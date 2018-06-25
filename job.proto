@@ -13,7 +13,7 @@ message ScanRequest {
     SWE = 1;
     NOR = 2;
     NLD = 3;
-    FIN = 4
+    FIN = 4;
   }
   message WebhookCallbackSetting {
     string url = 1;
