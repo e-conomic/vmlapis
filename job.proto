@@ -1,7 +1,18 @@
 syntax = "proto3";
 package ssn;
 
+import "google/protobuf/timestamp.proto";
+
+
 message Job {
+  message WebhookCallbackSetting {
+    string url = 1;
+    string secret = 2;
+  }
   string uuid = 1;
-  string url = 2;
+  string clientId = 2;
+  string clientDocumentId = 3;
+  string documentUrl = 4;
+  google.protobuf.Timestamp ctime= 5;
+  WebhookCallbackSetting webhook = 6;
 }
