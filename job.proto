@@ -4,15 +4,32 @@ package ssn;
 import "google/protobuf/timestamp.proto";
 
 
-message Job {
+// A request to scan a document
+message ScanRequest {
+
+  // ISO 639-3
+  enum Language {
+    DAN = 0;
+    SWE = 1;
+    NOR = 2;
+    NLD = 3;
+    FIN = 4
+  }
   message WebhookCallbackSetting {
     string url = 1;
     string secret = 2;
   }
-  string uuid = 1;
-  string clientId = 2;
+
+  string documentUrl = 1;
+  WebhookCallbackSetting webhook = 2;
   string clientDocumentId = 3;
-  string documentUrl = 4;
-  google.protobuf.Timestamp ctime= 5;
-  WebhookCallbackSetting webhook = 6;
+  Language language = 4;
+}
+
+// Internal job structure
+message Job {
+  string uuid = 1;
+  google.protobuf.Timestamp ctime= 2;
+  string clientId = 3;
+  ScanRequest scanRequest = 4;
 }
