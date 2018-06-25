@@ -1,0 +1,7 @@
+syntax = "proto3";
+package ssn;
+
+message Job {
+  string uuid = 1;
+  string url = 2;
+}
