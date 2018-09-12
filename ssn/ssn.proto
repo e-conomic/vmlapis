@@ -3,7 +3,7 @@ syntax = "proto3";
 package ssn;
 
 import "google/protobuf/timestamp.proto";
-import "imageservice.proto";
+import "imageservice/imageservice.proto";
 
 message Page {
   uint32 index = 1;

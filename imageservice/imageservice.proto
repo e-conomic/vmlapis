@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package imageservice;
 
+option go_package = "github.com/e-conomic/ssn-protobuf/imageservice";
 
 // Interface exported by the server.
 service ImageService {
