@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package ssn;
+
+import "google/protobuf/timestamp.proto";
+import "imageservice.proto";
+
+message Page {
+  uint32 index = 1;
+  imageservice.Image image = 2;
+}
+
+message Document {
+  string url = 1;
+  repeated Page pages = 3;
+  repeated string ocr = 4;
+}
+
+message Callback {
+  string uri = 1;
+  string hmacSigningKey = 2;
+}
+
+message WebRequestContext {
+  string id = 1;
+  string ip = 2;
+}
+
+message Job {
+  string uuid = 1;
+  google.protobuf.Timestamp ctime = 2;
+  WebRequestContext ctx =3;
+  Document doc = 4;
+  string error = 5;
+  Callback callback = 6;
+  string clientId = 7;
+}

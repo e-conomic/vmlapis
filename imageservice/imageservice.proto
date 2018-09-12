@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package imageservice;
+
+
+// Interface exported by the server.
+service ImageService {
+  rpc GetOcr(OcrRequest) returns (OcrResponse) {}
+  rpc PdfRasterizer(PdfRasterizerRequest) returns (stream PdfRasterizerResponse) {}
+}
+
+enum ImageFormat {
+  PNG = 0;
+  JPEG = 1;
+}
+
+message Image {
+  bytes data = 1;
+  ImageFormat format = 2;
+}
+
+message PdfRasterizerRequest {
+  bytes pdfBytes = 1;
+  repeated uint32 indecies = 2;
+}
+
+message PdfRasterizerResponse {
+  uint32 index = 1;
+  Image image = 2;
+}
+
+message OcrRequest {
+  Image image = 1;
+  Language lang = 2;
+}
+
+message OcrResponse {
+  string hocr = 1;
+}
+
+enum Language {
+  ENG = 0;
+  DAN = 1;
+  SWE = 2;
+  NOR = 3;
+  FIN = 4;
+  NLD = 5;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ssn;
+
+service VoucherExtractionService {
+    rpc GetPrediction(VoucherExtractionRequest) returns (VoucherExtractionResponse) {}
+}
+
+message PredictedField {
+    string value = 1;
+    uint32 confidence = 2;
+}
+
+message VoucherExtractionRequest {
+    string ocr = 1;
+}
+
+message VoucherExtractionResponse {
+    PredictedField totalIncludingVat = 1;
+    PredictedField vatDistributionSE12 = 2;
+    PredictedField vatDistributionSE25 = 3;
+}
