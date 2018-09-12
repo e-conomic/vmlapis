@@ -2,8 +2,9 @@ syntax = "proto3";
 
 package ssn;
 
-service VoucherExtractionService {
-    rpc GetPrediction(VoucherExtractionRequest) returns (VoucherExtractionResponse) {}
+// Ocr Voucher Labeler Service
+service OvlService {
+    rpc GetPrediction(OvlRequest) returns (OvlResponse) {}
 }
 
 message PredictedField {
@@ -11,11 +12,11 @@ message PredictedField {
     uint32 confidence = 2;
 }
 
-message VoucherExtractionRequest {
+message OvlRequest {
     string ocr = 1;
 }
 
-message VoucherExtractionResponse {
+message OvlResponse {
     PredictedField totalIncludingVat = 1;
     PredictedField vatDistributionSE12 = 2;
     PredictedField vatDistributionSE25 = 3;
