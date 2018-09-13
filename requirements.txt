@@ -1,0 +1,5 @@
+grpcio==1.15.0
+grpcio-tools==1.15.0
+invoke==1.1.1
+protobuf==3.6.1
+six==1.11.0

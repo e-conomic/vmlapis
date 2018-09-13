@@ -6,7 +6,7 @@ cache: pip
 python:
   - '3.6'
 
-install: pip install invoke grpcio-tools
+install: pip install -r requirements.txt
 
 script:
   - invoke build-py
