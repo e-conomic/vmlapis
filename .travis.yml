@@ -15,6 +15,7 @@ deploy:
   - provider: pypi
     server: https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi
     distributions: bdist_wheel
+    skip_cleanup: true
     user: vml-rw
     on:
       tags: true
