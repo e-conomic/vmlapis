@@ -6,7 +6,7 @@ cache: pip
 python:
   - '3.6'
 
-install: pip install invoke
+install: pip install invoke, grpcio-tools
 
 script:
   - invoke build-py
@@ -14,7 +14,7 @@ script:
 deploy:
   - provider: pypi
     server: https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi
-    distributions: bdist_wheel
+    distributions: py/bdist_wheel
     edge:
       branch: v1.8.45
     user: vml-rw
