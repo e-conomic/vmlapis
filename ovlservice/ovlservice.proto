@@ -17,7 +17,45 @@ message OvlRequest {
 }
 
 message OvlResponse {
-    PredictedField totalIncludingVat = 1;
-    PredictedField vatDistributionSE12 = 2;
-    PredictedField vatDistributionSE25 = 3;
+    message OcrLineDk {
+        PredictedField type = 1;
+        PredictedField paymentId = 2;
+        PredictedField creditorId = 3;
+    }
+
+    message OcrLineSe {
+        PredictedField paymentId = 1;
+    }
+
+    message VatDistributionDk {
+        PredictedField vatDistributionDk25 = 1;
+    }
+
+    message VatDistributionSe {
+        PredictedField vatDistributionSe12 = 1;
+        PredictedField vatDistributionSe25 = 2;
+    }
+
+    PredictedField orderDate = 1;
+    PredictedField paymentDueDate = 2;
+    PredictedField currency = 3;
+    PredictedField totalVat = 4;
+    PredictedField totalInclVat = 5;
+    PredictedField totalExclVat = 6;
+    PredictedField corporateId = 7;
+    PredictedField countryCode = 8;
+    PredictedField documentType = 9;
+    PredictedField paymentMethod = 10;
+    PredictedField creditCardLastFourDigits = 11;
+
+    oneof ocrLine {
+        OcrLineDk ocrDk = 12;
+        OcrLineSe ocrSe = 13;
+    }
+
+    oneof vatDistribution {
+        VatDistributionSe vatSe = 14;
+        VatDistributionDk vatDk = 15;
+    }
 }
+
