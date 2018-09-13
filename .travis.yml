@@ -14,7 +14,7 @@ script:
 deploy:
   - provider: pypi
     server: https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi
-    distributions: py/bdist_wheel
+    distributions: bdist_wheel
     edge:
       branch: v1.8.45
     user: vml-rw
