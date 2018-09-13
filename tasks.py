@@ -10,7 +10,6 @@ def build_py(ctx):
     ctx.run('touch ./ssn/__init__.py')
     ctx.run('touch ./ssn/imageservice/__init__.py')
     ctx.run('touch ./ssn/mlservice/__init__.py')
-    ctx.run('python3 setup.py bdist_wheel')
 
 
 @task
