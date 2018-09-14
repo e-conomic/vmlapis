@@ -1,2 +1,1 @@
-# ssn-protobuf
-Common protocol buffers
+# proto
