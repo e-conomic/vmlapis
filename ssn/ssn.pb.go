@@ -6,7 +6,7 @@ package ssn
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import imageservice "github.com/e-conomic/ssn-protobuf/ssn/imageservice"
+import imageservice "github.com/e-conomic/proto/ssn/imageservice"
 import timestamp "github.com/golang/protobuf/ptypes/timestamp"
 
 // Reference imports to suppress errors if they are not otherwise used.
