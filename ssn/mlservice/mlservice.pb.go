@@ -35,7 +35,7 @@ func (m *PredictedField) Reset()         { *m = PredictedField{} }
 func (m *PredictedField) String() string { return proto.CompactTextString(m) }
 func (*PredictedField) ProtoMessage()    {}
 func (*PredictedField) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{0}
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{0}
 }
 func (m *PredictedField) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PredictedField.Unmarshal(m, b)
@@ -69,45 +69,45 @@ func (m *PredictedField) GetConfidence() uint32 {
 	return 0
 }
 
-type OvlRequest struct {
+type MlRequest struct {
 	Ocr                  string   `protobuf:"bytes,1,opt,name=ocr,proto3" json:"ocr,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *OvlRequest) Reset()         { *m = OvlRequest{} }
-func (m *OvlRequest) String() string { return proto.CompactTextString(m) }
-func (*OvlRequest) ProtoMessage()    {}
-func (*OvlRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{1}
+func (m *MlRequest) Reset()         { *m = MlRequest{} }
+func (m *MlRequest) String() string { return proto.CompactTextString(m) }
+func (*MlRequest) ProtoMessage()    {}
+func (*MlRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{1}
 }
-func (m *OvlRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlRequest.Unmarshal(m, b)
+func (m *MlRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlRequest.Unmarshal(m, b)
 }
-func (m *OvlRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlRequest.Marshal(b, m, deterministic)
+func (m *MlRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlRequest.Marshal(b, m, deterministic)
 }
-func (dst *OvlRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlRequest.Merge(dst, src)
+func (dst *MlRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlRequest.Merge(dst, src)
 }
-func (m *OvlRequest) XXX_Size() int {
-	return xxx_messageInfo_OvlRequest.Size(m)
+func (m *MlRequest) XXX_Size() int {
+	return xxx_messageInfo_MlRequest.Size(m)
 }
-func (m *OvlRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlRequest.DiscardUnknown(m)
+func (m *MlRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlRequest proto.InternalMessageInfo
+var xxx_messageInfo_MlRequest proto.InternalMessageInfo
 
-func (m *OvlRequest) GetOcr() string {
+func (m *MlRequest) GetOcr() string {
 	if m != nil {
 		return m.Ocr
 	}
 	return ""
 }
 
-type OvlResponse struct {
+type MlResponse struct {
 	OrderDate                *PredictedField `protobuf:"bytes,1,opt,name=orderDate,proto3" json:"orderDate,omitempty"`
 	PaymentDueDate           *PredictedField `protobuf:"bytes,2,opt,name=paymentDueDate,proto3" json:"paymentDueDate,omitempty"`
 	Currency                 *PredictedField `protobuf:"bytes,3,opt,name=currency,proto3" json:"currency,omitempty"`
@@ -120,290 +120,290 @@ type OvlResponse struct {
 	PaymentMethod            *PredictedField `protobuf:"bytes,10,opt,name=paymentMethod,proto3" json:"paymentMethod,omitempty"`
 	CreditCardLastFourDigits *PredictedField `protobuf:"bytes,11,opt,name=creditCardLastFourDigits,proto3" json:"creditCardLastFourDigits,omitempty"`
 	// Types that are valid to be assigned to OcrLine:
-	//	*OvlResponse_OcrDk
-	//	*OvlResponse_OcrSe
-	OcrLine isOvlResponse_OcrLine `protobuf_oneof:"ocrLine"`
+	//	*MlResponse_OcrDk
+	//	*MlResponse_OcrSe
+	OcrLine isMlResponse_OcrLine `protobuf_oneof:"ocrLine"`
 	// Types that are valid to be assigned to VatDistribution:
-	//	*OvlResponse_VatSe
-	//	*OvlResponse_VatDk
-	VatDistribution      isOvlResponse_VatDistribution `protobuf_oneof:"vatDistribution"`
-	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
-	XXX_unrecognized     []byte                        `json:"-"`
-	XXX_sizecache        int32                         `json:"-"`
+	//	*MlResponse_VatSe
+	//	*MlResponse_VatDk
+	VatDistribution      isMlResponse_VatDistribution `protobuf_oneof:"vatDistribution"`
+	XXX_NoUnkeyedLiteral struct{}                     `json:"-"`
+	XXX_unrecognized     []byte                       `json:"-"`
+	XXX_sizecache        int32                        `json:"-"`
 }
 
-func (m *OvlResponse) Reset()         { *m = OvlResponse{} }
-func (m *OvlResponse) String() string { return proto.CompactTextString(m) }
-func (*OvlResponse) ProtoMessage()    {}
-func (*OvlResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{2}
+func (m *MlResponse) Reset()         { *m = MlResponse{} }
+func (m *MlResponse) String() string { return proto.CompactTextString(m) }
+func (*MlResponse) ProtoMessage()    {}
+func (*MlResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{2}
 }
-func (m *OvlResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlResponse.Unmarshal(m, b)
+func (m *MlResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlResponse.Unmarshal(m, b)
 }
-func (m *OvlResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlResponse.Marshal(b, m, deterministic)
+func (m *MlResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlResponse.Marshal(b, m, deterministic)
 }
-func (dst *OvlResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlResponse.Merge(dst, src)
+func (dst *MlResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlResponse.Merge(dst, src)
 }
-func (m *OvlResponse) XXX_Size() int {
-	return xxx_messageInfo_OvlResponse.Size(m)
+func (m *MlResponse) XXX_Size() int {
+	return xxx_messageInfo_MlResponse.Size(m)
 }
-func (m *OvlResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlResponse.DiscardUnknown(m)
+func (m *MlResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlResponse proto.InternalMessageInfo
+var xxx_messageInfo_MlResponse proto.InternalMessageInfo
 
-func (m *OvlResponse) GetOrderDate() *PredictedField {
+func (m *MlResponse) GetOrderDate() *PredictedField {
 	if m != nil {
 		return m.OrderDate
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetPaymentDueDate() *PredictedField {
+func (m *MlResponse) GetPaymentDueDate() *PredictedField {
 	if m != nil {
 		return m.PaymentDueDate
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetCurrency() *PredictedField {
+func (m *MlResponse) GetCurrency() *PredictedField {
 	if m != nil {
 		return m.Currency
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetTotalVat() *PredictedField {
+func (m *MlResponse) GetTotalVat() *PredictedField {
 	if m != nil {
 		return m.TotalVat
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetTotalInclVat() *PredictedField {
+func (m *MlResponse) GetTotalInclVat() *PredictedField {
 	if m != nil {
 		return m.TotalInclVat
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetTotalExclVat() *PredictedField {
+func (m *MlResponse) GetTotalExclVat() *PredictedField {
 	if m != nil {
 		return m.TotalExclVat
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetCorporateId() *PredictedField {
+func (m *MlResponse) GetCorporateId() *PredictedField {
 	if m != nil {
 		return m.CorporateId
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetCountryCode() *PredictedField {
+func (m *MlResponse) GetCountryCode() *PredictedField {
 	if m != nil {
 		return m.CountryCode
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetDocumentType() *PredictedField {
+func (m *MlResponse) GetDocumentType() *PredictedField {
 	if m != nil {
 		return m.DocumentType
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetPaymentMethod() *PredictedField {
+func (m *MlResponse) GetPaymentMethod() *PredictedField {
 	if m != nil {
 		return m.PaymentMethod
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetCreditCardLastFourDigits() *PredictedField {
+func (m *MlResponse) GetCreditCardLastFourDigits() *PredictedField {
 	if m != nil {
 		return m.CreditCardLastFourDigits
 	}
 	return nil
 }
 
-type isOvlResponse_OcrLine interface {
-	isOvlResponse_OcrLine()
+type isMlResponse_OcrLine interface {
+	isMlResponse_OcrLine()
 }
 
-type OvlResponse_OcrDk struct {
-	OcrDk *OvlResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocrDk,proto3,oneof"`
+type MlResponse_OcrDk struct {
+	OcrDk *MlResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocrDk,proto3,oneof"`
 }
 
-type OvlResponse_OcrSe struct {
-	OcrSe *OvlResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocrSe,proto3,oneof"`
+type MlResponse_OcrSe struct {
+	OcrSe *MlResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocrSe,proto3,oneof"`
 }
 
-func (*OvlResponse_OcrDk) isOvlResponse_OcrLine() {}
+func (*MlResponse_OcrDk) isMlResponse_OcrLine() {}
 
-func (*OvlResponse_OcrSe) isOvlResponse_OcrLine() {}
+func (*MlResponse_OcrSe) isMlResponse_OcrLine() {}
 
-func (m *OvlResponse) GetOcrLine() isOvlResponse_OcrLine {
+func (m *MlResponse) GetOcrLine() isMlResponse_OcrLine {
 	if m != nil {
 		return m.OcrLine
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetOcrDk() *OvlResponse_OcrLineDk {
-	if x, ok := m.GetOcrLine().(*OvlResponse_OcrDk); ok {
+func (m *MlResponse) GetOcrDk() *MlResponse_OcrLineDk {
+	if x, ok := m.GetOcrLine().(*MlResponse_OcrDk); ok {
 		return x.OcrDk
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetOcrSe() *OvlResponse_OcrLineSe {
-	if x, ok := m.GetOcrLine().(*OvlResponse_OcrSe); ok {
+func (m *MlResponse) GetOcrSe() *MlResponse_OcrLineSe {
+	if x, ok := m.GetOcrLine().(*MlResponse_OcrSe); ok {
 		return x.OcrSe
 	}
 	return nil
 }
 
-type isOvlResponse_VatDistribution interface {
-	isOvlResponse_VatDistribution()
+type isMlResponse_VatDistribution interface {
+	isMlResponse_VatDistribution()
 }
 
-type OvlResponse_VatSe struct {
-	VatSe *OvlResponse_VatDistributionSe `protobuf:"bytes,14,opt,name=vatSe,proto3,oneof"`
+type MlResponse_VatSe struct {
+	VatSe *MlResponse_VatDistributionSe `protobuf:"bytes,14,opt,name=vatSe,proto3,oneof"`
 }
 
-type OvlResponse_VatDk struct {
-	VatDk *OvlResponse_VatDistributionDk `protobuf:"bytes,15,opt,name=vatDk,proto3,oneof"`
+type MlResponse_VatDk struct {
+	VatDk *MlResponse_VatDistributionDk `protobuf:"bytes,15,opt,name=vatDk,proto3,oneof"`
 }
 
-func (*OvlResponse_VatSe) isOvlResponse_VatDistribution() {}
+func (*MlResponse_VatSe) isMlResponse_VatDistribution() {}
 
-func (*OvlResponse_VatDk) isOvlResponse_VatDistribution() {}
+func (*MlResponse_VatDk) isMlResponse_VatDistribution() {}
 
-func (m *OvlResponse) GetVatDistribution() isOvlResponse_VatDistribution {
+func (m *MlResponse) GetVatDistribution() isMlResponse_VatDistribution {
 	if m != nil {
 		return m.VatDistribution
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetVatSe() *OvlResponse_VatDistributionSe {
-	if x, ok := m.GetVatDistribution().(*OvlResponse_VatSe); ok {
+func (m *MlResponse) GetVatSe() *MlResponse_VatDistributionSe {
+	if x, ok := m.GetVatDistribution().(*MlResponse_VatSe); ok {
 		return x.VatSe
 	}
 	return nil
 }
 
-func (m *OvlResponse) GetVatDk() *OvlResponse_VatDistributionDk {
-	if x, ok := m.GetVatDistribution().(*OvlResponse_VatDk); ok {
+func (m *MlResponse) GetVatDk() *MlResponse_VatDistributionDk {
+	if x, ok := m.GetVatDistribution().(*MlResponse_VatDk); ok {
 		return x.VatDk
 	}
 	return nil
 }
 
 // XXX_OneofFuncs is for the internal use of the proto package.
-func (*OvlResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _OvlResponse_OneofMarshaler, _OvlResponse_OneofUnmarshaler, _OvlResponse_OneofSizer, []interface{}{
-		(*OvlResponse_OcrDk)(nil),
-		(*OvlResponse_OcrSe)(nil),
-		(*OvlResponse_VatSe)(nil),
-		(*OvlResponse_VatDk)(nil),
+func (*MlResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _MlResponse_OneofMarshaler, _MlResponse_OneofUnmarshaler, _MlResponse_OneofSizer, []interface{}{
+		(*MlResponse_OcrDk)(nil),
+		(*MlResponse_OcrSe)(nil),
+		(*MlResponse_VatSe)(nil),
+		(*MlResponse_VatDk)(nil),
 	}
 }
 
-func _OvlResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*OvlResponse)
+func _MlResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*MlResponse)
 	// ocrLine
 	switch x := m.OcrLine.(type) {
-	case *OvlResponse_OcrDk:
+	case *MlResponse_OcrDk:
 		b.EncodeVarint(12<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrDk); err != nil {
 			return err
 		}
-	case *OvlResponse_OcrSe:
+	case *MlResponse_OcrSe:
 		b.EncodeVarint(13<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrSe); err != nil {
 			return err
 		}
 	case nil:
 	default:
-		return fmt.Errorf("OvlResponse.OcrLine has unexpected type %T", x)
+		return fmt.Errorf("MlResponse.OcrLine has unexpected type %T", x)
 	}
 	// vatDistribution
 	switch x := m.VatDistribution.(type) {
-	case *OvlResponse_VatSe:
+	case *MlResponse_VatSe:
 		b.EncodeVarint(14<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.VatSe); err != nil {
 			return err
 		}
-	case *OvlResponse_VatDk:
+	case *MlResponse_VatDk:
 		b.EncodeVarint(15<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.VatDk); err != nil {
 			return err
 		}
 	case nil:
 	default:
-		return fmt.Errorf("OvlResponse.VatDistribution has unexpected type %T", x)
+		return fmt.Errorf("MlResponse.VatDistribution has unexpected type %T", x)
 	}
 	return nil
 }
 
-func _OvlResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*OvlResponse)
+func _MlResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*MlResponse)
 	switch tag {
 	case 12: // ocrLine.ocrDk
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(OvlResponse_OcrLineDk)
+		msg := new(MlResponse_OcrLineDk)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &OvlResponse_OcrDk{msg}
+		m.OcrLine = &MlResponse_OcrDk{msg}
 		return true, err
 	case 13: // ocrLine.ocrSe
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(OvlResponse_OcrLineSe)
+		msg := new(MlResponse_OcrLineSe)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &OvlResponse_OcrSe{msg}
+		m.OcrLine = &MlResponse_OcrSe{msg}
 		return true, err
 	case 14: // vatDistribution.vatSe
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(OvlResponse_VatDistributionSe)
+		msg := new(MlResponse_VatDistributionSe)
 		err := b.DecodeMessage(msg)
-		m.VatDistribution = &OvlResponse_VatSe{msg}
+		m.VatDistribution = &MlResponse_VatSe{msg}
 		return true, err
 	case 15: // vatDistribution.vatDk
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(OvlResponse_VatDistributionDk)
+		msg := new(MlResponse_VatDistributionDk)
 		err := b.DecodeMessage(msg)
-		m.VatDistribution = &OvlResponse_VatDk{msg}
+		m.VatDistribution = &MlResponse_VatDk{msg}
 		return true, err
 	default:
 		return false, nil
 	}
 }
 
-func _OvlResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*OvlResponse)
+func _MlResponse_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*MlResponse)
 	// ocrLine
 	switch x := m.OcrLine.(type) {
-	case *OvlResponse_OcrDk:
+	case *MlResponse_OcrDk:
 		s := proto.Size(x.OcrDk)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *OvlResponse_OcrSe:
+	case *MlResponse_OcrSe:
 		s := proto.Size(x.OcrSe)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
@@ -414,12 +414,12 @@ func _OvlResponse_OneofSizer(msg proto.Message) (n int) {
 	}
 	// vatDistribution
 	switch x := m.VatDistribution.(type) {
-	case *OvlResponse_VatSe:
+	case *MlResponse_VatSe:
 		s := proto.Size(x.VatSe)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *OvlResponse_VatDk:
+	case *MlResponse_VatDk:
 		s := proto.Size(x.VatDk)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
@@ -431,7 +431,7 @@ func _OvlResponse_OneofSizer(msg proto.Message) (n int) {
 	return n
 }
 
-type OvlResponse_OcrLineDk struct {
+type MlResponse_OcrLineDk struct {
 	Type                 *PredictedField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
 	PaymentId            *PredictedField `protobuf:"bytes,2,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
 	CreditorId           *PredictedField `protobuf:"bytes,3,opt,name=creditorId,proto3" json:"creditorId,omitempty"`
@@ -440,128 +440,128 @@ type OvlResponse_OcrLineDk struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *OvlResponse_OcrLineDk) Reset()         { *m = OvlResponse_OcrLineDk{} }
-func (m *OvlResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
-func (*OvlResponse_OcrLineDk) ProtoMessage()    {}
-func (*OvlResponse_OcrLineDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{2, 0}
+func (m *MlResponse_OcrLineDk) Reset()         { *m = MlResponse_OcrLineDk{} }
+func (m *MlResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
+func (*MlResponse_OcrLineDk) ProtoMessage()    {}
+func (*MlResponse_OcrLineDk) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{2, 0}
 }
-func (m *OvlResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlResponse_OcrLineDk.Unmarshal(m, b)
+func (m *MlResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlResponse_OcrLineDk.Unmarshal(m, b)
 }
-func (m *OvlResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlResponse_OcrLineDk.Marshal(b, m, deterministic)
+func (m *MlResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlResponse_OcrLineDk.Marshal(b, m, deterministic)
 }
-func (dst *OvlResponse_OcrLineDk) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlResponse_OcrLineDk.Merge(dst, src)
+func (dst *MlResponse_OcrLineDk) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlResponse_OcrLineDk.Merge(dst, src)
 }
-func (m *OvlResponse_OcrLineDk) XXX_Size() int {
-	return xxx_messageInfo_OvlResponse_OcrLineDk.Size(m)
+func (m *MlResponse_OcrLineDk) XXX_Size() int {
+	return xxx_messageInfo_MlResponse_OcrLineDk.Size(m)
 }
-func (m *OvlResponse_OcrLineDk) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlResponse_OcrLineDk.DiscardUnknown(m)
+func (m *MlResponse_OcrLineDk) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlResponse_OcrLineDk.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlResponse_OcrLineDk proto.InternalMessageInfo
+var xxx_messageInfo_MlResponse_OcrLineDk proto.InternalMessageInfo
 
-func (m *OvlResponse_OcrLineDk) GetType() *PredictedField {
+func (m *MlResponse_OcrLineDk) GetType() *PredictedField {
 	if m != nil {
 		return m.Type
 	}
 	return nil
 }
 
-func (m *OvlResponse_OcrLineDk) GetPaymentId() *PredictedField {
+func (m *MlResponse_OcrLineDk) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-func (m *OvlResponse_OcrLineDk) GetCreditorId() *PredictedField {
+func (m *MlResponse_OcrLineDk) GetCreditorId() *PredictedField {
 	if m != nil {
 		return m.CreditorId
 	}
 	return nil
 }
 
-type OvlResponse_OcrLineSe struct {
+type MlResponse_OcrLineSe struct {
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *OvlResponse_OcrLineSe) Reset()         { *m = OvlResponse_OcrLineSe{} }
-func (m *OvlResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
-func (*OvlResponse_OcrLineSe) ProtoMessage()    {}
-func (*OvlResponse_OcrLineSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{2, 1}
+func (m *MlResponse_OcrLineSe) Reset()         { *m = MlResponse_OcrLineSe{} }
+func (m *MlResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
+func (*MlResponse_OcrLineSe) ProtoMessage()    {}
+func (*MlResponse_OcrLineSe) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{2, 1}
 }
-func (m *OvlResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlResponse_OcrLineSe.Unmarshal(m, b)
+func (m *MlResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlResponse_OcrLineSe.Unmarshal(m, b)
 }
-func (m *OvlResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlResponse_OcrLineSe.Marshal(b, m, deterministic)
+func (m *MlResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlResponse_OcrLineSe.Marshal(b, m, deterministic)
 }
-func (dst *OvlResponse_OcrLineSe) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlResponse_OcrLineSe.Merge(dst, src)
+func (dst *MlResponse_OcrLineSe) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlResponse_OcrLineSe.Merge(dst, src)
 }
-func (m *OvlResponse_OcrLineSe) XXX_Size() int {
-	return xxx_messageInfo_OvlResponse_OcrLineSe.Size(m)
+func (m *MlResponse_OcrLineSe) XXX_Size() int {
+	return xxx_messageInfo_MlResponse_OcrLineSe.Size(m)
 }
-func (m *OvlResponse_OcrLineSe) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlResponse_OcrLineSe.DiscardUnknown(m)
+func (m *MlResponse_OcrLineSe) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlResponse_OcrLineSe.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlResponse_OcrLineSe proto.InternalMessageInfo
+var xxx_messageInfo_MlResponse_OcrLineSe proto.InternalMessageInfo
 
-func (m *OvlResponse_OcrLineSe) GetPaymentId() *PredictedField {
+func (m *MlResponse_OcrLineSe) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-type OvlResponse_VatDistributionDk struct {
+type MlResponse_VatDistributionDk struct {
 	VatDistributionDk25  *PredictedField `protobuf:"bytes,1,opt,name=vatDistributionDk25,proto3" json:"vatDistributionDk25,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *OvlResponse_VatDistributionDk) Reset()         { *m = OvlResponse_VatDistributionDk{} }
-func (m *OvlResponse_VatDistributionDk) String() string { return proto.CompactTextString(m) }
-func (*OvlResponse_VatDistributionDk) ProtoMessage()    {}
-func (*OvlResponse_VatDistributionDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{2, 2}
+func (m *MlResponse_VatDistributionDk) Reset()         { *m = MlResponse_VatDistributionDk{} }
+func (m *MlResponse_VatDistributionDk) String() string { return proto.CompactTextString(m) }
+func (*MlResponse_VatDistributionDk) ProtoMessage()    {}
+func (*MlResponse_VatDistributionDk) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{2, 2}
 }
-func (m *OvlResponse_VatDistributionDk) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlResponse_VatDistributionDk.Unmarshal(m, b)
+func (m *MlResponse_VatDistributionDk) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlResponse_VatDistributionDk.Unmarshal(m, b)
 }
-func (m *OvlResponse_VatDistributionDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlResponse_VatDistributionDk.Marshal(b, m, deterministic)
+func (m *MlResponse_VatDistributionDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlResponse_VatDistributionDk.Marshal(b, m, deterministic)
 }
-func (dst *OvlResponse_VatDistributionDk) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlResponse_VatDistributionDk.Merge(dst, src)
+func (dst *MlResponse_VatDistributionDk) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlResponse_VatDistributionDk.Merge(dst, src)
 }
-func (m *OvlResponse_VatDistributionDk) XXX_Size() int {
-	return xxx_messageInfo_OvlResponse_VatDistributionDk.Size(m)
+func (m *MlResponse_VatDistributionDk) XXX_Size() int {
+	return xxx_messageInfo_MlResponse_VatDistributionDk.Size(m)
 }
-func (m *OvlResponse_VatDistributionDk) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlResponse_VatDistributionDk.DiscardUnknown(m)
+func (m *MlResponse_VatDistributionDk) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlResponse_VatDistributionDk.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlResponse_VatDistributionDk proto.InternalMessageInfo
+var xxx_messageInfo_MlResponse_VatDistributionDk proto.InternalMessageInfo
 
-func (m *OvlResponse_VatDistributionDk) GetVatDistributionDk25() *PredictedField {
+func (m *MlResponse_VatDistributionDk) GetVatDistributionDk25() *PredictedField {
 	if m != nil {
 		return m.VatDistributionDk25
 	}
 	return nil
 }
 
-type OvlResponse_VatDistributionSe struct {
+type MlResponse_VatDistributionSe struct {
 	VatDistributionSe12  *PredictedField `protobuf:"bytes,1,opt,name=vatDistributionSe12,proto3" json:"vatDistributionSe12,omitempty"`
 	VatDistributionSe25  *PredictedField `protobuf:"bytes,2,opt,name=vatDistributionSe25,proto3" json:"vatDistributionSe25,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
@@ -569,38 +569,38 @@ type OvlResponse_VatDistributionSe struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *OvlResponse_VatDistributionSe) Reset()         { *m = OvlResponse_VatDistributionSe{} }
-func (m *OvlResponse_VatDistributionSe) String() string { return proto.CompactTextString(m) }
-func (*OvlResponse_VatDistributionSe) ProtoMessage()    {}
-func (*OvlResponse_VatDistributionSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_dbab505679bbd3e3, []int{2, 3}
+func (m *MlResponse_VatDistributionSe) Reset()         { *m = MlResponse_VatDistributionSe{} }
+func (m *MlResponse_VatDistributionSe) String() string { return proto.CompactTextString(m) }
+func (*MlResponse_VatDistributionSe) ProtoMessage()    {}
+func (*MlResponse_VatDistributionSe) Descriptor() ([]byte, []int) {
+	return fileDescriptor_mlservice_a8c9ac7462077503, []int{2, 3}
 }
-func (m *OvlResponse_VatDistributionSe) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OvlResponse_VatDistributionSe.Unmarshal(m, b)
+func (m *MlResponse_VatDistributionSe) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_MlResponse_VatDistributionSe.Unmarshal(m, b)
 }
-func (m *OvlResponse_VatDistributionSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OvlResponse_VatDistributionSe.Marshal(b, m, deterministic)
+func (m *MlResponse_VatDistributionSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_MlResponse_VatDistributionSe.Marshal(b, m, deterministic)
 }
-func (dst *OvlResponse_VatDistributionSe) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OvlResponse_VatDistributionSe.Merge(dst, src)
+func (dst *MlResponse_VatDistributionSe) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MlResponse_VatDistributionSe.Merge(dst, src)
 }
-func (m *OvlResponse_VatDistributionSe) XXX_Size() int {
-	return xxx_messageInfo_OvlResponse_VatDistributionSe.Size(m)
+func (m *MlResponse_VatDistributionSe) XXX_Size() int {
+	return xxx_messageInfo_MlResponse_VatDistributionSe.Size(m)
 }
-func (m *OvlResponse_VatDistributionSe) XXX_DiscardUnknown() {
-	xxx_messageInfo_OvlResponse_VatDistributionSe.DiscardUnknown(m)
+func (m *MlResponse_VatDistributionSe) XXX_DiscardUnknown() {
+	xxx_messageInfo_MlResponse_VatDistributionSe.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OvlResponse_VatDistributionSe proto.InternalMessageInfo
+var xxx_messageInfo_MlResponse_VatDistributionSe proto.InternalMessageInfo
 
-func (m *OvlResponse_VatDistributionSe) GetVatDistributionSe12() *PredictedField {
+func (m *MlResponse_VatDistributionSe) GetVatDistributionSe12() *PredictedField {
 	if m != nil {
 		return m.VatDistributionSe12
 	}
 	return nil
 }
 
-func (m *OvlResponse_VatDistributionSe) GetVatDistributionSe25() *PredictedField {
+func (m *MlResponse_VatDistributionSe) GetVatDistributionSe25() *PredictedField {
 	if m != nil {
 		return m.VatDistributionSe25
 	}
@@ -609,12 +609,12 @@ func (m *OvlResponse_VatDistributionSe) GetVatDistributionSe25() *PredictedField
 
 func init() {
 	proto.RegisterType((*PredictedField)(nil), "ssn.PredictedField")
-	proto.RegisterType((*OvlRequest)(nil), "ssn.OvlRequest")
-	proto.RegisterType((*OvlResponse)(nil), "ssn.OvlResponse")
-	proto.RegisterType((*OvlResponse_OcrLineDk)(nil), "ssn.OvlResponse.OcrLineDk")
-	proto.RegisterType((*OvlResponse_OcrLineSe)(nil), "ssn.OvlResponse.OcrLineSe")
-	proto.RegisterType((*OvlResponse_VatDistributionDk)(nil), "ssn.OvlResponse.VatDistributionDk")
-	proto.RegisterType((*OvlResponse_VatDistributionSe)(nil), "ssn.OvlResponse.VatDistributionSe")
+	proto.RegisterType((*MlRequest)(nil), "ssn.MlRequest")
+	proto.RegisterType((*MlResponse)(nil), "ssn.MlResponse")
+	proto.RegisterType((*MlResponse_OcrLineDk)(nil), "ssn.MlResponse.OcrLineDk")
+	proto.RegisterType((*MlResponse_OcrLineSe)(nil), "ssn.MlResponse.OcrLineSe")
+	proto.RegisterType((*MlResponse_VatDistributionDk)(nil), "ssn.MlResponse.VatDistributionDk")
+	proto.RegisterType((*MlResponse_VatDistributionSe)(nil), "ssn.MlResponse.VatDistributionSe")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -625,64 +625,64 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// OvlServiceClient is the client API for OvlService service.
+// MlServiceClient is the client API for MlService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type OvlServiceClient interface {
-	GetPrediction(ctx context.Context, in *OvlRequest, opts ...grpc.CallOption) (*OvlResponse, error)
+type MlServiceClient interface {
+	GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error)
 }
 
-type ovlServiceClient struct {
+type mlServiceClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewOvlServiceClient(cc *grpc.ClientConn) OvlServiceClient {
-	return &ovlServiceClient{cc}
+func NewMlServiceClient(cc *grpc.ClientConn) MlServiceClient {
+	return &mlServiceClient{cc}
 }
 
-func (c *ovlServiceClient) GetPrediction(ctx context.Context, in *OvlRequest, opts ...grpc.CallOption) (*OvlResponse, error) {
-	out := new(OvlResponse)
-	err := c.cc.Invoke(ctx, "/ssn.OvlService/GetPrediction", in, out, opts...)
+func (c *mlServiceClient) GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error) {
+	out := new(MlResponse)
+	err := c.cc.Invoke(ctx, "/ssn.MlService/GetPrediction", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// OvlServiceServer is the server API for OvlService service.
-type OvlServiceServer interface {
-	GetPrediction(context.Context, *OvlRequest) (*OvlResponse, error)
+// MlServiceServer is the server API for MlService service.
+type MlServiceServer interface {
+	GetPrediction(context.Context, *MlRequest) (*MlResponse, error)
 }
 
-func RegisterOvlServiceServer(s *grpc.Server, srv OvlServiceServer) {
-	s.RegisterService(&_OvlService_serviceDesc, srv)
+func RegisterMlServiceServer(s *grpc.Server, srv MlServiceServer) {
+	s.RegisterService(&_MlService_serviceDesc, srv)
 }
 
-func _OvlService_GetPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(OvlRequest)
+func _MlService_GetPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(MlRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(OvlServiceServer).GetPrediction(ctx, in)
+		return srv.(MlServiceServer).GetPrediction(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.OvlService/GetPrediction",
+		FullMethod: "/ssn.MlService/GetPrediction",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(OvlServiceServer).GetPrediction(ctx, req.(*OvlRequest))
+		return srv.(MlServiceServer).GetPrediction(ctx, req.(*MlRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _OvlService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "ssn.OvlService",
-	HandlerType: (*OvlServiceServer)(nil),
+var _MlService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "ssn.MlService",
+	HandlerType: (*MlServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetPrediction",
-			Handler:    _OvlService_GetPrediction_Handler,
+			Handler:    _MlService_GetPrediction_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -690,45 +690,45 @@ var _OvlService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/mlservice/mlservice.proto", fileDescriptor_mlservice_dbab505679bbd3e3)
+	proto.RegisterFile("ssn/mlservice/mlservice.proto", fileDescriptor_mlservice_a8c9ac7462077503)
 }
 
-var fileDescriptor_mlservice_dbab505679bbd3e3 = []byte{
-	// 564 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x95, 0xcf, 0x6f, 0xd3, 0x30,
-	0x14, 0xc7, 0x97, 0x6d, 0xdd, 0xd6, 0xd7, 0xb5, 0xdd, 0x3c, 0x0e, 0x56, 0x24, 0xa6, 0xa9, 0x17,
-	0x76, 0xea, 0xb4, 0x8c, 0x0a, 0x01, 0x12, 0x87, 0x2e, 0x2b, 0xab, 0x34, 0x54, 0x94, 0xa0, 0x1d,
-	0xb8, 0x65, 0xf6, 0x03, 0xa2, 0x76, 0x76, 0xb1, 0x9d, 0x8a, 0xfe, 0x2f, 0x5c, 0xf8, 0xd3, 0xf8,
-	0x4f, 0x50, 0x9c, 0xd0, 0xdf, 0x09, 0xe3, 0xe6, 0x46, 0x9f, 0xcf, 0xd7, 0x2f, 0x2f, 0x7e, 0x2e,
-	0x3c, 0xd7, 0x5a, 0x5c, 0x3c, 0x8e, 0x34, 0xaa, 0x49, 0xcc, 0x70, 0xbe, 0x6a, 0x8f, 0x95, 0x34,
-	0x92, 0xec, 0x68, 0x2d, 0x5a, 0x3d, 0x68, 0x7c, 0x54, 0xc8, 0x63, 0x66, 0x90, 0xf7, 0x62, 0x1c,
-	0x71, 0xf2, 0x0c, 0x2a, 0x93, 0x68, 0x94, 0x20, 0x75, 0xce, 0x9c, 0xf3, 0x6a, 0x90, 0xfd, 0x20,
-	0xa7, 0x00, 0x4c, 0x8a, 0x2f, 0x31, 0x47, 0xc1, 0x90, 0x6e, 0x9f, 0x39, 0xe7, 0xf5, 0x60, 0xe1,
-	0x49, 0xeb, 0x14, 0x60, 0x30, 0x19, 0x05, 0xf8, 0x3d, 0x41, 0x6d, 0xc8, 0x11, 0xec, 0x48, 0xa6,
-	0xf2, 0x84, 0x74, 0xd9, 0xfa, 0x0d, 0x50, 0xb3, 0x80, 0x1e, 0x4b, 0xa1, 0x91, 0x5c, 0x42, 0x55,
-	0x2a, 0x8e, 0xca, 0x8f, 0x4c, 0xb6, 0x53, 0xcd, 0x3b, 0x69, 0x6b, 0x2d, 0xda, 0xcb, 0xd5, 0x04,
-	0x73, 0x8a, 0xbc, 0x85, 0xc6, 0x38, 0x9a, 0x3e, 0xa2, 0x30, 0x7e, 0x82, 0xd6, 0xdb, 0x2e, 0xf6,
-	0x56, 0x50, 0x72, 0x01, 0x07, 0x2c, 0x51, 0x0a, 0x05, 0x9b, 0xd2, 0x9d, 0x62, 0x6d, 0x06, 0xa5,
-	0x82, 0x91, 0x26, 0x1a, 0xdd, 0x47, 0x86, 0xee, 0x96, 0x08, 0x7f, 0x21, 0xf2, 0x0a, 0x0e, 0xed,
-	0xba, 0x2f, 0x98, 0x95, 0x2a, 0xc5, 0xd2, 0x12, 0x38, 0x13, 0x6f, 0x7e, 0x64, 0xe2, 0xde, 0xbf,
-	0xc4, 0x1c, 0x24, 0x1d, 0xa8, 0x31, 0xa9, 0xc6, 0x52, 0x45, 0x06, 0xfb, 0x9c, 0xee, 0x17, 0x7b,
-	0x8b, 0x5c, 0xa6, 0x25, 0xc2, 0xa8, 0xe9, 0xb5, 0xe4, 0x48, 0x0f, 0x4a, 0xb5, 0x19, 0x97, 0x96,
-	0xc9, 0x25, 0x4b, 0xd2, 0xa6, 0x7e, 0x9a, 0x8e, 0x91, 0x56, 0x4b, 0xca, 0x5c, 0x04, 0xc9, 0x6b,
-	0xa8, 0xe7, 0x1f, 0xe3, 0x03, 0x9a, 0x6f, 0x92, 0x53, 0x28, 0x36, 0x97, 0x49, 0x32, 0x00, 0xca,
-	0x52, 0xc0, 0x5c, 0x47, 0x8a, 0xdf, 0x45, 0xda, 0xf4, 0x64, 0xa2, 0xfc, 0xf8, 0x6b, 0x6c, 0x34,
-	0xad, 0x15, 0xa7, 0x14, 0x4a, 0xc4, 0x83, 0x8a, 0x64, 0xca, 0x1f, 0xd2, 0x43, 0x6b, 0xbb, 0xd6,
-	0x5e, 0x38, 0x97, 0xed, 0x01, 0x53, 0x77, 0xb1, 0x40, 0x7f, 0x78, 0xbb, 0x15, 0x64, 0x68, 0xee,
-	0x84, 0x48, 0xeb, 0xe5, 0x4e, 0x88, 0xb9, 0x13, 0x22, 0x79, 0x93, 0x0e, 0x91, 0x09, 0x91, 0x36,
-	0xac, 0xd3, 0x5a, 0x73, 0xee, 0x23, 0xe3, 0xc7, 0xda, 0xa8, 0xf8, 0x21, 0x31, 0xb1, 0x14, 0x21,
-	0xde, 0x3a, 0x41, 0xa6, 0xe4, 0xae, 0x3f, 0xa4, 0xcd, 0xa7, 0xb9, 0xfe, 0x30, 0x77, 0xfd, 0xa1,
-	0xfb, 0xd3, 0x81, 0xea, 0xec, 0x15, 0xc8, 0x0b, 0xd8, 0x35, 0xe9, 0xa7, 0x2a, 0x99, 0x2f, 0x0b,
-	0xa4, 0xd3, 0x98, 0x37, 0xbe, 0xcf, 0xcb, 0xa6, 0x6a, 0x4e, 0x91, 0x2b, 0x80, 0xac, 0xcb, 0x52,
-	0xf5, 0x79, 0xd9, 0x48, 0x2d, 0x60, 0xee, 0xbb, 0x59, 0x75, 0xe1, 0xca, 0xa6, 0xce, 0x53, 0x36,
-	0x75, 0x3f, 0xc3, 0xf1, 0xda, 0xcb, 0x93, 0x1b, 0x38, 0x99, 0xac, 0x3e, 0xf4, 0x3a, 0x65, 0x89,
-	0x9b, 0x78, 0xf7, 0x97, 0xb3, 0x16, 0x1e, 0xe2, 0x86, 0xf0, 0x10, 0x2f, 0xbd, 0xff, 0x09, 0x4f,
-	0xf9, 0x8d, 0x31, 0x5e, 0xa7, 0xac, 0xd5, 0x9b, 0xf8, 0x6e, 0x15, 0xf6, 0x65, 0xd6, 0xbf, 0xee,
-	0x31, 0x34, 0x57, 0x08, 0xaf, 0x6b, 0xef, 0xe0, 0x30, 0xbb, 0xe4, 0xc9, 0x4b, 0xa8, 0xbf, 0x47,
-	0x93, 0xa7, 0xc6, 0x52, 0x90, 0xe6, 0xfc, 0x20, 0xd9, 0x5b, 0xda, 0x3d, 0x5a, 0x3d, 0x59, 0xad,
-	0xad, 0x87, 0x3d, 0xfb, 0xdf, 0x70, 0xf5, 0x27, 0x00, 0x00, 0xff, 0xff, 0xb2, 0x11, 0xd3, 0x42,
-	0x3c, 0x06, 0x00, 0x00,
+var fileDescriptor_mlservice_a8c9ac7462077503 = []byte{
+	// 565 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x95, 0x4d, 0x4f, 0xdb, 0x30,
+	0x18, 0xc7, 0x09, 0xa5, 0x40, 0x9e, 0xd2, 0x76, 0x98, 0x1d, 0xbc, 0x4a, 0x4c, 0xac, 0x97, 0x71,
+	0x2a, 0x6a, 0x50, 0x35, 0x4d, 0x93, 0x36, 0x09, 0x42, 0x47, 0x25, 0x10, 0x53, 0x32, 0x71, 0xd8,
+	0x2d, 0xd8, 0xcf, 0xb6, 0xa8, 0xc5, 0xee, 0x6c, 0xa7, 0x5a, 0xbf, 0xcb, 0x2e, 0xfb, 0x5e, 0xfb,
+	0x30, 0x53, 0x5e, 0x96, 0xb6, 0xa1, 0xc9, 0xe0, 0xe6, 0xa6, 0xbf, 0xdf, 0xdf, 0x4f, 0x1e, 0xbf,
+	0x04, 0x0e, 0xb5, 0x16, 0x27, 0xf7, 0x13, 0x8d, 0x6a, 0x16, 0x32, 0x5c, 0x8c, 0x7a, 0x53, 0x25,
+	0x8d, 0x24, 0x35, 0xad, 0x45, 0x77, 0x08, 0xad, 0x4f, 0x0a, 0x79, 0xc8, 0x0c, 0xf2, 0x61, 0x88,
+	0x13, 0x4e, 0x9e, 0x43, 0x7d, 0x16, 0x4c, 0x22, 0xa4, 0xd6, 0x91, 0x75, 0x6c, 0x7b, 0xe9, 0x0f,
+	0xf2, 0x12, 0x80, 0x49, 0xf1, 0x35, 0xe4, 0x28, 0x18, 0xd2, 0xcd, 0x23, 0xeb, 0xb8, 0xe9, 0x2d,
+	0x3d, 0xe9, 0x1e, 0x82, 0x7d, 0x3d, 0xf1, 0xf0, 0x47, 0x84, 0xda, 0x90, 0x67, 0x50, 0x93, 0x4c,
+	0x65, 0x01, 0xf1, 0xb0, 0xfb, 0x07, 0x00, 0xe2, 0xff, 0xf5, 0x54, 0x0a, 0x8d, 0xa4, 0x0f, 0xb6,
+	0x54, 0x1c, 0x95, 0x1b, 0x98, 0x74, 0x9e, 0x86, 0x73, 0xd0, 0xd3, 0x5a, 0xf4, 0x56, 0x6b, 0xf1,
+	0x16, 0x14, 0x79, 0x07, 0xad, 0x69, 0x30, 0xbf, 0x47, 0x61, 0xdc, 0x08, 0x13, 0x6f, 0xb3, 0xdc,
+	0x2b, 0xa0, 0xe4, 0x04, 0x76, 0x59, 0xa4, 0x14, 0x0a, 0x36, 0xa7, 0xb5, 0x72, 0x2d, 0x87, 0x62,
+	0xc1, 0x48, 0x13, 0x4c, 0x6e, 0x03, 0x43, 0xb7, 0x2a, 0x84, 0x7f, 0x10, 0x79, 0x03, 0x7b, 0xc9,
+	0x78, 0x24, 0x58, 0x22, 0xd5, 0xcb, 0xa5, 0x15, 0x30, 0x17, 0x2f, 0x7e, 0xa6, 0xe2, 0xf6, 0xff,
+	0xc4, 0x0c, 0x24, 0x03, 0x68, 0x30, 0xa9, 0xa6, 0x52, 0x05, 0x06, 0x47, 0x9c, 0xee, 0x94, 0x7b,
+	0xcb, 0x5c, 0xaa, 0x45, 0xc2, 0xa8, 0xf9, 0xb9, 0xe4, 0x48, 0x77, 0x2b, 0xb5, 0x9c, 0x8b, 0xcb,
+	0xe4, 0x92, 0x45, 0x71, 0x53, 0x3f, 0xcf, 0xa7, 0x48, 0xed, 0x8a, 0x32, 0x97, 0x41, 0xf2, 0x16,
+	0x9a, 0xd9, 0x62, 0x5c, 0xa3, 0xf9, 0x2e, 0x39, 0x85, 0x72, 0x73, 0x95, 0x24, 0x37, 0x40, 0x59,
+	0x0c, 0x98, 0xf3, 0x40, 0xf1, 0xab, 0x40, 0x9b, 0xa1, 0x8c, 0x94, 0x1b, 0x7e, 0x0b, 0x8d, 0xa6,
+	0x8d, 0xf2, 0x94, 0x52, 0x89, 0xf4, 0xa1, 0x2e, 0x99, 0x72, 0xc7, 0x74, 0x2f, 0xb1, 0x5f, 0x24,
+	0xf6, 0x62, 0x5b, 0xf6, 0x6e, 0x98, 0xba, 0x0a, 0x05, 0xba, 0xe3, 0xcb, 0x0d, 0x2f, 0x25, 0x33,
+	0xc5, 0x47, 0xda, 0xac, 0x54, 0x7c, 0xcc, 0x14, 0x3f, 0x7e, 0xe3, 0xfa, 0x2c, 0x30, 0x3e, 0xd2,
+	0x56, 0xa2, 0xbc, 0x2a, 0x2a, 0xb7, 0x81, 0x71, 0x43, 0x6d, 0x54, 0x78, 0x17, 0x99, 0x50, 0x0a,
+	0x1f, 0x2f, 0x2d, 0x2f, 0x35, 0x32, 0xd5, 0x1d, 0xd3, 0xf6, 0xa3, 0x54, 0x77, 0x9c, 0xa9, 0xee,
+	0xb8, 0xf3, 0xcb, 0x02, 0x3b, 0xaf, 0x9f, 0xbc, 0x86, 0x2d, 0x13, 0x2f, 0x53, 0xc5, 0xd9, 0x4a,
+	0x80, 0xf8, 0x24, 0x66, 0x4d, 0x1f, 0xf1, 0xaa, 0x13, 0xb5, 0xa0, 0xc8, 0x29, 0x40, 0xda, 0x61,
+	0xa9, 0x46, 0xbc, 0xea, 0x38, 0x2d, 0x61, 0x9d, 0xf7, 0x79, 0x75, 0x7e, 0x61, 0x52, 0xeb, 0x31,
+	0x93, 0x76, 0xbe, 0xc0, 0xfe, 0x83, 0x97, 0x27, 0x17, 0x70, 0x30, 0x2b, 0x3e, 0x74, 0x06, 0x55,
+	0x89, 0xeb, 0xf8, 0xce, 0x6f, 0xeb, 0x41, 0xb8, 0x8f, 0x6b, 0xc2, 0x7d, 0xec, 0x3b, 0x4f, 0x09,
+	0x8f, 0xf9, 0xb5, 0x31, 0xce, 0xa0, 0xaa, 0xd5, 0xeb, 0xf8, 0x33, 0x1b, 0x76, 0x64, 0xda, 0xbf,
+	0xb3, 0x7d, 0x68, 0x17, 0x08, 0xe7, 0x43, 0x7c, 0xfb, 0xfa, 0xe9, 0xed, 0x4e, 0x1c, 0x68, 0x7e,
+	0x44, 0x93, 0x85, 0x86, 0x52, 0x90, 0x56, 0xbe, 0x8d, 0x92, 0xeb, 0xb9, 0xd3, 0x2e, 0x6c, 0xab,
+	0xee, 0xc6, 0xdd, 0x76, 0xf2, 0x49, 0x38, 0xfd, 0x1b, 0x00, 0x00, 0xff, 0xff, 0x77, 0x5a, 0x46,
+	0xf6, 0x33, 0x06, 0x00, 0x00,
 }

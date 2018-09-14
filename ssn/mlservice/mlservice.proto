@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package ssn;
 
-// Ocr Voucher Labeler Service
-service OvlService {
-    rpc GetPrediction(OvlRequest) returns (OvlResponse) {}
+// Machine learning Service
+service MlService {
+    rpc GetPrediction(MlRequest) returns (MlResponse) {}
 }
 
 message PredictedField {
@@ -12,11 +12,11 @@ message PredictedField {
     uint32 confidence = 2;
 }
 
-message OvlRequest {
+message MlRequest {
     string ocr = 1;
 }
 
-message OvlResponse {
+message MlResponse {
     message OcrLineDk {
         PredictedField type = 1;
         PredictedField paymentId = 2;
@@ -58,4 +58,3 @@ message OvlResponse {
         VatDistributionDk vatDk = 15;
     }
 }
-
