@@ -59,7 +59,7 @@ message MlResponse {
     PredictedField documentType = 9;
     PredictedField paymentMethod = 10;
     PredictedField creditCardLastFourDigits = 11;
-    PredictedField InvoiceNumber = 17;
+    PredictedField invoiceNumber = 17;
 
     oneof ocrLine {
         OcrLineDk ocrLineDk = 12;
