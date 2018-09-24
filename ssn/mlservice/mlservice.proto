@@ -59,7 +59,7 @@ message MlResponse {
     PredictedField documentType = 9;
     PredictedField paymentMethod = 10;
     PredictedField creditCardLastFourDigits = 11;
-    PredictedField InvoiceNumber = 11;
+    PredictedField InvoiceNumber = 17;
 
     oneof ocrLine {
         OcrLineDk ocrLineDk = 12;
@@ -70,7 +70,7 @@ message MlResponse {
     }
 
     // oneof vatDistribution {
-    //     VatDistributionSe vatSe = 14;
-    //     VatDistributionDk vatDk = 15;
+    //     VatDistributionSe vatSe = 18;
+    //     VatDistributionDk vatDk = 19;
     // }
 }
