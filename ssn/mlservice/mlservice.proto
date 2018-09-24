@@ -27,14 +27,26 @@ message MlResponse {
         PredictedField paymentId = 1;
     }
 
-    message VatDistributionDk {
-        PredictedField vatDistributionDk25 = 1;
+    message OcrLineNo {
+        PredictedField paymentId = 1;
     }
 
-    message VatDistributionSe {
-        PredictedField vatDistributionSe12 = 1;
-        PredictedField vatDistributionSe25 = 2;
+    message OcrLineNl {
+        PredictedField paymentId = 1;
     }
+
+    message OcrLineFi {
+        PredictedField paymentId = 1;
+    }
+
+    // message VatDistributionDk {
+    //     PredictedField vatDistributionDk25 = 1;
+    // }
+    //
+    // message VatDistributionSe {
+    //     PredictedField vatDistributionSe12 = 1;
+    //     PredictedField vatDistributionSe25 = 2;
+    // }
 
     PredictedField orderDate = 1;
     PredictedField paymentDueDate = 2;
@@ -47,14 +59,18 @@ message MlResponse {
     PredictedField documentType = 9;
     PredictedField paymentMethod = 10;
     PredictedField creditCardLastFourDigits = 11;
+    PredictedField InvoiceNumber = 11;
 
     oneof ocrLine {
-        OcrLineDk ocrDk = 12;
-        OcrLineSe ocrSe = 13;
+        OcrLineDk ocrLineDk = 12;
+        OcrLineSe ocrLineSe = 13;
+        OcrLineNo ocrLineNo = 14;
+        OcrLineFi ocrLineFi = 15;
+        OcrLineNl ocrLineNl = 16;
     }
 
-    oneof vatDistribution {
-        VatDistributionSe vatSe = 14;
-        VatDistributionDk vatDk = 15;
-    }
+    // oneof vatDistribution {
+    //     VatDistributionSe vatSe = 14;
+    //     VatDistributionDk vatDk = 15;
+    // }
 }
