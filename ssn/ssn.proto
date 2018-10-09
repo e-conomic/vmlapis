@@ -4,6 +4,25 @@ package ssn;
 
 import "google/protobuf/timestamp.proto";
 import "ssn/imageservice/imageservice.proto";
+import "ssn/mlservice/mlservice.proto";
+
+service SsnService {
+  rpc GetOcrAndPrediction(SsnRequest) returns (SsnExtendedResponse) {}
+  rpc GetPrediction(SsnRequest) returns (SsnResponse) {}
+}
+
+message SsnRequest {
+  bytes document = 1;
+}
+
+message SsnResponse {
+  MlResponse response = 1;
+}
+
+message SsnExtendedResponse {
+  MlResponse response = 1;
+  repeated string ocr = 2;
+}
 
 message Page {
   uint32 index = 1;
