@@ -26,7 +26,9 @@ message MlResponse {
     }
 
     message OcrLineSe {
-        PredictedField paymentId = 1;
+        PredictedField bankgiroPaymentId = 1;
+        PredictedField bankgiroCreditorId = 2;
+        PredictedField plusgiroPaymentId = 3;
     }
 
     message OcrLineNo {
@@ -56,8 +58,8 @@ message MlResponse {
     PredictedField totalVat = 4;
     PredictedField totalInclVat = 5;
     PredictedField totalExclVat = 6;
-    PredictedField corporateId = 7;
-    PredictedField countryCode = 8;
+    PredictedField supplierCorporateId = 7;
+    PredictedField supplierCountryCode = 8;
     PredictedField documentType = 9;
     PredictedField paymentMethod = 10;
     PredictedField creditCardLastFourDigits = 11;
