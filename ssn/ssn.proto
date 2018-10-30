@@ -2,51 +2,50 @@ syntax = "proto3";
 
 package ssn;
 
-// import "google/protobuf/timestamp.proto";
+import "google/protobuf/timestamp.proto";
 import "ssn/imageservice/imageservice.proto";
 import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
-  rpc RawScan(RawScanningRequest) returns (RawScanningResponse) {}
+  rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
 }
 
-message RawScanningRequest {
+message ScanRequest {
   bytes doc = 1;
 }
 
-message RawScanningResponse {
+message InternalScanResponse {
   repeated imageservice.OcrScanImageResponse imgResp = 1;
   mlservice.MlResponse MlResp = 2; 
 }
 
-// message Page {
-//   uint32 index = 1;
-//   imageservice.Image image = 2;
-//   string tessHocr = 2;
-// }
+message Page {
+  uint32 index = 1;
+  imageservice.Image image = 2;
+}
 
-// message Document {
-//   string url = 1;
-//   repeated Page pages = 3;
-//   repeated string ocr = 4;
-// }
+message Document {
+  string url = 1;
+  repeated Page pages = 3;
+  repeated string ocr = 4;
+}
 
-// message Callback {
-//   string uri = 1;
-//   string hmacSigningKey = 2;
-// }
+message Callback {
+  string uri = 1;
+  string hmacSigningKey = 2;
+}
 
-// message WebRequestContext {
-//   string id = 1;
-//   string ip = 2;
-// }
+message WebRequestContext {
+  string id = 1;
+  string ip = 2;
+}
 
-// message Job {
-//   string uuid = 1;
-//   google.protobuf.Timestamp ctime = 2;
-//   WebRequestContext ctx =3;
-//   Document doc = 4;
-//   string error = 5;
-//   Callback callback = 6;
-//   string clientId = 7;
-// }
+message Job {
+  string uuid = 1;
+  google.protobuf.Timestamp ctime = 2;
+  WebRequestContext ctx =3;
+  Document doc = 4;
+  string error = 5;
+  Callback callback = 6;
+  string clientId = 7;
+}

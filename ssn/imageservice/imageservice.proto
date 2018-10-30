@@ -23,7 +23,7 @@ message Image {
 }
 
 message RasterizePdfRequest {
-  bytes pdfBytes = 1;
+  bytes bytes = 1;
   uint32 DPI = 2;
 }
 

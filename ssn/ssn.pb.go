@@ -8,6 +8,7 @@ import (
 	imageservice "github.com/e-conomic/proto/ssn/imageservice"
 	mlservice "github.com/e-conomic/proto/ssn/mlservice"
 	proto "github.com/golang/protobuf/proto"
+	timestamp "github.com/golang/protobuf/ptypes/timestamp"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
@@ -24,46 +25,46 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type RawScanningRequest struct {
+type ScanRequest struct {
 	Doc                  []byte   `protobuf:"bytes,1,opt,name=doc,proto3" json:"doc,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *RawScanningRequest) Reset()         { *m = RawScanningRequest{} }
-func (m *RawScanningRequest) String() string { return proto.CompactTextString(m) }
-func (*RawScanningRequest) ProtoMessage()    {}
-func (*RawScanningRequest) Descriptor() ([]byte, []int) {
+func (m *ScanRequest) Reset()         { *m = ScanRequest{} }
+func (m *ScanRequest) String() string { return proto.CompactTextString(m) }
+func (*ScanRequest) ProtoMessage()    {}
+func (*ScanRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_4c0d42de96027072, []int{0}
 }
 
-func (m *RawScanningRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RawScanningRequest.Unmarshal(m, b)
+func (m *ScanRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanRequest.Unmarshal(m, b)
 }
-func (m *RawScanningRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RawScanningRequest.Marshal(b, m, deterministic)
+func (m *ScanRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanRequest.Marshal(b, m, deterministic)
 }
-func (m *RawScanningRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RawScanningRequest.Merge(m, src)
+func (m *ScanRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanRequest.Merge(m, src)
 }
-func (m *RawScanningRequest) XXX_Size() int {
-	return xxx_messageInfo_RawScanningRequest.Size(m)
+func (m *ScanRequest) XXX_Size() int {
+	return xxx_messageInfo_ScanRequest.Size(m)
 }
-func (m *RawScanningRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_RawScanningRequest.DiscardUnknown(m)
+func (m *ScanRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RawScanningRequest proto.InternalMessageInfo
+var xxx_messageInfo_ScanRequest proto.InternalMessageInfo
 
-func (m *RawScanningRequest) GetDoc() []byte {
+func (m *ScanRequest) GetDoc() []byte {
 	if m != nil {
 		return m.Doc
 	}
 	return nil
 }
 
-type RawScanningResponse struct {
+type InternalScanResponse struct {
 	ImgResp              []*imageservice.OcrScanImageResponse `protobuf:"bytes,1,rep,name=imgResp,proto3" json:"imgResp,omitempty"`
 	MlResp               *mlservice.MlResponse                `protobuf:"bytes,2,opt,name=MlResp,proto3" json:"MlResp,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                             `json:"-"`
@@ -71,68 +72,373 @@ type RawScanningResponse struct {
 	XXX_sizecache        int32                                `json:"-"`
 }
 
-func (m *RawScanningResponse) Reset()         { *m = RawScanningResponse{} }
-func (m *RawScanningResponse) String() string { return proto.CompactTextString(m) }
-func (*RawScanningResponse) ProtoMessage()    {}
-func (*RawScanningResponse) Descriptor() ([]byte, []int) {
+func (m *InternalScanResponse) Reset()         { *m = InternalScanResponse{} }
+func (m *InternalScanResponse) String() string { return proto.CompactTextString(m) }
+func (*InternalScanResponse) ProtoMessage()    {}
+func (*InternalScanResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_4c0d42de96027072, []int{1}
 }
 
-func (m *RawScanningResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RawScanningResponse.Unmarshal(m, b)
+func (m *InternalScanResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_InternalScanResponse.Unmarshal(m, b)
 }
-func (m *RawScanningResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RawScanningResponse.Marshal(b, m, deterministic)
+func (m *InternalScanResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_InternalScanResponse.Marshal(b, m, deterministic)
 }
-func (m *RawScanningResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RawScanningResponse.Merge(m, src)
+func (m *InternalScanResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_InternalScanResponse.Merge(m, src)
 }
-func (m *RawScanningResponse) XXX_Size() int {
-	return xxx_messageInfo_RawScanningResponse.Size(m)
+func (m *InternalScanResponse) XXX_Size() int {
+	return xxx_messageInfo_InternalScanResponse.Size(m)
 }
-func (m *RawScanningResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_RawScanningResponse.DiscardUnknown(m)
+func (m *InternalScanResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_InternalScanResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RawScanningResponse proto.InternalMessageInfo
+var xxx_messageInfo_InternalScanResponse proto.InternalMessageInfo
 
-func (m *RawScanningResponse) GetImgResp() []*imageservice.OcrScanImageResponse {
+func (m *InternalScanResponse) GetImgResp() []*imageservice.OcrScanImageResponse {
 	if m != nil {
 		return m.ImgResp
 	}
 	return nil
 }
 
-func (m *RawScanningResponse) GetMlResp() *mlservice.MlResponse {
+func (m *InternalScanResponse) GetMlResp() *mlservice.MlResponse {
 	if m != nil {
 		return m.MlResp
 	}
 	return nil
 }
 
+type Page struct {
+	Index                uint32              `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
+	Image                *imageservice.Image `protobuf:"bytes,2,opt,name=image,proto3" json:"image,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
+}
+
+func (m *Page) Reset()         { *m = Page{} }
+func (m *Page) String() string { return proto.CompactTextString(m) }
+func (*Page) ProtoMessage()    {}
+func (*Page) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{2}
+}
+
+func (m *Page) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Page.Unmarshal(m, b)
+}
+func (m *Page) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Page.Marshal(b, m, deterministic)
+}
+func (m *Page) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Page.Merge(m, src)
+}
+func (m *Page) XXX_Size() int {
+	return xxx_messageInfo_Page.Size(m)
+}
+func (m *Page) XXX_DiscardUnknown() {
+	xxx_messageInfo_Page.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Page proto.InternalMessageInfo
+
+func (m *Page) GetIndex() uint32 {
+	if m != nil {
+		return m.Index
+	}
+	return 0
+}
+
+func (m *Page) GetImage() *imageservice.Image {
+	if m != nil {
+		return m.Image
+	}
+	return nil
+}
+
+type Document struct {
+	Url                  string   `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
+	Pages                []*Page  `protobuf:"bytes,3,rep,name=pages,proto3" json:"pages,omitempty"`
+	Ocr                  []string `protobuf:"bytes,4,rep,name=ocr,proto3" json:"ocr,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Document) Reset()         { *m = Document{} }
+func (m *Document) String() string { return proto.CompactTextString(m) }
+func (*Document) ProtoMessage()    {}
+func (*Document) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{3}
+}
+
+func (m *Document) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Document.Unmarshal(m, b)
+}
+func (m *Document) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Document.Marshal(b, m, deterministic)
+}
+func (m *Document) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Document.Merge(m, src)
+}
+func (m *Document) XXX_Size() int {
+	return xxx_messageInfo_Document.Size(m)
+}
+func (m *Document) XXX_DiscardUnknown() {
+	xxx_messageInfo_Document.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Document proto.InternalMessageInfo
+
+func (m *Document) GetUrl() string {
+	if m != nil {
+		return m.Url
+	}
+	return ""
+}
+
+func (m *Document) GetPages() []*Page {
+	if m != nil {
+		return m.Pages
+	}
+	return nil
+}
+
+func (m *Document) GetOcr() []string {
+	if m != nil {
+		return m.Ocr
+	}
+	return nil
+}
+
+type Callback struct {
+	Uri                  string   `protobuf:"bytes,1,opt,name=uri,proto3" json:"uri,omitempty"`
+	HmacSigningKey       string   `protobuf:"bytes,2,opt,name=hmacSigningKey,proto3" json:"hmacSigningKey,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *Callback) Reset()         { *m = Callback{} }
+func (m *Callback) String() string { return proto.CompactTextString(m) }
+func (*Callback) ProtoMessage()    {}
+func (*Callback) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{4}
+}
+
+func (m *Callback) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Callback.Unmarshal(m, b)
+}
+func (m *Callback) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Callback.Marshal(b, m, deterministic)
+}
+func (m *Callback) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Callback.Merge(m, src)
+}
+func (m *Callback) XXX_Size() int {
+	return xxx_messageInfo_Callback.Size(m)
+}
+func (m *Callback) XXX_DiscardUnknown() {
+	xxx_messageInfo_Callback.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Callback proto.InternalMessageInfo
+
+func (m *Callback) GetUri() string {
+	if m != nil {
+		return m.Uri
+	}
+	return ""
+}
+
+func (m *Callback) GetHmacSigningKey() string {
+	if m != nil {
+		return m.HmacSigningKey
+	}
+	return ""
+}
+
+type WebRequestContext struct {
+	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Ip                   string   `protobuf:"bytes,2,opt,name=ip,proto3" json:"ip,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *WebRequestContext) Reset()         { *m = WebRequestContext{} }
+func (m *WebRequestContext) String() string { return proto.CompactTextString(m) }
+func (*WebRequestContext) ProtoMessage()    {}
+func (*WebRequestContext) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{5}
+}
+
+func (m *WebRequestContext) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_WebRequestContext.Unmarshal(m, b)
+}
+func (m *WebRequestContext) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_WebRequestContext.Marshal(b, m, deterministic)
+}
+func (m *WebRequestContext) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_WebRequestContext.Merge(m, src)
+}
+func (m *WebRequestContext) XXX_Size() int {
+	return xxx_messageInfo_WebRequestContext.Size(m)
+}
+func (m *WebRequestContext) XXX_DiscardUnknown() {
+	xxx_messageInfo_WebRequestContext.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_WebRequestContext proto.InternalMessageInfo
+
+func (m *WebRequestContext) GetId() string {
+	if m != nil {
+		return m.Id
+	}
+	return ""
+}
+
+func (m *WebRequestContext) GetIp() string {
+	if m != nil {
+		return m.Ip
+	}
+	return ""
+}
+
+type Job struct {
+	Uuid                 string               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
+	Ctime                *timestamp.Timestamp `protobuf:"bytes,2,opt,name=ctime,proto3" json:"ctime,omitempty"`
+	Ctx                  *WebRequestContext   `protobuf:"bytes,3,opt,name=ctx,proto3" json:"ctx,omitempty"`
+	Doc                  *Document            `protobuf:"bytes,4,opt,name=doc,proto3" json:"doc,omitempty"`
+	Error                string               `protobuf:"bytes,5,opt,name=error,proto3" json:"error,omitempty"`
+	Callback             *Callback            `protobuf:"bytes,6,opt,name=callback,proto3" json:"callback,omitempty"`
+	ClientId             string               `protobuf:"bytes,7,opt,name=clientId,proto3" json:"clientId,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
+	XXX_unrecognized     []byte               `json:"-"`
+	XXX_sizecache        int32                `json:"-"`
+}
+
+func (m *Job) Reset()         { *m = Job{} }
+func (m *Job) String() string { return proto.CompactTextString(m) }
+func (*Job) ProtoMessage()    {}
+func (*Job) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{6}
+}
+
+func (m *Job) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_Job.Unmarshal(m, b)
+}
+func (m *Job) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_Job.Marshal(b, m, deterministic)
+}
+func (m *Job) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Job.Merge(m, src)
+}
+func (m *Job) XXX_Size() int {
+	return xxx_messageInfo_Job.Size(m)
+}
+func (m *Job) XXX_DiscardUnknown() {
+	xxx_messageInfo_Job.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_Job proto.InternalMessageInfo
+
+func (m *Job) GetUuid() string {
+	if m != nil {
+		return m.Uuid
+	}
+	return ""
+}
+
+func (m *Job) GetCtime() *timestamp.Timestamp {
+	if m != nil {
+		return m.Ctime
+	}
+	return nil
+}
+
+func (m *Job) GetCtx() *WebRequestContext {
+	if m != nil {
+		return m.Ctx
+	}
+	return nil
+}
+
+func (m *Job) GetDoc() *Document {
+	if m != nil {
+		return m.Doc
+	}
+	return nil
+}
+
+func (m *Job) GetError() string {
+	if m != nil {
+		return m.Error
+	}
+	return ""
+}
+
+func (m *Job) GetCallback() *Callback {
+	if m != nil {
+		return m.Callback
+	}
+	return nil
+}
+
+func (m *Job) GetClientId() string {
+	if m != nil {
+		return m.ClientId
+	}
+	return ""
+}
+
 func init() {
-	proto.RegisterType((*RawScanningRequest)(nil), "ssn.RawScanningRequest")
-	proto.RegisterType((*RawScanningResponse)(nil), "ssn.RawScanningResponse")
+	proto.RegisterType((*ScanRequest)(nil), "ssn.ScanRequest")
+	proto.RegisterType((*InternalScanResponse)(nil), "ssn.InternalScanResponse")
+	proto.RegisterType((*Page)(nil), "ssn.Page")
+	proto.RegisterType((*Document)(nil), "ssn.Document")
+	proto.RegisterType((*Callback)(nil), "ssn.Callback")
+	proto.RegisterType((*WebRequestContext)(nil), "ssn.WebRequestContext")
+	proto.RegisterType((*Job)(nil), "ssn.Job")
 }
 
 func init() { proto.RegisterFile("ssn/ssn.proto", fileDescriptor_4c0d42de96027072) }
 
 var fileDescriptor_4c0d42de96027072 = []byte{
-	// 219 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x90, 0x51, 0x4b, 0x87, 0x30,
-	0x14, 0xc5, 0x5b, 0xc2, 0x5f, 0xb8, 0x16, 0xc4, 0x22, 0x12, 0x21, 0x90, 0x05, 0xe1, 0x4b, 0x0b,
-	0xec, 0x35, 0x7a, 0x0f, 0x8a, 0x60, 0x7e, 0x02, 0x5b, 0x43, 0x06, 0x7a, 0x67, 0x5e, 0xab, 0xf7,
-	0x3e, 0x79, 0x6c, 0xd3, 0x42, 0x7c, 0xbb, 0xf7, 0x9e, 0xdf, 0x19, 0x67, 0x07, 0x4e, 0x89, 0xf0,
-	0x8e, 0x08, 0xe5, 0x38, 0xb9, 0xd9, 0xf1, 0x84, 0x08, 0x8b, 0x6b, 0x7f, 0xb3, 0x43, 0xdb, 0x19,
-	0x32, 0xd3, 0x97, 0xd5, 0x66, 0xb3, 0x44, 0xb2, 0xb8, 0xf2, 0xd0, 0xd0, 0xaf, 0xc4, 0xdf, 0x14,
-	0x65, 0x71, 0x03, 0x5c, 0xb5, 0xdf, 0x8d, 0x6e, 0x11, 0x2d, 0x76, 0xca, 0x7c, 0x7c, 0x1a, 0x9a,
-	0xf9, 0x19, 0x24, 0xef, 0x4e, 0xe7, 0xac, 0x64, 0xd5, 0x89, 0xf2, 0xa3, 0xf8, 0x61, 0x70, 0xbe,
-	0x01, 0x69, 0x74, 0x48, 0x86, 0x3f, 0x40, 0x6a, 0x87, 0xb0, 0xe6, 0xac, 0x4c, 0xaa, 0xac, 0x16,
-	0x72, 0x13, 0xe2, 0x55, 0x4f, 0xde, 0xf3, 0xe4, 0x6f, 0xab, 0x49, 0xad, 0x16, 0x7e, 0x0b, 0x87,
-	0x97, 0x3e, 0x98, 0x8f, 0x4b, 0x56, 0x65, 0xf5, 0x85, 0xfc, 0xcf, 0x17, 0x85, 0xc0, 0x2f, 0x50,
-	0xfd, 0x0c, 0xd0, 0x10, 0x36, 0x11, 0xe0, 0x8f, 0x90, 0x2e, 0x89, 0xf8, 0xa5, 0xf4, 0xd5, 0xec,
-	0x3f, 0x52, 0xe4, 0x7b, 0x21, 0xbe, 0x29, 0x8e, 0xde, 0x0e, 0xa1, 0x81, 0xfb, 0xdf, 0x00, 0x00,
-	0x00, 0xff, 0xff, 0x6d, 0xd6, 0xef, 0x64, 0x5b, 0x01, 0x00, 0x00,
+	// 492 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x92, 0x51, 0x6f, 0xd3, 0x30,
+	0x10, 0xc7, 0x49, 0xd3, 0x74, 0xed, 0x75, 0x9d, 0x86, 0x19, 0x28, 0x44, 0x42, 0xad, 0x82, 0x84,
+	0xba, 0x07, 0x52, 0xd4, 0xbd, 0xc2, 0xd3, 0x26, 0xa1, 0x32, 0xa1, 0x4d, 0x29, 0x12, 0xcf, 0x89,
+	0x63, 0x82, 0x45, 0x62, 0x07, 0xdb, 0x41, 0xe5, 0x99, 0x8f, 0xcc, 0x17, 0x40, 0x3e, 0x27, 0x5d,
+	0x0b, 0xbc, 0xf9, 0xce, 0xbf, 0xff, 0xf9, 0x7c, 0xf7, 0x87, 0x99, 0xd6, 0x62, 0xa5, 0xb5, 0x48,
+	0x1a, 0x25, 0x8d, 0x24, 0xbe, 0xd6, 0x22, 0x9a, 0x97, 0x52, 0x96, 0x15, 0x5b, 0x61, 0x2a, 0x6f,
+	0xbf, 0xac, 0x0c, 0xaf, 0x99, 0x36, 0x59, 0xdd, 0x38, 0x2a, 0x7a, 0x69, 0x45, 0xbc, 0xce, 0x4a,
+	0xa6, 0x99, 0xfa, 0xc1, 0x29, 0x3b, 0x0a, 0x3a, 0xe8, 0x85, 0x85, 0xea, 0xaa, 0x27, 0xf6, 0x27,
+	0x77, 0x1d, 0xcf, 0x61, 0xba, 0xa5, 0x99, 0x48, 0xd9, 0xf7, 0x96, 0x69, 0x43, 0xce, 0xc1, 0x2f,
+	0x24, 0x0d, 0xbd, 0x85, 0xb7, 0x3c, 0x4d, 0xed, 0x31, 0xfe, 0xe5, 0xc1, 0xc5, 0x46, 0x18, 0xa6,
+	0x44, 0x56, 0x39, 0x52, 0x37, 0x52, 0x68, 0x46, 0xde, 0xc2, 0x09, 0xaf, 0x4b, 0x1b, 0x86, 0xde,
+	0xc2, 0x5f, 0x4e, 0xd7, 0x71, 0x72, 0xf4, 0xfc, 0x1d, 0x55, 0x96, 0xdf, 0xd8, 0x5c, 0x2f, 0x4a,
+	0x7b, 0x09, 0x79, 0x0d, 0xa3, 0x8f, 0x15, 0x8a, 0x07, 0x0b, 0x6f, 0x39, 0x5d, 0x3f, 0x4d, 0x1e,
+	0x3a, 0x73, 0x17, 0xc8, 0x77, 0x50, 0xfc, 0x1e, 0x86, 0xf7, 0x59, 0xc9, 0xc8, 0x05, 0x04, 0x5c,
+	0x14, 0x6c, 0x87, 0x1d, 0xce, 0x52, 0x17, 0x90, 0x4b, 0x08, 0xf0, 0xe9, 0xae, 0xd6, 0x93, 0xe3,
+	0x46, 0x5c, 0x07, 0x8e, 0x88, 0xef, 0x60, 0x7c, 0x23, 0x69, 0x5b, 0x33, 0x81, 0x9f, 0x6d, 0x55,
+	0x85, 0xa5, 0x26, 0xa9, 0x3d, 0x92, 0x39, 0x04, 0x8d, 0x55, 0x86, 0x3e, 0xfe, 0x68, 0x92, 0xd8,
+	0x95, 0xdc, 0xa3, 0x1c, 0xf3, 0x56, 0x22, 0xa9, 0x0a, 0x87, 0x0b, 0xdf, 0x4a, 0x24, 0x55, 0xf1,
+	0x0d, 0x8c, 0xaf, 0xb3, 0xaa, 0xca, 0x33, 0xfa, 0xcd, 0x15, 0xe4, 0x0f, 0x05, 0x39, 0x79, 0x05,
+	0x67, 0x5f, 0xeb, 0x8c, 0x6e, 0x79, 0x29, 0xb8, 0x28, 0x6f, 0xd9, 0x4f, 0x6c, 0x71, 0x92, 0xfe,
+	0x95, 0x8d, 0xaf, 0xe0, 0xf1, 0x67, 0x96, 0x77, 0x5b, 0xb8, 0x96, 0xc2, 0xb0, 0x9d, 0x21, 0x67,
+	0x30, 0xe0, 0x45, 0x57, 0x6d, 0xc0, 0x0b, 0x8c, 0x9b, 0xae, 0xc0, 0x80, 0x37, 0xf1, 0x6f, 0x0f,
+	0xfc, 0x0f, 0x32, 0x27, 0x04, 0x86, 0x6d, 0xbb, 0x27, 0xf1, 0x4c, 0xde, 0x40, 0x40, 0xad, 0x5f,
+	0xba, 0x91, 0x44, 0x89, 0x33, 0x53, 0xd2, 0x9b, 0x29, 0xf9, 0xd4, 0x9b, 0x29, 0x75, 0x20, 0x59,
+	0x82, 0x4f, 0xcd, 0x2e, 0xf4, 0x91, 0x7f, 0x86, 0x3f, 0xff, 0xa7, 0xa5, 0xd4, 0x22, 0x64, 0xee,
+	0x4c, 0x32, 0x44, 0x72, 0x86, 0x64, 0x3f, 0x53, 0xf4, 0x8c, 0xdd, 0x12, 0x53, 0x4a, 0xaa, 0x30,
+	0xc0, 0x8e, 0x5c, 0x40, 0x2e, 0x61, 0x4c, 0xbb, 0x49, 0x85, 0xa3, 0x03, 0x6d, 0x3f, 0xbe, 0x74,
+	0x7f, 0x4d, 0x22, 0x18, 0xd3, 0x8a, 0x33, 0x61, 0x36, 0x45, 0x78, 0x82, 0x35, 0xf6, 0xf1, 0xfa,
+	0x16, 0x60, 0xab, 0xc5, 0xd6, 0x2d, 0x97, 0xbc, 0x83, 0xd3, 0x43, 0x77, 0x92, 0x73, 0x2c, 0x79,
+	0x60, 0xe9, 0xe8, 0x39, 0x66, 0xfe, 0x67, 0xe1, 0xf8, 0x51, 0x3e, 0xc2, 0x79, 0x5c, 0xfd, 0x09,
+	0x00, 0x00, 0xff, 0xff, 0x3c, 0x96, 0xd9, 0x4c, 0x80, 0x03, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -147,7 +453,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type SsnServiceClient interface {
-	RawScan(ctx context.Context, in *RawScanningRequest, opts ...grpc.CallOption) (*RawScanningResponse, error)
+	InternalScan(ctx context.Context, in *ScanRequest, opts ...grpc.CallOption) (*InternalScanResponse, error)
 }
 
 type ssnServiceClient struct {
@@ -158,9 +464,9 @@ func NewSsnServiceClient(cc *grpc.ClientConn) SsnServiceClient {
 	return &ssnServiceClient{cc}
 }
 
-func (c *ssnServiceClient) RawScan(ctx context.Context, in *RawScanningRequest, opts ...grpc.CallOption) (*RawScanningResponse, error) {
-	out := new(RawScanningResponse)
-	err := c.cc.Invoke(ctx, "/ssn.SsnService/RawScan", in, out, opts...)
+func (c *ssnServiceClient) InternalScan(ctx context.Context, in *ScanRequest, opts ...grpc.CallOption) (*InternalScanResponse, error) {
+	out := new(InternalScanResponse)
+	err := c.cc.Invoke(ctx, "/ssn.SsnService/InternalScan", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -169,27 +475,27 @@ func (c *ssnServiceClient) RawScan(ctx context.Context, in *RawScanningRequest, 
 
 // SsnServiceServer is the server API for SsnService service.
 type SsnServiceServer interface {
-	RawScan(context.Context, *RawScanningRequest) (*RawScanningResponse, error)
+	InternalScan(context.Context, *ScanRequest) (*InternalScanResponse, error)
 }
 
 func RegisterSsnServiceServer(s *grpc.Server, srv SsnServiceServer) {
 	s.RegisterService(&_SsnService_serviceDesc, srv)
 }
 
-func _SsnService_RawScan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RawScanningRequest)
+func _SsnService_InternalScan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ScanRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SsnServiceServer).RawScan(ctx, in)
+		return srv.(SsnServiceServer).InternalScan(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.SsnService/RawScan",
+		FullMethod: "/ssn.SsnService/InternalScan",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SsnServiceServer).RawScan(ctx, req.(*RawScanningRequest))
+		return srv.(SsnServiceServer).InternalScan(ctx, req.(*ScanRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -199,8 +505,8 @@ var _SsnService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*SsnServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "RawScan",
-			Handler:    _SsnService_RawScan_Handler,
+			MethodName: "InternalScan",
+			Handler:    _SsnService_InternalScan_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
