@@ -6,44 +6,40 @@ option go_package = "github.com/e-conomic/proto/ssn/imageservice";
 
 // Interface exported by the server.
 service ImageService {
-  rpc GetOcr(OcrRequest) returns (OcrResponse) {}
-  rpc PdfRasterizer(PdfRasterizerRequest) returns (stream PdfRasterizerResponse) {}
+  rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse) {}
+  rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse) {}
 }
 
 enum ImageFormat {
   PNG = 0;
   JPEG = 1;
+  GIF = 2;
+  PGM = 3;
 }
 
 message Image {
-  bytes data = 1;
+  bytes bytes = 1;
   ImageFormat format = 2;
 }
 
-message PdfRasterizerRequest {
+message RasterizePdfRequest {
   bytes pdfBytes = 1;
-  repeated uint32 indecies = 2;
+  uint32 DPI = 2;
 }
 
-message PdfRasterizerResponse {
+message RasterizePdfResponse {
   uint32 index = 1;
   Image image = 2;
 }
 
-message OcrRequest {
+message OcrScanImageRequest {
   Image image = 1;
-  Language lang = 2;
 }
 
-message OcrResponse {
-  string hocr = 1;
-}
-
-enum Language {
-  ENG = 0;
-  DAN = 1;
-  SWE = 2;
-  NOR = 3;
-  FIN = 4;
-  NLD = 5;
+message OcrScanImageResponse {
+  string tessHocr = 1;
+  // float  scaleFactor = 2;
+  // trimBox what what cut off 
+  // Google Vision Ord
+  // Other transformations
 }

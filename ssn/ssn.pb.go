@@ -8,7 +8,6 @@ import (
 	imageservice "github.com/e-conomic/proto/ssn/imageservice"
 	mlservice "github.com/e-conomic/proto/ssn/mlservice"
 	proto "github.com/golang/protobuf/proto"
-	timestamp "github.com/golang/protobuf/ptypes/timestamp"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	math "math"
@@ -25,461 +24,115 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type SsnRequest struct {
-	Document             []byte   `protobuf:"bytes,1,opt,name=document,proto3" json:"document,omitempty"`
+type RawScanningRequest struct {
+	Doc                  []byte   `protobuf:"bytes,1,opt,name=doc,proto3" json:"doc,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *SsnRequest) Reset()         { *m = SsnRequest{} }
-func (m *SsnRequest) String() string { return proto.CompactTextString(m) }
-func (*SsnRequest) ProtoMessage()    {}
-func (*SsnRequest) Descriptor() ([]byte, []int) {
+func (m *RawScanningRequest) Reset()         { *m = RawScanningRequest{} }
+func (m *RawScanningRequest) String() string { return proto.CompactTextString(m) }
+func (*RawScanningRequest) ProtoMessage()    {}
+func (*RawScanningRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_4c0d42de96027072, []int{0}
 }
 
-func (m *SsnRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SsnRequest.Unmarshal(m, b)
+func (m *RawScanningRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RawScanningRequest.Unmarshal(m, b)
 }
-func (m *SsnRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SsnRequest.Marshal(b, m, deterministic)
+func (m *RawScanningRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RawScanningRequest.Marshal(b, m, deterministic)
 }
-func (m *SsnRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SsnRequest.Merge(m, src)
+func (m *RawScanningRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RawScanningRequest.Merge(m, src)
 }
-func (m *SsnRequest) XXX_Size() int {
-	return xxx_messageInfo_SsnRequest.Size(m)
+func (m *RawScanningRequest) XXX_Size() int {
+	return xxx_messageInfo_RawScanningRequest.Size(m)
 }
-func (m *SsnRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_SsnRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SsnRequest proto.InternalMessageInfo
-
-func (m *SsnRequest) GetDocument() []byte {
-	if m != nil {
-		return m.Document
-	}
-	return nil
+func (m *RawScanningRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_RawScanningRequest.DiscardUnknown(m)
 }
 
-type SsnResponse struct {
-	Response             *mlservice.MlResponse `protobuf:"bytes,1,opt,name=response,proto3" json:"response,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
+var xxx_messageInfo_RawScanningRequest proto.InternalMessageInfo
 
-func (m *SsnResponse) Reset()         { *m = SsnResponse{} }
-func (m *SsnResponse) String() string { return proto.CompactTextString(m) }
-func (*SsnResponse) ProtoMessage()    {}
-func (*SsnResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{1}
-}
-
-func (m *SsnResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SsnResponse.Unmarshal(m, b)
-}
-func (m *SsnResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SsnResponse.Marshal(b, m, deterministic)
-}
-func (m *SsnResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SsnResponse.Merge(m, src)
-}
-func (m *SsnResponse) XXX_Size() int {
-	return xxx_messageInfo_SsnResponse.Size(m)
-}
-func (m *SsnResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_SsnResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SsnResponse proto.InternalMessageInfo
-
-func (m *SsnResponse) GetResponse() *mlservice.MlResponse {
-	if m != nil {
-		return m.Response
-	}
-	return nil
-}
-
-type SsnExtendedResponse struct {
-	Response             *mlservice.MlResponse `protobuf:"bytes,1,opt,name=response,proto3" json:"response,omitempty"`
-	Ocr                  []string              `protobuf:"bytes,2,rep,name=ocr,proto3" json:"ocr,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *SsnExtendedResponse) Reset()         { *m = SsnExtendedResponse{} }
-func (m *SsnExtendedResponse) String() string { return proto.CompactTextString(m) }
-func (*SsnExtendedResponse) ProtoMessage()    {}
-func (*SsnExtendedResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{2}
-}
-
-func (m *SsnExtendedResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SsnExtendedResponse.Unmarshal(m, b)
-}
-func (m *SsnExtendedResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SsnExtendedResponse.Marshal(b, m, deterministic)
-}
-func (m *SsnExtendedResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SsnExtendedResponse.Merge(m, src)
-}
-func (m *SsnExtendedResponse) XXX_Size() int {
-	return xxx_messageInfo_SsnExtendedResponse.Size(m)
-}
-func (m *SsnExtendedResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_SsnExtendedResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SsnExtendedResponse proto.InternalMessageInfo
-
-func (m *SsnExtendedResponse) GetResponse() *mlservice.MlResponse {
-	if m != nil {
-		return m.Response
-	}
-	return nil
-}
-
-func (m *SsnExtendedResponse) GetOcr() []string {
-	if m != nil {
-		return m.Ocr
-	}
-	return nil
-}
-
-type Page struct {
-	Index                uint32              `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
-	Image                *imageservice.Image `protobuf:"bytes,2,opt,name=image,proto3" json:"image,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
-	XXX_unrecognized     []byte              `json:"-"`
-	XXX_sizecache        int32               `json:"-"`
-}
-
-func (m *Page) Reset()         { *m = Page{} }
-func (m *Page) String() string { return proto.CompactTextString(m) }
-func (*Page) ProtoMessage()    {}
-func (*Page) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{3}
-}
-
-func (m *Page) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Page.Unmarshal(m, b)
-}
-func (m *Page) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Page.Marshal(b, m, deterministic)
-}
-func (m *Page) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Page.Merge(m, src)
-}
-func (m *Page) XXX_Size() int {
-	return xxx_messageInfo_Page.Size(m)
-}
-func (m *Page) XXX_DiscardUnknown() {
-	xxx_messageInfo_Page.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Page proto.InternalMessageInfo
-
-func (m *Page) GetIndex() uint32 {
-	if m != nil {
-		return m.Index
-	}
-	return 0
-}
-
-func (m *Page) GetImage() *imageservice.Image {
-	if m != nil {
-		return m.Image
-	}
-	return nil
-}
-
-type Document struct {
-	Url                  string   `protobuf:"bytes,1,opt,name=url,proto3" json:"url,omitempty"`
-	Pages                []*Page  `protobuf:"bytes,3,rep,name=pages,proto3" json:"pages,omitempty"`
-	Ocr                  []string `protobuf:"bytes,4,rep,name=ocr,proto3" json:"ocr,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *Document) Reset()         { *m = Document{} }
-func (m *Document) String() string { return proto.CompactTextString(m) }
-func (*Document) ProtoMessage()    {}
-func (*Document) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{4}
-}
-
-func (m *Document) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Document.Unmarshal(m, b)
-}
-func (m *Document) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Document.Marshal(b, m, deterministic)
-}
-func (m *Document) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Document.Merge(m, src)
-}
-func (m *Document) XXX_Size() int {
-	return xxx_messageInfo_Document.Size(m)
-}
-func (m *Document) XXX_DiscardUnknown() {
-	xxx_messageInfo_Document.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Document proto.InternalMessageInfo
-
-func (m *Document) GetUrl() string {
-	if m != nil {
-		return m.Url
-	}
-	return ""
-}
-
-func (m *Document) GetPages() []*Page {
-	if m != nil {
-		return m.Pages
-	}
-	return nil
-}
-
-func (m *Document) GetOcr() []string {
-	if m != nil {
-		return m.Ocr
-	}
-	return nil
-}
-
-type Callback struct {
-	Uri                  string   `protobuf:"bytes,1,opt,name=uri,proto3" json:"uri,omitempty"`
-	HmacSigningKey       string   `protobuf:"bytes,2,opt,name=hmacSigningKey,proto3" json:"hmacSigningKey,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *Callback) Reset()         { *m = Callback{} }
-func (m *Callback) String() string { return proto.CompactTextString(m) }
-func (*Callback) ProtoMessage()    {}
-func (*Callback) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{5}
-}
-
-func (m *Callback) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Callback.Unmarshal(m, b)
-}
-func (m *Callback) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Callback.Marshal(b, m, deterministic)
-}
-func (m *Callback) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Callback.Merge(m, src)
-}
-func (m *Callback) XXX_Size() int {
-	return xxx_messageInfo_Callback.Size(m)
-}
-func (m *Callback) XXX_DiscardUnknown() {
-	xxx_messageInfo_Callback.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Callback proto.InternalMessageInfo
-
-func (m *Callback) GetUri() string {
-	if m != nil {
-		return m.Uri
-	}
-	return ""
-}
-
-func (m *Callback) GetHmacSigningKey() string {
-	if m != nil {
-		return m.HmacSigningKey
-	}
-	return ""
-}
-
-type WebRequestContext struct {
-	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Ip                   string   `protobuf:"bytes,2,opt,name=ip,proto3" json:"ip,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *WebRequestContext) Reset()         { *m = WebRequestContext{} }
-func (m *WebRequestContext) String() string { return proto.CompactTextString(m) }
-func (*WebRequestContext) ProtoMessage()    {}
-func (*WebRequestContext) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{6}
-}
-
-func (m *WebRequestContext) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_WebRequestContext.Unmarshal(m, b)
-}
-func (m *WebRequestContext) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_WebRequestContext.Marshal(b, m, deterministic)
-}
-func (m *WebRequestContext) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_WebRequestContext.Merge(m, src)
-}
-func (m *WebRequestContext) XXX_Size() int {
-	return xxx_messageInfo_WebRequestContext.Size(m)
-}
-func (m *WebRequestContext) XXX_DiscardUnknown() {
-	xxx_messageInfo_WebRequestContext.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_WebRequestContext proto.InternalMessageInfo
-
-func (m *WebRequestContext) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *WebRequestContext) GetIp() string {
-	if m != nil {
-		return m.Ip
-	}
-	return ""
-}
-
-type Job struct {
-	Uuid                 string               `protobuf:"bytes,1,opt,name=uuid,proto3" json:"uuid,omitempty"`
-	Ctime                *timestamp.Timestamp `protobuf:"bytes,2,opt,name=ctime,proto3" json:"ctime,omitempty"`
-	Ctx                  *WebRequestContext   `protobuf:"bytes,3,opt,name=ctx,proto3" json:"ctx,omitempty"`
-	Doc                  *Document            `protobuf:"bytes,4,opt,name=doc,proto3" json:"doc,omitempty"`
-	Error                string               `protobuf:"bytes,5,opt,name=error,proto3" json:"error,omitempty"`
-	Callback             *Callback            `protobuf:"bytes,6,opt,name=callback,proto3" json:"callback,omitempty"`
-	ClientId             string               `protobuf:"bytes,7,opt,name=clientId,proto3" json:"clientId,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
-}
-
-func (m *Job) Reset()         { *m = Job{} }
-func (m *Job) String() string { return proto.CompactTextString(m) }
-func (*Job) ProtoMessage()    {}
-func (*Job) Descriptor() ([]byte, []int) {
-	return fileDescriptor_4c0d42de96027072, []int{7}
-}
-
-func (m *Job) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Job.Unmarshal(m, b)
-}
-func (m *Job) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Job.Marshal(b, m, deterministic)
-}
-func (m *Job) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Job.Merge(m, src)
-}
-func (m *Job) XXX_Size() int {
-	return xxx_messageInfo_Job.Size(m)
-}
-func (m *Job) XXX_DiscardUnknown() {
-	xxx_messageInfo_Job.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Job proto.InternalMessageInfo
-
-func (m *Job) GetUuid() string {
-	if m != nil {
-		return m.Uuid
-	}
-	return ""
-}
-
-func (m *Job) GetCtime() *timestamp.Timestamp {
-	if m != nil {
-		return m.Ctime
-	}
-	return nil
-}
-
-func (m *Job) GetCtx() *WebRequestContext {
-	if m != nil {
-		return m.Ctx
-	}
-	return nil
-}
-
-func (m *Job) GetDoc() *Document {
+func (m *RawScanningRequest) GetDoc() []byte {
 	if m != nil {
 		return m.Doc
 	}
 	return nil
 }
 
-func (m *Job) GetError() string {
-	if m != nil {
-		return m.Error
-	}
-	return ""
+type RawScanningResponse struct {
+	ImgResp              []*imageservice.OcrScanImageResponse `protobuf:"bytes,1,rep,name=imgResp,proto3" json:"imgResp,omitempty"`
+	MlResp               *mlservice.MlResponse                `protobuf:"bytes,2,opt,name=MlResp,proto3" json:"MlResp,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                             `json:"-"`
+	XXX_unrecognized     []byte                               `json:"-"`
+	XXX_sizecache        int32                                `json:"-"`
 }
 
-func (m *Job) GetCallback() *Callback {
+func (m *RawScanningResponse) Reset()         { *m = RawScanningResponse{} }
+func (m *RawScanningResponse) String() string { return proto.CompactTextString(m) }
+func (*RawScanningResponse) ProtoMessage()    {}
+func (*RawScanningResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_4c0d42de96027072, []int{1}
+}
+
+func (m *RawScanningResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RawScanningResponse.Unmarshal(m, b)
+}
+func (m *RawScanningResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RawScanningResponse.Marshal(b, m, deterministic)
+}
+func (m *RawScanningResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RawScanningResponse.Merge(m, src)
+}
+func (m *RawScanningResponse) XXX_Size() int {
+	return xxx_messageInfo_RawScanningResponse.Size(m)
+}
+func (m *RawScanningResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_RawScanningResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RawScanningResponse proto.InternalMessageInfo
+
+func (m *RawScanningResponse) GetImgResp() []*imageservice.OcrScanImageResponse {
 	if m != nil {
-		return m.Callback
+		return m.ImgResp
 	}
 	return nil
 }
 
-func (m *Job) GetClientId() string {
+func (m *RawScanningResponse) GetMlResp() *mlservice.MlResponse {
 	if m != nil {
-		return m.ClientId
+		return m.MlResp
 	}
-	return ""
+	return nil
 }
 
 func init() {
-	proto.RegisterType((*SsnRequest)(nil), "ssn.SsnRequest")
-	proto.RegisterType((*SsnResponse)(nil), "ssn.SsnResponse")
-	proto.RegisterType((*SsnExtendedResponse)(nil), "ssn.SsnExtendedResponse")
-	proto.RegisterType((*Page)(nil), "ssn.Page")
-	proto.RegisterType((*Document)(nil), "ssn.Document")
-	proto.RegisterType((*Callback)(nil), "ssn.Callback")
-	proto.RegisterType((*WebRequestContext)(nil), "ssn.WebRequestContext")
-	proto.RegisterType((*Job)(nil), "ssn.Job")
+	proto.RegisterType((*RawScanningRequest)(nil), "ssn.RawScanningRequest")
+	proto.RegisterType((*RawScanningResponse)(nil), "ssn.RawScanningResponse")
 }
 
 func init() { proto.RegisterFile("ssn/ssn.proto", fileDescriptor_4c0d42de96027072) }
 
 var fileDescriptor_4c0d42de96027072 = []byte{
-	// 510 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x92, 0x5f, 0x6e, 0xd3, 0x40,
-	0x10, 0xc6, 0x49, 0x9c, 0x94, 0x64, 0x42, 0x4a, 0xd9, 0x00, 0xb2, 0x22, 0xa1, 0x44, 0x46, 0x42,
-	0xe9, 0x8b, 0x03, 0x29, 0x07, 0x00, 0x5a, 0x14, 0x15, 0x84, 0x1a, 0x6d, 0x90, 0x90, 0x78, 0x73,
-	0xd6, 0x83, 0x59, 0x61, 0xef, 0x1a, 0xef, 0x1a, 0x85, 0x0b, 0x70, 0x61, 0x2e, 0x80, 0x76, 0xfc,
-	0x27, 0xb4, 0x48, 0xbc, 0xf4, 0x6d, 0x66, 0xf6, 0x37, 0x9f, 0xc7, 0x33, 0x1f, 0x8c, 0x8d, 0x51,
-	0x4b, 0x63, 0x54, 0x98, 0x17, 0xda, 0x6a, 0xe6, 0x19, 0xa3, 0xa6, 0xb3, 0x44, 0xeb, 0x24, 0xc5,
-	0x25, 0x95, 0x76, 0xe5, 0x97, 0xa5, 0x95, 0x19, 0x1a, 0x1b, 0x65, 0x79, 0x45, 0x4d, 0x9f, 0xba,
-	0x26, 0x99, 0x45, 0x09, 0x1a, 0x2c, 0x7e, 0x48, 0x81, 0xd7, 0x92, 0x1a, 0x7a, 0xe2, 0xa0, 0x2c,
-	0x6d, 0x88, 0x36, 0xaa, 0x9e, 0x83, 0x05, 0xc0, 0xd6, 0x28, 0x8e, 0xdf, 0x4b, 0x34, 0x96, 0x4d,
-	0x61, 0x10, 0x6b, 0x51, 0x66, 0xa8, 0xac, 0xdf, 0x99, 0x77, 0x16, 0xf7, 0x78, 0x9b, 0x07, 0xaf,
-	0x60, 0x44, 0xa4, 0xc9, 0xb5, 0x32, 0xc8, 0x5e, 0xc0, 0xa0, 0xa8, 0x63, 0x42, 0x47, 0xab, 0x47,
-	0xe1, 0x41, 0xfc, 0x43, 0xda, 0x80, 0xbc, 0xc5, 0x82, 0xcf, 0x30, 0xd9, 0x1a, 0xf5, 0x76, 0x6f,
-	0x51, 0xc5, 0x18, 0xdf, 0x42, 0x89, 0x9d, 0x80, 0xa7, 0x45, 0xe1, 0x77, 0xe7, 0xde, 0x62, 0xc8,
-	0x5d, 0x18, 0xac, 0xa1, 0xb7, 0x89, 0x12, 0x64, 0x0f, 0xa1, 0x2f, 0x55, 0x8c, 0x7b, 0x52, 0x1a,
-	0xf3, 0x2a, 0x61, 0xa7, 0xd0, 0xa7, 0xd5, 0xf8, 0x5d, 0xd2, 0x9f, 0x84, 0xd7, 0x16, 0x75, 0xe9,
-	0x12, 0x5e, 0x11, 0xc1, 0x15, 0x0c, 0x2e, 0xea, 0x5f, 0x76, 0x9f, 0x29, 0x8b, 0x94, 0xa4, 0x86,
-	0xdc, 0x85, 0x6c, 0x06, 0xfd, 0xdc, 0x75, 0xfa, 0xde, 0xdc, 0x5b, 0x8c, 0x56, 0xc3, 0xd0, 0xdd,
-	0x6c, 0x43, 0xed, 0x54, 0x6f, 0x26, 0xeb, 0x1d, 0x26, 0xbb, 0x80, 0xc1, 0x79, 0x94, 0xa6, 0xbb,
-	0x48, 0x7c, 0xab, 0x04, 0xe5, 0x41, 0x50, 0xb2, 0x67, 0x70, 0xfc, 0x35, 0x8b, 0xc4, 0x56, 0x26,
-	0x4a, 0xaa, 0xe4, 0x3d, 0xfe, 0xa4, 0x11, 0x87, 0xfc, 0x46, 0x35, 0x38, 0x83, 0x07, 0x9f, 0x70,
-	0x57, 0xdf, 0xe9, 0x5c, 0x2b, 0x8b, 0x7b, 0xcb, 0x8e, 0xa1, 0x2b, 0xe3, 0x5a, 0xad, 0x2b, 0x63,
-	0xca, 0xf3, 0x5a, 0xa0, 0x2b, 0xf3, 0xe0, 0x77, 0x07, 0xbc, 0x77, 0x7a, 0xc7, 0x18, 0xf4, 0xca,
-	0xb2, 0x25, 0x29, 0x66, 0xcf, 0xa1, 0x2f, 0x9c, 0xa1, 0xea, 0x95, 0x4c, 0xc3, 0xca, 0x6d, 0x61,
-	0xe3, 0xb6, 0xf0, 0x63, 0xe3, 0x36, 0x5e, 0x81, 0x6c, 0x01, 0x9e, 0xb0, 0x7b, 0xdf, 0x23, 0xfe,
-	0x31, 0xfd, 0xf9, 0x3f, 0x23, 0x71, 0x87, 0xb0, 0x19, 0x78, 0xb1, 0x16, 0x7e, 0x8f, 0xc8, 0x31,
-	0x91, 0xcd, 0x4e, 0xb9, 0x7b, 0x71, 0x57, 0xc2, 0xa2, 0xd0, 0x85, 0xdf, 0xa7, 0x89, 0xaa, 0x84,
-	0x9d, 0xc2, 0x40, 0xd4, 0x9b, 0xf2, 0x8f, 0xfe, 0xea, 0x6d, 0xd6, 0xc7, 0xdb, 0x67, 0x67, 0x54,
-	0x91, 0x4a, 0x54, 0xf6, 0x32, 0xf6, 0xef, 0x92, 0x46, 0x9b, 0xaf, 0x7e, 0x75, 0xc8, 0xd3, 0xdb,
-	0xea, 0xba, 0xec, 0x0d, 0x4c, 0xd6, 0x68, 0xaf, 0x44, 0xf1, 0x5a, 0xc5, 0x9b, 0x02, 0x63, 0x29,
-	0xac, 0xd4, 0x8a, 0xdd, 0x27, 0xe9, 0x83, 0xf7, 0xa7, 0x7e, 0x53, 0xb8, 0x69, 0xd0, 0xe0, 0x0e,
-	0x7b, 0x09, 0xe3, 0x35, 0xda, 0xff, 0x75, 0x9f, 0x1c, 0x0a, 0x4d, 0xd7, 0xee, 0x88, 0x76, 0x79,
-	0xf6, 0x27, 0x00, 0x00, 0xff, 0xff, 0xe2, 0xfa, 0xf6, 0xfd, 0xdd, 0x03, 0x00, 0x00,
+	// 219 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x90, 0x51, 0x4b, 0x87, 0x30,
+	0x14, 0xc5, 0x5b, 0xc2, 0x5f, 0xb8, 0x16, 0xc4, 0x22, 0x12, 0x21, 0x90, 0x05, 0xe1, 0x4b, 0x0b,
+	0xec, 0x35, 0x7a, 0x0f, 0x8a, 0x60, 0x7e, 0x02, 0x5b, 0x43, 0x06, 0x7a, 0x67, 0x5e, 0xab, 0xf7,
+	0x3e, 0x79, 0x6c, 0xd3, 0x42, 0x7c, 0xbb, 0xf7, 0x9e, 0xdf, 0x19, 0x67, 0x07, 0x4e, 0x89, 0xf0,
+	0x8e, 0x08, 0xe5, 0x38, 0xb9, 0xd9, 0xf1, 0x84, 0x08, 0x8b, 0x6b, 0x7f, 0xb3, 0x43, 0xdb, 0x19,
+	0x32, 0xd3, 0x97, 0xd5, 0x66, 0xb3, 0x44, 0xb2, 0xb8, 0xf2, 0xd0, 0xd0, 0xaf, 0xc4, 0xdf, 0x14,
+	0x65, 0x71, 0x03, 0x5c, 0xb5, 0xdf, 0x8d, 0x6e, 0x11, 0x2d, 0x76, 0xca, 0x7c, 0x7c, 0x1a, 0x9a,
+	0xf9, 0x19, 0x24, 0xef, 0x4e, 0xe7, 0xac, 0x64, 0xd5, 0x89, 0xf2, 0xa3, 0xf8, 0x61, 0x70, 0xbe,
+	0x01, 0x69, 0x74, 0x48, 0x86, 0x3f, 0x40, 0x6a, 0x87, 0xb0, 0xe6, 0xac, 0x4c, 0xaa, 0xac, 0x16,
+	0x72, 0x13, 0xe2, 0x55, 0x4f, 0xde, 0xf3, 0xe4, 0x6f, 0xab, 0x49, 0xad, 0x16, 0x7e, 0x0b, 0x87,
+	0x97, 0x3e, 0x98, 0x8f, 0x4b, 0x56, 0x65, 0xf5, 0x85, 0xfc, 0xcf, 0x17, 0x85, 0xc0, 0x2f, 0x50,
+	0xfd, 0x0c, 0xd0, 0x10, 0x36, 0x11, 0xe0, 0x8f, 0x90, 0x2e, 0x89, 0xf8, 0xa5, 0xf4, 0xd5, 0xec,
+	0x3f, 0x52, 0xe4, 0x7b, 0x21, 0xbe, 0x29, 0x8e, 0xde, 0x0e, 0xa1, 0x81, 0xfb, 0xdf, 0x00, 0x00,
+	0x00, 0xff, 0xff, 0x6d, 0xd6, 0xef, 0x64, 0x5b, 0x01, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -494,8 +147,7 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type SsnServiceClient interface {
-	GetOcrAndPrediction(ctx context.Context, in *SsnRequest, opts ...grpc.CallOption) (*SsnExtendedResponse, error)
-	GetPrediction(ctx context.Context, in *SsnRequest, opts ...grpc.CallOption) (*SsnResponse, error)
+	RawScan(ctx context.Context, in *RawScanningRequest, opts ...grpc.CallOption) (*RawScanningResponse, error)
 }
 
 type ssnServiceClient struct {
@@ -506,18 +158,9 @@ func NewSsnServiceClient(cc *grpc.ClientConn) SsnServiceClient {
 	return &ssnServiceClient{cc}
 }
 
-func (c *ssnServiceClient) GetOcrAndPrediction(ctx context.Context, in *SsnRequest, opts ...grpc.CallOption) (*SsnExtendedResponse, error) {
-	out := new(SsnExtendedResponse)
-	err := c.cc.Invoke(ctx, "/ssn.SsnService/GetOcrAndPrediction", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *ssnServiceClient) GetPrediction(ctx context.Context, in *SsnRequest, opts ...grpc.CallOption) (*SsnResponse, error) {
-	out := new(SsnResponse)
-	err := c.cc.Invoke(ctx, "/ssn.SsnService/GetPrediction", in, out, opts...)
+func (c *ssnServiceClient) RawScan(ctx context.Context, in *RawScanningRequest, opts ...grpc.CallOption) (*RawScanningResponse, error) {
+	out := new(RawScanningResponse)
+	err := c.cc.Invoke(ctx, "/ssn.SsnService/RawScan", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -526,46 +169,27 @@ func (c *ssnServiceClient) GetPrediction(ctx context.Context, in *SsnRequest, op
 
 // SsnServiceServer is the server API for SsnService service.
 type SsnServiceServer interface {
-	GetOcrAndPrediction(context.Context, *SsnRequest) (*SsnExtendedResponse, error)
-	GetPrediction(context.Context, *SsnRequest) (*SsnResponse, error)
+	RawScan(context.Context, *RawScanningRequest) (*RawScanningResponse, error)
 }
 
 func RegisterSsnServiceServer(s *grpc.Server, srv SsnServiceServer) {
 	s.RegisterService(&_SsnService_serviceDesc, srv)
 }
 
-func _SsnService_GetOcrAndPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SsnRequest)
+func _SsnService_RawScan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RawScanningRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(SsnServiceServer).GetOcrAndPrediction(ctx, in)
+		return srv.(SsnServiceServer).RawScan(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.SsnService/GetOcrAndPrediction",
+		FullMethod: "/ssn.SsnService/RawScan",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SsnServiceServer).GetOcrAndPrediction(ctx, req.(*SsnRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _SsnService_GetPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SsnRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(SsnServiceServer).GetPrediction(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/ssn.SsnService/GetPrediction",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SsnServiceServer).GetPrediction(ctx, req.(*SsnRequest))
+		return srv.(SsnServiceServer).RawScan(ctx, req.(*RawScanningRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -575,12 +199,8 @@ var _SsnService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*SsnServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetOcrAndPrediction",
-			Handler:    _SsnService_GetOcrAndPrediction_Handler,
-		},
-		{
-			MethodName: "GetPrediction",
-			Handler:    _SsnService_GetPrediction_Handler,
+			MethodName: "RawScan",
+			Handler:    _SsnService_RawScan_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

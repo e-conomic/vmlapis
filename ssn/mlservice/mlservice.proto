@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package mlservice;
 
+import "ssn/imageservice/imageservice.proto";
+
 option go_package = "github.com/e-conomic/proto/ssn/mlservice";
 
 // Machine learning Service
@@ -15,7 +17,7 @@ message PredictedField {
 }
 
 message MlRequest {
-    string ocr = 1;
+    repeated imageservice.OcrScanImageResponse imgResp = 1;
 }
 
 message MlResponse {

@@ -27,16 +27,22 @@ type ImageFormat int32
 const (
 	ImageFormat_PNG  ImageFormat = 0
 	ImageFormat_JPEG ImageFormat = 1
+	ImageFormat_GIF  ImageFormat = 2
+	ImageFormat_PGM  ImageFormat = 3
 )
 
 var ImageFormat_name = map[int32]string{
 	0: "PNG",
 	1: "JPEG",
+	2: "GIF",
+	3: "PGM",
 }
 
 var ImageFormat_value = map[string]int32{
 	"PNG":  0,
 	"JPEG": 1,
+	"GIF":  2,
+	"PGM":  3,
 }
 
 func (x ImageFormat) String() string {
@@ -47,45 +53,8 @@ func (ImageFormat) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_f52ba60e79477746, []int{0}
 }
 
-type Language int32
-
-const (
-	Language_ENG Language = 0
-	Language_DAN Language = 1
-	Language_SWE Language = 2
-	Language_NOR Language = 3
-	Language_FIN Language = 4
-	Language_NLD Language = 5
-)
-
-var Language_name = map[int32]string{
-	0: "ENG",
-	1: "DAN",
-	2: "SWE",
-	3: "NOR",
-	4: "FIN",
-	5: "NLD",
-}
-
-var Language_value = map[string]int32{
-	"ENG": 0,
-	"DAN": 1,
-	"SWE": 2,
-	"NOR": 3,
-	"FIN": 4,
-	"NLD": 5,
-}
-
-func (x Language) String() string {
-	return proto.EnumName(Language_name, int32(x))
-}
-
-func (Language) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_f52ba60e79477746, []int{1}
-}
-
 type Image struct {
-	Data                 []byte      `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
+	Bytes                []byte      `protobuf:"bytes,1,opt,name=bytes,proto3" json:"bytes,omitempty"`
 	Format               ImageFormat `protobuf:"varint,2,opt,name=format,proto3,enum=imageservice.ImageFormat" json:"format,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
 	XXX_unrecognized     []byte      `json:"-"`
@@ -117,9 +86,9 @@ func (m *Image) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_Image proto.InternalMessageInfo
 
-func (m *Image) GetData() []byte {
+func (m *Image) GetBytes() []byte {
 	if m != nil {
-		return m.Data
+		return m.Bytes
 	}
 	return nil
 }
@@ -131,54 +100,54 @@ func (m *Image) GetFormat() ImageFormat {
 	return ImageFormat_PNG
 }
 
-type PdfRasterizerRequest struct {
+type RasterizePdfRequest struct {
 	PdfBytes             []byte   `protobuf:"bytes,1,opt,name=pdfBytes,proto3" json:"pdfBytes,omitempty"`
-	Indecies             []uint32 `protobuf:"varint,2,rep,packed,name=indecies,proto3" json:"indecies,omitempty"`
+	DPI                  uint32   `protobuf:"varint,2,opt,name=DPI,proto3" json:"DPI,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PdfRasterizerRequest) Reset()         { *m = PdfRasterizerRequest{} }
-func (m *PdfRasterizerRequest) String() string { return proto.CompactTextString(m) }
-func (*PdfRasterizerRequest) ProtoMessage()    {}
-func (*PdfRasterizerRequest) Descriptor() ([]byte, []int) {
+func (m *RasterizePdfRequest) Reset()         { *m = RasterizePdfRequest{} }
+func (m *RasterizePdfRequest) String() string { return proto.CompactTextString(m) }
+func (*RasterizePdfRequest) ProtoMessage()    {}
+func (*RasterizePdfRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f52ba60e79477746, []int{1}
 }
 
-func (m *PdfRasterizerRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PdfRasterizerRequest.Unmarshal(m, b)
+func (m *RasterizePdfRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RasterizePdfRequest.Unmarshal(m, b)
 }
-func (m *PdfRasterizerRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PdfRasterizerRequest.Marshal(b, m, deterministic)
+func (m *RasterizePdfRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RasterizePdfRequest.Marshal(b, m, deterministic)
 }
-func (m *PdfRasterizerRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PdfRasterizerRequest.Merge(m, src)
+func (m *RasterizePdfRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RasterizePdfRequest.Merge(m, src)
 }
-func (m *PdfRasterizerRequest) XXX_Size() int {
-	return xxx_messageInfo_PdfRasterizerRequest.Size(m)
+func (m *RasterizePdfRequest) XXX_Size() int {
+	return xxx_messageInfo_RasterizePdfRequest.Size(m)
 }
-func (m *PdfRasterizerRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_PdfRasterizerRequest.DiscardUnknown(m)
+func (m *RasterizePdfRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_RasterizePdfRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PdfRasterizerRequest proto.InternalMessageInfo
+var xxx_messageInfo_RasterizePdfRequest proto.InternalMessageInfo
 
-func (m *PdfRasterizerRequest) GetPdfBytes() []byte {
+func (m *RasterizePdfRequest) GetPdfBytes() []byte {
 	if m != nil {
 		return m.PdfBytes
 	}
 	return nil
 }
 
-func (m *PdfRasterizerRequest) GetIndecies() []uint32 {
+func (m *RasterizePdfRequest) GetDPI() uint32 {
 	if m != nil {
-		return m.Indecies
+		return m.DPI
 	}
-	return nil
+	return 0
 }
 
-type PdfRasterizerResponse struct {
+type RasterizePdfResponse struct {
 	Index                uint32   `protobuf:"varint,1,opt,name=index,proto3" json:"index,omitempty"`
 	Image                *Image   `protobuf:"bytes,2,opt,name=image,proto3" json:"image,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -186,139 +155,130 @@ type PdfRasterizerResponse struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PdfRasterizerResponse) Reset()         { *m = PdfRasterizerResponse{} }
-func (m *PdfRasterizerResponse) String() string { return proto.CompactTextString(m) }
-func (*PdfRasterizerResponse) ProtoMessage()    {}
-func (*PdfRasterizerResponse) Descriptor() ([]byte, []int) {
+func (m *RasterizePdfResponse) Reset()         { *m = RasterizePdfResponse{} }
+func (m *RasterizePdfResponse) String() string { return proto.CompactTextString(m) }
+func (*RasterizePdfResponse) ProtoMessage()    {}
+func (*RasterizePdfResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f52ba60e79477746, []int{2}
 }
 
-func (m *PdfRasterizerResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PdfRasterizerResponse.Unmarshal(m, b)
+func (m *RasterizePdfResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RasterizePdfResponse.Unmarshal(m, b)
 }
-func (m *PdfRasterizerResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PdfRasterizerResponse.Marshal(b, m, deterministic)
+func (m *RasterizePdfResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RasterizePdfResponse.Marshal(b, m, deterministic)
 }
-func (m *PdfRasterizerResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PdfRasterizerResponse.Merge(m, src)
+func (m *RasterizePdfResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RasterizePdfResponse.Merge(m, src)
 }
-func (m *PdfRasterizerResponse) XXX_Size() int {
-	return xxx_messageInfo_PdfRasterizerResponse.Size(m)
+func (m *RasterizePdfResponse) XXX_Size() int {
+	return xxx_messageInfo_RasterizePdfResponse.Size(m)
 }
-func (m *PdfRasterizerResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_PdfRasterizerResponse.DiscardUnknown(m)
+func (m *RasterizePdfResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_RasterizePdfResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PdfRasterizerResponse proto.InternalMessageInfo
+var xxx_messageInfo_RasterizePdfResponse proto.InternalMessageInfo
 
-func (m *PdfRasterizerResponse) GetIndex() uint32 {
+func (m *RasterizePdfResponse) GetIndex() uint32 {
 	if m != nil {
 		return m.Index
 	}
 	return 0
 }
 
-func (m *PdfRasterizerResponse) GetImage() *Image {
+func (m *RasterizePdfResponse) GetImage() *Image {
 	if m != nil {
 		return m.Image
 	}
 	return nil
 }
 
-type OcrRequest struct {
+type OcrScanImageRequest struct {
 	Image                *Image   `protobuf:"bytes,1,opt,name=image,proto3" json:"image,omitempty"`
-	Lang                 Language `protobuf:"varint,2,opt,name=lang,proto3,enum=imageservice.Language" json:"lang,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *OcrRequest) Reset()         { *m = OcrRequest{} }
-func (m *OcrRequest) String() string { return proto.CompactTextString(m) }
-func (*OcrRequest) ProtoMessage()    {}
-func (*OcrRequest) Descriptor() ([]byte, []int) {
+func (m *OcrScanImageRequest) Reset()         { *m = OcrScanImageRequest{} }
+func (m *OcrScanImageRequest) String() string { return proto.CompactTextString(m) }
+func (*OcrScanImageRequest) ProtoMessage()    {}
+func (*OcrScanImageRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f52ba60e79477746, []int{3}
 }
 
-func (m *OcrRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OcrRequest.Unmarshal(m, b)
+func (m *OcrScanImageRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_OcrScanImageRequest.Unmarshal(m, b)
 }
-func (m *OcrRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OcrRequest.Marshal(b, m, deterministic)
+func (m *OcrScanImageRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_OcrScanImageRequest.Marshal(b, m, deterministic)
 }
-func (m *OcrRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OcrRequest.Merge(m, src)
+func (m *OcrScanImageRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_OcrScanImageRequest.Merge(m, src)
 }
-func (m *OcrRequest) XXX_Size() int {
-	return xxx_messageInfo_OcrRequest.Size(m)
+func (m *OcrScanImageRequest) XXX_Size() int {
+	return xxx_messageInfo_OcrScanImageRequest.Size(m)
 }
-func (m *OcrRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_OcrRequest.DiscardUnknown(m)
+func (m *OcrScanImageRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_OcrScanImageRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OcrRequest proto.InternalMessageInfo
+var xxx_messageInfo_OcrScanImageRequest proto.InternalMessageInfo
 
-func (m *OcrRequest) GetImage() *Image {
+func (m *OcrScanImageRequest) GetImage() *Image {
 	if m != nil {
 		return m.Image
 	}
 	return nil
 }
 
-func (m *OcrRequest) GetLang() Language {
-	if m != nil {
-		return m.Lang
-	}
-	return Language_ENG
-}
-
-type OcrResponse struct {
-	Hocr                 string   `protobuf:"bytes,1,opt,name=hocr,proto3" json:"hocr,omitempty"`
+type OcrScanImageResponse struct {
+	TessHocr             string   `protobuf:"bytes,1,opt,name=tessHocr,proto3" json:"tessHocr,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *OcrResponse) Reset()         { *m = OcrResponse{} }
-func (m *OcrResponse) String() string { return proto.CompactTextString(m) }
-func (*OcrResponse) ProtoMessage()    {}
-func (*OcrResponse) Descriptor() ([]byte, []int) {
+func (m *OcrScanImageResponse) Reset()         { *m = OcrScanImageResponse{} }
+func (m *OcrScanImageResponse) String() string { return proto.CompactTextString(m) }
+func (*OcrScanImageResponse) ProtoMessage()    {}
+func (*OcrScanImageResponse) Descriptor() ([]byte, []int) {
 	return fileDescriptor_f52ba60e79477746, []int{4}
 }
 
-func (m *OcrResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_OcrResponse.Unmarshal(m, b)
+func (m *OcrScanImageResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_OcrScanImageResponse.Unmarshal(m, b)
 }
-func (m *OcrResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_OcrResponse.Marshal(b, m, deterministic)
+func (m *OcrScanImageResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_OcrScanImageResponse.Marshal(b, m, deterministic)
 }
-func (m *OcrResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_OcrResponse.Merge(m, src)
+func (m *OcrScanImageResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_OcrScanImageResponse.Merge(m, src)
 }
-func (m *OcrResponse) XXX_Size() int {
-	return xxx_messageInfo_OcrResponse.Size(m)
+func (m *OcrScanImageResponse) XXX_Size() int {
+	return xxx_messageInfo_OcrScanImageResponse.Size(m)
 }
-func (m *OcrResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_OcrResponse.DiscardUnknown(m)
+func (m *OcrScanImageResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_OcrScanImageResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_OcrResponse proto.InternalMessageInfo
+var xxx_messageInfo_OcrScanImageResponse proto.InternalMessageInfo
 
-func (m *OcrResponse) GetHocr() string {
+func (m *OcrScanImageResponse) GetTessHocr() string {
 	if m != nil {
-		return m.Hocr
+		return m.TessHocr
 	}
 	return ""
 }
 
 func init() {
 	proto.RegisterEnum("imageservice.ImageFormat", ImageFormat_name, ImageFormat_value)
-	proto.RegisterEnum("imageservice.Language", Language_name, Language_value)
 	proto.RegisterType((*Image)(nil), "imageservice.Image")
-	proto.RegisterType((*PdfRasterizerRequest)(nil), "imageservice.PdfRasterizerRequest")
-	proto.RegisterType((*PdfRasterizerResponse)(nil), "imageservice.PdfRasterizerResponse")
-	proto.RegisterType((*OcrRequest)(nil), "imageservice.OcrRequest")
-	proto.RegisterType((*OcrResponse)(nil), "imageservice.OcrResponse")
+	proto.RegisterType((*RasterizePdfRequest)(nil), "imageservice.RasterizePdfRequest")
+	proto.RegisterType((*RasterizePdfResponse)(nil), "imageservice.RasterizePdfResponse")
+	proto.RegisterType((*OcrScanImageRequest)(nil), "imageservice.OcrScanImageRequest")
+	proto.RegisterType((*OcrScanImageResponse)(nil), "imageservice.OcrScanImageResponse")
 }
 
 func init() {
@@ -326,33 +286,29 @@ func init() {
 }
 
 var fileDescriptor_f52ba60e79477746 = []byte{
-	// 407 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x52, 0x5d, 0x8f, 0xd2, 0x40,
-	0x14, 0xdd, 0xa1, 0x2d, 0x8b, 0x17, 0x30, 0xcd, 0xb8, 0x9a, 0x2e, 0x4f, 0xb5, 0xfb, 0x82, 0x98,
-	0xa5, 0x8a, 0x3f, 0x40, 0xdd, 0xf0, 0x11, 0x0c, 0x29, 0x64, 0x78, 0xd0, 0x18, 0x5f, 0xca, 0x74,
-	0x28, 0x4d, 0x6c, 0x07, 0x3b, 0x83, 0x51, 0xff, 0x93, 0xff, 0xd1, 0xcc, 0xb4, 0x54, 0x4a, 0x88,
-	0xbe, 0x9d, 0x33, 0xf7, 0xdc, 0x73, 0x4f, 0x6f, 0x2f, 0xdc, 0x09, 0x91, 0xf9, 0x49, 0x1a, 0xc6,
-	0x4c, 0xb0, 0xfc, 0x7b, 0x42, 0x59, 0x8d, 0x0c, 0xf7, 0x39, 0x97, 0x1c, 0x77, 0x4e, 0xdf, 0xbc,
-	0x00, 0xac, 0xb9, 0xe2, 0x18, 0x83, 0x19, 0x85, 0x32, 0x74, 0x90, 0x8b, 0xfa, 0x1d, 0xa2, 0x31,
-	0x7e, 0x0d, 0xcd, 0x2d, 0xcf, 0xd3, 0x50, 0x3a, 0x0d, 0x17, 0xf5, 0x1f, 0x8f, 0x6e, 0x87, 0x35,
-	0x3f, 0xdd, 0x38, 0xd5, 0x02, 0x52, 0x0a, 0xbd, 0x00, 0x6e, 0x56, 0xd1, 0x96, 0x84, 0x42, 0xb2,
-	0x3c, 0xf9, 0xc5, 0x72, 0xc2, 0xbe, 0x1d, 0x98, 0x90, 0xb8, 0x07, 0xad, 0x7d, 0xb4, 0x7d, 0xf8,
-	0x29, 0x99, 0x28, 0x47, 0x54, 0x5c, 0xd5, 0x92, 0x2c, 0x62, 0x34, 0x61, 0xc2, 0x69, 0xb8, 0x46,
-	0xbf, 0x4b, 0x2a, 0xee, 0x7d, 0x82, 0xa7, 0x67, 0x7e, 0x62, 0xcf, 0x33, 0xc1, 0xf0, 0x0d, 0x58,
-	0x4a, 0xf4, 0x43, 0xbb, 0x75, 0x49, 0x41, 0xf0, 0x0b, 0xb0, 0x74, 0x44, 0x1d, 0xb8, 0x3d, 0x7a,
-	0x72, 0x21, 0x30, 0x29, 0x14, 0x1e, 0x05, 0x58, 0xd2, 0x2a, 0x5f, 0xd5, 0x88, 0xfe, 0xd7, 0x88,
-	0x07, 0x60, 0x7e, 0x0d, 0xb3, 0xb8, 0xdc, 0xc9, 0xb3, 0xba, 0x72, 0x11, 0x66, 0xf1, 0x41, 0x89,
-	0xb5, 0xc6, 0x7b, 0x0e, 0x6d, 0x3d, 0xa4, 0x0c, 0x8d, 0xc1, 0xdc, 0x71, 0x9a, 0xeb, 0x21, 0x8f,
-	0x88, 0xc6, 0x03, 0x17, 0xda, 0x27, 0x8b, 0xc4, 0xd7, 0x60, 0xac, 0x82, 0x99, 0x7d, 0x85, 0x5b,
-	0x60, 0x7e, 0x58, 0x4d, 0x66, 0x36, 0x1a, 0xbc, 0x83, 0xd6, 0xd1, 0x56, 0x95, 0x27, 0xba, 0x7c,
-	0x0d, 0xc6, 0xf8, 0x7d, 0x60, 0x23, 0x05, 0xd6, 0x1f, 0x27, 0x76, 0x43, 0x81, 0x60, 0x49, 0x6c,
-	0x43, 0x81, 0xe9, 0x3c, 0xb0, 0x4d, 0xfd, 0xb2, 0x18, 0xdb, 0xd6, 0xe8, 0x37, 0x82, 0x8e, 0x1e,
-	0xb2, 0x2e, 0x62, 0xe2, 0xb7, 0xd0, 0x9c, 0x31, 0xb9, 0xa4, 0x39, 0x76, 0xea, 0xf9, 0xff, 0xae,
-	0xa4, 0x77, 0x7b, 0xa1, 0x52, 0x7c, 0x87, 0x77, 0x85, 0xbf, 0x40, 0xb7, 0xf6, 0x5f, 0xb0, 0x57,
-	0x57, 0x5f, 0x3a, 0x82, 0xde, 0xdd, 0x3f, 0x35, 0x47, 0xef, 0x57, 0xe8, 0xe1, 0xfe, 0xf3, 0xcb,
-	0x38, 0x91, 0xbb, 0xc3, 0x66, 0x48, 0x79, 0xea, 0xb3, 0x7b, 0xca, 0x33, 0x9e, 0x26, 0xd4, 0xd7,
-	0x17, 0xec, 0x9f, 0x5f, 0xf9, 0xa6, 0xa9, 0xdf, 0xdf, 0xfc, 0x09, 0x00, 0x00, 0xff, 0xff, 0x77,
-	0x52, 0x46, 0x2c, 0x00, 0x03, 0x00, 0x00,
+	// 351 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x92, 0x4f, 0x4f, 0xc2, 0x30,
+	0x18, 0x87, 0x29, 0x08, 0xe2, 0xcb, 0x30, 0x4b, 0xe1, 0x80, 0x9c, 0xb0, 0x5e, 0x50, 0x03, 0xd3,
+	0xf9, 0x05, 0x0c, 0x2a, 0x13, 0x13, 0x75, 0x29, 0x07, 0xa2, 0xb7, 0x51, 0x0a, 0xee, 0xb0, 0x15,
+	0xd7, 0x62, 0xd4, 0x8f, 0xe7, 0x27, 0x33, 0xb4, 0x84, 0x6c, 0x64, 0xd1, 0xdb, 0x7e, 0xef, 0xde,
+	0x3e, 0xef, 0xd3, 0x3f, 0x70, 0x22, 0x65, 0xec, 0x84, 0x51, 0xb0, 0xe0, 0x92, 0x27, 0x1f, 0x21,
+	0xe3, 0x99, 0xd0, 0x5f, 0x26, 0x42, 0x09, 0x6c, 0xa5, 0x6b, 0xc4, 0x87, 0xf2, 0x68, 0x9d, 0x71,
+	0x13, 0xca, 0xd3, 0x2f, 0xc5, 0x65, 0x0b, 0x75, 0x50, 0xd7, 0xa2, 0x26, 0xe0, 0x4b, 0xa8, 0xcc,
+	0x45, 0x12, 0x05, 0xaa, 0x55, 0xec, 0xa0, 0xee, 0xa1, 0x7b, 0xd4, 0xcf, 0x10, 0xf5, 0xd2, 0xa1,
+	0x6e, 0xa0, 0x9b, 0x46, 0x72, 0x03, 0x0d, 0x1a, 0x48, 0xc5, 0x93, 0xf0, 0x9b, 0xfb, 0xb3, 0x39,
+	0xe5, 0xef, 0x2b, 0x2e, 0x15, 0x6e, 0x43, 0x75, 0x39, 0x9b, 0x0f, 0x52, 0x23, 0xb6, 0x19, 0xdb,
+	0x50, 0xba, 0xf5, 0x47, 0x7a, 0x44, 0x9d, 0xae, 0x3f, 0xc9, 0x04, 0x9a, 0x59, 0x88, 0x5c, 0x8a,
+	0x58, 0x6a, 0xcb, 0x30, 0x9e, 0xf1, 0x4f, 0x8d, 0xa8, 0x53, 0x13, 0xf0, 0x29, 0x94, 0xb5, 0x96,
+	0x26, 0xd4, 0xdc, 0x46, 0x8e, 0x24, 0x35, 0x1d, 0xe4, 0x1a, 0x1a, 0xcf, 0x2c, 0x19, 0xb3, 0x20,
+	0x36, 0xe5, 0x8d, 0xdd, 0x96, 0x80, 0xfe, 0x25, 0xb8, 0xd0, 0xcc, 0x12, 0x36, 0x6a, 0x6d, 0xa8,
+	0x2a, 0x2e, 0xe5, 0xbd, 0x60, 0x89, 0xa6, 0x1c, 0xd0, 0x6d, 0x3e, 0x73, 0xa1, 0x96, 0x3a, 0x2a,
+	0xbc, 0x0f, 0x25, 0xff, 0xc9, 0xb3, 0x0b, 0xb8, 0x0a, 0x7b, 0x0f, 0xfe, 0x9d, 0x67, 0xa3, 0x75,
+	0xc9, 0x1b, 0x0d, 0xed, 0xa2, 0xfe, 0xe7, 0x3d, 0xda, 0x25, 0xf7, 0x07, 0x81, 0xa5, 0x17, 0x8d,
+	0x8d, 0x05, 0x9e, 0x80, 0x95, 0x1e, 0x8c, 0x8f, 0xb3, 0x92, 0x39, 0xdb, 0x6a, 0x93, 0xbf, 0x5a,
+	0x8c, 0x37, 0x29, 0xe0, 0x17, 0xb0, 0xd2, 0x87, 0xbd, 0x0b, 0xce, 0xb9, 0xcd, 0x5d, 0x70, 0xde,
+	0x5d, 0x91, 0xc2, 0x05, 0x1a, 0xf4, 0x5e, 0xcf, 0x17, 0xa1, 0x7a, 0x5b, 0x4d, 0xfb, 0x4c, 0x44,
+	0x0e, 0xef, 0x31, 0x11, 0x8b, 0x28, 0x64, 0x8e, 0x7e, 0x8a, 0xce, 0xee, 0x73, 0x9d, 0x56, 0x74,
+	0xfd, 0xea, 0x37, 0x00, 0x00, 0xff, 0xff, 0x77, 0x93, 0xc4, 0x75, 0xc9, 0x02, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -367,8 +323,8 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type ImageServiceClient interface {
-	GetOcr(ctx context.Context, in *OcrRequest, opts ...grpc.CallOption) (*OcrResponse, error)
-	PdfRasterizer(ctx context.Context, in *PdfRasterizerRequest, opts ...grpc.CallOption) (ImageService_PdfRasterizerClient, error)
+	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
+	RasterizePdf(ctx context.Context, in *RasterizePdfRequest, opts ...grpc.CallOption) (ImageService_RasterizePdfClient, error)
 }
 
 type imageServiceClient struct {
@@ -379,21 +335,21 @@ func NewImageServiceClient(cc *grpc.ClientConn) ImageServiceClient {
 	return &imageServiceClient{cc}
 }
 
-func (c *imageServiceClient) GetOcr(ctx context.Context, in *OcrRequest, opts ...grpc.CallOption) (*OcrResponse, error) {
-	out := new(OcrResponse)
-	err := c.cc.Invoke(ctx, "/imageservice.ImageService/GetOcr", in, out, opts...)
+func (c *imageServiceClient) OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error) {
+	out := new(OcrScanImageResponse)
+	err := c.cc.Invoke(ctx, "/imageservice.ImageService/OcrScanImage", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *imageServiceClient) PdfRasterizer(ctx context.Context, in *PdfRasterizerRequest, opts ...grpc.CallOption) (ImageService_PdfRasterizerClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_ImageService_serviceDesc.Streams[0], "/imageservice.ImageService/PdfRasterizer", opts...)
+func (c *imageServiceClient) RasterizePdf(ctx context.Context, in *RasterizePdfRequest, opts ...grpc.CallOption) (ImageService_RasterizePdfClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_ImageService_serviceDesc.Streams[0], "/imageservice.ImageService/RasterizePdf", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &imageServicePdfRasterizerClient{stream}
+	x := &imageServiceRasterizePdfClient{stream}
 	if err := x.ClientStream.SendMsg(in); err != nil {
 		return nil, err
 	}
@@ -403,17 +359,17 @@ func (c *imageServiceClient) PdfRasterizer(ctx context.Context, in *PdfRasterize
 	return x, nil
 }
 
-type ImageService_PdfRasterizerClient interface {
-	Recv() (*PdfRasterizerResponse, error)
+type ImageService_RasterizePdfClient interface {
+	Recv() (*RasterizePdfResponse, error)
 	grpc.ClientStream
 }
 
-type imageServicePdfRasterizerClient struct {
+type imageServiceRasterizePdfClient struct {
 	grpc.ClientStream
 }
 
-func (x *imageServicePdfRasterizerClient) Recv() (*PdfRasterizerResponse, error) {
-	m := new(PdfRasterizerResponse)
+func (x *imageServiceRasterizePdfClient) Recv() (*RasterizePdfResponse, error) {
+	m := new(RasterizePdfResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -422,50 +378,50 @@ func (x *imageServicePdfRasterizerClient) Recv() (*PdfRasterizerResponse, error)
 
 // ImageServiceServer is the server API for ImageService service.
 type ImageServiceServer interface {
-	GetOcr(context.Context, *OcrRequest) (*OcrResponse, error)
-	PdfRasterizer(*PdfRasterizerRequest, ImageService_PdfRasterizerServer) error
+	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
+	RasterizePdf(*RasterizePdfRequest, ImageService_RasterizePdfServer) error
 }
 
 func RegisterImageServiceServer(s *grpc.Server, srv ImageServiceServer) {
 	s.RegisterService(&_ImageService_serviceDesc, srv)
 }
 
-func _ImageService_GetOcr_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(OcrRequest)
+func _ImageService_OcrScanImage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OcrScanImageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ImageServiceServer).GetOcr(ctx, in)
+		return srv.(ImageServiceServer).OcrScanImage(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/imageservice.ImageService/GetOcr",
+		FullMethod: "/imageservice.ImageService/OcrScanImage",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ImageServiceServer).GetOcr(ctx, req.(*OcrRequest))
+		return srv.(ImageServiceServer).OcrScanImage(ctx, req.(*OcrScanImageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ImageService_PdfRasterizer_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(PdfRasterizerRequest)
+func _ImageService_RasterizePdf_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(RasterizePdfRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
-	return srv.(ImageServiceServer).PdfRasterizer(m, &imageServicePdfRasterizerServer{stream})
+	return srv.(ImageServiceServer).RasterizePdf(m, &imageServiceRasterizePdfServer{stream})
 }
 
-type ImageService_PdfRasterizerServer interface {
-	Send(*PdfRasterizerResponse) error
+type ImageService_RasterizePdfServer interface {
+	Send(*RasterizePdfResponse) error
 	grpc.ServerStream
 }
 
-type imageServicePdfRasterizerServer struct {
+type imageServiceRasterizePdfServer struct {
 	grpc.ServerStream
 }
 
-func (x *imageServicePdfRasterizerServer) Send(m *PdfRasterizerResponse) error {
+func (x *imageServiceRasterizePdfServer) Send(m *RasterizePdfResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
@@ -474,14 +430,14 @@ var _ImageService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*ImageServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetOcr",
-			Handler:    _ImageService_GetOcr_Handler,
+			MethodName: "OcrScanImage",
+			Handler:    _ImageService_OcrScanImage_Handler,
 		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
-			StreamName:    "PdfRasterizer",
-			Handler:       _ImageService_PdfRasterizer_Handler,
+			StreamName:    "RasterizePdf",
+			Handler:       _ImageService_RasterizePdf_Handler,
 			ServerStreams: true,
 		},
 	},
