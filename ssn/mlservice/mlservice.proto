@@ -17,7 +17,7 @@ message PredictedField {
 }
 
 message MlRequest {
-    repeated imageservice.OcrScanImageResponse imgResp = 1;
+    repeated imageservice.OcrScanImageResponse ocrResponses  = 1;
 }
 
 message MlResponse {

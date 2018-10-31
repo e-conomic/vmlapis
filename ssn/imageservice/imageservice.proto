@@ -8,32 +8,26 @@ option go_package = "github.com/e-conomic/proto/ssn/imageservice";
 service ImageService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse) {}
   rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse) {}
+  // rpc IsValidFileType() returns(){}
 }
 
-enum ImageFormat {
-  PNG = 0;
-  JPEG = 1;
-  GIF = 2;
-  PGM = 3;
-}
-
-message Image {
-  bytes bytes = 1;
-  ImageFormat format = 2;
-}
 
 message RasterizePdfRequest {
-  bytes bytes = 1;
-  uint32 DPI = 2;
+  bytes data = 1;
+  uint32 dpi = 2;
+  enum Format {
+    PNG = 0;
+  }
+  Format format = 3;
 }
 
 message RasterizePdfResponse {
   uint32 index = 1;
-  Image image = 2;
+  bytes data = 2;
 }
 
 message OcrScanImageRequest {
-  Image image = 1;
+  bytes data = 1;
 }
 
 message OcrScanImageResponse {

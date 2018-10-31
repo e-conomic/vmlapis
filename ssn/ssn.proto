@@ -11,17 +11,18 @@ service SsnService {
 }
 
 message ScanRequest {
-  bytes doc = 1;
+  bytes data = 1;
 }
 
 message InternalScanResponse {
-  repeated imageservice.OcrScanImageResponse imgResp = 1;
-  mlservice.MlResponse mlResp = 2; 
+  repeated imageservice.OcrScanImageResponse ocr = 1;
+  mlservice.MlResponse ml = 2; 
 }
 
 message Page {
   uint32 index = 1;
-  imageservice.Image image = 2;
+  bytes data = 2;
+  imageservice.OcrScanImageResponse ocr = 3;
 }
 
 message Document {
