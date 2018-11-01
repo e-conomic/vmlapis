@@ -7,8 +7,10 @@ option go_package = "github.com/e-conomic/proto/ssn/imageservice";
 // Interface exported by the server.
 service ImageService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse) {}
+}
+
+service PdfService {
   rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse) {}
-  // rpc IsValidFileType() returns(){}
 }
 
 
