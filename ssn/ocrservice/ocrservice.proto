@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ocrservice;
+
+option go_package = "github.com/e-conomic/proto/ssn/ocrservice";
+
+// Interface exported by the server.
+service OcrService {
+  rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse) {}
+}
+
+message OcrScanImageRequest {
+  bytes data = 1;
+}
+
+message OcrScanImageResponse {
+  string tessHocr = 1;
+  // float  scaleFactor = 2;
+  // trimBox what what cut off 
+  // Google Vision Ord
+  // Other transformations
+}

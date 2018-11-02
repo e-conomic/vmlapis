@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package mlservice;
 
-import "ssn/imageservice/imageservice.proto";
+import "ssn/ocrservice/ocrservice.proto";
 
 option go_package = "github.com/e-conomic/proto/ssn/mlservice";
 
@@ -17,7 +17,7 @@ message PredictedField {
 }
 
 message MlRequest {
-    repeated imageservice.OcrScanImageResponse ocrResponses  = 1;
+    repeated ocrservice.OcrScanImageResponse ocrResponses  = 1;
 }
 
 message MlResponse {

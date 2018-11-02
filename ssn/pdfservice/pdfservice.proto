@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pdfservice;
+
+option go_package = "github.com/e-conomic/proto/ssn/pdfservice";
+
+service PdfService {
+  rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse) {}
+}
+
+message RasterizePdfRequest {
+  bytes data = 1;
+  uint32 dpi = 2;
+  enum Format {
+    PNG = 0;
+  }
+  Format format = 3;
+}
+
+message RasterizePdfResponse {
+  uint32 index = 1;
+  bytes data = 2;
+}

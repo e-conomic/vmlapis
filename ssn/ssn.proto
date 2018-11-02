@@ -3,7 +3,7 @@ syntax = "proto3";
 package ssn;
 
 import "google/protobuf/timestamp.proto";
-import "ssn/imageservice/imageservice.proto";
+import "ssn/ocrservice/ocrservice.proto";
 import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
@@ -15,14 +15,13 @@ message ScanRequest {
 }
 
 message InternalScanResponse {
-  repeated imageservice.OcrScanImageResponse ocr = 1;
+  repeated ocrservice.OcrScanImageResponse ocr = 1;
   mlservice.MlResponse ml = 2; 
 }
 
 message Page {
   uint32 index = 1;
   bytes data = 2;
-  imageservice.OcrScanImageResponse ocr = 3;
 }
 
 message Document {
