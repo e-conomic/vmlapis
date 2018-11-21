@@ -8,14 +8,14 @@ import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
-  rpc ExternalScan(ScanRequestBase64) returns (ExternalScanResponse) {}
+  rpc ExternalScan(EncodedScanRequest) returns (ExternalScanResponse) {}
 }
 
 message ScanRequest {
   bytes data = 1;
 }
 
-message ScanRequestBase64 {
+message EncodedScanRequest {
   string data = 1;
 }
 
