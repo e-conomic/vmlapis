@@ -8,15 +8,24 @@ import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
+  rpc ExternalScan(ScanRequestBase64) returns (ExternalScanResponse) {}
 }
 
 message ScanRequest {
   bytes data = 1;
 }
 
+message ScanRequestBase64 {
+  string data = 1;
+}
+
 message InternalScanResponse {
   repeated ocrservice.OcrScanImageResponse ocr = 1;
   mlservice.MlResponse ml = 2;
+}
+
+message ExternalScanResponse {
+  mlservice.MlResponse ml = 1;
 }
 
 message Page {
