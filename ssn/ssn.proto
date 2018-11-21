@@ -16,7 +16,7 @@ message ScanRequest {
 
 message InternalScanResponse {
   repeated ocrservice.OcrScanImageResponse ocr = 1;
-  mlservice.MlResponse ml = 2; 
+  mlservice.MlResponse ml = 2;
 }
 
 message Page {
