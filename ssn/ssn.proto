@@ -11,7 +11,7 @@ service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
   rpc ExternalScan(EncodedScanRequest) returns (ExternalScanResponse) {
     option (google.api.http) = {
-      post: "/"
+      post: "/scan"
       body: "*"
     };
   }

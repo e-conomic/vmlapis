@@ -10,7 +10,7 @@ build-py:
 	touch ./ssn/mlservice/__init__.py
 
 build-go:
-	protoc -I . ssn/*.proto  --go_out=plugins=grpc,paths=source_relative:.
+	protoc -I . -I ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis --grpc-gateway_out=logtostderr=true:. ssn/ssn.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/ocrservice/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/pdfservice/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/mlservice/*.proto  --go_out=plugins=grpc,paths=source_relative:.
