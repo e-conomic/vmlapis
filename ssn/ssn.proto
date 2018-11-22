@@ -5,16 +5,10 @@ package ssn;
 import "google/protobuf/timestamp.proto";
 import "ssn/ocrservice/ocrservice.proto";
 import "ssn/mlservice/mlservice.proto";
-import "google/api/annotations.proto";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
-  rpc ExternalScan(EncodedScanRequest) returns (ExternalScanResponse) {
-    option (google.api.http) = {
-      post: "/scan"
-      body: "*"
-    };
-  }
+  rpc ExternalScan(EncodedScanRequest) returns (ExternalScanResponse) {}
 }
 
 message ScanRequest {
