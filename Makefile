@@ -15,4 +15,6 @@ build-go:
 	protoc -I . ssn/pdfservice/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/mlservice/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 
+	protoc -I . -I ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis  --grpc-gateway_out=logtostderr=true,grpc_api_configuration=ssn/http-api.yaml:. ssn/*.proto
+
 .PHONY: build-py build-go

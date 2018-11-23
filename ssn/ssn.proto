@@ -8,6 +8,7 @@ import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
+  rpc Scan(ScanRequest) returns (ScanResponse) {}
 }
 
 message ScanRequest {
@@ -16,7 +17,11 @@ message ScanRequest {
 
 message InternalScanResponse {
   repeated ocrservice.OcrScanImageResponse ocr = 1;
-  mlservice.MlResponse ml = 2; 
+  mlservice.MlResponse ml = 2;
+}
+
+message ScanResponse {
+  mlservice.MlResponse ml = 1;
 }
 
 message Page {
