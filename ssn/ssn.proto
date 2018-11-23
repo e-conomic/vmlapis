@@ -8,15 +8,11 @@ import "ssn/mlservice/mlservice.proto";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
-  rpc ExternalScan(EncodedScanRequest) returns (ExternalScanResponse) {}
+  rpc Scan(ScanRequest) returns (ScanResponse) {}
 }
 
 message ScanRequest {
   bytes data = 1;
-}
-
-message EncodedScanRequest {
-  string data = 1;
 }
 
 message InternalScanResponse {
@@ -24,7 +20,7 @@ message InternalScanResponse {
   mlservice.MlResponse ml = 2;
 }
 
-message ExternalScanResponse {
+message ScanResponse {
   mlservice.MlResponse ml = 1;
 }
 

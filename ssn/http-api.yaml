@@ -3,6 +3,6 @@ config_version: 3
 
 http:
   rules:
-  - selector: ssn.SsnService.ExternalScan
+  - selector: ssn.SsnService.Scan
     post: /scan
     body: "*"
