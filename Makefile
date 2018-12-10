@@ -3,7 +3,7 @@ build-py:
 	python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ssn/mlservice/v1alpha1/mlservice.proto
 	python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ssn/ocrservice/v1alpha1/ocrservice.proto
 	python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ssn/pdfservice/v1alpha1/pdfservice.proto
-	python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ssn/apiserver/v1alpha1/ssn.proto
+	python3 -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. ssn/apiserver/v1alpha1/apiserver.proto
 	touch ./ssn/apiserver/v1alpha1/__init__.py
 	touch ./ssn/pdfservice/v1alpha1/__init__.py
 	touch ./ssn/ocrservice/v1alpha1/__init__.py
