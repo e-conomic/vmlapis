@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package mlservice;
 
-import "ssn/ocrservice/ocrservice.proto";
+import "ssn/ocrservice/v1alpha1/ocrservice.proto";
 
-option go_package = "github.com/e-conomic/proto/ssn/mlservice";
+option go_package = "github.com/e-conomic/proto/ssn/mlservice/v1alpha1";
 
 // Machine learning Service
 service MlService {
