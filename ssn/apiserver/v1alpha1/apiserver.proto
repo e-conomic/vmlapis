@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ssn;
+package apiserver;
 
 import "google/protobuf/timestamp.proto";
 import "ssn/ocrservice/v1alpha1/ocrservice.proto";
