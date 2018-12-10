@@ -3,8 +3,10 @@ syntax = "proto3";
 package ssn;
 
 import "google/protobuf/timestamp.proto";
-import "ssn/ocrservice/ocrservice.proto";
-import "ssn/mlservice/mlservice.proto";
+import "ssn/ocrservice/v1alpha1/ocrservice.proto";
+import "ssn/mlservice/v1alpha1/mlservice.proto";
+
+option go_package = "github.com/e-conomic/proto/ssn/apiserver/v1alpha1";
 
 service SsnService {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
