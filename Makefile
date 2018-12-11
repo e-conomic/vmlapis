@@ -15,11 +15,10 @@ build-py:
 	touch ./ssn/mlservice/v1alpha1/__init__.py
 
 build-go:
-	protoc -I . -I ./googleapis ssn/scanner/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
+	protoc -I . -I ./googleapis --go_out=plugins=grpc,paths=source_relative:. ssn/scanner/v1alpha1/*.proto  
 	protoc -I . ssn/ocrservice/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/pdfservice/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/mlservice/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
-
-	# protoc -I . -I ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis  --grpc-gateway_out=logtostderr=true,grpc_api_configuration=ssn/http-api.yaml:. ssn/*.proto
+	protoc -I . -I googleapis --grpc-gateway_out=logtostderr=true,paths=source_relative:. ssn/scanner/v1alpha1/*.proto  
 
 .PHONY: build-py build-go
