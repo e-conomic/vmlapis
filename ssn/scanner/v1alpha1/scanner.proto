@@ -4,12 +4,18 @@ package scanner;
 
 import "ssn/ocrservice/v1alpha1/ocrservice.proto";
 import "ssn/mlservice/v1alpha1/mlservice.proto";
+import "google/api/annotations.proto";
 
 option go_package = "github.com/e-conomic/proto/ssn/scanner/v1alpha1;scanner";
 
 service Scanner {
   rpc InternalScan(InternalScanRequest) returns (InternalScanResponse) {}
-  rpc Scan(ScanRequest) returns (ScanResponse) {}
+  rpc Scan(ScanRequest) returns (ScanResponse) {
+    option (google.api.http) = {
+      post: "/v1alpha1/scan"
+        body: "*"
+    };
+  } 
 }
 
 message InternalScanRequest {
