@@ -1,6 +1,6 @@
 import setuptools
 
-__version__ = '7.0.5'
+__version__ = '8.0.0'
 
 setuptools.setup(
     name="ssn_proto",
