@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package usermgnt;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/e-conomic/proto/ssn/usermgnt/v1alpha1;usermgnt";
+
+service UserMgnt {
+	rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+}
+
+message User {
+  int64 consumer_id = 1;
+	string email = 2;
+}
+
+message Consumer {
+	int64 id = 1;
+  repeated User users = 2;
+  repeated Token tokens = 3;
+}
+
+message Token {
+  int64 consumer_id = 1;
+	string token = 2;
+	bool active = 3;
+	google.protobuf.Timestamp created_at = 4;
+}
+
+message CreateUserRequest {
+	User user = 1;
+}
+
+message CreateUserResponse {
+	int32 id = 1;
+}
