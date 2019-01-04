@@ -3,8 +3,6 @@ syntax = "proto3";
 package usermgnt;
 
 import "google/protobuf/timestamp.proto";
-import "google/protobuf/empty.proto";
-import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/e-conomic/proto/ssn/usermgnt/v1alpha1;usermgnt";
 
