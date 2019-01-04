@@ -9,54 +9,172 @@ import "google/protobuf/wrappers.proto";
 option go_package = "github.com/e-conomic/proto/ssn/usermgnt/v1alpha1;usermgnt";
 
 
+// CONSUMER
+
 message Consumer {
 	uint32 id = 1;
 	string name = 2;
 	google.protobuf.Timestamp created_at = 3;
-	repeated Token tokens = 4;
+	
 }
+
+message CreateConsumerRequest {
+	string name = 1;
+}
+
+message CreateConsumerResponse {
+	Consumer consumer = 1;
+}
+
+message ReadConsumerRequest {
+	uint32 id = 1;
+	string name = 2;
+}
+
+message ReadConsumerResponse {
+	Consumer consumer = 1;
+	repeated Token tokens = 2;
+}
+
+message DeleteConsumerRequest {
+	uint32 id = 1;
+}
+message DeleteConsumerResponse {
+}
+
+message ReadAllConsumersRequest {
+
+}
+message ReadAllConsumersResponse {
+	repeated ReadConsumerResponse consumers = 1;
+}
+
+
+// TOKEN
 
 message Token {
   uint32 id = 1;
 	string value = 2; // unique and indexed
 	google.protobuf.Timestamp created_at = 3;
-	uint32 consumer_id = 4;
+}
+
+message CreateTokenRequest {
+	uint32 consumer_id = 1;
+}
+
+message CreateTokenResponse {
+	Token token = 1;
+}
+
+message ReadTokenRequest {
+	uint32 id = 1;
+	string value = 2;
+}
+
+message ReadTokenResponse {
+	Token token = 1;
+	Consumer consumer = 2;
+}
+
+message DeleteTokenRequest {
+	uint32 id = 1;
+}
+
+message DeleteTokenResponse {
+}
+
+message ReadAllTokensRequest {
+	// Read only tokens from with consumer
+	uint32 consumer_id = 1;
+}
+
+message ReadAllTokensResponse {
+	repeated Token tokens = 1;
 }
 
 
-message ReadAllConsumersResponse {
-	repeated Consumer consumers = 1;
+// USER
+
+message User {
+  uint32 id = 1;
+	string email = 2;
+	google.protobuf.Timestamp created_at = 3;
 }
+
+message CreateUserRequest {
+	uint32 email = 1;
+}
+
+message CreateUserResponse {
+	User User = 1;
+}
+
+message ReadUserRequest {
+	uint32 id = 1;
+	string email = 2;
+}
+
+message ReadUserResponse {
+	User User = 1;
+	repeated Consumer consumer = 2;
+}
+
+message DeleteUserRequest {
+	uint32 id = 1;
+}
+
+message DeleteUserResponse {
+}
+
+message ReadAllUsersRequest {
+	// Read only Users from with consumer
+	uint32 consumer_id = 1;
+}
+
+message ReadAllUsersResponse {
+	repeated ReadUserResponse users = 1;
+}
+
+message AddUserToConsumerRequest {
+	// Read only Users from with consumer
+	uint32 user_id = 1;
+	uint32 consumer_id = 2;
+}
+
+message AddUserToConsumerResponse {
+}
+
+message RemoveUserFromConsumerRequest {
+	// Read only Users from with consumer
+	uint32 user_id = 1;
+	uint32 consumer_id = 2;
+}
+
+message RemoveUserFromConsumerResponse {
+
+}
+
 
 
 service UserMgnt {
   // Consumer Methods
-	rpc CreateConsumer(Consumer) returns (Consumer); // Max 3 tokens pr consumer.
-	rpc ReadConsumer(Consumer) returns (Consumer); // Search on id if present else name.
-	rpc DeleteConsumer(google.protobuf.UInt32Value) returns (google.protobuf.Empty);  // Could also be bool
-	rpc ReadAllConsumers(google.protobuf.Empty) returns (ReadAllConsumersResponse);
+	rpc CreateConsumer(CreateConsumerRequest) returns (CreateConsumerResponse); 
+	rpc ReadConsumer(ReadConsumerRequest) returns (ReadConsumerResponse);
+	rpc DeleteConsumer(DeleteConsumerRequest) returns (DeleteConsumerResponse);
+	rpc ReadAllConsumers(ReadAllConsumersRequest) returns (ReadAllConsumersResponse);
 
-	// GenerateApiToken takes a consumer id and gives back a token
-	rpc CreateToken(Consumer) returns (Token);
-	rpc DeleteToken(Token) returns (google.protobuf.Empty); // Could also be bool
-	rpc ReadAllTokens(Consumer) returns (Token);
-	rpc GetConsumerFromTokenValue(google.protobuf.StringValue) returns (Consumer); // Should return 404 when not found
+	// Max 3 tokens pr consumer.
+	rpc CreateToken(CreateTokenRequest) returns (CreateTokenResponse);
+	rpc ReadToken(ReadTokenRequest) returns (ReadTokenResponse);
+	rpc DeleteToken(DeleteTokenRequest) returns (DeleteTokenResponse);
+	rpc ReadAllTokens(ReadAllTokensRequest) returns (ReadAllTokensResponse);
 
-	// rpc CreateUser(User) returns (User);
-	// rpc ReadUser(User) returns (User); // Search on id if present else email.
-	// rpc DeleteUser(google.protobuf.UInt32Value) returns (google.protobuf.Empty);
+	rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+	rpc ReadUser(ReadUserRequest) returns (ReadUserResponse);
+	rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+	rpc ReadAllUsers(ReadAllUsersRequest) returns (ReadAllUsersResponse);
 
-	// rpc AddUserToConsumer(UserConsumerRelation) returns (google.protobuf.Empty);  // Could also be bool
-	// rpc RemoveUserFromConsumer(UserConsumerRelation) returns (google.protobuf.Empty);  // Could also be bool
+	// Manage link between users and consumers
+	rpc AddUserToConsumer(AddUserToConsumerRequest) returns (AddUserToConsumerRequest);
+	rpc RemoveUserFromConsumer(RemoveUserFromConsumerRequest) returns (RemoveUserFromConsumerResponse);
 }
-
-// message UserConsumerRelation {
-// 	uint32 user_id = 1; 
-// 	uint32 consumer_id = 2;
-// }
-
-// message User {
-//   uint32 id = 1;
-// 	string email = 2;
-// 	google.protobuf.Timestamp created_at = 3;
-// }
