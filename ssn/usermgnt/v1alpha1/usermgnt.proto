@@ -3,35 +3,55 @@ syntax = "proto3";
 package usermgnt;
 
 import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/e-conomic/proto/ssn/usermgnt/v1alpha1;usermgnt";
 
-service UserMgnt {
-	rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
-}
-
-message User {
-  int64 consumer_id = 1;
-	string email = 2;
-}
+// message User {
+//   uint32 id = 1;
+// 	string email = 2;
+// 	google.protobuf.Timestamp created_at = 3;
+// }
 
 message Consumer {
-	int64 id = 1;
-  repeated User users = 2;
-  repeated Token tokens = 3;
+	uint32 id = 1;
+	string name = 2;
+	google.protobuf.Timestamp created_at = 3;
+	repeated Token tokens = 4;
 }
 
 message Token {
-  int64 consumer_id = 1;
-	string token = 2;
-	bool active = 3;
-	google.protobuf.Timestamp created_at = 4;
+  uint32 id = 1;
+	string value = 2; // unique and indexed
+	google.protobuf.Timestamp created_at = 3;
+	uint32 consumer_id = 4;
 }
 
-message CreateUserRequest {
-	User user = 1;
-}
+// message UserConsumerRelation {
+// 	uint32 user_id = 1; 
+// 	uint32 consumer_id = 2;
+// }
 
-message CreateUserResponse {
-  User user = 1;
+message ReadAllConsumersResponse {
+	repeated Consumer consumers = 1;
+}
+service UserMgnt {
+	// rpc CreateUser(User) returns (User);
+	// rpc ReadUser(User) returns (User); // Search on id if present else email.
+	// rpc DeleteUser(google.protobuf.UInt32Value) returns (google.protobuf.Empty);
+
+	// rpc AddUserToConsumer(UserConsumerRelation) returns (google.protobuf.Empty);  // Could also be bool
+	// rpc RemoveUserFromConsumer(UserConsumerRelation) returns (google.protobuf.Empty);  // Could also be bool
+
+	rpc CreateConsumer(Consumer) returns (Consumer); // Max 3 tokens pr consumer.
+	rpc ReadConsumer(Consumer) returns (Consumer); // Search on id if present else name.
+	rpc DeleteConsumer(google.protobuf.UInt32Value) returns (google.protobuf.Empty);  // Could also be bool
+	rpc ReadAllConsumers(google.protobuf.Empty) returns (ReadAllConsumersResponse);
+
+	// GenerateApiToken takes a consumer id and gives back a token
+	rpc CreateToken(Consumer) returns (Token);
+	rpc DeleteToken(Token) returns (google.protobuf.Empty); // Could also be bool
+	rpc ReadAllTokens(Consumer) returns (Token);
+	rpc GetConsumerFromTokenValue(google.protobuf.StringValue) returns (Consumer); // Should return 404 when not found
 }
