@@ -23,6 +23,7 @@ build-go:
 	protoc -I . ssn/pdfservice/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/mlservice/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/usermgnt/v1alpha1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
+	protoc-go-inject-tag -input=ssn/usermgnt/v1alpha1/usermgnt.pb.go -XXX_skip=gorm
 	protoc -I . -I googleapis --grpc-gateway_out=logtostderr=true,paths=source_relative:. ssn/scanner/v1alpha1/*.proto
 
 .PHONY: build-py build-go

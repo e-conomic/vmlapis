@@ -28,9 +28,9 @@ type Consumer struct {
 	Id                   uint32               `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name                 string               `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	CreatedAt            *timestamp.Timestamp `protobuf:"bytes,3,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte               `json:"-" gorm:"-"`
+	XXX_sizecache        int32                `json:"-" gorm:"-"`
 }
 
 func (m *Consumer) Reset()         { *m = Consumer{} }
@@ -80,9 +80,9 @@ func (m *Consumer) GetCreatedAt() *timestamp.Timestamp {
 
 type CreateConsumerRequest struct {
 	Name                 string   `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *CreateConsumerRequest) Reset()         { *m = CreateConsumerRequest{} }
@@ -118,9 +118,9 @@ func (m *CreateConsumerRequest) GetName() string {
 
 type CreateConsumerResponse struct {
 	Consumer             *Consumer `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte    `json:"-" gorm:"-"`
+	XXX_sizecache        int32     `json:"-" gorm:"-"`
 }
 
 func (m *CreateConsumerResponse) Reset()         { *m = CreateConsumerResponse{} }
@@ -157,9 +157,9 @@ func (m *CreateConsumerResponse) GetConsumer() *Consumer {
 type ReadConsumerRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Name                 string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadConsumerRequest) Reset()         { *m = ReadConsumerRequest{} }
@@ -203,9 +203,9 @@ func (m *ReadConsumerRequest) GetName() string {
 type ReadConsumerResponse struct {
 	Consumer             *Consumer `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
 	Tokens               []*Token  `protobuf:"bytes,2,rep,name=tokens,proto3" json:"tokens,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte    `json:"-" gorm:"-"`
+	XXX_sizecache        int32     `json:"-" gorm:"-"`
 }
 
 func (m *ReadConsumerResponse) Reset()         { *m = ReadConsumerResponse{} }
@@ -248,9 +248,9 @@ func (m *ReadConsumerResponse) GetTokens() []*Token {
 
 type DeleteConsumerRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteConsumerRequest) Reset()         { *m = DeleteConsumerRequest{} }
@@ -285,9 +285,9 @@ func (m *DeleteConsumerRequest) GetId() uint32 {
 }
 
 type DeleteConsumerResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteConsumerResponse) Reset()         { *m = DeleteConsumerResponse{} }
@@ -315,9 +315,9 @@ func (m *DeleteConsumerResponse) XXX_DiscardUnknown() {
 var xxx_messageInfo_DeleteConsumerResponse proto.InternalMessageInfo
 
 type ReadAllConsumersRequest struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllConsumersRequest) Reset()         { *m = ReadAllConsumersRequest{} }
@@ -346,9 +346,9 @@ var xxx_messageInfo_ReadAllConsumersRequest proto.InternalMessageInfo
 
 type ReadAllConsumersResponse struct {
 	Consumers            []*ReadConsumerResponse `protobuf:"bytes,1,rep,name=consumers,proto3" json:"consumers,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                `json:"-"`
-	XXX_unrecognized     []byte                  `json:"-"`
-	XXX_sizecache        int32                   `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}                `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte                  `json:"-" gorm:"-"`
+	XXX_sizecache        int32                   `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllConsumersResponse) Reset()         { *m = ReadAllConsumersResponse{} }
@@ -386,9 +386,9 @@ type Token struct {
 	Id                   uint32               `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Value                string               `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
 	CreatedAt            *timestamp.Timestamp `protobuf:"bytes,3,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte               `json:"-" gorm:"-"`
+	XXX_sizecache        int32                `json:"-" gorm:"-"`
 }
 
 func (m *Token) Reset()         { *m = Token{} }
@@ -438,9 +438,9 @@ func (m *Token) GetCreatedAt() *timestamp.Timestamp {
 
 type CreateTokenRequest struct {
 	ConsumerId           uint32   `protobuf:"varint,1,opt,name=consumer_id,json=consumerId,proto3" json:"consumer_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *CreateTokenRequest) Reset()         { *m = CreateTokenRequest{} }
@@ -476,9 +476,9 @@ func (m *CreateTokenRequest) GetConsumerId() uint32 {
 
 type CreateTokenResponse struct {
 	Token                *Token   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *CreateTokenResponse) Reset()         { *m = CreateTokenResponse{} }
@@ -515,9 +515,9 @@ func (m *CreateTokenResponse) GetToken() *Token {
 type ReadTokenRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Value                string   `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadTokenRequest) Reset()         { *m = ReadTokenRequest{} }
@@ -561,9 +561,9 @@ func (m *ReadTokenRequest) GetValue() string {
 type ReadTokenResponse struct {
 	Token                *Token    `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
 	Consumer             *Consumer `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}  `json:"-"`
-	XXX_unrecognized     []byte    `json:"-"`
-	XXX_sizecache        int32     `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}  `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte    `json:"-" gorm:"-"`
+	XXX_sizecache        int32     `json:"-" gorm:"-"`
 }
 
 func (m *ReadTokenResponse) Reset()         { *m = ReadTokenResponse{} }
@@ -606,9 +606,9 @@ func (m *ReadTokenResponse) GetConsumer() *Consumer {
 
 type DeleteTokenRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteTokenRequest) Reset()         { *m = DeleteTokenRequest{} }
@@ -643,9 +643,9 @@ func (m *DeleteTokenRequest) GetId() uint32 {
 }
 
 type DeleteTokenResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteTokenResponse) Reset()         { *m = DeleteTokenResponse{} }
@@ -675,9 +675,9 @@ var xxx_messageInfo_DeleteTokenResponse proto.InternalMessageInfo
 type ReadAllTokensRequest struct {
 	// Read only tokens from with consumer
 	ConsumerId           uint32   `protobuf:"varint,1,opt,name=consumer_id,json=consumerId,proto3" json:"consumer_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllTokensRequest) Reset()         { *m = ReadAllTokensRequest{} }
@@ -713,9 +713,9 @@ func (m *ReadAllTokensRequest) GetConsumerId() uint32 {
 
 type ReadAllTokensResponse struct {
 	Tokens               []*Token `protobuf:"bytes,1,rep,name=tokens,proto3" json:"tokens,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllTokensResponse) Reset()         { *m = ReadAllTokensResponse{} }
@@ -753,9 +753,9 @@ type User struct {
 	Id                   uint32               `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Email                string               `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
 	CreatedAt            *timestamp.Timestamp `protobuf:"bytes,3,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}             `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte               `json:"-" gorm:"-"`
+	XXX_sizecache        int32                `json:"-" gorm:"-"`
 }
 
 func (m *User) Reset()         { *m = User{} }
@@ -805,9 +805,9 @@ func (m *User) GetCreatedAt() *timestamp.Timestamp {
 
 type CreateUserRequest struct {
 	Email                uint32   `protobuf:"varint,1,opt,name=email,proto3" json:"email,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *CreateUserRequest) Reset()         { *m = CreateUserRequest{} }
@@ -843,9 +843,9 @@ func (m *CreateUserRequest) GetEmail() uint32 {
 
 type CreateUserResponse struct {
 	User                 *User    `protobuf:"bytes,1,opt,name=User,proto3" json:"User,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *CreateUserResponse) Reset()         { *m = CreateUserResponse{} }
@@ -882,9 +882,9 @@ func (m *CreateUserResponse) GetUser() *User {
 type ReadUserRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
 	Email                string   `protobuf:"bytes,2,opt,name=email,proto3" json:"email,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadUserRequest) Reset()         { *m = ReadUserRequest{} }
@@ -928,9 +928,9 @@ func (m *ReadUserRequest) GetEmail() string {
 type ReadUserResponse struct {
 	User                 *User       `protobuf:"bytes,1,opt,name=User,proto3" json:"User,omitempty"`
 	Consumer             []*Consumer `protobuf:"bytes,2,rep,name=consumer,proto3" json:"consumer,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
-	XXX_unrecognized     []byte      `json:"-"`
-	XXX_sizecache        int32       `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}    `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte      `json:"-" gorm:"-"`
+	XXX_sizecache        int32       `json:"-" gorm:"-"`
 }
 
 func (m *ReadUserResponse) Reset()         { *m = ReadUserResponse{} }
@@ -973,9 +973,9 @@ func (m *ReadUserResponse) GetConsumer() []*Consumer {
 
 type DeleteUserRequest struct {
 	Id                   uint32   `protobuf:"varint,1,opt,name=id,proto3" json:"id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteUserRequest) Reset()         { *m = DeleteUserRequest{} }
@@ -1010,9 +1010,9 @@ func (m *DeleteUserRequest) GetId() uint32 {
 }
 
 type DeleteUserResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *DeleteUserResponse) Reset()         { *m = DeleteUserResponse{} }
@@ -1042,9 +1042,9 @@ var xxx_messageInfo_DeleteUserResponse proto.InternalMessageInfo
 type ReadAllUsersRequest struct {
 	// Read only Users from with consumer
 	ConsumerId           uint32   `protobuf:"varint,1,opt,name=consumer_id,json=consumerId,proto3" json:"consumer_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllUsersRequest) Reset()         { *m = ReadAllUsersRequest{} }
@@ -1080,9 +1080,9 @@ func (m *ReadAllUsersRequest) GetConsumerId() uint32 {
 
 type ReadAllUsersResponse struct {
 	Users                []*ReadUserResponse `protobuf:"bytes,1,rep,name=users,proto3" json:"users,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
-	XXX_unrecognized     []byte              `json:"-"`
-	XXX_sizecache        int32               `json:"-"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte              `json:"-" gorm:"-"`
+	XXX_sizecache        int32               `json:"-" gorm:"-"`
 }
 
 func (m *ReadAllUsersResponse) Reset()         { *m = ReadAllUsersResponse{} }
@@ -1120,9 +1120,9 @@ type AddUserToConsumerRequest struct {
 	// Read only Users from with consumer
 	UserId               uint32   `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	ConsumerId           uint32   `protobuf:"varint,2,opt,name=consumer_id,json=consumerId,proto3" json:"consumer_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *AddUserToConsumerRequest) Reset()         { *m = AddUserToConsumerRequest{} }
@@ -1164,9 +1164,9 @@ func (m *AddUserToConsumerRequest) GetConsumerId() uint32 {
 }
 
 type AddUserToConsumerResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *AddUserToConsumerResponse) Reset()         { *m = AddUserToConsumerResponse{} }
@@ -1197,9 +1197,9 @@ type RemoveUserFromConsumerRequest struct {
 	// Read only Users from with consumer
 	UserId               uint32   `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	ConsumerId           uint32   `protobuf:"varint,2,opt,name=consumer_id,json=consumerId,proto3" json:"consumer_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *RemoveUserFromConsumerRequest) Reset()         { *m = RemoveUserFromConsumerRequest{} }
@@ -1241,9 +1241,9 @@ func (m *RemoveUserFromConsumerRequest) GetConsumerId() uint32 {
 }
 
 type RemoveUserFromConsumerResponse struct {
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-" gorm:"-"`
+	XXX_unrecognized     []byte   `json:"-" gorm:"-"`
+	XXX_sizecache        int32    `json:"-" gorm:"-"`
 }
 
 func (m *RemoveUserFromConsumerResponse) Reset()         { *m = RemoveUserFromConsumerResponse{} }
