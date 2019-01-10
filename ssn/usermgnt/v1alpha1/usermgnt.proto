@@ -173,6 +173,6 @@ service UserMgnt {
 	rpc ReadAllUsers(ReadAllUsersRequest) returns (ReadAllUsersResponse);
 
 	// Manage link between users and consumers
-	rpc AddUserToConsumer(AddUserToConsumerRequest) returns (AddUserToConsumerRequest);
+	rpc AddUserToConsumer(AddUserToConsumerRequest) returns (AddUserToConsumerResponse);
 	rpc RemoveUserFromConsumer(RemoveUserFromConsumerRequest) returns (RemoveUserFromConsumerResponse);
 }
