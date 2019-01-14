@@ -22,6 +22,8 @@ build-go:
 	protoc -I . -I googleapis --grpc-gateway_out=logtostderr=true,paths=source_relative:. ssn/scanner/v1alpha1/*.proto
 
 build-swift:
+	protoc -I . --swift_out=Visibility=Public:. --swiftgrpc_out=Client=true,Server=false,Visibility=Public:. ssn/mlservice/v1alpha1/mlservice.proto
+	protoc -I . --swift_out=Visibility=Public:. --swiftgrpc_out=Client=true,Server=false,Visibility=Public:. ssn/ocrservice/v1alpha1/ocrservice.proto
 	protoc -I . -I ./googleapis --swift_out=Visibility=Public:. --swiftgrpc_out=Client=true,Server=false,Visibility=Public:. ssn/scanner/v1alpha1/scanner.proto
 
 .PHONY: build-py build-go build-swift
