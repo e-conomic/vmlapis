@@ -42,5 +42,5 @@ message ScanRequest {
 
 message ScanResponse {
   mlservice.MlResponse documentFieldDetection = 1;
-  string RawTextDetection = 2;
+  string rawTextDetection = 2;
 }
