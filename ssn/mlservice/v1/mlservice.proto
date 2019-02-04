@@ -17,7 +17,7 @@ message PredictedField {
 }
 
 message MlRequest {
-    repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses  = 1;
+    repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses = 1;
 }
 
 message MlResponse {
