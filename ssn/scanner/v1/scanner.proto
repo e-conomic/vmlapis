@@ -9,13 +9,13 @@ import "google/api/annotations.proto";
 option go_package = "github.com/e-conomic/vmlapis/ssn/scanner/v1;scanner";
 
 service Scanner {
+  rpc InternalScan(ScanRequest) returns (InternalScanResponse) {}
   rpc Scan(ScanRequest) returns (ScanResponse) {
     option (google.api.http) = {
       post: "/v1/scan"
         body: "*"
     };
   }
-  rpc DebugScan(ScanRequest) returns (DebugScanResponse) {}
 }
 
 message Feature {
@@ -36,7 +36,7 @@ message ScanResponse {
   string rawTextDetection = 2;
 }
 
-message DebugScanResponse {
+message InternalScanResponse {
   ScanResponse scanResponse = 1;
   repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 2;
 }
