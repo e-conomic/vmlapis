@@ -67,7 +67,8 @@ message MlResponse {
     PredictedField paymentMethod = 10;
     PredictedField creditCardLastFourDigits = 11;
     PredictedField invoiceNumber = 17;
-
+    
+    // Only one ocrLineXX will be returned in a documentFieldDetection response.
     oneof ocrLine {
         OcrLineDk ocrLineDk = 12;
         OcrLineSe ocrLineSe = 13;
