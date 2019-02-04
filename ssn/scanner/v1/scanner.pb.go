@@ -49,7 +49,7 @@ func (x Feature_Type) String() string {
 	return proto.EnumName(Feature_Type_name, int32(x))
 }
 func (Feature_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_635bb0aa69b38f1c, []int{0, 0}
+	return fileDescriptor_scanner_63499f4947b0544d, []int{0, 0}
 }
 
 type Feature struct {
@@ -63,7 +63,7 @@ func (m *Feature) Reset()         { *m = Feature{} }
 func (m *Feature) String() string { return proto.CompactTextString(m) }
 func (*Feature) ProtoMessage()    {}
 func (*Feature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_635bb0aa69b38f1c, []int{0}
+	return fileDescriptor_scanner_63499f4947b0544d, []int{0}
 }
 func (m *Feature) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Feature.Unmarshal(m, b)
@@ -102,7 +102,7 @@ func (m *ScanRequest) Reset()         { *m = ScanRequest{} }
 func (m *ScanRequest) String() string { return proto.CompactTextString(m) }
 func (*ScanRequest) ProtoMessage()    {}
 func (*ScanRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_635bb0aa69b38f1c, []int{1}
+	return fileDescriptor_scanner_63499f4947b0544d, []int{1}
 }
 func (m *ScanRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScanRequest.Unmarshal(m, b)
@@ -149,7 +149,7 @@ func (m *ScanResponse) Reset()         { *m = ScanResponse{} }
 func (m *ScanResponse) String() string { return proto.CompactTextString(m) }
 func (*ScanResponse) ProtoMessage()    {}
 func (*ScanResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_635bb0aa69b38f1c, []int{2}
+	return fileDescriptor_scanner_63499f4947b0544d, []int{2}
 }
 func (m *ScanResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScanResponse.Unmarshal(m, b)
@@ -270,10 +270,10 @@ var _Scanner_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/scanner/v1/scanner.proto", fileDescriptor_scanner_635bb0aa69b38f1c)
+	proto.RegisterFile("ssn/scanner/v1/scanner.proto", fileDescriptor_scanner_63499f4947b0544d)
 }
 
-var fileDescriptor_scanner_635bb0aa69b38f1c = []byte{
+var fileDescriptor_scanner_63499f4947b0544d = []byte{
 	// 450 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x52, 0x4d, 0x6f, 0xd3, 0x40,
 	0x10, 0xc5, 0x69, 0xa0, 0x65, 0x92, 0x56, 0x61, 0x41, 0x25, 0x0a, 0x3e, 0x44, 0xbe, 0x10, 0x55,

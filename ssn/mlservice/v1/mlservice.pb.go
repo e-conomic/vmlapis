@@ -36,7 +36,7 @@ func (m *PredictedField) Reset()         { *m = PredictedField{} }
 func (m *PredictedField) String() string { return proto.CompactTextString(m) }
 func (*PredictedField) ProtoMessage()    {}
 func (*PredictedField) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{0}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{0}
 }
 func (m *PredictedField) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PredictedField.Unmarshal(m, b)
@@ -81,7 +81,7 @@ func (m *MlRequest) Reset()         { *m = MlRequest{} }
 func (m *MlRequest) String() string { return proto.CompactTextString(m) }
 func (*MlRequest) ProtoMessage()    {}
 func (*MlRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{1}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{1}
 }
 func (m *MlRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlRequest.Unmarshal(m, b)
@@ -137,7 +137,7 @@ func (m *MlResponse) Reset()         { *m = MlResponse{} }
 func (m *MlResponse) String() string { return proto.CompactTextString(m) }
 func (*MlResponse) ProtoMessage()    {}
 func (*MlResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2}
 }
 func (m *MlResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse.Unmarshal(m, b)
@@ -461,7 +461,7 @@ func (m *MlResponse_OcrLineDk) Reset()         { *m = MlResponse_OcrLineDk{} }
 func (m *MlResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineDk) ProtoMessage()    {}
 func (*MlResponse_OcrLineDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2, 0}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2, 0}
 }
 func (m *MlResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineDk.Unmarshal(m, b)
@@ -515,7 +515,7 @@ func (m *MlResponse_OcrLineSe) Reset()         { *m = MlResponse_OcrLineSe{} }
 func (m *MlResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineSe) ProtoMessage()    {}
 func (*MlResponse_OcrLineSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2, 1}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2, 1}
 }
 func (m *MlResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineSe.Unmarshal(m, b)
@@ -567,7 +567,7 @@ func (m *MlResponse_OcrLineNo) Reset()         { *m = MlResponse_OcrLineNo{} }
 func (m *MlResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineNo) ProtoMessage()    {}
 func (*MlResponse_OcrLineNo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2, 2}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2, 2}
 }
 func (m *MlResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineNo.Unmarshal(m, b)
@@ -605,7 +605,7 @@ func (m *MlResponse_OcrLineNl) Reset()         { *m = MlResponse_OcrLineNl{} }
 func (m *MlResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineNl) ProtoMessage()    {}
 func (*MlResponse_OcrLineNl) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2, 3}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2, 3}
 }
 func (m *MlResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineNl.Unmarshal(m, b)
@@ -643,7 +643,7 @@ func (m *MlResponse_OcrLineFi) Reset()         { *m = MlResponse_OcrLineFi{} }
 func (m *MlResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineFi) ProtoMessage()    {}
 func (*MlResponse_OcrLineFi) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_87ac8bd484017a97, []int{2, 4}
+	return fileDescriptor_mlservice_b357574a323f477c, []int{2, 4}
 }
 func (m *MlResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineFi.Unmarshal(m, b)
@@ -754,10 +754,10 @@ var _MlService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/mlservice/v1/mlservice.proto", fileDescriptor_mlservice_87ac8bd484017a97)
+	proto.RegisterFile("ssn/mlservice/v1/mlservice.proto", fileDescriptor_mlservice_b357574a323f477c)
 }
 
-var fileDescriptor_mlservice_87ac8bd484017a97 = []byte{
+var fileDescriptor_mlservice_b357574a323f477c = []byte{
 	// 661 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x96, 0xdd, 0x6e, 0xd3, 0x30,
 	0x14, 0xc7, 0xd7, 0x7d, 0xc7, 0xfb, 0xc4, 0x70, 0x61, 0x15, 0x84, 0xaa, 0x5e, 0xc0, 0x6e, 0x48,
