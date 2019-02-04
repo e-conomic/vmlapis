@@ -38,5 +38,5 @@ message ScanResponse {
 
 message InternalScanResponse {
   ScanResponse scanResponse = 1;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 2;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses = 2;
 }
