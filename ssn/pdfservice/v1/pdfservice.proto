@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package pdfservice;
+package ssn.pdfservice.v1;
 
-option go_package = "github.com/e-conomic/proto/ssn/pdfservice/v1alpha1;pdfservice";
+option go_package = "github.com/e-conomic/proto/ssn/pdfservice/v1;pdfservice";
 
 service PdfService {
   rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse) {}
