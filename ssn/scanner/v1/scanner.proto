@@ -6,7 +6,7 @@ import "ssn/ocrservice/v1/ocrservice.proto";
 import "ssn/mlservice/v1/mlservice.proto";
 import "google/api/annotations.proto";
 
-option go_package = "github.com/e-conomic/proto/ssn/scanner/v1;scanner";
+option go_package = "github.com/e-conomic/vmlapis/ssn/scanner/v1;scanner";
 
 service Scanner {
   rpc Scan(ScanRequest) returns (ScanResponse) {

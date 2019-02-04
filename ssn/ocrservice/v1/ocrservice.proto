@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.ocrservice.v1;
 
-option go_package = "github.com/e-conomic/proto/ssn/ocrservice/v1;ocrservice";
+option go_package = "github.com/e-conomic/vmlapis/ssn/ocrservice/v1;ocrservice";
 
 // Interface exported by the server.
 service OcrService {

@@ -1,4 +1,4 @@
-module github.com/e-conomic/proto
+module github.com/e-conomic/vmlapis
 
 require (
 	github.com/golang/protobuf v1.2.0

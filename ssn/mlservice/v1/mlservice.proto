@@ -4,7 +4,7 @@ package ssn.mlservice.v1;
 
 import "ssn/ocrservice/v1/ocrservice.proto";
 
-option go_package = "github.com/e-conomic/proto/ssn/mlservice/v1;mlservice";
+option go_package = "github.com/e-conomic/vmlapis/ssn/mlservice/v1;mlservice";
 
 // Machine learning Service
 service MlService {
