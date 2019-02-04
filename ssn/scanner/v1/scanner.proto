@@ -15,7 +15,7 @@ service Scanner {
         body: "*"
     };
   }
-  rpc DebugScan(DebugScanRequest) returns (DebugScanResponse) {}
+  rpc DebugScan(ScanRequest) returns (DebugScanResponse) {}
 }
 
 message Feature {
@@ -36,11 +36,7 @@ message ScanResponse {
   string rawTextDetection = 2;
 }
 
-message DebugScanRequest {
-  ScanRequest scanRequest = 1;
-}
-
 message DebugScanResponse {
   ScanResponse scanResponse = 1;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 3;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 2;
 }
