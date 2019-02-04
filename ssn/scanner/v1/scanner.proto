@@ -21,7 +21,8 @@ message Feature {
   enum Type {
     DOCUMENT_FIELD_DETECTION = 0;
     RAW_TEXT_DETECTION = 1;
-    OCR_RESPONSES = 2;
+    // INTERNAL is for internal debugging
+    INTERNAL_OCR_RESPONSES = 100;
   }
   Type type = 1;
 }
@@ -34,5 +35,5 @@ message ScanRequest {
 message ScanResponse {
   ssn.mlservice.v1.MlResponse documentFieldDetection = 1;
   string rawTextDetection = 2;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses = 3;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 3;
 }
