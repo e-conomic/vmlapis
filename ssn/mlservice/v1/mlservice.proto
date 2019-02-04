@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package mlservice;
+package ssn.mlservice.v1;
 
-import "ssn/ocrservice/v1alpha1/ocrservice.proto";
+import "ssn/ocrservice/v1/ocrservice.proto";
 
-option go_package = "github.com/e-conomic/proto/ssn/mlservice/v1alpha1;mlservice";
+option go_package = "github.com/e-conomic/proto/ssn/mlservice/v1;mlservice";
 
 // Machine learning Service
 service MlService {
@@ -17,7 +17,7 @@ message PredictedField {
 }
 
 message MlRequest {
-    repeated ocrservice.OcrScanImageResponse ocrResponses  = 1;
+    repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses = 1;
 }
 
 message MlResponse {
@@ -45,15 +45,6 @@ message MlResponse {
         PredictedField paymentId = 1;
     }
 
-    // message VatDistributionDk {
-    //     PredictedField vatDistributionDk25 = 1;
-    // }
-    //
-    // message VatDistributionSe {
-    //     PredictedField vatDistributionSe12 = 1;
-    //     PredictedField vatDistributionSe25 = 2;
-    // }
-
     PredictedField orderDate = 1;
     PredictedField paymentDueDate = 2;
     PredictedField currency = 3;
@@ -74,9 +65,4 @@ message MlResponse {
         OcrLineFi ocrLineFi = 15;
         OcrLineNl ocrLineNl = 16;
     }
-
-    // oneof vatDistribution {
-    //     VatDistributionSe vatSe = 18;
-    //     VatDistributionDk vatDk = 19;
-    // }
 }
