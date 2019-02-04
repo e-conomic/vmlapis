@@ -35,5 +35,5 @@ message ScanRequest {
 message ScanResponse {
   ssn.mlservice.v1.MlResponse documentFieldDetection = 1;
   string rawTextDetection = 2;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 3;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse internalOcrResponses = 100;
 }
