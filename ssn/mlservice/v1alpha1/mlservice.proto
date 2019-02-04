@@ -60,6 +60,7 @@ message MlResponse {
     PredictedField totalVat = 4;
     PredictedField totalInclVat = 5;
     PredictedField totalExclVat = 6;
+    // Returned as a list to try and get both supplier and customer corp. ids
     repeated PredictedField supplierCorporateId = 7;
     PredictedField supplierCountryCode = 8;
     PredictedField documentType = 9;
