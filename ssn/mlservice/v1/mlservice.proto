@@ -22,91 +22,92 @@ message MlRequest {
 
 message MlResponse {
     message OcrLineDk {
-        PredictedField type = 1; # example: "71"
-        PredictedField paymentId = 2; # example: "000002879094031"
-        PredictedField creditorId = 3; # example: "86570807"
+        PredictedField type = 1; // example: "71"
+        PredictedField paymentId = 2; // example: "000002879094031"
+        PredictedField creditorId = 3; //example: "86570807"
     }
 
     message OcrLineSe {
-        PredictedField paymentId = 1; # example: "050765098"
-        PredictedField bankgiroCreditorId = 2; # example: "2654507"
-        PredictedField plusgiroCreditorId = 3; # example: "5000872"
+        PredictedField paymentId = 1; // example: "050765098"
+        PredictedField bankgiroCreditorId = 2; // example: "2654507"
+        PredictedField plusgiroCreditorId = 3; // example: "5000872"
     }
 
     message OcrLineNo {
-        PredictedField paymentId = 1; # example: "12345678903"
+        PredictedField paymentId = 1; // example: "12345678903"
     }
 
     message OcrLineNl {
-        PredictedField paymentId = 1; # example: "0817937867870002"
+        PredictedField paymentId = 1; // example: "0817937867870002"
     }
 
     message OcrLineFi {
-        PredictedField paymentId = 1; # example: "00000159220010146012"
+        PredictedField paymentId = 1; // example: "00000159220010146012"
     }
 
-    # orderDate
-    # ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-    # Example: "2019-12-31"
+    // orderDate
+    // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
+    // Example: "2019-12-31"
     PredictedField orderDate = 1;
 
-    # paymentDueDate
-    # ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-    # Example: "2019-12-31"
+    // paymentDueDate
+    // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+    // Example: "2019-12-31"
     PredictedField paymentDueDate = 2;
 
-    # currency
-    # ISO 4217 string, ie. a 3-letter capitalized string
-    # Example: "NOK"
+    // currency
+    // ISO 4217 string, ie. a 3-letter capitalized string
+    // Example: "NOK"
     PredictedField currency = 3;
 
-    # totalVat
-    # A string that parses as a two-decimal number
-    # Example: "10.0" or "11.11"
+    // totalVat
+    // A string that parses as a two-decimal number
+    // Example: "10.0" or "11.11"
     PredictedField totalVat = 4;
 
-    # totalInclVat
-    # A string that parses as a two-decimal number
-    # Example: "10.0" or "11.11"
+    // totalInclVat
+    // A string that parses as a two-decimal number
+    // Example: "10.0" or "11.11"
     PredictedField totalInclVat = 5;
 
-    # totalExclVat
-    # A string that parses as a two-decimal number
-    # Example: "10.0" or "11.11"
+    // totalExclVat
+    // A string that parses as a two-decimal number
+    // Example: "10.0" or "11.11"
     PredictedField totalExclVat = 6;
 
-    # supplierCorporateId
-    # The company VAT number
-    # Example: "123456789B01" (for Dutch companies)
-    # or "12345678" (for Norwegian companies)
-    # Note: The field is repeated because multiple VAT numbers might exist.
-    # If you have the VAT number of you customer, you can use this information
-    # to find out which VAT number belongs to the supplier of the invoice.
+    // supplierCorporateId
+    // The company VAT number
+    // Example: "123456789B01" (for Dutch companies)
+    // or "12345678" (for Norwegian companies)
+    // Note: The field is repeated because multiple VAT numbers might exist.
+    // If you have the VAT number of you customer, you can use this information
+    // to find out which VAT number belongs to the supplier of the invoice.
     repeated PredictedField supplierCorporateId = 7;
 
-    # supplierCountryCode
-    # ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-    # Example: "NO"
+    // supplierCountryCode
+    // ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
+    // Example: "NO"
     PredictedField supplierCountryCode = 8;
 
-    # documentType
-    # Either "Receipt" or "Invoice"
+    // documentType
+    // Either "Receipt" or "Invoice"
     PredictedField documentType = 9;
 
-    # paymentMethod
-    # Either "Cash" or "CreditCard"
+    // paymentMethod
+    // Either "Cash" or "CreditCard"
     PredictedField paymentMethod = 10;
 
-    # creditCardLastFourDigits
-    # Four digits
-    # Example: "0012"
+    // creditCardLastFourDigits
+    // Four digits
+    // Example: "0012"
     PredictedField creditCardLastFourDigits = 11;
 
-    # invoiceNumber
-    # The supplier defined identifier af the invoice
-    # Example: "12345-A99"
+    // invoiceNumber
+    // The supplier defined identifier af the invoice
+    // Example: "12345-A99"
     PredictedField invoiceNumber = 17;
 
+    // Only one ocrLine will be present in a suggestion.
     oneof ocrLine {
         OcrLineDk ocrLineDk = 12;
         OcrLineSe ocrLineSe = 13;
