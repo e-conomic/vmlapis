@@ -22,27 +22,36 @@ message MlRequest {
 
 message MlResponse {
     message OcrLineDk {
-        PredictedField type = 1; // example: "71"
-        PredictedField paymentId = 2; // example: "000002879094031"
-        PredictedField creditorId = 3; //example: "86570807"
+        // example: "71"
+        PredictedField type = 1;
+        // example: "000002879094031"
+        PredictedField paymentId = 2;
+        //example: "86570807"
+        PredictedField creditorId = 3;
     }
 
     message OcrLineSe {
-        PredictedField paymentId = 1; // example: "050765098"
-        PredictedField bankgiroCreditorId = 2; // example: "2654507"
-        PredictedField plusgiroCreditorId = 3; // example: "5000872"
+        // example: "050765098"
+        PredictedField paymentId = 1;
+        // example: "2654507"
+        PredictedField bankgiroCreditorId = 2;
+        // example: "5000872"
+        PredictedField plusgiroCreditorId = 3;
     }
 
     message OcrLineNo {
-        PredictedField paymentId = 1; // example: "12345678903"
+        // example: "12345678903"
+        PredictedField paymentId = 1;
     }
 
     message OcrLineNl {
-        PredictedField paymentId = 1; // example: "0817937867870002"
+        // example: "0817937867870002"
+        PredictedField paymentId = 1;
     }
 
     message OcrLineFi {
-        PredictedField paymentId = 1; // example: "00000159220010146012"
+        // example: "00000159220010146012"
+        PredictedField paymentId = 1;
     }
 
     // orderDate
