@@ -36,7 +36,7 @@ func (m *PredictedField) Reset()         { *m = PredictedField{} }
 func (m *PredictedField) String() string { return proto.CompactTextString(m) }
 func (*PredictedField) ProtoMessage()    {}
 func (*PredictedField) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{0}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{0}
 }
 func (m *PredictedField) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PredictedField.Unmarshal(m, b)
@@ -81,7 +81,7 @@ func (m *MlRequest) Reset()         { *m = MlRequest{} }
 func (m *MlRequest) String() string { return proto.CompactTextString(m) }
 func (*MlRequest) ProtoMessage()    {}
 func (*MlRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{1}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{1}
 }
 func (m *MlRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlRequest.Unmarshal(m, b)
@@ -109,18 +109,58 @@ func (m *MlRequest) GetOcrResponses() []*v1.OcrScanImageResponse {
 }
 
 type MlResponse struct {
-	OrderDate                *PredictedField   `protobuf:"bytes,1,opt,name=orderDate,proto3" json:"orderDate,omitempty"`
-	PaymentDueDate           *PredictedField   `protobuf:"bytes,2,opt,name=paymentDueDate,proto3" json:"paymentDueDate,omitempty"`
-	Currency                 *PredictedField   `protobuf:"bytes,3,opt,name=currency,proto3" json:"currency,omitempty"`
-	TotalVat                 *PredictedField   `protobuf:"bytes,4,opt,name=totalVat,proto3" json:"totalVat,omitempty"`
-	TotalInclVat             *PredictedField   `protobuf:"bytes,5,opt,name=totalInclVat,proto3" json:"totalInclVat,omitempty"`
-	TotalExclVat             *PredictedField   `protobuf:"bytes,6,opt,name=totalExclVat,proto3" json:"totalExclVat,omitempty"`
-	SupplierCorporateId      []*PredictedField `protobuf:"bytes,7,rep,name=supplierCorporateId,proto3" json:"supplierCorporateId,omitempty"`
-	SupplierCountryCode      *PredictedField   `protobuf:"bytes,8,opt,name=supplierCountryCode,proto3" json:"supplierCountryCode,omitempty"`
-	DocumentType             *PredictedField   `protobuf:"bytes,9,opt,name=documentType,proto3" json:"documentType,omitempty"`
-	PaymentMethod            *PredictedField   `protobuf:"bytes,10,opt,name=paymentMethod,proto3" json:"paymentMethod,omitempty"`
-	CreditCardLastFourDigits *PredictedField   `protobuf:"bytes,11,opt,name=creditCardLastFourDigits,proto3" json:"creditCardLastFourDigits,omitempty"`
-	InvoiceNumber            *PredictedField   `protobuf:"bytes,17,opt,name=invoiceNumber,proto3" json:"invoiceNumber,omitempty"`
+	// orderDate
+	// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
+	// Example: "2019-12-31"
+	OrderDate *PredictedField `protobuf:"bytes,1,opt,name=orderDate,proto3" json:"orderDate,omitempty"`
+	// paymentDueDate
+	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+	// Example: "2019-12-31"
+	PaymentDueDate *PredictedField `protobuf:"bytes,2,opt,name=paymentDueDate,proto3" json:"paymentDueDate,omitempty"`
+	// currency
+	// ISO 4217 string, ie. a 3-letter capitalized string
+	// Example: "NOK"
+	Currency *PredictedField `protobuf:"bytes,3,opt,name=currency,proto3" json:"currency,omitempty"`
+	// totalVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalVat *PredictedField `protobuf:"bytes,4,opt,name=totalVat,proto3" json:"totalVat,omitempty"`
+	// totalInclVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalInclVat *PredictedField `protobuf:"bytes,5,opt,name=totalInclVat,proto3" json:"totalInclVat,omitempty"`
+	// totalExclVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalExclVat *PredictedField `protobuf:"bytes,6,opt,name=totalExclVat,proto3" json:"totalExclVat,omitempty"`
+	// supplierCorporateId
+	// The company VAT number
+	// Example: "123456789B01" (for Dutch companies)
+	// or "12345678" (for Norwegian companies)
+	// Note: The field is repeated because multiple VAT numbers might exist.
+	// If you have the VAT number of you customer, you can use this information
+	// to find out which VAT number belongs to the supplier of the invoice.
+	SupplierCorporateId []*PredictedField `protobuf:"bytes,7,rep,name=supplierCorporateId,proto3" json:"supplierCorporateId,omitempty"`
+	// supplierCountryCode
+	// ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
+	// Example: "NO"
+	SupplierCountryCode *PredictedField `protobuf:"bytes,8,opt,name=supplierCountryCode,proto3" json:"supplierCountryCode,omitempty"`
+	// documentType
+	// Either "Receipt" or "Invoice"
+	DocumentType *PredictedField `protobuf:"bytes,9,opt,name=documentType,proto3" json:"documentType,omitempty"`
+	// paymentMethod
+	// Either "Cash" or "CreditCard"
+	PaymentMethod *PredictedField `protobuf:"bytes,10,opt,name=paymentMethod,proto3" json:"paymentMethod,omitempty"`
+	// creditCardLastFourDigits
+	// Four digits
+	// Example: "0012"
+	CreditCardLastFourDigits *PredictedField `protobuf:"bytes,11,opt,name=creditCardLastFourDigits,proto3" json:"creditCardLastFourDigits,omitempty"`
+	// invoiceNumber
+	// The supplier defined identifier af the invoice
+	// Example: "12345-A99"
+	InvoiceNumber *PredictedField `protobuf:"bytes,17,opt,name=invoiceNumber,proto3" json:"invoiceNumber,omitempty"`
+	// Only one ocrLine will be present in a suggestion.
+	//
 	// Types that are valid to be assigned to OcrLine:
 	//	*MlResponse_OcrLineDk_
 	//	*MlResponse_OcrLineSe_
@@ -137,7 +177,7 @@ func (m *MlResponse) Reset()         { *m = MlResponse{} }
 func (m *MlResponse) String() string { return proto.CompactTextString(m) }
 func (*MlResponse) ProtoMessage()    {}
 func (*MlResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2}
 }
 func (m *MlResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse.Unmarshal(m, b)
@@ -449,8 +489,11 @@ func _MlResponse_OneofSizer(msg proto.Message) (n int) {
 }
 
 type MlResponse_OcrLineDk struct {
-	Type                 *PredictedField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
-	PaymentId            *PredictedField `protobuf:"bytes,2,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
+	// example: "71"
+	Type *PredictedField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
+	// example: "000002879094031"
+	PaymentId *PredictedField `protobuf:"bytes,2,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
+	// example: "86570807"
 	CreditorId           *PredictedField `protobuf:"bytes,3,opt,name=creditorId,proto3" json:"creditorId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
@@ -461,7 +504,7 @@ func (m *MlResponse_OcrLineDk) Reset()         { *m = MlResponse_OcrLineDk{} }
 func (m *MlResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineDk) ProtoMessage()    {}
 func (*MlResponse_OcrLineDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2, 0}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2, 0}
 }
 func (m *MlResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineDk.Unmarshal(m, b)
@@ -503,8 +546,11 @@ func (m *MlResponse_OcrLineDk) GetCreditorId() *PredictedField {
 }
 
 type MlResponse_OcrLineSe struct {
-	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
-	BankgiroCreditorId   *PredictedField `protobuf:"bytes,2,opt,name=bankgiroCreditorId,proto3" json:"bankgiroCreditorId,omitempty"`
+	// example: "050765098"
+	PaymentId *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
+	// example: "2654507"
+	BankgiroCreditorId *PredictedField `protobuf:"bytes,2,opt,name=bankgiroCreditorId,proto3" json:"bankgiroCreditorId,omitempty"`
+	// example: "5000872"
 	PlusgiroCreditorId   *PredictedField `protobuf:"bytes,3,opt,name=plusgiroCreditorId,proto3" json:"plusgiroCreditorId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
@@ -515,7 +561,7 @@ func (m *MlResponse_OcrLineSe) Reset()         { *m = MlResponse_OcrLineSe{} }
 func (m *MlResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineSe) ProtoMessage()    {}
 func (*MlResponse_OcrLineSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2, 1}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2, 1}
 }
 func (m *MlResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineSe.Unmarshal(m, b)
@@ -557,6 +603,7 @@ func (m *MlResponse_OcrLineSe) GetPlusgiroCreditorId() *PredictedField {
 }
 
 type MlResponse_OcrLineNo struct {
+	// example: "12345678903"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
@@ -567,7 +614,7 @@ func (m *MlResponse_OcrLineNo) Reset()         { *m = MlResponse_OcrLineNo{} }
 func (m *MlResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineNo) ProtoMessage()    {}
 func (*MlResponse_OcrLineNo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2, 2}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2, 2}
 }
 func (m *MlResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineNo.Unmarshal(m, b)
@@ -595,6 +642,7 @@ func (m *MlResponse_OcrLineNo) GetPaymentId() *PredictedField {
 }
 
 type MlResponse_OcrLineNl struct {
+	// example: "0817937867870002"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
@@ -605,7 +653,7 @@ func (m *MlResponse_OcrLineNl) Reset()         { *m = MlResponse_OcrLineNl{} }
 func (m *MlResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineNl) ProtoMessage()    {}
 func (*MlResponse_OcrLineNl) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2, 3}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2, 3}
 }
 func (m *MlResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineNl.Unmarshal(m, b)
@@ -633,6 +681,7 @@ func (m *MlResponse_OcrLineNl) GetPaymentId() *PredictedField {
 }
 
 type MlResponse_OcrLineFi struct {
+	// example: "00000159220010146012"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=paymentId,proto3" json:"paymentId,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
 	XXX_unrecognized     []byte          `json:"-"`
@@ -643,7 +692,7 @@ func (m *MlResponse_OcrLineFi) Reset()         { *m = MlResponse_OcrLineFi{} }
 func (m *MlResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
 func (*MlResponse_OcrLineFi) ProtoMessage()    {}
 func (*MlResponse_OcrLineFi) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_a7cbc0541d1f13f7, []int{2, 4}
+	return fileDescriptor_mlservice_d1c6ff561e1742fc, []int{2, 4}
 }
 func (m *MlResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse_OcrLineFi.Unmarshal(m, b)
@@ -754,10 +803,10 @@ var _MlService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/mlservice/v1/mlservice.proto", fileDescriptor_mlservice_a7cbc0541d1f13f7)
+	proto.RegisterFile("ssn/mlservice/v1/mlservice.proto", fileDescriptor_mlservice_d1c6ff561e1742fc)
 }
 
-var fileDescriptor_mlservice_a7cbc0541d1f13f7 = []byte{
+var fileDescriptor_mlservice_d1c6ff561e1742fc = []byte{
 	// 664 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x96, 0xdd, 0x6e, 0xd3, 0x30,
 	0x14, 0xc7, 0xd7, 0x7d, 0xc7, 0xfb, 0xc4, 0x70, 0x61, 0x15, 0x84, 0xaa, 0x5e, 0xc0, 0x6e, 0x48,
