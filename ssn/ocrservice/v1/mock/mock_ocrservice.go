@@ -5,7 +5,6 @@
 package mock_ocrservice
 
 import (
-	x "."
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -36,13 +35,13 @@ func (m *MockOcrServiceClient) EXPECT() *MockOcrServiceClientMockRecorder {
 }
 
 // OcrScanImage mocks base method
-func (m *MockOcrServiceClient) OcrScanImage(ctx context.Context, in *x.OcrScanImageRequest, opts ...grpc.CallOption) (*x.OcrScanImageResponse, error) {
+func (m *MockOcrServiceClient) OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error) {
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "OcrScanImage", varargs...)
-	ret0, _ := ret[0].(*x.OcrScanImageResponse)
+	ret0, _ := ret[0].(*OcrScanImageResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -77,9 +76,9 @@ func (m *MockOcrServiceServer) EXPECT() *MockOcrServiceServerMockRecorder {
 }
 
 // OcrScanImage mocks base method
-func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *x.OcrScanImageRequest) (*x.OcrScanImageResponse, error) {
+func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *OcrScanImageRequest) (*OcrScanImageResponse, error) {
 	ret := m.ctrl.Call(m, "OcrScanImage", arg0, arg1)
-	ret0, _ := ret[0].(*x.OcrScanImageResponse)
+	ret0, _ := ret[0].(*OcrScanImageResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
