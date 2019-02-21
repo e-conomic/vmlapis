@@ -5,6 +5,7 @@
 package mock_pdfservice
 
 import (
+	x "github.com/e-conomic/vmlapis/ssn/pdfservice/v1"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -36,7 +37,7 @@ func (m *MockPdfServiceClient) EXPECT() *MockPdfServiceClientMockRecorder {
 }
 
 // RasterizePdf mocks base method
-func (m *MockPdfServiceClient) RasterizePdf(ctx context.Context, in *RasterizePdfRequest, opts ...grpc.CallOption) (x.PdfService_RasterizePdfClient, error) {
+func (m *MockPdfServiceClient) RasterizePdf(ctx context.Context, in *x.RasterizePdfRequest, opts ...grpc.CallOption) (x.PdfService_RasterizePdfClient, error) {
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
@@ -77,9 +78,9 @@ func (m *MockPdfService_RasterizePdfClient) EXPECT() *MockPdfService_RasterizePd
 }
 
 // Recv mocks base method
-func (m *MockPdfService_RasterizePdfClient) Recv() (*RasterizePdfResponse, error) {
+func (m *MockPdfService_RasterizePdfClient) Recv() (*x.RasterizePdfResponse, error) {
 	ret := m.ctrl.Call(m, "Recv")
-	ret0, _ := ret[0].(*RasterizePdfResponse)
+	ret0, _ := ret[0].(*x.RasterizePdfResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -186,7 +187,7 @@ func (m *MockPdfServiceServer) EXPECT() *MockPdfServiceServerMockRecorder {
 }
 
 // RasterizePdf mocks base method
-func (m *MockPdfServiceServer) RasterizePdf(arg0 *RasterizePdfRequest, arg1 PdfService_RasterizePdfServer) error {
+func (m *MockPdfServiceServer) RasterizePdf(arg0 *x.RasterizePdfRequest, arg1 x.PdfService_RasterizePdfServer) error {
 	ret := m.ctrl.Call(m, "RasterizePdf", arg0, arg1)
 	ret0, _ := ret[0].(error)
 	return ret0
@@ -221,7 +222,7 @@ func (m *MockPdfService_RasterizePdfServer) EXPECT() *MockPdfService_RasterizePd
 }
 
 // Send mocks base method
-func (m *MockPdfService_RasterizePdfServer) Send(arg0 *RasterizePdfResponse) error {
+func (m *MockPdfService_RasterizePdfServer) Send(arg0 *x.RasterizePdfResponse) error {
 	ret := m.ctrl.Call(m, "Send", arg0)
 	ret0, _ := ret[0].(error)
 	return ret0

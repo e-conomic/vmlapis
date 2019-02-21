@@ -5,6 +5,7 @@
 package mock_mlservice
 
 import (
+	x "github.com/e-conomic/vmlapis/ssn/mlservice/v1"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -68,13 +69,13 @@ func (m *MockMlServiceClient) EXPECT() *MockMlServiceClientMockRecorder {
 }
 
 // GetPrediction mocks base method
-func (m *MockMlServiceClient) GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error) {
+func (m *MockMlServiceClient) GetPrediction(ctx context.Context, in *x.MlRequest, opts ...grpc.CallOption) (*x.MlResponse, error) {
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetPrediction", varargs...)
-	ret0, _ := ret[0].(*MlResponse)
+	ret0, _ := ret[0].(*x.MlResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -109,9 +110,9 @@ func (m *MockMlServiceServer) EXPECT() *MockMlServiceServerMockRecorder {
 }
 
 // GetPrediction mocks base method
-func (m *MockMlServiceServer) GetPrediction(arg0 context.Context, arg1 *MlRequest) (*MlResponse, error) {
+func (m *MockMlServiceServer) GetPrediction(arg0 context.Context, arg1 *x.MlRequest) (*x.MlResponse, error) {
 	ret := m.ctrl.Call(m, "GetPrediction", arg0, arg1)
-	ret0, _ := ret[0].(*MlResponse)
+	ret0, _ := ret[0].(*x.MlResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
