@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.ocrservice.v1;
 
-option go_package = "github.com/e-conomic/vmlapis/ssn/ocrservice/v1;ocrservice";
+option go_package = "ocrservicev1";
 
 // Interface exported by the server.
 service OcrService {
@@ -16,7 +16,7 @@ message OcrScanImageRequest {
 message OcrScanImageResponse {
   string tessHocr = 1;
   // float  scaleFactor = 2;
-  // trimBox what what cut off 
+  // trimBox what what cut off
   // Google Vision Ord
   // Other transformations
 }

@@ -18,8 +18,8 @@ build-go:
 	protoc -I . ssn/ocrservice/v1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/pdfservice/v1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
 	protoc -I . ssn/mlservice/v1/*.proto  --go_out=plugins=grpc,paths=source_relative:.
-	protoc -I . -I ./googleapis --go_out=plugins=grpc,paths=source_relative:. ssn/scanner/v1/*.proto  
-	protoc -I . -I googleapis --grpc-gateway_out=logtostderr=true,paths=source_relative:. ssn/scanner/v1/*.proto  
+	protoc -I . -I ./googleapis --go_out=plugins=grpc,paths=source_relative:. --validate_out="lang=go:." ssn/scanner/v1/*.proto
+	protoc -I . -I googleapis --grpc-gateway_out=logtostderr=true,paths=source_relative:. ssn/scanner/v1/*.proto
 
 build-go-mock:
 	mockgen -source ssn/ocrservice/v1/ocrservice.pb.go -destination ssn/ocrservice/v1/mock/mock_ocrservice.go -package mock_ocrservice
