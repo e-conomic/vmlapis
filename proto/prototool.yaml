@@ -37,6 +37,8 @@ protoc:
     #  name: uber
 
 # Lint directives.
+lint:
+  group: google
 #lint:
   # Linter files to ignore.
 #  ignores:

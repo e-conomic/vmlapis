@@ -34,7 +34,7 @@ func (m *OcrScanImageRequest) Reset()         { *m = OcrScanImageRequest{} }
 func (m *OcrScanImageRequest) String() string { return proto.CompactTextString(m) }
 func (*OcrScanImageRequest) ProtoMessage()    {}
 func (*OcrScanImageRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ocrservice_27d9e02b5c50c878, []int{0}
+	return fileDescriptor_ocrservice_65aee3a02a9db9c0, []int{0}
 }
 func (m *OcrScanImageRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OcrScanImageRequest.Unmarshal(m, b)
@@ -72,7 +72,7 @@ func (m *OcrScanImageResponse) Reset()         { *m = OcrScanImageResponse{} }
 func (m *OcrScanImageResponse) String() string { return proto.CompactTextString(m) }
 func (*OcrScanImageResponse) ProtoMessage()    {}
 func (*OcrScanImageResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ocrservice_27d9e02b5c50c878, []int{1}
+	return fileDescriptor_ocrservice_65aee3a02a9db9c0, []int{1}
 }
 func (m *OcrScanImageResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OcrScanImageResponse.Unmarshal(m, b)
@@ -177,10 +177,10 @@ var _OcrService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/ocrservice/v1/ocrservice.proto", fileDescriptor_ocrservice_27d9e02b5c50c878)
+	proto.RegisterFile("ssn/ocrservice/v1/ocrservice.proto", fileDescriptor_ocrservice_65aee3a02a9db9c0)
 }
 
-var fileDescriptor_ocrservice_27d9e02b5c50c878 = []byte{
+var fileDescriptor_ocrservice_65aee3a02a9db9c0 = []byte{
 	// 172 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x2a, 0x2e, 0xce, 0xd3,
 	0xcf, 0x4f, 0x2e, 0x2a, 0x4e, 0x2d, 0x2a, 0xcb, 0x4c, 0x4e, 0xd5, 0x2f, 0x33, 0x44, 0xe2, 0xe9,
