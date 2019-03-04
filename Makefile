@@ -37,6 +37,8 @@
 
 build-all:
 	@echo "Generate all the things"
-	@cd proto && prototool generate
+	cd proto && prototool generate
+	sh scripts/gomock.sh
+	sh scripts/py_init.sh
 
 .PHONY: build-al
