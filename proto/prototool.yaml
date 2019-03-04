@@ -37,7 +37,8 @@ protoc:
     #  name: uber
 
 # Lint directives.
-#lint:
+lint:
+  group: google
   # Linter files to ignore.
 #  ignores:
 #    - id: RPC_NAMES_CAMEL_CASE
