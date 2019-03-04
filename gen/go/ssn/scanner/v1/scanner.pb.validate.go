@@ -107,7 +107,12 @@ func (m *ScanRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Image
+	if len(m.GetImage()) < 256 {
+		return ScanRequestValidationError{
+			field:  "Image",
+			reason: "value length must be at least 256 bytes",
+		}
+	}
 
 	for idx, item := range m.GetFeatures() {
 		_, _ = idx, item
