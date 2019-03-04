@@ -14,9 +14,9 @@ message OcrScanImageRequest {
 }
 
 message OcrScanImageResponse {
-  string tessHocr = 1;
-  // float  scaleFactor = 2;
-  // trimBox what what cut off 
+  string tess_hocr = 1;
+  // float  scale_factor = 2;
+  // trimBox what what cut off
   // Google Vision Ord
   // Other transformations
 }

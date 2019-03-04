@@ -13,7 +13,7 @@ service Scanner {
   rpc Scan(ScanRequest) returns (ScanResponse) {
     option (google.api.http) = {
       post: "/v1/scan"
-        body: "*"
+      body: "*"
     };
   }
 }
@@ -32,11 +32,11 @@ message ScanRequest {
 }
 
 message ScanResponse {
-  ssn.mlservice.v1.MlResponse documentFieldDetection = 1;
-  string rawTextDetection = 2;
+  ssn.mlservice.v1.MlResponse document_field_detection = 1;
+  string raw_text_detection = 2;
 }
 
 message InternalScanResponse {
-  ScanResponse scanResponse = 1;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse ocrResponses = 2;
+  ScanResponse scan_response = 1;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse ocr_responses = 2;
 }
