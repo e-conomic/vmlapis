@@ -7,7 +7,7 @@ lint:
   group: google
 generate:
   go_options:
-    import_path: github.com/e-conomic/vmlapis
+    import_path: github.com/e-conomic/vmlapis/proto
   plugins:
   - name: go
     type: go
