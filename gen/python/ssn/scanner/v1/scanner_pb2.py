@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.scanner.v1',
   syntax='proto3',
   serialized_options=_b('Z\007scanner'),
-  serialized_pb=_b('\n\x1cssn/scanner/v1/scanner.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a ssn/mlservice/v1/mlservice.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\"s\n\x07\x46\x65\x61ture\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.ssn.scanner.v1.Feature.Type\"<\n\x04Type\x12\x1c\n\x18\x44OCUMENT_FIELD_DETECTION\x10\x00\x12\x16\n\x12RAW_TEXT_DETECTION\x10\x01\"G\n\x0bScanRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\x12)\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x17.ssn.scanner.v1.Feature\"f\n\x0cScanResponse\x12<\n\x16\x64ocumentFieldDetection\x18\x01 \x01(\x0b\x32\x1c.ssn.mlservice.v1.MlResponse\x12\x18\n\x10rawTextDetection\x18\x02 \x01(\t\"\x89\x01\n\x14InternalScanResponse\x12\x32\n\x0cscanResponse\x18\x01 \x01(\x0b\x32\x1c.ssn.scanner.v1.ScanResponse\x12=\n\x0cocrResponses\x18\x02 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse2\xb4\x01\n\x07Scanner\x12Q\n\x0cInternalScan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a$.ssn.scanner.v1.InternalScanResponse\x12V\n\x04Scan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a\x1c.ssn.scanner.v1.ScanResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/scan:\x01*B\tZ\x07scannerb\x06proto3')
+  serialized_pb=_b('\n\x1cssn/scanner/v1/scanner.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a ssn/mlservice/v1/mlservice.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\"s\n\x07\x46\x65\x61ture\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.ssn.scanner.v1.Feature.Type\"<\n\x04Type\x12\x1c\n\x18\x44OCUMENT_FIELD_DETECTION\x10\x00\x12\x16\n\x12RAW_TEXT_DETECTION\x10\x01\"G\n\x0bScanRequest\x12\r\n\x05image\x18\x01 \x01(\x0c\x12)\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x17.ssn.scanner.v1.Feature\"j\n\x0cScanResponse\x12>\n\x18\x64ocument_field_detection\x18\x01 \x01(\x0b\x32\x1c.ssn.mlservice.v1.MlResponse\x12\x1a\n\x12raw_text_detection\x18\x02 \x01(\t\"\x8b\x01\n\x14InternalScanResponse\x12\x33\n\rscan_response\x18\x01 \x01(\x0b\x32\x1c.ssn.scanner.v1.ScanResponse\x12>\n\rocr_responses\x18\x02 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse2\xb4\x01\n\x07Scanner\x12Q\n\x0cInternalScan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a$.ssn.scanner.v1.InternalScanResponse\x12V\n\x04Scan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a\x1c.ssn.scanner.v1.ScanResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/scan:\x01*B\tZ\x07scannerb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,ssn_dot_mlservice_dot_v1_dot_mlservice__pb2.DESCRIPTOR,ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,])
 
@@ -129,14 +129,14 @@ _SCANRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='documentFieldDetection', full_name='ssn.scanner.v1.ScanResponse.documentFieldDetection', index=0,
+      name='document_field_detection', full_name='ssn.scanner.v1.ScanResponse.document_field_detection', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rawTextDetection', full_name='ssn.scanner.v1.ScanResponse.rawTextDetection', index=1,
+      name='raw_text_detection', full_name='ssn.scanner.v1.ScanResponse.raw_text_detection', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -155,7 +155,7 @@ _SCANRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=338,
-  serialized_end=440,
+  serialized_end=444,
 )
 
 
@@ -167,14 +167,14 @@ _INTERNALSCANRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='scanResponse', full_name='ssn.scanner.v1.InternalScanResponse.scanResponse', index=0,
+      name='scan_response', full_name='ssn.scanner.v1.InternalScanResponse.scan_response', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocrResponses', full_name='ssn.scanner.v1.InternalScanResponse.ocrResponses', index=1,
+      name='ocr_responses', full_name='ssn.scanner.v1.InternalScanResponse.ocr_responses', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -192,16 +192,16 @@ _INTERNALSCANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=443,
-  serialized_end=580,
+  serialized_start=447,
+  serialized_end=586,
 )
 
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
 _FEATURE_TYPE.containing_type = _FEATURE
 _SCANREQUEST.fields_by_name['features'].message_type = _FEATURE
-_SCANRESPONSE.fields_by_name['documentFieldDetection'].message_type = ssn_dot_mlservice_dot_v1_dot_mlservice__pb2._MLRESPONSE
-_INTERNALSCANRESPONSE.fields_by_name['scanResponse'].message_type = _SCANRESPONSE
-_INTERNALSCANRESPONSE.fields_by_name['ocrResponses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
+_SCANRESPONSE.fields_by_name['document_field_detection'].message_type = ssn_dot_mlservice_dot_v1_dot_mlservice__pb2._MLRESPONSE
+_INTERNALSCANRESPONSE.fields_by_name['scan_response'].message_type = _SCANRESPONSE
+_INTERNALSCANRESPONSE.fields_by_name['ocr_responses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
 DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
 DESCRIPTOR.message_types_by_name['ScanRequest'] = _SCANREQUEST
 DESCRIPTOR.message_types_by_name['ScanResponse'] = _SCANRESPONSE
@@ -245,8 +245,8 @@ _SCANNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=583,
-  serialized_end=763,
+  serialized_start=589,
+  serialized_end=769,
   methods=[
   _descriptor.MethodDescriptor(
     name='InternalScan',

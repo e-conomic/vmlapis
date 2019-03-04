@@ -315,12 +315,12 @@ func (m *MlResponse) Validate() error {
 
 	switch m.OcrLine.(type) {
 
-	case *MlResponse_OcrLineDk_:
+	case *MlResponse_OcrIneDk:
 
-		if v, ok := interface{}(m.GetOcrLineDk()).(interface{ Validate() error }); ok {
+		if v, ok := interface{}(m.GetOcrIneDk()).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
 				return MlResponseValidationError{
-					field:  "OcrLineDk",
+					field:  "OcrIneDk",
 					reason: "embedded message failed validation",
 					cause:  err,
 				}

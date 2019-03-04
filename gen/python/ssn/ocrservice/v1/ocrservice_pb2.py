@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\nocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"(\n\x14OcrScanImageResponse\x12\x10\n\x08tessHocr\x18\x01 \x01(\t2m\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponseB\x0cZ\nocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2m\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponseB\x0cZ\nocrserviceb\x06proto3')
 )
 
 
@@ -64,7 +64,7 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tessHocr', full_name='ssn.ocrservice.v1.OcrScanImageResponse.tessHocr', index=0,
+      name='tess_hocr', full_name='ssn.ocrservice.v1.OcrScanImageResponse.tess_hocr', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -83,7 +83,7 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=94,
-  serialized_end=134,
+  serialized_end=135,
 )
 
 DESCRIPTOR.message_types_by_name['OcrScanImageRequest'] = _OCRSCANIMAGEREQUEST
@@ -113,8 +113,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=136,
-  serialized_end=245,
+  serialized_start=137,
+  serialized_end=246,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',
