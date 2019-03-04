@@ -39,7 +39,10 @@ protoc:
 # Lint directives.
 lint:
   group: google
+<<<<<<< HEAD
 #lint:
+=======
+>>>>>>> 4acc02c2a6ba7e33d75daa1528e8a5d6bdc72944
   # Linter files to ignore.
 #  ignores:
 #    - id: RPC_NAMES_CAMEL_CASE

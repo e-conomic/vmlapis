@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.mlservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n ssn/mlservice/v1/mlservice.proto\x12\x10ssn.mlservice.v1\x1a\"ssn/ocrservice/v1/ocrservice.proto\"3\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\"J\n\tMlRequest\x12=\n\x0cocrResponses\x18\x01 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\"\xa9\x0c\n\nMlResponse\x12\x33\n\torderDate\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x38\n\x0epaymentDueDate\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x32\n\x08\x63urrency\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x32\n\x08totalVat\x18\x04 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0ctotalInclVat\x18\x05 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0ctotalExclVat\x18\x06 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12=\n\x13supplierCorporateId\x18\x07 \x03(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12=\n\x13supplierCountryCode\x18\x08 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0c\x64ocumentType\x18\t \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x37\n\rpaymentMethod\x18\n \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x42\n\x18\x63reditCardLastFourDigits\x18\x0b \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x37\n\rinvoiceNumber\x18\x11 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12;\n\tocrLineDk\x18\x0c \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineDkH\x00\x12;\n\tocrLineSe\x18\r \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineSeH\x00\x12;\n\tocrLineNo\x18\x0e \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNoH\x00\x12;\n\tocrLineFi\x18\x0f \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineFiH\x00\x12;\n\tocrLineNl\x18\x10 \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNlH\x00\x1a\xa6\x01\n\tOcrLineDk\x12.\n\x04type\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x33\n\tpaymentId\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x34\n\ncreditorId\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a\xbc\x01\n\tOcrLineSe\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12<\n\x12\x62\x61nkgiroCreditorId\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12<\n\x12plusgiroCreditorId\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineNo\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineNl\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineFi\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedFieldB\t\n\x07ocrLine2W\n\tMlService\x12J\n\rGetPrediction\x12\x1b.ssn.mlservice.v1.MlRequest\x1a\x1c.ssn.mlservice.v1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n ssn/mlservice/v1/mlservice.proto\x12\x10ssn.mlservice.v1\x1a\"ssn/ocrservice/v1/ocrservice.proto\"3\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\"J\n\tMlRequest\x12=\n\x0cocrResponses\x18\x01 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\"\xaa\x0c\n\nMlResponse\x12\x33\n\torderDate\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x38\n\x0epaymentDueDate\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x32\n\x08\x63urrency\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x32\n\x08totalVat\x18\x04 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0ctotalInclVat\x18\x05 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0ctotalExclVat\x18\x06 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12=\n\x13supplierCorporateId\x18\x07 \x03(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12=\n\x13supplierCountryCode\x18\x08 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x36\n\x0c\x64ocumentType\x18\t \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x37\n\rpaymentMethod\x18\n \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x42\n\x18\x63reditCardLastFourDigits\x18\x0b \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x37\n\rinvoiceNumber\x18\x11 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12;\n\tocrLineDk\x18\x0c \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineDkH\x00\x12;\n\tocrLineSe\x18\r \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineSeH\x00\x12;\n\tocrLineNo\x18\x0e \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNoH\x00\x12;\n\tocrLineFi\x18\x0f \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineFiH\x00\x12;\n\tocrLineNl\x18\x10 \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNlH\x00\x1a\xa7\x01\n\tOcrLineDk\x12.\n\x04type\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x34\n\npayment_id\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12\x34\n\ncreditorId\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a\xbc\x01\n\tOcrLineSe\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12<\n\x12\x62\x61nkgiroCreditorId\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x12<\n\x12plusgiroCreditorId\x18\x03 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineNo\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineNl\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedField\x1a@\n\tOcrLineFi\x12\x33\n\tpaymentId\x18\x01 \x01(\x0b\x32 .ssn.mlservice.v1.PredictedFieldB\t\n\x07ocrLine2W\n\tMlService\x12J\n\rGetPrediction\x12\x1b.ssn.mlservice.v1.MlRequest\x1a\x1c.ssn.mlservice.v1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
   dependencies=[ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,])
 
@@ -111,7 +111,7 @@ _MLRESPONSE_OCRLINEDK = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='paymentId', full_name='ssn.mlservice.v1.MlResponse.OcrLineDk.paymentId', index=1,
+      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineDk.payment_id', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -137,7 +137,7 @@ _MLRESPONSE_OCRLINEDK = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1231,
-  serialized_end=1397,
+  serialized_end=1398,
 )
 
 _MLRESPONSE_OCRLINESE = _descriptor.Descriptor(
@@ -180,8 +180,8 @@ _MLRESPONSE_OCRLINESE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1400,
-  serialized_end=1588,
+  serialized_start=1401,
+  serialized_end=1589,
 )
 
 _MLRESPONSE_OCRLINENO = _descriptor.Descriptor(
@@ -210,8 +210,8 @@ _MLRESPONSE_OCRLINENO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1590,
-  serialized_end=1654,
+  serialized_start=1591,
+  serialized_end=1655,
 )
 
 _MLRESPONSE_OCRLINENL = _descriptor.Descriptor(
@@ -240,8 +240,8 @@ _MLRESPONSE_OCRLINENL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1656,
-  serialized_end=1720,
+  serialized_start=1657,
+  serialized_end=1721,
 )
 
 _MLRESPONSE_OCRLINEFI = _descriptor.Descriptor(
@@ -270,8 +270,8 @@ _MLRESPONSE_OCRLINEFI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1722,
-  serialized_end=1786,
+  serialized_start=1723,
+  serialized_end=1787,
 )
 
 _MLRESPONSE = _descriptor.Descriptor(
@@ -416,12 +416,12 @@ _MLRESPONSE = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=220,
-  serialized_end=1797,
+  serialized_end=1798,
 )
 
 _MLREQUEST.fields_by_name['ocrResponses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
 _MLRESPONSE_OCRLINEDK.fields_by_name['type'].message_type = _PREDICTEDFIELD
-_MLRESPONSE_OCRLINEDK.fields_by_name['paymentId'].message_type = _PREDICTEDFIELD
+_MLRESPONSE_OCRLINEDK.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
 _MLRESPONSE_OCRLINEDK.fields_by_name['creditorId'].message_type = _PREDICTEDFIELD
 _MLRESPONSE_OCRLINEDK.containing_type = _MLRESPONSE
 _MLRESPONSE_OCRLINESE.fields_by_name['paymentId'].message_type = _PREDICTEDFIELD
@@ -541,8 +541,8 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1799,
-  serialized_end=1886,
+  serialized_start=1800,
+  serialized_end=1887,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPrediction',
