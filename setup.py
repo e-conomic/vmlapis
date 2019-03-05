@@ -1,10 +1,13 @@
 import setuptools
+import os
+import datetime
 
-__version__ = '19.0.0'
+
+date = datetime.datetime.now().strf('%Y%m%d')
 
 setuptools.setup(
     name="ssn_proto",
-    version=__version__,
+    version='{}-{}'.format(date, os.environ.get('TRAVIS_BUILD_NUMBER', 0)),
     description="A package containing ssn protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
     packages=setuptools.find_packages(where='gen/python/'),
