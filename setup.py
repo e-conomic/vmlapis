@@ -1,7 +1,5 @@
 import setuptools
 import os
-import datetime
-
 
 tag = os.environ.get('TRAVIS_TAG')
 assert tag
