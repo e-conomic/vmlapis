@@ -1,10 +1,13 @@
 import setuptools
+import os
 
-__version__ = '19.0.0'
+tag = os.environ.get('TRAVIS_TAG')
+assert tag
+version = tag.strip('v')
 
 setuptools.setup(
     name="ssn_proto",
-    version=__version__,
+    version=version,
     description="A package containing ssn protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
     packages=setuptools.find_packages(where='gen/python/'),
