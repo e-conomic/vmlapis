@@ -6,8 +6,8 @@ package mock_pdfservice
 
 import (
 	x "github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1"
+	context "context"
 	gomock "github.com/golang/mock/gomock"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	metadata "google.golang.org/grpc/metadata"
 	reflect "reflect"
