@@ -6,6 +6,9 @@ cache: pip
 python:
   - '3.6'
 
+script:
+  - python setup.py bdist_wheel
+
 deploy:
   - provider: pypi
     server: https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi
