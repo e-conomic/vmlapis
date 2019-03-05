@@ -6,4 +6,4 @@ build-all:
 	go mod tidy
 	sh scripts/py_init.sh
 
-.PHONY: build-al
+.PHONY: build-all
