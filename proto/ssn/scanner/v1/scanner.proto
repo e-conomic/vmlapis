@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package ssn.scanner.v1;
+
+option go_package = "scanner";
+
+import "google/api/annotations.proto";
+import "ssn/mlservice/v1/mlservice.proto";
+import "ssn/ocrservice/v1/ocrservice.proto";
+import "validate/validate.proto";
+
+service Scanner {
+  rpc InternalScan(ScanRequest) returns (InternalScanResponse);
+  rpc Scan(ScanRequest) returns (ScanResponse) {
+    option (google.api.http) = {
+      post: "/v1/scan"
+      body: "*"
+    };
+  }
+}
+
+message Feature {
+  enum Type {
+    DOCUMENT_FIELD_DETECTION = 0;
+    RAW_TEXT_DETECTION = 1;
+  }
+  Type type = 1;
+}
+
+message ScanRequest {
+  bytes image = 1 [(validate.rules).bytes.min_len = 256];
+  repeated Feature features = 2;
+}
+
+message ScanResponse {
+  ssn.mlservice.v1.MlResponse document_field_detection = 1;
+  string raw_text_detection = 2;
+}
+
+message InternalScanResponse {
+  ScanResponse scan_response = 1;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse ocr_responses = 2;
+}

@@ -1,0 +1,26 @@
+protoc:
+  version: 3.6.1
+  includes:
+  - ../deps/googleapis
+  - ../deps/validate
+lint:
+  group: google
+generate:
+  go_options:
+    import_path: github.com/e-conomic/vmlapis/proto
+  plugins:
+  - name: go
+    type: go
+    flags: plugins=grpc
+    output: ../gen/go
+  - name: grpc-gateway
+    type: go
+    output: ../gen/go
+  - name: python
+    output: ../gen/python
+  - name: grpc-python
+    path: /usr/local/bin/grpc_python_plugin
+    output: ../gen/python
+  - name: validate
+    flags: "lang=go"
+    output: ../gen/go
