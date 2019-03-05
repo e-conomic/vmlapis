@@ -6,8 +6,8 @@ package mock_ocrservice
 
 import (
 	x "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1"
+	context "context"
 	gomock "github.com/golang/mock/gomock"
-	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	reflect "reflect"
 )

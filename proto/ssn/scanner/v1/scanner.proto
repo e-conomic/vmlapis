@@ -5,9 +5,9 @@ package ssn.scanner.v1;
 option go_package = "scanner";
 
 import "google/api/annotations.proto";
+import "lyft/validate/validate.proto";
 import "ssn/mlservice/v1/mlservice.proto";
 import "ssn/ocrservice/v1/ocrservice.proto";
-import "validate/validate.proto";
 
 service Scanner {
   rpc InternalScan(ScanRequest) returns (InternalScanResponse);
@@ -28,7 +28,7 @@ message Feature {
 }
 
 message ScanRequest {
-  bytes image = 1 [(validate.rules).bytes.min_len = 256];
+  bytes image = 1 [(lyft.validate.rules).bytes.min_len = 256];
   repeated Feature features = 2;
 }
 
