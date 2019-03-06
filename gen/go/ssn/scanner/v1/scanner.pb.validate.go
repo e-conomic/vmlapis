@@ -107,10 +107,10 @@ func (m *ScanRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetImage()) < 256 {
+	if len(m.GetImage()) < 261 {
 		return ScanRequestValidationError{
 			field:  "Image",
-			reason: "value length must be at least 256 bytes",
+			reason: "value length must be at least 261 bytes",
 		}
 	}
 
