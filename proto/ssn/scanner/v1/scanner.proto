@@ -28,7 +28,7 @@ message Feature {
 }
 
 message ScanRequest {
-  bytes image = 1 [(lyft.validate.rules).bytes.min_len = 256];
+  bytes image = 1 [(lyft.validate.rules).bytes.min_len = 261];
   repeated Feature features = 2;
 }
 
