@@ -6,8 +6,8 @@ package mock_scanner
 
 import (
 	x "github.com/e-conomic/vmlapis/gen/go/ssn/scanner/v1"
-	context "context"
 	gomock "github.com/golang/mock/gomock"
+	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
 	reflect "reflect"
 )
@@ -33,26 +33,6 @@ func NewMockScannerClient(ctrl *gomock.Controller) *MockScannerClient {
 // EXPECT returns an object that allows the caller to indicate expected use
 func (m *MockScannerClient) EXPECT() *MockScannerClientMockRecorder {
 	return m.recorder
-}
-
-// InternalScan mocks base method
-func (m *MockScannerClient) InternalScan(ctx context.Context, in *x.ScanRequest, opts ...grpc.CallOption) (*x.InternalScanResponse, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "InternalScan", varargs...)
-	ret0, _ := ret[0].(*x.InternalScanResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// InternalScan indicates an expected call of InternalScan
-func (mr *MockScannerClientMockRecorder) InternalScan(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InternalScan", reflect.TypeOf((*MockScannerClient)(nil).InternalScan), varargs...)
 }
 
 // Scan mocks base method
@@ -96,21 +76,6 @@ func NewMockScannerServer(ctrl *gomock.Controller) *MockScannerServer {
 // EXPECT returns an object that allows the caller to indicate expected use
 func (m *MockScannerServer) EXPECT() *MockScannerServerMockRecorder {
 	return m.recorder
-}
-
-// InternalScan mocks base method
-func (m *MockScannerServer) InternalScan(arg0 context.Context, arg1 *x.ScanRequest) (*x.InternalScanResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "InternalScan", arg0, arg1)
-	ret0, _ := ret[0].(*x.InternalScanResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// InternalScan indicates an expected call of InternalScan
-func (mr *MockScannerServerMockRecorder) InternalScan(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InternalScan", reflect.TypeOf((*MockScannerServer)(nil).InternalScan), arg0, arg1)
 }
 
 // Scan mocks base method
