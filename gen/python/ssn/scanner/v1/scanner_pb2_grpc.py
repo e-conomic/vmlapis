@@ -14,11 +14,6 @@ class ScannerStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.InternalScan = channel.unary_unary(
-        '/ssn.scanner.v1.Scanner/InternalScan',
-        request_serializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.ScanRequest.SerializeToString,
-        response_deserializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.InternalScanResponse.FromString,
-        )
     self.Scan = channel.unary_unary(
         '/ssn.scanner.v1.Scanner/Scan',
         request_serializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.ScanRequest.SerializeToString,
@@ -30,13 +25,6 @@ class ScannerServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def InternalScan(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
   def Scan(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -47,11 +35,6 @@ class ScannerServicer(object):
 
 def add_ScannerServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'InternalScan': grpc.unary_unary_rpc_method_handler(
-          servicer.InternalScan,
-          request_deserializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.ScanRequest.FromString,
-          response_serializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.InternalScanResponse.SerializeToString,
-      ),
       'Scan': grpc.unary_unary_rpc_method_handler(
           servicer.Scan,
           request_deserializer=ssn_dot_scanner_dot_v1_dot_scanner__pb2.ScanRequest.FromString,
