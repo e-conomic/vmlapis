@@ -7,10 +7,8 @@ option go_package = "scanner";
 import "google/api/annotations.proto";
 import "lyft/validate/validate.proto";
 import "ssn/mlservice/v1/mlservice.proto";
-import "ssn/ocrservice/v1/ocrservice.proto";
 
 service Scanner {
-  rpc InternalScan(ScanRequest) returns (InternalScanResponse);
   rpc Scan(ScanRequest) returns (ScanResponse) {
     option (google.api.http) = {
       post: "/v1/scan"
@@ -35,9 +33,4 @@ message ScanRequest {
 message ScanResponse {
   ssn.mlservice.v1.MlResponse document_field_detection = 1;
   string raw_text_detection = 2;
-}
-
-message InternalScanResponse {
-  ScanResponse scan_response = 1;
-  repeated ssn.ocrservice.v1.OcrScanImageResponse ocr_responses = 2;
 }

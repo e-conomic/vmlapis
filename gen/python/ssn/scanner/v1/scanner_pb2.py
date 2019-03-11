@@ -15,7 +15,6 @@ _sym_db = _symbol_database.Default()
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from lyft.validate import validate_pb2 as lyft_dot_validate_dot_validate__pb2
 from ssn.mlservice.v1 import mlservice_pb2 as ssn_dot_mlservice_dot_v1_dot_mlservice__pb2
-from ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.scanner.v1',
   syntax='proto3',
   serialized_options=_b('Z\007scanner'),
-  serialized_pb=_b('\n\x1cssn/scanner/v1/scanner.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a ssn/mlservice/v1/mlservice.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\"s\n\x07\x46\x65\x61ture\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.ssn.scanner.v1.Feature.Type\"<\n\x04Type\x12\x1c\n\x18\x44OCUMENT_FIELD_DETECTION\x10\x00\x12\x16\n\x12RAW_TEXT_DETECTION\x10\x01\"S\n\x0bScanRequest\x12\x19\n\x05image\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12)\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x17.ssn.scanner.v1.Feature\"j\n\x0cScanResponse\x12>\n\x18\x64ocument_field_detection\x18\x01 \x01(\x0b\x32\x1c.ssn.mlservice.v1.MlResponse\x12\x1a\n\x12raw_text_detection\x18\x02 \x01(\t\"\x8b\x01\n\x14InternalScanResponse\x12\x33\n\rscan_response\x18\x01 \x01(\x0b\x32\x1c.ssn.scanner.v1.ScanResponse\x12>\n\rocr_responses\x18\x02 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse2\xb4\x01\n\x07Scanner\x12Q\n\x0cInternalScan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a$.ssn.scanner.v1.InternalScanResponse\x12V\n\x04Scan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a\x1c.ssn.scanner.v1.ScanResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/scan:\x01*B\tZ\x07scannerb\x06proto3')
+  serialized_pb=_b('\n\x1cssn/scanner/v1/scanner.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a ssn/mlservice/v1/mlservice.proto\"s\n\x07\x46\x65\x61ture\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.ssn.scanner.v1.Feature.Type\"<\n\x04Type\x12\x1c\n\x18\x44OCUMENT_FIELD_DETECTION\x10\x00\x12\x16\n\x12RAW_TEXT_DETECTION\x10\x01\"S\n\x0bScanRequest\x12\x19\n\x05image\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12)\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x17.ssn.scanner.v1.Feature\"j\n\x0cScanResponse\x12>\n\x18\x64ocument_field_detection\x18\x01 \x01(\x0b\x32\x1c.ssn.mlservice.v1.MlResponse\x12\x1a\n\x12raw_text_detection\x18\x02 \x01(\t2a\n\x07Scanner\x12V\n\x04Scan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a\x1c.ssn.scanner.v1.ScanResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/scan:\x01*B\tZ\x07scannerb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_mlservice_dot_v1_dot_mlservice__pb2.DESCRIPTOR,ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_mlservice_dot_v1_dot_mlservice__pb2.DESCRIPTOR,])
 
 
 
@@ -46,8 +45,8 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=233,
-  serialized_end=293,
+  serialized_start=197,
+  serialized_end=257,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
 
@@ -79,8 +78,8 @@ _FEATURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=178,
-  serialized_end=293,
+  serialized_start=142,
+  serialized_end=257,
 )
 
 
@@ -117,8 +116,8 @@ _SCANREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=378,
+  serialized_start=259,
+  serialized_end=342,
 )
 
 
@@ -155,58 +154,17 @@ _SCANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=380,
-  serialized_end=486,
-)
-
-
-_INTERNALSCANRESPONSE = _descriptor.Descriptor(
-  name='InternalScanResponse',
-  full_name='ssn.scanner.v1.InternalScanResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='scan_response', full_name='ssn.scanner.v1.InternalScanResponse.scan_response', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_responses', full_name='ssn.scanner.v1.InternalScanResponse.ocr_responses', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=489,
-  serialized_end=628,
+  serialized_start=344,
+  serialized_end=450,
 )
 
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
 _FEATURE_TYPE.containing_type = _FEATURE
 _SCANREQUEST.fields_by_name['features'].message_type = _FEATURE
 _SCANRESPONSE.fields_by_name['document_field_detection'].message_type = ssn_dot_mlservice_dot_v1_dot_mlservice__pb2._MLRESPONSE
-_INTERNALSCANRESPONSE.fields_by_name['scan_response'].message_type = _SCANRESPONSE
-_INTERNALSCANRESPONSE.fields_by_name['ocr_responses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
 DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
 DESCRIPTOR.message_types_by_name['ScanRequest'] = _SCANREQUEST
 DESCRIPTOR.message_types_by_name['ScanResponse'] = _SCANRESPONSE
-DESCRIPTOR.message_types_by_name['InternalScanResponse'] = _INTERNALSCANRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Feature = _reflection.GeneratedProtocolMessageType('Feature', (_message.Message,), dict(
@@ -230,13 +188,6 @@ ScanResponse = _reflection.GeneratedProtocolMessageType('ScanResponse', (_messag
   ))
 _sym_db.RegisterMessage(ScanResponse)
 
-InternalScanResponse = _reflection.GeneratedProtocolMessageType('InternalScanResponse', (_message.Message,), dict(
-  DESCRIPTOR = _INTERNALSCANRESPONSE,
-  __module__ = 'ssn.scanner.v1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.InternalScanResponse)
-  ))
-_sym_db.RegisterMessage(InternalScanResponse)
-
 
 DESCRIPTOR._options = None
 _SCANREQUEST.fields_by_name['image']._options = None
@@ -247,22 +198,13 @@ _SCANNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=631,
-  serialized_end=811,
+  serialized_start=452,
+  serialized_end=549,
   methods=[
-  _descriptor.MethodDescriptor(
-    name='InternalScan',
-    full_name='ssn.scanner.v1.Scanner.InternalScan',
-    index=0,
-    containing_service=None,
-    input_type=_SCANREQUEST,
-    output_type=_INTERNALSCANRESPONSE,
-    serialized_options=None,
-  ),
   _descriptor.MethodDescriptor(
     name='Scan',
     full_name='ssn.scanner.v1.Scanner.Scan',
-    index=1,
+    index=0,
     containing_service=None,
     input_type=_SCANREQUEST,
     output_type=_SCANRESPONSE,
