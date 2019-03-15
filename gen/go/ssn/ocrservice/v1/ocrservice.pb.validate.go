@@ -112,6 +112,18 @@ func (m *OcrScanImageResponse) Validate() error {
 
 	// no validation rules for TessHocr
 
+	// no validation rules for ScaleFactor
+
+	if v, ok := interface{}(m.GetAnnotateImageResponse()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return OcrScanImageResponseValidationError{
+				field:  "AnnotateImageResponse",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	return nil
 }
 
