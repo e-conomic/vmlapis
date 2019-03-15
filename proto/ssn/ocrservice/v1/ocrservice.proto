@@ -4,6 +4,8 @@ package ssn.ocrservice.v1;
 
 option go_package = "ocrservice";
 
+import "google/cloud/vision/v1/image_annotator.proto";
+
 // Interface exported by the server.
 service OcrService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse);
@@ -15,9 +17,6 @@ message OcrScanImageRequest {
 
 message OcrScanImageResponse {
   string tess_hocr = 1;
-  // float  scaleFactor = 2;
-  // trimBox what what cut off
-  // Google Vision Ord
-  // Other transformations
-
+  float scale_factor = 2;
+  google.cloud.vision.v1.AnnotateImageResponse annotate_image_response = 3;
 }
