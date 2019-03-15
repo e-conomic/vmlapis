@@ -1,7 +1,7 @@
 protoc:
   version: 3.6.1
   includes:
-  - ../deps/google
+  - ../deps/googleapis
 lint:
   group: google
 generate:
