@@ -17,6 +17,6 @@ message OcrScanImageRequest {
 
 message OcrScanImageResponse {
   string tess_hocr = 1;
-  float scale_factor = 2;
+  double scale_factor = 2;
   google.cloud.vision.v1.AnnotateImageResponse annotate_image_response = 3;
 }
