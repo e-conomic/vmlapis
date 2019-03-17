@@ -4,6 +4,6 @@ build-all:
 	cd proto && prototool all
 	sh scripts/gomock.sh
 	go mod tidy
-	sh scripts/py_init.sh
+	sh scripts/py_fixes.sh
 
 .PHONY: build-all

@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from google.cloud.vision.v1 import text_annotation_pb2 as google_dot_cloud_dot_vision_dot_v1_dot_text__annotation__pb2
+from google.cloud.vision_v1 import text_annotation_pb2 as google_dot_cloud_dot_vision_dot_v1_dot_text__annotation__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
