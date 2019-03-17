@@ -114,10 +114,10 @@ func (m *OcrScanImageResponse) Validate() error {
 
 	// no validation rules for ScaleFactor
 
-	if v, ok := interface{}(m.GetAnnotateImageResponse()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetTextAnnotation()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return OcrScanImageResponseValidationError{
-				field:  "AnnotateImageResponse",
+				field:  "TextAnnotation",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
