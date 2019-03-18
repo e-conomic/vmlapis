@@ -112,8 +112,6 @@ func (m *OcrScanImageResponse) Validate() error {
 
 	// no validation rules for TessHocr
 
-	// no validation rules for ScaleFactor
-
 	if v, ok := interface{}(m.GetTextAnnotation()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return OcrScanImageResponseValidationError{

@@ -17,11 +17,6 @@ message OcrScanImageRequest {
 
 message OcrScanImageResponse {
   string tess_hocr = 1;
-  // Aspect ratio is kept, but image might have been resized before
-  // text annotation was done, boundary polygons should be multiplied
-  // with the scale factor to get the position of the polygon on the
-  // original image
-  double scale_factor = 2;
   // TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-  google.cloud.vision.v1.TextAnnotation text_annotation = 3;
+  google.cloud.vision.v1.TextAnnotation text_annotation = 2;
 }

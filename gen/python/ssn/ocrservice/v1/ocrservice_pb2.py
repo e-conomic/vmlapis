@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\nocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x32google/cloud/vision_v1/proto/text_annotation.proto\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"\x80\x01\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t\x12\x14\n\x0cscale_factor\x18\x02 \x01(\x01\x12?\n\x0ftext_annotation\x18\x03 \x01(\x0b\x32&.google.cloud.vision.v1.TextAnnotation2m\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponseB\x0cZ\nocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x32google/cloud/vision_v1/proto/text_annotation.proto\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\"j\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t\x12?\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32&.google.cloud.vision.v1.TextAnnotation2m\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponseB\x0cZ\nocrserviceb\x06proto3')
   ,
   dependencies=[google_dot_cloud_dot_vision__v1_dot_proto_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -73,15 +73,8 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='scale_factor', full_name='ssn.ocrservice.v1.OcrScanImageResponse.scale_factor', index=1,
-      number=2, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='text_annotation', full_name='ssn.ocrservice.v1.OcrScanImageResponse.text_annotation', index=2,
-      number=3, type=11, cpp_type=10, label=1,
+      name='text_annotation', full_name='ssn.ocrservice.v1.OcrScanImageResponse.text_annotation', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -98,8 +91,8 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=147,
-  serialized_end=275,
+  serialized_start=146,
+  serialized_end=252,
 )
 
 _OCRSCANIMAGERESPONSE.fields_by_name['text_annotation'].message_type = google_dot_cloud_dot_vision__v1_dot_proto_dot_text__annotation__pb2._TEXTANNOTATION
@@ -130,8 +123,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=277,
-  serialized_end=386,
+  serialized_start=254,
+  serialized_end=363,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',
