@@ -3,12 +3,14 @@
 
 package validate
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
-import duration "github.com/golang/protobuf/ptypes/duration"
-import timestamp "github.com/golang/protobuf/ptypes/timestamp"
+import (
+	fmt "fmt"
+	proto "github.com/golang/protobuf/proto"
+	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
+	duration "github.com/golang/protobuf/ptypes/duration"
+	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	math "math"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -19,7 +21,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // FieldRules encapsulates the rules for each type of field. Depending on the
 // field, the correct set should be used to ensure proper validations.
@@ -57,16 +59,17 @@ func (m *FieldRules) Reset()         { *m = FieldRules{} }
 func (m *FieldRules) String() string { return proto.CompactTextString(m) }
 func (*FieldRules) ProtoMessage()    {}
 func (*FieldRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{0}
+	return fileDescriptor_698addcc49c49a48, []int{0}
 }
+
 func (m *FieldRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_FieldRules.Unmarshal(m, b)
 }
 func (m *FieldRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_FieldRules.Marshal(b, m, deterministic)
 }
-func (dst *FieldRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_FieldRules.Merge(dst, src)
+func (m *FieldRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_FieldRules.Merge(m, src)
 }
 func (m *FieldRules) XXX_Size() int {
 	return xxx_messageInfo_FieldRules.Size(m)
@@ -374,9 +377,9 @@ func (m *FieldRules) GetTimestamp() *TimestampRules {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*FieldRules) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _FieldRules_OneofMarshaler, _FieldRules_OneofUnmarshaler, _FieldRules_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*FieldRules) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*FieldRules_Float)(nil),
 		(*FieldRules_Double)(nil),
 		(*FieldRules_Int32)(nil),
@@ -400,432 +403,6 @@ func (*FieldRules) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) er
 		(*FieldRules_Duration)(nil),
 		(*FieldRules_Timestamp)(nil),
 	}
-}
-
-func _FieldRules_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*FieldRules)
-	// type
-	switch x := m.Type.(type) {
-	case *FieldRules_Float:
-		b.EncodeVarint(1<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Float); err != nil {
-			return err
-		}
-	case *FieldRules_Double:
-		b.EncodeVarint(2<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Double); err != nil {
-			return err
-		}
-	case *FieldRules_Int32:
-		b.EncodeVarint(3<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Int32); err != nil {
-			return err
-		}
-	case *FieldRules_Int64:
-		b.EncodeVarint(4<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Int64); err != nil {
-			return err
-		}
-	case *FieldRules_Uint32:
-		b.EncodeVarint(5<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Uint32); err != nil {
-			return err
-		}
-	case *FieldRules_Uint64:
-		b.EncodeVarint(6<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Uint64); err != nil {
-			return err
-		}
-	case *FieldRules_Sint32:
-		b.EncodeVarint(7<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Sint32); err != nil {
-			return err
-		}
-	case *FieldRules_Sint64:
-		b.EncodeVarint(8<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Sint64); err != nil {
-			return err
-		}
-	case *FieldRules_Fixed32:
-		b.EncodeVarint(9<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Fixed32); err != nil {
-			return err
-		}
-	case *FieldRules_Fixed64:
-		b.EncodeVarint(10<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Fixed64); err != nil {
-			return err
-		}
-	case *FieldRules_Sfixed32:
-		b.EncodeVarint(11<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Sfixed32); err != nil {
-			return err
-		}
-	case *FieldRules_Sfixed64:
-		b.EncodeVarint(12<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Sfixed64); err != nil {
-			return err
-		}
-	case *FieldRules_Bool:
-		b.EncodeVarint(13<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Bool); err != nil {
-			return err
-		}
-	case *FieldRules_String_:
-		b.EncodeVarint(14<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.String_); err != nil {
-			return err
-		}
-	case *FieldRules_Bytes:
-		b.EncodeVarint(15<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Bytes); err != nil {
-			return err
-		}
-	case *FieldRules_Enum:
-		b.EncodeVarint(16<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Enum); err != nil {
-			return err
-		}
-	case *FieldRules_Message:
-		b.EncodeVarint(17<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Message); err != nil {
-			return err
-		}
-	case *FieldRules_Repeated:
-		b.EncodeVarint(18<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Repeated); err != nil {
-			return err
-		}
-	case *FieldRules_Map:
-		b.EncodeVarint(19<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Map); err != nil {
-			return err
-		}
-	case *FieldRules_Any:
-		b.EncodeVarint(20<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Any); err != nil {
-			return err
-		}
-	case *FieldRules_Duration:
-		b.EncodeVarint(21<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Duration); err != nil {
-			return err
-		}
-	case *FieldRules_Timestamp:
-		b.EncodeVarint(22<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Timestamp); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("FieldRules.Type has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _FieldRules_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*FieldRules)
-	switch tag {
-	case 1: // type.float
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(FloatRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Float{msg}
-		return true, err
-	case 2: // type.double
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(DoubleRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Double{msg}
-		return true, err
-	case 3: // type.int32
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Int32Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Int32{msg}
-		return true, err
-	case 4: // type.int64
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Int64Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Int64{msg}
-		return true, err
-	case 5: // type.uint32
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(UInt32Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Uint32{msg}
-		return true, err
-	case 6: // type.uint64
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(UInt64Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Uint64{msg}
-		return true, err
-	case 7: // type.sint32
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(SInt32Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Sint32{msg}
-		return true, err
-	case 8: // type.sint64
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(SInt64Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Sint64{msg}
-		return true, err
-	case 9: // type.fixed32
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Fixed32Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Fixed32{msg}
-		return true, err
-	case 10: // type.fixed64
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(Fixed64Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Fixed64{msg}
-		return true, err
-	case 11: // type.sfixed32
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(SFixed32Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Sfixed32{msg}
-		return true, err
-	case 12: // type.sfixed64
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(SFixed64Rules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Sfixed64{msg}
-		return true, err
-	case 13: // type.bool
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(BoolRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Bool{msg}
-		return true, err
-	case 14: // type.string
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(StringRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_String_{msg}
-		return true, err
-	case 15: // type.bytes
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(BytesRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Bytes{msg}
-		return true, err
-	case 16: // type.enum
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(EnumRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Enum{msg}
-		return true, err
-	case 17: // type.message
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MessageRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Message{msg}
-		return true, err
-	case 18: // type.repeated
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(RepeatedRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Repeated{msg}
-		return true, err
-	case 19: // type.map
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MapRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Map{msg}
-		return true, err
-	case 20: // type.any
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(AnyRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Any{msg}
-		return true, err
-	case 21: // type.duration
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(DurationRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Duration{msg}
-		return true, err
-	case 22: // type.timestamp
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(TimestampRules)
-		err := b.DecodeMessage(msg)
-		m.Type = &FieldRules_Timestamp{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _FieldRules_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*FieldRules)
-	// type
-	switch x := m.Type.(type) {
-	case *FieldRules_Float:
-		s := proto.Size(x.Float)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Double:
-		s := proto.Size(x.Double)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Int32:
-		s := proto.Size(x.Int32)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Int64:
-		s := proto.Size(x.Int64)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Uint32:
-		s := proto.Size(x.Uint32)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Uint64:
-		s := proto.Size(x.Uint64)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Sint32:
-		s := proto.Size(x.Sint32)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Sint64:
-		s := proto.Size(x.Sint64)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Fixed32:
-		s := proto.Size(x.Fixed32)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Fixed64:
-		s := proto.Size(x.Fixed64)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Sfixed32:
-		s := proto.Size(x.Sfixed32)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Sfixed64:
-		s := proto.Size(x.Sfixed64)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Bool:
-		s := proto.Size(x.Bool)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_String_:
-		s := proto.Size(x.String_)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Bytes:
-		s := proto.Size(x.Bytes)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Enum:
-		s := proto.Size(x.Enum)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Message:
-		s := proto.Size(x.Message)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Repeated:
-		s := proto.Size(x.Repeated)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Map:
-		s := proto.Size(x.Map)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Any:
-		s := proto.Size(x.Any)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Duration:
-		s := proto.Size(x.Duration)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *FieldRules_Timestamp:
-		s := proto.Size(x.Timestamp)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 // FloatRules describes the constraints applied to `float` values
@@ -861,16 +438,17 @@ func (m *FloatRules) Reset()         { *m = FloatRules{} }
 func (m *FloatRules) String() string { return proto.CompactTextString(m) }
 func (*FloatRules) ProtoMessage()    {}
 func (*FloatRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{1}
+	return fileDescriptor_698addcc49c49a48, []int{1}
 }
+
 func (m *FloatRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_FloatRules.Unmarshal(m, b)
 }
 func (m *FloatRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_FloatRules.Marshal(b, m, deterministic)
 }
-func (dst *FloatRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_FloatRules.Merge(dst, src)
+func (m *FloatRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_FloatRules.Merge(m, src)
 }
 func (m *FloatRules) XXX_Size() int {
 	return xxx_messageInfo_FloatRules.Size(m)
@@ -963,16 +541,17 @@ func (m *DoubleRules) Reset()         { *m = DoubleRules{} }
 func (m *DoubleRules) String() string { return proto.CompactTextString(m) }
 func (*DoubleRules) ProtoMessage()    {}
 func (*DoubleRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{2}
+	return fileDescriptor_698addcc49c49a48, []int{2}
 }
+
 func (m *DoubleRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DoubleRules.Unmarshal(m, b)
 }
 func (m *DoubleRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DoubleRules.Marshal(b, m, deterministic)
 }
-func (dst *DoubleRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DoubleRules.Merge(dst, src)
+func (m *DoubleRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DoubleRules.Merge(m, src)
 }
 func (m *DoubleRules) XXX_Size() int {
 	return xxx_messageInfo_DoubleRules.Size(m)
@@ -1065,16 +644,17 @@ func (m *Int32Rules) Reset()         { *m = Int32Rules{} }
 func (m *Int32Rules) String() string { return proto.CompactTextString(m) }
 func (*Int32Rules) ProtoMessage()    {}
 func (*Int32Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{3}
+	return fileDescriptor_698addcc49c49a48, []int{3}
 }
+
 func (m *Int32Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Int32Rules.Unmarshal(m, b)
 }
 func (m *Int32Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Int32Rules.Marshal(b, m, deterministic)
 }
-func (dst *Int32Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Int32Rules.Merge(dst, src)
+func (m *Int32Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Int32Rules.Merge(m, src)
 }
 func (m *Int32Rules) XXX_Size() int {
 	return xxx_messageInfo_Int32Rules.Size(m)
@@ -1167,16 +747,17 @@ func (m *Int64Rules) Reset()         { *m = Int64Rules{} }
 func (m *Int64Rules) String() string { return proto.CompactTextString(m) }
 func (*Int64Rules) ProtoMessage()    {}
 func (*Int64Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{4}
+	return fileDescriptor_698addcc49c49a48, []int{4}
 }
+
 func (m *Int64Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Int64Rules.Unmarshal(m, b)
 }
 func (m *Int64Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Int64Rules.Marshal(b, m, deterministic)
 }
-func (dst *Int64Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Int64Rules.Merge(dst, src)
+func (m *Int64Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Int64Rules.Merge(m, src)
 }
 func (m *Int64Rules) XXX_Size() int {
 	return xxx_messageInfo_Int64Rules.Size(m)
@@ -1269,16 +850,17 @@ func (m *UInt32Rules) Reset()         { *m = UInt32Rules{} }
 func (m *UInt32Rules) String() string { return proto.CompactTextString(m) }
 func (*UInt32Rules) ProtoMessage()    {}
 func (*UInt32Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{5}
+	return fileDescriptor_698addcc49c49a48, []int{5}
 }
+
 func (m *UInt32Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UInt32Rules.Unmarshal(m, b)
 }
 func (m *UInt32Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UInt32Rules.Marshal(b, m, deterministic)
 }
-func (dst *UInt32Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UInt32Rules.Merge(dst, src)
+func (m *UInt32Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UInt32Rules.Merge(m, src)
 }
 func (m *UInt32Rules) XXX_Size() int {
 	return xxx_messageInfo_UInt32Rules.Size(m)
@@ -1371,16 +953,17 @@ func (m *UInt64Rules) Reset()         { *m = UInt64Rules{} }
 func (m *UInt64Rules) String() string { return proto.CompactTextString(m) }
 func (*UInt64Rules) ProtoMessage()    {}
 func (*UInt64Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{6}
+	return fileDescriptor_698addcc49c49a48, []int{6}
 }
+
 func (m *UInt64Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_UInt64Rules.Unmarshal(m, b)
 }
 func (m *UInt64Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_UInt64Rules.Marshal(b, m, deterministic)
 }
-func (dst *UInt64Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_UInt64Rules.Merge(dst, src)
+func (m *UInt64Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_UInt64Rules.Merge(m, src)
 }
 func (m *UInt64Rules) XXX_Size() int {
 	return xxx_messageInfo_UInt64Rules.Size(m)
@@ -1473,16 +1056,17 @@ func (m *SInt32Rules) Reset()         { *m = SInt32Rules{} }
 func (m *SInt32Rules) String() string { return proto.CompactTextString(m) }
 func (*SInt32Rules) ProtoMessage()    {}
 func (*SInt32Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{7}
+	return fileDescriptor_698addcc49c49a48, []int{7}
 }
+
 func (m *SInt32Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SInt32Rules.Unmarshal(m, b)
 }
 func (m *SInt32Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SInt32Rules.Marshal(b, m, deterministic)
 }
-func (dst *SInt32Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SInt32Rules.Merge(dst, src)
+func (m *SInt32Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SInt32Rules.Merge(m, src)
 }
 func (m *SInt32Rules) XXX_Size() int {
 	return xxx_messageInfo_SInt32Rules.Size(m)
@@ -1575,16 +1159,17 @@ func (m *SInt64Rules) Reset()         { *m = SInt64Rules{} }
 func (m *SInt64Rules) String() string { return proto.CompactTextString(m) }
 func (*SInt64Rules) ProtoMessage()    {}
 func (*SInt64Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{8}
+	return fileDescriptor_698addcc49c49a48, []int{8}
 }
+
 func (m *SInt64Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SInt64Rules.Unmarshal(m, b)
 }
 func (m *SInt64Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SInt64Rules.Marshal(b, m, deterministic)
 }
-func (dst *SInt64Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SInt64Rules.Merge(dst, src)
+func (m *SInt64Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SInt64Rules.Merge(m, src)
 }
 func (m *SInt64Rules) XXX_Size() int {
 	return xxx_messageInfo_SInt64Rules.Size(m)
@@ -1677,16 +1262,17 @@ func (m *Fixed32Rules) Reset()         { *m = Fixed32Rules{} }
 func (m *Fixed32Rules) String() string { return proto.CompactTextString(m) }
 func (*Fixed32Rules) ProtoMessage()    {}
 func (*Fixed32Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{9}
+	return fileDescriptor_698addcc49c49a48, []int{9}
 }
+
 func (m *Fixed32Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Fixed32Rules.Unmarshal(m, b)
 }
 func (m *Fixed32Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Fixed32Rules.Marshal(b, m, deterministic)
 }
-func (dst *Fixed32Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Fixed32Rules.Merge(dst, src)
+func (m *Fixed32Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Fixed32Rules.Merge(m, src)
 }
 func (m *Fixed32Rules) XXX_Size() int {
 	return xxx_messageInfo_Fixed32Rules.Size(m)
@@ -1779,16 +1365,17 @@ func (m *Fixed64Rules) Reset()         { *m = Fixed64Rules{} }
 func (m *Fixed64Rules) String() string { return proto.CompactTextString(m) }
 func (*Fixed64Rules) ProtoMessage()    {}
 func (*Fixed64Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{10}
+	return fileDescriptor_698addcc49c49a48, []int{10}
 }
+
 func (m *Fixed64Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Fixed64Rules.Unmarshal(m, b)
 }
 func (m *Fixed64Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Fixed64Rules.Marshal(b, m, deterministic)
 }
-func (dst *Fixed64Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Fixed64Rules.Merge(dst, src)
+func (m *Fixed64Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Fixed64Rules.Merge(m, src)
 }
 func (m *Fixed64Rules) XXX_Size() int {
 	return xxx_messageInfo_Fixed64Rules.Size(m)
@@ -1881,16 +1468,17 @@ func (m *SFixed32Rules) Reset()         { *m = SFixed32Rules{} }
 func (m *SFixed32Rules) String() string { return proto.CompactTextString(m) }
 func (*SFixed32Rules) ProtoMessage()    {}
 func (*SFixed32Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{11}
+	return fileDescriptor_698addcc49c49a48, []int{11}
 }
+
 func (m *SFixed32Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SFixed32Rules.Unmarshal(m, b)
 }
 func (m *SFixed32Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SFixed32Rules.Marshal(b, m, deterministic)
 }
-func (dst *SFixed32Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SFixed32Rules.Merge(dst, src)
+func (m *SFixed32Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SFixed32Rules.Merge(m, src)
 }
 func (m *SFixed32Rules) XXX_Size() int {
 	return xxx_messageInfo_SFixed32Rules.Size(m)
@@ -1983,16 +1571,17 @@ func (m *SFixed64Rules) Reset()         { *m = SFixed64Rules{} }
 func (m *SFixed64Rules) String() string { return proto.CompactTextString(m) }
 func (*SFixed64Rules) ProtoMessage()    {}
 func (*SFixed64Rules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{12}
+	return fileDescriptor_698addcc49c49a48, []int{12}
 }
+
 func (m *SFixed64Rules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SFixed64Rules.Unmarshal(m, b)
 }
 func (m *SFixed64Rules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_SFixed64Rules.Marshal(b, m, deterministic)
 }
-func (dst *SFixed64Rules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SFixed64Rules.Merge(dst, src)
+func (m *SFixed64Rules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SFixed64Rules.Merge(m, src)
 }
 func (m *SFixed64Rules) XXX_Size() int {
 	return xxx_messageInfo_SFixed64Rules.Size(m)
@@ -2065,16 +1654,17 @@ func (m *BoolRules) Reset()         { *m = BoolRules{} }
 func (m *BoolRules) String() string { return proto.CompactTextString(m) }
 func (*BoolRules) ProtoMessage()    {}
 func (*BoolRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{13}
+	return fileDescriptor_698addcc49c49a48, []int{13}
 }
+
 func (m *BoolRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BoolRules.Unmarshal(m, b)
 }
 func (m *BoolRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BoolRules.Marshal(b, m, deterministic)
 }
-func (dst *BoolRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BoolRules.Merge(dst, src)
+func (m *BoolRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BoolRules.Merge(m, src)
 }
 func (m *BoolRules) XXX_Size() int {
 	return xxx_messageInfo_BoolRules.Size(m)
@@ -2157,16 +1747,17 @@ func (m *StringRules) Reset()         { *m = StringRules{} }
 func (m *StringRules) String() string { return proto.CompactTextString(m) }
 func (*StringRules) ProtoMessage()    {}
 func (*StringRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{14}
+	return fileDescriptor_698addcc49c49a48, []int{14}
 }
+
 func (m *StringRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_StringRules.Unmarshal(m, b)
 }
 func (m *StringRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_StringRules.Marshal(b, m, deterministic)
 }
-func (dst *StringRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_StringRules.Merge(dst, src)
+func (m *StringRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_StringRules.Merge(m, src)
 }
 func (m *StringRules) XXX_Size() int {
 	return xxx_messageInfo_StringRules.Size(m)
@@ -2370,9 +1961,9 @@ func (m *StringRules) GetUriRef() bool {
 	return false
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*StringRules) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _StringRules_OneofMarshaler, _StringRules_OneofUnmarshaler, _StringRules_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*StringRules) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*StringRules_Email)(nil),
 		(*StringRules_Hostname)(nil),
 		(*StringRules_Ip)(nil),
@@ -2381,155 +1972,6 @@ func (*StringRules) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) e
 		(*StringRules_Uri)(nil),
 		(*StringRules_UriRef)(nil),
 	}
-}
-
-func _StringRules_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*StringRules)
-	// well_known
-	switch x := m.WellKnown.(type) {
-	case *StringRules_Email:
-		t := uint64(0)
-		if x.Email {
-			t = 1
-		}
-		b.EncodeVarint(12<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_Hostname:
-		t := uint64(0)
-		if x.Hostname {
-			t = 1
-		}
-		b.EncodeVarint(13<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_Ip:
-		t := uint64(0)
-		if x.Ip {
-			t = 1
-		}
-		b.EncodeVarint(14<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_Ipv4:
-		t := uint64(0)
-		if x.Ipv4 {
-			t = 1
-		}
-		b.EncodeVarint(15<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_Ipv6:
-		t := uint64(0)
-		if x.Ipv6 {
-			t = 1
-		}
-		b.EncodeVarint(16<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_Uri:
-		t := uint64(0)
-		if x.Uri {
-			t = 1
-		}
-		b.EncodeVarint(17<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *StringRules_UriRef:
-		t := uint64(0)
-		if x.UriRef {
-			t = 1
-		}
-		b.EncodeVarint(18<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case nil:
-	default:
-		return fmt.Errorf("StringRules.WellKnown has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _StringRules_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*StringRules)
-	switch tag {
-	case 12: // well_known.email
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Email{x != 0}
-		return true, err
-	case 13: // well_known.hostname
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Hostname{x != 0}
-		return true, err
-	case 14: // well_known.ip
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Ip{x != 0}
-		return true, err
-	case 15: // well_known.ipv4
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Ipv4{x != 0}
-		return true, err
-	case 16: // well_known.ipv6
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Ipv6{x != 0}
-		return true, err
-	case 17: // well_known.uri
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_Uri{x != 0}
-		return true, err
-	case 18: // well_known.uri_ref
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &StringRules_UriRef{x != 0}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _StringRules_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*StringRules)
-	// well_known
-	switch x := m.WellKnown.(type) {
-	case *StringRules_Email:
-		n += 1 // tag and wire
-		n += 1
-	case *StringRules_Hostname:
-		n += 1 // tag and wire
-		n += 1
-	case *StringRules_Ip:
-		n += 1 // tag and wire
-		n += 1
-	case *StringRules_Ipv4:
-		n += 1 // tag and wire
-		n += 1
-	case *StringRules_Ipv6:
-		n += 2 // tag and wire
-		n += 1
-	case *StringRules_Uri:
-		n += 2 // tag and wire
-		n += 1
-	case *StringRules_UriRef:
-		n += 2 // tag and wire
-		n += 1
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 // BytesRules describe the constraints applied to `bytes` values
@@ -2580,16 +2022,17 @@ func (m *BytesRules) Reset()         { *m = BytesRules{} }
 func (m *BytesRules) String() string { return proto.CompactTextString(m) }
 func (*BytesRules) ProtoMessage()    {}
 func (*BytesRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{15}
+	return fileDescriptor_698addcc49c49a48, []int{15}
 }
+
 func (m *BytesRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BytesRules.Unmarshal(m, b)
 }
 func (m *BytesRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_BytesRules.Marshal(b, m, deterministic)
 }
-func (dst *BytesRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BytesRules.Merge(dst, src)
+func (m *BytesRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BytesRules.Merge(m, src)
 }
 func (m *BytesRules) XXX_Size() int {
 	return xxx_messageInfo_BytesRules.Size(m)
@@ -2720,94 +2163,13 @@ func (m *BytesRules) GetIpv6() bool {
 	return false
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*BytesRules) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _BytesRules_OneofMarshaler, _BytesRules_OneofUnmarshaler, _BytesRules_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*BytesRules) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*BytesRules_Ip)(nil),
 		(*BytesRules_Ipv4)(nil),
 		(*BytesRules_Ipv6)(nil),
 	}
-}
-
-func _BytesRules_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*BytesRules)
-	// well_known
-	switch x := m.WellKnown.(type) {
-	case *BytesRules_Ip:
-		t := uint64(0)
-		if x.Ip {
-			t = 1
-		}
-		b.EncodeVarint(10<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *BytesRules_Ipv4:
-		t := uint64(0)
-		if x.Ipv4 {
-			t = 1
-		}
-		b.EncodeVarint(11<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case *BytesRules_Ipv6:
-		t := uint64(0)
-		if x.Ipv6 {
-			t = 1
-		}
-		b.EncodeVarint(12<<3 | proto.WireVarint)
-		b.EncodeVarint(t)
-	case nil:
-	default:
-		return fmt.Errorf("BytesRules.WellKnown has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _BytesRules_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*BytesRules)
-	switch tag {
-	case 10: // well_known.ip
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &BytesRules_Ip{x != 0}
-		return true, err
-	case 11: // well_known.ipv4
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &BytesRules_Ipv4{x != 0}
-		return true, err
-	case 12: // well_known.ipv6
-		if wire != proto.WireVarint {
-			return true, proto.ErrInternalBadWireType
-		}
-		x, err := b.DecodeVarint()
-		m.WellKnown = &BytesRules_Ipv6{x != 0}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _BytesRules_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*BytesRules)
-	// well_known
-	switch x := m.WellKnown.(type) {
-	case *BytesRules_Ip:
-		n += 1 // tag and wire
-		n += 1
-	case *BytesRules_Ipv4:
-		n += 1 // tag and wire
-		n += 1
-	case *BytesRules_Ipv6:
-		n += 1 // tag and wire
-		n += 1
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 // EnumRules describe the constraints applied to enum values
@@ -2832,16 +2194,17 @@ func (m *EnumRules) Reset()         { *m = EnumRules{} }
 func (m *EnumRules) String() string { return proto.CompactTextString(m) }
 func (*EnumRules) ProtoMessage()    {}
 func (*EnumRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{16}
+	return fileDescriptor_698addcc49c49a48, []int{16}
 }
+
 func (m *EnumRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_EnumRules.Unmarshal(m, b)
 }
 func (m *EnumRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_EnumRules.Marshal(b, m, deterministic)
 }
-func (dst *EnumRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_EnumRules.Merge(dst, src)
+func (m *EnumRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_EnumRules.Merge(m, src)
 }
 func (m *EnumRules) XXX_Size() int {
 	return xxx_messageInfo_EnumRules.Size(m)
@@ -2897,16 +2260,17 @@ func (m *MessageRules) Reset()         { *m = MessageRules{} }
 func (m *MessageRules) String() string { return proto.CompactTextString(m) }
 func (*MessageRules) ProtoMessage()    {}
 func (*MessageRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{17}
+	return fileDescriptor_698addcc49c49a48, []int{17}
 }
+
 func (m *MessageRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MessageRules.Unmarshal(m, b)
 }
 func (m *MessageRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_MessageRules.Marshal(b, m, deterministic)
 }
-func (dst *MessageRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MessageRules.Merge(dst, src)
+func (m *MessageRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MessageRules.Merge(m, src)
 }
 func (m *MessageRules) XXX_Size() int {
 	return xxx_messageInfo_MessageRules.Size(m)
@@ -2956,16 +2320,17 @@ func (m *RepeatedRules) Reset()         { *m = RepeatedRules{} }
 func (m *RepeatedRules) String() string { return proto.CompactTextString(m) }
 func (*RepeatedRules) ProtoMessage()    {}
 func (*RepeatedRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{18}
+	return fileDescriptor_698addcc49c49a48, []int{18}
 }
+
 func (m *RepeatedRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RepeatedRules.Unmarshal(m, b)
 }
 func (m *RepeatedRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_RepeatedRules.Marshal(b, m, deterministic)
 }
-func (dst *RepeatedRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RepeatedRules.Merge(dst, src)
+func (m *RepeatedRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RepeatedRules.Merge(m, src)
 }
 func (m *RepeatedRules) XXX_Size() int {
 	return xxx_messageInfo_RepeatedRules.Size(m)
@@ -3030,16 +2395,17 @@ func (m *MapRules) Reset()         { *m = MapRules{} }
 func (m *MapRules) String() string { return proto.CompactTextString(m) }
 func (*MapRules) ProtoMessage()    {}
 func (*MapRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{19}
+	return fileDescriptor_698addcc49c49a48, []int{19}
 }
+
 func (m *MapRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MapRules.Unmarshal(m, b)
 }
 func (m *MapRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_MapRules.Marshal(b, m, deterministic)
 }
-func (dst *MapRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MapRules.Merge(dst, src)
+func (m *MapRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_MapRules.Merge(m, src)
 }
 func (m *MapRules) XXX_Size() int {
 	return xxx_messageInfo_MapRules.Size(m)
@@ -3105,16 +2471,17 @@ func (m *AnyRules) Reset()         { *m = AnyRules{} }
 func (m *AnyRules) String() string { return proto.CompactTextString(m) }
 func (*AnyRules) ProtoMessage()    {}
 func (*AnyRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{20}
+	return fileDescriptor_698addcc49c49a48, []int{20}
 }
+
 func (m *AnyRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AnyRules.Unmarshal(m, b)
 }
 func (m *AnyRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_AnyRules.Marshal(b, m, deterministic)
 }
-func (dst *AnyRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AnyRules.Merge(dst, src)
+func (m *AnyRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AnyRules.Merge(m, src)
 }
 func (m *AnyRules) XXX_Size() int {
 	return xxx_messageInfo_AnyRules.Size(m)
@@ -3180,16 +2547,17 @@ func (m *DurationRules) Reset()         { *m = DurationRules{} }
 func (m *DurationRules) String() string { return proto.CompactTextString(m) }
 func (*DurationRules) ProtoMessage()    {}
 func (*DurationRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{21}
+	return fileDescriptor_698addcc49c49a48, []int{21}
 }
+
 func (m *DurationRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DurationRules.Unmarshal(m, b)
 }
 func (m *DurationRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_DurationRules.Marshal(b, m, deterministic)
 }
-func (dst *DurationRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DurationRules.Merge(dst, src)
+func (m *DurationRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DurationRules.Merge(m, src)
 }
 func (m *DurationRules) XXX_Size() int {
 	return xxx_messageInfo_DurationRules.Size(m)
@@ -3294,16 +2662,17 @@ func (m *TimestampRules) Reset()         { *m = TimestampRules{} }
 func (m *TimestampRules) String() string { return proto.CompactTextString(m) }
 func (*TimestampRules) ProtoMessage()    {}
 func (*TimestampRules) Descriptor() ([]byte, []int) {
-	return fileDescriptor_validate_bfa62649d7508623, []int{22}
+	return fileDescriptor_698addcc49c49a48, []int{22}
 }
+
 func (m *TimestampRules) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_TimestampRules.Unmarshal(m, b)
 }
 func (m *TimestampRules) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_TimestampRules.Marshal(b, m, deterministic)
 }
-func (dst *TimestampRules) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_TimestampRules.Merge(dst, src)
+func (m *TimestampRules) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_TimestampRules.Merge(m, src)
 }
 func (m *TimestampRules) XXX_Size() int {
 	return xxx_messageInfo_TimestampRules.Size(m)
@@ -3433,11 +2802,9 @@ func init() {
 	proto.RegisterExtension(E_Rules)
 }
 
-func init() {
-	proto.RegisterFile("lyft/validate/validate.proto", fileDescriptor_validate_bfa62649d7508623)
-}
+func init() { proto.RegisterFile("lyft/validate/validate.proto", fileDescriptor_698addcc49c49a48) }
 
-var fileDescriptor_validate_bfa62649d7508623 = []byte{
+var fileDescriptor_698addcc49c49a48 = []byte{
 	// 1608 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x98, 0x4b, 0x6f, 0xdb, 0xc6,
 	0x16, 0xc7, 0x2f, 0x9f, 0xa2, 0xc6, 0x52, 0x24, 0xcd, 0xb5, 0x1d, 0xc6, 0x49, 0x6e, 0x1c, 0xad,

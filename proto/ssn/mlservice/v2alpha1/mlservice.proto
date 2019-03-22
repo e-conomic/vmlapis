@@ -5,13 +5,11 @@ package ssn.mlservice.v1;
 option go_package = "mlservice";
 
 import "ssn/ocrservice/v1/ocrservice.proto";
-import "google/cloud/vision_v1/proto/geometry.proto";
 
 // Machine learning Service
 service MlService {
   rpc GetPrediction(MlRequest) returns (MlResponse);
 }
-
 
 message PredictedStringField {
   string value = 1;
@@ -36,13 +34,15 @@ message PredictedStringField {
   //         1----0
   //
   //   and the vertex order will still be (0, 1, 2, 3).
-  google.cloud.vision.v1.BoundingPoly bounding_box = 3;
+  // google.cloud.vision.v1.BoundingPoly bounding_box = 3;
+
 }
 
 message PredictedFieldFloat {
   float value = 1;
   float confidence = 2;
-  google.cloud.vision.v1.BoundingPoly bounding_box = 3;
+  // google.cloud.vision.v1.BoundingPoly bounding_box = 3;
+
 }
 
 message Feature {

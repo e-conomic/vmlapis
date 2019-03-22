@@ -4,7 +4,7 @@ package ssn.ocrservice.v1;
 
 option go_package = "ocrservice";
 
-import "google/cloud/vision_v1/proto/text_annotation.proto";
+import "google/cloud/vision/v1/text_annotation.proto";
 
 // Interface exported by the server.
 service OcrService {
