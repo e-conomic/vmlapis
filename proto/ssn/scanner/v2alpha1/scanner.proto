@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package ssn.scanner.v1;
+
+option go_package = "scanner";
+
+import "google/api/annotations.proto";
+import "lyft/validate/validate.proto";
+import "ssn/mlservice/v1/mlservice.proto";
+
+service Scanner {
+  rpc Scan(ScanRequest) returns (ScanResponse) {
+    option (google.api.http) = {
+      post: "/v1/scan"
+      body: "*"
+    };
+  }
+}
+
+message Feature {
+  enum Type {
+    DOCUMENT_FIELD_DETECTION = 0;
+    RAW_TEXT_DETECTION = 1;
+  }
+  Type type = 1;
+}
+
+message ScanRequest {
+  Document document = 1;
+  repeated Feature features = 2;
+}
+
+message ScanResponse {
+  ssn.mlservice.v1.MlResponse document_field_detection = 1;
+  string raw_text_detection = 2;
+}
+
+message Document {
+  // Document content, represented as a stream of bytes.
+  // Note: As with all `bytes` fields, protobuffers use a pure binary
+  // representation, whereas JSON representations use base64.
+  bytes content = 1 [(lyft.validate.rules).bytes.min_len = 261];
+  // Google Cloud Storage image location, or publicly-accessible image
+  // URL. If both `content` and `source` are provided for a document, `content`
+  // takes precedence and is used to perform the scan request.
+  DocumentSource source = 2;
+}
+
+message DocumentSource {
+  // The URI of the source document. Can be either:
+  //
+  // 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
+  //    HTTP/HTTPS URLs, We cannot guarantee that the request will be
+  //    completed. Your request may fail if the specified host denies the
+  //    request (e.g. due to request throttling or DOS prevention).
+  //
+  string http_uri = 1;
+}
