@@ -5,6 +5,7 @@ package ssn.mlservice.v1;
 option go_package = "mlservice";
 
 import "ssn/ocrservice/v1/ocrservice.proto";
+import "google/cloud/vision_v1/proto/text_annotation.proto";
 
 // Machine learning Service
 service MlService {
@@ -41,7 +42,7 @@ message PredictedStringField {
 message PredictedFieldFloat {
   float value = 1;
   float confidence = 2;
-  // google.cloud.vision.v1.BoundingPoly bounding_box = 3;
+  google.cloud.vision.v1.BoundingPoly bounding_box = 3;
 
 }
 
