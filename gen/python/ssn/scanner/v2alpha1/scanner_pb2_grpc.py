@@ -5,8 +5,58 @@ from ssn.scanner.v2alpha1 import scanner_pb2 as ssn_dot_scanner_dot_v2alpha1_dot
 
 
 class ScannerStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+  """Scanner
+  {
+  "document":{
+  "source": {
+  http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
+  }
+  },
+  "features":[
+  {
+  "type":"ORDER_DATE",
+  "max_results":2
+  },
+  {
+  "type":"CURRENCY",
+  "max_results":1
+  }
+  ]
+  }
+  Example response
+
+  {
+  "order_date": [
+  {
+  "value": "1. jan",
+  "normalized_value": "01-01-2019",
+  "confidence": 0.9,
+  "bounding_box":[{
+  "x":123,
+  "y": 32
+  }, ...]
+  },
+  {
+  "value": "1. jan",
+  "normalized_value": "01-01-2019",
+  "confidence": 0.9,
+  "bounding_box": [{
+  "x":123,
+  "y": 32
+  }, ...]
+  }
+  ]
+  "currency": [{
+  "value": "DKK",
+  "confidence": 0.99,
+  "bounding_box": [{
+  "x": 123,
+  "y": 32
+  }, ...]
+  }]
+  }
+
+  """
 
   def __init__(self, channel):
     """Constructor.
@@ -15,15 +65,65 @@ class ScannerStub(object):
       channel: A grpc.Channel.
     """
     self.Scan = channel.unary_unary(
-        '/ssn.scanner.v1.Scanner/Scan',
+        '/ssn.scanner.v2alpha1.Scanner/Scan',
         request_serializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanRequest.SerializeToString,
         response_deserializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanResponse.FromString,
         )
 
 
 class ScannerServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+  """Scanner
+  {
+  "document":{
+  "source": {
+  http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
+  }
+  },
+  "features":[
+  {
+  "type":"ORDER_DATE",
+  "max_results":2
+  },
+  {
+  "type":"CURRENCY",
+  "max_results":1
+  }
+  ]
+  }
+  Example response
+
+  {
+  "order_date": [
+  {
+  "value": "1. jan",
+  "normalized_value": "01-01-2019",
+  "confidence": 0.9,
+  "bounding_box":[{
+  "x":123,
+  "y": 32
+  }, ...]
+  },
+  {
+  "value": "1. jan",
+  "normalized_value": "01-01-2019",
+  "confidence": 0.9,
+  "bounding_box": [{
+  "x":123,
+  "y": 32
+  }, ...]
+  }
+  ]
+  "currency": [{
+  "value": "DKK",
+  "confidence": 0.99,
+  "bounding_box": [{
+  "x": 123,
+  "y": 32
+  }, ...]
+  }]
+  }
+
+  """
 
   def Scan(self, request, context):
     # missing associated documentation comment in .proto file
@@ -42,5 +142,5 @@ def add_ScannerServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'ssn.scanner.v1.Scanner', rpc_method_handlers)
+      'ssn.scanner.v2alpha1.Scanner', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

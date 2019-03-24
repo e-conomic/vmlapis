@@ -4,11 +4,26 @@ package ssn.ocrservice.v1;
 
 option go_package = "ocrservice";
 
-import "google/cloud/vision/v1/text_annotation.proto";
+import "ssn/type/text_annotation.proto";
 
 // Interface exported by the server.
 service OcrService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse);
+  rpc GetTextAnnotation(GetTextAnnotationRequest) returns (GetTextAnnotationResponse);
+}
+
+message GetTextAnnotationRequest {
+  message Image {
+    // Image content, represented as a stream of bytes.
+    // Note: As with all `bytes` fields, protobuffers use a pure binary
+    // representation, whereas JSON representations use base64.
+    bytes content = 1;
+  }
+  repeated Image images = 2;
+}
+
+message GetTextAnnotationResponse {
+  ssn.type.TextAnnotation text_annotation = 2;
 }
 
 message OcrScanImageRequest {
@@ -17,6 +32,4 @@ message OcrScanImageRequest {
 
 message OcrScanImageResponse {
   string tess_hocr = 1;
-  // TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-  google.cloud.vision.v1.TextAnnotation text_annotation = 2;
 }

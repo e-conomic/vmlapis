@@ -19,6 +19,11 @@ class OcrServiceStub(object):
         request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageRequest.SerializeToString,
         response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageResponse.FromString,
         )
+    self.GetTextAnnotation = channel.unary_unary(
+        '/ssn.ocrservice.v1.OcrService/GetTextAnnotation',
+        request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
+        response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
+        )
 
 
 class OcrServiceServicer(object):
@@ -32,6 +37,13 @@ class OcrServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def GetTextAnnotation(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_OcrServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -39,6 +51,11 @@ def add_OcrServiceServicer_to_server(servicer, server):
           servicer.OcrScanImage,
           request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageRequest.FromString,
           response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageResponse.SerializeToString,
+      ),
+      'GetTextAnnotation': grpc.unary_unary_rpc_method_handler(
+          servicer.GetTextAnnotation,
+          request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.FromString,
+          response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

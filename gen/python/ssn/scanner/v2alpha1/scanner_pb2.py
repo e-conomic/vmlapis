@@ -14,54 +14,169 @@ _sym_db = _symbol_database.Default()
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from lyft.validate import validate_pb2 as lyft_dot_validate_dot_validate__pb2
-from ssn.mlservice.v1 import mlservice_pb2 as ssn_dot_mlservice_dot_v1_dot_mlservice__pb2
+from ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
+from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ssn/scanner/v2alpha1/scanner.proto',
-  package='ssn.scanner.v1',
+  package='ssn.scanner.v2alpha1',
   syntax='proto3',
   serialized_options=_b('Z\007scanner'),
-  serialized_pb=_b('\n\"ssn/scanner/v2alpha1/scanner.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a ssn/mlservice/v1/mlservice.proto\"s\n\x07\x46\x65\x61ture\x12*\n\x04type\x18\x01 \x01(\x0e\x32\x1c.ssn.scanner.v1.Feature.Type\"<\n\x04Type\x12\x1c\n\x18\x44OCUMENT_FIELD_DETECTION\x10\x00\x12\x16\n\x12RAW_TEXT_DETECTION\x10\x01\"d\n\x0bScanRequest\x12*\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x18.ssn.scanner.v1.Document\x12)\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x17.ssn.scanner.v1.Feature\"j\n\x0cScanResponse\x12>\n\x18\x64ocument_field_detection\x18\x01 \x01(\x0b\x32\x1c.ssn.mlservice.v1.MlResponse\x12\x1a\n\x12raw_text_detection\x18\x02 \x01(\t\"W\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12.\n\x06source\x18\x02 \x01(\x0b\x32\x1e.ssn.scanner.v1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t2a\n\x07Scanner\x12V\n\x04Scan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a\x1c.ssn.scanner.v1.ScanResponse\"\x13\x82\xd3\xe4\x93\x02\r\"\x08/v1/scan:\x01*B\tZ\x07scannerb\x06proto3')
+  serialized_pb=_b('\n\"ssn/scanner/v2alpha1/scanner.proto\x12\x14ssn.scanner.v2alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"{\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12\x12\n\nconfidence\x18\x03 \x01(\x02\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\"\xfc\x02\n\x07\x46\x65\x61ture\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".ssn.scanner.v2alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12\r\n\x05model\x18\x03 \x01(\t\"\x9a\x02\n\x04Type\x12\x13\n\x0fTEXT_ANNOTATION\x10\x00\x12\x0e\n\nORDER_DATE\x10\x01\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x02\x12\x0c\n\x08\x43URRENCY\x10\x03\x12\r\n\tTOTAL_VAT\x10\x04\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x05\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x06\x12\x16\n\x12SUPPLIER_CORPORATE\x10\x07\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\x08\x12\x11\n\rDOCUMENT_TYPE\x10\t\x12\x12\n\x0ePAYMENT_METHOD\x10\n\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0b\x12\x0c\n\x08OCR_LINE\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\"p\n\x0bScanRequest\x12\x30\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1e.ssn.scanner.v2alpha1.Document\x12/\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1d.ssn.scanner.v2alpha1.Feature\"\xed\r\n\x0cScanResponse\x12\x38\n\norder_date\x18\x01 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12>\n\x10payment_due_date\x18\x02 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x36\n\x08\x63urrency\x18\x03 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x37\n\ttotal_vat\x18\x04 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12;\n\rdocument_type\x18\t \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0epayment_method\x18\n \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12@\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0einvoice_number\x18\x11 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x0bocr_line_dk\x18\x0c \x01(\x0b\x32,.ssn.scanner.v2alpha1.ScanResponse.OcrLineDkH\x00\x12\x43\n\x0bocr_line_se\x18\r \x01(\x0b\x32,.ssn.scanner.v2alpha1.ScanResponse.OcrLineSeH\x00\x12\x43\n\x0bocr_line_no\x18\x0e \x01(\x0b\x32,.ssn.scanner.v2alpha1.ScanResponse.OcrLineNoH\x00\x12\x43\n\x0bocr_line_fi\x18\x0f \x01(\x0b\x32,.ssn.scanner.v2alpha1.ScanResponse.OcrLineFiH\x00\x12\x43\n\x0bocr_line_nl\x18\x10 \x01(\x0b\x32,.ssn.scanner.v2alpha1.ScanResponse.OcrLineNlH\x00\x12\x31\n\x0ftext_annotation\x18\x12 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xb4\x01\n\tOcrLineDk\x12\x32\n\x04type\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x38\n\npayment_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x39\n\x0b\x63reditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\xcd\x01\n\tOcrLineSe\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14\x62\x61nkgiro_creditor_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14plusgiro_creditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNo\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNl\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineFi\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedFieldB\t\n\x07ocrLine\"]\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12\x34\n\x06source\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t2s\n\x07Scanner\x12h\n\x04Scan\x12!.ssn.scanner.v2alpha1.ScanRequest\x1a\".ssn.scanner.v2alpha1.ScanResponse\"\x19\x82\xd3\xe4\x93\x02\x13\"\x0e/v1alpha1/scan:\x01*B\tZ\x07scannerb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_mlservice_dot_v1_dot_mlservice__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
 
 _FEATURE_TYPE = _descriptor.EnumDescriptor(
   name='Type',
-  full_name='ssn.scanner.v1.Feature.Type',
+  full_name='ssn.scanner.v2alpha1.Feature.Type',
   filename=None,
   file=DESCRIPTOR,
   values=[
     _descriptor.EnumValueDescriptor(
-      name='DOCUMENT_FIELD_DETECTION', index=0, number=0,
+      name='TEXT_ANNOTATION', index=0, number=0,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RAW_TEXT_DETECTION', index=1, number=1,
+      name='ORDER_DATE', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PAYMENT_DUE_DATE', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CURRENCY', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOTAL_VAT', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOTAL_INCL_VAT', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TOTAL_EXCL_VAT', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUPPLIER_CORPORATE', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUPPLIER_COUNTRY_CODE', index=8, number=8,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DOCUMENT_TYPE', index=9, number=9,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PAYMENT_METHOD', index=10, number=10,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CREDIT_CARD_NUMBER', index=11, number=11,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCR_LINE', index=12, number=12,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVOICE_NUMBER', index=13, number=13,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=203,
-  serialized_end=263,
+  serialized_start=401,
+  serialized_end=683,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
 
 
-_FEATURE = _descriptor.Descriptor(
-  name='Feature',
-  full_name='ssn.scanner.v1.Feature',
+_PREDICTEDFIELD = _descriptor.Descriptor(
+  name='PredictedField',
+  full_name='ssn.scanner.v2alpha1.PredictedField',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='type', full_name='ssn.scanner.v1.Feature.type', index=0,
+      name='value', full_name='ssn.scanner.v2alpha1.PredictedField.value', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='normalized_value', full_name='ssn.scanner.v2alpha1.PredictedField.normalized_value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='confidence', full_name='ssn.scanner.v2alpha1.PredictedField.confidence', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bounding_box', full_name='ssn.scanner.v2alpha1.PredictedField.bounding_box', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=177,
+  serialized_end=300,
+)
+
+
+_FEATURE = _descriptor.Descriptor(
+  name='Feature',
+  full_name='ssn.scanner.v2alpha1.Feature',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='type', full_name='ssn.scanner.v2alpha1.Feature.type', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='max_results', full_name='ssn.scanner.v2alpha1.Feature.max_results', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model', full_name='ssn.scanner.v2alpha1.Feature.model', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -78,27 +193,27 @@ _FEATURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=148,
-  serialized_end=263,
+  serialized_start=303,
+  serialized_end=683,
 )
 
 
 _SCANREQUEST = _descriptor.Descriptor(
   name='ScanRequest',
-  full_name='ssn.scanner.v1.ScanRequest',
+  full_name='ssn.scanner.v2alpha1.ScanRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='document', full_name='ssn.scanner.v1.ScanRequest.document', index=0,
+      name='document', full_name='ssn.scanner.v2alpha1.ScanRequest.document', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='features', full_name='ssn.scanner.v1.ScanRequest.features', index=1,
+      name='features', full_name='ssn.scanner.v2alpha1.ScanRequest.features', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -116,29 +231,36 @@ _SCANREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=265,
-  serialized_end=365,
+  serialized_start=685,
+  serialized_end=797,
 )
 
 
-_SCANRESPONSE = _descriptor.Descriptor(
-  name='ScanResponse',
-  full_name='ssn.scanner.v1.ScanResponse',
+_SCANRESPONSE_OCRLINEDK = _descriptor.Descriptor(
+  name='OcrLineDk',
+  full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineDk',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='document_field_detection', full_name='ssn.scanner.v1.ScanResponse.document_field_detection', index=0,
+      name='type', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineDk.type', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='raw_text_detection', full_name='ssn.scanner.v1.ScanResponse.raw_text_detection', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='payment_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineDk.payment_id', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='creditor_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineDk.creditor_id', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -154,27 +276,313 @@ _SCANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=367,
-  serialized_end=473,
+  serialized_start=1961,
+  serialized_end=2141,
 )
 
-
-_DOCUMENT = _descriptor.Descriptor(
-  name='Document',
-  full_name='ssn.scanner.v1.Document',
+_SCANRESPONSE_OCRLINESE = _descriptor.Descriptor(
+  name='OcrLineSe',
+  full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineSe',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='content', full_name='ssn.scanner.v1.Document.content', index=0,
+      name='payment_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineSe.payment_id', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bankgiro_creditor_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineSe.bankgiro_creditor_id', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='plusgiro_creditor_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineSe.plusgiro_creditor_id', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2144,
+  serialized_end=2349,
+)
+
+_SCANRESPONSE_OCRLINENO = _descriptor.Descriptor(
+  name='OcrLineNo',
+  full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineNo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='payment_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineNo.payment_id', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2351,
+  serialized_end=2420,
+)
+
+_SCANRESPONSE_OCRLINENL = _descriptor.Descriptor(
+  name='OcrLineNl',
+  full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineNl',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='payment_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineNl.payment_id', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2422,
+  serialized_end=2491,
+)
+
+_SCANRESPONSE_OCRLINEFI = _descriptor.Descriptor(
+  name='OcrLineFi',
+  full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineFi',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='payment_id', full_name='ssn.scanner.v2alpha1.ScanResponse.OcrLineFi.payment_id', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2493,
+  serialized_end=2562,
+)
+
+_SCANRESPONSE = _descriptor.Descriptor(
+  name='ScanResponse',
+  full_name='ssn.scanner.v2alpha1.ScanResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='order_date', full_name='ssn.scanner.v2alpha1.ScanResponse.order_date', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_due_date', full_name='ssn.scanner.v2alpha1.ScanResponse.payment_due_date', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='currency', full_name='ssn.scanner.v2alpha1.ScanResponse.currency', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='total_vat', full_name='ssn.scanner.v2alpha1.ScanResponse.total_vat', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='total_incl_vat', full_name='ssn.scanner.v2alpha1.ScanResponse.total_incl_vat', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='total_excl_vat', full_name='ssn.scanner.v2alpha1.ScanResponse.total_excl_vat', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='supplier_corporate_id', full_name='ssn.scanner.v2alpha1.ScanResponse.supplier_corporate_id', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='supplier_country_code', full_name='ssn.scanner.v2alpha1.ScanResponse.supplier_country_code', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='document_type', full_name='ssn.scanner.v2alpha1.ScanResponse.document_type', index=8,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_method', full_name='ssn.scanner.v2alpha1.ScanResponse.payment_method', index=9,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='credit_card_number', full_name='ssn.scanner.v2alpha1.ScanResponse.credit_card_number', index=10,
+      number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='invoice_number', full_name='ssn.scanner.v2alpha1.ScanResponse.invoice_number', index=11,
+      number=17, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_dk', full_name='ssn.scanner.v2alpha1.ScanResponse.ocr_line_dk', index=12,
+      number=12, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_se', full_name='ssn.scanner.v2alpha1.ScanResponse.ocr_line_se', index=13,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_no', full_name='ssn.scanner.v2alpha1.ScanResponse.ocr_line_no', index=14,
+      number=14, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_fi', full_name='ssn.scanner.v2alpha1.ScanResponse.ocr_line_fi', index=15,
+      number=15, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_nl', full_name='ssn.scanner.v2alpha1.ScanResponse.ocr_line_nl', index=16,
+      number=16, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='text_annotation', full_name='ssn.scanner.v2alpha1.ScanResponse.text_annotation', index=17,
+      number=18, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_SCANRESPONSE_OCRLINEDK, _SCANRESPONSE_OCRLINESE, _SCANRESPONSE_OCRLINENO, _SCANRESPONSE_OCRLINENL, _SCANRESPONSE_OCRLINEFI, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='ocrLine', full_name='ssn.scanner.v2alpha1.ScanResponse.ocrLine',
+      index=0, containing_type=None, fields=[]),
+  ],
+  serialized_start=800,
+  serialized_end=2573,
+)
+
+
+_DOCUMENT = _descriptor.Descriptor(
+  name='Document',
+  full_name='ssn.scanner.v2alpha1.Document',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='content', full_name='ssn.scanner.v2alpha1.Document.content', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=_b('\272\351\300\003\005z\003\020\205\002'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='source', full_name='ssn.scanner.v1.Document.source', index=1,
+      name='source', full_name='ssn.scanner.v2alpha1.Document.source', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -192,20 +600,20 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=475,
-  serialized_end=562,
+  serialized_start=2575,
+  serialized_end=2668,
 )
 
 
 _DOCUMENTSOURCE = _descriptor.Descriptor(
   name='DocumentSource',
-  full_name='ssn.scanner.v1.DocumentSource',
+  full_name='ssn.scanner.v2alpha1.DocumentSource',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='http_uri', full_name='ssn.scanner.v1.DocumentSource.http_uri', index=0,
+      name='http_uri', full_name='ssn.scanner.v2alpha1.DocumentSource.http_uri', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -223,16 +631,64 @@ _DOCUMENTSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=564,
-  serialized_end=598,
+  serialized_start=2670,
+  serialized_end=2704,
 )
 
+_PREDICTEDFIELD.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
 _FEATURE_TYPE.containing_type = _FEATURE
 _SCANREQUEST.fields_by_name['document'].message_type = _DOCUMENT
 _SCANREQUEST.fields_by_name['features'].message_type = _FEATURE
-_SCANRESPONSE.fields_by_name['document_field_detection'].message_type = ssn_dot_mlservice_dot_v1_dot_mlservice__pb2._MLRESPONSE
+_SCANRESPONSE_OCRLINEDK.fields_by_name['type'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINEDK.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINEDK.fields_by_name['creditor_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINEDK.containing_type = _SCANRESPONSE
+_SCANRESPONSE_OCRLINESE.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINESE.fields_by_name['bankgiro_creditor_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINESE.fields_by_name['plusgiro_creditor_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINESE.containing_type = _SCANRESPONSE
+_SCANRESPONSE_OCRLINENO.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINENO.containing_type = _SCANRESPONSE
+_SCANRESPONSE_OCRLINENL.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINENL.containing_type = _SCANRESPONSE
+_SCANRESPONSE_OCRLINEFI.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE_OCRLINEFI.containing_type = _SCANRESPONSE
+_SCANRESPONSE.fields_by_name['order_date'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['payment_due_date'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['currency'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['total_vat'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['total_incl_vat'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['total_excl_vat'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['supplier_corporate_id'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['supplier_country_code'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['document_type'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['payment_method'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['credit_card_number'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['invoice_number'].message_type = _PREDICTEDFIELD
+_SCANRESPONSE.fields_by_name['ocr_line_dk'].message_type = _SCANRESPONSE_OCRLINEDK
+_SCANRESPONSE.fields_by_name['ocr_line_se'].message_type = _SCANRESPONSE_OCRLINESE
+_SCANRESPONSE.fields_by_name['ocr_line_no'].message_type = _SCANRESPONSE_OCRLINENO
+_SCANRESPONSE.fields_by_name['ocr_line_fi'].message_type = _SCANRESPONSE_OCRLINEFI
+_SCANRESPONSE.fields_by_name['ocr_line_nl'].message_type = _SCANRESPONSE_OCRLINENL
+_SCANRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
+_SCANRESPONSE.oneofs_by_name['ocrLine'].fields.append(
+  _SCANRESPONSE.fields_by_name['ocr_line_dk'])
+_SCANRESPONSE.fields_by_name['ocr_line_dk'].containing_oneof = _SCANRESPONSE.oneofs_by_name['ocrLine']
+_SCANRESPONSE.oneofs_by_name['ocrLine'].fields.append(
+  _SCANRESPONSE.fields_by_name['ocr_line_se'])
+_SCANRESPONSE.fields_by_name['ocr_line_se'].containing_oneof = _SCANRESPONSE.oneofs_by_name['ocrLine']
+_SCANRESPONSE.oneofs_by_name['ocrLine'].fields.append(
+  _SCANRESPONSE.fields_by_name['ocr_line_no'])
+_SCANRESPONSE.fields_by_name['ocr_line_no'].containing_oneof = _SCANRESPONSE.oneofs_by_name['ocrLine']
+_SCANRESPONSE.oneofs_by_name['ocrLine'].fields.append(
+  _SCANRESPONSE.fields_by_name['ocr_line_fi'])
+_SCANRESPONSE.fields_by_name['ocr_line_fi'].containing_oneof = _SCANRESPONSE.oneofs_by_name['ocrLine']
+_SCANRESPONSE.oneofs_by_name['ocrLine'].fields.append(
+  _SCANRESPONSE.fields_by_name['ocr_line_nl'])
+_SCANRESPONSE.fields_by_name['ocr_line_nl'].containing_oneof = _SCANRESPONSE.oneofs_by_name['ocrLine']
 _DOCUMENT.fields_by_name['source'].message_type = _DOCUMENTSOURCE
+DESCRIPTOR.message_types_by_name['PredictedField'] = _PREDICTEDFIELD
 DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
 DESCRIPTOR.message_types_by_name['ScanRequest'] = _SCANREQUEST
 DESCRIPTOR.message_types_by_name['ScanResponse'] = _SCANRESPONSE
@@ -240,38 +696,85 @@ DESCRIPTOR.message_types_by_name['Document'] = _DOCUMENT
 DESCRIPTOR.message_types_by_name['DocumentSource'] = _DOCUMENTSOURCE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
+PredictedField = _reflection.GeneratedProtocolMessageType('PredictedField', (_message.Message,), dict(
+  DESCRIPTOR = _PREDICTEDFIELD,
+  __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.PredictedField)
+  ))
+_sym_db.RegisterMessage(PredictedField)
+
 Feature = _reflection.GeneratedProtocolMessageType('Feature', (_message.Message,), dict(
   DESCRIPTOR = _FEATURE,
   __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.Feature)
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.Feature)
   ))
 _sym_db.RegisterMessage(Feature)
 
 ScanRequest = _reflection.GeneratedProtocolMessageType('ScanRequest', (_message.Message,), dict(
   DESCRIPTOR = _SCANREQUEST,
   __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.ScanRequest)
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanRequest)
   ))
 _sym_db.RegisterMessage(ScanRequest)
 
 ScanResponse = _reflection.GeneratedProtocolMessageType('ScanResponse', (_message.Message,), dict(
+
+  OcrLineDk = _reflection.GeneratedProtocolMessageType('OcrLineDk', (_message.Message,), dict(
+    DESCRIPTOR = _SCANRESPONSE_OCRLINEDK,
+    __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+    # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse.OcrLineDk)
+    ))
+  ,
+
+  OcrLineSe = _reflection.GeneratedProtocolMessageType('OcrLineSe', (_message.Message,), dict(
+    DESCRIPTOR = _SCANRESPONSE_OCRLINESE,
+    __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+    # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse.OcrLineSe)
+    ))
+  ,
+
+  OcrLineNo = _reflection.GeneratedProtocolMessageType('OcrLineNo', (_message.Message,), dict(
+    DESCRIPTOR = _SCANRESPONSE_OCRLINENO,
+    __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+    # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse.OcrLineNo)
+    ))
+  ,
+
+  OcrLineNl = _reflection.GeneratedProtocolMessageType('OcrLineNl', (_message.Message,), dict(
+    DESCRIPTOR = _SCANRESPONSE_OCRLINENL,
+    __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+    # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse.OcrLineNl)
+    ))
+  ,
+
+  OcrLineFi = _reflection.GeneratedProtocolMessageType('OcrLineFi', (_message.Message,), dict(
+    DESCRIPTOR = _SCANRESPONSE_OCRLINEFI,
+    __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+    # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse.OcrLineFi)
+    ))
+  ,
   DESCRIPTOR = _SCANRESPONSE,
   __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.ScanResponse)
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.ScanResponse)
   ))
 _sym_db.RegisterMessage(ScanResponse)
+_sym_db.RegisterMessage(ScanResponse.OcrLineDk)
+_sym_db.RegisterMessage(ScanResponse.OcrLineSe)
+_sym_db.RegisterMessage(ScanResponse.OcrLineNo)
+_sym_db.RegisterMessage(ScanResponse.OcrLineNl)
+_sym_db.RegisterMessage(ScanResponse.OcrLineFi)
 
 Document = _reflection.GeneratedProtocolMessageType('Document', (_message.Message,), dict(
   DESCRIPTOR = _DOCUMENT,
   __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.Document)
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.Document)
   ))
 _sym_db.RegisterMessage(Document)
 
 DocumentSource = _reflection.GeneratedProtocolMessageType('DocumentSource', (_message.Message,), dict(
   DESCRIPTOR = _DOCUMENTSOURCE,
   __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v1.DocumentSource)
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.DocumentSource)
   ))
 _sym_db.RegisterMessage(DocumentSource)
 
@@ -281,21 +784,21 @@ _DOCUMENT.fields_by_name['content']._options = None
 
 _SCANNER = _descriptor.ServiceDescriptor(
   name='Scanner',
-  full_name='ssn.scanner.v1.Scanner',
+  full_name='ssn.scanner.v2alpha1.Scanner',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=600,
-  serialized_end=697,
+  serialized_start=2706,
+  serialized_end=2821,
   methods=[
   _descriptor.MethodDescriptor(
     name='Scan',
-    full_name='ssn.scanner.v1.Scanner.Scan',
+    full_name='ssn.scanner.v2alpha1.Scanner.Scan',
     index=0,
     containing_service=None,
     input_type=_SCANREQUEST,
     output_type=_SCANRESPONSE,
-    serialized_options=_b('\202\323\344\223\002\r\"\010/v1/scan:\001*'),
+    serialized_options=_b('\202\323\344\223\002\023\"\016/v1alpha1/scan:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_SCANNER)

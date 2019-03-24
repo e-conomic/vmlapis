@@ -33,6 +33,87 @@ var (
 	_ = ptypes.DynamicAny{}
 )
 
+// Validate checks the field values on PredictedField with the rules defined in
+// the proto definition for this message. If any rules are violated, an error
+// is returned.
+func (m *PredictedField) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Value
+
+	// no validation rules for NormalizedValue
+
+	// no validation rules for Confidence
+
+	if v, ok := interface{}(m.GetBoundingBox()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return PredictedFieldValidationError{
+				field:  "BoundingBox",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// PredictedFieldValidationError is the validation error returned by
+// PredictedField.Validate if the designated constraints aren't met.
+type PredictedFieldValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e PredictedFieldValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e PredictedFieldValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e PredictedFieldValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e PredictedFieldValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e PredictedFieldValidationError) ErrorName() string { return "PredictedFieldValidationError" }
+
+// Error satisfies the builtin error interface
+func (e PredictedFieldValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sPredictedField.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = PredictedFieldValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = PredictedFieldValidationError{}
+
 // Validate checks the field values on Feature with the rules defined in the
 // proto definition for this message. If any rules are violated, an error is returned.
 func (m *Feature) Validate() error {
@@ -41,6 +122,10 @@ func (m *Feature) Validate() error {
 	}
 
 	// no validation rules for Type
+
+	// no validation rules for MaxResults
+
+	// no validation rules for Model
 
 	return nil
 }
@@ -197,17 +282,249 @@ func (m *ScanResponse) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetDocumentFieldDetection()).(interface{ Validate() error }); ok {
+	for idx, item := range m.GetOrderDate() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("OrderDate[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetPaymentDueDate() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("PaymentDueDate[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetCurrency() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("Currency[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetTotalVat() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("TotalVat[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetTotalInclVat() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("TotalInclVat[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetTotalExclVat() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("TotalExclVat[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetSupplierCorporateId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("SupplierCorporateId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetSupplierCountryCode() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("SupplierCountryCode[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if v, ok := interface{}(m.GetDocumentType()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return ScanResponseValidationError{
-				field:  "DocumentFieldDetection",
+				field:  "DocumentType",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
 		}
 	}
 
-	// no validation rules for RawTextDetection
+	if v, ok := interface{}(m.GetPaymentMethod()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponseValidationError{
+				field:  "PaymentMethod",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	for idx, item := range m.GetCreditCardNumber() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("CreditCardNumber[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetInvoiceNumber() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  fmt.Sprintf("InvoiceNumber[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if v, ok := interface{}(m.GetTextAnnotation()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponseValidationError{
+				field:  "TextAnnotation",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	switch m.OcrLine.(type) {
+
+	case *ScanResponse_OcrLineDk_:
+
+		if v, ok := interface{}(m.GetOcrLineDk()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  "OcrLineDk",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	case *ScanResponse_OcrLineSe_:
+
+		if v, ok := interface{}(m.GetOcrLineSe()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  "OcrLineSe",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	case *ScanResponse_OcrLineNo_:
+
+		if v, ok := interface{}(m.GetOcrLineNo()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  "OcrLineNo",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	case *ScanResponse_OcrLineFi_:
+
+		if v, ok := interface{}(m.GetOcrLineFi()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  "OcrLineFi",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	case *ScanResponse_OcrLineNl_:
+
+		if v, ok := interface{}(m.GetOcrLineNl()).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ScanResponseValidationError{
+					field:  "OcrLineNl",
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
 
 	return nil
 }
@@ -413,3 +730,428 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = DocumentSourceValidationError{}
+
+// Validate checks the field values on ScanResponse_OcrLineDk with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ScanResponse_OcrLineDk) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetType()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineDkValidationError{
+				field:  "Type",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineDkValidationError{
+				field:  "PaymentId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetCreditorId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineDkValidationError{
+				field:  "CreditorId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ScanResponse_OcrLineDkValidationError is the validation error returned by
+// ScanResponse_OcrLineDk.Validate if the designated constraints aren't met.
+type ScanResponse_OcrLineDkValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ScanResponse_OcrLineDkValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ScanResponse_OcrLineDkValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ScanResponse_OcrLineDkValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ScanResponse_OcrLineDkValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ScanResponse_OcrLineDkValidationError) ErrorName() string {
+	return "ScanResponse_OcrLineDkValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ScanResponse_OcrLineDkValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sScanResponse_OcrLineDk.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ScanResponse_OcrLineDkValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ScanResponse_OcrLineDkValidationError{}
+
+// Validate checks the field values on ScanResponse_OcrLineSe with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ScanResponse_OcrLineSe) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineSeValidationError{
+				field:  "PaymentId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetBankgiroCreditorId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineSeValidationError{
+				field:  "BankgiroCreditorId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if v, ok := interface{}(m.GetPlusgiroCreditorId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineSeValidationError{
+				field:  "PlusgiroCreditorId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ScanResponse_OcrLineSeValidationError is the validation error returned by
+// ScanResponse_OcrLineSe.Validate if the designated constraints aren't met.
+type ScanResponse_OcrLineSeValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ScanResponse_OcrLineSeValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ScanResponse_OcrLineSeValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ScanResponse_OcrLineSeValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ScanResponse_OcrLineSeValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ScanResponse_OcrLineSeValidationError) ErrorName() string {
+	return "ScanResponse_OcrLineSeValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ScanResponse_OcrLineSeValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sScanResponse_OcrLineSe.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ScanResponse_OcrLineSeValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ScanResponse_OcrLineSeValidationError{}
+
+// Validate checks the field values on ScanResponse_OcrLineNo with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ScanResponse_OcrLineNo) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineNoValidationError{
+				field:  "PaymentId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ScanResponse_OcrLineNoValidationError is the validation error returned by
+// ScanResponse_OcrLineNo.Validate if the designated constraints aren't met.
+type ScanResponse_OcrLineNoValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ScanResponse_OcrLineNoValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ScanResponse_OcrLineNoValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ScanResponse_OcrLineNoValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ScanResponse_OcrLineNoValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ScanResponse_OcrLineNoValidationError) ErrorName() string {
+	return "ScanResponse_OcrLineNoValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ScanResponse_OcrLineNoValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sScanResponse_OcrLineNo.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ScanResponse_OcrLineNoValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ScanResponse_OcrLineNoValidationError{}
+
+// Validate checks the field values on ScanResponse_OcrLineNl with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ScanResponse_OcrLineNl) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineNlValidationError{
+				field:  "PaymentId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ScanResponse_OcrLineNlValidationError is the validation error returned by
+// ScanResponse_OcrLineNl.Validate if the designated constraints aren't met.
+type ScanResponse_OcrLineNlValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ScanResponse_OcrLineNlValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ScanResponse_OcrLineNlValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ScanResponse_OcrLineNlValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ScanResponse_OcrLineNlValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ScanResponse_OcrLineNlValidationError) ErrorName() string {
+	return "ScanResponse_OcrLineNlValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ScanResponse_OcrLineNlValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sScanResponse_OcrLineNl.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ScanResponse_OcrLineNlValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ScanResponse_OcrLineNlValidationError{}
+
+// Validate checks the field values on ScanResponse_OcrLineFi with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *ScanResponse_OcrLineFi) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return ScanResponse_OcrLineFiValidationError{
+				field:  "PaymentId",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// ScanResponse_OcrLineFiValidationError is the validation error returned by
+// ScanResponse_OcrLineFi.Validate if the designated constraints aren't met.
+type ScanResponse_OcrLineFiValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ScanResponse_OcrLineFiValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ScanResponse_OcrLineFiValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ScanResponse_OcrLineFiValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ScanResponse_OcrLineFiValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ScanResponse_OcrLineFiValidationError) ErrorName() string {
+	return "ScanResponse_OcrLineFiValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ScanResponse_OcrLineFiValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sScanResponse_OcrLineFi.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ScanResponse_OcrLineFiValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ScanResponse_OcrLineFiValidationError{}

@@ -4,9 +4,9 @@ import grpc
 from ssn.mlservice.v2alpha1 import mlservice_pb2 as ssn_dot_mlservice_dot_v2alpha1_dot_mlservice__pb2
 
 
-class MlServiceStub(object):
-  """Machine learning Service
-  """
+class MLServiceStub(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -15,15 +15,15 @@ class MlServiceStub(object):
       channel: A grpc.Channel.
     """
     self.GetPrediction = channel.unary_unary(
-        '/ssn.mlservice.v1.MlService/GetPrediction',
+        '/ssn.mlservice.v2alpha1.MLService/GetPrediction',
         request_serializer=ssn_dot_mlservice_dot_v2alpha1_dot_mlservice__pb2.MlRequest.SerializeToString,
         response_deserializer=ssn_dot_mlservice_dot_v2alpha1_dot_mlservice__pb2.MlResponse.FromString,
         )
 
 
-class MlServiceServicer(object):
-  """Machine learning Service
-  """
+class MLServiceServicer(object):
+  # missing associated documentation comment in .proto file
+  pass
 
   def GetPrediction(self, request, context):
     # missing associated documentation comment in .proto file
@@ -33,7 +33,7 @@ class MlServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_MlServiceServicer_to_server(servicer, server):
+def add_MLServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'GetPrediction': grpc.unary_unary_rpc_method_handler(
           servicer.GetPrediction,
@@ -42,5 +42,5 @@ def add_MlServiceServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'ssn.mlservice.v1.MlService', rpc_method_handlers)
+      'ssn.mlservice.v2alpha1.MLService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

@@ -6,7 +6,7 @@ package ocrservice
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import v1 "google.golang.org/genproto/googleapis/cloud/vision/v1"
+import _type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
 
 import (
 	context "golang.org/x/net/context"
@@ -24,6 +24,123 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
+type GetTextAnnotationRequest struct {
+	Images               []*GetTextAnnotationRequest_Image `protobuf:"bytes,2,rep,name=images,proto3" json:"images,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                          `json:"-"`
+	XXX_unrecognized     []byte                            `json:"-"`
+	XXX_sizecache        int32                             `json:"-"`
+}
+
+func (m *GetTextAnnotationRequest) Reset()         { *m = GetTextAnnotationRequest{} }
+func (m *GetTextAnnotationRequest) String() string { return proto.CompactTextString(m) }
+func (*GetTextAnnotationRequest) ProtoMessage()    {}
+func (*GetTextAnnotationRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ocrservice_21a2081efa1af642, []int{0}
+}
+func (m *GetTextAnnotationRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetTextAnnotationRequest.Unmarshal(m, b)
+}
+func (m *GetTextAnnotationRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetTextAnnotationRequest.Marshal(b, m, deterministic)
+}
+func (dst *GetTextAnnotationRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetTextAnnotationRequest.Merge(dst, src)
+}
+func (m *GetTextAnnotationRequest) XXX_Size() int {
+	return xxx_messageInfo_GetTextAnnotationRequest.Size(m)
+}
+func (m *GetTextAnnotationRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetTextAnnotationRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetTextAnnotationRequest proto.InternalMessageInfo
+
+func (m *GetTextAnnotationRequest) GetImages() []*GetTextAnnotationRequest_Image {
+	if m != nil {
+		return m.Images
+	}
+	return nil
+}
+
+type GetTextAnnotationRequest_Image struct {
+	// Image content, represented as a stream of bytes.
+	// Note: As with all `bytes` fields, protobuffers use a pure binary
+	// representation, whereas JSON representations use base64.
+	Content              []byte   `protobuf:"bytes,1,opt,name=content,proto3" json:"content,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *GetTextAnnotationRequest_Image) Reset()         { *m = GetTextAnnotationRequest_Image{} }
+func (m *GetTextAnnotationRequest_Image) String() string { return proto.CompactTextString(m) }
+func (*GetTextAnnotationRequest_Image) ProtoMessage()    {}
+func (*GetTextAnnotationRequest_Image) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ocrservice_21a2081efa1af642, []int{0, 0}
+}
+func (m *GetTextAnnotationRequest_Image) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetTextAnnotationRequest_Image.Unmarshal(m, b)
+}
+func (m *GetTextAnnotationRequest_Image) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetTextAnnotationRequest_Image.Marshal(b, m, deterministic)
+}
+func (dst *GetTextAnnotationRequest_Image) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetTextAnnotationRequest_Image.Merge(dst, src)
+}
+func (m *GetTextAnnotationRequest_Image) XXX_Size() int {
+	return xxx_messageInfo_GetTextAnnotationRequest_Image.Size(m)
+}
+func (m *GetTextAnnotationRequest_Image) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetTextAnnotationRequest_Image.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetTextAnnotationRequest_Image proto.InternalMessageInfo
+
+func (m *GetTextAnnotationRequest_Image) GetContent() []byte {
+	if m != nil {
+		return m.Content
+	}
+	return nil
+}
+
+type GetTextAnnotationResponse struct {
+	TextAnnotation       *_type.TextAnnotation `protobuf:"bytes,2,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
+}
+
+func (m *GetTextAnnotationResponse) Reset()         { *m = GetTextAnnotationResponse{} }
+func (m *GetTextAnnotationResponse) String() string { return proto.CompactTextString(m) }
+func (*GetTextAnnotationResponse) ProtoMessage()    {}
+func (*GetTextAnnotationResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ocrservice_21a2081efa1af642, []int{1}
+}
+func (m *GetTextAnnotationResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetTextAnnotationResponse.Unmarshal(m, b)
+}
+func (m *GetTextAnnotationResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetTextAnnotationResponse.Marshal(b, m, deterministic)
+}
+func (dst *GetTextAnnotationResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetTextAnnotationResponse.Merge(dst, src)
+}
+func (m *GetTextAnnotationResponse) XXX_Size() int {
+	return xxx_messageInfo_GetTextAnnotationResponse.Size(m)
+}
+func (m *GetTextAnnotationResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetTextAnnotationResponse.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetTextAnnotationResponse proto.InternalMessageInfo
+
+func (m *GetTextAnnotationResponse) GetTextAnnotation() *_type.TextAnnotation {
+	if m != nil {
+		return m.TextAnnotation
+	}
+	return nil
+}
+
 type OcrScanImageRequest struct {
 	Data                 []byte   `protobuf:"bytes,1,opt,name=data,proto3" json:"data,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -35,7 +152,7 @@ func (m *OcrScanImageRequest) Reset()         { *m = OcrScanImageRequest{} }
 func (m *OcrScanImageRequest) String() string { return proto.CompactTextString(m) }
 func (*OcrScanImageRequest) ProtoMessage()    {}
 func (*OcrScanImageRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ocrservice_ab6440354c32aa5b, []int{0}
+	return fileDescriptor_ocrservice_21a2081efa1af642, []int{2}
 }
 func (m *OcrScanImageRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OcrScanImageRequest.Unmarshal(m, b)
@@ -63,19 +180,17 @@ func (m *OcrScanImageRequest) GetData() []byte {
 }
 
 type OcrScanImageResponse struct {
-	TessHocr string `protobuf:"bytes,1,opt,name=tess_hocr,json=tessHocr,proto3" json:"tess_hocr,omitempty"`
-	// TextAnnotation -> Page -> Block -> Paragraph -> Word -> Symbol
-	TextAnnotation       *v1.TextAnnotation `protobuf:"bytes,2,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}           `json:"-"`
-	XXX_unrecognized     []byte             `json:"-"`
-	XXX_sizecache        int32              `json:"-"`
+	TessHocr             string   `protobuf:"bytes,1,opt,name=tess_hocr,json=tessHocr,proto3" json:"tess_hocr,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
 }
 
 func (m *OcrScanImageResponse) Reset()         { *m = OcrScanImageResponse{} }
 func (m *OcrScanImageResponse) String() string { return proto.CompactTextString(m) }
 func (*OcrScanImageResponse) ProtoMessage()    {}
 func (*OcrScanImageResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ocrservice_ab6440354c32aa5b, []int{1}
+	return fileDescriptor_ocrservice_21a2081efa1af642, []int{3}
 }
 func (m *OcrScanImageResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_OcrScanImageResponse.Unmarshal(m, b)
@@ -102,14 +217,10 @@ func (m *OcrScanImageResponse) GetTessHocr() string {
 	return ""
 }
 
-func (m *OcrScanImageResponse) GetTextAnnotation() *v1.TextAnnotation {
-	if m != nil {
-		return m.TextAnnotation
-	}
-	return nil
-}
-
 func init() {
+	proto.RegisterType((*GetTextAnnotationRequest)(nil), "ssn.ocrservice.v1.GetTextAnnotationRequest")
+	proto.RegisterType((*GetTextAnnotationRequest_Image)(nil), "ssn.ocrservice.v1.GetTextAnnotationRequest.Image")
+	proto.RegisterType((*GetTextAnnotationResponse)(nil), "ssn.ocrservice.v1.GetTextAnnotationResponse")
 	proto.RegisterType((*OcrScanImageRequest)(nil), "ssn.ocrservice.v1.OcrScanImageRequest")
 	proto.RegisterType((*OcrScanImageResponse)(nil), "ssn.ocrservice.v1.OcrScanImageResponse")
 }
@@ -127,6 +238,7 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type OcrServiceClient interface {
 	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
+	GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error)
 }
 
 type ocrServiceClient struct {
@@ -146,9 +258,19 @@ func (c *ocrServiceClient) OcrScanImage(ctx context.Context, in *OcrScanImageReq
 	return out, nil
 }
 
+func (c *ocrServiceClient) GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error) {
+	out := new(GetTextAnnotationResponse)
+	err := c.cc.Invoke(ctx, "/ssn.ocrservice.v1.OcrService/GetTextAnnotation", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // OcrServiceServer is the server API for OcrService service.
 type OcrServiceServer interface {
 	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
+	GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error)
 }
 
 func RegisterOcrServiceServer(s *grpc.Server, srv OcrServiceServer) {
@@ -173,6 +295,24 @@ func _OcrService_OcrScanImage_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _OcrService_GetTextAnnotation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetTextAnnotationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OcrServiceServer).GetTextAnnotation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ssn.ocrservice.v1.OcrService/GetTextAnnotation",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OcrServiceServer).GetTextAnnotation(ctx, req.(*GetTextAnnotationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _OcrService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "ssn.ocrservice.v1.OcrService",
 	HandlerType: (*OcrServiceServer)(nil),
@@ -181,31 +321,39 @@ var _OcrService_serviceDesc = grpc.ServiceDesc{
 			MethodName: "OcrScanImage",
 			Handler:    _OcrService_OcrScanImage_Handler,
 		},
+		{
+			MethodName: "GetTextAnnotation",
+			Handler:    _OcrService_GetTextAnnotation_Handler,
+		},
 	},
 	Streams:  []grpc.StreamDesc{},
 	Metadata: "ssn/ocrservice/v1/ocrservice.proto",
 }
 
 func init() {
-	proto.RegisterFile("ssn/ocrservice/v1/ocrservice.proto", fileDescriptor_ocrservice_ab6440354c32aa5b)
+	proto.RegisterFile("ssn/ocrservice/v1/ocrservice.proto", fileDescriptor_ocrservice_21a2081efa1af642)
 }
 
-var fileDescriptor_ocrservice_ab6440354c32aa5b = []byte{
-	// 253 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x90, 0xc1, 0x4a, 0xc3, 0x40,
-	0x10, 0x86, 0x89, 0x88, 0xd8, 0x31, 0x28, 0xae, 0x1e, 0x4a, 0xbd, 0x94, 0x1c, 0x6a, 0x05, 0xd9,
-	0x90, 0xfa, 0x04, 0x7a, 0xd2, 0x53, 0x21, 0x7a, 0xf2, 0x12, 0xd6, 0xed, 0x10, 0x03, 0xed, 0x4e,
-	0xdd, 0x99, 0x2e, 0x7d, 0x00, 0x1f, 0x5c, 0x92, 0x05, 0x4d, 0x55, 0xe8, 0x6d, 0x67, 0xf8, 0x66,
-	0xe7, 0xfb, 0x07, 0x32, 0x66, 0x97, 0x93, 0xf5, 0x8c, 0x3e, 0x34, 0x16, 0xf3, 0x50, 0xf4, 0x2a,
-	0xbd, 0xf6, 0x24, 0xa4, 0xce, 0x99, 0x9d, 0xee, 0x75, 0x43, 0x31, 0xba, 0xad, 0x89, 0xea, 0x25,
-	0xe6, 0x76, 0x49, 0x9b, 0x45, 0x1e, 0x1a, 0x6e, 0xc8, 0xb5, 0xb3, 0x82, 0x5b, 0xa9, 0x8c, 0x73,
-	0x24, 0x46, 0x1a, 0x72, 0xf1, 0x83, 0xec, 0x06, 0x2e, 0xe6, 0xd6, 0x3f, 0x5b, 0xe3, 0x9e, 0x56,
-	0xa6, 0xc6, 0x12, 0x3f, 0x36, 0xc8, 0xa2, 0x14, 0x1c, 0x2e, 0x8c, 0x98, 0x61, 0x32, 0x4e, 0xa6,
-	0x69, 0xd9, 0xbd, 0xb3, 0xcf, 0x04, 0x2e, 0x77, 0x59, 0x5e, 0x93, 0x63, 0x54, 0x57, 0x30, 0x10,
-	0x64, 0xae, 0xde, 0xc9, 0xfa, 0x6e, 0x62, 0x50, 0x1e, 0xb7, 0x8d, 0x47, 0xb2, 0x5e, 0xcd, 0xe1,
-	0xec, 0xd7, 0xe6, 0xe1, 0xc1, 0x38, 0x99, 0x9e, 0xcc, 0x26, 0x3a, 0x8a, 0xea, 0x4e, 0x54, 0x47,
-	0x51, 0x1d, 0x0a, 0xfd, 0x82, 0x5b, 0xb9, 0xff, 0xa6, 0xcb, 0x53, 0xd9, 0xa9, 0x67, 0x2b, 0x80,
-	0xd6, 0x22, 0x06, 0x56, 0x15, 0xa4, 0x7d, 0x27, 0x35, 0xd1, 0x7f, 0x2e, 0xa2, 0xff, 0x09, 0x38,
-	0xba, 0xde, 0xcb, 0xc5, 0x70, 0x0f, 0xe9, 0x2b, 0xfc, 0x50, 0x6f, 0x47, 0xdd, 0xd5, 0xee, 0xbe,
-	0x02, 0x00, 0x00, 0xff, 0xff, 0x67, 0x36, 0xaa, 0xed, 0x9c, 0x01, 0x00, 0x00,
+var fileDescriptor_ocrservice_21a2081efa1af642 = []byte{
+	// 312 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x92, 0xcf, 0x4e, 0xc3, 0x30,
+	0x0c, 0xc6, 0xd5, 0x01, 0x83, 0x79, 0x13, 0x68, 0x81, 0x43, 0x28, 0x12, 0x1a, 0x3d, 0xc0, 0x10,
+	0x28, 0xd3, 0xb6, 0x27, 0x18, 0x17, 0xd8, 0x09, 0xa9, 0x70, 0xe2, 0x40, 0x15, 0x82, 0x05, 0x3d,
+	0x90, 0x94, 0xc4, 0x54, 0xe3, 0x0d, 0x78, 0x49, 0xde, 0x05, 0xf5, 0x0f, 0xd0, 0x6d, 0x45, 0xc0,
+	0x2d, 0x76, 0xbe, 0x9f, 0xfd, 0xd9, 0x09, 0x04, 0xce, 0xe9, 0x81, 0x51, 0xd6, 0xa1, 0x4d, 0x63,
+	0x85, 0x83, 0x74, 0x58, 0x89, 0x44, 0x62, 0x0d, 0x19, 0xd6, 0x75, 0x4e, 0x8b, 0x4a, 0x36, 0x1d,
+	0xfa, 0xfb, 0x19, 0x46, 0xaf, 0x09, 0x0e, 0x08, 0x67, 0x14, 0x49, 0xad, 0x0d, 0x49, 0x8a, 0x8d,
+	0x2e, 0x90, 0xe0, 0xcd, 0x03, 0x7e, 0x8e, 0x74, 0x8d, 0x33, 0x9a, 0x7c, 0xdd, 0x85, 0xf8, 0xfc,
+	0x82, 0x8e, 0xd8, 0x14, 0x9a, 0xf1, 0x93, 0x7c, 0x40, 0xc7, 0x1b, 0xbd, 0x95, 0x7e, 0x7b, 0x34,
+	0x14, 0x4b, 0x0d, 0xc4, 0x4f, 0xb0, 0x98, 0x66, 0x64, 0x58, 0x16, 0xf0, 0x0f, 0x60, 0x2d, 0x4f,
+	0x30, 0x0e, 0xeb, 0xca, 0x68, 0x42, 0x4d, 0xdc, 0xeb, 0x79, 0xfd, 0x4e, 0xf8, 0x19, 0x06, 0xb7,
+	0xb0, 0x5b, 0x53, 0xcc, 0x25, 0x46, 0x3b, 0x64, 0x13, 0xd8, 0x5a, 0x18, 0x80, 0x37, 0x7a, 0x5e,
+	0xbf, 0x3d, 0xe2, 0xb9, 0xa7, 0x6c, 0x42, 0xb1, 0x80, 0x6e, 0xd2, 0x5c, 0x1c, 0x1c, 0xc3, 0xf6,
+	0xa5, 0xb2, 0x57, 0x4a, 0xea, 0xc2, 0x5a, 0x39, 0x24, 0x83, 0xd5, 0x7b, 0x49, 0xb2, 0x74, 0x93,
+	0x9f, 0x83, 0x31, 0xec, 0xcc, 0x4b, 0x4b, 0x17, 0x7b, 0xd0, 0x22, 0x74, 0x2e, 0x7a, 0x34, 0xca,
+	0xe6, 0x40, 0x2b, 0xdc, 0xc8, 0x12, 0x17, 0x46, 0xd9, 0xd1, 0xbb, 0x07, 0x90, 0x51, 0xc5, 0x6e,
+	0x58, 0x04, 0x9d, 0x6a, 0x0d, 0x76, 0x58, 0xb3, 0xbc, 0x1a, 0x3f, 0xfe, 0xd1, 0xaf, 0xba, 0xd2,
+	0x8c, 0x86, 0xee, 0xd2, 0xbe, 0xd8, 0xc9, 0x3f, 0x9e, 0xc8, 0x3f, 0xfd, 0x9b, 0xb8, 0xe8, 0x77,
+	0xd6, 0xb9, 0x81, 0x6f, 0xe9, 0x5d, 0x33, 0xff, 0x3f, 0xe3, 0x8f, 0x00, 0x00, 0x00, 0xff, 0xff,
+	0x08, 0x8b, 0x5c, 0xae, 0x98, 0x02, 0x00, 0x00,
 }

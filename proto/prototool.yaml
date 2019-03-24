@@ -2,7 +2,6 @@ protoc:
   version: 3.6.1
   includes:
   - ../deps/googleapis
-  - ../deps/google-cloud-python/vision
 
 lint:
   group: google

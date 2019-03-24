@@ -7,7 +7,7 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 import _ "github.com/e-conomic/vmlapis/gen/go/lyft/validate"
-import v1 "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v1"
+import _type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
 import _ "google.golang.org/genproto/googleapis/api/annotations"
 
 import (
@@ -29,38 +29,182 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 type Feature_Type int32
 
 const (
-	Feature_DOCUMENT_FIELD_DETECTION Feature_Type = 0
-	Feature_RAW_TEXT_DETECTION       Feature_Type = 1
+	// Run default feature set
+	Feature_TEXT_ANNOTATION Feature_Type = 0
+	// Run order date detection
+	Feature_ORDER_DATE Feature_Type = 1
+	// Run due date detection
+	Feature_PAYMENT_DUE_DATE Feature_Type = 2
+	// Run currency detection
+	Feature_CURRENCY Feature_Type = 3
+	// Run total vat detection
+	Feature_TOTAL_VAT Feature_Type = 4
+	// Run total incl vat detection
+	Feature_TOTAL_INCL_VAT Feature_Type = 5
+	// Run total excl vat detection
+	Feature_TOTAL_EXCL_VAT Feature_Type = 6
+	// Run supplier corporate detection
+	Feature_SUPPLIER_CORPORATE Feature_Type = 7
+	// Run country code detection
+	Feature_SUPPLIER_COUNTRY_CODE Feature_Type = 8
+	// Run document type detection
+	Feature_DOCUMENT_TYPE Feature_Type = 9
+	// Run pyment method detection
+	Feature_PAYMENT_METHOD Feature_Type = 10
+	// Run credit card number detection
+	Feature_CREDIT_CARD_NUMBER Feature_Type = 11
+	// Run ocr line detection
+	Feature_OCR_LINE Feature_Type = 12
+	// Run invoice number detection
+	Feature_INVOICE_NUMBER Feature_Type = 13
 )
 
 var Feature_Type_name = map[int32]string{
-	0: "DOCUMENT_FIELD_DETECTION",
-	1: "RAW_TEXT_DETECTION",
+	0:  "TEXT_ANNOTATION",
+	1:  "ORDER_DATE",
+	2:  "PAYMENT_DUE_DATE",
+	3:  "CURRENCY",
+	4:  "TOTAL_VAT",
+	5:  "TOTAL_INCL_VAT",
+	6:  "TOTAL_EXCL_VAT",
+	7:  "SUPPLIER_CORPORATE",
+	8:  "SUPPLIER_COUNTRY_CODE",
+	9:  "DOCUMENT_TYPE",
+	10: "PAYMENT_METHOD",
+	11: "CREDIT_CARD_NUMBER",
+	12: "OCR_LINE",
+	13: "INVOICE_NUMBER",
 }
 var Feature_Type_value = map[string]int32{
-	"DOCUMENT_FIELD_DETECTION": 0,
-	"RAW_TEXT_DETECTION":       1,
+	"TEXT_ANNOTATION":       0,
+	"ORDER_DATE":            1,
+	"PAYMENT_DUE_DATE":      2,
+	"CURRENCY":              3,
+	"TOTAL_VAT":             4,
+	"TOTAL_INCL_VAT":        5,
+	"TOTAL_EXCL_VAT":        6,
+	"SUPPLIER_CORPORATE":    7,
+	"SUPPLIER_COUNTRY_CODE": 8,
+	"DOCUMENT_TYPE":         9,
+	"PAYMENT_METHOD":        10,
+	"CREDIT_CARD_NUMBER":    11,
+	"OCR_LINE":              12,
+	"INVOICE_NUMBER":        13,
 }
 
 func (x Feature_Type) String() string {
 	return proto.EnumName(Feature_Type_name, int32(x))
 }
 func (Feature_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{0, 0}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{1, 0}
+}
+
+type PredictedField struct {
+	// The text as found on the document "1. Jan"
+	Value string `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
+	// Normalized value 01-01-2019
+	// Only set when value is returned nomalized
+	NormalizedValue string `protobuf:"bytes,2,opt,name=normalized_value,json=normalizedValue,proto3" json:"normalized_value,omitempty"`
+	// The accuracy of the field detection in an image.
+	Confidence float32 `protobuf:"fixed32,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
+	// The bounding box for the block.
+	// The vertices are in the order of top-left, top-right, bottom-right,
+	// bottom-left. When a rotation of the bounding box is detected the rotation
+	// is represented as around the top-left corner as defined when the text is
+	// read in the 'natural' orientation.
+	// For example:
+	//
+	// * when the text is horizontal it might look like:
+	//
+	//         0----1
+	//         |    |
+	//         3----2
+	//
+	// * when it's rotated 180 degrees around the top-left corner it becomes:
+	//
+	//         2----3
+	//         |    |
+	//         1----0
+	//
+	//   and the vertex order will still be (0, 1, 2, 3).
+	BoundingBox          *_type.BoundingPoly `protobuf:"bytes,4,opt,name=bounding_box,json=boundingBox,proto3" json:"bounding_box,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
+}
+
+func (m *PredictedField) Reset()         { *m = PredictedField{} }
+func (m *PredictedField) String() string { return proto.CompactTextString(m) }
+func (*PredictedField) ProtoMessage()    {}
+func (*PredictedField) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{0}
+}
+func (m *PredictedField) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PredictedField.Unmarshal(m, b)
+}
+func (m *PredictedField) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PredictedField.Marshal(b, m, deterministic)
+}
+func (dst *PredictedField) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PredictedField.Merge(dst, src)
+}
+func (m *PredictedField) XXX_Size() int {
+	return xxx_messageInfo_PredictedField.Size(m)
+}
+func (m *PredictedField) XXX_DiscardUnknown() {
+	xxx_messageInfo_PredictedField.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PredictedField proto.InternalMessageInfo
+
+func (m *PredictedField) GetValue() string {
+	if m != nil {
+		return m.Value
+	}
+	return ""
+}
+
+func (m *PredictedField) GetNormalizedValue() string {
+	if m != nil {
+		return m.NormalizedValue
+	}
+	return ""
+}
+
+func (m *PredictedField) GetConfidence() float32 {
+	if m != nil {
+		return m.Confidence
+	}
+	return 0
+}
+
+func (m *PredictedField) GetBoundingBox() *_type.BoundingPoly {
+	if m != nil {
+		return m.BoundingBox
+	}
+	return nil
 }
 
 type Feature struct {
-	Type                 Feature_Type `protobuf:"varint,1,opt,name=type,proto3,enum=ssn.scanner.v1.Feature_Type" json:"type,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
+	// The feature type.
+	Type Feature_Type `protobuf:"varint,1,opt,name=type,proto3,enum=ssn.scanner.v2alpha1.Feature_Type" json:"type,omitempty"`
+	// Maximum number of results of this type. Does not apply to
+	// `TEXT_DETECTION`, `DOCUMENT_TEXT_DETECTION`, or `CROP_HINTS`.
+	MaxResults int32 `protobuf:"varint,2,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
+	// Model to use for the feature.
+	// Supported values: "builtin/stable" (the default if unset) and
+	// "builtin/latest".
+	Model                string   `protobuf:"bytes,3,opt,name=model,proto3" json:"model,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
 }
 
 func (m *Feature) Reset()         { *m = Feature{} }
 func (m *Feature) String() string { return proto.CompactTextString(m) }
 func (*Feature) ProtoMessage()    {}
 func (*Feature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{0}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{1}
 }
 func (m *Feature) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Feature.Unmarshal(m, b)
@@ -84,7 +228,21 @@ func (m *Feature) GetType() Feature_Type {
 	if m != nil {
 		return m.Type
 	}
-	return Feature_DOCUMENT_FIELD_DETECTION
+	return Feature_TEXT_ANNOTATION
+}
+
+func (m *Feature) GetMaxResults() int32 {
+	if m != nil {
+		return m.MaxResults
+	}
+	return 0
+}
+
+func (m *Feature) GetModel() string {
+	if m != nil {
+		return m.Model
+	}
+	return ""
 }
 
 type ScanRequest struct {
@@ -99,7 +257,7 @@ func (m *ScanRequest) Reset()         { *m = ScanRequest{} }
 func (m *ScanRequest) String() string { return proto.CompactTextString(m) }
 func (*ScanRequest) ProtoMessage()    {}
 func (*ScanRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{1}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{2}
 }
 func (m *ScanRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScanRequest.Unmarshal(m, b)
@@ -134,18 +292,77 @@ func (m *ScanRequest) GetFeatures() []*Feature {
 }
 
 type ScanResponse struct {
-	DocumentFieldDetection *v1.MlResponse `protobuf:"bytes,1,opt,name=document_field_detection,json=documentFieldDetection,proto3" json:"document_field_detection,omitempty"`
-	RawTextDetection       string         `protobuf:"bytes,2,opt,name=raw_text_detection,json=rawTextDetection,proto3" json:"raw_text_detection,omitempty"`
-	XXX_NoUnkeyedLiteral   struct{}       `json:"-"`
-	XXX_unrecognized       []byte         `json:"-"`
-	XXX_sizecache          int32          `json:"-"`
+	// orderDate
+	// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
+	// Example: "2019-12-31"
+	OrderDate []*PredictedField `protobuf:"bytes,1,rep,name=order_date,json=orderDate,proto3" json:"order_date,omitempty"`
+	// paymentDueDate
+	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+	// Example: "2019-12-31"
+	PaymentDueDate []*PredictedField `protobuf:"bytes,2,rep,name=payment_due_date,json=paymentDueDate,proto3" json:"payment_due_date,omitempty"`
+	// currency
+	// ISO 4217 string, ie. a 3-letter capitalized string
+	// Example: "NOK"
+	Currency []*PredictedField `protobuf:"bytes,3,rep,name=currency,proto3" json:"currency,omitempty"`
+	// totalVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalVat []*PredictedField `protobuf:"bytes,4,rep,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
+	// totalInclVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalInclVat []*PredictedField `protobuf:"bytes,5,rep,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
+	// totalExclVat
+	// A string that parses as a two-decimal number
+	// Example: "10.0" or "11.11"
+	TotalExclVat []*PredictedField `protobuf:"bytes,6,rep,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
+	// supplierCorporateId
+	// The company VAT number
+	// Example: "123456789B01" (for Dutch companies)
+	// or "12345678" (for Norwegian companies)
+	// Note: The field is repeated because multiple VAT numbers might exist.
+	// If you have the VAT number of you customer, you can use this information
+	// to find out which VAT number belongs to the supplier of the invoice.
+	SupplierCorporateId []*PredictedField `protobuf:"bytes,7,rep,name=supplier_corporate_id,json=supplierCorporateId,proto3" json:"supplier_corporate_id,omitempty"`
+	// supplierCountryCode
+	// ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
+	// Example: "NO"
+	SupplierCountryCode []*PredictedField `protobuf:"bytes,8,rep,name=supplier_country_code,json=supplierCountryCode,proto3" json:"supplier_country_code,omitempty"`
+	// documentType
+	// Either "Receipt" or "Invoice"
+	DocumentType *PredictedField `protobuf:"bytes,9,opt,name=document_type,json=documentType,proto3" json:"document_type,omitempty"`
+	// paymentMethod
+	// Either "Cash" or "CreditCard"
+	PaymentMethod *PredictedField `protobuf:"bytes,10,opt,name=payment_method,json=paymentMethod,proto3" json:"payment_method,omitempty"`
+	// creditCardNumber
+	// Four digits
+	// Example: "0012"
+	CreditCardNumber []*PredictedField `protobuf:"bytes,11,rep,name=credit_card_number,json=creditCardNumber,proto3" json:"credit_card_number,omitempty"`
+	// invoiceNumber
+	// The supplier defined identifier af the invoice
+	// Example: "12345-A99"
+	InvoiceNumber []*PredictedField `protobuf:"bytes,17,rep,name=invoice_number,json=invoiceNumber,proto3" json:"invoice_number,omitempty"`
+	// Only one ocrLine will be present in a suggestion.
+	//
+	// Types that are valid to be assigned to OcrLine:
+	//	*ScanResponse_OcrLineDk_
+	//	*ScanResponse_OcrLineSe_
+	//	*ScanResponse_OcrLineNo_
+	//	*ScanResponse_OcrLineFi_
+	//	*ScanResponse_OcrLineNl_
+	OcrLine isScanResponse_OcrLine `protobuf_oneof:"ocrLine"`
+	// Return text annotation
+	TextAnnotation       *_type.TextAnnotation `protobuf:"bytes,18,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
 }
 
 func (m *ScanResponse) Reset()         { *m = ScanResponse{} }
 func (m *ScanResponse) String() string { return proto.CompactTextString(m) }
 func (*ScanResponse) ProtoMessage()    {}
 func (*ScanResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{2}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3}
 }
 func (m *ScanResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScanResponse.Unmarshal(m, b)
@@ -165,18 +382,533 @@ func (m *ScanResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ScanResponse proto.InternalMessageInfo
 
-func (m *ScanResponse) GetDocumentFieldDetection() *v1.MlResponse {
+func (m *ScanResponse) GetOrderDate() []*PredictedField {
 	if m != nil {
-		return m.DocumentFieldDetection
+		return m.OrderDate
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetRawTextDetection() string {
+func (m *ScanResponse) GetPaymentDueDate() []*PredictedField {
 	if m != nil {
-		return m.RawTextDetection
+		return m.PaymentDueDate
 	}
-	return ""
+	return nil
+}
+
+func (m *ScanResponse) GetCurrency() []*PredictedField {
+	if m != nil {
+		return m.Currency
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetTotalVat() []*PredictedField {
+	if m != nil {
+		return m.TotalVat
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetTotalInclVat() []*PredictedField {
+	if m != nil {
+		return m.TotalInclVat
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetTotalExclVat() []*PredictedField {
+	if m != nil {
+		return m.TotalExclVat
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetSupplierCorporateId() []*PredictedField {
+	if m != nil {
+		return m.SupplierCorporateId
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetSupplierCountryCode() []*PredictedField {
+	if m != nil {
+		return m.SupplierCountryCode
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetDocumentType() *PredictedField {
+	if m != nil {
+		return m.DocumentType
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetPaymentMethod() *PredictedField {
+	if m != nil {
+		return m.PaymentMethod
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetCreditCardNumber() []*PredictedField {
+	if m != nil {
+		return m.CreditCardNumber
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetInvoiceNumber() []*PredictedField {
+	if m != nil {
+		return m.InvoiceNumber
+	}
+	return nil
+}
+
+type isScanResponse_OcrLine interface {
+	isScanResponse_OcrLine()
+}
+
+type ScanResponse_OcrLineDk_ struct {
+	OcrLineDk *ScanResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocr_line_dk,json=ocrLineDk,proto3,oneof"`
+}
+
+type ScanResponse_OcrLineSe_ struct {
+	OcrLineSe *ScanResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocr_line_se,json=ocrLineSe,proto3,oneof"`
+}
+
+type ScanResponse_OcrLineNo_ struct {
+	OcrLineNo *ScanResponse_OcrLineNo `protobuf:"bytes,14,opt,name=ocr_line_no,json=ocrLineNo,proto3,oneof"`
+}
+
+type ScanResponse_OcrLineFi_ struct {
+	OcrLineFi *ScanResponse_OcrLineFi `protobuf:"bytes,15,opt,name=ocr_line_fi,json=ocrLineFi,proto3,oneof"`
+}
+
+type ScanResponse_OcrLineNl_ struct {
+	OcrLineNl *ScanResponse_OcrLineNl `protobuf:"bytes,16,opt,name=ocr_line_nl,json=ocrLineNl,proto3,oneof"`
+}
+
+func (*ScanResponse_OcrLineDk_) isScanResponse_OcrLine() {}
+
+func (*ScanResponse_OcrLineSe_) isScanResponse_OcrLine() {}
+
+func (*ScanResponse_OcrLineNo_) isScanResponse_OcrLine() {}
+
+func (*ScanResponse_OcrLineFi_) isScanResponse_OcrLine() {}
+
+func (*ScanResponse_OcrLineNl_) isScanResponse_OcrLine() {}
+
+func (m *ScanResponse) GetOcrLine() isScanResponse_OcrLine {
+	if m != nil {
+		return m.OcrLine
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetOcrLineDk() *ScanResponse_OcrLineDk {
+	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineDk_); ok {
+		return x.OcrLineDk
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetOcrLineSe() *ScanResponse_OcrLineSe {
+	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineSe_); ok {
+		return x.OcrLineSe
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetOcrLineNo() *ScanResponse_OcrLineNo {
+	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineNo_); ok {
+		return x.OcrLineNo
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetOcrLineFi() *ScanResponse_OcrLineFi {
+	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineFi_); ok {
+		return x.OcrLineFi
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetOcrLineNl() *ScanResponse_OcrLineNl {
+	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineNl_); ok {
+		return x.OcrLineNl
+	}
+	return nil
+}
+
+func (m *ScanResponse) GetTextAnnotation() *_type.TextAnnotation {
+	if m != nil {
+		return m.TextAnnotation
+	}
+	return nil
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*ScanResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _ScanResponse_OneofMarshaler, _ScanResponse_OneofUnmarshaler, _ScanResponse_OneofSizer, []interface{}{
+		(*ScanResponse_OcrLineDk_)(nil),
+		(*ScanResponse_OcrLineSe_)(nil),
+		(*ScanResponse_OcrLineNo_)(nil),
+		(*ScanResponse_OcrLineFi_)(nil),
+		(*ScanResponse_OcrLineNl_)(nil),
+	}
+}
+
+func _ScanResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*ScanResponse)
+	// ocrLine
+	switch x := m.OcrLine.(type) {
+	case *ScanResponse_OcrLineDk_:
+		b.EncodeVarint(12<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.OcrLineDk); err != nil {
+			return err
+		}
+	case *ScanResponse_OcrLineSe_:
+		b.EncodeVarint(13<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.OcrLineSe); err != nil {
+			return err
+		}
+	case *ScanResponse_OcrLineNo_:
+		b.EncodeVarint(14<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.OcrLineNo); err != nil {
+			return err
+		}
+	case *ScanResponse_OcrLineFi_:
+		b.EncodeVarint(15<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.OcrLineFi); err != nil {
+			return err
+		}
+	case *ScanResponse_OcrLineNl_:
+		b.EncodeVarint(16<<3 | proto.WireBytes)
+		if err := b.EncodeMessage(x.OcrLineNl); err != nil {
+			return err
+		}
+	case nil:
+	default:
+		return fmt.Errorf("ScanResponse.OcrLine has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _ScanResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*ScanResponse)
+	switch tag {
+	case 12: // ocrLine.ocr_line_dk
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ScanResponse_OcrLineDk)
+		err := b.DecodeMessage(msg)
+		m.OcrLine = &ScanResponse_OcrLineDk_{msg}
+		return true, err
+	case 13: // ocrLine.ocr_line_se
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ScanResponse_OcrLineSe)
+		err := b.DecodeMessage(msg)
+		m.OcrLine = &ScanResponse_OcrLineSe_{msg}
+		return true, err
+	case 14: // ocrLine.ocr_line_no
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ScanResponse_OcrLineNo)
+		err := b.DecodeMessage(msg)
+		m.OcrLine = &ScanResponse_OcrLineNo_{msg}
+		return true, err
+	case 15: // ocrLine.ocr_line_fi
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ScanResponse_OcrLineFi)
+		err := b.DecodeMessage(msg)
+		m.OcrLine = &ScanResponse_OcrLineFi_{msg}
+		return true, err
+	case 16: // ocrLine.ocr_line_nl
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		msg := new(ScanResponse_OcrLineNl)
+		err := b.DecodeMessage(msg)
+		m.OcrLine = &ScanResponse_OcrLineNl_{msg}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _ScanResponse_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*ScanResponse)
+	// ocrLine
+	switch x := m.OcrLine.(type) {
+	case *ScanResponse_OcrLineDk_:
+		s := proto.Size(x.OcrLineDk)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *ScanResponse_OcrLineSe_:
+		s := proto.Size(x.OcrLineSe)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *ScanResponse_OcrLineNo_:
+		s := proto.Size(x.OcrLineNo)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *ScanResponse_OcrLineFi_:
+		s := proto.Size(x.OcrLineFi)
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case *ScanResponse_OcrLineNl_:
+		s := proto.Size(x.OcrLineNl)
+		n += 2 // tag and wire
+		n += proto.SizeVarint(uint64(s))
+		n += s
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type ScanResponse_OcrLineDk struct {
+	// example: "71"
+	Type *PredictedField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
+	// example: "000002879094031"
+	PaymentId *PredictedField `protobuf:"bytes,2,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	// example: "86570807"
+	CreditorId           *PredictedField `protobuf:"bytes,3,opt,name=creditor_id,json=creditorId,proto3" json:"creditor_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ScanResponse_OcrLineDk) Reset()         { *m = ScanResponse_OcrLineDk{} }
+func (m *ScanResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
+func (*ScanResponse_OcrLineDk) ProtoMessage()    {}
+func (*ScanResponse_OcrLineDk) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 0}
+}
+func (m *ScanResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanResponse_OcrLineDk.Unmarshal(m, b)
+}
+func (m *ScanResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanResponse_OcrLineDk.Marshal(b, m, deterministic)
+}
+func (dst *ScanResponse_OcrLineDk) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanResponse_OcrLineDk.Merge(dst, src)
+}
+func (m *ScanResponse_OcrLineDk) XXX_Size() int {
+	return xxx_messageInfo_ScanResponse_OcrLineDk.Size(m)
+}
+func (m *ScanResponse_OcrLineDk) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanResponse_OcrLineDk.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ScanResponse_OcrLineDk proto.InternalMessageInfo
+
+func (m *ScanResponse_OcrLineDk) GetType() *PredictedField {
+	if m != nil {
+		return m.Type
+	}
+	return nil
+}
+
+func (m *ScanResponse_OcrLineDk) GetPaymentId() *PredictedField {
+	if m != nil {
+		return m.PaymentId
+	}
+	return nil
+}
+
+func (m *ScanResponse_OcrLineDk) GetCreditorId() *PredictedField {
+	if m != nil {
+		return m.CreditorId
+	}
+	return nil
+}
+
+type ScanResponse_OcrLineSe struct {
+	// example: "050765098"
+	PaymentId *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	// example: "2654507"
+	BankgiroCreditorId *PredictedField `protobuf:"bytes,2,opt,name=bankgiro_creditor_id,json=bankgiroCreditorId,proto3" json:"bankgiro_creditor_id,omitempty"`
+	// example: "5000872"
+	PlusgiroCreditorId   *PredictedField `protobuf:"bytes,3,opt,name=plusgiro_creditor_id,json=plusgiroCreditorId,proto3" json:"plusgiro_creditor_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ScanResponse_OcrLineSe) Reset()         { *m = ScanResponse_OcrLineSe{} }
+func (m *ScanResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
+func (*ScanResponse_OcrLineSe) ProtoMessage()    {}
+func (*ScanResponse_OcrLineSe) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 1}
+}
+func (m *ScanResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanResponse_OcrLineSe.Unmarshal(m, b)
+}
+func (m *ScanResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanResponse_OcrLineSe.Marshal(b, m, deterministic)
+}
+func (dst *ScanResponse_OcrLineSe) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanResponse_OcrLineSe.Merge(dst, src)
+}
+func (m *ScanResponse_OcrLineSe) XXX_Size() int {
+	return xxx_messageInfo_ScanResponse_OcrLineSe.Size(m)
+}
+func (m *ScanResponse_OcrLineSe) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanResponse_OcrLineSe.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ScanResponse_OcrLineSe proto.InternalMessageInfo
+
+func (m *ScanResponse_OcrLineSe) GetPaymentId() *PredictedField {
+	if m != nil {
+		return m.PaymentId
+	}
+	return nil
+}
+
+func (m *ScanResponse_OcrLineSe) GetBankgiroCreditorId() *PredictedField {
+	if m != nil {
+		return m.BankgiroCreditorId
+	}
+	return nil
+}
+
+func (m *ScanResponse_OcrLineSe) GetPlusgiroCreditorId() *PredictedField {
+	if m != nil {
+		return m.PlusgiroCreditorId
+	}
+	return nil
+}
+
+type ScanResponse_OcrLineNo struct {
+	// example: "12345678903"
+	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ScanResponse_OcrLineNo) Reset()         { *m = ScanResponse_OcrLineNo{} }
+func (m *ScanResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
+func (*ScanResponse_OcrLineNo) ProtoMessage()    {}
+func (*ScanResponse_OcrLineNo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 2}
+}
+func (m *ScanResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanResponse_OcrLineNo.Unmarshal(m, b)
+}
+func (m *ScanResponse_OcrLineNo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanResponse_OcrLineNo.Marshal(b, m, deterministic)
+}
+func (dst *ScanResponse_OcrLineNo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanResponse_OcrLineNo.Merge(dst, src)
+}
+func (m *ScanResponse_OcrLineNo) XXX_Size() int {
+	return xxx_messageInfo_ScanResponse_OcrLineNo.Size(m)
+}
+func (m *ScanResponse_OcrLineNo) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanResponse_OcrLineNo.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ScanResponse_OcrLineNo proto.InternalMessageInfo
+
+func (m *ScanResponse_OcrLineNo) GetPaymentId() *PredictedField {
+	if m != nil {
+		return m.PaymentId
+	}
+	return nil
+}
+
+type ScanResponse_OcrLineNl struct {
+	// example: "0817937867870002"
+	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ScanResponse_OcrLineNl) Reset()         { *m = ScanResponse_OcrLineNl{} }
+func (m *ScanResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
+func (*ScanResponse_OcrLineNl) ProtoMessage()    {}
+func (*ScanResponse_OcrLineNl) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 3}
+}
+func (m *ScanResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanResponse_OcrLineNl.Unmarshal(m, b)
+}
+func (m *ScanResponse_OcrLineNl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanResponse_OcrLineNl.Marshal(b, m, deterministic)
+}
+func (dst *ScanResponse_OcrLineNl) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanResponse_OcrLineNl.Merge(dst, src)
+}
+func (m *ScanResponse_OcrLineNl) XXX_Size() int {
+	return xxx_messageInfo_ScanResponse_OcrLineNl.Size(m)
+}
+func (m *ScanResponse_OcrLineNl) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanResponse_OcrLineNl.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ScanResponse_OcrLineNl proto.InternalMessageInfo
+
+func (m *ScanResponse_OcrLineNl) GetPaymentId() *PredictedField {
+	if m != nil {
+		return m.PaymentId
+	}
+	return nil
+}
+
+type ScanResponse_OcrLineFi struct {
+	// example: "00000159220010146012"
+	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
+}
+
+func (m *ScanResponse_OcrLineFi) Reset()         { *m = ScanResponse_OcrLineFi{} }
+func (m *ScanResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
+func (*ScanResponse_OcrLineFi) ProtoMessage()    {}
+func (*ScanResponse_OcrLineFi) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 4}
+}
+func (m *ScanResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScanResponse_OcrLineFi.Unmarshal(m, b)
+}
+func (m *ScanResponse_OcrLineFi) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScanResponse_OcrLineFi.Marshal(b, m, deterministic)
+}
+func (dst *ScanResponse_OcrLineFi) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScanResponse_OcrLineFi.Merge(dst, src)
+}
+func (m *ScanResponse_OcrLineFi) XXX_Size() int {
+	return xxx_messageInfo_ScanResponse_OcrLineFi.Size(m)
+}
+func (m *ScanResponse_OcrLineFi) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScanResponse_OcrLineFi.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ScanResponse_OcrLineFi proto.InternalMessageInfo
+
+func (m *ScanResponse_OcrLineFi) GetPaymentId() *PredictedField {
+	if m != nil {
+		return m.PaymentId
+	}
+	return nil
 }
 
 type Document struct {
@@ -197,7 +929,7 @@ func (m *Document) Reset()         { *m = Document{} }
 func (m *Document) String() string { return proto.CompactTextString(m) }
 func (*Document) ProtoMessage()    {}
 func (*Document) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{3}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{4}
 }
 func (m *Document) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Document.Unmarshal(m, b)
@@ -249,7 +981,7 @@ func (m *DocumentSource) Reset()         { *m = DocumentSource{} }
 func (m *DocumentSource) String() string { return proto.CompactTextString(m) }
 func (*DocumentSource) ProtoMessage()    {}
 func (*DocumentSource) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_f8134aeeca006dc8, []int{4}
+	return fileDescriptor_scanner_67e7b2827df6efe3, []int{5}
 }
 func (m *DocumentSource) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DocumentSource.Unmarshal(m, b)
@@ -277,12 +1009,18 @@ func (m *DocumentSource) GetHttpUri() string {
 }
 
 func init() {
-	proto.RegisterType((*Feature)(nil), "ssn.scanner.v1.Feature")
-	proto.RegisterType((*ScanRequest)(nil), "ssn.scanner.v1.ScanRequest")
-	proto.RegisterType((*ScanResponse)(nil), "ssn.scanner.v1.ScanResponse")
-	proto.RegisterType((*Document)(nil), "ssn.scanner.v1.Document")
-	proto.RegisterType((*DocumentSource)(nil), "ssn.scanner.v1.DocumentSource")
-	proto.RegisterEnum("ssn.scanner.v1.Feature_Type", Feature_Type_name, Feature_Type_value)
+	proto.RegisterType((*PredictedField)(nil), "ssn.scanner.v2alpha1.PredictedField")
+	proto.RegisterType((*Feature)(nil), "ssn.scanner.v2alpha1.Feature")
+	proto.RegisterType((*ScanRequest)(nil), "ssn.scanner.v2alpha1.ScanRequest")
+	proto.RegisterType((*ScanResponse)(nil), "ssn.scanner.v2alpha1.ScanResponse")
+	proto.RegisterType((*ScanResponse_OcrLineDk)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineDk")
+	proto.RegisterType((*ScanResponse_OcrLineSe)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineSe")
+	proto.RegisterType((*ScanResponse_OcrLineNo)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineNo")
+	proto.RegisterType((*ScanResponse_OcrLineNl)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineNl")
+	proto.RegisterType((*ScanResponse_OcrLineFi)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineFi")
+	proto.RegisterType((*Document)(nil), "ssn.scanner.v2alpha1.Document")
+	proto.RegisterType((*DocumentSource)(nil), "ssn.scanner.v2alpha1.DocumentSource")
+	proto.RegisterEnum("ssn.scanner.v2alpha1.Feature_Type", Feature_Type_name, Feature_Type_value)
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -310,7 +1048,7 @@ func NewScannerClient(cc *grpc.ClientConn) ScannerClient {
 
 func (c *scannerClient) Scan(ctx context.Context, in *ScanRequest, opts ...grpc.CallOption) (*ScanResponse, error) {
 	out := new(ScanResponse)
-	err := c.cc.Invoke(ctx, "/ssn.scanner.v1.Scanner/Scan", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ssn.scanner.v2alpha1.Scanner/Scan", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -336,7 +1074,7 @@ func _Scanner_Scan_Handler(srv interface{}, ctx context.Context, dec func(interf
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.scanner.v1.Scanner/Scan",
+		FullMethod: "/ssn.scanner.v2alpha1.Scanner/Scan",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ScannerServer).Scan(ctx, req.(*ScanRequest))
@@ -345,7 +1083,7 @@ func _Scanner_Scan_Handler(srv interface{}, ctx context.Context, dec func(interf
 }
 
 var _Scanner_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "ssn.scanner.v1.Scanner",
+	ServiceName: "ssn.scanner.v2alpha1.Scanner",
 	HandlerType: (*ScannerServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -358,40 +1096,83 @@ var _Scanner_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/scanner/v2alpha1/scanner.proto", fileDescriptor_scanner_f8134aeeca006dc8)
+	proto.RegisterFile("ssn/scanner/v2alpha1/scanner.proto", fileDescriptor_scanner_67e7b2827df6efe3)
 }
 
-var fileDescriptor_scanner_f8134aeeca006dc8 = []byte{
-	// 488 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x74, 0x92, 0x4f, 0x6e, 0xd3, 0x40,
-	0x14, 0xc6, 0x71, 0x1a, 0x6a, 0xe7, 0xa5, 0x44, 0xd1, 0x20, 0x15, 0x13, 0x2c, 0x14, 0x59, 0x2c,
-	0x22, 0x40, 0x36, 0x71, 0x11, 0x0b, 0xc4, 0x86, 0xd6, 0x8e, 0x54, 0x89, 0xb6, 0xd2, 0xc4, 0x2d,
-	0x88, 0x8d, 0x35, 0x38, 0x93, 0xc6, 0x92, 0x3b, 0x63, 0x3c, 0x63, 0x37, 0x61, 0x89, 0xc4, 0x09,
-	0xe0, 0x34, 0xac, 0xb8, 0x03, 0x57, 0x60, 0xc3, 0x2d, 0x90, 0xff, 0xa5, 0x69, 0x45, 0x77, 0x33,
-	0xef, 0xfb, 0xbd, 0xf7, 0x3e, 0x7f, 0x1e, 0x30, 0x85, 0x60, 0xb6, 0x08, 0x09, 0x63, 0x34, 0xb5,
-	0x73, 0x87, 0xc4, 0xc9, 0x82, 0x8c, 0x9b, 0x82, 0x95, 0xa4, 0x5c, 0x72, 0xd4, 0x13, 0x82, 0x59,
-	0x4d, 0x29, 0x1f, 0x0f, 0x8c, 0x73, 0xce, 0xcf, 0x63, 0x6a, 0x93, 0x24, 0xb2, 0x09, 0x63, 0x5c,
-	0x12, 0x19, 0x71, 0x26, 0x2a, 0x7a, 0x60, 0xc4, 0xab, 0xb9, 0xb4, 0x73, 0x12, 0x47, 0x33, 0x22,
-	0xe9, 0xfa, 0x50, 0xab, 0xc3, 0x62, 0xdf, 0x45, 0x2c, 0x68, 0x9a, 0x47, 0x21, 0xb5, 0xf3, 0xf1,
-	0xd5, 0xa5, 0x22, 0xcc, 0x15, 0xa8, 0x13, 0x4a, 0x64, 0x96, 0x52, 0xf4, 0x02, 0xda, 0x72, 0x95,
-	0x50, 0x5d, 0x19, 0x2a, 0xa3, 0x9e, 0x63, 0x58, 0xd7, 0x7d, 0x58, 0x35, 0x66, 0xf9, 0xab, 0x84,
-	0xe2, 0x92, 0x34, 0xdf, 0x40, 0xbb, 0xb8, 0x21, 0x03, 0x74, 0xf7, 0xe4, 0xe0, 0xf4, 0xc8, 0x3b,
-	0xf6, 0x83, 0xc9, 0xa1, 0xf7, 0xce, 0x0d, 0x5c, 0xcf, 0xf7, 0x0e, 0xfc, 0xc3, 0x93, 0xe3, 0xfe,
-	0x1d, 0xb4, 0x0b, 0x08, 0xbf, 0x7d, 0x1f, 0xf8, 0xde, 0x07, 0x7f, 0xa3, 0xae, 0x98, 0x4b, 0xe8,
-	0x4e, 0x43, 0xc2, 0x30, 0xfd, 0x9c, 0x51, 0x21, 0xd1, 0x4b, 0xd0, 0x66, 0x3c, 0xcc, 0x2e, 0x28,
-	0x93, 0xa5, 0x85, 0xae, 0xa3, 0xdf, 0xb4, 0xe0, 0xd6, 0x3a, 0x5e, 0x93, 0x68, 0x0f, 0xb4, 0x79,
-	0x65, 0x4c, 0xe8, 0xad, 0xe1, 0xd6, 0xa8, 0xeb, 0x3c, 0xb8, 0xc5, 0x38, 0x5e, 0x83, 0xe6, 0x0f,
-	0x05, 0x76, 0xaa, 0xd5, 0x22, 0xe1, 0x4c, 0x50, 0x74, 0x06, 0x7a, 0x33, 0x31, 0x98, 0x47, 0x34,
-	0x9e, 0x05, 0x33, 0x2a, 0x69, 0x58, 0x04, 0x5d, 0x7b, 0xa9, 0xe2, 0xb8, 0x4a, 0x2f, 0x1f, 0x5b,
-	0x47, 0x71, 0xd3, 0x8f, 0x77, 0x9b, 0xee, 0x49, 0xd1, 0xec, 0x36, 0xbd, 0xe8, 0x39, 0xa0, 0x94,
-	0x5c, 0x06, 0x92, 0x2e, 0xe5, 0xc6, 0xc4, 0xd6, 0x50, 0x19, 0x75, 0x70, 0x3f, 0x25, 0x97, 0x3e,
-	0x5d, 0xca, 0x35, 0x6d, 0x2e, 0x40, 0x6b, 0xbe, 0x10, 0x3d, 0x01, 0x35, 0xe4, 0x4c, 0x36, 0x61,
-	0xec, 0xec, 0xc3, 0xcf, 0xbf, 0xbf, 0xb6, 0xee, 0x7e, 0xd9, 0xea, 0x7f, 0x6b, 0xe1, 0x46, 0x42,
-	0xaf, 0x60, 0x5b, 0xf0, 0x2c, 0x0d, 0x69, 0x39, 0xb3, 0xeb, 0x3c, 0xbe, 0x2d, 0xb1, 0x69, 0x49,
-	0xe1, 0x9a, 0x36, 0x9f, 0x41, 0xef, 0xba, 0x82, 0x1e, 0x82, 0xb6, 0x90, 0x32, 0x09, 0xb2, 0x34,
-	0x2a, 0x17, 0x76, 0xb0, 0x5a, 0xdc, 0x4f, 0xd3, 0xc8, 0x21, 0xa0, 0x4e, 0xab, 0x89, 0xe8, 0x0c,
-	0xda, 0xc5, 0x11, 0x3d, 0xba, 0xb9, 0x67, 0xe3, 0x47, 0x0e, 0x8c, 0xff, 0x8b, 0x55, 0x54, 0xe6,
-	0xfd, 0xaf, 0xbf, 0xff, 0x7c, 0x6f, 0xdd, 0x33, 0xb5, 0xe2, 0x35, 0x16, 0xd0, 0x6b, 0xe5, 0xe9,
-	0x7e, 0xe7, 0xa3, 0x5a, 0xf3, 0x9f, 0xb6, 0xcb, 0x77, 0xb9, 0xf7, 0x2f, 0x00, 0x00, 0xff, 0xff,
-	0x78, 0x9d, 0x82, 0xb9, 0x2b, 0x03, 0x00, 0x00,
+var fileDescriptor_scanner_67e7b2827df6efe3 = []byte{
+	// 1183 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x97, 0xcb, 0x6e, 0xdb, 0x46,
+	0x17, 0xc7, 0x23, 0xc9, 0xb6, 0xa4, 0xa3, 0x8b, 0x99, 0x89, 0x93, 0x8f, 0x31, 0xf2, 0xa5, 0xa9,
+	0x90, 0x85, 0x7b, 0x81, 0x84, 0xb8, 0x40, 0xd1, 0x04, 0x5d, 0x54, 0xa6, 0x68, 0x44, 0xad, 0x4d,
+	0x09, 0x23, 0xca, 0x88, 0xbb, 0x19, 0xd0, 0xe4, 0xd8, 0x26, 0x42, 0xcd, 0xa8, 0xc3, 0xa1, 0x20,
+	0x65, 0x55, 0x14, 0xed, 0x13, 0x14, 0xdd, 0xf4, 0x19, 0xfa, 0x04, 0x5d, 0xf5, 0x15, 0x8a, 0x6e,
+	0xfa, 0x00, 0xdd, 0xf4, 0x2d, 0x0a, 0x0e, 0x49, 0x59, 0x4a, 0x8d, 0x34, 0x0c, 0xbc, 0xd3, 0x9c,
+	0x73, 0xfe, 0x3f, 0xfd, 0xe7, 0x3e, 0x84, 0x56, 0x18, 0xb2, 0x4e, 0xe8, 0x3a, 0x8c, 0x51, 0xd1,
+	0x99, 0xed, 0x3b, 0xc1, 0xf4, 0xd2, 0x79, 0x92, 0x05, 0xda, 0x53, 0xc1, 0x25, 0x47, 0x3b, 0x61,
+	0xc8, 0xda, 0x59, 0x28, 0xab, 0xd9, 0x7d, 0x70, 0xc1, 0xf9, 0x45, 0x40, 0x3b, 0xce, 0xd4, 0xef,
+	0x38, 0x8c, 0x71, 0xe9, 0x48, 0x9f, 0xb3, 0x30, 0xd1, 0xec, 0x3e, 0x08, 0x16, 0xe7, 0xb2, 0x33,
+	0x73, 0x02, 0xdf, 0x73, 0x24, 0x5d, 0xfe, 0x48, 0xb3, 0xff, 0x8b, 0xff, 0x55, 0x2e, 0xa6, 0xb4,
+	0x73, 0x41, 0xf9, 0x84, 0x4a, 0xb1, 0x48, 0x13, 0x0f, 0x97, 0x09, 0x49, 0xe7, 0x92, 0x5c, 0x71,
+	0x93, 0x7c, 0xeb, 0x97, 0x02, 0x34, 0x87, 0x82, 0x7a, 0xbe, 0x2b, 0xa9, 0x77, 0xe8, 0xd3, 0xc0,
+	0x43, 0x3b, 0xb0, 0x39, 0x73, 0x82, 0x88, 0xea, 0x85, 0x47, 0x85, 0xbd, 0x2a, 0x4e, 0x1a, 0xe8,
+	0x03, 0xd0, 0x18, 0x17, 0x13, 0x27, 0xf0, 0x5f, 0x51, 0x8f, 0x24, 0x05, 0x45, 0x55, 0xb0, 0x7d,
+	0x15, 0x3f, 0x51, 0xa5, 0x0f, 0x01, 0x5c, 0xce, 0xce, 0x7d, 0x8f, 0x32, 0x97, 0xea, 0xa5, 0x47,
+	0x85, 0xbd, 0x22, 0x5e, 0x89, 0xa0, 0xa7, 0x50, 0x3f, 0xe3, 0x11, 0xf3, 0x7c, 0x76, 0x41, 0xce,
+	0xf8, 0x5c, 0xdf, 0x78, 0x54, 0xd8, 0xab, 0xed, 0xdf, 0x6b, 0xc7, 0xa3, 0x12, 0x5b, 0x6d, 0x1f,
+	0xa4, 0xd9, 0x21, 0x0f, 0x16, 0xb8, 0x96, 0xd5, 0x1e, 0xf0, 0x79, 0xeb, 0xa7, 0x12, 0x94, 0x0f,
+	0xa9, 0x23, 0x23, 0x41, 0xd1, 0xa7, 0xb0, 0x11, 0x57, 0x2b, 0x9b, 0xcd, 0xfd, 0x56, 0xfb, 0xba,
+	0x41, 0x6d, 0xa7, 0xc5, 0x6d, 0x7b, 0x31, 0xa5, 0x58, 0xd5, 0xa3, 0xf7, 0xa0, 0x36, 0x71, 0xe6,
+	0x44, 0xd0, 0x30, 0x0a, 0x64, 0xa8, 0x3a, 0xb1, 0x89, 0x61, 0xe2, 0xcc, 0x71, 0x12, 0x89, 0x07,
+	0x60, 0xc2, 0x3d, 0x1a, 0x28, 0xeb, 0x55, 0x9c, 0x34, 0x5a, 0x3f, 0x17, 0x61, 0x23, 0xa6, 0xa0,
+	0x3b, 0xb0, 0x6d, 0x9b, 0x2f, 0x6c, 0xd2, 0xb5, 0xac, 0x81, 0xdd, 0xb5, 0xfb, 0x03, 0x4b, 0xbb,
+	0x85, 0x9a, 0x00, 0x03, 0xdc, 0x33, 0x31, 0xe9, 0x75, 0x6d, 0x53, 0x2b, 0xa0, 0x1d, 0xd0, 0x86,
+	0xdd, 0xd3, 0x63, 0xd3, 0xb2, 0x49, 0x6f, 0x6c, 0x26, 0xd1, 0x22, 0xaa, 0x43, 0xc5, 0x18, 0x63,
+	0x6c, 0x5a, 0xc6, 0xa9, 0x56, 0x42, 0x0d, 0xa8, 0xda, 0x03, 0xbb, 0x7b, 0x44, 0x4e, 0xba, 0xb6,
+	0xb6, 0x81, 0x10, 0x34, 0x93, 0x66, 0xdf, 0x32, 0x92, 0xd8, 0xe6, 0x55, 0xcc, 0x7c, 0x91, 0xc6,
+	0xb6, 0xd0, 0x3d, 0x40, 0xa3, 0xf1, 0x70, 0x78, 0xd4, 0x37, 0x31, 0x31, 0x06, 0x78, 0x38, 0xc0,
+	0x31, 0xbc, 0x8c, 0xee, 0xc3, 0xdd, 0x95, 0xf8, 0xd8, 0xb2, 0xf1, 0x29, 0x31, 0x06, 0x3d, 0x53,
+	0xab, 0xa0, 0xdb, 0xd0, 0xe8, 0x0d, 0x8c, 0xb1, 0xb2, 0x63, 0x9f, 0x0e, 0x4d, 0xad, 0x1a, 0x93,
+	0x33, 0x83, 0xc7, 0xa6, 0xfd, 0x7c, 0xd0, 0xd3, 0x20, 0x26, 0x1b, 0xd8, 0xec, 0xf5, 0x6d, 0x62,
+	0x74, 0x71, 0x8f, 0x58, 0xe3, 0xe3, 0x03, 0x13, 0x6b, 0xb5, 0xd8, 0xf6, 0xc0, 0xc0, 0xe4, 0xa8,
+	0x6f, 0x99, 0x5a, 0x3d, 0x56, 0xf6, 0xad, 0x93, 0x41, 0xdf, 0x30, 0xb3, 0x8a, 0x46, 0xeb, 0xfb,
+	0x02, 0xd4, 0x46, 0xae, 0xc3, 0x30, 0xfd, 0x26, 0xa2, 0xa1, 0x44, 0xcf, 0xa0, 0xe2, 0x71, 0x37,
+	0x9a, 0x50, 0x26, 0xd5, 0xfc, 0xd4, 0xf6, 0x1f, 0x5e, 0x3f, 0x3f, 0xbd, 0xb4, 0x0a, 0x2f, 0xeb,
+	0xd1, 0x53, 0xa8, 0x9c, 0x27, 0xb3, 0x16, 0x4f, 0x4e, 0x69, 0xaf, 0xb6, 0xff, 0xff, 0x37, 0xce,
+	0x2d, 0x5e, 0x96, 0xb7, 0xfe, 0xd4, 0xa0, 0x9e, 0xd8, 0x08, 0xa7, 0x9c, 0x85, 0x14, 0x19, 0x00,
+	0x5c, 0x78, 0x54, 0x90, 0x78, 0xaf, 0xe8, 0x05, 0x45, 0x7b, 0x7c, 0x3d, 0x6d, 0x7d, 0x17, 0xe0,
+	0xaa, 0xd2, 0xf5, 0x1c, 0x49, 0x91, 0x05, 0xda, 0xd4, 0x59, 0xc4, 0xde, 0x88, 0x17, 0xd1, 0x04,
+	0x55, 0xcc, 0x81, 0x6a, 0xa6, 0xea, 0x5e, 0x44, 0x15, 0xef, 0x0b, 0xa8, 0xb8, 0x91, 0x10, 0x94,
+	0xb9, 0x0b, 0xbd, 0x94, 0x83, 0xb3, 0x54, 0xa1, 0x2e, 0x54, 0x25, 0x97, 0x4e, 0x40, 0x66, 0x8e,
+	0xd4, 0x37, 0xf2, 0x20, 0x94, 0xec, 0xc4, 0x91, 0xe8, 0x4b, 0x68, 0x26, 0x08, 0x9f, 0xb9, 0x09,
+	0x67, 0x33, 0x07, 0xa7, 0xae, 0xb4, 0x7d, 0xe6, 0xae, 0xb3, 0xe8, 0x3c, 0x65, 0x6d, 0xe5, 0x66,
+	0x99, 0xf3, 0x84, 0xf5, 0x02, 0xee, 0x86, 0xd1, 0x74, 0x1a, 0xf8, 0x54, 0x10, 0x97, 0x8b, 0x29,
+	0x17, 0x8e, 0xa4, 0xc4, 0xf7, 0xf4, 0x72, 0x0e, 0xe4, 0x9d, 0x0c, 0x61, 0x64, 0x84, 0xbe, 0xf7,
+	0x1a, 0x39, 0x62, 0x52, 0x2c, 0x88, 0xcb, 0x3d, 0xaa, 0x57, 0xde, 0x8d, 0xac, 0x08, 0x06, 0xf7,
+	0x28, 0xea, 0x43, 0x23, 0x5b, 0xbd, 0x44, 0x1d, 0x49, 0x55, 0xb5, 0xe4, 0xdf, 0xb2, 0xfb, 0x99,
+	0x54, 0x1d, 0x2e, 0x5f, 0x41, 0xb6, 0x5a, 0xc8, 0x84, 0xca, 0x4b, 0xee, 0xe9, 0x90, 0x83, 0xd5,
+	0x48, 0xb5, 0xc7, 0x4a, 0x8a, 0x30, 0x20, 0x37, 0x2e, 0x90, 0xc4, 0x75, 0x84, 0x47, 0x58, 0x34,
+	0x39, 0xa3, 0x42, 0xaf, 0xe5, 0xe8, 0xae, 0x96, 0xe8, 0x0d, 0x47, 0x78, 0x96, 0x52, 0xc7, 0x06,
+	0x7d, 0x36, 0xe3, 0xbe, 0x4b, 0x33, 0xde, 0xed, 0x1c, 0xbc, 0x46, 0xaa, 0x4d, 0x61, 0x16, 0xd4,
+	0xb8, 0x2b, 0x48, 0xe0, 0x33, 0x4a, 0xbc, 0x97, 0x7a, 0x5d, 0x75, 0xf5, 0xe3, 0xeb, 0x49, 0xab,
+	0xfb, 0xba, 0x3d, 0x70, 0xc5, 0x91, 0xcf, 0x68, 0xef, 0xe5, 0xf3, 0x5b, 0xb8, 0xca, 0xb3, 0xc6,
+	0x1a, 0x2f, 0xa4, 0x7a, 0x23, 0x2f, 0x6f, 0x44, 0x57, 0x78, 0x23, 0xba, 0xc6, 0x63, 0x5c, 0x6f,
+	0xe6, 0xe5, 0x59, 0x7c, 0x85, 0x67, 0xf1, 0x35, 0xde, 0xb9, 0xaf, 0x6f, 0xe7, 0xe5, 0x1d, 0xfa,
+	0x2b, 0xbc, 0x43, 0x7f, 0xdd, 0x5f, 0xa0, 0x6b, 0xb9, 0xfd, 0x05, 0xab, 0xfe, 0x02, 0xd4, 0x85,
+	0xed, 0xd7, 0x9e, 0x09, 0x3a, 0x52, 0x4c, 0xfd, 0xea, 0x72, 0xb6, 0xe9, 0x5c, 0x76, 0x97, 0x79,
+	0xdc, 0x94, 0x6b, 0xed, 0xdd, 0xdf, 0x0b, 0x50, 0x5d, 0xce, 0x0e, 0xfa, 0x6c, 0xe5, 0x8e, 0x7e,
+	0xdb, 0x35, 0x92, 0xdc, 0xd2, 0x06, 0x40, 0xb6, 0x11, 0x7c, 0x4f, 0x5d, 0xd2, 0x6f, 0x7d, 0x72,
+	0xa7, 0xba, 0xbe, 0x87, 0x4c, 0xa8, 0x25, 0x0b, 0x98, 0x8b, 0x98, 0x52, 0xca, 0x41, 0x81, 0x4c,
+	0xd8, 0xf7, 0x76, 0xbf, 0x2d, 0x2e, 0xfb, 0x34, 0x7a, 0xdd, 0x59, 0xe1, 0xdd, 0x9c, 0x9d, 0xc0,
+	0xce, 0x99, 0xc3, 0x5e, 0x5e, 0xf8, 0x82, 0x93, 0x55, 0x8b, 0x79, 0x3a, 0x8a, 0x32, 0x82, 0xb1,
+	0xb4, 0x1a, 0x73, 0xa7, 0x41, 0x14, 0xfe, 0x8b, 0x9b, 0xa7, 0xeb, 0x28, 0x23, 0x5c, 0x71, 0x77,
+	0x87, 0xcb, 0x11, 0xb0, 0xf8, 0x8d, 0x8c, 0xc0, 0x2a, 0x31, 0xb8, 0x69, 0xe2, 0xa1, 0x7f, 0x23,
+	0xc4, 0x83, 0x2a, 0x94, 0xd3, 0xcd, 0xd1, 0x62, 0x50, 0xc9, 0xde, 0x2a, 0xe8, 0x31, 0x94, 0x5d,
+	0xce, 0x64, 0xf6, 0xb8, 0xa9, 0x1f, 0xc0, 0xaf, 0x7f, 0xff, 0x56, 0xda, 0x7c, 0x55, 0xd2, 0x7e,
+	0x28, 0xe2, 0x2c, 0x85, 0x3e, 0x87, 0xad, 0x90, 0x47, 0xc2, 0xa5, 0x6f, 0x9e, 0xd4, 0x8c, 0x3a,
+	0x52, 0xb5, 0x38, 0xd5, 0xb4, 0x3e, 0x82, 0xe6, 0x7a, 0x06, 0xdd, 0x87, 0xca, 0xa5, 0x94, 0x53,
+	0x12, 0x09, 0x3f, 0x7d, 0x9a, 0x97, 0xe3, 0xf6, 0x58, 0xf8, 0xfb, 0x21, 0x94, 0x47, 0x09, 0x17,
+	0x5d, 0xc2, 0x46, 0xfc, 0x13, 0xbd, 0xff, 0xa6, 0x53, 0x40, 0x3d, 0xd2, 0x76, 0x5b, 0xff, 0x7d,
+	0x50, 0xb4, 0xee, 0x7f, 0xf7, 0xc7, 0x5f, 0x3f, 0x16, 0xef, 0xb4, 0x9a, 0x9d, 0xd9, 0x93, 0x95,
+	0x6f, 0x99, 0x67, 0x85, 0x0f, 0x0f, 0xaa, 0x5f, 0x97, 0x53, 0xed, 0xd9, 0x96, 0xfa, 0x98, 0xf8,
+	0xe4, 0x9f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x56, 0xf4, 0x2e, 0xe5, 0xfd, 0x0c, 0x00, 0x00,
 }

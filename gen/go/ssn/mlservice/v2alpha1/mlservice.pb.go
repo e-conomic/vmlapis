@@ -6,7 +6,8 @@ package mlservice
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import v1 "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1"
+import v2alpha1 "github.com/e-conomic/vmlapis/gen/go/ssn/scanner/v2alpha1"
+import _type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
 
 import (
 	context "golang.org/x/net/context"
@@ -24,214 +25,19 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type Feature_Type int32
-
-const (
-	Feature_ORDER_DATE            Feature_Type = 0
-	Feature_PAYMENT_DUE_DATE      Feature_Type = 1
-	Feature_CURRENCY              Feature_Type = 3
-	Feature_TOTAL_VAT             Feature_Type = 4
-	Feature_TOTAL_INCL_VAT        Feature_Type = 5
-	Feature_TOTAL_EXCL_VAT        Feature_Type = 6
-	Feature_SUPPLIER_CORPORATE    Feature_Type = 7
-	Feature_SUPPLIER_COUNTRY_CODE Feature_Type = 8
-	Feature_DOCUMENT_TYPE         Feature_Type = 9
-	Feature_PAYMENT_METHOD        Feature_Type = 10
-	Feature_CREDIT_CARD_NUMBER    Feature_Type = 11
-	Feature_OCR_LINE              Feature_Type = 12
-	Feature_INVOICE_NUMBER        Feature_Type = 13
-)
-
-var Feature_Type_name = map[int32]string{
-	0:  "ORDER_DATE",
-	1:  "PAYMENT_DUE_DATE",
-	3:  "CURRENCY",
-	4:  "TOTAL_VAT",
-	5:  "TOTAL_INCL_VAT",
-	6:  "TOTAL_EXCL_VAT",
-	7:  "SUPPLIER_CORPORATE",
-	8:  "SUPPLIER_COUNTRY_CODE",
-	9:  "DOCUMENT_TYPE",
-	10: "PAYMENT_METHOD",
-	11: "CREDIT_CARD_NUMBER",
-	12: "OCR_LINE",
-	13: "INVOICE_NUMBER",
-}
-var Feature_Type_value = map[string]int32{
-	"ORDER_DATE":            0,
-	"PAYMENT_DUE_DATE":      1,
-	"CURRENCY":              3,
-	"TOTAL_VAT":             4,
-	"TOTAL_INCL_VAT":        5,
-	"TOTAL_EXCL_VAT":        6,
-	"SUPPLIER_CORPORATE":    7,
-	"SUPPLIER_COUNTRY_CODE": 8,
-	"DOCUMENT_TYPE":         9,
-	"PAYMENT_METHOD":        10,
-	"CREDIT_CARD_NUMBER":    11,
-	"OCR_LINE":              12,
-	"INVOICE_NUMBER":        13,
-}
-
-func (x Feature_Type) String() string {
-	return proto.EnumName(Feature_Type_name, int32(x))
-}
-func (Feature_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{2, 0}
-}
-
-type PredictedStringField struct {
-	Value                string   `protobuf:"bytes,1,opt,name=value,proto3" json:"value,omitempty"`
-	Confidence           float32  `protobuf:"fixed32,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PredictedStringField) Reset()         { *m = PredictedStringField{} }
-func (m *PredictedStringField) String() string { return proto.CompactTextString(m) }
-func (*PredictedStringField) ProtoMessage()    {}
-func (*PredictedStringField) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{0}
-}
-func (m *PredictedStringField) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PredictedStringField.Unmarshal(m, b)
-}
-func (m *PredictedStringField) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PredictedStringField.Marshal(b, m, deterministic)
-}
-func (dst *PredictedStringField) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PredictedStringField.Merge(dst, src)
-}
-func (m *PredictedStringField) XXX_Size() int {
-	return xxx_messageInfo_PredictedStringField.Size(m)
-}
-func (m *PredictedStringField) XXX_DiscardUnknown() {
-	xxx_messageInfo_PredictedStringField.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PredictedStringField proto.InternalMessageInfo
-
-func (m *PredictedStringField) GetValue() string {
-	if m != nil {
-		return m.Value
-	}
-	return ""
-}
-
-func (m *PredictedStringField) GetConfidence() float32 {
-	if m != nil {
-		return m.Confidence
-	}
-	return 0
-}
-
-type PredictedFieldFloat struct {
-	Value                float32  `protobuf:"fixed32,1,opt,name=value,proto3" json:"value,omitempty"`
-	Confidence           float32  `protobuf:"fixed32,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *PredictedFieldFloat) Reset()         { *m = PredictedFieldFloat{} }
-func (m *PredictedFieldFloat) String() string { return proto.CompactTextString(m) }
-func (*PredictedFieldFloat) ProtoMessage()    {}
-func (*PredictedFieldFloat) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{1}
-}
-func (m *PredictedFieldFloat) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PredictedFieldFloat.Unmarshal(m, b)
-}
-func (m *PredictedFieldFloat) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PredictedFieldFloat.Marshal(b, m, deterministic)
-}
-func (dst *PredictedFieldFloat) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PredictedFieldFloat.Merge(dst, src)
-}
-func (m *PredictedFieldFloat) XXX_Size() int {
-	return xxx_messageInfo_PredictedFieldFloat.Size(m)
-}
-func (m *PredictedFieldFloat) XXX_DiscardUnknown() {
-	xxx_messageInfo_PredictedFieldFloat.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PredictedFieldFloat proto.InternalMessageInfo
-
-func (m *PredictedFieldFloat) GetValue() float32 {
-	if m != nil {
-		return m.Value
-	}
-	return 0
-}
-
-func (m *PredictedFieldFloat) GetConfidence() float32 {
-	if m != nil {
-		return m.Confidence
-	}
-	return 0
-}
-
-type Feature struct {
-	Type                 Feature_Type `protobuf:"varint,1,opt,name=type,proto3,enum=ssn.mlservice.v1.Feature_Type" json:"type,omitempty"`
-	MaxResults           uint32       `protobuf:"varint,2,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
-}
-
-func (m *Feature) Reset()         { *m = Feature{} }
-func (m *Feature) String() string { return proto.CompactTextString(m) }
-func (*Feature) ProtoMessage()    {}
-func (*Feature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{2}
-}
-func (m *Feature) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Feature.Unmarshal(m, b)
-}
-func (m *Feature) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Feature.Marshal(b, m, deterministic)
-}
-func (dst *Feature) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Feature.Merge(dst, src)
-}
-func (m *Feature) XXX_Size() int {
-	return xxx_messageInfo_Feature.Size(m)
-}
-func (m *Feature) XXX_DiscardUnknown() {
-	xxx_messageInfo_Feature.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Feature proto.InternalMessageInfo
-
-func (m *Feature) GetType() Feature_Type {
-	if m != nil {
-		return m.Type
-	}
-	return Feature_ORDER_DATE
-}
-
-func (m *Feature) GetMaxResults() uint32 {
-	if m != nil {
-		return m.MaxResults
-	}
-	return 0
-}
-
 type MlRequest struct {
-	OcrResponses         []*v1.OcrScanImageResponse `protobuf:"bytes,1,rep,name=ocr_responses,json=ocrResponses,proto3" json:"ocr_responses,omitempty"`
-	Imageannotation      string                     `protobuf:"bytes,2,opt,name=imageannotation,proto3" json:"imageannotation,omitempty"`
-	Features             []*Feature                 `protobuf:"bytes,3,rep,name=features,proto3" json:"features,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
-	XXX_unrecognized     []byte                     `json:"-"`
-	XXX_sizecache        int32                      `json:"-"`
+	Scanrequest          *v2alpha1.ScanRequest `protobuf:"bytes,1,opt,name=scanrequest,proto3" json:"scanrequest,omitempty"`
+	TextAnnotation       *_type.TextAnnotation `protobuf:"bytes,2,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
 }
 
 func (m *MlRequest) Reset()         { *m = MlRequest{} }
 func (m *MlRequest) String() string { return proto.CompactTextString(m) }
 func (*MlRequest) ProtoMessage()    {}
 func (*MlRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{3}
+	return fileDescriptor_mlservice_ece1a7d2642846f3, []int{0}
 }
 func (m *MlRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlRequest.Unmarshal(m, b)
@@ -251,97 +57,32 @@ func (m *MlRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_MlRequest proto.InternalMessageInfo
 
-func (m *MlRequest) GetOcrResponses() []*v1.OcrScanImageResponse {
+func (m *MlRequest) GetScanrequest() *v2alpha1.ScanRequest {
 	if m != nil {
-		return m.OcrResponses
+		return m.Scanrequest
 	}
 	return nil
 }
 
-func (m *MlRequest) GetImageannotation() string {
+func (m *MlRequest) GetTextAnnotation() *_type.TextAnnotation {
 	if m != nil {
-		return m.Imageannotation
-	}
-	return ""
-}
-
-func (m *MlRequest) GetFeatures() []*Feature {
-	if m != nil {
-		return m.Features
+		return m.TextAnnotation
 	}
 	return nil
 }
 
 type MlResponse struct {
-	// orderDate
-	// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
-	// Example: "2019-12-31"
-	OrderDate []*PredictedStringField `protobuf:"bytes,1,rep,name=order_date,json=orderDate,proto3" json:"order_date,omitempty"`
-	// paymentDueDate
-	// ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
-	// Example: "2019-12-31"
-	PaymentDueDate []*PredictedStringField `protobuf:"bytes,2,rep,name=payment_due_date,json=paymentDueDate,proto3" json:"payment_due_date,omitempty"`
-	// currency
-	// ISO 4217 string, ie. a 3-letter capitalized string
-	// Example: "NOK"
-	Currency []*PredictedStringField `protobuf:"bytes,3,rep,name=currency,proto3" json:"currency,omitempty"`
-	// totalVat
-	// A string that parses as a two-decimal number
-	// Example: "10.0" or "11.11"
-	TotalVat []*PredictedFieldFloat `protobuf:"bytes,4,rep,name=total_vat,json=totalVat,proto3" json:"total_vat,omitempty"`
-	// totalInclVat
-	// A string that parses as a two-decimal number
-	// Example: "10.0" or "11.11"
-	TotalInclVat []*PredictedFieldFloat `protobuf:"bytes,5,rep,name=total_incl_vat,json=totalInclVat,proto3" json:"total_incl_vat,omitempty"`
-	// totalExclVat
-	// A string that parses as a two-decimal number
-	// Example: "10.0" or "11.11"
-	TotalExclVat []*PredictedFieldFloat `protobuf:"bytes,6,rep,name=total_excl_vat,json=totalExclVat,proto3" json:"total_excl_vat,omitempty"`
-	// supplierCorporateId
-	// The company VAT number
-	// Example: "123456789B01" (for Dutch companies)
-	// or "12345678" (for Norwegian companies)
-	// Note: The field is repeated because multiple VAT numbers might exist.
-	// If you have the VAT number of you customer, you can use this information
-	// to find out which VAT number belongs to the supplier of the invoice.
-	SupplierCorporateId []*PredictedStringField `protobuf:"bytes,7,rep,name=supplier_corporate_id,json=supplierCorporateId,proto3" json:"supplier_corporate_id,omitempty"`
-	// supplierCountryCode
-	// ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
-	// Example: "NO"
-	SupplierCountryCode []*PredictedStringField `protobuf:"bytes,8,rep,name=supplier_country_code,json=supplierCountryCode,proto3" json:"supplier_country_code,omitempty"`
-	// documentType
-	// Either "Receipt" or "Invoice"
-	DocumentType *PredictedStringField `protobuf:"bytes,9,opt,name=document_type,json=documentType,proto3" json:"document_type,omitempty"`
-	// paymentMethod
-	// Either "Cash" or "CreditCard"
-	PaymentMethod *PredictedStringField `protobuf:"bytes,10,opt,name=payment_method,json=paymentMethod,proto3" json:"payment_method,omitempty"`
-	// creditCardNumber
-	// Four digits
-	// Example: "0012"
-	CreditCardNumber []*PredictedStringField `protobuf:"bytes,11,rep,name=credit_card_number,json=creditCardNumber,proto3" json:"credit_card_number,omitempty"`
-	// invoiceNumber
-	// The supplier defined identifier af the invoice
-	// Example: "12345-A99"
-	InvoiceNumber []*PredictedStringField `protobuf:"bytes,17,rep,name=invoice_number,json=invoiceNumber,proto3" json:"invoice_number,omitempty"`
-	// Only one ocrLine will be present in a suggestion.
-	//
-	// Types that are valid to be assigned to OcrLine:
-	//	*MlResponse_OcrLineDk_
-	//	*MlResponse_OcrLineSe_
-	//	*MlResponse_OcrLineNo_
-	//	*MlResponse_OcrLineFi_
-	//	*MlResponse_OcrLineNl_
-	OcrLine              isMlResponse_OcrLine `protobuf_oneof:"ocrLine"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	Scanresponse         *v2alpha1.ScanResponse `protobuf:"bytes,1,opt,name=scanresponse,proto3" json:"scanresponse,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *MlResponse) Reset()         { *m = MlResponse{} }
 func (m *MlResponse) String() string { return proto.CompactTextString(m) }
 func (*MlResponse) ProtoMessage()    {}
 func (*MlResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4}
+	return fileDescriptor_mlservice_ece1a7d2642846f3, []int{1}
 }
 func (m *MlResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_MlResponse.Unmarshal(m, b)
@@ -361,540 +102,16 @@ func (m *MlResponse) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_MlResponse proto.InternalMessageInfo
 
-func (m *MlResponse) GetOrderDate() []*PredictedStringField {
+func (m *MlResponse) GetScanresponse() *v2alpha1.ScanResponse {
 	if m != nil {
-		return m.OrderDate
-	}
-	return nil
-}
-
-func (m *MlResponse) GetPaymentDueDate() []*PredictedStringField {
-	if m != nil {
-		return m.PaymentDueDate
-	}
-	return nil
-}
-
-func (m *MlResponse) GetCurrency() []*PredictedStringField {
-	if m != nil {
-		return m.Currency
-	}
-	return nil
-}
-
-func (m *MlResponse) GetTotalVat() []*PredictedFieldFloat {
-	if m != nil {
-		return m.TotalVat
-	}
-	return nil
-}
-
-func (m *MlResponse) GetTotalInclVat() []*PredictedFieldFloat {
-	if m != nil {
-		return m.TotalInclVat
-	}
-	return nil
-}
-
-func (m *MlResponse) GetTotalExclVat() []*PredictedFieldFloat {
-	if m != nil {
-		return m.TotalExclVat
-	}
-	return nil
-}
-
-func (m *MlResponse) GetSupplierCorporateId() []*PredictedStringField {
-	if m != nil {
-		return m.SupplierCorporateId
-	}
-	return nil
-}
-
-func (m *MlResponse) GetSupplierCountryCode() []*PredictedStringField {
-	if m != nil {
-		return m.SupplierCountryCode
-	}
-	return nil
-}
-
-func (m *MlResponse) GetDocumentType() *PredictedStringField {
-	if m != nil {
-		return m.DocumentType
-	}
-	return nil
-}
-
-func (m *MlResponse) GetPaymentMethod() *PredictedStringField {
-	if m != nil {
-		return m.PaymentMethod
-	}
-	return nil
-}
-
-func (m *MlResponse) GetCreditCardNumber() []*PredictedStringField {
-	if m != nil {
-		return m.CreditCardNumber
-	}
-	return nil
-}
-
-func (m *MlResponse) GetInvoiceNumber() []*PredictedStringField {
-	if m != nil {
-		return m.InvoiceNumber
-	}
-	return nil
-}
-
-type isMlResponse_OcrLine interface {
-	isMlResponse_OcrLine()
-}
-
-type MlResponse_OcrLineDk_ struct {
-	OcrLineDk *MlResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocr_line_dk,json=ocrLineDk,proto3,oneof"`
-}
-
-type MlResponse_OcrLineSe_ struct {
-	OcrLineSe *MlResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocr_line_se,json=ocrLineSe,proto3,oneof"`
-}
-
-type MlResponse_OcrLineNo_ struct {
-	OcrLineNo *MlResponse_OcrLineNo `protobuf:"bytes,14,opt,name=ocr_line_no,json=ocrLineNo,proto3,oneof"`
-}
-
-type MlResponse_OcrLineFi_ struct {
-	OcrLineFi *MlResponse_OcrLineFi `protobuf:"bytes,15,opt,name=ocr_line_fi,json=ocrLineFi,proto3,oneof"`
-}
-
-type MlResponse_OcrLineNl_ struct {
-	OcrLineNl *MlResponse_OcrLineNl `protobuf:"bytes,16,opt,name=ocr_line_nl,json=ocrLineNl,proto3,oneof"`
-}
-
-func (*MlResponse_OcrLineDk_) isMlResponse_OcrLine() {}
-
-func (*MlResponse_OcrLineSe_) isMlResponse_OcrLine() {}
-
-func (*MlResponse_OcrLineNo_) isMlResponse_OcrLine() {}
-
-func (*MlResponse_OcrLineFi_) isMlResponse_OcrLine() {}
-
-func (*MlResponse_OcrLineNl_) isMlResponse_OcrLine() {}
-
-func (m *MlResponse) GetOcrLine() isMlResponse_OcrLine {
-	if m != nil {
-		return m.OcrLine
-	}
-	return nil
-}
-
-func (m *MlResponse) GetOcrLineDk() *MlResponse_OcrLineDk {
-	if x, ok := m.GetOcrLine().(*MlResponse_OcrLineDk_); ok {
-		return x.OcrLineDk
-	}
-	return nil
-}
-
-func (m *MlResponse) GetOcrLineSe() *MlResponse_OcrLineSe {
-	if x, ok := m.GetOcrLine().(*MlResponse_OcrLineSe_); ok {
-		return x.OcrLineSe
-	}
-	return nil
-}
-
-func (m *MlResponse) GetOcrLineNo() *MlResponse_OcrLineNo {
-	if x, ok := m.GetOcrLine().(*MlResponse_OcrLineNo_); ok {
-		return x.OcrLineNo
-	}
-	return nil
-}
-
-func (m *MlResponse) GetOcrLineFi() *MlResponse_OcrLineFi {
-	if x, ok := m.GetOcrLine().(*MlResponse_OcrLineFi_); ok {
-		return x.OcrLineFi
-	}
-	return nil
-}
-
-func (m *MlResponse) GetOcrLineNl() *MlResponse_OcrLineNl {
-	if x, ok := m.GetOcrLine().(*MlResponse_OcrLineNl_); ok {
-		return x.OcrLineNl
-	}
-	return nil
-}
-
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*MlResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _MlResponse_OneofMarshaler, _MlResponse_OneofUnmarshaler, _MlResponse_OneofSizer, []interface{}{
-		(*MlResponse_OcrLineDk_)(nil),
-		(*MlResponse_OcrLineSe_)(nil),
-		(*MlResponse_OcrLineNo_)(nil),
-		(*MlResponse_OcrLineFi_)(nil),
-		(*MlResponse_OcrLineNl_)(nil),
-	}
-}
-
-func _MlResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*MlResponse)
-	// ocrLine
-	switch x := m.OcrLine.(type) {
-	case *MlResponse_OcrLineDk_:
-		b.EncodeVarint(12<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.OcrLineDk); err != nil {
-			return err
-		}
-	case *MlResponse_OcrLineSe_:
-		b.EncodeVarint(13<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.OcrLineSe); err != nil {
-			return err
-		}
-	case *MlResponse_OcrLineNo_:
-		b.EncodeVarint(14<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.OcrLineNo); err != nil {
-			return err
-		}
-	case *MlResponse_OcrLineFi_:
-		b.EncodeVarint(15<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.OcrLineFi); err != nil {
-			return err
-		}
-	case *MlResponse_OcrLineNl_:
-		b.EncodeVarint(16<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.OcrLineNl); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("MlResponse.OcrLine has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _MlResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*MlResponse)
-	switch tag {
-	case 12: // ocrLine.ocr_line_dk
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MlResponse_OcrLineDk)
-		err := b.DecodeMessage(msg)
-		m.OcrLine = &MlResponse_OcrLineDk_{msg}
-		return true, err
-	case 13: // ocrLine.ocr_line_se
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MlResponse_OcrLineSe)
-		err := b.DecodeMessage(msg)
-		m.OcrLine = &MlResponse_OcrLineSe_{msg}
-		return true, err
-	case 14: // ocrLine.ocr_line_no
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MlResponse_OcrLineNo)
-		err := b.DecodeMessage(msg)
-		m.OcrLine = &MlResponse_OcrLineNo_{msg}
-		return true, err
-	case 15: // ocrLine.ocr_line_fi
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MlResponse_OcrLineFi)
-		err := b.DecodeMessage(msg)
-		m.OcrLine = &MlResponse_OcrLineFi_{msg}
-		return true, err
-	case 16: // ocrLine.ocr_line_nl
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(MlResponse_OcrLineNl)
-		err := b.DecodeMessage(msg)
-		m.OcrLine = &MlResponse_OcrLineNl_{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _MlResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*MlResponse)
-	// ocrLine
-	switch x := m.OcrLine.(type) {
-	case *MlResponse_OcrLineDk_:
-		s := proto.Size(x.OcrLineDk)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *MlResponse_OcrLineSe_:
-		s := proto.Size(x.OcrLineSe)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *MlResponse_OcrLineNo_:
-		s := proto.Size(x.OcrLineNo)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *MlResponse_OcrLineFi_:
-		s := proto.Size(x.OcrLineFi)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *MlResponse_OcrLineNl_:
-		s := proto.Size(x.OcrLineNl)
-		n += 2 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
-}
-
-type MlResponse_OcrLineDk struct {
-	// example: "71"
-	Type *PredictedStringField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
-	// example: "000002879094031"
-	PaymentId *PredictedStringField `protobuf:"bytes,2,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
-	// example: "86570807"
-	CreditorId           *PredictedStringField `protobuf:"bytes,3,opt,name=creditor_id,json=creditorId,proto3" json:"creditor_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *MlResponse_OcrLineDk) Reset()         { *m = MlResponse_OcrLineDk{} }
-func (m *MlResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
-func (*MlResponse_OcrLineDk) ProtoMessage()    {}
-func (*MlResponse_OcrLineDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4, 0}
-}
-func (m *MlResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MlResponse_OcrLineDk.Unmarshal(m, b)
-}
-func (m *MlResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MlResponse_OcrLineDk.Marshal(b, m, deterministic)
-}
-func (dst *MlResponse_OcrLineDk) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MlResponse_OcrLineDk.Merge(dst, src)
-}
-func (m *MlResponse_OcrLineDk) XXX_Size() int {
-	return xxx_messageInfo_MlResponse_OcrLineDk.Size(m)
-}
-func (m *MlResponse_OcrLineDk) XXX_DiscardUnknown() {
-	xxx_messageInfo_MlResponse_OcrLineDk.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MlResponse_OcrLineDk proto.InternalMessageInfo
-
-func (m *MlResponse_OcrLineDk) GetType() *PredictedStringField {
-	if m != nil {
-		return m.Type
-	}
-	return nil
-}
-
-func (m *MlResponse_OcrLineDk) GetPaymentId() *PredictedStringField {
-	if m != nil {
-		return m.PaymentId
-	}
-	return nil
-}
-
-func (m *MlResponse_OcrLineDk) GetCreditorId() *PredictedStringField {
-	if m != nil {
-		return m.CreditorId
-	}
-	return nil
-}
-
-type MlResponse_OcrLineSe struct {
-	// example: "050765098"
-	PaymentId *PredictedStringField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
-	// example: "2654507"
-	BankgiroCreditorId *PredictedStringField `protobuf:"bytes,2,opt,name=bankgiro_creditor_id,json=bankgiroCreditorId,proto3" json:"bankgiro_creditor_id,omitempty"`
-	// example: "5000872"
-	PlusgiroCreditorId   *PredictedStringField `protobuf:"bytes,3,opt,name=plusgiro_creditor_id,json=plusgiroCreditorId,proto3" json:"plusgiro_creditor_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *MlResponse_OcrLineSe) Reset()         { *m = MlResponse_OcrLineSe{} }
-func (m *MlResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
-func (*MlResponse_OcrLineSe) ProtoMessage()    {}
-func (*MlResponse_OcrLineSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4, 1}
-}
-func (m *MlResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MlResponse_OcrLineSe.Unmarshal(m, b)
-}
-func (m *MlResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MlResponse_OcrLineSe.Marshal(b, m, deterministic)
-}
-func (dst *MlResponse_OcrLineSe) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MlResponse_OcrLineSe.Merge(dst, src)
-}
-func (m *MlResponse_OcrLineSe) XXX_Size() int {
-	return xxx_messageInfo_MlResponse_OcrLineSe.Size(m)
-}
-func (m *MlResponse_OcrLineSe) XXX_DiscardUnknown() {
-	xxx_messageInfo_MlResponse_OcrLineSe.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MlResponse_OcrLineSe proto.InternalMessageInfo
-
-func (m *MlResponse_OcrLineSe) GetPaymentId() *PredictedStringField {
-	if m != nil {
-		return m.PaymentId
-	}
-	return nil
-}
-
-func (m *MlResponse_OcrLineSe) GetBankgiroCreditorId() *PredictedStringField {
-	if m != nil {
-		return m.BankgiroCreditorId
-	}
-	return nil
-}
-
-func (m *MlResponse_OcrLineSe) GetPlusgiroCreditorId() *PredictedStringField {
-	if m != nil {
-		return m.PlusgiroCreditorId
-	}
-	return nil
-}
-
-type MlResponse_OcrLineNo struct {
-	// example: "12345678903"
-	PaymentId            *PredictedStringField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *MlResponse_OcrLineNo) Reset()         { *m = MlResponse_OcrLineNo{} }
-func (m *MlResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
-func (*MlResponse_OcrLineNo) ProtoMessage()    {}
-func (*MlResponse_OcrLineNo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4, 2}
-}
-func (m *MlResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MlResponse_OcrLineNo.Unmarshal(m, b)
-}
-func (m *MlResponse_OcrLineNo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MlResponse_OcrLineNo.Marshal(b, m, deterministic)
-}
-func (dst *MlResponse_OcrLineNo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MlResponse_OcrLineNo.Merge(dst, src)
-}
-func (m *MlResponse_OcrLineNo) XXX_Size() int {
-	return xxx_messageInfo_MlResponse_OcrLineNo.Size(m)
-}
-func (m *MlResponse_OcrLineNo) XXX_DiscardUnknown() {
-	xxx_messageInfo_MlResponse_OcrLineNo.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MlResponse_OcrLineNo proto.InternalMessageInfo
-
-func (m *MlResponse_OcrLineNo) GetPaymentId() *PredictedStringField {
-	if m != nil {
-		return m.PaymentId
-	}
-	return nil
-}
-
-type MlResponse_OcrLineNl struct {
-	// example: "0817937867870002"
-	PaymentId            *PredictedStringField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *MlResponse_OcrLineNl) Reset()         { *m = MlResponse_OcrLineNl{} }
-func (m *MlResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
-func (*MlResponse_OcrLineNl) ProtoMessage()    {}
-func (*MlResponse_OcrLineNl) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4, 3}
-}
-func (m *MlResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MlResponse_OcrLineNl.Unmarshal(m, b)
-}
-func (m *MlResponse_OcrLineNl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MlResponse_OcrLineNl.Marshal(b, m, deterministic)
-}
-func (dst *MlResponse_OcrLineNl) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MlResponse_OcrLineNl.Merge(dst, src)
-}
-func (m *MlResponse_OcrLineNl) XXX_Size() int {
-	return xxx_messageInfo_MlResponse_OcrLineNl.Size(m)
-}
-func (m *MlResponse_OcrLineNl) XXX_DiscardUnknown() {
-	xxx_messageInfo_MlResponse_OcrLineNl.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MlResponse_OcrLineNl proto.InternalMessageInfo
-
-func (m *MlResponse_OcrLineNl) GetPaymentId() *PredictedStringField {
-	if m != nil {
-		return m.PaymentId
-	}
-	return nil
-}
-
-type MlResponse_OcrLineFi struct {
-	// example: "00000159220010146012"
-	PaymentId            *PredictedStringField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
-	XXX_unrecognized     []byte                `json:"-"`
-	XXX_sizecache        int32                 `json:"-"`
-}
-
-func (m *MlResponse_OcrLineFi) Reset()         { *m = MlResponse_OcrLineFi{} }
-func (m *MlResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
-func (*MlResponse_OcrLineFi) ProtoMessage()    {}
-func (*MlResponse_OcrLineFi) Descriptor() ([]byte, []int) {
-	return fileDescriptor_mlservice_b209e965de74bcc0, []int{4, 4}
-}
-func (m *MlResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_MlResponse_OcrLineFi.Unmarshal(m, b)
-}
-func (m *MlResponse_OcrLineFi) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_MlResponse_OcrLineFi.Marshal(b, m, deterministic)
-}
-func (dst *MlResponse_OcrLineFi) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_MlResponse_OcrLineFi.Merge(dst, src)
-}
-func (m *MlResponse_OcrLineFi) XXX_Size() int {
-	return xxx_messageInfo_MlResponse_OcrLineFi.Size(m)
-}
-func (m *MlResponse_OcrLineFi) XXX_DiscardUnknown() {
-	xxx_messageInfo_MlResponse_OcrLineFi.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_MlResponse_OcrLineFi proto.InternalMessageInfo
-
-func (m *MlResponse_OcrLineFi) GetPaymentId() *PredictedStringField {
-	if m != nil {
-		return m.PaymentId
+		return m.Scanresponse
 	}
 	return nil
 }
 
 func init() {
-	proto.RegisterType((*PredictedStringField)(nil), "ssn.mlservice.v1.PredictedStringField")
-	proto.RegisterType((*PredictedFieldFloat)(nil), "ssn.mlservice.v1.PredictedFieldFloat")
-	proto.RegisterType((*Feature)(nil), "ssn.mlservice.v1.Feature")
-	proto.RegisterType((*MlRequest)(nil), "ssn.mlservice.v1.MlRequest")
-	proto.RegisterType((*MlResponse)(nil), "ssn.mlservice.v1.MlResponse")
-	proto.RegisterType((*MlResponse_OcrLineDk)(nil), "ssn.mlservice.v1.MlResponse.OcrLineDk")
-	proto.RegisterType((*MlResponse_OcrLineSe)(nil), "ssn.mlservice.v1.MlResponse.OcrLineSe")
-	proto.RegisterType((*MlResponse_OcrLineNo)(nil), "ssn.mlservice.v1.MlResponse.OcrLineNo")
-	proto.RegisterType((*MlResponse_OcrLineNl)(nil), "ssn.mlservice.v1.MlResponse.OcrLineNl")
-	proto.RegisterType((*MlResponse_OcrLineFi)(nil), "ssn.mlservice.v1.MlResponse.OcrLineFi")
-	proto.RegisterEnum("ssn.mlservice.v1.Feature_Type", Feature_Type_name, Feature_Type_value)
+	proto.RegisterType((*MlRequest)(nil), "ssn.mlservice.v2alpha1.MlRequest")
+	proto.RegisterType((*MlResponse)(nil), "ssn.mlservice.v2alpha1.MlResponse")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -905,64 +122,64 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// MlServiceClient is the client API for MlService service.
+// MLServiceClient is the client API for MLService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type MlServiceClient interface {
+type MLServiceClient interface {
 	GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error)
 }
 
-type mlServiceClient struct {
+type mLServiceClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewMlServiceClient(cc *grpc.ClientConn) MlServiceClient {
-	return &mlServiceClient{cc}
+func NewMLServiceClient(cc *grpc.ClientConn) MLServiceClient {
+	return &mLServiceClient{cc}
 }
 
-func (c *mlServiceClient) GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error) {
+func (c *mLServiceClient) GetPrediction(ctx context.Context, in *MlRequest, opts ...grpc.CallOption) (*MlResponse, error) {
 	out := new(MlResponse)
-	err := c.cc.Invoke(ctx, "/ssn.mlservice.v1.MlService/GetPrediction", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/ssn.mlservice.v2alpha1.MLService/GetPrediction", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// MlServiceServer is the server API for MlService service.
-type MlServiceServer interface {
+// MLServiceServer is the server API for MLService service.
+type MLServiceServer interface {
 	GetPrediction(context.Context, *MlRequest) (*MlResponse, error)
 }
 
-func RegisterMlServiceServer(s *grpc.Server, srv MlServiceServer) {
-	s.RegisterService(&_MlService_serviceDesc, srv)
+func RegisterMLServiceServer(s *grpc.Server, srv MLServiceServer) {
+	s.RegisterService(&_MLService_serviceDesc, srv)
 }
 
-func _MlService_GetPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _MLService_GetPrediction_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(MlRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(MlServiceServer).GetPrediction(ctx, in)
+		return srv.(MLServiceServer).GetPrediction(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.mlservice.v1.MlService/GetPrediction",
+		FullMethod: "/ssn.mlservice.v2alpha1.MLService/GetPrediction",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(MlServiceServer).GetPrediction(ctx, req.(*MlRequest))
+		return srv.(MLServiceServer).GetPrediction(ctx, req.(*MlRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _MlService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "ssn.mlservice.v1.MlService",
-	HandlerType: (*MlServiceServer)(nil),
+var _MLService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "ssn.mlservice.v2alpha1.MLService",
+	HandlerType: (*MLServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "GetPrediction",
-			Handler:    _MlService_GetPrediction_Handler,
+			Handler:    _MLService_GetPrediction_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -970,71 +187,26 @@ var _MlService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/mlservice/v2alpha1/mlservice.proto", fileDescriptor_mlservice_b209e965de74bcc0)
+	proto.RegisterFile("ssn/mlservice/v2alpha1/mlservice.proto", fileDescriptor_mlservice_ece1a7d2642846f3)
 }
 
-var fileDescriptor_mlservice_b209e965de74bcc0 = []byte{
-	// 992 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x96, 0xdf, 0x6e, 0xdb, 0xb6,
-	0x17, 0xc7, 0x6b, 0x27, 0x4d, 0xac, 0xe3, 0x3f, 0x55, 0xd9, 0xf4, 0x07, 0x35, 0xbf, 0xa1, 0x0b,
-	0x0c, 0xac, 0xcb, 0x95, 0x8b, 0x64, 0xd8, 0xcd, 0xee, 0x12, 0x49, 0x6e, 0xb4, 0xd8, 0xb2, 0x41,
-	0xcb, 0x59, 0xd3, 0x1b, 0x41, 0x91, 0x98, 0x54, 0x88, 0x4c, 0x7a, 0x14, 0x65, 0x24, 0x0f, 0xb0,
-	0x3d, 0xc5, 0x9e, 0x64, 0x2f, 0xb2, 0x37, 0xd8, 0x73, 0x0c, 0xa2, 0x24, 0x5b, 0x4e, 0xff, 0xc0,
-	0x2a, 0x72, 0xc9, 0xa3, 0xf3, 0xfd, 0xf0, 0xcb, 0xc3, 0x43, 0x8a, 0xf0, 0x26, 0x8e, 0xe9, 0xdb,
-	0x59, 0x14, 0x13, 0xbe, 0x08, 0x7d, 0xf2, 0x76, 0x71, 0xec, 0x45, 0xf3, 0x8f, 0xde, 0xd1, 0x2a,
-	0xd4, 0x9b, 0x73, 0x26, 0x18, 0x52, 0xe3, 0x98, 0xf6, 0x56, 0xc1, 0xc5, 0xd1, 0x7e, 0x37, 0x55,
-	0x32, 0x9f, 0x2f, 0xa5, 0x47, 0xa5, 0x51, 0xa6, 0xea, 0x0e, 0x60, 0x6f, 0xcc, 0x49, 0x10, 0xfa,
-	0x82, 0x04, 0x13, 0xc1, 0x43, 0x7a, 0xd3, 0x0f, 0x49, 0x14, 0xa0, 0x3d, 0x78, 0xba, 0xf0, 0xa2,
-	0x84, 0x68, 0xb5, 0x83, 0xda, 0xa1, 0x82, 0xb3, 0x01, 0x7a, 0x0d, 0xe0, 0x33, 0x7a, 0x1d, 0x06,
-	0x84, 0xfa, 0x44, 0xab, 0x1f, 0xd4, 0x0e, 0xeb, 0xb8, 0x14, 0xe9, 0x9e, 0xc3, 0x8b, 0x25, 0x4d,
-	0x72, 0xfa, 0x11, 0xf3, 0xc4, 0x3a, 0xac, 0xbe, 0x29, 0xec, 0xdf, 0x3a, 0xec, 0xf6, 0x89, 0x27,
-	0x12, 0x4e, 0xd0, 0x31, 0x6c, 0x8b, 0xfb, 0x79, 0x06, 0xe8, 0x1c, 0xbf, 0xee, 0x3d, 0x5c, 0x6b,
-	0x2f, 0x4f, 0xec, 0x39, 0xf7, 0x73, 0x82, 0x65, 0x2e, 0xfa, 0x1e, 0x9a, 0x33, 0xef, 0xce, 0xe5,
-	0x24, 0x4e, 0x22, 0x11, 0xcb, 0x09, 0xda, 0x18, 0x66, 0xde, 0x1d, 0xce, 0x22, 0xdd, 0x3f, 0xea,
-	0xb0, 0x9d, 0xe6, 0xa3, 0x0e, 0xc0, 0x08, 0x1b, 0x26, 0x76, 0x8d, 0x13, 0xc7, 0x54, 0x9f, 0xa0,
-	0x3d, 0x50, 0xc7, 0x27, 0x97, 0x43, 0xd3, 0x76, 0x5c, 0x63, 0x6a, 0x66, 0xd1, 0x1a, 0x6a, 0x41,
-	0x43, 0x9f, 0x62, 0x6c, 0xda, 0xfa, 0xa5, 0xba, 0x85, 0xda, 0xa0, 0x38, 0x23, 0xe7, 0x64, 0xe0,
-	0x5e, 0x9c, 0x38, 0xea, 0x36, 0x42, 0xd0, 0xc9, 0x86, 0x96, 0xad, 0x67, 0xb1, 0xa7, 0xab, 0x98,
-	0xf9, 0x3e, 0x8f, 0xed, 0xa0, 0xff, 0x01, 0x9a, 0x4c, 0xc7, 0xe3, 0x81, 0x65, 0x62, 0x57, 0x1f,
-	0xe1, 0xf1, 0x08, 0xa7, 0xf0, 0x5d, 0xf4, 0x0a, 0x5e, 0x96, 0xe2, 0x53, 0xdb, 0xc1, 0x97, 0xae,
-	0x3e, 0x32, 0x4c, 0xb5, 0x81, 0x9e, 0x43, 0xdb, 0x18, 0xe9, 0x53, 0x69, 0xc7, 0xb9, 0x1c, 0x9b,
-	0xaa, 0x92, 0x92, 0x0b, 0x83, 0x43, 0xd3, 0x39, 0x1b, 0x19, 0x2a, 0xa4, 0x64, 0x1d, 0x9b, 0x86,
-	0xe5, 0xb8, 0xfa, 0x09, 0x36, 0x5c, 0x7b, 0x3a, 0x3c, 0x35, 0xb1, 0xda, 0x4c, 0x6d, 0x8f, 0x74,
-	0xec, 0x0e, 0x2c, 0xdb, 0x54, 0x5b, 0xa9, 0xd2, 0xb2, 0x2f, 0x46, 0x96, 0x6e, 0x16, 0x19, 0xed,
-	0xee, 0xdf, 0x35, 0x50, 0x86, 0x11, 0x26, 0xbf, 0x27, 0x24, 0x16, 0x68, 0x00, 0x6d, 0xe6, 0xf3,
-	0xb4, 0x6c, 0x73, 0x46, 0x63, 0x12, 0x6b, 0xb5, 0x83, 0xad, 0xc3, 0xe6, 0xf1, 0x8f, 0xb2, 0xe6,
-	0xa5, 0xfe, 0x59, 0x1c, 0xf5, 0x46, 0x3e, 0x9f, 0xf8, 0x1e, 0xb5, 0x66, 0xde, 0x0d, 0xc1, 0x79,
-	0x3e, 0x6e, 0x31, 0x9f, 0x17, 0x83, 0x18, 0x1d, 0xc2, 0xb3, 0x30, 0xfd, 0xec, 0x51, 0xca, 0x84,
-	0x27, 0x42, 0x46, 0xe5, 0x46, 0x28, 0xf8, 0x61, 0x18, 0xfd, 0x0c, 0x8d, 0xeb, 0x6c, 0x13, 0x63,
-	0x6d, 0x4b, 0x4e, 0xf9, 0xea, 0x8b, 0xdb, 0x8c, 0x97, 0xa9, 0xdd, 0xbf, 0x54, 0x80, 0xd4, 0x7c,
-	0x36, 0x21, 0x32, 0x01, 0x18, 0x0f, 0x08, 0x77, 0x03, 0x4f, 0x90, 0xdc, 0xfa, 0x9b, 0x4f, 0x39,
-	0x9f, 0xeb, 0x79, 0xac, 0x48, 0xa5, 0xe1, 0x09, 0x82, 0xc6, 0xa0, 0xce, 0xbd, 0xfb, 0x19, 0xa1,
-	0xc2, 0x0d, 0x12, 0x92, 0xc1, 0xea, 0x95, 0x60, 0x9d, 0x5c, 0x6f, 0x24, 0x44, 0x12, 0x4f, 0xa1,
-	0xe1, 0x27, 0x9c, 0x13, 0xea, 0xdf, 0xe7, 0xcb, 0xdb, 0x94, 0xb4, 0xd4, 0xa1, 0x53, 0x50, 0x04,
-	0x13, 0x5e, 0xe4, 0x2e, 0x3c, 0xa1, 0x6d, 0x4b, 0xc8, 0x0f, 0x5f, 0x81, 0xac, 0x4e, 0x20, 0x6e,
-	0x48, 0xdd, 0x85, 0x27, 0xd0, 0x39, 0x74, 0x32, 0x46, 0x48, 0xfd, 0x0c, 0xf4, 0xb4, 0x0a, 0xa8,
-	0x25, 0xc5, 0x16, 0xf5, 0xd7, 0x61, 0xe4, 0x2e, 0x87, 0xed, 0x54, 0x87, 0x99, 0x77, 0x19, 0xec,
-	0x03, 0xbc, 0x8c, 0x93, 0xf9, 0x3c, 0x0a, 0x09, 0x77, 0x7d, 0xc6, 0xe7, 0x8c, 0x7b, 0x82, 0xb8,
-	0x61, 0xa0, 0xed, 0x56, 0x2a, 0xd7, 0x8b, 0x02, 0xa2, 0x17, 0x0c, 0x2b, 0x78, 0xc0, 0x4e, 0xa8,
-	0xe0, 0xf7, 0xae, 0xcf, 0x02, 0xa2, 0x35, 0xbe, 0x95, 0x2d, 0x19, 0x3a, 0x0b, 0x08, 0x3a, 0x87,
-	0x76, 0xc0, 0xfc, 0x44, 0x36, 0x8b, 0xbc, 0xa4, 0x94, 0x83, 0x5a, 0x05, 0x66, 0xab, 0x10, 0xcb,
-	0xab, 0x68, 0x08, 0x45, 0xe3, 0xb8, 0x33, 0x22, 0x3e, 0xb2, 0x40, 0x83, 0x4a, 0xb4, 0x76, 0xae,
-	0x1e, 0x4a, 0x31, 0x72, 0x00, 0xf9, 0x69, 0x9a, 0x70, 0x7d, 0x8f, 0x07, 0x2e, 0x4d, 0x66, 0x57,
-	0x84, 0x6b, 0xcd, 0x4a, 0x8b, 0x56, 0x33, 0x82, 0xee, 0xf1, 0xc0, 0x96, 0xfa, 0xd4, 0x64, 0x48,
-	0x17, 0x2c, 0xf4, 0x49, 0x41, 0x7c, 0x5e, 0x89, 0xd8, 0xce, 0xd5, 0x39, 0xee, 0x0c, 0x9a, 0xe9,
-	0x8d, 0x13, 0x85, 0x94, 0xb8, 0xc1, 0xad, 0xd6, 0xfa, 0xd2, 0x82, 0x57, 0xc7, 0x3c, 0xbd, 0x79,
-	0x06, 0x21, 0x25, 0xc6, 0xed, 0xd9, 0x13, 0xac, 0xb0, 0x62, 0xb0, 0x46, 0x8a, 0x89, 0xd6, 0xde,
-	0x9c, 0x34, 0x21, 0x25, 0xd2, 0x84, 0xac, 0x91, 0x28, 0xd3, 0x3a, 0x9b, 0x93, 0x6c, 0x56, 0x22,
-	0xd9, 0x6c, 0x8d, 0x74, 0x1d, 0x6a, 0xcf, 0x36, 0x27, 0xf5, 0xc3, 0x12, 0xa9, 0x1f, 0xae, 0x7b,
-	0x8a, 0x34, 0xb5, 0x82, 0xa7, 0xa8, 0xec, 0x29, 0xda, 0xff, 0xa7, 0x06, 0xca, 0xb2, 0x84, 0xe8,
-	0x97, 0xd2, 0xcf, 0x75, 0xf3, 0x4d, 0xcc, 0x7e, 0xb2, 0x26, 0x40, 0xd1, 0xaf, 0x61, 0x20, 0xaf,
-	0xf6, 0x0a, 0xf7, 0x6d, 0xae, 0xb4, 0x02, 0xf4, 0x0e, 0x9a, 0x59, 0x97, 0x31, 0x9e, 0x72, 0xb6,
-	0x2a, 0x71, 0xa0, 0x90, 0x5a, 0xc1, 0xfe, 0x9f, 0xf5, 0xe5, 0xca, 0x26, 0x0f, 0xdd, 0xd5, 0xbe,
-	0xd5, 0xdd, 0x7b, 0xd8, 0xbb, 0xf2, 0xe8, 0xed, 0x4d, 0xc8, 0x99, 0x5b, 0xb6, 0x59, 0x6d, 0xb9,
-	0xa8, 0x60, 0xe8, 0x4b, 0xbb, 0x29, 0x79, 0x1e, 0x25, 0xf1, 0x27, 0xe4, 0x6a, 0x05, 0x40, 0x05,
-	0x63, 0x45, 0xde, 0xc7, 0xcb, 0x3a, 0xd8, 0xec, 0x91, 0xea, 0x50, 0x66, 0x46, 0x8f, 0xcf, 0xec,
-	0x87, 0x8f, 0xc4, 0x3c, 0x55, 0x60, 0x37, 0xef, 0xf5, 0xe3, 0xdf, 0xd2, 0xa7, 0xcd, 0x24, 0x93,
-	0xa2, 0x5f, 0xa1, 0xfd, 0x8e, 0x88, 0x5c, 0x9d, 0xbe, 0x39, 0xfe, 0xff, 0xf9, 0xc3, 0x23, 0x1f,
-	0x42, 0xfb, 0xdf, 0x7d, 0xed, 0x64, 0x9d, 0x36, 0x3f, 0x28, 0xcb, 0x4f, 0x57, 0x3b, 0xf2, 0x31,
-	0xfd, 0xd3, 0x7f, 0x01, 0x00, 0x00, 0xff, 0xff, 0xb6, 0x3a, 0x0d, 0x8b, 0xac, 0x0b, 0x00, 0x00,
+var fileDescriptor_mlservice_ece1a7d2642846f3 = []byte{
+	// 265 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x90, 0x4f, 0x4b, 0xc4, 0x30,
+	0x10, 0xc5, 0xa9, 0x07, 0xa1, 0xa9, 0x7f, 0x20, 0x07, 0x29, 0x3d, 0x88, 0xf6, 0x20, 0x9e, 0x52,
+	0xac, 0x9f, 0x60, 0x15, 0xf4, 0xe2, 0x82, 0x74, 0x17, 0x0f, 0x5e, 0x24, 0xc6, 0x01, 0x0b, 0x35,
+	0xa9, 0x99, 0x71, 0x59, 0x3f, 0x87, 0x5f, 0x58, 0xd2, 0xe9, 0x1f, 0xd7, 0x85, 0x3d, 0xce, 0xe4,
+	0xfd, 0xe6, 0xbd, 0x3c, 0x71, 0x81, 0x68, 0x8b, 0x8f, 0x06, 0xc1, 0xaf, 0x6a, 0x03, 0xc5, 0xaa,
+	0xd4, 0x4d, 0xfb, 0xae, 0xaf, 0xa6, 0x95, 0x6a, 0xbd, 0x23, 0x27, 0x4f, 0x10, 0xad, 0x9a, 0x96,
+	0x83, 0x2e, 0xcb, 0x03, 0x8f, 0x46, 0x5b, 0x0b, 0x7e, 0xa2, 0xfb, 0x05, 0xb3, 0xd9, 0x69, 0xd0,
+	0xd0, 0x77, 0x0b, 0x05, 0xc1, 0x9a, 0x5e, 0xb4, 0xb5, 0x8e, 0x34, 0xd5, 0xce, 0xf2, 0x7b, 0xfe,
+	0x13, 0x89, 0x78, 0xde, 0x54, 0xf0, 0xf9, 0x05, 0x48, 0xf2, 0x56, 0x24, 0x01, 0xf7, 0x3c, 0xa6,
+	0xd1, 0x59, 0x74, 0x99, 0x94, 0xe7, 0x2a, 0xf8, 0x0f, 0x67, 0x07, 0x1f, 0xb5, 0x30, 0xda, 0xf6,
+	0x5c, 0xf5, 0x97, 0x92, 0x33, 0x71, 0xfc, 0xcf, 0x2b, 0xdd, 0xeb, 0x0e, 0xa5, 0xdd, 0xa1, 0x10,
+	0x46, 0x2d, 0x61, 0x4d, 0xb3, 0xf1, 0xbd, 0x3a, 0xa2, 0x8d, 0x39, 0x5f, 0x0a, 0x11, 0x42, 0x61,
+	0xeb, 0x2c, 0x82, 0xbc, 0x13, 0x07, 0x7c, 0x9f, 0xe7, 0x3e, 0x56, 0xbe, 0x2b, 0x16, 0x2b, 0xab,
+	0x0d, 0xae, 0x34, 0x22, 0x9e, 0x3f, 0x2c, 0xb8, 0x45, 0xf9, 0x24, 0x0e, 0xef, 0x81, 0x1e, 0x3d,
+	0xbc, 0xd5, 0x26, 0x78, 0x4a, 0xfe, 0xe6, 0x76, 0xcd, 0x6a, 0xac, 0x27, 0xcb, 0x77, 0x49, 0xd8,
+	0xe4, 0x26, 0x79, 0x8e, 0x47, 0xc1, 0xeb, 0x7e, 0x57, 0xf2, 0xf5, 0x6f, 0x00, 0x00, 0x00, 0xff,
+	0xff, 0x48, 0x69, 0x0b, 0x4c, 0xea, 0x01, 0x00, 0x00,
 }

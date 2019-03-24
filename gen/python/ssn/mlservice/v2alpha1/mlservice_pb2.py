@@ -12,275 +12,43 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
+from ssn.scanner.v2alpha1 import scanner_pb2 as ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2
+from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='ssn/mlservice/v2alpha1/mlservice.proto',
-  package='ssn.mlservice.v1',
+  package='ssn.mlservice.v2alpha1',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x10ssn.mlservice.v1\x1a\"ssn/ocrservice/v1/ocrservice.proto\"9\n\x14PredictedStringField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\"8\n\x13PredictedFieldFloat\x12\r\n\x05value\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\"\xd4\x02\n\x07\x46\x65\x61ture\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x1e.ssn.mlservice.v1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\r\"\x85\x02\n\x04Type\x12\x0e\n\nORDER_DATE\x10\x00\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x01\x12\x0c\n\x08\x43URRENCY\x10\x03\x12\r\n\tTOTAL_VAT\x10\x04\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x05\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x06\x12\x16\n\x12SUPPLIER_CORPORATE\x10\x07\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\x08\x12\x11\n\rDOCUMENT_TYPE\x10\t\x12\x12\n\x0ePAYMENT_METHOD\x10\n\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0b\x12\x0c\n\x08OCR_LINE\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\"\x91\x01\n\tMlRequest\x12>\n\rocr_responses\x18\x01 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\x12\x17\n\x0fimageannotation\x18\x02 \x01(\t\x12+\n\x08\x66\x65\x61tures\x18\x03 \x03(\x0b\x32\x19.ssn.mlservice.v1.Feature\"\xc1\r\n\nMlResponse\x12:\n\norder_date\x18\x01 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12@\n\x10payment_due_date\x18\x02 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x38\n\x08\x63urrency\x18\x03 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x38\n\ttotal_vat\x18\x04 \x03(\x0b\x32%.ssn.mlservice.v1.PredictedFieldFloat\x12=\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32%.ssn.mlservice.v1.PredictedFieldFloat\x12=\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32%.ssn.mlservice.v1.PredictedFieldFloat\x12\x45\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x45\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12=\n\rdocument_type\x18\t \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12>\n\x0epayment_method\x18\n \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x42\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12>\n\x0einvoice_number\x18\x11 \x03(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12=\n\x0bocr_line_dk\x18\x0c \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineDkH\x00\x12=\n\x0bocr_line_se\x18\r \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineSeH\x00\x12=\n\x0bocr_line_no\x18\x0e \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNoH\x00\x12=\n\x0bocr_line_fi\x18\x0f \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineFiH\x00\x12=\n\x0bocr_line_nl\x18\x10 \x01(\x0b\x32&.ssn.mlservice.v1.MlResponse.OcrLineNlH\x00\x1a\xba\x01\n\tOcrLineDk\x12\x34\n\x04type\x18\x01 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12:\n\npayment_id\x18\x02 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12;\n\x0b\x63reditor_id\x18\x03 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x1a\xd3\x01\n\tOcrLineSe\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x44\n\x14\x62\x61nkgiro_creditor_id\x18\x02 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x12\x44\n\x14plusgiro_creditor_id\x18\x03 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x1aG\n\tOcrLineNo\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x1aG\n\tOcrLineNl\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringField\x1aG\n\tOcrLineFi\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.mlservice.v1.PredictedStringFieldB\t\n\x07ocrLine2W\n\tMlService\x12J\n\rGetPrediction\x12\x1b.ssn.mlservice.v1.MlRequest\x1a\x1c.ssn.mlservice.v1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x16ssn.mlservice.v2alpha1\x1a\"ssn/scanner/v2alpha1/scanner.proto\x1a\x1essn/type/text_annotation.proto\"v\n\tMlRequest\x12\x36\n\x0bscanrequest\x18\x01 \x01(\x0b\x32!.ssn.scanner.v2alpha1.ScanRequest\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"F\n\nMlResponse\x12\x38\n\x0cscanresponse\x18\x01 \x01(\x0b\x32\".ssn.scanner.v2alpha1.ScanResponse2c\n\tMLService\x12V\n\rGetPrediction\x12!.ssn.mlservice.v2alpha1.MlRequest\x1a\".ssn.mlservice.v2alpha1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
-  dependencies=[ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,])
+  dependencies=[ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
-
-_FEATURE_TYPE = _descriptor.EnumDescriptor(
-  name='Type',
-  full_name='ssn.mlservice.v1.Feature.Type',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='ORDER_DATE', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PAYMENT_DUE_DATE', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CURRENCY', index=2, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TOTAL_VAT', index=3, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TOTAL_INCL_VAT', index=4, number=5,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TOTAL_EXCL_VAT', index=5, number=6,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUPPLIER_CORPORATE', index=6, number=7,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUPPLIER_COUNTRY_CODE', index=7, number=8,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DOCUMENT_TYPE', index=8, number=9,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PAYMENT_METHOD', index=9, number=10,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CREDIT_CARD_NUMBER', index=10, number=11,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OCR_LINE', index=11, number=12,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVOICE_NUMBER', index=12, number=13,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=293,
-  serialized_end=554,
-)
-_sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
-
-
-_PREDICTEDSTRINGFIELD = _descriptor.Descriptor(
-  name='PredictedStringField',
-  full_name='ssn.mlservice.v1.PredictedStringField',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='value', full_name='ssn.mlservice.v1.PredictedStringField.value', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='confidence', full_name='ssn.mlservice.v1.PredictedStringField.confidence', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=96,
-  serialized_end=153,
-)
-
-
-_PREDICTEDFIELDFLOAT = _descriptor.Descriptor(
-  name='PredictedFieldFloat',
-  full_name='ssn.mlservice.v1.PredictedFieldFloat',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='value', full_name='ssn.mlservice.v1.PredictedFieldFloat.value', index=0,
-      number=1, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='confidence', full_name='ssn.mlservice.v1.PredictedFieldFloat.confidence', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=155,
-  serialized_end=211,
-)
-
-
-_FEATURE = _descriptor.Descriptor(
-  name='Feature',
-  full_name='ssn.mlservice.v1.Feature',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='ssn.mlservice.v1.Feature.type', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_results', full_name='ssn.mlservice.v1.Feature.max_results', index=1,
-      number=2, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _FEATURE_TYPE,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=214,
-  serialized_end=554,
-)
 
 
 _MLREQUEST = _descriptor.Descriptor(
   name='MlRequest',
-  full_name='ssn.mlservice.v1.MlRequest',
+  full_name='ssn.mlservice.v2alpha1.MlRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ocr_responses', full_name='ssn.mlservice.v1.MlRequest.ocr_responses', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='imageannotation', full_name='ssn.mlservice.v1.MlRequest.imageannotation', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='features', full_name='ssn.mlservice.v1.MlRequest.features', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=557,
-  serialized_end=702,
-)
-
-
-_MLRESPONSE_OCRLINEDK = _descriptor.Descriptor(
-  name='OcrLineDk',
-  full_name='ssn.mlservice.v1.MlResponse.OcrLineDk',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='ssn.mlservice.v1.MlResponse.OcrLineDk.type', index=0,
+      name='scanrequest', full_name='ssn.mlservice.v2alpha1.MlRequest.scanrequest', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineDk.payment_id', index=1,
+      name='text_annotation', full_name='ssn.mlservice.v2alpha1.MlRequest.text_annotation', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='creditor_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineDk.creditor_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -293,266 +61,21 @@ _MLRESPONSE_OCRLINEDK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1804,
-  serialized_end=1990,
+  serialized_start=134,
+  serialized_end=252,
 )
 
-_MLRESPONSE_OCRLINESE = _descriptor.Descriptor(
-  name='OcrLineSe',
-  full_name='ssn.mlservice.v1.MlResponse.OcrLineSe',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineSe.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bankgiro_creditor_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineSe.bankgiro_creditor_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='plusgiro_creditor_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineSe.plusgiro_creditor_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1993,
-  serialized_end=2204,
-)
-
-_MLRESPONSE_OCRLINENO = _descriptor.Descriptor(
-  name='OcrLineNo',
-  full_name='ssn.mlservice.v1.MlResponse.OcrLineNo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineNo.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2206,
-  serialized_end=2277,
-)
-
-_MLRESPONSE_OCRLINENL = _descriptor.Descriptor(
-  name='OcrLineNl',
-  full_name='ssn.mlservice.v1.MlResponse.OcrLineNl',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineNl.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2279,
-  serialized_end=2350,
-)
-
-_MLRESPONSE_OCRLINEFI = _descriptor.Descriptor(
-  name='OcrLineFi',
-  full_name='ssn.mlservice.v1.MlResponse.OcrLineFi',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.mlservice.v1.MlResponse.OcrLineFi.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2352,
-  serialized_end=2423,
-)
 
 _MLRESPONSE = _descriptor.Descriptor(
   name='MlResponse',
-  full_name='ssn.mlservice.v1.MlResponse',
+  full_name='ssn.mlservice.v2alpha1.MlResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='order_date', full_name='ssn.mlservice.v1.MlResponse.order_date', index=0,
-      number=1, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='payment_due_date', full_name='ssn.mlservice.v1.MlResponse.payment_due_date', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='currency', full_name='ssn.mlservice.v1.MlResponse.currency', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='total_vat', full_name='ssn.mlservice.v1.MlResponse.total_vat', index=3,
-      number=4, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='total_incl_vat', full_name='ssn.mlservice.v1.MlResponse.total_incl_vat', index=4,
-      number=5, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='total_excl_vat', full_name='ssn.mlservice.v1.MlResponse.total_excl_vat', index=5,
-      number=6, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='supplier_corporate_id', full_name='ssn.mlservice.v1.MlResponse.supplier_corporate_id', index=6,
-      number=7, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='supplier_country_code', full_name='ssn.mlservice.v1.MlResponse.supplier_country_code', index=7,
-      number=8, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='document_type', full_name='ssn.mlservice.v1.MlResponse.document_type', index=8,
-      number=9, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='payment_method', full_name='ssn.mlservice.v1.MlResponse.payment_method', index=9,
-      number=10, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='credit_card_number', full_name='ssn.mlservice.v1.MlResponse.credit_card_number', index=10,
-      number=11, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='invoice_number', full_name='ssn.mlservice.v1.MlResponse.invoice_number', index=11,
-      number=17, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_line_dk', full_name='ssn.mlservice.v1.MlResponse.ocr_line_dk', index=12,
-      number=12, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_line_se', full_name='ssn.mlservice.v1.MlResponse.ocr_line_se', index=13,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_line_no', full_name='ssn.mlservice.v1.MlResponse.ocr_line_no', index=14,
-      number=14, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_line_fi', full_name='ssn.mlservice.v1.MlResponse.ocr_line_fi', index=15,
-      number=15, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='ocr_line_nl', full_name='ssn.mlservice.v1.MlResponse.ocr_line_nl', index=16,
-      number=16, type=11, cpp_type=10, label=1,
+      name='scanresponse', full_name='ssn.mlservice.v2alpha1.MlResponse.scanresponse', index=0,
+      number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -560,7 +83,7 @@ _MLRESPONSE = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_MLRESPONSE_OCRLINEDK, _MLRESPONSE_OCRLINESE, _MLRESPONSE_OCRLINENO, _MLRESPONSE_OCRLINENL, _MLRESPONSE_OCRLINEFI, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -568,161 +91,47 @@ _MLRESPONSE = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='ocrLine', full_name='ssn.mlservice.v1.MlResponse.ocrLine',
-      index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=705,
-  serialized_end=2434,
+  serialized_start=254,
+  serialized_end=324,
 )
 
-_FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
-_FEATURE_TYPE.containing_type = _FEATURE
-_MLREQUEST.fields_by_name['ocr_responses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
-_MLREQUEST.fields_by_name['features'].message_type = _FEATURE
-_MLRESPONSE_OCRLINEDK.fields_by_name['type'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINEDK.fields_by_name['payment_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINEDK.fields_by_name['creditor_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINEDK.containing_type = _MLRESPONSE
-_MLRESPONSE_OCRLINESE.fields_by_name['payment_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINESE.fields_by_name['bankgiro_creditor_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINESE.fields_by_name['plusgiro_creditor_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINESE.containing_type = _MLRESPONSE
-_MLRESPONSE_OCRLINENO.fields_by_name['payment_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINENO.containing_type = _MLRESPONSE
-_MLRESPONSE_OCRLINENL.fields_by_name['payment_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINENL.containing_type = _MLRESPONSE
-_MLRESPONSE_OCRLINEFI.fields_by_name['payment_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE_OCRLINEFI.containing_type = _MLRESPONSE
-_MLRESPONSE.fields_by_name['order_date'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['payment_due_date'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['currency'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['total_vat'].message_type = _PREDICTEDFIELDFLOAT
-_MLRESPONSE.fields_by_name['total_incl_vat'].message_type = _PREDICTEDFIELDFLOAT
-_MLRESPONSE.fields_by_name['total_excl_vat'].message_type = _PREDICTEDFIELDFLOAT
-_MLRESPONSE.fields_by_name['supplier_corporate_id'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['supplier_country_code'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['document_type'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['payment_method'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['credit_card_number'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['invoice_number'].message_type = _PREDICTEDSTRINGFIELD
-_MLRESPONSE.fields_by_name['ocr_line_dk'].message_type = _MLRESPONSE_OCRLINEDK
-_MLRESPONSE.fields_by_name['ocr_line_se'].message_type = _MLRESPONSE_OCRLINESE
-_MLRESPONSE.fields_by_name['ocr_line_no'].message_type = _MLRESPONSE_OCRLINENO
-_MLRESPONSE.fields_by_name['ocr_line_fi'].message_type = _MLRESPONSE_OCRLINEFI
-_MLRESPONSE.fields_by_name['ocr_line_nl'].message_type = _MLRESPONSE_OCRLINENL
-_MLRESPONSE.oneofs_by_name['ocrLine'].fields.append(
-  _MLRESPONSE.fields_by_name['ocr_line_dk'])
-_MLRESPONSE.fields_by_name['ocr_line_dk'].containing_oneof = _MLRESPONSE.oneofs_by_name['ocrLine']
-_MLRESPONSE.oneofs_by_name['ocrLine'].fields.append(
-  _MLRESPONSE.fields_by_name['ocr_line_se'])
-_MLRESPONSE.fields_by_name['ocr_line_se'].containing_oneof = _MLRESPONSE.oneofs_by_name['ocrLine']
-_MLRESPONSE.oneofs_by_name['ocrLine'].fields.append(
-  _MLRESPONSE.fields_by_name['ocr_line_no'])
-_MLRESPONSE.fields_by_name['ocr_line_no'].containing_oneof = _MLRESPONSE.oneofs_by_name['ocrLine']
-_MLRESPONSE.oneofs_by_name['ocrLine'].fields.append(
-  _MLRESPONSE.fields_by_name['ocr_line_fi'])
-_MLRESPONSE.fields_by_name['ocr_line_fi'].containing_oneof = _MLRESPONSE.oneofs_by_name['ocrLine']
-_MLRESPONSE.oneofs_by_name['ocrLine'].fields.append(
-  _MLRESPONSE.fields_by_name['ocr_line_nl'])
-_MLRESPONSE.fields_by_name['ocr_line_nl'].containing_oneof = _MLRESPONSE.oneofs_by_name['ocrLine']
-DESCRIPTOR.message_types_by_name['PredictedStringField'] = _PREDICTEDSTRINGFIELD
-DESCRIPTOR.message_types_by_name['PredictedFieldFloat'] = _PREDICTEDFIELDFLOAT
-DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
+_MLREQUEST.fields_by_name['scanrequest'].message_type = ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2._SCANREQUEST
+_MLREQUEST.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
+_MLRESPONSE.fields_by_name['scanresponse'].message_type = ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2._SCANRESPONSE
 DESCRIPTOR.message_types_by_name['MlRequest'] = _MLREQUEST
 DESCRIPTOR.message_types_by_name['MlResponse'] = _MLRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-PredictedStringField = _reflection.GeneratedProtocolMessageType('PredictedStringField', (_message.Message,), dict(
-  DESCRIPTOR = _PREDICTEDSTRINGFIELD,
-  __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.PredictedStringField)
-  ))
-_sym_db.RegisterMessage(PredictedStringField)
-
-PredictedFieldFloat = _reflection.GeneratedProtocolMessageType('PredictedFieldFloat', (_message.Message,), dict(
-  DESCRIPTOR = _PREDICTEDFIELDFLOAT,
-  __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.PredictedFieldFloat)
-  ))
-_sym_db.RegisterMessage(PredictedFieldFloat)
-
-Feature = _reflection.GeneratedProtocolMessageType('Feature', (_message.Message,), dict(
-  DESCRIPTOR = _FEATURE,
-  __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.Feature)
-  ))
-_sym_db.RegisterMessage(Feature)
-
 MlRequest = _reflection.GeneratedProtocolMessageType('MlRequest', (_message.Message,), dict(
   DESCRIPTOR = _MLREQUEST,
   __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlRequest)
+  # @@protoc_insertion_point(class_scope:ssn.mlservice.v2alpha1.MlRequest)
   ))
 _sym_db.RegisterMessage(MlRequest)
 
 MlResponse = _reflection.GeneratedProtocolMessageType('MlResponse', (_message.Message,), dict(
-
-  OcrLineDk = _reflection.GeneratedProtocolMessageType('OcrLineDk', (_message.Message,), dict(
-    DESCRIPTOR = _MLRESPONSE_OCRLINEDK,
-    __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse.OcrLineDk)
-    ))
-  ,
-
-  OcrLineSe = _reflection.GeneratedProtocolMessageType('OcrLineSe', (_message.Message,), dict(
-    DESCRIPTOR = _MLRESPONSE_OCRLINESE,
-    __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse.OcrLineSe)
-    ))
-  ,
-
-  OcrLineNo = _reflection.GeneratedProtocolMessageType('OcrLineNo', (_message.Message,), dict(
-    DESCRIPTOR = _MLRESPONSE_OCRLINENO,
-    __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse.OcrLineNo)
-    ))
-  ,
-
-  OcrLineNl = _reflection.GeneratedProtocolMessageType('OcrLineNl', (_message.Message,), dict(
-    DESCRIPTOR = _MLRESPONSE_OCRLINENL,
-    __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse.OcrLineNl)
-    ))
-  ,
-
-  OcrLineFi = _reflection.GeneratedProtocolMessageType('OcrLineFi', (_message.Message,), dict(
-    DESCRIPTOR = _MLRESPONSE_OCRLINEFI,
-    __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse.OcrLineFi)
-    ))
-  ,
   DESCRIPTOR = _MLRESPONSE,
   __module__ = 'ssn.mlservice.v2alpha1.mlservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.mlservice.v1.MlResponse)
+  # @@protoc_insertion_point(class_scope:ssn.mlservice.v2alpha1.MlResponse)
   ))
 _sym_db.RegisterMessage(MlResponse)
-_sym_db.RegisterMessage(MlResponse.OcrLineDk)
-_sym_db.RegisterMessage(MlResponse.OcrLineSe)
-_sym_db.RegisterMessage(MlResponse.OcrLineNo)
-_sym_db.RegisterMessage(MlResponse.OcrLineNl)
-_sym_db.RegisterMessage(MlResponse.OcrLineFi)
 
 
 DESCRIPTOR._options = None
 
 _MLSERVICE = _descriptor.ServiceDescriptor(
-  name='MlService',
-  full_name='ssn.mlservice.v1.MlService',
+  name='MLService',
+  full_name='ssn.mlservice.v2alpha1.MLService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2436,
-  serialized_end=2523,
+  serialized_start=326,
+  serialized_end=425,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPrediction',
-    full_name='ssn.mlservice.v1.MlService.GetPrediction',
+    full_name='ssn.mlservice.v2alpha1.MLService.GetPrediction',
     index=0,
     containing_service=None,
     input_type=_MLREQUEST,
@@ -732,6 +141,6 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
 ])
 _sym_db.RegisterServiceDescriptor(_MLSERVICE)
 
-DESCRIPTOR.services_by_name['MlService'] = _MLSERVICE
+DESCRIPTOR.services_by_name['MLService'] = _MLSERVICE
 
 # @@protoc_insertion_point(module_scope)

@@ -55,6 +55,26 @@ func (mr *MockOcrServiceClientMockRecorder) OcrScanImage(ctx, in interface{}, op
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceClient)(nil).OcrScanImage), varargs...)
 }
 
+// GetTextAnnotation mocks base method
+func (m *MockOcrServiceClient) GetTextAnnotation(ctx context.Context, in *x.GetTextAnnotationRequest, opts ...grpc.CallOption) (*x.GetTextAnnotationResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "GetTextAnnotation", varargs...)
+	ret0, _ := ret[0].(*x.GetTextAnnotationResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetTextAnnotation indicates an expected call of GetTextAnnotation
+func (mr *MockOcrServiceClientMockRecorder) GetTextAnnotation(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTextAnnotation", reflect.TypeOf((*MockOcrServiceClient)(nil).GetTextAnnotation), varargs...)
+}
+
 // MockOcrServiceServer is a mock of OcrServiceServer interface
 type MockOcrServiceServer struct {
 	ctrl     *gomock.Controller
@@ -91,4 +111,19 @@ func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *x.OcrSca
 func (mr *MockOcrServiceServerMockRecorder) OcrScanImage(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "OcrScanImage", reflect.TypeOf((*MockOcrServiceServer)(nil).OcrScanImage), arg0, arg1)
+}
+
+// GetTextAnnotation mocks base method
+func (m *MockOcrServiceServer) GetTextAnnotation(arg0 context.Context, arg1 *x.GetTextAnnotationRequest) (*x.GetTextAnnotationResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetTextAnnotation", arg0, arg1)
+	ret0, _ := ret[0].(*x.GetTextAnnotationResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetTextAnnotation indicates an expected call of GetTextAnnotation
+func (mr *MockOcrServiceServerMockRecorder) GetTextAnnotation(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTextAnnotation", reflect.TypeOf((*MockOcrServiceServer)(nil).GetTextAnnotation), arg0, arg1)
 }
