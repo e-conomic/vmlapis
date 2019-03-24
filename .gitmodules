@@ -1,8 +1,0 @@
-[submodule "deps/googleapis"]
-	path = deps/googleapis
-	url = https://github.com/googleapis/googleapis.git
-	shallow = true
-[submodule "deps/google-cloud-python"]
-	path = deps/google-cloud-python
-	url = https://github.com/googleapis/google-cloud-python.git
-	shallow = true
