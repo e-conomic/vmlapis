@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
 from ssn.scanner.v2alpha1 import scanner_pb2 as ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2
 from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.mlservice.v2alpha1',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x16ssn.mlservice.v2alpha1\x1a\"ssn/scanner/v2alpha1/scanner.proto\x1a\x1essn/type/text_annotation.proto\"\x92\x01\n\tMlRequest\x12R\n\x1a\x64ocument_annotator_request\x18\x01 \x01(\x0b\x32..ssn.scanner.v2alpha1.DocumentAnnotatorRequest\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"b\n\nMlResponse\x12T\n\x1b\x64ocument_annotator_response\x18\x01 \x01(\x0b\x32/.ssn.scanner.v2alpha1.DocumentAnnotatorResponse2c\n\tMLService\x12V\n\rGetPrediction\x12!.ssn.mlservice.v2alpha1.MlRequest\x1a\".ssn.mlservice.v2alpha1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x16ssn.mlservice.v2alpha1\x1a\"ssn/ocrservice/v1/ocrservice.proto\x1a\"ssn/scanner/v2alpha1/scanner.proto\x1a\x1essn/type/text_annotation.proto\"\xd2\x01\n\tMlRequest\x12R\n\x1a\x64ocument_annotator_request\x18\x01 \x01(\x0b\x32..ssn.scanner.v2alpha1.DocumentAnnotatorRequest\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12>\n\rocr_responses\x18\x03 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\"b\n\nMlResponse\x12T\n\x1b\x64ocument_annotator_response\x18\x01 \x01(\x0b\x32/.ssn.scanner.v2alpha1.DocumentAnnotatorResponse2c\n\tMLService\x12V\n\rGetPrediction\x12!.ssn.mlservice.v2alpha1.MlRequest\x1a\".ssn.mlservice.v2alpha1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
-  dependencies=[ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
+  dependencies=[ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
 
@@ -49,6 +50,13 @@ _MLREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_responses', full_name='ssn.mlservice.v2alpha1.MlRequest.ocr_responses', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -61,8 +69,8 @@ _MLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=135,
-  serialized_end=281,
+  serialized_start=171,
+  serialized_end=381,
 )
 
 
@@ -92,12 +100,13 @@ _MLRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=283,
-  serialized_end=381,
+  serialized_start=383,
+  serialized_end=481,
 )
 
 _MLREQUEST.fields_by_name['document_annotator_request'].message_type = ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2._DOCUMENTANNOTATORREQUEST
 _MLREQUEST.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
+_MLREQUEST.fields_by_name['ocr_responses'].message_type = ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2._OCRSCANIMAGERESPONSE
 _MLRESPONSE.fields_by_name['document_annotator_response'].message_type = ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2._DOCUMENTANNOTATORRESPONSE
 DESCRIPTOR.message_types_by_name['MlRequest'] = _MLREQUEST
 DESCRIPTOR.message_types_by_name['MlResponse'] = _MLRESPONSE
@@ -126,8 +135,8 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=383,
-  serialized_end=482,
+  serialized_start=483,
+  serialized_end=582,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPrediction',
