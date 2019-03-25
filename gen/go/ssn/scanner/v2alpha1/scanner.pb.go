@@ -26,77 +26,118 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
+// A bucketized representation of confidence, which is intended to give clients
+// highly stable results across model upgrades.
+type ConfidenceLevel int32
+
+const (
+	ConfidenceLevel_UNKNOWN   ConfidenceLevel = 0
+	ConfidenceLevel_VERY_LOW  ConfidenceLevel = 1
+	ConfidenceLevel_LOW       ConfidenceLevel = 2
+	ConfidenceLevel_MID       ConfidenceLevel = 3
+	ConfidenceLevel_HIGH      ConfidenceLevel = 4
+	ConfidenceLevel_VERY_HIGH ConfidenceLevel = 5
+)
+
+var ConfidenceLevel_name = map[int32]string{
+	0: "UNKNOWN",
+	1: "VERY_LOW",
+	2: "LOW",
+	3: "MID",
+	4: "HIGH",
+	5: "VERY_HIGH",
+}
+var ConfidenceLevel_value = map[string]int32{
+	"UNKNOWN":   0,
+	"VERY_LOW":  1,
+	"LOW":       2,
+	"MID":       3,
+	"HIGH":      4,
+	"VERY_HIGH": 5,
+}
+
+func (x ConfidenceLevel) String() string {
+	return proto.EnumName(ConfidenceLevel_name, int32(x))
+}
+func (ConfidenceLevel) EnumDescriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{0}
+}
+
 type Feature_Type int32
 
 const (
 	// Run default feature set
-	Feature_TEXT_ANNOTATION Feature_Type = 0
+	Feature_DEFAULT Feature_Type = 0
+	// Return text annotation
+	Feature_TEXT_ANNOTATION Feature_Type = 1
 	// Run order date detection
-	Feature_ORDER_DATE Feature_Type = 1
+	Feature_ORDER_DATE Feature_Type = 2
 	// Run due date detection
-	Feature_PAYMENT_DUE_DATE Feature_Type = 2
+	Feature_PAYMENT_DUE_DATE Feature_Type = 3
 	// Run currency detection
-	Feature_CURRENCY Feature_Type = 3
+	Feature_CURRENCY Feature_Type = 4
 	// Run total vat detection
-	Feature_TOTAL_VAT Feature_Type = 4
+	Feature_TOTAL_VAT Feature_Type = 5
 	// Run total incl vat detection
-	Feature_TOTAL_INCL_VAT Feature_Type = 5
+	Feature_TOTAL_INCL_VAT Feature_Type = 6
 	// Run total excl vat detection
-	Feature_TOTAL_EXCL_VAT Feature_Type = 6
+	Feature_TOTAL_EXCL_VAT Feature_Type = 7
 	// Run supplier corporate detection
-	Feature_SUPPLIER_CORPORATE Feature_Type = 7
+	Feature_SUPPLIER_CORPORATE Feature_Type = 8
 	// Run country code detection
-	Feature_SUPPLIER_COUNTRY_CODE Feature_Type = 8
+	Feature_SUPPLIER_COUNTRY_CODE Feature_Type = 9
 	// Run document type detection
-	Feature_DOCUMENT_TYPE Feature_Type = 9
+	Feature_DOCUMENT_TYPE Feature_Type = 10
 	// Run pyment method detection
-	Feature_PAYMENT_METHOD Feature_Type = 10
+	Feature_PAYMENT_METHOD Feature_Type = 11
 	// Run credit card number detection
-	Feature_CREDIT_CARD_NUMBER Feature_Type = 11
+	Feature_CREDIT_CARD_NUMBER Feature_Type = 12
 	// Run ocr line detection
-	Feature_OCR_LINE Feature_Type = 12
+	Feature_OCR_LINE Feature_Type = 13
 	// Run invoice number detection
-	Feature_INVOICE_NUMBER Feature_Type = 13
+	Feature_INVOICE_NUMBER Feature_Type = 14
 )
 
 var Feature_Type_name = map[int32]string{
-	0:  "TEXT_ANNOTATION",
-	1:  "ORDER_DATE",
-	2:  "PAYMENT_DUE_DATE",
-	3:  "CURRENCY",
-	4:  "TOTAL_VAT",
-	5:  "TOTAL_INCL_VAT",
-	6:  "TOTAL_EXCL_VAT",
-	7:  "SUPPLIER_CORPORATE",
-	8:  "SUPPLIER_COUNTRY_CODE",
-	9:  "DOCUMENT_TYPE",
-	10: "PAYMENT_METHOD",
-	11: "CREDIT_CARD_NUMBER",
-	12: "OCR_LINE",
-	13: "INVOICE_NUMBER",
+	0:  "DEFAULT",
+	1:  "TEXT_ANNOTATION",
+	2:  "ORDER_DATE",
+	3:  "PAYMENT_DUE_DATE",
+	4:  "CURRENCY",
+	5:  "TOTAL_VAT",
+	6:  "TOTAL_INCL_VAT",
+	7:  "TOTAL_EXCL_VAT",
+	8:  "SUPPLIER_CORPORATE",
+	9:  "SUPPLIER_COUNTRY_CODE",
+	10: "DOCUMENT_TYPE",
+	11: "PAYMENT_METHOD",
+	12: "CREDIT_CARD_NUMBER",
+	13: "OCR_LINE",
+	14: "INVOICE_NUMBER",
 }
 var Feature_Type_value = map[string]int32{
-	"TEXT_ANNOTATION":       0,
-	"ORDER_DATE":            1,
-	"PAYMENT_DUE_DATE":      2,
-	"CURRENCY":              3,
-	"TOTAL_VAT":             4,
-	"TOTAL_INCL_VAT":        5,
-	"TOTAL_EXCL_VAT":        6,
-	"SUPPLIER_CORPORATE":    7,
-	"SUPPLIER_COUNTRY_CODE": 8,
-	"DOCUMENT_TYPE":         9,
-	"PAYMENT_METHOD":        10,
-	"CREDIT_CARD_NUMBER":    11,
-	"OCR_LINE":              12,
-	"INVOICE_NUMBER":        13,
+	"DEFAULT":               0,
+	"TEXT_ANNOTATION":       1,
+	"ORDER_DATE":            2,
+	"PAYMENT_DUE_DATE":      3,
+	"CURRENCY":              4,
+	"TOTAL_VAT":             5,
+	"TOTAL_INCL_VAT":        6,
+	"TOTAL_EXCL_VAT":        7,
+	"SUPPLIER_CORPORATE":    8,
+	"SUPPLIER_COUNTRY_CODE": 9,
+	"DOCUMENT_TYPE":         10,
+	"PAYMENT_METHOD":        11,
+	"CREDIT_CARD_NUMBER":    12,
+	"OCR_LINE":              13,
+	"INVOICE_NUMBER":        14,
 }
 
 func (x Feature_Type) String() string {
 	return proto.EnumName(Feature_Type_name, int32(x))
 }
 func (Feature_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{1, 0}
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{1, 0}
 }
 
 type PredictedField struct {
@@ -105,8 +146,8 @@ type PredictedField struct {
 	// Normalized value 01-01-2019
 	// Only set when value is returned nomalized
 	NormalizedValue string `protobuf:"bytes,2,opt,name=normalized_value,json=normalizedValue,proto3" json:"normalized_value,omitempty"`
-	// The accuracy of the field detection in an image.
-	Confidence float32 `protobuf:"fixed32,3,opt,name=confidence,proto3" json:"confidence,omitempty"`
+	// The confidence of the prediction being correct
+	Confidence ConfidenceLevel `protobuf:"varint,3,opt,name=confidence,proto3,enum=ssn.scanner.v2alpha1.ConfidenceLevel" json:"confidence,omitempty"`
 	// The bounding box for the block.
 	// The vertices are in the order of top-left, top-right, bottom-right,
 	// bottom-left. When a rotation of the bounding box is detected the rotation
@@ -137,7 +178,7 @@ func (m *PredictedField) Reset()         { *m = PredictedField{} }
 func (m *PredictedField) String() string { return proto.CompactTextString(m) }
 func (*PredictedField) ProtoMessage()    {}
 func (*PredictedField) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{0}
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{0}
 }
 func (m *PredictedField) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PredictedField.Unmarshal(m, b)
@@ -171,11 +212,11 @@ func (m *PredictedField) GetNormalizedValue() string {
 	return ""
 }
 
-func (m *PredictedField) GetConfidence() float32 {
+func (m *PredictedField) GetConfidence() ConfidenceLevel {
 	if m != nil {
 		return m.Confidence
 	}
-	return 0
+	return ConfidenceLevel_UNKNOWN
 }
 
 func (m *PredictedField) GetBoundingBox() *_type.BoundingPoly {
@@ -191,20 +232,18 @@ type Feature struct {
 	// Maximum number of results of this type. Does not apply to
 	// `TEXT_DETECTION`, `DOCUMENT_TEXT_DETECTION`, or `CROP_HINTS`.
 	MaxResults int32 `protobuf:"varint,2,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
-	// Model to use for the feature.
-	// Supported values: "builtin/stable" (the default if unset) and
-	// "builtin/latest".
-	Model                string   `protobuf:"bytes,3,opt,name=model,proto3" json:"model,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	// The minimum confidence for predictions that the caller wants returned
+	MinConfidence        ConfidenceLevel `protobuf:"varint,3,opt,name=min_confidence,json=minConfidence,proto3,enum=ssn.scanner.v2alpha1.ConfidenceLevel" json:"min_confidence,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
 }
 
 func (m *Feature) Reset()         { *m = Feature{} }
 func (m *Feature) String() string { return proto.CompactTextString(m) }
 func (*Feature) ProtoMessage()    {}
 func (*Feature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{1}
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{1}
 }
 func (m *Feature) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Feature.Unmarshal(m, b)
@@ -228,7 +267,7 @@ func (m *Feature) GetType() Feature_Type {
 	if m != nil {
 		return m.Type
 	}
-	return Feature_TEXT_ANNOTATION
+	return Feature_DEFAULT
 }
 
 func (m *Feature) GetMaxResults() int32 {
@@ -238,14 +277,14 @@ func (m *Feature) GetMaxResults() int32 {
 	return 0
 }
 
-func (m *Feature) GetModel() string {
+func (m *Feature) GetMinConfidence() ConfidenceLevel {
 	if m != nil {
-		return m.Model
+		return m.MinConfidence
 	}
-	return ""
+	return ConfidenceLevel_UNKNOWN
 }
 
-type ScanRequest struct {
+type DocumentAnnotatorRequest struct {
 	Document             *Document  `protobuf:"bytes,1,opt,name=document,proto3" json:"document,omitempty"`
 	Features             []*Feature `protobuf:"bytes,2,rep,name=features,proto3" json:"features,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}   `json:"-"`
@@ -253,45 +292,45 @@ type ScanRequest struct {
 	XXX_sizecache        int32      `json:"-"`
 }
 
-func (m *ScanRequest) Reset()         { *m = ScanRequest{} }
-func (m *ScanRequest) String() string { return proto.CompactTextString(m) }
-func (*ScanRequest) ProtoMessage()    {}
-func (*ScanRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{2}
+func (m *DocumentAnnotatorRequest) Reset()         { *m = DocumentAnnotatorRequest{} }
+func (m *DocumentAnnotatorRequest) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorRequest) ProtoMessage()    {}
+func (*DocumentAnnotatorRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{2}
 }
-func (m *ScanRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanRequest.Unmarshal(m, b)
+func (m *DocumentAnnotatorRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorRequest.Unmarshal(m, b)
 }
-func (m *ScanRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanRequest.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorRequest.Marshal(b, m, deterministic)
 }
-func (dst *ScanRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanRequest.Merge(dst, src)
+func (dst *DocumentAnnotatorRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorRequest.Merge(dst, src)
 }
-func (m *ScanRequest) XXX_Size() int {
-	return xxx_messageInfo_ScanRequest.Size(m)
+func (m *DocumentAnnotatorRequest) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorRequest.Size(m)
 }
-func (m *ScanRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanRequest.DiscardUnknown(m)
+func (m *DocumentAnnotatorRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanRequest proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorRequest proto.InternalMessageInfo
 
-func (m *ScanRequest) GetDocument() *Document {
+func (m *DocumentAnnotatorRequest) GetDocument() *Document {
 	if m != nil {
 		return m.Document
 	}
 	return nil
 }
 
-func (m *ScanRequest) GetFeatures() []*Feature {
+func (m *DocumentAnnotatorRequest) GetFeatures() []*Feature {
 	if m != nil {
 		return m.Features
 	}
 	return nil
 }
 
-type ScanResponse struct {
+type DocumentAnnotatorResponse struct {
 	// orderDate
 	// ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
 	// Example: "2019-12-31"
@@ -345,12 +384,12 @@ type ScanResponse struct {
 	// Only one ocrLine will be present in a suggestion.
 	//
 	// Types that are valid to be assigned to OcrLine:
-	//	*ScanResponse_OcrLineDk_
-	//	*ScanResponse_OcrLineSe_
-	//	*ScanResponse_OcrLineNo_
-	//	*ScanResponse_OcrLineFi_
-	//	*ScanResponse_OcrLineNl_
-	OcrLine isScanResponse_OcrLine `protobuf_oneof:"ocrLine"`
+	//	*DocumentAnnotatorResponse_OcrLineDk_
+	//	*DocumentAnnotatorResponse_OcrLineSe_
+	//	*DocumentAnnotatorResponse_OcrLineNo_
+	//	*DocumentAnnotatorResponse_OcrLineFi_
+	//	*DocumentAnnotatorResponse_OcrLineNl_
+	OcrLine isDocumentAnnotatorResponse_OcrLine `protobuf_oneof:"ocrLine"`
 	// Return text annotation
 	TextAnnotation       *_type.TextAnnotation `protobuf:"bytes,18,opt,name=text_annotation,json=textAnnotation,proto3" json:"text_annotation,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
@@ -358,191 +397,191 @@ type ScanResponse struct {
 	XXX_sizecache        int32                 `json:"-"`
 }
 
-func (m *ScanResponse) Reset()         { *m = ScanResponse{} }
-func (m *ScanResponse) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse) ProtoMessage()    {}
-func (*ScanResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3}
+func (m *DocumentAnnotatorResponse) Reset()         { *m = DocumentAnnotatorResponse{} }
+func (m *DocumentAnnotatorResponse) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3}
 }
-func (m *ScanResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse.Unmarshal(m, b)
 }
-func (m *ScanResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse.Merge(dst, src)
 }
-func (m *ScanResponse) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse.Size(m)
+func (m *DocumentAnnotatorResponse) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse.Size(m)
 }
-func (m *ScanResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse proto.InternalMessageInfo
 
-func (m *ScanResponse) GetOrderDate() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetOrderDate() []*PredictedField {
 	if m != nil {
 		return m.OrderDate
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetPaymentDueDate() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetPaymentDueDate() []*PredictedField {
 	if m != nil {
 		return m.PaymentDueDate
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetCurrency() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetCurrency() []*PredictedField {
 	if m != nil {
 		return m.Currency
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetTotalVat() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetTotalVat() []*PredictedField {
 	if m != nil {
 		return m.TotalVat
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetTotalInclVat() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetTotalInclVat() []*PredictedField {
 	if m != nil {
 		return m.TotalInclVat
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetTotalExclVat() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetTotalExclVat() []*PredictedField {
 	if m != nil {
 		return m.TotalExclVat
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetSupplierCorporateId() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetSupplierCorporateId() []*PredictedField {
 	if m != nil {
 		return m.SupplierCorporateId
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetSupplierCountryCode() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetSupplierCountryCode() []*PredictedField {
 	if m != nil {
 		return m.SupplierCountryCode
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetDocumentType() *PredictedField {
+func (m *DocumentAnnotatorResponse) GetDocumentType() *PredictedField {
 	if m != nil {
 		return m.DocumentType
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetPaymentMethod() *PredictedField {
+func (m *DocumentAnnotatorResponse) GetPaymentMethod() *PredictedField {
 	if m != nil {
 		return m.PaymentMethod
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetCreditCardNumber() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetCreditCardNumber() []*PredictedField {
 	if m != nil {
 		return m.CreditCardNumber
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetInvoiceNumber() []*PredictedField {
+func (m *DocumentAnnotatorResponse) GetInvoiceNumber() []*PredictedField {
 	if m != nil {
 		return m.InvoiceNumber
 	}
 	return nil
 }
 
-type isScanResponse_OcrLine interface {
-	isScanResponse_OcrLine()
+type isDocumentAnnotatorResponse_OcrLine interface {
+	isDocumentAnnotatorResponse_OcrLine()
 }
 
-type ScanResponse_OcrLineDk_ struct {
-	OcrLineDk *ScanResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocr_line_dk,json=ocrLineDk,proto3,oneof"`
+type DocumentAnnotatorResponse_OcrLineDk_ struct {
+	OcrLineDk *DocumentAnnotatorResponse_OcrLineDk `protobuf:"bytes,12,opt,name=ocr_line_dk,json=ocrLineDk,proto3,oneof"`
 }
 
-type ScanResponse_OcrLineSe_ struct {
-	OcrLineSe *ScanResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocr_line_se,json=ocrLineSe,proto3,oneof"`
+type DocumentAnnotatorResponse_OcrLineSe_ struct {
+	OcrLineSe *DocumentAnnotatorResponse_OcrLineSe `protobuf:"bytes,13,opt,name=ocr_line_se,json=ocrLineSe,proto3,oneof"`
 }
 
-type ScanResponse_OcrLineNo_ struct {
-	OcrLineNo *ScanResponse_OcrLineNo `protobuf:"bytes,14,opt,name=ocr_line_no,json=ocrLineNo,proto3,oneof"`
+type DocumentAnnotatorResponse_OcrLineNo_ struct {
+	OcrLineNo *DocumentAnnotatorResponse_OcrLineNo `protobuf:"bytes,14,opt,name=ocr_line_no,json=ocrLineNo,proto3,oneof"`
 }
 
-type ScanResponse_OcrLineFi_ struct {
-	OcrLineFi *ScanResponse_OcrLineFi `protobuf:"bytes,15,opt,name=ocr_line_fi,json=ocrLineFi,proto3,oneof"`
+type DocumentAnnotatorResponse_OcrLineFi_ struct {
+	OcrLineFi *DocumentAnnotatorResponse_OcrLineFi `protobuf:"bytes,15,opt,name=ocr_line_fi,json=ocrLineFi,proto3,oneof"`
 }
 
-type ScanResponse_OcrLineNl_ struct {
-	OcrLineNl *ScanResponse_OcrLineNl `protobuf:"bytes,16,opt,name=ocr_line_nl,json=ocrLineNl,proto3,oneof"`
+type DocumentAnnotatorResponse_OcrLineNl_ struct {
+	OcrLineNl *DocumentAnnotatorResponse_OcrLineNl `protobuf:"bytes,16,opt,name=ocr_line_nl,json=ocrLineNl,proto3,oneof"`
 }
 
-func (*ScanResponse_OcrLineDk_) isScanResponse_OcrLine() {}
+func (*DocumentAnnotatorResponse_OcrLineDk_) isDocumentAnnotatorResponse_OcrLine() {}
 
-func (*ScanResponse_OcrLineSe_) isScanResponse_OcrLine() {}
+func (*DocumentAnnotatorResponse_OcrLineSe_) isDocumentAnnotatorResponse_OcrLine() {}
 
-func (*ScanResponse_OcrLineNo_) isScanResponse_OcrLine() {}
+func (*DocumentAnnotatorResponse_OcrLineNo_) isDocumentAnnotatorResponse_OcrLine() {}
 
-func (*ScanResponse_OcrLineFi_) isScanResponse_OcrLine() {}
+func (*DocumentAnnotatorResponse_OcrLineFi_) isDocumentAnnotatorResponse_OcrLine() {}
 
-func (*ScanResponse_OcrLineNl_) isScanResponse_OcrLine() {}
+func (*DocumentAnnotatorResponse_OcrLineNl_) isDocumentAnnotatorResponse_OcrLine() {}
 
-func (m *ScanResponse) GetOcrLine() isScanResponse_OcrLine {
+func (m *DocumentAnnotatorResponse) GetOcrLine() isDocumentAnnotatorResponse_OcrLine {
 	if m != nil {
 		return m.OcrLine
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetOcrLineDk() *ScanResponse_OcrLineDk {
-	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineDk_); ok {
+func (m *DocumentAnnotatorResponse) GetOcrLineDk() *DocumentAnnotatorResponse_OcrLineDk {
+	if x, ok := m.GetOcrLine().(*DocumentAnnotatorResponse_OcrLineDk_); ok {
 		return x.OcrLineDk
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetOcrLineSe() *ScanResponse_OcrLineSe {
-	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineSe_); ok {
+func (m *DocumentAnnotatorResponse) GetOcrLineSe() *DocumentAnnotatorResponse_OcrLineSe {
+	if x, ok := m.GetOcrLine().(*DocumentAnnotatorResponse_OcrLineSe_); ok {
 		return x.OcrLineSe
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetOcrLineNo() *ScanResponse_OcrLineNo {
-	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineNo_); ok {
+func (m *DocumentAnnotatorResponse) GetOcrLineNo() *DocumentAnnotatorResponse_OcrLineNo {
+	if x, ok := m.GetOcrLine().(*DocumentAnnotatorResponse_OcrLineNo_); ok {
 		return x.OcrLineNo
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetOcrLineFi() *ScanResponse_OcrLineFi {
-	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineFi_); ok {
+func (m *DocumentAnnotatorResponse) GetOcrLineFi() *DocumentAnnotatorResponse_OcrLineFi {
+	if x, ok := m.GetOcrLine().(*DocumentAnnotatorResponse_OcrLineFi_); ok {
 		return x.OcrLineFi
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetOcrLineNl() *ScanResponse_OcrLineNl {
-	if x, ok := m.GetOcrLine().(*ScanResponse_OcrLineNl_); ok {
+func (m *DocumentAnnotatorResponse) GetOcrLineNl() *DocumentAnnotatorResponse_OcrLineNl {
+	if x, ok := m.GetOcrLine().(*DocumentAnnotatorResponse_OcrLineNl_); ok {
 		return x.OcrLineNl
 	}
 	return nil
 }
 
-func (m *ScanResponse) GetTextAnnotation() *_type.TextAnnotation {
+func (m *DocumentAnnotatorResponse) GetTextAnnotation() *_type.TextAnnotation {
 	if m != nil {
 		return m.TextAnnotation
 	}
@@ -550,125 +589,125 @@ func (m *ScanResponse) GetTextAnnotation() *_type.TextAnnotation {
 }
 
 // XXX_OneofFuncs is for the internal use of the proto package.
-func (*ScanResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _ScanResponse_OneofMarshaler, _ScanResponse_OneofUnmarshaler, _ScanResponse_OneofSizer, []interface{}{
-		(*ScanResponse_OcrLineDk_)(nil),
-		(*ScanResponse_OcrLineSe_)(nil),
-		(*ScanResponse_OcrLineNo_)(nil),
-		(*ScanResponse_OcrLineFi_)(nil),
-		(*ScanResponse_OcrLineNl_)(nil),
+func (*DocumentAnnotatorResponse) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _DocumentAnnotatorResponse_OneofMarshaler, _DocumentAnnotatorResponse_OneofUnmarshaler, _DocumentAnnotatorResponse_OneofSizer, []interface{}{
+		(*DocumentAnnotatorResponse_OcrLineDk_)(nil),
+		(*DocumentAnnotatorResponse_OcrLineSe_)(nil),
+		(*DocumentAnnotatorResponse_OcrLineNo_)(nil),
+		(*DocumentAnnotatorResponse_OcrLineFi_)(nil),
+		(*DocumentAnnotatorResponse_OcrLineNl_)(nil),
 	}
 }
 
-func _ScanResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*ScanResponse)
+func _DocumentAnnotatorResponse_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*DocumentAnnotatorResponse)
 	// ocrLine
 	switch x := m.OcrLine.(type) {
-	case *ScanResponse_OcrLineDk_:
+	case *DocumentAnnotatorResponse_OcrLineDk_:
 		b.EncodeVarint(12<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrLineDk); err != nil {
 			return err
 		}
-	case *ScanResponse_OcrLineSe_:
+	case *DocumentAnnotatorResponse_OcrLineSe_:
 		b.EncodeVarint(13<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrLineSe); err != nil {
 			return err
 		}
-	case *ScanResponse_OcrLineNo_:
+	case *DocumentAnnotatorResponse_OcrLineNo_:
 		b.EncodeVarint(14<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrLineNo); err != nil {
 			return err
 		}
-	case *ScanResponse_OcrLineFi_:
+	case *DocumentAnnotatorResponse_OcrLineFi_:
 		b.EncodeVarint(15<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrLineFi); err != nil {
 			return err
 		}
-	case *ScanResponse_OcrLineNl_:
+	case *DocumentAnnotatorResponse_OcrLineNl_:
 		b.EncodeVarint(16<<3 | proto.WireBytes)
 		if err := b.EncodeMessage(x.OcrLineNl); err != nil {
 			return err
 		}
 	case nil:
 	default:
-		return fmt.Errorf("ScanResponse.OcrLine has unexpected type %T", x)
+		return fmt.Errorf("DocumentAnnotatorResponse.OcrLine has unexpected type %T", x)
 	}
 	return nil
 }
 
-func _ScanResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*ScanResponse)
+func _DocumentAnnotatorResponse_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*DocumentAnnotatorResponse)
 	switch tag {
 	case 12: // ocrLine.ocr_line_dk
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(ScanResponse_OcrLineDk)
+		msg := new(DocumentAnnotatorResponse_OcrLineDk)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &ScanResponse_OcrLineDk_{msg}
+		m.OcrLine = &DocumentAnnotatorResponse_OcrLineDk_{msg}
 		return true, err
 	case 13: // ocrLine.ocr_line_se
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(ScanResponse_OcrLineSe)
+		msg := new(DocumentAnnotatorResponse_OcrLineSe)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &ScanResponse_OcrLineSe_{msg}
+		m.OcrLine = &DocumentAnnotatorResponse_OcrLineSe_{msg}
 		return true, err
 	case 14: // ocrLine.ocr_line_no
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(ScanResponse_OcrLineNo)
+		msg := new(DocumentAnnotatorResponse_OcrLineNo)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &ScanResponse_OcrLineNo_{msg}
+		m.OcrLine = &DocumentAnnotatorResponse_OcrLineNo_{msg}
 		return true, err
 	case 15: // ocrLine.ocr_line_fi
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(ScanResponse_OcrLineFi)
+		msg := new(DocumentAnnotatorResponse_OcrLineFi)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &ScanResponse_OcrLineFi_{msg}
+		m.OcrLine = &DocumentAnnotatorResponse_OcrLineFi_{msg}
 		return true, err
 	case 16: // ocrLine.ocr_line_nl
 		if wire != proto.WireBytes {
 			return true, proto.ErrInternalBadWireType
 		}
-		msg := new(ScanResponse_OcrLineNl)
+		msg := new(DocumentAnnotatorResponse_OcrLineNl)
 		err := b.DecodeMessage(msg)
-		m.OcrLine = &ScanResponse_OcrLineNl_{msg}
+		m.OcrLine = &DocumentAnnotatorResponse_OcrLineNl_{msg}
 		return true, err
 	default:
 		return false, nil
 	}
 }
 
-func _ScanResponse_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*ScanResponse)
+func _DocumentAnnotatorResponse_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*DocumentAnnotatorResponse)
 	// ocrLine
 	switch x := m.OcrLine.(type) {
-	case *ScanResponse_OcrLineDk_:
+	case *DocumentAnnotatorResponse_OcrLineDk_:
 		s := proto.Size(x.OcrLineDk)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *ScanResponse_OcrLineSe_:
+	case *DocumentAnnotatorResponse_OcrLineSe_:
 		s := proto.Size(x.OcrLineSe)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *ScanResponse_OcrLineNo_:
+	case *DocumentAnnotatorResponse_OcrLineNo_:
 		s := proto.Size(x.OcrLineNo)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *ScanResponse_OcrLineFi_:
+	case *DocumentAnnotatorResponse_OcrLineFi_:
 		s := proto.Size(x.OcrLineFi)
 		n += 1 // tag and wire
 		n += proto.SizeVarint(uint64(s))
 		n += s
-	case *ScanResponse_OcrLineNl_:
+	case *DocumentAnnotatorResponse_OcrLineNl_:
 		s := proto.Size(x.OcrLineNl)
 		n += 2 // tag and wire
 		n += proto.SizeVarint(uint64(s))
@@ -680,7 +719,7 @@ func _ScanResponse_OneofSizer(msg proto.Message) (n int) {
 	return n
 }
 
-type ScanResponse_OcrLineDk struct {
+type DocumentAnnotatorResponse_OcrLineDk struct {
 	// example: "71"
 	Type *PredictedField `protobuf:"bytes,1,opt,name=type,proto3" json:"type,omitempty"`
 	// example: "000002879094031"
@@ -692,52 +731,52 @@ type ScanResponse_OcrLineDk struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *ScanResponse_OcrLineDk) Reset()         { *m = ScanResponse_OcrLineDk{} }
-func (m *ScanResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse_OcrLineDk) ProtoMessage()    {}
-func (*ScanResponse_OcrLineDk) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 0}
+func (m *DocumentAnnotatorResponse_OcrLineDk) Reset()         { *m = DocumentAnnotatorResponse_OcrLineDk{} }
+func (m *DocumentAnnotatorResponse_OcrLineDk) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse_OcrLineDk) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse_OcrLineDk) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3, 0}
 }
-func (m *ScanResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse_OcrLineDk.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse_OcrLineDk) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk.Unmarshal(m, b)
 }
-func (m *ScanResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse_OcrLineDk.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse_OcrLineDk) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse_OcrLineDk) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse_OcrLineDk.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse_OcrLineDk) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk.Merge(dst, src)
 }
-func (m *ScanResponse_OcrLineDk) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse_OcrLineDk.Size(m)
+func (m *DocumentAnnotatorResponse_OcrLineDk) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk.Size(m)
 }
-func (m *ScanResponse_OcrLineDk) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse_OcrLineDk.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse_OcrLineDk) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse_OcrLineDk proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse_OcrLineDk proto.InternalMessageInfo
 
-func (m *ScanResponse_OcrLineDk) GetType() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineDk) GetType() *PredictedField {
 	if m != nil {
 		return m.Type
 	}
 	return nil
 }
 
-func (m *ScanResponse_OcrLineDk) GetPaymentId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineDk) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-func (m *ScanResponse_OcrLineDk) GetCreditorId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineDk) GetCreditorId() *PredictedField {
 	if m != nil {
 		return m.CreditorId
 	}
 	return nil
 }
 
-type ScanResponse_OcrLineSe struct {
+type DocumentAnnotatorResponse_OcrLineSe struct {
 	// example: "050765098"
 	PaymentId *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
 	// example: "2654507"
@@ -749,52 +788,52 @@ type ScanResponse_OcrLineSe struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *ScanResponse_OcrLineSe) Reset()         { *m = ScanResponse_OcrLineSe{} }
-func (m *ScanResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse_OcrLineSe) ProtoMessage()    {}
-func (*ScanResponse_OcrLineSe) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 1}
+func (m *DocumentAnnotatorResponse_OcrLineSe) Reset()         { *m = DocumentAnnotatorResponse_OcrLineSe{} }
+func (m *DocumentAnnotatorResponse_OcrLineSe) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse_OcrLineSe) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse_OcrLineSe) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3, 1}
 }
-func (m *ScanResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse_OcrLineSe.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse_OcrLineSe) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe.Unmarshal(m, b)
 }
-func (m *ScanResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse_OcrLineSe.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse_OcrLineSe) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse_OcrLineSe) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse_OcrLineSe.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse_OcrLineSe) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe.Merge(dst, src)
 }
-func (m *ScanResponse_OcrLineSe) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse_OcrLineSe.Size(m)
+func (m *DocumentAnnotatorResponse_OcrLineSe) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe.Size(m)
 }
-func (m *ScanResponse_OcrLineSe) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse_OcrLineSe.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse_OcrLineSe) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse_OcrLineSe proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse_OcrLineSe proto.InternalMessageInfo
 
-func (m *ScanResponse_OcrLineSe) GetPaymentId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineSe) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-func (m *ScanResponse_OcrLineSe) GetBankgiroCreditorId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineSe) GetBankgiroCreditorId() *PredictedField {
 	if m != nil {
 		return m.BankgiroCreditorId
 	}
 	return nil
 }
 
-func (m *ScanResponse_OcrLineSe) GetPlusgiroCreditorId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineSe) GetPlusgiroCreditorId() *PredictedField {
 	if m != nil {
 		return m.PlusgiroCreditorId
 	}
 	return nil
 }
 
-type ScanResponse_OcrLineNo struct {
+type DocumentAnnotatorResponse_OcrLineNo struct {
 	// example: "12345678903"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
@@ -802,38 +841,38 @@ type ScanResponse_OcrLineNo struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *ScanResponse_OcrLineNo) Reset()         { *m = ScanResponse_OcrLineNo{} }
-func (m *ScanResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse_OcrLineNo) ProtoMessage()    {}
-func (*ScanResponse_OcrLineNo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 2}
+func (m *DocumentAnnotatorResponse_OcrLineNo) Reset()         { *m = DocumentAnnotatorResponse_OcrLineNo{} }
+func (m *DocumentAnnotatorResponse_OcrLineNo) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse_OcrLineNo) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse_OcrLineNo) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3, 2}
 }
-func (m *ScanResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse_OcrLineNo.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse_OcrLineNo) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo.Unmarshal(m, b)
 }
-func (m *ScanResponse_OcrLineNo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse_OcrLineNo.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse_OcrLineNo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse_OcrLineNo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse_OcrLineNo.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse_OcrLineNo) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo.Merge(dst, src)
 }
-func (m *ScanResponse_OcrLineNo) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse_OcrLineNo.Size(m)
+func (m *DocumentAnnotatorResponse_OcrLineNo) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo.Size(m)
 }
-func (m *ScanResponse_OcrLineNo) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse_OcrLineNo.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse_OcrLineNo) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse_OcrLineNo proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNo proto.InternalMessageInfo
 
-func (m *ScanResponse_OcrLineNo) GetPaymentId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineNo) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-type ScanResponse_OcrLineNl struct {
+type DocumentAnnotatorResponse_OcrLineNl struct {
 	// example: "0817937867870002"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
@@ -841,38 +880,38 @@ type ScanResponse_OcrLineNl struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *ScanResponse_OcrLineNl) Reset()         { *m = ScanResponse_OcrLineNl{} }
-func (m *ScanResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse_OcrLineNl) ProtoMessage()    {}
-func (*ScanResponse_OcrLineNl) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 3}
+func (m *DocumentAnnotatorResponse_OcrLineNl) Reset()         { *m = DocumentAnnotatorResponse_OcrLineNl{} }
+func (m *DocumentAnnotatorResponse_OcrLineNl) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse_OcrLineNl) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse_OcrLineNl) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3, 3}
 }
-func (m *ScanResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse_OcrLineNl.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse_OcrLineNl) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl.Unmarshal(m, b)
 }
-func (m *ScanResponse_OcrLineNl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse_OcrLineNl.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse_OcrLineNl) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse_OcrLineNl) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse_OcrLineNl.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse_OcrLineNl) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl.Merge(dst, src)
 }
-func (m *ScanResponse_OcrLineNl) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse_OcrLineNl.Size(m)
+func (m *DocumentAnnotatorResponse_OcrLineNl) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl.Size(m)
 }
-func (m *ScanResponse_OcrLineNl) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse_OcrLineNl.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse_OcrLineNl) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse_OcrLineNl proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse_OcrLineNl proto.InternalMessageInfo
 
-func (m *ScanResponse_OcrLineNl) GetPaymentId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineNl) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
 	return nil
 }
 
-type ScanResponse_OcrLineFi struct {
+type DocumentAnnotatorResponse_OcrLineFi struct {
 	// example: "00000159220010146012"
 	PaymentId            *PredictedField `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
@@ -880,31 +919,31 @@ type ScanResponse_OcrLineFi struct {
 	XXX_sizecache        int32           `json:"-"`
 }
 
-func (m *ScanResponse_OcrLineFi) Reset()         { *m = ScanResponse_OcrLineFi{} }
-func (m *ScanResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
-func (*ScanResponse_OcrLineFi) ProtoMessage()    {}
-func (*ScanResponse_OcrLineFi) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{3, 4}
+func (m *DocumentAnnotatorResponse_OcrLineFi) Reset()         { *m = DocumentAnnotatorResponse_OcrLineFi{} }
+func (m *DocumentAnnotatorResponse_OcrLineFi) String() string { return proto.CompactTextString(m) }
+func (*DocumentAnnotatorResponse_OcrLineFi) ProtoMessage()    {}
+func (*DocumentAnnotatorResponse_OcrLineFi) Descriptor() ([]byte, []int) {
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{3, 4}
 }
-func (m *ScanResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScanResponse_OcrLineFi.Unmarshal(m, b)
+func (m *DocumentAnnotatorResponse_OcrLineFi) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi.Unmarshal(m, b)
 }
-func (m *ScanResponse_OcrLineFi) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScanResponse_OcrLineFi.Marshal(b, m, deterministic)
+func (m *DocumentAnnotatorResponse_OcrLineFi) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi.Marshal(b, m, deterministic)
 }
-func (dst *ScanResponse_OcrLineFi) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScanResponse_OcrLineFi.Merge(dst, src)
+func (dst *DocumentAnnotatorResponse_OcrLineFi) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi.Merge(dst, src)
 }
-func (m *ScanResponse_OcrLineFi) XXX_Size() int {
-	return xxx_messageInfo_ScanResponse_OcrLineFi.Size(m)
+func (m *DocumentAnnotatorResponse_OcrLineFi) XXX_Size() int {
+	return xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi.Size(m)
 }
-func (m *ScanResponse_OcrLineFi) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScanResponse_OcrLineFi.DiscardUnknown(m)
+func (m *DocumentAnnotatorResponse_OcrLineFi) XXX_DiscardUnknown() {
+	xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScanResponse_OcrLineFi proto.InternalMessageInfo
+var xxx_messageInfo_DocumentAnnotatorResponse_OcrLineFi proto.InternalMessageInfo
 
-func (m *ScanResponse_OcrLineFi) GetPaymentId() *PredictedField {
+func (m *DocumentAnnotatorResponse_OcrLineFi) GetPaymentId() *PredictedField {
 	if m != nil {
 		return m.PaymentId
 	}
@@ -929,7 +968,7 @@ func (m *Document) Reset()         { *m = Document{} }
 func (m *Document) String() string { return proto.CompactTextString(m) }
 func (*Document) ProtoMessage()    {}
 func (*Document) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{4}
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{4}
 }
 func (m *Document) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Document.Unmarshal(m, b)
@@ -981,7 +1020,7 @@ func (m *DocumentSource) Reset()         { *m = DocumentSource{} }
 func (m *DocumentSource) String() string { return proto.CompactTextString(m) }
 func (*DocumentSource) ProtoMessage()    {}
 func (*DocumentSource) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanner_67e7b2827df6efe3, []int{5}
+	return fileDescriptor_scanner_26d82fb3d446bb5e, []int{5}
 }
 func (m *DocumentSource) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DocumentSource.Unmarshal(m, b)
@@ -1011,15 +1050,16 @@ func (m *DocumentSource) GetHttpUri() string {
 func init() {
 	proto.RegisterType((*PredictedField)(nil), "ssn.scanner.v2alpha1.PredictedField")
 	proto.RegisterType((*Feature)(nil), "ssn.scanner.v2alpha1.Feature")
-	proto.RegisterType((*ScanRequest)(nil), "ssn.scanner.v2alpha1.ScanRequest")
-	proto.RegisterType((*ScanResponse)(nil), "ssn.scanner.v2alpha1.ScanResponse")
-	proto.RegisterType((*ScanResponse_OcrLineDk)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineDk")
-	proto.RegisterType((*ScanResponse_OcrLineSe)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineSe")
-	proto.RegisterType((*ScanResponse_OcrLineNo)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineNo")
-	proto.RegisterType((*ScanResponse_OcrLineNl)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineNl")
-	proto.RegisterType((*ScanResponse_OcrLineFi)(nil), "ssn.scanner.v2alpha1.ScanResponse.OcrLineFi")
+	proto.RegisterType((*DocumentAnnotatorRequest)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorRequest")
+	proto.RegisterType((*DocumentAnnotatorResponse)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse")
+	proto.RegisterType((*DocumentAnnotatorResponse_OcrLineDk)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineDk")
+	proto.RegisterType((*DocumentAnnotatorResponse_OcrLineSe)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineSe")
+	proto.RegisterType((*DocumentAnnotatorResponse_OcrLineNo)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNo")
+	proto.RegisterType((*DocumentAnnotatorResponse_OcrLineNl)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNl")
+	proto.RegisterType((*DocumentAnnotatorResponse_OcrLineFi)(nil), "ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineFi")
 	proto.RegisterType((*Document)(nil), "ssn.scanner.v2alpha1.Document")
 	proto.RegisterType((*DocumentSource)(nil), "ssn.scanner.v2alpha1.DocumentSource")
+	proto.RegisterEnum("ssn.scanner.v2alpha1.ConfidenceLevel", ConfidenceLevel_name, ConfidenceLevel_value)
 	proto.RegisterEnum("ssn.scanner.v2alpha1.Feature_Type", Feature_Type_name, Feature_Type_value)
 }
 
@@ -1031,64 +1071,64 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// ScannerClient is the client API for Scanner service.
+// DocumentAnnotatorClient is the client API for DocumentAnnotator service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type ScannerClient interface {
-	Scan(ctx context.Context, in *ScanRequest, opts ...grpc.CallOption) (*ScanResponse, error)
+type DocumentAnnotatorClient interface {
+	AnnotateDocument(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error)
 }
 
-type scannerClient struct {
+type documentAnnotatorClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewScannerClient(cc *grpc.ClientConn) ScannerClient {
-	return &scannerClient{cc}
+func NewDocumentAnnotatorClient(cc *grpc.ClientConn) DocumentAnnotatorClient {
+	return &documentAnnotatorClient{cc}
 }
 
-func (c *scannerClient) Scan(ctx context.Context, in *ScanRequest, opts ...grpc.CallOption) (*ScanResponse, error) {
-	out := new(ScanResponse)
-	err := c.cc.Invoke(ctx, "/ssn.scanner.v2alpha1.Scanner/Scan", in, out, opts...)
+func (c *documentAnnotatorClient) AnnotateDocument(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error) {
+	out := new(DocumentAnnotatorResponse)
+	err := c.cc.Invoke(ctx, "/ssn.scanner.v2alpha1.DocumentAnnotator/AnnotateDocument", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// ScannerServer is the server API for Scanner service.
-type ScannerServer interface {
-	Scan(context.Context, *ScanRequest) (*ScanResponse, error)
+// DocumentAnnotatorServer is the server API for DocumentAnnotator service.
+type DocumentAnnotatorServer interface {
+	AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error)
 }
 
-func RegisterScannerServer(s *grpc.Server, srv ScannerServer) {
-	s.RegisterService(&_Scanner_serviceDesc, srv)
+func RegisterDocumentAnnotatorServer(s *grpc.Server, srv DocumentAnnotatorServer) {
+	s.RegisterService(&_DocumentAnnotator_serviceDesc, srv)
 }
 
-func _Scanner_Scan_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ScanRequest)
+func _DocumentAnnotator_AnnotateDocument_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DocumentAnnotatorRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ScannerServer).Scan(ctx, in)
+		return srv.(DocumentAnnotatorServer).AnnotateDocument(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/ssn.scanner.v2alpha1.Scanner/Scan",
+		FullMethod: "/ssn.scanner.v2alpha1.DocumentAnnotator/AnnotateDocument",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ScannerServer).Scan(ctx, req.(*ScanRequest))
+		return srv.(DocumentAnnotatorServer).AnnotateDocument(ctx, req.(*DocumentAnnotatorRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Scanner_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "ssn.scanner.v2alpha1.Scanner",
-	HandlerType: (*ScannerServer)(nil),
+var _DocumentAnnotator_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "ssn.scanner.v2alpha1.DocumentAnnotator",
+	HandlerType: (*DocumentAnnotatorServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Scan",
-			Handler:    _Scanner_Scan_Handler,
+			MethodName: "AnnotateDocument",
+			Handler:    _DocumentAnnotator_AnnotateDocument_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -1096,83 +1136,90 @@ var _Scanner_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("ssn/scanner/v2alpha1/scanner.proto", fileDescriptor_scanner_67e7b2827df6efe3)
+	proto.RegisterFile("ssn/scanner/v2alpha1/scanner.proto", fileDescriptor_scanner_26d82fb3d446bb5e)
 }
 
-var fileDescriptor_scanner_67e7b2827df6efe3 = []byte{
-	// 1183 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x97, 0xcb, 0x6e, 0xdb, 0x46,
-	0x17, 0xc7, 0x23, 0xc9, 0xb6, 0xa4, 0xa3, 0x8b, 0x99, 0x89, 0x93, 0x8f, 0x31, 0xf2, 0xa5, 0xa9,
-	0x90, 0x85, 0x7b, 0x81, 0x84, 0xb8, 0x40, 0xd1, 0x04, 0x5d, 0x54, 0xa6, 0x68, 0x44, 0xad, 0x4d,
-	0x09, 0x23, 0xca, 0x88, 0xbb, 0x19, 0xd0, 0xe4, 0xd8, 0x26, 0x42, 0xcd, 0xa8, 0xc3, 0xa1, 0x20,
-	0x65, 0x55, 0x14, 0xed, 0x13, 0x14, 0xdd, 0xf4, 0x19, 0xfa, 0x04, 0x5d, 0xf5, 0x15, 0x8a, 0x6e,
-	0xfa, 0x00, 0xdd, 0xf4, 0x2d, 0x0a, 0x0e, 0x49, 0x59, 0x4a, 0x8d, 0x34, 0x0c, 0xbc, 0xd3, 0x9c,
-	0x73, 0xfe, 0x3f, 0xfd, 0xe7, 0x3e, 0x84, 0x56, 0x18, 0xb2, 0x4e, 0xe8, 0x3a, 0x8c, 0x51, 0xd1,
-	0x99, 0xed, 0x3b, 0xc1, 0xf4, 0xd2, 0x79, 0x92, 0x05, 0xda, 0x53, 0xc1, 0x25, 0x47, 0x3b, 0x61,
-	0xc8, 0xda, 0x59, 0x28, 0xab, 0xd9, 0x7d, 0x70, 0xc1, 0xf9, 0x45, 0x40, 0x3b, 0xce, 0xd4, 0xef,
-	0x38, 0x8c, 0x71, 0xe9, 0x48, 0x9f, 0xb3, 0x30, 0xd1, 0xec, 0x3e, 0x08, 0x16, 0xe7, 0xb2, 0x33,
-	0x73, 0x02, 0xdf, 0x73, 0x24, 0x5d, 0xfe, 0x48, 0xb3, 0xff, 0x8b, 0xff, 0x55, 0x2e, 0xa6, 0xb4,
-	0x73, 0x41, 0xf9, 0x84, 0x4a, 0xb1, 0x48, 0x13, 0x0f, 0x97, 0x09, 0x49, 0xe7, 0x92, 0x5c, 0x71,
-	0x93, 0x7c, 0xeb, 0x97, 0x02, 0x34, 0x87, 0x82, 0x7a, 0xbe, 0x2b, 0xa9, 0x77, 0xe8, 0xd3, 0xc0,
-	0x43, 0x3b, 0xb0, 0x39, 0x73, 0x82, 0x88, 0xea, 0x85, 0x47, 0x85, 0xbd, 0x2a, 0x4e, 0x1a, 0xe8,
-	0x03, 0xd0, 0x18, 0x17, 0x13, 0x27, 0xf0, 0x5f, 0x51, 0x8f, 0x24, 0x05, 0x45, 0x55, 0xb0, 0x7d,
-	0x15, 0x3f, 0x51, 0xa5, 0x0f, 0x01, 0x5c, 0xce, 0xce, 0x7d, 0x8f, 0x32, 0x97, 0xea, 0xa5, 0x47,
-	0x85, 0xbd, 0x22, 0x5e, 0x89, 0xa0, 0xa7, 0x50, 0x3f, 0xe3, 0x11, 0xf3, 0x7c, 0x76, 0x41, 0xce,
-	0xf8, 0x5c, 0xdf, 0x78, 0x54, 0xd8, 0xab, 0xed, 0xdf, 0x6b, 0xc7, 0xa3, 0x12, 0x5b, 0x6d, 0x1f,
-	0xa4, 0xd9, 0x21, 0x0f, 0x16, 0xb8, 0x96, 0xd5, 0x1e, 0xf0, 0x79, 0xeb, 0xa7, 0x12, 0x94, 0x0f,
-	0xa9, 0x23, 0x23, 0x41, 0xd1, 0xa7, 0xb0, 0x11, 0x57, 0x2b, 0x9b, 0xcd, 0xfd, 0x56, 0xfb, 0xba,
-	0x41, 0x6d, 0xa7, 0xc5, 0x6d, 0x7b, 0x31, 0xa5, 0x58, 0xd5, 0xa3, 0xf7, 0xa0, 0x36, 0x71, 0xe6,
-	0x44, 0xd0, 0x30, 0x0a, 0x64, 0xa8, 0x3a, 0xb1, 0x89, 0x61, 0xe2, 0xcc, 0x71, 0x12, 0x89, 0x07,
-	0x60, 0xc2, 0x3d, 0x1a, 0x28, 0xeb, 0x55, 0x9c, 0x34, 0x5a, 0x3f, 0x17, 0x61, 0x23, 0xa6, 0xa0,
-	0x3b, 0xb0, 0x6d, 0x9b, 0x2f, 0x6c, 0xd2, 0xb5, 0xac, 0x81, 0xdd, 0xb5, 0xfb, 0x03, 0x4b, 0xbb,
-	0x85, 0x9a, 0x00, 0x03, 0xdc, 0x33, 0x31, 0xe9, 0x75, 0x6d, 0x53, 0x2b, 0xa0, 0x1d, 0xd0, 0x86,
-	0xdd, 0xd3, 0x63, 0xd3, 0xb2, 0x49, 0x6f, 0x6c, 0x26, 0xd1, 0x22, 0xaa, 0x43, 0xc5, 0x18, 0x63,
-	0x6c, 0x5a, 0xc6, 0xa9, 0x56, 0x42, 0x0d, 0xa8, 0xda, 0x03, 0xbb, 0x7b, 0x44, 0x4e, 0xba, 0xb6,
-	0xb6, 0x81, 0x10, 0x34, 0x93, 0x66, 0xdf, 0x32, 0x92, 0xd8, 0xe6, 0x55, 0xcc, 0x7c, 0x91, 0xc6,
-	0xb6, 0xd0, 0x3d, 0x40, 0xa3, 0xf1, 0x70, 0x78, 0xd4, 0x37, 0x31, 0x31, 0x06, 0x78, 0x38, 0xc0,
-	0x31, 0xbc, 0x8c, 0xee, 0xc3, 0xdd, 0x95, 0xf8, 0xd8, 0xb2, 0xf1, 0x29, 0x31, 0x06, 0x3d, 0x53,
-	0xab, 0xa0, 0xdb, 0xd0, 0xe8, 0x0d, 0x8c, 0xb1, 0xb2, 0x63, 0x9f, 0x0e, 0x4d, 0xad, 0x1a, 0x93,
-	0x33, 0x83, 0xc7, 0xa6, 0xfd, 0x7c, 0xd0, 0xd3, 0x20, 0x26, 0x1b, 0xd8, 0xec, 0xf5, 0x6d, 0x62,
-	0x74, 0x71, 0x8f, 0x58, 0xe3, 0xe3, 0x03, 0x13, 0x6b, 0xb5, 0xd8, 0xf6, 0xc0, 0xc0, 0xe4, 0xa8,
-	0x6f, 0x99, 0x5a, 0x3d, 0x56, 0xf6, 0xad, 0x93, 0x41, 0xdf, 0x30, 0xb3, 0x8a, 0x46, 0xeb, 0xfb,
-	0x02, 0xd4, 0x46, 0xae, 0xc3, 0x30, 0xfd, 0x26, 0xa2, 0xa1, 0x44, 0xcf, 0xa0, 0xe2, 0x71, 0x37,
-	0x9a, 0x50, 0x26, 0xd5, 0xfc, 0xd4, 0xf6, 0x1f, 0x5e, 0x3f, 0x3f, 0xbd, 0xb4, 0x0a, 0x2f, 0xeb,
-	0xd1, 0x53, 0xa8, 0x9c, 0x27, 0xb3, 0x16, 0x4f, 0x4e, 0x69, 0xaf, 0xb6, 0xff, 0xff, 0x37, 0xce,
-	0x2d, 0x5e, 0x96, 0xb7, 0xfe, 0xd4, 0xa0, 0x9e, 0xd8, 0x08, 0xa7, 0x9c, 0x85, 0x14, 0x19, 0x00,
-	0x5c, 0x78, 0x54, 0x90, 0x78, 0xaf, 0xe8, 0x05, 0x45, 0x7b, 0x7c, 0x3d, 0x6d, 0x7d, 0x17, 0xe0,
-	0xaa, 0xd2, 0xf5, 0x1c, 0x49, 0x91, 0x05, 0xda, 0xd4, 0x59, 0xc4, 0xde, 0x88, 0x17, 0xd1, 0x04,
-	0x55, 0xcc, 0x81, 0x6a, 0xa6, 0xea, 0x5e, 0x44, 0x15, 0xef, 0x0b, 0xa8, 0xb8, 0x91, 0x10, 0x94,
-	0xb9, 0x0b, 0xbd, 0x94, 0x83, 0xb3, 0x54, 0xa1, 0x2e, 0x54, 0x25, 0x97, 0x4e, 0x40, 0x66, 0x8e,
-	0xd4, 0x37, 0xf2, 0x20, 0x94, 0xec, 0xc4, 0x91, 0xe8, 0x4b, 0x68, 0x26, 0x08, 0x9f, 0xb9, 0x09,
-	0x67, 0x33, 0x07, 0xa7, 0xae, 0xb4, 0x7d, 0xe6, 0xae, 0xb3, 0xe8, 0x3c, 0x65, 0x6d, 0xe5, 0x66,
-	0x99, 0xf3, 0x84, 0xf5, 0x02, 0xee, 0x86, 0xd1, 0x74, 0x1a, 0xf8, 0x54, 0x10, 0x97, 0x8b, 0x29,
-	0x17, 0x8e, 0xa4, 0xc4, 0xf7, 0xf4, 0x72, 0x0e, 0xe4, 0x9d, 0x0c, 0x61, 0x64, 0x84, 0xbe, 0xf7,
-	0x1a, 0x39, 0x62, 0x52, 0x2c, 0x88, 0xcb, 0x3d, 0xaa, 0x57, 0xde, 0x8d, 0xac, 0x08, 0x06, 0xf7,
-	0x28, 0xea, 0x43, 0x23, 0x5b, 0xbd, 0x44, 0x1d, 0x49, 0x55, 0xb5, 0xe4, 0xdf, 0xb2, 0xfb, 0x99,
-	0x54, 0x1d, 0x2e, 0x5f, 0x41, 0xb6, 0x5a, 0xc8, 0x84, 0xca, 0x4b, 0xee, 0xe9, 0x90, 0x83, 0xd5,
-	0x48, 0xb5, 0xc7, 0x4a, 0x8a, 0x30, 0x20, 0x37, 0x2e, 0x90, 0xc4, 0x75, 0x84, 0x47, 0x58, 0x34,
-	0x39, 0xa3, 0x42, 0xaf, 0xe5, 0xe8, 0xae, 0x96, 0xe8, 0x0d, 0x47, 0x78, 0x96, 0x52, 0xc7, 0x06,
-	0x7d, 0x36, 0xe3, 0xbe, 0x4b, 0x33, 0xde, 0xed, 0x1c, 0xbc, 0x46, 0xaa, 0x4d, 0x61, 0x16, 0xd4,
-	0xb8, 0x2b, 0x48, 0xe0, 0x33, 0x4a, 0xbc, 0x97, 0x7a, 0x5d, 0x75, 0xf5, 0xe3, 0xeb, 0x49, 0xab,
-	0xfb, 0xba, 0x3d, 0x70, 0xc5, 0x91, 0xcf, 0x68, 0xef, 0xe5, 0xf3, 0x5b, 0xb8, 0xca, 0xb3, 0xc6,
-	0x1a, 0x2f, 0xa4, 0x7a, 0x23, 0x2f, 0x6f, 0x44, 0x57, 0x78, 0x23, 0xba, 0xc6, 0x63, 0x5c, 0x6f,
-	0xe6, 0xe5, 0x59, 0x7c, 0x85, 0x67, 0xf1, 0x35, 0xde, 0xb9, 0xaf, 0x6f, 0xe7, 0xe5, 0x1d, 0xfa,
-	0x2b, 0xbc, 0x43, 0x7f, 0xdd, 0x5f, 0xa0, 0x6b, 0xb9, 0xfd, 0x05, 0xab, 0xfe, 0x02, 0xd4, 0x85,
-	0xed, 0xd7, 0x9e, 0x09, 0x3a, 0x52, 0x4c, 0xfd, 0xea, 0x72, 0xb6, 0xe9, 0x5c, 0x76, 0x97, 0x79,
-	0xdc, 0x94, 0x6b, 0xed, 0xdd, 0xdf, 0x0b, 0x50, 0x5d, 0xce, 0x0e, 0xfa, 0x6c, 0xe5, 0x8e, 0x7e,
-	0xdb, 0x35, 0x92, 0xdc, 0xd2, 0x06, 0x40, 0xb6, 0x11, 0x7c, 0x4f, 0x5d, 0xd2, 0x6f, 0x7d, 0x72,
-	0xa7, 0xba, 0xbe, 0x87, 0x4c, 0xa8, 0x25, 0x0b, 0x98, 0x8b, 0x98, 0x52, 0xca, 0x41, 0x81, 0x4c,
-	0xd8, 0xf7, 0x76, 0xbf, 0x2d, 0x2e, 0xfb, 0x34, 0x7a, 0xdd, 0x59, 0xe1, 0xdd, 0x9c, 0x9d, 0xc0,
-	0xce, 0x99, 0xc3, 0x5e, 0x5e, 0xf8, 0x82, 0x93, 0x55, 0x8b, 0x79, 0x3a, 0x8a, 0x32, 0x82, 0xb1,
-	0xb4, 0x1a, 0x73, 0xa7, 0x41, 0x14, 0xfe, 0x8b, 0x9b, 0xa7, 0xeb, 0x28, 0x23, 0x5c, 0x71, 0x77,
-	0x87, 0xcb, 0x11, 0xb0, 0xf8, 0x8d, 0x8c, 0xc0, 0x2a, 0x31, 0xb8, 0x69, 0xe2, 0xa1, 0x7f, 0x23,
-	0xc4, 0x83, 0x2a, 0x94, 0xd3, 0xcd, 0xd1, 0x62, 0x50, 0xc9, 0xde, 0x2a, 0xe8, 0x31, 0x94, 0x5d,
-	0xce, 0x64, 0xf6, 0xb8, 0xa9, 0x1f, 0xc0, 0xaf, 0x7f, 0xff, 0x56, 0xda, 0x7c, 0x55, 0xd2, 0x7e,
-	0x28, 0xe2, 0x2c, 0x85, 0x3e, 0x87, 0xad, 0x90, 0x47, 0xc2, 0xa5, 0x6f, 0x9e, 0xd4, 0x8c, 0x3a,
-	0x52, 0xb5, 0x38, 0xd5, 0xb4, 0x3e, 0x82, 0xe6, 0x7a, 0x06, 0xdd, 0x87, 0xca, 0xa5, 0x94, 0x53,
-	0x12, 0x09, 0x3f, 0x7d, 0x9a, 0x97, 0xe3, 0xf6, 0x58, 0xf8, 0xfb, 0x21, 0x94, 0x47, 0x09, 0x17,
-	0x5d, 0xc2, 0x46, 0xfc, 0x13, 0xbd, 0xff, 0xa6, 0x53, 0x40, 0x3d, 0xd2, 0x76, 0x5b, 0xff, 0x7d,
-	0x50, 0xb4, 0xee, 0x7f, 0xf7, 0xc7, 0x5f, 0x3f, 0x16, 0xef, 0xb4, 0x9a, 0x9d, 0xd9, 0x93, 0x95,
-	0x6f, 0x99, 0x67, 0x85, 0x0f, 0x0f, 0xaa, 0x5f, 0x97, 0x53, 0xed, 0xd9, 0x96, 0xfa, 0x98, 0xf8,
-	0xe4, 0x9f, 0x00, 0x00, 0x00, 0xff, 0xff, 0x56, 0xf4, 0x2e, 0xe5, 0xfd, 0x0c, 0x00, 0x00,
+var fileDescriptor_scanner_26d82fb3d446bb5e = []byte{
+	// 1281 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x97, 0xcf, 0x6f, 0xdb, 0xc6,
+	0x12, 0xc7, 0x43, 0xc9, 0xb6, 0xa4, 0x91, 0x25, 0xd3, 0x1b, 0x27, 0x8f, 0xf1, 0xcb, 0xcb, 0x33,
+	0x84, 0xbc, 0x07, 0x37, 0x05, 0x64, 0xd4, 0x05, 0x8a, 0x26, 0xe8, 0xa1, 0x32, 0x49, 0xd7, 0x6c,
+	0x64, 0x52, 0x58, 0x53, 0x4e, 0xdc, 0x1e, 0x16, 0x34, 0xb9, 0x76, 0x88, 0x50, 0xbb, 0x2a, 0x7f,
+	0x18, 0x52, 0x4e, 0x45, 0x81, 0xfe, 0x01, 0x45, 0x8f, 0xbd, 0xb7, 0xe7, 0x5e, 0x7b, 0xea, 0xbf,
+	0x50, 0xe4, 0xd6, 0x73, 0x2f, 0xfd, 0x2f, 0x0a, 0x2e, 0x49, 0xfd, 0x70, 0x8c, 0xc0, 0x8a, 0x73,
+	0xd3, 0xce, 0xcc, 0xf7, 0xc3, 0x19, 0xee, 0xee, 0x68, 0x08, 0xad, 0x28, 0x62, 0x3b, 0x91, 0xeb,
+	0x30, 0x46, 0xc3, 0x9d, 0x8b, 0x5d, 0x27, 0x18, 0xbe, 0x70, 0x3e, 0x2a, 0x0c, 0xed, 0x61, 0xc8,
+	0x63, 0x8e, 0x36, 0xa2, 0x88, 0xb5, 0x0b, 0x53, 0x11, 0xb3, 0x79, 0xff, 0x9c, 0xf3, 0xf3, 0x80,
+	0xee, 0x38, 0x43, 0x7f, 0xc7, 0x61, 0x8c, 0xc7, 0x4e, 0xec, 0x73, 0x16, 0x65, 0x9a, 0xcd, 0xfb,
+	0xc1, 0xf8, 0x2c, 0xde, 0xb9, 0x70, 0x02, 0xdf, 0x73, 0x62, 0x3a, 0xf9, 0x91, 0x7b, 0xff, 0x95,
+	0x3e, 0x35, 0x1e, 0x0f, 0xe9, 0xce, 0x39, 0xe5, 0x03, 0x1a, 0x87, 0xe3, 0xdc, 0xf1, 0x60, 0xe2,
+	0x88, 0xe9, 0x28, 0x26, 0x53, 0x6e, 0xe6, 0x6f, 0xbd, 0x96, 0xa0, 0xd9, 0x0b, 0xa9, 0xe7, 0xbb,
+	0x31, 0xf5, 0xf6, 0x7d, 0x1a, 0x78, 0x68, 0x03, 0x96, 0x2f, 0x9c, 0x20, 0xa1, 0x8a, 0xb4, 0x25,
+	0x6d, 0xd7, 0x70, 0xb6, 0x40, 0x1f, 0x80, 0xcc, 0x78, 0x38, 0x70, 0x02, 0xff, 0x15, 0xf5, 0x48,
+	0x16, 0x50, 0x12, 0x01, 0x6b, 0x53, 0xfb, 0xb1, 0x08, 0xd5, 0x01, 0x5c, 0xce, 0xce, 0x7c, 0x8f,
+	0x32, 0x97, 0x2a, 0xe5, 0x2d, 0x69, 0xbb, 0xb9, 0xfb, 0xbf, 0xf6, 0x55, 0x35, 0xb7, 0xd5, 0x49,
+	0x5c, 0x97, 0x5e, 0xd0, 0x00, 0xcf, 0x08, 0xd1, 0x63, 0x58, 0x3d, 0xe5, 0x09, 0xf3, 0x7c, 0x76,
+	0x4e, 0x4e, 0xf9, 0x48, 0x59, 0xda, 0x92, 0xb6, 0xeb, 0xbb, 0x77, 0x05, 0x28, 0xad, 0xa8, 0xbd,
+	0x97, 0x7b, 0x7b, 0x3c, 0x18, 0xe3, 0x7a, 0x11, 0xbb, 0xc7, 0x47, 0xad, 0x3f, 0xcb, 0x50, 0xd9,
+	0xa7, 0x4e, 0x9c, 0x84, 0x14, 0x7d, 0x02, 0x4b, 0x69, 0xb4, 0xa8, 0xa6, 0xb9, 0xdb, 0xba, 0x3a,
+	0x8f, 0x3c, 0xb8, 0x6d, 0x8f, 0x87, 0x14, 0x8b, 0x78, 0xf4, 0x5f, 0xa8, 0x0f, 0x9c, 0x11, 0x09,
+	0x69, 0x94, 0x04, 0x71, 0x24, 0x6a, 0x5d, 0xc6, 0x30, 0x70, 0x46, 0x38, 0xb3, 0xa0, 0x2e, 0x34,
+	0x07, 0x3e, 0x23, 0xef, 0x5a, 0x6a, 0x63, 0xe0, 0xb3, 0xa9, 0xad, 0xf5, 0x4b, 0x09, 0x96, 0xd2,
+	0xa7, 0xa3, 0x3a, 0x54, 0x34, 0x7d, 0xbf, 0xd3, 0xef, 0xda, 0xf2, 0x2d, 0x74, 0x1b, 0xd6, 0x6c,
+	0xfd, 0xb9, 0x4d, 0x3a, 0xa6, 0x69, 0xd9, 0x1d, 0xdb, 0xb0, 0x4c, 0x59, 0x42, 0x4d, 0x00, 0x0b,
+	0x6b, 0x3a, 0x26, 0x5a, 0xc7, 0xd6, 0xe5, 0x12, 0xda, 0x00, 0xb9, 0xd7, 0x39, 0x39, 0xd4, 0x4d,
+	0x9b, 0x68, 0x7d, 0x3d, 0xb3, 0x96, 0xd1, 0x2a, 0x54, 0xd5, 0x3e, 0xc6, 0xba, 0xa9, 0x9e, 0xc8,
+	0x4b, 0xa8, 0x01, 0x35, 0xdb, 0xb2, 0x3b, 0x5d, 0x72, 0xdc, 0xb1, 0xe5, 0x65, 0x84, 0xa0, 0x99,
+	0x2d, 0x0d, 0x53, 0xcd, 0x6c, 0x2b, 0x53, 0x9b, 0xfe, 0x3c, 0xb7, 0x55, 0xd0, 0x5d, 0x40, 0x47,
+	0xfd, 0x5e, 0xaf, 0x6b, 0xe8, 0x98, 0xa8, 0x16, 0xee, 0x59, 0x38, 0x85, 0x57, 0xd1, 0x3d, 0xb8,
+	0x33, 0x63, 0xef, 0x9b, 0x36, 0x3e, 0x21, 0xaa, 0xa5, 0xe9, 0x72, 0x0d, 0xad, 0x43, 0x43, 0xb3,
+	0xd4, 0xbe, 0x48, 0xc7, 0x3e, 0xe9, 0xe9, 0x32, 0xa4, 0xe4, 0x22, 0xc1, 0x43, 0xdd, 0x3e, 0xb0,
+	0x34, 0xb9, 0x9e, 0x92, 0x55, 0xac, 0x6b, 0x86, 0x4d, 0xd4, 0x0e, 0xd6, 0x88, 0xd9, 0x3f, 0xdc,
+	0xd3, 0xb1, 0xbc, 0x9a, 0xa6, 0x6d, 0xa9, 0x98, 0x74, 0x0d, 0x53, 0x97, 0x1b, 0xa9, 0xd2, 0x30,
+	0x8f, 0x2d, 0x43, 0xd5, 0x8b, 0x88, 0x66, 0xeb, 0x07, 0x09, 0x14, 0x8d, 0xbb, 0xc9, 0x80, 0xb2,
+	0xb8, 0x93, 0x9d, 0x67, 0x1e, 0x62, 0xfa, 0x4d, 0x42, 0xa3, 0x18, 0x3d, 0x81, 0xaa, 0x97, 0xfb,
+	0xc4, 0x8e, 0xd7, 0x77, 0x1f, 0x5c, 0xbd, 0x1d, 0x05, 0x01, 0x4f, 0xe2, 0xd1, 0x63, 0xa8, 0x9e,
+	0x65, 0xe7, 0x20, 0xdd, 0xee, 0xf2, 0x76, 0x7d, 0xf7, 0x3f, 0x6f, 0x3d, 0x2d, 0x78, 0x12, 0xde,
+	0xfa, 0x79, 0x1d, 0xee, 0x5d, 0x91, 0x53, 0x34, 0xe4, 0x2c, 0xa2, 0x48, 0x05, 0xe0, 0xa1, 0x47,
+	0x43, 0x92, 0xde, 0x58, 0x45, 0x12, 0xe8, 0x87, 0x57, 0xa3, 0xe7, 0xef, 0x22, 0xae, 0x09, 0x9d,
+	0xe6, 0xc4, 0x14, 0x99, 0x20, 0x0f, 0x9d, 0x71, 0xfa, 0x00, 0xe2, 0x25, 0x34, 0x43, 0x95, 0x16,
+	0x40, 0x35, 0x73, 0xb5, 0x96, 0x50, 0xc1, 0xfb, 0x1c, 0xaa, 0x6e, 0x12, 0x86, 0x94, 0xb9, 0x63,
+	0xa5, 0xbc, 0x00, 0x67, 0xa2, 0x42, 0x1d, 0xa8, 0xc5, 0x3c, 0x76, 0x02, 0x72, 0xe1, 0xc4, 0xca,
+	0xd2, 0x22, 0x08, 0x21, 0x3b, 0x76, 0x62, 0xf4, 0x25, 0x34, 0x33, 0x84, 0xcf, 0xdc, 0x8c, 0xb3,
+	0xbc, 0x00, 0x67, 0x55, 0x68, 0x0d, 0xe6, 0xce, 0xb3, 0xe8, 0x28, 0x67, 0xad, 0x2c, 0xcc, 0xd2,
+	0x47, 0x19, 0xeb, 0x39, 0xdc, 0x89, 0x92, 0xe1, 0x30, 0xf0, 0x69, 0x48, 0x5c, 0x1e, 0x0e, 0x79,
+	0xe8, 0xc4, 0x94, 0xf8, 0x9e, 0x52, 0x59, 0x00, 0x79, 0xbb, 0x40, 0xa8, 0x05, 0xc1, 0xf0, 0x2e,
+	0x91, 0x13, 0x16, 0x87, 0x63, 0xe2, 0x72, 0x8f, 0x2a, 0xd5, 0x77, 0x23, 0x0b, 0x82, 0xca, 0x3d,
+	0x8a, 0x0c, 0x68, 0x14, 0x47, 0x99, 0x88, 0x8e, 0x57, 0x13, 0xe7, 0xff, 0x9a, 0xe5, 0x17, 0x52,
+	0xd1, 0x83, 0x9e, 0x42, 0x71, 0x5a, 0xc8, 0x80, 0xc6, 0x2f, 0xb8, 0xa7, 0xc0, 0x02, 0xac, 0x46,
+	0xae, 0x3d, 0x14, 0x52, 0x84, 0x01, 0xb9, 0x69, 0x40, 0x4c, 0x5c, 0x27, 0xf4, 0x08, 0x4b, 0x06,
+	0xa7, 0x34, 0x54, 0xea, 0x0b, 0x94, 0x2b, 0x67, 0x7a, 0xd5, 0x09, 0x3d, 0x53, 0xa8, 0xd3, 0x04,
+	0x7d, 0x76, 0xc1, 0x7d, 0x97, 0x16, 0xbc, 0xf5, 0x05, 0x78, 0x8d, 0x5c, 0x9b, 0xc3, 0xbe, 0x86,
+	0x3a, 0x77, 0x43, 0x12, 0xf8, 0x8c, 0x12, 0xef, 0xa5, 0xb2, 0x2a, 0x4a, 0x7d, 0xfc, 0xf6, 0xb6,
+	0xf1, 0xc6, 0x25, 0x6f, 0x5b, 0x6e, 0xd8, 0xf5, 0x19, 0xd5, 0x5e, 0x1e, 0xdc, 0xc2, 0x35, 0x5e,
+	0x2c, 0xe6, 0xe0, 0x11, 0x55, 0x1a, 0x37, 0x82, 0x1f, 0xd1, 0x19, 0xf8, 0x11, 0x9d, 0x83, 0x33,
+	0xae, 0x34, 0x6f, 0x04, 0x37, 0xf9, 0x0c, 0xdc, 0xe4, 0x73, 0xf0, 0x33, 0x5f, 0x59, 0xbb, 0x11,
+	0x7c, 0xdf, 0x9f, 0x81, 0xef, 0xfb, 0xf3, 0x99, 0x07, 0x8a, 0x7c, 0xb3, 0xcc, 0x83, 0xd9, 0xcc,
+	0x03, 0xd4, 0x81, 0xb5, 0x4b, 0xd3, 0x8e, 0x82, 0xc4, 0x03, 0x94, 0xe9, 0xf0, 0x60, 0xd3, 0x51,
+	0x01, 0xf4, 0x39, 0xc3, 0xcd, 0x78, 0x6e, 0xbd, 0xf9, 0x87, 0x04, 0xb5, 0xc9, 0x8e, 0xa2, 0x4f,
+	0x67, 0x66, 0x88, 0xeb, 0x1e, 0xb2, 0x6c, 0x8a, 0x50, 0x01, 0x8a, 0x9b, 0xe4, 0x7b, 0x62, 0x88,
+	0xb8, 0x76, 0xeb, 0xcf, 0x75, 0x86, 0x87, 0x74, 0xa8, 0x67, 0x37, 0x80, 0x87, 0x29, 0xa5, 0xbc,
+	0x00, 0x05, 0x0a, 0xa1, 0xe1, 0x6d, 0x7e, 0x5b, 0x9a, 0xd4, 0x74, 0x74, 0x39, 0x33, 0xe9, 0xdd,
+	0x32, 0x3b, 0x86, 0x8d, 0x53, 0x87, 0xbd, 0x3c, 0xf7, 0x43, 0x4e, 0x66, 0x53, 0x5c, 0xa4, 0x50,
+	0x54, 0x10, 0xd4, 0x49, 0xaa, 0x29, 0x77, 0x18, 0x24, 0xd1, 0x1b, 0xdc, 0x45, 0x4a, 0x47, 0x05,
+	0x61, 0xca, 0xdd, 0xec, 0x4d, 0xde, 0x80, 0xc9, 0xdf, 0xcb, 0x1b, 0x98, 0x25, 0x06, 0xef, 0x9b,
+	0xb8, 0xef, 0xbf, 0x17, 0xe2, 0x5e, 0x0d, 0x2a, 0xf9, 0xe5, 0x68, 0x31, 0xa8, 0x16, 0xd7, 0x09,
+	0x3d, 0x84, 0x8a, 0xcb, 0x59, 0x5c, 0x8c, 0x4a, 0xab, 0x7b, 0xf0, 0xdb, 0xdf, 0xbf, 0x97, 0x97,
+	0x5f, 0x95, 0xe5, 0xef, 0x4b, 0xb8, 0x70, 0xa1, 0xcf, 0x60, 0x25, 0xe2, 0x49, 0xe8, 0xd2, 0xb7,
+	0x6f, 0x6a, 0x41, 0x3d, 0x12, 0xb1, 0x38, 0xd7, 0xb4, 0x3e, 0x84, 0xe6, 0xbc, 0x07, 0xdd, 0x83,
+	0xea, 0x8b, 0x38, 0x1e, 0x92, 0x24, 0xf4, 0xf3, 0x2f, 0x8c, 0x4a, 0xba, 0xee, 0x87, 0xfe, 0xa3,
+	0x67, 0xb0, 0x76, 0x69, 0x4a, 0x4e, 0xa7, 0xe1, 0xbe, 0xf9, 0xd4, 0xb4, 0x9e, 0x99, 0xf2, 0xad,
+	0x74, 0x36, 0x3c, 0xd6, 0xf1, 0x09, 0xe9, 0x5a, 0xcf, 0x64, 0x09, 0x55, 0xa0, 0x9c, 0xfe, 0x28,
+	0xa5, 0x3f, 0x0e, 0x0d, 0x4d, 0x2e, 0xa3, 0x2a, 0x2c, 0x1d, 0x18, 0x5f, 0x1c, 0x64, 0xe3, 0xae,
+	0x88, 0x14, 0xcb, 0xe5, 0xdd, 0x5f, 0x25, 0x58, 0x7f, 0xa3, 0x8b, 0xa0, 0x9f, 0x24, 0x90, 0xf3,
+	0x15, 0x9d, 0xbc, 0x94, 0xf6, 0xb5, 0x7b, 0x90, 0x18, 0x38, 0x37, 0x77, 0x16, 0xec, 0x59, 0xad,
+	0xff, 0x7f, 0xf7, 0xfa, 0xaf, 0x1f, 0x4b, 0x5b, 0xad, 0x7f, 0x4f, 0xbf, 0x0e, 0x8b, 0xff, 0xde,
+	0x27, 0x79, 0xc3, 0xa2, 0x4f, 0xa4, 0x47, 0x7b, 0xb5, 0xaf, 0x2a, 0x39, 0xf5, 0x74, 0x45, 0x7c,
+	0xab, 0x7d, 0xfc, 0x4f, 0x00, 0x00, 0x00, 0xff, 0xff, 0xc6, 0x69, 0x6a, 0x04, 0x5c, 0x0e, 0x00,
+	0x00,
 }

@@ -4,7 +4,7 @@ import grpc
 from ssn.scanner.v2alpha1 import scanner_pb2 as ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2
 
 
-class ScannerStub(object):
+class DocumentAnnotatorStub(object):
   """Scanner
   {
   "document":{
@@ -19,7 +19,8 @@ class ScannerStub(object):
   },
   {
   "type":"CURRENCY",
-  "max_results":1
+  "max_results":1,
+  "min_confidence": "LOW"
   }
   ]
   }
@@ -30,7 +31,7 @@ class ScannerStub(object):
   {
   "value": "1. jan",
   "normalized_value": "01-01-2019",
-  "confidence": 0.9,
+  "confidence": "VERY_HIGH",
   "bounding_box":[{
   "x":123,
   "y": 32
@@ -39,7 +40,7 @@ class ScannerStub(object):
   {
   "value": "1. jan",
   "normalized_value": "01-01-2019",
-  "confidence": 0.9,
+  "confidence": "MID",
   "bounding_box": [{
   "x":123,
   "y": 32
@@ -48,7 +49,7 @@ class ScannerStub(object):
   ]
   "currency": [{
   "value": "DKK",
-  "confidence": 0.99,
+  "confidence": "LOW",
   "bounding_box": [{
   "x": 123,
   "y": 32
@@ -64,14 +65,14 @@ class ScannerStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Scan = channel.unary_unary(
-        '/ssn.scanner.v2alpha1.Scanner/Scan',
-        request_serializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanRequest.SerializeToString,
-        response_deserializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanResponse.FromString,
+    self.AnnotateDocument = channel.unary_unary(
+        '/ssn.scanner.v2alpha1.DocumentAnnotator/AnnotateDocument',
+        request_serializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DocumentAnnotatorRequest.SerializeToString,
+        response_deserializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DocumentAnnotatorResponse.FromString,
         )
 
 
-class ScannerServicer(object):
+class DocumentAnnotatorServicer(object):
   """Scanner
   {
   "document":{
@@ -86,7 +87,8 @@ class ScannerServicer(object):
   },
   {
   "type":"CURRENCY",
-  "max_results":1
+  "max_results":1,
+  "min_confidence": "LOW"
   }
   ]
   }
@@ -97,7 +99,7 @@ class ScannerServicer(object):
   {
   "value": "1. jan",
   "normalized_value": "01-01-2019",
-  "confidence": 0.9,
+  "confidence": "VERY_HIGH",
   "bounding_box":[{
   "x":123,
   "y": 32
@@ -106,7 +108,7 @@ class ScannerServicer(object):
   {
   "value": "1. jan",
   "normalized_value": "01-01-2019",
-  "confidence": 0.9,
+  "confidence": "MID",
   "bounding_box": [{
   "x":123,
   "y": 32
@@ -115,7 +117,7 @@ class ScannerServicer(object):
   ]
   "currency": [{
   "value": "DKK",
-  "confidence": 0.99,
+  "confidence": "LOW",
   "bounding_box": [{
   "x": 123,
   "y": 32
@@ -125,7 +127,7 @@ class ScannerServicer(object):
 
   """
 
-  def Scan(self, request, context):
+  def AnnotateDocument(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -133,14 +135,14 @@ class ScannerServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_ScannerServicer_to_server(servicer, server):
+def add_DocumentAnnotatorServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Scan': grpc.unary_unary_rpc_method_handler(
-          servicer.Scan,
-          request_deserializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanRequest.FromString,
-          response_serializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.ScanResponse.SerializeToString,
+      'AnnotateDocument': grpc.unary_unary_rpc_method_handler(
+          servicer.AnnotateDocument,
+          request_deserializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DocumentAnnotatorRequest.FromString,
+          response_serializer=ssn_dot_scanner_dot_v2alpha1_dot_scanner__pb2.DocumentAnnotatorResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'ssn.scanner.v2alpha1.Scanner', rpc_method_handlers)
+      'ssn.scanner.v2alpha1.DocumentAnnotator', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

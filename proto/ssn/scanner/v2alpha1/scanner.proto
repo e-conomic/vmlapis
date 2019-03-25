@@ -23,7 +23,8 @@ import "ssn/type/text_annotation.proto";
 //     },
 //     {
 //       "type":"CURRENCY",
-//       "max_results":1
+//       "max_results":1,
+//       "min_confidence": "LOW"
 //     }
 //   ]
 // }
@@ -34,7 +35,7 @@ import "ssn/type/text_annotation.proto";
 //     {
 //       "value": "1. jan",
 //       "normalized_value": "01-01-2019",
-//       "confidence": 0.9,
+//       "confidence": "VERY_HIGH",
 //       "bounding_box":[{
 //         "x":123,
 //         "y": 32
@@ -43,7 +44,7 @@ import "ssn/type/text_annotation.proto";
 //     {
 //       "value": "1. jan",
 //       "normalized_value": "01-01-2019",
-//       "confidence": 0.9,
+//       "confidence": "MID",
 //       "bounding_box": [{
 //         "x":123,
 //         "y": 32
@@ -52,7 +53,7 @@ import "ssn/type/text_annotation.proto";
 //   ]
 //   "currency": [{
 //     "value": "DKK",
-//     "confidence": 0.99,
+//     "confidence": "LOW",
 //     "bounding_box": [{
 //       "x": 123,
 //       "y": 32
@@ -60,10 +61,10 @@ import "ssn/type/text_annotation.proto";
 //   }]
 // }
 
-service Scanner {
-  rpc Scan(ScanRequest) returns (ScanResponse) {
+service DocumentAnnotator {
+  rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/scan"
+      post: "/v2alpha1/document:annotate"
       body: "*"
     };
   }
@@ -75,8 +76,8 @@ message PredictedField {
   // Normalized value 01-01-2019
   // Only set when value is returned nomalized
   string normalized_value = 2;
-  // The accuracy of the field detection in an image.
-  float confidence = 3;
+  // The confidence of the prediction being correct
+  ConfidenceLevel confidence = 3;
   // The bounding box for the block.
   // The vertices are in the order of top-left, top-right, bottom-right,
   // bottom-left. When a rotation of the bounding box is detected the rotation
@@ -103,51 +104,51 @@ message PredictedField {
 message Feature {
   enum Type {
     // Run default feature set
-    TEXT_ANNOTATION = 0;
+    DEFAULT = 0;
+    // Return text annotation
+    TEXT_ANNOTATION = 1;
     // Run order date detection
-    ORDER_DATE = 1;
+    ORDER_DATE = 2;
     // Run due date detection
-    PAYMENT_DUE_DATE = 2;
+    PAYMENT_DUE_DATE = 3;
     // Run currency detection
-    CURRENCY = 3;
+    CURRENCY = 4;
     // Run total vat detection
-    TOTAL_VAT = 4;
+    TOTAL_VAT = 5;
     // Run total incl vat detection
-    TOTAL_INCL_VAT = 5;
+    TOTAL_INCL_VAT = 6;
     // Run total excl vat detection
-    TOTAL_EXCL_VAT = 6;
+    TOTAL_EXCL_VAT = 7;
     // Run supplier corporate detection
-    SUPPLIER_CORPORATE = 7;
+    SUPPLIER_CORPORATE = 8;
     // Run country code detection
-    SUPPLIER_COUNTRY_CODE = 8;
+    SUPPLIER_COUNTRY_CODE = 9;
     // Run document type detection
-    DOCUMENT_TYPE = 9;
+    DOCUMENT_TYPE = 10;
     // Run pyment method detection
-    PAYMENT_METHOD = 10;
+    PAYMENT_METHOD = 11;
     // Run credit card number detection
-    CREDIT_CARD_NUMBER = 11;
+    CREDIT_CARD_NUMBER = 12;
     // Run ocr line detection
-    OCR_LINE = 12;
+    OCR_LINE = 13;
     // Run invoice number detection
-    INVOICE_NUMBER = 13;
+    INVOICE_NUMBER = 14;
   }
   // The feature type.
   Type type = 1;
   // Maximum number of results of this type. Does not apply to
   // `TEXT_DETECTION`, `DOCUMENT_TEXT_DETECTION`, or `CROP_HINTS`.
   int32 max_results = 2;
-  // Model to use for the feature.
-  // Supported values: "builtin/stable" (the default if unset) and
-  // "builtin/latest".
-  string model = 3;
+  // The minimum confidence for predictions that the caller wants returned
+  ConfidenceLevel min_confidence = 3;
 }
 
-message ScanRequest {
+message DocumentAnnotatorRequest {
   Document document = 1;
   repeated Feature features = 2;
 }
 
-message ScanResponse {
+message DocumentAnnotatorResponse {
   message OcrLineDk {
     // example: "71"
     PredictedField type = 1;
@@ -258,4 +259,15 @@ message DocumentSource {
   //    request (e.g. due to request throttling or DOS prevention).
   //
   string http_uri = 1;
+}
+
+// A bucketized representation of confidence, which is intended to give clients
+// highly stable results across model upgrades.
+enum ConfidenceLevel {
+  UNKNOWN = 0;
+  VERY_LOW = 1;
+  LOW = 2;
+  MID = 3;
+  HIGH = 4;
+  VERY_HIGH = 5;
 }

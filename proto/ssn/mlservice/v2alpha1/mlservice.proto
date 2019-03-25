@@ -12,10 +12,10 @@ service MLService {
 }
 
 message MlRequest {
-  ssn.scanner.v2alpha1.ScanRequest scanrequest = 1;
+  ssn.scanner.v2alpha1.DocumentAnnotatorRequest document_annotator_request = 1;
   ssn.type.TextAnnotation text_annotation = 2;
 }
 
 message MlResponse {
-  ssn.scanner.v2alpha1.ScanResponse scanresponse = 1;
+  ssn.scanner.v2alpha1.DocumentAnnotatorResponse document_annotator_response = 1;
 }

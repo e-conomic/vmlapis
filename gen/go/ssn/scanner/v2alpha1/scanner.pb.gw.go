@@ -28,8 +28,8 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-func request_Scanner_Scan_0(ctx context.Context, marshaler runtime.Marshaler, client ScannerClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq ScanRequest
+func request_DocumentAnnotator_AnnotateDocument_0(ctx context.Context, marshaler runtime.Marshaler, client DocumentAnnotatorClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq DocumentAnnotatorRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -40,14 +40,14 @@ func request_Scanner_Scan_0(ctx context.Context, marshaler runtime.Marshaler, cl
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.Scan(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.AnnotateDocument(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-// RegisterScannerHandlerFromEndpoint is same as RegisterScannerHandler but
+// RegisterDocumentAnnotatorHandlerFromEndpoint is same as RegisterDocumentAnnotatorHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterScannerHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterDocumentAnnotatorHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -67,23 +67,23 @@ func RegisterScannerHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeM
 		}()
 	}()
 
-	return RegisterScannerHandler(ctx, mux, conn)
+	return RegisterDocumentAnnotatorHandler(ctx, mux, conn)
 }
 
-// RegisterScannerHandler registers the http handlers for service Scanner to "mux".
+// RegisterDocumentAnnotatorHandler registers the http handlers for service DocumentAnnotator to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterScannerHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterScannerHandlerClient(ctx, mux, NewScannerClient(conn))
+func RegisterDocumentAnnotatorHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterDocumentAnnotatorHandlerClient(ctx, mux, NewDocumentAnnotatorClient(conn))
 }
 
-// RegisterScannerHandlerClient registers the http handlers for service Scanner
-// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "ScannerClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "ScannerClient"
+// RegisterDocumentAnnotatorHandlerClient registers the http handlers for service DocumentAnnotator
+// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "DocumentAnnotatorClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "DocumentAnnotatorClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "ScannerClient" to call the correct interceptors.
-func RegisterScannerHandlerClient(ctx context.Context, mux *runtime.ServeMux, client ScannerClient) error {
+// "DocumentAnnotatorClient" to call the correct interceptors.
+func RegisterDocumentAnnotatorHandlerClient(ctx context.Context, mux *runtime.ServeMux, client DocumentAnnotatorClient) error {
 
-	mux.Handle("POST", pattern_Scanner_Scan_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_DocumentAnnotator_AnnotateDocument_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -92,14 +92,14 @@ func RegisterScannerHandlerClient(ctx context.Context, mux *runtime.ServeMux, cl
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Scanner_Scan_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_DocumentAnnotator_AnnotateDocument_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Scanner_Scan_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_DocumentAnnotator_AnnotateDocument_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -107,9 +107,9 @@ func RegisterScannerHandlerClient(ctx context.Context, mux *runtime.ServeMux, cl
 }
 
 var (
-	pattern_Scanner_Scan_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scan"}, ""))
+	pattern_DocumentAnnotator_AnnotateDocument_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v2alpha1", "document"}, "annotate"))
 )
 
 var (
-	forward_Scanner_Scan_0 = runtime.ForwardResponseMessage
+	forward_DocumentAnnotator_AnnotateDocument_0 = runtime.ForwardResponseMessage
 )
