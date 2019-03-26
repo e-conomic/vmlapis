@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.scanner.v2alpha1',
   syntax='proto3',
   serialized_options=_b('Z\007scanner'),
-  serialized_pb=_b('\n\"ssn/scanner/v2alpha1/scanner.proto\x12\x14ssn.scanner.v2alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\xa2\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12\x39\n\nconfidence\x18\x03 \x01(\x0e\x32%.ssn.scanner.v2alpha1.ConfidenceLevel\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\"\xb9\x03\n\x07\x46\x65\x61ture\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".ssn.scanner.v2alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12=\n\x0emin_confidence\x18\x03 \x01(\x0e\x32%.ssn.scanner.v2alpha1.ConfidenceLevel\"\xa7\x02\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x16\n\x12SUPPLIER_CORPORATE\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x0c\n\x08OCR_LINE\x10\r\x12\x12\n\x0eINVOICE_NUMBER\x10\x0e\"}\n\x18\x44ocumentAnnotatorRequest\x12\x30\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1e.ssn.scanner.v2alpha1.Document\x12/\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1d.ssn.scanner.v2alpha1.Feature\"\xbb\x0e\n\x19\x44ocumentAnnotatorResponse\x12\x38\n\norder_date\x18\x01 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12>\n\x10payment_due_date\x18\x02 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x36\n\x08\x63urrency\x18\x03 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x37\n\ttotal_vat\x18\x04 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12;\n\rdocument_type\x18\t \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0epayment_method\x18\n \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12@\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0einvoice_number\x18\x11 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12P\n\x0bocr_line_dk\x18\x0c \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineDkH\x00\x12P\n\x0bocr_line_se\x18\r \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineSeH\x00\x12P\n\x0bocr_line_no\x18\x0e \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNoH\x00\x12P\n\x0bocr_line_fi\x18\x0f \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineFiH\x00\x12P\n\x0bocr_line_nl\x18\x10 \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNlH\x00\x12\x31\n\x0ftext_annotation\x18\x12 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xb4\x01\n\tOcrLineDk\x12\x32\n\x04type\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x38\n\npayment_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x39\n\x0b\x63reditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\xcd\x01\n\tOcrLineSe\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14\x62\x61nkgiro_creditor_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14plusgiro_creditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNo\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNl\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineFi\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedFieldB\t\n\x07ocrLine\"]\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12\x34\n\x06source\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xb1\x01\n\x11\x44ocumentAnnotator\x12\x9b\x01\n\x10\x41nnotateDocument\x12..ssn.scanner.v2alpha1.DocumentAnnotatorRequest\x1a/.ssn.scanner.v2alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v2alpha1/document:annotate:\x01*B\tZ\x07scannerb\x06proto3')
+  serialized_pb=_b('\n\"ssn/scanner/v2alpha1/scanner.proto\x12\x14ssn.scanner.v2alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\xb9\x03\n\x07\x46\x65\x61ture\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".ssn.scanner.v2alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12=\n\x0emin_confidence\x18\x03 \x01(\x0e\x32%.ssn.scanner.v2alpha1.ConfidenceLevel\"\xa7\x02\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x16\n\x12SUPPLIER_CORPORATE\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x0c\n\x08OCR_LINE\x10\r\x12\x12\n\x0eINVOICE_NUMBER\x10\x0e\"}\n\x18\x44ocumentAnnotatorRequest\x12\x30\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1e.ssn.scanner.v2alpha1.Document\x12/\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1d.ssn.scanner.v2alpha1.Feature\"\xbb\x0e\n\x19\x44ocumentAnnotatorResponse\x12\x38\n\norder_date\x18\x01 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12>\n\x10payment_due_date\x18\x02 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x36\n\x08\x63urrency\x18\x03 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x37\n\ttotal_vat\x18\x04 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x43\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12;\n\rdocument_type\x18\t \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0epayment_method\x18\n \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12@\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12<\n\x0einvoice_number\x18\x11 \x03(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12P\n\x0bocr_line_dk\x18\x0c \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineDkH\x00\x12P\n\x0bocr_line_se\x18\r \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineSeH\x00\x12P\n\x0bocr_line_no\x18\x0e \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNoH\x00\x12P\n\x0bocr_line_fi\x18\x0f \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineFiH\x00\x12P\n\x0bocr_line_nl\x18\x10 \x01(\x0b\x32\x39.ssn.scanner.v2alpha1.DocumentAnnotatorResponse.OcrLineNlH\x00\x12\x31\n\x0ftext_annotation\x18\x12 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xb4\x01\n\tOcrLineDk\x12\x32\n\x04type\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x38\n\npayment_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x39\n\x0b\x63reditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\xcd\x01\n\tOcrLineSe\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14\x62\x61nkgiro_creditor_id\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x12\x42\n\x14plusgiro_creditor_id\x18\x03 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNo\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineNl\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedField\x1a\x45\n\tOcrLineFi\x12\x38\n\npayment_id\x18\x01 \x01(\x0b\x32$.ssn.scanner.v2alpha1.PredictedFieldB\t\n\x07ocrLine\"]\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12\x34\n\x06source\x18\x02 \x01(\x0b\x32$.ssn.scanner.v2alpha1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t\"\xa2\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12\x39\n\nconfidence\x18\x03 \x01(\x0e\x32%.ssn.scanner.v2alpha1.ConfidenceLevel\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xb1\x01\n\x11\x44ocumentAnnotator\x12\x9b\x01\n\x10\x41nnotateDocument\x12..ssn.scanner.v2alpha1.DocumentAnnotatorRequest\x1a/.ssn.scanner.v2alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v2alpha1/document:annotate:\x01*B\tZ\x07scannerb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -144,62 +144,10 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=489,
-  serialized_end=784,
+  serialized_start=324,
+  serialized_end=619,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
-
-
-_PREDICTEDFIELD = _descriptor.Descriptor(
-  name='PredictedField',
-  full_name='ssn.scanner.v2alpha1.PredictedField',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='value', full_name='ssn.scanner.v2alpha1.PredictedField.value', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='normalized_value', full_name='ssn.scanner.v2alpha1.PredictedField.normalized_value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='confidence', full_name='ssn.scanner.v2alpha1.PredictedField.confidence', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bounding_box', full_name='ssn.scanner.v2alpha1.PredictedField.bounding_box', index=3,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=178,
-  serialized_end=340,
-)
 
 
 _FEATURE = _descriptor.Descriptor(
@@ -243,8 +191,8 @@ _FEATURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=343,
-  serialized_end=784,
+  serialized_start=178,
+  serialized_end=619,
 )
 
 
@@ -281,8 +229,8 @@ _DOCUMENTANNOTATORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=786,
-  serialized_end=911,
+  serialized_start=621,
+  serialized_end=746,
 )
 
 
@@ -326,8 +274,8 @@ _DOCUMENTANNOTATORRESPONSE_OCRLINEDK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2153,
-  serialized_end=2333,
+  serialized_start=1988,
+  serialized_end=2168,
 )
 
 _DOCUMENTANNOTATORRESPONSE_OCRLINESE = _descriptor.Descriptor(
@@ -370,8 +318,8 @@ _DOCUMENTANNOTATORRESPONSE_OCRLINESE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2336,
-  serialized_end=2541,
+  serialized_start=2171,
+  serialized_end=2376,
 )
 
 _DOCUMENTANNOTATORRESPONSE_OCRLINENO = _descriptor.Descriptor(
@@ -400,8 +348,8 @@ _DOCUMENTANNOTATORRESPONSE_OCRLINENO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2543,
-  serialized_end=2612,
+  serialized_start=2378,
+  serialized_end=2447,
 )
 
 _DOCUMENTANNOTATORRESPONSE_OCRLINENL = _descriptor.Descriptor(
@@ -430,8 +378,8 @@ _DOCUMENTANNOTATORRESPONSE_OCRLINENL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2614,
-  serialized_end=2683,
+  serialized_start=2449,
+  serialized_end=2518,
 )
 
 _DOCUMENTANNOTATORRESPONSE_OCRLINEFI = _descriptor.Descriptor(
@@ -460,8 +408,8 @@ _DOCUMENTANNOTATORRESPONSE_OCRLINEFI = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2685,
-  serialized_end=2754,
+  serialized_start=2520,
+  serialized_end=2589,
 )
 
 _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
@@ -612,8 +560,8 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
       name='ocrLine', full_name='ssn.scanner.v2alpha1.DocumentAnnotatorResponse.ocrLine',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=914,
-  serialized_end=2765,
+  serialized_start=749,
+  serialized_end=2600,
 )
 
 
@@ -650,8 +598,8 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2767,
-  serialized_end=2860,
+  serialized_start=2602,
+  serialized_end=2695,
 )
 
 
@@ -681,12 +629,62 @@ _DOCUMENTSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2862,
+  serialized_start=2697,
+  serialized_end=2731,
+)
+
+
+_PREDICTEDFIELD = _descriptor.Descriptor(
+  name='PredictedField',
+  full_name='ssn.scanner.v2alpha1.PredictedField',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='ssn.scanner.v2alpha1.PredictedField.value', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='normalized_value', full_name='ssn.scanner.v2alpha1.PredictedField.normalized_value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='confidence', full_name='ssn.scanner.v2alpha1.PredictedField.confidence', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bounding_box', full_name='ssn.scanner.v2alpha1.PredictedField.bounding_box', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2734,
   serialized_end=2896,
 )
 
-_PREDICTEDFIELD.fields_by_name['confidence'].enum_type = _CONFIDENCELEVEL
-_PREDICTEDFIELD.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
 _FEATURE.fields_by_name['min_confidence'].enum_type = _CONFIDENCELEVEL
 _FEATURE_TYPE.containing_type = _FEATURE
@@ -740,21 +738,16 @@ _DOCUMENTANNOTATORRESPONSE.oneofs_by_name['ocrLine'].fields.append(
   _DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_nl'])
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_nl'].containing_oneof = _DOCUMENTANNOTATORRESPONSE.oneofs_by_name['ocrLine']
 _DOCUMENT.fields_by_name['source'].message_type = _DOCUMENTSOURCE
-DESCRIPTOR.message_types_by_name['PredictedField'] = _PREDICTEDFIELD
+_PREDICTEDFIELD.fields_by_name['confidence'].enum_type = _CONFIDENCELEVEL
+_PREDICTEDFIELD.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
 DESCRIPTOR.message_types_by_name['Feature'] = _FEATURE
 DESCRIPTOR.message_types_by_name['DocumentAnnotatorRequest'] = _DOCUMENTANNOTATORREQUEST
 DESCRIPTOR.message_types_by_name['DocumentAnnotatorResponse'] = _DOCUMENTANNOTATORRESPONSE
 DESCRIPTOR.message_types_by_name['Document'] = _DOCUMENT
 DESCRIPTOR.message_types_by_name['DocumentSource'] = _DOCUMENTSOURCE
+DESCRIPTOR.message_types_by_name['PredictedField'] = _PREDICTEDFIELD
 DESCRIPTOR.enum_types_by_name['ConfidenceLevel'] = _CONFIDENCELEVEL
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-PredictedField = _reflection.GeneratedProtocolMessageType('PredictedField', (_message.Message,), dict(
-  DESCRIPTOR = _PREDICTEDFIELD,
-  __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.PredictedField)
-  ))
-_sym_db.RegisterMessage(PredictedField)
 
 Feature = _reflection.GeneratedProtocolMessageType('Feature', (_message.Message,), dict(
   DESCRIPTOR = _FEATURE,
@@ -830,6 +823,13 @@ DocumentSource = _reflection.GeneratedProtocolMessageType('DocumentSource', (_me
   # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.DocumentSource)
   ))
 _sym_db.RegisterMessage(DocumentSource)
+
+PredictedField = _reflection.GeneratedProtocolMessageType('PredictedField', (_message.Message,), dict(
+  DESCRIPTOR = _PREDICTEDFIELD,
+  __module__ = 'ssn.scanner.v2alpha1.scanner_pb2'
+  # @@protoc_insertion_point(class_scope:ssn.scanner.v2alpha1.PredictedField)
+  ))
+_sym_db.RegisterMessage(PredictedField)
 
 
 DESCRIPTOR._options = None

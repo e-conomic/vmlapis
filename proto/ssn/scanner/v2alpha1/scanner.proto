@@ -70,37 +70,6 @@ service DocumentAnnotator {
   }
 }
 
-message PredictedField {
-  // The text as found on the document "1. Jan"
-  string value = 1;
-  // Normalized value 01-01-2019
-  // Only set when value is returned nomalized
-  string normalized_value = 2;
-  // The confidence of the prediction being correct
-  ConfidenceLevel confidence = 3;
-  // The bounding box for the block.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //
-  // * when the text is horizontal it might look like:
-  //
-  //         0----1
-  //         |    |
-  //         3----2
-  //
-  // * when it's rotated 180 degrees around the top-left corner it becomes:
-  //
-  //         2----3
-  //         |    |
-  //         1----0
-  //
-  //   and the vertex order will still be (0, 1, 2, 3).
-  ssn.type.BoundingPoly bounding_box = 4;
-}
-
 message Feature {
   enum Type {
     // Run default feature set
@@ -137,7 +106,7 @@ message Feature {
   // The feature type.
   Type type = 1;
   // Maximum number of results of this type. Does not apply to
-  // `TEXT_DETECTION`, `DOCUMENT_TEXT_DETECTION`, or `CROP_HINTS`.
+  // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
   int32 max_results = 2;
   // The minimum confidence for predictions that the caller wants returned
   ConfidenceLevel min_confidence = 3;
@@ -270,4 +239,36 @@ enum ConfidenceLevel {
   MID = 3;
   HIGH = 4;
   VERY_HIGH = 5;
+}
+
+// Message as prediction
+message PredictedField {
+  // The text as found on the document "1. Jan"
+  string value = 1;
+  // Normalized value 01-01-2019
+  // Only set when value is returned nomalized
+  string normalized_value = 2;
+  // The confidence of the prediction being correct
+  ConfidenceLevel confidence = 3;
+  // The bounding box for the block.
+  // The vertices are in the order of top-left, top-right, bottom-right,
+  // bottom-left. When a rotation of the bounding box is detected the rotation
+  // is represented as around the top-left corner as defined when the text is
+  // read in the 'natural' orientation.
+  // For example:
+  //
+  // * when the text is horizontal it might look like:
+  //
+  //         0----1
+  //         |    |
+  //         3----2
+  //
+  // * when it's rotated 180 degrees around the top-left corner it becomes:
+  //
+  //         2----3
+  //         |    |
+  //         1----0
+  //
+  //   and the vertex order will still be (0, 1, 2, 3).
+  ssn.type.BoundingPoly bounding_box = 4;
 }
