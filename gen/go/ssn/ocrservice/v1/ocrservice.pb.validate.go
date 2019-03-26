@@ -33,6 +33,165 @@ var (
 	_ = ptypes.DynamicAny{}
 )
 
+// Validate checks the field values on GetTextAnnotationRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *GetTextAnnotationRequest) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	for idx, item := range m.GetImages() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return GetTextAnnotationRequestValidationError{
+					field:  fmt.Sprintf("Images[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	return nil
+}
+
+// GetTextAnnotationRequestValidationError is the validation error returned by
+// GetTextAnnotationRequest.Validate if the designated constraints aren't met.
+type GetTextAnnotationRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetTextAnnotationRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetTextAnnotationRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetTextAnnotationRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetTextAnnotationRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetTextAnnotationRequestValidationError) ErrorName() string {
+	return "GetTextAnnotationRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetTextAnnotationRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetTextAnnotationRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetTextAnnotationRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetTextAnnotationRequestValidationError{}
+
+// Validate checks the field values on GetTextAnnotationResponse with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *GetTextAnnotationResponse) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	if v, ok := interface{}(m.GetTextAnnotation()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetTextAnnotationResponseValidationError{
+				field:  "TextAnnotation",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	return nil
+}
+
+// GetTextAnnotationResponseValidationError is the validation error returned by
+// GetTextAnnotationResponse.Validate if the designated constraints aren't met.
+type GetTextAnnotationResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetTextAnnotationResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetTextAnnotationResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetTextAnnotationResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetTextAnnotationResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetTextAnnotationResponseValidationError) ErrorName() string {
+	return "GetTextAnnotationResponseValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetTextAnnotationResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetTextAnnotationResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetTextAnnotationResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetTextAnnotationResponseValidationError{}
+
 // Validate checks the field values on OcrScanImageRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -112,16 +271,6 @@ func (m *OcrScanImageResponse) Validate() error {
 
 	// no validation rules for TessHocr
 
-	if v, ok := interface{}(m.GetTextAnnotation()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return OcrScanImageResponseValidationError{
-				field:  "TextAnnotation",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
 	return nil
 }
 
@@ -180,3 +329,73 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = OcrScanImageResponseValidationError{}
+
+// Validate checks the field values on GetTextAnnotationRequest_Image with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, an error is returned.
+func (m *GetTextAnnotationRequest_Image) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Content
+
+	return nil
+}
+
+// GetTextAnnotationRequest_ImageValidationError is the validation error
+// returned by GetTextAnnotationRequest_Image.Validate if the designated
+// constraints aren't met.
+type GetTextAnnotationRequest_ImageValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetTextAnnotationRequest_ImageValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetTextAnnotationRequest_ImageValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetTextAnnotationRequest_ImageValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetTextAnnotationRequest_ImageValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetTextAnnotationRequest_ImageValidationError) ErrorName() string {
+	return "GetTextAnnotationRequest_ImageValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetTextAnnotationRequest_ImageValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetTextAnnotationRequest_Image.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetTextAnnotationRequest_ImageValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetTextAnnotationRequest_ImageValidationError{}

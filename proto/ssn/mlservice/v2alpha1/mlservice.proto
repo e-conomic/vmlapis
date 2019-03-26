@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package ssn.mlservice.v2alpha1;
+
+option go_package = "mlservice";
+
+import "ssn/document_annotator/v1alpha1/document_annotator.proto";
+import "ssn/ocrservice/v1/ocrservice.proto";
+import "ssn/type/text_annotation.proto";
+
+service MLService {
+  rpc GetPrediction(MlRequest) returns (MlResponse);
+}
+
+message MlRequest {
+  ssn.document_annotator.v1alpha1.DocumentAnnotatorRequest document_annotator_request = 1;
+  ssn.type.TextAnnotation text_annotation = 2;
+  repeated ssn.ocrservice.v1.OcrScanImageResponse ocr_responses = 3;
+}
+
+message MlResponse {
+  ssn.document_annotator.v1alpha1.DocumentAnnotatorResponse document_annotator_response = 1;
+}

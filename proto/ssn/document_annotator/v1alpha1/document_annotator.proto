@@ -1,0 +1,274 @@
+syntax = "proto3";
+
+package ssn.document_annotator.v1alpha1;
+
+option go_package = "document_annotator";
+
+import "google/api/annotations.proto";
+import "lyft/validate/validate.proto";
+import "ssn/type/geometry.proto";
+import "ssn/type/text_annotation.proto";
+
+// DocumentAnnotator
+// {
+//   "document":{
+//     "source": {
+//       http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
+//     }
+//   },
+//   "features":[
+//     {
+//       "type":"ORDER_DATE",
+//       "max_results":2
+//     },
+//     {
+//       "type":"CURRENCY",
+//       "max_results":1,
+//       "min_confidence": "LOW"
+//     }
+//   ]
+// }
+// Example response
+//
+// {
+//   "order_date": [
+//     {
+//       "value": "1. jan",
+//       "normalized_value": "01-01-2019",
+//       "confidence": "VERY_HIGH",
+//       "bounding_box":[{
+//         "x":123,
+//         "y": 32
+//       }, ...]
+//     },
+//     {
+//       "value": "1. jan",
+//       "normalized_value": "01-01-2019",
+//       "confidence": "MID",
+//       "bounding_box": [{
+//         "x":123,
+//         "y": 32
+//       }, ...]
+//     }
+//   ]
+//   "currency": [{
+//     "value": "DKK",
+//     "confidence": "LOW",
+//     "bounding_box": [{
+//       "x": 123,
+//       "y": 32
+//     }, ...]
+//   }]
+// }
+
+service DocumentAnnotator {
+  rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
+    option (google.api.http) = {
+      post: "/v1alpha1/document:annotate"
+      body: "*"
+    };
+  }
+}
+
+message Feature {
+  enum Type {
+    // Run default feature set
+    DEFAULT = 0;
+    // Return text annotation
+    TEXT_ANNOTATION = 1;
+    // Run order date detection
+    ORDER_DATE = 2;
+    // Run due date detection
+    PAYMENT_DUE_DATE = 3;
+    // Run currency detection
+    CURRENCY = 4;
+    // Run total vat detection
+    TOTAL_VAT = 5;
+    // Run total incl vat detection
+    TOTAL_INCL_VAT = 6;
+    // Run total excl vat detection
+    TOTAL_EXCL_VAT = 7;
+    // Run supplier corporate detection
+    SUPPLIER_CORPORATE = 8;
+    // Run country code detection
+    SUPPLIER_COUNTRY_CODE = 9;
+    // Run document type detection
+    DOCUMENT_TYPE = 10;
+    // Run pyment method detection
+    PAYMENT_METHOD = 11;
+    // Run credit card number detection
+    CREDIT_CARD_NUMBER = 12;
+    // Run ocr line detection
+    OCR_LINE = 13;
+    // Run invoice number detection
+    INVOICE_NUMBER = 14;
+  }
+  // The feature type.
+  Type type = 1;
+  // Maximum number of results of this type. Does not apply to
+  // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+  int32 max_results = 2;
+  // The minimum confidence for predictions that the caller wants returned
+  ConfidenceLevel min_confidence = 3;
+}
+
+message DocumentAnnotatorRequest {
+  Document document = 1;
+  repeated Feature features = 2;
+}
+
+message DocumentAnnotatorResponse {
+  message OcrLineDk {
+    // example: "71"
+    PredictedField type = 1;
+    // example: "000002879094031"
+    PredictedField payment_id = 2;
+    //example: "86570807"
+    PredictedField creditor_id = 3;
+  }
+  message OcrLineSe {
+    // example: "050765098"
+    PredictedField payment_id = 1;
+    // example: "2654507"
+    PredictedField bankgiro_creditor_id = 2;
+    // example: "5000872"
+    PredictedField plusgiro_creditor_id = 3;
+  }
+  message OcrLineNo {
+    // example: "12345678903"
+    PredictedField payment_id = 1;
+  }
+  message OcrLineNl {
+    // example: "0817937867870002"
+    PredictedField payment_id = 1;
+  }
+  message OcrLineFi {
+    // example: "00000159220010146012"
+    PredictedField payment_id = 1;
+  }
+  // orderDate
+  // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  repeated PredictedField order_date = 1;
+  // paymentDueDate
+  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  repeated PredictedField payment_due_date = 2;
+  // currency
+  // ISO 4217 string, ie. a 3-letter capitalized string
+  // Example: "NOK"
+  repeated PredictedField currency = 3;
+  // totalVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  repeated PredictedField total_vat = 4;
+  // totalInclVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  repeated PredictedField total_incl_vat = 5;
+  // totalExclVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  repeated PredictedField total_excl_vat = 6;
+  // supplierCorporateId
+  // The company VAT number
+  // Example: "123456789B01" (for Dutch companies)
+  // or "12345678" (for Norwegian companies)
+  // Note: The field is repeated because multiple VAT numbers might exist.
+  // If you have the VAT number of you customer, you can use this information
+  // to find out which VAT number belongs to the supplier of the invoice.
+  repeated PredictedField supplier_corporate_id = 7;
+  // supplierCountryCode
+  // ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
+  // Example: "NO"
+  repeated PredictedField supplier_country_code = 8;
+  // documentType
+  // Either "Receipt" or "Invoice"
+  PredictedField document_type = 9;
+  // paymentMethod
+  // Either "Cash" or "CreditCard"
+  PredictedField payment_method = 10;
+  // creditCardNumber
+  // Four digits
+  // Example: "0012"
+  repeated PredictedField credit_card_number = 11;
+  // invoiceNumber
+  // The supplier defined identifier af the invoice
+  // Example: "12345-A99"
+  repeated PredictedField invoice_number = 17;
+  // Only one ocrLine will be present in a suggestion.
+  oneof ocrLine {
+    OcrLineDk ocr_line_dk = 12;
+    OcrLineSe ocr_line_se = 13;
+    OcrLineNo ocr_line_no = 14;
+    OcrLineFi ocr_line_fi = 15;
+    OcrLineNl ocr_line_nl = 16;
+  }
+  // Return text annotation
+  ssn.type.TextAnnotation text_annotation = 18;
+}
+
+message Document {
+  // Document content, represented as a stream of bytes.
+  // Note: As with all `bytes` fields, protobuffers use a pure binary
+  // representation, whereas JSON representations use base64.
+  bytes content = 1 [(lyft.validate.rules).bytes.min_len = 261];
+  // Google Cloud Storage image location, or publicly-accessible image
+  // URL. If both `content` and `source` are provided for a document, `content`
+  // takes precedence and is used to perform the scan request.
+  DocumentSource source = 2;
+}
+
+message DocumentSource {
+  // The URI of the source document. Can be either:
+  //
+  // 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
+  //    HTTP/HTTPS URLs, We cannot guarantee that the request will be
+  //    completed. Your request may fail if the specified host denies the
+  //    request (e.g. due to request throttling or DOS prevention).
+  //
+  string http_uri = 1;
+}
+
+// A bucketized representation of confidence, which is intended to give clients
+// highly stable results across model upgrades.
+enum ConfidenceLevel {
+  UNKNOWN = 0;
+  VERY_LOW = 1;
+  LOW = 2;
+  MID = 3;
+  HIGH = 4;
+  VERY_HIGH = 5;
+}
+
+// Message as prediction
+message PredictedField {
+  // The text as found on the document "1. Jan"
+  string value = 1;
+  // Normalized value 01-01-2019
+  // Only set when value is returned nomalized
+  string normalized_value = 2;
+  // The confidence of the prediction being correct
+  ConfidenceLevel confidence = 3;
+  // The bounding box for the block.
+  // The vertices are in the order of top-left, top-right, bottom-right,
+  // bottom-left. When a rotation of the bounding box is detected the rotation
+  // is represented as around the top-left corner as defined when the text is
+  // read in the 'natural' orientation.
+  // For example:
+  //
+  // * when the text is horizontal it might look like:
+  //
+  //         0----1
+  //         |    |
+  //         3----2
+  //
+  // * when it's rotated 180 degrees around the top-left corner it becomes:
+  //
+  //         2----3
+  //         |    |
+  //         1----0
+  //
+  //   and the vertex order will still be (0, 1, 2, 3).
+  ssn.type.BoundingPoly bounding_box = 4;
+}
