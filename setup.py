@@ -10,16 +10,11 @@ setuptools.setup(
     version=version,
     description="A package containing ssn protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
-    install_requires=[
-        'google-api-core',
-    ],
     packages=setuptools.find_packages(where='gen/python/'),
-    package_dir={'ssn': 'gen/python/ssn', 'lyft': 'gen/python/lyft', 'google': 'gen/python/google'},
+    package_dir={'ssn': 'gen/python/ssn', 'lyft': 'gen/python/lyft'},
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
-    # can be used to build googleapis complitent protos
-    # namespace_packages= ['google', 'google.cloud'],
     include_package_data=True,
     zip_safe=False,
 )
