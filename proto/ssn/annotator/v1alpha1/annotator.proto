@@ -98,10 +98,18 @@ message Feature {
     PAYMENT_METHOD = 11;
     // Run credit card number detection
     CREDIT_CARD_NUMBER = 12;
-    // Run ocr line detection
-    OCR_LINE = 13;
     // Run invoice number detection
     INVOICE_NUMBER = 14;
+    // Run danish ocr line detection
+    OCR_LINE_DK = 15;
+    // Run swedish ocr line detection
+    OCR_LINE_SE = 16;
+    // Run norwegian ocr line detection
+    OCR_LINE_NO = 17;
+    // Run finish ocr line detection
+    OCR_LINE_FI = 18;
+    // Run dutch ocr line detection
+    OCR_LINE_NL = 19;
   }
   // The feature type.
   Type type = 1;
@@ -184,10 +192,10 @@ message DocumentAnnotatorResponse {
   repeated PredictedField supplier_country_code = 8;
   // documentType
   // Either "Receipt" or "Invoice"
-  PredictedField document_type = 9;
+  repeated PredictedField document_type = 9;
   // paymentMethod
   // Either "Cash" or "CreditCard"
-  PredictedField payment_method = 10;
+  repeated PredictedField payment_method = 10;
   // creditCardNumber
   // Four digits
   // Example: "0012"
@@ -195,15 +203,20 @@ message DocumentAnnotatorResponse {
   // invoiceNumber
   // The supplier defined identifier af the invoice
   // Example: "12345-A99"
+
+  // OCR lines are only returned if requested as feature in the annotator request.
+  repeated OcrLineDk ocr_line_dk = 12;
+
+  repeated OcrLineSe ocr_line_se = 13;
+
+  repeated OcrLineNo ocr_line_no = 14;
+
+  repeated OcrLineFi ocr_line_fi = 15;
+
+  repeated OcrLineNl ocr_line_nl = 16;
+
   repeated PredictedField invoice_number = 17;
-  // Only one ocrLine will be present in a suggestion.
-  oneof ocrLine {
-    OcrLineDk ocr_line_dk = 12;
-    OcrLineSe ocr_line_se = 13;
-    OcrLineNo ocr_line_no = 14;
-    OcrLineFi ocr_line_fi = 15;
-    OcrLineNl ocr_line_nl = 16;
-  }
+
   // Return text annotation
   ssn.type.TextAnnotation text_annotation = 18;
 }
