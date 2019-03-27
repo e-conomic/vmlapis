@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.mlservice.v2alpha1',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x16ssn.mlservice.v2alpha1\x1a&ssn/annotator/v1alpha1/annotator.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\x1a\x1essn/type/text_annotation.proto\"\xcb\x01\n\tMlRequest\x12K\n\x11\x61nnotator_request\x18\x01 \x01(\x0b\x32\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12>\n\rocr_responses\x18\x03 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\"[\n\nMlResponse\x12M\n\x12\x61nnotator_response\x18\x01 \x01(\x0b\x32\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse2c\n\tMLService\x12V\n\rGetPrediction\x12!.ssn.mlservice.v2alpha1.MlRequest\x1a\".ssn.mlservice.v2alpha1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n&ssn/mlservice/v2alpha1/mlservice.proto\x12\x16ssn.mlservice.v2alpha1\x1a&ssn/annotator/v1alpha1/annotator.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\x1a\x1essn/type/text_annotation.proto\"\xcb\x01\n\tMlRequest\x12K\n\x11\x61nnotator_request\x18\x01 \x01(\x0b\x32\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12>\n\rocr_responses\x18\x03 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse\"[\n\nMlResponse\x12M\n\x12\x61nnotator_response\x18\x01 \x01(\x0b\x32\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse2c\n\tMlService\x12V\n\rGetPrediction\x12!.ssn.mlservice.v2alpha1.MlRequest\x1a\".ssn.mlservice.v2alpha1.MlResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
   dependencies=[ssn_dot_annotator_dot_v1alpha1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -130,8 +130,8 @@ _sym_db.RegisterMessage(MlResponse)
 DESCRIPTOR._options = None
 
 _MLSERVICE = _descriptor.ServiceDescriptor(
-  name='MLService',
-  full_name='ssn.mlservice.v2alpha1.MLService',
+  name='MlService',
+  full_name='ssn.mlservice.v2alpha1.MlService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
@@ -140,7 +140,7 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPrediction',
-    full_name='ssn.mlservice.v2alpha1.MLService.GetPrediction',
+    full_name='ssn.mlservice.v2alpha1.MlService.GetPrediction',
     index=0,
     containing_service=None,
     input_type=_MLREQUEST,
@@ -150,6 +150,6 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
 ])
 _sym_db.RegisterServiceDescriptor(_MLSERVICE)
 
-DESCRIPTOR.services_by_name['MLService'] = _MLSERVICE
+DESCRIPTOR.services_by_name['MlService'] = _MLSERVICE
 
 # @@protoc_insertion_point(module_scope)
