@@ -323,24 +323,34 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 
 	}
 
-	if v, ok := interface{}(m.GetDocumentType()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponseValidationError{
-				field:  "DocumentType",
-				reason: "embedded message failed validation",
-				cause:  err,
+	for idx, item := range m.GetDocumentType() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("DocumentType[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
 			}
 		}
+
 	}
 
-	if v, ok := interface{}(m.GetPaymentMethod()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponseValidationError{
-				field:  "PaymentMethod",
-				reason: "embedded message failed validation",
-				cause:  err,
+	for idx, item := range m.GetPaymentMethod() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("PaymentMethod[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
 			}
 		}
+
 	}
 
 	for idx, item := range m.GetCreditCardNumber() {
@@ -350,6 +360,81 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 			if err := v.Validate(); err != nil {
 				return DocumentAnnotatorResponseValidationError{
 					field:  fmt.Sprintf("CreditCardNumber[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineDk() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineDk[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineSe() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineSe[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineNo() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineNo[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineFi() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineFi[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineNl() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineNl[%v]", idx),
 					reason: "embedded message failed validation",
 					cause:  err,
 				}
@@ -381,70 +466,6 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 				cause:  err,
 			}
 		}
-	}
-
-	switch m.OcrLine.(type) {
-
-	case *DocumentAnnotatorResponse_OcrLineDk_:
-
-		if v, ok := interface{}(m.GetOcrLineDk()).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  "OcrLineDk",
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	case *DocumentAnnotatorResponse_OcrLineSe_:
-
-		if v, ok := interface{}(m.GetOcrLineSe()).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  "OcrLineSe",
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	case *DocumentAnnotatorResponse_OcrLineNo_:
-
-		if v, ok := interface{}(m.GetOcrLineNo()).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  "OcrLineNo",
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	case *DocumentAnnotatorResponse_OcrLineFi_:
-
-		if v, ok := interface{}(m.GetOcrLineFi()).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  "OcrLineFi",
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	case *DocumentAnnotatorResponse_OcrLineNl_:
-
-		if v, ok := interface{}(m.GetOcrLineNl()).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  "OcrLineNl",
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
 	}
 
 	return nil
