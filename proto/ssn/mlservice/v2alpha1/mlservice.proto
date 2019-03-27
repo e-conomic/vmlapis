@@ -13,7 +13,7 @@ service MlService {
 }
 
 message MlRequest {
-  ssn.annotator.v1alpha1.DocumentAnnotatorRequest annotator_request = 1;
+  repeated ssn.annotator.v1alpha1.Feature features = 1;
   ssn.type.TextAnnotation text_annotation = 2;
   repeated ssn.ocrservice.v1.OcrScanImageResponse ocr_responses = 3;
 }
