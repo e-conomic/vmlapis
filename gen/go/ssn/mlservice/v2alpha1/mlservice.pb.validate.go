@@ -40,10 +40,10 @@ func (m *MlRequest) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetDocumentAnnotatorRequest()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetAnnotatorRequest()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return MlRequestValidationError{
-				field:  "DocumentAnnotatorRequest",
+				field:  "AnnotatorRequest",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
@@ -139,10 +139,10 @@ func (m *MlResponse) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetDocumentAnnotatorResponse()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetAnnotatorResponse()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return MlResponseValidationError{
-				field:  "DocumentAnnotatorResponse",
+				field:  "AnnotatorResponse",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}

@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package ssn.document_annotator.v1alpha1;
+package ssn.annotator.v1alpha1;
 
-option go_package = "document_annotator";
+option go_package = "annotator";
 
 import "google/api/annotations.proto";
 import "lyft/validate/validate.proto";
