@@ -99,17 +99,17 @@ message Feature {
     // Run credit card number detection
     CREDIT_CARD_NUMBER = 12;
     // Run invoice number detection
-    INVOICE_NUMBER = 14;
+    INVOICE_NUMBER = 13;
     // Run danish ocr line detection
-    OCR_LINE_DK = 15;
+    OCR_LINE_DK = 14;
     // Run swedish ocr line detection
-    OCR_LINE_SE = 16;
+    OCR_LINE_SE = 15;
     // Run norwegian ocr line detection
-    OCR_LINE_NO = 17;
+    OCR_LINE_NO = 16;
     // Run finish ocr line detection
-    OCR_LINE_FI = 18;
+    OCR_LINE_FI = 17;
     // Run dutch ocr line detection
-    OCR_LINE_NL = 19;
+    OCR_LINE_NL = 18;
   }
   // The feature type.
   Type type = 1;
