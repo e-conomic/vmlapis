@@ -8,7 +8,7 @@ import "ssn/annotator/v1alpha1/annotator.proto";
 import "ssn/ocrservice/v1/ocrservice.proto";
 import "ssn/type/text_annotation.proto";
 
-service MLService {
+service MlService {
   rpc GetPrediction(MlRequest) returns (MlResponse);
 }
 
