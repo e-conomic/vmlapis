@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.annotator.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\tannotator'),
-  serialized_pb=_b('\n&ssn/annotator/v1alpha1/annotator.proto\x12\x16ssn.annotator.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\x84\x04\n\x07\x46\x65\x61ture\x12\x32\n\x04type\x18\x01 \x01(\x0e\x32$.ssn.annotator.v1alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12?\n\x0emin_confidence\x18\x03 \x01(\x0e\x32\'.ssn.annotator.v1alpha1.ConfidenceLevel\"\xee\x02\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x16\n\x12SUPPLIER_CORPORATE\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x0f\n\x0bOCR_LINE_DK\x10\x0e\x12\x0f\n\x0bOCR_LINE_SE\x10\x0f\x12\x0f\n\x0bOCR_LINE_NO\x10\x10\x12\x0f\n\x0bOCR_LINE_FI\x10\x11\x12\x0f\n\x0bOCR_LINE_NL\x10\x12\"\x81\x01\n\x18\x44ocumentAnnotatorRequest\x12\x32\n\x08\x64ocument\x18\x01 \x01(\x0b\x32 .ssn.annotator.v1alpha1.Document\x12\x31\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1f.ssn.annotator.v1alpha1.Feature\"\xda\x0e\n\x19\x44ocumentAnnotatorResponse\x12:\n\norder_date\x18\x01 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12@\n\x10payment_due_date\x18\x02 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x38\n\x08\x63urrency\x18\x03 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x39\n\ttotal_vat\x18\x04 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12=\n\rdocument_type\x18\t \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0epayment_method\x18\n \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x42\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n\x0bocr_line_dk\x18\x0c \x03(\x0b\x32;.ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk\x12P\n\x0bocr_line_se\x18\r \x03(\x0b\x32;.ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe\x12P\n\x0bocr_line_no\x18\x0e \x03(\x0b\x32;.ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNo\x12P\n\x0bocr_line_fi\x18\x0f \x03(\x0b\x32;.ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineFi\x12P\n\x0bocr_line_nl\x18\x10 \x03(\x0b\x32;.ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNl\x12>\n\x0einvoice_number\x18\x11 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x31\n\x0ftext_annotation\x18\x12 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xba\x01\n\tOcrLineDk\x12\x34\n\x04type\x18\x01 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12:\n\npayment_id\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12;\n\x0b\x63reditor_id\x18\x03 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x1a\xd3\x01\n\tOcrLineSe\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x44\n\x14\x62\x61nkgiro_creditor_id\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x44\n\x14plusgiro_creditor_id\x18\x03 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x1aG\n\tOcrLineNo\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x1aG\n\tOcrLineNl\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x1aG\n\tOcrLineFi\x12:\n\npayment_id\x18\x01 \x01(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\"_\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12\x36\n\x06source\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t\"\xa4\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12;\n\nconfidence\x18\x03 \x01(\x0e\x32\'.ssn.annotator.v1alpha1.ConfidenceLevel\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xb5\x01\n\x11\x44ocumentAnnotator\x12\x9f\x01\n\x10\x41nnotateDocument\x12\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x1a\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v1alpha1/document:annotate:\x01*B\x0bZ\tannotatorb\x06proto3')
+  serialized_pb=_b('\n&ssn/annotator/v1alpha1/annotator.proto\x12\x16ssn.annotator.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\xbd\x05\n\x07\x46\x65\x61ture\x12\x32\n\x04type\x18\x01 \x01(\x0e\x32$.ssn.annotator.v1alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12?\n\x0emin_confidence\x18\x03 \x01(\x0e\x32\'.ssn.annotator.v1alpha1.ConfidenceLevel\"\xa7\x04\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x19\n\x15SUPPLIER_CORPORATE_ID\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x14\n\x10OCR_LINE_DK_TYPE\x10\x0e\x12\x1a\n\x16OCR_LINE_DK_PAYMENT_ID\x10\x0f\x12\x1b\n\x17OCR_LINE_DK_CREDITOR_ID\x10\x10\x12\x1a\n\x16OCR_LINE_SE_PAYMENT_ID\x10\x11\x12$\n OCR_LINE_SE_BANKGIRO_CREDITOR_ID\x10\x12\x12$\n OCR_LINE_SE_PLUSGIRO_CREDITOR_ID\x10\x13\x12\x1a\n\x16OCR_LINE_NO_PAYMENT_ID\x10\x14\x12\x1a\n\x16OCR_LINE_FI_PAYMENT_ID\x10\x15\x12\x1a\n\x16OCR_LINE_NL_PAYMENT_ID\x10\x16\"\x81\x01\n\x18\x44ocumentAnnotatorRequest\x12\x32\n\x08\x64ocument\x18\x01 \x01(\x0b\x32 .ssn.annotator.v1alpha1.Document\x12\x31\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1f.ssn.annotator.v1alpha1.Feature\"\xe9\x0b\n\x19\x44ocumentAnnotatorResponse\x12:\n\norder_date\x18\x01 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12@\n\x10payment_due_date\x18\x02 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x38\n\x08\x63urrency\x18\x03 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x39\n\ttotal_vat\x18\x04 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12=\n\rdocument_type\x18\t \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0epayment_method\x18\n \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x42\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0einvoice_number\x18\x0c \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x31\n\x0ftext_annotation\x18\r \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12@\n\x10ocr_line_dk_type\x18\x0e \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_dk_payment_id\x18\x0f \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12G\n\x17ocr_line_dk_creditor_id\x18\x10 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_se_payment_id\x18\x11 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_bankgiro_creditor_id\x18\x12 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_plusgiro_creditor_id\x18\x13 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_no_payment_id\x18\x14 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_fi_payment_id\x18\x15 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_nl_payment_id\x18\x16 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\"_\n\x08\x44ocument\x12\x1b\n\x07\x63ontent\x18\x01 \x01(\x0c\x42\n\xba\xe9\xc0\x03\x05z\x03\x10\x85\x02\x12\x36\n\x06source\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t\"\xa4\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12;\n\nconfidence\x18\x03 \x01(\x0e\x32\'.ssn.annotator.v1alpha1.ConfidenceLevel\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly*W\n\x0f\x43onfidenceLevel\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\x32\xb5\x01\n\x11\x44ocumentAnnotator\x12\x9f\x01\n\x10\x41nnotateDocument\x12\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x1a\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v1alpha1/document:annotate:\x01*B\x0bZ\tannotatorb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -61,8 +61,8 @@ _CONFIDENCELEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=3019,
-  serialized_end=3106,
+  serialized_start=2835,
+  serialized_end=2922,
 )
 _sym_db.RegisterEnumDescriptor(_CONFIDENCELEVEL)
 
@@ -114,7 +114,7 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SUPPLIER_CORPORATE', index=8, number=8,
+      name='SUPPLIER_CORPORATE_ID', index=8, number=8,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
@@ -138,30 +138,46 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='OCR_LINE_DK', index=14, number=14,
+      name='OCR_LINE_DK_TYPE', index=14, number=14,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='OCR_LINE_SE', index=15, number=15,
+      name='OCR_LINE_DK_PAYMENT_ID', index=15, number=15,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='OCR_LINE_NO', index=16, number=16,
+      name='OCR_LINE_DK_CREDITOR_ID', index=16, number=16,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='OCR_LINE_FI', index=17, number=17,
+      name='OCR_LINE_SE_PAYMENT_ID', index=17, number=17,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='OCR_LINE_NL', index=18, number=18,
+      name='OCR_LINE_SE_BANKGIRO_CREDITOR_ID', index=18, number=18,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCR_LINE_SE_PLUSGIRO_CREDITOR_ID', index=19, number=19,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCR_LINE_NO_PAYMENT_ID', index=20, number=20,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCR_LINE_FI_PAYMENT_ID', index=21, number=21,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OCR_LINE_NL_PAYMENT_ID', index=22, number=22,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=334,
-  serialized_end=700,
+  serialized_end=885,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
 
@@ -208,7 +224,7 @@ _FEATURE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=184,
-  serialized_end=700,
+  serialized_end=885,
 )
 
 
@@ -245,188 +261,10 @@ _DOCUMENTANNOTATORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=703,
-  serialized_end=832,
+  serialized_start=888,
+  serialized_end=1017,
 )
 
-
-_DOCUMENTANNOTATORRESPONSE_OCRLINEDK = _descriptor.Descriptor(
-  name='OcrLineDk',
-  full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='type', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk.type', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk.payment_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk.creditor_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2098,
-  serialized_end=2284,
-)
-
-_DOCUMENTANNOTATORRESPONSE_OCRLINESE = _descriptor.Descriptor(
-  name='OcrLineSe',
-  full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='bankgiro_creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe.bankgiro_creditor_id', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='plusgiro_creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe.plusgiro_creditor_id', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2287,
-  serialized_end=2498,
-)
-
-_DOCUMENTANNOTATORRESPONSE_OCRLINENO = _descriptor.Descriptor(
-  name='OcrLineNo',
-  full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNo',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNo.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2500,
-  serialized_end=2571,
-)
-
-_DOCUMENTANNOTATORRESPONSE_OCRLINENL = _descriptor.Descriptor(
-  name='OcrLineNl',
-  full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNl',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNl.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2573,
-  serialized_end=2644,
-)
-
-_DOCUMENTANNOTATORRESPONSE_OCRLINEFI = _descriptor.Descriptor(
-  name='OcrLineFi',
-  full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineFi',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineFi.payment_id', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=2646,
-  serialized_end=2717,
-)
 
 _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
   name='DocumentAnnotatorResponse',
@@ -513,58 +351,86 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_dk', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_dk', index=11,
+      name='invoice_number', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.invoice_number', index=11,
       number=12, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_se', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_se', index=12,
-      number=13, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='text_annotation', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.text_annotation', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_no', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_no', index=13,
+      name='ocr_line_dk_type', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_dk_type', index=13,
       number=14, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_fi', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_fi', index=14,
+      name='ocr_line_dk_payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_dk_payment_id', index=14,
       number=15, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_nl', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_nl', index=15,
+      name='ocr_line_dk_creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_dk_creditor_id', index=15,
       number=16, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='invoice_number', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.invoice_number', index=16,
+      name='ocr_line_se_payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_se_payment_id', index=16,
       number=17, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='text_annotation', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.text_annotation', index=17,
-      number=18, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='ocr_line_se_bankgiro_creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_se_bankgiro_creditor_id', index=17,
+      number=18, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_se_plusgiro_creditor_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_se_plusgiro_creditor_id', index=18,
+      number=19, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_no_payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_no_payment_id', index=19,
+      number=20, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_fi_payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_fi_payment_id', index=20,
+      number=21, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_nl_payment_id', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.ocr_line_nl_payment_id', index=21,
+      number=22, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[_DOCUMENTANNOTATORRESPONSE_OCRLINEDK, _DOCUMENTANNOTATORRESPONSE_OCRLINESE, _DOCUMENTANNOTATORRESPONSE_OCRLINENO, _DOCUMENTANNOTATORRESPONSE_OCRLINENL, _DOCUMENTANNOTATORRESPONSE_OCRLINEFI, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -573,8 +439,8 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=835,
-  serialized_end=2717,
+  serialized_start=1020,
+  serialized_end=2533,
 )
 
 
@@ -611,8 +477,8 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2719,
-  serialized_end=2814,
+  serialized_start=2535,
+  serialized_end=2630,
 )
 
 
@@ -642,8 +508,8 @@ _DOCUMENTSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2816,
-  serialized_end=2850,
+  serialized_start=2632,
+  serialized_end=2666,
 )
 
 
@@ -694,8 +560,8 @@ _PREDICTEDFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2853,
-  serialized_end=3017,
+  serialized_start=2669,
+  serialized_end=2833,
 )
 
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
@@ -703,20 +569,6 @@ _FEATURE.fields_by_name['min_confidence'].enum_type = _CONFIDENCELEVEL
 _FEATURE_TYPE.containing_type = _FEATURE
 _DOCUMENTANNOTATORREQUEST.fields_by_name['document'].message_type = _DOCUMENT
 _DOCUMENTANNOTATORREQUEST.fields_by_name['features'].message_type = _FEATURE
-_DOCUMENTANNOTATORRESPONSE_OCRLINEDK.fields_by_name['type'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINEDK.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINEDK.fields_by_name['creditor_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINEDK.containing_type = _DOCUMENTANNOTATORRESPONSE
-_DOCUMENTANNOTATORRESPONSE_OCRLINESE.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINESE.fields_by_name['bankgiro_creditor_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINESE.fields_by_name['plusgiro_creditor_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINESE.containing_type = _DOCUMENTANNOTATORRESPONSE
-_DOCUMENTANNOTATORRESPONSE_OCRLINENO.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINENO.containing_type = _DOCUMENTANNOTATORRESPONSE
-_DOCUMENTANNOTATORRESPONSE_OCRLINENL.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINENL.containing_type = _DOCUMENTANNOTATORRESPONSE
-_DOCUMENTANNOTATORRESPONSE_OCRLINEFI.fields_by_name['payment_id'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE_OCRLINEFI.containing_type = _DOCUMENTANNOTATORRESPONSE
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['order_date'].message_type = _PREDICTEDFIELD
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['payment_due_date'].message_type = _PREDICTEDFIELD
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['currency'].message_type = _PREDICTEDFIELD
@@ -728,13 +580,17 @@ _DOCUMENTANNOTATORRESPONSE.fields_by_name['supplier_country_code'].message_type 
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['document_type'].message_type = _PREDICTEDFIELD
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['payment_method'].message_type = _PREDICTEDFIELD
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['credit_card_number'].message_type = _PREDICTEDFIELD
-_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_dk'].message_type = _DOCUMENTANNOTATORRESPONSE_OCRLINEDK
-_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_se'].message_type = _DOCUMENTANNOTATORRESPONSE_OCRLINESE
-_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_no'].message_type = _DOCUMENTANNOTATORRESPONSE_OCRLINENO
-_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_fi'].message_type = _DOCUMENTANNOTATORRESPONSE_OCRLINEFI
-_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_nl'].message_type = _DOCUMENTANNOTATORRESPONSE_OCRLINENL
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['invoice_number'].message_type = _PREDICTEDFIELD
 _DOCUMENTANNOTATORRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_dk_type'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_dk_payment_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_dk_creditor_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_se_payment_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_se_bankgiro_creditor_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_se_plusgiro_creditor_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_no_payment_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_fi_payment_id'].message_type = _PREDICTEDFIELD
+_DOCUMENTANNOTATORRESPONSE.fields_by_name['ocr_line_nl_payment_id'].message_type = _PREDICTEDFIELD
 _DOCUMENT.fields_by_name['source'].message_type = _DOCUMENTSOURCE
 _PREDICTEDFIELD.fields_by_name['confidence'].enum_type = _CONFIDENCELEVEL
 _PREDICTEDFIELD.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
@@ -762,51 +618,11 @@ DocumentAnnotatorRequest = _reflection.GeneratedProtocolMessageType('DocumentAnn
 _sym_db.RegisterMessage(DocumentAnnotatorRequest)
 
 DocumentAnnotatorResponse = _reflection.GeneratedProtocolMessageType('DocumentAnnotatorResponse', (_message.Message,), dict(
-
-  OcrLineDk = _reflection.GeneratedProtocolMessageType('OcrLineDk', (_message.Message,), dict(
-    DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE_OCRLINEDK,
-    __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineDk)
-    ))
-  ,
-
-  OcrLineSe = _reflection.GeneratedProtocolMessageType('OcrLineSe', (_message.Message,), dict(
-    DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE_OCRLINESE,
-    __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineSe)
-    ))
-  ,
-
-  OcrLineNo = _reflection.GeneratedProtocolMessageType('OcrLineNo', (_message.Message,), dict(
-    DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE_OCRLINENO,
-    __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNo)
-    ))
-  ,
-
-  OcrLineNl = _reflection.GeneratedProtocolMessageType('OcrLineNl', (_message.Message,), dict(
-    DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE_OCRLINENL,
-    __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineNl)
-    ))
-  ,
-
-  OcrLineFi = _reflection.GeneratedProtocolMessageType('OcrLineFi', (_message.Message,), dict(
-    DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE_OCRLINEFI,
-    __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse.OcrLineFi)
-    ))
-  ,
   DESCRIPTOR = _DOCUMENTANNOTATORRESPONSE,
   __module__ = 'ssn.annotator.v1alpha1.annotator_pb2'
   # @@protoc_insertion_point(class_scope:ssn.annotator.v1alpha1.DocumentAnnotatorResponse)
   ))
 _sym_db.RegisterMessage(DocumentAnnotatorResponse)
-_sym_db.RegisterMessage(DocumentAnnotatorResponse.OcrLineDk)
-_sym_db.RegisterMessage(DocumentAnnotatorResponse.OcrLineSe)
-_sym_db.RegisterMessage(DocumentAnnotatorResponse.OcrLineNo)
-_sym_db.RegisterMessage(DocumentAnnotatorResponse.OcrLineNl)
-_sym_db.RegisterMessage(DocumentAnnotatorResponse.OcrLineFi)
 
 Document = _reflection.GeneratedProtocolMessageType('Document', (_message.Message,), dict(
   DESCRIPTOR = _DOCUMENT,
@@ -839,8 +655,8 @@ _DOCUMENTANNOTATOR = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=3109,
-  serialized_end=3290,
+  serialized_start=2925,
+  serialized_end=3106,
   methods=[
   _descriptor.MethodDescriptor(
     name='AnnotateDocument',

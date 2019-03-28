@@ -88,8 +88,8 @@ message Feature {
     TOTAL_INCL_VAT = 6;
     // Run total excl vat detection
     TOTAL_EXCL_VAT = 7;
-    // Run supplier corporate detection
-    SUPPLIER_CORPORATE = 8;
+    // Run supplier corporate id detection
+    SUPPLIER_CORPORATE_ID = 8;
     // Run country code detection
     SUPPLIER_COUNTRY_CODE = 9;
     // Run document type detection
@@ -100,16 +100,24 @@ message Feature {
     CREDIT_CARD_NUMBER = 12;
     // Run invoice number detection
     INVOICE_NUMBER = 13;
-    // Run danish ocr line detection
-    OCR_LINE_DK = 14;
-    // Run swedish ocr line detection
-    OCR_LINE_SE = 15;
-    // Run norwegian ocr line detection
-    OCR_LINE_NO = 16;
-    // Run finish ocr line detection
-    OCR_LINE_FI = 17;
-    // Run dutch ocr line detection
-    OCR_LINE_NL = 18;
+    // Run danish ocr line detection, for the type
+    OCR_LINE_DK_TYPE = 14;
+    // Run danish ocr line detection, for the payment id
+    OCR_LINE_DK_PAYMENT_ID = 15;
+    // Run danish ocr line detection, for the creditor id
+    OCR_LINE_DK_CREDITOR_ID = 16;
+    // Run swedish ocr line detection for the payment id
+    OCR_LINE_SE_PAYMENT_ID = 17;
+    // Run swedish ocr line detection for the bankgiro creditor id
+    OCR_LINE_SE_BANKGIRO_CREDITOR_ID = 18;
+    // Run swedish ocr line detection for the plusgiro creditor id
+    OCR_LINE_SE_PLUSGIRO_CREDITOR_ID = 19;
+    // Run norwegian ocr line detection or the payment id
+    OCR_LINE_NO_PAYMENT_ID = 20;
+    // Run finish ocr line detection or the payment id
+    OCR_LINE_FI_PAYMENT_ID = 21;
+    // Run dutch ocr line detection for the payment id
+    OCR_LINE_NL_PAYMENT_ID = 22;
   }
   // The feature type.
   Type type = 1;
@@ -126,34 +134,6 @@ message DocumentAnnotatorRequest {
 }
 
 message DocumentAnnotatorResponse {
-  message OcrLineDk {
-    // example: "71"
-    PredictedField type = 1;
-    // example: "000002879094031"
-    PredictedField payment_id = 2;
-    //example: "86570807"
-    PredictedField creditor_id = 3;
-  }
-  message OcrLineSe {
-    // example: "050765098"
-    PredictedField payment_id = 1;
-    // example: "2654507"
-    PredictedField bankgiro_creditor_id = 2;
-    // example: "5000872"
-    PredictedField plusgiro_creditor_id = 3;
-  }
-  message OcrLineNo {
-    // example: "12345678903"
-    PredictedField payment_id = 1;
-  }
-  message OcrLineNl {
-    // example: "0817937867870002"
-    PredictedField payment_id = 1;
-  }
-  message OcrLineFi {
-    // example: "00000159220010146012"
-    PredictedField payment_id = 1;
-  }
   // orderDate
   // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
   // Example: "2019-12-31"
@@ -203,16 +183,27 @@ message DocumentAnnotatorResponse {
   // invoiceNumber
   // The supplier defined identifier af the invoice
   // Example: "12345-A99"
-
-  // OCR lines are only returned if requested as feature in the annotator request.
-  repeated OcrLineDk ocr_line_dk = 12;
-  repeated OcrLineSe ocr_line_se = 13;
-  repeated OcrLineNo ocr_line_no = 14;
-  repeated OcrLineFi ocr_line_fi = 15;
-  repeated OcrLineNl ocr_line_nl = 16;
-  repeated PredictedField invoice_number = 17;
+  repeated PredictedField invoice_number = 12;
   // Return text annotation
-  ssn.type.TextAnnotation text_annotation = 18;
+  ssn.type.TextAnnotation text_annotation = 13;
+  // example: "71"
+  repeated PredictedField ocr_line_dk_type = 14;
+  // example: "000002879094031"
+  repeated PredictedField ocr_line_dk_payment_id = 15;
+  //example: "86570807"
+  repeated PredictedField ocr_line_dk_creditor_id = 16;
+  // example: "050765098"
+  repeated PredictedField ocr_line_se_payment_id = 17;
+  // example: "2654507"
+  repeated PredictedField ocr_line_se_bankgiro_creditor_id = 18;
+  // example: "5000872"
+  repeated PredictedField ocr_line_se_plusgiro_creditor_id = 19;
+  // example: "12345678903"
+  repeated PredictedField ocr_line_no_payment_id = 20;
+  // example: "0817937867870002"
+  repeated PredictedField ocr_line_fi_payment_id = 21;
+  // example: "00000159220010146012"
+  repeated PredictedField ocr_line_nl_payment_id = 22;
 }
 
 message Document {
