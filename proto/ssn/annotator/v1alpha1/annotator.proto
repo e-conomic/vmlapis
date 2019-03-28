@@ -118,7 +118,6 @@ message Feature {
     OCR_LINE_FI_PAYMENT_ID = 21;
     // Run dutch ocr line detection for the payment id
     OCR_LINE_NL_PAYMENT_ID = 22;
-
   }
   // The feature type.
   Type type = 1;

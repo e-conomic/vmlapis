@@ -368,81 +368,6 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 
 	}
 
-	for idx, item := range m.GetOcrLineDk() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  fmt.Sprintf("OcrLineDk[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
-	for idx, item := range m.GetOcrLineSe() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  fmt.Sprintf("OcrLineSe[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
-	for idx, item := range m.GetOcrLineNo() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  fmt.Sprintf("OcrLineNo[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
-	for idx, item := range m.GetOcrLineFi() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  fmt.Sprintf("OcrLineFi[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
-	for idx, item := range m.GetOcrLineNl() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return DocumentAnnotatorResponseValidationError{
-					field:  fmt.Sprintf("OcrLineNl[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
 	for idx, item := range m.GetInvoiceNumber() {
 		_, _ = idx, item
 
@@ -466,6 +391,141 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 				cause:  err,
 			}
 		}
+	}
+
+	for idx, item := range m.GetOcrLineDkType() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineDkType[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineDkPaymentId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineDkPaymentId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineDkCreditorId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineDkCreditorId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineSePaymentId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineSePaymentId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineSeBankgiroCreditorId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineSeBankgiroCreditorId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineSePlusgiroCreditorId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineSePlusgiroCreditorId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineNoPaymentId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineNoPaymentId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineFiPaymentId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineFiPaymentId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	for idx, item := range m.GetOcrLineNlPaymentId() {
+		_, _ = idx, item
+
+		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return DocumentAnnotatorResponseValidationError{
+					field:  fmt.Sprintf("OcrLineNlPaymentId[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
 	}
 
 	return nil
@@ -755,433 +815,3 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = PredictedFieldValidationError{}
-
-// Validate checks the field values on DocumentAnnotatorResponse_OcrLineDk with
-// the rules defined in the proto definition for this message. If any rules
-// are violated, an error is returned.
-func (m *DocumentAnnotatorResponse_OcrLineDk) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	if v, ok := interface{}(m.GetType()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineDkValidationError{
-				field:  "Type",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineDkValidationError{
-				field:  "PaymentId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if v, ok := interface{}(m.GetCreditorId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineDkValidationError{
-				field:  "CreditorId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	return nil
-}
-
-// DocumentAnnotatorResponse_OcrLineDkValidationError is the validation error
-// returned by DocumentAnnotatorResponse_OcrLineDk.Validate if the designated
-// constraints aren't met.
-type DocumentAnnotatorResponse_OcrLineDkValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) ErrorName() string {
-	return "DocumentAnnotatorResponse_OcrLineDkValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e DocumentAnnotatorResponse_OcrLineDkValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sDocumentAnnotatorResponse_OcrLineDk.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = DocumentAnnotatorResponse_OcrLineDkValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = DocumentAnnotatorResponse_OcrLineDkValidationError{}
-
-// Validate checks the field values on DocumentAnnotatorResponse_OcrLineSe with
-// the rules defined in the proto definition for this message. If any rules
-// are violated, an error is returned.
-func (m *DocumentAnnotatorResponse_OcrLineSe) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineSeValidationError{
-				field:  "PaymentId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if v, ok := interface{}(m.GetBankgiroCreditorId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineSeValidationError{
-				field:  "BankgiroCreditorId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	if v, ok := interface{}(m.GetPlusgiroCreditorId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineSeValidationError{
-				field:  "PlusgiroCreditorId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	return nil
-}
-
-// DocumentAnnotatorResponse_OcrLineSeValidationError is the validation error
-// returned by DocumentAnnotatorResponse_OcrLineSe.Validate if the designated
-// constraints aren't met.
-type DocumentAnnotatorResponse_OcrLineSeValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) ErrorName() string {
-	return "DocumentAnnotatorResponse_OcrLineSeValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e DocumentAnnotatorResponse_OcrLineSeValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sDocumentAnnotatorResponse_OcrLineSe.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = DocumentAnnotatorResponse_OcrLineSeValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = DocumentAnnotatorResponse_OcrLineSeValidationError{}
-
-// Validate checks the field values on DocumentAnnotatorResponse_OcrLineNo with
-// the rules defined in the proto definition for this message. If any rules
-// are violated, an error is returned.
-func (m *DocumentAnnotatorResponse_OcrLineNo) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineNoValidationError{
-				field:  "PaymentId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	return nil
-}
-
-// DocumentAnnotatorResponse_OcrLineNoValidationError is the validation error
-// returned by DocumentAnnotatorResponse_OcrLineNo.Validate if the designated
-// constraints aren't met.
-type DocumentAnnotatorResponse_OcrLineNoValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) ErrorName() string {
-	return "DocumentAnnotatorResponse_OcrLineNoValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e DocumentAnnotatorResponse_OcrLineNoValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sDocumentAnnotatorResponse_OcrLineNo.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = DocumentAnnotatorResponse_OcrLineNoValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = DocumentAnnotatorResponse_OcrLineNoValidationError{}
-
-// Validate checks the field values on DocumentAnnotatorResponse_OcrLineNl with
-// the rules defined in the proto definition for this message. If any rules
-// are violated, an error is returned.
-func (m *DocumentAnnotatorResponse_OcrLineNl) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineNlValidationError{
-				field:  "PaymentId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	return nil
-}
-
-// DocumentAnnotatorResponse_OcrLineNlValidationError is the validation error
-// returned by DocumentAnnotatorResponse_OcrLineNl.Validate if the designated
-// constraints aren't met.
-type DocumentAnnotatorResponse_OcrLineNlValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) ErrorName() string {
-	return "DocumentAnnotatorResponse_OcrLineNlValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e DocumentAnnotatorResponse_OcrLineNlValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sDocumentAnnotatorResponse_OcrLineNl.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = DocumentAnnotatorResponse_OcrLineNlValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = DocumentAnnotatorResponse_OcrLineNlValidationError{}
-
-// Validate checks the field values on DocumentAnnotatorResponse_OcrLineFi with
-// the rules defined in the proto definition for this message. If any rules
-// are violated, an error is returned.
-func (m *DocumentAnnotatorResponse_OcrLineFi) Validate() error {
-	if m == nil {
-		return nil
-	}
-
-	if v, ok := interface{}(m.GetPaymentId()).(interface{ Validate() error }); ok {
-		if err := v.Validate(); err != nil {
-			return DocumentAnnotatorResponse_OcrLineFiValidationError{
-				field:  "PaymentId",
-				reason: "embedded message failed validation",
-				cause:  err,
-			}
-		}
-	}
-
-	return nil
-}
-
-// DocumentAnnotatorResponse_OcrLineFiValidationError is the validation error
-// returned by DocumentAnnotatorResponse_OcrLineFi.Validate if the designated
-// constraints aren't met.
-type DocumentAnnotatorResponse_OcrLineFiValidationError struct {
-	field  string
-	reason string
-	cause  error
-	key    bool
-}
-
-// Field function returns field value.
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) Field() string { return e.field }
-
-// Reason function returns reason value.
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) Reason() string { return e.reason }
-
-// Cause function returns cause value.
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) Cause() error { return e.cause }
-
-// Key function returns key value.
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) Key() bool { return e.key }
-
-// ErrorName returns error name.
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) ErrorName() string {
-	return "DocumentAnnotatorResponse_OcrLineFiValidationError"
-}
-
-// Error satisfies the builtin error interface
-func (e DocumentAnnotatorResponse_OcrLineFiValidationError) Error() string {
-	cause := ""
-	if e.cause != nil {
-		cause = fmt.Sprintf(" | caused by: %v", e.cause)
-	}
-
-	key := ""
-	if e.key {
-		key = "key for "
-	}
-
-	return fmt.Sprintf(
-		"invalid %sDocumentAnnotatorResponse_OcrLineFi.%s: %s%s",
-		key,
-		e.field,
-		e.reason,
-		cause)
-}
-
-var _ error = DocumentAnnotatorResponse_OcrLineFiValidationError{}
-
-var _ interface {
-	Field() string
-	Reason() string
-	Key() bool
-	Cause() error
-	ErrorName() string
-} = DocumentAnnotatorResponse_OcrLineFiValidationError{}
