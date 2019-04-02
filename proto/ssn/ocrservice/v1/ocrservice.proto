@@ -19,7 +19,7 @@ message GetTextAnnotationRequest {
     // representation, whereas JSON representations use base64.
     bytes content = 1;
   }
-  repeated Image images = 2;
+  Image images = 2;
 }
 
 message GetTextAnnotationResponse {

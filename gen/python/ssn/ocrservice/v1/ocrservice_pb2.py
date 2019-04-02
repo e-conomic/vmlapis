@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\nocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1essn/type/text_annotation.proto\"w\n\x18GetTextAnnotationRequest\x12\x41\n\x06images\x18\x02 \x03(\x0b\x32\x31.ssn.ocrservice.v1.GetTextAnnotationRequest.Image\x1a\x18\n\x05Image\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1essn/type/text_annotation.proto\"w\n\x18GetTextAnnotationRequest\x12\x41\n\x06images\x18\x02 \x01(\x0b\x32\x31.ssn.ocrservice.v1.GetTextAnnotationRequest.Image\x1a\x18\n\x05Image\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
   ,
   dependencies=[ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -66,8 +66,8 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='images', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.images', index=0,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
