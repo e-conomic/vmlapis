@@ -11,13 +11,33 @@ service PdfService {
 message RasterizePdfRequest {
   bytes data = 1;
   uint32 dpi = 2;
+  
   enum Format {
     PNG = 0;
+    JPEG = 1;
+    WEBP = 2;
   }
   Format format = 3;
+  
+  enum ColorSpace {
+    GRAY = 0;
+    COLOR = 1;
+  }
+  ColorSpace color = 4;
+  
+  enum PageOption {
+    FIRST_LAST = 0;
+    FIRST = 1;
+    LAST = 2;
+    ALL = 3;
+  }
+  PageOption pages = 5;
 }
 
 message RasterizePdfResponse {
   uint32 index = 1;
   bytes data = 2;
+  uint32 width = 3;
+  uint32 height = 4;
+  double scale = 5; // Compared to a 72 dpi page
 }
