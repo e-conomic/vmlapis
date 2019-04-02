@@ -47,6 +47,10 @@ func (m *RasterizePdfRequest) Validate() error {
 
 	// no validation rules for Format
 
+	// no validation rules for Color
+
+	// no validation rules for Pages
+
 	return nil
 }
 
@@ -117,6 +121,12 @@ func (m *RasterizePdfResponse) Validate() error {
 	// no validation rules for Index
 
 	// no validation rules for Data
+
+	// no validation rules for Width
+
+	// no validation rules for Height
+
+	// no validation rules for Scale
 
 	return nil
 }

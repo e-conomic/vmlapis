@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.pdfservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\npdfservice'),
-  serialized_pb=_b('\n\"ssn/pdfservice/v1/pdfservice.proto\x12\x11ssn.pdfservice.v1\"\x82\x01\n\x13RasterizePdfRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0b\n\x03\x64pi\x18\x02 \x01(\r\x12=\n\x06\x66ormat\x18\x03 \x01(\x0e\x32-.ssn.pdfservice.v1.RasterizePdfRequest.Format\"\x11\n\x06\x46ormat\x12\x07\n\x03PNG\x10\x00\"3\n\x14RasterizePdfResponse\x12\r\n\x05index\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x32o\n\nPdfService\x12\x61\n\x0cRasterizePdf\x12&.ssn.pdfservice.v1.RasterizePdfRequest\x1a\'.ssn.pdfservice.v1.RasterizePdfResponse0\x01\x42\x0cZ\npdfserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/pdfservice/v1/pdfservice.proto\x12\x11ssn.pdfservice.v1\"\xf9\x02\n\x13RasterizePdfRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0b\n\x03\x64pi\x18\x02 \x01(\r\x12=\n\x06\x66ormat\x18\x03 \x01(\x0e\x32-.ssn.pdfservice.v1.RasterizePdfRequest.Format\x12@\n\x05\x63olor\x18\x04 \x01(\x0e\x32\x31.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace\x12@\n\x05pages\x18\x05 \x01(\x0e\x32\x31.ssn.pdfservice.v1.RasterizePdfRequest.PageOption\"%\n\x06\x46ormat\x12\x07\n\x03PNG\x10\x00\x12\x08\n\x04JPEG\x10\x01\x12\x08\n\x04WEBP\x10\x02\"!\n\nColorSpace\x12\x08\n\x04GRAY\x10\x00\x12\t\n\x05\x43OLOR\x10\x01\":\n\nPageOption\x12\x0e\n\nFIRST_LAST\x10\x00\x12\t\n\x05\x46IRST\x10\x01\x12\x08\n\x04LAST\x10\x02\x12\x07\n\x03\x41LL\x10\x03\"a\n\x14RasterizePdfResponse\x12\r\n\x05index\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\r\n\x05width\x18\x03 \x01(\r\x12\x0e\n\x06height\x18\x04 \x01(\r\x12\r\n\x05scale\x18\x05 \x01(\x01\x32o\n\nPdfService\x12\x61\n\x0cRasterizePdf\x12&.ssn.pdfservice.v1.RasterizePdfRequest\x1a\'.ssn.pdfservice.v1.RasterizePdfResponse0\x01\x42\x0cZ\npdfserviceb\x06proto3')
 )
 
 
@@ -34,13 +34,73 @@ _RASTERIZEPDFREQUEST_FORMAT = _descriptor.EnumDescriptor(
       name='PNG', index=0, number=0,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='JPEG', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='WEBP', index=2, number=2,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=171,
-  serialized_end=188,
+  serialized_start=303,
+  serialized_end=340,
 )
 _sym_db.RegisterEnumDescriptor(_RASTERIZEPDFREQUEST_FORMAT)
+
+_RASTERIZEPDFREQUEST_COLORSPACE = _descriptor.EnumDescriptor(
+  name='ColorSpace',
+  full_name='ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='GRAY', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='COLOR', index=1, number=1,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=342,
+  serialized_end=375,
+)
+_sym_db.RegisterEnumDescriptor(_RASTERIZEPDFREQUEST_COLORSPACE)
+
+_RASTERIZEPDFREQUEST_PAGEOPTION = _descriptor.EnumDescriptor(
+  name='PageOption',
+  full_name='ssn.pdfservice.v1.RasterizePdfRequest.PageOption',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='FIRST_LAST', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FIRST', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LAST', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ALL', index=3, number=3,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=377,
+  serialized_end=435,
+)
+_sym_db.RegisterEnumDescriptor(_RASTERIZEPDFREQUEST_PAGEOPTION)
 
 
 _RASTERIZEPDFREQUEST = _descriptor.Descriptor(
@@ -71,12 +131,28 @@ _RASTERIZEPDFREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='color', full_name='ssn.pdfservice.v1.RasterizePdfRequest.color', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='pages', full_name='ssn.pdfservice.v1.RasterizePdfRequest.pages', index=4,
+      number=5, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
     _RASTERIZEPDFREQUEST_FORMAT,
+    _RASTERIZEPDFREQUEST_COLORSPACE,
+    _RASTERIZEPDFREQUEST_PAGEOPTION,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -85,7 +161,7 @@ _RASTERIZEPDFREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=58,
-  serialized_end=188,
+  serialized_end=435,
 )
 
 
@@ -110,6 +186,27 @@ _RASTERIZEPDFRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='ssn.pdfservice.v1.RasterizePdfResponse.width', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='ssn.pdfservice.v1.RasterizePdfResponse.height', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='scale', full_name='ssn.pdfservice.v1.RasterizePdfResponse.scale', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -122,12 +219,16 @@ _RASTERIZEPDFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=190,
-  serialized_end=241,
+  serialized_start=437,
+  serialized_end=534,
 )
 
 _RASTERIZEPDFREQUEST.fields_by_name['format'].enum_type = _RASTERIZEPDFREQUEST_FORMAT
+_RASTERIZEPDFREQUEST.fields_by_name['color'].enum_type = _RASTERIZEPDFREQUEST_COLORSPACE
+_RASTERIZEPDFREQUEST.fields_by_name['pages'].enum_type = _RASTERIZEPDFREQUEST_PAGEOPTION
 _RASTERIZEPDFREQUEST_FORMAT.containing_type = _RASTERIZEPDFREQUEST
+_RASTERIZEPDFREQUEST_COLORSPACE.containing_type = _RASTERIZEPDFREQUEST
+_RASTERIZEPDFREQUEST_PAGEOPTION.containing_type = _RASTERIZEPDFREQUEST
 DESCRIPTOR.message_types_by_name['RasterizePdfRequest'] = _RASTERIZEPDFREQUEST
 DESCRIPTOR.message_types_by_name['RasterizePdfResponse'] = _RASTERIZEPDFRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -155,8 +256,8 @@ _PDFSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=243,
-  serialized_end=354,
+  serialized_start=536,
+  serialized_end=647,
   methods=[
   _descriptor.MethodDescriptor(
     name='RasterizePdf',
