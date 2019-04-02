@@ -20,22 +20,22 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\nocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1essn/type/text_annotation.proto\"w\n\x18GetTextAnnotationRequest\x12\x41\n\x06images\x18\x02 \x01(\x0b\x32\x31.ssn.ocrservice.v1.GetTextAnnotationRequest.Image\x1a\x18\n\x05Image\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1essn/type/text_annotation.proto\"\x7f\n\x18GetTextAnnotationRequest\x12\x46\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x34.ssn.ocrservice.v1.GetTextAnnotationRequest.Document\x1a\x1b\n\x08\x44ocument\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
   ,
   dependencies=[ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
 
 
-_GETTEXTANNOTATIONREQUEST_IMAGE = _descriptor.Descriptor(
-  name='Image',
-  full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.Image',
+_GETTEXTANNOTATIONREQUEST_DOCUMENT = _descriptor.Descriptor(
+  name='Document',
+  full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.Document',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='content', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.Image.content', index=0,
+      name='content', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.Document.content', index=0,
       number=1, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -53,8 +53,8 @@ _GETTEXTANNOTATIONREQUEST_IMAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=184,
-  serialized_end=208,
+  serialized_start=189,
+  serialized_end=216,
 )
 
 _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
@@ -65,7 +65,7 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='images', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.images', index=0,
+      name='document', full_name='ssn.ocrservice.v1.GetTextAnnotationRequest.document', index=0,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -74,7 +74,7 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_GETTEXTANNOTATIONREQUEST_IMAGE, ],
+  nested_types=[_GETTEXTANNOTATIONREQUEST_DOCUMENT, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -84,7 +84,7 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=89,
-  serialized_end=208,
+  serialized_end=216,
 )
 
 
@@ -114,8 +114,8 @@ _GETTEXTANNOTATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=210,
-  serialized_end=288,
+  serialized_start=218,
+  serialized_end=296,
 )
 
 
@@ -145,8 +145,8 @@ _OCRSCANIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=290,
-  serialized_end=325,
+  serialized_start=298,
+  serialized_end=333,
 )
 
 
@@ -176,12 +176,12 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=327,
-  serialized_end=368,
+  serialized_start=335,
+  serialized_end=376,
 )
 
-_GETTEXTANNOTATIONREQUEST_IMAGE.containing_type = _GETTEXTANNOTATIONREQUEST
-_GETTEXTANNOTATIONREQUEST.fields_by_name['images'].message_type = _GETTEXTANNOTATIONREQUEST_IMAGE
+_GETTEXTANNOTATIONREQUEST_DOCUMENT.containing_type = _GETTEXTANNOTATIONREQUEST
+_GETTEXTANNOTATIONREQUEST.fields_by_name['document'].message_type = _GETTEXTANNOTATIONREQUEST_DOCUMENT
 _GETTEXTANNOTATIONRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 DESCRIPTOR.message_types_by_name['GetTextAnnotationRequest'] = _GETTEXTANNOTATIONREQUEST
 DESCRIPTOR.message_types_by_name['GetTextAnnotationResponse'] = _GETTEXTANNOTATIONRESPONSE
@@ -191,10 +191,10 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 GetTextAnnotationRequest = _reflection.GeneratedProtocolMessageType('GetTextAnnotationRequest', (_message.Message,), dict(
 
-  Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), dict(
-    DESCRIPTOR = _GETTEXTANNOTATIONREQUEST_IMAGE,
+  Document = _reflection.GeneratedProtocolMessageType('Document', (_message.Message,), dict(
+    DESCRIPTOR = _GETTEXTANNOTATIONREQUEST_DOCUMENT,
     __module__ = 'ssn.ocrservice.v1.ocrservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.GetTextAnnotationRequest.Image)
+    # @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.GetTextAnnotationRequest.Document)
     ))
   ,
   DESCRIPTOR = _GETTEXTANNOTATIONREQUEST,
@@ -202,7 +202,7 @@ GetTextAnnotationRequest = _reflection.GeneratedProtocolMessageType('GetTextAnno
   # @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.GetTextAnnotationRequest)
   ))
 _sym_db.RegisterMessage(GetTextAnnotationRequest)
-_sym_db.RegisterMessage(GetTextAnnotationRequest.Image)
+_sym_db.RegisterMessage(GetTextAnnotationRequest.Document)
 
 GetTextAnnotationResponse = _reflection.GeneratedProtocolMessageType('GetTextAnnotationResponse', (_message.Message,), dict(
   DESCRIPTOR = _GETTEXTANNOTATIONRESPONSE,
@@ -234,8 +234,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=371,
-  serialized_end=592,
+  serialized_start=379,
+  serialized_end=600,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',

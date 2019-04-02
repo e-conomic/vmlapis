@@ -41,10 +41,10 @@ func (m *GetTextAnnotationRequest) Validate() error {
 		return nil
 	}
 
-	if v, ok := interface{}(m.GetImages()).(interface{ Validate() error }); ok {
+	if v, ok := interface{}(m.GetDocument()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
 			return GetTextAnnotationRequestValidationError{
-				field:  "Images",
+				field:  "Document",
 				reason: "embedded message failed validation",
 				cause:  err,
 			}
@@ -325,10 +325,10 @@ var _ interface {
 	ErrorName() string
 } = OcrScanImageResponseValidationError{}
 
-// Validate checks the field values on GetTextAnnotationRequest_Image with the
-// rules defined in the proto definition for this message. If any rules are
-// violated, an error is returned.
-func (m *GetTextAnnotationRequest_Image) Validate() error {
+// Validate checks the field values on GetTextAnnotationRequest_Document with
+// the rules defined in the proto definition for this message. If any rules
+// are violated, an error is returned.
+func (m *GetTextAnnotationRequest_Document) Validate() error {
 	if m == nil {
 		return nil
 	}
@@ -338,10 +338,10 @@ func (m *GetTextAnnotationRequest_Image) Validate() error {
 	return nil
 }
 
-// GetTextAnnotationRequest_ImageValidationError is the validation error
-// returned by GetTextAnnotationRequest_Image.Validate if the designated
+// GetTextAnnotationRequest_DocumentValidationError is the validation error
+// returned by GetTextAnnotationRequest_Document.Validate if the designated
 // constraints aren't met.
-type GetTextAnnotationRequest_ImageValidationError struct {
+type GetTextAnnotationRequest_DocumentValidationError struct {
 	field  string
 	reason string
 	cause  error
@@ -349,24 +349,24 @@ type GetTextAnnotationRequest_ImageValidationError struct {
 }
 
 // Field function returns field value.
-func (e GetTextAnnotationRequest_ImageValidationError) Field() string { return e.field }
+func (e GetTextAnnotationRequest_DocumentValidationError) Field() string { return e.field }
 
 // Reason function returns reason value.
-func (e GetTextAnnotationRequest_ImageValidationError) Reason() string { return e.reason }
+func (e GetTextAnnotationRequest_DocumentValidationError) Reason() string { return e.reason }
 
 // Cause function returns cause value.
-func (e GetTextAnnotationRequest_ImageValidationError) Cause() error { return e.cause }
+func (e GetTextAnnotationRequest_DocumentValidationError) Cause() error { return e.cause }
 
 // Key function returns key value.
-func (e GetTextAnnotationRequest_ImageValidationError) Key() bool { return e.key }
+func (e GetTextAnnotationRequest_DocumentValidationError) Key() bool { return e.key }
 
 // ErrorName returns error name.
-func (e GetTextAnnotationRequest_ImageValidationError) ErrorName() string {
-	return "GetTextAnnotationRequest_ImageValidationError"
+func (e GetTextAnnotationRequest_DocumentValidationError) ErrorName() string {
+	return "GetTextAnnotationRequest_DocumentValidationError"
 }
 
 // Error satisfies the builtin error interface
-func (e GetTextAnnotationRequest_ImageValidationError) Error() string {
+func (e GetTextAnnotationRequest_DocumentValidationError) Error() string {
 	cause := ""
 	if e.cause != nil {
 		cause = fmt.Sprintf(" | caused by: %v", e.cause)
@@ -378,14 +378,14 @@ func (e GetTextAnnotationRequest_ImageValidationError) Error() string {
 	}
 
 	return fmt.Sprintf(
-		"invalid %sGetTextAnnotationRequest_Image.%s: %s%s",
+		"invalid %sGetTextAnnotationRequest_Document.%s: %s%s",
 		key,
 		e.field,
 		e.reason,
 		cause)
 }
 
-var _ error = GetTextAnnotationRequest_ImageValidationError{}
+var _ error = GetTextAnnotationRequest_DocumentValidationError{}
 
 var _ interface {
 	Field() string
@@ -393,4 +393,4 @@ var _ interface {
 	Key() bool
 	Cause() error
 	ErrorName() string
-} = GetTextAnnotationRequest_ImageValidationError{}
+} = GetTextAnnotationRequest_DocumentValidationError{}
