@@ -29,7 +29,7 @@ message RasterizePdfRequest {
     FIRST_LAST = 0;
     FIRST = 1;
     LAST = 2;
-    ALL = 3
+    ALL = 3;
   }
   PageOption pages = 5;
 }
