@@ -2,6 +2,7 @@ protoc:
   version: 3.6.1
   includes:
   - ../deps/googleapis
+  - ../deps/tensorflow
 
 lint:
   group: google
@@ -16,11 +17,11 @@ generate:
   - name: grpc-gateway
     type: go
     output: ../gen/go
-  - name: python
-    output: ../gen/python
-  - name: grpc-python
-    path: /usr/local/bin/grpc_python_plugin
-    output: ../gen/python
-  - name: validate
-    flags: "lang=go"
-    output: ../gen/go
+  # - name: python
+  #   output: ../gen/python
+  # - name: grpc-python
+  #   path: /usr/local/bin/grpc_python_plugin
+  #   output: ../gen/python
+  # - name: validate
+  #   flags: "lang=go"
+  #   output: ../gen/go

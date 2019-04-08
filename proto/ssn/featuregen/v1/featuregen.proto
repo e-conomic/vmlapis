@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package ssn.featuregen.v1;
+
+option go_package = "featuregen";
+
+import "ssn/type/text_annotation.proto";
+import "tensorflow/core/example/example.proto";
+
+// Machine learning Service
+service FeatureGen {
+  rpc GenerateFeatures(FeatureGenRequest) returns (FeatureGenResponse);
+}
+
+message FeatureGenRequest {
+  string truth = 1;
+  ssn.type.TextAnnotation text_annotation = 2;
+}
+
+message FeatureGenResponse {
+  tensorflow.Example example = 1;
+}
