@@ -735,6 +735,72 @@ var _ interface {
 	ErrorName() string
 } = DocumentSourceValidationError{}
 
+// Validate checks the field values on Confidence with the rules defined in the
+// proto definition for this message. If any rules are violated, an error is returned.
+func (m *Confidence) Validate() error {
+	if m == nil {
+		return nil
+	}
+
+	// no validation rules for Level
+
+	return nil
+}
+
+// ConfidenceValidationError is the validation error returned by
+// Confidence.Validate if the designated constraints aren't met.
+type ConfidenceValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ConfidenceValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ConfidenceValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ConfidenceValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ConfidenceValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ConfidenceValidationError) ErrorName() string { return "ConfidenceValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ConfidenceValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sConfidence.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ConfidenceValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ConfidenceValidationError{}
+
 // Validate checks the field values on PredictedField with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
 // is returned.
@@ -747,7 +813,15 @@ func (m *PredictedField) Validate() error {
 
 	// no validation rules for NormalizedValue
 
-	// no validation rules for Confidence
+	if v, ok := interface{}(m.GetConfidence()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return PredictedFieldValidationError{
+				field:  "Confidence",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
 
 	if v, ok := interface{}(m.GetBoundingBox()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
