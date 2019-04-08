@@ -13,10 +13,34 @@ service FeatureGen {
 }
 
 message FeatureGenRequest {
-  string truth = 1;
+  TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
 }
 
 message FeatureGenResponse {
   tensorflow.Example example = 1;
+}
+
+message TruthLabels {
+  string total_incl_vat = 1;
+  string total_vat = 2;
+  string total_excl_vat = 3;
+  string order_date = 4;
+  string payment_due_date = 5;
+  string document_type = 6;
+  string currency = 7;
+  string credit_card_number = 8;
+  string payment_method = 9;
+  string ocr_line_dk_type = 10;
+  string ocr_line_dk_payment_id = 11;
+  string ocr_line_dk_creditor_id = 12;
+  string ocr_line_se_payment_id = 13;
+  string ocr_line_se_bankgiro_creditor_id = 14;
+  string ocr_line_se_plusgiro_creditor_id = 15;
+  string ocr_line_no_payment_id = 16;
+  string ocr_line_fi_payment_id = 17;
+  string supplier_name = 18;
+  string supplier_corporate_id = 19;
+  string supplier_country_code = 20;
+  string invoice_number = 21;
 }
