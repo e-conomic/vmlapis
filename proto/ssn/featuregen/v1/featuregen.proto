@@ -7,7 +7,7 @@ option go_package = "featuregen";
 import "ssn/type/text_annotation.proto";
 import "tensorflow/core/example/example.proto";
 
-// Machine learning Service
+// Feature Generation Service
 service FeatureGen {
   rpc GenerateFeatures(FeatureGenRequest) returns (FeatureGenResponse);
 }
