@@ -125,7 +125,7 @@ message Feature {
   // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
   int32 max_results = 2;
   // The minimum confidence for predictions that the caller wants returned
-  ConfidenceLevel min_confidence = 3;
+  Confidence.Level min_confidence = 3;
 }
 
 message DocumentAnnotatorRequest {
@@ -230,13 +230,21 @@ message DocumentSource {
 
 // A bucketized representation of confidence, which is intended to give clients
 // highly stable results across model upgrades.
-enum ConfidenceLevel {
-  UNKNOWN = 0;
-  VERY_LOW = 1;
-  LOW = 2;
-  MID = 3;
-  HIGH = 4;
-  VERY_HIGH = 5;
+
+message Confidence {
+  enum Level {
+    UNKNOWN = 0;
+    VERY_LOW = 1;
+    LOW = 2;
+    MID = 3;
+    HIGH = 4;
+    VERY_HIGH = 5;
+  }
+  Level level = 1;
+  // The confidence message could be extended like this.
+  // float value = 2;
+  // float threshold = 3;
+
 }
 
 // Message as prediction
@@ -247,7 +255,7 @@ message PredictedField {
   // Only set when value is returned nomalized
   string normalized_value = 2;
   // The confidence of the prediction being correct
-  ConfidenceLevel confidence = 3;
+  Confidence confidence = 3;
   // The bounding box for the block.
   // The vertices are in the order of top-left, top-right, bottom-right,
   // bottom-left. When a rotation of the bounding box is detected the rotation
