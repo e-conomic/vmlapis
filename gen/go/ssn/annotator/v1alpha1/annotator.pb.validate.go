@@ -594,12 +594,7 @@ func (m *Document) Validate() error {
 		return nil
 	}
 
-	if len(m.GetContent()) < 261 {
-		return DocumentValidationError{
-			field:  "Content",
-			reason: "value length must be at least 261 bytes",
-		}
-	}
+	// no validation rules for Content
 
 	if v, ok := interface{}(m.GetSource()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
@@ -676,7 +671,18 @@ func (m *DocumentSource) Validate() error {
 		return nil
 	}
 
-	// no validation rules for HttpUri
+	if uri, err := url.Parse(m.GetHttpUri()); err != nil {
+		return DocumentSourceValidationError{
+			field:  "HttpUri",
+			reason: "value must be a valid URI",
+			cause:  err,
+		}
+	} else if !uri.IsAbs() {
+		return DocumentSourceValidationError{
+			field:  "HttpUri",
+			reason: "value must be absolute",
+		}
+	}
 
 	return nil
 }
