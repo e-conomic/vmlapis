@@ -210,7 +210,7 @@ message Document {
   // Document content, represented as a stream of bytes.
   // Note: As with all `bytes` fields, protobuffers use a pure binary
   // representation, whereas JSON representations use base64.
-  bytes content = 1 [(lyft.validate.rules).bytes.min_len = 261];
+  bytes content = 1;
   // Google Cloud Storage image location, or publicly-accessible image
   // URL. If both `content` and `source` are provided for a document, `content`
   // takes precedence and is used to perform the scan request.
