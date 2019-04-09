@@ -225,7 +225,7 @@ message DocumentSource {
   //    completed. Your request may fail if the specified host denies the
   //    request (e.g. due to request throttling or DOS prevention).
   //
-  string http_uri = 1;
+  string http_uri = 1 [(lyft.validate.rules).string.uri = true];
 }
 
 // A bucketized representation of confidence, which is intended to give clients
