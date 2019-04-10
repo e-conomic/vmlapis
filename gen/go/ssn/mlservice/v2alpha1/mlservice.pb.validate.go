@@ -65,21 +65,6 @@ func (m *MlRequest) Validate() error {
 		}
 	}
 
-	for idx, item := range m.GetOcrResponses() {
-		_, _ = idx, item
-
-		if v, ok := interface{}(item).(interface{ Validate() error }); ok {
-			if err := v.Validate(); err != nil {
-				return MlRequestValidationError{
-					field:  fmt.Sprintf("OcrResponses[%v]", idx),
-					reason: "embedded message failed validation",
-					cause:  err,
-				}
-			}
-		}
-
-	}
-
 	return nil
 }
 
