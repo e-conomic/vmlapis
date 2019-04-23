@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.annotator.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\tannotator'),
-  serialized_pb=_b('\n&ssn/annotator/v1alpha1/annotator.proto\x12\x16ssn.annotator.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\xbe\x05\n\x07\x46\x65\x61ture\x12\x32\n\x04type\x18\x01 \x01(\x0e\x32$.ssn.annotator.v1alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12@\n\x0emin_confidence\x18\x03 \x01(\x0e\x32(.ssn.annotator.v1alpha1.Confidence.Level\"\xa7\x04\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x19\n\x15SUPPLIER_CORPORATE_ID\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x14\n\x10OCR_LINE_DK_TYPE\x10\x0e\x12\x1a\n\x16OCR_LINE_DK_PAYMENT_ID\x10\x0f\x12\x1b\n\x17OCR_LINE_DK_CREDITOR_ID\x10\x10\x12\x1a\n\x16OCR_LINE_SE_PAYMENT_ID\x10\x11\x12$\n OCR_LINE_SE_BANKGIRO_CREDITOR_ID\x10\x12\x12$\n OCR_LINE_SE_PLUSGIRO_CREDITOR_ID\x10\x13\x12\x1a\n\x16OCR_LINE_NO_PAYMENT_ID\x10\x14\x12\x1a\n\x16OCR_LINE_FI_PAYMENT_ID\x10\x15\x12\x1a\n\x16OCR_LINE_NL_PAYMENT_ID\x10\x16\"\x81\x01\n\x18\x44ocumentAnnotatorRequest\x12\x32\n\x08\x64ocument\x18\x01 \x01(\x0b\x32 .ssn.annotator.v1alpha1.Document\x12\x31\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1f.ssn.annotator.v1alpha1.Feature\"\xe9\x0b\n\x19\x44ocumentAnnotatorResponse\x12:\n\norder_date\x18\x01 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12@\n\x10payment_due_date\x18\x02 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x38\n\x08\x63urrency\x18\x03 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x39\n\ttotal_vat\x18\x04 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12=\n\rdocument_type\x18\t \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0epayment_method\x18\n \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x42\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0einvoice_number\x18\x0c \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x31\n\x0ftext_annotation\x18\r \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12@\n\x10ocr_line_dk_type\x18\x0e \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_dk_payment_id\x18\x0f \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12G\n\x17ocr_line_dk_creditor_id\x18\x10 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_se_payment_id\x18\x11 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_bankgiro_creditor_id\x18\x12 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_plusgiro_creditor_id\x18\x13 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_no_payment_id\x18\x14 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_fi_payment_id\x18\x15 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_nl_payment_id\x18\x16 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\"S\n\x08\x44ocument\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\x12\x36\n\x06source\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.DocumentSource\".\n\x0e\x44ocumentSource\x12\x1c\n\x08http_uri\x18\x01 \x01(\tB\n\xba\xe9\xc0\x03\x05r\x03\x88\x01\x01\"\x94\x01\n\nConfidence\x12\x37\n\x05level\x18\x01 \x01(\x0e\x32(.ssn.annotator.v1alpha1.Confidence.Level\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\x9f\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12\x36\n\nconfidence\x18\x03 \x01(\x0b\x32\".ssn.annotator.v1alpha1.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly2\xb5\x01\n\x11\x44ocumentAnnotator\x12\x9f\x01\n\x10\x41nnotateDocument\x12\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x1a\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v1alpha1/document:annotate:\x01*B\x0bZ\tannotatorb\x06proto3')
+  serialized_pb=_b('\n&ssn/annotator/v1alpha1/annotator.proto\x12\x16ssn.annotator.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\x17ssn/type/geometry.proto\x1a\x1essn/type/text_annotation.proto\"\xc8\x05\n\x07\x46\x65\x61ture\x12\x32\n\x04type\x18\x01 \x01(\x0e\x32$.ssn.annotator.v1alpha1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12@\n\x0emin_confidence\x18\x03 \x01(\x0e\x32(.ssn.annotator.v1alpha1.Confidence.Level\"\xb1\x04\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x19\n\x15SUPPLIER_CORPORATE_ID\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x16\n\x12\x43REDIT_CARD_NUMBER\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x14\n\x10OCR_LINE_DK_TYPE\x10\x0e\x12\x1a\n\x16OCR_LINE_DK_PAYMENT_ID\x10\x0f\x12\x1b\n\x17OCR_LINE_DK_CREDITOR_ID\x10\x10\x12\x1a\n\x16OCR_LINE_SE_PAYMENT_ID\x10\x11\x12$\n OCR_LINE_SE_BANKGIRO_CREDITOR_ID\x10\x12\x12$\n OCR_LINE_SE_PLUSGIRO_CREDITOR_ID\x10\x13\x12\x1a\n\x16OCR_LINE_NO_PAYMENT_ID\x10\x14\x12\x1a\n\x16OCR_LINE_FI_PAYMENT_ID\x10\x15\x12\x1a\n\x16OCR_LINE_NL_PAYMENT_ID\x10\x16\x12\x08\n\x04TEXT\x10\x17\"\x81\x01\n\x18\x44ocumentAnnotatorRequest\x12\x32\n\x08\x64ocument\x18\x01 \x01(\x0b\x32 .ssn.annotator.v1alpha1.Document\x12\x31\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x1f.ssn.annotator.v1alpha1.Feature\"\xf7\x0b\n\x19\x44ocumentAnnotatorResponse\x12:\n\norder_date\x18\x01 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12@\n\x10payment_due_date\x18\x02 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x38\n\x08\x63urrency\x18\x03 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x39\n\ttotal_vat\x18\x04 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x45\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12=\n\rdocument_type\x18\t \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0epayment_method\x18\n \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x42\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12>\n\x0einvoice_number\x18\x0c \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x31\n\x0ftext_annotation\x18\r \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12@\n\x10ocr_line_dk_type\x18\x0e \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_dk_payment_id\x18\x0f \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12G\n\x17ocr_line_dk_creditor_id\x18\x10 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_se_payment_id\x18\x11 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_bankgiro_creditor_id\x18\x12 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12P\n ocr_line_se_plusgiro_creditor_id\x18\x13 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_no_payment_id\x18\x14 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_fi_payment_id\x18\x15 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x46\n\x16ocr_line_nl_payment_id\x18\x16 \x03(\x0b\x32&.ssn.annotator.v1alpha1.PredictedField\x12\x0c\n\x04text\x18\x17 \x01(\t\"S\n\x08\x44ocument\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\x12\x36\n\x06source\x18\x02 \x01(\x0b\x32&.ssn.annotator.v1alpha1.DocumentSource\".\n\x0e\x44ocumentSource\x12\x1c\n\x08http_uri\x18\x01 \x01(\tB\n\xba\xe9\xc0\x03\x05r\x03\x88\x01\x01\"\x94\x01\n\nConfidence\x12\x37\n\x05level\x18\x01 \x01(\x0e\x32(.ssn.annotator.v1alpha1.Confidence.Level\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\x9f\x01\n\x0ePredictedField\x12\r\n\x05value\x18\x01 \x01(\t\x12\x18\n\x10normalized_value\x18\x02 \x01(\t\x12\x36\n\nconfidence\x18\x03 \x01(\x0b\x32\".ssn.annotator.v1alpha1.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly2\xb5\x01\n\x11\x44ocumentAnnotator\x12\x9f\x01\n\x10\x41nnotateDocument\x12\x30.ssn.annotator.v1alpha1.DocumentAnnotatorRequest\x1a\x31.ssn.annotator.v1alpha1.DocumentAnnotatorResponse\"&\x82\xd3\xe4\x93\x02 \"\x1b/v1alpha1/document:annotate:\x01*B\x0bZ\tannotatorb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -127,11 +127,15 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
       name='OCR_LINE_NL_PAYMENT_ID', index=22, number=22,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TEXT', index=23, number=23,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=335,
-  serialized_end=886,
+  serialized_end=896,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
 
@@ -168,8 +172,8 @@ _CONFIDENCE_LEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2741,
-  serialized_end=2818,
+  serialized_start=2765,
+  serialized_end=2842,
 )
 _sym_db.RegisterEnumDescriptor(_CONFIDENCE_LEVEL)
 
@@ -216,7 +220,7 @@ _FEATURE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=184,
-  serialized_end=886,
+  serialized_end=896,
 )
 
 
@@ -253,8 +257,8 @@ _DOCUMENTANNOTATORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=889,
-  serialized_end=1018,
+  serialized_start=899,
+  serialized_end=1028,
 )
 
 
@@ -419,6 +423,13 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='text', full_name='ssn.annotator.v1alpha1.DocumentAnnotatorResponse.text', index=22,
+      number=23, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -431,8 +442,8 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1021,
-  serialized_end=2534,
+  serialized_start=1031,
+  serialized_end=2558,
 )
 
 
@@ -469,8 +480,8 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2536,
-  serialized_end=2619,
+  serialized_start=2560,
+  serialized_end=2643,
 )
 
 
@@ -500,8 +511,8 @@ _DOCUMENTSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2621,
-  serialized_end=2667,
+  serialized_start=2645,
+  serialized_end=2691,
 )
 
 
@@ -532,8 +543,8 @@ _CONFIDENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2670,
-  serialized_end=2818,
+  serialized_start=2694,
+  serialized_end=2842,
 )
 
 
@@ -584,8 +595,8 @@ _PREDICTEDFIELD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2821,
-  serialized_end=2980,
+  serialized_start=2845,
+  serialized_end=3004,
 )
 
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
@@ -688,8 +699,8 @@ _DOCUMENTANNOTATOR = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2983,
-  serialized_end=3164,
+  serialized_start=3007,
+  serialized_end=3188,
   methods=[
   _descriptor.MethodDescriptor(
     name='AnnotateDocument',
