@@ -118,6 +118,8 @@ message Feature {
     OCR_LINE_FI_PAYMENT_ID = 21;
     // Run dutch ocr line detection for the payment id
     OCR_LINE_NL_PAYMENT_ID = 22;
+    // Return document text
+    TEXT = 23;
   }
   // The feature type.
   Type type = 1;
@@ -204,6 +206,8 @@ message DocumentAnnotatorResponse {
   repeated PredictedField ocr_line_fi_payment_id = 21;
   // example: "00000159220010146012"
   repeated PredictedField ocr_line_nl_payment_id = 22;
+  // Return a string containing the text from the document
+  string text = 23;
 }
 
 message Document {
