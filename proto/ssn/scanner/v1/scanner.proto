@@ -5,7 +5,6 @@ package ssn.scanner.v1;
 option go_package = "scanner";
 
 import "google/api/annotations.proto";
-import "lyft/validate/validate.proto";
 import "ssn/mlservice/v1/mlservice.proto";
 
 service Scanner {
@@ -26,7 +25,7 @@ message Feature {
 }
 
 message ScanRequest {
-  bytes image = 1 [(lyft.validate.rules).bytes.min_len = 261];
+  bytes image = 1;
   repeated Feature features = 2;
 }
 
