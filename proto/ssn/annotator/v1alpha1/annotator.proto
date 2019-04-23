@@ -5,7 +5,6 @@ package ssn.annotator.v1alpha1;
 option go_package = "annotator";
 
 import "google/api/annotations.proto";
-import "lyft/validate/validate.proto";
 import "ssn/type/geometry.proto";
 import "ssn/type/text_annotation.proto";
 
@@ -229,7 +228,7 @@ message DocumentSource {
   //    completed. Your request may fail if the specified host denies the
   //    request (e.g. due to request throttling or DOS prevention).
   //
-  string http_uri = 1 [(lyft.validate.rules).string.uri = true];
+  string http_uri = 1;
 }
 
 // A bucketized representation of confidence, which is intended to give clients

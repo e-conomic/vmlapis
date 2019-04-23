@@ -22,6 +22,3 @@ generate:
   - name: grpc-python
     path: /usr/local/bin/grpc_python_plugin
     output: ../gen/python
-  - name: validate
-    flags: "lang=go"
-    output: ../gen/go

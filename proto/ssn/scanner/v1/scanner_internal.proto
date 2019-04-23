@@ -5,7 +5,6 @@ package ssn.scanner.v1;
 option go_package = "scanner";
 
 import "google/api/annotations.proto";
-import "lyft/validate/validate.proto";
 import "ssn/ocrservice/v1/ocrservice.proto";
 import "ssn/scanner/v1/scanner.proto";
 

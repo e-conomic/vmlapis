@@ -13,7 +13,6 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
-from lyft.validate import validate_pb2 as lyft_dot_validate_dot_validate__pb2
 from ssn.ocrservice.v1 import ocrservice_pb2 as ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2
 from ssn.scanner.v1 import scanner_pb2 as ssn_dot_scanner_dot_v1_dot_scanner__pb2
 
@@ -23,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.scanner.v1',
   syntax='proto3',
   serialized_options=_b('Z\007scanner'),
-  serialized_pb=_b('\n%ssn/scanner/v1/scanner_internal.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1clyft/validate/validate.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\x1a\x1cssn/scanner/v1/scanner.proto\"\x8b\x01\n\x14InternalScanResponse\x12\x33\n\rscan_response\x18\x01 \x01(\x0b\x32\x1c.ssn.scanner.v1.ScanResponse\x12>\n\rocr_responses\x18\x02 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse2d\n\x0fInternalScanner\x12Q\n\x0cInternalScan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a$.ssn.scanner.v1.InternalScanResponseB\tZ\x07scannerb\x06proto3')
+  serialized_pb=_b('\n%ssn/scanner/v1/scanner_internal.proto\x12\x0essn.scanner.v1\x1a\x1cgoogle/api/annotations.proto\x1a\"ssn/ocrservice/v1/ocrservice.proto\x1a\x1cssn/scanner/v1/scanner.proto\"\x8b\x01\n\x14InternalScanResponse\x12\x33\n\rscan_response\x18\x01 \x01(\x0b\x32\x1c.ssn.scanner.v1.ScanResponse\x12>\n\rocr_responses\x18\x02 \x03(\x0b\x32\'.ssn.ocrservice.v1.OcrScanImageResponse2d\n\x0fInternalScanner\x12Q\n\x0cInternalScan\x12\x1b.ssn.scanner.v1.ScanRequest\x1a$.ssn.scanner.v1.InternalScanResponseB\tZ\x07scannerb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,lyft_dot_validate_dot_validate__pb2.DESCRIPTOR,ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,ssn_dot_scanner_dot_v1_dot_scanner__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.DESCRIPTOR,ssn_dot_scanner_dot_v1_dot_scanner__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +62,8 @@ _INTERNALSCANRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=184,
-  serialized_end=323,
+  serialized_start=154,
+  serialized_end=293,
 )
 
 _INTERNALSCANRESPONSE.fields_by_name['scan_response'].message_type = ssn_dot_scanner_dot_v1_dot_scanner__pb2._SCANRESPONSE
@@ -88,8 +87,8 @@ _INTERNALSCANNER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=325,
-  serialized_end=425,
+  serialized_start=295,
+  serialized_end=395,
   methods=[
   _descriptor.MethodDescriptor(
     name='InternalScan',
