@@ -528,6 +528,8 @@ func (m *DocumentAnnotatorResponse) Validate() error {
 
 	}
 
+	// no validation rules for Text
+
 	return nil
 }
 
