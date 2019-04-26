@@ -252,7 +252,7 @@ message Confidence {
 
 // Message as prediction
 message PredictedField {
-    // Normalized value 01-01-2019
+  // Normalized value 01-01-2019
   string value = 1;
   // The text as found on the document "1. Jan"
   // useful for overlays
