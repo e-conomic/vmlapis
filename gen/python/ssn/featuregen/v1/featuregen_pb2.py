@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.type import date_pb2 as google_dot_type_dot_date__pb2
 from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 from tensorflow.core.example import example_pb2 as tensorflow_dot_core_dot_example_dot_example__pb2
 
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.featuregen.v1',
   syntax='proto3',
   serialized_options=_b('Z\nfeaturegen'),
-  serialized_pb=_b('\n\"ssn/featuregen/v1/featuregen.proto\x12\x11ssn.featuregen.v1\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"|\n\x11\x46\x65\x61tureGenRequest\x12\x34\n\x0ctruth_labels\x18\x01 \x01(\x0b\x32\x1e.ssn.featuregen.v1.TruthLabels\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"\xd7\x04\n\x0bTruthLabels\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\t\x12\x11\n\ttotal_vat\x18\x02 \x01(\t\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\t\x12\x12\n\norder_date\x18\x04 \x01(\t\x12\x18\n\x10payment_due_date\x18\x05 \x01(\t\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x15\n\rsupplier_name\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t2m\n\nFeatureGen\x12_\n\x10GenerateFeatures\x12$.ssn.featuregen.v1.FeatureGenRequest\x1a%.ssn.featuregen.v1.FeatureGenResponseB\x0cZ\nfeaturegenb\x06proto3')
+  serialized_pb=_b('\n\"ssn/featuregen/v1/featuregen.proto\x12\x11ssn.featuregen.v1\x1a\x16google/type/date.proto\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"\x8c\x01\n\x11\x46\x65\x61tureGenRequest\x12\x34\n\x0ctruth_labels\x18\x01 \x01(\x0b\x32\x1e.ssn.featuregen.v1.TruthLabels\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x0e\n\x06origin\x18\x03 \x01(\t\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"\xfd\x04\n\x0bTruthLabels\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\x02\x12\x11\n\ttotal_vat\x18\x02 \x01(\x02\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\x02\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x15\n\rsupplier_name\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t2m\n\nFeatureGen\x12_\n\x10GenerateFeatures\x12$.ssn.featuregen.v1.FeatureGenRequest\x1a%.ssn.featuregen.v1.FeatureGenResponseB\x0cZ\nfeaturegenb\x06proto3')
   ,
-  dependencies=[ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,tensorflow_dot_core_dot_example_dot_example__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,tensorflow_dot_core_dot_example_dot_example__pb2.DESCRIPTOR,])
 
 
 
@@ -49,6 +50,13 @@ _FEATUREGENREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='origin', full_name='ssn.featuregen.v1.FeatureGenRequest.origin', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -61,8 +69,8 @@ _FEATUREGENREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=128,
-  serialized_end=252,
+  serialized_start=153,
+  serialized_end=293,
 )
 
 
@@ -92,8 +100,8 @@ _FEATUREGENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=254,
-  serialized_end=312,
+  serialized_start=295,
+  serialized_end=353,
 )
 
 
@@ -106,36 +114,36 @@ _TRUTHLABELS = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='total_incl_vat', full_name='ssn.featuregen.v1.TruthLabels.total_incl_vat', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='total_vat', full_name='ssn.featuregen.v1.TruthLabels.total_vat', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='total_excl_vat', full_name='ssn.featuregen.v1.TruthLabels.total_excl_vat', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='order_date', full_name='ssn.featuregen.v1.TruthLabels.order_date', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='payment_due_date', full_name='ssn.featuregen.v1.TruthLabels.payment_due_date', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -263,13 +271,15 @@ _TRUTHLABELS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=315,
-  serialized_end=914,
+  serialized_start=356,
+  serialized_end=993,
 )
 
 _FEATUREGENREQUEST.fields_by_name['truth_labels'].message_type = _TRUTHLABELS
 _FEATUREGENREQUEST.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 _FEATUREGENRESPONSE.fields_by_name['example'].message_type = tensorflow_dot_core_dot_example_dot_example__pb2._EXAMPLE
+_TRUTHLABELS.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb2._DATE
+_TRUTHLABELS.fields_by_name['payment_due_date'].message_type = google_dot_type_dot_date__pb2._DATE
 DESCRIPTOR.message_types_by_name['FeatureGenRequest'] = _FEATUREGENREQUEST
 DESCRIPTOR.message_types_by_name['FeatureGenResponse'] = _FEATUREGENRESPONSE
 DESCRIPTOR.message_types_by_name['TruthLabels'] = _TRUTHLABELS
@@ -305,8 +315,8 @@ _FEATUREGEN = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=916,
-  serialized_end=1025,
+  serialized_start=995,
+  serialized_end=1104,
   methods=[
   _descriptor.MethodDescriptor(
     name='GenerateFeatures',
