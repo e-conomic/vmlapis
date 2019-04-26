@@ -252,11 +252,11 @@ message Confidence {
 
 // Message as prediction
 message PredictedField {
-  // The text as found on the document "1. Jan"
+    // Normalized value 01-01-2019
   string value = 1;
-  // Normalized value 01-01-2019
-  // Only set when value is returned nomalized
-  string normalized_value = 2;
+  // The text as found on the document "1. Jan"
+  // useful for overlays
+  string text = 2;
   // The confidence of the prediction being correct
   Confidence confidence = 3;
   // The bounding box for the block.
