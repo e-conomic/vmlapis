@@ -5,60 +5,8 @@ package ssn.annotator.v1alpha1;
 option go_package = "annotator";
 
 import "google/api/annotations.proto";
-import "ssn/type/geometry.proto";
+import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
-
-// DocumentAnnotator
-// {
-//   "document":{
-//     "source": {
-//       http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
-//     }
-//   },
-//   "features":[
-//     {
-//       "type":"ORDER_DATE",
-//       "max_results":2
-//     },
-//     {
-//       "type":"CURRENCY",
-//       "max_results":1,
-//       "min_confidence": "LOW"
-//     }
-//   ]
-// }
-// Example response
-//
-// {
-//   "order_date": [
-//     {
-//       "value": "1. jan",
-//       "normalized_value": "01-01-2019",
-//       "confidence": "VERY_HIGH",
-//       "bounding_box":[{
-//         "x":123,
-//         "y": 32
-//       }, ...]
-//     },
-//     {
-//       "value": "1. jan",
-//       "normalized_value": "01-01-2019",
-//       "confidence": "MID",
-//       "bounding_box": [{
-//         "x":123,
-//         "y": 32
-//       }, ...]
-//     }
-//   ]
-//   "currency": [{
-//     "value": "DKK",
-//     "confidence": "LOW",
-//     "bounding_box": [{
-//       "x": 123,
-//       "y": 32
-//     }, ...]
-//   }]
-// }
 
 service DocumentAnnotator {
   rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
@@ -126,7 +74,7 @@ message Feature {
   // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
   int32 max_results = 2;
   // The minimum confidence for predictions that the caller wants returned
-  Confidence.Level min_confidence = 3;
+  ssn.type.Confidence.Level min_confidence = 3;
 }
 
 message DocumentAnnotatorRequest {
@@ -138,27 +86,27 @@ message DocumentAnnotatorResponse {
   // orderDate
   // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
   // Example: "2019-12-31"
-  repeated PredictedField order_date = 1;
+  repeated ssn.type.Candidate order_date = 1;
   // paymentDueDate
   // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
   // Example: "2019-12-31"
-  repeated PredictedField payment_due_date = 2;
+  repeated ssn.type.Candidate payment_due_date = 2;
   // currency
   // ISO 4217 string, ie. a 3-letter capitalized string
   // Example: "NOK"
-  repeated PredictedField currency = 3;
+  repeated ssn.type.Candidate currency = 3;
   // totalVat
   // A string that parses as a two-decimal number
   // Example: "10.0" or "11.11"
-  repeated PredictedField total_vat = 4;
+  repeated ssn.type.Candidate total_vat = 4;
   // totalInclVat
   // A string that parses as a two-decimal number
   // Example: "10.0" or "11.11"
-  repeated PredictedField total_incl_vat = 5;
+  repeated ssn.type.Candidate total_incl_vat = 5;
   // totalExclVat
   // A string that parses as a two-decimal number
   // Example: "10.0" or "11.11"
-  repeated PredictedField total_excl_vat = 6;
+  repeated ssn.type.Candidate total_excl_vat = 6;
   // supplierCorporateId
   // The company VAT number
   // Example: "123456789B01" (for Dutch companies)
@@ -166,45 +114,45 @@ message DocumentAnnotatorResponse {
   // Note: The field is repeated because multiple VAT numbers might exist.
   // If you have the VAT number of you customer, you can use this information
   // to find out which VAT number belongs to the supplier of the invoice.
-  repeated PredictedField supplier_corporate_id = 7;
+  repeated ssn.type.Candidate supplier_corporate_id = 7;
   // supplierCountryCode
   // ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
   // Example: "NO"
-  repeated PredictedField supplier_country_code = 8;
+  repeated ssn.type.Candidate supplier_country_code = 8;
   // documentType
   // Either "Receipt" or "Invoice"
-  repeated PredictedField document_type = 9;
+  repeated ssn.type.Candidate document_type = 9;
   // paymentMethod
   // Either "Cash" or "CreditCard"
-  repeated PredictedField payment_method = 10;
+  repeated ssn.type.Candidate payment_method = 10;
   // creditCardNumber
   // Four digits
   // Example: "0012"
-  repeated PredictedField credit_card_number = 11;
+  repeated ssn.type.Candidate credit_card_number = 11;
   // invoiceNumber
   // The supplier defined identifier af the invoice
   // Example: "12345-A99"
-  repeated PredictedField invoice_number = 12;
+  repeated ssn.type.Candidate invoice_number = 12;
   // Return text annotation
   ssn.type.TextAnnotation text_annotation = 13;
   // example: "71"
-  repeated PredictedField ocr_line_dk_type = 14;
+  repeated ssn.type.Candidate ocr_line_dk_type = 14;
   // example: "000002879094031"
-  repeated PredictedField ocr_line_dk_payment_id = 15;
+  repeated ssn.type.Candidate ocr_line_dk_payment_id = 15;
   //example: "86570807"
-  repeated PredictedField ocr_line_dk_creditor_id = 16;
+  repeated ssn.type.Candidate ocr_line_dk_creditor_id = 16;
   // example: "050765098"
-  repeated PredictedField ocr_line_se_payment_id = 17;
+  repeated ssn.type.Candidate ocr_line_se_payment_id = 17;
   // example: "2654507"
-  repeated PredictedField ocr_line_se_bankgiro_creditor_id = 18;
+  repeated ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 18;
   // example: "5000872"
-  repeated PredictedField ocr_line_se_plusgiro_creditor_id = 19;
+  repeated ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 19;
   // example: "12345678903"
-  repeated PredictedField ocr_line_no_payment_id = 20;
+  repeated ssn.type.Candidate ocr_line_no_payment_id = 20;
   // example: "0817937867870002"
-  repeated PredictedField ocr_line_fi_payment_id = 21;
+  repeated ssn.type.Candidate ocr_line_fi_payment_id = 21;
   // example: "00000159220010146012"
-  repeated PredictedField ocr_line_nl_payment_id = 22;
+  repeated ssn.type.Candidate ocr_line_nl_payment_id = 22;
   // Return a string containing the text from the document
   string text = 23;
 }
@@ -229,55 +177,4 @@ message DocumentSource {
   //    request (e.g. due to request throttling or DOS prevention).
   //
   string http_uri = 1;
-}
-
-// A bucketized representation of confidence, which is intended to give clients
-// highly stable results across model upgrades.
-
-message Confidence {
-  enum Level {
-    UNKNOWN = 0;
-    VERY_LOW = 1;
-    LOW = 2;
-    MID = 3;
-    HIGH = 4;
-    VERY_HIGH = 5;
-  }
-  Level level = 1;
-  // The confidence message could be extended like this.
-  // float value = 2;
-  // float threshold = 3;
-
-}
-
-// Message as prediction
-message PredictedField {
-  // Normalized value 01-01-2019
-  string value = 1;
-  // The text as found on the document "1. Jan"
-  // useful for overlays
-  string text = 2;
-  // The confidence of the prediction being correct
-  Confidence confidence = 3;
-  // The bounding box for the block.
-  // The vertices are in the order of top-left, top-right, bottom-right,
-  // bottom-left. When a rotation of the bounding box is detected the rotation
-  // is represented as around the top-left corner as defined when the text is
-  // read in the 'natural' orientation.
-  // For example:
-  //
-  // * when the text is horizontal it might look like:
-  //
-  //         0----1
-  //         |    |
-  //         3----2
-  //
-  // * when it's rotated 180 degrees around the top-left corner it becomes:
-  //
-  //         2----3
-  //         |    |
-  //         1----0
-  //
-  //   and the vertex order will still be (0, 1, 2, 3).
-  ssn.type.BoundingPoly bounding_box = 4;
 }
