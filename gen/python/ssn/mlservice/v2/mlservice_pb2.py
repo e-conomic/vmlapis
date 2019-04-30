@@ -23,162 +23,162 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.mlservice.v2',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n ssn/mlservice/v2/mlservice.proto\x12\x10ssn.mlservice.v2\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"\x8a\x06\n\x11\x46\x65\x61tureGenRequest\x12\x43\n\x0btruth_label\x18\x01 \x01(\x0b\x32..ssn.mlservice.v2.FeatureGenRequest.TruthLabel\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xfc\x04\n\nTruthLabel\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\x02\x12\x11\n\ttotal_vat\x18\x02 \x01(\x02\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\x02\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x15\n\rsupplier_name\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"T\n\x0ePredictRequest\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\x12\x1c\n\x14top_n_most_confident\x18\x02 \x01(\r\"\x9d\x08\n\x0fPredictResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12/\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10ocr_line_dk_type\x18\r \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\"\x97\x01\n\x18\x46\x65\x61tureGenPredictRequest\x12@\n\x13\x66\x65\x61ture_gen_request\x18\x01 \x01(\x0b\x32#.ssn.mlservice.v2.FeatureGenRequest\x12\x39\n\x0fpredict_request\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v2.PredictRequest2\x98\x02\n\tMlService\x12W\n\nFeatureGen\x12#.ssn.mlservice.v2.FeatureGenRequest\x1a$.ssn.mlservice.v2.FeatureGenResponse\x12N\n\x07Predict\x12 .ssn.mlservice.v2.PredictRequest\x1a!.ssn.mlservice.v2.PredictResponse\x12\x62\n\x11\x46\x65\x61tureGenPredict\x12*.ssn.mlservice.v2.FeatureGenPredictRequest\x1a!.ssn.mlservice.v2.PredictResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n ssn/mlservice/v2/mlservice.proto\x12\x10ssn.mlservice.v2\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"\x8d\x06\n\x11\x46\x65\x61tureGenRequest\x12\x45\n\x0ctruth_labels\x18\x01 \x01(\x0b\x32/.ssn.mlservice.v2.FeatureGenRequest.TruthLabels\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x1a\xfd\x04\n\x0bTruthLabels\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\x02\x12\x11\n\ttotal_vat\x18\x02 \x01(\x02\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\x02\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x15\n\rsupplier_name\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"T\n\x0ePredictRequest\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\x12\x1c\n\x14top_n_most_confident\x18\x02 \x01(\r\"\x9d\x08\n\x0fPredictResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12/\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10ocr_line_dk_type\x18\r \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\"\x97\x01\n\x18\x46\x65\x61tureGenPredictRequest\x12@\n\x13\x66\x65\x61ture_gen_request\x18\x01 \x01(\x0b\x32#.ssn.mlservice.v2.FeatureGenRequest\x12\x39\n\x0fpredict_request\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v2.PredictRequest2\x98\x02\n\tMlService\x12W\n\nFeatureGen\x12#.ssn.mlservice.v2.FeatureGenRequest\x1a$.ssn.mlservice.v2.FeatureGenResponse\x12N\n\x07Predict\x12 .ssn.mlservice.v2.PredictRequest\x1a!.ssn.mlservice.v2.PredictResponse\x12\x62\n\x11\x46\x65\x61tureGenPredict\x12*.ssn.mlservice.v2.FeatureGenPredictRequest\x1a!.ssn.mlservice.v2.PredictResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
   dependencies=[google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_candidate__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,tensorflow_dot_core_dot_example_dot_example__pb2.DESCRIPTOR,])
 
 
 
 
-_FEATUREGENREQUEST_TRUTHLABEL = _descriptor.Descriptor(
-  name='TruthLabel',
-  full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel',
+_FEATUREGENREQUEST_TRUTHLABELS = _descriptor.Descriptor(
+  name='TruthLabels',
+  full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='total_incl_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.total_incl_vat', index=0,
+      name='total_incl_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.total_incl_vat', index=0,
       number=1, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='total_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.total_vat', index=1,
+      name='total_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.total_vat', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='total_excl_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.total_excl_vat', index=2,
+      name='total_excl_vat', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.total_excl_vat', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='order_date', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.order_date', index=3,
+      name='order_date', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.order_date', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='payment_due_date', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.payment_due_date', index=4,
+      name='payment_due_date', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_due_date', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='document_type', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.document_type', index=5,
+      name='document_type', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.document_type', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='currency', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.currency', index=6,
+      name='currency', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.currency', index=6,
       number=7, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='credit_card_number', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.credit_card_number', index=7,
+      name='credit_card_number', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.credit_card_number', index=7,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='payment_method', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.payment_method', index=8,
+      name='payment_method', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_method', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_dk_type', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_dk_type', index=9,
+      name='ocr_line_dk_type', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_dk_type', index=9,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_dk_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_dk_payment_id', index=10,
+      name='ocr_line_dk_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_dk_payment_id', index=10,
       number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_dk_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_dk_creditor_id', index=11,
+      name='ocr_line_dk_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_dk_creditor_id', index=11,
       number=12, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_se_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_se_payment_id', index=12,
+      name='ocr_line_se_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_se_payment_id', index=12,
       number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_se_bankgiro_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_se_bankgiro_creditor_id', index=13,
+      name='ocr_line_se_bankgiro_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_se_bankgiro_creditor_id', index=13,
       number=14, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_se_plusgiro_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_se_plusgiro_creditor_id', index=14,
+      name='ocr_line_se_plusgiro_creditor_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_se_plusgiro_creditor_id', index=14,
       number=15, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_no_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_no_payment_id', index=15,
+      name='ocr_line_no_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_no_payment_id', index=15,
       number=16, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='ocr_line_fi_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.ocr_line_fi_payment_id', index=16,
+      name='ocr_line_fi_payment_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.ocr_line_fi_payment_id', index=16,
       number=17, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='supplier_name', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.supplier_name', index=17,
+      name='supplier_name', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.supplier_name', index=17,
       number=18, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='supplier_corporate_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.supplier_corporate_id', index=18,
+      name='supplier_corporate_id', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.supplier_corporate_id', index=18,
       number=19, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='supplier_country_code', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.supplier_country_code', index=19,
+      name='supplier_country_code', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.supplier_country_code', index=19,
       number=20, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='invoice_number', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabel.invoice_number', index=20,
+      name='invoice_number', full_name='ssn.mlservice.v2.FeatureGenRequest.TruthLabels.invoice_number', index=20,
       number=21, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -196,8 +196,8 @@ _FEATUREGENREQUEST_TRUTHLABEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=954,
+  serialized_start=320,
+  serialized_end=957,
 )
 
 _FEATUREGENREQUEST = _descriptor.Descriptor(
@@ -208,7 +208,7 @@ _FEATUREGENREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='truth_label', full_name='ssn.mlservice.v2.FeatureGenRequest.truth_label', index=0,
+      name='truth_labels', full_name='ssn.mlservice.v2.FeatureGenRequest.truth_labels', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -224,7 +224,7 @@ _FEATUREGENREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_FEATUREGENREQUEST_TRUTHLABEL, ],
+  nested_types=[_FEATUREGENREQUEST_TRUTHLABELS, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -234,7 +234,7 @@ _FEATUREGENREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=176,
-  serialized_end=954,
+  serialized_end=957,
 )
 
 
@@ -264,8 +264,8 @@ _FEATUREGENRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=956,
-  serialized_end=1014,
+  serialized_start=959,
+  serialized_end=1017,
 )
 
 
@@ -302,8 +302,8 @@ _PREDICTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1016,
-  serialized_end=1100,
+  serialized_start=1019,
+  serialized_end=1103,
 )
 
 
@@ -473,8 +473,8 @@ _PREDICTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1103,
-  serialized_end=2156,
+  serialized_start=1106,
+  serialized_end=2159,
 )
 
 
@@ -511,14 +511,14 @@ _FEATUREGENPREDICTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2159,
-  serialized_end=2310,
+  serialized_start=2162,
+  serialized_end=2313,
 )
 
-_FEATUREGENREQUEST_TRUTHLABEL.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb2._DATE
-_FEATUREGENREQUEST_TRUTHLABEL.fields_by_name['payment_due_date'].message_type = google_dot_type_dot_date__pb2._DATE
-_FEATUREGENREQUEST_TRUTHLABEL.containing_type = _FEATUREGENREQUEST
-_FEATUREGENREQUEST.fields_by_name['truth_label'].message_type = _FEATUREGENREQUEST_TRUTHLABEL
+_FEATUREGENREQUEST_TRUTHLABELS.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb2._DATE
+_FEATUREGENREQUEST_TRUTHLABELS.fields_by_name['payment_due_date'].message_type = google_dot_type_dot_date__pb2._DATE
+_FEATUREGENREQUEST_TRUTHLABELS.containing_type = _FEATUREGENREQUEST
+_FEATUREGENREQUEST.fields_by_name['truth_labels'].message_type = _FEATUREGENREQUEST_TRUTHLABELS
 _FEATUREGENREQUEST.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 _FEATUREGENRESPONSE.fields_by_name['example'].message_type = tensorflow_dot_core_dot_example_dot_example__pb2._EXAMPLE
 _PREDICTREQUEST.fields_by_name['example'].message_type = tensorflow_dot_core_dot_example_dot_example__pb2._EXAMPLE
@@ -554,10 +554,10 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 FeatureGenRequest = _reflection.GeneratedProtocolMessageType('FeatureGenRequest', (_message.Message,), dict(
 
-  TruthLabel = _reflection.GeneratedProtocolMessageType('TruthLabel', (_message.Message,), dict(
-    DESCRIPTOR = _FEATUREGENREQUEST_TRUTHLABEL,
+  TruthLabels = _reflection.GeneratedProtocolMessageType('TruthLabels', (_message.Message,), dict(
+    DESCRIPTOR = _FEATUREGENREQUEST_TRUTHLABELS,
     __module__ = 'ssn.mlservice.v2.mlservice_pb2'
-    # @@protoc_insertion_point(class_scope:ssn.mlservice.v2.FeatureGenRequest.TruthLabel)
+    # @@protoc_insertion_point(class_scope:ssn.mlservice.v2.FeatureGenRequest.TruthLabels)
     ))
   ,
   DESCRIPTOR = _FEATUREGENREQUEST,
@@ -565,7 +565,7 @@ FeatureGenRequest = _reflection.GeneratedProtocolMessageType('FeatureGenRequest'
   # @@protoc_insertion_point(class_scope:ssn.mlservice.v2.FeatureGenRequest)
   ))
 _sym_db.RegisterMessage(FeatureGenRequest)
-_sym_db.RegisterMessage(FeatureGenRequest.TruthLabel)
+_sym_db.RegisterMessage(FeatureGenRequest.TruthLabels)
 
 FeatureGenResponse = _reflection.GeneratedProtocolMessageType('FeatureGenResponse', (_message.Message,), dict(
   DESCRIPTOR = _FEATUREGENRESPONSE,
@@ -604,8 +604,8 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2313,
-  serialized_end=2593,
+  serialized_start=2316,
+  serialized_end=2596,
   methods=[
   _descriptor.MethodDescriptor(
     name='FeatureGen',

@@ -18,7 +18,7 @@ service MlService {
 }
 
 message FeatureGenRequest {
-  message TruthLabel {
+  message TruthLabels {
     float total_incl_vat = 1;
     float total_vat = 2;
     float total_excl_vat = 3;
@@ -41,7 +41,7 @@ message FeatureGenRequest {
     string supplier_country_code = 20;
     string invoice_number = 21;
   }
-  TruthLabel truth_label = 1;
+  TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
 }
 
