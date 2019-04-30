@@ -5,59 +5,8 @@ from ssn.annotator.v1alpha1 import annotator_pb2 as ssn_dot_annotator_dot_v1alph
 
 
 class DocumentAnnotatorStub(object):
-  """DocumentAnnotator
-  {
-  "document":{
-  "source": {
-  http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
-  }
-  },
-  "features":[
-  {
-  "type":"ORDER_DATE",
-  "max_results":2
-  },
-  {
-  "type":"CURRENCY",
-  "max_results":1,
-  "min_confidence": "LOW"
-  }
-  ]
-  }
-  Example response
-
-  {
-  "order_date": [
-  {
-  "value": "1. jan",
-  "normalized_value": "01-01-2019",
-  "confidence": "VERY_HIGH",
-  "bounding_box":[{
-  "x":123,
-  "y": 32
-  }, ...]
-  },
-  {
-  "value": "1. jan",
-  "normalized_value": "01-01-2019",
-  "confidence": "MID",
-  "bounding_box": [{
-  "x":123,
-  "y": 32
-  }, ...]
-  }
-  ]
-  "currency": [{
-  "value": "DKK",
-  "confidence": "LOW",
-  "bounding_box": [{
-  "x": 123,
-  "y": 32
-  }, ...]
-  }]
-  }
-
-  """
+  # missing associated documentation comment in .proto file
+  pass
 
   def __init__(self, channel):
     """Constructor.
@@ -73,59 +22,8 @@ class DocumentAnnotatorStub(object):
 
 
 class DocumentAnnotatorServicer(object):
-  """DocumentAnnotator
-  {
-  "document":{
-  "source": {
-  http_uri: "http://classy.dk/ftest0716/IMG_20160720_111123.jpg"
-  }
-  },
-  "features":[
-  {
-  "type":"ORDER_DATE",
-  "max_results":2
-  },
-  {
-  "type":"CURRENCY",
-  "max_results":1,
-  "min_confidence": "LOW"
-  }
-  ]
-  }
-  Example response
-
-  {
-  "order_date": [
-  {
-  "value": "1. jan",
-  "normalized_value": "01-01-2019",
-  "confidence": "VERY_HIGH",
-  "bounding_box":[{
-  "x":123,
-  "y": 32
-  }, ...]
-  },
-  {
-  "value": "1. jan",
-  "normalized_value": "01-01-2019",
-  "confidence": "MID",
-  "bounding_box": [{
-  "x":123,
-  "y": 32
-  }, ...]
-  }
-  ]
-  "currency": [{
-  "value": "DKK",
-  "confidence": "LOW",
-  "bounding_box": [{
-  "x": 123,
-  "y": 32
-  }, ...]
-  }]
-  }
-
-  """
+  # missing associated documentation comment in .proto file
+  pass
 
   def AnnotateDocument(self, request, context):
     # missing associated documentation comment in .proto file
