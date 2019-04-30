@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ssn.mlservice.v2alpha2;
+package ssn.mlservice.v2;
 
 option go_package = "mlservice";
 
