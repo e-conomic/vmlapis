@@ -44,7 +44,7 @@ message Feature {
     // Run pyment method detection
     PAYMENT_METHOD = 11;
     // Run credit card number detection
-    CREDIT_CARD_NUMBER = 12;
+    CREDIT_CARD_LAST_FOUR = 12;
     // Run invoice number detection
     INVOICE_NUMBER = 13;
     // Run danish ocr line detection, for the type
@@ -128,7 +128,7 @@ message DocumentAnnotatorResponse {
   // creditCardNumber
   // Four digits
   // Example: "0012"
-  repeated ssn.type.Candidate credit_card_number = 11;
+  repeated ssn.type.Candidate credit_card_last_four = 11;
   // invoiceNumber
   // The supplier defined identifier af the invoice
   // Example: "12345-A99"
