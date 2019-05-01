@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 from ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x17ssn/type/geometry.proto\"\x95\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12\r\n\x05value\x18\x02 \x01(\x02\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\x80\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPolyB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\x80\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPolyB\x06Z\x04typeb\x06proto3')
   ,
-  dependencies=[ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,])
 
 
 
@@ -59,8 +60,8 @@ _CONFIDENCE_LEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=136,
-  serialized_end=213,
+  serialized_start=197,
+  serialized_end=274,
 )
 _sym_db.RegisterEnumDescriptor(_CONFIDENCE_LEVEL)
 
@@ -81,8 +82,8 @@ _CONFIDENCE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='ssn.type.Confidence.value', index=1,
-      number=2, type=2, cpp_type=6, label=1,
-      has_default_value=False, default_value=float(0),
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -99,8 +100,8 @@ _CONFIDENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=64,
-  serialized_end=213,
+  serialized_start=96,
+  serialized_end=274,
 )
 
 
@@ -151,11 +152,12 @@ _CANDIDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=216,
-  serialized_end=344,
+  serialized_start=277,
+  serialized_end=405,
 )
 
 _CONFIDENCE.fields_by_name['level'].enum_type = _CONFIDENCE_LEVEL
+_CONFIDENCE.fields_by_name['value'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _CONFIDENCE_LEVEL.containing_type = _CONFIDENCE
 _CANDIDATE.fields_by_name['confidence'].message_type = _CONFIDENCE
 _CANDIDATE.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
