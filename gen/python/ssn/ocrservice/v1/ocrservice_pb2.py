@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from ssn.annotator.v1alpha1 import annotator_pb2 as ssn_dot_annotator_dot_v1alpha1_dot_annotator__pb2
+from ssn.annotator.v1 import annotator_pb2 as ssn_dot_annotator_dot_v1_dot_annotator__pb2
 from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z\nocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a&ssn/annotator/v1alpha1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"N\n\x18GetTextAnnotationRequest\x12\x32\n\x08\x64ocument\x18\x02 \x01(\x0b\x32 .ssn.annotator.v1alpha1.Document\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"H\n\x18GetTextAnnotationRequest\x12,\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\"N\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseB\x0cZ\nocrserviceb\x06proto3')
   ,
-  dependencies=[ssn_dot_annotator_dot_v1alpha1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
+  dependencies=[ssn_dot_annotator_dot_v1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
 
@@ -54,8 +54,8 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=129,
-  serialized_end=207,
+  serialized_start=123,
+  serialized_end=195,
 )
 
 
@@ -85,8 +85,8 @@ _GETTEXTANNOTATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=209,
-  serialized_end=287,
+  serialized_start=197,
+  serialized_end=275,
 )
 
 
@@ -116,8 +116,8 @@ _OCRSCANIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=289,
-  serialized_end=324,
+  serialized_start=277,
+  serialized_end=312,
 )
 
 
@@ -147,11 +147,11 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=326,
-  serialized_end=367,
+  serialized_start=314,
+  serialized_end=355,
 )
 
-_GETTEXTANNOTATIONREQUEST.fields_by_name['document'].message_type = ssn_dot_annotator_dot_v1alpha1_dot_annotator__pb2._DOCUMENT
+_GETTEXTANNOTATIONREQUEST.fields_by_name['document'].message_type = ssn_dot_annotator_dot_v1_dot_annotator__pb2._DOCUMENT
 _GETTEXTANNOTATIONRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 DESCRIPTOR.message_types_by_name['GetTextAnnotationRequest'] = _GETTEXTANNOTATIONREQUEST
 DESCRIPTOR.message_types_by_name['GetTextAnnotationResponse'] = _GETTEXTANNOTATIONRESPONSE
@@ -196,8 +196,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=370,
-  serialized_end=591,
+  serialized_start=358,
+  serialized_end=579,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',

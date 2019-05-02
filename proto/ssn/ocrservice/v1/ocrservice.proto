@@ -4,7 +4,7 @@ package ssn.ocrservice.v1;
 
 option go_package = "ocrservice";
 
-import "ssn/annotator/v1alpha1/annotator.proto";
+import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/text_annotation.proto";
 
 // Interface exported by the server.
@@ -14,7 +14,7 @@ service OcrService {
 }
 
 message GetTextAnnotationRequest {
-  ssn.annotator.v1alpha1.Document document = 2;
+  ssn.annotator.v1.Document document = 2;
 }
 
 message GetTextAnnotationResponse {
