@@ -6,8 +6,8 @@ package mlservice
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
+import example "github.com/e-conomic/tensorflow/tensorflow/go/core/example"
 import _type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
-import example "github.com/tensorflow/tensorflow/tensorflow/go/core/example"
 import date "google.golang.org/genproto/googleapis/type/date"
 
 import (
