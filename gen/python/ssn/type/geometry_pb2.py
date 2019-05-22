@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x17ssn/type/geometry.proto\x12\x08ssn.type\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x05\x12\t\n\x01y\x18\x02 \x01(\x05\"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\"k\n\x0c\x42oundingPoly\x12\"\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.ssn.type.Vertex\x12\x37\n\x13normalized_vertices\x18\x02 \x03(\x0b\x32\x1a.ssn.type.NormalizedVertexB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x17ssn/type/geometry.proto\x12\x08ssn.type\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x05\x12\t\n\x01y\x18\x02 \x01(\x05\"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\"}\n\x0c\x42oundingPoly\x12\"\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.ssn.type.Vertex\x12\x37\n\x13normalized_vertices\x18\x02 \x03(\x0b\x32\x1a.ssn.type.NormalizedVertex\x12\x10\n\x08page_ref\x18\x03 \x01(\rB\x06Z\x04typeb\x06proto3')
 )
 
 
@@ -122,6 +122,13 @@ _BOUNDINGPOLY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='page_ref', full_name='ssn.type.BoundingPoly.page_ref', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -135,7 +142,7 @@ _BOUNDINGPOLY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=111,
-  serialized_end=218,
+  serialized_end=236,
 )
 
 _BOUNDINGPOLY.fields_by_name['vertices'].message_type = _VERTEX
