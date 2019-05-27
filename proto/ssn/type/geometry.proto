@@ -44,8 +44,4 @@ message BoundingPoly {
   repeated Vertex vertices = 1;
   // The bounding polygon normalized vertices.
   repeated NormalizedVertex normalized_vertices = 2;
-  // A reference to the page where the bounding poly belongs,
-  // Only used when scanning multipage PDFs.
-  // The page_ref is one indexed.
-  uint32 page_ref = 3;
 }
