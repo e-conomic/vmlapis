@@ -24,6 +24,11 @@ message Confidence {
 }
 
 message Candidate {
+  enum Type {
+    UNKNOWN = 0;
+    FIELD = 1;
+    PROPERTY = 2;
+  }
   // Normalized value 01-01-2019
   string value = 1;
   // The text as found on the document "1. Jan"
@@ -52,4 +57,9 @@ message Candidate {
   //
   //   and the vertex order will still be (0, 1, 2, 3).
   ssn.type.BoundingPoly bounding_box = 4;
+  // Indicate the type of the candidate
+  Type type = 5;
+  // A reference to the page where the candidate was found.
+  // page_ref start from 1.
+  uint32 page_ref = 6;
 }
