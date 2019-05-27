@@ -27,7 +27,7 @@ message Candidate {
   enum Type {
     UNKNOWN = 0;
     FIELD = 1;
-    PROPERTY = 2;
+    DOCUMENT = 2;
   }
   // Normalized value 01-01-2019
   string value = 1;
