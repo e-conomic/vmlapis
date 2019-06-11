@@ -121,6 +121,12 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.Candidate supplier_country_code = 8;
   // documentType
   // Either "Receipt" or "Invoice"
+  // NOTE: Sometimes "Receipt" will have higher confidence than "Invoice" while still
+  // suggesting eg. an ocr line, an invoice number and/or a payment due date. If your
+  // use-case requires you to pick either one or the other, then the following rule might
+  // benefit your application: Assume "Invoice" if the confidence for this category is
+  // HIGH or VERY_HIGH or if there exists any ocrline field, invoice_number or
+  // payment_due_date with confidence HIGH or VERY_HIGH.
   repeated ssn.type.Candidate document_type = 9;
   // paymentMethod
   // Either "Cash" or "CreditCard"
