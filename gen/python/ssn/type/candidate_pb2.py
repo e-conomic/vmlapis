@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe8\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08PROPERTY\x10\x02\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe8\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08\x44OCUMENT\x10\x02\x42\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,])
 
@@ -80,7 +80,7 @@ _CANDIDATE_TYPE = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='PROPERTY', index=2, number=2,
+      name='DOCUMENT', index=2, number=2,
       serialized_options=None,
       type=None),
   ],
