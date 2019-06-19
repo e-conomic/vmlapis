@@ -36,7 +36,7 @@ message FeatureGenRequest {
     string ocr_line_se_plusgiro_creditor_id = 15;
     string ocr_line_no_payment_id = 16;
     string ocr_line_fi_payment_id = 17;
-    string supplier_name = 18;
+    string ocr_line_nl_payment_id = 18;
     string supplier_corporate_id = 19;
     string supplier_country_code = 20;
     string invoice_number = 21;
