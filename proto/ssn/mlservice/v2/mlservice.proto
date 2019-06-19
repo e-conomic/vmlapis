@@ -19,9 +19,9 @@ service MlService {
 
 message FeatureGenRequest {
   message TruthLabels {
-    float total_incl_vat = 1;
-    float total_vat = 2;
-    float total_excl_vat = 3;
+    double total_incl_vat = 1;
+    double total_vat = 2;
+    double total_excl_vat = 3;
     google.type.Date order_date = 4;
     google.type.Date payment_due_date = 5;
     string document_type = 6;
