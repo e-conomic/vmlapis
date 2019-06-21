@@ -19,6 +19,10 @@ generate:
     output: ../gen/go
   - name: python
     output: ../gen/python
+  - name: java
+    output: ../gen/java
+  - name: csharp
+    output: ../gen/csharp
   - name: grpc-python
-    path: /usr/local/bin/grpc_python_plugin
+    path: grpc_python_plugin
     output: ../gen/python

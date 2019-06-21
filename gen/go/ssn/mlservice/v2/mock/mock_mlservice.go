@@ -5,7 +5,7 @@
 package mock_mlservice
 
 import (
-	x "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
+	v2 "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -36,14 +36,14 @@ func (m *MockMlServiceClient) EXPECT() *MockMlServiceClientMockRecorder {
 }
 
 // FeatureGen mocks base method
-func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *x.FeatureGenRequest, opts ...grpc.CallOption) (*x.FeatureGenResponse, error) {
+func (m *MockMlServiceClient) FeatureGen(ctx context.Context, in *v2.FeatureGenRequest, opts ...grpc.CallOption) (*v2.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "FeatureGen", varargs...)
-	ret0, _ := ret[0].(*x.FeatureGenResponse)
+	ret0, _ := ret[0].(*v2.FeatureGenResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -56,14 +56,14 @@ func (mr *MockMlServiceClientMockRecorder) FeatureGen(ctx, in interface{}, opts 
 }
 
 // Predict mocks base method
-func (m *MockMlServiceClient) Predict(ctx context.Context, in *x.PredictRequest, opts ...grpc.CallOption) (*x.PredictResponse, error) {
+func (m *MockMlServiceClient) Predict(ctx context.Context, in *v2.PredictRequest, opts ...grpc.CallOption) (*v2.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "Predict", varargs...)
-	ret0, _ := ret[0].(*x.PredictResponse)
+	ret0, _ := ret[0].(*v2.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -76,14 +76,14 @@ func (mr *MockMlServiceClientMockRecorder) Predict(ctx, in interface{}, opts ...
 }
 
 // FeatureGenPredict mocks base method
-func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *x.FeatureGenPredictRequest, opts ...grpc.CallOption) (*x.PredictResponse, error) {
+func (m *MockMlServiceClient) FeatureGenPredict(ctx context.Context, in *v2.FeatureGenPredictRequest, opts ...grpc.CallOption) (*v2.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "FeatureGenPredict", varargs...)
-	ret0, _ := ret[0].(*x.PredictResponse)
+	ret0, _ := ret[0].(*v2.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -119,10 +119,10 @@ func (m *MockMlServiceServer) EXPECT() *MockMlServiceServerMockRecorder {
 }
 
 // FeatureGen mocks base method
-func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *x.FeatureGenRequest) (*x.FeatureGenResponse, error) {
+func (m *MockMlServiceServer) FeatureGen(arg0 context.Context, arg1 *v2.FeatureGenRequest) (*v2.FeatureGenResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGen", arg0, arg1)
-	ret0, _ := ret[0].(*x.FeatureGenResponse)
+	ret0, _ := ret[0].(*v2.FeatureGenResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -134,10 +134,10 @@ func (mr *MockMlServiceServerMockRecorder) FeatureGen(arg0, arg1 interface{}) *g
 }
 
 // Predict mocks base method
-func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *x.PredictRequest) (*x.PredictResponse, error) {
+func (m *MockMlServiceServer) Predict(arg0 context.Context, arg1 *v2.PredictRequest) (*v2.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Predict", arg0, arg1)
-	ret0, _ := ret[0].(*x.PredictResponse)
+	ret0, _ := ret[0].(*v2.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -149,10 +149,10 @@ func (mr *MockMlServiceServerMockRecorder) Predict(arg0, arg1 interface{}) *gomo
 }
 
 // FeatureGenPredict mocks base method
-func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *x.FeatureGenPredictRequest) (*x.PredictResponse, error) {
+func (m *MockMlServiceServer) FeatureGenPredict(arg0 context.Context, arg1 *v2.FeatureGenPredictRequest) (*v2.PredictResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "FeatureGenPredict", arg0, arg1)
-	ret0, _ := ret[0].(*x.PredictResponse)
+	ret0, _ := ret[0].(*v2.PredictResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }

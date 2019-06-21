@@ -5,7 +5,7 @@
 package mock_ocrservice
 
 import (
-	x "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1"
+	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -36,14 +36,14 @@ func (m *MockOcrServiceClient) EXPECT() *MockOcrServiceClientMockRecorder {
 }
 
 // OcrScanImage mocks base method
-func (m *MockOcrServiceClient) OcrScanImage(ctx context.Context, in *x.OcrScanImageRequest, opts ...grpc.CallOption) (*x.OcrScanImageResponse, error) {
+func (m *MockOcrServiceClient) OcrScanImage(ctx context.Context, in *v1.OcrScanImageRequest, opts ...grpc.CallOption) (*v1.OcrScanImageResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "OcrScanImage", varargs...)
-	ret0, _ := ret[0].(*x.OcrScanImageResponse)
+	ret0, _ := ret[0].(*v1.OcrScanImageResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -56,14 +56,14 @@ func (mr *MockOcrServiceClientMockRecorder) OcrScanImage(ctx, in interface{}, op
 }
 
 // GetTextAnnotation mocks base method
-func (m *MockOcrServiceClient) GetTextAnnotation(ctx context.Context, in *x.GetTextAnnotationRequest, opts ...grpc.CallOption) (*x.GetTextAnnotationResponse, error) {
+func (m *MockOcrServiceClient) GetTextAnnotation(ctx context.Context, in *v1.GetTextAnnotationRequest, opts ...grpc.CallOption) (*v1.GetTextAnnotationResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "GetTextAnnotation", varargs...)
-	ret0, _ := ret[0].(*x.GetTextAnnotationResponse)
+	ret0, _ := ret[0].(*v1.GetTextAnnotationResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -99,10 +99,10 @@ func (m *MockOcrServiceServer) EXPECT() *MockOcrServiceServerMockRecorder {
 }
 
 // OcrScanImage mocks base method
-func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *x.OcrScanImageRequest) (*x.OcrScanImageResponse, error) {
+func (m *MockOcrServiceServer) OcrScanImage(arg0 context.Context, arg1 *v1.OcrScanImageRequest) (*v1.OcrScanImageResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "OcrScanImage", arg0, arg1)
-	ret0, _ := ret[0].(*x.OcrScanImageResponse)
+	ret0, _ := ret[0].(*v1.OcrScanImageResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -114,10 +114,10 @@ func (mr *MockOcrServiceServerMockRecorder) OcrScanImage(arg0, arg1 interface{})
 }
 
 // GetTextAnnotation mocks base method
-func (m *MockOcrServiceServer) GetTextAnnotation(arg0 context.Context, arg1 *x.GetTextAnnotationRequest) (*x.GetTextAnnotationResponse, error) {
+func (m *MockOcrServiceServer) GetTextAnnotation(arg0 context.Context, arg1 *v1.GetTextAnnotationRequest) (*v1.GetTextAnnotationResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTextAnnotation", arg0, arg1)
-	ret0, _ := ret[0].(*x.GetTextAnnotationResponse)
+	ret0, _ := ret[0].(*v1.GetTextAnnotationResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }

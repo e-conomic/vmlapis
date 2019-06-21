@@ -4,6 +4,7 @@ go 1.12
 
 require (
 	cloud.google.com/go v0.40.0 // indirect
+	github.com/e-conomic/tensorflow v0.0.0-20190502071349-5bfe5110fb55
 	github.com/golang/mock v1.3.1
 	github.com/golang/protobuf v1.3.1
 	github.com/google/btree v1.0.0 // indirect

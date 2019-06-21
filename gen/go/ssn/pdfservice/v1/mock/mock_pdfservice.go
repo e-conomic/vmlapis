@@ -5,7 +5,7 @@
 package mock_pdfservice
 
 import (
-	x "github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1"
+	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -37,14 +37,14 @@ func (m *MockPdfServiceClient) EXPECT() *MockPdfServiceClientMockRecorder {
 }
 
 // RasterizePdf mocks base method
-func (m *MockPdfServiceClient) RasterizePdf(ctx context.Context, in *x.RasterizePdfRequest, opts ...grpc.CallOption) (x.PdfService_RasterizePdfClient, error) {
+func (m *MockPdfServiceClient) RasterizePdf(ctx context.Context, in *v1.RasterizePdfRequest, opts ...grpc.CallOption) (v1.PdfService_RasterizePdfClient, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "RasterizePdf", varargs...)
-	ret0, _ := ret[0].(x.PdfService_RasterizePdfClient)
+	ret0, _ := ret[0].(v1.PdfService_RasterizePdfClient)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -80,10 +80,10 @@ func (m *MockPdfService_RasterizePdfClient) EXPECT() *MockPdfService_RasterizePd
 }
 
 // Recv mocks base method
-func (m *MockPdfService_RasterizePdfClient) Recv() (*x.RasterizePdfResponse, error) {
+func (m *MockPdfService_RasterizePdfClient) Recv() (*v1.RasterizePdfResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Recv")
-	ret0, _ := ret[0].(*x.RasterizePdfResponse)
+	ret0, _ := ret[0].(*v1.RasterizePdfResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -203,7 +203,7 @@ func (m *MockPdfServiceServer) EXPECT() *MockPdfServiceServerMockRecorder {
 }
 
 // RasterizePdf mocks base method
-func (m *MockPdfServiceServer) RasterizePdf(arg0 *x.RasterizePdfRequest, arg1 x.PdfService_RasterizePdfServer) error {
+func (m *MockPdfServiceServer) RasterizePdf(arg0 *v1.RasterizePdfRequest, arg1 v1.PdfService_RasterizePdfServer) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "RasterizePdf", arg0, arg1)
 	ret0, _ := ret[0].(error)
@@ -240,7 +240,7 @@ func (m *MockPdfService_RasterizePdfServer) EXPECT() *MockPdfService_RasterizePd
 }
 
 // Send mocks base method
-func (m *MockPdfService_RasterizePdfServer) Send(arg0 *x.RasterizePdfResponse) error {
+func (m *MockPdfService_RasterizePdfServer) Send(arg0 *v1.RasterizePdfResponse) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Send", arg0)
 	ret0, _ := ret[0].(error)

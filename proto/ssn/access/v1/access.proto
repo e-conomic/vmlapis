@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package ssn.access.v1;
+
+option go_package = "access";
+
+import "google/api/annotations.proto";
+
+service Access {
+  rpc GenerateValetKey(ValetKeyRequest) returns (ValetKeyResponse) {
+    option (google.api.http) = {
+      post: "/v1/access/valetkey"
+      body: "*"
+    };
+  }
+}
+
+message ValetKeyRequest {
+  // Reference for the data, useful to delete all data matching custom reference, ie. customer id
+  string data_reference = 1;
+  // Custom ID for the data subject, useful for deleting data, ie. visma connect guid | user id
+  string data_subject = 2;
+  // How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+  uint32 expiration = 3;
+}
+
+message ValetKeyResponse {
+  // Key for this key
+  string id = 1;
+  // A JWT Token
+  string token = 2;
+}
