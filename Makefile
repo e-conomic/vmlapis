@@ -7,8 +7,8 @@ all:
 
 docker:
 	@rm -rf gen
-	docker build -t 000 .
-	DOCKERID=$$(docker create 000) ;\
+	docker build -t vmlapis .
+	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
 	docker rm $$DOCKERID
 
