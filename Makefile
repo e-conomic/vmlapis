@@ -1,8 +1,17 @@
-build-all:
+all:
 	@rm -rf gen
 	@echo "Generate all the things"
 	cd proto && prototool all
-	sh scripts/gomock.sh
-	sh scripts/py_fixes.sh
+	./scripts/gomock.sh
+	./scripts/py_fixes.sh
 
-.PHONY: build-all
+docker:
+	@rm -rf gen
+	docker build -t vmlapis .
+	DOCKERID=$$(docker create vmlapis) ;\
+	docker cp $$DOCKERID:/app/gen ./ ;\
+	docker rm $$DOCKERID
+
+.PHONY: all
+.PHONY: docker
+.DEFAULT_GOAL := docker

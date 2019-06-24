@@ -5,7 +5,7 @@
 package mock_annotator
 
 import (
-	x "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
+	v1 "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
 	gomock "github.com/golang/mock/gomock"
 	context "golang.org/x/net/context"
 	grpc "google.golang.org/grpc"
@@ -36,14 +36,14 @@ func (m *MockDocumentAnnotatorClient) EXPECT() *MockDocumentAnnotatorClientMockR
 }
 
 // AnnotateDocument mocks base method
-func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *x.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*x.DocumentAnnotatorResponse, error) {
+func (m *MockDocumentAnnotatorClient) AnnotateDocument(ctx context.Context, in *v1.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*v1.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
 	ret := m.ctrl.Call(m, "AnnotateDocument", varargs...)
-	ret0, _ := ret[0].(*x.DocumentAnnotatorResponse)
+	ret0, _ := ret[0].(*v1.DocumentAnnotatorResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -79,10 +79,10 @@ func (m *MockDocumentAnnotatorServer) EXPECT() *MockDocumentAnnotatorServerMockR
 }
 
 // AnnotateDocument mocks base method
-func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg1 *x.DocumentAnnotatorRequest) (*x.DocumentAnnotatorResponse, error) {
+func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg1 *v1.DocumentAnnotatorRequest) (*v1.DocumentAnnotatorResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "AnnotateDocument", arg0, arg1)
-	ret0, _ := ret[0].(*x.DocumentAnnotatorResponse)
+	ret0, _ := ret[0].(*v1.DocumentAnnotatorResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }

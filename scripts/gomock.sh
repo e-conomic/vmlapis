@@ -13,7 +13,5 @@ for FILE in ${FILES[@]}; do
     DIRNAME=$(dirname -- "$FILE")
     FILENAME="${FILENAME_WITH_EXT%.pb.go}"
     mockgen -source "$FILE" -destination "$DIRNAME"/mock/mock_"$FILENAME".go
-    # Fix pacakge name
-    sed -i '' 's|"."|'"\"github.com/e-conomic/vmlapis/$DIRNAME\"|g" "$DIRNAME"/mock/mock_"$FILENAME".go
     echo $FILE "->" "$DIRNAME"/mock/mock_"$FILENAME".go
 done
