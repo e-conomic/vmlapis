@@ -41,9 +41,9 @@ message FeatureGenRequest {
     string supplier_country_code = 20;
     string invoice_number = 21;
   }
-  string id = 1;
-  TruthLabels truth_labels = 2;
-  ssn.type.TextAnnotation text_annotation = 3;
+  TruthLabels truth_labels = 1;
+  ssn.type.TextAnnotation text_annotation = 2;
+  string id = 3;
 }
 
 message FeatureGenResponse {

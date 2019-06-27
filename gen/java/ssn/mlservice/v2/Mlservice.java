@@ -19,40 +19,40 @@ public final class Mlservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
      */
     boolean hasTruthLabels();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
      */
     ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels getTruthLabels();
     /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
      */
     ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder();
 
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
     boolean hasTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+
+    /**
+     * <code>string id = 3;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
   }
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest}
@@ -95,12 +95,6 @@ public final class Mlservice {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
               ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.Builder subBuilder = null;
               if (truthLabels_ != null) {
                 subBuilder = truthLabels_.toBuilder();
@@ -113,7 +107,7 @@ public final class Mlservice {
 
               break;
             }
-            case 26: {
+            case 18: {
               ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder subBuilder = null;
               if (textAnnotation_ != null) {
                 subBuilder = textAnnotation_.toBuilder();
@@ -124,6 +118,12 @@ public final class Mlservice {
                 textAnnotation_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
               break;
             }
             default: {
@@ -3349,10 +3349,52 @@ public final class Mlservice {
 
     }
 
-    public static final int ID_FIELD_NUMBER = 1;
+    public static final int TRUTH_LABELS_FIELD_NUMBER = 1;
+    private ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels truthLabels_;
+    /**
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     */
+    public boolean hasTruthLabels() {
+      return truthLabels_ != null;
+    }
+    /**
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     */
+    public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels getTruthLabels() {
+      return truthLabels_ == null ? ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.getDefaultInstance() : truthLabels_;
+    }
+    /**
+     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
+     */
+    public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
+      return getTruthLabels();
+    }
+
+    public static final int TEXT_ANNOTATION_FIELD_NUMBER = 2;
+    private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     */
+    public boolean hasTextAnnotation() {
+      return textAnnotation_ != null;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     */
+    public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
+      return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     */
+    public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
+      return getTextAnnotation();
+    }
+
+    public static final int ID_FIELD_NUMBER = 3;
     private volatile java.lang.Object id_;
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 3;</code>
      */
     public java.lang.String getId() {
       java.lang.Object ref = id_;
@@ -3367,7 +3409,7 @@ public final class Mlservice {
       }
     }
     /**
-     * <code>string id = 1;</code>
+     * <code>string id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getIdBytes() {
@@ -3381,48 +3423,6 @@ public final class Mlservice {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
-    }
-
-    public static final int TRUTH_LABELS_FIELD_NUMBER = 2;
-    private ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels truthLabels_;
-    /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
-     */
-    public boolean hasTruthLabels() {
-      return truthLabels_ != null;
-    }
-    /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
-     */
-    public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels getTruthLabels() {
-      return truthLabels_ == null ? ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.getDefaultInstance() : truthLabels_;
-    }
-    /**
-     * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
-     */
-    public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
-      return getTruthLabels();
-    }
-
-    public static final int TEXT_ANNOTATION_FIELD_NUMBER = 3;
-    private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
-    /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
-     */
-    public boolean hasTextAnnotation() {
-      return textAnnotation_ != null;
-    }
-    /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
-     */
-    public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
-      return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
-    }
-    /**
-     * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
-     */
-    public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-      return getTextAnnotation();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3439,14 +3439,14 @@ public final class Mlservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
       if (truthLabels_ != null) {
-        output.writeMessage(2, getTruthLabels());
+        output.writeMessage(1, getTruthLabels());
       }
       if (textAnnotation_ != null) {
-        output.writeMessage(3, getTextAnnotation());
+        output.writeMessage(2, getTextAnnotation());
+      }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
       }
       unknownFields.writeTo(output);
     }
@@ -3457,16 +3457,16 @@ public final class Mlservice {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
       if (truthLabels_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getTruthLabels());
+          .computeMessageSize(1, getTruthLabels());
       }
       if (textAnnotation_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTextAnnotation());
+          .computeMessageSize(2, getTextAnnotation());
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3484,8 +3484,6 @@ public final class Mlservice {
       ssn.mlservice.v2.Mlservice.FeatureGenRequest other = (ssn.mlservice.v2.Mlservice.FeatureGenRequest) obj;
 
       boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
       result = result && (hasTruthLabels() == other.hasTruthLabels());
       if (hasTruthLabels()) {
         result = result && getTruthLabels()
@@ -3496,6 +3494,8 @@ public final class Mlservice {
         result = result && getTextAnnotation()
             .equals(other.getTextAnnotation());
       }
+      result = result && getId()
+          .equals(other.getId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3507,8 +3507,6 @@ public final class Mlservice {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       if (hasTruthLabels()) {
         hash = (37 * hash) + TRUTH_LABELS_FIELD_NUMBER;
         hash = (53 * hash) + getTruthLabels().hashCode();
@@ -3517,6 +3515,8 @@ public final class Mlservice {
         hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
         hash = (53 * hash) + getTextAnnotation().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3650,8 +3650,6 @@ public final class Mlservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
-
         if (truthLabelsBuilder_ == null) {
           truthLabels_ = null;
         } else {
@@ -3664,6 +3662,8 @@ public final class Mlservice {
           textAnnotation_ = null;
           textAnnotationBuilder_ = null;
         }
+        id_ = "";
+
         return this;
       }
 
@@ -3690,7 +3690,6 @@ public final class Mlservice {
       @java.lang.Override
       public ssn.mlservice.v2.Mlservice.FeatureGenRequest buildPartial() {
         ssn.mlservice.v2.Mlservice.FeatureGenRequest result = new ssn.mlservice.v2.Mlservice.FeatureGenRequest(this);
-        result.id_ = id_;
         if (truthLabelsBuilder_ == null) {
           result.truthLabels_ = truthLabels_;
         } else {
@@ -3701,6 +3700,7 @@ public final class Mlservice {
         } else {
           result.textAnnotation_ = textAnnotationBuilder_.build();
         }
+        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -3749,15 +3749,15 @@ public final class Mlservice {
 
       public Builder mergeFrom(ssn.mlservice.v2.Mlservice.FeatureGenRequest other) {
         if (other == ssn.mlservice.v2.Mlservice.FeatureGenRequest.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
         if (other.hasTruthLabels()) {
           mergeTruthLabels(other.getTruthLabels());
         }
         if (other.hasTextAnnotation()) {
           mergeTextAnnotation(other.getTextAnnotation());
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3788,86 +3788,17 @@ public final class Mlservice {
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
       private ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels truthLabels_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels, ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.Builder, ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder> truthLabelsBuilder_;
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public boolean hasTruthLabels() {
         return truthLabelsBuilder_ != null || truthLabels_ != null;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels getTruthLabels() {
         if (truthLabelsBuilder_ == null) {
@@ -3877,7 +3808,7 @@ public final class Mlservice {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public Builder setTruthLabels(ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels value) {
         if (truthLabelsBuilder_ == null) {
@@ -3893,7 +3824,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public Builder setTruthLabels(
           ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.Builder builderForValue) {
@@ -3907,7 +3838,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public Builder mergeTruthLabels(ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels value) {
         if (truthLabelsBuilder_ == null) {
@@ -3925,7 +3856,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public Builder clearTruthLabels() {
         if (truthLabelsBuilder_ == null) {
@@ -3939,7 +3870,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.Builder getTruthLabelsBuilder() {
         
@@ -3947,7 +3878,7 @@ public final class Mlservice {
         return getTruthLabelsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       public ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
         if (truthLabelsBuilder_ != null) {
@@ -3958,7 +3889,7 @@ public final class Mlservice {
         }
       }
       /**
-       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 2;</code>
+       * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels, ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabels.Builder, ssn.mlservice.v2.Mlservice.FeatureGenRequest.TruthLabelsOrBuilder> 
@@ -3978,13 +3909,13 @@ public final class Mlservice {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -3994,7 +3925,7 @@ public final class Mlservice {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public Builder setTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -4010,7 +3941,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public Builder setTextAnnotation(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
@@ -4024,7 +3955,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
@@ -4042,7 +3973,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public Builder clearTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -4056,7 +3987,7 @@ public final class Mlservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
         
@@ -4064,7 +3995,7 @@ public final class Mlservice {
         return getTextAnnotationFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
         if (textAnnotationBuilder_ != null) {
@@ -4075,7 +4006,7 @@ public final class Mlservice {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation text_annotation = 3;</code>
+       * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
@@ -4089,6 +4020,75 @@ public final class Mlservice {
           textAnnotation_ = null;
         }
         return textAnnotationBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <code>string id = 3;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string id = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string id = 3;</code>
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3;</code>
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3;</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -14394,11 +14394,11 @@ public final class Mlservice {
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032\036ssn/type/text_an" +
       "notation.proto\032%tensorflow/core/example/" +
-      "example.proto\"\242\006\n\021FeatureGenRequest\022\n\n\002i" +
-      "d\030\001 \001(\t\022E\n\014truth_labels\030\002 \001(\0132/.ssn.mlse" +
-      "rvice.v2.FeatureGenRequest.TruthLabels\0221" +
-      "\n\017text_annotation\030\003 \001(\0132\030.ssn.type.TextA" +
-      "nnotation\032\206\005\n\013TruthLabels\022\026\n\016total_incl_" +
+      "example.proto\"\242\006\n\021FeatureGenRequest\022E\n\014t" +
+      "ruth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fea" +
+      "tureGenRequest.TruthLabels\0221\n\017text_annot" +
+      "ation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\n\n" +
+      "\002id\030\003 \001(\t\032\206\005\n\013TruthLabels\022\026\n\016total_incl_" +
       "vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_ex" +
       "cl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.googl" +
       "e.type.Date\022+\n\020payment_due_date\030\005 \001(\0132\021." +
@@ -14478,7 +14478,7 @@ public final class Mlservice {
     internal_static_ssn_mlservice_v2_FeatureGenRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor,
-        new java.lang.String[] { "Id", "TruthLabels", "TextAnnotation", });
+        new java.lang.String[] { "TruthLabels", "TextAnnotation", "Id", });
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_descriptor =
       internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor.getNestedTypes().get(0);
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_fieldAccessorTable = new
