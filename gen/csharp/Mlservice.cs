@@ -28,10 +28,10 @@ namespace Ssn.Mlservice.V2 {
             "dmljZS52MhoWZ29vZ2xlL3R5cGUvZGF0ZS5wcm90bxoYc3NuL3R5cGUvY2Fu",
             "ZGlkYXRlLnByb3RvGh5zc24vdHlwZS90ZXh0X2Fubm90YXRpb24ucHJvdG8a",
             "JXRlbnNvcmZsb3cvY29yZS9leGFtcGxlL2V4YW1wbGUucHJvdG8iogYKEUZl",
-            "YXR1cmVHZW5SZXF1ZXN0EgoKAmlkGAEgASgJEkUKDHRydXRoX2xhYmVscxgC",
-            "IAEoCzIvLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlcXVlc3QuVHJ1",
-            "dGhMYWJlbHMSMQoPdGV4dF9hbm5vdGF0aW9uGAMgASgLMhguc3NuLnR5cGUu",
-            "VGV4dEFubm90YXRpb24ahgUKC1RydXRoTGFiZWxzEhYKDnRvdGFsX2luY2xf",
+            "YXR1cmVHZW5SZXF1ZXN0EkUKDHRydXRoX2xhYmVscxgBIAEoCzIvLnNzbi5t",
+            "bHNlcnZpY2UudjIuRmVhdHVyZUdlblJlcXVlc3QuVHJ1dGhMYWJlbHMSMQoP",
+            "dGV4dF9hbm5vdGF0aW9uGAIgASgLMhguc3NuLnR5cGUuVGV4dEFubm90YXRp",
+            "b24SCgoCaWQYAyABKAkahgUKC1RydXRoTGFiZWxzEhYKDnRvdGFsX2luY2xf",
             "dmF0GAEgASgBEhEKCXRvdGFsX3ZhdBgCIAEoARIWCg50b3RhbF9leGNsX3Zh",
             "dBgDIAEoARIlCgpvcmRlcl9kYXRlGAQgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
             "ZRIrChBwYXltZW50X2R1ZV9kYXRlGAUgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
@@ -86,7 +86,7 @@ namespace Ssn.Mlservice.V2 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "Id", "TruthLabels", "TextAnnotation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId" }, null, null, null),
@@ -122,9 +122,9 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public FeatureGenRequest(FeatureGenRequest other) : this() {
-      id_ = other.id_;
       truthLabels_ = other.truthLabels_ != null ? other.truthLabels_.Clone() : null;
       textAnnotation_ = other.textAnnotation_ != null ? other.textAnnotation_.Clone() : null;
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -133,19 +133,8 @@ namespace Ssn.Mlservice.V2 {
       return new FeatureGenRequest(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "truth_labels" field.</summary>
-    public const int TruthLabelsFieldNumber = 2;
+    public const int TruthLabelsFieldNumber = 1;
     private global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels truthLabels_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels TruthLabels {
@@ -156,13 +145,24 @@ namespace Ssn.Mlservice.V2 {
     }
 
     /// <summary>Field number for the "text_annotation" field.</summary>
-    public const int TextAnnotationFieldNumber = 3;
+    public const int TextAnnotationFieldNumber = 2;
     private global::Ssn.Type.TextAnnotation textAnnotation_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Type.TextAnnotation TextAnnotation {
       get { return textAnnotation_; }
       set {
         textAnnotation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 3;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -179,18 +179,18 @@ namespace Ssn.Mlservice.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (!object.Equals(TruthLabels, other.TruthLabels)) return false;
       if (!object.Equals(TextAnnotation, other.TextAnnotation)) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (truthLabels_ != null) hash ^= TruthLabels.GetHashCode();
       if (textAnnotation_ != null) hash ^= TextAnnotation.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -204,17 +204,17 @@ namespace Ssn.Mlservice.V2 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
       if (truthLabels_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(TruthLabels);
       }
       if (textAnnotation_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteMessage(TextAnnotation);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Id);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -224,14 +224,14 @@ namespace Ssn.Mlservice.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
       if (truthLabels_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TruthLabels);
       }
       if (textAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextAnnotation);
+      }
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -243,9 +243,6 @@ namespace Ssn.Mlservice.V2 {
     public void MergeFrom(FeatureGenRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
       }
       if (other.truthLabels_ != null) {
         if (truthLabels_ == null) {
@@ -259,6 +256,9 @@ namespace Ssn.Mlservice.V2 {
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -271,21 +271,21 @@ namespace Ssn.Mlservice.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
             if (truthLabels_ == null) {
               truthLabels_ = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
             }
             input.ReadMessage(truthLabels_);
             break;
           }
-          case 26: {
+          case 18: {
             if (textAnnotation_ == null) {
               textAnnotation_ = new global::Ssn.Type.TextAnnotation();
             }
             input.ReadMessage(textAnnotation_);
+            break;
+          }
+          case 26: {
+            Id = input.ReadString();
             break;
           }
         }
