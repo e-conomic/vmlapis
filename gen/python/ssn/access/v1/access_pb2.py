@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.access.v1',
   syntax='proto3',
   serialized_options=_b('Z\006access'),
-  serialized_pb=_b('\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"3\n\x0fValetKeyRequest\x12\x0c\n\x04tags\x18\x01 \x03(\t\x12\x12\n\nexpiration\x18\x02 \x01(\r\"-\n\x10ValetKeyResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B\x08Z\x06\x61\x63\x63\x65ssb\x06proto3')
+  serialized_pb=_b('\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"+\n\x0fValetKeyRequest\x12\x0b\n\x03sub\x18\x01 \x01(\t\x12\x0b\n\x03\x65xp\x18\x02 \x01(\x03\"-\n\x10ValetKeyResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B\x08Z\x06\x61\x63\x63\x65ssb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -35,15 +35,15 @@ _VALETKEYREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='tags', full_name='ssn.access.v1.ValetKeyRequest.tags', index=0,
-      number=1, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='sub', full_name='ssn.access.v1.ValetKeyRequest.sub', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='expiration', full_name='ssn.access.v1.ValetKeyRequest.expiration', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      name='exp', full_name='ssn.access.v1.ValetKeyRequest.exp', index=1,
+      number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -61,7 +61,7 @@ _VALETKEYREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=75,
-  serialized_end=126,
+  serialized_end=118,
 )
 
 
@@ -98,8 +98,8 @@ _VALETKEYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=128,
-  serialized_end=173,
+  serialized_start=120,
+  serialized_end=165,
 )
 
 DESCRIPTOR.message_types_by_name['ValetKeyRequest'] = _VALETKEYREQUEST
@@ -129,8 +129,8 @@ _ACCESS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=175,
-  serialized_end=300,
+  serialized_start=167,
+  serialized_end=292,
   methods=[
   _descriptor.MethodDescriptor(
     name='GenerateValetKey',

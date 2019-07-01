@@ -20,47 +20,34 @@ public final class AccessOuterClass {
 
     /**
      * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+     * Principal / Data Subject, ie. user id
+     * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>repeated string tags = 1;</code>
+     * <code>string sub = 1;</code>
      */
-    java.util.List<java.lang.String>
-        getTagsList();
+    java.lang.String getSub();
     /**
      * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+     * Principal / Data Subject, ie. user id
+     * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>repeated string tags = 1;</code>
-     */
-    int getTagsCount();
-    /**
-     * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-     * </pre>
-     *
-     * <code>repeated string tags = 1;</code>
-     */
-    java.lang.String getTags(int index);
-    /**
-     * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-     * </pre>
-     *
-     * <code>repeated string tags = 1;</code>
+     * <code>string sub = 1;</code>
      */
     com.google.protobuf.ByteString
-        getTagsBytes(int index);
+        getSubBytes();
 
     /**
      * <pre>
-     * How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+     * Timestamp for when this key expires
+     * Default 8 hours from now, max 48h
+     * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>uint32 expiration = 2;</code>
+     * <code>int64 exp = 2;</code>
      */
-    int getExpiration();
+    long getExp();
   }
   /**
    * Protobuf type {@code ssn.access.v1.ValetKeyRequest}
@@ -75,8 +62,8 @@ public final class AccessOuterClass {
       super(builder);
     }
     private ValetKeyRequest() {
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      expiration_ = 0;
+      sub_ = "";
+      exp_ = 0L;
     }
 
     @java.lang.Override
@@ -105,16 +92,13 @@ public final class AccessOuterClass {
               break;
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tags_.add(s);
+
+              sub_ = s;
               break;
             }
             case 16: {
 
-              expiration_ = input.readUInt32();
+              exp_ = input.readInt64();
               break;
             }
             default: {
@@ -132,9 +116,6 @@ public final class AccessOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -152,63 +133,63 @@ public final class AccessOuterClass {
               ssn.access.v1.AccessOuterClass.ValetKeyRequest.class, ssn.access.v1.AccessOuterClass.ValetKeyRequest.Builder.class);
     }
 
-    private int bitField0_;
-    public static final int TAGS_FIELD_NUMBER = 1;
-    private com.google.protobuf.LazyStringList tags_;
+    public static final int SUB_FIELD_NUMBER = 1;
+    private volatile java.lang.Object sub_;
     /**
      * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+     * Principal / Data Subject, ie. user id
+     * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>repeated string tags = 1;</code>
+     * <code>string sub = 1;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
+    public java.lang.String getSub() {
+      java.lang.Object ref = sub_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sub_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+     * Principal / Data Subject, ie. user id
+     * https://tools.ietf.org/html/rfc7519#section-4.1.2
      * </pre>
      *
-     * <code>repeated string tags = 1;</code>
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-     * </pre>
-     *
-     * <code>repeated string tags = 1;</code>
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <pre>
-     * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-     * </pre>
-     *
-     * <code>repeated string tags = 1;</code>
+     * <code>string sub = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
+        getSubBytes() {
+      java.lang.Object ref = sub_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sub_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int EXPIRATION_FIELD_NUMBER = 2;
-    private int expiration_;
+    public static final int EXP_FIELD_NUMBER = 2;
+    private long exp_;
     /**
      * <pre>
-     * How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+     * Timestamp for when this key expires
+     * Default 8 hours from now, max 48h
+     * https://tools.ietf.org/html/rfc7519#section-4.1.4
      * </pre>
      *
-     * <code>uint32 expiration = 2;</code>
+     * <code>int64 exp = 2;</code>
      */
-    public int getExpiration() {
-      return expiration_;
+    public long getExp() {
+      return exp_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -225,11 +206,11 @@ public final class AccessOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tags_.getRaw(i));
+      if (!getSubBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, sub_);
       }
-      if (expiration_ != 0) {
-        output.writeUInt32(2, expiration_);
+      if (exp_ != 0L) {
+        output.writeInt64(2, exp_);
       }
       unknownFields.writeTo(output);
     }
@@ -240,17 +221,12 @@ public final class AccessOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
+      if (!getSubBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, sub_);
       }
-      if (expiration_ != 0) {
+      if (exp_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, expiration_);
+          .computeInt64Size(2, exp_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -268,10 +244,10 @@ public final class AccessOuterClass {
       ssn.access.v1.AccessOuterClass.ValetKeyRequest other = (ssn.access.v1.AccessOuterClass.ValetKeyRequest) obj;
 
       boolean result = true;
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && (getExpiration()
-          == other.getExpiration());
+      result = result && getSub()
+          .equals(other.getSub());
+      result = result && (getExp()
+          == other.getExp());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -283,12 +259,11 @@ public final class AccessOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
-      }
-      hash = (37 * hash) + EXPIRATION_FIELD_NUMBER;
-      hash = (53 * hash) + getExpiration();
+      hash = (37 * hash) + SUB_FIELD_NUMBER;
+      hash = (53 * hash) + getSub().hashCode();
+      hash = (37 * hash) + EXP_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getExp());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -422,9 +397,9 @@ public final class AccessOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        expiration_ = 0;
+        sub_ = "";
+
+        exp_ = 0L;
 
         return this;
       }
@@ -452,15 +427,8 @@ public final class AccessOuterClass {
       @java.lang.Override
       public ssn.access.v1.AccessOuterClass.ValetKeyRequest buildPartial() {
         ssn.access.v1.AccessOuterClass.ValetKeyRequest result = new ssn.access.v1.AccessOuterClass.ValetKeyRequest(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
-        result.expiration_ = expiration_;
-        result.bitField0_ = to_bitField0_;
+        result.sub_ = sub_;
+        result.exp_ = exp_;
         onBuilt();
         return result;
       }
@@ -509,18 +477,12 @@ public final class AccessOuterClass {
 
       public Builder mergeFrom(ssn.access.v1.AccessOuterClass.ValetKeyRequest other) {
         if (other == ssn.access.v1.AccessOuterClass.ValetKeyRequest.getDefaultInstance()) return this;
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
+        if (!other.getSub().isEmpty()) {
+          sub_ = other.sub_;
           onChanged();
         }
-        if (other.getExpiration() != 0) {
-          setExpiration(other.getExpiration());
+        if (other.getExp() != 0L) {
+          setExp(other.getExp());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -550,172 +512,141 @@ public final class AccessOuterClass {
         }
         return this;
       }
-      private int bitField0_;
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
-         }
-      }
+      private java.lang.Object sub_ = "";
       /**
        * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+       * Principal / Data Subject, ie. user id
+       * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>repeated string tags = 1;</code>
+       * <code>string sub = 1;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
+      public java.lang.String getSub() {
+        java.lang.Object ref = sub_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sub_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
        * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+       * Principal / Data Subject, ie. user id
+       * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>repeated string tags = 1;</code>
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-       * </pre>
-       *
-       * <code>repeated string tags = 1;</code>
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-       * </pre>
-       *
-       * <code>repeated string tags = 1;</code>
+       * <code>string sub = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
+          getSubBytes() {
+        java.lang.Object ref = sub_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sub_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
        * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+       * Principal / Data Subject, ie. user id
+       * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>repeated string tags = 1;</code>
+       * <code>string sub = 1;</code>
        */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-       * </pre>
-       *
-       * <code>repeated string tags = 1;</code>
-       */
-      public Builder addTags(
+      public Builder setSub(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTagsIsMutable();
-        tags_.add(value);
+  
+        sub_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+       * Principal / Data Subject, ie. user id
+       * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>repeated string tags = 1;</code>
+       * <code>string sub = 1;</code>
        */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
+      public Builder clearSub() {
+        
+        sub_ = getDefaultInstance().getSub();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+       * Principal / Data Subject, ie. user id
+       * https://tools.ietf.org/html/rfc7519#section-4.1.2
        * </pre>
        *
-       * <code>repeated string tags = 1;</code>
+       * <code>string sub = 1;</code>
        */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-       * </pre>
-       *
-       * <code>repeated string tags = 1;</code>
-       */
-      public Builder addTagsBytes(
+      public Builder setSubBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
+        
+        sub_ = value;
         onChanged();
         return this;
       }
 
-      private int expiration_ ;
+      private long exp_ ;
       /**
        * <pre>
-       * How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+       * Timestamp for when this key expires
+       * Default 8 hours from now, max 48h
+       * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>uint32 expiration = 2;</code>
+       * <code>int64 exp = 2;</code>
        */
-      public int getExpiration() {
-        return expiration_;
+      public long getExp() {
+        return exp_;
       }
       /**
        * <pre>
-       * How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+       * Timestamp for when this key expires
+       * Default 8 hours from now, max 48h
+       * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>uint32 expiration = 2;</code>
+       * <code>int64 exp = 2;</code>
        */
-      public Builder setExpiration(int value) {
+      public Builder setExp(long value) {
         
-        expiration_ = value;
+        exp_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+       * Timestamp for when this key expires
+       * Default 8 hours from now, max 48h
+       * https://tools.ietf.org/html/rfc7519#section-4.1.4
        * </pre>
        *
-       * <code>uint32 expiration = 2;</code>
+       * <code>int64 exp = 2;</code>
        */
-      public Builder clearExpiration() {
+      public Builder clearExp() {
         
-        expiration_ = 0;
+        exp_ = 0L;
         onChanged();
         return this;
       }
@@ -1551,13 +1482,13 @@ public final class AccessOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032ssn/access/v1/access.proto\022\rssn.access" +
-      ".v1\032\034google/api/annotations.proto\"3\n\017Val" +
-      "etKeyRequest\022\014\n\004tags\030\001 \003(\t\022\022\n\nexpiration" +
-      "\030\002 \001(\r\"-\n\020ValetKeyResponse\022\n\n\002id\030\001 \001(\t\022\r" +
-      "\n\005token\030\002 \001(\t2}\n\006Access\022s\n\020GenerateValet" +
-      "Key\022\036.ssn.access.v1.ValetKeyRequest\032\037.ss" +
-      "n.access.v1.ValetKeyResponse\"\036\202\323\344\223\002\030\"\023/v" +
-      "1/access/valetkey:\001*B\010Z\006accessb\006proto3"
+      ".v1\032\034google/api/annotations.proto\"+\n\017Val" +
+      "etKeyRequest\022\013\n\003sub\030\001 \001(\t\022\013\n\003exp\030\002 \001(\003\"-" +
+      "\n\020ValetKeyResponse\022\n\n\002id\030\001 \001(\t\022\r\n\005token\030" +
+      "\002 \001(\t2}\n\006Access\022s\n\020GenerateValetKey\022\036.ss" +
+      "n.access.v1.ValetKeyRequest\032\037.ssn.access" +
+      ".v1.ValetKeyResponse\"\036\202\323\344\223\002\030\"\023/v1/access" +
+      "/valetkey:\001*B\010Z\006accessb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1577,7 +1508,7 @@ public final class AccessOuterClass {
     internal_static_ssn_access_v1_ValetKeyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_access_v1_ValetKeyRequest_descriptor,
-        new java.lang.String[] { "Tags", "Expiration", });
+        new java.lang.String[] { "Sub", "Exp", });
     internal_static_ssn_access_v1_ValetKeyResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_access_v1_ValetKeyResponse_fieldAccessorTable = new
