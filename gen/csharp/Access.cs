@@ -25,17 +25,16 @@ namespace Ssn.Access.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chpzc24vYWNjZXNzL3YxL2FjY2Vzcy5wcm90bxINc3NuLmFjY2Vzcy52MRoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byIzCg9WYWxldEtleVJlcXVl",
-            "c3QSDAoEdGFncxgBIAMoCRISCgpleHBpcmF0aW9uGAIgASgNIi0KEFZhbGV0",
-            "S2V5UmVzcG9uc2USCgoCaWQYASABKAkSDQoFdG9rZW4YAiABKAkyfQoGQWNj",
-            "ZXNzEnMKEEdlbmVyYXRlVmFsZXRLZXkSHi5zc24uYWNjZXNzLnYxLlZhbGV0",
-            "S2V5UmVxdWVzdBofLnNzbi5hY2Nlc3MudjEuVmFsZXRLZXlSZXNwb25zZSIe",
-            "gtPkkwIYIhMvdjEvYWNjZXNzL3ZhbGV0a2V5OgEqQghaBmFjY2Vzc2IGcHJv",
-            "dG8z"));
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byIrCg9WYWxldEtleVJlcXVl",
+            "c3QSCwoDc3ViGAEgASgJEgsKA2V4cBgCIAEoAyItChBWYWxldEtleVJlc3Bv",
+            "bnNlEgoKAmlkGAEgASgJEg0KBXRva2VuGAIgASgJMn0KBkFjY2VzcxJzChBH",
+            "ZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFjY2Vzcy52MS5WYWxldEtleVJlcXVl",
+            "c3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0S2V5UmVzcG9uc2UiHoLT5JMCGCIT",
+            "L3YxL2FjY2Vzcy92YWxldGtleToBKkIIWgZhY2Nlc3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyRequest), global::Ssn.Access.V1.ValetKeyRequest.Parser, new[]{ "Tags", "Expiration" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyRequest), global::Ssn.Access.V1.ValetKeyRequest.Parser, new[]{ "Sub", "Exp" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyResponse), global::Ssn.Access.V1.ValetKeyResponse.Parser, new[]{ "Id", "Token" }, null, null, null)
           }));
     }
@@ -68,8 +67,8 @@ namespace Ssn.Access.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ValetKeyRequest(ValetKeyRequest other) : this() {
-      tags_ = other.tags_.Clone();
-      expiration_ = other.expiration_;
+      sub_ = other.sub_;
+      exp_ = other.exp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -78,30 +77,34 @@ namespace Ssn.Access.V1 {
       return new ValetKeyRequest(this);
     }
 
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "sub" field.</summary>
+    public const int SubFieldNumber = 1;
+    private string sub_ = "";
     /// <summary>
-    /// Tags for the data, useful to delete all data matching one or more tags, ie. customer id
+    /// Principal / Data Subject, ie. user id
+    /// https://tools.ietf.org/html/rfc7519#section-4.1.2
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
+    public string Sub {
+      get { return sub_; }
+      set {
+        sub_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
-    /// <summary>Field number for the "expiration" field.</summary>
-    public const int ExpirationFieldNumber = 2;
-    private uint expiration_;
+    /// <summary>Field number for the "exp" field.</summary>
+    public const int ExpFieldNumber = 2;
+    private long exp_;
     /// <summary>
-    /// How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
+    /// Timestamp for when this key expires
+    /// Default 8 hours from now, max 48h
+    /// https://tools.ietf.org/html/rfc7519#section-4.1.4
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public uint Expiration {
-      get { return expiration_; }
+    public long Exp {
+      get { return exp_; }
       set {
-        expiration_ = value;
+        exp_ = value;
       }
     }
 
@@ -118,16 +121,16 @@ namespace Ssn.Access.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!tags_.Equals(other.tags_)) return false;
-      if (Expiration != other.Expiration) return false;
+      if (Sub != other.Sub) return false;
+      if (Exp != other.Exp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= tags_.GetHashCode();
-      if (Expiration != 0) hash ^= Expiration.GetHashCode();
+      if (Sub.Length != 0) hash ^= Sub.GetHashCode();
+      if (Exp != 0L) hash ^= Exp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -141,10 +144,13 @@ namespace Ssn.Access.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      tags_.WriteTo(output, _repeated_tags_codec);
-      if (Expiration != 0) {
+      if (Sub.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Sub);
+      }
+      if (Exp != 0L) {
         output.WriteRawTag(16);
-        output.WriteUInt32(Expiration);
+        output.WriteInt64(Exp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -154,9 +160,11 @@ namespace Ssn.Access.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += tags_.CalculateSize(_repeated_tags_codec);
-      if (Expiration != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Expiration);
+      if (Sub.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Sub);
+      }
+      if (Exp != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Exp);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -169,9 +177,11 @@ namespace Ssn.Access.V1 {
       if (other == null) {
         return;
       }
-      tags_.Add(other.tags_);
-      if (other.Expiration != 0) {
-        Expiration = other.Expiration;
+      if (other.Sub.Length != 0) {
+        Sub = other.Sub;
+      }
+      if (other.Exp != 0L) {
+        Exp = other.Exp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -185,11 +195,11 @@ namespace Ssn.Access.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            Sub = input.ReadString();
             break;
           }
           case 16: {
-            Expiration = input.ReadUInt32();
+            Exp = input.ReadInt64();
             break;
           }
         }

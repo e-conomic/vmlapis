@@ -16,10 +16,14 @@ service Access {
 }
 
 message ValetKeyRequest {
-  // Tags for the data, useful to delete all data matching one or more tags, ie. customer id
-  repeated string tags = 1;
-  // How many seconds should this key be valid for? Default 28.800 (8h). Max 48h
-  uint32 expiration = 2;
+  // Principal / Data Subject, ie. user id
+  // https://tools.ietf.org/html/rfc7519#section-4.1.2
+  string sub = 1;
+
+  // Timestamp for when this key expires 
+  // Default 8 hours from now, max 48h
+  // https://tools.ietf.org/html/rfc7519#section-4.1.4
+  int64 exp = 2;
 }
 
 message ValetKeyResponse {
