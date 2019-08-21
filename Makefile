@@ -1,7 +1,12 @@
 all:
 	@rm -rf gen
 	@echo "Generate all the things"
-	cd proto && prototool all && prototool descriptor-set --include-imports --include-source-info -o ../gen/descriptor.bin
+	cd proto && prototool all
+	protoc -I./deps/googleapis -I./proto \
+		--include_imports --include_source_info \
+		--descriptor_set_out=gen/descriptor.bin \
+		proto/ssn/annotator/v1/annotator.proto \
+		proto/ssn/access/v1/access.proto
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
 
