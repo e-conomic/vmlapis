@@ -30,12 +30,13 @@ RUN curl -sSL \
 
 WORKDIR /app
 
-COPY ["go.mod", "go.sum", "Makefile", "/app/"]
+COPY ["go.mod", "go.sum", "/app/"]
 RUN go get . \
   && go install github.com/golang/mock/mockgen
 
 ENV PATH="/root/go/bin:${PATH}"
 
+COPY Makefile /app/
 COPY deps deps
 COPY scripts scripts
 COPY proto proto

@@ -1,7 +1,7 @@
 all:
 	@rm -rf gen
 	@echo "Generate all the things"
-	cd proto && prototool all
+	cd proto && prototool all && prototool descriptor-set --include-imports --include-source-info -o ../gen/descriptor.bin
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
 
