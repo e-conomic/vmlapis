@@ -7,15 +7,15 @@ option go_package = "dataservice";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
+import "ssn/type/text_annotation.proto";
 
 service DataService {
 
-    rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse)
-    rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse)
-
+    rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse);
+    rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse);
     // For feedback
-    rpc PrepareFeedback(PrepareFeedbackRequest) returns (PrepareFeedbackResponse)
-    rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty)
+    rpc PrepareFeedback(PrepareFeedbackRequest) returns (PrepareFeedbackResponse);
+    rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty);
 }
 
 message Document {
