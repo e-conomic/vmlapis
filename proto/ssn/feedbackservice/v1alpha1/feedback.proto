@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package ssn.feedbackservice.v1alpha1;
+
+option go_package = "feedbackservice";
+
+import "ssn/type/truth_features.proto";
+import "google/protobuf/empty.proto";
+
+// Feature Generation Service
+service FeedbackService {
+    rpc ProvideFeedback(ProvideFeedbackRequest) returns (ProvideFeedbackResponse);
+    rpc DeleteFeedback(DeleteFeedbackRequest) returns (google.protobuf.Empty);
+  }
+
+
+message ProvideFeedbackRequest {
+    string document_id = 1;
+    ssn.type.TruthFeatures truth_features = 2;
+}
+
+message ProvideFeedbackResponse {
+    string document_id = 1;
+}
+
+message DeleteFeedbackRequest {
+    repeated string document_id = 1;
+}
