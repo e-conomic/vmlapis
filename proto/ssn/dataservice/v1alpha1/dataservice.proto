@@ -9,44 +9,74 @@ import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
 
 service DataService {
-    rpc ProvideFeedback(ProvideFeedbackRequest) returns (ProvideFeedbackResponse);
-    rpc DeleteData(DeleteDataRequest) returns (google.protobuf.Empty);
-  }
 
+    rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse)
+    rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse)
+
+    // For feedback
+    rpc PrepareFeedback(PrepareFeedbackRequest) returns (PrepareFeedbackResponse)
+    rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty)
+}
 
 message Document {
-google.protobuf.DoubleValue total_incl_vat = 1;
-google.protobuf.DoubleValue total_vat = 2;
-google.protobuf.DoubleValue total_excl_vat = 3;
-google.type.Date order_date = 4;
-google.type.Date payment_due_date = 5;
-google.protobuf.StringValue document_type = 6;
-google.protobuf.StringValue currency = 7;
-google.protobuf.StringValue credit_card_number = 8;
-google.protobuf.StringValue payment_method = 9;
-google.protobuf.StringValue ocr_line_dk_type = 10;
-google.protobuf.StringValue ocr_line_dk_payment_id = 11;
-google.protobuf.StringValue ocr_line_dk_creditor_id = 12;
-google.protobuf.StringValue ocr_line_se_payment_id = 13;
-google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;
-google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;
-google.protobuf.StringValue ocr_line_no_payment_id = 16;
-google.protobuf.StringValue ocr_line_fi_payment_id = 17;
-google.protobuf.StringValue ocr_line_nl_payment_id = 18;
-google.protobuf.StringValue supplier_corporate_id = 19;
-google.protobuf.StringValue supplier_country_code = 20;
-google.protobuf.StringValue invoice_number = 21;
+    ssn.type.TextAnnotation ta = 1;
+    bytes bytes = 2;
+    Labels labels = 3;
+    repeated string tags = 4;
 }
 
-message ProvideFeedbackRequest {
-    string document_id = 1;
-    Document document = 2;
+message Labels {
+    google.protobuf.DoubleValue total_incl_vat = 1;
+    google.protobuf.DoubleValue total_vat = 2;
+    google.protobuf.DoubleValue total_excl_vat = 3;
+    google.type.Date order_date = 4;
+    google.type.Date payment_due_date = 5;
+    google.protobuf.StringValue document_type = 6;
+    google.protobuf.StringValue currency = 7;
+    google.protobuf.StringValue credit_card_number = 8;
+    google.protobuf.StringValue payment_method = 9;
+    google.protobuf.StringValue ocr_line_dk_type = 10;
+    google.protobuf.StringValue ocr_line_dk_payment_id = 11;
+    google.protobuf.StringValue ocr_line_dk_creditor_id = 12;
+    google.protobuf.StringValue ocr_line_se_payment_id = 13;
+    google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;
+    google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;
+    google.protobuf.StringValue ocr_line_no_payment_id = 16;
+    google.protobuf.StringValue ocr_line_fi_payment_id = 17;
+    google.protobuf.StringValue ocr_line_nl_payment_id = 18;
+    google.protobuf.StringValue supplier_corporate_id = 19;
+    google.protobuf.StringValue supplier_country_code = 20;
+    google.protobuf.StringValue invoice_number = 21;
 }
 
-message ProvideFeedbackResponse {
-    String document_id = 1;
+message CreateDocumentRequest {
+    Document document = 1;
 }
 
-message DeleteDataRequest {
-    repeated string document_id = 1;
+message CreateDocumentResponse {
+    string id = 1;
+}
+
+message ReadDocumentRequest {
+    string id = 1;
+
+}
+
+message ReadDocumentResponse {
+    Document document = 1;
+}
+
+message PrepareFeedbackRequest {
+    ssn.type.TextAnnotation ta = 1;
+    bytes document_bytes = 2;
+}
+
+message PrepareFeedbackResponse {
+    string id = 1;
+}
+
+message FeedbackRequest {
+    string id = 1;
+    Labels labels = 2;
+    repeated string tags = 3;
 }
