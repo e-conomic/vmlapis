@@ -6,7 +6,8 @@ all:
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \
-		proto/ssn/access/v1/access.proto
+		proto/ssn/access/v1/access.proto \
+		proto/ssn/feedback/v1alpa1/feedback.proto
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
 
