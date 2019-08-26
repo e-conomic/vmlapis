@@ -7,6 +7,7 @@ option go_package = "mlservice";
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
+import "ssn/type/truth_features.proto";
 import "tensorflow/core/example/example.proto";
 
 // Feature Generation Service
@@ -18,30 +19,7 @@ service MlService {
 }
 
 message FeatureGenRequest {
-  message TruthLabels {
-    double total_incl_vat = 1;
-    double total_vat = 2;
-    double total_excl_vat = 3;
-    google.type.Date order_date = 4;
-    google.type.Date payment_due_date = 5;
-    string document_type = 6;
-    string currency = 7;
-    string credit_card_number = 8;
-    string payment_method = 9;
-    string ocr_line_dk_type = 10;
-    string ocr_line_dk_payment_id = 11;
-    string ocr_line_dk_creditor_id = 12;
-    string ocr_line_se_payment_id = 13;
-    string ocr_line_se_bankgiro_creditor_id = 14;
-    string ocr_line_se_plusgiro_creditor_id = 15;
-    string ocr_line_no_payment_id = 16;
-    string ocr_line_fi_payment_id = 17;
-    string ocr_line_nl_payment_id = 18;
-    string supplier_corporate_id = 19;
-    string supplier_country_code = 20;
-    string invoice_number = 21;
-  }
-  TruthLabels truth_labels = 1;
+  ssn.type.TruthFeatures truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
   string id = 3;
 }
