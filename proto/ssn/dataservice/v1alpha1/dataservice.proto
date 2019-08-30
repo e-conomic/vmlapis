@@ -72,8 +72,9 @@ message ReadDocumentResponse {
 }
 
 message PrepareFeedbackRequest {
-    ssn.type.TextAnnotation ta = 1;
-    bytes document_bytes = 2;
+    string id = 1;
+    ssn.type.TextAnnotation ta = 2;
+    bytes document_bytes = 3;
 }
 
 message PrepareFeedbackResponse {
