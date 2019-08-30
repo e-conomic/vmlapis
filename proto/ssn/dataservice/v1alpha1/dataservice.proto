@@ -38,7 +38,7 @@ message Labels {
     google.type.Date payment_due_date = 5;
     google.protobuf.StringValue document_type = 6;
     google.protobuf.StringValue currency = 7;
-    google.protobuf.StringValue credit_card_number = 8;
+    google.protobuf.StringValue credit_card_last_four = 8;
     google.protobuf.StringValue payment_method = 9;
     google.protobuf.StringValue ocr_line_dk_type = 10;
     google.protobuf.StringValue ocr_line_dk_payment_id = 11;

@@ -28,7 +28,7 @@ class DataServiceStub(object):
     self.PrepareFeedback = channel.unary_unary(
         '/ssn.dataservice.v1alpha1.DataService/PrepareFeedback',
         request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
-        response_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareFeedbackResponse.FromString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.Feedback = channel.unary_unary(
         '/ssn.dataservice.v1alpha1.DataService/Feedback',
@@ -85,7 +85,7 @@ def add_DataServiceServicer_to_server(servicer, server):
       'PrepareFeedback': grpc.unary_unary_rpc_method_handler(
           servicer.PrepareFeedback,
           request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareFeedbackRequest.FromString,
-          response_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareFeedbackResponse.SerializeToString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'Feedback': grpc.unary_unary_rpc_method_handler(
           servicer.Feedback,

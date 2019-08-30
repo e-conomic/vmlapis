@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n*ssn/dataservice/v1alpha1/dataservice.proto\x12\x18ssn.dataservice.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x1essn/type/text_annotation.proto\"\x7f\n\x08\x44ocument\x12$\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\r\n\x05\x62ytes\x18\x02 \x01(\x0c\x12\x30\n\x06labels\x18\x03 \x01(\x0b\x32 .ssn.dataservice.v1alpha1.Labels\x12\x0c\n\x04tags\x18\x04 \x03(\t\"\xbb\t\n\x06Labels\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x38\n\x12\x63redit_card_number\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"M\n\x15\x43reateDocumentRequest\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"L\n\x14ReadDocumentResponse\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"V\n\x16PrepareFeedbackRequest\x12$\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x02 \x01(\x0c\"%\n\x17PrepareFeedbackResponse\x12\n\n\x02id\x18\x01 \x01(\t\"]\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x30\n\x06labels\x18\x02 \x01(\x0b\x32 .ssn.dataservice.v1alpha1.Labels\x12\x0c\n\x04tags\x18\x03 \x03(\t2\xd7\x03\n\x0b\x44\x61taService\x12s\n\x0e\x43reateDocument\x12/.ssn.dataservice.v1alpha1.CreateDocumentRequest\x1a\x30.ssn.dataservice.v1alpha1.CreateDocumentResponse\x12m\n\x0cReadDocument\x12-.ssn.dataservice.v1alpha1.ReadDocumentRequest\x1a..ssn.dataservice.v1alpha1.ReadDocumentResponse\x12v\n\x0fPrepareFeedback\x12\x30.ssn.dataservice.v1alpha1.PrepareFeedbackRequest\x1a\x31.ssn.dataservice.v1alpha1.PrepareFeedbackResponse\x12l\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12).ssn.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1alpha1/feedback:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n*ssn/dataservice/v1alpha1/dataservice.proto\x12\x18ssn.dataservice.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x1essn/type/text_annotation.proto\"\x7f\n\x08\x44ocument\x12$\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\r\n\x05\x62ytes\x18\x02 \x01(\x0c\x12\x30\n\x06labels\x18\x03 \x01(\x0b\x32 .ssn.dataservice.v1alpha1.Labels\x12\x0c\n\x04tags\x18\x04 \x03(\t\"\xbe\t\n\x06Labels\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"M\n\x15\x43reateDocumentRequest\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"L\n\x14ReadDocumentResponse\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"b\n\x16PrepareFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x02ta\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x03 \x01(\x0c\"]\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x30\n\x06labels\x18\x02 \x01(\x0b\x32 .ssn.dataservice.v1alpha1.Labels\x12\x0c\n\x04tags\x18\x03 \x03(\t2\xbc\x03\n\x0b\x44\x61taService\x12s\n\x0e\x43reateDocument\x12/.ssn.dataservice.v1alpha1.CreateDocumentRequest\x1a\x30.ssn.dataservice.v1alpha1.CreateDocumentResponse\x12m\n\x0cReadDocument\x12-.ssn.dataservice.v1alpha1.ReadDocumentRequest\x1a..ssn.dataservice.v1alpha1.ReadDocumentResponse\x12[\n\x0fPrepareFeedback\x12\x30.ssn.dataservice.v1alpha1.PrepareFeedbackRequest\x1a\x16.google.protobuf.Empty\x12l\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12).ssn.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"\x1d\x82\xd3\xe4\x93\x02\x17\"\x12/v1alpha1/feedback:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -140,7 +140,7 @@ _LABELS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='credit_card_number', full_name='ssn.dataservice.v1alpha1.Labels.credit_card_number', index=7,
+      name='credit_card_last_four', full_name='ssn.dataservice.v1alpha1.Labels.credit_card_last_four', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -250,7 +250,7 @@ _LABELS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=349,
-  serialized_end=1560,
+  serialized_end=1563,
 )
 
 
@@ -280,8 +280,8 @@ _CREATEDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1562,
-  serialized_end=1639,
+  serialized_start=1565,
+  serialized_end=1642,
 )
 
 
@@ -311,8 +311,8 @@ _CREATEDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1641,
-  serialized_end=1677,
+  serialized_start=1644,
+  serialized_end=1680,
 )
 
 
@@ -342,8 +342,8 @@ _READDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1679,
-  serialized_end=1712,
+  serialized_start=1682,
+  serialized_end=1715,
 )
 
 
@@ -373,8 +373,8 @@ _READDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1714,
-  serialized_end=1790,
+  serialized_start=1717,
+  serialized_end=1793,
 )
 
 
@@ -386,15 +386,22 @@ _PREPAREFEEDBACKREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ta', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackRequest.ta', index=0,
-      number=1, type=11, cpp_type=10, label=1,
+      name='id', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackRequest.id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ta', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackRequest.ta', index=1,
+      number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='document_bytes', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackRequest.document_bytes', index=1,
-      number=2, type=12, cpp_type=9, label=1,
+      name='document_bytes', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackRequest.document_bytes', index=2,
+      number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -411,39 +418,8 @@ _PREPAREFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1792,
-  serialized_end=1878,
-)
-
-
-_PREPAREFEEDBACKRESPONSE = _descriptor.Descriptor(
-  name='PrepareFeedbackResponse',
-  full_name='ssn.dataservice.v1alpha1.PrepareFeedbackResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='ssn.dataservice.v1alpha1.PrepareFeedbackResponse.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1880,
-  serialized_end=1917,
+  serialized_start=1795,
+  serialized_end=1893,
 )
 
 
@@ -487,8 +463,8 @@ _FEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1919,
-  serialized_end=2012,
+  serialized_start=1895,
+  serialized_end=1988,
 )
 
 _DOCUMENT.fields_by_name['ta'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
@@ -500,7 +476,7 @@ _LABELS.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb
 _LABELS.fields_by_name['payment_due_date'].message_type = google_dot_type_dot_date__pb2._DATE
 _LABELS.fields_by_name['document_type'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _LABELS.fields_by_name['currency'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
-_LABELS.fields_by_name['credit_card_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_LABELS.fields_by_name['credit_card_last_four'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _LABELS.fields_by_name['payment_method'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _LABELS.fields_by_name['ocr_line_dk_type'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _LABELS.fields_by_name['ocr_line_dk_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
@@ -525,7 +501,6 @@ DESCRIPTOR.message_types_by_name['CreateDocumentResponse'] = _CREATEDOCUMENTRESP
 DESCRIPTOR.message_types_by_name['ReadDocumentRequest'] = _READDOCUMENTREQUEST
 DESCRIPTOR.message_types_by_name['ReadDocumentResponse'] = _READDOCUMENTRESPONSE
 DESCRIPTOR.message_types_by_name['PrepareFeedbackRequest'] = _PREPAREFEEDBACKREQUEST
-DESCRIPTOR.message_types_by_name['PrepareFeedbackResponse'] = _PREPAREFEEDBACKRESPONSE
 DESCRIPTOR.message_types_by_name['FeedbackRequest'] = _FEEDBACKREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -578,13 +553,6 @@ PrepareFeedbackRequest = _reflection.GeneratedProtocolMessageType('PrepareFeedba
   ))
 _sym_db.RegisterMessage(PrepareFeedbackRequest)
 
-PrepareFeedbackResponse = _reflection.GeneratedProtocolMessageType('PrepareFeedbackResponse', (_message.Message,), dict(
-  DESCRIPTOR = _PREPAREFEEDBACKRESPONSE,
-  __module__ = 'ssn.dataservice.v1alpha1.dataservice_pb2'
-  # @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
-  ))
-_sym_db.RegisterMessage(PrepareFeedbackResponse)
-
 FeedbackRequest = _reflection.GeneratedProtocolMessageType('FeedbackRequest', (_message.Message,), dict(
   DESCRIPTOR = _FEEDBACKREQUEST,
   __module__ = 'ssn.dataservice.v1alpha1.dataservice_pb2'
@@ -601,8 +569,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2015,
-  serialized_end=2486,
+  serialized_start=1991,
+  serialized_end=2435,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDocument',
@@ -628,7 +596,7 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
     index=2,
     containing_service=None,
     input_type=_PREPAREFEEDBACKREQUEST,
-    output_type=_PREPAREFEEDBACKRESPONSE,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(

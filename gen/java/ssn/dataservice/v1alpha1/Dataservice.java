@@ -1171,17 +1171,17 @@ public final class Dataservice {
     com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
 
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    boolean hasCreditCardNumber();
+    boolean hasCreditCardLastFour();
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    com.google.protobuf.StringValue getCreditCardNumber();
+    com.google.protobuf.StringValue getCreditCardLastFour();
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    com.google.protobuf.StringValueOrBuilder getCreditCardNumberOrBuilder();
+    com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder();
 
     /**
      * <code>.google.protobuf.StringValue payment_method = 9;</code>
@@ -1484,13 +1484,13 @@ public final class Dataservice {
             }
             case 66: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (creditCardNumber_ != null) {
-                subBuilder = creditCardNumber_.toBuilder();
+              if (creditCardLastFour_ != null) {
+                subBuilder = creditCardLastFour_.toBuilder();
               }
-              creditCardNumber_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              creditCardLastFour_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(creditCardNumber_);
-                creditCardNumber_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(creditCardLastFour_);
+                creditCardLastFour_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1843,25 +1843,25 @@ public final class Dataservice {
       return getCurrency();
     }
 
-    public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 8;
-    private com.google.protobuf.StringValue creditCardNumber_;
+    public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
+    private com.google.protobuf.StringValue creditCardLastFour_;
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    public boolean hasCreditCardNumber() {
-      return creditCardNumber_ != null;
+    public boolean hasCreditCardLastFour() {
+      return creditCardLastFour_ != null;
     }
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    public com.google.protobuf.StringValue getCreditCardNumber() {
-      return creditCardNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardNumber_;
+    public com.google.protobuf.StringValue getCreditCardLastFour() {
+      return creditCardLastFour_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
     }
     /**
-     * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+     * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getCreditCardNumberOrBuilder() {
-      return getCreditCardNumber();
+    public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder() {
+      return getCreditCardLastFour();
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
@@ -2172,8 +2172,8 @@ public final class Dataservice {
       if (currency_ != null) {
         output.writeMessage(7, getCurrency());
       }
-      if (creditCardNumber_ != null) {
-        output.writeMessage(8, getCreditCardNumber());
+      if (creditCardLastFour_ != null) {
+        output.writeMessage(8, getCreditCardLastFour());
       }
       if (paymentMethod_ != null) {
         output.writeMessage(9, getPaymentMethod());
@@ -2251,9 +2251,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getCurrency());
       }
-      if (creditCardNumber_ != null) {
+      if (creditCardLastFour_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getCreditCardNumber());
+          .computeMessageSize(8, getCreditCardLastFour());
       }
       if (paymentMethod_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2358,10 +2358,10 @@ public final class Dataservice {
         result = result && getCurrency()
             .equals(other.getCurrency());
       }
-      result = result && (hasCreditCardNumber() == other.hasCreditCardNumber());
-      if (hasCreditCardNumber()) {
-        result = result && getCreditCardNumber()
-            .equals(other.getCreditCardNumber());
+      result = result && (hasCreditCardLastFour() == other.hasCreditCardLastFour());
+      if (hasCreditCardLastFour()) {
+        result = result && getCreditCardLastFour()
+            .equals(other.getCreditCardLastFour());
       }
       result = result && (hasPaymentMethod() == other.hasPaymentMethod());
       if (hasPaymentMethod()) {
@@ -2467,9 +2467,9 @@ public final class Dataservice {
         hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
         hash = (53 * hash) + getCurrency().hashCode();
       }
-      if (hasCreditCardNumber()) {
-        hash = (37 * hash) + CREDIT_CARD_NUMBER_FIELD_NUMBER;
-        hash = (53 * hash) + getCreditCardNumber().hashCode();
+      if (hasCreditCardLastFour()) {
+        hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCardLastFour().hashCode();
       }
       if (hasPaymentMethod()) {
         hash = (37 * hash) + PAYMENT_METHOD_FIELD_NUMBER;
@@ -2698,11 +2698,11 @@ public final class Dataservice {
           currency_ = null;
           currencyBuilder_ = null;
         }
-        if (creditCardNumberBuilder_ == null) {
-          creditCardNumber_ = null;
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = null;
         } else {
-          creditCardNumber_ = null;
-          creditCardNumberBuilder_ = null;
+          creditCardLastFour_ = null;
+          creditCardLastFourBuilder_ = null;
         }
         if (paymentMethodBuilder_ == null) {
           paymentMethod_ = null;
@@ -2843,10 +2843,10 @@ public final class Dataservice {
         } else {
           result.currency_ = currencyBuilder_.build();
         }
-        if (creditCardNumberBuilder_ == null) {
-          result.creditCardNumber_ = creditCardNumber_;
+        if (creditCardLastFourBuilder_ == null) {
+          result.creditCardLastFour_ = creditCardLastFour_;
         } else {
-          result.creditCardNumber_ = creditCardNumberBuilder_.build();
+          result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
         if (paymentMethodBuilder_ == null) {
           result.paymentMethod_ = paymentMethod_;
@@ -2982,8 +2982,8 @@ public final class Dataservice {
         if (other.hasCurrency()) {
           mergeCurrency(other.getCurrency());
         }
-        if (other.hasCreditCardNumber()) {
-          mergeCreditCardNumber(other.getCreditCardNumber());
+        if (other.hasCreditCardLastFour()) {
+          mergeCreditCardLastFour(other.getCreditCardLastFour());
         }
         if (other.hasPaymentMethod()) {
           mergePaymentMethod(other.getPaymentMethod());
@@ -3872,121 +3872,121 @@ public final class Dataservice {
         return currencyBuilder_;
       }
 
-      private com.google.protobuf.StringValue creditCardNumber_ = null;
+      private com.google.protobuf.StringValue creditCardLastFour_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCardNumberBuilder_;
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCardLastFourBuilder_;
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public boolean hasCreditCardNumber() {
-        return creditCardNumberBuilder_ != null || creditCardNumber_ != null;
+      public boolean hasCreditCardLastFour() {
+        return creditCardLastFourBuilder_ != null || creditCardLastFour_ != null;
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.StringValue getCreditCardNumber() {
-        if (creditCardNumberBuilder_ == null) {
-          return creditCardNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardNumber_;
+      public com.google.protobuf.StringValue getCreditCardLastFour() {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
         } else {
-          return creditCardNumberBuilder_.getMessage();
+          return creditCardLastFourBuilder_.getMessage();
         }
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public Builder setCreditCardNumber(com.google.protobuf.StringValue value) {
-        if (creditCardNumberBuilder_ == null) {
+      public Builder setCreditCardLastFour(com.google.protobuf.StringValue value) {
+        if (creditCardLastFourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          creditCardNumber_ = value;
+          creditCardLastFour_ = value;
           onChanged();
         } else {
-          creditCardNumberBuilder_.setMessage(value);
+          creditCardLastFourBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public Builder setCreditCardNumber(
+      public Builder setCreditCardLastFour(
           com.google.protobuf.StringValue.Builder builderForValue) {
-        if (creditCardNumberBuilder_ == null) {
-          creditCardNumber_ = builderForValue.build();
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = builderForValue.build();
           onChanged();
         } else {
-          creditCardNumberBuilder_.setMessage(builderForValue.build());
+          creditCardLastFourBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public Builder mergeCreditCardNumber(com.google.protobuf.StringValue value) {
-        if (creditCardNumberBuilder_ == null) {
-          if (creditCardNumber_ != null) {
-            creditCardNumber_ =
-              com.google.protobuf.StringValue.newBuilder(creditCardNumber_).mergeFrom(value).buildPartial();
+      public Builder mergeCreditCardLastFour(com.google.protobuf.StringValue value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (creditCardLastFour_ != null) {
+            creditCardLastFour_ =
+              com.google.protobuf.StringValue.newBuilder(creditCardLastFour_).mergeFrom(value).buildPartial();
           } else {
-            creditCardNumber_ = value;
+            creditCardLastFour_ = value;
           }
           onChanged();
         } else {
-          creditCardNumberBuilder_.mergeFrom(value);
+          creditCardLastFourBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public Builder clearCreditCardNumber() {
-        if (creditCardNumberBuilder_ == null) {
-          creditCardNumber_ = null;
+      public Builder clearCreditCardLastFour() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = null;
           onChanged();
         } else {
-          creditCardNumber_ = null;
-          creditCardNumberBuilder_ = null;
+          creditCardLastFour_ = null;
+          creditCardLastFourBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.StringValue.Builder getCreditCardNumberBuilder() {
+      public com.google.protobuf.StringValue.Builder getCreditCardLastFourBuilder() {
         
         onChanged();
-        return getCreditCardNumberFieldBuilder().getBuilder();
+        return getCreditCardLastFourFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.StringValueOrBuilder getCreditCardNumberOrBuilder() {
-        if (creditCardNumberBuilder_ != null) {
-          return creditCardNumberBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder() {
+        if (creditCardLastFourBuilder_ != null) {
+          return creditCardLastFourBuilder_.getMessageOrBuilder();
         } else {
-          return creditCardNumber_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : creditCardNumber_;
+          return creditCardLastFour_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
         }
       }
       /**
-       * <code>.google.protobuf.StringValue credit_card_number = 8;</code>
+       * <code>.google.protobuf.StringValue credit_card_last_four = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getCreditCardNumberFieldBuilder() {
-        if (creditCardNumberBuilder_ == null) {
-          creditCardNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getCreditCardLastFourFieldBuilder() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFourBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getCreditCardNumber(),
+                  getCreditCardLastFour(),
                   getParentForChildren(),
                   isClean());
-          creditCardNumber_ = null;
+          creditCardLastFour_ = null;
         }
-        return creditCardNumberBuilder_;
+        return creditCardLastFourBuilder_;
       }
 
       private com.google.protobuf.StringValue paymentMethod_ = null;
@@ -7881,20 +7881,30 @@ public final class Dataservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>string id = 1;</code>
+     */
+    java.lang.String getId();
+    /**
+     * <code>string id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
+
+    /**
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     boolean hasTa();
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTa();
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder();
 
     /**
-     * <code>bytes document_bytes = 2;</code>
+     * <code>bytes document_bytes = 3;</code>
      */
     com.google.protobuf.ByteString getDocumentBytes();
   }
@@ -7911,6 +7921,7 @@ public final class Dataservice {
       super(builder);
     }
     private PrepareFeedbackRequest() {
+      id_ = "";
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
     }
 
@@ -7939,6 +7950,12 @@ public final class Dataservice {
               done = true;
               break;
             case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
+              break;
+            }
+            case 18: {
               ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder subBuilder = null;
               if (ta_ != null) {
                 subBuilder = ta_.toBuilder();
@@ -7951,7 +7968,7 @@ public final class Dataservice {
 
               break;
             }
-            case 18: {
+            case 26: {
 
               documentBytes_ = input.readBytes();
               break;
@@ -7988,31 +8005,65 @@ public final class Dataservice {
               ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.class, ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.Builder.class);
     }
 
-    public static final int TA_FIELD_NUMBER = 1;
+    public static final int ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object id_;
+    /**
+     * <code>string id = 1;</code>
+     */
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TA_FIELD_NUMBER = 2;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     public boolean hasTa() {
       return ta_ != null;
     }
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
       return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 2;</code>
      */
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
       return getTa();
     }
 
-    public static final int DOCUMENT_BYTES_FIELD_NUMBER = 2;
+    public static final int DOCUMENT_BYTES_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString documentBytes_;
     /**
-     * <code>bytes document_bytes = 2;</code>
+     * <code>bytes document_bytes = 3;</code>
      */
     public com.google.protobuf.ByteString getDocumentBytes() {
       return documentBytes_;
@@ -8032,11 +8083,14 @@ public final class Dataservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+      }
       if (ta_ != null) {
-        output.writeMessage(1, getTa());
+        output.writeMessage(2, getTa());
       }
       if (!documentBytes_.isEmpty()) {
-        output.writeBytes(2, documentBytes_);
+        output.writeBytes(3, documentBytes_);
       }
       unknownFields.writeTo(output);
     }
@@ -8047,13 +8101,16 @@ public final class Dataservice {
       if (size != -1) return size;
 
       size = 0;
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+      }
       if (ta_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getTa());
+          .computeMessageSize(2, getTa());
       }
       if (!documentBytes_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, documentBytes_);
+          .computeBytesSize(3, documentBytes_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8071,6 +8128,8 @@ public final class Dataservice {
       ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest other = (ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest) obj;
 
       boolean result = true;
+      result = result && getId()
+          .equals(other.getId());
       result = result && (hasTa() == other.hasTa());
       if (hasTa()) {
         result = result && getTa()
@@ -8089,6 +8148,8 @@ public final class Dataservice {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       if (hasTa()) {
         hash = (37 * hash) + TA_FIELD_NUMBER;
         hash = (53 * hash) + getTa().hashCode();
@@ -8228,6 +8289,8 @@ public final class Dataservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        id_ = "";
+
         if (taBuilder_ == null) {
           ta_ = null;
         } else {
@@ -8262,6 +8325,7 @@ public final class Dataservice {
       @java.lang.Override
       public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest buildPartial() {
         ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest result = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest(this);
+        result.id_ = id_;
         if (taBuilder_ == null) {
           result.ta_ = ta_;
         } else {
@@ -8316,6 +8380,10 @@ public final class Dataservice {
 
       public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest other) {
         if (other == ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.getDefaultInstance()) return this;
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
         if (other.hasTa()) {
           mergeTa(other.getTa());
         }
@@ -8342,633 +8410,6 @@ public final class Dataservice {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> taBuilder_;
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public boolean hasTa() {
-        return taBuilder_ != null || ta_ != null;
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
-        if (taBuilder_ == null) {
-          return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
-        } else {
-          return taBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public Builder setTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
-        if (taBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ta_ = value;
-          onChanged();
-        } else {
-          taBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public Builder setTa(
-          ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
-        if (taBuilder_ == null) {
-          ta_ = builderForValue.build();
-          onChanged();
-        } else {
-          taBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public Builder mergeTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
-        if (taBuilder_ == null) {
-          if (ta_ != null) {
-            ta_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(ta_).mergeFrom(value).buildPartial();
-          } else {
-            ta_ = value;
-          }
-          onChanged();
-        } else {
-          taBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public Builder clearTa() {
-        if (taBuilder_ == null) {
-          ta_ = null;
-          onChanged();
-        } else {
-          ta_ = null;
-          taBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTaBuilder() {
-        
-        onChanged();
-        return getTaFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
-        if (taBuilder_ != null) {
-          return taBuilder_.getMessageOrBuilder();
-        } else {
-          return ta_ == null ?
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
-        }
-      }
-      /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
-          getTaFieldBuilder() {
-        if (taBuilder_ == null) {
-          taBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder>(
-                  getTa(),
-                  getParentForChildren(),
-                  isClean());
-          ta_ = null;
-        }
-        return taBuilder_;
-      }
-
-      private com.google.protobuf.ByteString documentBytes_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>bytes document_bytes = 2;</code>
-       */
-      public com.google.protobuf.ByteString getDocumentBytes() {
-        return documentBytes_;
-      }
-      /**
-       * <code>bytes document_bytes = 2;</code>
-       */
-      public Builder setDocumentBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        documentBytes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bytes document_bytes = 2;</code>
-       */
-      public Builder clearDocumentBytes() {
-        
-        documentBytes_ = getDefaultInstance().getDocumentBytes();
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.PrepareFeedbackRequest)
-    }
-
-    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PrepareFeedbackRequest)
-    private static final ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest();
-    }
-
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<PrepareFeedbackRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PrepareFeedbackRequest>() {
-      @java.lang.Override
-      public PrepareFeedbackRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrepareFeedbackRequest(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<PrepareFeedbackRequest> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<PrepareFeedbackRequest> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PrepareFeedbackResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-  }
-  /**
-   * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackResponse}
-   */
-  public  static final class PrepareFeedbackResponse extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
-      PrepareFeedbackResponseOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use PrepareFeedbackResponse.newBuilder() to construct.
-    private PrepareFeedbackResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private PrepareFeedbackResponse() {
-      id_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private PrepareFeedbackResponse(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.class, ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse)) {
-        return super.equals(obj);
-      }
-      ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse other = (ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse) obj;
-
-      boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackResponse}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
-        ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponseOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.class, ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.Builder.class);
-      }
-
-      // Construct using ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        id_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor;
-      }
-
-      @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse getDefaultInstanceForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse build() {
-        ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse buildPartial() {
-        ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse result = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse(this);
-        result.id_ = id_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse) {
-          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse other) {
-        if (other == ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9046,6 +8487,152 @@ public final class Dataservice {
         onChanged();
         return this;
       }
+
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> taBuilder_;
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public boolean hasTa() {
+        return taBuilder_ != null || ta_ != null;
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
+        if (taBuilder_ == null) {
+          return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
+        } else {
+          return taBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public Builder setTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
+        if (taBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ta_ = value;
+          onChanged();
+        } else {
+          taBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public Builder setTa(
+          ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
+        if (taBuilder_ == null) {
+          ta_ = builderForValue.build();
+          onChanged();
+        } else {
+          taBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public Builder mergeTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
+        if (taBuilder_ == null) {
+          if (ta_ != null) {
+            ta_ =
+              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(ta_).mergeFrom(value).buildPartial();
+          } else {
+            ta_ = value;
+          }
+          onChanged();
+        } else {
+          taBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public Builder clearTa() {
+        if (taBuilder_ == null) {
+          ta_ = null;
+          onChanged();
+        } else {
+          ta_ = null;
+          taBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTaBuilder() {
+        
+        onChanged();
+        return getTaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
+        if (taBuilder_ != null) {
+          return taBuilder_.getMessageOrBuilder();
+        } else {
+          return ta_ == null ?
+              ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
+        }
+      }
+      /**
+       * <code>.ssn.type.TextAnnotation ta = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
+          getTaFieldBuilder() {
+        if (taBuilder_ == null) {
+          taBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder>(
+                  getTa(),
+                  getParentForChildren(),
+                  isClean());
+          ta_ = null;
+        }
+        return taBuilder_;
+      }
+
+      private com.google.protobuf.ByteString documentBytes_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>bytes document_bytes = 3;</code>
+       */
+      public com.google.protobuf.ByteString getDocumentBytes() {
+        return documentBytes_;
+      }
+      /**
+       * <code>bytes document_bytes = 3;</code>
+       */
+      public Builder setDocumentBytes(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        documentBytes_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bytes document_bytes = 3;</code>
+       */
+      public Builder clearDocumentBytes() {
+        
+        documentBytes_ = getDefaultInstance().getDocumentBytes();
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9059,41 +8646,41 @@ public final class Dataservice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.PrepareFeedbackRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PrepareFeedbackResponse)
-    private static final ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PrepareFeedbackRequest)
+    private static final ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse();
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest();
     }
 
-    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse getDefaultInstance() {
+    public static ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PrepareFeedbackResponse>
-        PARSER = new com.google.protobuf.AbstractParser<PrepareFeedbackResponse>() {
+    private static final com.google.protobuf.Parser<PrepareFeedbackRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PrepareFeedbackRequest>() {
       @java.lang.Override
-      public PrepareFeedbackResponse parsePartialFrom(
+      public PrepareFeedbackRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrepareFeedbackResponse(input, extensionRegistry);
+        return new PrepareFeedbackRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PrepareFeedbackResponse> parser() {
+    public static com.google.protobuf.Parser<PrepareFeedbackRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PrepareFeedbackResponse> getParserForType() {
+    public com.google.protobuf.Parser<PrepareFeedbackRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackResponse getDefaultInstanceForType() {
+    public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10073,11 +9660,6 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10099,7 +9681,7 @@ public final class Dataservice {
       "_annotation.proto\"\177\n\010Document\022$\n\002ta\030\001 \001(" +
       "\0132\030.ssn.type.TextAnnotation\022\r\n\005bytes\030\002 \001" +
       "(\014\0220\n\006labels\030\003 \001(\0132 .ssn.dataservice.v1a" +
-      "lpha1.Labels\022\014\n\004tags\030\004 \003(\t\"\273\t\n\006Labels\0224\n" +
+      "lpha1.Labels\022\014\n\004tags\030\004 \003(\t\"\276\t\n\006Labels\0224\n" +
       "\016total_incl_vat\030\001 \001(\0132\034.google.protobuf." +
       "DoubleValue\022/\n\ttotal_vat\030\002 \001(\0132\034.google." +
       "protobuf.DoubleValue\0224\n\016total_excl_vat\030\003" +
@@ -10108,52 +9690,51 @@ public final class Dataservice {
       "ment_due_date\030\005 \001(\0132\021.google.type.Date\0223" +
       "\n\rdocument_type\030\006 \001(\0132\034.google.protobuf." +
       "StringValue\022.\n\010currency\030\007 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\0228\n\022credit_card_numbe" +
-      "r\030\010 \001(\0132\034.google.protobuf.StringValue\0224\n" +
-      "\016payment_method\030\t \001(\0132\034.google.protobuf." +
-      "StringValue\0226\n\020ocr_line_dk_type\030\n \001(\0132\034." +
-      "google.protobuf.StringValue\022<\n\026ocr_line_" +
-      "dk_payment_id\030\013 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022=\n\027ocr_line_dk_creditor_id\030\014 \001" +
-      "(\0132\034.google.protobuf.StringValue\022<\n\026ocr_" +
-      "line_se_payment_id\030\r \001(\0132\034.google.protob" +
-      "uf.StringValue\022F\n ocr_line_se_bankgiro_c" +
-      "reditor_id\030\016 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022F\n ocr_line_se_plusgiro_creditor_" +
-      "id\030\017 \001(\0132\034.google.protobuf.StringValue\022<" +
-      "\n\026ocr_line_no_payment_id\030\020 \001(\0132\034.google." +
-      "protobuf.StringValue\022<\n\026ocr_line_fi_paym" +
-      "ent_id\030\021 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022;\n\025supplier_cor" +
-      "porate_id\030\023 \001(\0132\034.google.protobuf.String" +
-      "Value\022;\n\025supplier_country_code\030\024 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\0224\n\016invoice_nu" +
-      "mber\030\025 \001(\0132\034.google.protobuf.StringValue" +
-      "\"M\n\025CreateDocumentRequest\0224\n\010document\030\001 " +
-      "\001(\0132\".ssn.dataservice.v1alpha1.Document\"" +
-      "$\n\026CreateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n" +
-      "\023ReadDocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024Read" +
-      "DocumentResponse\0224\n\010document\030\001 \001(\0132\".ssn" +
-      ".dataservice.v1alpha1.Document\"V\n\026Prepar" +
-      "eFeedbackRequest\022$\n\002ta\030\001 \001(\0132\030.ssn.type." +
-      "TextAnnotation\022\026\n\016document_bytes\030\002 \001(\014\"%" +
-      "\n\027PrepareFeedbackResponse\022\n\n\002id\030\001 \001(\t\"]\n" +
-      "\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0220\n\006labels\030\002" +
-      " \001(\0132 .ssn.dataservice.v1alpha1.Labels\022\014" +
-      "\n\004tags\030\003 \003(\t2\327\003\n\013DataService\022s\n\016CreateDo" +
-      "cument\022/.ssn.dataservice.v1alpha1.Create" +
-      "DocumentRequest\0320.ssn.dataservice.v1alph" +
-      "a1.CreateDocumentResponse\022m\n\014ReadDocumen" +
-      "t\022-.ssn.dataservice.v1alpha1.ReadDocumen" +
-      "tRequest\032..ssn.dataservice.v1alpha1.Read" +
-      "DocumentResponse\022v\n\017PrepareFeedback\0220.ss" +
-      "n.dataservice.v1alpha1.PrepareFeedbackRe" +
-      "quest\0321.ssn.dataservice.v1alpha1.Prepare" +
-      "FeedbackResponse\022l\n\010Feedback\022).ssn.datas" +
-      "ervice.v1alpha1.FeedbackRequest\032\026.google" +
-      ".protobuf.Empty\"\035\202\323\344\223\002\027\"\022/v1alpha1/feedb" +
-      "ack:\001*B\rZ\013dataserviceb\006proto3"
+      "rotobuf.StringValue\022;\n\025credit_card_last_" +
+      "four\030\010 \001(\0132\034.google.protobuf.StringValue" +
+      "\0224\n\016payment_method\030\t \001(\0132\034.google.protob" +
+      "uf.StringValue\0226\n\020ocr_line_dk_type\030\n \001(\013" +
+      "2\034.google.protobuf.StringValue\022<\n\026ocr_li" +
+      "ne_dk_payment_id\030\013 \001(\0132\034.google.protobuf" +
+      ".StringValue\022=\n\027ocr_line_dk_creditor_id\030" +
+      "\014 \001(\0132\034.google.protobuf.StringValue\022<\n\026o" +
+      "cr_line_se_payment_id\030\r \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022F\n ocr_line_se_bankgir" +
+      "o_creditor_id\030\016 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022F\n ocr_line_se_plusgiro_credit" +
+      "or_id\030\017 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022<\n\026ocr_line_no_payment_id\030\020 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022<\n\026ocr_line_fi_p" +
+      "ayment_id\030\021 \001(\0132\034.google.protobuf.String" +
+      "Value\022<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034." +
+      "google.protobuf.StringValue\022;\n\025supplier_" +
+      "corporate_id\030\023 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022;\n\025supplier_country_code\030\024 \001(\0132" +
+      "\034.google.protobuf.StringValue\0224\n\016invoice" +
+      "_number\030\025 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\"M\n\025CreateDocumentRequest\0224\n\010document" +
+      "\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Docume" +
+      "nt\"$\n\026CreateDocumentResponse\022\n\n\002id\030\001 \001(\t" +
+      "\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024R" +
+      "eadDocumentResponse\0224\n\010document\030\001 \001(\0132\"." +
+      "ssn.dataservice.v1alpha1.Document\"b\n\026Pre" +
+      "pareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 " +
+      "\001(\0132\030.ssn.type.TextAnnotation\022\026\n\016documen" +
+      "t_bytes\030\003 \001(\014\"]\n\017FeedbackRequest\022\n\n\002id\030\001" +
+      " \001(\t\0220\n\006labels\030\002 \001(\0132 .ssn.dataservice.v" +
+      "1alpha1.Labels\022\014\n\004tags\030\003 \003(\t2\274\003\n\013DataSer" +
+      "vice\022s\n\016CreateDocument\022/.ssn.dataservice" +
+      ".v1alpha1.CreateDocumentRequest\0320.ssn.da" +
+      "taservice.v1alpha1.CreateDocumentRespons" +
+      "e\022m\n\014ReadDocument\022-.ssn.dataservice.v1al" +
+      "pha1.ReadDocumentRequest\032..ssn.dataservi" +
+      "ce.v1alpha1.ReadDocumentResponse\022[\n\017Prep" +
+      "areFeedback\0220.ssn.dataservice.v1alpha1.P" +
+      "repareFeedbackRequest\032\026.google.protobuf." +
+      "Empty\022l\n\010Feedback\022).ssn.dataservice.v1al" +
+      "pha1.FeedbackRequest\032\026.google.protobuf.E" +
+      "mpty\"\035\202\323\344\223\002\027\"\022/v1alpha1/feedback:\001*B\rZ\013d" +
+      "ataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10183,7 +9764,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_Labels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_Labels_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_fieldAccessorTable = new
@@ -10213,15 +9794,9 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Ta", "DocumentBytes", });
-    internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackResponse_descriptor,
-        new java.lang.String[] { "Id", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", });
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor,

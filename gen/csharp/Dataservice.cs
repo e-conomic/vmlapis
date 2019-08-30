@@ -31,7 +31,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "cHJvdG8aHnNzbi90eXBlL3RleHRfYW5ub3RhdGlvbi5wcm90byJ/CghEb2N1",
             "bWVudBIkCgJ0YRgBIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uEg0K",
             "BWJ5dGVzGAIgASgMEjAKBmxhYmVscxgDIAEoCzIgLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5MYWJlbHMSDAoEdGFncxgEIAMoCSK7CQoGTGFiZWxzEjQK",
+            "ZS52MWFscGhhMS5MYWJlbHMSDAoEdGFncxgEIAMoCSK+CQoGTGFiZWxzEjQK",
             "DnRvdGFsX2luY2xfdmF0GAEgASgLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJs",
             "ZVZhbHVlEi8KCXRvdGFsX3ZhdBgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5E",
             "b3VibGVWYWx1ZRI0Cg50b3RhbF9leGNsX3ZhdBgDIAEoCzIcLmdvb2dsZS5w",
@@ -39,58 +39,56 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "Z2xlLnR5cGUuRGF0ZRIrChBwYXltZW50X2R1ZV9kYXRlGAUgASgLMhEuZ29v",
             "Z2xlLnR5cGUuRGF0ZRIzCg1kb2N1bWVudF90eXBlGAYgASgLMhwuZ29vZ2xl",
             "LnByb3RvYnVmLlN0cmluZ1ZhbHVlEi4KCGN1cnJlbmN5GAcgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjgKEmNyZWRpdF9jYXJkX251bWJl",
-            "chgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI0Cg5wYXlt",
-            "ZW50X21ldGhvZBgJIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1",
-            "ZRI2ChBvY3JfbGluZV9ka190eXBlGAogASgLMhwuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cmluZ1ZhbHVlEjwKFm9jcl9saW5lX2RrX3BheW1lbnRfaWQYCyABKAsy",
-            "HC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSPQoXb2NyX2xpbmVfZGtf",
-            "Y3JlZGl0b3JfaWQYDCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFs",
-            "dWUSPAoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgNIAEoCzIcLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJpbmdWYWx1ZRJGCiBvY3JfbGluZV9zZV9iYW5rZ2lyb19j",
-            "cmVkaXRvcl9pZBgOIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1",
-            "ZRJGCiBvY3JfbGluZV9zZV9wbHVzZ2lyb19jcmVkaXRvcl9pZBgPIAEoCzIc",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI8ChZvY3JfbGluZV9ub19w",
-            "YXltZW50X2lkGBAgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVl",
-            "EjwKFm9jcl9saW5lX2ZpX3BheW1lbnRfaWQYESABKAsyHC5nb29nbGUucHJv",
-            "dG9idWYuU3RyaW5nVmFsdWUSPAoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgS",
-            "IAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI7ChVzdXBwbGll",
-            "cl9jb3Jwb3JhdGVfaWQYEyABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
-            "VmFsdWUSOwoVc3VwcGxpZXJfY291bnRyeV9jb2RlGBQgASgLMhwuZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlEjQKDmludm9pY2VfbnVtYmVyGBUgASgL",
-            "MhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIk0KFUNyZWF0ZURvY3Vt",
-            "ZW50UmVxdWVzdBI0Cghkb2N1bWVudBgBIAEoCzIiLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5Eb2N1bWVudCIkChZDcmVhdGVEb2N1bWVudFJlc3BvbnNl",
-            "EgoKAmlkGAEgASgJIiEKE1JlYWREb2N1bWVudFJlcXVlc3QSCgoCaWQYASAB",
-            "KAkiTAoUUmVhZERvY3VtZW50UmVzcG9uc2USNAoIZG9jdW1lbnQYASABKAsy",
-            "Ii5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRG9jdW1lbnQiVgoWUHJlcGFy",
-            "ZUZlZWRiYWNrUmVxdWVzdBIkCgJ0YRgBIAEoCzIYLnNzbi50eXBlLlRleHRB",
-            "bm5vdGF0aW9uEhYKDmRvY3VtZW50X2J5dGVzGAIgASgMIiUKF1ByZXBhcmVG",
-            "ZWVkYmFja1Jlc3BvbnNlEgoKAmlkGAEgASgJIl0KD0ZlZWRiYWNrUmVxdWVz",
-            "dBIKCgJpZBgBIAEoCRIwCgZsYWJlbHMYAiABKAsyIC5zc24uZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuTGFiZWxzEgwKBHRhZ3MYAyADKAky1wMKC0RhdGFTZXJ2",
-            "aWNlEnMKDkNyZWF0ZURvY3VtZW50Ei8uc3NuLmRhdGFzZXJ2aWNlLnYxYWxw",
-            "aGExLkNyZWF0ZURvY3VtZW50UmVxdWVzdBowLnNzbi5kYXRhc2VydmljZS52",
-            "MWFscGhhMS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEm0KDFJlYWREb2N1bWVu",
-            "dBItLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRSZXF1",
-            "ZXN0Gi4uc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJlYWREb2N1bWVudFJl",
-            "c3BvbnNlEnYKD1ByZXBhcmVGZWVkYmFjaxIwLnNzbi5kYXRhc2VydmljZS52",
-            "MWFscGhhMS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GjEuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxYWxwaGExLlByZXBhcmVGZWVkYmFja1Jlc3BvbnNlEmwKCEZlZWRi",
-            "YWNrEikuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkZlZWRiYWNrUmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIdgtPkkwIXIhIvdjFhbHBoYTEv",
-            "ZmVlZGJhY2s6ASpCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
+            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjsKFWNyZWRpdF9jYXJkX2xhc3Rf",
+            "Zm91chgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI0Cg5w",
+            "YXltZW50X21ldGhvZBgJIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdW",
+            "YWx1ZRI2ChBvY3JfbGluZV9ka190eXBlGAogASgLMhwuZ29vZ2xlLnByb3Rv",
+            "YnVmLlN0cmluZ1ZhbHVlEjwKFm9jcl9saW5lX2RrX3BheW1lbnRfaWQYCyAB",
+            "KAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSPQoXb2NyX2xpbmVf",
+            "ZGtfY3JlZGl0b3JfaWQYDCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5n",
+            "VmFsdWUSPAoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgNIAEoCzIcLmdvb2ds",
+            "ZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRJGCiBvY3JfbGluZV9zZV9iYW5rZ2ly",
+            "b19jcmVkaXRvcl9pZBgOIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdW",
+            "YWx1ZRJGCiBvY3JfbGluZV9zZV9wbHVzZ2lyb19jcmVkaXRvcl9pZBgPIAEo",
+            "CzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI8ChZvY3JfbGluZV9u",
+            "b19wYXltZW50X2lkGBAgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1Zh",
+            "bHVlEjwKFm9jcl9saW5lX2ZpX3BheW1lbnRfaWQYESABKAsyHC5nb29nbGUu",
+            "cHJvdG9idWYuU3RyaW5nVmFsdWUSPAoWb2NyX2xpbmVfbmxfcGF5bWVudF9p",
+            "ZBgSIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRI7ChVzdXBw",
+            "bGllcl9jb3Jwb3JhdGVfaWQYEyABKAsyHC5nb29nbGUucHJvdG9idWYuU3Ry",
+            "aW5nVmFsdWUSOwoVc3VwcGxpZXJfY291bnRyeV9jb2RlGBQgASgLMhwuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjQKDmludm9pY2VfbnVtYmVyGBUg",
+            "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIk0KFUNyZWF0ZURv",
+            "Y3VtZW50UmVxdWVzdBI0Cghkb2N1bWVudBgBIAEoCzIiLnNzbi5kYXRhc2Vy",
+            "dmljZS52MWFscGhhMS5Eb2N1bWVudCIkChZDcmVhdGVEb2N1bWVudFJlc3Bv",
+            "bnNlEgoKAmlkGAEgASgJIiEKE1JlYWREb2N1bWVudFJlcXVlc3QSCgoCaWQY",
+            "ASABKAkiTAoUUmVhZERvY3VtZW50UmVzcG9uc2USNAoIZG9jdW1lbnQYASAB",
+            "KAsyIi5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRG9jdW1lbnQiYgoWUHJl",
+            "cGFyZUZlZWRiYWNrUmVxdWVzdBIKCgJpZBgBIAEoCRIkCgJ0YRgCIAEoCzIY",
+            "LnNzbi50eXBlLlRleHRBbm5vdGF0aW9uEhYKDmRvY3VtZW50X2J5dGVzGAMg",
+            "ASgMIl0KD0ZlZWRiYWNrUmVxdWVzdBIKCgJpZBgBIAEoCRIwCgZsYWJlbHMY",
+            "AiABKAsyIC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuTGFiZWxzEgwKBHRh",
+            "Z3MYAyADKAkyvAMKC0RhdGFTZXJ2aWNlEnMKDkNyZWF0ZURvY3VtZW50Ei8u",
+            "c3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZURvY3VtZW50UmVxdWVz",
+            "dBowLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5DcmVhdGVEb2N1bWVudFJl",
+            "c3BvbnNlEm0KDFJlYWREb2N1bWVudBItLnNzbi5kYXRhc2VydmljZS52MWFs",
+            "cGhhMS5SZWFkRG9jdW1lbnRSZXF1ZXN0Gi4uc3NuLmRhdGFzZXJ2aWNlLnYx",
+            "YWxwaGExLlJlYWREb2N1bWVudFJlc3BvbnNlElsKD1ByZXBhcmVGZWVkYmFj",
+            "axIwLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5QcmVwYXJlRmVlZGJhY2tS",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmwKCEZlZWRiYWNrEiku",
+            "c3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkZlZWRiYWNrUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIdgtPkkwIXIhIvdjFhbHBoYTEvZmVlZGJh",
+            "Y2s6ASpCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.Document), global::Ssn.Dataservice.V1Alpha1.Document.Parser, new[]{ "Ta", "Bytes", "Labels", "Tags" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.Labels), global::Ssn.Dataservice.V1Alpha1.Labels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.Labels), global::Ssn.Dataservice.V1Alpha1.Labels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.CreateDocumentRequest), global::Ssn.Dataservice.V1Alpha1.CreateDocumentRequest.Parser, new[]{ "Document" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.CreateDocumentResponse), global::Ssn.Dataservice.V1Alpha1.CreateDocumentResponse.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentRequest), global::Ssn.Dataservice.V1Alpha1.ReadDocumentRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse), global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest.Parser, new[]{ "Ta", "DocumentBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackResponse), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackResponse.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackRequest), global::Ssn.Dataservice.V1Alpha1.FeedbackRequest.Parser, new[]{ "Id", "Labels", "Tags" }, null, null, null)
           }));
     }
@@ -347,7 +345,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       paymentDueDate_ = other.paymentDueDate_ != null ? other.paymentDueDate_.Clone() : null;
       DocumentType = other.DocumentType;
       Currency = other.Currency;
-      CreditCardNumber = other.CreditCardNumber;
+      CreditCardLastFour = other.CreditCardLastFour;
       PaymentMethod = other.PaymentMethod;
       OcrLineDkType = other.OcrLineDkType;
       OcrLineDkPaymentId = other.OcrLineDkPaymentId;
@@ -451,15 +449,15 @@ namespace Ssn.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "credit_card_number" field.</summary>
-    public const int CreditCardNumberFieldNumber = 8;
-    private static readonly pb::FieldCodec<string> _single_creditCardNumber_codec = pb::FieldCodec.ForClassWrapper<string>(66);
-    private string creditCardNumber_;
+    /// <summary>Field number for the "credit_card_last_four" field.</summary>
+    public const int CreditCardLastFourFieldNumber = 8;
+    private static readonly pb::FieldCodec<string> _single_creditCardLastFour_codec = pb::FieldCodec.ForClassWrapper<string>(66);
+    private string creditCardLastFour_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string CreditCardNumber {
-      get { return creditCardNumber_; }
+    public string CreditCardLastFour {
+      get { return creditCardLastFour_; }
       set {
-        creditCardNumber_ = value;
+        creditCardLastFour_ = value;
       }
     }
 
@@ -639,7 +637,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (!object.Equals(PaymentDueDate, other.PaymentDueDate)) return false;
       if (DocumentType != other.DocumentType) return false;
       if (Currency != other.Currency) return false;
-      if (CreditCardNumber != other.CreditCardNumber) return false;
+      if (CreditCardLastFour != other.CreditCardLastFour) return false;
       if (PaymentMethod != other.PaymentMethod) return false;
       if (OcrLineDkType != other.OcrLineDkType) return false;
       if (OcrLineDkPaymentId != other.OcrLineDkPaymentId) return false;
@@ -666,7 +664,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (paymentDueDate_ != null) hash ^= PaymentDueDate.GetHashCode();
       if (documentType_ != null) hash ^= DocumentType.GetHashCode();
       if (currency_ != null) hash ^= Currency.GetHashCode();
-      if (creditCardNumber_ != null) hash ^= CreditCardNumber.GetHashCode();
+      if (creditCardLastFour_ != null) hash ^= CreditCardLastFour.GetHashCode();
       if (paymentMethod_ != null) hash ^= PaymentMethod.GetHashCode();
       if (ocrLineDkType_ != null) hash ^= OcrLineDkType.GetHashCode();
       if (ocrLineDkPaymentId_ != null) hash ^= OcrLineDkPaymentId.GetHashCode();
@@ -716,8 +714,8 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (currency_ != null) {
         _single_currency_codec.WriteTagAndValue(output, Currency);
       }
-      if (creditCardNumber_ != null) {
-        _single_creditCardNumber_codec.WriteTagAndValue(output, CreditCardNumber);
+      if (creditCardLastFour_ != null) {
+        _single_creditCardLastFour_codec.WriteTagAndValue(output, CreditCardLastFour);
       }
       if (paymentMethod_ != null) {
         _single_paymentMethod_codec.WriteTagAndValue(output, PaymentMethod);
@@ -787,8 +785,8 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (currency_ != null) {
         size += _single_currency_codec.CalculateSizeWithTag(Currency);
       }
-      if (creditCardNumber_ != null) {
-        size += _single_creditCardNumber_codec.CalculateSizeWithTag(CreditCardNumber);
+      if (creditCardLastFour_ != null) {
+        size += _single_creditCardLastFour_codec.CalculateSizeWithTag(CreditCardLastFour);
       }
       if (paymentMethod_ != null) {
         size += _single_paymentMethod_codec.CalculateSizeWithTag(PaymentMethod);
@@ -877,9 +875,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
           Currency = other.Currency;
         }
       }
-      if (other.creditCardNumber_ != null) {
-        if (creditCardNumber_ == null || other.CreditCardNumber != "") {
-          CreditCardNumber = other.CreditCardNumber;
+      if (other.creditCardLastFour_ != null) {
+        if (creditCardLastFour_ == null || other.CreditCardLastFour != "") {
+          CreditCardLastFour = other.CreditCardLastFour;
         }
       }
       if (other.paymentMethod_ != null) {
@@ -1008,9 +1006,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           }
           case 66: {
-            string value = _single_creditCardNumber_codec.Read(input);
-            if (creditCardNumber_ == null || value != "") {
-              CreditCardNumber = value;
+            string value = _single_creditCardLastFour_codec.Read(input);
+            if (creditCardLastFour_ == null || value != "") {
+              CreditCardLastFour = value;
             }
             break;
           }
@@ -1664,6 +1662,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PrepareFeedbackRequest(PrepareFeedbackRequest other) : this() {
+      id_ = other.id_;
       ta_ = other.ta_ != null ? other.ta_.Clone() : null;
       documentBytes_ = other.documentBytes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1674,8 +1673,19 @@ namespace Ssn.Dataservice.V1Alpha1 {
       return new PrepareFeedbackRequest(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "ta" field.</summary>
-    public const int TaFieldNumber = 1;
+    public const int TaFieldNumber = 2;
     private global::Ssn.Type.TextAnnotation ta_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Type.TextAnnotation Ta {
@@ -1686,7 +1696,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
     }
 
     /// <summary>Field number for the "document_bytes" field.</summary>
-    public const int DocumentBytesFieldNumber = 2;
+    public const int DocumentBytesFieldNumber = 3;
     private pb::ByteString documentBytes_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pb::ByteString DocumentBytes {
@@ -1709,6 +1719,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Id != other.Id) return false;
       if (!object.Equals(Ta, other.Ta)) return false;
       if (DocumentBytes != other.DocumentBytes) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1717,6 +1728,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (ta_ != null) hash ^= Ta.GetHashCode();
       if (DocumentBytes.Length != 0) hash ^= DocumentBytes.GetHashCode();
       if (_unknownFields != null) {
@@ -1732,12 +1744,16 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ta_ != null) {
+      if (Id.Length != 0) {
         output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (ta_ != null) {
+        output.WriteRawTag(18);
         output.WriteMessage(Ta);
       }
       if (DocumentBytes.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteBytes(DocumentBytes);
       }
       if (_unknownFields != null) {
@@ -1748,6 +1764,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
       if (ta_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ta);
       }
@@ -1764,6 +1783,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
     public void MergeFrom(PrepareFeedbackRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
       }
       if (other.ta_ != null) {
         if (ta_ == null) {
@@ -1786,143 +1808,18 @@ namespace Ssn.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
             if (ta_ == null) {
               ta_ = new global::Ssn.Type.TextAnnotation();
             }
             input.ReadMessage(ta_);
             break;
           }
-          case 18: {
+          case 26: {
             DocumentBytes = input.ReadBytes();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class PrepareFeedbackResponse : pb::IMessage<PrepareFeedbackResponse> {
-    private static readonly pb::MessageParser<PrepareFeedbackResponse> _parser = new pb::MessageParser<PrepareFeedbackResponse>(() => new PrepareFeedbackResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PrepareFeedbackResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareFeedbackResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareFeedbackResponse(PrepareFeedbackResponse other) : this() {
-      id_ = other.id_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareFeedbackResponse Clone() {
-      return new PrepareFeedbackResponse(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as PrepareFeedbackResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PrepareFeedbackResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PrepareFeedbackResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
             break;
           }
         }
@@ -1939,7 +1836,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
