@@ -14,7 +14,7 @@ service DataService {
     rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse);
     rpc ReadDocument(ReadDocumentRequest) returns (ReadDocumentResponse);
     // For feedback
-    rpc PrepareFeedback(PrepareFeedbackRequest) returns (PrepareFeedbackResponse);
+    rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
     rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty){
         option (google.api.http) = {
             post: "/v1alpha1/feedback"
@@ -75,10 +75,6 @@ message PrepareFeedbackRequest {
     string id = 1;
     ssn.type.TextAnnotation ta = 2;
     bytes document_bytes = 3;
-}
-
-message PrepareFeedbackResponse {
-    string id = 1;
 }
 
 message FeedbackRequest {
