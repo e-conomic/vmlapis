@@ -3344,14 +3344,14 @@ public final class Annotator {
         getTextBytes();
 
     /**
-     * <code>string request_id = 24;</code>
+     * <code>string feedback_id = 24;</code>
      */
-    java.lang.String getRequestId();
+    java.lang.String getFeedbackId();
     /**
-     * <code>string request_id = 24;</code>
+     * <code>string feedback_id = 24;</code>
      */
     com.google.protobuf.ByteString
-        getRequestIdBytes();
+        getFeedbackIdBytes();
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -3388,7 +3388,7 @@ public final class Annotator {
       ocrLineFiPaymentId_ = java.util.Collections.emptyList();
       ocrLineNlPaymentId_ = java.util.Collections.emptyList();
       text_ = "";
-      requestId_ = "";
+      feedbackId_ = "";
     }
 
     @java.lang.Override
@@ -3626,7 +3626,7 @@ public final class Annotator {
             case 194: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              requestId_ = s;
+              feedbackId_ = s;
               break;
             }
             default: {
@@ -5085,34 +5085,34 @@ public final class Annotator {
       }
     }
 
-    public static final int REQUEST_ID_FIELD_NUMBER = 24;
-    private volatile java.lang.Object requestId_;
+    public static final int FEEDBACK_ID_FIELD_NUMBER = 24;
+    private volatile java.lang.Object feedbackId_;
     /**
-     * <code>string request_id = 24;</code>
+     * <code>string feedback_id = 24;</code>
      */
-    public java.lang.String getRequestId() {
-      java.lang.Object ref = requestId_;
+    public java.lang.String getFeedbackId() {
+      java.lang.Object ref = feedbackId_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        requestId_ = s;
+        feedbackId_ = s;
         return s;
       }
     }
     /**
-     * <code>string request_id = 24;</code>
+     * <code>string feedback_id = 24;</code>
      */
     public com.google.protobuf.ByteString
-        getRequestIdBytes() {
-      java.lang.Object ref = requestId_;
+        getFeedbackIdBytes() {
+      java.lang.Object ref = feedbackId_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        requestId_ = b;
+        feedbackId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5202,8 +5202,8 @@ public final class Annotator {
       if (!getTextBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 23, text_);
       }
-      if (!getRequestIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, requestId_);
+      if (!getFeedbackIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 24, feedbackId_);
       }
       unknownFields.writeTo(output);
     }
@@ -5305,8 +5305,8 @@ public final class Annotator {
       if (!getTextBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, text_);
       }
-      if (!getRequestIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, requestId_);
+      if (!getFeedbackIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, feedbackId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5373,8 +5373,8 @@ public final class Annotator {
           .equals(other.getOcrLineNlPaymentIdList());
       result = result && getText()
           .equals(other.getText());
-      result = result && getRequestId()
-          .equals(other.getRequestId());
+      result = result && getFeedbackId()
+          .equals(other.getFeedbackId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5476,8 +5476,8 @@ public final class Annotator {
       }
       hash = (37 * hash) + TEXT_FIELD_NUMBER;
       hash = (53 * hash) + getText().hashCode();
-      hash = (37 * hash) + REQUEST_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getRequestId().hashCode();
+      hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedbackId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5766,7 +5766,7 @@ public final class Annotator {
         }
         text_ = "";
 
-        requestId_ = "";
+        feedbackId_ = "";
 
         return this;
       }
@@ -5991,7 +5991,7 @@ public final class Annotator {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
         result.text_ = text_;
-        result.requestId_ = requestId_;
+        result.feedbackId_ = feedbackId_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6594,8 +6594,8 @@ public final class Annotator {
           text_ = other.text_;
           onChanged();
         }
-        if (!other.getRequestId().isEmpty()) {
-          requestId_ = other.requestId_;
+        if (!other.getFeedbackId().isEmpty()) {
+          feedbackId_ = other.feedbackId_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -13890,71 +13890,71 @@ public final class Annotator {
         return this;
       }
 
-      private java.lang.Object requestId_ = "";
+      private java.lang.Object feedbackId_ = "";
       /**
-       * <code>string request_id = 24;</code>
+       * <code>string feedback_id = 24;</code>
        */
-      public java.lang.String getRequestId() {
-        java.lang.Object ref = requestId_;
+      public java.lang.String getFeedbackId() {
+        java.lang.Object ref = feedbackId_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          requestId_ = s;
+          feedbackId_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string request_id = 24;</code>
+       * <code>string feedback_id = 24;</code>
        */
       public com.google.protobuf.ByteString
-          getRequestIdBytes() {
-        java.lang.Object ref = requestId_;
+          getFeedbackIdBytes() {
+        java.lang.Object ref = feedbackId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          requestId_ = b;
+          feedbackId_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string request_id = 24;</code>
+       * <code>string feedback_id = 24;</code>
        */
-      public Builder setRequestId(
+      public Builder setFeedbackId(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        requestId_ = value;
+        feedbackId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string request_id = 24;</code>
+       * <code>string feedback_id = 24;</code>
        */
-      public Builder clearRequestId() {
+      public Builder clearFeedbackId() {
         
-        requestId_ = getDefaultInstance().getRequestId();
+        feedbackId_ = getDefaultInstance().getFeedbackId();
         onChanged();
         return this;
       }
       /**
-       * <code>string request_id = 24;</code>
+       * <code>string feedback_id = 24;</code>
        */
-      public Builder setRequestIdBytes(
+      public Builder setFeedbackIdBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        requestId_ = value;
+        feedbackId_ = value;
         onChanged();
         return this;
       }
@@ -15483,7 +15483,7 @@ public final class Annotator {
       "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\"u" +
       "\n\030DocumentAnnotatorRequest\022,\n\010document\030\001" +
       " \001(\0132\032.ssn.annotator.v1.Document\022+\n\010feat" +
-      "ures\030\002 \003(\0132\031.ssn.annotator.v1.Feature\"\377\010" +
+      "ures\030\002 \003(\0132\031.ssn.annotator.v1.Feature\"\200\t" +
       "\n\031DocumentAnnotatorResponse\022\'\n\norder_dat" +
       "e\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020payment_" +
       "due_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010c" +
@@ -15512,15 +15512,15 @@ public final class Annotator {
       "e.Candidate\0223\n\026ocr_line_fi_payment_id\030\025 " +
       "\003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_nl_" +
       "payment_id\030\026 \003(\0132\023.ssn.type.Candidate\022\014\n" +
-      "\004text\030\027 \001(\t\022\022\n\nrequest_id\030\030 \001(\t\"M\n\010Docum" +
-      "ent\022\017\n\007content\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 .s" +
-      "sn.annotator.v1.DocumentSource\"\"\n\016Docume" +
-      "ntSource\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021DocumentA" +
-      "nnotator\022\215\001\n\020AnnotateDocument\022*.ssn.anno" +
-      "tator.v1.DocumentAnnotatorRequest\032+.ssn." +
-      "annotator.v1.DocumentAnnotatorResponse\" " +
-      "\202\323\344\223\002\032\"\025/v1/document:annotate:\001*B\013Z\tanno" +
-      "tatorb\006proto3"
+      "\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\"M\n\010Docu" +
+      "ment\022\017\n\007content\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 ." +
+      "ssn.annotator.v1.DocumentSource\"\"\n\016Docum" +
+      "entSource\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021Document" +
+      "Annotator\022\215\001\n\020AnnotateDocument\022*.ssn.ann" +
+      "otator.v1.DocumentAnnotatorRequest\032+.ssn" +
+      ".annotator.v1.DocumentAnnotatorResponse\"" +
+      " \202\323\344\223\002\032\"\025/v1/document:annotate:\001*B\013Z\tann" +
+      "otatorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15554,7 +15554,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "RequestId", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new

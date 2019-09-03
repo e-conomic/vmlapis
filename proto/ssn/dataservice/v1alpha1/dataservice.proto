@@ -64,7 +64,6 @@ message CreateDocumentResponse {
 
 message ReadDocumentRequest {
     string id = 1;
-
 }
 
 message ReadDocumentResponse {

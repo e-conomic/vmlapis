@@ -45,7 +45,7 @@ namespace Ssn.Annotator.V1 {
             "TkVfTkxfUEFZTUVOVF9JRBAWEggKBFRFWFQQFyJ1ChhEb2N1bWVudEFubm90",
             "YXRvclJlcXVlc3QSLAoIZG9jdW1lbnQYASABKAsyGi5zc24uYW5ub3RhdG9y",
             "LnYxLkRvY3VtZW50EisKCGZlYXR1cmVzGAIgAygLMhkuc3NuLmFubm90YXRv",
-            "ci52MS5GZWF0dXJlIv8IChlEb2N1bWVudEFubm90YXRvclJlc3BvbnNlEicK",
+            "ci52MS5GZWF0dXJlIoAJChlEb2N1bWVudEFubm90YXRvclJlc3BvbnNlEicK",
             "Cm9yZGVyX2RhdGUYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSLQoQcGF5",
             "bWVudF9kdWVfZGF0ZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIlCghj",
             "dXJyZW5jeRgDIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRImCgl0b3RhbF92",
@@ -70,20 +70,20 @@ namespace Ssn.Annotator.V1 {
             "YXltZW50X2lkGBQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9s",
             "aW5lX2ZpX3BheW1lbnRfaWQYFSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
             "MwoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgWIAMoCzITLnNzbi50eXBlLkNh",
-            "bmRpZGF0ZRIMCgR0ZXh0GBcgASgJEhIKCnJlcXVlc3RfaWQYGCABKAkiTQoI",
-            "RG9jdW1lbnQSDwoHY29udGVudBgBIAEoDBIwCgZzb3VyY2UYAiABKAsyIC5z",
-            "c24uYW5ub3RhdG9yLnYxLkRvY3VtZW50U291cmNlIiIKDkRvY3VtZW50U291",
-            "cmNlEhAKCGh0dHBfdXJpGAEgASgJMqMBChFEb2N1bWVudEFubm90YXRvchKN",
-            "AQoQQW5ub3RhdGVEb2N1bWVudBIqLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
-            "bnRBbm5vdGF0b3JSZXF1ZXN0Gisuc3NuLmFubm90YXRvci52MS5Eb2N1bWVu",
-            "dEFubm90YXRvclJlc3BvbnNlIiCC0+STAhoiFS92MS9kb2N1bWVudDphbm5v",
-            "dGF0ZToBKkILWglhbm5vdGF0b3JiBnByb3RvMw=="));
+            "bmRpZGF0ZRIMCgR0ZXh0GBcgASgJEhMKC2ZlZWRiYWNrX2lkGBggASgJIk0K",
+            "CERvY3VtZW50Eg8KB2NvbnRlbnQYASABKAwSMAoGc291cmNlGAIgASgLMiAu",
+            "c3NuLmFubm90YXRvci52MS5Eb2N1bWVudFNvdXJjZSIiCg5Eb2N1bWVudFNv",
+            "dXJjZRIQCghodHRwX3VyaRgBIAEoCTKjAQoRRG9jdW1lbnRBbm5vdGF0b3IS",
+            "jQEKEEFubm90YXRlRG9jdW1lbnQSKi5zc24uYW5ub3RhdG9yLnYxLkRvY3Vt",
+            "ZW50QW5ub3RhdG9yUmVxdWVzdBorLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
+            "bnRBbm5vdGF0b3JSZXNwb25zZSIggtPkkwIaIhUvdjEvZG9jdW1lbnQ6YW5u",
+            "b3RhdGU6ASpCC1oJYW5ub3RhdG9yYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "RequestId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null)
           }));
@@ -596,7 +596,7 @@ namespace Ssn.Annotator.V1 {
       ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_.Clone();
       ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_.Clone();
       text_ = other.text_;
-      requestId_ = other.requestId_;
+      feedbackId_ = other.feedbackId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -932,14 +932,14 @@ namespace Ssn.Annotator.V1 {
       }
     }
 
-    /// <summary>Field number for the "request_id" field.</summary>
-    public const int RequestIdFieldNumber = 24;
-    private string requestId_ = "";
+    /// <summary>Field number for the "feedback_id" field.</summary>
+    public const int FeedbackIdFieldNumber = 24;
+    private string feedbackId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RequestId {
-      get { return requestId_; }
+    public string FeedbackId {
+      get { return feedbackId_; }
       set {
-        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        feedbackId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -979,7 +979,7 @@ namespace Ssn.Annotator.V1 {
       if(!ocrLineFiPaymentId_.Equals(other.ocrLineFiPaymentId_)) return false;
       if(!ocrLineNlPaymentId_.Equals(other.ocrLineNlPaymentId_)) return false;
       if (Text != other.Text) return false;
-      if (RequestId != other.RequestId) return false;
+      if (FeedbackId != other.FeedbackId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1009,7 +1009,7 @@ namespace Ssn.Annotator.V1 {
       hash ^= ocrLineFiPaymentId_.GetHashCode();
       hash ^= ocrLineNlPaymentId_.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1052,9 +1052,9 @@ namespace Ssn.Annotator.V1 {
         output.WriteRawTag(186, 1);
         output.WriteString(Text);
       }
-      if (RequestId.Length != 0) {
+      if (FeedbackId.Length != 0) {
         output.WriteRawTag(194, 1);
-        output.WriteString(RequestId);
+        output.WriteString(FeedbackId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1091,8 +1091,8 @@ namespace Ssn.Annotator.V1 {
       if (Text.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (RequestId.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      if (FeedbackId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(FeedbackId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1135,8 +1135,8 @@ namespace Ssn.Annotator.V1 {
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
-      if (other.RequestId.Length != 0) {
-        RequestId = other.RequestId;
+      if (other.FeedbackId.Length != 0) {
+        FeedbackId = other.FeedbackId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1245,7 +1245,7 @@ namespace Ssn.Annotator.V1 {
             break;
           }
           case 194: {
-            RequestId = input.ReadString();
+            FeedbackId = input.ReadString();
             break;
           }
         }

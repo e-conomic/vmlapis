@@ -155,7 +155,7 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 22;
   // Return a string containing the text from the document
   string text = 23;
-  string request_id = 24;
+  string feedback_id = 24;
 }
 
 message Document {
