@@ -87,6 +87,25 @@ public final class Dataservice {
      * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
      */
     ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
+
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    java.util.List<java.lang.String>
+        getMissingValuesList();
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    int getMissingValuesCount();
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    java.lang.String getMissingValues(int index);
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    com.google.protobuf.ByteString
+        getMissingValuesBytes(int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.Document}
@@ -105,6 +124,7 @@ public final class Dataservice {
       id_ = "";
       consumer_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      missingValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -183,6 +203,15 @@ public final class Dataservice {
 
               break;
             }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                missingValues_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              missingValues_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -200,6 +229,9 @@ public final class Dataservice {
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          missingValues_ = missingValues_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -367,6 +399,35 @@ public final class Dataservice {
       return getTrueValues();
     }
 
+    public static final int MISSING_VALUES_FIELD_NUMBER = 7;
+    private com.google.protobuf.LazyStringList missingValues_;
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getMissingValuesList() {
+      return missingValues_;
+    }
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    public int getMissingValuesCount() {
+      return missingValues_.size();
+    }
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    public java.lang.String getMissingValues(int index) {
+      return missingValues_.get(index);
+    }
+    /**
+     * <code>repeated string missing_values = 7;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMissingValuesBytes(int index) {
+      return missingValues_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -398,6 +459,9 @@ public final class Dataservice {
       }
       if (trueValues_ != null) {
         output.writeMessage(6, getTrueValues());
+      }
+      for (int i = 0; i < missingValues_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, missingValues_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -434,6 +498,14 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTrueValues());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < missingValues_.size(); i++) {
+          dataSize += computeStringSizeNoTag(missingValues_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getMissingValuesList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -468,6 +540,8 @@ public final class Dataservice {
         result = result && getTrueValues()
             .equals(other.getTrueValues());
       }
+      result = result && getMissingValuesList()
+          .equals(other.getMissingValuesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -496,6 +570,10 @@ public final class Dataservice {
       if (hasTrueValues()) {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getTrueValues().hashCode();
+      }
+      if (getMissingValuesCount() > 0) {
+        hash = (37 * hash) + MISSING_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getMissingValuesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -650,6 +728,8 @@ public final class Dataservice {
           trueValues_ = null;
           trueValuesBuilder_ = null;
         }
+        missingValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -696,6 +776,11 @@ public final class Dataservice {
         } else {
           result.trueValues_ = trueValuesBuilder_.build();
         }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          missingValues_ = missingValues_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.missingValues_ = missingValues_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -771,6 +856,16 @@ public final class Dataservice {
         }
         if (other.hasTrueValues()) {
           mergeTrueValues(other.getTrueValues());
+        }
+        if (!other.missingValues_.isEmpty()) {
+          if (missingValues_.isEmpty()) {
+            missingValues_ = other.missingValues_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureMissingValuesIsMutable();
+            missingValues_.addAll(other.missingValues_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1295,6 +1390,100 @@ public final class Dataservice {
           trueValues_ = null;
         }
         return trueValuesBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList missingValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureMissingValuesIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          missingValues_ = new com.google.protobuf.LazyStringArrayList(missingValues_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getMissingValuesList() {
+        return missingValues_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public int getMissingValuesCount() {
+        return missingValues_.size();
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public java.lang.String getMissingValues(int index) {
+        return missingValues_.get(index);
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMissingValuesBytes(int index) {
+        return missingValues_.getByteString(index);
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public Builder setMissingValues(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMissingValuesIsMutable();
+        missingValues_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public Builder addMissingValues(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureMissingValuesIsMutable();
+        missingValues_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public Builder addAllMissingValues(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureMissingValuesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, missingValues_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public Builder clearMissingValues() {
+        missingValues_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string missing_values = 7;</code>
+       */
+      public Builder addMissingValuesBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureMissingValuesIsMutable();
+        missingValues_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -9953,7 +10142,7 @@ public final class Dataservice {
       "ations.proto\032\033google/protobuf/empty.prot" +
       "o\032\036google/protobuf/wrappers.proto\032\026googl" +
       "e/type/date.proto\032\036ssn/type/text_annotat" +
-      "ion.proto\"\310\002\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn" +
+      "ion.proto\"\340\002\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn" +
       ".type.TextAnnotationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001" +
       "(\014B\005\352?\002\030\001\022;\n\002id\030\003 \001(\tB/\352?\'\"%Feedback ID," +
       " same as Envoy request id\352?\002\010\001\022\027\n\010consum" +
@@ -9961,61 +10150,61 @@ public final class Dataservice {
       " defined by consumer, enriched by servic" +
       "e if valetkey is used\0229\n\013true_values\030\006 \001" +
       "(\0132$.ssn.dataservice.v1alpha1.TrueValues" +
-      ":\022\352?\017\n\rtraining_data\"\330\t\n\nTrueValues\0224\n\016t" +
-      "otal_incl_vat\030\001 \001(\0132\034.google.protobuf.Do" +
-      "ubleValue\022/\n\ttotal_vat\030\002 \001(\0132\034.google.pr" +
-      "otobuf.DoubleValue\0224\n\016total_excl_vat\030\003 \001" +
-      "(\0132\034.google.protobuf.DoubleValue\0220\n\norde" +
-      "r_date\030\004 \001(\0132\021.google.type.DateB\t\352?\006\022\004DA" +
-      "TE\0226\n\020payment_due_date\030\005 \001(\0132\021.google.ty" +
-      "pe.DateB\t\352?\006\022\004DATE\0223\n\rdocument_type\030\006 \001(" +
-      "\0132\034.google.protobuf.StringValue\022.\n\010curre" +
-      "ncy\030\007 \001(\0132\034.google.protobuf.StringValue\022" +
-      ";\n\025credit_card_last_four\030\010 \001(\0132\034.google." +
-      "protobuf.StringValue\0224\n\016payment_method\030\t" +
-      " \001(\0132\034.google.protobuf.StringValue\0226\n\020oc" +
-      "r_line_dk_type\030\n \001(\0132\034.google.protobuf.S" +
-      "tringValue\022<\n\026ocr_line_dk_payment_id\030\013 \001" +
-      "(\0132\034.google.protobuf.StringValue\022=\n\027ocr_" +
-      "line_dk_creditor_id\030\014 \001(\0132\034.google.proto" +
-      "buf.StringValue\022<\n\026ocr_line_se_payment_i" +
-      "d\030\r \001(\0132\034.google.protobuf.StringValue\022F\n" +
-      " ocr_line_se_bankgiro_creditor_id\030\016 \001(\0132" +
-      "\034.google.protobuf.StringValue\022F\n ocr_lin" +
-      "e_se_plusgiro_creditor_id\030\017 \001(\0132\034.google" +
-      ".protobuf.StringValue\022<\n\026ocr_line_no_pay" +
-      "ment_id\030\020 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022<\n\026ocr_line_fi_payment_id\030\021 \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022<\n\026ocr_line_nl" +
-      "_payment_id\030\022 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022;\n\025supplier_corporate_id\030\023 \001(\0132\034" +
-      ".google.protobuf.StringValue\022;\n\025supplier" +
-      "_country_code\030\024 \001(\0132\034.google.protobuf.St" +
-      "ringValue\0224\n\016invoice_number\030\025 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\"M\n\025CreateDocumen" +
-      "tRequest\0224\n\010document\030\001 \001(\0132\".ssn.dataser" +
-      "vice.v1alpha1.Document\"$\n\026CreateDocument" +
-      "Response\022\n\n\002id\030\001 \001(\t\"!\n\023ReadDocumentRequ" +
-      "est\022\n\n\002id\030\001 \001(\t\"L\n\024ReadDocumentResponse\022" +
-      "4\n\010document\030\001 \001(\0132\".ssn.dataservice.v1al" +
-      "pha1.Document\"b\n\026PrepareFeedbackRequest\022" +
-      "\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextA" +
-      "nnotation\022\026\n\016document_bytes\030\003 \001(\014\"f\n\017Fee" +
-      "dbackRequest\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030" +
-      "\002 \001(\0132$.ssn.dataservice.v1alpha1.TrueVal" +
-      "ues\022\014\n\004tags\030\003 \003(\t2\274\003\n\013DataService\022s\n\016Cre" +
-      "ateDocument\022/.ssn.dataservice.v1alpha1.C" +
-      "reateDocumentRequest\0320.ssn.dataservice.v" +
-      "1alpha1.CreateDocumentResponse\022m\n\014ReadDo" +
-      "cument\022-.ssn.dataservice.v1alpha1.ReadDo" +
-      "cumentRequest\032..ssn.dataservice.v1alpha1" +
-      ".ReadDocumentResponse\022[\n\017PrepareFeedback" +
-      "\0220.ssn.dataservice.v1alpha1.PrepareFeedb" +
-      "ackRequest\032\026.google.protobuf.Empty\022l\n\010Fe" +
-      "edback\022).ssn.dataservice.v1alpha1.Feedba" +
-      "ckRequest\032\026.google.protobuf.Empty\"\035\202\323\344\223\002" +
-      "\027\"\022/v1alpha1/feedback:\001*B\rZ\013dataserviceb" +
-      "\006proto3"
+      "\022\026\n\016missing_values\030\007 \003(\t:\022\352?\017\n\rtraining_" +
+      "data\"\330\t\n\nTrueValues\0224\n\016total_incl_vat\030\001 " +
+      "\001(\0132\034.google.protobuf.DoubleValue\022/\n\ttot" +
+      "al_vat\030\002 \001(\0132\034.google.protobuf.DoubleVal" +
+      "ue\0224\n\016total_excl_vat\030\003 \001(\0132\034.google.prot" +
+      "obuf.DoubleValue\0220\n\norder_date\030\004 \001(\0132\021.g" +
+      "oogle.type.DateB\t\352?\006\022\004DATE\0226\n\020payment_du" +
+      "e_date\030\005 \001(\0132\021.google.type.DateB\t\352?\006\022\004DA" +
+      "TE\0223\n\rdocument_type\030\006 \001(\0132\034.google.proto" +
+      "buf.StringValue\022.\n\010currency\030\007 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022;\n\025credit_card_l" +
+      "ast_four\030\010 \001(\0132\034.google.protobuf.StringV" +
+      "alue\0224\n\016payment_method\030\t \001(\0132\034.google.pr" +
+      "otobuf.StringValue\0226\n\020ocr_line_dk_type\030\n" +
+      " \001(\0132\034.google.protobuf.StringValue\022<\n\026oc" +
+      "r_line_dk_payment_id\030\013 \001(\0132\034.google.prot" +
+      "obuf.StringValue\022=\n\027ocr_line_dk_creditor" +
+      "_id\030\014 \001(\0132\034.google.protobuf.StringValue\022" +
+      "<\n\026ocr_line_se_payment_id\030\r \001(\0132\034.google" +
+      ".protobuf.StringValue\022F\n ocr_line_se_ban" +
+      "kgiro_creditor_id\030\016 \001(\0132\034.google.protobu" +
+      "f.StringValue\022F\n ocr_line_se_plusgiro_cr" +
+      "editor_id\030\017 \001(\0132\034.google.protobuf.String" +
+      "Value\022<\n\026ocr_line_no_payment_id\030\020 \001(\0132\034." +
+      "google.protobuf.StringValue\022<\n\026ocr_line_" +
+      "fi_payment_id\030\021 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022<\n\026ocr_line_nl_payment_id\030\022 \001(" +
+      "\0132\034.google.protobuf.StringValue\022;\n\025suppl" +
+      "ier_corporate_id\030\023 \001(\0132\034.google.protobuf" +
+      ".StringValue\022;\n\025supplier_country_code\030\024 " +
+      "\001(\0132\034.google.protobuf.StringValue\0224\n\016inv" +
+      "oice_number\030\025 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"M\n\025CreateDocumentRequest\0224\n\010docu" +
+      "ment\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Do" +
+      "cument\"$\n\026CreateDocumentResponse\022\n\n\002id\030\001" +
+      " \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(\t\"" +
+      "L\n\024ReadDocumentResponse\0224\n\010document\030\001 \001(" +
+      "\0132\".ssn.dataservice.v1alpha1.Document\"b\n" +
+      "\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002t" +
+      "a\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026\n\016doc" +
+      "ument_bytes\030\003 \001(\014\"f\n\017FeedbackRequest\022\n\n\002" +
+      "id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn.data" +
+      "service.v1alpha1.TrueValues\022\014\n\004tags\030\003 \003(" +
+      "\t2\274\003\n\013DataService\022s\n\016CreateDocument\022/.ss" +
+      "n.dataservice.v1alpha1.CreateDocumentReq" +
+      "uest\0320.ssn.dataservice.v1alpha1.CreateDo" +
+      "cumentResponse\022m\n\014ReadDocument\022-.ssn.dat" +
+      "aservice.v1alpha1.ReadDocumentRequest\032.." +
+      "ssn.dataservice.v1alpha1.ReadDocumentRes" +
+      "ponse\022[\n\017PrepareFeedback\0220.ssn.dataservi" +
+      "ce.v1alpha1.PrepareFeedbackRequest\032\026.goo" +
+      "gle.protobuf.Empty\022l\n\010Feedback\022).ssn.dat" +
+      "aservice.v1alpha1.FeedbackRequest\032\026.goog" +
+      "le.protobuf.Empty\"\035\202\323\344\223\002\027\"\022/v1alpha1/fee" +
+      "dback:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10041,7 +10230,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_Document_descriptor,
-        new java.lang.String[] { "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", });
+        new java.lang.String[] { "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", "MissingValues", });
     internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable = new
