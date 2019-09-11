@@ -32,7 +32,8 @@ WORKDIR /app
 
 COPY ["go.mod", "go.sum", "/app/"]
 RUN go get . \
-  && go install github.com/golang/mock/mockgen
+  && go install github.com/golang/mock/mockgen \
+  && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema
 
 ENV PATH="/root/go/bin:${PATH}"
 

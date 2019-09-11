@@ -19,54 +19,74 @@ public final class Dataservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     boolean hasTa();
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTa();
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder();
 
     /**
-     * <code>bytes bytes = 2;</code>
+     * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.protobuf.ByteString getBytes();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+     * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    boolean hasLabels();
+    java.lang.String getId();
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+     * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.Labels getLabels();
-    /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-     */
-    ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder();
+    com.google.protobuf.ByteString
+        getIdBytes();
 
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.lang.String getConsumer();
+    /**
+     * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.protobuf.ByteString
+        getConsumerBytes();
+
+    /**
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    boolean hasTrueValues();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.Document}
@@ -82,6 +102,8 @@ public final class Dataservice {
     }
     private Document() {
       bytes_ = com.google.protobuf.ByteString.EMPTY;
+      id_ = "";
+      consumer_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -128,25 +150,37 @@ public final class Dataservice {
               break;
             }
             case 26: {
-              ssn.dataservice.v1alpha1.Dataservice.Labels.Builder subBuilder = null;
-              if (labels_ != null) {
-                subBuilder = labels_.toBuilder();
-              }
-              labels_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.Labels.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(labels_);
-                labels_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              id_ = s;
               break;
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+
+              consumer_ = s;
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000010;
               }
               tags_.add(s);
+              break;
+            }
+            case 50: {
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              if (trueValues_ != null) {
+                subBuilder = trueValues_.toBuilder();
+              }
+              trueValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(trueValues_);
+                trueValues_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -164,7 +198,7 @@ public final class Dataservice {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -188,19 +222,19 @@ public final class Dataservice {
     public static final int TA_FIELD_NUMBER = 1;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation ta_;
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public boolean hasTa() {
       return ta_ != null;
     }
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
       return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
     /**
-     * <code>.ssn.type.TextAnnotation ta = 1;</code>
+     * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
       return getTa();
@@ -209,60 +243,128 @@ public final class Dataservice {
     public static final int BYTES_FIELD_NUMBER = 2;
     private com.google.protobuf.ByteString bytes_;
     /**
-     * <code>bytes bytes = 2;</code>
+     * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.protobuf.ByteString getBytes() {
       return bytes_;
     }
 
-    public static final int LABELS_FIELD_NUMBER = 3;
-    private ssn.dataservice.v1alpha1.Dataservice.Labels labels_;
+    public static final int ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object id_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+     * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    public boolean hasLabels() {
-      return labels_ != null;
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+     * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.Labels getLabels() {
-      return labels_ == null ? ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
-    }
-    /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-     */
-    public ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder() {
-      return getLabels();
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
-    public static final int TAGS_FIELD_NUMBER = 4;
+    public static final int CONSUMER_FIELD_NUMBER = 4;
+    private volatile java.lang.Object consumer_;
+    /**
+     * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.lang.String getConsumer() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getConsumerBytes() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 5;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 4;</code>
+     * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
       return tags_.getByteString(index);
+    }
+
+    public static final int TRUE_VALUES_FIELD_NUMBER = 6;
+    private ssn.dataservice.v1alpha1.Dataservice.TrueValues trueValues_;
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    public boolean hasTrueValues() {
+      return trueValues_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues() {
+      return trueValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder() {
+      return getTrueValues();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -285,11 +387,17 @@ public final class Dataservice {
       if (!bytes_.isEmpty()) {
         output.writeBytes(2, bytes_);
       }
-      if (labels_ != null) {
-        output.writeMessage(3, getLabels());
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+      }
+      if (!getConsumerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, consumer_);
       }
       for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tags_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+      }
+      if (trueValues_ != null) {
+        output.writeMessage(6, getTrueValues());
       }
       unknownFields.writeTo(output);
     }
@@ -308,9 +416,11 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(2, bytes_);
       }
-      if (labels_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getLabels());
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
+      }
+      if (!getConsumerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, consumer_);
       }
       {
         int dataSize = 0;
@@ -319,6 +429,10 @@ public final class Dataservice {
         }
         size += dataSize;
         size += 1 * getTagsList().size();
+      }
+      if (trueValues_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getTrueValues());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -343,13 +457,17 @@ public final class Dataservice {
       }
       result = result && getBytes()
           .equals(other.getBytes());
-      result = result && (hasLabels() == other.hasLabels());
-      if (hasLabels()) {
-        result = result && getLabels()
-            .equals(other.getLabels());
-      }
+      result = result && getId()
+          .equals(other.getId());
+      result = result && getConsumer()
+          .equals(other.getConsumer());
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && (hasTrueValues() == other.hasTrueValues());
+      if (hasTrueValues()) {
+        result = result && getTrueValues()
+            .equals(other.getTrueValues());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -367,13 +485,17 @@ public final class Dataservice {
       }
       hash = (37 * hash) + BYTES_FIELD_NUMBER;
       hash = (53 * hash) + getBytes().hashCode();
-      if (hasLabels()) {
-        hash = (37 * hash) + LABELS_FIELD_NUMBER;
-        hash = (53 * hash) + getLabels().hashCode();
-      }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
+      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumer().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasTrueValues()) {
+        hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrueValues().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -516,14 +638,18 @@ public final class Dataservice {
         }
         bytes_ = com.google.protobuf.ByteString.EMPTY;
 
-        if (labelsBuilder_ == null) {
-          labels_ = null;
-        } else {
-          labels_ = null;
-          labelsBuilder_ = null;
-        }
+        id_ = "";
+
+        consumer_ = "";
+
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = null;
+        } else {
+          trueValues_ = null;
+          trueValuesBuilder_ = null;
+        }
         return this;
       }
 
@@ -558,16 +684,18 @@ public final class Dataservice {
           result.ta_ = taBuilder_.build();
         }
         result.bytes_ = bytes_;
-        if (labelsBuilder_ == null) {
-          result.labels_ = labels_;
-        } else {
-          result.labels_ = labelsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        result.id_ = id_;
+        result.consumer_ = consumer_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.tags_ = tags_;
+        if (trueValuesBuilder_ == null) {
+          result.trueValues_ = trueValues_;
+        } else {
+          result.trueValues_ = trueValuesBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -623,18 +751,26 @@ public final class Dataservice {
         if (other.getBytes() != com.google.protobuf.ByteString.EMPTY) {
           setBytes(other.getBytes());
         }
-        if (other.hasLabels()) {
-          mergeLabels(other.getLabels());
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
+        }
+        if (!other.getConsumer().isEmpty()) {
+          consumer_ = other.consumer_;
+          onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
           }
           onChanged();
+        }
+        if (other.hasTrueValues()) {
+          mergeTrueValues(other.getTrueValues());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -670,13 +806,13 @@ public final class Dataservice {
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> taBuilder_;
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public boolean hasTa() {
         return taBuilder_ != null || ta_ != null;
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTa() {
         if (taBuilder_ == null) {
@@ -686,7 +822,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (taBuilder_ == null) {
@@ -702,7 +838,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTa(
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
@@ -716,7 +852,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder mergeTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (taBuilder_ == null) {
@@ -734,7 +870,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearTa() {
         if (taBuilder_ == null) {
@@ -748,7 +884,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTaBuilder() {
         
@@ -756,7 +892,7 @@ public final class Dataservice {
         return getTaFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
         if (taBuilder_ != null) {
@@ -767,7 +903,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.ssn.type.TextAnnotation ta = 1;</code>
+       * <code>.ssn.type.TextAnnotation ta = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> 
@@ -785,13 +921,13 @@ public final class Dataservice {
 
       private com.google.protobuf.ByteString bytes_ = com.google.protobuf.ByteString.EMPTY;
       /**
-       * <code>bytes bytes = 2;</code>
+       * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.protobuf.ByteString getBytes() {
         return bytes_;
       }
       /**
-       * <code>bytes bytes = 2;</code>
+       * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setBytes(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -803,7 +939,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>bytes bytes = 2;</code>
+       * <code>bytes bytes = 2 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearBytes() {
         
@@ -812,158 +948,179 @@ public final class Dataservice {
         return this;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.Labels labels_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder> labelsBuilder_;
+      private java.lang.Object id_ = "";
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+       * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public boolean hasLabels() {
-        return labelsBuilder_ != null || labels_ != null;
-      }
-      /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-       */
-      public ssn.dataservice.v1alpha1.Dataservice.Labels getLabels() {
-        if (labelsBuilder_ == null) {
-          return labels_ == null ? ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
         } else {
-          return labelsBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+       * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder setLabels(ssn.dataservice.v1alpha1.Dataservice.Labels value) {
-        if (labelsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          labels_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
         } else {
-          labelsBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+       * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder setLabels(
-          ssn.dataservice.v1alpha1.Dataservice.Labels.Builder builderForValue) {
-        if (labelsBuilder_ == null) {
-          labels_ = builderForValue.build();
-          onChanged();
-        } else {
-          labelsBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-       */
-      public Builder mergeLabels(ssn.dataservice.v1alpha1.Dataservice.Labels value) {
-        if (labelsBuilder_ == null) {
-          if (labels_ != null) {
-            labels_ =
-              ssn.dataservice.v1alpha1.Dataservice.Labels.newBuilder(labels_).mergeFrom(value).buildPartial();
-          } else {
-            labels_ = value;
-          }
-          onChanged();
-        } else {
-          labelsBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-       */
-      public Builder clearLabels() {
-        if (labelsBuilder_ == null) {
-          labels_ = null;
-          onChanged();
-        } else {
-          labels_ = null;
-          labelsBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
-       */
-      public ssn.dataservice.v1alpha1.Dataservice.Labels.Builder getLabelsBuilder() {
-        
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
         onChanged();
-        return getLabelsFieldBuilder().getBuilder();
+        return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+       * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder() {
-        if (labelsBuilder_ != null) {
-          return labelsBuilder_.getMessageOrBuilder();
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string id = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object consumer_ = "";
+      /**
+       * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.lang.String getConsumer() {
+        java.lang.Object ref = consumer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          consumer_ = s;
+          return s;
         } else {
-          return labels_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
+          return (java.lang.String) ref;
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 3;</code>
+       * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder> 
-          getLabelsFieldBuilder() {
-        if (labelsBuilder_ == null) {
-          labelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder>(
-                  getLabels(),
-                  getParentForChildren(),
-                  isClean());
-          labels_ = null;
+      public com.google.protobuf.ByteString
+          getConsumerBytes() {
+        java.lang.Object ref = consumer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consumer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
         }
-        return labelsBuilder_;
+      }
+      /**
+       * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setConsumer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        consumer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearConsumer() {
+        
+        consumer_ = getDefaultInstance().getConsumer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setConsumerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        consumer_ = value;
+        onChanged();
+        return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -976,7 +1133,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addTags(
           java.lang.String value) {
@@ -989,7 +1146,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -1000,16 +1157,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string tags = 4;</code>
+       * <code>repeated string tags = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -1021,6 +1178,123 @@ public final class Dataservice {
         tags_.add(value);
         onChanged();
         return this;
+      }
+
+      private ssn.dataservice.v1alpha1.Dataservice.TrueValues trueValues_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> trueValuesBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public boolean hasTrueValues() {
+        return trueValuesBuilder_ != null || trueValues_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
+        } else {
+          return trueValuesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public Builder setTrueValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (trueValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          trueValues_ = value;
+          onChanged();
+        } else {
+          trueValuesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public Builder setTrueValues(
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = builderForValue.build();
+          onChanged();
+        } else {
+          trueValuesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public Builder mergeTrueValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (trueValuesBuilder_ == null) {
+          if (trueValues_ != null) {
+            trueValues_ =
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(trueValues_).mergeFrom(value).buildPartial();
+          } else {
+            trueValues_ = value;
+          }
+          onChanged();
+        } else {
+          trueValuesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public Builder clearTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = null;
+          onChanged();
+        } else {
+          trueValues_ = null;
+          trueValuesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getTrueValuesBuilder() {
+        
+        onChanged();
+        return getTrueValuesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder() {
+        if (trueValuesBuilder_ != null) {
+          return trueValuesBuilder_.getMessageOrBuilder();
+        } else {
+          return trueValues_ == null ?
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          getTrueValuesFieldBuilder() {
+        if (trueValuesBuilder_ == null) {
+          trueValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+                  getTrueValues(),
+                  getParentForChildren(),
+                  isClean());
+          trueValues_ = null;
+        }
+        return trueValuesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1075,8 +1349,8 @@ public final class Dataservice {
 
   }
 
-  public interface LabelsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.Labels)
+  public interface TrueValuesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.TrueValues)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1119,28 +1393,28 @@ public final class Dataservice {
     com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder();
 
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     boolean hasOrderDate();
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.type.Date getOrderDate();
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.type.DateOrBuilder getOrderDateOrBuilder();
 
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     boolean hasPaymentDueDate();
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.type.Date getPaymentDueDate();
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.type.DateOrBuilder getPaymentDueDateOrBuilder();
 
@@ -1353,18 +1627,18 @@ public final class Dataservice {
     com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder();
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1alpha1.Labels}
+   * Protobuf type {@code ssn.dataservice.v1alpha1.TrueValues}
    */
-  public  static final class Labels extends
+  public  static final class TrueValues extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.Labels)
-      LabelsOrBuilder {
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.TrueValues)
+      TrueValuesOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Labels.newBuilder() to construct.
-    private Labels(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use TrueValues.newBuilder() to construct.
+    private TrueValues(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Labels() {
+    private TrueValues() {
     }
 
     @java.lang.Override
@@ -1372,7 +1646,7 @@ public final class Dataservice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Labels(
+    private TrueValues(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1685,15 +1959,15 @@ public final class Dataservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Labels_descriptor;
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Labels_fieldAccessorTable
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.dataservice.v1alpha1.Dataservice.Labels.class, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder.class);
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.class, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder.class);
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
@@ -1762,19 +2036,19 @@ public final class Dataservice {
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
     private com.google.type.Date orderDate_;
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public boolean hasOrderDate() {
       return orderDate_ != null;
     }
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date getOrderDate() {
       return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
     }
     /**
-     * <code>.google.type.Date order_date = 4;</code>
+     * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
       return getOrderDate();
@@ -1783,19 +2057,19 @@ public final class Dataservice {
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
     private com.google.type.Date paymentDueDate_;
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public boolean hasPaymentDueDate() {
       return paymentDueDate_ != null;
     }
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.Date getPaymentDueDate() {
       return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
     }
     /**
-     * <code>.google.type.Date payment_due_date = 5;</code>
+     * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
       return getPaymentDueDate();
@@ -2317,10 +2591,10 @@ public final class Dataservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.Labels)) {
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.TrueValues)) {
         return super.equals(obj);
       }
-      ssn.dataservice.v1alpha1.Dataservice.Labels other = (ssn.dataservice.v1alpha1.Dataservice.Labels) obj;
+      ssn.dataservice.v1alpha1.Dataservice.TrueValues other = (ssn.dataservice.v1alpha1.Dataservice.TrueValues) obj;
 
       boolean result = true;
       result = result && (hasTotalInclVat() == other.hasTotalInclVat());
@@ -2528,69 +2802,69 @@ public final class Dataservice {
       return hash;
     }
 
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(byte[] data)
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(java.io.InputStream input)
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseDelimitedFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2603,7 +2877,7 @@ public final class Dataservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.Labels prototype) {
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.TrueValues prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2619,26 +2893,26 @@ public final class Dataservice {
       return builder;
     }
     /**
-     * Protobuf type {@code ssn.dataservice.v1alpha1.Labels}
+     * Protobuf type {@code ssn.dataservice.v1alpha1.TrueValues}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.Labels)
-        ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.TrueValues)
+        ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Labels_descriptor;
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Labels_fieldAccessorTable
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.dataservice.v1alpha1.Dataservice.Labels.class, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder.class);
+                ssn.dataservice.v1alpha1.Dataservice.TrueValues.class, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder.class);
       }
 
-      // Construct using ssn.dataservice.v1alpha1.Dataservice.Labels.newBuilder()
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2788,17 +3062,17 @@ public final class Dataservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Labels_descriptor;
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor;
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.Labels getDefaultInstanceForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance();
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.Labels build() {
-        ssn.dataservice.v1alpha1.Dataservice.Labels result = buildPartial();
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues build() {
+        ssn.dataservice.v1alpha1.Dataservice.TrueValues result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2806,8 +3080,8 @@ public final class Dataservice {
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.Labels buildPartial() {
-        ssn.dataservice.v1alpha1.Dataservice.Labels result = new ssn.dataservice.v1alpha1.Dataservice.Labels(this);
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.TrueValues result = new ssn.dataservice.v1alpha1.Dataservice.TrueValues(this);
         if (totalInclVatBuilder_ == null) {
           result.totalInclVat_ = totalInclVat_;
         } else {
@@ -2951,16 +3225,16 @@ public final class Dataservice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.Labels) {
-          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.Labels)other);
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.TrueValues) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.TrueValues)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.Labels other) {
-        if (other == ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.TrueValues other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance()) return this;
         if (other.hasTotalInclVat()) {
           mergeTotalInclVat(other.getTotalInclVat());
         }
@@ -3039,11 +3313,11 @@ public final class Dataservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.dataservice.v1alpha1.Dataservice.Labels parsedMessage = null;
+        ssn.dataservice.v1alpha1.Dataservice.TrueValues parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.Labels) e.getUnfinishedMessage();
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.TrueValues) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3408,13 +3682,13 @@ public final class Dataservice {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public boolean hasOrderDate() {
         return orderDateBuilder_ != null || orderDate_ != null;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date getOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -3424,7 +3698,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setOrderDate(com.google.type.Date value) {
         if (orderDateBuilder_ == null) {
@@ -3440,7 +3714,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setOrderDate(
           com.google.type.Date.Builder builderForValue) {
@@ -3454,7 +3728,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder mergeOrderDate(com.google.type.Date value) {
         if (orderDateBuilder_ == null) {
@@ -3472,7 +3746,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -3486,7 +3760,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date.Builder getOrderDateBuilder() {
         
@@ -3494,7 +3768,7 @@ public final class Dataservice {
         return getOrderDateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
         if (orderDateBuilder_ != null) {
@@ -3505,7 +3779,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.google.type.Date order_date = 4;</code>
+       * <code>.google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
@@ -3525,13 +3799,13 @@ public final class Dataservice {
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public boolean hasPaymentDueDate() {
         return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date getPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -3541,7 +3815,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setPaymentDueDate(com.google.type.Date value) {
         if (paymentDueDateBuilder_ == null) {
@@ -3557,7 +3831,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setPaymentDueDate(
           com.google.type.Date.Builder builderForValue) {
@@ -3571,7 +3845,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder mergePaymentDueDate(com.google.type.Date value) {
         if (paymentDueDateBuilder_ == null) {
@@ -3589,7 +3863,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -3603,7 +3877,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date.Builder getPaymentDueDateBuilder() {
         
@@ -3611,7 +3885,7 @@ public final class Dataservice {
         return getPaymentDueDateFieldBuilder().getBuilder();
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
         if (paymentDueDateBuilder_ != null) {
@@ -3622,7 +3896,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>.google.type.Date payment_due_date = 5;</code>
+       * <code>.google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
@@ -5522,41 +5796,41 @@ public final class Dataservice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.Labels)
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.TrueValues)
     }
 
-    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.Labels)
-    private static final ssn.dataservice.v1alpha1.Dataservice.Labels DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.TrueValues)
+    private static final ssn.dataservice.v1alpha1.Dataservice.TrueValues DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.Labels();
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.TrueValues();
     }
 
-    public static ssn.dataservice.v1alpha1.Dataservice.Labels getDefaultInstance() {
+    public static ssn.dataservice.v1alpha1.Dataservice.TrueValues getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Labels>
-        PARSER = new com.google.protobuf.AbstractParser<Labels>() {
+    private static final com.google.protobuf.Parser<TrueValues>
+        PARSER = new com.google.protobuf.AbstractParser<TrueValues>() {
       @java.lang.Override
-      public Labels parsePartialFrom(
+      public TrueValues parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Labels(input, extensionRegistry);
+        return new TrueValues(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Labels> parser() {
+    public static com.google.protobuf.Parser<TrueValues> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Labels> getParserForType() {
+    public com.google.protobuf.Parser<TrueValues> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ssn.dataservice.v1alpha1.Dataservice.Labels getDefaultInstanceForType() {
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8701,17 +8975,17 @@ public final class Dataservice {
         getIdBytes();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    boolean hasLabels();
+    boolean hasTrueValues();
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.Labels getLabels();
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues();
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder();
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
 
     /**
      * <code>repeated string tags = 3;</code>
@@ -8780,14 +9054,14 @@ public final class Dataservice {
               break;
             }
             case 18: {
-              ssn.dataservice.v1alpha1.Dataservice.Labels.Builder subBuilder = null;
-              if (labels_ != null) {
-                subBuilder = labels_.toBuilder();
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              if (trueValues_ != null) {
+                subBuilder = trueValues_.toBuilder();
               }
-              labels_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.Labels.parser(), extensionRegistry);
+              trueValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(labels_);
-                labels_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(trueValues_);
+                trueValues_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8871,25 +9145,25 @@ public final class Dataservice {
       }
     }
 
-    public static final int LABELS_FIELD_NUMBER = 2;
-    private ssn.dataservice.v1alpha1.Dataservice.Labels labels_;
+    public static final int TRUE_VALUES_FIELD_NUMBER = 2;
+    private ssn.dataservice.v1alpha1.Dataservice.TrueValues trueValues_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    public boolean hasLabels() {
-      return labels_ != null;
+    public boolean hasTrueValues() {
+      return trueValues_ != null;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.Labels getLabels() {
-      return labels_ == null ? ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues() {
+      return trueValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+     * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder() {
-      return getLabels();
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder() {
+      return getTrueValues();
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
@@ -8938,8 +9212,8 @@ public final class Dataservice {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (labels_ != null) {
-        output.writeMessage(2, getLabels());
+      if (trueValues_ != null) {
+        output.writeMessage(2, getTrueValues());
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
@@ -8956,9 +9230,9 @@ public final class Dataservice {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (labels_ != null) {
+      if (trueValues_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getLabels());
+          .computeMessageSize(2, getTrueValues());
       }
       {
         int dataSize = 0;
@@ -8986,10 +9260,10 @@ public final class Dataservice {
       boolean result = true;
       result = result && getId()
           .equals(other.getId());
-      result = result && (hasLabels() == other.hasLabels());
-      if (hasLabels()) {
-        result = result && getLabels()
-            .equals(other.getLabels());
+      result = result && (hasTrueValues() == other.hasTrueValues());
+      if (hasTrueValues()) {
+        result = result && getTrueValues()
+            .equals(other.getTrueValues());
       }
       result = result && getTagsList()
           .equals(other.getTagsList());
@@ -9006,9 +9280,9 @@ public final class Dataservice {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      if (hasLabels()) {
-        hash = (37 * hash) + LABELS_FIELD_NUMBER;
-        hash = (53 * hash) + getLabels().hashCode();
+      if (hasTrueValues()) {
+        hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrueValues().hashCode();
       }
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
@@ -9149,11 +9423,11 @@ public final class Dataservice {
         super.clear();
         id_ = "";
 
-        if (labelsBuilder_ == null) {
-          labels_ = null;
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = null;
         } else {
-          labels_ = null;
-          labelsBuilder_ = null;
+          trueValues_ = null;
+          trueValuesBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -9186,10 +9460,10 @@ public final class Dataservice {
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.id_ = id_;
-        if (labelsBuilder_ == null) {
-          result.labels_ = labels_;
+        if (trueValuesBuilder_ == null) {
+          result.trueValues_ = trueValues_;
         } else {
-          result.labels_ = labelsBuilder_.build();
+          result.trueValues_ = trueValuesBuilder_.build();
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
@@ -9249,8 +9523,8 @@ public final class Dataservice {
           id_ = other.id_;
           onChanged();
         }
-        if (other.hasLabels()) {
-          mergeLabels(other.getLabels());
+        if (other.hasTrueValues()) {
+          mergeTrueValues(other.getTrueValues());
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
@@ -9361,121 +9635,121 @@ public final class Dataservice {
         return this;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.Labels labels_ = null;
+      private ssn.dataservice.v1alpha1.Dataservice.TrueValues trueValues_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder> labelsBuilder_;
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> trueValuesBuilder_;
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public boolean hasLabels() {
-        return labelsBuilder_ != null || labels_ != null;
+      public boolean hasTrueValues() {
+        return trueValuesBuilder_ != null || trueValues_ != null;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.Labels getLabels() {
-        if (labelsBuilder_ == null) {
-          return labels_ == null ? ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
         } else {
-          return labelsBuilder_.getMessage();
+          return trueValuesBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public Builder setLabels(ssn.dataservice.v1alpha1.Dataservice.Labels value) {
-        if (labelsBuilder_ == null) {
+      public Builder setTrueValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          labels_ = value;
+          trueValues_ = value;
           onChanged();
         } else {
-          labelsBuilder_.setMessage(value);
+          trueValuesBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public Builder setLabels(
-          ssn.dataservice.v1alpha1.Dataservice.Labels.Builder builderForValue) {
-        if (labelsBuilder_ == null) {
-          labels_ = builderForValue.build();
+      public Builder setTrueValues(
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = builderForValue.build();
           onChanged();
         } else {
-          labelsBuilder_.setMessage(builderForValue.build());
+          trueValuesBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public Builder mergeLabels(ssn.dataservice.v1alpha1.Dataservice.Labels value) {
-        if (labelsBuilder_ == null) {
-          if (labels_ != null) {
-            labels_ =
-              ssn.dataservice.v1alpha1.Dataservice.Labels.newBuilder(labels_).mergeFrom(value).buildPartial();
+      public Builder mergeTrueValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (trueValuesBuilder_ == null) {
+          if (trueValues_ != null) {
+            trueValues_ =
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(trueValues_).mergeFrom(value).buildPartial();
           } else {
-            labels_ = value;
+            trueValues_ = value;
           }
           onChanged();
         } else {
-          labelsBuilder_.mergeFrom(value);
+          trueValuesBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public Builder clearLabels() {
-        if (labelsBuilder_ == null) {
-          labels_ = null;
+      public Builder clearTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = null;
           onChanged();
         } else {
-          labels_ = null;
-          labelsBuilder_ = null;
+          trueValues_ = null;
+          trueValuesBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.Labels.Builder getLabelsBuilder() {
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getTrueValuesBuilder() {
         
         onChanged();
-        return getLabelsFieldBuilder().getBuilder();
+        return getTrueValuesFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder getLabelsOrBuilder() {
-        if (labelsBuilder_ != null) {
-          return labelsBuilder_.getMessageOrBuilder();
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder() {
+        if (trueValuesBuilder_ != null) {
+          return trueValuesBuilder_.getMessageOrBuilder();
         } else {
-          return labels_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.Labels.getDefaultInstance() : labels_;
+          return trueValues_ == null ?
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : trueValues_;
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.Labels labels = 2;</code>
+       * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder> 
-          getLabelsFieldBuilder() {
-        if (labelsBuilder_ == null) {
-          labelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ssn.dataservice.v1alpha1.Dataservice.Labels, ssn.dataservice.v1alpha1.Dataservice.Labels.Builder, ssn.dataservice.v1alpha1.Dataservice.LabelsOrBuilder>(
-                  getLabels(),
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          getTrueValuesFieldBuilder() {
+        if (trueValuesBuilder_ == null) {
+          trueValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+                  getTrueValues(),
                   getParentForChildren(),
                   isClean());
-          labels_ = null;
+          trueValues_ = null;
         }
-        return labelsBuilder_;
+        return trueValuesBuilder_;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9630,10 +9904,10 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_Document_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_dataservice_v1alpha1_Labels_descriptor;
+    internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ssn_dataservice_v1alpha1_Labels_fieldAccessorTable;
+      internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor;
   private static final 
@@ -9674,67 +9948,74 @@ public final class Dataservice {
   static {
     java.lang.String[] descriptorData = {
       "\n*ssn/dataservice/v1alpha1/dataservice.p" +
-      "roto\022\030ssn.dataservice.v1alpha1\032\034google/a" +
-      "pi/annotations.proto\032\033google/protobuf/em" +
-      "pty.proto\032\036google/protobuf/wrappers.prot" +
-      "o\032\026google/type/date.proto\032\036ssn/type/text" +
-      "_annotation.proto\"\177\n\010Document\022$\n\002ta\030\001 \001(" +
-      "\0132\030.ssn.type.TextAnnotation\022\r\n\005bytes\030\002 \001" +
-      "(\014\0220\n\006labels\030\003 \001(\0132 .ssn.dataservice.v1a" +
-      "lpha1.Labels\022\014\n\004tags\030\004 \003(\t\"\276\t\n\006Labels\0224\n" +
-      "\016total_incl_vat\030\001 \001(\0132\034.google.protobuf." +
-      "DoubleValue\022/\n\ttotal_vat\030\002 \001(\0132\034.google." +
-      "protobuf.DoubleValue\0224\n\016total_excl_vat\030\003" +
-      " \001(\0132\034.google.protobuf.DoubleValue\022%\n\nor" +
-      "der_date\030\004 \001(\0132\021.google.type.Date\022+\n\020pay" +
-      "ment_due_date\030\005 \001(\0132\021.google.type.Date\0223" +
-      "\n\rdocument_type\030\006 \001(\0132\034.google.protobuf." +
-      "StringValue\022.\n\010currency\030\007 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022;\n\025credit_card_last_" +
-      "four\030\010 \001(\0132\034.google.protobuf.StringValue" +
-      "\0224\n\016payment_method\030\t \001(\0132\034.google.protob" +
-      "uf.StringValue\0226\n\020ocr_line_dk_type\030\n \001(\013" +
-      "2\034.google.protobuf.StringValue\022<\n\026ocr_li" +
-      "ne_dk_payment_id\030\013 \001(\0132\034.google.protobuf" +
-      ".StringValue\022=\n\027ocr_line_dk_creditor_id\030" +
-      "\014 \001(\0132\034.google.protobuf.StringValue\022<\n\026o" +
-      "cr_line_se_payment_id\030\r \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022F\n ocr_line_se_bankgir" +
-      "o_creditor_id\030\016 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022F\n ocr_line_se_plusgiro_credit" +
-      "or_id\030\017 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022<\n\026ocr_line_no_payment_id\030\020 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022<\n\026ocr_line_fi_p" +
-      "ayment_id\030\021 \001(\0132\034.google.protobuf.String" +
-      "Value\022<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034." +
-      "google.protobuf.StringValue\022;\n\025supplier_" +
-      "corporate_id\030\023 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022;\n\025supplier_country_code\030\024 \001(\0132" +
-      "\034.google.protobuf.StringValue\0224\n\016invoice" +
-      "_number\030\025 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"M\n\025CreateDocumentRequest\0224\n\010document" +
-      "\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Docume" +
-      "nt\"$\n\026CreateDocumentResponse\022\n\n\002id\030\001 \001(\t" +
-      "\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024R" +
-      "eadDocumentResponse\0224\n\010document\030\001 \001(\0132\"." +
-      "ssn.dataservice.v1alpha1.Document\"b\n\026Pre" +
-      "pareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 " +
-      "\001(\0132\030.ssn.type.TextAnnotation\022\026\n\016documen" +
-      "t_bytes\030\003 \001(\014\"]\n\017FeedbackRequest\022\n\n\002id\030\001" +
-      " \001(\t\0220\n\006labels\030\002 \001(\0132 .ssn.dataservice.v" +
-      "1alpha1.Labels\022\014\n\004tags\030\003 \003(\t2\274\003\n\013DataSer" +
-      "vice\022s\n\016CreateDocument\022/.ssn.dataservice" +
-      ".v1alpha1.CreateDocumentRequest\0320.ssn.da" +
-      "taservice.v1alpha1.CreateDocumentRespons" +
-      "e\022m\n\014ReadDocument\022-.ssn.dataservice.v1al" +
-      "pha1.ReadDocumentRequest\032..ssn.dataservi" +
-      "ce.v1alpha1.ReadDocumentResponse\022[\n\017Prep" +
-      "areFeedback\0220.ssn.dataservice.v1alpha1.P" +
-      "repareFeedbackRequest\032\026.google.protobuf." +
-      "Empty\022l\n\010Feedback\022).ssn.dataservice.v1al" +
-      "pha1.FeedbackRequest\032\026.google.protobuf.E" +
-      "mpty\"\035\202\323\344\223\002\027\"\022/v1alpha1/feedback:\001*B\rZ\013d" +
-      "ataserviceb\006proto3"
+      "roto\022\030ssn.dataservice.v1alpha1\032\016bq_field" +
+      ".proto\032\016bq_table.proto\032\034google/api/annot" +
+      "ations.proto\032\033google/protobuf/empty.prot" +
+      "o\032\036google/protobuf/wrappers.proto\032\026googl" +
+      "e/type/date.proto\032\036ssn/type/text_annotat" +
+      "ion.proto\"\310\002\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn" +
+      ".type.TextAnnotationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001" +
+      "(\014B\005\352?\002\030\001\022;\n\002id\030\003 \001(\tB/\352?\'\"%Feedback ID," +
+      " same as Envoy request id\352?\002\010\001\022\027\n\010consum" +
+      "er\030\004 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\005 \003(\tBF\352?C\"ATags" +
+      " defined by consumer, enriched by servic" +
+      "e if valetkey is used\0229\n\013true_values\030\006 \001" +
+      "(\0132$.ssn.dataservice.v1alpha1.TrueValues" +
+      ":\022\352?\017\n\rtraining_data\"\330\t\n\nTrueValues\0224\n\016t" +
+      "otal_incl_vat\030\001 \001(\0132\034.google.protobuf.Do" +
+      "ubleValue\022/\n\ttotal_vat\030\002 \001(\0132\034.google.pr" +
+      "otobuf.DoubleValue\0224\n\016total_excl_vat\030\003 \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0220\n\norde" +
+      "r_date\030\004 \001(\0132\021.google.type.DateB\t\352?\006\022\004DA" +
+      "TE\0226\n\020payment_due_date\030\005 \001(\0132\021.google.ty" +
+      "pe.DateB\t\352?\006\022\004DATE\0223\n\rdocument_type\030\006 \001(" +
+      "\0132\034.google.protobuf.StringValue\022.\n\010curre" +
+      "ncy\030\007 \001(\0132\034.google.protobuf.StringValue\022" +
+      ";\n\025credit_card_last_four\030\010 \001(\0132\034.google." +
+      "protobuf.StringValue\0224\n\016payment_method\030\t" +
+      " \001(\0132\034.google.protobuf.StringValue\0226\n\020oc" +
+      "r_line_dk_type\030\n \001(\0132\034.google.protobuf.S" +
+      "tringValue\022<\n\026ocr_line_dk_payment_id\030\013 \001" +
+      "(\0132\034.google.protobuf.StringValue\022=\n\027ocr_" +
+      "line_dk_creditor_id\030\014 \001(\0132\034.google.proto" +
+      "buf.StringValue\022<\n\026ocr_line_se_payment_i" +
+      "d\030\r \001(\0132\034.google.protobuf.StringValue\022F\n" +
+      " ocr_line_se_bankgiro_creditor_id\030\016 \001(\0132" +
+      "\034.google.protobuf.StringValue\022F\n ocr_lin" +
+      "e_se_plusgiro_creditor_id\030\017 \001(\0132\034.google" +
+      ".protobuf.StringValue\022<\n\026ocr_line_no_pay" +
+      "ment_id\030\020 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022<\n\026ocr_line_fi_payment_id\030\021 \001(\0132\034.go" +
+      "ogle.protobuf.StringValue\022<\n\026ocr_line_nl" +
+      "_payment_id\030\022 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022;\n\025supplier_corporate_id\030\023 \001(\0132\034" +
+      ".google.protobuf.StringValue\022;\n\025supplier" +
+      "_country_code\030\024 \001(\0132\034.google.protobuf.St" +
+      "ringValue\0224\n\016invoice_number\030\025 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"M\n\025CreateDocumen" +
+      "tRequest\0224\n\010document\030\001 \001(\0132\".ssn.dataser" +
+      "vice.v1alpha1.Document\"$\n\026CreateDocument" +
+      "Response\022\n\n\002id\030\001 \001(\t\"!\n\023ReadDocumentRequ" +
+      "est\022\n\n\002id\030\001 \001(\t\"L\n\024ReadDocumentResponse\022" +
+      "4\n\010document\030\001 \001(\0132\".ssn.dataservice.v1al" +
+      "pha1.Document\"b\n\026PrepareFeedbackRequest\022" +
+      "\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextA" +
+      "nnotation\022\026\n\016document_bytes\030\003 \001(\014\"f\n\017Fee" +
+      "dbackRequest\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030" +
+      "\002 \001(\0132$.ssn.dataservice.v1alpha1.TrueVal" +
+      "ues\022\014\n\004tags\030\003 \003(\t2\274\003\n\013DataService\022s\n\016Cre" +
+      "ateDocument\022/.ssn.dataservice.v1alpha1.C" +
+      "reateDocumentRequest\0320.ssn.dataservice.v" +
+      "1alpha1.CreateDocumentResponse\022m\n\014ReadDo" +
+      "cument\022-.ssn.dataservice.v1alpha1.ReadDo" +
+      "cumentRequest\032..ssn.dataservice.v1alpha1" +
+      ".ReadDocumentResponse\022[\n\017PrepareFeedback" +
+      "\0220.ssn.dataservice.v1alpha1.PrepareFeedb" +
+      "ackRequest\032\026.google.protobuf.Empty\022l\n\010Fe" +
+      "edback\022).ssn.dataservice.v1alpha1.Feedba" +
+      "ckRequest\032\026.google.protobuf.Empty\"\035\202\323\344\223\002" +
+      "\027\"\022/v1alpha1/feedback:\001*B\rZ\013dataserviceb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9747,6 +10028,8 @@ public final class Dataservice {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
+          gen_bq_schema.BqTable.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
@@ -9758,12 +10041,12 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_Document_descriptor,
-        new java.lang.String[] { "Ta", "Bytes", "Labels", "Tags", });
-    internal_static_ssn_dataservice_v1alpha1_Labels_descriptor =
+        new java.lang.String[] { "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", });
+    internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ssn_dataservice_v1alpha1_Labels_fieldAccessorTable = new
+    internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ssn_dataservice_v1alpha1_Labels_descriptor,
+        internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor,
         new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
@@ -9800,12 +10083,16 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Labels", "Tags", });
+        new java.lang.String[] { "Id", "TrueValues", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.bigquery);
+    registry.add(gen_bq_schema.BqTable.bigqueryOpts);
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
+    gen_bq_schema.BqTable.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
