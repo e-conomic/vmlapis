@@ -4,8 +4,8 @@ package ssn.dataservice.v1alpha1;
 
 option go_package = "dataservice";
 
-import "protoc-gen-bq-schema/bq_field.proto";
-import "protoc-gen-bq-schema/bq_table.proto";
+import "gen_bq_schema/bq_field.proto";
+import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
