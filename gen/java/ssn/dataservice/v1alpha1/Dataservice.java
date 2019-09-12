@@ -10137,74 +10137,75 @@ public final class Dataservice {
   static {
     java.lang.String[] descriptorData = {
       "\n*ssn/dataservice/v1alpha1/dataservice.p" +
-      "roto\022\030ssn.dataservice.v1alpha1\032\016bq_field" +
-      ".proto\032\016bq_table.proto\032\034google/api/annot" +
-      "ations.proto\032\033google/protobuf/empty.prot" +
-      "o\032\036google/protobuf/wrappers.proto\032\026googl" +
-      "e/type/date.proto\032\036ssn/type/text_annotat" +
-      "ion.proto\"\340\002\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn" +
-      ".type.TextAnnotationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001" +
-      "(\014B\005\352?\002\030\001\022;\n\002id\030\003 \001(\tB/\352?\'\"%Feedback ID," +
-      " same as Envoy request id\352?\002\010\001\022\027\n\010consum" +
-      "er\030\004 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\005 \003(\tBF\352?C\"ATags" +
-      " defined by consumer, enriched by servic" +
-      "e if valetkey is used\0229\n\013true_values\030\006 \001" +
-      "(\0132$.ssn.dataservice.v1alpha1.TrueValues" +
-      "\022\026\n\016missing_values\030\007 \003(\t:\022\352?\017\n\rtraining_" +
-      "data\"\330\t\n\nTrueValues\0224\n\016total_incl_vat\030\001 " +
-      "\001(\0132\034.google.protobuf.DoubleValue\022/\n\ttot" +
-      "al_vat\030\002 \001(\0132\034.google.protobuf.DoubleVal" +
-      "ue\0224\n\016total_excl_vat\030\003 \001(\0132\034.google.prot" +
-      "obuf.DoubleValue\0220\n\norder_date\030\004 \001(\0132\021.g" +
-      "oogle.type.DateB\t\352?\006\022\004DATE\0226\n\020payment_du" +
-      "e_date\030\005 \001(\0132\021.google.type.DateB\t\352?\006\022\004DA" +
-      "TE\0223\n\rdocument_type\030\006 \001(\0132\034.google.proto" +
-      "buf.StringValue\022.\n\010currency\030\007 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022;\n\025credit_card_l" +
-      "ast_four\030\010 \001(\0132\034.google.protobuf.StringV" +
-      "alue\0224\n\016payment_method\030\t \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0226\n\020ocr_line_dk_type\030\n" +
-      " \001(\0132\034.google.protobuf.StringValue\022<\n\026oc" +
-      "r_line_dk_payment_id\030\013 \001(\0132\034.google.prot" +
-      "obuf.StringValue\022=\n\027ocr_line_dk_creditor" +
-      "_id\030\014 \001(\0132\034.google.protobuf.StringValue\022" +
-      "<\n\026ocr_line_se_payment_id\030\r \001(\0132\034.google" +
-      ".protobuf.StringValue\022F\n ocr_line_se_ban" +
-      "kgiro_creditor_id\030\016 \001(\0132\034.google.protobu" +
-      "f.StringValue\022F\n ocr_line_se_plusgiro_cr" +
-      "editor_id\030\017 \001(\0132\034.google.protobuf.String" +
-      "Value\022<\n\026ocr_line_no_payment_id\030\020 \001(\0132\034." +
+      "roto\022\030ssn.dataservice.v1alpha1\032\034gen-bq-s" +
+      "chema/bq_field.proto\032\034gen-bq-schema/bq_t" +
+      "able.proto\032\034google/api/annotations.proto" +
+      "\032\033google/protobuf/empty.proto\032\036google/pr" +
+      "otobuf/wrappers.proto\032\026google/type/date." +
+      "proto\032\036ssn/type/text_annotation.proto\"\340\002" +
+      "\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn.type.TextAn" +
+      "notationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001(\014B\005\352?\002\030\001\022;\n" +
+      "\002id\030\003 \001(\tB/\352?\'\"%Feedback ID, same as Env" +
+      "oy request id\352?\002\010\001\022\027\n\010consumer\030\004 \001(\tB\005\352?" +
+      "\002\010\001\022T\n\004tags\030\005 \003(\tBF\352?C\"ATags defined by " +
+      "consumer, enriched by service if valetke" +
+      "y is used\0229\n\013true_values\030\006 \001(\0132$.ssn.dat" +
+      "aservice.v1alpha1.TrueValues\022\026\n\016missing_" +
+      "values\030\007 \003(\t:\022\352?\017\n\rtraining_data\"\330\t\n\nTru" +
+      "eValues\0224\n\016total_incl_vat\030\001 \001(\0132\034.google" +
+      ".protobuf.DoubleValue\022/\n\ttotal_vat\030\002 \001(\013" +
+      "2\034.google.protobuf.DoubleValue\0224\n\016total_" +
+      "excl_vat\030\003 \001(\0132\034.google.protobuf.DoubleV" +
+      "alue\0220\n\norder_date\030\004 \001(\0132\021.google.type.D" +
+      "ateB\t\352?\006\022\004DATE\0226\n\020payment_due_date\030\005 \001(\013" +
+      "2\021.google.type.DateB\t\352?\006\022\004DATE\0223\n\rdocume" +
+      "nt_type\030\006 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022.\n\010currency\030\007 \001(\0132\034.google.protobuf." +
+      "StringValue\022;\n\025credit_card_last_four\030\010 \001" +
+      "(\0132\034.google.protobuf.StringValue\0224\n\016paym" +
+      "ent_method\030\t \001(\0132\034.google.protobuf.Strin" +
+      "gValue\0226\n\020ocr_line_dk_type\030\n \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022<\n\026ocr_line_dk_pa" +
+      "yment_id\030\013 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022=\n\027ocr_line_dk_creditor_id\030\014 \001(\0132\034." +
       "google.protobuf.StringValue\022<\n\026ocr_line_" +
-      "fi_payment_id\030\021 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022<\n\026ocr_line_nl_payment_id\030\022 \001(" +
-      "\0132\034.google.protobuf.StringValue\022;\n\025suppl" +
-      "ier_corporate_id\030\023 \001(\0132\034.google.protobuf" +
-      ".StringValue\022;\n\025supplier_country_code\030\024 " +
-      "\001(\0132\034.google.protobuf.StringValue\0224\n\016inv" +
-      "oice_number\030\025 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\"M\n\025CreateDocumentRequest\0224\n\010docu" +
-      "ment\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Do" +
-      "cument\"$\n\026CreateDocumentResponse\022\n\n\002id\030\001" +
-      " \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 \001(\t\"" +
-      "L\n\024ReadDocumentResponse\0224\n\010document\030\001 \001(" +
-      "\0132\".ssn.dataservice.v1alpha1.Document\"b\n" +
-      "\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002t" +
-      "a\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026\n\016doc" +
-      "ument_bytes\030\003 \001(\014\"f\n\017FeedbackRequest\022\n\n\002" +
-      "id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn.data" +
-      "service.v1alpha1.TrueValues\022\014\n\004tags\030\003 \003(" +
-      "\t2\274\003\n\013DataService\022s\n\016CreateDocument\022/.ss" +
-      "n.dataservice.v1alpha1.CreateDocumentReq" +
-      "uest\0320.ssn.dataservice.v1alpha1.CreateDo" +
-      "cumentResponse\022m\n\014ReadDocument\022-.ssn.dat" +
-      "aservice.v1alpha1.ReadDocumentRequest\032.." +
-      "ssn.dataservice.v1alpha1.ReadDocumentRes" +
-      "ponse\022[\n\017PrepareFeedback\0220.ssn.dataservi" +
-      "ce.v1alpha1.PrepareFeedbackRequest\032\026.goo" +
-      "gle.protobuf.Empty\022l\n\010Feedback\022).ssn.dat" +
-      "aservice.v1alpha1.FeedbackRequest\032\026.goog" +
-      "le.protobuf.Empty\"\035\202\323\344\223\002\027\"\022/v1alpha1/fee" +
-      "dback:\001*B\rZ\013dataserviceb\006proto3"
+      "se_payment_id\030\r \001(\0132\034.google.protobuf.St" +
+      "ringValue\022F\n ocr_line_se_bankgiro_credit" +
+      "or_id\030\016 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022F\n ocr_line_se_plusgiro_creditor_id\030\017 " +
+      "\001(\0132\034.google.protobuf.StringValue\022<\n\026ocr" +
+      "_line_no_payment_id\030\020 \001(\0132\034.google.proto" +
+      "buf.StringValue\022<\n\026ocr_line_fi_payment_i" +
+      "d\030\021 \001(\0132\034.google.protobuf.StringValue\022<\n" +
+      "\026ocr_line_nl_payment_id\030\022 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022;\n\025supplier_corporat" +
+      "e_id\030\023 \001(\0132\034.google.protobuf.StringValue" +
+      "\022;\n\025supplier_country_code\030\024 \001(\0132\034.google" +
+      ".protobuf.StringValue\0224\n\016invoice_number\030" +
+      "\025 \001(\0132\034.google.protobuf.StringValue\"M\n\025C" +
+      "reateDocumentRequest\0224\n\010document\030\001 \001(\0132\"" +
+      ".ssn.dataservice.v1alpha1.Document\"$\n\026Cr" +
+      "eateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Read" +
+      "DocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024ReadDocum" +
+      "entResponse\0224\n\010document\030\001 \001(\0132\".ssn.data" +
+      "service.v1alpha1.Document\"b\n\026PrepareFeed" +
+      "backRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ss" +
+      "n.type.TextAnnotation\022\026\n\016document_bytes\030" +
+      "\003 \001(\014\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0229\n\013" +
+      "true_values\030\002 \001(\0132$.ssn.dataservice.v1al" +
+      "pha1.TrueValues\022\014\n\004tags\030\003 \003(\t2\274\003\n\013DataSe" +
+      "rvice\022s\n\016CreateDocument\022/.ssn.dataservic" +
+      "e.v1alpha1.CreateDocumentRequest\0320.ssn.d" +
+      "ataservice.v1alpha1.CreateDocumentRespon" +
+      "se\022m\n\014ReadDocument\022-.ssn.dataservice.v1a" +
+      "lpha1.ReadDocumentRequest\032..ssn.dataserv" +
+      "ice.v1alpha1.ReadDocumentResponse\022[\n\017Pre" +
+      "pareFeedback\0220.ssn.dataservice.v1alpha1." +
+      "PrepareFeedbackRequest\032\026.google.protobuf" +
+      ".Empty\022l\n\010Feedback\022).ssn.dataservice.v1a" +
+      "lpha1.FeedbackRequest\032\026.google.protobuf." +
+      "Empty\"\035\202\323\344\223\002\027\"\022/v1alpha1/feedback:\001*B\rZ\013" +
+      "dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
