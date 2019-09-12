@@ -6,7 +6,7 @@ package dataservice
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
-import _ "gen_bq_schema"
+import _ "github.com/GoogleCloudPlatform/protoc-gen-bq-schema"
 import _type "github.com/e-conomic/vmlapis/gen/go/ssn/type"
 import empty "github.com/golang/protobuf/ptypes/empty"
 import wrappers "github.com/golang/protobuf/ptypes/wrappers"
