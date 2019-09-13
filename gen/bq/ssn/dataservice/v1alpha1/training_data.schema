@@ -127,10 +127,5 @@
     "mode": "NULLABLE"
    }
   ]
- },
- {
-  "name": "missing_values",
-  "type": "STRING",
-  "mode": "REPEATED"
  }
 ]
