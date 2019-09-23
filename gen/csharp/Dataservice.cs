@@ -74,17 +74,20 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "IAEoCRIkCgJ0YRgCIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uEhYK",
             "DmRvY3VtZW50X2J5dGVzGAMgASgMImYKD0ZlZWRiYWNrUmVxdWVzdBIKCgJp",
             "ZBgBIAEoCRI5Cgt0cnVlX3ZhbHVlcxgCIAEoCzIkLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5UcnVlVmFsdWVzEgwKBHRhZ3MYAyADKAkyvAMKC0RhdGFT",
-            "ZXJ2aWNlEnMKDkNyZWF0ZURvY3VtZW50Ei8uc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "YWxwaGExLkNyZWF0ZURvY3VtZW50UmVxdWVzdBowLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEm0KDFJlYWREb2N1",
-            "bWVudBItLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRS",
-            "ZXF1ZXN0Gi4uc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJlYWREb2N1bWVu",
-            "dFJlc3BvbnNlElsKD1ByZXBhcmVGZWVkYmFjaxIwLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5EmwKCEZlZWRiYWNrEikuc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "YWxwaGExLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIdgtPkkwIXIhIvdjFhbHBoYTEvZmVlZGJhY2s6ASpCDVoLZGF0YXNlcnZp",
+            "ZS52MWFscGhhMS5UcnVlVmFsdWVzEgwKBHRhZ3MYAyADKAkiHQoNRGVsZXRl",
+            "UmVxdWVzdBIMCgR0YWdzGAEgAygJMqQECgtEYXRhU2VydmljZRJzCg5DcmVh",
+            "dGVEb2N1bWVudBIvLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5DcmVhdGVE",
+            "b2N1bWVudFJlcXVlc3QaMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ3Jl",
+            "YXRlRG9jdW1lbnRSZXNwb25zZRJtCgxSZWFkRG9jdW1lbnQSLS5zc24uZGF0",
+            "YXNlcnZpY2UudjFhbHBoYTEuUmVhZERvY3VtZW50UmVxdWVzdBouLnNzbi5k",
+            "YXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRSZXNwb25zZRJbCg9Q",
+            "cmVwYXJlRmVlZGJhY2sSMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuUHJl",
+            "cGFyZUZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJs",
+            "CghGZWVkYmFjaxIpLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5GZWVkYmFj",
+            "a1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHYLT5JMCFyISL3Yx",
+            "YWxwaGExL2ZlZWRiYWNrOgEqEmYKBkRlbGV0ZRInLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MWFscGhhMS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IhuC0+STAhUiEC92MWFscGhhMS9kZWxldGU6ASpCDVoLZGF0YXNlcnZp",
             "Y2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
@@ -96,7 +99,8 @@ namespace Ssn.Dataservice.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentRequest), global::Ssn.Dataservice.V1Alpha1.ReadDocumentRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse), global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackRequest), global::Ssn.Dataservice.V1Alpha1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackRequest), global::Ssn.Dataservice.V1Alpha1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteRequest), global::Ssn.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -2065,6 +2069,127 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           }
           case 26: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DeleteRequest : pb::IMessage<DeleteRequest> {
+    private static readonly pb::MessageParser<DeleteRequest> _parser = new pb::MessageParser<DeleteRequest>(() => new DeleteRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DeleteRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteRequest(DeleteRequest other) : this() {
+      tags_ = other.tags_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DeleteRequest Clone() {
+      return new DeleteRequest(this);
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DeleteRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!tags_.Equals(other.tags_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= tags_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      tags_.WriteTo(output, _repeated_tags_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += tags_.CalculateSize(_repeated_tags_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DeleteRequest other) {
+      if (other == null) {
+        return;
+      }
+      tags_.Add(other.tags_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }

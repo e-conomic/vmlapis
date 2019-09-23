@@ -23,6 +23,12 @@ service DataService {
       body: "*"
     };
   }
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/delete"
+      body: "*"
+    };
+  }
 }
 
 message Document {
@@ -85,4 +91,8 @@ message FeedbackRequest {
   string id = 1;
   TrueValues true_values = 2;
   repeated string tags = 3;
+}
+
+message DeleteRequest {
+  repeated string tags = 1;
 }
