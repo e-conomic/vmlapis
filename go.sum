@@ -4,6 +4,8 @@ cloud.google.com/go v0.38.0/go.mod h1:990N+gfupTy94rShfmMCWGDn0LpTmnzTp2qbd1dvSR
 cloud.google.com/go v0.40.0/go.mod h1:Tk58MuI9rbLMKlAjeO/bDnteAx7tX2gJIXw4T5Jwlro=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
+github.com/GoogleCloudPlatform/protoc-gen-bq-schema v0.0.0-20190119112626-026f9fcdf705 h1:jVwOUIhgsS+U4xXLETdpIrr8WIP9tSoqDxpuFAXRvUk=
+github.com/GoogleCloudPlatform/protoc-gen-bq-schema v0.0.0-20190119112626-026f9fcdf705/go.mod h1:+BxrME0giHzMqsTGNhfrNgxtzMwWYw6pqtXiGrNu5Xo=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/e-conomic/tensorflow v0.0.0-20190502071349-5bfe5110fb55 h1:AhpKUjWT1pdGQ9RFUmdyit7cXTVeIIx1LUBsPaNWNdw=
 github.com/e-conomic/tensorflow v0.0.0-20190502071349-5bfe5110fb55/go.mod h1:HK2TLVj57Th5PdfSf5up67MygvyH03rHzFStg2t56Kk=

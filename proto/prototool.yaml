@@ -3,6 +3,7 @@ protoc:
   includes:
   - ../deps/googleapis
   - ../deps/tensorflow
+  - ../deps/bq
 
 lint:
   group: google
@@ -26,3 +27,7 @@ generate:
   - name: grpc-python
     path: grpc_python_plugin
     output: ../gen/python
+  - name: bigquery-schema
+    path: protoc-gen-bq-schema
+    output: ../gen/bq
+

@@ -19,8 +19,7 @@ message ValetKeyRequest {
   // Principal / Data Subject, ie. user id
   // https://tools.ietf.org/html/rfc7519#section-4.1.2
   string sub = 1;
-
-  // Timestamp for when this key expires 
+  // Timestamp for when this key expires
   // Default 8 hours from now, max 48h
   // https://tools.ietf.org/html/rfc7519#section-4.1.4
   int64 exp = 2;

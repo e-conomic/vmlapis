@@ -2,7 +2,7 @@ all:
 	@rm -rf gen
 	@echo "Generate all the things"
 	cd proto && prototool all
-	protoc -I./deps/googleapis -I./proto \
+	protoc -I./deps/googleapis -I./deps/bq -I./proto \
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \
@@ -17,6 +17,9 @@ docker:
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
 	docker rm $$DOCKERID
+
+bigquery:
+	cp -r ./gen/bq/ssn/dataservice ../ssn-terraform/bq
 
 .PHONY: all
 .PHONY: docker
