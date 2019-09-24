@@ -74,21 +74,21 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "IAEoCRIkCgJ0YRgCIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uEhYK",
             "DmRvY3VtZW50X2J5dGVzGAMgASgMImYKD0ZlZWRiYWNrUmVxdWVzdBIKCgJp",
             "ZBgBIAEoCRI5Cgt0cnVlX3ZhbHVlcxgCIAEoCzIkLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5UcnVlVmFsdWVzEgwKBHRhZ3MYAyADKAkiHQoNRGVsZXRl",
-            "UmVxdWVzdBIMCgR0YWdzGAEgAygJMqQECgtEYXRhU2VydmljZRJzCg5DcmVh",
-            "dGVEb2N1bWVudBIvLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5DcmVhdGVE",
-            "b2N1bWVudFJlcXVlc3QaMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ3Jl",
-            "YXRlRG9jdW1lbnRSZXNwb25zZRJtCgxSZWFkRG9jdW1lbnQSLS5zc24uZGF0",
-            "YXNlcnZpY2UudjFhbHBoYTEuUmVhZERvY3VtZW50UmVxdWVzdBouLnNzbi5k",
-            "YXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRSZXNwb25zZRJbCg9Q",
-            "cmVwYXJlRmVlZGJhY2sSMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuUHJl",
-            "cGFyZUZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJs",
-            "CghGZWVkYmFjaxIpLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5GZWVkYmFj",
-            "a1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHYLT5JMCFyISL3Yx",
-            "YWxwaGExL2ZlZWRiYWNrOgEqEmYKBkRlbGV0ZRInLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5IhuC0+STAhUiEC92MWFscGhhMS9kZWxldGU6ASpCDVoLZGF0YXNlcnZp",
-            "Y2ViBnByb3RvMw=="));
+            "ZS52MWFscGhhMS5UcnVlVmFsdWVzEgwKBHRhZ3MYAyADKAkiJQoVRGVsZXRl",
+            "RmVlZGJhY2tSZXF1ZXN0EgwKBHRhZ3MYASADKAkyvAQKC0RhdGFTZXJ2aWNl",
+            "EnMKDkNyZWF0ZURvY3VtZW50Ei8uc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGEx",
+            "LkNyZWF0ZURvY3VtZW50UmVxdWVzdBowLnNzbi5kYXRhc2VydmljZS52MWFs",
+            "cGhhMS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEm0KDFJlYWREb2N1bWVudBIt",
+            "LnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRSZXF1ZXN0",
+            "Gi4uc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJlYWREb2N1bWVudFJlc3Bv",
+            "bnNlElsKD1ByZXBhcmVGZWVkYmFjaxIwLnNzbi5kYXRhc2VydmljZS52MWFs",
+            "cGhhMS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
+            "LkVtcHR5EmwKCEZlZWRiYWNrEikuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGEx",
+            "LkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIdgtPk",
+            "kwIXIhIvdjFhbHBoYTEvZmVlZGJhY2s6ASoSfgoORGVsZXRlRmVlZGJhY2sS",
+            "Ly5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRGVsZXRlRmVlZGJhY2tSZXF1",
+            "ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiOC0+STAh0iGC92MWFscGhh",
+            "MS9kZWxldGVmZWVkYmFjazoBKkINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -100,7 +100,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse), global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackRequest), global::Ssn.Dataservice.V1Alpha1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteRequest), global::Ssn.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.DeleteFeedbackRequest.Parser, new[]{ "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -2078,11 +2078,11 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
   }
 
-  public sealed partial class DeleteRequest : pb::IMessage<DeleteRequest> {
-    private static readonly pb::MessageParser<DeleteRequest> _parser = new pb::MessageParser<DeleteRequest>(() => new DeleteRequest());
+  public sealed partial class DeleteFeedbackRequest : pb::IMessage<DeleteFeedbackRequest> {
+    private static readonly pb::MessageParser<DeleteFeedbackRequest> _parser = new pb::MessageParser<DeleteFeedbackRequest>(() => new DeleteFeedbackRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DeleteRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeleteFeedbackRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -2095,21 +2095,21 @@ namespace Ssn.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeleteRequest() {
+    public DeleteFeedbackRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeleteRequest(DeleteRequest other) : this() {
+    public DeleteFeedbackRequest(DeleteFeedbackRequest other) : this() {
       tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DeleteRequest Clone() {
-      return new DeleteRequest(this);
+    public DeleteFeedbackRequest Clone() {
+      return new DeleteFeedbackRequest(this);
     }
 
     /// <summary>Field number for the "tags" field.</summary>
@@ -2124,11 +2124,11 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as DeleteRequest);
+      return Equals(other as DeleteFeedbackRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DeleteRequest other) {
+    public bool Equals(DeleteFeedbackRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2173,7 +2173,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DeleteRequest other) {
+    public void MergeFrom(DeleteFeedbackRequest other) {
       if (other == null) {
         return;
       }

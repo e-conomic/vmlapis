@@ -23,9 +23,9 @@ service DataService {
       body: "*"
     };
   }
-  rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
+  rpc DeleteFeedback(DeleteFeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/delete"
+      post: "/v1alpha1/deletefeedback"
       body: "*"
     };
   }
@@ -93,6 +93,6 @@ message FeedbackRequest {
   repeated string tags = 3;
 }
 
-message DeleteRequest {
+message DeleteFeedbackRequest {
   repeated string tags = 1;
 }
