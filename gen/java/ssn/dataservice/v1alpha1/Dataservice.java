@@ -9898,8 +9898,8 @@ public final class Dataservice {
 
   }
 
-  public interface DeleteFeedbackRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.DeleteFeedbackRequest)
+  public interface DeleteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.DeleteRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -9922,18 +9922,18 @@ public final class Dataservice {
         getTagsBytes(int index);
   }
   /**
-   * Protobuf type {@code ssn.dataservice.v1alpha1.DeleteFeedbackRequest}
+   * Protobuf type {@code ssn.dataservice.v1alpha1.DeleteRequest}
    */
-  public  static final class DeleteFeedbackRequest extends
+  public  static final class DeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.DeleteFeedbackRequest)
-      DeleteFeedbackRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.DeleteRequest)
+      DeleteRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use DeleteFeedbackRequest.newBuilder() to construct.
-    private DeleteFeedbackRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use DeleteRequest.newBuilder() to construct.
+    private DeleteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private DeleteFeedbackRequest() {
+    private DeleteRequest() {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -9942,7 +9942,7 @@ public final class Dataservice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private DeleteFeedbackRequest(
+    private DeleteRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -9994,15 +9994,15 @@ public final class Dataservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor;
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_fieldAccessorTable
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.class, ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.Builder.class);
+              ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.class, ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.Builder.class);
     }
 
     public static final int TAGS_FIELD_NUMBER = 1;
@@ -10078,10 +10078,10 @@ public final class Dataservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest)) {
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.DeleteRequest)) {
         return super.equals(obj);
       }
-      ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest other = (ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest) obj;
+      ssn.dataservice.v1alpha1.Dataservice.DeleteRequest other = (ssn.dataservice.v1alpha1.Dataservice.DeleteRequest) obj;
 
       boolean result = true;
       result = result && getTagsList()
@@ -10106,69 +10106,69 @@ public final class Dataservice {
       return hash;
     }
 
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(byte[] data)
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(java.io.InputStream input)
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseDelimitedFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parseFrom(
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10181,7 +10181,7 @@ public final class Dataservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest prototype) {
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.DeleteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10197,26 +10197,26 @@ public final class Dataservice {
       return builder;
     }
     /**
-     * Protobuf type {@code ssn.dataservice.v1alpha1.DeleteFeedbackRequest}
+     * Protobuf type {@code ssn.dataservice.v1alpha1.DeleteRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.DeleteFeedbackRequest)
-        ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.DeleteRequest)
+        ssn.dataservice.v1alpha1.Dataservice.DeleteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor;
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_fieldAccessorTable
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.class, ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.Builder.class);
+                ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.class, ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.Builder.class);
       }
 
-      // Construct using ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.newBuilder()
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10242,17 +10242,17 @@ public final class Dataservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor;
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor;
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest getDefaultInstanceForType() {
-        return ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.getDefaultInstance();
+      public ssn.dataservice.v1alpha1.Dataservice.DeleteRequest getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest build() {
-        ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest result = buildPartial();
+      public ssn.dataservice.v1alpha1.Dataservice.DeleteRequest build() {
+        ssn.dataservice.v1alpha1.Dataservice.DeleteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10260,8 +10260,8 @@ public final class Dataservice {
       }
 
       @java.lang.Override
-      public ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest buildPartial() {
-        ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest result = new ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest(this);
+      public ssn.dataservice.v1alpha1.Dataservice.DeleteRequest buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.DeleteRequest result = new ssn.dataservice.v1alpha1.Dataservice.DeleteRequest(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           tags_ = tags_.getUnmodifiableView();
@@ -10306,16 +10306,16 @@ public final class Dataservice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest) {
-          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest)other);
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.DeleteRequest) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.DeleteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest other) {
-        if (other == ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.DeleteRequest other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.DeleteRequest.getDefaultInstance()) return this;
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
@@ -10341,11 +10341,11 @@ public final class Dataservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest parsedMessage = null;
+        ssn.dataservice.v1alpha1.Dataservice.DeleteRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest) e.getUnfinishedMessage();
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.DeleteRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -10462,41 +10462,41 @@ public final class Dataservice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.DeleteFeedbackRequest)
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.DeleteRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.DeleteFeedbackRequest)
-    private static final ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.DeleteRequest)
+    private static final ssn.dataservice.v1alpha1.Dataservice.DeleteRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest();
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.DeleteRequest();
     }
 
-    public static ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest getDefaultInstance() {
+    public static ssn.dataservice.v1alpha1.Dataservice.DeleteRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<DeleteFeedbackRequest>
-        PARSER = new com.google.protobuf.AbstractParser<DeleteFeedbackRequest>() {
+    private static final com.google.protobuf.Parser<DeleteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<DeleteRequest>() {
       @java.lang.Override
-      public DeleteFeedbackRequest parsePartialFrom(
+      public DeleteRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new DeleteFeedbackRequest(input, extensionRegistry);
+        return new DeleteRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<DeleteFeedbackRequest> parser() {
+    public static com.google.protobuf.Parser<DeleteRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<DeleteFeedbackRequest> getParserForType() {
+    public com.google.protobuf.Parser<DeleteRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ssn.dataservice.v1alpha1.Dataservice.DeleteFeedbackRequest getDefaultInstanceForType() {
+    public ssn.dataservice.v1alpha1.Dataservice.DeleteRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10543,10 +10543,10 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor;
+    internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_fieldAccessorTable;
+      internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10613,23 +10613,22 @@ public final class Dataservice {
       "\016document_bytes\030\003 \001(\014\"f\n\017FeedbackRequest" +
       "\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn." +
       "dataservice.v1alpha1.TrueValues\022\014\n\004tags\030" +
-      "\003 \003(\t\"%\n\025DeleteFeedbackRequest\022\014\n\004tags\030\001" +
-      " \003(\t2\274\004\n\013DataService\022s\n\016CreateDocument\022/" +
-      ".ssn.dataservice.v1alpha1.CreateDocument" +
-      "Request\0320.ssn.dataservice.v1alpha1.Creat" +
-      "eDocumentResponse\022m\n\014ReadDocument\022-.ssn." +
-      "dataservice.v1alpha1.ReadDocumentRequest" +
-      "\032..ssn.dataservice.v1alpha1.ReadDocument" +
-      "Response\022[\n\017PrepareFeedback\0220.ssn.datase" +
-      "rvice.v1alpha1.PrepareFeedbackRequest\032\026." +
-      "google.protobuf.Empty\022l\n\010Feedback\022).ssn." +
-      "dataservice.v1alpha1.FeedbackRequest\032\026.g" +
-      "oogle.protobuf.Empty\"\035\202\323\344\223\002\027\"\022/v1alpha1/" +
-      "feedback:\001*\022~\n\016DeleteFeedback\022/.ssn.data" +
-      "service.v1alpha1.DeleteFeedbackRequest\032\026" +
-      ".google.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1alpha" +
-      "1/deletefeedback:\001*B\rZ\013dataserviceb\006prot" +
-      "o3"
+      "\003 \003(\t\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n" +
+      "\013DataService\022s\n\016CreateDocument\022/.ssn.dat" +
+      "aservice.v1alpha1.CreateDocumentRequest\032" +
+      "0.ssn.dataservice.v1alpha1.CreateDocumen" +
+      "tResponse\022m\n\014ReadDocument\022-.ssn.dataserv" +
+      "ice.v1alpha1.ReadDocumentRequest\032..ssn.d" +
+      "ataservice.v1alpha1.ReadDocumentResponse" +
+      "\022[\n\017PrepareFeedback\0220.ssn.dataservice.v1" +
+      "alpha1.PrepareFeedbackRequest\032\026.google.p" +
+      "rotobuf.Empty\022s\n\010Feedback\022).ssn.dataserv" +
+      "ice.v1alpha1.FeedbackRequest\032\026.google.pr" +
+      "otobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback" +
+      ":create:\001*\022o\n\006Delete\022\'.ssn.dataservice.v" +
+      "1alpha1.DeleteRequest\032\026.google.protobuf." +
+      "Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:delete" +
+      ":\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10698,11 +10697,11 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "TrueValues", "Tags", });
-    internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor =
+    internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_fieldAccessorTable = new
+    internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ssn_dataservice_v1alpha1_DeleteFeedbackRequest_descriptor,
+        internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor,
         new java.lang.String[] { "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

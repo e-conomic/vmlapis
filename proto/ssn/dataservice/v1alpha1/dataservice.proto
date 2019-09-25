@@ -19,13 +19,13 @@ service DataService {
   rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
   rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback"
+      post: "/v1alpha1/feedback:create"
       body: "*"
     };
   }
-  rpc DeleteFeedback(DeleteFeedbackRequest) returns (google.protobuf.Empty) {
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/deletefeedback"
+      post: "/v1alpha1/feedback:delete"
       body: "*"
     };
   }
@@ -93,6 +93,6 @@ message FeedbackRequest {
   repeated string tags = 3;
 }
 
-message DeleteFeedbackRequest {
+message DeleteRequest {
   repeated string tags = 1;
 }

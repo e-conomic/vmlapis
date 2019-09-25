@@ -35,9 +35,9 @@ class DataServiceStub(object):
         request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.DeleteFeedback = channel.unary_unary(
-        '/ssn.dataservice.v1alpha1.DataService/DeleteFeedback',
-        request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.DeleteFeedbackRequest.SerializeToString,
+    self.Delete = channel.unary_unary(
+        '/ssn.dataservice.v1alpha1.DataService/Delete',
+        request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
 
@@ -74,7 +74,7 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def DeleteFeedback(self, request, context):
+  def Delete(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -104,9 +104,9 @@ def add_DataServiceServicer_to_server(servicer, server):
           request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'DeleteFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteFeedback,
-          request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.DeleteFeedbackRequest.FromString,
+      'Delete': grpc.unary_unary_rpc_method_handler(
+          servicer.Delete,
+          request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.DeleteRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
   }
