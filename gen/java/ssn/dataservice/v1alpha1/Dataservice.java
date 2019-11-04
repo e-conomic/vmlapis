@@ -8181,6 +8181,19 @@ public final class Dataservice {
      * <code>bytes document_bytes = 3;</code>
      */
     com.google.protobuf.ByteString getDocumentBytes();
+
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    boolean hasPredictions();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackRequest}
@@ -8245,6 +8258,19 @@ public final class Dataservice {
             case 26: {
 
               documentBytes_ = input.readBytes();
+              break;
+            }
+            case 34: {
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              if (predictions_ != null) {
+                subBuilder = predictions_.toBuilder();
+              }
+              predictions_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(predictions_);
+                predictions_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -8343,6 +8369,27 @@ public final class Dataservice {
       return documentBytes_;
     }
 
+    public static final int PREDICTIONS_FIELD_NUMBER = 4;
+    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_;
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    public boolean hasPredictions() {
+      return predictions_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
+      return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
+      return getPredictions();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8366,6 +8413,9 @@ public final class Dataservice {
       if (!documentBytes_.isEmpty()) {
         output.writeBytes(3, documentBytes_);
       }
+      if (predictions_ != null) {
+        output.writeMessage(4, getPredictions());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -8385,6 +8435,10 @@ public final class Dataservice {
       if (!documentBytes_.isEmpty()) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, documentBytes_);
+      }
+      if (predictions_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getPredictions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8411,6 +8465,11 @@ public final class Dataservice {
       }
       result = result && getDocumentBytes()
           .equals(other.getDocumentBytes());
+      result = result && (hasPredictions() == other.hasPredictions());
+      if (hasPredictions()) {
+        result = result && getPredictions()
+            .equals(other.getPredictions());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8430,6 +8489,10 @@ public final class Dataservice {
       }
       hash = (37 * hash) + DOCUMENT_BYTES_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentBytes().hashCode();
+      if (hasPredictions()) {
+        hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPredictions().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8573,6 +8636,12 @@ public final class Dataservice {
         }
         documentBytes_ = com.google.protobuf.ByteString.EMPTY;
 
+        if (predictionsBuilder_ == null) {
+          predictions_ = null;
+        } else {
+          predictions_ = null;
+          predictionsBuilder_ = null;
+        }
         return this;
       }
 
@@ -8606,6 +8675,11 @@ public final class Dataservice {
           result.ta_ = taBuilder_.build();
         }
         result.documentBytes_ = documentBytes_;
+        if (predictionsBuilder_ == null) {
+          result.predictions_ = predictions_;
+        } else {
+          result.predictions_ = predictionsBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -8663,6 +8737,9 @@ public final class Dataservice {
         }
         if (other.getDocumentBytes() != com.google.protobuf.ByteString.EMPTY) {
           setDocumentBytes(other.getDocumentBytes());
+        }
+        if (other.hasPredictions()) {
+          mergePredictions(other.getPredictions());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -8906,6 +8983,123 @@ public final class Dataservice {
         documentBytes_ = getDefaultInstance().getDocumentBytes();
         onChanged();
         return this;
+      }
+
+      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionsBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public boolean hasPredictions() {
+        return predictionsBuilder_ != null || predictions_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
+        if (predictionsBuilder_ == null) {
+          return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+        } else {
+          return predictionsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder setPredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          predictions_ = value;
+          onChanged();
+        } else {
+          predictionsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder setPredictions(
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          predictions_ = builderForValue.build();
+          onChanged();
+        } else {
+          predictionsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder mergePredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionsBuilder_ == null) {
+          if (predictions_ != null) {
+            predictions_ =
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictions_).mergeFrom(value).buildPartial();
+          } else {
+            predictions_ = value;
+          }
+          onChanged();
+        } else {
+          predictionsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder clearPredictions() {
+        if (predictionsBuilder_ == null) {
+          predictions_ = null;
+          onChanged();
+        } else {
+          predictions_ = null;
+          predictionsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionsBuilder() {
+        
+        onChanged();
+        return getPredictionsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
+        if (predictionsBuilder_ != null) {
+          return predictionsBuilder_.getMessageOrBuilder();
+        } else {
+          return predictions_ == null ?
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          getPredictionsFieldBuilder() {
+        if (predictionsBuilder_ == null) {
+          predictionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+                  getPredictions(),
+                  getParentForChildren(),
+                  isClean());
+          predictions_ = null;
+        }
+        return predictionsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10608,27 +10802,29 @@ public final class Dataservice {
       "id\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 " +
       "\001(\t\"L\n\024ReadDocumentResponse\0224\n\010document\030" +
       "\001 \001(\0132\".ssn.dataservice.v1alpha1.Documen" +
-      "t\"b\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
-      "$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026\n" +
-      "\016document_bytes\030\003 \001(\014\"f\n\017FeedbackRequest" +
-      "\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn." +
-      "dataservice.v1alpha1.TrueValues\022\014\n\004tags\030" +
-      "\003 \003(\t\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n" +
-      "\013DataService\022s\n\016CreateDocument\022/.ssn.dat" +
-      "aservice.v1alpha1.CreateDocumentRequest\032" +
-      "0.ssn.dataservice.v1alpha1.CreateDocumen" +
-      "tResponse\022m\n\014ReadDocument\022-.ssn.dataserv" +
-      "ice.v1alpha1.ReadDocumentRequest\032..ssn.d" +
-      "ataservice.v1alpha1.ReadDocumentResponse" +
-      "\022[\n\017PrepareFeedback\0220.ssn.dataservice.v1" +
-      "alpha1.PrepareFeedbackRequest\032\026.google.p" +
-      "rotobuf.Empty\022s\n\010Feedback\022).ssn.dataserv" +
-      "ice.v1alpha1.FeedbackRequest\032\026.google.pr" +
-      "otobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback" +
-      ":create:\001*\022o\n\006Delete\022\'.ssn.dataservice.v" +
-      "1alpha1.DeleteRequest\032\026.google.protobuf." +
-      "Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:delete" +
-      ":\001*B\rZ\013dataserviceb\006proto3"
+      "t\"\235\001\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t" +
+      "\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026" +
+      "\n\016document_bytes\030\003 \001(\014\0229\n\013predictions\030\004 " +
+      "\001(\0132$.ssn.dataservice.v1alpha1.TrueValue" +
+      "s\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0229\n\013true" +
+      "_values\030\002 \001(\0132$.ssn.dataservice.v1alpha1" +
+      ".TrueValues\022\014\n\004tags\030\003 \003(\t\"\035\n\rDeleteReque" +
+      "st\022\014\n\004tags\030\001 \003(\t2\264\004\n\013DataService\022s\n\016Crea" +
+      "teDocument\022/.ssn.dataservice.v1alpha1.Cr" +
+      "eateDocumentRequest\0320.ssn.dataservice.v1" +
+      "alpha1.CreateDocumentResponse\022m\n\014ReadDoc" +
+      "ument\022-.ssn.dataservice.v1alpha1.ReadDoc" +
+      "umentRequest\032..ssn.dataservice.v1alpha1." +
+      "ReadDocumentResponse\022[\n\017PrepareFeedback\022" +
+      "0.ssn.dataservice.v1alpha1.PrepareFeedba" +
+      "ckRequest\032\026.google.protobuf.Empty\022s\n\010Fee" +
+      "dback\022).ssn.dataservice.v1alpha1.Feedbac" +
+      "kRequest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036" +
+      "\"\031/v1alpha1/feedback:create:\001*\022o\n\006Delete" +
+      "\022\'.ssn.dataservice.v1alpha1.DeleteReques" +
+      "t\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1al" +
+      "pha1/feedback:delete:\001*B\rZ\013dataserviceb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10690,7 +10886,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", });
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
