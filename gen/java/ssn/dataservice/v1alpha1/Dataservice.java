@@ -87,6 +87,24 @@ public final class Dataservice {
      * <code>.ssn.dataservice.v1alpha1.TrueValues true_values = 6;</code>
      */
     ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
+
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    boolean hasPredictionValues();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder();
+
+    /**
+     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    long getFeedbackTime();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.Document}
@@ -105,6 +123,7 @@ public final class Dataservice {
       id_ = "";
       consumer_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      feedbackTime_ = 0L;
     }
 
     @java.lang.Override
@@ -181,6 +200,24 @@ public final class Dataservice {
                 trueValues_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              if (predictionValues_ != null) {
+                subBuilder = predictionValues_.toBuilder();
+              }
+              predictionValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(predictionValues_);
+                predictionValues_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 64: {
+
+              feedbackTime_ = input.readUInt64();
               break;
             }
             default: {
@@ -367,6 +404,36 @@ public final class Dataservice {
       return getTrueValues();
     }
 
+    public static final int PREDICTION_VALUES_FIELD_NUMBER = 7;
+    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_;
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    public boolean hasPredictionValues() {
+      return predictionValues_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
+      return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
+      return getPredictionValues();
+    }
+
+    public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
+    private long feedbackTime_;
+    /**
+     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public long getFeedbackTime() {
+      return feedbackTime_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -398,6 +465,12 @@ public final class Dataservice {
       }
       if (trueValues_ != null) {
         output.writeMessage(6, getTrueValues());
+      }
+      if (predictionValues_ != null) {
+        output.writeMessage(7, getPredictionValues());
+      }
+      if (feedbackTime_ != 0L) {
+        output.writeUInt64(8, feedbackTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -434,6 +507,14 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTrueValues());
       }
+      if (predictionValues_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPredictionValues());
+      }
+      if (feedbackTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(8, feedbackTime_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -468,6 +549,13 @@ public final class Dataservice {
         result = result && getTrueValues()
             .equals(other.getTrueValues());
       }
+      result = result && (hasPredictionValues() == other.hasPredictionValues());
+      if (hasPredictionValues()) {
+        result = result && getPredictionValues()
+            .equals(other.getPredictionValues());
+      }
+      result = result && (getFeedbackTime()
+          == other.getFeedbackTime());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -497,6 +585,13 @@ public final class Dataservice {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getTrueValues().hashCode();
       }
+      if (hasPredictionValues()) {
+        hash = (37 * hash) + PREDICTION_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getPredictionValues().hashCode();
+      }
+      hash = (37 * hash) + FEEDBACK_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getFeedbackTime());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -650,6 +745,14 @@ public final class Dataservice {
           trueValues_ = null;
           trueValuesBuilder_ = null;
         }
+        if (predictionValuesBuilder_ == null) {
+          predictionValues_ = null;
+        } else {
+          predictionValues_ = null;
+          predictionValuesBuilder_ = null;
+        }
+        feedbackTime_ = 0L;
+
         return this;
       }
 
@@ -696,6 +799,12 @@ public final class Dataservice {
         } else {
           result.trueValues_ = trueValuesBuilder_.build();
         }
+        if (predictionValuesBuilder_ == null) {
+          result.predictionValues_ = predictionValues_;
+        } else {
+          result.predictionValues_ = predictionValuesBuilder_.build();
+        }
+        result.feedbackTime_ = feedbackTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -771,6 +880,12 @@ public final class Dataservice {
         }
         if (other.hasTrueValues()) {
           mergeTrueValues(other.getTrueValues());
+        }
+        if (other.hasPredictionValues()) {
+          mergePredictionValues(other.getPredictionValues());
+        }
+        if (other.getFeedbackTime() != 0L) {
+          setFeedbackTime(other.getFeedbackTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1295,6 +1410,149 @@ public final class Dataservice {
           trueValues_ = null;
         }
         return trueValuesBuilder_;
+      }
+
+      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionValuesBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public boolean hasPredictionValues() {
+        return predictionValuesBuilder_ != null || predictionValues_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
+        if (predictionValuesBuilder_ == null) {
+          return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+        } else {
+          return predictionValuesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder setPredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          predictionValues_ = value;
+          onChanged();
+        } else {
+          predictionValuesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder setPredictionValues(
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (predictionValuesBuilder_ == null) {
+          predictionValues_ = builderForValue.build();
+          onChanged();
+        } else {
+          predictionValuesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder mergePredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionValuesBuilder_ == null) {
+          if (predictionValues_ != null) {
+            predictionValues_ =
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictionValues_).mergeFrom(value).buildPartial();
+          } else {
+            predictionValues_ = value;
+          }
+          onChanged();
+        } else {
+          predictionValuesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder clearPredictionValues() {
+        if (predictionValuesBuilder_ == null) {
+          predictionValues_ = null;
+          onChanged();
+        } else {
+          predictionValues_ = null;
+          predictionValuesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionValuesBuilder() {
+        
+        onChanged();
+        return getPredictionValuesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
+        if (predictionValuesBuilder_ != null) {
+          return predictionValuesBuilder_.getMessageOrBuilder();
+        } else {
+          return predictionValues_ == null ?
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          getPredictionValuesFieldBuilder() {
+        if (predictionValuesBuilder_ == null) {
+          predictionValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+                  getPredictionValues(),
+                  getParentForChildren(),
+                  isClean());
+          predictionValues_ = null;
+        }
+        return predictionValuesBuilder_;
+      }
+
+      private long feedbackTime_ ;
+      /**
+       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public long getFeedbackTime() {
+        return feedbackTime_;
+      }
+      /**
+       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setFeedbackTime(long value) {
+        
+        feedbackTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearFeedbackTime() {
+        
+        feedbackTime_ = 0L;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10562,7 +10820,7 @@ public final class Dataservice {
       "able.proto\032\034google/api/annotations.proto" +
       "\032\033google/protobuf/empty.proto\032\036google/pr" +
       "otobuf/wrappers.proto\032\026google/type/date." +
-      "proto\032\036ssn/type/text_annotation.proto\"\310\002" +
+      "proto\032\036ssn/type/text_annotation.proto\"\262\003" +
       "\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn.type.TextAn" +
       "notationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001(\014B\005\352?\002\030\001\022;\n" +
       "\002id\030\003 \001(\tB/\352?\'\"%Feedback ID, same as Env" +
@@ -10570,65 +10828,68 @@ public final class Dataservice {
       "\002\010\001\022T\n\004tags\030\005 \003(\tBF\352?C\"ATags defined by " +
       "consumer, enriched by service if valetke" +
       "y is used\0229\n\013true_values\030\006 \001(\0132$.ssn.dat" +
-      "aservice.v1alpha1.TrueValues:\022\352?\017\n\rtrain" +
-      "ing_data\"\330\t\n\nTrueValues\0224\n\016total_incl_va" +
-      "t\030\001 \001(\0132\034.google.protobuf.DoubleValue\022/\n" +
-      "\ttotal_vat\030\002 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\0224\n\016total_excl_vat\030\003 \001(\0132\034.google." +
-      "protobuf.DoubleValue\0220\n\norder_date\030\004 \001(\013" +
-      "2\021.google.type.DateB\t\352?\006\022\004DATE\0226\n\020paymen" +
-      "t_due_date\030\005 \001(\0132\021.google.type.DateB\t\352?\006" +
-      "\022\004DATE\0223\n\rdocument_type\030\006 \001(\0132\034.google.p" +
-      "rotobuf.StringValue\022.\n\010currency\030\007 \001(\0132\034." +
-      "google.protobuf.StringValue\022;\n\025credit_ca" +
-      "rd_last_four\030\010 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0224\n\016payment_method\030\t \001(\0132\034.googl" +
-      "e.protobuf.StringValue\0226\n\020ocr_line_dk_ty" +
-      "pe\030\n \001(\0132\034.google.protobuf.StringValue\022<" +
-      "\n\026ocr_line_dk_payment_id\030\013 \001(\0132\034.google." +
-      "protobuf.StringValue\022=\n\027ocr_line_dk_cred" +
-      "itor_id\030\014 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022<\n\026ocr_line_se_payment_id\030\r \001(\0132\034.go" +
-      "ogle.protobuf.StringValue\022F\n ocr_line_se" +
-      "_bankgiro_creditor_id\030\016 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022F\n ocr_line_se_plusgir" +
-      "o_creditor_id\030\017 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022<\n\026ocr_line_no_payment_id\030\020 \001(" +
-      "\0132\034.google.protobuf.StringValue\022<\n\026ocr_l" +
-      "ine_fi_payment_id\030\021 \001(\0132\034.google.protobu" +
-      "f.StringValue\022<\n\026ocr_line_nl_payment_id\030" +
-      "\022 \001(\0132\034.google.protobuf.StringValue\022;\n\025s" +
-      "upplier_corporate_id\030\023 \001(\0132\034.google.prot" +
-      "obuf.StringValue\022;\n\025supplier_country_cod" +
-      "e\030\024 \001(\0132\034.google.protobuf.StringValue\0224\n" +
-      "\016invoice_number\030\025 \001(\0132\034.google.protobuf." +
-      "StringValue\"M\n\025CreateDocumentRequest\0224\n\010" +
-      "document\030\001 \001(\0132\".ssn.dataservice.v1alpha" +
-      "1.Document\"$\n\026CreateDocumentResponse\022\n\n\002" +
-      "id\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001 " +
-      "\001(\t\"L\n\024ReadDocumentResponse\0224\n\010document\030" +
-      "\001 \001(\0132\".ssn.dataservice.v1alpha1.Documen" +
-      "t\"b\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
-      "$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026\n" +
-      "\016document_bytes\030\003 \001(\014\"f\n\017FeedbackRequest" +
-      "\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn." +
-      "dataservice.v1alpha1.TrueValues\022\014\n\004tags\030" +
-      "\003 \003(\t\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n" +
-      "\013DataService\022s\n\016CreateDocument\022/.ssn.dat" +
-      "aservice.v1alpha1.CreateDocumentRequest\032" +
-      "0.ssn.dataservice.v1alpha1.CreateDocumen" +
-      "tResponse\022m\n\014ReadDocument\022-.ssn.dataserv" +
-      "ice.v1alpha1.ReadDocumentRequest\032..ssn.d" +
-      "ataservice.v1alpha1.ReadDocumentResponse" +
-      "\022[\n\017PrepareFeedback\0220.ssn.dataservice.v1" +
-      "alpha1.PrepareFeedbackRequest\032\026.google.p" +
-      "rotobuf.Empty\022s\n\010Feedback\022).ssn.dataserv" +
-      "ice.v1alpha1.FeedbackRequest\032\026.google.pr" +
-      "otobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback" +
-      ":create:\001*\022o\n\006Delete\022\'.ssn.dataservice.v" +
-      "1alpha1.DeleteRequest\032\026.google.protobuf." +
-      "Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:delete" +
-      ":\001*B\rZ\013dataserviceb\006proto3"
+      "aservice.v1alpha1.TrueValues\022?\n\021predicti" +
+      "on_values\030\007 \001(\0132$.ssn.dataservice.v1alph" +
+      "a1.TrueValues\022\'\n\rfeedback_time\030\010 \001(\004B\020\352?" +
+      "\r\010\001\022\tTIMESTAMP:\022\352?\017\n\rtraining_data\"\330\t\n\nT" +
+      "rueValues\0224\n\016total_incl_vat\030\001 \001(\0132\034.goog" +
+      "le.protobuf.DoubleValue\022/\n\ttotal_vat\030\002 \001" +
+      "(\0132\034.google.protobuf.DoubleValue\0224\n\016tota" +
+      "l_excl_vat\030\003 \001(\0132\034.google.protobuf.Doubl" +
+      "eValue\0220\n\norder_date\030\004 \001(\0132\021.google.type" +
+      ".DateB\t\352?\006\022\004DATE\0226\n\020payment_due_date\030\005 \001" +
+      "(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0223\n\rdocu" +
+      "ment_type\030\006 \001(\0132\034.google.protobuf.String" +
+      "Value\022.\n\010currency\030\007 \001(\0132\034.google.protobu" +
+      "f.StringValue\022;\n\025credit_card_last_four\030\010" +
+      " \001(\0132\034.google.protobuf.StringValue\0224\n\016pa" +
+      "yment_method\030\t \001(\0132\034.google.protobuf.Str" +
+      "ingValue\0226\n\020ocr_line_dk_type\030\n \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022<\n\026ocr_line_dk_" +
+      "payment_id\030\013 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022=\n\027ocr_line_dk_creditor_id\030\014 \001(\0132" +
+      "\034.google.protobuf.StringValue\022<\n\026ocr_lin" +
+      "e_se_payment_id\030\r \001(\0132\034.google.protobuf." +
+      "StringValue\022F\n ocr_line_se_bankgiro_cred" +
+      "itor_id\030\016 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022F\n ocr_line_se_plusgiro_creditor_id\030" +
+      "\017 \001(\0132\034.google.protobuf.StringValue\022<\n\026o" +
+      "cr_line_no_payment_id\030\020 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022<\n\026ocr_line_fi_payment" +
+      "_id\030\021 \001(\0132\034.google.protobuf.StringValue\022" +
+      "<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034.google" +
+      ".protobuf.StringValue\022;\n\025supplier_corpor" +
+      "ate_id\030\023 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022;\n\025supplier_country_code\030\024 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\0224\n\016invoice_numbe" +
+      "r\030\025 \001(\0132\034.google.protobuf.StringValue\"M\n" +
+      "\025CreateDocumentRequest\0224\n\010document\030\001 \001(\013" +
+      "2\".ssn.dataservice.v1alpha1.Document\"$\n\026" +
+      "CreateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Re" +
+      "adDocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024ReadDoc" +
+      "umentResponse\0224\n\010document\030\001 \001(\0132\".ssn.da" +
+      "taservice.v1alpha1.Document\"b\n\026PrepareFe" +
+      "edbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030." +
+      "ssn.type.TextAnnotation\022\026\n\016document_byte" +
+      "s\030\003 \001(\014\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0229" +
+      "\n\013true_values\030\002 \001(\0132$.ssn.dataservice.v1" +
+      "alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"\035\n\rDelet" +
+      "eRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n\013DataService\022s" +
+      "\n\016CreateDocument\022/.ssn.dataservice.v1alp" +
+      "ha1.CreateDocumentRequest\0320.ssn.dataserv" +
+      "ice.v1alpha1.CreateDocumentResponse\022m\n\014R" +
+      "eadDocument\022-.ssn.dataservice.v1alpha1.R" +
+      "eadDocumentRequest\032..ssn.dataservice.v1a" +
+      "lpha1.ReadDocumentResponse\022[\n\017PrepareFee" +
+      "dback\0220.ssn.dataservice.v1alpha1.Prepare" +
+      "FeedbackRequest\032\026.google.protobuf.Empty\022" +
+      "s\n\010Feedback\022).ssn.dataservice.v1alpha1.F" +
+      "eedbackRequest\032\026.google.protobuf.Empty\"$" +
+      "\202\323\344\223\002\036\"\031/v1alpha1/feedback:create:\001*\022o\n\006" +
+      "Delete\022\'.ssn.dataservice.v1alpha1.Delete" +
+      "Request\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036\"" +
+      "\031/v1alpha1/feedback:delete:\001*B\rZ\013dataser" +
+      "viceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10654,7 +10915,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_Document_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_Document_descriptor,
-        new java.lang.String[] { "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", });
+        new java.lang.String[] { "Ta", "Bytes", "Id", "Consumer", "Tags", "TrueValues", "PredictionValues", "FeedbackTime", });
     internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable = new

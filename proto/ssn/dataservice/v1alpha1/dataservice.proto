@@ -39,6 +39,13 @@ message Document {
   string consumer = 4 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 5 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   TrueValues true_values = 6;
+  TrueValues prediction_values = 7;
+  uint64 feedback_time = 8 [
+    (gen_bq_schema.bigquery) = {
+      require: true,
+      type_override: 'TIMESTAMP'
+    }
+  ];
 }
 
 message TrueValues {
