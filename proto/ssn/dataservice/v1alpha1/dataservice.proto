@@ -35,7 +35,10 @@ message Document {
   option (gen_bq_schema.bigquery_opts).table_name = "training_data";
   ssn.type.TextAnnotation ta = 1 [(gen_bq_schema.bigquery).ignore = true];
   bytes bytes = 2 [(gen_bq_schema.bigquery).ignore = true];
-  string id = 3 [(gen_bq_schema.bigquery).require = true, (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id"];
+  string id = 3 [
+    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).require = true
+  ];
   string consumer = 4 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 5 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   TrueValues true_values = 6;
@@ -92,6 +95,7 @@ message PrepareFeedbackRequest {
   string id = 1;
   ssn.type.TextAnnotation ta = 2;
   bytes document_bytes = 3;
+  TrueValues predictions = 4;
 }
 
 message FeedbackRequest {
