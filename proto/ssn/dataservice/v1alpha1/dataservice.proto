@@ -42,7 +42,7 @@ message Document {
   string consumer = 4 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 5 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   TrueValues true_values = 6;
-  repeated TrueValues prediction_values = 7;
+  PredictionValues prediction_values = 7;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -75,6 +75,30 @@ message TrueValues {
   google.protobuf.StringValue invoice_number = 21;
 }
 
+message PredictionValues {
+  repeated google.protobuf.DoubleValue total_incl_vat = 1;
+  repeated google.protobuf.DoubleValue total_vat = 2;
+  repeated google.protobuf.DoubleValue total_excl_vat = 3;
+  repeated google.type.Date order_date = 4 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  repeated google.type.Date payment_due_date = 5 [(gen_bq_schema.bigquery).type_override = "DATE"];
+  repeated google.protobuf.StringValue document_type = 6;
+  repeated google.protobuf.StringValue currency = 7;
+  repeated google.protobuf.StringValue credit_card_last_four = 8;
+  repeated google.protobuf.StringValue payment_method = 9;
+  repeated google.protobuf.StringValue ocr_line_dk_type = 10;
+  repeated google.protobuf.StringValue ocr_line_dk_payment_id = 11;
+  repeated google.protobuf.StringValue ocr_line_dk_creditor_id = 12;
+  repeated google.protobuf.StringValue ocr_line_se_payment_id = 13;
+  repeated google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;
+  repeated google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;
+  repeated google.protobuf.StringValue ocr_line_no_payment_id = 16;
+  repeated google.protobuf.StringValue ocr_line_fi_payment_id = 17;
+  repeated google.protobuf.StringValue ocr_line_nl_payment_id = 18;
+  repeated google.protobuf.StringValue supplier_corporate_id = 19;
+  repeated google.protobuf.StringValue supplier_country_code = 20;
+  repeated google.protobuf.StringValue invoice_number = 21;
+}
+
 message CreateDocumentRequest {
   Document document = 1;
 }
@@ -95,7 +119,7 @@ message PrepareFeedbackRequest {
   string id = 1;
   ssn.type.TextAnnotation ta = 2;
   bytes document_bytes = 3;
-  repeated TrueValues predictions = 4;
+  PredictionValues predictions = 4;
 }
 
 message FeedbackRequest {
