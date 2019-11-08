@@ -89,17 +89,28 @@ public final class Dataservice {
     ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    boolean hasPredictionValues();
+    java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> 
+        getPredictionValuesList();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues();
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues(int index);
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder();
+    int getPredictionValuesCount();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+        getPredictionValuesOrBuilderList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder(
+        int index);
 
     /**
      * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
@@ -123,6 +134,7 @@ public final class Dataservice {
       id_ = "";
       consumer_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      predictionValues_ = java.util.Collections.emptyList();
       feedbackTime_ = 0L;
     }
 
@@ -203,16 +215,12 @@ public final class Dataservice {
               break;
             }
             case 58: {
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
-              if (predictionValues_ != null) {
-                subBuilder = predictionValues_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                predictionValues_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.TrueValues>();
+                mutable_bitField0_ |= 0x00000040;
               }
-              predictionValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(predictionValues_);
-                predictionValues_ = subBuilder.buildPartial();
-              }
-
+              predictionValues_.add(
+                  input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry));
               break;
             }
             case 64: {
@@ -237,6 +245,9 @@ public final class Dataservice {
       } finally {
         if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
           tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          predictionValues_ = java.util.Collections.unmodifiableList(predictionValues_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -405,24 +416,38 @@ public final class Dataservice {
     }
 
     public static final int PREDICTION_VALUES_FIELD_NUMBER = 7;
-    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_;
+    private java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> predictionValues_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    public boolean hasPredictionValues() {
-      return predictionValues_ != null;
+    public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> getPredictionValuesList() {
+      return predictionValues_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
-      return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+    public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+        getPredictionValuesOrBuilderList() {
+      return predictionValues_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
-      return getPredictionValues();
+    public int getPredictionValuesCount() {
+      return predictionValues_.size();
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues(int index) {
+      return predictionValues_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder(
+        int index) {
+      return predictionValues_.get(index);
     }
 
     public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
@@ -466,8 +491,8 @@ public final class Dataservice {
       if (trueValues_ != null) {
         output.writeMessage(6, getTrueValues());
       }
-      if (predictionValues_ != null) {
-        output.writeMessage(7, getPredictionValues());
+      for (int i = 0; i < predictionValues_.size(); i++) {
+        output.writeMessage(7, predictionValues_.get(i));
       }
       if (feedbackTime_ != 0L) {
         output.writeUInt64(8, feedbackTime_);
@@ -507,9 +532,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getTrueValues());
       }
-      if (predictionValues_ != null) {
+      for (int i = 0; i < predictionValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getPredictionValues());
+          .computeMessageSize(7, predictionValues_.get(i));
       }
       if (feedbackTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -549,11 +574,8 @@ public final class Dataservice {
         result = result && getTrueValues()
             .equals(other.getTrueValues());
       }
-      result = result && (hasPredictionValues() == other.hasPredictionValues());
-      if (hasPredictionValues()) {
-        result = result && getPredictionValues()
-            .equals(other.getPredictionValues());
-      }
+      result = result && getPredictionValuesList()
+          .equals(other.getPredictionValuesList());
       result = result && (getFeedbackTime()
           == other.getFeedbackTime());
       result = result && unknownFields.equals(other.unknownFields);
@@ -585,9 +607,9 @@ public final class Dataservice {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getTrueValues().hashCode();
       }
-      if (hasPredictionValues()) {
+      if (getPredictionValuesCount() > 0) {
         hash = (37 * hash) + PREDICTION_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getPredictionValues().hashCode();
+        hash = (53 * hash) + getPredictionValuesList().hashCode();
       }
       hash = (37 * hash) + FEEDBACK_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -720,6 +742,7 @@ public final class Dataservice {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPredictionValuesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -746,10 +769,10 @@ public final class Dataservice {
           trueValuesBuilder_ = null;
         }
         if (predictionValuesBuilder_ == null) {
-          predictionValues_ = null;
+          predictionValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          predictionValues_ = null;
-          predictionValuesBuilder_ = null;
+          predictionValuesBuilder_.clear();
         }
         feedbackTime_ = 0L;
 
@@ -800,6 +823,10 @@ public final class Dataservice {
           result.trueValues_ = trueValuesBuilder_.build();
         }
         if (predictionValuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            predictionValues_ = java.util.Collections.unmodifiableList(predictionValues_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
           result.predictionValues_ = predictionValues_;
         } else {
           result.predictionValues_ = predictionValuesBuilder_.build();
@@ -881,8 +908,31 @@ public final class Dataservice {
         if (other.hasTrueValues()) {
           mergeTrueValues(other.getTrueValues());
         }
-        if (other.hasPredictionValues()) {
-          mergePredictionValues(other.getPredictionValues());
+        if (predictionValuesBuilder_ == null) {
+          if (!other.predictionValues_.isEmpty()) {
+            if (predictionValues_.isEmpty()) {
+              predictionValues_ = other.predictionValues_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensurePredictionValuesIsMutable();
+              predictionValues_.addAll(other.predictionValues_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.predictionValues_.isEmpty()) {
+            if (predictionValuesBuilder_.isEmpty()) {
+              predictionValuesBuilder_.dispose();
+              predictionValuesBuilder_ = null;
+              predictionValues_ = other.predictionValues_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              predictionValuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPredictionValuesFieldBuilder() : null;
+            } else {
+              predictionValuesBuilder_.addAllMessages(other.predictionValues_);
+            }
+          }
         }
         if (other.getFeedbackTime() != 0L) {
           setFeedbackTime(other.getFeedbackTime());
@@ -1412,116 +1462,239 @@ public final class Dataservice {
         return trueValuesBuilder_;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionValuesBuilder_;
-      /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
-       */
-      public boolean hasPredictionValues() {
-        return predictionValuesBuilder_ != null || predictionValues_ != null;
+      private java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> predictionValues_ =
+        java.util.Collections.emptyList();
+      private void ensurePredictionValuesIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          predictionValues_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.TrueValues>(predictionValues_);
+          bitField0_ |= 0x00000040;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionValuesBuilder_;
+
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> getPredictionValuesList() {
         if (predictionValuesBuilder_ == null) {
-          return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+          return java.util.Collections.unmodifiableList(predictionValues_);
         } else {
-          return predictionValuesBuilder_.getMessage();
+          return predictionValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      public Builder setPredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public int getPredictionValuesCount() {
+        if (predictionValuesBuilder_ == null) {
+          return predictionValues_.size();
+        } else {
+          return predictionValuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues(int index) {
+        if (predictionValuesBuilder_ == null) {
+          return predictionValues_.get(index);
+        } else {
+          return predictionValuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder setPredictionValues(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
         if (predictionValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          predictionValues_ = value;
+          ensurePredictionValuesIsMutable();
+          predictionValues_.set(index, value);
           onChanged();
         } else {
-          predictionValuesBuilder_.setMessage(value);
+          predictionValuesBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
       public Builder setPredictionValues(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (predictionValuesBuilder_ == null) {
+          ensurePredictionValuesIsMutable();
+          predictionValues_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          predictionValuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder addPredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionValuesIsMutable();
+          predictionValues_.add(value);
+          onChanged();
+        } else {
+          predictionValuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder addPredictionValues(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionValuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionValuesIsMutable();
+          predictionValues_.add(index, value);
+          onChanged();
+        } else {
+          predictionValuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder addPredictionValues(
           ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
         if (predictionValuesBuilder_ == null) {
-          predictionValues_ = builderForValue.build();
+          ensurePredictionValuesIsMutable();
+          predictionValues_.add(builderForValue.build());
           onChanged();
         } else {
-          predictionValuesBuilder_.setMessage(builderForValue.build());
+          predictionValuesBuilder_.addMessage(builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      public Builder mergePredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder addPredictionValues(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
         if (predictionValuesBuilder_ == null) {
-          if (predictionValues_ != null) {
-            predictionValues_ =
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictionValues_).mergeFrom(value).buildPartial();
-          } else {
-            predictionValues_ = value;
-          }
+          ensurePredictionValuesIsMutable();
+          predictionValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          predictionValuesBuilder_.mergeFrom(value);
+          predictionValuesBuilder_.addMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public Builder addAllPredictionValues(
+          java.lang.Iterable<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValues> values) {
+        if (predictionValuesBuilder_ == null) {
+          ensurePredictionValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, predictionValues_);
+          onChanged();
+        } else {
+          predictionValuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
       public Builder clearPredictionValues() {
         if (predictionValuesBuilder_ == null) {
-          predictionValues_ = null;
+          predictionValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
-          predictionValues_ = null;
-          predictionValuesBuilder_ = null;
+          predictionValuesBuilder_.clear();
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionValuesBuilder() {
-        
-        onChanged();
-        return getPredictionValuesFieldBuilder().getBuilder();
+      public Builder removePredictionValues(int index) {
+        if (predictionValuesBuilder_ == null) {
+          ensurePredictionValuesIsMutable();
+          predictionValues_.remove(index);
+          onChanged();
+        } else {
+          predictionValuesBuilder_.remove(index);
+        }
+        return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
-        if (predictionValuesBuilder_ != null) {
-          return predictionValuesBuilder_.getMessageOrBuilder();
-        } else {
-          return predictionValues_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionValuesBuilder(
+          int index) {
+        return getPredictionValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder(
+          int index) {
+        if (predictionValuesBuilder_ == null) {
+          return predictionValues_.get(index);  } else {
+          return predictionValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+           getPredictionValuesOrBuilderList() {
+        if (predictionValuesBuilder_ != null) {
+          return predictionValuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(predictionValues_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder addPredictionValuesBuilder() {
+        return getPredictionValuesFieldBuilder().addBuilder(
+            ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder addPredictionValuesBuilder(
+          int index) {
+        return getPredictionValuesFieldBuilder().addBuilder(
+            index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder> 
+           getPredictionValuesBuilderList() {
+        return getPredictionValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
           getPredictionValuesFieldBuilder() {
         if (predictionValuesBuilder_ == null) {
-          predictionValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          predictionValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
-                  getPredictionValues(),
+                  predictionValues_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
           predictionValues_ = null;
@@ -8441,17 +8614,28 @@ public final class Dataservice {
     com.google.protobuf.ByteString getDocumentBytes();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    boolean hasPredictions();
+    java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> 
+        getPredictionsList();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions();
+    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions(int index);
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder();
+    int getPredictionsCount();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+        getPredictionsOrBuilderList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackRequest}
@@ -8468,6 +8652,7 @@ public final class Dataservice {
     private PrepareFeedbackRequest() {
       id_ = "";
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
+      predictions_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -8519,16 +8704,12 @@ public final class Dataservice {
               break;
             }
             case 34: {
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
-              if (predictions_ != null) {
-                subBuilder = predictions_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                predictions_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.TrueValues>();
+                mutable_bitField0_ |= 0x00000008;
               }
-              predictions_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(predictions_);
-                predictions_ = subBuilder.buildPartial();
-              }
-
+              predictions_.add(
+                  input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -8546,6 +8727,9 @@ public final class Dataservice {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          predictions_ = java.util.Collections.unmodifiableList(predictions_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -8563,6 +8747,7 @@ public final class Dataservice {
               ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.class, ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -8628,24 +8813,38 @@ public final class Dataservice {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 4;
-    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_;
+    private java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> predictions_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    public boolean hasPredictions() {
-      return predictions_ != null;
+    public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> getPredictionsList() {
+      return predictions_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
-      return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+    public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+        getPredictionsOrBuilderList() {
+      return predictions_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
-      return getPredictions();
+    public int getPredictionsCount() {
+      return predictions_.size();
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions(int index) {
+      return predictions_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder(
+        int index) {
+      return predictions_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8671,8 +8870,8 @@ public final class Dataservice {
       if (!documentBytes_.isEmpty()) {
         output.writeBytes(3, documentBytes_);
       }
-      if (predictions_ != null) {
-        output.writeMessage(4, getPredictions());
+      for (int i = 0; i < predictions_.size(); i++) {
+        output.writeMessage(4, predictions_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -8694,9 +8893,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, documentBytes_);
       }
-      if (predictions_ != null) {
+      for (int i = 0; i < predictions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getPredictions());
+          .computeMessageSize(4, predictions_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8723,11 +8922,8 @@ public final class Dataservice {
       }
       result = result && getDocumentBytes()
           .equals(other.getDocumentBytes());
-      result = result && (hasPredictions() == other.hasPredictions());
-      if (hasPredictions()) {
-        result = result && getPredictions()
-            .equals(other.getPredictions());
-      }
+      result = result && getPredictionsList()
+          .equals(other.getPredictionsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8747,9 +8943,9 @@ public final class Dataservice {
       }
       hash = (37 * hash) + DOCUMENT_BYTES_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentBytes().hashCode();
-      if (hasPredictions()) {
+      if (getPredictionsCount() > 0) {
         hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
-        hash = (53 * hash) + getPredictions().hashCode();
+        hash = (53 * hash) + getPredictionsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8879,6 +9075,7 @@ public final class Dataservice {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getPredictionsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -8895,10 +9092,10 @@ public final class Dataservice {
         documentBytes_ = com.google.protobuf.ByteString.EMPTY;
 
         if (predictionsBuilder_ == null) {
-          predictions_ = null;
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
-          predictions_ = null;
-          predictionsBuilder_ = null;
+          predictionsBuilder_.clear();
         }
         return this;
       }
@@ -8926,6 +9123,8 @@ public final class Dataservice {
       @java.lang.Override
       public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest buildPartial() {
         ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest result = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         if (taBuilder_ == null) {
           result.ta_ = ta_;
@@ -8934,10 +9133,15 @@ public final class Dataservice {
         }
         result.documentBytes_ = documentBytes_;
         if (predictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            predictions_ = java.util.Collections.unmodifiableList(predictions_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
           result.predictions_ = predictions_;
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -8996,8 +9200,31 @@ public final class Dataservice {
         if (other.getDocumentBytes() != com.google.protobuf.ByteString.EMPTY) {
           setDocumentBytes(other.getDocumentBytes());
         }
-        if (other.hasPredictions()) {
-          mergePredictions(other.getPredictions());
+        if (predictionsBuilder_ == null) {
+          if (!other.predictions_.isEmpty()) {
+            if (predictions_.isEmpty()) {
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensurePredictionsIsMutable();
+              predictions_.addAll(other.predictions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.predictions_.isEmpty()) {
+            if (predictionsBuilder_.isEmpty()) {
+              predictionsBuilder_.dispose();
+              predictionsBuilder_ = null;
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              predictionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPredictionsFieldBuilder() : null;
+            } else {
+              predictionsBuilder_.addAllMessages(other.predictions_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9027,6 +9254,7 @@ public final class Dataservice {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -9243,116 +9471,239 @@ public final class Dataservice {
         return this;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionsBuilder_;
-      /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
-       */
-      public boolean hasPredictions() {
-        return predictionsBuilder_ != null || predictions_ != null;
+      private java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> predictions_ =
+        java.util.Collections.emptyList();
+      private void ensurePredictionsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          predictions_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.TrueValues>(predictions_);
+          bitField0_ |= 0x00000008;
+         }
       }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionsBuilder_;
+
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues> getPredictionsList() {
         if (predictionsBuilder_ == null) {
-          return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+          return java.util.Collections.unmodifiableList(predictions_);
         } else {
-          return predictionsBuilder_.getMessage();
+          return predictionsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      public Builder setPredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public int getPredictionsCount() {
+        if (predictionsBuilder_ == null) {
+          return predictions_.size();
+        } else {
+          return predictionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);
+        } else {
+          return predictionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder setPredictions(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          predictions_ = value;
+          ensurePredictionsIsMutable();
+          predictions_.set(index, value);
           onChanged();
         } else {
-          predictionsBuilder_.setMessage(value);
+          predictionsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
       public Builder setPredictions(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          predictionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder addPredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionsIsMutable();
+          predictions_.add(value);
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder addPredictions(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+        if (predictionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePredictionsIsMutable();
+          predictions_.add(index, value);
+          onChanged();
+        } else {
+          predictionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder addPredictions(
           ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
-          predictions_ = builderForValue.build();
+          ensurePredictionsIsMutable();
+          predictions_.add(builderForValue.build());
           onChanged();
         } else {
-          predictionsBuilder_.setMessage(builderForValue.build());
+          predictionsBuilder_.addMessage(builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      public Builder mergePredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder addPredictions(
+          int index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
-          if (predictions_ != null) {
-            predictions_ =
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictions_).mergeFrom(value).buildPartial();
-          } else {
-            predictions_ = value;
-          }
+          ensurePredictionsIsMutable();
+          predictions_.add(index, builderForValue.build());
           onChanged();
         } else {
-          predictionsBuilder_.mergeFrom(value);
+          predictionsBuilder_.addMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public Builder addAllPredictions(
+          java.lang.Iterable<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValues> values) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, predictions_);
+          onChanged();
+        } else {
+          predictionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
-          predictions_ = null;
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
-          predictions_ = null;
-          predictionsBuilder_ = null;
+          predictionsBuilder_.clear();
         }
-
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionsBuilder() {
-        
-        onChanged();
-        return getPredictionsFieldBuilder().getBuilder();
+      public Builder removePredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.remove(index);
+          onChanged();
+        } else {
+          predictionsBuilder_.remove(index);
+        }
+        return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
-        if (predictionsBuilder_ != null) {
-          return predictionsBuilder_.getMessageOrBuilder();
-        } else {
-          return predictions_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionsBuilder(
+          int index) {
+        return getPredictionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder(
+          int index) {
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);  } else {
+          return predictionsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
+      public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+           getPredictionsOrBuilderList() {
+        if (predictionsBuilder_ != null) {
+          return predictionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(predictions_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder addPredictionsBuilder() {
+        return getPredictionsFieldBuilder().addBuilder(
+            ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder addPredictionsBuilder(
+          int index) {
+        return getPredictionsFieldBuilder().addBuilder(
+            index, ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder> 
+           getPredictionsBuilderList() {
+        return getPredictionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
           ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
           getPredictionsFieldBuilder() {
         if (predictionsBuilder_ == null) {
-          predictionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
-                  getPredictions(),
+                  predictions_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           predictions_ = null;
@@ -11023,7 +11374,7 @@ public final class Dataservice {
       "consumer, enriched by service if valetke" +
       "y is used\0229\n\013true_values\030\006 \001(\0132$.ssn.dat" +
       "aservice.v1alpha1.TrueValues\022?\n\021predicti" +
-      "on_values\030\007 \001(\0132$.ssn.dataservice.v1alph" +
+      "on_values\030\007 \003(\0132$.ssn.dataservice.v1alph" +
       "a1.TrueValues\022\'\n\rfeedback_time\030\010 \001(\004B\020\352?" +
       "\r\010\001\022\tTIMESTAMP:\022\352?\017\n\rtraining_data\"\330\t\n\nT" +
       "rueValues\0224\n\016total_incl_vat\030\001 \001(\0132\034.goog" +
@@ -11065,7 +11416,7 @@ public final class Dataservice {
       "taservice.v1alpha1.Document\"\235\001\n\026PrepareF" +
       "eedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030" +
       ".ssn.type.TextAnnotation\022\026\n\016document_byt" +
-      "es\030\003 \001(\014\0229\n\013predictions\030\004 \001(\0132$.ssn.data" +
+      "es\030\003 \001(\014\0229\n\013predictions\030\004 \003(\0132$.ssn.data" +
       "service.v1alpha1.TrueValues\"f\n\017FeedbackR" +
       "equest\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132" +
       "$.ssn.dataservice.v1alpha1.TrueValues\022\014\n" +

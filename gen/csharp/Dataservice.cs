@@ -37,7 +37,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "cxgFIAMoCUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmlj",
             "aGVkIGJ5IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBI5Cgt0cnVlX3Zh",
             "bHVlcxgGIAEoCzIkLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5UcnVlVmFs",
-            "dWVzEj8KEXByZWRpY3Rpb25fdmFsdWVzGAcgASgLMiQuc3NuLmRhdGFzZXJ2",
+            "dWVzEj8KEXByZWRpY3Rpb25fdmFsdWVzGAcgAygLMiQuc3NuLmRhdGFzZXJ2",
             "aWNlLnYxYWxwaGExLlRydWVWYWx1ZXMSJwoNZmVlZGJhY2tfdGltZRgIIAEo",
             "BEIQ6j8NCAESCVRJTUVTVEFNUDoS6j8PCg10cmFpbmluZ19kYXRhItgJCgpU",
             "cnVlVmFsdWVzEjQKDnRvdGFsX2luY2xfdmF0GAEgASgLMhwuZ29vZ2xlLnBy",
@@ -75,7 +75,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "dGFzZXJ2aWNlLnYxYWxwaGExLkRvY3VtZW50Ip0BChZQcmVwYXJlRmVlZGJh",
             "Y2tSZXF1ZXN0EgoKAmlkGAEgASgJEiQKAnRhGAIgASgLMhguc3NuLnR5cGUu",
             "VGV4dEFubm90YXRpb24SFgoOZG9jdW1lbnRfYnl0ZXMYAyABKAwSOQoLcHJl",
-            "ZGljdGlvbnMYBCABKAsyJC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuVHJ1",
+            "ZGljdGlvbnMYBCADKAsyJC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuVHJ1",
             "ZVZhbHVlcyJmCg9GZWVkYmFja1JlcXVlc3QSCgoCaWQYASABKAkSOQoLdHJ1",
             "ZV92YWx1ZXMYAiABKAsyJC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuVHJ1",
             "ZVZhbHVlcxIMCgR0YWdzGAMgAygJIh0KDURlbGV0ZVJlcXVlc3QSDAoEdGFn",
@@ -142,7 +142,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       consumer_ = other.consumer_;
       tags_ = other.tags_.Clone();
       trueValues_ = other.trueValues_ != null ? other.trueValues_.Clone() : null;
-      predictionValues_ = other.predictionValues_ != null ? other.predictionValues_.Clone() : null;
+      predictionValues_ = other.predictionValues_.Clone();
       feedbackTime_ = other.feedbackTime_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -219,13 +219,12 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "prediction_values" field.</summary>
     public const int PredictionValuesFieldNumber = 7;
-    private global::Ssn.Dataservice.V1Alpha1.TrueValues predictionValues_;
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1Alpha1.TrueValues> _repeated_predictionValues_codec
+        = pb::FieldCodec.ForMessage(58, global::Ssn.Dataservice.V1Alpha1.TrueValues.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues> predictionValues_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Dataservice.V1Alpha1.TrueValues PredictionValues {
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues> PredictionValues {
       get { return predictionValues_; }
-      set {
-        predictionValues_ = value;
-      }
     }
 
     /// <summary>Field number for the "feedback_time" field.</summary>
@@ -258,7 +257,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (Consumer != other.Consumer) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(TrueValues, other.TrueValues)) return false;
-      if (!object.Equals(PredictionValues, other.PredictionValues)) return false;
+      if(!predictionValues_.Equals(other.predictionValues_)) return false;
       if (FeedbackTime != other.FeedbackTime) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -272,7 +271,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (trueValues_ != null) hash ^= TrueValues.GetHashCode();
-      if (predictionValues_ != null) hash ^= PredictionValues.GetHashCode();
+      hash ^= predictionValues_.GetHashCode();
       if (FeedbackTime != 0UL) hash ^= FeedbackTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -308,10 +307,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
         output.WriteRawTag(50);
         output.WriteMessage(TrueValues);
       }
-      if (predictionValues_ != null) {
-        output.WriteRawTag(58);
-        output.WriteMessage(PredictionValues);
-      }
+      predictionValues_.WriteTo(output, _repeated_predictionValues_codec);
       if (FeedbackTime != 0UL) {
         output.WriteRawTag(64);
         output.WriteUInt64(FeedbackTime);
@@ -340,9 +336,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (trueValues_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrueValues);
       }
-      if (predictionValues_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PredictionValues);
-      }
+      size += predictionValues_.CalculateSize(_repeated_predictionValues_codec);
       if (FeedbackTime != 0UL) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FeedbackTime);
       }
@@ -379,12 +373,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
         }
         TrueValues.MergeFrom(other.TrueValues);
       }
-      if (other.predictionValues_ != null) {
-        if (predictionValues_ == null) {
-          predictionValues_ = new global::Ssn.Dataservice.V1Alpha1.TrueValues();
-        }
-        PredictionValues.MergeFrom(other.PredictionValues);
-      }
+      predictionValues_.Add(other.predictionValues_);
       if (other.FeedbackTime != 0UL) {
         FeedbackTime = other.FeedbackTime;
       }
@@ -430,10 +419,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           }
           case 58: {
-            if (predictionValues_ == null) {
-              predictionValues_ = new global::Ssn.Dataservice.V1Alpha1.TrueValues();
-            }
-            input.ReadMessage(predictionValues_);
+            predictionValues_.AddEntriesFrom(input, _repeated_predictionValues_codec);
             break;
           }
           case 64: {
@@ -1798,7 +1784,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       id_ = other.id_;
       ta_ = other.ta_ != null ? other.ta_.Clone() : null;
       documentBytes_ = other.documentBytes_;
-      predictions_ = other.predictions_ != null ? other.predictions_.Clone() : null;
+      predictions_ = other.predictions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1842,13 +1828,12 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "predictions" field.</summary>
     public const int PredictionsFieldNumber = 4;
-    private global::Ssn.Dataservice.V1Alpha1.TrueValues predictions_;
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1Alpha1.TrueValues> _repeated_predictions_codec
+        = pb::FieldCodec.ForMessage(34, global::Ssn.Dataservice.V1Alpha1.TrueValues.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues> predictions_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Dataservice.V1Alpha1.TrueValues Predictions {
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.TrueValues> Predictions {
       get { return predictions_; }
-      set {
-        predictions_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1867,7 +1852,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (Id != other.Id) return false;
       if (!object.Equals(Ta, other.Ta)) return false;
       if (DocumentBytes != other.DocumentBytes) return false;
-      if (!object.Equals(Predictions, other.Predictions)) return false;
+      if(!predictions_.Equals(other.predictions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1877,7 +1862,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (ta_ != null) hash ^= Ta.GetHashCode();
       if (DocumentBytes.Length != 0) hash ^= DocumentBytes.GetHashCode();
-      if (predictions_ != null) hash ^= Predictions.GetHashCode();
+      hash ^= predictions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1903,10 +1888,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
         output.WriteRawTag(26);
         output.WriteBytes(DocumentBytes);
       }
-      if (predictions_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(Predictions);
-      }
+      predictions_.WriteTo(output, _repeated_predictions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1924,9 +1906,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (DocumentBytes.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(DocumentBytes);
       }
-      if (predictions_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Predictions);
-      }
+      size += predictions_.CalculateSize(_repeated_predictions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1950,12 +1930,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (other.DocumentBytes.Length != 0) {
         DocumentBytes = other.DocumentBytes;
       }
-      if (other.predictions_ != null) {
-        if (predictions_ == null) {
-          predictions_ = new global::Ssn.Dataservice.V1Alpha1.TrueValues();
-        }
-        Predictions.MergeFrom(other.Predictions);
-      }
+      predictions_.Add(other.predictions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1983,10 +1958,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           }
           case 34: {
-            if (predictions_ == null) {
-              predictions_ = new global::Ssn.Dataservice.V1Alpha1.TrueValues();
-            }
-            input.ReadMessage(predictions_);
+            predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
             break;
           }
         }

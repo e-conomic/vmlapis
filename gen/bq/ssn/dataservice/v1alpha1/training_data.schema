@@ -131,7 +131,7 @@
  {
   "name": "prediction_values",
   "type": "RECORD",
-  "mode": "NULLABLE",
+  "mode": "REPEATED",
   "fields": [
    {
     "name": "total_incl_vat",
