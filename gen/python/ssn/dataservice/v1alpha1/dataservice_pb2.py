@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n*ssn/dataservice/v1alpha1/dataservice.proto\x12\x18ssn.dataservice.v1alpha1\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x1essn/type/text_annotation.proto\"\xb2\x03\n\x08\x44ocument\x12+\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotationB\x05\xea?\x02\x18\x01\x12\x14\n\x05\x62ytes\x18\x02 \x01(\x0c\x42\x05\xea?\x02\x18\x01\x12;\n\x02id\x18\x03 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x04 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x05 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x39\n\x0btrue_values\x18\x06 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\x12?\n\x11prediction_values\x18\x07 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x12\xea?\x0f\n\rtraining_data\"\xd8\t\n\nTrueValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"M\n\x15\x43reateDocumentRequest\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"L\n\x14ReadDocumentResponse\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"\x9d\x01\n\x16PrepareFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x02ta\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x03 \x01(\x0c\x12\x39\n\x0bpredictions\x18\x04 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\"f\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\x1d\n\rDeleteRequest\x12\x0c\n\x04tags\x18\x01 \x03(\t2\xb4\x04\n\x0b\x44\x61taService\x12s\n\x0e\x43reateDocument\x12/.ssn.dataservice.v1alpha1.CreateDocumentRequest\x1a\x30.ssn.dataservice.v1alpha1.CreateDocumentResponse\x12m\n\x0cReadDocument\x12-.ssn.dataservice.v1alpha1.ReadDocumentRequest\x1a..ssn.dataservice.v1alpha1.ReadDocumentResponse\x12[\n\x0fPrepareFeedback\x12\x30.ssn.dataservice.v1alpha1.PrepareFeedbackRequest\x1a\x16.google.protobuf.Empty\x12s\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12).ssn.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:create:\x01*\x12o\n\x06\x44\x65lete\x12\'.ssn.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n*ssn/dataservice/v1alpha1/dataservice.proto\x12\x18ssn.dataservice.v1alpha1\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x1essn/type/text_annotation.proto\"\xb8\x03\n\x08\x44ocument\x12+\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotationB\x05\xea?\x02\x18\x01\x12\x14\n\x05\x62ytes\x18\x02 \x01(\x0c\x42\x05\xea?\x02\x18\x01\x12;\n\x02id\x18\x03 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x04 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x05 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x39\n\x0btrue_values\x18\x06 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\x12\x45\n\x11prediction_values\x18\x07 \x01(\x0b\x32*.ssn.dataservice.v1alpha1.PredictionValues\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x12\xea?\x0f\n\rtraining_data\"\xd8\t\n\nTrueValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"\xde\t\n\x10PredictionValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x1c.google.protobuf.StringValue\"M\n\x15\x43reateDocumentRequest\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"L\n\x14ReadDocumentResponse\x12\x34\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\".ssn.dataservice.v1alpha1.Document\"\xa3\x01\n\x16PrepareFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x02ta\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x03 \x01(\x0c\x12?\n\x0bpredictions\x18\x04 \x01(\x0b\x32*.ssn.dataservice.v1alpha1.PredictionValues\"f\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x01(\x0b\x32$.ssn.dataservice.v1alpha1.TrueValues\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\x1d\n\rDeleteRequest\x12\x0c\n\x04tags\x18\x01 \x03(\t2\xb4\x04\n\x0b\x44\x61taService\x12s\n\x0e\x43reateDocument\x12/.ssn.dataservice.v1alpha1.CreateDocumentRequest\x1a\x30.ssn.dataservice.v1alpha1.CreateDocumentResponse\x12m\n\x0cReadDocument\x12-.ssn.dataservice.v1alpha1.ReadDocumentRequest\x1a..ssn.dataservice.v1alpha1.ReadDocumentResponse\x12[\n\x0fPrepareFeedback\x12\x30.ssn.dataservice.v1alpha1.PrepareFeedbackRequest\x1a\x16.google.protobuf.Empty\x12s\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12).ssn.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:create:\x01*\x12o\n\x06\x44\x65lete\x12\'.ssn.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
@@ -109,7 +109,7 @@ _DOCUMENT = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=280,
-  serialized_end=714,
+  serialized_end=720,
 )
 
 
@@ -279,8 +279,179 @@ _TRUEVALUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=717,
-  serialized_end=1957,
+  serialized_start=723,
+  serialized_end=1963,
+)
+
+
+_PREDICTIONVALUES = _descriptor.Descriptor(
+  name='PredictionValues',
+  full_name='ssn.dataservice.v1alpha1.PredictionValues',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='total_incl_vat', full_name='ssn.dataservice.v1alpha1.PredictionValues.total_incl_vat', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='total_vat', full_name='ssn.dataservice.v1alpha1.PredictionValues.total_vat', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='total_excl_vat', full_name='ssn.dataservice.v1alpha1.PredictionValues.total_excl_vat', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_date', full_name='ssn.dataservice.v1alpha1.PredictionValues.order_date', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\006\022\004DATE'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_due_date', full_name='ssn.dataservice.v1alpha1.PredictionValues.payment_due_date', index=4,
+      number=5, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\006\022\004DATE'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='document_type', full_name='ssn.dataservice.v1alpha1.PredictionValues.document_type', index=5,
+      number=6, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='currency', full_name='ssn.dataservice.v1alpha1.PredictionValues.currency', index=6,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='credit_card_last_four', full_name='ssn.dataservice.v1alpha1.PredictionValues.credit_card_last_four', index=7,
+      number=8, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='payment_method', full_name='ssn.dataservice.v1alpha1.PredictionValues.payment_method', index=8,
+      number=9, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_dk_type', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_dk_type', index=9,
+      number=10, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_dk_payment_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_dk_payment_id', index=10,
+      number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_dk_creditor_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_dk_creditor_id', index=11,
+      number=12, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_se_payment_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_se_payment_id', index=12,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_se_bankgiro_creditor_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_se_bankgiro_creditor_id', index=13,
+      number=14, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_se_plusgiro_creditor_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_se_plusgiro_creditor_id', index=14,
+      number=15, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_no_payment_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_no_payment_id', index=15,
+      number=16, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_fi_payment_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_fi_payment_id', index=16,
+      number=17, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ocr_line_nl_payment_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.ocr_line_nl_payment_id', index=17,
+      number=18, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='supplier_corporate_id', full_name='ssn.dataservice.v1alpha1.PredictionValues.supplier_corporate_id', index=18,
+      number=19, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='supplier_country_code', full_name='ssn.dataservice.v1alpha1.PredictionValues.supplier_country_code', index=19,
+      number=20, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='invoice_number', full_name='ssn.dataservice.v1alpha1.PredictionValues.invoice_number', index=20,
+      number=21, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1966,
+  serialized_end=3212,
 )
 
 
@@ -310,8 +481,8 @@ _CREATEDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1959,
-  serialized_end=2036,
+  serialized_start=3214,
+  serialized_end=3291,
 )
 
 
@@ -341,8 +512,8 @@ _CREATEDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2038,
-  serialized_end=2074,
+  serialized_start=3293,
+  serialized_end=3329,
 )
 
 
@@ -372,8 +543,8 @@ _READDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2076,
-  serialized_end=2109,
+  serialized_start=3331,
+  serialized_end=3364,
 )
 
 
@@ -403,8 +574,8 @@ _READDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2111,
-  serialized_end=2187,
+  serialized_start=3366,
+  serialized_end=3442,
 )
 
 
@@ -455,8 +626,8 @@ _PREPAREFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2190,
-  serialized_end=2347,
+  serialized_start=3445,
+  serialized_end=3608,
 )
 
 
@@ -500,8 +671,8 @@ _FEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2349,
-  serialized_end=2451,
+  serialized_start=3610,
+  serialized_end=3712,
 )
 
 
@@ -531,13 +702,13 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2453,
-  serialized_end=2482,
+  serialized_start=3714,
+  serialized_end=3743,
 )
 
 _DOCUMENT.fields_by_name['ta'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 _DOCUMENT.fields_by_name['true_values'].message_type = _TRUEVALUES
-_DOCUMENT.fields_by_name['prediction_values'].message_type = _TRUEVALUES
+_DOCUMENT.fields_by_name['prediction_values'].message_type = _PREDICTIONVALUES
 _TRUEVALUES.fields_by_name['total_incl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
 _TRUEVALUES.fields_by_name['total_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
 _TRUEVALUES.fields_by_name['total_excl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
@@ -559,13 +730,35 @@ _TRUEVALUES.fields_by_name['ocr_line_nl_payment_id'].message_type = google_dot_p
 _TRUEVALUES.fields_by_name['supplier_corporate_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _TRUEVALUES.fields_by_name['supplier_country_code'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _TRUEVALUES.fields_by_name['invoice_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['total_incl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
+_PREDICTIONVALUES.fields_by_name['total_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
+_PREDICTIONVALUES.fields_by_name['total_excl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
+_PREDICTIONVALUES.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb2._DATE
+_PREDICTIONVALUES.fields_by_name['payment_due_date'].message_type = google_dot_type_dot_date__pb2._DATE
+_PREDICTIONVALUES.fields_by_name['document_type'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['currency'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['credit_card_last_four'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['payment_method'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_dk_type'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_dk_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_dk_creditor_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_se_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_se_bankgiro_creditor_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_se_plusgiro_creditor_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_no_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_fi_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['ocr_line_nl_payment_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['supplier_corporate_id'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['supplier_country_code'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['invoice_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _CREATEDOCUMENTREQUEST.fields_by_name['document'].message_type = _DOCUMENT
 _READDOCUMENTRESPONSE.fields_by_name['document'].message_type = _DOCUMENT
 _PREPAREFEEDBACKREQUEST.fields_by_name['ta'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
-_PREPAREFEEDBACKREQUEST.fields_by_name['predictions'].message_type = _TRUEVALUES
+_PREPAREFEEDBACKREQUEST.fields_by_name['predictions'].message_type = _PREDICTIONVALUES
 _FEEDBACKREQUEST.fields_by_name['true_values'].message_type = _TRUEVALUES
 DESCRIPTOR.message_types_by_name['Document'] = _DOCUMENT
 DESCRIPTOR.message_types_by_name['TrueValues'] = _TRUEVALUES
+DESCRIPTOR.message_types_by_name['PredictionValues'] = _PREDICTIONVALUES
 DESCRIPTOR.message_types_by_name['CreateDocumentRequest'] = _CREATEDOCUMENTREQUEST
 DESCRIPTOR.message_types_by_name['CreateDocumentResponse'] = _CREATEDOCUMENTRESPONSE
 DESCRIPTOR.message_types_by_name['ReadDocumentRequest'] = _READDOCUMENTREQUEST
@@ -588,6 +781,13 @@ TrueValues = _reflection.GeneratedProtocolMessageType('TrueValues', (_message.Me
   # @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.TrueValues)
   ))
 _sym_db.RegisterMessage(TrueValues)
+
+PredictionValues = _reflection.GeneratedProtocolMessageType('PredictionValues', (_message.Message,), dict(
+  DESCRIPTOR = _PREDICTIONVALUES,
+  __module__ = 'ssn.dataservice.v1alpha1.dataservice_pb2'
+  # @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PredictionValues)
+  ))
+_sym_db.RegisterMessage(PredictionValues)
 
 CreateDocumentRequest = _reflection.GeneratedProtocolMessageType('CreateDocumentRequest', (_message.Message,), dict(
   DESCRIPTOR = _CREATEDOCUMENTREQUEST,
@@ -649,6 +849,8 @@ _DOCUMENT.fields_by_name['feedback_time']._options = None
 _DOCUMENT._options = None
 _TRUEVALUES.fields_by_name['order_date']._options = None
 _TRUEVALUES.fields_by_name['payment_due_date']._options = None
+_PREDICTIONVALUES.fields_by_name['order_date']._options = None
+_PREDICTIONVALUES.fields_by_name['payment_due_date']._options = None
 
 _DATASERVICE = _descriptor.ServiceDescriptor(
   name='DataService',
@@ -656,8 +858,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2485,
-  serialized_end=3049,
+  serialized_start=3746,
+  serialized_end=4310,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDocument',

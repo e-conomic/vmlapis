@@ -89,17 +89,17 @@ public final class Dataservice {
     ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getTrueValuesOrBuilder();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
     boolean hasPredictionValues();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues();
+    ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictionValues();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder();
+    ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionValuesOrBuilder();
 
     /**
      * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
@@ -203,11 +203,11 @@ public final class Dataservice {
               break;
             }
             case 58: {
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder subBuilder = null;
               if (predictionValues_ != null) {
                 subBuilder = predictionValues_.toBuilder();
               }
-              predictionValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
+              predictionValues_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.PredictionValues.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(predictionValues_);
                 predictionValues_ = subBuilder.buildPartial();
@@ -405,23 +405,23 @@ public final class Dataservice {
     }
 
     public static final int PREDICTION_VALUES_FIELD_NUMBER = 7;
-    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_;
+    private ssn.dataservice.v1alpha1.Dataservice.PredictionValues predictionValues_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
     public boolean hasPredictionValues() {
       return predictionValues_ != null;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
-      return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+    public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictionValues() {
+      return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictionValues_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
+    public ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionValuesOrBuilder() {
       return getPredictionValues();
     }
 
@@ -1412,29 +1412,29 @@ public final class Dataservice {
         return trueValuesBuilder_;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictionValues_ = null;
+      private ssn.dataservice.v1alpha1.Dataservice.PredictionValues predictionValues_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionValuesBuilder_;
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder> predictionValuesBuilder_;
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
       public boolean hasPredictionValues() {
         return predictionValuesBuilder_ != null || predictionValues_ != null;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictionValues() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictionValues() {
         if (predictionValuesBuilder_ == null) {
-          return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+          return predictionValues_ == null ? ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictionValues_;
         } else {
           return predictionValuesBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
-      public Builder setPredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder setPredictionValues(ssn.dataservice.v1alpha1.Dataservice.PredictionValues value) {
         if (predictionValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1448,10 +1448,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
       public Builder setPredictionValues(
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder builderForValue) {
         if (predictionValuesBuilder_ == null) {
           predictionValues_ = builderForValue.build();
           onChanged();
@@ -1462,13 +1462,13 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
-      public Builder mergePredictionValues(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder mergePredictionValues(ssn.dataservice.v1alpha1.Dataservice.PredictionValues value) {
         if (predictionValuesBuilder_ == null) {
           if (predictionValues_ != null) {
             predictionValues_ =
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictionValues_).mergeFrom(value).buildPartial();
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.newBuilder(predictionValues_).mergeFrom(value).buildPartial();
           } else {
             predictionValues_ = value;
           }
@@ -1480,7 +1480,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
       public Builder clearPredictionValues() {
         if (predictionValuesBuilder_ == null) {
@@ -1494,33 +1494,33 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionValuesBuilder() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder getPredictionValuesBuilder() {
         
         onChanged();
         return getPredictionValuesFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionValuesOrBuilder() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionValuesOrBuilder() {
         if (predictionValuesBuilder_ != null) {
           return predictionValuesBuilder_.getMessageOrBuilder();
         } else {
           return predictionValues_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictionValues_;
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictionValues_;
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues prediction_values = 7;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues prediction_values = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder> 
           getPredictionValuesFieldBuilder() {
         if (predictionValuesBuilder_ == null) {
           predictionValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder>(
                   getPredictionValues(),
                   getParentForChildren(),
                   isClean());
@@ -6094,6 +6094,8128 @@ public final class Dataservice {
 
   }
 
+  public interface PredictionValuesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.PredictionValues)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    java.util.List<com.google.protobuf.DoubleValue> 
+        getTotalInclVatList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    com.google.protobuf.DoubleValue getTotalInclVat(int index);
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    int getTotalInclVatCount();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalInclVatOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    java.util.List<com.google.protobuf.DoubleValue> 
+        getTotalVatList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    com.google.protobuf.DoubleValue getTotalVat(int index);
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    int getTotalVatCount();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalVatOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    java.util.List<com.google.protobuf.DoubleValue> 
+        getTotalExclVatList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    com.google.protobuf.DoubleValue getTotalExclVat(int index);
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    int getTotalExclVatCount();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalExclVatOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<com.google.type.Date> 
+        getOrderDateList();
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.Date getOrderDate(int index);
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getOrderDateCount();
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<? extends com.google.type.DateOrBuilder> 
+        getOrderDateOrBuilderList();
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.DateOrBuilder getOrderDateOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<com.google.type.Date> 
+        getPaymentDueDateList();
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.Date getPaymentDueDate(int index);
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getPaymentDueDateCount();
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<? extends com.google.type.DateOrBuilder> 
+        getPaymentDueDateOrBuilderList();
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.type.DateOrBuilder getPaymentDueDateOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getDocumentTypeList();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    com.google.protobuf.StringValue getDocumentType(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    int getDocumentTypeCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getDocumentTypeOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getCurrencyList();
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    com.google.protobuf.StringValue getCurrency(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    int getCurrencyCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCurrencyOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getCreditCardLastFourList();
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    com.google.protobuf.StringValue getCreditCardLastFour(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    int getCreditCardLastFourCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCreditCardLastFourOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getPaymentMethodList();
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    com.google.protobuf.StringValue getPaymentMethod(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    int getPaymentMethodCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getPaymentMethodOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineDkTypeList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineDkType(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    int getOcrLineDkTypeCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkTypeOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineDkPaymentIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineDkPaymentId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    int getOcrLineDkPaymentIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkPaymentIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineDkCreditorIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineDkCreditorId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    int getOcrLineDkCreditorIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkCreditorIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineSePaymentIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineSePaymentId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    int getOcrLineSePaymentIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSePaymentIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineSeBankgiroCreditorIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    int getOcrLineSeBankgiroCreditorIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSeBankgiroCreditorIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineSePlusgiroCreditorIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    int getOcrLineSePlusgiroCreditorIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSePlusgiroCreditorIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineNoPaymentIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineNoPaymentId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    int getOcrLineNoPaymentIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineNoPaymentIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineFiPaymentIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineFiPaymentId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    int getOcrLineFiPaymentIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineFiPaymentIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getOcrLineNlPaymentIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    com.google.protobuf.StringValue getOcrLineNlPaymentId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    int getOcrLineNlPaymentIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineNlPaymentIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierCorporateIdList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    com.google.protobuf.StringValue getSupplierCorporateId(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    int getSupplierCorporateIdCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierCorporateIdOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getSupplierCountryCodeList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    com.google.protobuf.StringValue getSupplierCountryCode(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    int getSupplierCountryCodeCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierCountryCodeOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder(
+        int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getInvoiceNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    com.google.protobuf.StringValue getInvoiceNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    int getInvoiceNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getInvoiceNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.PredictionValues}
+   */
+  public  static final class PredictionValues extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.PredictionValues)
+      PredictionValuesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PredictionValues.newBuilder() to construct.
+    private PredictionValues(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PredictionValues() {
+      totalInclVat_ = java.util.Collections.emptyList();
+      totalVat_ = java.util.Collections.emptyList();
+      totalExclVat_ = java.util.Collections.emptyList();
+      orderDate_ = java.util.Collections.emptyList();
+      paymentDueDate_ = java.util.Collections.emptyList();
+      documentType_ = java.util.Collections.emptyList();
+      currency_ = java.util.Collections.emptyList();
+      creditCardLastFour_ = java.util.Collections.emptyList();
+      paymentMethod_ = java.util.Collections.emptyList();
+      ocrLineDkType_ = java.util.Collections.emptyList();
+      ocrLineDkPaymentId_ = java.util.Collections.emptyList();
+      ocrLineDkCreditorId_ = java.util.Collections.emptyList();
+      ocrLineSePaymentId_ = java.util.Collections.emptyList();
+      ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
+      ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
+      ocrLineNoPaymentId_ = java.util.Collections.emptyList();
+      ocrLineFiPaymentId_ = java.util.Collections.emptyList();
+      ocrLineNlPaymentId_ = java.util.Collections.emptyList();
+      supplierCorporateId_ = java.util.Collections.emptyList();
+      supplierCountryCode_ = java.util.Collections.emptyList();
+      invoiceNumber_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PredictionValues(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              totalInclVat_.add(
+                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              totalVat_.add(
+                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              totalExclVat_.add(
+                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                orderDate_ = new java.util.ArrayList<com.google.type.Date>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              orderDate_.add(
+                  input.readMessage(com.google.type.Date.parser(), extensionRegistry));
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                paymentDueDate_ = new java.util.ArrayList<com.google.type.Date>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              paymentDueDate_.add(
+                  input.readMessage(com.google.type.Date.parser(), extensionRegistry));
+              break;
+            }
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+                documentType_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000020;
+              }
+              documentType_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                currency_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              currency_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              creditCardLastFour_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 74: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                paymentMethod_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              paymentMethod_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              ocrLineDkType_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              ocrLineDkPaymentId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              ocrLineDkCreditorId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 106: {
+              if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+                ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              ocrLineSePaymentId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+                ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00002000;
+              }
+              ocrLineSeBankgiroCreditorId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 122: {
+              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+                ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00004000;
+              }
+              ocrLineSePlusgiroCreditorId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 130: {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+                ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00008000;
+              }
+              ocrLineNoPaymentId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 138: {
+              if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00010000;
+              }
+              ocrLineFiPaymentId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 146: {
+              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+                ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00020000;
+              }
+              ocrLineNlPaymentId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 154: {
+              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+                supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00040000;
+              }
+              supplierCorporateId_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 162: {
+              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+                supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00080000;
+              }
+              supplierCountryCode_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            case 170: {
+              if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+                invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>();
+                mutable_bitField0_ |= 0x00100000;
+              }
+              invoiceNumber_.add(
+                  input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
+        }
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
+        }
+        if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
+          documentType_ = java.util.Collections.unmodifiableList(documentType_);
+        }
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          currency_ = java.util.Collections.unmodifiableList(currency_);
+        }
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
+        }
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
+        }
+        if (((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
+          ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
+          ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
+        }
+        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+          ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
+        }
+        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
+          ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+          ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+          ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+          supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
+        }
+        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+          supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
+        }
+        if (((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
+          invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PredictionValues_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.class, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder.class);
+    }
+
+    public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
+    private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_;
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    public java.util.List<com.google.protobuf.DoubleValue> getTotalInclVatList() {
+      return totalInclVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalInclVatOrBuilderList() {
+      return totalInclVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    public int getTotalInclVatCount() {
+      return totalInclVat_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    public com.google.protobuf.DoubleValue getTotalInclVat(int index) {
+      return totalInclVat_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+        int index) {
+      return totalInclVat_.get(index);
+    }
+
+    public static final int TOTAL_VAT_FIELD_NUMBER = 2;
+    private java.util.List<com.google.protobuf.DoubleValue> totalVat_;
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    public java.util.List<com.google.protobuf.DoubleValue> getTotalVatList() {
+      return totalVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalVatOrBuilderList() {
+      return totalVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    public int getTotalVatCount() {
+      return totalVat_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    public com.google.protobuf.DoubleValue getTotalVat(int index) {
+      return totalVat_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+        int index) {
+      return totalVat_.get(index);
+    }
+
+    public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
+    private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_;
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    public java.util.List<com.google.protobuf.DoubleValue> getTotalExclVatList() {
+      return totalExclVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+        getTotalExclVatOrBuilderList() {
+      return totalExclVat_;
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    public int getTotalExclVatCount() {
+      return totalExclVat_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    public com.google.protobuf.DoubleValue getTotalExclVat(int index) {
+      return totalExclVat_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     */
+    public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+        int index) {
+      return totalExclVat_.get(index);
+    }
+
+    public static final int ORDER_DATE_FIELD_NUMBER = 4;
+    private java.util.List<com.google.type.Date> orderDate_;
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<com.google.type.Date> getOrderDateList() {
+      return orderDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<? extends com.google.type.DateOrBuilder> 
+        getOrderDateOrBuilderList() {
+      return orderDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getOrderDateCount() {
+      return orderDate_.size();
+    }
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.Date getOrderDate(int index) {
+      return orderDate_.get(index);
+    }
+    /**
+     * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.DateOrBuilder getOrderDateOrBuilder(
+        int index) {
+      return orderDate_.get(index);
+    }
+
+    public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
+    private java.util.List<com.google.type.Date> paymentDueDate_;
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<com.google.type.Date> getPaymentDueDateList() {
+      return paymentDueDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<? extends com.google.type.DateOrBuilder> 
+        getPaymentDueDateOrBuilderList() {
+      return paymentDueDate_;
+    }
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getPaymentDueDateCount() {
+      return paymentDueDate_.size();
+    }
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.Date getPaymentDueDate(int index) {
+      return paymentDueDate_.get(index);
+    }
+    /**
+     * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder(
+        int index) {
+      return paymentDueDate_.get(index);
+    }
+
+    public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
+    private java.util.List<com.google.protobuf.StringValue> documentType_;
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getDocumentTypeList() {
+      return documentType_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getDocumentTypeOrBuilderList() {
+      return documentType_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    public int getDocumentTypeCount() {
+      return documentType_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    public com.google.protobuf.StringValue getDocumentType(int index) {
+      return documentType_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder(
+        int index) {
+      return documentType_.get(index);
+    }
+
+    public static final int CURRENCY_FIELD_NUMBER = 7;
+    private java.util.List<com.google.protobuf.StringValue> currency_;
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getCurrencyList() {
+      return currency_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCurrencyOrBuilderList() {
+      return currency_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    public int getCurrencyCount() {
+      return currency_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    public com.google.protobuf.StringValue getCurrency(int index) {
+      return currency_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder(
+        int index) {
+      return currency_.get(index);
+    }
+
+    public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
+    private java.util.List<com.google.protobuf.StringValue> creditCardLastFour_;
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getCreditCardLastFourList() {
+      return creditCardLastFour_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCreditCardLastFourOrBuilderList() {
+      return creditCardLastFour_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    public int getCreditCardLastFourCount() {
+      return creditCardLastFour_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    public com.google.protobuf.StringValue getCreditCardLastFour(int index) {
+      return creditCardLastFour_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder(
+        int index) {
+      return creditCardLastFour_.get(index);
+    }
+
+    public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
+    private java.util.List<com.google.protobuf.StringValue> paymentMethod_;
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getPaymentMethodList() {
+      return paymentMethod_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getPaymentMethodOrBuilderList() {
+      return paymentMethod_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    public int getPaymentMethodCount() {
+      return paymentMethod_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    public com.google.protobuf.StringValue getPaymentMethod(int index) {
+      return paymentMethod_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder(
+        int index) {
+      return paymentMethod_.get(index);
+    }
+
+    public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineDkType_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineDkTypeList() {
+      return ocrLineDkType_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkTypeOrBuilderList() {
+      return ocrLineDkType_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    public int getOcrLineDkTypeCount() {
+      return ocrLineDkType_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineDkType(int index) {
+      return ocrLineDkType_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder(
+        int index) {
+      return ocrLineDkType_.get(index);
+    }
+
+    public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineDkPaymentId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineDkPaymentIdList() {
+      return ocrLineDkPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkPaymentIdOrBuilderList() {
+      return ocrLineDkPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    public int getOcrLineDkPaymentIdCount() {
+      return ocrLineDkPaymentId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineDkPaymentId(int index) {
+      return ocrLineDkPaymentId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+        int index) {
+      return ocrLineDkPaymentId_.get(index);
+    }
+
+    public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineDkCreditorId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineDkCreditorIdList() {
+      return ocrLineDkCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineDkCreditorIdOrBuilderList() {
+      return ocrLineDkCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    public int getOcrLineDkCreditorIdCount() {
+      return ocrLineDkCreditorId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineDkCreditorId(int index) {
+      return ocrLineDkCreditorId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+        int index) {
+      return ocrLineDkCreditorId_.get(index);
+    }
+
+    public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineSePaymentId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineSePaymentIdList() {
+      return ocrLineSePaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSePaymentIdOrBuilderList() {
+      return ocrLineSePaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    public int getOcrLineSePaymentIdCount() {
+      return ocrLineSePaymentId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineSePaymentId(int index) {
+      return ocrLineSePaymentId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+        int index) {
+      return ocrLineSePaymentId_.get(index);
+    }
+
+    public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineSeBankgiroCreditorId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineSeBankgiroCreditorIdList() {
+      return ocrLineSeBankgiroCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSeBankgiroCreditorIdOrBuilderList() {
+      return ocrLineSeBankgiroCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    public int getOcrLineSeBankgiroCreditorIdCount() {
+      return ocrLineSeBankgiroCreditorId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId(int index) {
+      return ocrLineSeBankgiroCreditorId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+        int index) {
+      return ocrLineSeBankgiroCreditorId_.get(index);
+    }
+
+    public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineSePlusgiroCreditorId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineSePlusgiroCreditorIdList() {
+      return ocrLineSePlusgiroCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineSePlusgiroCreditorIdOrBuilderList() {
+      return ocrLineSePlusgiroCreditorId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    public int getOcrLineSePlusgiroCreditorIdCount() {
+      return ocrLineSePlusgiroCreditorId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId(int index) {
+      return ocrLineSePlusgiroCreditorId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+        int index) {
+      return ocrLineSePlusgiroCreditorId_.get(index);
+    }
+
+    public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineNoPaymentId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineNoPaymentIdList() {
+      return ocrLineNoPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineNoPaymentIdOrBuilderList() {
+      return ocrLineNoPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    public int getOcrLineNoPaymentIdCount() {
+      return ocrLineNoPaymentId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineNoPaymentId(int index) {
+      return ocrLineNoPaymentId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+        int index) {
+      return ocrLineNoPaymentId_.get(index);
+    }
+
+    public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineFiPaymentId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineFiPaymentIdList() {
+      return ocrLineFiPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineFiPaymentIdOrBuilderList() {
+      return ocrLineFiPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    public int getOcrLineFiPaymentIdCount() {
+      return ocrLineFiPaymentId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineFiPaymentId(int index) {
+      return ocrLineFiPaymentId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+        int index) {
+      return ocrLineFiPaymentId_.get(index);
+    }
+
+    public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
+    private java.util.List<com.google.protobuf.StringValue> ocrLineNlPaymentId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getOcrLineNlPaymentIdList() {
+      return ocrLineNlPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineNlPaymentIdOrBuilderList() {
+      return ocrLineNlPaymentId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    public int getOcrLineNlPaymentIdCount() {
+      return ocrLineNlPaymentId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    public com.google.protobuf.StringValue getOcrLineNlPaymentId(int index) {
+      return ocrLineNlPaymentId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+        int index) {
+      return ocrLineNlPaymentId_.get(index);
+    }
+
+    public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
+    private java.util.List<com.google.protobuf.StringValue> supplierCorporateId_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getSupplierCorporateIdList() {
+      return supplierCorporateId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierCorporateIdOrBuilderList() {
+      return supplierCorporateId_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    public int getSupplierCorporateIdCount() {
+      return supplierCorporateId_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    public com.google.protobuf.StringValue getSupplierCorporateId(int index) {
+      return supplierCorporateId_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder(
+        int index) {
+      return supplierCorporateId_.get(index);
+    }
+
+    public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
+    private java.util.List<com.google.protobuf.StringValue> supplierCountryCode_;
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getSupplierCountryCodeList() {
+      return supplierCountryCode_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getSupplierCountryCodeOrBuilderList() {
+      return supplierCountryCode_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    public int getSupplierCountryCodeCount() {
+      return supplierCountryCode_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    public com.google.protobuf.StringValue getSupplierCountryCode(int index) {
+      return supplierCountryCode_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder(
+        int index) {
+      return supplierCountryCode_.get(index);
+    }
+
+    public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
+    private java.util.List<com.google.protobuf.StringValue> invoiceNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getInvoiceNumberList() {
+      return invoiceNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getInvoiceNumberOrBuilderList() {
+      return invoiceNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    public int getInvoiceNumberCount() {
+      return invoiceNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    public com.google.protobuf.StringValue getInvoiceNumber(int index) {
+      return invoiceNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder(
+        int index) {
+      return invoiceNumber_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < totalInclVat_.size(); i++) {
+        output.writeMessage(1, totalInclVat_.get(i));
+      }
+      for (int i = 0; i < totalVat_.size(); i++) {
+        output.writeMessage(2, totalVat_.get(i));
+      }
+      for (int i = 0; i < totalExclVat_.size(); i++) {
+        output.writeMessage(3, totalExclVat_.get(i));
+      }
+      for (int i = 0; i < orderDate_.size(); i++) {
+        output.writeMessage(4, orderDate_.get(i));
+      }
+      for (int i = 0; i < paymentDueDate_.size(); i++) {
+        output.writeMessage(5, paymentDueDate_.get(i));
+      }
+      for (int i = 0; i < documentType_.size(); i++) {
+        output.writeMessage(6, documentType_.get(i));
+      }
+      for (int i = 0; i < currency_.size(); i++) {
+        output.writeMessage(7, currency_.get(i));
+      }
+      for (int i = 0; i < creditCardLastFour_.size(); i++) {
+        output.writeMessage(8, creditCardLastFour_.get(i));
+      }
+      for (int i = 0; i < paymentMethod_.size(); i++) {
+        output.writeMessage(9, paymentMethod_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkType_.size(); i++) {
+        output.writeMessage(10, ocrLineDkType_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkPaymentId_.size(); i++) {
+        output.writeMessage(11, ocrLineDkPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkCreditorId_.size(); i++) {
+        output.writeMessage(12, ocrLineDkCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSePaymentId_.size(); i++) {
+        output.writeMessage(13, ocrLineSePaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSeBankgiroCreditorId_.size(); i++) {
+        output.writeMessage(14, ocrLineSeBankgiroCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSePlusgiroCreditorId_.size(); i++) {
+        output.writeMessage(15, ocrLineSePlusgiroCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineNoPaymentId_.size(); i++) {
+        output.writeMessage(16, ocrLineNoPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineFiPaymentId_.size(); i++) {
+        output.writeMessage(17, ocrLineFiPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineNlPaymentId_.size(); i++) {
+        output.writeMessage(18, ocrLineNlPaymentId_.get(i));
+      }
+      for (int i = 0; i < supplierCorporateId_.size(); i++) {
+        output.writeMessage(19, supplierCorporateId_.get(i));
+      }
+      for (int i = 0; i < supplierCountryCode_.size(); i++) {
+        output.writeMessage(20, supplierCountryCode_.get(i));
+      }
+      for (int i = 0; i < invoiceNumber_.size(); i++) {
+        output.writeMessage(21, invoiceNumber_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < totalInclVat_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, totalInclVat_.get(i));
+      }
+      for (int i = 0; i < totalVat_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, totalVat_.get(i));
+      }
+      for (int i = 0; i < totalExclVat_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, totalExclVat_.get(i));
+      }
+      for (int i = 0; i < orderDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, orderDate_.get(i));
+      }
+      for (int i = 0; i < paymentDueDate_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, paymentDueDate_.get(i));
+      }
+      for (int i = 0; i < documentType_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, documentType_.get(i));
+      }
+      for (int i = 0; i < currency_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, currency_.get(i));
+      }
+      for (int i = 0; i < creditCardLastFour_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, creditCardLastFour_.get(i));
+      }
+      for (int i = 0; i < paymentMethod_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, paymentMethod_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkType_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, ocrLineDkType_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkPaymentId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, ocrLineDkPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineDkCreditorId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, ocrLineDkCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSePaymentId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, ocrLineSePaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSeBankgiroCreditorId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, ocrLineSeBankgiroCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineSePlusgiroCreditorId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, ocrLineSePlusgiroCreditorId_.get(i));
+      }
+      for (int i = 0; i < ocrLineNoPaymentId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(16, ocrLineNoPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineFiPaymentId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, ocrLineFiPaymentId_.get(i));
+      }
+      for (int i = 0; i < ocrLineNlPaymentId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, ocrLineNlPaymentId_.get(i));
+      }
+      for (int i = 0; i < supplierCorporateId_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, supplierCorporateId_.get(i));
+      }
+      for (int i = 0; i < supplierCountryCode_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, supplierCountryCode_.get(i));
+      }
+      for (int i = 0; i < invoiceNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(21, invoiceNumber_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.PredictionValues)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.PredictionValues other = (ssn.dataservice.v1alpha1.Dataservice.PredictionValues) obj;
+
+      boolean result = true;
+      result = result && getTotalInclVatList()
+          .equals(other.getTotalInclVatList());
+      result = result && getTotalVatList()
+          .equals(other.getTotalVatList());
+      result = result && getTotalExclVatList()
+          .equals(other.getTotalExclVatList());
+      result = result && getOrderDateList()
+          .equals(other.getOrderDateList());
+      result = result && getPaymentDueDateList()
+          .equals(other.getPaymentDueDateList());
+      result = result && getDocumentTypeList()
+          .equals(other.getDocumentTypeList());
+      result = result && getCurrencyList()
+          .equals(other.getCurrencyList());
+      result = result && getCreditCardLastFourList()
+          .equals(other.getCreditCardLastFourList());
+      result = result && getPaymentMethodList()
+          .equals(other.getPaymentMethodList());
+      result = result && getOcrLineDkTypeList()
+          .equals(other.getOcrLineDkTypeList());
+      result = result && getOcrLineDkPaymentIdList()
+          .equals(other.getOcrLineDkPaymentIdList());
+      result = result && getOcrLineDkCreditorIdList()
+          .equals(other.getOcrLineDkCreditorIdList());
+      result = result && getOcrLineSePaymentIdList()
+          .equals(other.getOcrLineSePaymentIdList());
+      result = result && getOcrLineSeBankgiroCreditorIdList()
+          .equals(other.getOcrLineSeBankgiroCreditorIdList());
+      result = result && getOcrLineSePlusgiroCreditorIdList()
+          .equals(other.getOcrLineSePlusgiroCreditorIdList());
+      result = result && getOcrLineNoPaymentIdList()
+          .equals(other.getOcrLineNoPaymentIdList());
+      result = result && getOcrLineFiPaymentIdList()
+          .equals(other.getOcrLineFiPaymentIdList());
+      result = result && getOcrLineNlPaymentIdList()
+          .equals(other.getOcrLineNlPaymentIdList());
+      result = result && getSupplierCorporateIdList()
+          .equals(other.getSupplierCorporateIdList());
+      result = result && getSupplierCountryCodeList()
+          .equals(other.getSupplierCountryCodeList());
+      result = result && getInvoiceNumberList()
+          .equals(other.getInvoiceNumberList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getTotalInclVatCount() > 0) {
+        hash = (37 * hash) + TOTAL_INCL_VAT_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalInclVatList().hashCode();
+      }
+      if (getTotalVatCount() > 0) {
+        hash = (37 * hash) + TOTAL_VAT_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalVatList().hashCode();
+      }
+      if (getTotalExclVatCount() > 0) {
+        hash = (37 * hash) + TOTAL_EXCL_VAT_FIELD_NUMBER;
+        hash = (53 * hash) + getTotalExclVatList().hashCode();
+      }
+      if (getOrderDateCount() > 0) {
+        hash = (37 * hash) + ORDER_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getOrderDateList().hashCode();
+      }
+      if (getPaymentDueDateCount() > 0) {
+        hash = (37 * hash) + PAYMENT_DUE_DATE_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentDueDateList().hashCode();
+      }
+      if (getDocumentTypeCount() > 0) {
+        hash = (37 * hash) + DOCUMENT_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentTypeList().hashCode();
+      }
+      if (getCurrencyCount() > 0) {
+        hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrencyList().hashCode();
+      }
+      if (getCreditCardLastFourCount() > 0) {
+        hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCardLastFourList().hashCode();
+      }
+      if (getPaymentMethodCount() > 0) {
+        hash = (37 * hash) + PAYMENT_METHOD_FIELD_NUMBER;
+        hash = (53 * hash) + getPaymentMethodList().hashCode();
+      }
+      if (getOcrLineDkTypeCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_DK_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineDkTypeList().hashCode();
+      }
+      if (getOcrLineDkPaymentIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineDkPaymentIdList().hashCode();
+      }
+      if (getOcrLineDkCreditorIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineDkCreditorIdList().hashCode();
+      }
+      if (getOcrLineSePaymentIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineSePaymentIdList().hashCode();
+      }
+      if (getOcrLineSeBankgiroCreditorIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineSeBankgiroCreditorIdList().hashCode();
+      }
+      if (getOcrLineSePlusgiroCreditorIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineSePlusgiroCreditorIdList().hashCode();
+      }
+      if (getOcrLineNoPaymentIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineNoPaymentIdList().hashCode();
+      }
+      if (getOcrLineFiPaymentIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineFiPaymentIdList().hashCode();
+      }
+      if (getOcrLineNlPaymentIdCount() > 0) {
+        hash = (37 * hash) + OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getOcrLineNlPaymentIdList().hashCode();
+      }
+      if (getSupplierCorporateIdCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_CORPORATE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierCorporateIdList().hashCode();
+      }
+      if (getSupplierCountryCodeCount() > 0) {
+        hash = (37 * hash) + SUPPLIER_COUNTRY_CODE_FIELD_NUMBER;
+        hash = (53 * hash) + getSupplierCountryCodeList().hashCode();
+      }
+      if (getInvoiceNumberCount() > 0) {
+        hash = (37 * hash) + INVOICE_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getInvoiceNumberList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.PredictionValues prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.PredictionValues}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.PredictionValues)
+        ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PredictionValues_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.PredictionValues.class, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.PredictionValues.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getTotalInclVatFieldBuilder();
+          getTotalVatFieldBuilder();
+          getTotalExclVatFieldBuilder();
+          getOrderDateFieldBuilder();
+          getPaymentDueDateFieldBuilder();
+          getDocumentTypeFieldBuilder();
+          getCurrencyFieldBuilder();
+          getCreditCardLastFourFieldBuilder();
+          getPaymentMethodFieldBuilder();
+          getOcrLineDkTypeFieldBuilder();
+          getOcrLineDkPaymentIdFieldBuilder();
+          getOcrLineDkCreditorIdFieldBuilder();
+          getOcrLineSePaymentIdFieldBuilder();
+          getOcrLineSeBankgiroCreditorIdFieldBuilder();
+          getOcrLineSePlusgiroCreditorIdFieldBuilder();
+          getOcrLineNoPaymentIdFieldBuilder();
+          getOcrLineFiPaymentIdFieldBuilder();
+          getOcrLineNlPaymentIdFieldBuilder();
+          getSupplierCorporateIdFieldBuilder();
+          getSupplierCountryCodeFieldBuilder();
+          getInvoiceNumberFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (totalInclVatBuilder_ == null) {
+          totalInclVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          totalInclVatBuilder_.clear();
+        }
+        if (totalVatBuilder_ == null) {
+          totalVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          totalVatBuilder_.clear();
+        }
+        if (totalExclVatBuilder_ == null) {
+          totalExclVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          totalExclVatBuilder_.clear();
+        }
+        if (orderDateBuilder_ == null) {
+          orderDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          orderDateBuilder_.clear();
+        }
+        if (paymentDueDateBuilder_ == null) {
+          paymentDueDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          paymentDueDateBuilder_.clear();
+        }
+        if (documentTypeBuilder_ == null) {
+          documentType_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+        } else {
+          documentTypeBuilder_.clear();
+        }
+        if (currencyBuilder_ == null) {
+          currency_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+        } else {
+          currencyBuilder_.clear();
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          creditCardLastFourBuilder_.clear();
+        }
+        if (paymentMethodBuilder_ == null) {
+          paymentMethod_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          paymentMethodBuilder_.clear();
+        }
+        if (ocrLineDkTypeBuilder_ == null) {
+          ocrLineDkType_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          ocrLineDkTypeBuilder_.clear();
+        }
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ocrLineDkPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          ocrLineDkPaymentIdBuilder_.clear();
+        }
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ocrLineDkCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          ocrLineDkCreditorIdBuilder_.clear();
+        }
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ocrLineSePaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+        } else {
+          ocrLineSePaymentIdBuilder_.clear();
+        }
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00002000);
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.clear();
+        }
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.clear();
+        }
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ocrLineNoPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+        } else {
+          ocrLineNoPaymentIdBuilder_.clear();
+        }
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ocrLineFiPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+        } else {
+          ocrLineFiPaymentIdBuilder_.clear();
+        }
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ocrLineNlPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00020000);
+        } else {
+          ocrLineNlPaymentIdBuilder_.clear();
+        }
+        if (supplierCorporateIdBuilder_ == null) {
+          supplierCorporateId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00040000);
+        } else {
+          supplierCorporateIdBuilder_.clear();
+        }
+        if (supplierCountryCodeBuilder_ == null) {
+          supplierCountryCode_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00080000);
+        } else {
+          supplierCountryCodeBuilder_.clear();
+        }
+        if (invoiceNumberBuilder_ == null) {
+          invoiceNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00100000);
+        } else {
+          invoiceNumberBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues build() {
+        ssn.dataservice.v1alpha1.Dataservice.PredictionValues result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.PredictionValues result = new ssn.dataservice.v1alpha1.Dataservice.PredictionValues(this);
+        int from_bitField0_ = bitField0_;
+        if (totalInclVatBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.totalInclVat_ = totalInclVat_;
+        } else {
+          result.totalInclVat_ = totalInclVatBuilder_.build();
+        }
+        if (totalVatBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            totalVat_ = java.util.Collections.unmodifiableList(totalVat_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.totalVat_ = totalVat_;
+        } else {
+          result.totalVat_ = totalVatBuilder_.build();
+        }
+        if (totalExclVatBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            totalExclVat_ = java.util.Collections.unmodifiableList(totalExclVat_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.totalExclVat_ = totalExclVat_;
+        } else {
+          result.totalExclVat_ = totalExclVatBuilder_.build();
+        }
+        if (orderDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.orderDate_ = orderDate_;
+        } else {
+          result.orderDate_ = orderDateBuilder_.build();
+        }
+        if (paymentDueDateBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            paymentDueDate_ = java.util.Collections.unmodifiableList(paymentDueDate_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.paymentDueDate_ = paymentDueDate_;
+        } else {
+          result.paymentDueDate_ = paymentDueDateBuilder_.build();
+        }
+        if (documentTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020)) {
+            documentType_ = java.util.Collections.unmodifiableList(documentType_);
+            bitField0_ = (bitField0_ & ~0x00000020);
+          }
+          result.documentType_ = documentType_;
+        } else {
+          result.documentType_ = documentTypeBuilder_.build();
+        }
+        if (currencyBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040)) {
+            currency_ = java.util.Collections.unmodifiableList(currency_);
+            bitField0_ = (bitField0_ & ~0x00000040);
+          }
+          result.currency_ = currency_;
+        } else {
+          result.currency_ = currencyBuilder_.build();
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            creditCardLastFour_ = java.util.Collections.unmodifiableList(creditCardLastFour_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.creditCardLastFour_ = creditCardLastFour_;
+        } else {
+          result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
+        }
+        if (paymentMethodBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+            paymentMethod_ = java.util.Collections.unmodifiableList(paymentMethod_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.paymentMethod_ = paymentMethod_;
+        } else {
+          result.paymentMethod_ = paymentMethodBuilder_.build();
+        }
+        if (ocrLineDkTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+            ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.ocrLineDkType_ = ocrLineDkType_;
+        } else {
+          result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
+        }
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
+        } else {
+          result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
+        }
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
+        } else {
+          result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
+        }
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000)) {
+            ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
+            bitField0_ = (bitField0_ & ~0x00001000);
+          }
+          result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
+        } else {
+          result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
+        }
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) == 0x00002000)) {
+            ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
+            bitField0_ = (bitField0_ & ~0x00002000);
+          }
+          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
+        } else {
+          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
+        }
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+            ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
+            bitField0_ = (bitField0_ & ~0x00004000);
+          }
+          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
+        } else {
+          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
+        }
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
+            bitField0_ = (bitField0_ & ~0x00008000);
+          }
+          result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
+        } else {
+          result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
+        }
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+            ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
+            bitField0_ = (bitField0_ & ~0x00010000);
+          }
+          result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
+        } else {
+          result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
+        }
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+            ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
+            bitField0_ = (bitField0_ & ~0x00020000);
+          }
+          result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
+        } else {
+          result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
+        }
+        if (supplierCorporateIdBuilder_ == null) {
+          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+            supplierCorporateId_ = java.util.Collections.unmodifiableList(supplierCorporateId_);
+            bitField0_ = (bitField0_ & ~0x00040000);
+          }
+          result.supplierCorporateId_ = supplierCorporateId_;
+        } else {
+          result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
+        }
+        if (supplierCountryCodeBuilder_ == null) {
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+            supplierCountryCode_ = java.util.Collections.unmodifiableList(supplierCountryCode_);
+            bitField0_ = (bitField0_ & ~0x00080000);
+          }
+          result.supplierCountryCode_ = supplierCountryCode_;
+        } else {
+          result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
+        }
+        if (invoiceNumberBuilder_ == null) {
+          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+            invoiceNumber_ = java.util.Collections.unmodifiableList(invoiceNumber_);
+            bitField0_ = (bitField0_ & ~0x00100000);
+          }
+          result.invoiceNumber_ = invoiceNumber_;
+        } else {
+          result.invoiceNumber_ = invoiceNumberBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.PredictionValues) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.PredictionValues)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.PredictionValues other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance()) return this;
+        if (totalInclVatBuilder_ == null) {
+          if (!other.totalInclVat_.isEmpty()) {
+            if (totalInclVat_.isEmpty()) {
+              totalInclVat_ = other.totalInclVat_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureTotalInclVatIsMutable();
+              totalInclVat_.addAll(other.totalInclVat_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalInclVat_.isEmpty()) {
+            if (totalInclVatBuilder_.isEmpty()) {
+              totalInclVatBuilder_.dispose();
+              totalInclVatBuilder_ = null;
+              totalInclVat_ = other.totalInclVat_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              totalInclVatBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalInclVatFieldBuilder() : null;
+            } else {
+              totalInclVatBuilder_.addAllMessages(other.totalInclVat_);
+            }
+          }
+        }
+        if (totalVatBuilder_ == null) {
+          if (!other.totalVat_.isEmpty()) {
+            if (totalVat_.isEmpty()) {
+              totalVat_ = other.totalVat_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTotalVatIsMutable();
+              totalVat_.addAll(other.totalVat_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalVat_.isEmpty()) {
+            if (totalVatBuilder_.isEmpty()) {
+              totalVatBuilder_.dispose();
+              totalVatBuilder_ = null;
+              totalVat_ = other.totalVat_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              totalVatBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalVatFieldBuilder() : null;
+            } else {
+              totalVatBuilder_.addAllMessages(other.totalVat_);
+            }
+          }
+        }
+        if (totalExclVatBuilder_ == null) {
+          if (!other.totalExclVat_.isEmpty()) {
+            if (totalExclVat_.isEmpty()) {
+              totalExclVat_ = other.totalExclVat_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTotalExclVatIsMutable();
+              totalExclVat_.addAll(other.totalExclVat_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.totalExclVat_.isEmpty()) {
+            if (totalExclVatBuilder_.isEmpty()) {
+              totalExclVatBuilder_.dispose();
+              totalExclVatBuilder_ = null;
+              totalExclVat_ = other.totalExclVat_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              totalExclVatBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTotalExclVatFieldBuilder() : null;
+            } else {
+              totalExclVatBuilder_.addAllMessages(other.totalExclVat_);
+            }
+          }
+        }
+        if (orderDateBuilder_ == null) {
+          if (!other.orderDate_.isEmpty()) {
+            if (orderDate_.isEmpty()) {
+              orderDate_ = other.orderDate_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureOrderDateIsMutable();
+              orderDate_.addAll(other.orderDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.orderDate_.isEmpty()) {
+            if (orderDateBuilder_.isEmpty()) {
+              orderDateBuilder_.dispose();
+              orderDateBuilder_ = null;
+              orderDate_ = other.orderDate_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              orderDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOrderDateFieldBuilder() : null;
+            } else {
+              orderDateBuilder_.addAllMessages(other.orderDate_);
+            }
+          }
+        }
+        if (paymentDueDateBuilder_ == null) {
+          if (!other.paymentDueDate_.isEmpty()) {
+            if (paymentDueDate_.isEmpty()) {
+              paymentDueDate_ = other.paymentDueDate_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensurePaymentDueDateIsMutable();
+              paymentDueDate_.addAll(other.paymentDueDate_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.paymentDueDate_.isEmpty()) {
+            if (paymentDueDateBuilder_.isEmpty()) {
+              paymentDueDateBuilder_.dispose();
+              paymentDueDateBuilder_ = null;
+              paymentDueDate_ = other.paymentDueDate_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              paymentDueDateBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPaymentDueDateFieldBuilder() : null;
+            } else {
+              paymentDueDateBuilder_.addAllMessages(other.paymentDueDate_);
+            }
+          }
+        }
+        if (documentTypeBuilder_ == null) {
+          if (!other.documentType_.isEmpty()) {
+            if (documentType_.isEmpty()) {
+              documentType_ = other.documentType_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+            } else {
+              ensureDocumentTypeIsMutable();
+              documentType_.addAll(other.documentType_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.documentType_.isEmpty()) {
+            if (documentTypeBuilder_.isEmpty()) {
+              documentTypeBuilder_.dispose();
+              documentTypeBuilder_ = null;
+              documentType_ = other.documentType_;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              documentTypeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDocumentTypeFieldBuilder() : null;
+            } else {
+              documentTypeBuilder_.addAllMessages(other.documentType_);
+            }
+          }
+        }
+        if (currencyBuilder_ == null) {
+          if (!other.currency_.isEmpty()) {
+            if (currency_.isEmpty()) {
+              currency_ = other.currency_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+            } else {
+              ensureCurrencyIsMutable();
+              currency_.addAll(other.currency_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.currency_.isEmpty()) {
+            if (currencyBuilder_.isEmpty()) {
+              currencyBuilder_.dispose();
+              currencyBuilder_ = null;
+              currency_ = other.currency_;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              currencyBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCurrencyFieldBuilder() : null;
+            } else {
+              currencyBuilder_.addAllMessages(other.currency_);
+            }
+          }
+        }
+        if (creditCardLastFourBuilder_ == null) {
+          if (!other.creditCardLastFour_.isEmpty()) {
+            if (creditCardLastFour_.isEmpty()) {
+              creditCardLastFour_ = other.creditCardLastFour_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureCreditCardLastFourIsMutable();
+              creditCardLastFour_.addAll(other.creditCardLastFour_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.creditCardLastFour_.isEmpty()) {
+            if (creditCardLastFourBuilder_.isEmpty()) {
+              creditCardLastFourBuilder_.dispose();
+              creditCardLastFourBuilder_ = null;
+              creditCardLastFour_ = other.creditCardLastFour_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              creditCardLastFourBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCreditCardLastFourFieldBuilder() : null;
+            } else {
+              creditCardLastFourBuilder_.addAllMessages(other.creditCardLastFour_);
+            }
+          }
+        }
+        if (paymentMethodBuilder_ == null) {
+          if (!other.paymentMethod_.isEmpty()) {
+            if (paymentMethod_.isEmpty()) {
+              paymentMethod_ = other.paymentMethod_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensurePaymentMethodIsMutable();
+              paymentMethod_.addAll(other.paymentMethod_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.paymentMethod_.isEmpty()) {
+            if (paymentMethodBuilder_.isEmpty()) {
+              paymentMethodBuilder_.dispose();
+              paymentMethodBuilder_ = null;
+              paymentMethod_ = other.paymentMethod_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              paymentMethodBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPaymentMethodFieldBuilder() : null;
+            } else {
+              paymentMethodBuilder_.addAllMessages(other.paymentMethod_);
+            }
+          }
+        }
+        if (ocrLineDkTypeBuilder_ == null) {
+          if (!other.ocrLineDkType_.isEmpty()) {
+            if (ocrLineDkType_.isEmpty()) {
+              ocrLineDkType_ = other.ocrLineDkType_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureOcrLineDkTypeIsMutable();
+              ocrLineDkType_.addAll(other.ocrLineDkType_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineDkType_.isEmpty()) {
+            if (ocrLineDkTypeBuilder_.isEmpty()) {
+              ocrLineDkTypeBuilder_.dispose();
+              ocrLineDkTypeBuilder_ = null;
+              ocrLineDkType_ = other.ocrLineDkType_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              ocrLineDkTypeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineDkTypeFieldBuilder() : null;
+            } else {
+              ocrLineDkTypeBuilder_.addAllMessages(other.ocrLineDkType_);
+            }
+          }
+        }
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          if (!other.ocrLineDkPaymentId_.isEmpty()) {
+            if (ocrLineDkPaymentId_.isEmpty()) {
+              ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensureOcrLineDkPaymentIdIsMutable();
+              ocrLineDkPaymentId_.addAll(other.ocrLineDkPaymentId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineDkPaymentId_.isEmpty()) {
+            if (ocrLineDkPaymentIdBuilder_.isEmpty()) {
+              ocrLineDkPaymentIdBuilder_.dispose();
+              ocrLineDkPaymentIdBuilder_ = null;
+              ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              ocrLineDkPaymentIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineDkPaymentIdFieldBuilder() : null;
+            } else {
+              ocrLineDkPaymentIdBuilder_.addAllMessages(other.ocrLineDkPaymentId_);
+            }
+          }
+        }
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          if (!other.ocrLineDkCreditorId_.isEmpty()) {
+            if (ocrLineDkCreditorId_.isEmpty()) {
+              ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureOcrLineDkCreditorIdIsMutable();
+              ocrLineDkCreditorId_.addAll(other.ocrLineDkCreditorId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineDkCreditorId_.isEmpty()) {
+            if (ocrLineDkCreditorIdBuilder_.isEmpty()) {
+              ocrLineDkCreditorIdBuilder_.dispose();
+              ocrLineDkCreditorIdBuilder_ = null;
+              ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              ocrLineDkCreditorIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineDkCreditorIdFieldBuilder() : null;
+            } else {
+              ocrLineDkCreditorIdBuilder_.addAllMessages(other.ocrLineDkCreditorId_);
+            }
+          }
+        }
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          if (!other.ocrLineSePaymentId_.isEmpty()) {
+            if (ocrLineSePaymentId_.isEmpty()) {
+              ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+            } else {
+              ensureOcrLineSePaymentIdIsMutable();
+              ocrLineSePaymentId_.addAll(other.ocrLineSePaymentId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineSePaymentId_.isEmpty()) {
+            if (ocrLineSePaymentIdBuilder_.isEmpty()) {
+              ocrLineSePaymentIdBuilder_.dispose();
+              ocrLineSePaymentIdBuilder_ = null;
+              ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
+              bitField0_ = (bitField0_ & ~0x00001000);
+              ocrLineSePaymentIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineSePaymentIdFieldBuilder() : null;
+            } else {
+              ocrLineSePaymentIdBuilder_.addAllMessages(other.ocrLineSePaymentId_);
+            }
+          }
+        }
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          if (!other.ocrLineSeBankgiroCreditorId_.isEmpty()) {
+            if (ocrLineSeBankgiroCreditorId_.isEmpty()) {
+              ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+            } else {
+              ensureOcrLineSeBankgiroCreditorIdIsMutable();
+              ocrLineSeBankgiroCreditorId_.addAll(other.ocrLineSeBankgiroCreditorId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineSeBankgiroCreditorId_.isEmpty()) {
+            if (ocrLineSeBankgiroCreditorIdBuilder_.isEmpty()) {
+              ocrLineSeBankgiroCreditorIdBuilder_.dispose();
+              ocrLineSeBankgiroCreditorIdBuilder_ = null;
+              ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00002000);
+              ocrLineSeBankgiroCreditorIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineSeBankgiroCreditorIdFieldBuilder() : null;
+            } else {
+              ocrLineSeBankgiroCreditorIdBuilder_.addAllMessages(other.ocrLineSeBankgiroCreditorId_);
+            }
+          }
+        }
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          if (!other.ocrLineSePlusgiroCreditorId_.isEmpty()) {
+            if (ocrLineSePlusgiroCreditorId_.isEmpty()) {
+              ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+            } else {
+              ensureOcrLineSePlusgiroCreditorIdIsMutable();
+              ocrLineSePlusgiroCreditorId_.addAll(other.ocrLineSePlusgiroCreditorId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineSePlusgiroCreditorId_.isEmpty()) {
+            if (ocrLineSePlusgiroCreditorIdBuilder_.isEmpty()) {
+              ocrLineSePlusgiroCreditorIdBuilder_.dispose();
+              ocrLineSePlusgiroCreditorIdBuilder_ = null;
+              ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
+              bitField0_ = (bitField0_ & ~0x00004000);
+              ocrLineSePlusgiroCreditorIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineSePlusgiroCreditorIdFieldBuilder() : null;
+            } else {
+              ocrLineSePlusgiroCreditorIdBuilder_.addAllMessages(other.ocrLineSePlusgiroCreditorId_);
+            }
+          }
+        }
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          if (!other.ocrLineNoPaymentId_.isEmpty()) {
+            if (ocrLineNoPaymentId_.isEmpty()) {
+              ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+            } else {
+              ensureOcrLineNoPaymentIdIsMutable();
+              ocrLineNoPaymentId_.addAll(other.ocrLineNoPaymentId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineNoPaymentId_.isEmpty()) {
+            if (ocrLineNoPaymentIdBuilder_.isEmpty()) {
+              ocrLineNoPaymentIdBuilder_.dispose();
+              ocrLineNoPaymentIdBuilder_ = null;
+              ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00008000);
+              ocrLineNoPaymentIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineNoPaymentIdFieldBuilder() : null;
+            } else {
+              ocrLineNoPaymentIdBuilder_.addAllMessages(other.ocrLineNoPaymentId_);
+            }
+          }
+        }
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          if (!other.ocrLineFiPaymentId_.isEmpty()) {
+            if (ocrLineFiPaymentId_.isEmpty()) {
+              ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              ensureOcrLineFiPaymentIdIsMutable();
+              ocrLineFiPaymentId_.addAll(other.ocrLineFiPaymentId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineFiPaymentId_.isEmpty()) {
+            if (ocrLineFiPaymentIdBuilder_.isEmpty()) {
+              ocrLineFiPaymentIdBuilder_.dispose();
+              ocrLineFiPaymentIdBuilder_ = null;
+              ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00010000);
+              ocrLineFiPaymentIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineFiPaymentIdFieldBuilder() : null;
+            } else {
+              ocrLineFiPaymentIdBuilder_.addAllMessages(other.ocrLineFiPaymentId_);
+            }
+          }
+        }
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          if (!other.ocrLineNlPaymentId_.isEmpty()) {
+            if (ocrLineNlPaymentId_.isEmpty()) {
+              ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+            } else {
+              ensureOcrLineNlPaymentIdIsMutable();
+              ocrLineNlPaymentId_.addAll(other.ocrLineNlPaymentId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.ocrLineNlPaymentId_.isEmpty()) {
+            if (ocrLineNlPaymentIdBuilder_.isEmpty()) {
+              ocrLineNlPaymentIdBuilder_.dispose();
+              ocrLineNlPaymentIdBuilder_ = null;
+              ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
+              bitField0_ = (bitField0_ & ~0x00020000);
+              ocrLineNlPaymentIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getOcrLineNlPaymentIdFieldBuilder() : null;
+            } else {
+              ocrLineNlPaymentIdBuilder_.addAllMessages(other.ocrLineNlPaymentId_);
+            }
+          }
+        }
+        if (supplierCorporateIdBuilder_ == null) {
+          if (!other.supplierCorporateId_.isEmpty()) {
+            if (supplierCorporateId_.isEmpty()) {
+              supplierCorporateId_ = other.supplierCorporateId_;
+              bitField0_ = (bitField0_ & ~0x00040000);
+            } else {
+              ensureSupplierCorporateIdIsMutable();
+              supplierCorporateId_.addAll(other.supplierCorporateId_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierCorporateId_.isEmpty()) {
+            if (supplierCorporateIdBuilder_.isEmpty()) {
+              supplierCorporateIdBuilder_.dispose();
+              supplierCorporateIdBuilder_ = null;
+              supplierCorporateId_ = other.supplierCorporateId_;
+              bitField0_ = (bitField0_ & ~0x00040000);
+              supplierCorporateIdBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierCorporateIdFieldBuilder() : null;
+            } else {
+              supplierCorporateIdBuilder_.addAllMessages(other.supplierCorporateId_);
+            }
+          }
+        }
+        if (supplierCountryCodeBuilder_ == null) {
+          if (!other.supplierCountryCode_.isEmpty()) {
+            if (supplierCountryCode_.isEmpty()) {
+              supplierCountryCode_ = other.supplierCountryCode_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+            } else {
+              ensureSupplierCountryCodeIsMutable();
+              supplierCountryCode_.addAll(other.supplierCountryCode_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.supplierCountryCode_.isEmpty()) {
+            if (supplierCountryCodeBuilder_.isEmpty()) {
+              supplierCountryCodeBuilder_.dispose();
+              supplierCountryCodeBuilder_ = null;
+              supplierCountryCode_ = other.supplierCountryCode_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+              supplierCountryCodeBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getSupplierCountryCodeFieldBuilder() : null;
+            } else {
+              supplierCountryCodeBuilder_.addAllMessages(other.supplierCountryCode_);
+            }
+          }
+        }
+        if (invoiceNumberBuilder_ == null) {
+          if (!other.invoiceNumber_.isEmpty()) {
+            if (invoiceNumber_.isEmpty()) {
+              invoiceNumber_ = other.invoiceNumber_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+            } else {
+              ensureInvoiceNumberIsMutable();
+              invoiceNumber_.addAll(other.invoiceNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.invoiceNumber_.isEmpty()) {
+            if (invoiceNumberBuilder_.isEmpty()) {
+              invoiceNumberBuilder_.dispose();
+              invoiceNumberBuilder_ = null;
+              invoiceNumber_ = other.invoiceNumber_;
+              bitField0_ = (bitField0_ & ~0x00100000);
+              invoiceNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getInvoiceNumberFieldBuilder() : null;
+            } else {
+              invoiceNumberBuilder_.addAllMessages(other.invoiceNumber_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.PredictionValues parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.PredictionValues) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalInclVatIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalInclVat_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalInclVatBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue> getTotalInclVatList() {
+        if (totalInclVatBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalInclVat_);
+        } else {
+          return totalInclVatBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public int getTotalInclVatCount() {
+        if (totalInclVatBuilder_ == null) {
+          return totalInclVat_.size();
+        } else {
+          return totalInclVatBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public com.google.protobuf.DoubleValue getTotalInclVat(int index) {
+        if (totalInclVatBuilder_ == null) {
+          return totalInclVat_.get(index);
+        } else {
+          return totalInclVatBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder setTotalInclVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalInclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.set(index, value);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder setTotalInclVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalInclVatBuilder_ == null) {
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalInclVatBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder addTotalInclVat(com.google.protobuf.DoubleValue value) {
+        if (totalInclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.add(value);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder addTotalInclVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalInclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.add(index, value);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder addTotalInclVat(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalInclVatBuilder_ == null) {
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalInclVatBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder addTotalInclVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalInclVatBuilder_ == null) {
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalInclVatBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder addAllTotalInclVat(
+          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+        if (totalInclVatBuilder_ == null) {
+          ensureTotalInclVatIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalInclVat_);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder clearTotalInclVat() {
+        if (totalInclVatBuilder_ == null) {
+          totalInclVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public Builder removeTotalInclVat(int index) {
+        if (totalInclVatBuilder_ == null) {
+          ensureTotalInclVatIsMutable();
+          totalInclVat_.remove(index);
+          onChanged();
+        } else {
+          totalInclVatBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getTotalInclVatBuilder(
+          int index) {
+        return getTotalInclVatFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+          int index) {
+        if (totalInclVatBuilder_ == null) {
+          return totalInclVat_.get(index);  } else {
+          return totalInclVatBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+           getTotalInclVatOrBuilderList() {
+        if (totalInclVatBuilder_ != null) {
+          return totalInclVatBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalInclVat_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalInclVatBuilder() {
+        return getTotalInclVatFieldBuilder().addBuilder(
+            com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalInclVatBuilder(
+          int index) {
+        return getTotalInclVatFieldBuilder().addBuilder(
+            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+           getTotalInclVatBuilderList() {
+        return getTotalInclVatFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getTotalInclVatFieldBuilder() {
+        if (totalInclVatBuilder_ == null) {
+          totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  totalInclVat_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          totalInclVat_ = null;
+        }
+        return totalInclVatBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.DoubleValue> totalVat_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalVatIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalVat_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalVatBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue> getTotalVatList() {
+        if (totalVatBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalVat_);
+        } else {
+          return totalVatBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public int getTotalVatCount() {
+        if (totalVatBuilder_ == null) {
+          return totalVat_.size();
+        } else {
+          return totalVatBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public com.google.protobuf.DoubleValue getTotalVat(int index) {
+        if (totalVatBuilder_ == null) {
+          return totalVat_.get(index);
+        } else {
+          return totalVatBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder setTotalVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalVatIsMutable();
+          totalVat_.set(index, value);
+          onChanged();
+        } else {
+          totalVatBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder setTotalVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalVatBuilder_ == null) {
+          ensureTotalVatIsMutable();
+          totalVat_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalVatBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder addTotalVat(com.google.protobuf.DoubleValue value) {
+        if (totalVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalVatIsMutable();
+          totalVat_.add(value);
+          onChanged();
+        } else {
+          totalVatBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder addTotalVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalVatIsMutable();
+          totalVat_.add(index, value);
+          onChanged();
+        } else {
+          totalVatBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder addTotalVat(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalVatBuilder_ == null) {
+          ensureTotalVatIsMutable();
+          totalVat_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalVatBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder addTotalVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalVatBuilder_ == null) {
+          ensureTotalVatIsMutable();
+          totalVat_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalVatBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder addAllTotalVat(
+          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+        if (totalVatBuilder_ == null) {
+          ensureTotalVatIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalVat_);
+          onChanged();
+        } else {
+          totalVatBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder clearTotalVat() {
+        if (totalVatBuilder_ == null) {
+          totalVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          totalVatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public Builder removeTotalVat(int index) {
+        if (totalVatBuilder_ == null) {
+          ensureTotalVatIsMutable();
+          totalVat_.remove(index);
+          onChanged();
+        } else {
+          totalVatBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getTotalVatBuilder(
+          int index) {
+        return getTotalVatFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+          int index) {
+        if (totalVatBuilder_ == null) {
+          return totalVat_.get(index);  } else {
+          return totalVatBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+           getTotalVatOrBuilderList() {
+        if (totalVatBuilder_ != null) {
+          return totalVatBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalVat_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalVatBuilder() {
+        return getTotalVatFieldBuilder().addBuilder(
+            com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalVatBuilder(
+          int index) {
+        return getTotalVatFieldBuilder().addBuilder(
+            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+           getTotalVatBuilderList() {
+        return getTotalVatFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getTotalVatFieldBuilder() {
+        if (totalVatBuilder_ == null) {
+          totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  totalVat_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          totalVat_ = null;
+        }
+        return totalVatBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_ =
+        java.util.Collections.emptyList();
+      private void ensureTotalExclVatIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalExclVat_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalExclVatBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue> getTotalExclVatList() {
+        if (totalExclVatBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(totalExclVat_);
+        } else {
+          return totalExclVatBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public int getTotalExclVatCount() {
+        if (totalExclVatBuilder_ == null) {
+          return totalExclVat_.size();
+        } else {
+          return totalExclVatBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue getTotalExclVat(int index) {
+        if (totalExclVatBuilder_ == null) {
+          return totalExclVat_.get(index);
+        } else {
+          return totalExclVatBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder setTotalExclVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalExclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.set(index, value);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder setTotalExclVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalExclVatBuilder_ == null) {
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExclVatBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder addTotalExclVat(com.google.protobuf.DoubleValue value) {
+        if (totalExclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.add(value);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder addTotalExclVat(
+          int index, com.google.protobuf.DoubleValue value) {
+        if (totalExclVatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.add(index, value);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder addTotalExclVat(
+          com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalExclVatBuilder_ == null) {
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.add(builderForValue.build());
+          onChanged();
+        } else {
+          totalExclVatBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder addTotalExclVat(
+          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+        if (totalExclVatBuilder_ == null) {
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          totalExclVatBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder addAllTotalExclVat(
+          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+        if (totalExclVatBuilder_ == null) {
+          ensureTotalExclVatIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, totalExclVat_);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder clearTotalExclVat() {
+        if (totalExclVatBuilder_ == null) {
+          totalExclVat_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public Builder removeTotalExclVat(int index) {
+        if (totalExclVatBuilder_ == null) {
+          ensureTotalExclVatIsMutable();
+          totalExclVat_.remove(index);
+          onChanged();
+        } else {
+          totalExclVatBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder getTotalExclVatBuilder(
+          int index) {
+        return getTotalExclVatFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+          int index) {
+        if (totalExclVatBuilder_ == null) {
+          return totalExclVat_.get(index);  } else {
+          return totalExclVatBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+           getTotalExclVatOrBuilderList() {
+        if (totalExclVatBuilder_ != null) {
+          return totalExclVatBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(totalExclVat_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalExclVatBuilder() {
+        return getTotalExclVatFieldBuilder().addBuilder(
+            com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public com.google.protobuf.DoubleValue.Builder addTotalExclVatBuilder(
+          int index) {
+        return getTotalExclVatFieldBuilder().addBuilder(
+            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       */
+      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+           getTotalExclVatBuilderList() {
+        return getTotalExclVatFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          getTotalExclVatFieldBuilder() {
+        if (totalExclVatBuilder_ == null) {
+          totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+                  totalExclVat_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          totalExclVat_ = null;
+        }
+        return totalExclVatBuilder_;
+      }
+
+      private java.util.List<com.google.type.Date> orderDate_ =
+        java.util.Collections.emptyList();
+      private void ensureOrderDateIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          orderDate_ = new java.util.ArrayList<com.google.type.Date>(orderDate_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> orderDateBuilder_;
+
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date> getOrderDateList() {
+        if (orderDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(orderDate_);
+        } else {
+          return orderDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getOrderDateCount() {
+        if (orderDateBuilder_ == null) {
+          return orderDate_.size();
+        } else {
+          return orderDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date getOrderDate(int index) {
+        if (orderDateBuilder_ == null) {
+          return orderDate_.get(index);
+        } else {
+          return orderDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setOrderDate(
+          int index, com.google.type.Date value) {
+        if (orderDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderDateIsMutable();
+          orderDate_.set(index, value);
+          onChanged();
+        } else {
+          orderDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setOrderDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (orderDateBuilder_ == null) {
+          ensureOrderDateIsMutable();
+          orderDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addOrderDate(com.google.type.Date value) {
+        if (orderDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderDateIsMutable();
+          orderDate_.add(value);
+          onChanged();
+        } else {
+          orderDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addOrderDate(
+          int index, com.google.type.Date value) {
+        if (orderDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOrderDateIsMutable();
+          orderDate_.add(index, value);
+          onChanged();
+        } else {
+          orderDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addOrderDate(
+          com.google.type.Date.Builder builderForValue) {
+        if (orderDateBuilder_ == null) {
+          ensureOrderDateIsMutable();
+          orderDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          orderDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addOrderDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (orderDateBuilder_ == null) {
+          ensureOrderDateIsMutable();
+          orderDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          orderDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addAllOrderDate(
+          java.lang.Iterable<? extends com.google.type.Date> values) {
+        if (orderDateBuilder_ == null) {
+          ensureOrderDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, orderDate_);
+          onChanged();
+        } else {
+          orderDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearOrderDate() {
+        if (orderDateBuilder_ == null) {
+          orderDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          orderDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder removeOrderDate(int index) {
+        if (orderDateBuilder_ == null) {
+          ensureOrderDateIsMutable();
+          orderDate_.remove(index);
+          onChanged();
+        } else {
+          orderDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder getOrderDateBuilder(
+          int index) {
+        return getOrderDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.DateOrBuilder getOrderDateOrBuilder(
+          int index) {
+        if (orderDateBuilder_ == null) {
+          return orderDate_.get(index);  } else {
+          return orderDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<? extends com.google.type.DateOrBuilder> 
+           getOrderDateOrBuilderList() {
+        if (orderDateBuilder_ != null) {
+          return orderDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(orderDate_);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addOrderDateBuilder() {
+        return getOrderDateFieldBuilder().addBuilder(
+            com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addOrderDateBuilder(
+          int index) {
+        return getOrderDateFieldBuilder().addBuilder(
+            index, com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date order_date = 4 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date.Builder> 
+           getOrderDateBuilderList() {
+        return getOrderDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+          getOrderDateFieldBuilder() {
+        if (orderDateBuilder_ == null) {
+          orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                  orderDate_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          orderDate_ = null;
+        }
+        return orderDateBuilder_;
+      }
+
+      private java.util.List<com.google.type.Date> paymentDueDate_ =
+        java.util.Collections.emptyList();
+      private void ensurePaymentDueDateIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          paymentDueDate_ = new java.util.ArrayList<com.google.type.Date>(paymentDueDate_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> paymentDueDateBuilder_;
+
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date> getPaymentDueDateList() {
+        if (paymentDueDateBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(paymentDueDate_);
+        } else {
+          return paymentDueDateBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getPaymentDueDateCount() {
+        if (paymentDueDateBuilder_ == null) {
+          return paymentDueDate_.size();
+        } else {
+          return paymentDueDateBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date getPaymentDueDate(int index) {
+        if (paymentDueDateBuilder_ == null) {
+          return paymentDueDate_.get(index);
+        } else {
+          return paymentDueDateBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setPaymentDueDate(
+          int index, com.google.type.Date value) {
+        if (paymentDueDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.set(index, value);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setPaymentDueDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (paymentDueDateBuilder_ == null) {
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addPaymentDueDate(com.google.type.Date value) {
+        if (paymentDueDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.add(value);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addPaymentDueDate(
+          int index, com.google.type.Date value) {
+        if (paymentDueDateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.add(index, value);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addPaymentDueDate(
+          com.google.type.Date.Builder builderForValue) {
+        if (paymentDueDateBuilder_ == null) {
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.add(builderForValue.build());
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addPaymentDueDate(
+          int index, com.google.type.Date.Builder builderForValue) {
+        if (paymentDueDateBuilder_ == null) {
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addAllPaymentDueDate(
+          java.lang.Iterable<? extends com.google.type.Date> values) {
+        if (paymentDueDateBuilder_ == null) {
+          ensurePaymentDueDateIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, paymentDueDate_);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearPaymentDueDate() {
+        if (paymentDueDateBuilder_ == null) {
+          paymentDueDate_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder removePaymentDueDate(int index) {
+        if (paymentDueDateBuilder_ == null) {
+          ensurePaymentDueDateIsMutable();
+          paymentDueDate_.remove(index);
+          onChanged();
+        } else {
+          paymentDueDateBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder getPaymentDueDateBuilder(
+          int index) {
+        return getPaymentDueDateFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder(
+          int index) {
+        if (paymentDueDateBuilder_ == null) {
+          return paymentDueDate_.get(index);  } else {
+          return paymentDueDateBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<? extends com.google.type.DateOrBuilder> 
+           getPaymentDueDateOrBuilderList() {
+        if (paymentDueDateBuilder_ != null) {
+          return paymentDueDateBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(paymentDueDate_);
+        }
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addPaymentDueDateBuilder() {
+        return getPaymentDueDateFieldBuilder().addBuilder(
+            com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.type.Date.Builder addPaymentDueDateBuilder(
+          int index) {
+        return getPaymentDueDateFieldBuilder().addBuilder(
+            index, com.google.type.Date.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.type.Date payment_due_date = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<com.google.type.Date.Builder> 
+           getPaymentDueDateBuilderList() {
+        return getPaymentDueDateFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder> 
+          getPaymentDueDateFieldBuilder() {
+        if (paymentDueDateBuilder_ == null) {
+          paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.type.Date, com.google.type.Date.Builder, com.google.type.DateOrBuilder>(
+                  paymentDueDate_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          paymentDueDate_ = null;
+        }
+        return paymentDueDateBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> documentType_ =
+        java.util.Collections.emptyList();
+      private void ensureDocumentTypeIsMutable() {
+        if (!((bitField0_ & 0x00000020) == 0x00000020)) {
+          documentType_ = new java.util.ArrayList<com.google.protobuf.StringValue>(documentType_);
+          bitField0_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> documentTypeBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getDocumentTypeList() {
+        if (documentTypeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(documentType_);
+        } else {
+          return documentTypeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public int getDocumentTypeCount() {
+        if (documentTypeBuilder_ == null) {
+          return documentType_.size();
+        } else {
+          return documentTypeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public com.google.protobuf.StringValue getDocumentType(int index) {
+        if (documentTypeBuilder_ == null) {
+          return documentType_.get(index);
+        } else {
+          return documentTypeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder setDocumentType(
+          int index, com.google.protobuf.StringValue value) {
+        if (documentTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentTypeIsMutable();
+          documentType_.set(index, value);
+          onChanged();
+        } else {
+          documentTypeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder setDocumentType(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentTypeBuilder_ == null) {
+          ensureDocumentTypeIsMutable();
+          documentType_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentTypeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder addDocumentType(com.google.protobuf.StringValue value) {
+        if (documentTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentTypeIsMutable();
+          documentType_.add(value);
+          onChanged();
+        } else {
+          documentTypeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder addDocumentType(
+          int index, com.google.protobuf.StringValue value) {
+        if (documentTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDocumentTypeIsMutable();
+          documentType_.add(index, value);
+          onChanged();
+        } else {
+          documentTypeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder addDocumentType(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentTypeBuilder_ == null) {
+          ensureDocumentTypeIsMutable();
+          documentType_.add(builderForValue.build());
+          onChanged();
+        } else {
+          documentTypeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder addDocumentType(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (documentTypeBuilder_ == null) {
+          ensureDocumentTypeIsMutable();
+          documentType_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          documentTypeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder addAllDocumentType(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (documentTypeBuilder_ == null) {
+          ensureDocumentTypeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, documentType_);
+          onChanged();
+        } else {
+          documentTypeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder clearDocumentType() {
+        if (documentTypeBuilder_ == null) {
+          documentType_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000020);
+          onChanged();
+        } else {
+          documentTypeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public Builder removeDocumentType(int index) {
+        if (documentTypeBuilder_ == null) {
+          ensureDocumentTypeIsMutable();
+          documentType_.remove(index);
+          onChanged();
+        } else {
+          documentTypeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDocumentTypeBuilder(
+          int index) {
+        return getDocumentTypeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder(
+          int index) {
+        if (documentTypeBuilder_ == null) {
+          return documentType_.get(index);  } else {
+          return documentTypeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getDocumentTypeOrBuilderList() {
+        if (documentTypeBuilder_ != null) {
+          return documentTypeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(documentType_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addDocumentTypeBuilder() {
+        return getDocumentTypeFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addDocumentTypeBuilder(
+          int index) {
+        return getDocumentTypeFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue document_type = 6;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getDocumentTypeBuilderList() {
+        return getDocumentTypeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDocumentTypeFieldBuilder() {
+        if (documentTypeBuilder_ == null) {
+          documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  documentType_,
+                  ((bitField0_ & 0x00000020) == 0x00000020),
+                  getParentForChildren(),
+                  isClean());
+          documentType_ = null;
+        }
+        return documentTypeBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> currency_ =
+        java.util.Collections.emptyList();
+      private void ensureCurrencyIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          currency_ = new java.util.ArrayList<com.google.protobuf.StringValue>(currency_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getCurrencyList() {
+        if (currencyBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(currency_);
+        } else {
+          return currencyBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public int getCurrencyCount() {
+        if (currencyBuilder_ == null) {
+          return currency_.size();
+        } else {
+          return currencyBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public com.google.protobuf.StringValue getCurrency(int index) {
+        if (currencyBuilder_ == null) {
+          return currency_.get(index);
+        } else {
+          return currencyBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder setCurrency(
+          int index, com.google.protobuf.StringValue value) {
+        if (currencyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrencyIsMutable();
+          currency_.set(index, value);
+          onChanged();
+        } else {
+          currencyBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder setCurrency(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (currencyBuilder_ == null) {
+          ensureCurrencyIsMutable();
+          currency_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          currencyBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder addCurrency(com.google.protobuf.StringValue value) {
+        if (currencyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrencyIsMutable();
+          currency_.add(value);
+          onChanged();
+        } else {
+          currencyBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder addCurrency(
+          int index, com.google.protobuf.StringValue value) {
+        if (currencyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCurrencyIsMutable();
+          currency_.add(index, value);
+          onChanged();
+        } else {
+          currencyBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder addCurrency(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (currencyBuilder_ == null) {
+          ensureCurrencyIsMutable();
+          currency_.add(builderForValue.build());
+          onChanged();
+        } else {
+          currencyBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder addCurrency(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (currencyBuilder_ == null) {
+          ensureCurrencyIsMutable();
+          currency_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          currencyBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder addAllCurrency(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (currencyBuilder_ == null) {
+          ensureCurrencyIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, currency_);
+          onChanged();
+        } else {
+          currencyBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder clearCurrency() {
+        if (currencyBuilder_ == null) {
+          currency_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000040);
+          onChanged();
+        } else {
+          currencyBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public Builder removeCurrency(int index) {
+        if (currencyBuilder_ == null) {
+          ensureCurrencyIsMutable();
+          currency_.remove(index);
+          onChanged();
+        } else {
+          currencyBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCurrencyBuilder(
+          int index) {
+        return getCurrencyFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder(
+          int index) {
+        if (currencyBuilder_ == null) {
+          return currency_.get(index);  } else {
+          return currencyBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getCurrencyOrBuilderList() {
+        if (currencyBuilder_ != null) {
+          return currencyBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(currency_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCurrencyBuilder() {
+        return getCurrencyFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCurrencyBuilder(
+          int index) {
+        return getCurrencyFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue currency = 7;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getCurrencyBuilderList() {
+        return getCurrencyFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCurrencyFieldBuilder() {
+        if (currencyBuilder_ == null) {
+          currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  currency_,
+                  ((bitField0_ & 0x00000040) == 0x00000040),
+                  getParentForChildren(),
+                  isClean());
+          currency_ = null;
+        }
+        return currencyBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> creditCardLastFour_ =
+        java.util.Collections.emptyList();
+      private void ensureCreditCardLastFourIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.StringValue>(creditCardLastFour_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCardLastFourBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getCreditCardLastFourList() {
+        if (creditCardLastFourBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(creditCardLastFour_);
+        } else {
+          return creditCardLastFourBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public int getCreditCardLastFourCount() {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.size();
+        } else {
+          return creditCardLastFourBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public com.google.protobuf.StringValue getCreditCardLastFour(int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.get(index);
+        } else {
+          return creditCardLastFourBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder setCreditCardLastFour(
+          int index, com.google.protobuf.StringValue value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.set(index, value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder setCreditCardLastFour(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder addCreditCardLastFour(com.google.protobuf.StringValue value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder addCreditCardLastFour(
+          int index, com.google.protobuf.StringValue value) {
+        if (creditCardLastFourBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(index, value);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder addCreditCardLastFour(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder addCreditCardLastFour(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder addAllCreditCardLastFour(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, creditCardLastFour_);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder clearCreditCardLastFour() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFour_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public Builder removeCreditCardLastFour(int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          ensureCreditCardLastFourIsMutable();
+          creditCardLastFour_.remove(index);
+          onChanged();
+        } else {
+          creditCardLastFourBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCreditCardLastFourBuilder(
+          int index) {
+        return getCreditCardLastFourFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder(
+          int index) {
+        if (creditCardLastFourBuilder_ == null) {
+          return creditCardLastFour_.get(index);  } else {
+          return creditCardLastFourBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getCreditCardLastFourOrBuilderList() {
+        if (creditCardLastFourBuilder_ != null) {
+          return creditCardLastFourBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(creditCardLastFour_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCreditCardLastFourBuilder() {
+        return getCreditCardLastFourFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCreditCardLastFourBuilder(
+          int index) {
+        return getCreditCardLastFourFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getCreditCardLastFourBuilderList() {
+        return getCreditCardLastFourFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCreditCardLastFourFieldBuilder() {
+        if (creditCardLastFourBuilder_ == null) {
+          creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  creditCardLastFour_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
+                  getParentForChildren(),
+                  isClean());
+          creditCardLastFour_ = null;
+        }
+        return creditCardLastFourBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> paymentMethod_ =
+        java.util.Collections.emptyList();
+      private void ensurePaymentMethodIsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          paymentMethod_ = new java.util.ArrayList<com.google.protobuf.StringValue>(paymentMethod_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> paymentMethodBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getPaymentMethodList() {
+        if (paymentMethodBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(paymentMethod_);
+        } else {
+          return paymentMethodBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public int getPaymentMethodCount() {
+        if (paymentMethodBuilder_ == null) {
+          return paymentMethod_.size();
+        } else {
+          return paymentMethodBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public com.google.protobuf.StringValue getPaymentMethod(int index) {
+        if (paymentMethodBuilder_ == null) {
+          return paymentMethod_.get(index);
+        } else {
+          return paymentMethodBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder setPaymentMethod(
+          int index, com.google.protobuf.StringValue value) {
+        if (paymentMethodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.set(index, value);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder setPaymentMethod(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentMethodBuilder_ == null) {
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          paymentMethodBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder addPaymentMethod(com.google.protobuf.StringValue value) {
+        if (paymentMethodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.add(value);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder addPaymentMethod(
+          int index, com.google.protobuf.StringValue value) {
+        if (paymentMethodBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.add(index, value);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder addPaymentMethod(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentMethodBuilder_ == null) {
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.add(builderForValue.build());
+          onChanged();
+        } else {
+          paymentMethodBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder addPaymentMethod(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (paymentMethodBuilder_ == null) {
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          paymentMethodBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder addAllPaymentMethod(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (paymentMethodBuilder_ == null) {
+          ensurePaymentMethodIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, paymentMethod_);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder clearPaymentMethod() {
+        if (paymentMethodBuilder_ == null) {
+          paymentMethod_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public Builder removePaymentMethod(int index) {
+        if (paymentMethodBuilder_ == null) {
+          ensurePaymentMethodIsMutable();
+          paymentMethod_.remove(index);
+          onChanged();
+        } else {
+          paymentMethodBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getPaymentMethodBuilder(
+          int index) {
+        return getPaymentMethodFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder(
+          int index) {
+        if (paymentMethodBuilder_ == null) {
+          return paymentMethod_.get(index);  } else {
+          return paymentMethodBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getPaymentMethodOrBuilderList() {
+        if (paymentMethodBuilder_ != null) {
+          return paymentMethodBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(paymentMethod_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addPaymentMethodBuilder() {
+        return getPaymentMethodFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addPaymentMethodBuilder(
+          int index) {
+        return getPaymentMethodFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue payment_method = 9;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getPaymentMethodBuilderList() {
+        return getPaymentMethodFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getPaymentMethodFieldBuilder() {
+        if (paymentMethodBuilder_ == null) {
+          paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  paymentMethod_,
+                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  getParentForChildren(),
+                  isClean());
+          paymentMethod_ = null;
+        }
+        return paymentMethodBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineDkType_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineDkTypeIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkType_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkTypeBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineDkTypeList() {
+        if (ocrLineDkTypeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineDkType_);
+        } else {
+          return ocrLineDkTypeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public int getOcrLineDkTypeCount() {
+        if (ocrLineDkTypeBuilder_ == null) {
+          return ocrLineDkType_.size();
+        } else {
+          return ocrLineDkTypeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineDkType(int index) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          return ocrLineDkType_.get(index);
+        } else {
+          return ocrLineDkTypeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder setOcrLineDkType(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder setOcrLineDkType(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder addOcrLineDkType(com.google.protobuf.StringValue value) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.add(value);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder addOcrLineDkType(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder addOcrLineDkType(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder addOcrLineDkType(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder addAllOcrLineDkType(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ensureOcrLineDkTypeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineDkType_);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder clearOcrLineDkType() {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ocrLineDkType_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public Builder removeOcrLineDkType(int index) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ensureOcrLineDkTypeIsMutable();
+          ocrLineDkType_.remove(index);
+          onChanged();
+        } else {
+          ocrLineDkTypeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineDkTypeBuilder(
+          int index) {
+        return getOcrLineDkTypeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder(
+          int index) {
+        if (ocrLineDkTypeBuilder_ == null) {
+          return ocrLineDkType_.get(index);  } else {
+          return ocrLineDkTypeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineDkTypeOrBuilderList() {
+        if (ocrLineDkTypeBuilder_ != null) {
+          return ocrLineDkTypeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineDkType_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkTypeBuilder() {
+        return getOcrLineDkTypeFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkTypeBuilder(
+          int index) {
+        return getOcrLineDkTypeFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineDkTypeBuilderList() {
+        return getOcrLineDkTypeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineDkTypeFieldBuilder() {
+        if (ocrLineDkTypeBuilder_ == null) {
+          ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineDkType_,
+                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineDkType_ = null;
+        }
+        return ocrLineDkTypeBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineDkPaymentId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineDkPaymentIdIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkPaymentId_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkPaymentIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineDkPaymentIdList() {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
+        } else {
+          return ocrLineDkPaymentIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public int getOcrLineDkPaymentIdCount() {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          return ocrLineDkPaymentId_.size();
+        } else {
+          return ocrLineDkPaymentIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineDkPaymentId(int index) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          return ocrLineDkPaymentId_.get(index);
+        } else {
+          return ocrLineDkPaymentIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder setOcrLineDkPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder setOcrLineDkPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder addOcrLineDkPaymentId(com.google.protobuf.StringValue value) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.add(value);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder addOcrLineDkPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder addOcrLineDkPaymentId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder addOcrLineDkPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder addAllOcrLineDkPaymentId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ensureOcrLineDkPaymentIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineDkPaymentId_);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder clearOcrLineDkPaymentId() {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ocrLineDkPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public Builder removeOcrLineDkPaymentId(int index) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ensureOcrLineDkPaymentIdIsMutable();
+          ocrLineDkPaymentId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineDkPaymentIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineDkPaymentIdBuilder(
+          int index) {
+        return getOcrLineDkPaymentIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+          int index) {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          return ocrLineDkPaymentId_.get(index);  } else {
+          return ocrLineDkPaymentIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineDkPaymentIdOrBuilderList() {
+        if (ocrLineDkPaymentIdBuilder_ != null) {
+          return ocrLineDkPaymentIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkPaymentIdBuilder() {
+        return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkPaymentIdBuilder(
+          int index) {
+        return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineDkPaymentIdBuilderList() {
+        return getOcrLineDkPaymentIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineDkPaymentIdFieldBuilder() {
+        if (ocrLineDkPaymentIdBuilder_ == null) {
+          ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineDkPaymentId_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineDkPaymentId_ = null;
+        }
+        return ocrLineDkPaymentIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineDkCreditorId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineDkCreditorIdIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineDkCreditorId_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineDkCreditorIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineDkCreditorIdList() {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
+        } else {
+          return ocrLineDkCreditorIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public int getOcrLineDkCreditorIdCount() {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          return ocrLineDkCreditorId_.size();
+        } else {
+          return ocrLineDkCreditorIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineDkCreditorId(int index) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          return ocrLineDkCreditorId_.get(index);
+        } else {
+          return ocrLineDkCreditorIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder setOcrLineDkCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder setOcrLineDkCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder addOcrLineDkCreditorId(com.google.protobuf.StringValue value) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.add(value);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder addOcrLineDkCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder addOcrLineDkCreditorId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder addOcrLineDkCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder addAllOcrLineDkCreditorId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ensureOcrLineDkCreditorIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineDkCreditorId_);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder clearOcrLineDkCreditorId() {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ocrLineDkCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public Builder removeOcrLineDkCreditorId(int index) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ensureOcrLineDkCreditorIdIsMutable();
+          ocrLineDkCreditorId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineDkCreditorIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineDkCreditorIdBuilder(
+          int index) {
+        return getOcrLineDkCreditorIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+          int index) {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          return ocrLineDkCreditorId_.get(index);  } else {
+          return ocrLineDkCreditorIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineDkCreditorIdOrBuilderList() {
+        if (ocrLineDkCreditorIdBuilder_ != null) {
+          return ocrLineDkCreditorIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkCreditorIdBuilder() {
+        return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineDkCreditorIdBuilder(
+          int index) {
+        return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineDkCreditorIdBuilderList() {
+        return getOcrLineDkCreditorIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineDkCreditorIdFieldBuilder() {
+        if (ocrLineDkCreditorIdBuilder_ == null) {
+          ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineDkCreditorId_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineDkCreditorId_ = null;
+        }
+        return ocrLineDkCreditorIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineSePaymentId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineSePaymentIdIsMutable() {
+        if (!((bitField0_ & 0x00001000) == 0x00001000)) {
+          ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSePaymentId_);
+          bitField0_ |= 0x00001000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePaymentIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineSePaymentIdList() {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
+        } else {
+          return ocrLineSePaymentIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public int getOcrLineSePaymentIdCount() {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          return ocrLineSePaymentId_.size();
+        } else {
+          return ocrLineSePaymentIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineSePaymentId(int index) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          return ocrLineSePaymentId_.get(index);
+        } else {
+          return ocrLineSePaymentIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder setOcrLineSePaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder setOcrLineSePaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder addOcrLineSePaymentId(com.google.protobuf.StringValue value) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.add(value);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder addOcrLineSePaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder addOcrLineSePaymentId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder addOcrLineSePaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder addAllOcrLineSePaymentId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ensureOcrLineSePaymentIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineSePaymentId_);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder clearOcrLineSePaymentId() {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ocrLineSePaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00001000);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public Builder removeOcrLineSePaymentId(int index) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ensureOcrLineSePaymentIdIsMutable();
+          ocrLineSePaymentId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineSePaymentIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineSePaymentIdBuilder(
+          int index) {
+        return getOcrLineSePaymentIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+          int index) {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          return ocrLineSePaymentId_.get(index);  } else {
+          return ocrLineSePaymentIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineSePaymentIdOrBuilderList() {
+        if (ocrLineSePaymentIdBuilder_ != null) {
+          return ocrLineSePaymentIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSePaymentIdBuilder() {
+        return getOcrLineSePaymentIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSePaymentIdBuilder(
+          int index) {
+        return getOcrLineSePaymentIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineSePaymentIdBuilderList() {
+        return getOcrLineSePaymentIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineSePaymentIdFieldBuilder() {
+        if (ocrLineSePaymentIdBuilder_ == null) {
+          ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineSePaymentId_,
+                  ((bitField0_ & 0x00001000) == 0x00001000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineSePaymentId_ = null;
+        }
+        return ocrLineSePaymentIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineSeBankgiroCreditorId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
+        if (!((bitField0_ & 0x00002000) == 0x00002000)) {
+          ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSeBankgiroCreditorId_);
+          bitField0_ |= 0x00002000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineSeBankgiroCreditorIdList() {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
+        } else {
+          return ocrLineSeBankgiroCreditorIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public int getOcrLineSeBankgiroCreditorIdCount() {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          return ocrLineSeBankgiroCreditorId_.size();
+        } else {
+          return ocrLineSeBankgiroCreditorIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineSeBankgiroCreditorId(int index) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          return ocrLineSeBankgiroCreditorId_.get(index);
+        } else {
+          return ocrLineSeBankgiroCreditorIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder setOcrLineSeBankgiroCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder setOcrLineSeBankgiroCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder addOcrLineSeBankgiroCreditorId(com.google.protobuf.StringValue value) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.add(value);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder addOcrLineSeBankgiroCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder addOcrLineSeBankgiroCreditorId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder addOcrLineSeBankgiroCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder addAllOcrLineSeBankgiroCreditorId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineSeBankgiroCreditorId_);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder clearOcrLineSeBankgiroCreditorId() {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00002000);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public Builder removeOcrLineSeBankgiroCreditorId(int index) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSeBankgiroCreditorIdIsMutable();
+          ocrLineSeBankgiroCreditorId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineSeBankgiroCreditorIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineSeBankgiroCreditorIdBuilder(
+          int index) {
+        return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+          int index) {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          return ocrLineSeBankgiroCreditorId_.get(index);  } else {
+          return ocrLineSeBankgiroCreditorIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineSeBankgiroCreditorIdOrBuilderList() {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ != null) {
+          return ocrLineSeBankgiroCreditorIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSeBankgiroCreditorIdBuilder() {
+        return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSeBankgiroCreditorIdBuilder(
+          int index) {
+        return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineSeBankgiroCreditorIdBuilderList() {
+        return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineSeBankgiroCreditorIdFieldBuilder() {
+        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
+          ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineSeBankgiroCreditorId_,
+                  ((bitField0_ & 0x00002000) == 0x00002000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineSeBankgiroCreditorId_ = null;
+        }
+        return ocrLineSeBankgiroCreditorIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineSePlusgiroCreditorId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
+        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+          ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineSePlusgiroCreditorId_);
+          bitField0_ |= 0x00004000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineSePlusgiroCreditorIdList() {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
+        } else {
+          return ocrLineSePlusgiroCreditorIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public int getOcrLineSePlusgiroCreditorIdCount() {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          return ocrLineSePlusgiroCreditorId_.size();
+        } else {
+          return ocrLineSePlusgiroCreditorIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineSePlusgiroCreditorId(int index) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          return ocrLineSePlusgiroCreditorId_.get(index);
+        } else {
+          return ocrLineSePlusgiroCreditorIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder setOcrLineSePlusgiroCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder setOcrLineSePlusgiroCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder addOcrLineSePlusgiroCreditorId(com.google.protobuf.StringValue value) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.add(value);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder addOcrLineSePlusgiroCreditorId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder addOcrLineSePlusgiroCreditorId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder addOcrLineSePlusgiroCreditorId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder addAllOcrLineSePlusgiroCreditorId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineSePlusgiroCreditorId_);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder clearOcrLineSePlusgiroCreditorId() {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00004000);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public Builder removeOcrLineSePlusgiroCreditorId(int index) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ensureOcrLineSePlusgiroCreditorIdIsMutable();
+          ocrLineSePlusgiroCreditorId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineSePlusgiroCreditorIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineSePlusgiroCreditorIdBuilder(
+          int index) {
+        return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+          int index) {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          return ocrLineSePlusgiroCreditorId_.get(index);  } else {
+          return ocrLineSePlusgiroCreditorIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineSePlusgiroCreditorIdOrBuilderList() {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ != null) {
+          return ocrLineSePlusgiroCreditorIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSePlusgiroCreditorIdBuilder() {
+        return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineSePlusgiroCreditorIdBuilder(
+          int index) {
+        return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineSePlusgiroCreditorIdBuilderList() {
+        return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineSePlusgiroCreditorIdFieldBuilder() {
+        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
+          ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineSePlusgiroCreditorId_,
+                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineSePlusgiroCreditorId_ = null;
+        }
+        return ocrLineSePlusgiroCreditorIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineNoPaymentId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineNoPaymentIdIsMutable() {
+        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
+          ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineNoPaymentId_);
+          bitField0_ |= 0x00008000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNoPaymentIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineNoPaymentIdList() {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
+        } else {
+          return ocrLineNoPaymentIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public int getOcrLineNoPaymentIdCount() {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          return ocrLineNoPaymentId_.size();
+        } else {
+          return ocrLineNoPaymentIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineNoPaymentId(int index) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          return ocrLineNoPaymentId_.get(index);
+        } else {
+          return ocrLineNoPaymentIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder setOcrLineNoPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder setOcrLineNoPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder addOcrLineNoPaymentId(com.google.protobuf.StringValue value) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.add(value);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder addOcrLineNoPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder addOcrLineNoPaymentId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder addOcrLineNoPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder addAllOcrLineNoPaymentId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ensureOcrLineNoPaymentIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineNoPaymentId_);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder clearOcrLineNoPaymentId() {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ocrLineNoPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00008000);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public Builder removeOcrLineNoPaymentId(int index) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ensureOcrLineNoPaymentIdIsMutable();
+          ocrLineNoPaymentId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineNoPaymentIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineNoPaymentIdBuilder(
+          int index) {
+        return getOcrLineNoPaymentIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+          int index) {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          return ocrLineNoPaymentId_.get(index);  } else {
+          return ocrLineNoPaymentIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineNoPaymentIdOrBuilderList() {
+        if (ocrLineNoPaymentIdBuilder_ != null) {
+          return ocrLineNoPaymentIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineNoPaymentIdBuilder() {
+        return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineNoPaymentIdBuilder(
+          int index) {
+        return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineNoPaymentIdBuilderList() {
+        return getOcrLineNoPaymentIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineNoPaymentIdFieldBuilder() {
+        if (ocrLineNoPaymentIdBuilder_ == null) {
+          ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineNoPaymentId_,
+                  ((bitField0_ & 0x00008000) == 0x00008000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineNoPaymentId_ = null;
+        }
+        return ocrLineNoPaymentIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineFiPaymentId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineFiPaymentIdIsMutable() {
+        if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+          ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineFiPaymentId_);
+          bitField0_ |= 0x00010000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineFiPaymentIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineFiPaymentIdList() {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
+        } else {
+          return ocrLineFiPaymentIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public int getOcrLineFiPaymentIdCount() {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          return ocrLineFiPaymentId_.size();
+        } else {
+          return ocrLineFiPaymentIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineFiPaymentId(int index) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          return ocrLineFiPaymentId_.get(index);
+        } else {
+          return ocrLineFiPaymentIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder setOcrLineFiPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder setOcrLineFiPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder addOcrLineFiPaymentId(com.google.protobuf.StringValue value) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.add(value);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder addOcrLineFiPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder addOcrLineFiPaymentId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder addOcrLineFiPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder addAllOcrLineFiPaymentId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ensureOcrLineFiPaymentIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineFiPaymentId_);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder clearOcrLineFiPaymentId() {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ocrLineFiPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00010000);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public Builder removeOcrLineFiPaymentId(int index) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ensureOcrLineFiPaymentIdIsMutable();
+          ocrLineFiPaymentId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineFiPaymentIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineFiPaymentIdBuilder(
+          int index) {
+        return getOcrLineFiPaymentIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+          int index) {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          return ocrLineFiPaymentId_.get(index);  } else {
+          return ocrLineFiPaymentIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineFiPaymentIdOrBuilderList() {
+        if (ocrLineFiPaymentIdBuilder_ != null) {
+          return ocrLineFiPaymentIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineFiPaymentIdBuilder() {
+        return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineFiPaymentIdBuilder(
+          int index) {
+        return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineFiPaymentIdBuilderList() {
+        return getOcrLineFiPaymentIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineFiPaymentIdFieldBuilder() {
+        if (ocrLineFiPaymentIdBuilder_ == null) {
+          ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineFiPaymentId_,
+                  ((bitField0_ & 0x00010000) == 0x00010000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineFiPaymentId_ = null;
+        }
+        return ocrLineFiPaymentIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> ocrLineNlPaymentId_ =
+        java.util.Collections.emptyList();
+      private void ensureOcrLineNlPaymentIdIsMutable() {
+        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+          ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(ocrLineNlPaymentId_);
+          bitField0_ |= 0x00020000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineNlPaymentIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getOcrLineNlPaymentIdList() {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
+        } else {
+          return ocrLineNlPaymentIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public int getOcrLineNlPaymentIdCount() {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          return ocrLineNlPaymentId_.size();
+        } else {
+          return ocrLineNlPaymentIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue getOcrLineNlPaymentId(int index) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          return ocrLineNlPaymentId_.get(index);
+        } else {
+          return ocrLineNlPaymentIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder setOcrLineNlPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.set(index, value);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder setOcrLineNlPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder addOcrLineNlPaymentId(com.google.protobuf.StringValue value) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.add(value);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder addOcrLineNlPaymentId(
+          int index, com.google.protobuf.StringValue value) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.add(index, value);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder addOcrLineNlPaymentId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder addOcrLineNlPaymentId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder addAllOcrLineNlPaymentId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ensureOcrLineNlPaymentIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, ocrLineNlPaymentId_);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder clearOcrLineNlPaymentId() {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ocrLineNlPaymentId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00020000);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public Builder removeOcrLineNlPaymentId(int index) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ensureOcrLineNlPaymentIdIsMutable();
+          ocrLineNlPaymentId_.remove(index);
+          onChanged();
+        } else {
+          ocrLineNlPaymentIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getOcrLineNlPaymentIdBuilder(
+          int index) {
+        return getOcrLineNlPaymentIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+          int index) {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          return ocrLineNlPaymentId_.get(index);  } else {
+          return ocrLineNlPaymentIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getOcrLineNlPaymentIdOrBuilderList() {
+        if (ocrLineNlPaymentIdBuilder_ != null) {
+          return ocrLineNlPaymentIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineNlPaymentIdBuilder() {
+        return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addOcrLineNlPaymentIdBuilder(
+          int index) {
+        return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getOcrLineNlPaymentIdBuilderList() {
+        return getOcrLineNlPaymentIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getOcrLineNlPaymentIdFieldBuilder() {
+        if (ocrLineNlPaymentIdBuilder_ == null) {
+          ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  ocrLineNlPaymentId_,
+                  ((bitField0_ & 0x00020000) == 0x00020000),
+                  getParentForChildren(),
+                  isClean());
+          ocrLineNlPaymentId_ = null;
+        }
+        return ocrLineNlPaymentIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierCorporateId_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierCorporateIdIsMutable() {
+        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+          supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierCorporateId_);
+          bitField0_ |= 0x00040000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCorporateIdBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierCorporateIdList() {
+        if (supplierCorporateIdBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierCorporateId_);
+        } else {
+          return supplierCorporateIdBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public int getSupplierCorporateIdCount() {
+        if (supplierCorporateIdBuilder_ == null) {
+          return supplierCorporateId_.size();
+        } else {
+          return supplierCorporateIdBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierCorporateId(int index) {
+        if (supplierCorporateIdBuilder_ == null) {
+          return supplierCorporateId_.get(index);
+        } else {
+          return supplierCorporateIdBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder setSupplierCorporateId(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierCorporateIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.set(index, value);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder setSupplierCorporateId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCorporateIdBuilder_ == null) {
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder addSupplierCorporateId(com.google.protobuf.StringValue value) {
+        if (supplierCorporateIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.add(value);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder addSupplierCorporateId(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierCorporateIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.add(index, value);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder addSupplierCorporateId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCorporateIdBuilder_ == null) {
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder addSupplierCorporateId(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCorporateIdBuilder_ == null) {
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder addAllSupplierCorporateId(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierCorporateIdBuilder_ == null) {
+          ensureSupplierCorporateIdIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierCorporateId_);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder clearSupplierCorporateId() {
+        if (supplierCorporateIdBuilder_ == null) {
+          supplierCorporateId_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00040000);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public Builder removeSupplierCorporateId(int index) {
+        if (supplierCorporateIdBuilder_ == null) {
+          ensureSupplierCorporateIdIsMutable();
+          supplierCorporateId_.remove(index);
+          onChanged();
+        } else {
+          supplierCorporateIdBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierCorporateIdBuilder(
+          int index) {
+        return getSupplierCorporateIdFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder(
+          int index) {
+        if (supplierCorporateIdBuilder_ == null) {
+          return supplierCorporateId_.get(index);  } else {
+          return supplierCorporateIdBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierCorporateIdOrBuilderList() {
+        if (supplierCorporateIdBuilder_ != null) {
+          return supplierCorporateIdBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierCorporateId_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierCorporateIdBuilder() {
+        return getSupplierCorporateIdFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierCorporateIdBuilder(
+          int index) {
+        return getSupplierCorporateIdFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierCorporateIdBuilderList() {
+        return getSupplierCorporateIdFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierCorporateIdFieldBuilder() {
+        if (supplierCorporateIdBuilder_ == null) {
+          supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierCorporateId_,
+                  ((bitField0_ & 0x00040000) == 0x00040000),
+                  getParentForChildren(),
+                  isClean());
+          supplierCorporateId_ = null;
+        }
+        return supplierCorporateIdBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> supplierCountryCode_ =
+        java.util.Collections.emptyList();
+      private void ensureSupplierCountryCodeIsMutable() {
+        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+          supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.StringValue>(supplierCountryCode_);
+          bitField0_ |= 0x00080000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierCountryCodeBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getSupplierCountryCodeList() {
+        if (supplierCountryCodeBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(supplierCountryCode_);
+        } else {
+          return supplierCountryCodeBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public int getSupplierCountryCodeCount() {
+        if (supplierCountryCodeBuilder_ == null) {
+          return supplierCountryCode_.size();
+        } else {
+          return supplierCountryCodeBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public com.google.protobuf.StringValue getSupplierCountryCode(int index) {
+        if (supplierCountryCodeBuilder_ == null) {
+          return supplierCountryCode_.get(index);
+        } else {
+          return supplierCountryCodeBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder setSupplierCountryCode(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierCountryCodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.set(index, value);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder setSupplierCountryCode(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCountryCodeBuilder_ == null) {
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder addSupplierCountryCode(com.google.protobuf.StringValue value) {
+        if (supplierCountryCodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.add(value);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder addSupplierCountryCode(
+          int index, com.google.protobuf.StringValue value) {
+        if (supplierCountryCodeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.add(index, value);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder addSupplierCountryCode(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCountryCodeBuilder_ == null) {
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.add(builderForValue.build());
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder addSupplierCountryCode(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (supplierCountryCodeBuilder_ == null) {
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder addAllSupplierCountryCode(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (supplierCountryCodeBuilder_ == null) {
+          ensureSupplierCountryCodeIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, supplierCountryCode_);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder clearSupplierCountryCode() {
+        if (supplierCountryCodeBuilder_ == null) {
+          supplierCountryCode_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00080000);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public Builder removeSupplierCountryCode(int index) {
+        if (supplierCountryCodeBuilder_ == null) {
+          ensureSupplierCountryCodeIsMutable();
+          supplierCountryCode_.remove(index);
+          onChanged();
+        } else {
+          supplierCountryCodeBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getSupplierCountryCodeBuilder(
+          int index) {
+        return getSupplierCountryCodeFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder(
+          int index) {
+        if (supplierCountryCodeBuilder_ == null) {
+          return supplierCountryCode_.get(index);  } else {
+          return supplierCountryCodeBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getSupplierCountryCodeOrBuilderList() {
+        if (supplierCountryCodeBuilder_ != null) {
+          return supplierCountryCodeBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(supplierCountryCode_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierCountryCodeBuilder() {
+        return getSupplierCountryCodeFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addSupplierCountryCodeBuilder(
+          int index) {
+        return getSupplierCountryCodeFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue supplier_country_code = 20;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getSupplierCountryCodeBuilderList() {
+        return getSupplierCountryCodeFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getSupplierCountryCodeFieldBuilder() {
+        if (supplierCountryCodeBuilder_ == null) {
+          supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  supplierCountryCode_,
+                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  getParentForChildren(),
+                  isClean());
+          supplierCountryCode_ = null;
+        }
+        return supplierCountryCodeBuilder_;
+      }
+
+      private java.util.List<com.google.protobuf.StringValue> invoiceNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureInvoiceNumberIsMutable() {
+        if (!((bitField0_ & 0x00100000) == 0x00100000)) {
+          invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(invoiceNumber_);
+          bitField0_ |= 0x00100000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> invoiceNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getInvoiceNumberList() {
+        if (invoiceNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(invoiceNumber_);
+        } else {
+          return invoiceNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public int getInvoiceNumberCount() {
+        if (invoiceNumberBuilder_ == null) {
+          return invoiceNumber_.size();
+        } else {
+          return invoiceNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public com.google.protobuf.StringValue getInvoiceNumber(int index) {
+        if (invoiceNumberBuilder_ == null) {
+          return invoiceNumber_.get(index);
+        } else {
+          return invoiceNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder setInvoiceNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (invoiceNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.set(index, value);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder setInvoiceNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (invoiceNumberBuilder_ == null) {
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder addInvoiceNumber(com.google.protobuf.StringValue value) {
+        if (invoiceNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.add(value);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder addInvoiceNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (invoiceNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.add(index, value);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder addInvoiceNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (invoiceNumberBuilder_ == null) {
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder addInvoiceNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (invoiceNumberBuilder_ == null) {
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder addAllInvoiceNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (invoiceNumberBuilder_ == null) {
+          ensureInvoiceNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, invoiceNumber_);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder clearInvoiceNumber() {
+        if (invoiceNumberBuilder_ == null) {
+          invoiceNumber_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00100000);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public Builder removeInvoiceNumber(int index) {
+        if (invoiceNumberBuilder_ == null) {
+          ensureInvoiceNumberIsMutable();
+          invoiceNumber_.remove(index);
+          onChanged();
+        } else {
+          invoiceNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getInvoiceNumberBuilder(
+          int index) {
+        return getInvoiceNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder(
+          int index) {
+        if (invoiceNumberBuilder_ == null) {
+          return invoiceNumber_.get(index);  } else {
+          return invoiceNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getInvoiceNumberOrBuilderList() {
+        if (invoiceNumberBuilder_ != null) {
+          return invoiceNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(invoiceNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addInvoiceNumberBuilder() {
+        return getInvoiceNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public com.google.protobuf.StringValue.Builder addInvoiceNumberBuilder(
+          int index) {
+        return getInvoiceNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue invoice_number = 21;</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getInvoiceNumberBuilderList() {
+        return getInvoiceNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getInvoiceNumberFieldBuilder() {
+        if (invoiceNumberBuilder_ == null) {
+          invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  invoiceNumber_,
+                  ((bitField0_ & 0x00100000) == 0x00100000),
+                  getParentForChildren(),
+                  isClean());
+          invoiceNumber_ = null;
+        }
+        return invoiceNumberBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.PredictionValues)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.PredictionValues)
+    private static final ssn.dataservice.v1alpha1.Dataservice.PredictionValues DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.PredictionValues();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.PredictionValues getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PredictionValues>
+        PARSER = new com.google.protobuf.AbstractParser<PredictionValues>() {
+      @java.lang.Override
+      public PredictionValues parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PredictionValues(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PredictionValues> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PredictionValues> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CreateDocumentRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.CreateDocumentRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -8441,17 +16563,17 @@ public final class Dataservice {
     com.google.protobuf.ByteString getDocumentBytes();
 
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
     boolean hasPredictions();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions();
+    ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictions();
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
-    ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder();
+    ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionsOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackRequest}
@@ -8519,11 +16641,11 @@ public final class Dataservice {
               break;
             }
             case 34: {
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder subBuilder = null;
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder subBuilder = null;
               if (predictions_ != null) {
                 subBuilder = predictions_.toBuilder();
               }
-              predictions_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.TrueValues.parser(), extensionRegistry);
+              predictions_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.PredictionValues.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(predictions_);
                 predictions_ = subBuilder.buildPartial();
@@ -8628,23 +16750,23 @@ public final class Dataservice {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 4;
-    private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_;
+    private ssn.dataservice.v1alpha1.Dataservice.PredictionValues predictions_;
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
     public boolean hasPredictions() {
       return predictions_ != null;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
-      return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+    public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictions() {
+      return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictions_;
     }
     /**
-     * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+     * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
-    public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
+    public ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionsOrBuilder() {
       return getPredictions();
     }
 
@@ -9243,29 +17365,29 @@ public final class Dataservice {
         return this;
       }
 
-      private ssn.dataservice.v1alpha1.Dataservice.TrueValues predictions_ = null;
+      private ssn.dataservice.v1alpha1.Dataservice.PredictionValues predictions_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> predictionsBuilder_;
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder> predictionsBuilder_;
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
       public boolean hasPredictions() {
         return predictionsBuilder_ != null || predictions_ != null;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues getPredictions() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues getPredictions() {
         if (predictionsBuilder_ == null) {
-          return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+          return predictions_ == null ? ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictions_;
         } else {
           return predictionsBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
-      public Builder setPredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder setPredictions(ssn.dataservice.v1alpha1.Dataservice.PredictionValues value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9279,10 +17401,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
       public Builder setPredictions(
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder builderForValue) {
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           predictions_ = builderForValue.build();
           onChanged();
@@ -9293,13 +17415,13 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
-      public Builder mergePredictions(ssn.dataservice.v1alpha1.Dataservice.TrueValues value) {
+      public Builder mergePredictions(ssn.dataservice.v1alpha1.Dataservice.PredictionValues value) {
         if (predictionsBuilder_ == null) {
           if (predictions_ != null) {
             predictions_ =
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.newBuilder(predictions_).mergeFrom(value).buildPartial();
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.newBuilder(predictions_).mergeFrom(value).buildPartial();
           } else {
             predictions_ = value;
           }
@@ -9311,7 +17433,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -9325,33 +17447,33 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder getPredictionsBuilder() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder getPredictionsBuilder() {
         
         onChanged();
         return getPredictionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
-      public ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder getPredictionsOrBuilder() {
+      public ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionsOrBuilder() {
         if (predictionsBuilder_ != null) {
           return predictionsBuilder_.getMessageOrBuilder();
         } else {
           return predictions_ == null ?
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues.getDefaultInstance() : predictions_;
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues.getDefaultInstance() : predictions_;
         }
       }
       /**
-       * <code>.ssn.dataservice.v1alpha1.TrueValues predictions = 4;</code>
+       * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder> 
+          ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder> 
           getPredictionsFieldBuilder() {
         if (predictionsBuilder_ == null) {
           predictionsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              ssn.dataservice.v1alpha1.Dataservice.TrueValues, ssn.dataservice.v1alpha1.Dataservice.TrueValues.Builder, ssn.dataservice.v1alpha1.Dataservice.TrueValuesOrBuilder>(
+              ssn.dataservice.v1alpha1.Dataservice.PredictionValues, ssn.dataservice.v1alpha1.Dataservice.PredictionValues.Builder, ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder>(
                   getPredictions(),
                   getParentForChildren(),
                   isClean());
@@ -10965,6 +19087,11 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_TrueValues_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_PredictionValues_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -11014,7 +19141,7 @@ public final class Dataservice {
       "able.proto\032\034google/api/annotations.proto" +
       "\032\033google/protobuf/empty.proto\032\036google/pr" +
       "otobuf/wrappers.proto\032\026google/type/date." +
-      "proto\032\036ssn/type/text_annotation.proto\"\262\003" +
+      "proto\032\036ssn/type/text_annotation.proto\"\270\003" +
       "\n\010Document\022+\n\002ta\030\001 \001(\0132\030.ssn.type.TextAn" +
       "notationB\005\352?\002\030\001\022\024\n\005bytes\030\002 \001(\014B\005\352?\002\030\001\022;\n" +
       "\002id\030\003 \001(\tB/\352?\'\"%Feedback ID, same as Env" +
@@ -11022,69 +19149,101 @@ public final class Dataservice {
       "\002\010\001\022T\n\004tags\030\005 \003(\tBF\352?C\"ATags defined by " +
       "consumer, enriched by service if valetke" +
       "y is used\0229\n\013true_values\030\006 \001(\0132$.ssn.dat" +
-      "aservice.v1alpha1.TrueValues\022?\n\021predicti" +
-      "on_values\030\007 \001(\0132$.ssn.dataservice.v1alph" +
-      "a1.TrueValues\022\'\n\rfeedback_time\030\010 \001(\004B\020\352?" +
-      "\r\010\001\022\tTIMESTAMP:\022\352?\017\n\rtraining_data\"\330\t\n\nT" +
-      "rueValues\0224\n\016total_incl_vat\030\001 \001(\0132\034.goog" +
-      "le.protobuf.DoubleValue\022/\n\ttotal_vat\030\002 \001" +
-      "(\0132\034.google.protobuf.DoubleValue\0224\n\016tota" +
-      "l_excl_vat\030\003 \001(\0132\034.google.protobuf.Doubl" +
-      "eValue\0220\n\norder_date\030\004 \001(\0132\021.google.type" +
-      ".DateB\t\352?\006\022\004DATE\0226\n\020payment_due_date\030\005 \001" +
-      "(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0223\n\rdocu" +
-      "ment_type\030\006 \001(\0132\034.google.protobuf.String" +
-      "Value\022.\n\010currency\030\007 \001(\0132\034.google.protobu" +
-      "f.StringValue\022;\n\025credit_card_last_four\030\010" +
-      " \001(\0132\034.google.protobuf.StringValue\0224\n\016pa" +
-      "yment_method\030\t \001(\0132\034.google.protobuf.Str" +
-      "ingValue\0226\n\020ocr_line_dk_type\030\n \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022<\n\026ocr_line_dk_" +
-      "payment_id\030\013 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022=\n\027ocr_line_dk_creditor_id\030\014 \001(\0132" +
-      "\034.google.protobuf.StringValue\022<\n\026ocr_lin" +
-      "e_se_payment_id\030\r \001(\0132\034.google.protobuf." +
-      "StringValue\022F\n ocr_line_se_bankgiro_cred" +
-      "itor_id\030\016 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022F\n ocr_line_se_plusgiro_creditor_id\030" +
-      "\017 \001(\0132\034.google.protobuf.StringValue\022<\n\026o" +
-      "cr_line_no_payment_id\030\020 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\022<\n\026ocr_line_fi_payment" +
-      "_id\030\021 \001(\0132\034.google.protobuf.StringValue\022" +
-      "<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034.google" +
-      ".protobuf.StringValue\022;\n\025supplier_corpor" +
-      "ate_id\030\023 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022;\n\025supplier_country_code\030\024 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\0224\n\016invoice_numbe" +
-      "r\030\025 \001(\0132\034.google.protobuf.StringValue\"M\n" +
-      "\025CreateDocumentRequest\0224\n\010document\030\001 \001(\013" +
-      "2\".ssn.dataservice.v1alpha1.Document\"$\n\026" +
-      "CreateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Re" +
-      "adDocumentRequest\022\n\n\002id\030\001 \001(\t\"L\n\024ReadDoc" +
-      "umentResponse\0224\n\010document\030\001 \001(\0132\".ssn.da" +
-      "taservice.v1alpha1.Document\"\235\001\n\026PrepareF" +
-      "eedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030" +
-      ".ssn.type.TextAnnotation\022\026\n\016document_byt" +
-      "es\030\003 \001(\014\0229\n\013predictions\030\004 \001(\0132$.ssn.data" +
-      "service.v1alpha1.TrueValues\"f\n\017FeedbackR" +
-      "equest\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132" +
-      "$.ssn.dataservice.v1alpha1.TrueValues\022\014\n" +
-      "\004tags\030\003 \003(\t\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003" +
-      "(\t2\264\004\n\013DataService\022s\n\016CreateDocument\022/.s" +
-      "sn.dataservice.v1alpha1.CreateDocumentRe" +
-      "quest\0320.ssn.dataservice.v1alpha1.CreateD" +
-      "ocumentResponse\022m\n\014ReadDocument\022-.ssn.da" +
-      "taservice.v1alpha1.ReadDocumentRequest\032." +
-      ".ssn.dataservice.v1alpha1.ReadDocumentRe" +
-      "sponse\022[\n\017PrepareFeedback\0220.ssn.dataserv" +
-      "ice.v1alpha1.PrepareFeedbackRequest\032\026.go" +
-      "ogle.protobuf.Empty\022s\n\010Feedback\022).ssn.da" +
-      "taservice.v1alpha1.FeedbackRequest\032\026.goo" +
-      "gle.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/fe" +
-      "edback:create:\001*\022o\n\006Delete\022\'.ssn.dataser" +
-      "vice.v1alpha1.DeleteRequest\032\026.google.pro" +
-      "tobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:" +
-      "delete:\001*B\rZ\013dataserviceb\006proto3"
+      "aservice.v1alpha1.TrueValues\022E\n\021predicti" +
+      "on_values\030\007 \001(\0132*.ssn.dataservice.v1alph" +
+      "a1.PredictionValues\022\'\n\rfeedback_time\030\010 \001" +
+      "(\004B\020\352?\r\010\001\022\tTIMESTAMP:\022\352?\017\n\rtraining_data" +
+      "\"\330\t\n\nTrueValues\0224\n\016total_incl_vat\030\001 \001(\0132" +
+      "\034.google.protobuf.DoubleValue\022/\n\ttotal_v" +
+      "at\030\002 \001(\0132\034.google.protobuf.DoubleValue\0224" +
+      "\n\016total_excl_vat\030\003 \001(\0132\034.google.protobuf" +
+      ".DoubleValue\0220\n\norder_date\030\004 \001(\0132\021.googl" +
+      "e.type.DateB\t\352?\006\022\004DATE\0226\n\020payment_due_da" +
+      "te\030\005 \001(\0132\021.google.type.DateB\t\352?\006\022\004DATE\0223" +
+      "\n\rdocument_type\030\006 \001(\0132\034.google.protobuf." +
+      "StringValue\022.\n\010currency\030\007 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022;\n\025credit_card_last_" +
+      "four\030\010 \001(\0132\034.google.protobuf.StringValue" +
+      "\0224\n\016payment_method\030\t \001(\0132\034.google.protob" +
+      "uf.StringValue\0226\n\020ocr_line_dk_type\030\n \001(\013" +
+      "2\034.google.protobuf.StringValue\022<\n\026ocr_li" +
+      "ne_dk_payment_id\030\013 \001(\0132\034.google.protobuf" +
+      ".StringValue\022=\n\027ocr_line_dk_creditor_id\030" +
+      "\014 \001(\0132\034.google.protobuf.StringValue\022<\n\026o" +
+      "cr_line_se_payment_id\030\r \001(\0132\034.google.pro" +
+      "tobuf.StringValue\022F\n ocr_line_se_bankgir" +
+      "o_creditor_id\030\016 \001(\0132\034.google.protobuf.St" +
+      "ringValue\022F\n ocr_line_se_plusgiro_credit" +
+      "or_id\030\017 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022<\n\026ocr_line_no_payment_id\030\020 \001(\0132\034.goog" +
+      "le.protobuf.StringValue\022<\n\026ocr_line_fi_p" +
+      "ayment_id\030\021 \001(\0132\034.google.protobuf.String" +
+      "Value\022<\n\026ocr_line_nl_payment_id\030\022 \001(\0132\034." +
+      "google.protobuf.StringValue\022;\n\025supplier_" +
+      "corporate_id\030\023 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022;\n\025supplier_country_code\030\024 \001(\0132" +
+      "\034.google.protobuf.StringValue\0224\n\016invoice" +
+      "_number\030\025 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\"\336\t\n\020PredictionValues\0224\n\016total_incl_v" +
+      "at\030\001 \003(\0132\034.google.protobuf.DoubleValue\022/" +
+      "\n\ttotal_vat\030\002 \003(\0132\034.google.protobuf.Doub" +
+      "leValue\0224\n\016total_excl_vat\030\003 \003(\0132\034.google" +
+      ".protobuf.DoubleValue\0220\n\norder_date\030\004 \003(" +
+      "\0132\021.google.type.DateB\t\352?\006\022\004DATE\0226\n\020payme" +
+      "nt_due_date\030\005 \003(\0132\021.google.type.DateB\t\352?" +
+      "\006\022\004DATE\0223\n\rdocument_type\030\006 \003(\0132\034.google." +
+      "protobuf.StringValue\022.\n\010currency\030\007 \003(\0132\034" +
+      ".google.protobuf.StringValue\022;\n\025credit_c" +
+      "ard_last_four\030\010 \003(\0132\034.google.protobuf.St" +
+      "ringValue\0224\n\016payment_method\030\t \003(\0132\034.goog" +
+      "le.protobuf.StringValue\0226\n\020ocr_line_dk_t" +
+      "ype\030\n \003(\0132\034.google.protobuf.StringValue\022" +
+      "<\n\026ocr_line_dk_payment_id\030\013 \003(\0132\034.google" +
+      ".protobuf.StringValue\022=\n\027ocr_line_dk_cre" +
+      "ditor_id\030\014 \003(\0132\034.google.protobuf.StringV" +
+      "alue\022<\n\026ocr_line_se_payment_id\030\r \003(\0132\034.g" +
+      "oogle.protobuf.StringValue\022F\n ocr_line_s" +
+      "e_bankgiro_creditor_id\030\016 \003(\0132\034.google.pr" +
+      "otobuf.StringValue\022F\n ocr_line_se_plusgi" +
+      "ro_creditor_id\030\017 \003(\0132\034.google.protobuf.S" +
+      "tringValue\022<\n\026ocr_line_no_payment_id\030\020 \003" +
+      "(\0132\034.google.protobuf.StringValue\022<\n\026ocr_" +
+      "line_fi_payment_id\030\021 \003(\0132\034.google.protob" +
+      "uf.StringValue\022<\n\026ocr_line_nl_payment_id" +
+      "\030\022 \003(\0132\034.google.protobuf.StringValue\022;\n\025" +
+      "supplier_corporate_id\030\023 \003(\0132\034.google.pro" +
+      "tobuf.StringValue\022;\n\025supplier_country_co" +
+      "de\030\024 \003(\0132\034.google.protobuf.StringValue\0224" +
+      "\n\016invoice_number\030\025 \003(\0132\034.google.protobuf" +
+      ".StringValue\"M\n\025CreateDocumentRequest\0224\n" +
+      "\010document\030\001 \001(\0132\".ssn.dataservice.v1alph" +
+      "a1.Document\"$\n\026CreateDocumentResponse\022\n\n" +
+      "\002id\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001" +
+      " \001(\t\"L\n\024ReadDocumentResponse\0224\n\010document" +
+      "\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Docume" +
+      "nt\"\243\001\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(" +
+      "\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022" +
+      "\026\n\016document_bytes\030\003 \001(\014\022?\n\013predictions\030\004" +
+      " \001(\0132*.ssn.dataservice.v1alpha1.Predicti" +
+      "onValues\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
+      "9\n\013true_values\030\002 \001(\0132$.ssn.dataservice.v" +
+      "1alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"\035\n\rDele" +
+      "teRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n\013DataService\022" +
+      "s\n\016CreateDocument\022/.ssn.dataservice.v1al" +
+      "pha1.CreateDocumentRequest\0320.ssn.dataser" +
+      "vice.v1alpha1.CreateDocumentResponse\022m\n\014" +
+      "ReadDocument\022-.ssn.dataservice.v1alpha1." +
+      "ReadDocumentRequest\032..ssn.dataservice.v1" +
+      "alpha1.ReadDocumentResponse\022[\n\017PrepareFe" +
+      "edback\0220.ssn.dataservice.v1alpha1.Prepar" +
+      "eFeedbackRequest\032\026.google.protobuf.Empty" +
+      "\022s\n\010Feedback\022).ssn.dataservice.v1alpha1." +
+      "FeedbackRequest\032\026.google.protobuf.Empty\"" +
+      "$\202\323\344\223\002\036\"\031/v1alpha1/feedback:create:\001*\022o\n" +
+      "\006Delete\022\'.ssn.dataservice.v1alpha1.Delet" +
+      "eRequest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036" +
+      "\"\031/v1alpha1/feedback:delete:\001*B\rZ\013datase" +
+      "rviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11117,44 +19276,50 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_TrueValues_descriptor,
         new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
-    internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor =
+    internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_dataservice_v1alpha1_PredictionValues_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_PredictionValues_descriptor,
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
+    internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_CreateDocumentRequest_descriptor,
         new java.lang.String[] { "Document", });
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_dataservice_v1alpha1_CreateDocumentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_CreateDocumentResponse_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_ssn_dataservice_v1alpha1_ReadDocumentRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_dataservice_v1alpha1_ReadDocumentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_ReadDocumentRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_ssn_dataservice_v1alpha1_ReadDocumentResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_ssn_dataservice_v1alpha1_ReadDocumentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_ReadDocumentResponse_descriptor,
         new java.lang.String[] { "Document", });
     internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", });
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "TrueValues", "Tags", });
     internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor,

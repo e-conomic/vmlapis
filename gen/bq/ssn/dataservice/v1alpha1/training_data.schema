@@ -136,107 +136,107 @@
    {
     "name": "total_incl_vat",
     "type": "FLOAT",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "total_vat",
     "type": "FLOAT",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "total_excl_vat",
     "type": "FLOAT",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "order_date",
     "type": "DATE",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "payment_due_date",
     "type": "DATE",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "document_type",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "currency",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "credit_card_last_four",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "payment_method",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_dk_type",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_dk_payment_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_dk_creditor_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_se_payment_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_se_bankgiro_creditor_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_se_plusgiro_creditor_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_no_payment_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_fi_payment_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "ocr_line_nl_payment_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "supplier_corporate_id",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "supplier_country_code",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    },
    {
     "name": "invoice_number",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    }
   ]
  },
