@@ -35,6 +35,11 @@ class DataServiceStub(object):
         request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
+    self.CalculateMetrics = channel.unary_unary(
+        '/ssn.dataservice.v1alpha1.DataService/CalculateMetrics',
+        request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
+        response_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackMetrics.FromString,
+        )
     self.Delete = channel.unary_unary(
         '/ssn.dataservice.v1alpha1.DataService/Delete',
         request_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
@@ -74,6 +79,13 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CalculateMetrics(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
   def Delete(self, request, context):
     # missing associated documentation comment in .proto file
     pass
@@ -103,6 +115,11 @@ def add_DataServiceServicer_to_server(servicer, server):
           servicer.Feedback,
           request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'CalculateMetrics': grpc.unary_unary_rpc_method_handler(
+          servicer.CalculateMetrics,
+          request_deserializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.MetricsRequest.FromString,
+          response_serializer=ssn_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.FeedbackMetrics.SerializeToString,
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(
           servicer.Delete,

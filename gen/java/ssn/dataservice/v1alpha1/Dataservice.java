@@ -18472,6 +18472,2731 @@ public final class Dataservice {
 
   }
 
+  public interface MetricsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.MetricsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string consumer = 1;</code>
+     */
+    java.lang.String getConsumer();
+    /**
+     * <code>string consumer = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getConsumerBytes();
+
+    /**
+     * <code>uint64 start_time = 2;</code>
+     */
+    long getStartTime();
+
+    /**
+     * <code>uint64 end_time = 3;</code>
+     */
+    long getEndTime();
+
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    java.util.List<java.lang.String>
+        getFieldsList();
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    int getFieldsCount();
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    java.lang.String getFields(int index);
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getFieldsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.MetricsRequest}
+   */
+  public  static final class MetricsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.MetricsRequest)
+      MetricsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use MetricsRequest.newBuilder() to construct.
+    private MetricsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private MetricsRequest() {
+      consumer_ = "";
+      startTime_ = 0L;
+      endTime_ = 0L;
+      fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private MetricsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              consumer_ = s;
+              break;
+            }
+            case 16: {
+
+              startTime_ = input.readUInt64();
+              break;
+            }
+            case 24: {
+
+              endTime_ = input.readUInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                fields_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              fields_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          fields_ = fields_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_MetricsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.class, ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int CONSUMER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object consumer_;
+    /**
+     * <code>string consumer = 1;</code>
+     */
+    public java.lang.String getConsumer() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        consumer_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string consumer = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getConsumerBytes() {
+      java.lang.Object ref = consumer_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        consumer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int START_TIME_FIELD_NUMBER = 2;
+    private long startTime_;
+    /**
+     * <code>uint64 start_time = 2;</code>
+     */
+    public long getStartTime() {
+      return startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 3;
+    private long endTime_;
+    /**
+     * <code>uint64 end_time = 3;</code>
+     */
+    public long getEndTime() {
+      return endTime_;
+    }
+
+    public static final int FIELDS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList fields_;
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getFieldsList() {
+      return fields_;
+    }
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    public int getFieldsCount() {
+      return fields_.size();
+    }
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    public java.lang.String getFields(int index) {
+      return fields_.get(index);
+    }
+    /**
+     * <code>repeated string fields = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFieldsBytes(int index) {
+      return fields_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getConsumerBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumer_);
+      }
+      if (startTime_ != 0L) {
+        output.writeUInt64(2, startTime_);
+      }
+      if (endTime_ != 0L) {
+        output.writeUInt64(3, endTime_);
+      }
+      for (int i = 0; i < fields_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fields_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getConsumerBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumer_);
+      }
+      if (startTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(2, startTime_);
+      }
+      if (endTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(3, endTime_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < fields_.size(); i++) {
+          dataSize += computeStringSizeNoTag(fields_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getFieldsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.MetricsRequest)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.MetricsRequest other = (ssn.dataservice.v1alpha1.Dataservice.MetricsRequest) obj;
+
+      boolean result = true;
+      result = result && getConsumer()
+          .equals(other.getConsumer());
+      result = result && (getStartTime()
+          == other.getStartTime());
+      result = result && (getEndTime()
+          == other.getEndTime());
+      result = result && getFieldsList()
+          .equals(other.getFieldsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
+      hash = (53 * hash) + getConsumer().hashCode();
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTime());
+      hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndTime());
+      if (getFieldsCount() > 0) {
+        hash = (37 * hash) + FIELDS_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.MetricsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.MetricsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.MetricsRequest)
+        ssn.dataservice.v1alpha1.Dataservice.MetricsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_MetricsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.class, ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        consumer_ = "";
+
+        startTime_ = 0L;
+
+        endTime_ = 0L;
+
+        fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.MetricsRequest getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.MetricsRequest build() {
+        ssn.dataservice.v1alpha1.Dataservice.MetricsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.MetricsRequest buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.MetricsRequest result = new ssn.dataservice.v1alpha1.Dataservice.MetricsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.consumer_ = consumer_;
+        result.startTime_ = startTime_;
+        result.endTime_ = endTime_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          fields_ = fields_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.fields_ = fields_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.MetricsRequest) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.MetricsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.MetricsRequest other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.getDefaultInstance()) return this;
+        if (!other.getConsumer().isEmpty()) {
+          consumer_ = other.consumer_;
+          onChanged();
+        }
+        if (other.getStartTime() != 0L) {
+          setStartTime(other.getStartTime());
+        }
+        if (other.getEndTime() != 0L) {
+          setEndTime(other.getEndTime());
+        }
+        if (!other.fields_.isEmpty()) {
+          if (fields_.isEmpty()) {
+            fields_ = other.fields_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureFieldsIsMutable();
+            fields_.addAll(other.fields_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.MetricsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.MetricsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object consumer_ = "";
+      /**
+       * <code>string consumer = 1;</code>
+       */
+      public java.lang.String getConsumer() {
+        java.lang.Object ref = consumer_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          consumer_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string consumer = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getConsumerBytes() {
+        java.lang.Object ref = consumer_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          consumer_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string consumer = 1;</code>
+       */
+      public Builder setConsumer(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        consumer_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 1;</code>
+       */
+      public Builder clearConsumer() {
+        
+        consumer_ = getDefaultInstance().getConsumer();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string consumer = 1;</code>
+       */
+      public Builder setConsumerBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        consumer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private long startTime_ ;
+      /**
+       * <code>uint64 start_time = 2;</code>
+       */
+      public long getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>uint64 start_time = 2;</code>
+       */
+      public Builder setStartTime(long value) {
+        
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 start_time = 2;</code>
+       */
+      public Builder clearStartTime() {
+        
+        startTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endTime_ ;
+      /**
+       * <code>uint64 end_time = 3;</code>
+       */
+      public long getEndTime() {
+        return endTime_;
+      }
+      /**
+       * <code>uint64 end_time = 3;</code>
+       */
+      public Builder setEndTime(long value) {
+        
+        endTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint64 end_time = 3;</code>
+       */
+      public Builder clearEndTime() {
+        
+        endTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureFieldsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getFieldsList() {
+        return fields_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public int getFieldsCount() {
+        return fields_.size();
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public java.lang.String getFields(int index) {
+        return fields_.get(index);
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFieldsBytes(int index) {
+        return fields_.getByteString(index);
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public Builder setFields(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
+        fields_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public Builder addFields(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureFieldsIsMutable();
+        fields_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public Builder addAllFields(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, fields_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public Builder clearFields() {
+        fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string fields = 4;</code>
+       */
+      public Builder addFieldsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureFieldsIsMutable();
+        fields_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.MetricsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.MetricsRequest)
+    private static final ssn.dataservice.v1alpha1.Dataservice.MetricsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.MetricsRequest();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.MetricsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<MetricsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<MetricsRequest>() {
+      @java.lang.Override
+      public MetricsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new MetricsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<MetricsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<MetricsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.MetricsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedbackMetricsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.FeedbackMetrics)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 document_count = 1;</code>
+     */
+    int getDocumentCount();
+
+    /**
+     * <code>int32 feedback_count = 2;</code>
+     */
+    int getFeedbackCount();
+
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    boolean hasOverallCorrectness();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.Correctness getOverallCorrectness();
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getOverallCorrectnessOrBuilder();
+
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness> 
+        getFieldCorrectnessList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.Correctness getFieldCorrectness(int index);
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    int getFieldCorrectnessCount();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> 
+        getFieldCorrectnessOrBuilderList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.FeedbackMetrics}
+   */
+  public  static final class FeedbackMetrics extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.FeedbackMetrics)
+      FeedbackMetricsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeedbackMetrics.newBuilder() to construct.
+    private FeedbackMetrics(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedbackMetrics() {
+      documentCount_ = 0;
+      feedbackCount_ = 0;
+      fieldCorrectness_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedbackMetrics(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              documentCount_ = input.readInt32();
+              break;
+            }
+            case 16: {
+
+              feedbackCount_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder subBuilder = null;
+              if (overallCorrectness_ != null) {
+                subBuilder = overallCorrectness_.toBuilder();
+              }
+              overallCorrectness_ = input.readMessage(ssn.dataservice.v1alpha1.Dataservice.Correctness.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(overallCorrectness_);
+                overallCorrectness_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                fieldCorrectness_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.Correctness>();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              fieldCorrectness_.add(
+                  input.readMessage(ssn.dataservice.v1alpha1.Dataservice.Correctness.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.class, ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DOCUMENT_COUNT_FIELD_NUMBER = 1;
+    private int documentCount_;
+    /**
+     * <code>int32 document_count = 1;</code>
+     */
+    public int getDocumentCount() {
+      return documentCount_;
+    }
+
+    public static final int FEEDBACK_COUNT_FIELD_NUMBER = 2;
+    private int feedbackCount_;
+    /**
+     * <code>int32 feedback_count = 2;</code>
+     */
+    public int getFeedbackCount() {
+      return feedbackCount_;
+    }
+
+    public static final int OVERALL_CORRECTNESS_FIELD_NUMBER = 3;
+    private ssn.dataservice.v1alpha1.Dataservice.Correctness overallCorrectness_;
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    public boolean hasOverallCorrectness() {
+      return overallCorrectness_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.Correctness getOverallCorrectness() {
+      return overallCorrectness_ == null ? ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance() : overallCorrectness_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getOverallCorrectnessOrBuilder() {
+      return getOverallCorrectness();
+    }
+
+    public static final int FIELD_CORRECTNESS_FIELD_NUMBER = 4;
+    private java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness> fieldCorrectness_;
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    public java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness> getFieldCorrectnessList() {
+      return fieldCorrectness_;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> 
+        getFieldCorrectnessOrBuilderList() {
+      return fieldCorrectness_;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    public int getFieldCorrectnessCount() {
+      return fieldCorrectness_.size();
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.Correctness getFieldCorrectness(int index) {
+      return fieldCorrectness_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
+        int index) {
+      return fieldCorrectness_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (documentCount_ != 0) {
+        output.writeInt32(1, documentCount_);
+      }
+      if (feedbackCount_ != 0) {
+        output.writeInt32(2, feedbackCount_);
+      }
+      if (overallCorrectness_ != null) {
+        output.writeMessage(3, getOverallCorrectness());
+      }
+      for (int i = 0; i < fieldCorrectness_.size(); i++) {
+        output.writeMessage(4, fieldCorrectness_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (documentCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, documentCount_);
+      }
+      if (feedbackCount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, feedbackCount_);
+      }
+      if (overallCorrectness_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getOverallCorrectness());
+      }
+      for (int i = 0; i < fieldCorrectness_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, fieldCorrectness_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics other = (ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics) obj;
+
+      boolean result = true;
+      result = result && (getDocumentCount()
+          == other.getDocumentCount());
+      result = result && (getFeedbackCount()
+          == other.getFeedbackCount());
+      result = result && (hasOverallCorrectness() == other.hasOverallCorrectness());
+      if (hasOverallCorrectness()) {
+        result = result && getOverallCorrectness()
+            .equals(other.getOverallCorrectness());
+      }
+      result = result && getFieldCorrectnessList()
+          .equals(other.getFieldCorrectnessList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DOCUMENT_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getDocumentCount();
+      hash = (37 * hash) + FEEDBACK_COUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getFeedbackCount();
+      if (hasOverallCorrectness()) {
+        hash = (37 * hash) + OVERALL_CORRECTNESS_FIELD_NUMBER;
+        hash = (53 * hash) + getOverallCorrectness().hashCode();
+      }
+      if (getFieldCorrectnessCount() > 0) {
+        hash = (37 * hash) + FIELD_CORRECTNESS_FIELD_NUMBER;
+        hash = (53 * hash) + getFieldCorrectnessList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.FeedbackMetrics}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.FeedbackMetrics)
+        ssn.dataservice.v1alpha1.Dataservice.FeedbackMetricsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.class, ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getFieldCorrectnessFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        documentCount_ = 0;
+
+        feedbackCount_ = 0;
+
+        if (overallCorrectnessBuilder_ == null) {
+          overallCorrectness_ = null;
+        } else {
+          overallCorrectness_ = null;
+          overallCorrectnessBuilder_ = null;
+        }
+        if (fieldCorrectnessBuilder_ == null) {
+          fieldCorrectness_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        } else {
+          fieldCorrectnessBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics build() {
+        ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics result = new ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.documentCount_ = documentCount_;
+        result.feedbackCount_ = feedbackCount_;
+        if (overallCorrectnessBuilder_ == null) {
+          result.overallCorrectness_ = overallCorrectness_;
+        } else {
+          result.overallCorrectness_ = overallCorrectnessBuilder_.build();
+        }
+        if (fieldCorrectnessBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.fieldCorrectness_ = fieldCorrectness_;
+        } else {
+          result.fieldCorrectness_ = fieldCorrectnessBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics.getDefaultInstance()) return this;
+        if (other.getDocumentCount() != 0) {
+          setDocumentCount(other.getDocumentCount());
+        }
+        if (other.getFeedbackCount() != 0) {
+          setFeedbackCount(other.getFeedbackCount());
+        }
+        if (other.hasOverallCorrectness()) {
+          mergeOverallCorrectness(other.getOverallCorrectness());
+        }
+        if (fieldCorrectnessBuilder_ == null) {
+          if (!other.fieldCorrectness_.isEmpty()) {
+            if (fieldCorrectness_.isEmpty()) {
+              fieldCorrectness_ = other.fieldCorrectness_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+            } else {
+              ensureFieldCorrectnessIsMutable();
+              fieldCorrectness_.addAll(other.fieldCorrectness_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.fieldCorrectness_.isEmpty()) {
+            if (fieldCorrectnessBuilder_.isEmpty()) {
+              fieldCorrectnessBuilder_.dispose();
+              fieldCorrectnessBuilder_ = null;
+              fieldCorrectness_ = other.fieldCorrectness_;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              fieldCorrectnessBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getFieldCorrectnessFieldBuilder() : null;
+            } else {
+              fieldCorrectnessBuilder_.addAllMessages(other.fieldCorrectness_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int documentCount_ ;
+      /**
+       * <code>int32 document_count = 1;</code>
+       */
+      public int getDocumentCount() {
+        return documentCount_;
+      }
+      /**
+       * <code>int32 document_count = 1;</code>
+       */
+      public Builder setDocumentCount(int value) {
+        
+        documentCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 document_count = 1;</code>
+       */
+      public Builder clearDocumentCount() {
+        
+        documentCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int feedbackCount_ ;
+      /**
+       * <code>int32 feedback_count = 2;</code>
+       */
+      public int getFeedbackCount() {
+        return feedbackCount_;
+      }
+      /**
+       * <code>int32 feedback_count = 2;</code>
+       */
+      public Builder setFeedbackCount(int value) {
+        
+        feedbackCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 feedback_count = 2;</code>
+       */
+      public Builder clearFeedbackCount() {
+        
+        feedbackCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private ssn.dataservice.v1alpha1.Dataservice.Correctness overallCorrectness_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> overallCorrectnessBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public boolean hasOverallCorrectness() {
+        return overallCorrectnessBuilder_ != null || overallCorrectness_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness getOverallCorrectness() {
+        if (overallCorrectnessBuilder_ == null) {
+          return overallCorrectness_ == null ? ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance() : overallCorrectness_;
+        } else {
+          return overallCorrectnessBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public Builder setOverallCorrectness(ssn.dataservice.v1alpha1.Dataservice.Correctness value) {
+        if (overallCorrectnessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          overallCorrectness_ = value;
+          onChanged();
+        } else {
+          overallCorrectnessBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public Builder setOverallCorrectness(
+          ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder builderForValue) {
+        if (overallCorrectnessBuilder_ == null) {
+          overallCorrectness_ = builderForValue.build();
+          onChanged();
+        } else {
+          overallCorrectnessBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public Builder mergeOverallCorrectness(ssn.dataservice.v1alpha1.Dataservice.Correctness value) {
+        if (overallCorrectnessBuilder_ == null) {
+          if (overallCorrectness_ != null) {
+            overallCorrectness_ =
+              ssn.dataservice.v1alpha1.Dataservice.Correctness.newBuilder(overallCorrectness_).mergeFrom(value).buildPartial();
+          } else {
+            overallCorrectness_ = value;
+          }
+          onChanged();
+        } else {
+          overallCorrectnessBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public Builder clearOverallCorrectness() {
+        if (overallCorrectnessBuilder_ == null) {
+          overallCorrectness_ = null;
+          onChanged();
+        } else {
+          overallCorrectness_ = null;
+          overallCorrectnessBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder getOverallCorrectnessBuilder() {
+        
+        onChanged();
+        return getOverallCorrectnessFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getOverallCorrectnessOrBuilder() {
+        if (overallCorrectnessBuilder_ != null) {
+          return overallCorrectnessBuilder_.getMessageOrBuilder();
+        } else {
+          return overallCorrectness_ == null ?
+              ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance() : overallCorrectness_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1alpha1.Correctness overall_correctness = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> 
+          getOverallCorrectnessFieldBuilder() {
+        if (overallCorrectnessBuilder_ == null) {
+          overallCorrectnessBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder>(
+                  getOverallCorrectness(),
+                  getParentForChildren(),
+                  isClean());
+          overallCorrectness_ = null;
+        }
+        return overallCorrectnessBuilder_;
+      }
+
+      private java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness> fieldCorrectness_ =
+        java.util.Collections.emptyList();
+      private void ensureFieldCorrectnessIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          fieldCorrectness_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.Correctness>(fieldCorrectness_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> fieldCorrectnessBuilder_;
+
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness> getFieldCorrectnessList() {
+        if (fieldCorrectnessBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(fieldCorrectness_);
+        } else {
+          return fieldCorrectnessBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public int getFieldCorrectnessCount() {
+        if (fieldCorrectnessBuilder_ == null) {
+          return fieldCorrectness_.size();
+        } else {
+          return fieldCorrectnessBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness getFieldCorrectness(int index) {
+        if (fieldCorrectnessBuilder_ == null) {
+          return fieldCorrectness_.get(index);
+        } else {
+          return fieldCorrectnessBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder setFieldCorrectness(
+          int index, ssn.dataservice.v1alpha1.Dataservice.Correctness value) {
+        if (fieldCorrectnessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.set(index, value);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder setFieldCorrectness(
+          int index, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder builderForValue) {
+        if (fieldCorrectnessBuilder_ == null) {
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder addFieldCorrectness(ssn.dataservice.v1alpha1.Dataservice.Correctness value) {
+        if (fieldCorrectnessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.add(value);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder addFieldCorrectness(
+          int index, ssn.dataservice.v1alpha1.Dataservice.Correctness value) {
+        if (fieldCorrectnessBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.add(index, value);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder addFieldCorrectness(
+          ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder builderForValue) {
+        if (fieldCorrectnessBuilder_ == null) {
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.add(builderForValue.build());
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder addFieldCorrectness(
+          int index, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder builderForValue) {
+        if (fieldCorrectnessBuilder_ == null) {
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder addAllFieldCorrectness(
+          java.lang.Iterable<? extends ssn.dataservice.v1alpha1.Dataservice.Correctness> values) {
+        if (fieldCorrectnessBuilder_ == null) {
+          ensureFieldCorrectnessIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, fieldCorrectness_);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder clearFieldCorrectness() {
+        if (fieldCorrectnessBuilder_ == null) {
+          fieldCorrectness_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public Builder removeFieldCorrectness(int index) {
+        if (fieldCorrectnessBuilder_ == null) {
+          ensureFieldCorrectnessIsMutable();
+          fieldCorrectness_.remove(index);
+          onChanged();
+        } else {
+          fieldCorrectnessBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder getFieldCorrectnessBuilder(
+          int index) {
+        return getFieldCorrectnessFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder getFieldCorrectnessOrBuilder(
+          int index) {
+        if (fieldCorrectnessBuilder_ == null) {
+          return fieldCorrectness_.get(index);  } else {
+          return fieldCorrectnessBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> 
+           getFieldCorrectnessOrBuilderList() {
+        if (fieldCorrectnessBuilder_ != null) {
+          return fieldCorrectnessBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(fieldCorrectness_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder addFieldCorrectnessBuilder() {
+        return getFieldCorrectnessFieldBuilder().addBuilder(
+            ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder addFieldCorrectnessBuilder(
+          int index) {
+        return getFieldCorrectnessFieldBuilder().addBuilder(
+            index, ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.Correctness field_correctness = 4;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder> 
+           getFieldCorrectnessBuilderList() {
+        return getFieldCorrectnessFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder> 
+          getFieldCorrectnessFieldBuilder() {
+        if (fieldCorrectnessBuilder_ == null) {
+          fieldCorrectnessBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.Correctness, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder, ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder>(
+                  fieldCorrectness_,
+                  ((bitField0_ & 0x00000008) == 0x00000008),
+                  getParentForChildren(),
+                  isClean());
+          fieldCorrectness_ = null;
+        }
+        return fieldCorrectnessBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.FeedbackMetrics)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.FeedbackMetrics)
+    private static final ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeedbackMetrics>
+        PARSER = new com.google.protobuf.AbstractParser<FeedbackMetrics>() {
+      @java.lang.Override
+      public FeedbackMetrics parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeedbackMetrics(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedbackMetrics> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedbackMetrics> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.FeedbackMetrics getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CorrectnessOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.Correctness)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string field = 1;</code>
+     */
+    java.lang.String getField();
+    /**
+     * <code>string field = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFieldBytes();
+
+    /**
+     * <code>float correct_percentage = 2;</code>
+     */
+    float getCorrectPercentage();
+
+    /**
+     * <code>float incomplete_percentage = 3;</code>
+     */
+    float getIncompletePercentage();
+
+    /**
+     * <code>float error_percentage = 4;</code>
+     */
+    float getErrorPercentage();
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.Correctness}
+   */
+  public  static final class Correctness extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.Correctness)
+      CorrectnessOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Correctness.newBuilder() to construct.
+    private Correctness(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Correctness() {
+      field_ = "";
+      correctPercentage_ = 0F;
+      incompletePercentage_ = 0F;
+      errorPercentage_ = 0F;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Correctness(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              field_ = s;
+              break;
+            }
+            case 21: {
+
+              correctPercentage_ = input.readFloat();
+              break;
+            }
+            case 29: {
+
+              incompletePercentage_ = input.readFloat();
+              break;
+            }
+            case 37: {
+
+              errorPercentage_ = input.readFloat();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Correctness_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.Correctness.class, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder.class);
+    }
+
+    public static final int FIELD_FIELD_NUMBER = 1;
+    private volatile java.lang.Object field_;
+    /**
+     * <code>string field = 1;</code>
+     */
+    public java.lang.String getField() {
+      java.lang.Object ref = field_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        field_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string field = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFieldBytes() {
+      java.lang.Object ref = field_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        field_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CORRECT_PERCENTAGE_FIELD_NUMBER = 2;
+    private float correctPercentage_;
+    /**
+     * <code>float correct_percentage = 2;</code>
+     */
+    public float getCorrectPercentage() {
+      return correctPercentage_;
+    }
+
+    public static final int INCOMPLETE_PERCENTAGE_FIELD_NUMBER = 3;
+    private float incompletePercentage_;
+    /**
+     * <code>float incomplete_percentage = 3;</code>
+     */
+    public float getIncompletePercentage() {
+      return incompletePercentage_;
+    }
+
+    public static final int ERROR_PERCENTAGE_FIELD_NUMBER = 4;
+    private float errorPercentage_;
+    /**
+     * <code>float error_percentage = 4;</code>
+     */
+    public float getErrorPercentage() {
+      return errorPercentage_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getFieldBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, field_);
+      }
+      if (correctPercentage_ != 0F) {
+        output.writeFloat(2, correctPercentage_);
+      }
+      if (incompletePercentage_ != 0F) {
+        output.writeFloat(3, incompletePercentage_);
+      }
+      if (errorPercentage_ != 0F) {
+        output.writeFloat(4, errorPercentage_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getFieldBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, field_);
+      }
+      if (correctPercentage_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, correctPercentage_);
+      }
+      if (incompletePercentage_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, incompletePercentage_);
+      }
+      if (errorPercentage_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, errorPercentage_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.Correctness)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.Correctness other = (ssn.dataservice.v1alpha1.Dataservice.Correctness) obj;
+
+      boolean result = true;
+      result = result && getField()
+          .equals(other.getField());
+      result = result && (
+          java.lang.Float.floatToIntBits(getCorrectPercentage())
+          == java.lang.Float.floatToIntBits(
+              other.getCorrectPercentage()));
+      result = result && (
+          java.lang.Float.floatToIntBits(getIncompletePercentage())
+          == java.lang.Float.floatToIntBits(
+              other.getIncompletePercentage()));
+      result = result && (
+          java.lang.Float.floatToIntBits(getErrorPercentage())
+          == java.lang.Float.floatToIntBits(
+              other.getErrorPercentage()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FIELD_FIELD_NUMBER;
+      hash = (53 * hash) + getField().hashCode();
+      hash = (37 * hash) + CORRECT_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getCorrectPercentage());
+      hash = (37 * hash) + INCOMPLETE_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getIncompletePercentage());
+      hash = (37 * hash) + ERROR_PERCENTAGE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getErrorPercentage());
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.Correctness prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.Correctness}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.Correctness)
+        ssn.dataservice.v1alpha1.Dataservice.CorrectnessOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Correctness_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.Correctness.class, ssn.dataservice.v1alpha1.Dataservice.Correctness.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.Correctness.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        field_ = "";
+
+        correctPercentage_ = 0F;
+
+        incompletePercentage_ = 0F;
+
+        errorPercentage_ = 0F;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness build() {
+        ssn.dataservice.v1alpha1.Dataservice.Correctness result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.Correctness buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.Correctness result = new ssn.dataservice.v1alpha1.Dataservice.Correctness(this);
+        result.field_ = field_;
+        result.correctPercentage_ = correctPercentage_;
+        result.incompletePercentage_ = incompletePercentage_;
+        result.errorPercentage_ = errorPercentage_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.Correctness) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.Correctness)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.Correctness other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.Correctness.getDefaultInstance()) return this;
+        if (!other.getField().isEmpty()) {
+          field_ = other.field_;
+          onChanged();
+        }
+        if (other.getCorrectPercentage() != 0F) {
+          setCorrectPercentage(other.getCorrectPercentage());
+        }
+        if (other.getIncompletePercentage() != 0F) {
+          setIncompletePercentage(other.getIncompletePercentage());
+        }
+        if (other.getErrorPercentage() != 0F) {
+          setErrorPercentage(other.getErrorPercentage());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.Correctness parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.Correctness) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object field_ = "";
+      /**
+       * <code>string field = 1;</code>
+       */
+      public java.lang.String getField() {
+        java.lang.Object ref = field_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          field_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string field = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFieldBytes() {
+        java.lang.Object ref = field_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          field_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string field = 1;</code>
+       */
+      public Builder setField(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        field_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string field = 1;</code>
+       */
+      public Builder clearField() {
+        
+        field_ = getDefaultInstance().getField();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string field = 1;</code>
+       */
+      public Builder setFieldBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        field_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float correctPercentage_ ;
+      /**
+       * <code>float correct_percentage = 2;</code>
+       */
+      public float getCorrectPercentage() {
+        return correctPercentage_;
+      }
+      /**
+       * <code>float correct_percentage = 2;</code>
+       */
+      public Builder setCorrectPercentage(float value) {
+        
+        correctPercentage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float correct_percentage = 2;</code>
+       */
+      public Builder clearCorrectPercentage() {
+        
+        correctPercentage_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float incompletePercentage_ ;
+      /**
+       * <code>float incomplete_percentage = 3;</code>
+       */
+      public float getIncompletePercentage() {
+        return incompletePercentage_;
+      }
+      /**
+       * <code>float incomplete_percentage = 3;</code>
+       */
+      public Builder setIncompletePercentage(float value) {
+        
+        incompletePercentage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float incomplete_percentage = 3;</code>
+       */
+      public Builder clearIncompletePercentage() {
+        
+        incompletePercentage_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float errorPercentage_ ;
+      /**
+       * <code>float error_percentage = 4;</code>
+       */
+      public float getErrorPercentage() {
+        return errorPercentage_;
+      }
+      /**
+       * <code>float error_percentage = 4;</code>
+       */
+      public Builder setErrorPercentage(float value) {
+        
+        errorPercentage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float error_percentage = 4;</code>
+       */
+      public Builder clearErrorPercentage() {
+        
+        errorPercentage_ = 0F;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.Correctness)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.Correctness)
+    private static final ssn.dataservice.v1alpha1.Dataservice.Correctness DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.Correctness();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.Correctness getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Correctness>
+        PARSER = new com.google.protobuf.AbstractParser<Correctness>() {
+      @java.lang.Override
+      public Correctness parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Correctness(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Correctness> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Correctness> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.Correctness getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface DeleteRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.DeleteRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -19122,6 +21847,21 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_MetricsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_Correctness_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -19227,23 +21967,36 @@ public final class Dataservice {
       " \001(\0132*.ssn.dataservice.v1alpha1.Predicti" +
       "onValues\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
       "9\n\013true_values\030\002 \001(\0132$.ssn.dataservice.v" +
-      "1alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"\035\n\rDele" +
-      "teRequest\022\014\n\004tags\030\001 \003(\t2\264\004\n\013DataService\022" +
-      "s\n\016CreateDocument\022/.ssn.dataservice.v1al" +
-      "pha1.CreateDocumentRequest\0320.ssn.dataser" +
-      "vice.v1alpha1.CreateDocumentResponse\022m\n\014" +
-      "ReadDocument\022-.ssn.dataservice.v1alpha1." +
-      "ReadDocumentRequest\032..ssn.dataservice.v1" +
-      "alpha1.ReadDocumentResponse\022[\n\017PrepareFe" +
-      "edback\0220.ssn.dataservice.v1alpha1.Prepar" +
-      "eFeedbackRequest\032\026.google.protobuf.Empty" +
-      "\022s\n\010Feedback\022).ssn.dataservice.v1alpha1." +
-      "FeedbackRequest\032\026.google.protobuf.Empty\"" +
-      "$\202\323\344\223\002\036\"\031/v1alpha1/feedback:create:\001*\022o\n" +
-      "\006Delete\022\'.ssn.dataservice.v1alpha1.Delet" +
-      "eRequest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036" +
-      "\"\031/v1alpha1/feedback:delete:\001*B\rZ\013datase" +
-      "rviceb\006proto3"
+      "1alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"X\n\016Metr" +
+      "icsRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nstart_ti" +
+      "me\030\002 \001(\004\022\020\n\010end_time\030\003 \001(\004\022\016\n\006fields\030\004 \003" +
+      "(\t\"\307\001\n\017FeedbackMetrics\022\026\n\016document_count" +
+      "\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005\022B\n\023overal" +
+      "l_correctness\030\003 \001(\0132%.ssn.dataservice.v1" +
+      "alpha1.Correctness\022@\n\021field_correctness\030" +
+      "\004 \003(\0132%.ssn.dataservice.v1alpha1.Correct" +
+      "ness\"q\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022co" +
+      "rrect_percentage\030\002 \001(\002\022\035\n\025incomplete_per" +
+      "centage\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\"" +
+      "\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t2\235\005\n\013DataS" +
+      "ervice\022s\n\016CreateDocument\022/.ssn.dataservi" +
+      "ce.v1alpha1.CreateDocumentRequest\0320.ssn." +
+      "dataservice.v1alpha1.CreateDocumentRespo" +
+      "nse\022m\n\014ReadDocument\022-.ssn.dataservice.v1" +
+      "alpha1.ReadDocumentRequest\032..ssn.dataser" +
+      "vice.v1alpha1.ReadDocumentResponse\022[\n\017Pr" +
+      "epareFeedback\0220.ssn.dataservice.v1alpha1" +
+      ".PrepareFeedbackRequest\032\026.google.protobu" +
+      "f.Empty\022s\n\010Feedback\022).ssn.dataservice.v1" +
+      "alpha1.FeedbackRequest\032\026.google.protobuf" +
+      ".Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:creat" +
+      "e:\001*\022g\n\020CalculateMetrics\022(.ssn.dataservi" +
+      "ce.v1alpha1.MetricsRequest\032).ssn.dataser" +
+      "vice.v1alpha1.FeedbackMetrics\022o\n\006Delete\022" +
+      "\'.ssn.dataservice.v1alpha1.DeleteRequest" +
+      "\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alp" +
+      "ha1/feedback:delete:\001*B\rZ\013dataserviceb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -19318,8 +22071,26 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "TrueValues", "Tags", });
-    internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor =
+    internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_ssn_dataservice_v1alpha1_MetricsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor,
+        new java.lang.String[] { "Consumer", "StartTime", "EndTime", "Fields", });
+    internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor,
+        new java.lang.String[] { "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness", });
+    internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_ssn_dataservice_v1alpha1_Correctness_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_Correctness_descriptor,
+        new java.lang.String[] { "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", });
+    internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(12);
     internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor,
