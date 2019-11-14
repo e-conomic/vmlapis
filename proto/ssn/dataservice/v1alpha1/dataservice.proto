@@ -131,8 +131,8 @@ message FeedbackRequest {
 
 message MetricsRequest {
   string consumer = 1;
-  uint64 start_time = 2;
-  uint64 end_time = 3;
+  int64 start_time = 2;
+  int64 end_time = 3;
   repeated string fields = 4;
 }
 

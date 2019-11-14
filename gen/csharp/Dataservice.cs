@@ -107,8 +107,8 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "b25WYWx1ZXMiZgoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjkKC3Ry",
             "dWVfdmFsdWVzGAIgASgLMiQuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlRy",
             "dWVWYWx1ZXMSDAoEdGFncxgDIAMoCSJYCg5NZXRyaWNzUmVxdWVzdBIQCghj",
-            "b25zdW1lchgBIAEoCRISCgpzdGFydF90aW1lGAIgASgEEhAKCGVuZF90aW1l",
-            "GAMgASgEEg4KBmZpZWxkcxgEIAMoCSLHAQoPRmVlZGJhY2tNZXRyaWNzEhYK",
+            "b25zdW1lchgBIAEoCRISCgpzdGFydF90aW1lGAIgASgDEhAKCGVuZF90aW1l",
+            "GAMgASgDEg4KBmZpZWxkcxgEIAMoCSLHAQoPRmVlZGJhY2tNZXRyaWNzEhYK",
             "DmRvY3VtZW50X2NvdW50GAEgASgFEhYKDmZlZWRiYWNrX2NvdW50GAIgASgF",
             "EkIKE292ZXJhbGxfY29ycmVjdG5lc3MYAyABKAsyJS5zc24uZGF0YXNlcnZp",
             "Y2UudjFhbHBoYTEuQ29ycmVjdG5lc3MSQAoRZmllbGRfY29ycmVjdG5lc3MY",
@@ -2792,9 +2792,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 2;
-    private ulong startTime_;
+    private long startTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong StartTime {
+    public long StartTime {
       get { return startTime_; }
       set {
         startTime_ = value;
@@ -2803,9 +2803,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 3;
-    private ulong endTime_;
+    private long endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ulong EndTime {
+    public long EndTime {
       get { return endTime_; }
       set {
         endTime_ = value;
@@ -2846,8 +2846,8 @@ namespace Ssn.Dataservice.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (StartTime != 0UL) hash ^= StartTime.GetHashCode();
-      if (EndTime != 0UL) hash ^= EndTime.GetHashCode();
+      if (StartTime != 0L) hash ^= StartTime.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       hash ^= fields_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2866,13 +2866,13 @@ namespace Ssn.Dataservice.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Consumer);
       }
-      if (StartTime != 0UL) {
+      if (StartTime != 0L) {
         output.WriteRawTag(16);
-        output.WriteUInt64(StartTime);
+        output.WriteInt64(StartTime);
       }
-      if (EndTime != 0UL) {
+      if (EndTime != 0L) {
         output.WriteRawTag(24);
-        output.WriteUInt64(EndTime);
+        output.WriteInt64(EndTime);
       }
       fields_.WriteTo(output, _repeated_fields_codec);
       if (_unknownFields != null) {
@@ -2886,11 +2886,11 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (Consumer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
       }
-      if (StartTime != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(StartTime);
+      if (StartTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
       }
-      if (EndTime != 0UL) {
-        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(EndTime);
+      if (EndTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
       }
       size += fields_.CalculateSize(_repeated_fields_codec);
       if (_unknownFields != null) {
@@ -2907,10 +2907,10 @@ namespace Ssn.Dataservice.V1Alpha1 {
       if (other.Consumer.Length != 0) {
         Consumer = other.Consumer;
       }
-      if (other.StartTime != 0UL) {
+      if (other.StartTime != 0L) {
         StartTime = other.StartTime;
       }
-      if (other.EndTime != 0UL) {
+      if (other.EndTime != 0L) {
         EndTime = other.EndTime;
       }
       fields_.Add(other.fields_);
@@ -2930,11 +2930,11 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           }
           case 16: {
-            StartTime = input.ReadUInt64();
+            StartTime = input.ReadInt64();
             break;
           }
           case 24: {
-            EndTime = input.ReadUInt64();
+            EndTime = input.ReadInt64();
             break;
           }
           case 34: {

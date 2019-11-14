@@ -18487,12 +18487,12 @@ public final class Dataservice {
         getConsumerBytes();
 
     /**
-     * <code>uint64 start_time = 2;</code>
+     * <code>int64 start_time = 2;</code>
      */
     long getStartTime();
 
     /**
-     * <code>uint64 end_time = 3;</code>
+     * <code>int64 end_time = 3;</code>
      */
     long getEndTime();
 
@@ -18566,12 +18566,12 @@ public final class Dataservice {
             }
             case 16: {
 
-              startTime_ = input.readUInt64();
+              startTime_ = input.readInt64();
               break;
             }
             case 24: {
 
-              endTime_ = input.readUInt64();
+              endTime_ = input.readInt64();
               break;
             }
             case 34: {
@@ -18656,7 +18656,7 @@ public final class Dataservice {
     public static final int START_TIME_FIELD_NUMBER = 2;
     private long startTime_;
     /**
-     * <code>uint64 start_time = 2;</code>
+     * <code>int64 start_time = 2;</code>
      */
     public long getStartTime() {
       return startTime_;
@@ -18665,7 +18665,7 @@ public final class Dataservice {
     public static final int END_TIME_FIELD_NUMBER = 3;
     private long endTime_;
     /**
-     * <code>uint64 end_time = 3;</code>
+     * <code>int64 end_time = 3;</code>
      */
     public long getEndTime() {
       return endTime_;
@@ -18718,10 +18718,10 @@ public final class Dataservice {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumer_);
       }
       if (startTime_ != 0L) {
-        output.writeUInt64(2, startTime_);
+        output.writeInt64(2, startTime_);
       }
       if (endTime_ != 0L) {
-        output.writeUInt64(3, endTime_);
+        output.writeInt64(3, endTime_);
       }
       for (int i = 0; i < fields_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 4, fields_.getRaw(i));
@@ -18740,11 +18740,11 @@ public final class Dataservice {
       }
       if (startTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(2, startTime_);
+          .computeInt64Size(2, startTime_);
       }
       if (endTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(3, endTime_);
+          .computeInt64Size(3, endTime_);
       }
       {
         int dataSize = 0;
@@ -19148,13 +19148,13 @@ public final class Dataservice {
 
       private long startTime_ ;
       /**
-       * <code>uint64 start_time = 2;</code>
+       * <code>int64 start_time = 2;</code>
        */
       public long getStartTime() {
         return startTime_;
       }
       /**
-       * <code>uint64 start_time = 2;</code>
+       * <code>int64 start_time = 2;</code>
        */
       public Builder setStartTime(long value) {
         
@@ -19163,7 +19163,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>uint64 start_time = 2;</code>
+       * <code>int64 start_time = 2;</code>
        */
       public Builder clearStartTime() {
         
@@ -19174,13 +19174,13 @@ public final class Dataservice {
 
       private long endTime_ ;
       /**
-       * <code>uint64 end_time = 3;</code>
+       * <code>int64 end_time = 3;</code>
        */
       public long getEndTime() {
         return endTime_;
       }
       /**
-       * <code>uint64 end_time = 3;</code>
+       * <code>int64 end_time = 3;</code>
        */
       public Builder setEndTime(long value) {
         
@@ -19189,7 +19189,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>uint64 end_time = 3;</code>
+       * <code>int64 end_time = 3;</code>
        */
       public Builder clearEndTime() {
         
@@ -21969,7 +21969,7 @@ public final class Dataservice {
       "9\n\013true_values\030\002 \001(\0132$.ssn.dataservice.v" +
       "1alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"X\n\016Metr" +
       "icsRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nstart_ti" +
-      "me\030\002 \001(\004\022\020\n\010end_time\030\003 \001(\004\022\016\n\006fields\030\004 \003" +
+      "me\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003" +
       "(\t\"\307\001\n\017FeedbackMetrics\022\026\n\016document_count" +
       "\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005\022B\n\023overal" +
       "l_correctness\030\003 \001(\0132%.ssn.dataservice.v1" +
