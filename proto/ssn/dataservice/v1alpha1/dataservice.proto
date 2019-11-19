@@ -23,6 +23,7 @@ service DataService {
       body: "*"
     };
   }
+  rpc CalculateMetrics(MetricsRequest) returns (FeedbackMetrics);
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/feedback:delete"
@@ -126,6 +127,27 @@ message FeedbackRequest {
   string id = 1;
   TrueValues true_values = 2;
   repeated string tags = 3;
+}
+
+message MetricsRequest {
+  string consumer = 1;
+  int64 start_time = 2;
+  int64 end_time = 3;
+  repeated string fields = 4;
+}
+
+message FeedbackMetrics {
+  int32 document_count = 1;
+  int32 feedback_count = 2;
+  Correctness overall_correctness = 3;
+  repeated Correctness field_correctness = 4;
+}
+
+message Correctness {
+  string field = 1;
+  float correct_percentage = 2;
+  float incomplete_percentage = 3;
+  float error_percentage = 4;
 }
 
 message DeleteRequest {

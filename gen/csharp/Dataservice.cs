@@ -106,21 +106,32 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "b25zGAQgASgLMiouc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlByZWRpY3Rp",
             "b25WYWx1ZXMiZgoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjkKC3Ry",
             "dWVfdmFsdWVzGAIgASgLMiQuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlRy",
-            "dWVWYWx1ZXMSDAoEdGFncxgDIAMoCSIdCg1EZWxldGVSZXF1ZXN0EgwKBHRh",
-            "Z3MYASADKAkytAQKC0RhdGFTZXJ2aWNlEnMKDkNyZWF0ZURvY3VtZW50Ei8u",
-            "c3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZURvY3VtZW50UmVxdWVz",
-            "dBowLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5DcmVhdGVEb2N1bWVudFJl",
-            "c3BvbnNlEm0KDFJlYWREb2N1bWVudBItLnNzbi5kYXRhc2VydmljZS52MWFs",
-            "cGhhMS5SZWFkRG9jdW1lbnRSZXF1ZXN0Gi4uc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "YWxwaGExLlJlYWREb2N1bWVudFJlc3BvbnNlElsKD1ByZXBhcmVGZWVkYmFj",
-            "axIwLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5QcmVwYXJlRmVlZGJhY2tS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EnMKCEZlZWRiYWNrEiku",
-            "c3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkZlZWRiYWNrUmVxdWVzdBoWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eSIkgtPkkwIeIhkvdjFhbHBoYTEvZmVlZGJh",
-            "Y2s6Y3JlYXRlOgEqEm8KBkRlbGV0ZRInLnNzbi5kYXRhc2VydmljZS52MWFs",
-            "cGhhMS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC",
-            "0+STAh4iGS92MWFscGhhMS9mZWVkYmFjazpkZWxldGU6ASpCDVoLZGF0YXNl",
-            "cnZpY2ViBnByb3RvMw=="));
+            "dWVWYWx1ZXMSDAoEdGFncxgDIAMoCSJYCg5NZXRyaWNzUmVxdWVzdBIQCghj",
+            "b25zdW1lchgBIAEoCRISCgpzdGFydF90aW1lGAIgASgDEhAKCGVuZF90aW1l",
+            "GAMgASgDEg4KBmZpZWxkcxgEIAMoCSLHAQoPRmVlZGJhY2tNZXRyaWNzEhYK",
+            "DmRvY3VtZW50X2NvdW50GAEgASgFEhYKDmZlZWRiYWNrX2NvdW50GAIgASgF",
+            "EkIKE292ZXJhbGxfY29ycmVjdG5lc3MYAyABKAsyJS5zc24uZGF0YXNlcnZp",
+            "Y2UudjFhbHBoYTEuQ29ycmVjdG5lc3MSQAoRZmllbGRfY29ycmVjdG5lc3MY",
+            "BCADKAsyJS5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ29ycmVjdG5lc3Mi",
+            "cQoLQ29ycmVjdG5lc3MSDQoFZmllbGQYASABKAkSGgoSY29ycmVjdF9wZXJj",
+            "ZW50YWdlGAIgASgCEh0KFWluY29tcGxldGVfcGVyY2VudGFnZRgDIAEoAhIY",
+            "ChBlcnJvcl9wZXJjZW50YWdlGAQgASgCIh0KDURlbGV0ZVJlcXVlc3QSDAoE",
+            "dGFncxgBIAMoCTKdBQoLRGF0YVNlcnZpY2UScwoOQ3JlYXRlRG9jdW1lbnQS",
+            "Ly5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ3JlYXRlRG9jdW1lbnRSZXF1",
+            "ZXN0GjAuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZURvY3VtZW50",
+            "UmVzcG9uc2USbQoMUmVhZERvY3VtZW50Ei0uc3NuLmRhdGFzZXJ2aWNlLnYx",
+            "YWxwaGExLlJlYWREb2N1bWVudFJlcXVlc3QaLi5zc24uZGF0YXNlcnZpY2Uu",
+            "djFhbHBoYTEuUmVhZERvY3VtZW50UmVzcG9uc2USWwoPUHJlcGFyZUZlZWRi",
+            "YWNrEjAuc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlByZXBhcmVGZWVkYmFj",
+            "a1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkScwoIRmVlZGJhY2sS",
+            "KS5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRmVlZGJhY2tSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4iGS92MWFscGhhMS9mZWVk",
+            "YmFjazpjcmVhdGU6ASoSZwoQQ2FsY3VsYXRlTWV0cmljcxIoLnNzbi5kYXRh",
+            "c2VydmljZS52MWFscGhhMS5NZXRyaWNzUmVxdWVzdBopLnNzbi5kYXRhc2Vy",
+            "dmljZS52MWFscGhhMS5GZWVkYmFja01ldHJpY3MSbwoGRGVsZXRlEicuc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkiJILT5JMCHiIZL3YxYWxwaGExL2ZlZWRiYWNrOmRl",
+            "bGV0ZToBKkINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -133,6 +144,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse), global::Ssn.Dataservice.V1Alpha1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1Alpha1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackRequest), global::Ssn.Dataservice.V1Alpha1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.MetricsRequest), global::Ssn.Dataservice.V1Alpha1.MetricsRequest.Parser, new[]{ "Consumer", "StartTime", "EndTime", "Fields" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackMetrics), global::Ssn.Dataservice.V1Alpha1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.Correctness), global::Ssn.Dataservice.V1Alpha1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteRequest), global::Ssn.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null)
           }));
     }
@@ -2728,6 +2742,635 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
   }
 
+  public sealed partial class MetricsRequest : pb::IMessage<MetricsRequest> {
+    private static readonly pb::MessageParser<MetricsRequest> _parser = new pb::MessageParser<MetricsRequest>(() => new MetricsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<MetricsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricsRequest(MetricsRequest other) : this() {
+      consumer_ = other.consumer_;
+      startTime_ = other.startTime_;
+      endTime_ = other.endTime_;
+      fields_ = other.fields_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MetricsRequest Clone() {
+      return new MetricsRequest(this);
+    }
+
+    /// <summary>Field number for the "consumer" field.</summary>
+    public const int ConsumerFieldNumber = 1;
+    private string consumer_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Consumer {
+      get { return consumer_; }
+      set {
+        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 2;
+    private long startTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 3;
+    private long endTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fields" field.</summary>
+    public const int FieldsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_fields_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> fields_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Fields {
+      get { return fields_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as MetricsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(MetricsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Consumer != other.Consumer) return false;
+      if (StartTime != other.StartTime) return false;
+      if (EndTime != other.EndTime) return false;
+      if(!fields_.Equals(other.fields_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
+      if (StartTime != 0L) hash ^= StartTime.GetHashCode();
+      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
+      hash ^= fields_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Consumer.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Consumer);
+      }
+      if (StartTime != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(StartTime);
+      }
+      if (EndTime != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(EndTime);
+      }
+      fields_.WriteTo(output, _repeated_fields_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Consumer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
+      }
+      if (StartTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
+      }
+      if (EndTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
+      }
+      size += fields_.CalculateSize(_repeated_fields_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(MetricsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Consumer.Length != 0) {
+        Consumer = other.Consumer;
+      }
+      if (other.StartTime != 0L) {
+        StartTime = other.StartTime;
+      }
+      if (other.EndTime != 0L) {
+        EndTime = other.EndTime;
+      }
+      fields_.Add(other.fields_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 16: {
+            StartTime = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            EndTime = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            fields_.AddEntriesFrom(input, _repeated_fields_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class FeedbackMetrics : pb::IMessage<FeedbackMetrics> {
+    private static readonly pb::MessageParser<FeedbackMetrics> _parser = new pb::MessageParser<FeedbackMetrics>(() => new FeedbackMetrics());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<FeedbackMetrics> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedbackMetrics() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedbackMetrics(FeedbackMetrics other) : this() {
+      documentCount_ = other.documentCount_;
+      feedbackCount_ = other.feedbackCount_;
+      overallCorrectness_ = other.overallCorrectness_ != null ? other.overallCorrectness_.Clone() : null;
+      fieldCorrectness_ = other.fieldCorrectness_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public FeedbackMetrics Clone() {
+      return new FeedbackMetrics(this);
+    }
+
+    /// <summary>Field number for the "document_count" field.</summary>
+    public const int DocumentCountFieldNumber = 1;
+    private int documentCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DocumentCount {
+      get { return documentCount_; }
+      set {
+        documentCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "feedback_count" field.</summary>
+    public const int FeedbackCountFieldNumber = 2;
+    private int feedbackCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int FeedbackCount {
+      get { return feedbackCount_; }
+      set {
+        feedbackCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "overall_correctness" field.</summary>
+    public const int OverallCorrectnessFieldNumber = 3;
+    private global::Ssn.Dataservice.V1Alpha1.Correctness overallCorrectness_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Ssn.Dataservice.V1Alpha1.Correctness OverallCorrectness {
+      get { return overallCorrectness_; }
+      set {
+        overallCorrectness_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_correctness" field.</summary>
+    public const int FieldCorrectnessFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1Alpha1.Correctness> _repeated_fieldCorrectness_codec
+        = pb::FieldCodec.ForMessage(34, global::Ssn.Dataservice.V1Alpha1.Correctness.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.Correctness> fieldCorrectness_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.Correctness>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.Correctness> FieldCorrectness {
+      get { return fieldCorrectness_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as FeedbackMetrics);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(FeedbackMetrics other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DocumentCount != other.DocumentCount) return false;
+      if (FeedbackCount != other.FeedbackCount) return false;
+      if (!object.Equals(OverallCorrectness, other.OverallCorrectness)) return false;
+      if(!fieldCorrectness_.Equals(other.fieldCorrectness_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DocumentCount != 0) hash ^= DocumentCount.GetHashCode();
+      if (FeedbackCount != 0) hash ^= FeedbackCount.GetHashCode();
+      if (overallCorrectness_ != null) hash ^= OverallCorrectness.GetHashCode();
+      hash ^= fieldCorrectness_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DocumentCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(DocumentCount);
+      }
+      if (FeedbackCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(FeedbackCount);
+      }
+      if (overallCorrectness_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OverallCorrectness);
+      }
+      fieldCorrectness_.WriteTo(output, _repeated_fieldCorrectness_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DocumentCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DocumentCount);
+      }
+      if (FeedbackCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FeedbackCount);
+      }
+      if (overallCorrectness_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OverallCorrectness);
+      }
+      size += fieldCorrectness_.CalculateSize(_repeated_fieldCorrectness_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(FeedbackMetrics other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DocumentCount != 0) {
+        DocumentCount = other.DocumentCount;
+      }
+      if (other.FeedbackCount != 0) {
+        FeedbackCount = other.FeedbackCount;
+      }
+      if (other.overallCorrectness_ != null) {
+        if (overallCorrectness_ == null) {
+          overallCorrectness_ = new global::Ssn.Dataservice.V1Alpha1.Correctness();
+        }
+        OverallCorrectness.MergeFrom(other.OverallCorrectness);
+      }
+      fieldCorrectness_.Add(other.fieldCorrectness_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DocumentCount = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            FeedbackCount = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            if (overallCorrectness_ == null) {
+              overallCorrectness_ = new global::Ssn.Dataservice.V1Alpha1.Correctness();
+            }
+            input.ReadMessage(overallCorrectness_);
+            break;
+          }
+          case 34: {
+            fieldCorrectness_.AddEntriesFrom(input, _repeated_fieldCorrectness_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class Correctness : pb::IMessage<Correctness> {
+    private static readonly pb::MessageParser<Correctness> _parser = new pb::MessageParser<Correctness>(() => new Correctness());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Correctness> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Correctness() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Correctness(Correctness other) : this() {
+      field_ = other.field_;
+      correctPercentage_ = other.correctPercentage_;
+      incompletePercentage_ = other.incompletePercentage_;
+      errorPercentage_ = other.errorPercentage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Correctness Clone() {
+      return new Correctness(this);
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 1;
+    private string field_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Field {
+      get { return field_; }
+      set {
+        field_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "correct_percentage" field.</summary>
+    public const int CorrectPercentageFieldNumber = 2;
+    private float correctPercentage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float CorrectPercentage {
+      get { return correctPercentage_; }
+      set {
+        correctPercentage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "incomplete_percentage" field.</summary>
+    public const int IncompletePercentageFieldNumber = 3;
+    private float incompletePercentage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float IncompletePercentage {
+      get { return incompletePercentage_; }
+      set {
+        incompletePercentage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_percentage" field.</summary>
+    public const int ErrorPercentageFieldNumber = 4;
+    private float errorPercentage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float ErrorPercentage {
+      get { return errorPercentage_; }
+      set {
+        errorPercentage_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Correctness);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Correctness other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Field != other.Field) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CorrectPercentage, other.CorrectPercentage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(IncompletePercentage, other.IncompletePercentage)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ErrorPercentage, other.ErrorPercentage)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Field.Length != 0) hash ^= Field.GetHashCode();
+      if (CorrectPercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CorrectPercentage);
+      if (IncompletePercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IncompletePercentage);
+      if (ErrorPercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ErrorPercentage);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Field.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Field);
+      }
+      if (CorrectPercentage != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(CorrectPercentage);
+      }
+      if (IncompletePercentage != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(IncompletePercentage);
+      }
+      if (ErrorPercentage != 0F) {
+        output.WriteRawTag(37);
+        output.WriteFloat(ErrorPercentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Field.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Field);
+      }
+      if (CorrectPercentage != 0F) {
+        size += 1 + 4;
+      }
+      if (IncompletePercentage != 0F) {
+        size += 1 + 4;
+      }
+      if (ErrorPercentage != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Correctness other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Field.Length != 0) {
+        Field = other.Field;
+      }
+      if (other.CorrectPercentage != 0F) {
+        CorrectPercentage = other.CorrectPercentage;
+      }
+      if (other.IncompletePercentage != 0F) {
+        IncompletePercentage = other.IncompletePercentage;
+      }
+      if (other.ErrorPercentage != 0F) {
+        ErrorPercentage = other.ErrorPercentage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Field = input.ReadString();
+            break;
+          }
+          case 21: {
+            CorrectPercentage = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            IncompletePercentage = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            ErrorPercentage = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class DeleteRequest : pb::IMessage<DeleteRequest> {
     private static readonly pb::MessageParser<DeleteRequest> _parser = new pb::MessageParser<DeleteRequest>(() => new DeleteRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -2736,7 +3379,7 @@ namespace Ssn.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
