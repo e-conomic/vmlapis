@@ -30,4 +30,6 @@ generate:
   - name: bigquery-schema
     path: protoc-gen-bq-schema
     output: ../gen/bq
-
+  - name: grpc-web
+    flags: mode=grpcweb
+    output: ../gen/grpc-web
