@@ -7,20 +7,21 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+goog.provide('proto.ssn.annotator.v1.DocumentAnnotatorClient');
+goog.provide('proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient');
 
-const grpc = {};
-grpc.web = require('grpc-web');
+goog.require('grpc.web.GrpcWebClientBase');
+goog.require('grpc.web.AbstractClientBase');
+goog.require('grpc.web.ClientReadableStream');
+goog.require('grpc.web.Error');
+goog.require('grpc.web.MethodDescriptor');
+goog.require('grpc.web.MethodType');
+goog.require('proto.ssn.annotator.v1.DocumentAnnotatorRequest');
+goog.require('proto.ssn.annotator.v1.DocumentAnnotatorResponse');
 
 
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
-var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
-
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
-const proto = {};
-proto.ssn = {};
-proto.ssn.annotator = {};
-proto.ssn.annotator.v1 = require('./annotator_pb.js');
+goog.scope(function() {
 
 /**
  * @param {string} hostname
@@ -154,5 +155,5 @@ proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.annotateDocument
 };
 
 
-module.exports = proto.ssn.annotator.v1;
+}); // goog.scope
 

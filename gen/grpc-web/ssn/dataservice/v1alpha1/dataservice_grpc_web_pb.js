@@ -7,28 +7,29 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+goog.provide('proto.ssn.dataservice.v1alpha1.DataServiceClient');
+goog.provide('proto.ssn.dataservice.v1alpha1.DataServicePromiseClient');
 
-const grpc = {};
-grpc.web = require('grpc-web');
+goog.require('grpc.web.GrpcWebClientBase');
+goog.require('grpc.web.AbstractClientBase');
+goog.require('grpc.web.ClientReadableStream');
+goog.require('grpc.web.Error');
+goog.require('grpc.web.MethodDescriptor');
+goog.require('grpc.web.MethodType');
+goog.require('proto.google.protobuf.Empty');
+goog.require('proto.ssn.dataservice.v1alpha1.CreateDocumentRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.CreateDocumentResponse');
+goog.require('proto.ssn.dataservice.v1alpha1.DeleteRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.FeedbackMetrics');
+goog.require('proto.ssn.dataservice.v1alpha1.FeedbackRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.MetricsRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.ReadDocumentRequest');
+goog.require('proto.ssn.dataservice.v1alpha1.ReadDocumentResponse');
 
 
-var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')
 
-var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js')
-
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
-
-var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
-
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
-
-var google_type_date_pb = require('../../../google/type/date_pb.js')
-
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
-const proto = {};
-proto.ssn = {};
-proto.ssn.dataservice = {};
-proto.ssn.dataservice.v1alpha1 = require('./dataservice_pb.js');
+goog.scope(function() {
 
 /**
  * @param {string} hostname
@@ -252,7 +253,7 @@ const methodDescriptor_DataService_PrepareFeedback = new grpc.web.MethodDescript
   '/ssn.dataservice.v1alpha1.DataService/PrepareFeedback',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest,
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest} request
    * @return {!Uint8Array}
@@ -260,7 +261,7 @@ const methodDescriptor_DataService_PrepareFeedback = new grpc.web.MethodDescript
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -271,7 +272,7 @@ const methodDescriptor_DataService_PrepareFeedback = new grpc.web.MethodDescript
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_DataService_PrepareFeedback = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest} request
    * @return {!Uint8Array}
@@ -279,7 +280,7 @@ const methodInfo_DataService_PrepareFeedback = new grpc.web.AbstractClientBase.M
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -332,7 +333,7 @@ const methodDescriptor_DataService_Feedback = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1alpha1.DataService/Feedback',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1alpha1.FeedbackRequest,
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
@@ -340,7 +341,7 @@ const methodDescriptor_DataService_Feedback = new grpc.web.MethodDescriptor(
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -351,7 +352,7 @@ const methodDescriptor_DataService_Feedback = new grpc.web.MethodDescriptor(
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_DataService_Feedback = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
@@ -359,7 +360,7 @@ const methodInfo_DataService_Feedback = new grpc.web.AbstractClientBase.MethodIn
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -492,7 +493,7 @@ const methodDescriptor_DataService_Delete = new grpc.web.MethodDescriptor(
   '/ssn.dataservice.v1alpha1.DataService/Delete',
   grpc.web.MethodType.UNARY,
   proto.ssn.dataservice.v1alpha1.DeleteRequest,
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.DeleteRequest} request
    * @return {!Uint8Array}
@@ -500,7 +501,7 @@ const methodDescriptor_DataService_Delete = new grpc.web.MethodDescriptor(
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -511,7 +512,7 @@ const methodDescriptor_DataService_Delete = new grpc.web.MethodDescriptor(
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_DataService_Delete = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
+  proto.google.protobuf.Empty,
   /**
    * @param {!proto.ssn.dataservice.v1alpha1.DeleteRequest} request
    * @return {!Uint8Array}
@@ -519,7 +520,7 @@ const methodInfo_DataService_Delete = new grpc.web.AbstractClientBase.MethodInfo
   function(request) {
     return request.serializeBinary();
   },
-  google_protobuf_empty_pb.Empty.deserializeBinary
+  proto.google.protobuf.Empty.deserializeBinary
 );
 
 
@@ -562,5 +563,5 @@ proto.ssn.dataservice.v1alpha1.DataServicePromiseClient.prototype.delete =
 };
 
 
-module.exports = proto.ssn.dataservice.v1alpha1;
+}); // goog.scope
 

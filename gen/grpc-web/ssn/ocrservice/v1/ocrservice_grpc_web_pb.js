@@ -7,18 +7,23 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+goog.provide('proto.ssn.ocrservice.v1.OcrServiceClient');
+goog.provide('proto.ssn.ocrservice.v1.OcrServicePromiseClient');
 
-const grpc = {};
-grpc.web = require('grpc-web');
+goog.require('grpc.web.GrpcWebClientBase');
+goog.require('grpc.web.AbstractClientBase');
+goog.require('grpc.web.ClientReadableStream');
+goog.require('grpc.web.Error');
+goog.require('grpc.web.MethodDescriptor');
+goog.require('grpc.web.MethodType');
+goog.require('proto.ssn.ocrservice.v1.GetTextAnnotationRequest');
+goog.require('proto.ssn.ocrservice.v1.GetTextAnnotationResponse');
+goog.require('proto.ssn.ocrservice.v1.OcrScanImageRequest');
+goog.require('proto.ssn.ocrservice.v1.OcrScanImageResponse');
 
 
-var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
 
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
-const proto = {};
-proto.ssn = {};
-proto.ssn.ocrservice = {};
-proto.ssn.ocrservice.v1 = require('./ocrservice_pb.js');
+goog.scope(function() {
 
 /**
  * @param {string} hostname
@@ -232,5 +237,5 @@ proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getTextAnnotation =
 };
 
 
-module.exports = proto.ssn.ocrservice.v1;
+}); // goog.scope
 

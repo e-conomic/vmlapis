@@ -7,16 +7,21 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
+goog.provide('proto.ssn.access.v1.AccessClient');
+goog.provide('proto.ssn.access.v1.AccessPromiseClient');
 
-const grpc = {};
-grpc.web = require('grpc-web');
+goog.require('grpc.web.GrpcWebClientBase');
+goog.require('grpc.web.AbstractClientBase');
+goog.require('grpc.web.ClientReadableStream');
+goog.require('grpc.web.Error');
+goog.require('grpc.web.MethodDescriptor');
+goog.require('grpc.web.MethodType');
+goog.require('proto.ssn.access.v1.ValetKeyRequest');
+goog.require('proto.ssn.access.v1.ValetKeyResponse');
 
 
-var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
-const proto = {};
-proto.ssn = {};
-proto.ssn.access = {};
-proto.ssn.access.v1 = require('./access_pb.js');
+
+goog.scope(function() {
 
 /**
  * @param {string} hostname
@@ -150,5 +155,5 @@ proto.ssn.access.v1.AccessPromiseClient.prototype.generateValetKey =
 };
 
 
-module.exports = proto.ssn.access.v1;
+}); // goog.scope
 
