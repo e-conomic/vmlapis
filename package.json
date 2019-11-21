@@ -1,0 +1,7 @@
+{
+    "name": "vmlapis-grpc-web",
+    "dependencies": {
+        "google-protobuf": "^3.6.1",
+        "grpc-web": "^0.4.0"
+    }
+}
