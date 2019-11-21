@@ -1,5 +1,7 @@
 {
     "name": "vmlapis-grpc-web",
+    "version": "0.1.0",
+    "files":["gen/js"],
     "dependencies": {
         "google-protobuf": "^3.6.1",
         "grpc-web": "^0.4.0"
