@@ -7,21 +7,14 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
-goog.provide('proto.ssn.pdfservice.v1.PdfServiceClient');
-goog.provide('proto.ssn.pdfservice.v1.PdfServicePromiseClient');
 
-goog.require('grpc.web.GrpcWebClientBase');
-goog.require('grpc.web.AbstractClientBase');
-goog.require('grpc.web.ClientReadableStream');
-goog.require('grpc.web.Error');
-goog.require('grpc.web.MethodDescriptor');
-goog.require('grpc.web.MethodType');
-goog.require('proto.ssn.pdfservice.v1.RasterizePdfRequest');
-goog.require('proto.ssn.pdfservice.v1.RasterizePdfResponse');
+const grpc = {};
+grpc.web = require('grpc-web');
 
-
-
-goog.scope(function() {
+const proto = {};
+proto.ssn = {};
+proto.ssn.pdfservice = {};
+proto.ssn.pdfservice.v1 = require('./pdfservice_pb.js');
 
 /**
  * @param {string} hostname
@@ -150,5 +143,5 @@ proto.ssn.pdfservice.v1.PdfServicePromiseClient.prototype.rasterizePdf =
 };
 
 
-}); // goog.scope
+module.exports = proto.ssn.pdfservice.v1;
 

@@ -7,24 +7,22 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 
-goog.provide('proto.ssn.mlservice.v2.MlServiceClient');
-goog.provide('proto.ssn.mlservice.v2.MlServicePromiseClient');
 
-goog.require('grpc.web.GrpcWebClientBase');
-goog.require('grpc.web.AbstractClientBase');
-goog.require('grpc.web.ClientReadableStream');
-goog.require('grpc.web.Error');
-goog.require('grpc.web.MethodDescriptor');
-goog.require('grpc.web.MethodType');
-goog.require('proto.ssn.mlservice.v2.FeatureGenPredictRequest');
-goog.require('proto.ssn.mlservice.v2.FeatureGenRequest');
-goog.require('proto.ssn.mlservice.v2.FeatureGenResponse');
-goog.require('proto.ssn.mlservice.v2.PredictRequest');
-goog.require('proto.ssn.mlservice.v2.PredictResponse');
+const grpc = {};
+grpc.web = require('grpc-web');
 
 
+var google_type_date_pb = require('../../../google/type/date_pb.js')
 
-goog.scope(function() {
+var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
+
+var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
+
+var tensorflow_core_example_example_pb = require('../../../tensorflow/core/example/example_pb.js')
+const proto = {};
+proto.ssn = {};
+proto.ssn.mlservice = {};
+proto.ssn.mlservice.v2 = require('./mlservice_pb.js');
 
 /**
  * @param {string} hostname
@@ -318,5 +316,5 @@ proto.ssn.mlservice.v2.MlServicePromiseClient.prototype.featureGenPredict =
 };
 
 
-}); // goog.scope
+module.exports = proto.ssn.mlservice.v2;
 
