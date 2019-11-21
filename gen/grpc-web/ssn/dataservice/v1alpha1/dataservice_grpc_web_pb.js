@@ -5,6 +5,7 @@
  */
 
 // GENERATED CODE -- DO NOT EDIT!
+/* eslint-disable */
 
 
 goog.provide('proto.ssn.dataservice.v1alpha1.DataServiceClient');
@@ -564,4 +565,3 @@ proto.ssn.dataservice.v1alpha1.DataServicePromiseClient.prototype.delete =
 
 
 }); // goog.scope
-
