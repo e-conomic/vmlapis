@@ -31,7 +31,8 @@ generate:
     path: protoc-gen-bq-schema
     output: ../gen/bq
   - name: js
+    flags: import_style=commonjs
     output: ../gen/js
   - name: grpc-web
-    flags: mode=grpcweb
-    output: ../gen/grpc-web
+    flags: import_style=commonjs,mode=grpcweb
+    output: ../gen/js
