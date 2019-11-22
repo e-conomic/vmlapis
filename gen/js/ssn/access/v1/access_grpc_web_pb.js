@@ -29,7 +29,7 @@ proto.ssn.access.v1 = require('./access_pb.js');
 proto.ssn.access.v1.AccessClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -55,7 +55,7 @@ proto.ssn.access.v1.AccessClient =
 proto.ssn.access.v1.AccessPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client

@@ -41,7 +41,7 @@ proto.ssn.dataservice.v1alpha1 = require('./dataservice_pb.js');
 proto.ssn.dataservice.v1alpha1.DataServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -67,7 +67,7 @@ proto.ssn.dataservice.v1alpha1.DataServiceClient =
 proto.ssn.dataservice.v1alpha1.DataServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client

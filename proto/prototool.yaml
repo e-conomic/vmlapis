@@ -34,5 +34,5 @@ generate:
     flags: import_style=commonjs
     output: ../gen/js
   - name: grpc-web
-    flags: import_style=commonjs,mode=grpcweb
+    flags: import_style=commonjs,mode=grpcwebtext
     output: ../gen/js

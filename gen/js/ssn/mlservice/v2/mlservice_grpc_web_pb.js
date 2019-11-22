@@ -35,7 +35,7 @@ proto.ssn.mlservice.v2 = require('./mlservice_pb.js');
 proto.ssn.mlservice.v2.MlServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -61,7 +61,7 @@ proto.ssn.mlservice.v2.MlServiceClient =
 proto.ssn.mlservice.v2.MlServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client

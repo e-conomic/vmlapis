@@ -27,7 +27,7 @@ proto.ssn.pdfservice.v1 = require('./pdfservice_pb.js');
 proto.ssn.pdfservice.v1.PdfServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -53,7 +53,7 @@ proto.ssn.pdfservice.v1.PdfServiceClient =
 proto.ssn.pdfservice.v1.PdfServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client

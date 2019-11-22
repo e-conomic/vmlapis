@@ -33,7 +33,7 @@ proto.ssn.annotator.v1 = require('./annotator_pb.js');
 proto.ssn.annotator.v1.DocumentAnnotatorClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -59,7 +59,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorClient =
 proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client

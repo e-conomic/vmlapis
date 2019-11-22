@@ -31,7 +31,7 @@ proto.ssn.ocrservice.v1 = require('./ocrservice_pb.js');
 proto.ssn.ocrservice.v1.OcrServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
@@ -57,7 +57,7 @@ proto.ssn.ocrservice.v1.OcrServiceClient =
 proto.ssn.ocrservice.v1.OcrServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
-  options['format'] = 'binary';
+  options['format'] = 'text';
 
   /**
    * @private @const {!grpc.web.GrpcWebClientBase} The client
