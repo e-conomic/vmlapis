@@ -10,6 +10,7 @@ all:
 		proto/ssn/dataservice/v1alpha1/dataservice.proto
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
+	./scripts/js_fixes.sh
 
 docker:
 	@rm -rf gen

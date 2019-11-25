@@ -30,4 +30,9 @@ generate:
   - name: bigquery-schema
     path: protoc-gen-bq-schema
     output: ../gen/bq
-
+  - name: js
+    flags: import_style=commonjs
+    output: ../gen/js
+  - name: grpc-web
+    flags: import_style=commonjs,mode=grpcwebtext
+    output: ../gen/js
