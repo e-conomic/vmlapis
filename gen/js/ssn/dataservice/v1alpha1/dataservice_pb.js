@@ -3725,7 +3725,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1alpha1.MetricsRequest.repeatedFields_ = [4];
+proto.ssn.dataservice.v1alpha1.MetricsRequest.repeatedFields_ = [4,5];
 
 
 
@@ -3759,7 +3759,8 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.toObject = function(includeInstanc
     consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     startTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
     endTime: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    fieldsList: jspb.Message.getRepeatedField(msg, 4)
+    fieldsList: jspb.Message.getRepeatedField(msg, 4),
+    tagsList: jspb.Message.getRepeatedField(msg, 5)
   };
 
   if (includeInstance) {
@@ -3811,6 +3812,10 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.deserializeBinaryFromReader = func
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.addFields(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -3866,6 +3871,13 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.serializeBinaryToWriter = function
   if (f.length > 0) {
     writer.writeRepeatedString(
       4,
+      f
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
       f
     );
   }
@@ -3943,6 +3955,35 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.addFields = function(val
 
 proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.clearFieldsList = function() {
   this.setFieldsList([]);
+};
+
+
+/**
+ * repeated string tags = 5;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/** @param {!Array<string>} value */
+proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 

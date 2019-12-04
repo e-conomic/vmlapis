@@ -134,6 +134,7 @@ message MetricsRequest {
   int64 start_time = 2;
   int64 end_time = 3;
   repeated string fields = 4;
+  repeated string tags = 5;
 }
 
 message FeedbackMetrics {
