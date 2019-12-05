@@ -42,47 +42,47 @@ namespace Ssn.Annotator.V1 {
             "X0xJTkVfU0VfQkFOS0dJUk9fQ1JFRElUT1JfSUQQEhIkCiBPQ1JfTElORV9T",
             "RV9QTFVTR0lST19DUkVESVRPUl9JRBATEhoKFk9DUl9MSU5FX05PX1BBWU1F",
             "TlRfSUQQFBIaChZPQ1JfTElORV9GSV9QQVlNRU5UX0lEEBUSGgoWT0NSX0xJ",
-            "TkVfTkxfUEFZTUVOVF9JRBAWEggKBFRFWFQQFyJ1ChhEb2N1bWVudEFubm90",
-            "YXRvclJlcXVlc3QSLAoIZG9jdW1lbnQYASABKAsyGi5zc24uYW5ub3RhdG9y",
-            "LnYxLkRvY3VtZW50EisKCGZlYXR1cmVzGAIgAygLMhkuc3NuLmFubm90YXRv",
-            "ci52MS5GZWF0dXJlIoAJChlEb2N1bWVudEFubm90YXRvclJlc3BvbnNlEicK",
-            "Cm9yZGVyX2RhdGUYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSLQoQcGF5",
-            "bWVudF9kdWVfZGF0ZRgCIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIlCghj",
-            "dXJyZW5jeRgDIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRImCgl0b3RhbF92",
-            "YXQYBCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfaW5jbF92",
-            "YXQYBSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSKwoOdG90YWxfZXhjbF92",
-            "YXQYBiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSMgoVc3VwcGxpZXJfY29y",
-            "cG9yYXRlX2lkGAcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjIKFXN1cHBs",
-            "aWVyX2NvdW50cnlfY29kZRgIIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIq",
-            "Cg1kb2N1bWVudF90eXBlGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEisK",
-            "DnBheW1lbnRfbWV0aG9kGAogAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjIK",
-            "FWNyZWRpdF9jYXJkX2xhc3RfZm91chgLIAMoCzITLnNzbi50eXBlLkNhbmRp",
-            "ZGF0ZRIrCg5pbnZvaWNlX251bWJlchgMIAMoCzITLnNzbi50eXBlLkNhbmRp",
-            "ZGF0ZRIxCg90ZXh0X2Fubm90YXRpb24YDSABKAsyGC5zc24udHlwZS5UZXh0",
-            "QW5ub3RhdGlvbhItChBvY3JfbGluZV9ka190eXBlGA4gAygLMhMuc3NuLnR5",
-            "cGUuQ2FuZGlkYXRlEjMKFm9jcl9saW5lX2RrX3BheW1lbnRfaWQYDyADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGUSNAoXb2NyX2xpbmVfZGtfY3JlZGl0b3Jf",
-            "aWQYECADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSMwoWb2NyX2xpbmVfc2Vf",
-            "cGF5bWVudF9pZBgRIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRI9CiBvY3Jf",
-            "bGluZV9zZV9iYW5rZ2lyb19jcmVkaXRvcl9pZBgSIAMoCzITLnNzbi50eXBl",
-            "LkNhbmRpZGF0ZRI9CiBvY3JfbGluZV9zZV9wbHVzZ2lyb19jcmVkaXRvcl9p",
-            "ZBgTIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIzChZvY3JfbGluZV9ub19w",
-            "YXltZW50X2lkGBQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9s",
-            "aW5lX2ZpX3BheW1lbnRfaWQYFSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
-            "MwoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgWIAMoCzITLnNzbi50eXBlLkNh",
-            "bmRpZGF0ZRIMCgR0ZXh0GBcgASgJEhMKC2ZlZWRiYWNrX2lkGBggASgJIk0K",
-            "CERvY3VtZW50Eg8KB2NvbnRlbnQYASABKAwSMAoGc291cmNlGAIgASgLMiAu",
-            "c3NuLmFubm90YXRvci52MS5Eb2N1bWVudFNvdXJjZSIiCg5Eb2N1bWVudFNv",
-            "dXJjZRIQCghodHRwX3VyaRgBIAEoCTKjAQoRRG9jdW1lbnRBbm5vdGF0b3IS",
-            "jQEKEEFubm90YXRlRG9jdW1lbnQSKi5zc24uYW5ub3RhdG9yLnYxLkRvY3Vt",
-            "ZW50QW5ub3RhdG9yUmVxdWVzdBorLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
-            "bnRBbm5vdGF0b3JSZXNwb25zZSIggtPkkwIaIhUvdjEvZG9jdW1lbnQ6YW5u",
-            "b3RhdGU6ASpCC1oJYW5ub3RhdG9yYgZwcm90bzM="));
+            "TkVfTkxfUEFZTUVOVF9JRBAWEggKBFRFWFQQFyKDAQoYRG9jdW1lbnRBbm5v",
+            "dGF0b3JSZXF1ZXN0EiwKCGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRv",
+            "ci52MS5Eb2N1bWVudBIrCghmZWF0dXJlcxgCIAMoCzIZLnNzbi5hbm5vdGF0",
+            "b3IudjEuRmVhdHVyZRIMCgR0YWdzGAMgAygJIoAJChlEb2N1bWVudEFubm90",
+            "YXRvclJlc3BvbnNlEicKCm9yZGVyX2RhdGUYASADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGUSLQoQcGF5bWVudF9kdWVfZGF0ZRgCIAMoCzITLnNzbi50eXBl",
+            "LkNhbmRpZGF0ZRIlCghjdXJyZW5jeRgDIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZRImCgl0b3RhbF92YXQYBCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
+            "KwoOdG90YWxfaW5jbF92YXQYBSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
+            "KwoOdG90YWxfZXhjbF92YXQYBiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
+            "MgoVc3VwcGxpZXJfY29ycG9yYXRlX2lkGAcgAygLMhMuc3NuLnR5cGUuQ2Fu",
+            "ZGlkYXRlEjIKFXN1cHBsaWVyX2NvdW50cnlfY29kZRgIIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZRIqCg1kb2N1bWVudF90eXBlGAkgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlEisKDnBheW1lbnRfbWV0aG9kGAogAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlEjIKFWNyZWRpdF9jYXJkX2xhc3RfZm91chgLIAMoCzIT",
+            "LnNzbi50eXBlLkNhbmRpZGF0ZRIrCg5pbnZvaWNlX251bWJlchgMIAMoCzIT",
+            "LnNzbi50eXBlLkNhbmRpZGF0ZRIxCg90ZXh0X2Fubm90YXRpb24YDSABKAsy",
+            "GC5zc24udHlwZS5UZXh0QW5ub3RhdGlvbhItChBvY3JfbGluZV9ka190eXBl",
+            "GA4gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlEjMKFm9jcl9saW5lX2RrX3Bh",
+            "eW1lbnRfaWQYDyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUSNAoXb2NyX2xp",
+            "bmVfZGtfY3JlZGl0b3JfaWQYECADKAsyEy5zc24udHlwZS5DYW5kaWRhdGUS",
+            "MwoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgRIAMoCzITLnNzbi50eXBlLkNh",
+            "bmRpZGF0ZRI9CiBvY3JfbGluZV9zZV9iYW5rZ2lyb19jcmVkaXRvcl9pZBgS",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRI9CiBvY3JfbGluZV9zZV9wbHVz",
+            "Z2lyb19jcmVkaXRvcl9pZBgTIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZRIz",
+            "ChZvY3JfbGluZV9ub19wYXltZW50X2lkGBQgAygLMhMuc3NuLnR5cGUuQ2Fu",
+            "ZGlkYXRlEjMKFm9jcl9saW5lX2ZpX3BheW1lbnRfaWQYFSADKAsyEy5zc24u",
+            "dHlwZS5DYW5kaWRhdGUSMwoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgWIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZRIMCgR0ZXh0GBcgASgJEhMKC2ZlZWRi",
+            "YWNrX2lkGBggASgJIk0KCERvY3VtZW50Eg8KB2NvbnRlbnQYASABKAwSMAoG",
+            "c291cmNlGAIgASgLMiAuc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFNvdXJj",
+            "ZSIiCg5Eb2N1bWVudFNvdXJjZRIQCghodHRwX3VyaRgBIAEoCTKjAQoRRG9j",
+            "dW1lbnRBbm5vdGF0b3ISjQEKEEFubm90YXRlRG9jdW1lbnQSKi5zc24uYW5u",
+            "b3RhdG9yLnYxLkRvY3VtZW50QW5ub3RhdG9yUmVxdWVzdBorLnNzbi5hbm5v",
+            "dGF0b3IudjEuRG9jdW1lbnRBbm5vdGF0b3JSZXNwb25zZSIggtPkkwIaIhUv",
+            "djEvZG9jdW1lbnQ6YW5ub3RhdGU6ASpCC1oJYW5ub3RhdG9yYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null)
@@ -420,6 +420,7 @@ namespace Ssn.Annotator.V1 {
     public DocumentAnnotatorRequest(DocumentAnnotatorRequest other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
       features_ = other.features_.Clone();
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -449,6 +450,16 @@ namespace Ssn.Annotator.V1 {
       get { return features_; }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DocumentAnnotatorRequest);
@@ -464,6 +475,7 @@ namespace Ssn.Annotator.V1 {
       }
       if (!object.Equals(Document, other.Document)) return false;
       if(!features_.Equals(other.features_)) return false;
+      if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -472,6 +484,7 @@ namespace Ssn.Annotator.V1 {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
       hash ^= features_.GetHashCode();
+      hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -490,6 +503,7 @@ namespace Ssn.Annotator.V1 {
         output.WriteMessage(Document);
       }
       features_.WriteTo(output, _repeated_features_codec);
+      tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -502,6 +516,7 @@ namespace Ssn.Annotator.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
       }
       size += features_.CalculateSize(_repeated_features_codec);
+      size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -520,6 +535,7 @@ namespace Ssn.Annotator.V1 {
         Document.MergeFrom(other.Document);
       }
       features_.Add(other.features_);
+      tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -540,6 +556,10 @@ namespace Ssn.Annotator.V1 {
           }
           case 18: {
             features_.AddEntriesFrom(input, _repeated_features_codec);
+            break;
+          }
+          case 26: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
         }

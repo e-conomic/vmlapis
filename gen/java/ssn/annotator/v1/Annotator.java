@@ -1303,6 +1303,25 @@ public final class Annotator {
      */
     ssn.annotator.v1.Annotator.FeatureOrBuilder getFeaturesOrBuilder(
         int index);
+
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorRequest}
@@ -1318,6 +1337,7 @@ public final class Annotator {
     }
     private DocumentAnnotatorRequest() {
       features_ = java.util.Collections.emptyList();
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -1366,6 +1386,15 @@ public final class Annotator {
                   input.readMessage(ssn.annotator.v1.Annotator.Feature.parser(), extensionRegistry));
               break;
             }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              tags_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1383,6 +1412,9 @@ public final class Annotator {
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           features_ = java.util.Collections.unmodifiableList(features_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1458,6 +1490,35 @@ public final class Annotator {
       return features_.get(index);
     }
 
+    public static final int TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1478,6 +1539,9 @@ public final class Annotator {
       for (int i = 0; i < features_.size(); i++) {
         output.writeMessage(2, features_.get(i));
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1494,6 +1558,14 @@ public final class Annotator {
       for (int i = 0; i < features_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, features_.get(i));
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1518,6 +1590,8 @@ public final class Annotator {
       }
       result = result && getFeaturesList()
           .equals(other.getFeaturesList());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1536,6 +1610,10 @@ public final class Annotator {
       if (getFeaturesCount() > 0) {
         hash = (37 * hash) + FEATURES_FIELD_NUMBER;
         hash = (53 * hash) + getFeaturesList().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1683,6 +1761,8 @@ public final class Annotator {
         } else {
           featuresBuilder_.clear();
         }
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -1725,6 +1805,11 @@ public final class Annotator {
         } else {
           result.features_ = featuresBuilder_.build();
         }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1802,6 +1887,16 @@ public final class Annotator {
               featuresBuilder_.addAllMessages(other.features_);
             }
           }
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2188,6 +2283,100 @@ public final class Annotator {
           features_ = null;
         }
         return featuresBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -15480,47 +15669,47 @@ public final class Annotator {
       "_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OCR_LINE_S" +
       "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
       "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
-      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\"u" +
-      "\n\030DocumentAnnotatorRequest\022,\n\010document\030\001" +
-      " \001(\0132\032.ssn.annotator.v1.Document\022+\n\010feat" +
-      "ures\030\002 \003(\0132\031.ssn.annotator.v1.Feature\"\200\t" +
-      "\n\031DocumentAnnotatorResponse\022\'\n\norder_dat" +
-      "e\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020payment_" +
-      "due_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010c" +
-      "urrency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\tto" +
-      "tal_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016to" +
-      "tal_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022" +
-      "+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.Candi" +
-      "date\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ss" +
-      "n.type.Candidate\0222\n\025supplier_country_cod" +
-      "e\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rdocument" +
-      "_type\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016paym" +
-      "ent_method\030\n \003(\0132\023.ssn.type.Candidate\0222\n" +
-      "\025credit_card_last_four\030\013 \003(\0132\023.ssn.type." +
-      "Candidate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn." +
-      "type.Candidate\0221\n\017text_annotation\030\r \001(\0132" +
-      "\030.ssn.type.TextAnnotation\022-\n\020ocr_line_dk" +
-      "_type\030\016 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_" +
-      "line_dk_payment_id\030\017 \003(\0132\023.ssn.type.Cand" +
-      "idate\0224\n\027ocr_line_dk_creditor_id\030\020 \003(\0132\023" +
-      ".ssn.type.Candidate\0223\n\026ocr_line_se_payme" +
-      "nt_id\030\021 \003(\0132\023.ssn.type.Candidate\022=\n ocr_" +
-      "line_se_bankgiro_creditor_id\030\022 \003(\0132\023.ssn" +
-      ".type.Candidate\022=\n ocr_line_se_plusgiro_" +
-      "creditor_id\030\023 \003(\0132\023.ssn.type.Candidate\0223" +
-      "\n\026ocr_line_no_payment_id\030\024 \003(\0132\023.ssn.typ" +
-      "e.Candidate\0223\n\026ocr_line_fi_payment_id\030\025 " +
-      "\003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_nl_" +
-      "payment_id\030\026 \003(\0132\023.ssn.type.Candidate\022\014\n" +
-      "\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\"M\n\010Docu" +
-      "ment\022\017\n\007content\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 ." +
-      "ssn.annotator.v1.DocumentSource\"\"\n\016Docum" +
-      "entSource\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021Document" +
-      "Annotator\022\215\001\n\020AnnotateDocument\022*.ssn.ann" +
-      "otator.v1.DocumentAnnotatorRequest\032+.ssn" +
-      ".annotator.v1.DocumentAnnotatorResponse\"" +
-      " \202\323\344\223\002\032\"\025/v1/document:annotate:\001*B\013Z\tann" +
-      "otatorb\006proto3"
+      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\"\203" +
+      "\001\n\030DocumentAnnotatorRequest\022,\n\010document\030" +
+      "\001 \001(\0132\032.ssn.annotator.v1.Document\022+\n\010fea" +
+      "tures\030\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014" +
+      "\n\004tags\030\003 \003(\t\"\200\t\n\031DocumentAnnotatorRespon" +
+      "se\022\'\n\norder_date\030\001 \003(\0132\023.ssn.type.Candid" +
+      "ate\022-\n\020payment_due_date\030\002 \003(\0132\023.ssn.type" +
+      ".Candidate\022%\n\010currency\030\003 \003(\0132\023.ssn.type." +
+      "Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type." +
+      "Candidate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn." +
+      "type.Candidate\022+\n\016total_excl_vat\030\006 \003(\0132\023" +
+      ".ssn.type.Candidate\0222\n\025supplier_corporat" +
+      "e_id\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025suppl" +
+      "ier_country_code\030\010 \003(\0132\023.ssn.type.Candid" +
+      "ate\022*\n\rdocument_type\030\t \003(\0132\023.ssn.type.Ca" +
+      "ndidate\022+\n\016payment_method\030\n \003(\0132\023.ssn.ty" +
+      "pe.Candidate\0222\n\025credit_card_last_four\030\013 " +
+      "\003(\0132\023.ssn.type.Candidate\022+\n\016invoice_numb" +
+      "er\030\014 \003(\0132\023.ssn.type.Candidate\0221\n\017text_an" +
+      "notation\030\r \001(\0132\030.ssn.type.TextAnnotation" +
+      "\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132" +
+      "\023.ssn.type.Candidate\0224\n\027ocr_line_dk_cred" +
+      "itor_id\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
+      "r_line_se_payment_id\030\021 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\022=\n ocr_line_se_bankgiro_creditor" +
+      "_id\030\022 \003(\0132\023.ssn.type.Candidate\022=\n ocr_li" +
+      "ne_se_plusgiro_creditor_id\030\023 \003(\0132\023.ssn.t" +
+      "ype.Candidate\0223\n\026ocr_line_no_payment_id\030" +
+      "\024 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_f" +
+      "i_payment_id\030\025 \003(\0132\023.ssn.type.Candidate\022" +
+      "3\n\026ocr_line_nl_payment_id\030\026 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_i" +
+      "d\030\030 \001(\t\"M\n\010Document\022\017\n\007content\030\001 \001(\014\0220\n\006" +
+      "source\030\002 \001(\0132 .ssn.annotator.v1.Document" +
+      "Source\"\"\n\016DocumentSource\022\020\n\010http_uri\030\001 \001" +
+      "(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDoc" +
+      "ument\022*.ssn.annotator.v1.DocumentAnnotat" +
+      "orRequest\032+.ssn.annotator.v1.DocumentAnn" +
+      "otatorResponse\" \202\323\344\223\002\032\"\025/v1/document:ann" +
+      "otate:\001*B\013Z\tannotatorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15548,7 +15737,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorRequest_descriptor,
-        new java.lang.String[] { "Document", "Features", });
+        new java.lang.String[] { "Document", "Features", "Tags", });
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new

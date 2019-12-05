@@ -3199,12 +3199,19 @@ proto.ssn.dataservice.v1alpha1.ReadDocumentResponse.prototype.hasDocument = func
  * @constructor
  */
 proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.repeatedFields_, null);
 };
 goog.inherits(proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.displayName = 'proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.repeatedFields_ = [5];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -3237,7 +3244,8 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.toObject = function(includ
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     ta: (f = msg.getTa()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     documentBytes: msg.getDocumentBytes_asB64(),
-    predictions: (f = msg.getPredictions()) && proto.ssn.dataservice.v1alpha1.PredictionValues.toObject(includeInstance, f)
+    predictions: (f = msg.getPredictions()) && proto.ssn.dataservice.v1alpha1.PredictionValues.toObject(includeInstance, f),
+    tagsList: jspb.Message.getRepeatedField(msg, 5)
   };
 
   if (includeInstance) {
@@ -3291,6 +3299,10 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.deserializeBinaryFromReade
       var value = new proto.ssn.dataservice.v1alpha1.PredictionValues;
       reader.readMessage(value,proto.ssn.dataservice.v1alpha1.PredictionValues.deserializeBinaryFromReader);
       msg.setPredictions(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -3349,6 +3361,13 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.serializeBinaryToWriter = 
       4,
       f,
       proto.ssn.dataservice.v1alpha1.PredictionValues.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
+      f
     );
   }
 };
@@ -3465,6 +3484,35 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.clearPredictions
  */
 proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.hasPredictions = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * repeated string tags = 5;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/** @param {!Array<string>} value */
+proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 
