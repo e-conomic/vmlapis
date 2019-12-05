@@ -16574,6 +16574,25 @@ public final class Dataservice {
      * <code>.ssn.dataservice.v1alpha1.PredictionValues predictions = 4;</code>
      */
     ssn.dataservice.v1alpha1.Dataservice.PredictionValuesOrBuilder getPredictionsOrBuilder();
+
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1alpha1.PrepareFeedbackRequest}
@@ -16590,6 +16609,7 @@ public final class Dataservice {
     private PrepareFeedbackRequest() {
       id_ = "";
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -16653,6 +16673,15 @@ public final class Dataservice {
 
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              tags_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -16668,6 +16697,9 @@ public final class Dataservice {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -16685,6 +16717,7 @@ public final class Dataservice {
               ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.class, ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int ID_FIELD_NUMBER = 1;
     private volatile java.lang.Object id_;
     /**
@@ -16770,6 +16803,35 @@ public final class Dataservice {
       return getPredictions();
     }
 
+    public static final int TAGS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -16796,6 +16858,9 @@ public final class Dataservice {
       if (predictions_ != null) {
         output.writeMessage(4, getPredictions());
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -16819,6 +16884,14 @@ public final class Dataservice {
       if (predictions_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getPredictions());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -16850,6 +16923,8 @@ public final class Dataservice {
         result = result && getPredictions()
             .equals(other.getPredictions());
       }
+      result = result && getTagsList()
+          .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -16872,6 +16947,10 @@ public final class Dataservice {
       if (hasPredictions()) {
         hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPredictions().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -17022,6 +17101,8 @@ public final class Dataservice {
           predictions_ = null;
           predictionsBuilder_ = null;
         }
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -17048,6 +17129,8 @@ public final class Dataservice {
       @java.lang.Override
       public ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest buildPartial() {
         ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest result = new ssn.dataservice.v1alpha1.Dataservice.PrepareFeedbackRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.id_ = id_;
         if (taBuilder_ == null) {
           result.ta_ = ta_;
@@ -17060,6 +17143,12 @@ public final class Dataservice {
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.tags_ = tags_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -17121,6 +17210,16 @@ public final class Dataservice {
         if (other.hasPredictions()) {
           mergePredictions(other.getPredictions());
         }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -17149,6 +17248,7 @@ public final class Dataservice {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -17480,6 +17580,100 @@ public final class Dataservice {
           predictions_ = null;
         }
         return predictionsBuilder_;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -22150,42 +22344,42 @@ public final class Dataservice {
       "\002id\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030\001" +
       " \001(\t\"L\n\024ReadDocumentResponse\0224\n\010document" +
       "\030\001 \001(\0132\".ssn.dataservice.v1alpha1.Docume" +
-      "nt\"\243\001\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(" +
+      "nt\"\261\001\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(" +
       "\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022" +
       "\026\n\016document_bytes\030\003 \001(\014\022?\n\013predictions\030\004" +
       " \001(\0132*.ssn.dataservice.v1alpha1.Predicti" +
-      "onValues\"f\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
-      "9\n\013true_values\030\002 \001(\0132$.ssn.dataservice.v" +
-      "1alpha1.TrueValues\022\014\n\004tags\030\003 \003(\t\"f\n\016Metr" +
-      "icsRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nstart_ti" +
-      "me\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003" +
-      "(\t\022\014\n\004tags\030\005 \003(\t\"\307\001\n\017FeedbackMetrics\022\026\n\016" +
-      "document_count\030\001 \001(\005\022\026\n\016feedback_count\030\002" +
-      " \001(\005\022B\n\023overall_correctness\030\003 \001(\0132%.ssn." +
-      "dataservice.v1alpha1.Correctness\022@\n\021fiel" +
-      "d_correctness\030\004 \003(\0132%.ssn.dataservice.v1" +
-      "alpha1.Correctness\"q\n\013Correctness\022\r\n\005fie" +
-      "ld\030\001 \001(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035\n\025" +
-      "incomplete_percentage\030\003 \001(\002\022\030\n\020error_per" +
-      "centage\030\004 \001(\002\"\035\n\rDeleteRequest\022\014\n\004tags\030\001" +
-      " \003(\t2\235\005\n\013DataService\022s\n\016CreateDocument\022/" +
-      ".ssn.dataservice.v1alpha1.CreateDocument" +
-      "Request\0320.ssn.dataservice.v1alpha1.Creat" +
-      "eDocumentResponse\022m\n\014ReadDocument\022-.ssn." +
-      "dataservice.v1alpha1.ReadDocumentRequest" +
-      "\032..ssn.dataservice.v1alpha1.ReadDocument" +
-      "Response\022[\n\017PrepareFeedback\0220.ssn.datase" +
-      "rvice.v1alpha1.PrepareFeedbackRequest\032\026." +
-      "google.protobuf.Empty\022s\n\010Feedback\022).ssn." +
-      "dataservice.v1alpha1.FeedbackRequest\032\026.g" +
-      "oogle.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/" +
-      "feedback:create:\001*\022g\n\020CalculateMetrics\022(" +
-      ".ssn.dataservice.v1alpha1.MetricsRequest" +
-      "\032).ssn.dataservice.v1alpha1.FeedbackMetr" +
-      "ics\022o\n\006Delete\022\'.ssn.dataservice.v1alpha1" +
-      ".DeleteRequest\032\026.google.protobuf.Empty\"$" +
-      "\202\323\344\223\002\036\"\031/v1alpha1/feedback:delete:\001*B\rZ\013" +
-      "dataserviceb\006proto3"
+      "onValues\022\014\n\004tags\030\005 \003(\t\"f\n\017FeedbackReques" +
+      "t\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn" +
+      ".dataservice.v1alpha1.TrueValues\022\014\n\004tags" +
+      "\030\003 \003(\t\"f\n\016MetricsRequest\022\020\n\010consumer\030\001 \001" +
+      "(\t\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003" +
+      "\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\307\001\n\017Feedb" +
+      "ackMetrics\022\026\n\016document_count\030\001 \001(\005\022\026\n\016fe" +
+      "edback_count\030\002 \001(\005\022B\n\023overall_correctnes" +
+      "s\030\003 \001(\0132%.ssn.dataservice.v1alpha1.Corre" +
+      "ctness\022@\n\021field_correctness\030\004 \003(\0132%.ssn." +
+      "dataservice.v1alpha1.Correctness\"q\n\013Corr" +
+      "ectness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_percen" +
+      "tage\030\002 \001(\002\022\035\n\025incomplete_percentage\030\003 \001(" +
+      "\002\022\030\n\020error_percentage\030\004 \001(\002\"\035\n\rDeleteReq" +
+      "uest\022\014\n\004tags\030\001 \003(\t2\235\005\n\013DataService\022s\n\016Cr" +
+      "eateDocument\022/.ssn.dataservice.v1alpha1." +
+      "CreateDocumentRequest\0320.ssn.dataservice." +
+      "v1alpha1.CreateDocumentResponse\022m\n\014ReadD" +
+      "ocument\022-.ssn.dataservice.v1alpha1.ReadD" +
+      "ocumentRequest\032..ssn.dataservice.v1alpha" +
+      "1.ReadDocumentResponse\022[\n\017PrepareFeedbac" +
+      "k\0220.ssn.dataservice.v1alpha1.PrepareFeed" +
+      "backRequest\032\026.google.protobuf.Empty\022s\n\010F" +
+      "eedback\022).ssn.dataservice.v1alpha1.Feedb" +
+      "ackRequest\032\026.google.protobuf.Empty\"$\202\323\344\223" +
+      "\002\036\"\031/v1alpha1/feedback:create:\001*\022g\n\020Calc" +
+      "ulateMetrics\022(.ssn.dataservice.v1alpha1." +
+      "MetricsRequest\032).ssn.dataservice.v1alpha" +
+      "1.FeedbackMetrics\022o\n\006Delete\022\'.ssn.datase" +
+      "rvice.v1alpha1.DeleteRequest\032\026.google.pr" +
+      "otobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback" +
+      ":delete:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22253,7 +22447,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", });
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_ssn_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new

@@ -80,6 +80,7 @@ message Feature {
 message DocumentAnnotatorRequest {
   Document document = 1;
   repeated Feature features = 2;
+  repeated string tags = 3;
 }
 
 message DocumentAnnotatorResponse {
