@@ -269,7 +269,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2];
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2,3];
 
 
 
@@ -302,7 +302,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.toObject = function(includeInsta
   var f, obj = {
     document: (f = msg.getDocument()) && proto.ssn.annotator.v1.Document.toObject(includeInstance, f),
     featuresList: jspb.Message.toObjectList(msg.getFeaturesList(),
-    proto.ssn.annotator.v1.Feature.toObject, includeInstance)
+    proto.ssn.annotator.v1.Feature.toObject, includeInstance),
+    tagsList: jspb.Message.getRepeatedField(msg, 3)
   };
 
   if (includeInstance) {
@@ -349,6 +350,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.deserializeBinaryFromReader = fu
       reader.readMessage(value,proto.ssn.annotator.v1.Feature.deserializeBinaryFromReader);
       msg.addFeatures(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -392,6 +397,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.serializeBinaryToWriter = functi
       2,
       f,
       proto.ssn.annotator.v1.Feature.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      3,
+      f
     );
   }
 };
@@ -455,6 +467,35 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.addFeatures = function
 
 proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearFeaturesList = function() {
   this.setFeaturesList([]);
+};
+
+
+/**
+ * repeated string tags = 3;
+ * @return {!Array<string>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
+};
+
+
+/** @param {!Array<string>} value */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 3, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+};
+
+
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 

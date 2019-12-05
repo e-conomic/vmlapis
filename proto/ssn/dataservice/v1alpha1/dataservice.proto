@@ -121,6 +121,7 @@ message PrepareFeedbackRequest {
   ssn.type.TextAnnotation ta = 2;
   bytes document_bytes = 3;
   PredictionValues predictions = 4;
+  repeated string tags = 5;
 }
 
 message FeedbackRequest {
