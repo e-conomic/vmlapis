@@ -3806,7 +3806,6 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.toObject = function(opt_
  */
 proto.ssn.dataservice.v1alpha1.MetricsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     startTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
     endTime: jspb.Message.getFieldWithDefault(msg, 3, 0),
     fieldsList: jspb.Message.getRepeatedField(msg, 4),
@@ -3847,10 +3846,6 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.deserializeBinaryFromReader = func
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setConsumer(value);
-      break;
     case 2:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setStartTime(value);
@@ -3896,13 +3891,6 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.serializeBinary = functi
  */
 proto.ssn.dataservice.v1alpha1.MetricsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getConsumer();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
   f = message.getStartTime();
   if (f !== 0) {
     writer.writeInt64(
@@ -3931,21 +3919,6 @@ proto.ssn.dataservice.v1alpha1.MetricsRequest.serializeBinaryToWriter = function
       f
     );
   }
-};
-
-
-/**
- * optional string consumer = 1;
- * @return {string}
- */
-proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.getConsumer = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.ssn.dataservice.v1alpha1.MetricsRequest.prototype.setConsumer = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -4737,7 +4710,7 @@ proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.toObject = function(opt_i
 proto.ssn.dataservice.v1alpha1.CallsPerMonth.toObject = function(includeInstance, msg) {
   var f, obj = {
     calls: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    month: (f = msg.getMonth()) && google_type_date_pb.Date.toObject(includeInstance, f)
+    monthName: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -4779,9 +4752,8 @@ proto.ssn.dataservice.v1alpha1.CallsPerMonth.deserializeBinaryFromReader = funct
       msg.setCalls(value);
       break;
     case 2:
-      var value = new google_type_date_pb.Date;
-      reader.readMessage(value,google_type_date_pb.Date.deserializeBinaryFromReader);
-      msg.setMonth(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMonthName(value);
       break;
     default:
       reader.skipField();
@@ -4819,12 +4791,11 @@ proto.ssn.dataservice.v1alpha1.CallsPerMonth.serializeBinaryToWriter = function(
       f
     );
   }
-  f = message.getMonth();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getMonthName();
+  if (f.length > 0) {
+    writer.writeString(
       2,
-      f,
-      google_type_date_pb.Date.serializeBinaryToWriter
+      f
     );
   }
 };
@@ -4846,32 +4817,17 @@ proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.setCalls = function(value
 
 
 /**
- * optional google.type.Date month = 2;
- * @return {?proto.google.type.Date}
+ * optional string month_name = 2;
+ * @return {string}
  */
-proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.getMonth = function() {
-  return /** @type{?proto.google.type.Date} */ (
-    jspb.Message.getWrapperField(this, google_type_date_pb.Date, 2));
+proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.getMonthName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {?proto.google.type.Date|undefined} value */
-proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.setMonth = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.clearMonth = function() {
-  this.setMonth(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.hasMonth = function() {
-  return jspb.Message.getField(this, 2) != null;
+/** @param {string} value */
+proto.ssn.dataservice.v1alpha1.CallsPerMonth.prototype.setMonthName = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
