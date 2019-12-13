@@ -116,23 +116,28 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "ZXJ2aWNlLnYxYWxwaGExLkNvcnJlY3RuZXNzInEKC0NvcnJlY3RuZXNzEg0K",
             "BWZpZWxkGAEgASgJEhoKEmNvcnJlY3RfcGVyY2VudGFnZRgCIAEoAhIdChVp",
             "bmNvbXBsZXRlX3BlcmNlbnRhZ2UYAyABKAISGAoQZXJyb3JfcGVyY2VudGFn",
-            "ZRgEIAEoAiIdCg1EZWxldGVSZXF1ZXN0EgwKBHRhZ3MYASADKAkynQUKC0Rh",
-            "dGFTZXJ2aWNlEnMKDkNyZWF0ZURvY3VtZW50Ei8uc3NuLmRhdGFzZXJ2aWNl",
-            "LnYxYWxwaGExLkNyZWF0ZURvY3VtZW50UmVxdWVzdBowLnNzbi5kYXRhc2Vy",
-            "dmljZS52MWFscGhhMS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEm0KDFJlYWRE",
-            "b2N1bWVudBItLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5SZWFkRG9jdW1l",
-            "bnRSZXF1ZXN0Gi4uc3NuLmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJlYWREb2N1",
-            "bWVudFJlc3BvbnNlElsKD1ByZXBhcmVGZWVkYmFjaxIwLnNzbi5kYXRhc2Vy",
-            "dmljZS52MWFscGhhMS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5EnMKCEZlZWRiYWNrEikuc3NuLmRhdGFzZXJ2aWNl",
-            "LnYxYWxwaGExLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIkgtPkkwIeIhkvdjFhbHBoYTEvZmVlZGJhY2s6Y3JlYXRlOgEqEmcK",
-            "EENhbGN1bGF0ZU1ldHJpY3MSKC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEu",
-            "TWV0cmljc1JlcXVlc3QaKS5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRmVl",
-            "ZGJhY2tNZXRyaWNzEm8KBkRlbGV0ZRInLnNzbi5kYXRhc2VydmljZS52MWFs",
-            "cGhhMS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC",
-            "0+STAh4iGS92MWFscGhhMS9mZWVkYmFjazpkZWxldGU6ASpCDVoLZGF0YXNl",
-            "cnZpY2ViBnByb3RvMw=="));
+            "ZRgEIAEoAiIdCg1EZWxldGVSZXF1ZXN0EgwKBHRhZ3MYASADKAkiQAoNQ2Fs",
+            "bHNQZXJNb250aBINCgVjYWxscxgBIAEoAxIgCgVtb250aBgCIAEoCzIRLmdv",
+            "b2dsZS50eXBlLkRhdGUiWQoVQ2FsbHNQZXJNb250aFJlc3BvbnNlEkAKD2Nh",
+            "bGxzX3Blcl9tb250aBgBIAMoCzInLnNzbi5kYXRhc2VydmljZS52MWFscGhh",
+            "MS5DYWxsc1Blck1vbnRoMv0FCgtEYXRhU2VydmljZRJzCg5DcmVhdGVEb2N1",
+            "bWVudBIvLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5DcmVhdGVEb2N1bWVu",
+            "dFJlcXVlc3QaMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ3JlYXRlRG9j",
+            "dW1lbnRSZXNwb25zZRJtCgxSZWFkRG9jdW1lbnQSLS5zc24uZGF0YXNlcnZp",
+            "Y2UudjFhbHBoYTEuUmVhZERvY3VtZW50UmVxdWVzdBouLnNzbi5kYXRhc2Vy",
+            "dmljZS52MWFscGhhMS5SZWFkRG9jdW1lbnRSZXNwb25zZRJbCg9QcmVwYXJl",
+            "RmVlZGJhY2sSMC5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuUHJlcGFyZUZl",
+            "ZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJzCghGZWVk",
+            "YmFjaxIpLnNzbi5kYXRhc2VydmljZS52MWFscGhhMS5GZWVkYmFja1JlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJILT5JMCHiIZL3YxYWxwaGEx",
+            "L2ZlZWRiYWNrOmNyZWF0ZToBKhJnChBDYWxjdWxhdGVNZXRyaWNzEiguc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxYWxwaGExLk1ldHJpY3NSZXF1ZXN0Gikuc3NuLmRh",
+            "dGFzZXJ2aWNlLnYxYWxwaGExLkZlZWRiYWNrTWV0cmljcxJvCgZEZWxldGUS",
+            "Jy5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIkgtPkkwIeIhkvdjFhbHBoYTEvZmVlZGJh",
+            "Y2s6ZGVsZXRlOgEqEl4KE0NhbGxzUGVyTW9udGhNZXRyaWMSFi5nb29nbGUu",
+            "cHJvdG9idWYuRW1wdHkaLy5zc24uZGF0YXNlcnZpY2UudjFhbHBoYTEuQ2Fs",
+            "bHNQZXJNb250aFJlc3BvbnNlQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +153,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.MetricsRequest), global::Ssn.Dataservice.V1Alpha1.MetricsRequest.Parser, new[]{ "Consumer", "StartTime", "EndTime", "Fields", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.FeedbackMetrics), global::Ssn.Dataservice.V1Alpha1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.Correctness), global::Ssn.Dataservice.V1Alpha1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteRequest), global::Ssn.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.DeleteRequest), global::Ssn.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.CallsPerMonth), global::Ssn.Dataservice.V1Alpha1.CallsPerMonth.Parser, new[]{ "Calls", "Month" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1Alpha1.CallsPerMonthResponse), global::Ssn.Dataservice.V1Alpha1.CallsPerMonthResponse.Parser, new[]{ "CallsPerMonth" }, null, null, null)
           }));
     }
     #endregion
@@ -3525,6 +3532,290 @@ namespace Ssn.Dataservice.V1Alpha1 {
             break;
           case 10: {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CallsPerMonth : pb::IMessage<CallsPerMonth> {
+    private static readonly pb::MessageParser<CallsPerMonth> _parser = new pb::MessageParser<CallsPerMonth>(() => new CallsPerMonth());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CallsPerMonth> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonth() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonth(CallsPerMonth other) : this() {
+      calls_ = other.calls_;
+      month_ = other.month_ != null ? other.month_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonth Clone() {
+      return new CallsPerMonth(this);
+    }
+
+    /// <summary>Field number for the "calls" field.</summary>
+    public const int CallsFieldNumber = 1;
+    private long calls_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Calls {
+      get { return calls_; }
+      set {
+        calls_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "month" field.</summary>
+    public const int MonthFieldNumber = 2;
+    private global::Google.Type.Date month_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Type.Date Month {
+      get { return month_; }
+      set {
+        month_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CallsPerMonth);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CallsPerMonth other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Calls != other.Calls) return false;
+      if (!object.Equals(Month, other.Month)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Calls != 0L) hash ^= Calls.GetHashCode();
+      if (month_ != null) hash ^= Month.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Calls != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(Calls);
+      }
+      if (month_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Month);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Calls != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Calls);
+      }
+      if (month_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Month);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CallsPerMonth other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Calls != 0L) {
+        Calls = other.Calls;
+      }
+      if (other.month_ != null) {
+        if (month_ == null) {
+          month_ = new global::Google.Type.Date();
+        }
+        Month.MergeFrom(other.Month);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Calls = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            if (month_ == null) {
+              month_ = new global::Google.Type.Date();
+            }
+            input.ReadMessage(month_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class CallsPerMonthResponse : pb::IMessage<CallsPerMonthResponse> {
+    private static readonly pb::MessageParser<CallsPerMonthResponse> _parser = new pb::MessageParser<CallsPerMonthResponse>(() => new CallsPerMonthResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<CallsPerMonthResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Dataservice.V1Alpha1.DataserviceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonthResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonthResponse(CallsPerMonthResponse other) : this() {
+      callsPerMonth_ = other.callsPerMonth_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public CallsPerMonthResponse Clone() {
+      return new CallsPerMonthResponse(this);
+    }
+
+    /// <summary>Field number for the "calls_per_month" field.</summary>
+    public const int CallsPerMonthFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ssn.Dataservice.V1Alpha1.CallsPerMonth> _repeated_callsPerMonth_codec
+        = pb::FieldCodec.ForMessage(10, global::Ssn.Dataservice.V1Alpha1.CallsPerMonth.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.CallsPerMonth> callsPerMonth_ = new pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.CallsPerMonth>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Ssn.Dataservice.V1Alpha1.CallsPerMonth> CallsPerMonth {
+      get { return callsPerMonth_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as CallsPerMonthResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(CallsPerMonthResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!callsPerMonth_.Equals(other.callsPerMonth_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= callsPerMonth_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      callsPerMonth_.WriteTo(output, _repeated_callsPerMonth_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += callsPerMonth_.CalculateSize(_repeated_callsPerMonth_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(CallsPerMonthResponse other) {
+      if (other == null) {
+        return;
+      }
+      callsPerMonth_.Add(other.callsPerMonth_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            callsPerMonth_.AddEntriesFrom(input, _repeated_callsPerMonth_codec);
             break;
           }
         }
