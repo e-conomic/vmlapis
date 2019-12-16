@@ -18671,16 +18671,6 @@ public final class Dataservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string consumer = 1;</code>
-     */
-    java.lang.String getConsumer();
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getConsumerBytes();
-
-    /**
      * <code>int64 start_time = 2;</code>
      */
     long getStartTime();
@@ -18741,7 +18731,6 @@ public final class Dataservice {
       super(builder);
     }
     private MetricsRequest() {
-      consumer_ = "";
       startTime_ = 0L;
       endTime_ = 0L;
       fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -18772,12 +18761,6 @@ public final class Dataservice {
             case 0:
               done = true;
               break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              consumer_ = s;
-              break;
-            }
             case 16: {
 
               startTime_ = input.readInt64();
@@ -18790,18 +18773,18 @@ public final class Dataservice {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
                 fields_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000004;
               }
               fields_.add(s);
               break;
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000008;
               }
               tags_.add(s);
               break;
@@ -18821,10 +18804,10 @@ public final class Dataservice {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           fields_ = fields_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -18845,40 +18828,6 @@ public final class Dataservice {
     }
 
     private int bitField0_;
-    public static final int CONSUMER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object consumer_;
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    public java.lang.String getConsumer() {
-      java.lang.Object ref = consumer_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        consumer_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getConsumerBytes() {
-      java.lang.Object ref = consumer_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        consumer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     public static final int START_TIME_FIELD_NUMBER = 2;
     private long startTime_;
     /**
@@ -18969,9 +18918,6 @@ public final class Dataservice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getConsumerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumer_);
-      }
       if (startTime_ != 0L) {
         output.writeInt64(2, startTime_);
       }
@@ -18993,9 +18939,6 @@ public final class Dataservice {
       if (size != -1) return size;
 
       size = 0;
-      if (!getConsumerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumer_);
-      }
       if (startTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(2, startTime_);
@@ -19036,8 +18979,6 @@ public final class Dataservice {
       ssn.dataservice.v1alpha1.Dataservice.MetricsRequest other = (ssn.dataservice.v1alpha1.Dataservice.MetricsRequest) obj;
 
       boolean result = true;
-      result = result && getConsumer()
-          .equals(other.getConsumer());
       result = result && (getStartTime()
           == other.getStartTime());
       result = result && (getEndTime()
@@ -19057,8 +18998,6 @@ public final class Dataservice {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
-      hash = (53 * hash) + getConsumer().hashCode();
       hash = (37 * hash) + START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getStartTime());
@@ -19206,16 +19145,14 @@ public final class Dataservice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        consumer_ = "";
-
         startTime_ = 0L;
 
         endTime_ = 0L;
 
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -19244,17 +19181,16 @@ public final class Dataservice {
         ssn.dataservice.v1alpha1.Dataservice.MetricsRequest result = new ssn.dataservice.v1alpha1.Dataservice.MetricsRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.consumer_ = consumer_;
         result.startTime_ = startTime_;
         result.endTime_ = endTime_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           fields_ = fields_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.fields_ = fields_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
@@ -19306,10 +19242,6 @@ public final class Dataservice {
 
       public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.MetricsRequest other) {
         if (other == ssn.dataservice.v1alpha1.Dataservice.MetricsRequest.getDefaultInstance()) return this;
-        if (!other.getConsumer().isEmpty()) {
-          consumer_ = other.consumer_;
-          onChanged();
-        }
         if (other.getStartTime() != 0L) {
           setStartTime(other.getStartTime());
         }
@@ -19319,7 +19251,7 @@ public final class Dataservice {
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
@@ -19329,7 +19261,7 @@ public final class Dataservice {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -19365,75 +19297,6 @@ public final class Dataservice {
         return this;
       }
       private int bitField0_;
-
-      private java.lang.Object consumer_ = "";
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public java.lang.String getConsumer() {
-        java.lang.Object ref = consumer_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          consumer_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getConsumerBytes() {
-        java.lang.Object ref = consumer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          consumer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder setConsumer(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        consumer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder clearConsumer() {
-        
-        consumer_ = getDefaultInstance().getConsumer();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder setConsumerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        consumer_ = value;
-        onChanged();
-        return this;
-      }
 
       private long startTime_ ;
       /**
@@ -19489,9 +19352,9 @@ public final class Dataservice {
 
       private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
           fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -19562,7 +19425,7 @@ public final class Dataservice {
        */
       public Builder clearFields() {
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -19583,9 +19446,9 @@ public final class Dataservice {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -19656,7 +19519,7 @@ public final class Dataservice {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -22184,6 +22047,1402 @@ public final class Dataservice {
 
   }
 
+  public interface CallsPerMonthOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.CallsPerMonth)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 calls = 1;</code>
+     */
+    long getCalls();
+
+    /**
+     * <code>string month_name = 2;</code>
+     */
+    java.lang.String getMonthName();
+    /**
+     * <code>string month_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getMonthNameBytes();
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.CallsPerMonth}
+   */
+  public  static final class CallsPerMonth extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.CallsPerMonth)
+      CallsPerMonthOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CallsPerMonth.newBuilder() to construct.
+    private CallsPerMonth(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CallsPerMonth() {
+      calls_ = 0L;
+      monthName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CallsPerMonth(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              calls_ = input.readInt64();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              monthName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.class, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder.class);
+    }
+
+    public static final int CALLS_FIELD_NUMBER = 1;
+    private long calls_;
+    /**
+     * <code>int64 calls = 1;</code>
+     */
+    public long getCalls() {
+      return calls_;
+    }
+
+    public static final int MONTH_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object monthName_;
+    /**
+     * <code>string month_name = 2;</code>
+     */
+    public java.lang.String getMonthName() {
+      java.lang.Object ref = monthName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        monthName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string month_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMonthNameBytes() {
+      java.lang.Object ref = monthName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        monthName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (calls_ != 0L) {
+        output.writeInt64(1, calls_);
+      }
+      if (!getMonthNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, monthName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (calls_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, calls_);
+      }
+      if (!getMonthNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, monthName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth other = (ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth) obj;
+
+      boolean result = true;
+      result = result && (getCalls()
+          == other.getCalls());
+      result = result && getMonthName()
+          .equals(other.getMonthName());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CALLS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getCalls());
+      hash = (37 * hash) + MONTH_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getMonthName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.CallsPerMonth}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.CallsPerMonth)
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.class, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        calls_ = 0L;
+
+        monthName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth build() {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth result = new ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth(this);
+        result.calls_ = calls_;
+        result.monthName_ = monthName_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.getDefaultInstance()) return this;
+        if (other.getCalls() != 0L) {
+          setCalls(other.getCalls());
+        }
+        if (!other.getMonthName().isEmpty()) {
+          monthName_ = other.monthName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private long calls_ ;
+      /**
+       * <code>int64 calls = 1;</code>
+       */
+      public long getCalls() {
+        return calls_;
+      }
+      /**
+       * <code>int64 calls = 1;</code>
+       */
+      public Builder setCalls(long value) {
+        
+        calls_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 calls = 1;</code>
+       */
+      public Builder clearCalls() {
+        
+        calls_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object monthName_ = "";
+      /**
+       * <code>string month_name = 2;</code>
+       */
+      public java.lang.String getMonthName() {
+        java.lang.Object ref = monthName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          monthName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string month_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMonthNameBytes() {
+        java.lang.Object ref = monthName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          monthName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string month_name = 2;</code>
+       */
+      public Builder setMonthName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        monthName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string month_name = 2;</code>
+       */
+      public Builder clearMonthName() {
+        
+        monthName_ = getDefaultInstance().getMonthName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string month_name = 2;</code>
+       */
+      public Builder setMonthNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        monthName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.CallsPerMonth)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.CallsPerMonth)
+    private static final ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CallsPerMonth>
+        PARSER = new com.google.protobuf.AbstractParser<CallsPerMonth>() {
+      @java.lang.Override
+      public CallsPerMonth parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CallsPerMonth(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CallsPerMonth> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CallsPerMonth> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CallsPerMonthResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.dataservice.v1alpha1.CallsPerMonthResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> 
+        getCallsPerMonthList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getCallsPerMonth(int index);
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    int getCallsPerMonthCount();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder> 
+        getCallsPerMonthOrBuilderList();
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder getCallsPerMonthOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ssn.dataservice.v1alpha1.CallsPerMonthResponse}
+   */
+  public  static final class CallsPerMonthResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.dataservice.v1alpha1.CallsPerMonthResponse)
+      CallsPerMonthResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CallsPerMonthResponse.newBuilder() to construct.
+    private CallsPerMonthResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CallsPerMonthResponse() {
+      callsPerMonth_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CallsPerMonthResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                callsPerMonth_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              callsPerMonth_.add(
+                  input.readMessage(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          callsPerMonth_ = java.util.Collections.unmodifiableList(callsPerMonth_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.class, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.Builder.class);
+    }
+
+    public static final int CALLS_PER_MONTH_FIELD_NUMBER = 1;
+    private java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> callsPerMonth_;
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    public java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> getCallsPerMonthList() {
+      return callsPerMonth_;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder> 
+        getCallsPerMonthOrBuilderList() {
+      return callsPerMonth_;
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    public int getCallsPerMonthCount() {
+      return callsPerMonth_.size();
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getCallsPerMonth(int index) {
+      return callsPerMonth_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+     */
+    public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder getCallsPerMonthOrBuilder(
+        int index) {
+      return callsPerMonth_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < callsPerMonth_.size(); i++) {
+        output.writeMessage(1, callsPerMonth_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < callsPerMonth_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, callsPerMonth_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse)) {
+        return super.equals(obj);
+      }
+      ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse other = (ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse) obj;
+
+      boolean result = true;
+      result = result && getCallsPerMonthList()
+          .equals(other.getCallsPerMonthList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCallsPerMonthCount() > 0) {
+        hash = (37 * hash) + CALLS_PER_MONTH_FIELD_NUMBER;
+        hash = (53 * hash) + getCallsPerMonthList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.dataservice.v1alpha1.CallsPerMonthResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.dataservice.v1alpha1.CallsPerMonthResponse)
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.class, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.Builder.class);
+      }
+
+      // Construct using ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCallsPerMonthFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (callsPerMonthBuilder_ == null) {
+          callsPerMonth_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          callsPerMonthBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse getDefaultInstanceForType() {
+        return ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse build() {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse buildPartial() {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse result = new ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (callsPerMonthBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            callsPerMonth_ = java.util.Collections.unmodifiableList(callsPerMonth_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.callsPerMonth_ = callsPerMonth_;
+        } else {
+          result.callsPerMonth_ = callsPerMonthBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse) {
+          return mergeFrom((ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse other) {
+        if (other == ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse.getDefaultInstance()) return this;
+        if (callsPerMonthBuilder_ == null) {
+          if (!other.callsPerMonth_.isEmpty()) {
+            if (callsPerMonth_.isEmpty()) {
+              callsPerMonth_ = other.callsPerMonth_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCallsPerMonthIsMutable();
+              callsPerMonth_.addAll(other.callsPerMonth_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.callsPerMonth_.isEmpty()) {
+            if (callsPerMonthBuilder_.isEmpty()) {
+              callsPerMonthBuilder_.dispose();
+              callsPerMonthBuilder_ = null;
+              callsPerMonth_ = other.callsPerMonth_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              callsPerMonthBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCallsPerMonthFieldBuilder() : null;
+            } else {
+              callsPerMonthBuilder_.addAllMessages(other.callsPerMonth_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> callsPerMonth_ =
+        java.util.Collections.emptyList();
+      private void ensureCallsPerMonthIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          callsPerMonth_ = new java.util.ArrayList<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth>(callsPerMonth_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder> callsPerMonthBuilder_;
+
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> getCallsPerMonthList() {
+        if (callsPerMonthBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(callsPerMonth_);
+        } else {
+          return callsPerMonthBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public int getCallsPerMonthCount() {
+        if (callsPerMonthBuilder_ == null) {
+          return callsPerMonth_.size();
+        } else {
+          return callsPerMonthBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth getCallsPerMonth(int index) {
+        if (callsPerMonthBuilder_ == null) {
+          return callsPerMonth_.get(index);
+        } else {
+          return callsPerMonthBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder setCallsPerMonth(
+          int index, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth value) {
+        if (callsPerMonthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.set(index, value);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder setCallsPerMonth(
+          int index, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder builderForValue) {
+        if (callsPerMonthBuilder_ == null) {
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder addCallsPerMonth(ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth value) {
+        if (callsPerMonthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.add(value);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder addCallsPerMonth(
+          int index, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth value) {
+        if (callsPerMonthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.add(index, value);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder addCallsPerMonth(
+          ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder builderForValue) {
+        if (callsPerMonthBuilder_ == null) {
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.add(builderForValue.build());
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder addCallsPerMonth(
+          int index, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder builderForValue) {
+        if (callsPerMonthBuilder_ == null) {
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder addAllCallsPerMonth(
+          java.lang.Iterable<? extends ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth> values) {
+        if (callsPerMonthBuilder_ == null) {
+          ensureCallsPerMonthIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, callsPerMonth_);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder clearCallsPerMonth() {
+        if (callsPerMonthBuilder_ == null) {
+          callsPerMonth_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public Builder removeCallsPerMonth(int index) {
+        if (callsPerMonthBuilder_ == null) {
+          ensureCallsPerMonthIsMutable();
+          callsPerMonth_.remove(index);
+          onChanged();
+        } else {
+          callsPerMonthBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder getCallsPerMonthBuilder(
+          int index) {
+        return getCallsPerMonthFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder getCallsPerMonthOrBuilder(
+          int index) {
+        if (callsPerMonthBuilder_ == null) {
+          return callsPerMonth_.get(index);  } else {
+          return callsPerMonthBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public java.util.List<? extends ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder> 
+           getCallsPerMonthOrBuilderList() {
+        if (callsPerMonthBuilder_ != null) {
+          return callsPerMonthBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(callsPerMonth_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder addCallsPerMonthBuilder() {
+        return getCallsPerMonthFieldBuilder().addBuilder(
+            ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder addCallsPerMonthBuilder(
+          int index) {
+        return getCallsPerMonthFieldBuilder().addBuilder(
+            index, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.dataservice.v1alpha1.CallsPerMonth calls_per_month = 1;</code>
+       */
+      public java.util.List<ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder> 
+           getCallsPerMonthBuilderList() {
+        return getCallsPerMonthFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder> 
+          getCallsPerMonthFieldBuilder() {
+        if (callsPerMonthBuilder_ == null) {
+          callsPerMonthBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonth.Builder, ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthOrBuilder>(
+                  callsPerMonth_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          callsPerMonth_ = null;
+        }
+        return callsPerMonthBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.dataservice.v1alpha1.CallsPerMonthResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.dataservice.v1alpha1.CallsPerMonthResponse)
+    private static final ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse();
+    }
+
+    public static ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CallsPerMonthResponse>
+        PARSER = new com.google.protobuf.AbstractParser<CallsPerMonthResponse>() {
+      @java.lang.Override
+      public CallsPerMonthResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CallsPerMonthResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CallsPerMonthResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CallsPerMonthResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.dataservice.v1alpha1.Dataservice.CallsPerMonthResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_dataservice_v1alpha1_Document_descriptor;
   private static final 
@@ -22249,6 +23508,16 @@ public final class Dataservice {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22351,35 +23620,41 @@ public final class Dataservice {
       "onValues\022\014\n\004tags\030\005 \003(\t\"f\n\017FeedbackReques" +
       "t\022\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \001(\0132$.ssn" +
       ".dataservice.v1alpha1.TrueValues\022\014\n\004tags" +
-      "\030\003 \003(\t\"f\n\016MetricsRequest\022\020\n\010consumer\030\001 \001" +
-      "(\t\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003" +
-      "\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\307\001\n\017Feedb" +
-      "ackMetrics\022\026\n\016document_count\030\001 \001(\005\022\026\n\016fe" +
-      "edback_count\030\002 \001(\005\022B\n\023overall_correctnes" +
-      "s\030\003 \001(\0132%.ssn.dataservice.v1alpha1.Corre" +
-      "ctness\022@\n\021field_correctness\030\004 \003(\0132%.ssn." +
-      "dataservice.v1alpha1.Correctness\"q\n\013Corr" +
-      "ectness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_percen" +
-      "tage\030\002 \001(\002\022\035\n\025incomplete_percentage\030\003 \001(" +
-      "\002\022\030\n\020error_percentage\030\004 \001(\002\"\035\n\rDeleteReq" +
-      "uest\022\014\n\004tags\030\001 \003(\t2\235\005\n\013DataService\022s\n\016Cr" +
-      "eateDocument\022/.ssn.dataservice.v1alpha1." +
-      "CreateDocumentRequest\0320.ssn.dataservice." +
-      "v1alpha1.CreateDocumentResponse\022m\n\014ReadD" +
-      "ocument\022-.ssn.dataservice.v1alpha1.ReadD" +
-      "ocumentRequest\032..ssn.dataservice.v1alpha" +
-      "1.ReadDocumentResponse\022[\n\017PrepareFeedbac" +
-      "k\0220.ssn.dataservice.v1alpha1.PrepareFeed" +
-      "backRequest\032\026.google.protobuf.Empty\022s\n\010F" +
-      "eedback\022).ssn.dataservice.v1alpha1.Feedb" +
-      "ackRequest\032\026.google.protobuf.Empty\"$\202\323\344\223" +
-      "\002\036\"\031/v1alpha1/feedback:create:\001*\022g\n\020Calc" +
-      "ulateMetrics\022(.ssn.dataservice.v1alpha1." +
-      "MetricsRequest\032).ssn.dataservice.v1alpha" +
-      "1.FeedbackMetrics\022o\n\006Delete\022\'.ssn.datase" +
-      "rvice.v1alpha1.DeleteRequest\032\026.google.pr" +
-      "otobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback" +
-      ":delete:\001*B\rZ\013dataserviceb\006proto3"
+      "\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart_time\030\002" +
+      " \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014" +
+      "\n\004tags\030\005 \003(\t\"\307\001\n\017FeedbackMetrics\022\026\n\016docu" +
+      "ment_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005" +
+      "\022B\n\023overall_correctness\030\003 \001(\0132%.ssn.data" +
+      "service.v1alpha1.Correctness\022@\n\021field_co" +
+      "rrectness\030\004 \003(\0132%.ssn.dataservice.v1alph" +
+      "a1.Correctness\"q\n\013Correctness\022\r\n\005field\030\001" +
+      " \001(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035\n\025inco" +
+      "mplete_percentage\030\003 \001(\002\022\030\n\020error_percent" +
+      "age\030\004 \001(\002\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t" +
+      "\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmont" +
+      "h_name\030\002 \001(\t\"Y\n\025CallsPerMonthResponse\022@\n" +
+      "\017calls_per_month\030\001 \003(\0132\'.ssn.dataservice" +
+      ".v1alpha1.CallsPerMonth2\375\005\n\013DataService\022" +
+      "s\n\016CreateDocument\022/.ssn.dataservice.v1al" +
+      "pha1.CreateDocumentRequest\0320.ssn.dataser" +
+      "vice.v1alpha1.CreateDocumentResponse\022m\n\014" +
+      "ReadDocument\022-.ssn.dataservice.v1alpha1." +
+      "ReadDocumentRequest\032..ssn.dataservice.v1" +
+      "alpha1.ReadDocumentResponse\022[\n\017PrepareFe" +
+      "edback\0220.ssn.dataservice.v1alpha1.Prepar" +
+      "eFeedbackRequest\032\026.google.protobuf.Empty" +
+      "\022s\n\010Feedback\022).ssn.dataservice.v1alpha1." +
+      "FeedbackRequest\032\026.google.protobuf.Empty\"" +
+      "$\202\323\344\223\002\036\"\031/v1alpha1/feedback:create:\001*\022g\n" +
+      "\020CalculateMetrics\022(.ssn.dataservice.v1al" +
+      "pha1.MetricsRequest\032).ssn.dataservice.v1" +
+      "alpha1.FeedbackMetrics\022o\n\006Delete\022\'.ssn.d" +
+      "ataservice.v1alpha1.DeleteRequest\032\026.goog" +
+      "le.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/fee" +
+      "dback:delete:\001*\022^\n\023CallsPerMonthMetric\022\026" +
+      ".google.protobuf.Empty\032/.ssn.dataservice" +
+      ".v1alpha1.CallsPerMonthResponseB\rZ\013datas" +
+      "erviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22459,7 +23734,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1alpha1_MetricsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_MetricsRequest_descriptor,
-        new java.lang.String[] { "Consumer", "StartTime", "EndTime", "Fields", "Tags", });
+        new java.lang.String[] { "StartTime", "EndTime", "Fields", "Tags", });
     internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_dataservice_v1alpha1_FeedbackMetrics_fieldAccessorTable = new
@@ -22478,6 +23753,18 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1alpha1_DeleteRequest_descriptor,
         new java.lang.String[] { "Tags", });
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_CallsPerMonth_descriptor,
+        new java.lang.String[] { "Calls", "MonthName", });
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_dataservice_v1alpha1_CallsPerMonthResponse_descriptor,
+        new java.lang.String[] { "CallsPerMonth", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);
