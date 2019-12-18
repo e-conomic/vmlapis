@@ -3,7 +3,6 @@ protoc:
   includes:
   - ../deps/googleapis
   - ../deps/tensorflow
-  - ../deps/bq
 
 lint:
   group: google

@@ -2,7 +2,7 @@ all:
 	@rm -rf gen
 	@echo "Generate all the things"
 	cd proto && prototool all
-	protoc -I./deps/googleapis -I./deps/bq -I./proto \
+	protoc -I./deps/googleapis -I./proto \
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \
