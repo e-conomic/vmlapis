@@ -1,7 +1,7 @@
 import setuptools
 import os
 
-tag = os.environ.get('TRAVIS_TAG', 'v0.0.0')
+tag = os.environ.get('TAG_NAME', 'v0.0.0')
 assert tag
 version = tag.strip('v')
 
