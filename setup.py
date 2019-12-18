@@ -11,7 +11,8 @@ setuptools.setup(
     description="A package containing ssn protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
     packages=setuptools.find_packages(where='gen/python/'),
-    package_dir={'ssn': 'gen/python/ssn', 'lyft': 'gen/python/lyft'},
+    package_dir={'ssn': 'gen/python/ssn',
+                 'gen_bq_schema': 'gen/python/gen_bq_schema'},
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
