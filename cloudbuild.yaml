@@ -1,0 +1,16 @@
+steps:
+
+- name: "python:3.7-buster"
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo $$MY_SECRET
+  secretEnv:
+    - 'MY_SECRET'
+  id: deploy
+
+secrets:
+  - kmsKeyName: projects/dev-vml-cm/locations/global/keyRings/builder/cryptoKeys/artifactory-pw
+    secretEnv:
+      MY_SECRET: CiQABn9jLcfY1jSP830Peern3dit23zdSz3qfZZJsevw0Ap9zWESLgBPNwwDPN4dEPfiIw5IP8T4Zhwcm5AOKD5JMGoOpuxwPKlZfoh9CrdzHdyvkLQ=
