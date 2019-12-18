@@ -1,22 +1,21 @@
 steps:
+- name: "python:3.7-buster"
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    if [ "$TAG_NAME" ] ; then
+      pip install twine
+      python setup.py bdist_wheel
+      twine upload --repository-url https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi -u vml-rw -p $$ARTIFACTORY_PW dist/*
+    fi
+  env:
+    - 'TAG_NAME=${TAG_NAME}'
+  secretEnv:
+    - 'ARTIFACTORY_PW'
+  id: deploy
 
-  - name: "python:3.7-buster"
-    entrypoint: 'bash'
-    args:
-    - '-c'
-    - |
-      if [ "$TAG_NAME" ] ; then
-        pip install twine
-        python setup.py bdist_wheel
-        twine upload --repository-url https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi -u vml-rw -p $$ARTIFACTORY_PW dist/*
-      fi
-    env:
-      - 'TAG_NAME=${TAG_NAME}'
-    secretEnv:
-      - 'ARTIFACTORY_PW'
-    id: deploy
-
-  secrets:
-    - kmsKeyName: projects/dev-vml-cm/locations/global/keyRings/builder/cryptoKeys/artifactory-pw
-      secretEnv:
-        ARTIFACTORY_PW: CiQABn9jLUW+LqR7sIGt+qNrDfIizwL4UNyumnqsi5I9/ofLHj0ScgBPNwwDR4MZUFeoGyz5P/OLqlGE27q0vayqbXUyd3AM9Mka2GMuqbGaJSpQvAxTEz3/vanIZLRJ3NPA5SRDzJraulDl7UaDm4F//N6UNI3DuPNSnfNqLPtL41ko67wTSfJgattedTz8xxjVWVnyUqwpLw==
+secrets:
+- kmsKeyName: projects/dev-vml-cm/locations/global/keyRings/builder/cryptoKeys/artifactory-pw
+  secretEnv:
+    ARTIFACTORY_PW: CiQABn9jLUW+LqR7sIGt+qNrDfIizwL4UNyumnqsi5I9/ofLHj0ScgBPNwwDR4MZUFeoGyz5P/OLqlGE27q0vayqbXUyd3AM9Mka2GMuqbGaJSpQvAxTEz3/vanIZLRJ3NPA5SRDzJraulDl7UaDm4F//N6UNI3DuPNSnfNqLPtL41ko67wTSfJgattedTz8xxjVWVnyUqwpLw==
