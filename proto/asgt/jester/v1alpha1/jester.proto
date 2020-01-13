@@ -4,7 +4,7 @@ package asgt.jester.v1alpha1;
 
 option go_package = "jester";
 
-import "google/api/http.proto";
+import "google/api/annotations.proto";
 import "google/protobuf/wrappers.proto";
 
 service Jester {
