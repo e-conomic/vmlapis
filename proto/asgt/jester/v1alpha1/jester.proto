@@ -1,0 +1,113 @@
+syntax = "proto3";
+
+package asgt.jester.v1alpha1;
+
+option go_package = "jester";
+
+import "google/api/http.proto";
+import "google/protobuf/wrappers.proto";
+
+service Jester {
+  rpc ScannedInvoiceSuggestions(ScannedInvoiceRequest) returns (SuggestionsResponse) {
+    option (google.api.http) = {
+      post: "/v1/suggest:scannedinvoice"
+      body: "*"
+    };
+  }
+
+  rpc ElectronicInvoicLineSuggestions(ElectronicInvoicLineRequest) returns (SuggestionsResponse) {
+    option (google.api.http) = {
+      post: "/v1/suggest:electronicinvoiceline"
+      body: "*"
+    };
+  }
+
+  rpc BankSuggestions(BankRequest) returns (SuggestionsResponse) {
+    option (google.api.http) = {
+      post: "/v1/suggest:bank"
+      body: "*"
+    };
+  }
+}
+
+// Common types
+message Confidence {
+  enum Level {
+    UNKNOWN = 0;
+    VERY_LOW = 1;
+    LOW = 2;
+    MID = 3;
+    HIGH = 4;
+    VERY_HIGH = 5;
+  }
+  // A bucketized representation of confidence, which is intended to give clients
+  // highly stable results across model upgrades.
+  Level level = 1;
+  // The confidence value
+  google.protobuf.FloatValue value = 2;
+}
+
+message Candidate {
+  string label = 1;
+  Confidence confidence = 2;
+}
+
+message SuggestionOptions {
+  int32 suggestion_limit = 1;
+  Confidence.Level min_confidence = 2;
+}
+
+// AutoSuggest
+message SuggestionsResponse {
+  message Prediction {
+    string target = 1;
+    repeated Candidate candidates = 2;
+  }
+
+  repeated Prediction predictions = 1;
+}
+
+// Scanned Invoice
+message ScannedInvoiceRequest {
+  message Input {
+    string description = 1;
+  }
+
+  repeated Input inputs = 1;
+  repeated string targets = 2;
+  SuggestionOptions options = 3;
+}
+
+// Electronic Invoice Line
+message ElectronicInvoicLineRequest {
+  message Input {
+    string issue_date = 1;
+    string currency = 2;
+    string supplier_id = 3;
+    string supplier_name = 4;
+    string supplier_global_id = 5;
+    string customer_ref = 6;
+    int32 total = 7;
+    string line_text = 8;
+    string line_id = 9;
+  }
+
+  repeated Input inputs = 1;
+  repeated string targets = 2;
+  SuggestionOptions options = 3;
+}
+
+// Bank
+message BankRequest {
+  message Input {
+    int32 account_number = 1;
+    google.protobuf.FloatValue amount = 2;
+    int32 entry_type = 3;
+    string text = 4;
+    int32 time_stamp = 5;
+  }
+
+  repeated Input inputs = 1;
+  repeated string targets = 2;
+  SuggestionOptions options = 3;
+}
