@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package ssn.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+import "gen_bq_schema/bq_field.proto";
+import "gen_bq_schema/bq_table.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "asgt/jester/v1alpha1/jester.proto";
+
+service DataService {
+  rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
+  rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/feedback:create"
+      body: "*"
+    };
+  }
+  // TODO(helvind)
+  // rpc AppendDataset(AppendDataRequest) returns (google.protobuf.Empty) {
+  //   option (google.api.http) = {
+  //     post: "/v1alpha1/feedback:append"
+  //     body: "*"
+  //   };
+  // }
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/feedback:delete"
+      body: "*"
+    };
+  }
+}
+
+message PrepareFeedbackRequest {
+  string id = 1;
+  oneof input {
+    asgt.jester.v1alpha1.ScannedInvoiceRequest.Input scanned_invoice_input = 2;
+    asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input electronic_invoice_line_input = 3;
+    asgt.jester.v1alpha1.BankRequest.Input bank_input = 4;
+  }
+  asgt.jester.v1alpha1.SuggestionsResponse predictions = 5;
+  repeated string tags = 6;
+}
+
+message FeedbackRequest {
+  string id = 1;
+  asgt.jester.v1alpha1.SuggestionsResponse.Prediction true_values = 2;
+  repeated string tags = 3;
+}
+
+message DeleteRequest {
+  repeated string tags = 1;
+}
