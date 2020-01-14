@@ -68,11 +68,19 @@ public final class Dataservice {
         getTagsBytes(int index);
 
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
     int getInputCount();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
     boolean containsInput(
         java.lang.String key);
@@ -83,30 +91,50 @@ public final class Dataservice {
     java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
     getInput();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
     java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
     getInputMap();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrDefault(
         java.lang.String key,
         asgt.dataservice.v1alpha1.Dataservice.FeedbackValue defaultValue);
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrThrow(
         java.lang.String key);
 
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
     int getTrueValuesCount();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
     boolean containsTrueValues(
         java.lang.String key);
@@ -117,30 +145,42 @@ public final class Dataservice {
     java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
     getTrueValues();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
     java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
     getTrueValuesMap();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrDefault(
         java.lang.String key,
         asgt.dataservice.v1alpha1.Dataservice.FeedbackValue defaultValue);
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrThrow(
         java.lang.String key);
 
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
     int getPredictionValuesCount();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
     boolean containsPredictionValues(
         java.lang.String key);
@@ -148,25 +188,25 @@ public final class Dataservice {
      * Use {@link #getPredictionValuesMap()} instead.
      */
     @java.lang.Deprecated
-    java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+    java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
     getPredictionValues();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
-    java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+    java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
     getPredictionValuesMap();
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
-    asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrDefault(
+    asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrDefault(
         java.lang.String key,
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue defaultValue);
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList defaultValue);
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
-    asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrThrow(
+    asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrThrow(
         java.lang.String key);
 
     /**
@@ -277,7 +317,7 @@ public final class Dataservice {
                     PredictionValuesDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000040;
               }
-              com.google.protobuf.MapEntry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+              com.google.protobuf.MapEntry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
               predictionValues__ = input.readMessage(
                   PredictionValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               predictionValues_.getMutableMap().put(
@@ -499,7 +539,11 @@ public final class Dataservice {
       return internalGetInput().getMap().size();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     public boolean containsInput(
@@ -515,14 +559,22 @@ public final class Dataservice {
       return getInputMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getInputMap() {
       return internalGetInput().getMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrDefault(
@@ -534,7 +586,11 @@ public final class Dataservice {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * input is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
      */
 
     public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrThrow(
@@ -575,7 +631,11 @@ public final class Dataservice {
       return internalGetTrueValues().getMap().size();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     public boolean containsTrueValues(
@@ -591,14 +651,22 @@ public final class Dataservice {
       return getTrueValuesMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getTrueValuesMap() {
       return internalGetTrueValues().getMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrDefault(
@@ -610,7 +678,11 @@ public final class Dataservice {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <pre>
+     * true_values is not bq required, to make it repeated
+     * </pre>
+     *
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
      */
 
     public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrThrow(
@@ -627,18 +699,18 @@ public final class Dataservice {
     public static final int PREDICTION_VALUES_FIELD_NUMBER = 7;
     private static final class PredictionValuesDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
-          java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> defaultEntry =
+          java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> defaultEntry =
               com.google.protobuf.MapEntry
-              .<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>newDefaultInstance(
+              .<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>newDefaultInstance(
                   asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_Entry_PredictionValuesEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
-                  asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance());
+                  asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.getDefaultInstance());
     }
     private com.google.protobuf.MapField<
-        java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> predictionValues_;
-    private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+        java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> predictionValues_;
+    private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
     internalGetPredictionValues() {
       if (predictionValues_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
@@ -651,7 +723,7 @@ public final class Dataservice {
       return internalGetPredictionValues().getMap().size();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
     public boolean containsPredictionValues(
@@ -663,36 +735,36 @@ public final class Dataservice {
      * Use {@link #getPredictionValuesMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getPredictionValues() {
+    public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> getPredictionValues() {
       return getPredictionValuesMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
-    public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getPredictionValuesMap() {
+    public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> getPredictionValuesMap() {
       return internalGetPredictionValues().getMap();
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
-    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrDefault(
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrDefault(
         java.lang.String key,
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue defaultValue) {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> map =
+      java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> map =
           internalGetPredictionValues().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+     * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
      */
 
-    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrThrow(
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> map =
+      java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> map =
           internalGetPredictionValues().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
@@ -802,9 +874,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(6, trueValues__);
       }
-      for (java.util.Map.Entry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> entry
+      for (java.util.Map.Entry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> entry
            : internalGetPredictionValues().getMap().entrySet()) {
-        com.google.protobuf.MapEntry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+        com.google.protobuf.MapEntry<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
         predictionValues__ = PredictionValuesDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
@@ -1541,7 +1613,11 @@ public final class Dataservice {
         return internalGetInput().getMap().size();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public boolean containsInput(
@@ -1557,14 +1633,22 @@ public final class Dataservice {
         return getInputMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getInputMap() {
         return internalGetInput().getMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrDefault(
@@ -1576,7 +1660,11 @@ public final class Dataservice {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getInputOrThrow(
@@ -1596,7 +1684,11 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public Builder removeInput(
@@ -1615,7 +1707,11 @@ public final class Dataservice {
         return internalGetMutableInput().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
       public Builder putInput(
           java.lang.String key,
@@ -1627,7 +1723,11 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * input is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; input = 5;</code>
        */
 
       public Builder putAllInput(
@@ -1664,7 +1764,11 @@ public final class Dataservice {
         return internalGetTrueValues().getMap().size();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public boolean containsTrueValues(
@@ -1680,14 +1784,22 @@ public final class Dataservice {
         return getTrueValuesMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getTrueValuesMap() {
         return internalGetTrueValues().getMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrDefault(
@@ -1699,7 +1811,11 @@ public final class Dataservice {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getTrueValuesOrThrow(
@@ -1719,7 +1835,11 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public Builder removeTrueValues(
@@ -1738,7 +1858,11 @@ public final class Dataservice {
         return internalGetMutableTrueValues().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
       public Builder putTrueValues(
           java.lang.String key,
@@ -1750,7 +1874,11 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <pre>
+       * true_values is not bq required, to make it repeated
+       * </pre>
+       *
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; true_values = 6;</code>
        */
 
       public Builder putAllTrueValues(
@@ -1761,8 +1889,8 @@ public final class Dataservice {
       }
 
       private com.google.protobuf.MapField<
-          java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> predictionValues_;
-      private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+          java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> predictionValues_;
+      private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
       internalGetPredictionValues() {
         if (predictionValues_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
@@ -1770,7 +1898,7 @@ public final class Dataservice {
         }
         return predictionValues_;
       }
-      private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+      private com.google.protobuf.MapField<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
       internalGetMutablePredictionValues() {
         onChanged();;
         if (predictionValues_ == null) {
@@ -1787,7 +1915,7 @@ public final class Dataservice {
         return internalGetPredictionValues().getMap().size();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
       public boolean containsPredictionValues(
@@ -1799,36 +1927,36 @@ public final class Dataservice {
        * Use {@link #getPredictionValuesMap()} instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getPredictionValues() {
+      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> getPredictionValues() {
         return getPredictionValuesMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
-      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getPredictionValuesMap() {
+      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> getPredictionValuesMap() {
         return internalGetPredictionValues().getMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
-      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrDefault(
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrDefault(
           java.lang.String key,
-          asgt.dataservice.v1alpha1.Dataservice.FeedbackValue defaultValue) {
+          asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList defaultValue) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> map =
+        java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> map =
             internalGetPredictionValues().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
-      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getPredictionValuesOrThrow(
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getPredictionValuesOrThrow(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> map =
+        java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> map =
             internalGetPredictionValues().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
@@ -1842,7 +1970,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
       public Builder removePredictionValues(
@@ -1856,16 +1984,16 @@ public final class Dataservice {
        * Use alternate mutation accessors instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>
+      public java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList>
       getMutablePredictionValues() {
         return internalGetMutablePredictionValues().getMutableMap();
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
       public Builder putPredictionValues(
           java.lang.String key,
-          asgt.dataservice.v1alpha1.Dataservice.FeedbackValue value) {
+          asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutablePredictionValues().getMutableMap()
@@ -1873,11 +2001,11 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValue&gt; prediction_values = 7;</code>
+       * <code>map&lt;string, .asgt.dataservice.v1alpha1.FeedbackValueList&gt; prediction_values = 7;</code>
        */
 
       public Builder putAllPredictionValues(
-          java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> values) {
+          java.util.Map<java.lang.String, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList> values) {
         internalGetMutablePredictionValues().getMutableMap()
             .putAll(values);
         return this;
@@ -1956,6 +2084,1729 @@ public final class Dataservice {
 
     @java.lang.Override
     public asgt.dataservice.v1alpha1.Dataservice.Entry getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedbackValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string feedback_string = 1;</code>
+     */
+    java.lang.String getFeedbackString();
+    /**
+     * <code>string feedback_string = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getFeedbackStringBytes();
+
+    /**
+     * <code>int32 feedback_int = 2;</code>
+     */
+    int getFeedbackInt();
+
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    boolean hasFeedbackFloat();
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    com.google.protobuf.FloatValue getFeedbackFloat();
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder();
+
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValue}
+   */
+  public  static final class FeedbackValue extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.FeedbackValue)
+      FeedbackValueOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeedbackValue.newBuilder() to construct.
+    private FeedbackValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedbackValue() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedbackValue(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              typeCase_ = 1;
+              type_ = s;
+              break;
+            }
+            case 16: {
+              typeCase_ = 2;
+              type_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              com.google.protobuf.FloatValue.Builder subBuilder = null;
+              if (typeCase_ == 3) {
+                subBuilder = ((com.google.protobuf.FloatValue) type_).toBuilder();
+              }
+              type_ =
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.google.protobuf.FloatValue) type_);
+                type_ = subBuilder.buildPartial();
+              }
+              typeCase_ = 3;
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder.class);
+    }
+
+    private int typeCase_ = 0;
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite {
+      FEEDBACK_STRING(1),
+      FEEDBACK_INT(2),
+      FEEDBACK_FLOAT(3),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return FEEDBACK_STRING;
+          case 2: return FEEDBACK_INT;
+          case 3: return FEEDBACK_FLOAT;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int FEEDBACK_STRING_FIELD_NUMBER = 1;
+    /**
+     * <code>string feedback_string = 1;</code>
+     */
+    public java.lang.String getFeedbackString() {
+      java.lang.Object ref = "";
+      if (typeCase_ == 1) {
+        ref = type_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (typeCase_ == 1) {
+          type_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>string feedback_string = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getFeedbackStringBytes() {
+      java.lang.Object ref = "";
+      if (typeCase_ == 1) {
+        ref = type_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (typeCase_ == 1) {
+          type_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int FEEDBACK_INT_FIELD_NUMBER = 2;
+    /**
+     * <code>int32 feedback_int = 2;</code>
+     */
+    public int getFeedbackInt() {
+      if (typeCase_ == 2) {
+        return (java.lang.Integer) type_;
+      }
+      return 0;
+    }
+
+    public static final int FEEDBACK_FLOAT_FIELD_NUMBER = 3;
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    public boolean hasFeedbackFloat() {
+      return typeCase_ == 3;
+    }
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    public com.google.protobuf.FloatValue getFeedbackFloat() {
+      if (typeCase_ == 3) {
+         return (com.google.protobuf.FloatValue) type_;
+      }
+      return com.google.protobuf.FloatValue.getDefaultInstance();
+    }
+    /**
+     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder() {
+      if (typeCase_ == 3) {
+         return (com.google.protobuf.FloatValue) type_;
+      }
+      return com.google.protobuf.FloatValue.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeInt32(
+            2, (int)((java.lang.Integer) type_));
+      }
+      if (typeCase_ == 3) {
+        output.writeMessage(3, (com.google.protobuf.FloatValue) type_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(
+              2, (int)((java.lang.Integer) type_));
+      }
+      if (typeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (com.google.protobuf.FloatValue) type_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValue)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1alpha1.Dataservice.FeedbackValue other = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) obj;
+
+      boolean result = true;
+      result = result && getTypeCase().equals(
+          other.getTypeCase());
+      if (!result) return false;
+      switch (typeCase_) {
+        case 1:
+          result = result && getFeedbackString()
+              .equals(other.getFeedbackString());
+          break;
+        case 2:
+          result = result && (getFeedbackInt()
+              == other.getFeedbackInt());
+          break;
+        case 3:
+          result = result && getFeedbackFloat()
+              .equals(other.getFeedbackFloat());
+          break;
+        case 0:
+        default:
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + FEEDBACK_STRING_FIELD_NUMBER;
+          hash = (53 * hash) + getFeedbackString().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + FEEDBACK_INT_FIELD_NUMBER;
+          hash = (53 * hash) + getFeedbackInt();
+          break;
+        case 3:
+          hash = (37 * hash) + FEEDBACK_FLOAT_FIELD_NUMBER;
+          hash = (53 * hash) + getFeedbackFloat().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.FeedbackValue)
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue build() {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue buildPartial() {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue result = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValue(this);
+        if (typeCase_ == 1) {
+          result.type_ = type_;
+        }
+        if (typeCase_ == 2) {
+          result.type_ = type_;
+        }
+        if (typeCase_ == 3) {
+          if (feedbackFloatBuilder_ == null) {
+            result.type_ = type_;
+          } else {
+            result.type_ = feedbackFloatBuilder_.build();
+          }
+        }
+        result.typeCase_ = typeCase_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Dataservice.FeedbackValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue other) {
+        if (other == asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case FEEDBACK_STRING: {
+            typeCase_ = 1;
+            type_ = other.type_;
+            onChanged();
+            break;
+          }
+          case FEEDBACK_INT: {
+            setFeedbackInt(other.getFeedbackInt());
+            break;
+          }
+          case FEEDBACK_FLOAT: {
+            mergeFeedbackFloat(other.getFeedbackFloat());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      /**
+       * <code>string feedback_string = 1;</code>
+       */
+      public java.lang.String getFeedbackString() {
+        java.lang.Object ref = "";
+        if (typeCase_ == 1) {
+          ref = type_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (typeCase_ == 1) {
+            type_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string feedback_string = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFeedbackStringBytes() {
+        java.lang.Object ref = "";
+        if (typeCase_ == 1) {
+          ref = type_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (typeCase_ == 1) {
+            type_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string feedback_string = 1;</code>
+       */
+      public Builder setFeedbackString(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  typeCase_ = 1;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string feedback_string = 1;</code>
+       */
+      public Builder clearFeedbackString() {
+        if (typeCase_ == 1) {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>string feedback_string = 1;</code>
+       */
+      public Builder setFeedbackStringBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        typeCase_ = 1;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+
+      /**
+       * <code>int32 feedback_int = 2;</code>
+       */
+      public int getFeedbackInt() {
+        if (typeCase_ == 2) {
+          return (java.lang.Integer) type_;
+        }
+        return 0;
+      }
+      /**
+       * <code>int32 feedback_int = 2;</code>
+       */
+      public Builder setFeedbackInt(int value) {
+        typeCase_ = 2;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 feedback_int = 2;</code>
+       */
+      public Builder clearFeedbackInt() {
+        if (typeCase_ == 2) {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> feedbackFloatBuilder_;
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public boolean hasFeedbackFloat() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public com.google.protobuf.FloatValue getFeedbackFloat() {
+        if (feedbackFloatBuilder_ == null) {
+          if (typeCase_ == 3) {
+            return (com.google.protobuf.FloatValue) type_;
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        } else {
+          if (typeCase_ == 3) {
+            return feedbackFloatBuilder_.getMessage();
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public Builder setFeedbackFloat(com.google.protobuf.FloatValue value) {
+        if (feedbackFloatBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          feedbackFloatBuilder_.setMessage(value);
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public Builder setFeedbackFloat(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (feedbackFloatBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          feedbackFloatBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public Builder mergeFeedbackFloat(com.google.protobuf.FloatValue value) {
+        if (feedbackFloatBuilder_ == null) {
+          if (typeCase_ == 3 &&
+              type_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+            type_ = com.google.protobuf.FloatValue.newBuilder((com.google.protobuf.FloatValue) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 3) {
+            feedbackFloatBuilder_.mergeFrom(value);
+          }
+          feedbackFloatBuilder_.setMessage(value);
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public Builder clearFeedbackFloat() {
+        if (feedbackFloatBuilder_ == null) {
+          if (typeCase_ == 3) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 3) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          feedbackFloatBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getFeedbackFloatBuilder() {
+        return getFeedbackFloatFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder() {
+        if ((typeCase_ == 3) && (feedbackFloatBuilder_ != null)) {
+          return feedbackFloatBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 3) {
+            return (com.google.protobuf.FloatValue) type_;
+          }
+          return com.google.protobuf.FloatValue.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getFeedbackFloatFieldBuilder() {
+        if (feedbackFloatBuilder_ == null) {
+          if (!(typeCase_ == 3)) {
+            type_ = com.google.protobuf.FloatValue.getDefaultInstance();
+          }
+          feedbackFloatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  (com.google.protobuf.FloatValue) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 3;
+        onChanged();;
+        return feedbackFloatBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.FeedbackValue)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.FeedbackValue)
+    private static final asgt.dataservice.v1alpha1.Dataservice.FeedbackValue DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValue();
+    }
+
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeedbackValue>
+        PARSER = new com.google.protobuf.AbstractParser<FeedbackValue>() {
+      @java.lang.Override
+      public FeedbackValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeedbackValue(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedbackValue> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedbackValue> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedbackValueListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackValueList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> 
+        getValuesList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getValues(int index);
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    int getValuesCount();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    java.util.List<? extends asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder> 
+        getValuesOrBuilderList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder getValuesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValueList}
+   */
+  public  static final class FeedbackValueList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.FeedbackValueList)
+      FeedbackValueListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeedbackValueList.newBuilder() to construct.
+    private FeedbackValueList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedbackValueList() {
+      values_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedbackValueList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                values_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              values_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          values_ = java.util.Collections.unmodifiableList(values_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.Builder.class);
+    }
+
+    public static final int VALUES_FIELD_NUMBER = 1;
+    private java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> values_;
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    public java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getValuesList() {
+      return values_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder> 
+        getValuesOrBuilderList() {
+      return values_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    public int getValuesCount() {
+      return values_.size();
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getValues(int index) {
+      return values_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+     */
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder getValuesOrBuilder(
+        int index) {
+      return values_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < values_.size(); i++) {
+        output.writeMessage(1, values_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < values_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, values_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList other = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList) obj;
+
+      boolean result = true;
+      result = result && getValuesList()
+          .equals(other.getValuesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getValuesCount() > 0) {
+        hash = (37 * hash) + VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getValuesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValueList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.FeedbackValueList)
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getValuesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList build() {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList buildPartial() {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList result = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList(this);
+        int from_bitField0_ = bitField0_;
+        if (valuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            values_ = java.util.Collections.unmodifiableList(values_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.values_ = values_;
+        } else {
+          result.values_ = valuesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList other) {
+        if (other == asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList.getDefaultInstance()) return this;
+        if (valuesBuilder_ == null) {
+          if (!other.values_.isEmpty()) {
+            if (values_.isEmpty()) {
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureValuesIsMutable();
+              values_.addAll(other.values_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.values_.isEmpty()) {
+            if (valuesBuilder_.isEmpty()) {
+              valuesBuilder_.dispose();
+              valuesBuilder_ = null;
+              values_ = other.values_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              valuesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getValuesFieldBuilder() : null;
+            } else {
+              valuesBuilder_.addAllMessages(other.values_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> values_ =
+        java.util.Collections.emptyList();
+      private void ensureValuesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          values_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue>(values_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Dataservice.FeedbackValue, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder> valuesBuilder_;
+
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> getValuesList() {
+        if (valuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(values_);
+        } else {
+          return valuesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public int getValuesCount() {
+        if (valuesBuilder_ == null) {
+          return values_.size();
+        } else {
+          return valuesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getValues(int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);
+        } else {
+          return valuesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder setValues(
+          int index, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.set(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder setValues(
+          int index, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder addValues(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder addValues(
+          int index, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue value) {
+        if (valuesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureValuesIsMutable();
+          values_.add(index, value);
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder addValues(
+          asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder addValues(
+          int index, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder builderForValue) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          valuesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder addAllValues(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Dataservice.FeedbackValue> values) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, values_);
+          onChanged();
+        } else {
+          valuesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder clearValues() {
+        if (valuesBuilder_ == null) {
+          values_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          valuesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public Builder removeValues(int index) {
+        if (valuesBuilder_ == null) {
+          ensureValuesIsMutable();
+          values_.remove(index);
+          onChanged();
+        } else {
+          valuesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder getValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder getValuesOrBuilder(
+          int index) {
+        if (valuesBuilder_ == null) {
+          return values_.get(index);  } else {
+          return valuesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder> 
+           getValuesOrBuilderList() {
+        if (valuesBuilder_ != null) {
+          return valuesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(values_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder addValuesBuilder() {
+        return getValuesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder addValuesBuilder(
+          int index) {
+        return getValuesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackValue values = 1;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder> 
+           getValuesBuilderList() {
+        return getValuesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Dataservice.FeedbackValue, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder> 
+          getValuesFieldBuilder() {
+        if (valuesBuilder_ == null) {
+          valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Dataservice.FeedbackValue, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder, asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder>(
+                  values_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          values_ = null;
+        }
+        return valuesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.FeedbackValueList)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.FeedbackValueList)
+    private static final asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList();
+    }
+
+    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeedbackValueList>
+        PARSER = new com.google.protobuf.AbstractParser<FeedbackValueList>() {
+      @java.lang.Override
+      public FeedbackValueList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeedbackValueList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedbackValueList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedbackValueList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValueList getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3930,947 +5781,6 @@ public final class Dataservice {
 
   }
 
-  public interface FeedbackValueOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackValue)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string feedback_string = 1;</code>
-     */
-    java.lang.String getFeedbackString();
-    /**
-     * <code>string feedback_string = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getFeedbackStringBytes();
-
-    /**
-     * <code>int32 feedback_int = 2;</code>
-     */
-    int getFeedbackInt();
-
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    boolean hasFeedbackFloat();
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    com.google.protobuf.FloatValue getFeedbackFloat();
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder();
-
-    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.TypeCase getTypeCase();
-  }
-  /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValue}
-   */
-  public  static final class FeedbackValue extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.FeedbackValue)
-      FeedbackValueOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use FeedbackValue.newBuilder() to construct.
-    private FeedbackValue(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private FeedbackValue() {
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private FeedbackValue(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              typeCase_ = 1;
-              type_ = s;
-              break;
-            }
-            case 16: {
-              typeCase_ = 2;
-              type_ = input.readInt32();
-              break;
-            }
-            case 26: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (typeCase_ == 3) {
-                subBuilder = ((com.google.protobuf.FloatValue) type_).toBuilder();
-              }
-              type_ =
-                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.google.protobuf.FloatValue) type_);
-                type_ = subBuilder.buildPartial();
-              }
-              typeCase_ = 3;
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder.class);
-    }
-
-    private int typeCase_ = 0;
-    private java.lang.Object type_;
-    public enum TypeCase
-        implements com.google.protobuf.Internal.EnumLite {
-      FEEDBACK_STRING(1),
-      FEEDBACK_INT(2),
-      FEEDBACK_FLOAT(3),
-      TYPE_NOT_SET(0);
-      private final int value;
-      private TypeCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static TypeCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static TypeCase forNumber(int value) {
-        switch (value) {
-          case 1: return FEEDBACK_STRING;
-          case 2: return FEEDBACK_INT;
-          case 3: return FEEDBACK_FLOAT;
-          case 0: return TYPE_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public TypeCase
-    getTypeCase() {
-      return TypeCase.forNumber(
-          typeCase_);
-    }
-
-    public static final int FEEDBACK_STRING_FIELD_NUMBER = 1;
-    /**
-     * <code>string feedback_string = 1;</code>
-     */
-    public java.lang.String getFeedbackString() {
-      java.lang.Object ref = "";
-      if (typeCase_ == 1) {
-        ref = type_;
-      }
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (typeCase_ == 1) {
-          type_ = s;
-        }
-        return s;
-      }
-    }
-    /**
-     * <code>string feedback_string = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getFeedbackStringBytes() {
-      java.lang.Object ref = "";
-      if (typeCase_ == 1) {
-        ref = type_;
-      }
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (typeCase_ == 1) {
-          type_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int FEEDBACK_INT_FIELD_NUMBER = 2;
-    /**
-     * <code>int32 feedback_int = 2;</code>
-     */
-    public int getFeedbackInt() {
-      if (typeCase_ == 2) {
-        return (java.lang.Integer) type_;
-      }
-      return 0;
-    }
-
-    public static final int FEEDBACK_FLOAT_FIELD_NUMBER = 3;
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    public boolean hasFeedbackFloat() {
-      return typeCase_ == 3;
-    }
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    public com.google.protobuf.FloatValue getFeedbackFloat() {
-      if (typeCase_ == 3) {
-         return (com.google.protobuf.FloatValue) type_;
-      }
-      return com.google.protobuf.FloatValue.getDefaultInstance();
-    }
-    /**
-     * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-     */
-    public com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder() {
-      if (typeCase_ == 3) {
-         return (com.google.protobuf.FloatValue) type_;
-      }
-      return com.google.protobuf.FloatValue.getDefaultInstance();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (typeCase_ == 1) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
-      }
-      if (typeCase_ == 2) {
-        output.writeInt32(
-            2, (int)((java.lang.Integer) type_));
-      }
-      if (typeCase_ == 3) {
-        output.writeMessage(3, (com.google.protobuf.FloatValue) type_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (typeCase_ == 1) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
-      }
-      if (typeCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(
-              2, (int)((java.lang.Integer) type_));
-      }
-      if (typeCase_ == 3) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.google.protobuf.FloatValue) type_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValue)) {
-        return super.equals(obj);
-      }
-      asgt.dataservice.v1alpha1.Dataservice.FeedbackValue other = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) obj;
-
-      boolean result = true;
-      result = result && getTypeCase().equals(
-          other.getTypeCase());
-      if (!result) return false;
-      switch (typeCase_) {
-        case 1:
-          result = result && getFeedbackString()
-              .equals(other.getFeedbackString());
-          break;
-        case 2:
-          result = result && (getFeedbackInt()
-              == other.getFeedbackInt());
-          break;
-        case 3:
-          result = result && getFeedbackFloat()
-              .equals(other.getFeedbackFloat());
-          break;
-        case 0:
-        default:
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      switch (typeCase_) {
-        case 1:
-          hash = (37 * hash) + FEEDBACK_STRING_FIELD_NUMBER;
-          hash = (53 * hash) + getFeedbackString().hashCode();
-          break;
-        case 2:
-          hash = (37 * hash) + FEEDBACK_INT_FIELD_NUMBER;
-          hash = (53 * hash) + getFeedbackInt();
-          break;
-        case 3:
-          hash = (37 * hash) + FEEDBACK_FLOAT_FIELD_NUMBER;
-          hash = (53 * hash) + getFeedbackFloat().hashCode();
-          break;
-        case 0:
-        default:
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackValue}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.FeedbackValue)
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValueOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.class, asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.Builder.class);
-      }
-
-      // Construct using asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        typeCase_ = 0;
-        type_ = null;
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue build() {
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue buildPartial() {
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue result = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValue(this);
-        if (typeCase_ == 1) {
-          result.type_ = type_;
-        }
-        if (typeCase_ == 2) {
-          result.type_ = type_;
-        }
-        if (typeCase_ == 3) {
-          if (feedbackFloatBuilder_ == null) {
-            result.type_ = type_;
-          } else {
-            result.type_ = feedbackFloatBuilder_.build();
-          }
-        }
-        result.typeCase_ = typeCase_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) {
-          return mergeFrom((asgt.dataservice.v1alpha1.Dataservice.FeedbackValue)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.Dataservice.FeedbackValue other) {
-        if (other == asgt.dataservice.v1alpha1.Dataservice.FeedbackValue.getDefaultInstance()) return this;
-        switch (other.getTypeCase()) {
-          case FEEDBACK_STRING: {
-            typeCase_ = 1;
-            type_ = other.type_;
-            onChanged();
-            break;
-          }
-          case FEEDBACK_INT: {
-            setFeedbackInt(other.getFeedbackInt());
-            break;
-          }
-          case FEEDBACK_FLOAT: {
-            mergeFeedbackFloat(other.getFeedbackFloat());
-            break;
-          }
-          case TYPE_NOT_SET: {
-            break;
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.dataservice.v1alpha1.Dataservice.FeedbackValue parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.Dataservice.FeedbackValue) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int typeCase_ = 0;
-      private java.lang.Object type_;
-      public TypeCase
-          getTypeCase() {
-        return TypeCase.forNumber(
-            typeCase_);
-      }
-
-      public Builder clearType() {
-        typeCase_ = 0;
-        type_ = null;
-        onChanged();
-        return this;
-      }
-
-
-      /**
-       * <code>string feedback_string = 1;</code>
-       */
-      public java.lang.String getFeedbackString() {
-        java.lang.Object ref = "";
-        if (typeCase_ == 1) {
-          ref = type_;
-        }
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          if (typeCase_ == 1) {
-            type_ = s;
-          }
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string feedback_string = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getFeedbackStringBytes() {
-        java.lang.Object ref = "";
-        if (typeCase_ == 1) {
-          ref = type_;
-        }
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          if (typeCase_ == 1) {
-            type_ = b;
-          }
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string feedback_string = 1;</code>
-       */
-      public Builder setFeedbackString(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  typeCase_ = 1;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string feedback_string = 1;</code>
-       */
-      public Builder clearFeedbackString() {
-        if (typeCase_ == 1) {
-          typeCase_ = 0;
-          type_ = null;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>string feedback_string = 1;</code>
-       */
-      public Builder setFeedbackStringBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        typeCase_ = 1;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-
-      /**
-       * <code>int32 feedback_int = 2;</code>
-       */
-      public int getFeedbackInt() {
-        if (typeCase_ == 2) {
-          return (java.lang.Integer) type_;
-        }
-        return 0;
-      }
-      /**
-       * <code>int32 feedback_int = 2;</code>
-       */
-      public Builder setFeedbackInt(int value) {
-        typeCase_ = 2;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 feedback_int = 2;</code>
-       */
-      public Builder clearFeedbackInt() {
-        if (typeCase_ == 2) {
-          typeCase_ = 0;
-          type_ = null;
-          onChanged();
-        }
-        return this;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> feedbackFloatBuilder_;
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public boolean hasFeedbackFloat() {
-        return typeCase_ == 3;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public com.google.protobuf.FloatValue getFeedbackFloat() {
-        if (feedbackFloatBuilder_ == null) {
-          if (typeCase_ == 3) {
-            return (com.google.protobuf.FloatValue) type_;
-          }
-          return com.google.protobuf.FloatValue.getDefaultInstance();
-        } else {
-          if (typeCase_ == 3) {
-            return feedbackFloatBuilder_.getMessage();
-          }
-          return com.google.protobuf.FloatValue.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public Builder setFeedbackFloat(com.google.protobuf.FloatValue value) {
-        if (feedbackFloatBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          type_ = value;
-          onChanged();
-        } else {
-          feedbackFloatBuilder_.setMessage(value);
-        }
-        typeCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public Builder setFeedbackFloat(
-          com.google.protobuf.FloatValue.Builder builderForValue) {
-        if (feedbackFloatBuilder_ == null) {
-          type_ = builderForValue.build();
-          onChanged();
-        } else {
-          feedbackFloatBuilder_.setMessage(builderForValue.build());
-        }
-        typeCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public Builder mergeFeedbackFloat(com.google.protobuf.FloatValue value) {
-        if (feedbackFloatBuilder_ == null) {
-          if (typeCase_ == 3 &&
-              type_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
-            type_ = com.google.protobuf.FloatValue.newBuilder((com.google.protobuf.FloatValue) type_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            type_ = value;
-          }
-          onChanged();
-        } else {
-          if (typeCase_ == 3) {
-            feedbackFloatBuilder_.mergeFrom(value);
-          }
-          feedbackFloatBuilder_.setMessage(value);
-        }
-        typeCase_ = 3;
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public Builder clearFeedbackFloat() {
-        if (feedbackFloatBuilder_ == null) {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-            onChanged();
-          }
-        } else {
-          if (typeCase_ == 3) {
-            typeCase_ = 0;
-            type_ = null;
-          }
-          feedbackFloatBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public com.google.protobuf.FloatValue.Builder getFeedbackFloatBuilder() {
-        return getFeedbackFloatFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getFeedbackFloatOrBuilder() {
-        if ((typeCase_ == 3) && (feedbackFloatBuilder_ != null)) {
-          return feedbackFloatBuilder_.getMessageOrBuilder();
-        } else {
-          if (typeCase_ == 3) {
-            return (com.google.protobuf.FloatValue) type_;
-          }
-          return com.google.protobuf.FloatValue.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.google.protobuf.FloatValue feedback_float = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-          getFeedbackFloatFieldBuilder() {
-        if (feedbackFloatBuilder_ == null) {
-          if (!(typeCase_ == 3)) {
-            type_ = com.google.protobuf.FloatValue.getDefaultInstance();
-          }
-          feedbackFloatBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                  (com.google.protobuf.FloatValue) type_,
-                  getParentForChildren(),
-                  isClean());
-          type_ = null;
-        }
-        typeCase_ = 3;
-        onChanged();;
-        return feedbackFloatBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.FeedbackValue)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.FeedbackValue)
-    private static final asgt.dataservice.v1alpha1.Dataservice.FeedbackValue DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Dataservice.FeedbackValue();
-    }
-
-    public static asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<FeedbackValue>
-        PARSER = new com.google.protobuf.AbstractParser<FeedbackValue>() {
-      @java.lang.Override
-      public FeedbackValue parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new FeedbackValue(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<FeedbackValue> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<FeedbackValue> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.dataservice.v1alpha1.Dataservice.FeedbackValue getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface FeedbackRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -6547,15 +7457,20 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_Entry_PredictionValuesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor;
   private static final 
@@ -6586,54 +7501,56 @@ public final class Dataservice {
       "ma/bq_field.proto\032\034gen_bq_schema/bq_tabl" +
       "e.proto\032\034google/api/annotations.proto\032\033g" +
       "oogle/protobuf/empty.proto\032\036google/proto" +
-      "buf/wrappers.proto\"\201\006\n\005Entry\022;\n\002id\030\001 \001(\t" +
+      "buf/wrappers.proto\"\367\005\n\005Entry\022;\n\002id\030\001 \001(\t" +
       "B/\352?\'\"%Feedback ID, same as Envoy reques" +
       "t id\352?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\023\n\004us" +
       "er\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags" +
       " defined by consumer, enriched by servic" +
-      "e if valetkey is used\022A\n\005input\030\005 \003(\0132+.a" +
+      "e if valetkey is used\022:\n\005input\030\005 \003(\0132+.a" +
       "sgt.dataservice.v1alpha1.Entry.InputEntr" +
-      "yB\005\352?\002\010\001\022L\n\013true_values\030\006 \003(\01320.asgt.dat" +
-      "aservice.v1alpha1.Entry.TrueValuesEntryB" +
-      "\005\352?\002\010\001\022Q\n\021prediction_values\030\007 \003(\01326.asgt" +
-      ".dataservice.v1alpha1.Entry.PredictionVa" +
-      "luesEntry\022\'\n\rfeedback_time\030\010 \001(\004B\020\352?\r\010\001\022" +
-      "\tTIMESTAMP\032V\n\nInputEntry\022\013\n\003key\030\001 \001(\t\0227\n" +
-      "\005value\030\002 \001(\0132(.asgt.dataservice.v1alpha1" +
-      ".FeedbackValue:\0028\001\032[\n\017TrueValuesEntry\022\013\n" +
-      "\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.asgt.dataser" +
-      "vice.v1alpha1.FeedbackValue:\0028\001\032a\n\025Predi" +
-      "ctionValuesEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002" +
-      " \001(\0132(.asgt.dataservice.v1alpha1.Feedbac" +
-      "kValue:\0028\001:\022\352?\017\n\rtraining_data\"\365\002\n\026Prepa" +
-      "reFeedbackRequest\022\n\n\002id\030\001 \001(\t\022\014\n\004user\030\002 " +
-      "\001(\t\022R\n\025scanned_invoice_input\030\003 \001(\01321.asg" +
-      "t.jester.v1alpha1.ScannedInvoiceRequest." +
-      "InputH\000\022`\n\035electronic_invoice_line_input" +
-      "\030\004 \001(\01327.asgt.jester.v1alpha1.Electronic" +
-      "InvoicLineRequest.InputH\000\022=\n\nbank_input\030" +
-      "\005 \001(\0132\'.asgt.jester.v1alpha1.BankRequest" +
-      ".InputH\000\0225\n\013predictions\030\006 \003(\0132 .asgt.jes" +
-      "ter.v1alpha1.Prediction\022\014\n\004tags\030\007 \003(\tB\007\n" +
-      "\005input\"\201\001\n\rFeedbackValue\022\031\n\017feedback_str" +
-      "ing\030\001 \001(\tH\000\022\026\n\014feedback_int\030\002 \001(\005H\000\0225\n\016f" +
-      "eedback_float\030\003 \001(\0132\033.google.protobuf.Fl" +
-      "oatValueH\000B\006\n\004type\"\331\001\n\017FeedbackRequest\022\n" +
-      "\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022O\n\013true_values\030" +
-      "\003 \003(\0132:.asgt.dataservice.v1alpha1.Feedba" +
-      "ckRequest.TrueValuesEntry\032[\n\017TrueValuesE" +
-      "ntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.asgt." +
-      "dataservice.v1alpha1.FeedbackValue:\0028\001\"\035" +
-      "\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t2\323\002\n\013DataSe" +
-      "rvice\022\\\n\017PrepareFeedback\0221.asgt.dataserv" +
-      "ice.v1alpha1.PrepareFeedbackRequest\032\026.go" +
-      "ogle.protobuf.Empty\022t\n\010Feedback\022*.asgt.d" +
-      "ataservice.v1alpha1.FeedbackRequest\032\026.go" +
-      "ogle.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/f" +
-      "eedback:create:\001*\022p\n\006Delete\022(.asgt.datas" +
-      "ervice.v1alpha1.DeleteRequest\032\026.google.p" +
-      "rotobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedbac" +
-      "k:delete:\001*B\rZ\013dataserviceb\006proto3"
+      "y\022E\n\013true_values\030\006 \003(\01320.asgt.dataservic" +
+      "e.v1alpha1.Entry.TrueValuesEntry\022Q\n\021pred" +
+      "iction_values\030\007 \003(\01326.asgt.dataservice.v" +
+      "1alpha1.Entry.PredictionValuesEntry\022\'\n\rf" +
+      "eedback_time\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP\032V\n\n" +
+      "InputEntry\022\013\n\003key\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(" +
+      ".asgt.dataservice.v1alpha1.FeedbackValue" +
+      ":\0028\001\032[\n\017TrueValuesEntry\022\013\n\003key\030\001 \001(\t\0227\n\005" +
+      "value\030\002 \001(\0132(.asgt.dataservice.v1alpha1." +
+      "FeedbackValue:\0028\001\032e\n\025PredictionValuesEnt" +
+      "ry\022\013\n\003key\030\001 \001(\t\022;\n\005value\030\002 \001(\0132,.asgt.da" +
+      "taservice.v1alpha1.FeedbackValueList:\0028\001" +
+      ":\022\352?\017\n\rtraining_data\"\201\001\n\rFeedbackValue\022\031" +
+      "\n\017feedback_string\030\001 \001(\tH\000\022\026\n\014feedback_in" +
+      "t\030\002 \001(\005H\000\0225\n\016feedback_float\030\003 \001(\0132\033.goog" +
+      "le.protobuf.FloatValueH\000B\006\n\004type\"M\n\021Feed" +
+      "backValueList\0228\n\006values\030\001 \003(\0132(.asgt.dat" +
+      "aservice.v1alpha1.FeedbackValue\"\365\002\n\026Prep" +
+      "areFeedbackRequest\022\n\n\002id\030\001 \001(\t\022\014\n\004user\030\002" +
+      " \001(\t\022R\n\025scanned_invoice_input\030\003 \001(\01321.as" +
+      "gt.jester.v1alpha1.ScannedInvoiceRequest" +
+      ".InputH\000\022`\n\035electronic_invoice_line_inpu" +
+      "t\030\004 \001(\01327.asgt.jester.v1alpha1.Electroni" +
+      "cInvoicLineRequest.InputH\000\022=\n\nbank_input" +
+      "\030\005 \001(\0132\'.asgt.jester.v1alpha1.BankReques" +
+      "t.InputH\000\0225\n\013predictions\030\006 \003(\0132 .asgt.je" +
+      "ster.v1alpha1.Prediction\022\014\n\004tags\030\007 \003(\tB\007" +
+      "\n\005input\"\331\001\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
+      "\014\n\004tags\030\002 \003(\t\022O\n\013true_values\030\003 \003(\0132:.asg" +
+      "t.dataservice.v1alpha1.FeedbackRequest.T" +
+      "rueValuesEntry\032[\n\017TrueValuesEntry\022\013\n\003key" +
+      "\030\001 \001(\t\0227\n\005value\030\002 \001(\0132(.asgt.dataservice" +
+      ".v1alpha1.FeedbackValue:\0028\001\"\035\n\rDeleteReq" +
+      "uest\022\014\n\004tags\030\001 \003(\t2\323\002\n\013DataService\022\\\n\017Pr" +
+      "epareFeedback\0221.asgt.dataservice.v1alpha" +
+      "1.PrepareFeedbackRequest\032\026.google.protob" +
+      "uf.Empty\022t\n\010Feedback\022*.asgt.dataservice." +
+      "v1alpha1.FeedbackRequest\032\026.google.protob" +
+      "uf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:cre" +
+      "ate:\001*\022p\n\006Delete\022(.asgt.dataservice.v1al" +
+      "pha1.DeleteRequest\032\026.google.protobuf.Emp" +
+      "ty\"$\202\323\344\223\002\036\"\031/v1alpha1/feedback:delete:\001*" +
+      "B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6677,20 +7594,26 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_Entry_PredictionValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "User", "ScannedInvoiceInput", "ElectronicInvoiceLineInput", "BankInput", "Predictions", "Tags", "Input", });
     internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_FeedbackValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_FeedbackValue_descriptor,
         new java.lang.String[] { "FeedbackString", "FeedbackInt", "FeedbackFloat", "Type", });
-    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor =
+    internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_FeedbackValueList_descriptor,
+        new java.lang.String[] { "Values", });
+    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_PrepareFeedbackRequest_descriptor,
+        new java.lang.String[] { "Id", "User", "ScannedInvoiceInput", "ElectronicInvoiceLineInput", "BankInput", "Predictions", "Tags", "Input", });
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor,
@@ -6702,7 +7625,7 @@ public final class Dataservice {
         internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_TrueValuesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_asgt_dataservice_v1alpha1_DeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_asgt_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DeleteRequest_descriptor,
