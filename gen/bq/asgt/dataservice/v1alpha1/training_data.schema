@@ -27,7 +27,7 @@
   "mode": "REPEATED",
   "fields": [
    {
-    "name": "key",
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
    },
@@ -61,7 +61,7 @@
   "mode": "REPEATED",
   "fields": [
    {
-    "name": "key",
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
    },
@@ -95,36 +95,29 @@
   "mode": "REPEATED",
   "fields": [
    {
-    "name": "key",
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
    },
    {
     "name": "value",
     "type": "RECORD",
-    "mode": "NULLABLE",
+    "mode": "REPEATED",
     "fields": [
      {
-      "name": "values",
-      "type": "RECORD",
-      "mode": "REPEATED",
-      "fields": [
-       {
-        "name": "feedback_string",
-        "type": "STRING",
-        "mode": "NULLABLE"
-       },
-       {
-        "name": "feedback_int",
-        "type": "INTEGER",
-        "mode": "NULLABLE"
-       },
-       {
-        "name": "feedback_float",
-        "type": "FLOAT",
-        "mode": "NULLABLE"
-       }
-      ]
+      "name": "feedback_string",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "feedback_int",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "feedback_float",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
      }
     ]
    }

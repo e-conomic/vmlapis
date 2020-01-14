@@ -20,6 +20,7 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DeleteRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.Entry', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackRequest', null, global);
+goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackType', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackValue', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackValueList', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.PrepareFeedbackRequest', null, global);
@@ -46,7 +47,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.Entry.repeatedFields_ = [4];
+proto.asgt.dataservice.v1alpha1.Entry.repeatedFields_ = [4,5,6,7];
 
 
 
@@ -81,9 +82,12 @@ proto.asgt.dataservice.v1alpha1.Entry.toObject = function(includeInstance, msg) 
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     user: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
-    inputMap: (f = msg.getInputMap()) ? f.toObject(includeInstance, proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject) : [],
-    trueValuesMap: (f = msg.getTrueValuesMap()) ? f.toObject(includeInstance, proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject) : [],
-    predictionValuesMap: (f = msg.getPredictionValuesMap()) ? f.toObject(includeInstance, proto.asgt.dataservice.v1alpha1.FeedbackValueList.toObject) : [],
+    inputList: jspb.Message.toObjectList(msg.getInputList(),
+    proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject, includeInstance),
+    trueValuesList: jspb.Message.toObjectList(msg.getTrueValuesList(),
+    proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject, includeInstance),
+    predictionValuesList: jspb.Message.toObjectList(msg.getPredictionValuesList(),
+    proto.asgt.dataservice.v1alpha1.FeedbackValueList.toObject, includeInstance),
     feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
@@ -138,22 +142,19 @@ proto.asgt.dataservice.v1alpha1.Entry.deserializeBinaryFromReader = function(msg
       msg.addTags(value);
       break;
     case 5:
-      var value = msg.getInputMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader, "");
-         });
+      var value = new proto.asgt.dataservice.v1alpha1.FeedbackValue;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader);
+      msg.addInput(value);
       break;
     case 6:
-      var value = msg.getTrueValuesMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader, "");
-         });
+      var value = new proto.asgt.dataservice.v1alpha1.FeedbackValue;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader);
+      msg.addTrueValues(value);
       break;
     case 7:
-      var value = msg.getPredictionValuesMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.dataservice.v1alpha1.FeedbackValueList.deserializeBinaryFromReader, "");
-         });
+      var value = new proto.asgt.dataservice.v1alpha1.FeedbackValueList;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackValueList.deserializeBinaryFromReader);
+      msg.addPredictionValues(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
@@ -216,17 +217,29 @@ proto.asgt.dataservice.v1alpha1.Entry.serializeBinaryToWriter = function(message
       f
     );
   }
-  f = message.getInputMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter);
+  f = message.getInputList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      5,
+      f,
+      proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter
+    );
   }
-  f = message.getTrueValuesMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(6, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter);
+  f = message.getTrueValuesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter
+    );
   }
-  f = message.getPredictionValuesMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(7, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.dataservice.v1alpha1.FeedbackValueList.serializeBinaryToWriter);
+  f = message.getPredictionValuesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      7,
+      f,
+      proto.asgt.dataservice.v1alpha1.FeedbackValueList.serializeBinaryToWriter
+    );
   }
   f = message.getFeedbackTime();
   if (f !== 0) {
@@ -313,56 +326,95 @@ proto.asgt.dataservice.v1alpha1.Entry.prototype.clearTagsList = function() {
 
 
 /**
- * map<string, FeedbackValue> input = 5;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValue>}
+ * repeated FeedbackValue input = 5;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>}
  */
-proto.asgt.dataservice.v1alpha1.Entry.prototype.getInputMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValue>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
-      proto.asgt.dataservice.v1alpha1.FeedbackValue));
+proto.asgt.dataservice.v1alpha1.Entry.prototype.getInputList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackValue, 5));
 };
 
 
-proto.asgt.dataservice.v1alpha1.Entry.prototype.clearInputMap = function() {
-  this.getInputMap().clear();
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} value */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.setInputList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
 /**
- * map<string, FeedbackValue> true_values = 6;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValue>}
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackValue}
  */
-proto.asgt.dataservice.v1alpha1.Entry.prototype.getTrueValuesMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValue>} */ (
-      jspb.Message.getMapField(this, 6, opt_noLazyCreate,
-      proto.asgt.dataservice.v1alpha1.FeedbackValue));
+proto.asgt.dataservice.v1alpha1.Entry.prototype.addInput = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.asgt.dataservice.v1alpha1.FeedbackValue, opt_index);
 };
 
 
-proto.asgt.dataservice.v1alpha1.Entry.prototype.clearTrueValuesMap = function() {
-  this.getTrueValuesMap().clear();
+proto.asgt.dataservice.v1alpha1.Entry.prototype.clearInputList = function() {
+  this.setInputList([]);
 };
 
 
 /**
- * map<string, FeedbackValueList> prediction_values = 7;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValueList>}
+ * repeated FeedbackValue true_values = 6;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>}
  */
-proto.asgt.dataservice.v1alpha1.Entry.prototype.getPredictionValuesMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.asgt.dataservice.v1alpha1.FeedbackValueList>} */ (
-      jspb.Message.getMapField(this, 7, opt_noLazyCreate,
-      proto.asgt.dataservice.v1alpha1.FeedbackValueList));
+proto.asgt.dataservice.v1alpha1.Entry.prototype.getTrueValuesList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackValue, 6));
 };
 
 
-proto.asgt.dataservice.v1alpha1.Entry.prototype.clearPredictionValuesMap = function() {
-  this.getPredictionValuesMap().clear();
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} value */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.setTrueValuesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackValue}
+ */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.addTrueValues = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.asgt.dataservice.v1alpha1.FeedbackValue, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.Entry.prototype.clearTrueValuesList = function() {
+  this.setTrueValuesList([]);
+};
+
+
+/**
+ * repeated FeedbackValueList prediction_values = 7;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValueList>}
+ */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.getPredictionValuesList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValueList>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackValueList, 7));
+};
+
+
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValueList>} value */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.setPredictionValuesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 7, value);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackValueList=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackValueList}
+ */
+proto.asgt.dataservice.v1alpha1.Entry.prototype.addPredictionValues = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.asgt.dataservice.v1alpha1.FeedbackValueList, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.Entry.prototype.clearPredictionValuesList = function() {
+  this.setPredictionValuesList([]);
 };
 
 
@@ -392,12 +444,12 @@ proto.asgt.dataservice.v1alpha1.Entry.prototype.setFeedbackTime = function(value
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_);
+proto.asgt.dataservice.v1alpha1.FeedbackType = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_);
 };
-goog.inherits(proto.asgt.dataservice.v1alpha1.FeedbackValue, jspb.Message);
+goog.inherits(proto.asgt.dataservice.v1alpha1.FeedbackType, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.dataservice.v1alpha1.FeedbackValue.displayName = 'proto.asgt.dataservice.v1alpha1.FeedbackValue';
+  proto.asgt.dataservice.v1alpha1.FeedbackType.displayName = 'proto.asgt.dataservice.v1alpha1.FeedbackType';
 }
 /**
  * Oneof group definitions for this message. Each group defines the field
@@ -407,25 +459,266 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_ = [[1,2,3]];
+proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_ = [[2,3,4]];
 
 /**
  * @enum {number}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.TypeCase = {
+proto.asgt.dataservice.v1alpha1.FeedbackType.TypeCase = {
   TYPE_NOT_SET: 0,
-  FEEDBACK_STRING: 1,
-  FEEDBACK_INT: 2,
-  FEEDBACK_FLOAT: 3
+  FEEDBACK_STRING: 2,
+  FEEDBACK_INT: 3,
+  FEEDBACK_FLOAT: 4
 };
 
 /**
- * @return {proto.asgt.dataservice.v1alpha1.FeedbackValue.TypeCase}
+ * @return {proto.asgt.dataservice.v1alpha1.FeedbackType.TypeCase}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getTypeCase = function() {
-  return /** @type {proto.asgt.dataservice.v1alpha1.FeedbackValue.TypeCase} */(jspb.Message.computeOneofCase(this, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0]));
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.getTypeCase = function() {
+  return /** @type {proto.asgt.dataservice.v1alpha1.FeedbackType.TypeCase} */(jspb.Message.computeOneofCase(this, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0]));
 };
 
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.dataservice.v1alpha1.FeedbackType.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackType} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    feedbackString: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    feedbackInt: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    feedbackFloat: (f = msg.getFeedbackFloat()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackType}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.asgt.dataservice.v1alpha1.FeedbackType;
+  return proto.asgt.dataservice.v1alpha1.FeedbackType.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackType} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackType}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFeedbackString(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setFeedbackInt(value);
+      break;
+    case 4:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.setFeedbackFloat(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.asgt.dataservice.v1alpha1.FeedbackType.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackType} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+  f = /** @type {number} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeInt32(
+      3,
+      f
+    );
+  }
+  f = message.getFeedbackFloat();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string feedback_string = 2;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.getFeedbackString = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.setFeedbackString = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0], value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.clearFeedbackString = function() {
+  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.hasFeedbackString = function() {
+  return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional int32 feedback_int = 3;
+ * @return {number}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.getFeedbackInt = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.setFeedbackInt = function(value) {
+  jspb.Message.setOneofField(this, 3, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0], value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.clearFeedbackInt = function() {
+  jspb.Message.setOneofField(this, 3, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.hasFeedbackInt = function() {
+  return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional google.protobuf.FloatValue feedback_float = 4;
+ * @return {?proto.google.protobuf.FloatValue}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.getFeedbackFloat = function() {
+  return /** @type{?proto.google.protobuf.FloatValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 4));
+};
+
+
+/** @param {?proto.google.protobuf.FloatValue|undefined} value */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.setFeedbackFloat = function(value) {
+  jspb.Message.setOneofWrapperField(this, 4, proto.asgt.dataservice.v1alpha1.FeedbackType.oneofGroups_[0], value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.clearFeedbackFloat = function() {
+  this.setFeedbackFloat(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackType.prototype.hasFeedbackFloat = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackValue = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.asgt.dataservice.v1alpha1.FeedbackValue, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.asgt.dataservice.v1alpha1.FeedbackValue.displayName = 'proto.asgt.dataservice.v1alpha1.FeedbackValue';
+}
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -455,9 +748,8 @@ proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.toObject = function(opt_
  */
 proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject = function(includeInstance, msg) {
   var f, obj = {
-    feedbackString: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    feedbackInt: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    feedbackFloat: (f = msg.getFeedbackFloat()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
+    target: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    value: (f = msg.getValue()) && proto.asgt.dataservice.v1alpha1.FeedbackType.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -496,16 +788,12 @@ proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader = func
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFeedbackString(value);
+      msg.setTarget(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setFeedbackInt(value);
-      break;
-    case 3:
-      var value = new google_protobuf_wrappers_pb.FloatValue;
-      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
-      msg.setFeedbackFloat(value);
+      var value = new proto.asgt.dataservice.v1alpha1.FeedbackType;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackType.deserializeBinaryFromReader);
+      msg.setValue(value);
       break;
     default:
       reader.skipField();
@@ -536,48 +824,57 @@ proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.serializeBinary = functi
  */
 proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = /** @type {string} */ (jspb.Message.getField(message, 1));
-  if (f != null) {
+  f = message.getTarget();
+  if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = /** @type {number} */ (jspb.Message.getField(message, 2));
-  if (f != null) {
-    writer.writeInt32(
-      2,
-      f
-    );
-  }
-  f = message.getFeedbackFloat();
+  f = message.getValue();
   if (f != null) {
     writer.writeMessage(
-      3,
+      2,
       f,
-      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+      proto.asgt.dataservice.v1alpha1.FeedbackType.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string feedback_string = 1;
+ * optional string target = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getFeedbackString = function() {
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getTarget = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.setFeedbackString = function(value) {
-  jspb.Message.setOneofField(this, 1, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0], value);
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.setTarget = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.clearFeedbackString = function() {
-  jspb.Message.setOneofField(this, 1, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0], undefined);
+/**
+ * optional FeedbackType value = 2;
+ * @return {?proto.asgt.dataservice.v1alpha1.FeedbackType}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getValue = function() {
+  return /** @type{?proto.asgt.dataservice.v1alpha1.FeedbackType} */ (
+    jspb.Message.getWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackType, 2));
+};
+
+
+/** @param {?proto.asgt.dataservice.v1alpha1.FeedbackType|undefined} value */
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.setValue = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.clearValue = function() {
+  this.setValue(undefined);
 };
 
 
@@ -585,67 +882,8 @@ proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.clearFeedbackString = fu
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.hasFeedbackString = function() {
-  return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional int32 feedback_int = 2;
- * @return {number}
- */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getFeedbackInt = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.setFeedbackInt = function(value) {
-  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0], value);
-};
-
-
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.clearFeedbackInt = function() {
-  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.hasFeedbackInt = function() {
+proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.hasValue = function() {
   return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional google.protobuf.FloatValue feedback_float = 3;
- * @return {?proto.google.protobuf.FloatValue}
- */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.getFeedbackFloat = function() {
-  return /** @type{?proto.google.protobuf.FloatValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 3));
-};
-
-
-/** @param {?proto.google.protobuf.FloatValue|undefined} value */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.setFeedbackFloat = function(value) {
-  jspb.Message.setOneofWrapperField(this, 3, proto.asgt.dataservice.v1alpha1.FeedbackValue.oneofGroups_[0], value);
-};
-
-
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.clearFeedbackFloat = function() {
-  this.setFeedbackFloat(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.dataservice.v1alpha1.FeedbackValue.prototype.hasFeedbackFloat = function() {
-  return jspb.Message.getField(this, 3) != null;
 };
 
 
@@ -672,7 +910,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValueList.repeatedFields_ = [1];
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.repeatedFields_ = [2];
 
 
 
@@ -703,8 +941,9 @@ proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.toObject = function(
  */
 proto.asgt.dataservice.v1alpha1.FeedbackValueList.toObject = function(includeInstance, msg) {
   var f, obj = {
-    valuesList: jspb.Message.toObjectList(msg.getValuesList(),
-    proto.asgt.dataservice.v1alpha1.FeedbackValue.toObject, includeInstance)
+    target: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    valueList: jspb.Message.toObjectList(msg.getValueList(),
+    proto.asgt.dataservice.v1alpha1.FeedbackType.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -742,9 +981,13 @@ proto.asgt.dataservice.v1alpha1.FeedbackValueList.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.asgt.dataservice.v1alpha1.FeedbackValue;
-      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackValue.deserializeBinaryFromReader);
-      msg.addValues(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setTarget(value);
+      break;
+    case 2:
+      var value = new proto.asgt.dataservice.v1alpha1.FeedbackType;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.FeedbackType.deserializeBinaryFromReader);
+      msg.addValue(value);
       break;
     default:
       reader.skipField();
@@ -775,45 +1018,67 @@ proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.serializeBinary = fu
  */
 proto.asgt.dataservice.v1alpha1.FeedbackValueList.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValuesList();
+  f = message.getTarget();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
+      f
+    );
+  }
+  f = message.getValueList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
+      2,
       f,
-      proto.asgt.dataservice.v1alpha1.FeedbackValue.serializeBinaryToWriter
+      proto.asgt.dataservice.v1alpha1.FeedbackType.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated FeedbackValue values = 1;
- * @return {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>}
+ * optional string target = 1;
+ * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.getValuesList = function() {
-  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackValue, 1));
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.getTarget = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
-/** @param {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackValue>} value */
-proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.setValuesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 1, value);
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.setTarget = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackValue=} opt_value
- * @param {number=} opt_index
- * @return {!proto.asgt.dataservice.v1alpha1.FeedbackValue}
+ * repeated FeedbackType value = 2;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackType>}
  */
-proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.addValues = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.dataservice.v1alpha1.FeedbackValue, opt_index);
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.getValueList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.FeedbackType>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.FeedbackType, 2));
 };
 
 
-proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.clearValuesList = function() {
-  this.setValuesList([]);
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.FeedbackType>} value */
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.setValueList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackType=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.FeedbackType}
+ */
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.addValue = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.dataservice.v1alpha1.FeedbackType, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.FeedbackValueList.prototype.clearValueList = function() {
+  this.setValueList([]);
 };
 
 
