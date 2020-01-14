@@ -47,24 +47,24 @@ message Confidence {
   google.protobuf.FloatValue value = 2;
 }
 
-message Candidate {
-  string label = 1;
-  Confidence confidence = 2;
+message Prediction {
+  message Candidate {
+    string label = 1;
+    Confidence confidence = 2;
+  }
+
+  string target = 1;
+  repeated Candidate candidates = 2;
+}
+
+// AutoSuggest
+message SuggestionsResponse {
+  repeated Prediction predictions = 1;
 }
 
 message SuggestionOptions {
   int32 suggestion_limit = 1;
   Confidence.Level min_confidence = 2;
-}
-
-// AutoSuggest
-message SuggestionsResponse {
-  message Prediction {
-    string target = 1;
-    repeated Candidate candidates = 2;
-  }
-
-  repeated Prediction predictions = 1;
 }
 
 // Scanned Invoice
