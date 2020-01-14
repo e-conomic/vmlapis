@@ -43,9 +43,12 @@ message Entry {
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string user = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-  map<string, FeedbackValue> input = 5; // input is not bq required, to make it repeated
-  map<string, FeedbackValue> true_values = 6; // true_values is not bq required, to make it repeated
-  map<string, FeedbackValueList> prediction_values = 7;
+  // map<string, FeedbackValue> input = 5; // input is not bq required, to make it repeated
+  // map<string, FeedbackValue> true_values = 6; // true_values is not bq required, to make it repeated
+  // map<string, FeedbackValue> prediction_values = 7;
+  repeated FeedbackValue input = 5; // input is not bq required, to make it repeated
+  repeated FeedbackValue true_values = 6; // true_values is not bq required, to make it repeated
+  repeated FeedbackValueList prediction_values = 7;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -54,16 +57,22 @@ message Entry {
   ];
 }
 
-message FeedbackValue {
+message FeedbackType {
   oneof type {
-    string feedback_string = 1;
-    int32 feedback_int = 2;
-    google.protobuf.FloatValue feedback_float = 3;
+    string feedback_string = 2;
+    int32 feedback_int = 3;
+    google.protobuf.FloatValue feedback_float = 4;
   }
 }
 
+message FeedbackValue {
+  string target = 1;
+  FeedbackType value = 2;
+}
+
 message FeedbackValueList {
-  repeated FeedbackValue values = 1;
+  string target = 1;
+  repeated FeedbackType value = 2;
 }
 
 message PrepareFeedbackRequest {
