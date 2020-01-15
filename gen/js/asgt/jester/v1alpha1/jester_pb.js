@@ -964,7 +964,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.repeatedFields_ = [1,2];
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.repeatedFields_ = [1];
 
 
 
@@ -997,7 +997,7 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.toObject = function(includeInst
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.toObject, includeInstance),
-    targetsList: jspb.Message.getRepeatedField(msg, 2),
+    datasetName: jspb.Message.getFieldWithDefault(msg, 2, ""),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
 
@@ -1042,7 +1042,7 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.deserializeBinaryFromReader = f
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.addTargets(value);
+      msg.setDatasetName(value);
       break;
     case 3:
       var value = new proto.asgt.jester.v1alpha1.SuggestionOptions;
@@ -1086,9 +1086,9 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.serializeBinaryToWriter = funct
       proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getDatasetName();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeString(
       2,
       f
     );
@@ -1278,31 +1278,17 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.clearInputsList = fun
 
 
 /**
- * repeated string targets = 2;
- * @return {!Array<string>}
+ * optional string dataset_name = 2;
+ * @return {string}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.getTargetsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.getDatasetName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {!Array<string>} value */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.setTargetsList = function(value) {
-  jspb.Message.setField(this, 2, value || []);
-};
-
-
-/**
- * @param {!string} value
- * @param {number=} opt_index
- */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.addTargets = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
-};
-
-
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+/** @param {string} value */
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.setDatasetName = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1359,7 +1345,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.repeatedFields_ = [1,2];
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.repeatedFields_ = [1];
 
 
 
@@ -1392,7 +1378,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.toObject = function(incl
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject, includeInstance),
-    targetsList: jspb.Message.getRepeatedField(msg, 2),
+    datasetName: jspb.Message.getFieldWithDefault(msg, 2, ""),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
 
@@ -1437,7 +1423,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.deserializeBinaryFromRea
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.addTargets(value);
+      msg.setDatasetName(value);
       break;
     case 3:
       var value = new proto.asgt.jester.v1alpha1.SuggestionOptions;
@@ -1481,9 +1467,9 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.serializeBinaryToWriter 
       proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getDatasetName();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeString(
       2,
       f
     );
@@ -1889,31 +1875,17 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.clearInputsLis
 
 
 /**
- * repeated string targets = 2;
- * @return {!Array<string>}
+ * optional string dataset_name = 2;
+ * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.getTargetsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.getDatasetName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {!Array<string>} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.setTargetsList = function(value) {
-  jspb.Message.setField(this, 2, value || []);
-};
-
-
-/**
- * @param {!string} value
- * @param {number=} opt_index
- */
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.addTargets = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
-};
-
-
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+/** @param {string} value */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.setDatasetName = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1970,7 +1942,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1alpha1.BankRequest.repeatedFields_ = [1,2];
+proto.asgt.jester.v1alpha1.BankRequest.repeatedFields_ = [1];
 
 
 
@@ -2003,7 +1975,7 @@ proto.asgt.jester.v1alpha1.BankRequest.toObject = function(includeInstance, msg)
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     proto.asgt.jester.v1alpha1.BankRequest.Data.toObject, includeInstance),
-    targetsList: jspb.Message.getRepeatedField(msg, 2),
+    datasetName: jspb.Message.getFieldWithDefault(msg, 2, ""),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
 
@@ -2048,7 +2020,7 @@ proto.asgt.jester.v1alpha1.BankRequest.deserializeBinaryFromReader = function(ms
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.addTargets(value);
+      msg.setDatasetName(value);
       break;
     case 3:
       var value = new proto.asgt.jester.v1alpha1.SuggestionOptions;
@@ -2092,9 +2064,9 @@ proto.asgt.jester.v1alpha1.BankRequest.serializeBinaryToWriter = function(messag
       proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getDatasetName();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeString(
       2,
       f
     );
@@ -2409,31 +2381,17 @@ proto.asgt.jester.v1alpha1.BankRequest.prototype.clearInputsList = function() {
 
 
 /**
- * repeated string targets = 2;
- * @return {!Array<string>}
+ * optional string dataset_name = 2;
+ * @return {string}
  */
-proto.asgt.jester.v1alpha1.BankRequest.prototype.getTargetsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+proto.asgt.jester.v1alpha1.BankRequest.prototype.getDatasetName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {!Array<string>} value */
-proto.asgt.jester.v1alpha1.BankRequest.prototype.setTargetsList = function(value) {
-  jspb.Message.setField(this, 2, value || []);
-};
-
-
-/**
- * @param {!string} value
- * @param {number=} opt_index
- */
-proto.asgt.jester.v1alpha1.BankRequest.prototype.addTargets = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
-};
-
-
-proto.asgt.jester.v1alpha1.BankRequest.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+/** @param {string} value */
+proto.asgt.jester.v1alpha1.BankRequest.prototype.setDatasetName = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

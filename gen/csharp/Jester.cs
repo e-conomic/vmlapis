@@ -39,36 +39,37 @@ namespace Asgt.Jester.V1Alpha1 {
             "Lmplc3Rlci52MWFscGhhMS5QcmVkaWN0aW9uIm0KEVN1Z2dlc3Rpb25PcHRp",
             "b25zEhgKEHN1Z2dlc3Rpb25fbGltaXQYASABKAUSPgoObWluX2NvbmZpZGVu",
             "Y2UYAiABKA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlLkxl",
-            "dmVsIsEBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQAoGaW5wdXRzGAEgAygL",
+            "dmVsIsYBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQAoGaW5wdXRzGAEgAygL",
             "MjAuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0",
-            "LkRhdGESDwoHdGFyZ2V0cxgCIAMoCRI4CgdvcHRpb25zGAMgASgLMicuYXNn",
-            "dC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlvbnMaGwoERGF0YRIT",
-            "CgtkZXNjcmlwdGlvbhgBIAEoCSLyAgocRWxlY3Ryb25pY0ludm9pY2VMaW5l",
-            "UmVxdWVzdBJHCgZpbnB1dHMYASADKAsyNy5hc2d0Lmplc3Rlci52MWFscGhh",
-            "MS5FbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0LkRhdGESDwoHdGFyZ2V0",
-            "cxgCIAMoCRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBo",
-            "YTEuU3VnZ2VzdGlvbk9wdGlvbnMavQEKBERhdGESEgoKaXNzdWVfZGF0ZRgB",
-            "IAEoCRIQCghjdXJyZW5jeRgCIAEoCRITCgtzdXBwbGllcl9pZBgDIAEoCRIV",
-            "Cg1zdXBwbGllcl9uYW1lGAQgASgJEhoKEnN1cHBsaWVyX2dsb2JhbF9pZBgF",
-            "IAEoCRIUCgxjdXN0b21lcl9yZWYYBiABKAkSDQoFdG90YWwYByABKAUSEQoJ",
-            "bGluZV90ZXh0GAggASgJEg8KB2xpbmVfaWQYCSABKAkilAIKC0JhbmtSZXF1",
-            "ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxwaGExLkJh",
-            "bmtSZXF1ZXN0LkRhdGESDwoHdGFyZ2V0cxgCIAMoCRI4CgdvcHRpb25zGAMg",
-            "ASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlvbnMa",
-            "gQEKBERhdGESFgoOYWNjb3VudF9udW1iZXIYASABKAUSKwoGYW1vdW50GAIg",
-            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSEgoKZW50cnlfdHlw",
-            "ZRgDIAEoBRIMCgR0ZXh0GAQgASgJEhIKCnRpbWVfc3RhbXAYBSABKAUy1AMK",
-            "Bkplc3RlchKaAQoZU2Nhbm5lZEludm9pY2VTdWdnZXN0aW9ucxIrLmFzZ3Qu",
-            "amVzdGVyLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlUmVxdWVzdBopLmFzZ3Qu",
-            "amVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIa",
-            "L3YxL3N1Z2dlc3Q6c2Nhbm5lZGludm9pY2U6ASoSrgEKH0VsZWN0cm9uaWNJ",
-            "bnZvaWNMaW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmplc3Rlci52MWFscGhhMS5F",
-            "bGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFh",
-            "bHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvc3VnZ2Vz",
-            "dDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoPQmFua1N1Z2dlc3Rpb25z",
-            "EiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0Lmpl",
-            "c3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92",
-            "MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZwcm90bzM="));
+            "LkRhdGESFAoMZGF0YXNldF9uYW1lGAIgASgJEjgKB29wdGlvbnMYAyABKAsy",
+            "Jy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uT3B0aW9ucxobCgRE",
+            "YXRhEhMKC2Rlc2NyaXB0aW9uGAEgASgJIvcCChxFbGVjdHJvbmljSW52b2lj",
+            "ZUxpbmVSZXF1ZXN0EkcKBmlucHV0cxgBIAMoCzI3LmFzZ3QuamVzdGVyLnYx",
+            "YWxwaGExLkVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QuRGF0YRIUCgxk",
+            "YXRhc2V0X25hbWUYAiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVz",
+            "dGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGr0BCgREYXRhEhIKCmlz",
+            "c3VlX2RhdGUYASABKAkSEAoIY3VycmVuY3kYAiABKAkSEwoLc3VwcGxpZXJf",
+            "aWQYAyABKAkSFQoNc3VwcGxpZXJfbmFtZRgEIAEoCRIaChJzdXBwbGllcl9n",
+            "bG9iYWxfaWQYBSABKAkSFAoMY3VzdG9tZXJfcmVmGAYgASgJEg0KBXRvdGFs",
+            "GAcgASgFEhEKCWxpbmVfdGV4dBgIIAEoCRIPCgdsaW5lX2lkGAkgASgJIpkC",
+            "CgtCYW5rUmVxdWVzdBI2CgZpbnB1dHMYASADKAsyJi5hc2d0Lmplc3Rlci52",
+            "MWFscGhhMS5CYW5rUmVxdWVzdC5EYXRhEhQKDGRhdGFzZXRfbmFtZRgCIAEo",
+            "CRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3Vn",
+            "Z2VzdGlvbk9wdGlvbnMagQEKBERhdGESFgoOYWNjb3VudF9udW1iZXIYASAB",
+            "KAUSKwoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
+            "dWUSEgoKZW50cnlfdHlwZRgDIAEoBRIMCgR0ZXh0GAQgASgJEhIKCnRpbWVf",
+            "c3RhbXAYBSABKAUy1AMKBkplc3RlchKaAQoZU2Nhbm5lZEludm9pY2VTdWdn",
+            "ZXN0aW9ucxIrLmFzZ3QuamVzdGVyLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNl",
+            "UmVxdWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVz",
+            "cG9uc2UiJYLT5JMCHyIaL3YxL3N1Z2dlc3Q6c2Nhbm5lZGludm9pY2U6ASoS",
+            "rgEKH0VsZWN0cm9uaWNJbnZvaWNMaW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmpl",
+            "c3Rlci52MWFscGhhMS5FbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0Giku",
+            "YXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPk",
+            "kwImIiEvdjEvc3VnZ2VzdDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoP",
+            "QmFua1N1Z2dlc3Rpb25zEiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1Jl",
+            "cXVlc3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3Bv",
+            "bnNlIhuC0+STAhUiEC92MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,9 +77,9 @@ namespace Asgt.Jester.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction), global::Asgt.Jester.V1Alpha1.Prediction.Parser, new[]{ "Target", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate), global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Parser, new[]{ "Predictions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser, new[]{ "Description" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser, new[]{ "Description" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
           }));
     }
     #endregion
@@ -902,7 +903,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ScannedInvoiceRequest(ScannedInvoiceRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -922,14 +923,15 @@ namespace Asgt.Jester.V1Alpha1 {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -957,7 +959,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -966,7 +968,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -982,7 +984,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -996,7 +1001,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1012,7 +1019,9 @@ namespace Asgt.Jester.V1Alpha1 {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1035,7 +1044,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {
@@ -1216,7 +1225,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ElectronicInvoiceLineRequest(ElectronicInvoiceLineRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1236,14 +1245,15 @@ namespace Asgt.Jester.V1Alpha1 {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -1271,7 +1281,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1280,7 +1290,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1296,7 +1306,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -1310,7 +1323,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1326,7 +1341,9 @@ namespace Asgt.Jester.V1Alpha1 {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1349,7 +1366,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {
@@ -1754,7 +1771,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BankRequest(BankRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1774,14 +1791,15 @@ namespace Asgt.Jester.V1Alpha1 {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -1809,7 +1827,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1818,7 +1836,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1834,7 +1852,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -1848,7 +1869,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1864,7 +1887,9 @@ namespace Asgt.Jester.V1Alpha1 {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1887,7 +1912,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {

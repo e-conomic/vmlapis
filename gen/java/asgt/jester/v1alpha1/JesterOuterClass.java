@@ -4017,23 +4017,14 @@ public final class JesterOuterClass {
         int index);
 
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getTargetsList();
+    java.lang.String getDatasetName();
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    int getTargetsCount();
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    java.lang.String getTargets(int index);
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     com.google.protobuf.ByteString
-        getTargetsBytes(int index);
+        getDatasetNameBytes();
 
     /**
      * <code>.asgt.jester.v1alpha1.SuggestionOptions options = 3;</code>
@@ -4066,7 +4057,7 @@ public final class JesterOuterClass {
     }
     private ScannedInvoiceRequest() {
       inputs_ = java.util.Collections.emptyList();
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      datasetName_ = "";
     }
 
     @java.lang.Override
@@ -4104,11 +4095,8 @@ public final class JesterOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targets_.add(s);
+
+              datasetName_ = s;
               break;
             }
             case 26: {
@@ -4141,9 +4129,6 @@ public final class JesterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4748,33 +4733,38 @@ public final class JesterOuterClass {
       return inputs_.get(index);
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList targets_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object datasetName_;
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
-      return targets_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetName_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public int getTargetsCount() {
-      return targets_.size();
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public java.lang.String getTargets(int index) {
-      return targets_.get(index);
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int OPTIONS_FIELD_NUMBER = 3;
@@ -4815,8 +4805,8 @@ public final class JesterOuterClass {
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(1, inputs_.get(i));
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targets_.getRaw(i));
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetName_);
       }
       if (options_ != null) {
         output.writeMessage(3, getOptions());
@@ -4834,13 +4824,8 @@ public final class JesterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, inputs_.get(i));
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTargetsList().size();
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetName_);
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -4864,8 +4849,8 @@ public final class JesterOuterClass {
       boolean result = true;
       result = result && getInputsList()
           .equals(other.getInputsList());
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
       result = result && (hasOptions() == other.hasOptions());
       if (hasOptions()) {
         result = result && getOptions()
@@ -4886,10 +4871,8 @@ public final class JesterOuterClass {
         hash = (37 * hash) + INPUTS_FIELD_NUMBER;
         hash = (53 * hash) + getInputsList().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
-      }
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
@@ -5038,8 +5021,8 @@ public final class JesterOuterClass {
         } else {
           inputsBuilder_.clear();
         }
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        datasetName_ = "";
+
         if (optionsBuilder_ == null) {
           options_ = null;
         } else {
@@ -5083,11 +5066,7 @@ public final class JesterOuterClass {
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.targets_ = targets_;
+        result.datasetName_ = datasetName_;
         if (optionsBuilder_ == null) {
           result.options_ = options_;
         } else {
@@ -5168,14 +5147,8 @@ public final class JesterOuterClass {
             }
           }
         }
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
-          }
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (other.hasOptions()) {
@@ -5451,96 +5424,71 @@ public final class JesterOuterClass {
         return inputsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
-         }
-      }
+      private java.lang.Object datasetName_ = "";
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public int getTargetsCount() {
-        return targets_.size();
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargets(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTargetsIsMutable();
-        targets_.add(value);
+  
+        datasetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
+      public Builder clearDatasetName() {
+        
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargetsBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
+        
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -5743,23 +5691,14 @@ public final class JesterOuterClass {
         int index);
 
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getTargetsList();
+    java.lang.String getDatasetName();
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    int getTargetsCount();
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    java.lang.String getTargets(int index);
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     com.google.protobuf.ByteString
-        getTargetsBytes(int index);
+        getDatasetNameBytes();
 
     /**
      * <code>.asgt.jester.v1alpha1.SuggestionOptions options = 3;</code>
@@ -5792,7 +5731,7 @@ public final class JesterOuterClass {
     }
     private ElectronicInvoiceLineRequest() {
       inputs_ = java.util.Collections.emptyList();
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      datasetName_ = "";
     }
 
     @java.lang.Override
@@ -5830,11 +5769,8 @@ public final class JesterOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targets_.add(s);
+
+              datasetName_ = s;
               break;
             }
             case 26: {
@@ -5867,9 +5803,6 @@ public final class JesterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7496,33 +7429,38 @@ public final class JesterOuterClass {
       return inputs_.get(index);
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList targets_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object datasetName_;
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
-      return targets_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetName_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public int getTargetsCount() {
-      return targets_.size();
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public java.lang.String getTargets(int index) {
-      return targets_.get(index);
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int OPTIONS_FIELD_NUMBER = 3;
@@ -7563,8 +7501,8 @@ public final class JesterOuterClass {
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(1, inputs_.get(i));
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targets_.getRaw(i));
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetName_);
       }
       if (options_ != null) {
         output.writeMessage(3, getOptions());
@@ -7582,13 +7520,8 @@ public final class JesterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, inputs_.get(i));
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTargetsList().size();
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetName_);
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -7612,8 +7545,8 @@ public final class JesterOuterClass {
       boolean result = true;
       result = result && getInputsList()
           .equals(other.getInputsList());
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
       result = result && (hasOptions() == other.hasOptions());
       if (hasOptions()) {
         result = result && getOptions()
@@ -7634,10 +7567,8 @@ public final class JesterOuterClass {
         hash = (37 * hash) + INPUTS_FIELD_NUMBER;
         hash = (53 * hash) + getInputsList().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
-      }
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
@@ -7786,8 +7717,8 @@ public final class JesterOuterClass {
         } else {
           inputsBuilder_.clear();
         }
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        datasetName_ = "";
+
         if (optionsBuilder_ == null) {
           options_ = null;
         } else {
@@ -7831,11 +7762,7 @@ public final class JesterOuterClass {
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.targets_ = targets_;
+        result.datasetName_ = datasetName_;
         if (optionsBuilder_ == null) {
           result.options_ = options_;
         } else {
@@ -7916,14 +7843,8 @@ public final class JesterOuterClass {
             }
           }
         }
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
-          }
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (other.hasOptions()) {
@@ -8199,96 +8120,71 @@ public final class JesterOuterClass {
         return inputsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
-         }
-      }
+      private java.lang.Object datasetName_ = "";
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public int getTargetsCount() {
-        return targets_.size();
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargets(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTargetsIsMutable();
-        targets_.add(value);
+  
+        datasetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
+      public Builder clearDatasetName() {
+        
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargetsBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
+        
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -8491,23 +8387,14 @@ public final class JesterOuterClass {
         int index);
 
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getTargetsList();
+    java.lang.String getDatasetName();
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    int getTargetsCount();
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    java.lang.String getTargets(int index);
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     com.google.protobuf.ByteString
-        getTargetsBytes(int index);
+        getDatasetNameBytes();
 
     /**
      * <code>.asgt.jester.v1alpha1.SuggestionOptions options = 3;</code>
@@ -8540,7 +8427,7 @@ public final class JesterOuterClass {
     }
     private BankRequest() {
       inputs_ = java.util.Collections.emptyList();
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      datasetName_ = "";
     }
 
     @java.lang.Override
@@ -8578,11 +8465,8 @@ public final class JesterOuterClass {
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targets_.add(s);
+
+              datasetName_ = s;
               break;
             }
             case 26: {
@@ -8615,9 +8499,6 @@ public final class JesterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -9605,33 +9486,38 @@ public final class JesterOuterClass {
       return inputs_.get(index);
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList targets_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object datasetName_;
     /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTargetsList() {
-      return targets_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetName_ = s;
+        return s;
+      }
     }
     /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public int getTargetsCount() {
-      return targets_.size();
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
-     */
-    public java.lang.String getTargets(int index) {
-      return targets_.get(index);
-    }
-    /**
-     * <code>repeated string targets = 2;</code>
+     * <code>string dataset_name = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getTargetsBytes(int index) {
-      return targets_.getByteString(index);
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int OPTIONS_FIELD_NUMBER = 3;
@@ -9672,8 +9558,8 @@ public final class JesterOuterClass {
       for (int i = 0; i < inputs_.size(); i++) {
         output.writeMessage(1, inputs_.get(i));
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, targets_.getRaw(i));
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetName_);
       }
       if (options_ != null) {
         output.writeMessage(3, getOptions());
@@ -9691,13 +9577,8 @@ public final class JesterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, inputs_.get(i));
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < targets_.size(); i++) {
-          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTargetsList().size();
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetName_);
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -9721,8 +9602,8 @@ public final class JesterOuterClass {
       boolean result = true;
       result = result && getInputsList()
           .equals(other.getInputsList());
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
       result = result && (hasOptions() == other.hasOptions());
       if (hasOptions()) {
         result = result && getOptions()
@@ -9743,10 +9624,8 @@ public final class JesterOuterClass {
         hash = (37 * hash) + INPUTS_FIELD_NUMBER;
         hash = (53 * hash) + getInputsList().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
-      }
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
@@ -9895,8 +9774,8 @@ public final class JesterOuterClass {
         } else {
           inputsBuilder_.clear();
         }
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        datasetName_ = "";
+
         if (optionsBuilder_ == null) {
           options_ = null;
         } else {
@@ -9940,11 +9819,7 @@ public final class JesterOuterClass {
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.targets_ = targets_;
+        result.datasetName_ = datasetName_;
         if (optionsBuilder_ == null) {
           result.options_ = options_;
         } else {
@@ -10025,14 +9900,8 @@ public final class JesterOuterClass {
             }
           }
         }
-        if (!other.targets_.isEmpty()) {
-          if (targets_.isEmpty()) {
-            targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTargetsIsMutable();
-            targets_.addAll(other.targets_);
-          }
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (other.hasOptions()) {
@@ -10308,96 +10177,71 @@ public final class JesterOuterClass {
         return inputsBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
-         }
-      }
+      private java.lang.Object datasetName_ = "";
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTargetsList() {
-        return targets_.getUnmodifiableView();
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public int getTargetsCount() {
-        return targets_.size();
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public java.lang.String getTargets(int index) {
-        return targets_.get(index);
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getTargetsBytes(int index) {
-        return targets_.getByteString(index);
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder setTargets(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
-        targets_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargets(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTargetsIsMutable();
-        targets_.add(value);
+  
+        datasetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder addAllTargets(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTargetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, targets_);
+      public Builder clearDatasetName() {
+        
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string targets = 2;</code>
+       * <code>string dataset_name = 2;</code>
        */
-      public Builder clearTargets() {
-        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string targets = 2;</code>
-       */
-      public Builder addTargetsBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTargetsIsMutable();
-        targets_.add(value);
+        
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -10651,41 +10495,41 @@ public final class JesterOuterClass {
       "ictions\030\001 \003(\0132 .asgt.jester.v1alpha1.Pre" +
       "diction\"m\n\021SuggestionOptions\022\030\n\020suggesti" +
       "on_limit\030\001 \001(\005\022>\n\016min_confidence\030\002 \001(\0162&" +
-      ".asgt.jester.v1alpha1.Confidence.Level\"\301" +
+      ".asgt.jester.v1alpha1.Confidence.Level\"\306" +
       "\001\n\025ScannedInvoiceRequest\022@\n\006inputs\030\001 \003(\013" +
       "20.asgt.jester.v1alpha1.ScannedInvoiceRe" +
-      "quest.Data\022\017\n\007targets\030\002 \003(\t\0228\n\007options\030\003" +
-      " \001(\0132\'.asgt.jester.v1alpha1.SuggestionOp" +
-      "tions\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\362\002\n\034E" +
-      "lectronicInvoiceLineRequest\022G\n\006inputs\030\001 " +
-      "\003(\01327.asgt.jester.v1alpha1.ElectronicInv" +
-      "oiceLineRequest.Data\022\017\n\007targets\030\002 \003(\t\0228\n" +
-      "\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1.Su" +
-      "ggestionOptions\032\275\001\n\004Data\022\022\n\nissue_date\030\001" +
-      " \001(\t\022\020\n\010currency\030\002 \001(\t\022\023\n\013supplier_id\030\003 " +
-      "\001(\t\022\025\n\rsupplier_name\030\004 \001(\t\022\032\n\022supplier_g" +
-      "lobal_id\030\005 \001(\t\022\024\n\014customer_ref\030\006 \001(\t\022\r\n\005" +
-      "total\030\007 \001(\005\022\021\n\tline_text\030\010 \001(\t\022\017\n\007line_i" +
-      "d\030\t \001(\t\"\224\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132" +
-      "&.asgt.jester.v1alpha1.BankRequest.Data\022" +
-      "\017\n\007targets\030\002 \003(\t\0228\n\007options\030\003 \001(\0132\'.asgt" +
-      ".jester.v1alpha1.SuggestionOptions\032\201\001\n\004D" +
-      "ata\022\026\n\016account_number\030\001 \001(\005\022+\n\006amount\030\002 " +
-      "\001(\0132\033.google.protobuf.FloatValue\022\022\n\nentr" +
-      "y_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022\022\n\ntime_stamp" +
-      "\030\005 \001(\0052\324\003\n\006Jester\022\232\001\n\031ScannedInvoiceSugg" +
-      "estions\022+.asgt.jester.v1alpha1.ScannedIn" +
-      "voiceRequest\032).asgt.jester.v1alpha1.Sugg" +
-      "estionsResponse\"%\202\323\344\223\002\037\"\032/v1/suggest:sca" +
-      "nnedinvoice:\001*\022\256\001\n\037ElectronicInvoicLineS" +
-      "uggestions\0222.asgt.jester.v1alpha1.Electr" +
-      "onicInvoiceLineRequest\032).asgt.jester.v1a" +
-      "lpha1.SuggestionsResponse\",\202\323\344\223\002&\"!/v1/s" +
-      "uggest:electronicinvoiceline:\001*\022|\n\017BankS" +
-      "uggestions\022!.asgt.jester.v1alpha1.BankRe" +
-      "quest\032).asgt.jester.v1alpha1.Suggestions" +
-      "Response\"\033\202\323\344\223\002\025\"\020/v1/suggest:bank:\001*B\010Z" +
-      "\006jesterb\006proto3"
+      "quest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007opti" +
+      "ons\030\003 \001(\0132\'.asgt.jester.v1alpha1.Suggest" +
+      "ionOptions\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"" +
+      "\367\002\n\034ElectronicInvoiceLineRequest\022G\n\006inpu" +
+      "ts\030\001 \003(\01327.asgt.jester.v1alpha1.Electron" +
+      "icInvoiceLineRequest.Data\022\024\n\014dataset_nam" +
+      "e\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v" +
+      "1alpha1.SuggestionOptions\032\275\001\n\004Data\022\022\n\nis" +
+      "sue_date\030\001 \001(\t\022\020\n\010currency\030\002 \001(\t\022\023\n\013supp" +
+      "lier_id\030\003 \001(\t\022\025\n\rsupplier_name\030\004 \001(\t\022\032\n\022" +
+      "supplier_global_id\030\005 \001(\t\022\024\n\014customer_ref" +
+      "\030\006 \001(\t\022\r\n\005total\030\007 \001(\005\022\021\n\tline_text\030\010 \001(\t" +
+      "\022\017\n\007line_id\030\t \001(\t\"\231\002\n\013BankRequest\0226\n\006inp" +
+      "uts\030\001 \003(\0132&.asgt.jester.v1alpha1.BankReq" +
+      "uest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007optio" +
+      "ns\030\003 \001(\0132\'.asgt.jester.v1alpha1.Suggesti" +
+      "onOptions\032\201\001\n\004Data\022\026\n\016account_number\030\001 \001" +
+      "(\005\022+\n\006amount\030\002 \001(\0132\033.google.protobuf.Flo" +
+      "atValue\022\022\n\nentry_type\030\003 \001(\005\022\014\n\004text\030\004 \001(" +
+      "\t\022\022\n\ntime_stamp\030\005 \001(\0052\324\003\n\006Jester\022\232\001\n\031Sca" +
+      "nnedInvoiceSuggestions\022+.asgt.jester.v1a" +
+      "lpha1.ScannedInvoiceRequest\032).asgt.jeste" +
+      "r.v1alpha1.SuggestionsResponse\"%\202\323\344\223\002\037\"\032" +
+      "/v1/suggest:scannedinvoice:\001*\022\256\001\n\037Electr" +
+      "onicInvoicLineSuggestions\0222.asgt.jester." +
+      "v1alpha1.ElectronicInvoiceLineRequest\032)." +
+      "asgt.jester.v1alpha1.SuggestionsResponse" +
+      "\",\202\323\344\223\002&\"!/v1/suggest:electronicinvoicel" +
+      "ine:\001*\022|\n\017BankSuggestions\022!.asgt.jester." +
+      "v1alpha1.BankRequest\032).asgt.jester.v1alp" +
+      "ha1.SuggestionsResponse\"\033\202\323\344\223\002\025\"\020/v1/sug" +
+      "gest:bank:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10736,7 +10580,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor,
-        new java.lang.String[] { "Inputs", "Targets", "Options", });
+        new java.lang.String[] { "Inputs", "DatasetName", "Options", });
     internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor =
       internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable = new
@@ -10748,7 +10592,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor,
-        new java.lang.String[] { "Inputs", "Targets", "Options", });
+        new java.lang.String[] { "Inputs", "DatasetName", "Options", });
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor =
       internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable = new
@@ -10760,7 +10604,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1alpha1_BankRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_BankRequest_descriptor,
-        new java.lang.String[] { "Inputs", "Targets", "Options", });
+        new java.lang.String[] { "Inputs", "DatasetName", "Options", });
     internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor =
       internal_static_asgt_jester_v1alpha1_BankRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable = new
