@@ -8,14 +8,20 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "google/protobuf/wrappers.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 
 service DataService {
-  rpc PrepareFeedback(PrepareFeedbackRequest) returns (google.protobuf.Empty);
-  rpc Feedback(FeedbackRequest) returns (google.protobuf.Empty) {
+  rpc PrepareScannedInvoiceFeedback(PrepareScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty);
+  rpc ScannedInvoiceFeedback(ScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:create"
+      post: "/v1alpha1/feedback:scannedinvoice"
+      body: "*"
+    };
+  }
+  rpc PrepareElectronicInvoicLineFeedback(PrepareScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty);
+  rpc ElectronicInvoicLineFeedback(ScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/feedback:electronicinvoiceline"
       body: "*"
     };
   }
@@ -34,8 +40,9 @@ service DataService {
   }
 }
 
-message Entry {
-  option (gen_bq_schema.bigquery_opts).table_name = "training_data";
+// Scanned Invoice
+message ScannedInvoiceEntry {
+  option (gen_bq_schema.bigquery_opts).table_name = "scanned_invoice_data";
   string id = 1 [
     (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
     (gen_bq_schema.bigquery).require = true
@@ -43,12 +50,42 @@ message Entry {
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string user = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-  // map<string, FeedbackValue> input = 5; // input is not bq required, to make it repeated
-  // map<string, FeedbackValue> true_values = 6; // true_values is not bq required, to make it repeated
-  // map<string, FeedbackValue> prediction_values = 7;
-  repeated FeedbackValue input = 5; // input is not bq required, to make it repeated
-  repeated FeedbackValue true_values = 6; // true_values is not bq required, to make it repeated
-  repeated FeedbackValueList prediction_values = 7;
+  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 5;
+  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 6;
+  uint64 feedback_time = 7 [
+    (gen_bq_schema.bigquery) = {
+      require: true,
+      type_override: 'TIMESTAMP'
+    }
+  ];
+}
+
+message PrepareScannedInvoiceFeedbackRequest {
+  string id = 1;
+  string user = 2;
+  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 3;
+  repeated asgt.jester.v1alpha1.Prediction predictions = 4;
+  repeated string tags = 5;
+}
+
+message ScannedInvoiceFeedbackRequest {
+  string id = 1;
+  repeated string tags = 2;
+  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;
+}
+
+// Electronic Invoice Line
+message ElectronicInvoiceLineEntry {
+  option (gen_bq_schema.bigquery_opts).table_name = "electronic_invoice_line_data";
+  string id = 1 [
+    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).require = true
+  ];
+  string consumer = 2 [(gen_bq_schema.bigquery).require = true];
+  string user = 3 [(gen_bq_schema.bigquery).require = true];
+  repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
+  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 5;
+  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 6;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -57,42 +94,57 @@ message Entry {
   ];
 }
 
-message FeedbackType {
-  oneof type {
-    string feedback_string = 2;
-    int32 feedback_int = 3;
-    google.protobuf.FloatValue feedback_float = 4;
-  }
-}
-
-message FeedbackValue {
-  string target = 1;
-  FeedbackType value = 2;
-}
-
-message FeedbackValueList {
-  string target = 1;
-  repeated FeedbackType value = 2;
-}
-
-message PrepareFeedbackRequest {
+message PrepareElectronicInvoiceLineFeedbackRequest {
   string id = 1;
   string user = 2;
-  oneof input {
-    asgt.jester.v1alpha1.ScannedInvoiceRequest.Input scanned_invoice_input = 3;
-    asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input electronic_invoice_line_input = 4;
-    asgt.jester.v1alpha1.BankRequest.Input bank_input = 5;
-  }
-  repeated asgt.jester.v1alpha1.Prediction predictions = 6;
-  repeated string tags = 7;
+  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 3;
+  repeated asgt.jester.v1alpha1.Prediction predictions = 4;
+  repeated string tags = 5;
 }
 
-message FeedbackRequest {
+message ElectronicInvoiceLineFeedbackRequest {
   string id = 1;
   repeated string tags = 2;
-  map<string, FeedbackValue> true_values = 3;
+  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;
 }
 
+// Bank
+message BankEntry {
+  option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
+  string id = 1 [
+    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).require = true
+  ];
+  string consumer = 2 [(gen_bq_schema.bigquery).require = true];
+  string user = 3 [(gen_bq_schema.bigquery).require = true];
+  repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
+  asgt.jester.v1alpha1.BankRequest.Data input = 5;
+  asgt.jester.v1alpha1.BankRequest.Data true_values = 6;
+  uint64 feedback_time = 8 [
+    (gen_bq_schema.bigquery) = {
+      require: true,
+      type_override: 'TIMESTAMP'
+    }
+  ];
+}
+
+message PrepareBankFeedbackRequest {
+  string id = 1;
+  string user = 2;
+  asgt.jester.v1alpha1.BankRequest.Data input = 3;
+  repeated asgt.jester.v1alpha1.Prediction predictions = 4;
+  repeated string tags = 5;
+}
+
+message BankFeedbackRequest {
+  string id = 1;
+  repeated string tags = 2;
+  asgt.jester.v1alpha1.BankRequest.Data true_values = 3;
+}
+
+// Delete
 message DeleteRequest {
-  repeated string tags = 1;
+  string model_type = 1;
+  string user = 2;
+  repeated string tags = 3;
 }

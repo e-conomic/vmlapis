@@ -21,7 +21,7 @@ class JesterStub(object):
         )
     self.ElectronicInvoicLineSuggestions = channel.unary_unary(
         '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
-        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoicLineRequest.SerializeToString,
+        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.SerializeToString,
         response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
         )
     self.BankSuggestions = channel.unary_unary(
@@ -66,7 +66,7 @@ def add_JesterServicer_to_server(servicer, server):
       ),
       'ElectronicInvoicLineSuggestions': grpc.unary_unary_rpc_method_handler(
           servicer.ElectronicInvoicLineSuggestions,
-          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoicLineRequest.FromString,
+          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.FromString,
           response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
       ),
       'BankSuggestions': grpc.unary_unary_rpc_method_handler(

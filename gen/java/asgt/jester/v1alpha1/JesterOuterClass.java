@@ -3993,27 +3993,27 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> 
+    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getInputs(int index);
+    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder> 
+    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder getInputsOrBuilder(
+    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -4095,11 +4095,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input>();
+                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.parser(), extensionRegistry));
+                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -4162,8 +4162,8 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Builder.class);
     }
 
-    public interface InputOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ScannedInvoiceRequest.Input)
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -4177,18 +4177,18 @@ public final class JesterOuterClass {
           getDescriptionBytes();
     }
     /**
-     * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Input}
+     * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
      */
-    public  static final class Input extends
+    public  static final class Data extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Input)
-        InputOrBuilder {
+        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
+        DataOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Input.newBuilder() to construct.
-      private Input(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Input() {
+      private Data() {
         description_ = "";
       }
 
@@ -4197,7 +4197,7 @@ public final class JesterOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Input(
+      private Data(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4243,15 +4243,15 @@ public final class JesterOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor;
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_fieldAccessorTable
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder.class);
+                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder.class);
       }
 
       public static final int DESCRIPTION_FIELD_NUMBER = 1;
@@ -4327,10 +4327,10 @@ public final class JesterOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input)) {
+        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data)) {
           return super.equals(obj);
         }
-        asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input other = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input) obj;
+        asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) obj;
 
         boolean result = true;
         result = result && getDescription()
@@ -4353,69 +4353,69 @@ public final class JesterOuterClass {
         return hash;
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(byte[] data)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseDelimitedFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -4428,7 +4428,7 @@ public final class JesterOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input prototype) {
+      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -4444,26 +4444,26 @@ public final class JesterOuterClass {
         return builder;
       }
       /**
-       * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Input}
+       * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Input)
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder {
+          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_fieldAccessorTable
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder.class);
+                  asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder.class);
         }
 
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.newBuilder()
+        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -4489,17 +4489,17 @@ public final class JesterOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.getDefaultInstance();
+        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstanceForType() {
+          return asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input build() {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input result = buildPartial();
+        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data build() {
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -4507,8 +4507,8 @@ public final class JesterOuterClass {
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input result = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input(this);
+        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data buildPartial() {
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data(this);
           result.description_ = description_;
           onBuilt();
           return result;
@@ -4548,16 +4548,16 @@ public final class JesterOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input)other);
+          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) {
+            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data other) {
+          if (other == asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance()) return this;
           if (!other.getDescription().isEmpty()) {
             description_ = other.description_;
             onChanged();
@@ -4577,11 +4577,11 @@ public final class JesterOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input parsedMessage = null;
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input) e.getUnfinishedMessage();
+            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -4672,41 +4672,41 @@ public final class JesterOuterClass {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Input)
+        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
       }
 
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Input)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
+      private static final asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input();
+        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data();
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getDefaultInstance() {
+      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Input>
-          PARSER = new com.google.protobuf.AbstractParser<Input>() {
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
         @java.lang.Override
-        public Input parsePartialFrom(
+        public Data parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Input(input, extensionRegistry);
+          return new Data(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Input> parser() {
+      public static com.google.protobuf.Parser<Data> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Input> getParserForType() {
+      public com.google.protobuf.Parser<Data> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getDefaultInstanceForType() {
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -4714,36 +4714,36 @@ public final class JesterOuterClass {
 
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> inputs_;
+    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> getInputsList() {
+    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder> 
+    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getInputs(int index) {
+    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder getInputsOrBuilder(
+    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -5211,22 +5211,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> inputs_ =
+      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder> inputsBuilder_;
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> getInputsList() {
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -5234,7 +5234,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -5244,9 +5244,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input getInputs(int index) {
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -5254,10 +5254,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5271,10 +5271,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -5285,9 +5285,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input value) {
+      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5301,10 +5301,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5318,10 +5318,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder builderForValue) {
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -5332,10 +5332,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -5346,10 +5346,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input> values) {
+          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -5361,7 +5361,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -5374,7 +5374,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -5387,16 +5387,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder getInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder getInputsOrBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -5404,9 +5404,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder> 
+      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -5415,33 +5415,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder addInputsBuilder() {
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.getDefaultInstance());
+            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder addInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.getDefaultInstance());
+            index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder> 
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder> 
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.InputOrBuilder>(
+              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -5714,32 +5714,32 @@ public final class JesterOuterClass {
 
   }
 
-  public interface ElectronicInvoicLineRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ElectronicInvoicLineRequest)
+  public interface ElectronicInvoiceLineRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> 
+    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getInputs(int index);
+    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder> 
+    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder getInputsOrBuilder(
+    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -5779,18 +5779,18 @@ public final class JesterOuterClass {
    * Electronic Invoice Line
    * </pre>
    *
-   * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoicLineRequest}
+   * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest}
    */
-  public  static final class ElectronicInvoicLineRequest extends
+  public  static final class ElectronicInvoiceLineRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ElectronicInvoicLineRequest)
-      ElectronicInvoicLineRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest)
+      ElectronicInvoiceLineRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ElectronicInvoicLineRequest.newBuilder() to construct.
-    private ElectronicInvoicLineRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ElectronicInvoiceLineRequest.newBuilder() to construct.
+    private ElectronicInvoiceLineRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ElectronicInvoicLineRequest() {
+    private ElectronicInvoiceLineRequest() {
       inputs_ = java.util.Collections.emptyList();
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
@@ -5800,7 +5800,7 @@ public final class JesterOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ElectronicInvoicLineRequest(
+    private ElectronicInvoiceLineRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -5821,11 +5821,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input>();
+                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.parser(), extensionRegistry));
+                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -5877,19 +5877,19 @@ public final class JesterOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor;
+      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_fieldAccessorTable
+      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Builder.class);
+              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Builder.class);
     }
 
-    public interface InputOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input)
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -5978,18 +5978,18 @@ public final class JesterOuterClass {
           getLineIdBytes();
     }
     /**
-     * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input}
+     * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
      */
-    public  static final class Input extends
+    public  static final class Data extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input)
-        InputOrBuilder {
+        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
+        DataOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Input.newBuilder() to construct.
-      private Input(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Input() {
+      private Data() {
         issueDate_ = "";
         currency_ = "";
         supplierId_ = "";
@@ -6006,7 +6006,7 @@ public final class JesterOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Input(
+      private Data(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -6099,15 +6099,15 @@ public final class JesterOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor;
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_fieldAccessorTable
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder.class);
+                asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder.class);
       }
 
       public static final int ISSUE_DATE_FIELD_NUMBER = 1;
@@ -6479,10 +6479,10 @@ public final class JesterOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input)) {
+        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data)) {
           return super.equals(obj);
         }
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input) obj;
+        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) obj;
 
         boolean result = true;
         result = result && getIssueDate()
@@ -6537,69 +6537,69 @@ public final class JesterOuterClass {
         return hash;
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(byte[] data)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseDelimitedFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -6612,7 +6612,7 @@ public final class JesterOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input prototype) {
+      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -6628,26 +6628,26 @@ public final class JesterOuterClass {
         return builder;
       }
       /**
-       * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input}
+       * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input)
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder {
+          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_fieldAccessorTable
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder.class);
+                  asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder.class);
         }
 
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.newBuilder()
+        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -6689,17 +6689,17 @@ public final class JesterOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.getDefaultInstance();
+        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstanceForType() {
+          return asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input build() {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input result = buildPartial();
+        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data build() {
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -6707,8 +6707,8 @@ public final class JesterOuterClass {
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input(this);
+        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data buildPartial() {
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data(this);
           result.issueDate_ = issueDate_;
           result.currency_ = currency_;
           result.supplierId_ = supplierId_;
@@ -6756,16 +6756,16 @@ public final class JesterOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input)other);
+          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) {
+            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other) {
+          if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance()) return this;
           if (!other.getIssueDate().isEmpty()) {
             issueDate_ = other.issueDate_;
             onChanged();
@@ -6816,11 +6816,11 @@ public final class JesterOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input parsedMessage = null;
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input) e.getUnfinishedMessage();
+            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -7420,41 +7420,41 @@ public final class JesterOuterClass {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input)
+        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
       }
 
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
+      private static final asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input();
+        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data();
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getDefaultInstance() {
+      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Input>
-          PARSER = new com.google.protobuf.AbstractParser<Input>() {
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
         @java.lang.Override
-        public Input parsePartialFrom(
+        public Data parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Input(input, extensionRegistry);
+          return new Data(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Input> parser() {
+      public static com.google.protobuf.Parser<Data> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Input> getParserForType() {
+      public com.google.protobuf.Parser<Data> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getDefaultInstanceForType() {
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -7462,36 +7462,36 @@ public final class JesterOuterClass {
 
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> inputs_;
+    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> getInputsList() {
+    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder> 
+    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getInputs(int index) {
+    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder getInputsOrBuilder(
+    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -7604,10 +7604,10 @@ public final class JesterOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest)) {
+      if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest)) {
         return super.equals(obj);
       }
-      asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest) obj;
+      asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest) obj;
 
       boolean result = true;
       result = result && getInputsList()
@@ -7647,69 +7647,69 @@ public final class JesterOuterClass {
       return hash;
     }
 
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(byte[] data)
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(java.io.InputStream input)
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseDelimitedFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parseFrom(
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7722,7 +7722,7 @@ public final class JesterOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest prototype) {
+    public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7742,26 +7742,26 @@ public final class JesterOuterClass {
      * Electronic Invoice Line
      * </pre>
      *
-     * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoicLineRequest}
+     * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ElectronicInvoicLineRequest)
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest)
+        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor;
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_fieldAccessorTable
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Builder.class);
+                asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Builder.class);
       }
 
-      // Construct using asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.newBuilder()
+      // Construct using asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7800,17 +7800,17 @@ public final class JesterOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor;
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest getDefaultInstanceForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.getDefaultInstance();
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest getDefaultInstanceForType() {
+        return asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest build() {
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest result = buildPartial();
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest build() {
+        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7818,8 +7818,8 @@ public final class JesterOuterClass {
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest buildPartial() {
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest(this);
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest buildPartial() {
+        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (inputsBuilder_ == null) {
@@ -7880,16 +7880,16 @@ public final class JesterOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest) {
-          return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest)other);
+        if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest) {
+          return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest other) {
-        if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest other) {
+        if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.getDefaultInstance()) return this;
         if (inputsBuilder_ == null) {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
@@ -7944,11 +7944,11 @@ public final class JesterOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest parsedMessage = null;
+        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7959,22 +7959,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> inputs_ =
+      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder> inputsBuilder_;
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> getInputsList() {
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -7982,7 +7982,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -7992,9 +7992,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input getInputs(int index) {
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -8002,10 +8002,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8019,10 +8019,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -8033,9 +8033,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input value) {
+      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8049,10 +8049,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8066,10 +8066,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder builderForValue) {
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -8080,10 +8080,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -8094,10 +8094,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input> values) {
+          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8109,7 +8109,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -8122,7 +8122,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -8135,16 +8135,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder getInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder getInputsOrBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -8152,9 +8152,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder> 
+      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -8163,33 +8163,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder addInputsBuilder() {
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.getDefaultInstance());
+            asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder addInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.getDefaultInstance());
+            index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder> 
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder> 
+          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest.InputOrBuilder>(
+              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -8422,41 +8422,41 @@ public final class JesterOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ElectronicInvoicLineRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ElectronicInvoicLineRequest)
-    private static final asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest)
+    private static final asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest();
+      DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest();
     }
 
-    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest getDefaultInstance() {
+    public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ElectronicInvoicLineRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ElectronicInvoicLineRequest>() {
+    private static final com.google.protobuf.Parser<ElectronicInvoiceLineRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ElectronicInvoiceLineRequest>() {
       @java.lang.Override
-      public ElectronicInvoicLineRequest parsePartialFrom(
+      public ElectronicInvoiceLineRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ElectronicInvoicLineRequest(input, extensionRegistry);
+        return new ElectronicInvoiceLineRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ElectronicInvoicLineRequest> parser() {
+    public static com.google.protobuf.Parser<ElectronicInvoiceLineRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ElectronicInvoicLineRequest> getParserForType() {
+    public com.google.protobuf.Parser<ElectronicInvoiceLineRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoicLineRequest getDefaultInstanceForType() {
+    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8467,27 +8467,27 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> 
+    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getInputs(int index);
+    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder> 
+    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder getInputsOrBuilder(
+    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -8569,11 +8569,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input>();
+                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.parser(), extensionRegistry));
+                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -8636,8 +8636,8 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.BankRequest.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Builder.class);
     }
 
-    public interface InputOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.BankRequest.Input)
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.BankRequest.Data)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -8679,18 +8679,18 @@ public final class JesterOuterClass {
       int getTimeStamp();
     }
     /**
-     * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Input}
+     * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Data}
      */
-    public  static final class Input extends
+    public  static final class Data extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.BankRequest.Input)
-        InputOrBuilder {
+        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.BankRequest.Data)
+        DataOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Input.newBuilder() to construct.
-      private Input(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Input() {
+      private Data() {
         accountNumber_ = 0;
         entryType_ = 0;
         text_ = "";
@@ -8702,7 +8702,7 @@ public final class JesterOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Input(
+      private Data(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -8776,15 +8776,15 @@ public final class JesterOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor;
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Input_fieldAccessorTable
+        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder.class);
+                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder.class);
       }
 
       public static final int ACCOUNT_NUMBER_FIELD_NUMBER = 1;
@@ -8936,10 +8936,10 @@ public final class JesterOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input)) {
+        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data)) {
           return super.equals(obj);
         }
-        asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input other = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input) obj;
+        asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) obj;
 
         boolean result = true;
         result = result && (getAccountNumber()
@@ -8983,69 +8983,69 @@ public final class JesterOuterClass {
         return hash;
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(byte[] data)
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseDelimitedFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parseFrom(
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -9058,7 +9058,7 @@ public final class JesterOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input prototype) {
+      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -9074,26 +9074,26 @@ public final class JesterOuterClass {
         return builder;
       }
       /**
-       * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Input}
+       * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Data}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.BankRequest.Input)
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder {
+          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.BankRequest.Data)
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Input_fieldAccessorTable
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder.class);
+                  asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder.class);
         }
 
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.newBuilder()
+        // Construct using asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -9131,17 +9131,17 @@ public final class JesterOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor;
+          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.getDefaultInstance();
+        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstanceForType() {
+          return asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input build() {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input result = buildPartial();
+        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data build() {
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -9149,8 +9149,8 @@ public final class JesterOuterClass {
         }
 
         @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input result = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input(this);
+        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data buildPartial() {
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data(this);
           result.accountNumber_ = accountNumber_;
           if (amountBuilder_ == null) {
             result.amount_ = amount_;
@@ -9198,16 +9198,16 @@ public final class JesterOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input)other);
+          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) {
+            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other) {
+          if (other == asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance()) return this;
           if (other.getAccountNumber() != 0) {
             setAccountNumber(other.getAccountNumber());
           }
@@ -9239,11 +9239,11 @@ public final class JesterOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input parsedMessage = null;
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input) e.getUnfinishedMessage();
+            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -9529,41 +9529,41 @@ public final class JesterOuterClass {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.BankRequest.Input)
+        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.BankRequest.Data)
       }
 
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.BankRequest.Input)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.BankRequest.Data)
+      private static final asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input();
+        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data();
       }
 
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getDefaultInstance() {
+      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Input>
-          PARSER = new com.google.protobuf.AbstractParser<Input>() {
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
         @java.lang.Override
-        public Input parsePartialFrom(
+        public Data parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Input(input, extensionRegistry);
+          return new Data(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Input> parser() {
+      public static com.google.protobuf.Parser<Data> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Input> getParserForType() {
+      public com.google.protobuf.Parser<Data> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getDefaultInstanceForType() {
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -9571,36 +9571,36 @@ public final class JesterOuterClass {
 
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> inputs_;
+    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> getInputsList() {
+    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder> 
+    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getInputs(int index) {
+    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder getInputsOrBuilder(
+    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -10068,22 +10068,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> inputs_ =
+      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder> inputsBuilder_;
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> getInputsList() {
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -10091,7 +10091,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -10101,9 +10101,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input getInputs(int index) {
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -10111,10 +10111,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10128,10 +10128,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -10142,9 +10142,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input value) {
+      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10158,10 +10158,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input value) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10175,10 +10175,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder builderForValue) {
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -10189,10 +10189,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder builderForValue) {
+          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -10203,10 +10203,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input> values) {
+          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -10218,7 +10218,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -10231,7 +10231,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -10244,16 +10244,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder getInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder getInputsOrBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -10261,9 +10261,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder> 
+      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -10272,33 +10272,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder addInputsBuilder() {
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.getDefaultInstance());
+            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder addInputsBuilder(
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.getDefaultInstance());
+            index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Input inputs = 1;</code>
+       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder> 
+      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder> 
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Input.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.InputOrBuilder>(
+              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -10602,30 +10602,30 @@ public final class JesterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor;
+    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_fieldAccessorTable;
+      internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor;
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_fieldAccessorTable;
+      internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor;
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_fieldAccessorTable;
+      internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_jester_v1alpha1_BankRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_jester_v1alpha1_BankRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor;
+    internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_BankRequest_Input_fieldAccessorTable;
+      internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -10651,41 +10651,41 @@ public final class JesterOuterClass {
       "ictions\030\001 \003(\0132 .asgt.jester.v1alpha1.Pre" +
       "diction\"m\n\021SuggestionOptions\022\030\n\020suggesti" +
       "on_limit\030\001 \001(\005\022>\n\016min_confidence\030\002 \001(\0162&" +
-      ".asgt.jester.v1alpha1.Confidence.Level\"\303" +
-      "\001\n\025ScannedInvoiceRequest\022A\n\006inputs\030\001 \003(\013" +
-      "21.asgt.jester.v1alpha1.ScannedInvoiceRe" +
-      "quest.Input\022\017\n\007targets\030\002 \003(\t\0228\n\007options\030" +
-      "\003 \001(\0132\'.asgt.jester.v1alpha1.SuggestionO" +
-      "ptions\032\034\n\005Input\022\023\n\013description\030\001 \001(\t\"\362\002\n" +
-      "\033ElectronicInvoicLineRequest\022G\n\006inputs\030\001" +
-      " \003(\01327.asgt.jester.v1alpha1.ElectronicIn" +
-      "voicLineRequest.Input\022\017\n\007targets\030\002 \003(\t\0228" +
-      "\n\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1.S" +
-      "uggestionOptions\032\276\001\n\005Input\022\022\n\nissue_date" +
-      "\030\001 \001(\t\022\020\n\010currency\030\002 \001(\t\022\023\n\013supplier_id\030" +
-      "\003 \001(\t\022\025\n\rsupplier_name\030\004 \001(\t\022\032\n\022supplier" +
-      "_global_id\030\005 \001(\t\022\024\n\014customer_ref\030\006 \001(\t\022\r" +
-      "\n\005total\030\007 \001(\005\022\021\n\tline_text\030\010 \001(\t\022\017\n\007line" +
-      "_id\030\t \001(\t\"\226\002\n\013BankRequest\0227\n\006inputs\030\001 \003(" +
-      "\0132\'.asgt.jester.v1alpha1.BankRequest.Inp" +
-      "ut\022\017\n\007targets\030\002 \003(\t\0228\n\007options\030\003 \001(\0132\'.a" +
-      "sgt.jester.v1alpha1.SuggestionOptions\032\202\001" +
-      "\n\005Input\022\026\n\016account_number\030\001 \001(\005\022+\n\006amoun" +
-      "t\030\002 \001(\0132\033.google.protobuf.FloatValue\022\022\n\n" +
-      "entry_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022\022\n\ntime_s" +
-      "tamp\030\005 \001(\0052\323\003\n\006Jester\022\232\001\n\031ScannedInvoice" +
-      "Suggestions\022+.asgt.jester.v1alpha1.Scann" +
-      "edInvoiceRequest\032).asgt.jester.v1alpha1." +
-      "SuggestionsResponse\"%\202\323\344\223\002\037\"\032/v1/suggest" +
-      ":scannedinvoice:\001*\022\255\001\n\037ElectronicInvoicL" +
-      "ineSuggestions\0221.asgt.jester.v1alpha1.El" +
-      "ectronicInvoicLineRequest\032).asgt.jester." +
-      "v1alpha1.SuggestionsResponse\",\202\323\344\223\002&\"!/v" +
-      "1/suggest:electronicinvoiceline:\001*\022|\n\017Ba" +
-      "nkSuggestions\022!.asgt.jester.v1alpha1.Ban" +
-      "kRequest\032).asgt.jester.v1alpha1.Suggesti" +
-      "onsResponse\"\033\202\323\344\223\002\025\"\020/v1/suggest:bank:\001*" +
-      "B\010Z\006jesterb\006proto3"
+      ".asgt.jester.v1alpha1.Confidence.Level\"\301" +
+      "\001\n\025ScannedInvoiceRequest\022@\n\006inputs\030\001 \003(\013" +
+      "20.asgt.jester.v1alpha1.ScannedInvoiceRe" +
+      "quest.Data\022\017\n\007targets\030\002 \003(\t\0228\n\007options\030\003" +
+      " \001(\0132\'.asgt.jester.v1alpha1.SuggestionOp" +
+      "tions\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\362\002\n\034E" +
+      "lectronicInvoiceLineRequest\022G\n\006inputs\030\001 " +
+      "\003(\01327.asgt.jester.v1alpha1.ElectronicInv" +
+      "oiceLineRequest.Data\022\017\n\007targets\030\002 \003(\t\0228\n" +
+      "\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1.Su" +
+      "ggestionOptions\032\275\001\n\004Data\022\022\n\nissue_date\030\001" +
+      " \001(\t\022\020\n\010currency\030\002 \001(\t\022\023\n\013supplier_id\030\003 " +
+      "\001(\t\022\025\n\rsupplier_name\030\004 \001(\t\022\032\n\022supplier_g" +
+      "lobal_id\030\005 \001(\t\022\024\n\014customer_ref\030\006 \001(\t\022\r\n\005" +
+      "total\030\007 \001(\005\022\021\n\tline_text\030\010 \001(\t\022\017\n\007line_i" +
+      "d\030\t \001(\t\"\224\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132" +
+      "&.asgt.jester.v1alpha1.BankRequest.Data\022" +
+      "\017\n\007targets\030\002 \003(\t\0228\n\007options\030\003 \001(\0132\'.asgt" +
+      ".jester.v1alpha1.SuggestionOptions\032\201\001\n\004D" +
+      "ata\022\026\n\016account_number\030\001 \001(\005\022+\n\006amount\030\002 " +
+      "\001(\0132\033.google.protobuf.FloatValue\022\022\n\nentr" +
+      "y_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022\022\n\ntime_stamp" +
+      "\030\005 \001(\0052\324\003\n\006Jester\022\232\001\n\031ScannedInvoiceSugg" +
+      "estions\022+.asgt.jester.v1alpha1.ScannedIn" +
+      "voiceRequest\032).asgt.jester.v1alpha1.Sugg" +
+      "estionsResponse\"%\202\323\344\223\002\037\"\032/v1/suggest:sca" +
+      "nnedinvoice:\001*\022\256\001\n\037ElectronicInvoicLineS" +
+      "uggestions\0222.asgt.jester.v1alpha1.Electr" +
+      "onicInvoiceLineRequest\032).asgt.jester.v1a" +
+      "lpha1.SuggestionsResponse\",\202\323\344\223\002&\"!/v1/s" +
+      "uggest:electronicinvoiceline:\001*\022|\n\017BankS" +
+      "uggestions\022!.asgt.jester.v1alpha1.BankRe" +
+      "quest\032).asgt.jester.v1alpha1.Suggestions" +
+      "Response\"\033\202\323\344\223\002\025\"\020/v1/suggest:bank:\001*B\010Z" +
+      "\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10737,23 +10737,23 @@ public final class JesterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor,
         new java.lang.String[] { "Inputs", "Targets", "Options", });
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor =
+    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor =
       internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_fieldAccessorTable = new
+    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Input_descriptor,
+        internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor,
         new java.lang.String[] { "Description", });
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor =
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_fieldAccessorTable = new
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor,
+        internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor,
         new java.lang.String[] { "Inputs", "Targets", "Options", });
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor =
-      internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_fieldAccessorTable = new
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor =
+      internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_ElectronicInvoicLineRequest_Input_descriptor,
+        internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor,
         new java.lang.String[] { "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId", });
     internal_static_asgt_jester_v1alpha1_BankRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
@@ -10761,11 +10761,11 @@ public final class JesterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_BankRequest_descriptor,
         new java.lang.String[] { "Inputs", "Targets", "Options", });
-    internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor =
+    internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor =
       internal_static_asgt_jester_v1alpha1_BankRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_BankRequest_Input_fieldAccessorTable = new
+    internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_BankRequest_Input_descriptor,
+        internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor,
         new java.lang.String[] { "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();

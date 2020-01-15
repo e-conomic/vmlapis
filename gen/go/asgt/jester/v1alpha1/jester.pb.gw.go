@@ -46,7 +46,7 @@ func request_Jester_ScannedInvoiceSuggestions_0(ctx context.Context, marshaler r
 }
 
 func request_Jester_ElectronicInvoicLineSuggestions_0(ctx context.Context, marshaler runtime.Marshaler, client JesterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq ElectronicInvoicLineRequest
+	var protoReq ElectronicInvoiceLineRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)

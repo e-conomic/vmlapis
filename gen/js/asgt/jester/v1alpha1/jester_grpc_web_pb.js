@@ -155,16 +155,16 @@ proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.scannedInvoiceSuggestio
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest,
+ *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
  *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
  */
 const methodDescriptor_Jester_ElectronicInvoicLineSuggestions = new grpc.web.MethodDescriptor(
   '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
   grpc.web.MethodType.UNARY,
-  proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest,
+  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
   proto.asgt.jester.v1alpha1.SuggestionsResponse,
   /**
-   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} request
+   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -177,13 +177,13 @@ const methodDescriptor_Jester_ElectronicInvoicLineSuggestions = new grpc.web.Met
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest,
+ *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
  *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
  */
 const methodInfo_Jester_ElectronicInvoicLineSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
   proto.asgt.jester.v1alpha1.SuggestionsResponse,
   /**
-   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} request
+   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -194,7 +194,7 @@ const methodInfo_Jester_ElectronicInvoicLineSuggestions = new grpc.web.AbstractC
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} request The
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -215,7 +215,7 @@ proto.asgt.jester.v1alpha1.JesterClient.prototype.electronicInvoicLineSuggestion
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} request The
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata

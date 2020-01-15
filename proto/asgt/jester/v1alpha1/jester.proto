@@ -15,7 +15,7 @@ service Jester {
     };
   }
 
-  rpc ElectronicInvoicLineSuggestions(ElectronicInvoicLineRequest) returns (SuggestionsResponse) {
+  rpc ElectronicInvoicLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
       post: "/v1/suggest:electronicinvoiceline"
       body: "*"
@@ -69,18 +69,18 @@ message SuggestionOptions {
 
 // Scanned Invoice
 message ScannedInvoiceRequest {
-  message Input {
+  message Data {
     string description = 1;
   }
 
-  repeated Input inputs = 1;
+  repeated Data inputs = 1;
   repeated string targets = 2;
   SuggestionOptions options = 3;
 }
 
 // Electronic Invoice Line
-message ElectronicInvoicLineRequest {
-  message Input {
+message ElectronicInvoiceLineRequest {
+  message Data {
     string issue_date = 1;
     string currency = 2;
     string supplier_id = 3;
@@ -92,14 +92,14 @@ message ElectronicInvoicLineRequest {
     string line_id = 9;
   }
 
-  repeated Input inputs = 1;
+  repeated Data inputs = 1;
   repeated string targets = 2;
   SuggestionOptions options = 3;
 }
 
 // Bank
 message BankRequest {
-  message Input {
+  message Data {
     int32 account_number = 1;
     google.protobuf.FloatValue amount = 2;
     int32 entry_type = 3;
@@ -107,7 +107,7 @@ message BankRequest {
     int32 time_stamp = 5;
   }
 
-  repeated Input inputs = 1;
+  repeated Data inputs = 1;
   repeated string targets = 2;
   SuggestionOptions options = 3;
 }

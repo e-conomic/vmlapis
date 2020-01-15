@@ -14,15 +14,15 @@ var global = Function('return this')();
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.jester.v1alpha1.BankRequest', null, global);
-goog.exportSymbol('proto.asgt.jester.v1alpha1.BankRequest.Input', null, global);
+goog.exportSymbol('proto.asgt.jester.v1alpha1.BankRequest.Data', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.Confidence', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.Confidence.Level', null, global);
-goog.exportSymbol('proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest', null, global);
-goog.exportSymbol('proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input', null, global);
+goog.exportSymbol('proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest', null, global);
+goog.exportSymbol('proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.Prediction', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.Prediction.Candidate', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.ScannedInvoiceRequest', null, global);
-goog.exportSymbol('proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input', null, global);
+goog.exportSymbol('proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.SuggestionOptions', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.SuggestionsResponse', null, global);
 
@@ -996,7 +996,7 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.toObject = function(o
 proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
-    proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.toObject, includeInstance),
+    proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.toObject, includeInstance),
     targetsList: jspb.Message.getRepeatedField(msg, 2),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
@@ -1036,8 +1036,8 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.deserializeBinaryFromReader = f
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input;
-      reader.readMessage(value,proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.deserializeBinaryFromReader);
+      var value = new proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data;
+      reader.readMessage(value,proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.deserializeBinaryFromReader);
       msg.addInputs(value);
       break;
     case 2:
@@ -1083,7 +1083,7 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.serializeBinaryToWriter
+      proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.serializeBinaryToWriter
     );
   }
   f = message.getTargetsList();
@@ -1115,12 +1115,12 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.serializeBinaryToWriter = funct
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input = function(opt_data) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input, jspb.Message);
+goog.inherits(proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.displayName = 'proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input';
+  proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.displayName = 'proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data';
 }
 
 
@@ -1135,8 +1135,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.toObject(opt_includeInstance, this);
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.toObject(opt_includeInstance, this);
 };
 
 
@@ -1145,11 +1145,11 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.toObject = func
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input} msg The msg instance to transform.
+ * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.toObject = function(includeInstance, msg) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
     description: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -1165,23 +1165,23 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.toObject = function(inclu
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.deserializeBinary = function(bytes) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input;
-  return proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data;
+  return proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input} msg The message object to deserialize into.
+ * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1205,9 +1205,9 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.deserializeBinaryFromRead
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.serializeBinary = function() {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.serializeBinaryToWriter(this, writer);
+  proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1215,11 +1215,11 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.serializeBinary
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input} message
+ * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDescription();
   if (f.length > 0) {
@@ -1235,40 +1235,40 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.serializeBinaryToWriter =
  * optional string description = 1;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.getDescription = function() {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.prototype.getDescription = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input.prototype.setDescription = function(value) {
+proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data.prototype.setDescription = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * repeated Input inputs = 1;
- * @return {!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input>}
+ * repeated Data inputs = 1;
+ * @return {!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data>}
  */
 proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.getInputsList = function() {
-  return /** @type{!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input, 1));
+  return /** @type{!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data, 1));
 };
 
 
-/** @param {!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input>} value */
+/** @param {!Array<!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data>} value */
 proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.setInputsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input=} opt_value
+ * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
  */
 proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.addInputs = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Input, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data, opt_index);
 };
 
 
@@ -1347,19 +1347,19 @@ proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.prototype.hasOptions = function
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.repeatedFields_, null);
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.repeatedFields_, null);
 };
-goog.inherits(proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest, jspb.Message);
+goog.inherits(proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.displayName = 'proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest';
+  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.displayName = 'proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.repeatedFields_ = [1,2];
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.repeatedFields_ = [1,2];
 
 
 
@@ -1374,8 +1374,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.toObject(opt_includeInstance, this);
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1384,14 +1384,14 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.toObject = func
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} msg The msg instance to transform.
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.toObject = function(includeInstance, msg) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
-    proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.toObject, includeInstance),
+    proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject, includeInstance),
     targetsList: jspb.Message.getRepeatedField(msg, 2),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
@@ -1407,23 +1407,23 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.toObject = function(inclu
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest}
+ * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.deserializeBinary = function(bytes) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest;
-  return proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest;
+  return proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} msg The message object to deserialize into.
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest}
+ * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1431,8 +1431,8 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.deserializeBinaryFromRead
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input;
-      reader.readMessage(value,proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.deserializeBinaryFromReader);
+      var value = new proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data;
+      reader.readMessage(value,proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFromReader);
       msg.addInputs(value);
       break;
     case 2:
@@ -1457,9 +1457,9 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.deserializeBinaryFromRead
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.serializeBinary = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.serializeBinaryToWriter(this, writer);
+  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1467,18 +1467,18 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.serializeBinary
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest} message
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getInputsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.serializeBinaryToWriter
+      proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter
     );
   }
   f = message.getTargetsList();
@@ -1510,12 +1510,12 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.serializeBinaryToWriter =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input = function(opt_data) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input, jspb.Message);
+goog.inherits(proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.displayName = 'proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input';
+  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.displayName = 'proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data';
 }
 
 
@@ -1530,8 +1530,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.toObject(opt_includeInstance, this);
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject(opt_includeInstance, this);
 };
 
 
@@ -1540,11 +1540,11 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.toObject 
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input} msg The msg instance to transform.
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.toObject = function(includeInstance, msg) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
     issueDate: jspb.Message.getFieldWithDefault(msg, 1, ""),
     currency: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -1568,23 +1568,23 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.toObject = function
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.deserializeBinary = function(bytes) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input;
-  return proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data;
+  return proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input} msg The message object to deserialize into.
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1640,9 +1640,9 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.deserializeBinaryFr
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.serializeBinary = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.serializeBinaryToWriter(this, writer);
+  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1650,11 +1650,11 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.serialize
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input} message
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getIssueDate();
   if (f.length > 0) {
@@ -1726,13 +1726,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.serializeBinaryToWr
  * optional string issue_date = 1;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getIssueDate = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getIssueDate = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setIssueDate = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setIssueDate = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1741,13 +1741,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setIssueD
  * optional string currency = 2;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getCurrency = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getCurrency = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setCurrency = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setCurrency = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1756,13 +1756,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setCurren
  * optional string supplier_id = 3;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getSupplierId = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getSupplierId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSupplierId = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSupplierId = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -1771,13 +1771,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSuppli
  * optional string supplier_name = 4;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getSupplierName = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getSupplierName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSupplierName = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSupplierName = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -1786,13 +1786,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSuppli
  * optional string supplier_global_id = 5;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getSupplierGlobalId = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getSupplierGlobalId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSupplierGlobalId = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSupplierGlobalId = function(value) {
   jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -1801,13 +1801,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setSuppli
  * optional string customer_ref = 6;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getCustomerRef = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getCustomerRef = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setCustomerRef = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setCustomerRef = function(value) {
   jspb.Message.setProto3StringField(this, 6, value);
 };
 
@@ -1816,13 +1816,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setCustom
  * optional int32 total = 7;
  * @return {number}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getTotal = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getTotal = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setTotal = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setTotal = function(value) {
   jspb.Message.setProto3IntField(this, 7, value);
 };
 
@@ -1831,13 +1831,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setTotal 
  * optional string line_text = 8;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getLineText = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getLineText = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setLineText = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setLineText = function(value) {
   jspb.Message.setProto3StringField(this, 8, value);
 };
 
@@ -1846,44 +1846,44 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setLineTe
  * optional string line_id = 9;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.getLineId = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getLineId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input.prototype.setLineId = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setLineId = function(value) {
   jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
 /**
- * repeated Input inputs = 1;
- * @return {!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input>}
+ * repeated Data inputs = 1;
+ * @return {!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data>}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.getInputsList = function() {
-  return /** @type{!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input, 1));
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.getInputsList = function() {
+  return /** @type{!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data, 1));
 };
 
 
-/** @param {!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input>} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.setInputsList = function(value) {
+/** @param {!Array<!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data>} value */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.setInputsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input=} opt_value
+ * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.addInputs = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input, opt_index);
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.addInputs = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data, opt_index);
 };
 
 
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearInputsList = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.clearInputsList = function() {
   this.setInputsList([]);
 };
 
@@ -1892,13 +1892,13 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearInputsList
  * repeated string targets = 2;
  * @return {!Array<string>}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.getTargetsList = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.getTargetsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
 
 /** @param {!Array<string>} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.setTargetsList = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.setTargetsList = function(value) {
   jspb.Message.setField(this, 2, value || []);
 };
 
@@ -1907,12 +1907,12 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.setTargetsList 
  * @param {!string} value
  * @param {number=} opt_index
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.addTargets = function(value, opt_index) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.addTargets = function(value, opt_index) {
   jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearTargetsList = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.clearTargetsList = function() {
   this.setTargetsList([]);
 };
 
@@ -1921,19 +1921,19 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearTargetsLis
  * optional SuggestionOptions options = 3;
  * @return {?proto.asgt.jester.v1alpha1.SuggestionOptions}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.getOptions = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.getOptions = function() {
   return /** @type{?proto.asgt.jester.v1alpha1.SuggestionOptions} */ (
     jspb.Message.getWrapperField(this, proto.asgt.jester.v1alpha1.SuggestionOptions, 3));
 };
 
 
 /** @param {?proto.asgt.jester.v1alpha1.SuggestionOptions|undefined} value */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.setOptions = function(value) {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.setOptions = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearOptions = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.clearOptions = function() {
   this.setOptions(undefined);
 };
 
@@ -1942,7 +1942,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.clearOptions = 
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoicLineRequest.prototype.hasOptions = function() {
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.prototype.hasOptions = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -2002,7 +2002,7 @@ proto.asgt.jester.v1alpha1.BankRequest.prototype.toObject = function(opt_include
 proto.asgt.jester.v1alpha1.BankRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
-    proto.asgt.jester.v1alpha1.BankRequest.Input.toObject, includeInstance),
+    proto.asgt.jester.v1alpha1.BankRequest.Data.toObject, includeInstance),
     targetsList: jspb.Message.getRepeatedField(msg, 2),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
   };
@@ -2042,8 +2042,8 @@ proto.asgt.jester.v1alpha1.BankRequest.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.asgt.jester.v1alpha1.BankRequest.Input;
-      reader.readMessage(value,proto.asgt.jester.v1alpha1.BankRequest.Input.deserializeBinaryFromReader);
+      var value = new proto.asgt.jester.v1alpha1.BankRequest.Data;
+      reader.readMessage(value,proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader);
       msg.addInputs(value);
       break;
     case 2:
@@ -2089,7 +2089,7 @@ proto.asgt.jester.v1alpha1.BankRequest.serializeBinaryToWriter = function(messag
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.asgt.jester.v1alpha1.BankRequest.Input.serializeBinaryToWriter
+      proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter
     );
   }
   f = message.getTargetsList();
@@ -2121,12 +2121,12 @@ proto.asgt.jester.v1alpha1.BankRequest.serializeBinaryToWriter = function(messag
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input = function(opt_data) {
+proto.asgt.jester.v1alpha1.BankRequest.Data = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.asgt.jester.v1alpha1.BankRequest.Input, jspb.Message);
+goog.inherits(proto.asgt.jester.v1alpha1.BankRequest.Data, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.jester.v1alpha1.BankRequest.Input.displayName = 'proto.asgt.jester.v1alpha1.BankRequest.Input';
+  proto.asgt.jester.v1alpha1.BankRequest.Data.displayName = 'proto.asgt.jester.v1alpha1.BankRequest.Data';
 }
 
 
@@ -2141,8 +2141,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.jester.v1alpha1.BankRequest.Input.toObject(opt_includeInstance, this);
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.jester.v1alpha1.BankRequest.Data.toObject(opt_includeInstance, this);
 };
 
 
@@ -2151,11 +2151,11 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.jester.v1alpha1.BankRequest.Input} msg The msg instance to transform.
+ * @param {!proto.asgt.jester.v1alpha1.BankRequest.Data} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.toObject = function(includeInstance, msg) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
     accountNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
     amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
@@ -2175,23 +2175,23 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.jester.v1alpha1.BankRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.BankRequest.Data}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.deserializeBinary = function(bytes) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.jester.v1alpha1.BankRequest.Input;
-  return proto.asgt.jester.v1alpha1.BankRequest.Input.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.jester.v1alpha1.BankRequest.Data;
+  return proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.jester.v1alpha1.BankRequest.Input} msg The message object to deserialize into.
+ * @param {!proto.asgt.jester.v1alpha1.BankRequest.Data} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.jester.v1alpha1.BankRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.BankRequest.Data}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2232,9 +2232,9 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.serializeBinary = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.jester.v1alpha1.BankRequest.Input.serializeBinaryToWriter(this, writer);
+  proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2242,11 +2242,11 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.jester.v1alpha1.BankRequest.Input} message
+ * @param {!proto.asgt.jester.v1alpha1.BankRequest.Data} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAccountNumber();
   if (f !== 0) {
@@ -2291,13 +2291,13 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.serializeBinaryToWriter = function(
  * optional int32 account_number = 1;
  * @return {number}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.getAccountNumber = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getAccountNumber = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setAccountNumber = function(value) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAccountNumber = function(value) {
   jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -2306,19 +2306,19 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setAccountNumber = functi
  * optional google.protobuf.FloatValue amount = 2;
  * @return {?proto.google.protobuf.FloatValue}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.getAmount = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getAmount = function() {
   return /** @type{?proto.google.protobuf.FloatValue} */ (
     jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 2));
 };
 
 
 /** @param {?proto.google.protobuf.FloatValue|undefined} value */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setAmount = function(value) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAmount = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.clearAmount = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.clearAmount = function() {
   this.setAmount(undefined);
 };
 
@@ -2327,7 +2327,7 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.clearAmount = function() 
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.hasAmount = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.hasAmount = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -2336,13 +2336,13 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.hasAmount = function() {
  * optional int32 entry_type = 3;
  * @return {number}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.getEntryType = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getEntryType = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setEntryType = function(value) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setEntryType = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -2351,13 +2351,13 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setEntryType = function(v
  * optional string text = 4;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.getText = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getText = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setText = function(value) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setText = function(value) {
   jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -2366,40 +2366,40 @@ proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setText = function(value)
  * optional int32 time_stamp = 5;
  * @return {number}
  */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.getTimeStamp = function() {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getTimeStamp = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.jester.v1alpha1.BankRequest.Input.prototype.setTimeStamp = function(value) {
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setTimeStamp = function(value) {
   jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
 /**
- * repeated Input inputs = 1;
- * @return {!Array<!proto.asgt.jester.v1alpha1.BankRequest.Input>}
+ * repeated Data inputs = 1;
+ * @return {!Array<!proto.asgt.jester.v1alpha1.BankRequest.Data>}
  */
 proto.asgt.jester.v1alpha1.BankRequest.prototype.getInputsList = function() {
-  return /** @type{!Array<!proto.asgt.jester.v1alpha1.BankRequest.Input>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.BankRequest.Input, 1));
+  return /** @type{!Array<!proto.asgt.jester.v1alpha1.BankRequest.Data>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.jester.v1alpha1.BankRequest.Data, 1));
 };
 
 
-/** @param {!Array<!proto.asgt.jester.v1alpha1.BankRequest.Input>} value */
+/** @param {!Array<!proto.asgt.jester.v1alpha1.BankRequest.Data>} value */
 proto.asgt.jester.v1alpha1.BankRequest.prototype.setInputsList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.BankRequest.Input=} opt_value
+ * @param {!proto.asgt.jester.v1alpha1.BankRequest.Data=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.jester.v1alpha1.BankRequest.Input}
+ * @return {!proto.asgt.jester.v1alpha1.BankRequest.Data}
  */
 proto.asgt.jester.v1alpha1.BankRequest.prototype.addInputs = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.BankRequest.Input, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.jester.v1alpha1.BankRequest.Data, opt_index);
 };
 
 

@@ -39,36 +39,36 @@ namespace Asgt.Jester.V1Alpha1 {
             "Lmplc3Rlci52MWFscGhhMS5QcmVkaWN0aW9uIm0KEVN1Z2dlc3Rpb25PcHRp",
             "b25zEhgKEHN1Z2dlc3Rpb25fbGltaXQYASABKAUSPgoObWluX2NvbmZpZGVu",
             "Y2UYAiABKA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlLkxl",
-            "dmVsIsMBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQQoGaW5wdXRzGAEgAygL",
-            "MjEuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0",
-            "LklucHV0Eg8KB3RhcmdldHMYAiADKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFz",
-            "Z3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGhwKBUlucHV0",
-            "EhMKC2Rlc2NyaXB0aW9uGAEgASgJIvICChtFbGVjdHJvbmljSW52b2ljTGlu",
-            "ZVJlcXVlc3QSRwoGaW5wdXRzGAEgAygLMjcuYXNndC5qZXN0ZXIudjFhbHBo",
-            "YTEuRWxlY3Ryb25pY0ludm9pY0xpbmVSZXF1ZXN0LklucHV0Eg8KB3Rhcmdl",
-            "dHMYAiADKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVzdGVyLnYxYWxw",
-            "aGExLlN1Z2dlc3Rpb25PcHRpb25zGr4BCgVJbnB1dBISCgppc3N1ZV9kYXRl",
-            "GAEgASgJEhAKCGN1cnJlbmN5GAIgASgJEhMKC3N1cHBsaWVyX2lkGAMgASgJ",
-            "EhUKDXN1cHBsaWVyX25hbWUYBCABKAkSGgoSc3VwcGxpZXJfZ2xvYmFsX2lk",
-            "GAUgASgJEhQKDGN1c3RvbWVyX3JlZhgGIAEoCRINCgV0b3RhbBgHIAEoBRIR",
-            "CglsaW5lX3RleHQYCCABKAkSDwoHbGluZV9pZBgJIAEoCSKWAgoLQmFua1Jl",
-            "cXVlc3QSNwoGaW5wdXRzGAEgAygLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
-            "QmFua1JlcXVlc3QuSW5wdXQSDwoHdGFyZ2V0cxgCIAMoCRI4CgdvcHRpb25z",
-            "GAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlv",
-            "bnMaggEKBUlucHV0EhYKDmFjY291bnRfbnVtYmVyGAEgASgFEisKBmFtb3Vu",
-            "dBgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlEhIKCmVudHJ5",
-            "X3R5cGUYAyABKAUSDAoEdGV4dBgEIAEoCRISCgp0aW1lX3N0YW1wGAUgASgF",
-            "MtMDCgZKZXN0ZXISmgEKGVNjYW5uZWRJbnZvaWNlU3VnZ2VzdGlvbnMSKy5h",
-            "c2d0Lmplc3Rlci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QaKS5h",
-            "c2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiWC0+ST",
-            "Ah8iGi92MS9zdWdnZXN0OnNjYW5uZWRpbnZvaWNlOgEqEq0BCh9FbGVjdHJv",
-            "bmljSW52b2ljTGluZVN1Z2dlc3Rpb25zEjEuYXNndC5qZXN0ZXIudjFhbHBo",
-            "YTEuRWxlY3Ryb25pY0ludm9pY0xpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIu",
-            "djFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvc3Vn",
-            "Z2VzdDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoPQmFua1N1Z2dlc3Rp",
-            "b25zEiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0",
-            "Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUi",
-            "EC92MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZwcm90bzM="));
+            "dmVsIsEBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQAoGaW5wdXRzGAEgAygL",
+            "MjAuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0",
+            "LkRhdGESDwoHdGFyZ2V0cxgCIAMoCRI4CgdvcHRpb25zGAMgASgLMicuYXNn",
+            "dC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlvbnMaGwoERGF0YRIT",
+            "CgtkZXNjcmlwdGlvbhgBIAEoCSLyAgocRWxlY3Ryb25pY0ludm9pY2VMaW5l",
+            "UmVxdWVzdBJHCgZpbnB1dHMYASADKAsyNy5hc2d0Lmplc3Rlci52MWFscGhh",
+            "MS5FbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0LkRhdGESDwoHdGFyZ2V0",
+            "cxgCIAMoCRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBo",
+            "YTEuU3VnZ2VzdGlvbk9wdGlvbnMavQEKBERhdGESEgoKaXNzdWVfZGF0ZRgB",
+            "IAEoCRIQCghjdXJyZW5jeRgCIAEoCRITCgtzdXBwbGllcl9pZBgDIAEoCRIV",
+            "Cg1zdXBwbGllcl9uYW1lGAQgASgJEhoKEnN1cHBsaWVyX2dsb2JhbF9pZBgF",
+            "IAEoCRIUCgxjdXN0b21lcl9yZWYYBiABKAkSDQoFdG90YWwYByABKAUSEQoJ",
+            "bGluZV90ZXh0GAggASgJEg8KB2xpbmVfaWQYCSABKAkilAIKC0JhbmtSZXF1",
+            "ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxwaGExLkJh",
+            "bmtSZXF1ZXN0LkRhdGESDwoHdGFyZ2V0cxgCIAMoCRI4CgdvcHRpb25zGAMg",
+            "ASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlvbnMa",
+            "gQEKBERhdGESFgoOYWNjb3VudF9udW1iZXIYASABKAUSKwoGYW1vdW50GAIg",
+            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSEgoKZW50cnlfdHlw",
+            "ZRgDIAEoBRIMCgR0ZXh0GAQgASgJEhIKCnRpbWVfc3RhbXAYBSABKAUy1AMK",
+            "Bkplc3RlchKaAQoZU2Nhbm5lZEludm9pY2VTdWdnZXN0aW9ucxIrLmFzZ3Qu",
+            "amVzdGVyLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlUmVxdWVzdBopLmFzZ3Qu",
+            "amVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIa",
+            "L3YxL3N1Z2dlc3Q6c2Nhbm5lZGludm9pY2U6ASoSrgEKH0VsZWN0cm9uaWNJ",
+            "bnZvaWNMaW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmplc3Rlci52MWFscGhhMS5F",
+            "bGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFh",
+            "bHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvc3VnZ2Vz",
+            "dDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoPQmFua1N1Z2dlc3Rpb25z",
+            "EiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0Lmpl",
+            "c3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92",
+            "MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,9 +76,9 @@ namespace Asgt.Jester.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction), global::Asgt.Jester.V1Alpha1.Prediction.Parser, new[]{ "Target", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate), global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Parser, new[]{ "Predictions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input.Parser, new[]{ "Description" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input), global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser, new[]{ "Description" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
           }));
     }
     #endregion
@@ -914,11 +914,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
@@ -1053,11 +1053,11 @@ namespace Asgt.Jester.V1Alpha1 {
     /// <summary>Container for nested types declared in the ScannedInvoiceRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1070,21 +1070,21 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
+        public Data(Data other) : this() {
           description_ = other.description_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "description" field.</summary>
@@ -1100,11 +1100,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1154,7 +1154,7 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
@@ -1190,11 +1190,11 @@ namespace Asgt.Jester.V1Alpha1 {
   /// <summary>
   /// Electronic Invoice Line
   /// </summary>
-  public sealed partial class ElectronicInvoicLineRequest : pb::IMessage<ElectronicInvoicLineRequest> {
-    private static readonly pb::MessageParser<ElectronicInvoicLineRequest> _parser = new pb::MessageParser<ElectronicInvoicLineRequest>(() => new ElectronicInvoicLineRequest());
+  public sealed partial class ElectronicInvoiceLineRequest : pb::IMessage<ElectronicInvoiceLineRequest> {
+    private static readonly pb::MessageParser<ElectronicInvoiceLineRequest> _parser = new pb::MessageParser<ElectronicInvoiceLineRequest>(() => new ElectronicInvoiceLineRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ElectronicInvoicLineRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<ElectronicInvoiceLineRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1207,14 +1207,14 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest() {
+    public ElectronicInvoiceLineRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest(ElectronicInvoicLineRequest other) : this() {
+    public ElectronicInvoiceLineRequest(ElectronicInvoiceLineRequest other) : this() {
       inputs_ = other.inputs_.Clone();
       targets_ = other.targets_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
@@ -1222,17 +1222,17 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest Clone() {
-      return new ElectronicInvoicLineRequest(this);
+    public ElectronicInvoiceLineRequest Clone() {
+      return new ElectronicInvoiceLineRequest(this);
     }
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
@@ -1259,11 +1259,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ElectronicInvoicLineRequest);
+      return Equals(other as ElectronicInvoiceLineRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ElectronicInvoicLineRequest other) {
+    public bool Equals(ElectronicInvoiceLineRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1321,7 +1321,7 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ElectronicInvoicLineRequest other) {
+    public void MergeFrom(ElectronicInvoiceLineRequest other) {
       if (other == null) {
         return;
       }
@@ -1364,18 +1364,18 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     #region Nested types
-    /// <summary>Container for nested types declared in the ElectronicInvoicLineRequest message type.</summary>
+    /// <summary>Container for nested types declared in the ElectronicInvoiceLineRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Descriptor.NestedTypes[0]; }
+          get { return global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1384,14 +1384,14 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
+        public Data(Data other) : this() {
           issueDate_ = other.issueDate_;
           currency_ = other.currency_;
           supplierId_ = other.supplierId_;
@@ -1405,8 +1405,8 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "issue_date" field.</summary>
@@ -1510,11 +1510,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1636,7 +1636,7 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
@@ -1766,11 +1766,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
@@ -1905,11 +1905,11 @@ namespace Asgt.Jester.V1Alpha1 {
     /// <summary>Container for nested types declared in the BankRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1922,14 +1922,14 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
+        public Data(Data other) : this() {
           accountNumber_ = other.accountNumber_;
           Amount = other.Amount;
           entryType_ = other.entryType_;
@@ -1939,8 +1939,8 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "account_number" field.</summary>
@@ -2001,11 +2001,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -2090,7 +2090,7 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
