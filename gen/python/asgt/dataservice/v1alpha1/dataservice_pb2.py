@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n+asgt/dataservice/v1alpha1/dataservice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa2\x03\n\x13ScannedInvoiceEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x45\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\'\n\rfeedback_time\x18\x07 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\xc6\x01\n$PrepareScannedInvoiceFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12?\n\x05input\x18\x03 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\x80\x01\n\x1dScannedInvoiceFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x45\n\x0btrue_values\x18\x03 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\"\xbf\x03\n\x1a\x45lectronicInvoiceLineEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12L\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xd4\x01\n+PrepareElectronicInvoiceLineFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x46\n\x05input\x18\x03 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\x8e\x01\n$ElectronicInvoiceLineFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12L\n\x0btrue_values\x18\x03 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\"\xf9\x02\n\tBankEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x35\n\x05input\x18\x05 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12;\n\x0btrue_values\x18\x06 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\xb2\x01\n\x1aPrepareBankFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x35\n\x05input\x18\x03 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"l\n\x13\x42\x61nkFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12;\n\x0btrue_values\x18\x03 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\"?\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t2\xbc\x05\n\x0b\x44\x61taService\x12x\n\x1dPrepareScannedInvoiceFeedback\x12?.asgt.dataservice.v1alpha1.PrepareScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\x12\x98\x01\n\x16ScannedInvoiceFeedback\x12\x38.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\",\x82\xd3\xe4\x93\x02&\"!/v1alpha1/feedback:scannedinvoice:\x01*\x12~\n#PrepareElectronicInvoicLineFeedback\x12?.asgt.dataservice.v1alpha1.PrepareScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\x12\xa5\x01\n\x1c\x45lectronicInvoicLineFeedback\x12\x38.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/feedback:electronicinvoiceline:\x01*\x12p\n\x06\x44\x65lete\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n+asgt/dataservice/v1alpha1/dataservice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa2\x03\n\x13ScannedInvoiceEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x45\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\'\n\rfeedback_time\x18\x07 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\xc6\x01\n$PrepareScannedInvoiceFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12?\n\x05input\x18\x03 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\xcb\x01\n\x1dScannedInvoiceFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12]\n\x0btrue_values\x18\x03 \x03(\x0b\x32H.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry\x1a\x31\n\x0fTrueValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xbf\x03\n\x1a\x45lectronicInvoiceLineEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12L\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xd4\x01\n+PrepareElectronicInvoiceLineFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x46\n\x05input\x18\x03 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\xd9\x01\n$ElectronicInvoiceLineFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x64\n\x0btrue_values\x18\x03 \x03(\x0b\x32O.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry\x1a\x31\n\x0fTrueValuesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xf9\x02\n\tBankEntry\x12;\n\x02id\x18\x01 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04user\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x35\n\x05input\x18\x05 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12;\n\x0btrue_values\x18\x06 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\xb2\x01\n\x1aPrepareBankFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x35\n\x05input\x18\x03 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x35\n\x0bpredictions\x18\x04 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\x12\x0c\n\x04tags\x18\x05 \x03(\t\"l\n\x13\x42\x61nkFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12;\n\x0btrue_values\x18\x03 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\"?\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t2\xbc\x05\n\x0b\x44\x61taService\x12x\n\x1dPrepareScannedInvoiceFeedback\x12?.asgt.dataservice.v1alpha1.PrepareScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\x12\x98\x01\n\x16ScannedInvoiceFeedback\x12\x38.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\",\x82\xd3\xe4\x93\x02&\"!/v1alpha1/feedback:scannedinvoice:\x01*\x12~\n#PrepareElectronicInvoicLineFeedback\x12?.asgt.dataservice.v1alpha1.PrepareScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\x12\xa5\x01\n\x1c\x45lectronicInvoicLineFeedback\x12\x38.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/feedback:electronicinvoiceline:\x01*\x12p\n\x06\x44\x65lete\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1alpha1/feedback:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -163,6 +163,43 @@ _PREPARESCANNEDINVOICEFEEDBACKREQUEST = _descriptor.Descriptor(
 )
 
 
+_SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY = _descriptor.Descriptor(
+  name='TrueValuesEntry',
+  full_name='asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1005,
+  serialized_end=1054,
+)
+
 _SCANNEDINVOICEFEEDBACKREQUEST = _descriptor.Descriptor(
   name='ScannedInvoiceFeedbackRequest',
   full_name='asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest',
@@ -186,15 +223,15 @@ _SCANNEDINVOICEFEEDBACKREQUEST = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='true_values', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.true_values', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -204,7 +241,7 @@ _SCANNEDINVOICEFEEDBACKREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=851,
-  serialized_end=979,
+  serialized_end=1054,
 )
 
 
@@ -276,8 +313,8 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=982,
-  serialized_end=1429,
+  serialized_start=1057,
+  serialized_end=1504,
 )
 
 
@@ -335,10 +372,47 @@ _PREPAREELECTRONICINVOICELINEFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1432,
-  serialized_end=1644,
+  serialized_start=1507,
+  serialized_end=1719,
 )
 
+
+_ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY = _descriptor.Descriptor(
+  name='TrueValuesEntry',
+  full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1005,
+  serialized_end=1054,
+)
 
 _ELECTRONICINVOICELINEFEEDBACKREQUEST = _descriptor.Descriptor(
   name='ElectronicInvoiceLineFeedbackRequest',
@@ -363,15 +437,15 @@ _ELECTRONICINVOICELINEFEEDBACKREQUEST = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='true_values', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.true_values', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[],
+  nested_types=[_ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -380,8 +454,8 @@ _ELECTRONICINVOICELINEFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1647,
-  serialized_end=1789,
+  serialized_start=1722,
+  serialized_end=1939,
 )
 
 
@@ -453,8 +527,8 @@ _BANKENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1792,
-  serialized_end=2169,
+  serialized_start=1942,
+  serialized_end=2319,
 )
 
 
@@ -512,8 +586,8 @@ _PREPAREBANKFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2172,
-  serialized_end=2350,
+  serialized_start=2322,
+  serialized_end=2500,
 )
 
 
@@ -557,8 +631,8 @@ _BANKFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2352,
-  serialized_end=2460,
+  serialized_start=2502,
+  serialized_end=2610,
 )
 
 
@@ -602,20 +676,22 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2462,
-  serialized_end=2525,
+  serialized_start=2612,
+  serialized_end=2675,
 )
 
 _SCANNEDINVOICEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
 _SCANNEDINVOICEENTRY.fields_by_name['true_values'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
 _PREPARESCANNEDINVOICEFEEDBACKREQUEST.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
 _PREPARESCANNEDINVOICEFEEDBACKREQUEST.fields_by_name['predictions'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._PREDICTION
-_SCANNEDINVOICEFEEDBACKREQUEST.fields_by_name['true_values'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
+_SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY.containing_type = _SCANNEDINVOICEFEEDBACKREQUEST
+_SCANNEDINVOICEFEEDBACKREQUEST.fields_by_name['true_values'].message_type = _SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY
 _ELECTRONICINVOICELINEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
 _ELECTRONICINVOICELINEENTRY.fields_by_name['true_values'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
 _PREPAREELECTRONICINVOICELINEFEEDBACKREQUEST.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
 _PREPAREELECTRONICINVOICELINEFEEDBACKREQUEST.fields_by_name['predictions'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._PREDICTION
-_ELECTRONICINVOICELINEFEEDBACKREQUEST.fields_by_name['true_values'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
+_ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY.containing_type = _ELECTRONICINVOICELINEFEEDBACKREQUEST
+_ELECTRONICINVOICELINEFEEDBACKREQUEST.fields_by_name['true_values'].message_type = _ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY
 _BANKENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._BANKREQUEST_DATA
 _BANKENTRY.fields_by_name['true_values'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._BANKREQUEST_DATA
 _PREPAREBANKFEEDBACKREQUEST.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._BANKREQUEST_DATA
@@ -648,11 +724,19 @@ PrepareScannedInvoiceFeedbackRequest = _reflection.GeneratedProtocolMessageType(
 _sym_db.RegisterMessage(PrepareScannedInvoiceFeedbackRequest)
 
 ScannedInvoiceFeedbackRequest = _reflection.GeneratedProtocolMessageType('ScannedInvoiceFeedbackRequest', (_message.Message,), dict(
+
+  TrueValuesEntry = _reflection.GeneratedProtocolMessageType('TrueValuesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY,
+    __module__ = 'asgt.dataservice.v1alpha1.dataservice_pb2'
+    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry)
+    ))
+  ,
   DESCRIPTOR = _SCANNEDINVOICEFEEDBACKREQUEST,
   __module__ = 'asgt.dataservice.v1alpha1.dataservice_pb2'
   # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest)
   ))
 _sym_db.RegisterMessage(ScannedInvoiceFeedbackRequest)
+_sym_db.RegisterMessage(ScannedInvoiceFeedbackRequest.TrueValuesEntry)
 
 ElectronicInvoiceLineEntry = _reflection.GeneratedProtocolMessageType('ElectronicInvoiceLineEntry', (_message.Message,), dict(
   DESCRIPTOR = _ELECTRONICINVOICELINEENTRY,
@@ -669,11 +753,19 @@ PrepareElectronicInvoiceLineFeedbackRequest = _reflection.GeneratedProtocolMessa
 _sym_db.RegisterMessage(PrepareElectronicInvoiceLineFeedbackRequest)
 
 ElectronicInvoiceLineFeedbackRequest = _reflection.GeneratedProtocolMessageType('ElectronicInvoiceLineFeedbackRequest', (_message.Message,), dict(
+
+  TrueValuesEntry = _reflection.GeneratedProtocolMessageType('TrueValuesEntry', (_message.Message,), dict(
+    DESCRIPTOR = _ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY,
+    __module__ = 'asgt.dataservice.v1alpha1.dataservice_pb2'
+    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry)
+    ))
+  ,
   DESCRIPTOR = _ELECTRONICINVOICELINEFEEDBACKREQUEST,
   __module__ = 'asgt.dataservice.v1alpha1.dataservice_pb2'
   # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest)
   ))
 _sym_db.RegisterMessage(ElectronicInvoiceLineFeedbackRequest)
+_sym_db.RegisterMessage(ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry)
 
 BankEntry = _reflection.GeneratedProtocolMessageType('BankEntry', (_message.Message,), dict(
   DESCRIPTOR = _BANKENTRY,
@@ -711,12 +803,14 @@ _SCANNEDINVOICEENTRY.fields_by_name['user']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['tags']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['feedback_time']._options = None
 _SCANNEDINVOICEENTRY._options = None
+_SCANNEDINVOICEFEEDBACKREQUEST_TRUEVALUESENTRY._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['id']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['consumer']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['user']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['tags']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['feedback_time']._options = None
 _ELECTRONICINVOICELINEENTRY._options = None
+_ELECTRONICINVOICELINEFEEDBACKREQUEST_TRUEVALUESENTRY._options = None
 _BANKENTRY.fields_by_name['id']._options = None
 _BANKENTRY.fields_by_name['consumer']._options = None
 _BANKENTRY.fields_by_name['user']._options = None
@@ -730,8 +824,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2528,
-  serialized_end=3228,
+  serialized_start=2678,
+  serialized_end=3378,
   methods=[
   _descriptor.MethodDescriptor(
     name='PrepareScannedInvoiceFeedback',

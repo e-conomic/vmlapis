@@ -748,7 +748,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.toObject = functio
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 2),
-    trueValues: (f = msg.getTrueValues()) && asgt_jester_v1alpha1_jester_pb.ScannedInvoiceRequest.Data.toObject(includeInstance, f)
+    trueValuesMap: (f = msg.getTrueValuesMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -794,9 +794,10 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.deserializeBinaryF
       msg.addTags(value);
       break;
     case 3:
-      var value = new asgt_jester_v1alpha1_jester_pb.ScannedInvoiceRequest.Data;
-      reader.readMessage(value,asgt_jester_v1alpha1_jester_pb.ScannedInvoiceRequest.Data.deserializeBinaryFromReader);
-      msg.setTrueValues(value);
+      var value = msg.getTrueValuesMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -841,13 +842,9 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.serializeBinaryToW
       f
     );
   }
-  f = message.getTrueValues();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      asgt_jester_v1alpha1_jester_pb.ScannedInvoiceRequest.Data.serializeBinaryToWriter
-    );
+  f = message.getTrueValuesMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -897,32 +894,20 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.clearTag
 
 
 /**
- * optional asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;
- * @return {?proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
+ * map<string, string> true_values = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.getTrueValues = function() {
-  return /** @type{?proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data} */ (
-    jspb.Message.getWrapperField(this, asgt_jester_v1alpha1_jester_pb.ScannedInvoiceRequest.Data, 3));
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.getTrueValuesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      null));
 };
 
 
-/** @param {?proto.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data|undefined} value */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.setTrueValues = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.clearTrueValues = function() {
-  this.setTrueValues(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.hasTrueValues = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.prototype.clearTrueValuesMap = function() {
+  this.getTrueValuesMap().clear();
 };
 
 
@@ -1648,7 +1633,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.toObject = 
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 2),
-    trueValues: (f = msg.getTrueValues()) && asgt_jester_v1alpha1_jester_pb.ElectronicInvoiceLineRequest.Data.toObject(includeInstance, f)
+    trueValuesMap: (f = msg.getTrueValuesMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
   if (includeInstance) {
@@ -1694,9 +1679,10 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.deserialize
       msg.addTags(value);
       break;
     case 3:
-      var value = new asgt_jester_v1alpha1_jester_pb.ElectronicInvoiceLineRequest.Data;
-      reader.readMessage(value,asgt_jester_v1alpha1_jester_pb.ElectronicInvoiceLineRequest.Data.deserializeBinaryFromReader);
-      msg.setTrueValues(value);
+      var value = msg.getTrueValuesMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
+         });
       break;
     default:
       reader.skipField();
@@ -1741,13 +1727,9 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.serializeBi
       f
     );
   }
-  f = message.getTrueValues();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      asgt_jester_v1alpha1_jester_pb.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter
-    );
+  f = message.getTrueValuesMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -1797,32 +1779,20 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.c
 
 
 /**
- * optional asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;
- * @return {?proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
+ * map<string, string> true_values = 3;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,string>}
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.getTrueValues = function() {
-  return /** @type{?proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data} */ (
-    jspb.Message.getWrapperField(this, asgt_jester_v1alpha1_jester_pb.ElectronicInvoiceLineRequest.Data, 3));
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.getTrueValuesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,string>} */ (
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
+      null));
 };
 
 
-/** @param {?proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data|undefined} value */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.setTrueValues = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.clearTrueValues = function() {
-  this.setTrueValues(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.hasTrueValues = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.prototype.clearTrueValuesMap = function() {
+  this.getTrueValuesMap().clear();
 };
 
 

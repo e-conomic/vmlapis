@@ -71,7 +71,7 @@ message PrepareScannedInvoiceFeedbackRequest {
 message ScannedInvoiceFeedbackRequest {
   string id = 1;
   repeated string tags = 2;
-  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;
+  map<string, string> true_values = 3;
 }
 
 // Electronic Invoice Line
@@ -105,7 +105,7 @@ message PrepareElectronicInvoiceLineFeedbackRequest {
 message ElectronicInvoiceLineFeedbackRequest {
   string id = 1;
   repeated string tags = 2;
-  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;
+  map<string, string> true_values = 3;
 }
 
 // Bank

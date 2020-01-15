@@ -1,0 +1,133 @@
+[
+ {
+  "name": "id",
+  "type": "STRING",
+  "mode": "REQUIRED",
+  "description": "Feedback ID, same as Envoy request id"
+ },
+ {
+  "name": "consumer",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "user",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "tags",
+  "type": "STRING",
+  "mode": "REPEATED",
+  "description": "Tags defined by consumer, enriched by service if valetkey is used"
+ },
+ {
+  "name": "input",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "issue_date",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "currency",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_global_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "customer_ref",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "total",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "line_text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "line_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "true_values",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "issue_date",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "currency",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "supplier_global_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "customer_ref",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "total",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "line_text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "line_id",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "feedback_time",
+  "type": "TIMESTAMP",
+  "mode": "REQUIRED"
+ }
+]

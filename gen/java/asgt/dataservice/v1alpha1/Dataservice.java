@@ -2968,17 +2968,38 @@ public final class Dataservice {
         getTagsBytes(int index);
 
     /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    boolean hasTrueValues();
+    int getTrueValuesCount();
     /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getTrueValues();
+    boolean containsTrueValues(
+        java.lang.String key);
     /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+     * Use {@link #getTrueValuesMap()} instead.
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getTrueValuesOrBuilder();
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getTrueValues();
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getTrueValuesMap();
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    java.lang.String getTrueValuesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    java.lang.String getTrueValuesOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest}
@@ -3037,16 +3058,16 @@ public final class Dataservice {
               break;
             }
             case 26: {
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder subBuilder = null;
-              if (trueValues_ != null) {
-                subBuilder = trueValues_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                trueValues_ = com.google.protobuf.MapField.newMapField(
+                    TrueValuesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
               }
-              trueValues_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trueValues_);
-                trueValues_ = subBuilder.buildPartial();
-              }
-
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              trueValues__ = input.readMessage(
+                  TrueValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              trueValues_.getMutableMap().put(
+                  trueValues__.getKey(), trueValues__.getValue());
               break;
             }
             default: {
@@ -3076,6 +3097,18 @@ public final class Dataservice {
       return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetTrueValues();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -3149,24 +3182,79 @@ public final class Dataservice {
     }
 
     public static final int TRUE_VALUES_FIELD_NUMBER = 3;
-    private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data trueValues_;
-    /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
-     */
-    public boolean hasTrueValues() {
-      return trueValues_ != null;
+    private static final class TrueValuesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> trueValues_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetTrueValues() {
+      if (trueValues_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TrueValuesDefaultEntryHolder.defaultEntry);
+      }
+      return trueValues_;
+    }
+
+    public int getTrueValuesCount() {
+      return internalGetTrueValues().getMap().size();
     }
     /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getTrueValues() {
-      return trueValues_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : trueValues_;
+
+    public boolean containsTrueValues(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTrueValues().getMap().containsKey(key);
     }
     /**
-     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+     * Use {@link #getTrueValuesMap()} instead.
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getTrueValuesOrBuilder() {
-      return getTrueValues();
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getTrueValues() {
+      return getTrueValuesMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getTrueValuesMap() {
+      return internalGetTrueValues().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.lang.String getTrueValuesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTrueValues().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.lang.String getTrueValuesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTrueValues().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3189,9 +3277,12 @@ public final class Dataservice {
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
       }
-      if (trueValues_ != null) {
-        output.writeMessage(3, getTrueValues());
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTrueValues(),
+          TrueValuesDefaultEntryHolder.defaultEntry,
+          3);
       unknownFields.writeTo(output);
     }
 
@@ -3212,9 +3303,15 @@ public final class Dataservice {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (trueValues_ != null) {
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetTrueValues().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        trueValues__ = TrueValuesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTrueValues());
+            .computeMessageSize(3, trueValues__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3236,11 +3333,8 @@ public final class Dataservice {
           .equals(other.getId());
       result = result && getTagsList()
           .equals(other.getTagsList());
-      result = result && (hasTrueValues() == other.hasTrueValues());
-      if (hasTrueValues()) {
-        result = result && getTrueValues()
-            .equals(other.getTrueValues());
-      }
+      result = result && internalGetTrueValues().equals(
+          other.internalGetTrueValues());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3258,9 +3352,9 @@ public final class Dataservice {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
-      if (hasTrueValues()) {
+      if (!internalGetTrueValues().getMap().isEmpty()) {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getTrueValues().hashCode();
+        hash = (53 * hash) + internalGetTrueValues().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3369,6 +3463,28 @@ public final class Dataservice {
         return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetTrueValues();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableTrueValues();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -3399,12 +3515,7 @@ public final class Dataservice {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-        } else {
-          trueValues_ = null;
-          trueValuesBuilder_ = null;
-        }
+        internalGetMutableTrueValues().clear();
         return this;
       }
 
@@ -3439,11 +3550,8 @@ public final class Dataservice {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
-        if (trueValuesBuilder_ == null) {
-          result.trueValues_ = trueValues_;
-        } else {
-          result.trueValues_ = trueValuesBuilder_.build();
-        }
+        result.trueValues_ = internalGetTrueValues();
+        result.trueValues_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3507,9 +3615,8 @@ public final class Dataservice {
           }
           onChanged();
         }
-        if (other.hasTrueValues()) {
-          mergeTrueValues(other.getTrueValues());
-        }
+        internalGetMutableTrueValues().mergeFrom(
+            other.internalGetTrueValues());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -3703,121 +3810,127 @@ public final class Dataservice {
         return this;
       }
 
-      private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data trueValues_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> trueValuesBuilder_;
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
-       */
-      public boolean hasTrueValues() {
-        return trueValuesBuilder_ != null || trueValues_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          return trueValues_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : trueValues_;
-        } else {
-          return trueValuesBuilder_.getMessage();
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> trueValues_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTrueValues() {
+        if (trueValues_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TrueValuesDefaultEntryHolder.defaultEntry);
         }
+        return trueValues_;
       }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
-       */
-      public Builder setTrueValues(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-        if (trueValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trueValues_ = value;
-          onChanged();
-        } else {
-          trueValuesBuilder_.setMessage(value);
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableTrueValues() {
+        onChanged();;
+        if (trueValues_ == null) {
+          trueValues_ = com.google.protobuf.MapField.newMapField(
+              TrueValuesDefaultEntryHolder.defaultEntry);
         }
+        if (!trueValues_.isMutable()) {
+          trueValues_ = trueValues_.copy();
+        }
+        return trueValues_;
+      }
 
-        return this;
+      public int getTrueValuesCount() {
+        return internalGetTrueValues().getMap().size();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      public Builder setTrueValues(
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = builderForValue.build();
-          onChanged();
-        } else {
-          trueValuesBuilder_.setMessage(builderForValue.build());
-        }
 
-        return this;
+      public boolean containsTrueValues(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTrueValues().getMap().containsKey(key);
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * Use {@link #getTrueValuesMap()} instead.
        */
-      public Builder mergeTrueValues(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-        if (trueValuesBuilder_ == null) {
-          if (trueValues_ != null) {
-            trueValues_ =
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder(trueValues_).mergeFrom(value).buildPartial();
-          } else {
-            trueValues_ = value;
-          }
-          onChanged();
-        } else {
-          trueValuesBuilder_.mergeFrom(value);
-        }
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTrueValues() {
+        return getTrueValuesMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
 
-        return this;
+      public java.util.Map<java.lang.String, java.lang.String> getTrueValuesMap() {
+        return internalGetTrueValues().getMap();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
+
+      public java.lang.String getTrueValuesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTrueValues().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
+
+      public java.lang.String getTrueValuesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTrueValues().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       public Builder clearTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-          onChanged();
-        } else {
-          trueValues_ = null;
-          trueValuesBuilder_ = null;
-        }
-
+        internalGetMutableTrueValues().getMutableMap()
+            .clear();
         return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getTrueValuesBuilder() {
-        
-        onChanged();
-        return getTrueValuesFieldBuilder().getBuilder();
+
+      public Builder removeTrueValues(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTrueValues().getMutableMap()
+            .remove(key);
+        return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * Use alternate mutation accessors instead.
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getTrueValuesOrBuilder() {
-        if (trueValuesBuilder_ != null) {
-          return trueValuesBuilder_.getMessageOrBuilder();
-        } else {
-          return trueValues_ == null ?
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : trueValues_;
-        }
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableTrueValues() {
+        return internalGetMutableTrueValues().getMutableMap();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
-          getTrueValuesFieldBuilder() {
-        if (trueValuesBuilder_ == null) {
-          trueValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
-                  getTrueValues(),
-                  getParentForChildren(),
-                  isClean());
-          trueValues_ = null;
-        }
-        return trueValuesBuilder_;
+      public Builder putTrueValues(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTrueValues().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
+
+      public Builder putAllTrueValues(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableTrueValues().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6826,17 +6939,38 @@ public final class Dataservice {
         getTagsBytes(int index);
 
     /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    boolean hasTrueValues();
+    int getTrueValuesCount();
     /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getTrueValues();
+    boolean containsTrueValues(
+        java.lang.String key);
     /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+     * Use {@link #getTrueValuesMap()} instead.
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getTrueValuesOrBuilder();
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getTrueValues();
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getTrueValuesMap();
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    java.lang.String getTrueValuesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    java.lang.String getTrueValuesOrThrow(
+        java.lang.String key);
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest}
@@ -6895,16 +7029,16 @@ public final class Dataservice {
               break;
             }
             case 26: {
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder subBuilder = null;
-              if (trueValues_ != null) {
-                subBuilder = trueValues_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                trueValues_ = com.google.protobuf.MapField.newMapField(
+                    TrueValuesDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000004;
               }
-              trueValues_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(trueValues_);
-                trueValues_ = subBuilder.buildPartial();
-              }
-
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              trueValues__ = input.readMessage(
+                  TrueValuesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              trueValues_.getMutableMap().put(
+                  trueValues__.getKey(), trueValues__.getValue());
               break;
             }
             default: {
@@ -6934,6 +7068,18 @@ public final class Dataservice {
       return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 3:
+          return internalGetTrueValues();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -7007,24 +7153,79 @@ public final class Dataservice {
     }
 
     public static final int TRUE_VALUES_FIELD_NUMBER = 3;
-    private asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data trueValues_;
-    /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
-     */
-    public boolean hasTrueValues() {
-      return trueValues_ != null;
+    private static final class TrueValuesDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> trueValues_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetTrueValues() {
+      if (trueValues_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TrueValuesDefaultEntryHolder.defaultEntry);
+      }
+      return trueValues_;
+    }
+
+    public int getTrueValuesCount() {
+      return internalGetTrueValues().getMap().size();
     }
     /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getTrueValues() {
-      return trueValues_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance() : trueValues_;
+
+    public boolean containsTrueValues(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetTrueValues().getMap().containsKey(key);
     }
     /**
-     * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+     * Use {@link #getTrueValuesMap()} instead.
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getTrueValuesOrBuilder() {
-      return getTrueValues();
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getTrueValues() {
+      return getTrueValuesMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getTrueValuesMap() {
+      return internalGetTrueValues().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.lang.String getTrueValuesOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTrueValues().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; true_values = 3;</code>
+     */
+
+    public java.lang.String getTrueValuesOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetTrueValues().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7047,9 +7248,12 @@ public final class Dataservice {
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
       }
-      if (trueValues_ != null) {
-        output.writeMessage(3, getTrueValues());
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetTrueValues(),
+          TrueValuesDefaultEntryHolder.defaultEntry,
+          3);
       unknownFields.writeTo(output);
     }
 
@@ -7070,9 +7274,15 @@ public final class Dataservice {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (trueValues_ != null) {
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetTrueValues().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        trueValues__ = TrueValuesDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTrueValues());
+            .computeMessageSize(3, trueValues__);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -7094,11 +7304,8 @@ public final class Dataservice {
           .equals(other.getId());
       result = result && getTagsList()
           .equals(other.getTagsList());
-      result = result && (hasTrueValues() == other.hasTrueValues());
-      if (hasTrueValues()) {
-        result = result && getTrueValues()
-            .equals(other.getTrueValues());
-      }
+      result = result && internalGetTrueValues().equals(
+          other.internalGetTrueValues());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7116,9 +7323,9 @@ public final class Dataservice {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
-      if (hasTrueValues()) {
+      if (!internalGetTrueValues().getMap().isEmpty()) {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getTrueValues().hashCode();
+        hash = (53 * hash) + internalGetTrueValues().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7227,6 +7434,28 @@ public final class Dataservice {
         return asgt.dataservice.v1alpha1.Dataservice.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetTrueValues();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 3:
+            return internalGetMutableTrueValues();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -7257,12 +7486,7 @@ public final class Dataservice {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-        } else {
-          trueValues_ = null;
-          trueValuesBuilder_ = null;
-        }
+        internalGetMutableTrueValues().clear();
         return this;
       }
 
@@ -7297,11 +7521,8 @@ public final class Dataservice {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
-        if (trueValuesBuilder_ == null) {
-          result.trueValues_ = trueValues_;
-        } else {
-          result.trueValues_ = trueValuesBuilder_.build();
-        }
+        result.trueValues_ = internalGetTrueValues();
+        result.trueValues_.makeImmutable();
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7365,9 +7586,8 @@ public final class Dataservice {
           }
           onChanged();
         }
-        if (other.hasTrueValues()) {
-          mergeTrueValues(other.getTrueValues());
-        }
+        internalGetMutableTrueValues().mergeFrom(
+            other.internalGetTrueValues());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -7561,121 +7781,127 @@ public final class Dataservice {
         return this;
       }
 
-      private asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data trueValues_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> trueValuesBuilder_;
-      /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
-       */
-      public boolean hasTrueValues() {
-        return trueValuesBuilder_ != null || trueValues_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          return trueValues_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance() : trueValues_;
-        } else {
-          return trueValuesBuilder_.getMessage();
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> trueValues_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetTrueValues() {
+        if (trueValues_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              TrueValuesDefaultEntryHolder.defaultEntry);
         }
+        return trueValues_;
       }
-      /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
-       */
-      public Builder setTrueValues(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
-        if (trueValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          trueValues_ = value;
-          onChanged();
-        } else {
-          trueValuesBuilder_.setMessage(value);
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableTrueValues() {
+        onChanged();;
+        if (trueValues_ == null) {
+          trueValues_ = com.google.protobuf.MapField.newMapField(
+              TrueValuesDefaultEntryHolder.defaultEntry);
         }
+        if (!trueValues_.isMutable()) {
+          trueValues_ = trueValues_.copy();
+        }
+        return trueValues_;
+      }
 
-        return this;
+      public int getTrueValuesCount() {
+        return internalGetTrueValues().getMap().size();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      public Builder setTrueValues(
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = builderForValue.build();
-          onChanged();
-        } else {
-          trueValuesBuilder_.setMessage(builderForValue.build());
-        }
 
-        return this;
+      public boolean containsTrueValues(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetTrueValues().getMap().containsKey(key);
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * Use {@link #getTrueValuesMap()} instead.
        */
-      public Builder mergeTrueValues(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
-        if (trueValuesBuilder_ == null) {
-          if (trueValues_ != null) {
-            trueValues_ =
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.newBuilder(trueValues_).mergeFrom(value).buildPartial();
-          } else {
-            trueValues_ = value;
-          }
-          onChanged();
-        } else {
-          trueValuesBuilder_.mergeFrom(value);
-        }
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getTrueValues() {
+        return getTrueValuesMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
 
-        return this;
+      public java.util.Map<java.lang.String, java.lang.String> getTrueValuesMap() {
+        return internalGetTrueValues().getMap();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
+
+      public java.lang.String getTrueValuesOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTrueValues().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
+
+      public java.lang.String getTrueValuesOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetTrueValues().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
       public Builder clearTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-          onChanged();
-        } else {
-          trueValues_ = null;
-          trueValuesBuilder_ = null;
-        }
-
+        internalGetMutableTrueValues().getMutableMap()
+            .clear();
         return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder getTrueValuesBuilder() {
-        
-        onChanged();
-        return getTrueValuesFieldBuilder().getBuilder();
+
+      public Builder removeTrueValues(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTrueValues().getMutableMap()
+            .remove(key);
+        return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * Use alternate mutation accessors instead.
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getTrueValuesOrBuilder() {
-        if (trueValuesBuilder_ != null) {
-          return trueValuesBuilder_.getMessageOrBuilder();
-        } else {
-          return trueValues_ == null ?
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance() : trueValues_;
-        }
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableTrueValues() {
+        return internalGetMutableTrueValues().getMutableMap();
       }
       /**
-       * <code>.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 3;</code>
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
-          getTrueValuesFieldBuilder() {
-        if (trueValuesBuilder_ == null) {
-          trueValuesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder>(
-                  getTrueValues(),
-                  getParentForChildren(),
-                  isClean());
-          trueValues_ = null;
-        }
-        return trueValuesBuilder_;
+      public Builder putTrueValues(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableTrueValues().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; true_values = 3;</code>
+       */
+
+      public Builder putAllTrueValues(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableTrueValues().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12493,6 +12719,11 @@ public final class Dataservice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -12507,6 +12738,11 @@ public final class Dataservice {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor;
   private static final 
@@ -12557,67 +12793,71 @@ public final class Dataservice {
       "put\030\003 \001(\01320.asgt.jester.v1alpha1.Scanned" +
       "InvoiceRequest.Data\0225\n\013predictions\030\004 \003(\013" +
       "2 .asgt.jester.v1alpha1.Prediction\022\014\n\004ta" +
-      "gs\030\005 \003(\t\"\200\001\n\035ScannedInvoiceFeedbackReque" +
-      "st\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022E\n\013true_val" +
-      "ues\030\003 \001(\01320.asgt.jester.v1alpha1.Scanned" +
-      "InvoiceRequest.Data\"\277\003\n\032ElectronicInvoic" +
-      "eLineEntry\022;\n\002id\030\001 \001(\tB/\352?\'\"%Feedback ID" +
-      ", same as Envoy request id\352?\002\010\001\022\027\n\010consu" +
-      "mer\030\002 \001(\tB\005\352?\002\010\001\022\023\n\004user\030\003 \001(\tB\005\352?\002\010\001\022T\n" +
-      "\004tags\030\004 \003(\tBF\352?C\"ATags defined by consum" +
-      "er, enriched by service if valetkey is u" +
-      "sed\022F\n\005input\030\005 \001(\01327.asgt.jester.v1alpha" +
-      "1.ElectronicInvoiceLineRequest.Data\022L\n\013t" +
-      "rue_values\030\006 \001(\01327.asgt.jester.v1alpha1." +
-      "ElectronicInvoiceLineRequest.Data\022\'\n\rfee" +
-      "dback_time\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n" +
-      "\034electronic_invoice_line_data\"\324\001\n+Prepar" +
-      "eElectronicInvoiceLineFeedbackRequest\022\n\n" +
-      "\002id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022F\n\005input\030\003 \001(\01327" +
-      ".asgt.jester.v1alpha1.ElectronicInvoiceL" +
-      "ineRequest.Data\0225\n\013predictions\030\004 \003(\0132 .a" +
-      "sgt.jester.v1alpha1.Prediction\022\014\n\004tags\030\005" +
-      " \003(\t\"\216\001\n$ElectronicInvoiceLineFeedbackRe" +
-      "quest\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022L\n\013true_" +
-      "values\030\003 \001(\01327.asgt.jester.v1alpha1.Elec" +
-      "tronicInvoiceLineRequest.Data\"\371\002\n\tBankEn" +
-      "try\022;\n\002id\030\001 \001(\tB/\352?\'\"%Feedback ID, same " +
-      "as Envoy request id\352?\002\010\001\022\027\n\010consumer\030\002 \001" +
-      "(\tB\005\352?\002\010\001\022\023\n\004user\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004" +
-      " \003(\tBF\352?C\"ATags defined by consumer, enr" +
-      "iched by service if valetkey is used\0225\n\005" +
-      "input\030\005 \001(\0132&.asgt.jester.v1alpha1.BankR" +
-      "equest.Data\022;\n\013true_values\030\006 \001(\0132&.asgt." +
-      "jester.v1alpha1.BankRequest.Data\022\'\n\rfeed" +
-      "back_time\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\t" +
-      "bank_data\"\262\001\n\032PrepareBankFeedbackRequest" +
-      "\022\n\n\002id\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\0225\n\005input\030\003 \001(" +
+      "gs\030\005 \003(\t\"\313\001\n\035ScannedInvoiceFeedbackReque" +
+      "st\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022]\n\013true_val" +
+      "ues\030\003 \003(\0132H.asgt.dataservice.v1alpha1.Sc" +
+      "annedInvoiceFeedbackRequest.TrueValuesEn" +
+      "try\0321\n\017TrueValuesEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005v" +
+      "alue\030\002 \001(\t:\0028\001\"\277\003\n\032ElectronicInvoiceLine" +
+      "Entry\022;\n\002id\030\001 \001(\tB/\352?\'\"%Feedback ID, sam" +
+      "e as Envoy request id\352?\002\010\001\022\027\n\010consumer\030\002" +
+      " \001(\tB\005\352?\002\010\001\022\023\n\004user\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags" +
+      "\030\004 \003(\tBF\352?C\"ATags defined by consumer, e" +
+      "nriched by service if valetkey is used\022F" +
+      "\n\005input\030\005 \001(\01327.asgt.jester.v1alpha1.Ele" +
+      "ctronicInvoiceLineRequest.Data\022L\n\013true_v" +
+      "alues\030\006 \001(\01327.asgt.jester.v1alpha1.Elect" +
+      "ronicInvoiceLineRequest.Data\022\'\n\rfeedback" +
+      "_time\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034elec" +
+      "tronic_invoice_line_data\"\324\001\n+PrepareElec" +
+      "tronicInvoiceLineFeedbackRequest\022\n\n\002id\030\001" +
+      " \001(\t\022\014\n\004user\030\002 \001(\t\022F\n\005input\030\003 \001(\01327.asgt" +
+      ".jester.v1alpha1.ElectronicInvoiceLineRe" +
+      "quest.Data\0225\n\013predictions\030\004 \003(\0132 .asgt.j" +
+      "ester.v1alpha1.Prediction\022\014\n\004tags\030\005 \003(\t\"" +
+      "\331\001\n$ElectronicInvoiceLineFeedbackRequest" +
+      "\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022d\n\013true_value" +
+      "s\030\003 \003(\0132O.asgt.dataservice.v1alpha1.Elec" +
+      "tronicInvoiceLineFeedbackRequest.TrueVal" +
+      "uesEntry\0321\n\017TrueValuesEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\t:\0028\001\"\371\002\n\tBankEntry\022;\n\002id\030" +
+      "\001 \001(\tB/\352?\'\"%Feedback ID, same as Envoy r" +
+      "equest id\352?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022" +
+      "\023\n\004user\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"" +
+      "ATags defined by consumer, enriched by s" +
+      "ervice if valetkey is used\0225\n\005input\030\005 \001(" +
       "\0132&.asgt.jester.v1alpha1.BankRequest.Dat" +
-      "a\0225\n\013predictions\030\004 \003(\0132 .asgt.jester.v1a" +
-      "lpha1.Prediction\022\014\n\004tags\030\005 \003(\t\"l\n\023BankFe" +
-      "edbackRequest\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022" +
-      ";\n\013true_values\030\003 \001(\0132&.asgt.jester.v1alp" +
-      "ha1.BankRequest.Data\"?\n\rDeleteRequest\022\022\n" +
-      "\nmodel_type\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022\014\n\004tags\030" +
-      "\003 \003(\t2\274\005\n\013DataService\022x\n\035PrepareScannedI" +
-      "nvoiceFeedback\022?.asgt.dataservice.v1alph" +
-      "a1.PrepareScannedInvoiceFeedbackRequest\032" +
-      "\026.google.protobuf.Empty\022\230\001\n\026ScannedInvoi" +
-      "ceFeedback\0228.asgt.dataservice.v1alpha1.S" +
-      "cannedInvoiceFeedbackRequest\032\026.google.pr" +
-      "otobuf.Empty\",\202\323\344\223\002&\"!/v1alpha1/feedback" +
-      ":scannedinvoice:\001*\022~\n#PrepareElectronicI" +
-      "nvoicLineFeedback\022?.asgt.dataservice.v1a" +
-      "lpha1.PrepareScannedInvoiceFeedbackReque" +
-      "st\032\026.google.protobuf.Empty\022\245\001\n\034Electroni" +
-      "cInvoicLineFeedback\0228.asgt.dataservice.v" +
-      "1alpha1.ScannedInvoiceFeedbackRequest\032\026." +
-      "google.protobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1" +
-      "/feedback:electronicinvoiceline:\001*\022p\n\006De" +
-      "lete\022(.asgt.dataservice.v1alpha1.DeleteR" +
-      "equest\032\026.google.protobuf.Empty\"$\202\323\344\223\002\036\"\031" +
-      "/v1alpha1/feedback:delete:\001*B\rZ\013dataserv" +
-      "iceb\006proto3"
+      "a\022;\n\013true_values\030\006 \001(\0132&.asgt.jester.v1a" +
+      "lpha1.BankRequest.Data\022\'\n\rfeedback_time\030" +
+      "\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_data\"" +
+      "\262\001\n\032PrepareBankFeedbackRequest\022\n\n\002id\030\001 \001" +
+      "(\t\022\014\n\004user\030\002 \001(\t\0225\n\005input\030\003 \001(\0132&.asgt.j" +
+      "ester.v1alpha1.BankRequest.Data\0225\n\013predi" +
+      "ctions\030\004 \003(\0132 .asgt.jester.v1alpha1.Pred" +
+      "iction\022\014\n\004tags\030\005 \003(\t\"l\n\023BankFeedbackRequ" +
+      "est\022\n\n\002id\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022;\n\013true_va" +
+      "lues\030\003 \001(\0132&.asgt.jester.v1alpha1.BankRe" +
+      "quest.Data\"?\n\rDeleteRequest\022\022\n\nmodel_typ" +
+      "e\030\001 \001(\t\022\014\n\004user\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t2\274\005\n\013" +
+      "DataService\022x\n\035PrepareScannedInvoiceFeed" +
+      "back\022?.asgt.dataservice.v1alpha1.Prepare" +
+      "ScannedInvoiceFeedbackRequest\032\026.google.p" +
+      "rotobuf.Empty\022\230\001\n\026ScannedInvoiceFeedback" +
+      "\0228.asgt.dataservice.v1alpha1.ScannedInvo" +
+      "iceFeedbackRequest\032\026.google.protobuf.Emp" +
+      "ty\",\202\323\344\223\002&\"!/v1alpha1/feedback:scannedin" +
+      "voice:\001*\022~\n#PrepareElectronicInvoicLineF" +
+      "eedback\022?.asgt.dataservice.v1alpha1.Prep" +
+      "areScannedInvoiceFeedbackRequest\032\026.googl" +
+      "e.protobuf.Empty\022\245\001\n\034ElectronicInvoicLin" +
+      "eFeedback\0228.asgt.dataservice.v1alpha1.Sc" +
+      "annedInvoiceFeedbackRequest\032\026.google.pro" +
+      "tobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/feedback:" +
+      "electronicinvoiceline:\001*\022p\n\006Delete\022(.asg" +
+      "t.dataservice.v1alpha1.DeleteRequest\032\026.g" +
+      "oogle.protobuf.Empty\"$\202\323\344\223\002\036\"\031/v1alpha1/" +
+      "feedback:delete:\001*B\rZ\013dataserviceb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -12654,6 +12894,12 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "Tags", "TrueValues", });
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_descriptor =
+      internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceFeedbackRequest_TrueValuesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable = new
@@ -12672,6 +12918,12 @@ public final class Dataservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_descriptor,
         new java.lang.String[] { "Id", "Tags", "TrueValues", });
+    internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_descriptor =
+      internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineFeedbackRequest_TrueValuesEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_asgt_dataservice_v1alpha1_BankEntry_fieldAccessorTable = new

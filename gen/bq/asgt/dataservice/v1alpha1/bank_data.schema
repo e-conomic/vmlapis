@@ -1,0 +1,93 @@
+[
+ {
+  "name": "id",
+  "type": "STRING",
+  "mode": "REQUIRED",
+  "description": "Feedback ID, same as Envoy request id"
+ },
+ {
+  "name": "consumer",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "user",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "tags",
+  "type": "STRING",
+  "mode": "REPEATED",
+  "description": "Tags defined by consumer, enriched by service if valetkey is used"
+ },
+ {
+  "name": "input",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "account_number",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "amount",
+    "type": "FLOAT",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "entry_type",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "time_stamp",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "true_values",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "account_number",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "amount",
+    "type": "FLOAT",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "entry_type",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "time_stamp",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "feedback_time",
+  "type": "TIMESTAMP",
+  "mode": "REQUIRED"
+ }
+]
