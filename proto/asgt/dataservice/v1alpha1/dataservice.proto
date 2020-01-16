@@ -12,32 +12,63 @@ import "asgt/jester/v1alpha1/jester.proto";
 
 service DataService {
   rpc PrepareScannedInvoiceFeedback(PrepareScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty);
-  rpc ScannedInvoiceFeedback(ScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty) {
+  rpc ScannedInvoiceAddData(AddDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:scannedinvoice"
+      post: "/v1alpha1/data:scannedinvoice"
       body: "*"
     };
   }
   rpc PrepareElectronicInvoicLineFeedback(PrepareScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty);
-  rpc ElectronicInvoicLineFeedback(ScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty) {
+  rpc ElectronicInvoicLineAddData(AddDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:electronicinvoiceline"
+      post: "/v1alpha1/data:electronicinvoiceline"
       body: "*"
     };
   }
-  // TODO(helvind)
-  // rpc AppendDataset(AppendDataRequest) returns (google.protobuf.Empty) {
-  //   option (google.api.http) = {
-  //     post: "/v1alpha1/feedback:append"
-  //     body: "*"
-  //   };
-  // }
+  rpc PrepareBankFeedback(PrepareScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty);
+  rpc BankAddData(AddDataRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/data:bank"
+      body: "*"
+    };
+  }
   rpc Delete(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:delete"
+      post: "/v1alpha1/data:delete"
       body: "*"
     };
   }
+}
+
+// Common Data types
+message DataTuple {
+  string target = 1;
+  string value = 2;
+}
+
+message PredictedTuple {
+  string target = 1;
+  repeated string predictions = 2;
+}
+
+message AddDataRequest {
+  message RetentionPolicy {
+    oneof policy {
+      int32 max_days = 1;
+      int32 max_records = 2;
+    }
+  }
+  string id = 1;
+  string dataset = 2;
+  repeated string tags = 3;
+  repeated DataTuple true_values = 4;
+  RetentionPolicy retention_policy = 5;
+}
+
+message DeleteRequest {
+  string model_type = 1;
+  string dataset = 2;
+  repeated string tags = 3;
 }
 
 // Scanned Invoice
@@ -48,11 +79,12 @@ message ScannedInvoiceEntry {
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-  string user = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 5;
-  map<string, string> true_values = 6;
-  uint64 feedback_time = 7 [
+  repeated DataTuple true_values = 6;
+  repeated PredictedTuple pred_values = 7;
+  uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
       type_override: 'TIMESTAMP'
@@ -62,16 +94,10 @@ message ScannedInvoiceEntry {
 
 message PrepareScannedInvoiceFeedbackRequest {
   string id = 1;
-  string user = 2;
+  string dataset = 2;
   asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 3;
   repeated asgt.jester.v1alpha1.Prediction predictions = 4;
   repeated string tags = 5;
-}
-
-message ScannedInvoiceFeedbackRequest {
-  string id = 1;
-  repeated string tags = 2;
-  map<string, string> true_values = 3;
 }
 
 // Electronic Invoice Line
@@ -82,10 +108,11 @@ message ElectronicInvoiceLineEntry {
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-  string user = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 5;
-  map<string, string> true_values = 6;
+  repeated DataTuple true_values = 6;
+  repeated PredictedTuple pred_values = 7;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -96,16 +123,10 @@ message ElectronicInvoiceLineEntry {
 
 message PrepareElectronicInvoiceLineFeedbackRequest {
   string id = 1;
-  string user = 2;
+  string dataset = 2;
   asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 3;
   repeated asgt.jester.v1alpha1.Prediction predictions = 4;
   repeated string tags = 5;
-}
-
-message ElectronicInvoiceLineFeedbackRequest {
-  string id = 1;
-  repeated string tags = 2;
-  map<string, string> true_values = 3;
 }
 
 // Bank
@@ -116,10 +137,11 @@ message BankEntry {
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-  string user = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.BankRequest.Data input = 5;
-  asgt.jester.v1alpha1.BankRequest.Data true_values = 6;
+  repeated DataTuple true_values = 6;
+  repeated PredictedTuple pred_values = 7;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -130,21 +152,8 @@ message BankEntry {
 
 message PrepareBankFeedbackRequest {
   string id = 1;
-  string user = 2;
+  string dataset = 2;
   asgt.jester.v1alpha1.BankRequest.Data input = 3;
   repeated asgt.jester.v1alpha1.Prediction predictions = 4;
   repeated string tags = 5;
-}
-
-message BankFeedbackRequest {
-  string id = 1;
-  repeated string tags = 2;
-  asgt.jester.v1alpha1.BankRequest.Data true_values = 3;
-}
-
-// Delete
-message DeleteRequest {
-  string model_type = 1;
-  string user = 2;
-  repeated string tags = 3;
 }
