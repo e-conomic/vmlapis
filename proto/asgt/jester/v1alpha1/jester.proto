@@ -83,14 +83,14 @@ message ScannedInvoiceRequest {
 message ElectronicInvoiceLineRequest {
   message Data {
     google.protobuf.Timestamp issue_date = 1;
-    string currency = 2;
+    google.protobuf.StringValue currency = 2;
     string supplier_id = 3;
-    string supplier_name = 4;
-    string supplier_global_id = 5;
-    string customer_ref = 6;
-    int32 total = 7;
-    string line_text = 8;
-    string line_id = 9;
+    google.protobuf.StringValue supplier_name = 4;
+    google.protobuf.StringValue supplier_global_id = 5;
+    google.protobuf.StringValue customer_ref = 6;
+    google.protobuf.Int32Value total = 7;
+    google.protobuf.StringValue line_text = 8;
+    google.protobuf.StringValue line_id = 9;
   }
 
   repeated Data inputs = 1;

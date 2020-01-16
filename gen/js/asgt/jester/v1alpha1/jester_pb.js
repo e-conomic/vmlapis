@@ -1534,14 +1534,14 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.toObject 
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
     issueDate: (f = msg.getIssueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    currency: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    currency: (f = msg.getCurrency()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierId: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    supplierName: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    supplierGlobalId: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    customerRef: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    total: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    lineText: jspb.Message.getFieldWithDefault(msg, 8, ""),
-    lineId: jspb.Message.getFieldWithDefault(msg, 9, "")
+    supplierName: (f = msg.getSupplierName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    supplierGlobalId: (f = msg.getSupplierGlobalId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    customerRef: (f = msg.getCustomerRef()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    total: (f = msg.getTotal()) && google_protobuf_wrappers_pb.Int32Value.toObject(includeInstance, f),
+    lineText: (f = msg.getLineText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    lineId: (f = msg.getLineId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1584,7 +1584,8 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFr
       msg.setIssueDate(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setCurrency(value);
       break;
     case 3:
@@ -1592,27 +1593,33 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFr
       msg.setSupplierId(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setSupplierName(value);
       break;
     case 5:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setSupplierGlobalId(value);
       break;
     case 6:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setCustomerRef(value);
       break;
     case 7:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = new google_protobuf_wrappers_pb.Int32Value;
+      reader.readMessage(value,google_protobuf_wrappers_pb.Int32Value.deserializeBinaryFromReader);
       msg.setTotal(value);
       break;
     case 8:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setLineText(value);
       break;
     case 9:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setLineId(value);
       break;
     default:
@@ -1653,10 +1660,11 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWr
     );
   }
   f = message.getCurrency();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getSupplierId();
@@ -1667,45 +1675,51 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWr
     );
   }
   f = message.getSupplierName();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       4,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getSupplierGlobalId();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       5,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getCustomerRef();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       6,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getTotal();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f != null) {
+    writer.writeMessage(
       7,
-      f
+      f,
+      google_protobuf_wrappers_pb.Int32Value.serializeBinaryToWriter
     );
   }
   f = message.getLineText();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       8,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getLineId();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       9,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
 };
@@ -1742,17 +1756,32 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasIssueD
 
 
 /**
- * optional string currency = 2;
- * @return {string}
+ * optional google.protobuf.StringValue currency = 2;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getCurrency = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 2));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setCurrency = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearCurrency = function() {
+  this.setCurrency(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasCurrency = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -1772,92 +1801,182 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSuppli
 
 
 /**
- * optional string supplier_name = 4;
- * @return {string}
+ * optional google.protobuf.StringValue supplier_name = 4;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getSupplierName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 4));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSupplierName = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearSupplierName = function() {
+  this.setSupplierName(undefined);
 };
 
 
 /**
- * optional string supplier_global_id = 5;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasSupplierName = function() {
+  return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue supplier_global_id = 5;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getSupplierGlobalId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 5));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setSupplierGlobalId = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearSupplierGlobalId = function() {
+  this.setSupplierGlobalId(undefined);
 };
 
 
 /**
- * optional string customer_ref = 6;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasSupplierGlobalId = function() {
+  return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue customer_ref = 6;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getCustomerRef = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 6));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setCustomerRef = function(value) {
-  jspb.Message.setProto3StringField(this, 6, value);
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearCustomerRef = function() {
+  this.setCustomerRef(undefined);
 };
 
 
 /**
- * optional int32 total = 7;
- * @return {number}
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasCustomerRef = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional google.protobuf.Int32Value total = 7;
+ * @return {?proto.google.protobuf.Int32Value}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getTotal = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+  return /** @type{?proto.google.protobuf.Int32Value} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.Int32Value, 7));
 };
 
 
-/** @param {number} value */
+/** @param {?proto.google.protobuf.Int32Value|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setTotal = function(value) {
-  jspb.Message.setProto3IntField(this, 7, value);
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearTotal = function() {
+  this.setTotal(undefined);
 };
 
 
 /**
- * optional string line_text = 8;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasTotal = function() {
+  return jspb.Message.getField(this, 7) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue line_text = 8;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getLineText = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 8));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setLineText = function(value) {
-  jspb.Message.setProto3StringField(this, 8, value);
+  jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearLineText = function() {
+  this.setLineText(undefined);
 };
 
 
 /**
- * optional string line_id = 9;
- * @return {string}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getLineId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasLineText = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
-/** @param {string} value */
+/**
+ * optional google.protobuf.StringValue line_id = 9;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getLineId = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 9));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setLineId = function(value) {
-  jspb.Message.setProto3StringField(this, 9, value);
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearLineId = function() {
+  this.setLineId(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasLineId = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 

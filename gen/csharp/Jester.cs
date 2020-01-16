@@ -44,34 +44,38 @@ namespace Asgt.Jester.V1Alpha1 {
             "ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0LkRhdGESFAoMZGF0",
             "YXNldF9uYW1lGAIgASgJEjgKB29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rl",
             "ci52MWFscGhhMS5TdWdnZXN0aW9uT3B0aW9ucxobCgREYXRhEhMKC2Rlc2Ny",
-            "aXB0aW9uGAEgASgJIpMDChxFbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0",
+            "aXB0aW9uGAEgASgJIuQEChxFbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0",
             "EkcKBmlucHV0cxgBIAMoCzI3LmFzZ3QuamVzdGVyLnYxYWxwaGExLkVsZWN0",
             "cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QuRGF0YRIUCgxkYXRhc2V0X25hbWUY",
             "AiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVzdGVyLnYxYWxwaGEx",
-            "LlN1Z2dlc3Rpb25PcHRpb25zGtkBCgREYXRhEi4KCmlzc3VlX2RhdGUYASAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGN1cnJlbmN5GAIg",
-            "ASgJEhMKC3N1cHBsaWVyX2lkGAMgASgJEhUKDXN1cHBsaWVyX25hbWUYBCAB",
-            "KAkSGgoSc3VwcGxpZXJfZ2xvYmFsX2lkGAUgASgJEhQKDGN1c3RvbWVyX3Jl",
-            "ZhgGIAEoCRINCgV0b3RhbBgHIAEoBRIRCglsaW5lX3RleHQYCCABKAkSDwoH",
-            "bGluZV9pZBgJIAEoCSK1AgoLQmFua1JlcXVlc3QSNgoGaW5wdXRzGAEgAygL",
-            "MiYuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QuRGF0YRIUCgxk",
-            "YXRhc2V0X25hbWUYAiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGp0BCgREYXRhEhYKDmFj",
-            "Y291bnRfbnVtYmVyGAEgASgFEisKBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5w",
-            "cm90b2J1Zi5GbG9hdFZhbHVlEhIKCmVudHJ5X3R5cGUYAyABKAUSDAoEdGV4",
-            "dBgEIAEoCRIuCgp0aW1lX3N0YW1wGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcDLUAwoGSmVzdGVyEpoBChlTY2FubmVkSW52b2ljZVN1Z2dl",
-            "c3Rpb25zEisuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VS",
-            "ZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNw",
-            "b25zZSIlgtPkkwIfIhovdjEvc3VnZ2VzdDpzY2FubmVkaW52b2ljZToBKhKu",
-            "AQofRWxlY3Ryb25pY0ludm9pY0xpbmVTdWdnZXN0aW9ucxIyLmFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExLkVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QaKS5h",
-            "c2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiyC0+ST",
-            "AiYiIS92MS9zdWdnZXN0OmVsZWN0cm9uaWNpbnZvaWNlbGluZToBKhJ8Cg9C",
-            "YW5rU3VnZ2VzdGlvbnMSIS5hc2d0Lmplc3Rlci52MWFscGhhMS5CYW5rUmVx",
-            "dWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9u",
-            "c2UiG4LT5JMCFSIQL3YxL3N1Z2dlc3Q6YmFuazoBKkIIWgZqZXN0ZXJiBnBy",
-            "b3RvMw=="));
+            "LlN1Z2dlc3Rpb25PcHRpb25zGqoDCgREYXRhEi4KCmlzc3VlX2RhdGUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCGN1cnJlbmN5GAIg",
+            "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEhMKC3N1cHBsaWVy",
+            "X2lkGAMgASgJEjMKDXN1cHBsaWVyX25hbWUYBCABKAsyHC5nb29nbGUucHJv",
+            "dG9idWYuU3RyaW5nVmFsdWUSOAoSc3VwcGxpZXJfZ2xvYmFsX2lkGAUgASgL",
+            "MhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjIKDGN1c3RvbWVyX3Jl",
+            "ZhgGIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIqCgV0b3Rh",
+            "bBgHIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEi8KCWxpbmVf",
+            "dGV4dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRItCgds",
+            "aW5lX2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIrUC",
+            "CgtCYW5rUmVxdWVzdBI2CgZpbnB1dHMYASADKAsyJi5hc2d0Lmplc3Rlci52",
+            "MWFscGhhMS5CYW5rUmVxdWVzdC5EYXRhEhQKDGRhdGFzZXRfbmFtZRgCIAEo",
+            "CRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3Vn",
+            "Z2VzdGlvbk9wdGlvbnManQEKBERhdGESFgoOYWNjb3VudF9udW1iZXIYASAB",
+            "KAUSKwoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
+            "dWUSEgoKZW50cnlfdHlwZRgDIAEoBRIMCgR0ZXh0GAQgASgJEi4KCnRpbWVf",
+            "c3RhbXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMtQDCgZK",
+            "ZXN0ZXISmgEKGVNjYW5uZWRJbnZvaWNlU3VnZ2VzdGlvbnMSKy5hc2d0Lmpl",
+            "c3Rlci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QaKS5hc2d0Lmpl",
+            "c3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiWC0+STAh8iGi92",
+            "MS9zdWdnZXN0OnNjYW5uZWRpbnZvaWNlOgEqEq4BCh9FbGVjdHJvbmljSW52",
+            "b2ljTGluZVN1Z2dlc3Rpb25zEjIuYXNndC5qZXN0ZXIudjFhbHBoYTEuRWxl",
+            "Y3Ryb25pY0ludm9pY2VMaW5lUmVxdWVzdBopLmFzZ3QuamVzdGVyLnYxYWxw",
+            "aGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiLILT5JMCJiIhL3YxL3N1Z2dlc3Q6",
+            "ZWxlY3Ryb25pY2ludm9pY2VsaW5lOgEqEnwKD0JhbmtTdWdnZXN0aW9ucxIh",
+            "LmFzZ3QuamVzdGVyLnYxYWxwaGExLkJhbmtSZXF1ZXN0GikuYXNndC5qZXN0",
+            "ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIbgtPkkwIVIhAvdjEv",
+            "c3VnZ2VzdDpiYW5rOgEqQghaBmplc3RlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1412,14 +1416,14 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Data(Data other) : this() {
           issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
-          currency_ = other.currency_;
+          Currency = other.Currency;
           supplierId_ = other.supplierId_;
-          supplierName_ = other.supplierName_;
-          supplierGlobalId_ = other.supplierGlobalId_;
-          customerRef_ = other.customerRef_;
-          total_ = other.total_;
-          lineText_ = other.lineText_;
-          lineId_ = other.lineId_;
+          SupplierName = other.SupplierName;
+          SupplierGlobalId = other.SupplierGlobalId;
+          CustomerRef = other.CustomerRef;
+          Total = other.Total;
+          LineText = other.LineText;
+          LineId = other.LineId;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1441,12 +1445,13 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "currency" field.</summary>
         public const int CurrencyFieldNumber = 2;
-        private string currency_ = "";
+        private static readonly pb::FieldCodec<string> _single_currency_codec = pb::FieldCodec.ForClassWrapper<string>(18);
+        private string currency_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Currency {
           get { return currency_; }
           set {
-            currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            currency_ = value;
           }
         }
 
@@ -1463,42 +1468,46 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "supplier_name" field.</summary>
         public const int SupplierNameFieldNumber = 4;
-        private string supplierName_ = "";
+        private static readonly pb::FieldCodec<string> _single_supplierName_codec = pb::FieldCodec.ForClassWrapper<string>(34);
+        private string supplierName_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SupplierName {
           get { return supplierName_; }
           set {
-            supplierName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            supplierName_ = value;
           }
         }
 
         /// <summary>Field number for the "supplier_global_id" field.</summary>
         public const int SupplierGlobalIdFieldNumber = 5;
-        private string supplierGlobalId_ = "";
+        private static readonly pb::FieldCodec<string> _single_supplierGlobalId_codec = pb::FieldCodec.ForClassWrapper<string>(42);
+        private string supplierGlobalId_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SupplierGlobalId {
           get { return supplierGlobalId_; }
           set {
-            supplierGlobalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            supplierGlobalId_ = value;
           }
         }
 
         /// <summary>Field number for the "customer_ref" field.</summary>
         public const int CustomerRefFieldNumber = 6;
-        private string customerRef_ = "";
+        private static readonly pb::FieldCodec<string> _single_customerRef_codec = pb::FieldCodec.ForClassWrapper<string>(50);
+        private string customerRef_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string CustomerRef {
           get { return customerRef_; }
           set {
-            customerRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            customerRef_ = value;
           }
         }
 
         /// <summary>Field number for the "total" field.</summary>
         public const int TotalFieldNumber = 7;
-        private int total_;
+        private static readonly pb::FieldCodec<int?> _single_total_codec = pb::FieldCodec.ForStructWrapper<int>(58);
+        private int? total_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int Total {
+        public int? Total {
           get { return total_; }
           set {
             total_ = value;
@@ -1507,23 +1516,25 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "line_text" field.</summary>
         public const int LineTextFieldNumber = 8;
-        private string lineText_ = "";
+        private static readonly pb::FieldCodec<string> _single_lineText_codec = pb::FieldCodec.ForClassWrapper<string>(66);
+        private string lineText_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string LineText {
           get { return lineText_; }
           set {
-            lineText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            lineText_ = value;
           }
         }
 
         /// <summary>Field number for the "line_id" field.</summary>
         public const int LineIdFieldNumber = 9;
-        private string lineId_ = "";
+        private static readonly pb::FieldCodec<string> _single_lineId_codec = pb::FieldCodec.ForClassWrapper<string>(74);
+        private string lineId_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string LineId {
           get { return lineId_; }
           set {
-            lineId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            lineId_ = value;
           }
         }
 
@@ -1556,14 +1567,14 @@ namespace Asgt.Jester.V1Alpha1 {
         public override int GetHashCode() {
           int hash = 1;
           if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
-          if (Currency.Length != 0) hash ^= Currency.GetHashCode();
+          if (currency_ != null) hash ^= Currency.GetHashCode();
           if (SupplierId.Length != 0) hash ^= SupplierId.GetHashCode();
-          if (SupplierName.Length != 0) hash ^= SupplierName.GetHashCode();
-          if (SupplierGlobalId.Length != 0) hash ^= SupplierGlobalId.GetHashCode();
-          if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
-          if (Total != 0) hash ^= Total.GetHashCode();
-          if (LineText.Length != 0) hash ^= LineText.GetHashCode();
-          if (LineId.Length != 0) hash ^= LineId.GetHashCode();
+          if (supplierName_ != null) hash ^= SupplierName.GetHashCode();
+          if (supplierGlobalId_ != null) hash ^= SupplierGlobalId.GetHashCode();
+          if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
+          if (total_ != null) hash ^= Total.GetHashCode();
+          if (lineText_ != null) hash ^= LineText.GetHashCode();
+          if (lineId_ != null) hash ^= LineId.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1581,37 +1592,30 @@ namespace Asgt.Jester.V1Alpha1 {
             output.WriteRawTag(10);
             output.WriteMessage(IssueDate);
           }
-          if (Currency.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Currency);
+          if (currency_ != null) {
+            _single_currency_codec.WriteTagAndValue(output, Currency);
           }
           if (SupplierId.Length != 0) {
             output.WriteRawTag(26);
             output.WriteString(SupplierId);
           }
-          if (SupplierName.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(SupplierName);
+          if (supplierName_ != null) {
+            _single_supplierName_codec.WriteTagAndValue(output, SupplierName);
           }
-          if (SupplierGlobalId.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(SupplierGlobalId);
+          if (supplierGlobalId_ != null) {
+            _single_supplierGlobalId_codec.WriteTagAndValue(output, SupplierGlobalId);
           }
-          if (CustomerRef.Length != 0) {
-            output.WriteRawTag(50);
-            output.WriteString(CustomerRef);
+          if (customerRef_ != null) {
+            _single_customerRef_codec.WriteTagAndValue(output, CustomerRef);
           }
-          if (Total != 0) {
-            output.WriteRawTag(56);
-            output.WriteInt32(Total);
+          if (total_ != null) {
+            _single_total_codec.WriteTagAndValue(output, Total);
           }
-          if (LineText.Length != 0) {
-            output.WriteRawTag(66);
-            output.WriteString(LineText);
+          if (lineText_ != null) {
+            _single_lineText_codec.WriteTagAndValue(output, LineText);
           }
-          if (LineId.Length != 0) {
-            output.WriteRawTag(74);
-            output.WriteString(LineId);
+          if (lineId_ != null) {
+            _single_lineId_codec.WriteTagAndValue(output, LineId);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -1624,29 +1628,29 @@ namespace Asgt.Jester.V1Alpha1 {
           if (issueDate_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(IssueDate);
           }
-          if (Currency.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
+          if (currency_ != null) {
+            size += _single_currency_codec.CalculateSizeWithTag(Currency);
           }
           if (SupplierId.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierId);
           }
-          if (SupplierName.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierName);
+          if (supplierName_ != null) {
+            size += _single_supplierName_codec.CalculateSizeWithTag(SupplierName);
           }
-          if (SupplierGlobalId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierGlobalId);
+          if (supplierGlobalId_ != null) {
+            size += _single_supplierGlobalId_codec.CalculateSizeWithTag(SupplierGlobalId);
           }
-          if (CustomerRef.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
+          if (customerRef_ != null) {
+            size += _single_customerRef_codec.CalculateSizeWithTag(CustomerRef);
           }
-          if (Total != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Total);
+          if (total_ != null) {
+            size += _single_total_codec.CalculateSizeWithTag(Total);
           }
-          if (LineText.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(LineText);
+          if (lineText_ != null) {
+            size += _single_lineText_codec.CalculateSizeWithTag(LineText);
           }
-          if (LineId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(LineId);
+          if (lineId_ != null) {
+            size += _single_lineId_codec.CalculateSizeWithTag(LineId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1665,29 +1669,43 @@ namespace Asgt.Jester.V1Alpha1 {
             }
             IssueDate.MergeFrom(other.IssueDate);
           }
-          if (other.Currency.Length != 0) {
-            Currency = other.Currency;
+          if (other.currency_ != null) {
+            if (currency_ == null || other.Currency != "") {
+              Currency = other.Currency;
+            }
           }
           if (other.SupplierId.Length != 0) {
             SupplierId = other.SupplierId;
           }
-          if (other.SupplierName.Length != 0) {
-            SupplierName = other.SupplierName;
+          if (other.supplierName_ != null) {
+            if (supplierName_ == null || other.SupplierName != "") {
+              SupplierName = other.SupplierName;
+            }
           }
-          if (other.SupplierGlobalId.Length != 0) {
-            SupplierGlobalId = other.SupplierGlobalId;
+          if (other.supplierGlobalId_ != null) {
+            if (supplierGlobalId_ == null || other.SupplierGlobalId != "") {
+              SupplierGlobalId = other.SupplierGlobalId;
+            }
           }
-          if (other.CustomerRef.Length != 0) {
-            CustomerRef = other.CustomerRef;
+          if (other.customerRef_ != null) {
+            if (customerRef_ == null || other.CustomerRef != "") {
+              CustomerRef = other.CustomerRef;
+            }
           }
-          if (other.Total != 0) {
-            Total = other.Total;
+          if (other.total_ != null) {
+            if (total_ == null || other.Total != 0) {
+              Total = other.Total;
+            }
           }
-          if (other.LineText.Length != 0) {
-            LineText = other.LineText;
+          if (other.lineText_ != null) {
+            if (lineText_ == null || other.LineText != "") {
+              LineText = other.LineText;
+            }
           }
-          if (other.LineId.Length != 0) {
-            LineId = other.LineId;
+          if (other.lineId_ != null) {
+            if (lineId_ == null || other.LineId != "") {
+              LineId = other.LineId;
+            }
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1708,7 +1726,10 @@ namespace Asgt.Jester.V1Alpha1 {
                 break;
               }
               case 18: {
-                Currency = input.ReadString();
+                string value = _single_currency_codec.Read(input);
+                if (currency_ == null || value != "") {
+                  Currency = value;
+                }
                 break;
               }
               case 26: {
@@ -1716,27 +1737,45 @@ namespace Asgt.Jester.V1Alpha1 {
                 break;
               }
               case 34: {
-                SupplierName = input.ReadString();
+                string value = _single_supplierName_codec.Read(input);
+                if (supplierName_ == null || value != "") {
+                  SupplierName = value;
+                }
                 break;
               }
               case 42: {
-                SupplierGlobalId = input.ReadString();
+                string value = _single_supplierGlobalId_codec.Read(input);
+                if (supplierGlobalId_ == null || value != "") {
+                  SupplierGlobalId = value;
+                }
                 break;
               }
               case 50: {
-                CustomerRef = input.ReadString();
+                string value = _single_customerRef_codec.Read(input);
+                if (customerRef_ == null || value != "") {
+                  CustomerRef = value;
+                }
                 break;
               }
-              case 56: {
-                Total = input.ReadInt32();
+              case 58: {
+                int? value = _single_total_codec.Read(input);
+                if (total_ == null || value != 0) {
+                  Total = value;
+                }
                 break;
               }
               case 66: {
-                LineText = input.ReadString();
+                string value = _single_lineText_codec.Read(input);
+                if (lineText_ == null || value != "") {
+                  LineText = value;
+                }
                 break;
               }
               case 74: {
-                LineId = input.ReadString();
+                string value = _single_lineId_codec.Read(input);
+                if (lineId_ == null || value != "") {
+                  LineId = value;
+                }
                 break;
               }
             }
