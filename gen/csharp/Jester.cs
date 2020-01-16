@@ -25,53 +25,55 @@ namespace Asgt.Jester.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFhc2d0L2plc3Rlci92MWFscGhhMS9qZXN0ZXIucHJvdG8SFGFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8ivgEKCkNvbmZpZGVuY2US",
-            "NQoFbGV2ZWwYASABKA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRl",
-            "bmNlLkxldmVsEioKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZs",
-            "b2F0VmFsdWUiTQoFTGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAES",
-            "BwoDTE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFIq4B",
-            "CgpQcmVkaWN0aW9uEg4KBnRhcmdldBgBIAEoCRI+CgpjYW5kaWRhdGVzGAIg",
-            "AygLMiouYXNndC5qZXN0ZXIudjFhbHBoYTEuUHJlZGljdGlvbi5DYW5kaWRh",
-            "dGUaUAoJQ2FuZGlkYXRlEg0KBWxhYmVsGAEgASgJEjQKCmNvbmZpZGVuY2UY",
-            "AiABKAsyIC5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlIkwKE1N1",
-            "Z2dlc3Rpb25zUmVzcG9uc2USNQoLcHJlZGljdGlvbnMYASADKAsyIC5hc2d0",
-            "Lmplc3Rlci52MWFscGhhMS5QcmVkaWN0aW9uIm0KEVN1Z2dlc3Rpb25PcHRp",
-            "b25zEhgKEHN1Z2dlc3Rpb25fbGltaXQYASABKAUSPgoObWluX2NvbmZpZGVu",
-            "Y2UYAiABKA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlLkxl",
-            "dmVsIsYBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQAoGaW5wdXRzGAEgAygL",
-            "MjAuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0",
-            "LkRhdGESFAoMZGF0YXNldF9uYW1lGAIgASgJEjgKB29wdGlvbnMYAyABKAsy",
-            "Jy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uT3B0aW9ucxobCgRE",
-            "YXRhEhMKC2Rlc2NyaXB0aW9uGAEgASgJIvcCChxFbGVjdHJvbmljSW52b2lj",
-            "ZUxpbmVSZXF1ZXN0EkcKBmlucHV0cxgBIAMoCzI3LmFzZ3QuamVzdGVyLnYx",
-            "YWxwaGExLkVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QuRGF0YRIUCgxk",
+            "dGVyLnYxYWxwaGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9i",
+            "dWYvd3JhcHBlcnMucHJvdG8ivgEKCkNvbmZpZGVuY2USNQoFbGV2ZWwYASAB",
+            "KA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlLkxldmVsEioK",
+            "BXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUiTQoF",
+            "TGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoD",
+            "TUlEEAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFIq4BCgpQcmVkaWN0aW9u",
+            "Eg4KBnRhcmdldBgBIAEoCRI+CgpjYW5kaWRhdGVzGAIgAygLMiouYXNndC5q",
+            "ZXN0ZXIudjFhbHBoYTEuUHJlZGljdGlvbi5DYW5kaWRhdGUaUAoJQ2FuZGlk",
+            "YXRlEg0KBWxhYmVsGAEgASgJEjQKCmNvbmZpZGVuY2UYAiABKAsyIC5hc2d0",
+            "Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlIkwKE1N1Z2dlc3Rpb25zUmVz",
+            "cG9uc2USNQoLcHJlZGljdGlvbnMYASADKAsyIC5hc2d0Lmplc3Rlci52MWFs",
+            "cGhhMS5QcmVkaWN0aW9uIm0KEVN1Z2dlc3Rpb25PcHRpb25zEhgKEHN1Z2dl",
+            "c3Rpb25fbGltaXQYASABKAUSPgoObWluX2NvbmZpZGVuY2UYAiABKA4yJi5h",
+            "c2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRlbmNlLkxldmVsIsYBChVTY2Fu",
+            "bmVkSW52b2ljZVJlcXVlc3QSQAoGaW5wdXRzGAEgAygLMjAuYXNndC5qZXN0",
+            "ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0LkRhdGESFAoMZGF0",
+            "YXNldF9uYW1lGAIgASgJEjgKB29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rl",
+            "ci52MWFscGhhMS5TdWdnZXN0aW9uT3B0aW9ucxobCgREYXRhEhMKC2Rlc2Ny",
+            "aXB0aW9uGAEgASgJIpMDChxFbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0",
+            "EkcKBmlucHV0cxgBIAMoCzI3LmFzZ3QuamVzdGVyLnYxYWxwaGExLkVsZWN0",
+            "cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QuRGF0YRIUCgxkYXRhc2V0X25hbWUY",
+            "AiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVzdGVyLnYxYWxwaGEx",
+            "LlN1Z2dlc3Rpb25PcHRpb25zGtkBCgREYXRhEi4KCmlzc3VlX2RhdGUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhAKCGN1cnJlbmN5GAIg",
+            "ASgJEhMKC3N1cHBsaWVyX2lkGAMgASgJEhUKDXN1cHBsaWVyX25hbWUYBCAB",
+            "KAkSGgoSc3VwcGxpZXJfZ2xvYmFsX2lkGAUgASgJEhQKDGN1c3RvbWVyX3Jl",
+            "ZhgGIAEoCRINCgV0b3RhbBgHIAEoBRIRCglsaW5lX3RleHQYCCABKAkSDwoH",
+            "bGluZV9pZBgJIAEoCSK1AgoLQmFua1JlcXVlc3QSNgoGaW5wdXRzGAEgAygL",
+            "MiYuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QuRGF0YRIUCgxk",
             "YXRhc2V0X25hbWUYAiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGr0BCgREYXRhEhIKCmlz",
-            "c3VlX2RhdGUYASABKAkSEAoIY3VycmVuY3kYAiABKAkSEwoLc3VwcGxpZXJf",
-            "aWQYAyABKAkSFQoNc3VwcGxpZXJfbmFtZRgEIAEoCRIaChJzdXBwbGllcl9n",
-            "bG9iYWxfaWQYBSABKAkSFAoMY3VzdG9tZXJfcmVmGAYgASgJEg0KBXRvdGFs",
-            "GAcgASgFEhEKCWxpbmVfdGV4dBgIIAEoCRIPCgdsaW5lX2lkGAkgASgJIpkC",
-            "CgtCYW5rUmVxdWVzdBI2CgZpbnB1dHMYASADKAsyJi5hc2d0Lmplc3Rlci52",
-            "MWFscGhhMS5CYW5rUmVxdWVzdC5EYXRhEhQKDGRhdGFzZXRfbmFtZRgCIAEo",
-            "CRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3Vn",
-            "Z2VzdGlvbk9wdGlvbnMagQEKBERhdGESFgoOYWNjb3VudF9udW1iZXIYASAB",
-            "KAUSKwoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
-            "dWUSEgoKZW50cnlfdHlwZRgDIAEoBRIMCgR0ZXh0GAQgASgJEhIKCnRpbWVf",
-            "c3RhbXAYBSABKAUy1AMKBkplc3RlchKaAQoZU2Nhbm5lZEludm9pY2VTdWdn",
-            "ZXN0aW9ucxIrLmFzZ3QuamVzdGVyLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNl",
-            "UmVxdWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVz",
-            "cG9uc2UiJYLT5JMCHyIaL3YxL3N1Z2dlc3Q6c2Nhbm5lZGludm9pY2U6ASoS",
-            "rgEKH0VsZWN0cm9uaWNJbnZvaWNMaW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmpl",
-            "c3Rlci52MWFscGhhMS5FbGVjdHJvbmljSW52b2ljZUxpbmVSZXF1ZXN0Giku",
-            "YXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPk",
-            "kwImIiEvdjEvc3VnZ2VzdDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoP",
-            "QmFua1N1Z2dlc3Rpb25zEiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1Jl",
-            "cXVlc3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3Bv",
-            "bnNlIhuC0+STAhUiEC92MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZw",
-            "cm90bzM="));
+            "dGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGp0BCgREYXRhEhYKDmFj",
+            "Y291bnRfbnVtYmVyGAEgASgFEisKBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5w",
+            "cm90b2J1Zi5GbG9hdFZhbHVlEhIKCmVudHJ5X3R5cGUYAyABKAUSDAoEdGV4",
+            "dBgEIAEoCRIuCgp0aW1lX3N0YW1wGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcDLUAwoGSmVzdGVyEpoBChlTY2FubmVkSW52b2ljZVN1Z2dl",
+            "c3Rpb25zEisuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VS",
+            "ZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNw",
+            "b25zZSIlgtPkkwIfIhovdjEvc3VnZ2VzdDpzY2FubmVkaW52b2ljZToBKhKu",
+            "AQofRWxlY3Ryb25pY0ludm9pY0xpbmVTdWdnZXN0aW9ucxIyLmFzZ3QuamVz",
+            "dGVyLnYxYWxwaGExLkVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QaKS5h",
+            "c2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiyC0+ST",
+            "AiYiIS92MS9zdWdnZXN0OmVsZWN0cm9uaWNpbnZvaWNlbGluZToBKhJ8Cg9C",
+            "YW5rU3VnZ2VzdGlvbnMSIS5hc2d0Lmplc3Rlci52MWFscGhhMS5CYW5rUmVx",
+            "dWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9u",
+            "c2UiG4LT5JMCFSIQL3YxL3N1Z2dlc3Q6YmFuazoBKkIIWgZqZXN0ZXJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Confidence), global::Asgt.Jester.V1Alpha1.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Jester.V1Alpha1.Confidence.Types.Level) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction), global::Asgt.Jester.V1Alpha1.Prediction.Parser, new[]{ "Target", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate), global::Asgt.Jester.V1Alpha1.Prediction.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)}),
@@ -1409,7 +1411,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Data(Data other) : this() {
-          issueDate_ = other.issueDate_;
+          issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
           currency_ = other.currency_;
           supplierId_ = other.supplierId_;
           supplierName_ = other.supplierName_;
@@ -1428,12 +1430,12 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "issue_date" field.</summary>
         public const int IssueDateFieldNumber = 1;
-        private string issueDate_ = "";
+        private global::Google.Protobuf.WellKnownTypes.Timestamp issueDate_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string IssueDate {
+        public global::Google.Protobuf.WellKnownTypes.Timestamp IssueDate {
           get { return issueDate_; }
           set {
-            issueDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            issueDate_ = value;
           }
         }
 
@@ -1538,7 +1540,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (IssueDate != other.IssueDate) return false;
+          if (!object.Equals(IssueDate, other.IssueDate)) return false;
           if (Currency != other.Currency) return false;
           if (SupplierId != other.SupplierId) return false;
           if (SupplierName != other.SupplierName) return false;
@@ -1553,7 +1555,7 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (IssueDate.Length != 0) hash ^= IssueDate.GetHashCode();
+          if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
           if (Currency.Length != 0) hash ^= Currency.GetHashCode();
           if (SupplierId.Length != 0) hash ^= SupplierId.GetHashCode();
           if (SupplierName.Length != 0) hash ^= SupplierName.GetHashCode();
@@ -1575,9 +1577,9 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (IssueDate.Length != 0) {
+          if (issueDate_ != null) {
             output.WriteRawTag(10);
-            output.WriteString(IssueDate);
+            output.WriteMessage(IssueDate);
           }
           if (Currency.Length != 0) {
             output.WriteRawTag(18);
@@ -1619,8 +1621,8 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (IssueDate.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(IssueDate);
+          if (issueDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IssueDate);
           }
           if (Currency.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
@@ -1657,8 +1659,11 @@ namespace Asgt.Jester.V1Alpha1 {
           if (other == null) {
             return;
           }
-          if (other.IssueDate.Length != 0) {
-            IssueDate = other.IssueDate;
+          if (other.issueDate_ != null) {
+            if (issueDate_ == null) {
+              issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            IssueDate.MergeFrom(other.IssueDate);
           }
           if (other.Currency.Length != 0) {
             Currency = other.Currency;
@@ -1696,7 +1701,10 @@ namespace Asgt.Jester.V1Alpha1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                IssueDate = input.ReadString();
+                if (issueDate_ == null) {
+                  issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(issueDate_);
                 break;
               }
               case 18: {
@@ -1959,7 +1967,7 @@ namespace Asgt.Jester.V1Alpha1 {
           Amount = other.Amount;
           entryType_ = other.entryType_;
           text_ = other.text_;
-          timeStamp_ = other.timeStamp_;
+          timeStamp_ = other.timeStamp_ != null ? other.timeStamp_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2015,9 +2023,9 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "time_stamp" field.</summary>
         public const int TimeStampFieldNumber = 5;
-        private int timeStamp_;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp timeStamp_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int TimeStamp {
+        public global::Google.Protobuf.WellKnownTypes.Timestamp TimeStamp {
           get { return timeStamp_; }
           set {
             timeStamp_ = value;
@@ -2041,7 +2049,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
           if (EntryType != other.EntryType) return false;
           if (Text != other.Text) return false;
-          if (TimeStamp != other.TimeStamp) return false;
+          if (!object.Equals(TimeStamp, other.TimeStamp)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2052,7 +2060,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Amount);
           if (EntryType != 0) hash ^= EntryType.GetHashCode();
           if (Text.Length != 0) hash ^= Text.GetHashCode();
-          if (TimeStamp != 0) hash ^= TimeStamp.GetHashCode();
+          if (timeStamp_ != null) hash ^= TimeStamp.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2081,9 +2089,9 @@ namespace Asgt.Jester.V1Alpha1 {
             output.WriteRawTag(34);
             output.WriteString(Text);
           }
-          if (TimeStamp != 0) {
-            output.WriteRawTag(40);
-            output.WriteInt32(TimeStamp);
+          if (timeStamp_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TimeStamp);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2105,8 +2113,8 @@ namespace Asgt.Jester.V1Alpha1 {
           if (Text.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
-          if (TimeStamp != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TimeStamp);
+          if (timeStamp_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeStamp);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2133,8 +2141,11 @@ namespace Asgt.Jester.V1Alpha1 {
           if (other.Text.Length != 0) {
             Text = other.Text;
           }
-          if (other.TimeStamp != 0) {
-            TimeStamp = other.TimeStamp;
+          if (other.timeStamp_ != null) {
+            if (timeStamp_ == null) {
+              timeStamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            TimeStamp.MergeFrom(other.TimeStamp);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2166,8 +2177,11 @@ namespace Asgt.Jester.V1Alpha1 {
                 Text = input.ReadString();
                 break;
               }
-              case 40: {
-                TimeStamp = input.ReadInt32();
+              case 42: {
+                if (timeStamp_ == null) {
+                  timeStamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(timeStamp_);
                 break;
               }
             }

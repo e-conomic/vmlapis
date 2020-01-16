@@ -48,7 +48,7 @@
    },
    {
     "name": "time_stamp",
-    "type": "INTEGER",
+    "type": "TIMESTAMP",
     "mode": "NULLABLE"
    }
   ]

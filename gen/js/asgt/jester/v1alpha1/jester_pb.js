@@ -12,6 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.jester.v1alpha1.BankRequest', null, global);
 goog.exportSymbol('proto.asgt.jester.v1alpha1.BankRequest.Data', null, global);
@@ -1532,7 +1533,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.toObject 
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
-    issueDate: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    issueDate: (f = msg.getIssueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     currency: jspb.Message.getFieldWithDefault(msg, 2, ""),
     supplierId: jspb.Message.getFieldWithDefault(msg, 3, ""),
     supplierName: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -1578,7 +1579,8 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFr
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setIssueDate(value);
       break;
     case 2:
@@ -1643,10 +1645,11 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.serialize
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getIssueDate();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getCurrency();
@@ -1709,17 +1712,32 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWr
 
 
 /**
- * optional string issue_date = 1;
- * @return {string}
+ * optional google.protobuf.Timestamp issue_date = 1;
+ * @return {?proto.google.protobuf.Timestamp}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getIssueDate = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 1));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setIssueDate = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.clearIssueDate = function() {
+  this.setIssueDate(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasIssueDate = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -2133,7 +2151,7 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.toObject = function(includeInstance,
     amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
     entryType: jspb.Message.getFieldWithDefault(msg, 3, 0),
     text: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    timeStamp: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    timeStamp: (f = msg.getTimeStamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2188,7 +2206,8 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader = functi
       msg.setText(value);
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setTimeStamp(value);
       break;
     default:
@@ -2250,10 +2269,11 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter = function(m
     );
   }
   f = message.getTimeStamp();
-  if (f !== 0) {
-    writer.writeInt32(
+  if (f != null) {
+    writer.writeMessage(
       5,
-      f
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
 };
@@ -2335,17 +2355,32 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setText = function(value) 
 
 
 /**
- * optional int32 time_stamp = 5;
- * @return {number}
+ * optional google.protobuf.Timestamp time_stamp = 5;
+ * @return {?proto.google.protobuf.Timestamp}
  */
 proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getTimeStamp = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
 };
 
 
-/** @param {number} value */
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
 proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setTimeStamp = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
+  jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.clearTimeStamp = function() {
+  this.setTimeStamp(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.hasTimeStamp = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

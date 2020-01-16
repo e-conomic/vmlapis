@@ -5826,14 +5826,17 @@ public final class JesterOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
        */
-      java.lang.String getIssueDate();
+      boolean hasIssueDate();
       /**
-       * <code>string issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
        */
-      com.google.protobuf.ByteString
-          getIssueDateBytes();
+      com.google.protobuf.Timestamp getIssueDate();
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
 
       /**
        * <code>string currency = 2;</code>
@@ -5923,7 +5926,6 @@ public final class JesterOuterClass {
         super(builder);
       }
       private Data() {
-        issueDate_ = "";
         currency_ = "";
         supplierId_ = "";
         supplierName_ = "";
@@ -5959,9 +5961,16 @@ public final class JesterOuterClass {
                 done = true;
                 break;
               case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (issueDate_ != null) {
+                  subBuilder = issueDate_.toBuilder();
+                }
+                issueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(issueDate_);
+                  issueDate_ = subBuilder.buildPartial();
+                }
 
-                issueDate_ = s;
                 break;
               }
               case 18: {
@@ -6044,37 +6053,24 @@ public final class JesterOuterClass {
       }
 
       public static final int ISSUE_DATE_FIELD_NUMBER = 1;
-      private volatile java.lang.Object issueDate_;
+      private com.google.protobuf.Timestamp issueDate_;
       /**
-       * <code>string issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
        */
-      public java.lang.String getIssueDate() {
-        java.lang.Object ref = issueDate_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          issueDate_ = s;
-          return s;
-        }
+      public boolean hasIssueDate() {
+        return issueDate_ != null;
       }
       /**
-       * <code>string issue_date = 1;</code>
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getIssueDateBytes() {
-        java.lang.Object ref = issueDate_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          issueDate_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public com.google.protobuf.Timestamp getIssueDate() {
+        return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
+        return getIssueDate();
       }
 
       public static final int CURRENCY_FIELD_NUMBER = 2;
@@ -6338,8 +6334,8 @@ public final class JesterOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getIssueDateBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, issueDate_);
+        if (issueDate_ != null) {
+          output.writeMessage(1, getIssueDate());
         }
         if (!getCurrencyBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, currency_);
@@ -6374,8 +6370,9 @@ public final class JesterOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getIssueDateBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, issueDate_);
+        if (issueDate_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, getIssueDate());
         }
         if (!getCurrencyBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, currency_);
@@ -6418,8 +6415,11 @@ public final class JesterOuterClass {
         asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) obj;
 
         boolean result = true;
-        result = result && getIssueDate()
-            .equals(other.getIssueDate());
+        result = result && (hasIssueDate() == other.hasIssueDate());
+        if (hasIssueDate()) {
+          result = result && getIssueDate()
+              .equals(other.getIssueDate());
+        }
         result = result && getCurrency()
             .equals(other.getCurrency());
         result = result && getSupplierId()
@@ -6447,8 +6447,10 @@ public final class JesterOuterClass {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ISSUE_DATE_FIELD_NUMBER;
-        hash = (53 * hash) + getIssueDate().hashCode();
+        if (hasIssueDate()) {
+          hash = (37 * hash) + ISSUE_DATE_FIELD_NUMBER;
+          hash = (53 * hash) + getIssueDate().hashCode();
+        }
         hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
         hash = (53 * hash) + getCurrency().hashCode();
         hash = (37 * hash) + SUPPLIER_ID_FIELD_NUMBER;
@@ -6598,8 +6600,12 @@ public final class JesterOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          issueDate_ = "";
-
+          if (issueDateBuilder_ == null) {
+            issueDate_ = null;
+          } else {
+            issueDate_ = null;
+            issueDateBuilder_ = null;
+          }
           currency_ = "";
 
           supplierId_ = "";
@@ -6642,7 +6648,11 @@ public final class JesterOuterClass {
         @java.lang.Override
         public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data buildPartial() {
           asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data(this);
-          result.issueDate_ = issueDate_;
+          if (issueDateBuilder_ == null) {
+            result.issueDate_ = issueDate_;
+          } else {
+            result.issueDate_ = issueDateBuilder_.build();
+          }
           result.currency_ = currency_;
           result.supplierId_ = supplierId_;
           result.supplierName_ = supplierName_;
@@ -6699,9 +6709,8 @@ public final class JesterOuterClass {
 
         public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other) {
           if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance()) return this;
-          if (!other.getIssueDate().isEmpty()) {
-            issueDate_ = other.issueDate_;
-            onChanged();
+          if (other.hasIssueDate()) {
+            mergeIssueDate(other.getIssueDate());
           }
           if (!other.getCurrency().isEmpty()) {
             currency_ = other.currency_;
@@ -6763,73 +6772,121 @@ public final class JesterOuterClass {
           return this;
         }
 
-        private java.lang.Object issueDate_ = "";
+        private com.google.protobuf.Timestamp issueDate_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
         /**
-         * <code>string issue_date = 1;</code>
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
          */
-        public java.lang.String getIssueDate() {
-          java.lang.Object ref = issueDate_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            issueDate_ = s;
-            return s;
+        public boolean hasIssueDate() {
+          return issueDateBuilder_ != null || issueDate_ != null;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+         */
+        public com.google.protobuf.Timestamp getIssueDate() {
+          if (issueDateBuilder_ == null) {
+            return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
           } else {
-            return (java.lang.String) ref;
+            return issueDateBuilder_.getMessage();
           }
         }
         /**
-         * <code>string issue_date = 1;</code>
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
          */
-        public com.google.protobuf.ByteString
-            getIssueDateBytes() {
-          java.lang.Object ref = issueDate_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            issueDate_ = b;
-            return b;
+        public Builder setIssueDate(com.google.protobuf.Timestamp value) {
+          if (issueDateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            issueDate_ = value;
+            onChanged();
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            issueDateBuilder_.setMessage(value);
           }
+
+          return this;
         }
         /**
-         * <code>string issue_date = 1;</code>
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
          */
         public Builder setIssueDate(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          issueDate_ = value;
-          onChanged();
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (issueDateBuilder_ == null) {
+            issueDate_ = builderForValue.build();
+            onChanged();
+          } else {
+            issueDateBuilder_.setMessage(builderForValue.build());
+          }
+
           return this;
         }
         /**
-         * <code>string issue_date = 1;</code>
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+         */
+        public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
+          if (issueDateBuilder_ == null) {
+            if (issueDate_ != null) {
+              issueDate_ =
+                com.google.protobuf.Timestamp.newBuilder(issueDate_).mergeFrom(value).buildPartial();
+            } else {
+              issueDate_ = value;
+            }
+            onChanged();
+          } else {
+            issueDateBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
          */
         public Builder clearIssueDate() {
-          
-          issueDate_ = getDefaultInstance().getIssueDate();
-          onChanged();
+          if (issueDateBuilder_ == null) {
+            issueDate_ = null;
+            onChanged();
+          } else {
+            issueDate_ = null;
+            issueDateBuilder_ = null;
+          }
+
           return this;
         }
         /**
-         * <code>string issue_date = 1;</code>
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
          */
-        public Builder setIssueDateBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
           
-          issueDate_ = value;
           onChanged();
-          return this;
+          return getIssueDateFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
+          if (issueDateBuilder_ != null) {
+            return issueDateBuilder_.getMessageOrBuilder();
+          } else {
+            return issueDate_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getIssueDateFieldBuilder() {
+          if (issueDateBuilder_ == null) {
+            issueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getIssueDate(),
+                    getParentForChildren(),
+                    isClean());
+            issueDate_ = null;
+          }
+          return issueDateBuilder_;
         }
 
         private java.lang.Object currency_ = "";
@@ -8555,9 +8612,17 @@ public final class JesterOuterClass {
           getTextBytes();
 
       /**
-       * <code>int32 time_stamp = 5;</code>
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
        */
-      int getTimeStamp();
+      boolean hasTimeStamp();
+      /**
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+       */
+      com.google.protobuf.Timestamp getTimeStamp();
+      /**
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+       */
+      com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder();
     }
     /**
      * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Data}
@@ -8575,7 +8640,6 @@ public final class JesterOuterClass {
         accountNumber_ = 0;
         entryType_ = 0;
         text_ = "";
-        timeStamp_ = 0;
       }
 
       @java.lang.Override
@@ -8631,9 +8695,17 @@ public final class JesterOuterClass {
                 text_ = s;
                 break;
               }
-              case 40: {
+              case 42: {
+                com.google.protobuf.Timestamp.Builder subBuilder = null;
+                if (timeStamp_ != null) {
+                  subBuilder = timeStamp_.toBuilder();
+                }
+                timeStamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(timeStamp_);
+                  timeStamp_ = subBuilder.buildPartial();
+                }
 
-                timeStamp_ = input.readInt32();
                 break;
               }
               default: {
@@ -8742,12 +8814,24 @@ public final class JesterOuterClass {
       }
 
       public static final int TIME_STAMP_FIELD_NUMBER = 5;
-      private int timeStamp_;
+      private com.google.protobuf.Timestamp timeStamp_;
       /**
-       * <code>int32 time_stamp = 5;</code>
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
        */
-      public int getTimeStamp() {
-        return timeStamp_;
+      public boolean hasTimeStamp() {
+        return timeStamp_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+       */
+      public com.google.protobuf.Timestamp getTimeStamp() {
+        return timeStamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder() {
+        return getTimeStamp();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -8776,8 +8860,8 @@ public final class JesterOuterClass {
         if (!getTextBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
         }
-        if (timeStamp_ != 0) {
-          output.writeInt32(5, timeStamp_);
+        if (timeStamp_ != null) {
+          output.writeMessage(5, getTimeStamp());
         }
         unknownFields.writeTo(output);
       }
@@ -8803,9 +8887,9 @@ public final class JesterOuterClass {
         if (!getTextBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
         }
-        if (timeStamp_ != 0) {
+        if (timeStamp_ != null) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(5, timeStamp_);
+            .computeMessageSize(5, getTimeStamp());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -8834,8 +8918,11 @@ public final class JesterOuterClass {
             == other.getEntryType());
         result = result && getText()
             .equals(other.getText());
-        result = result && (getTimeStamp()
-            == other.getTimeStamp());
+        result = result && (hasTimeStamp() == other.hasTimeStamp());
+        if (hasTimeStamp()) {
+          result = result && getTimeStamp()
+              .equals(other.getTimeStamp());
+        }
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -8857,8 +8944,10 @@ public final class JesterOuterClass {
         hash = (53 * hash) + getEntryType();
         hash = (37 * hash) + TEXT_FIELD_NUMBER;
         hash = (53 * hash) + getText().hashCode();
-        hash = (37 * hash) + TIME_STAMP_FIELD_NUMBER;
-        hash = (53 * hash) + getTimeStamp();
+        if (hasTimeStamp()) {
+          hash = (37 * hash) + TIME_STAMP_FIELD_NUMBER;
+          hash = (53 * hash) + getTimeStamp().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -9004,8 +9093,12 @@ public final class JesterOuterClass {
 
           text_ = "";
 
-          timeStamp_ = 0;
-
+          if (timeStampBuilder_ == null) {
+            timeStamp_ = null;
+          } else {
+            timeStamp_ = null;
+            timeStampBuilder_ = null;
+          }
           return this;
         }
 
@@ -9040,7 +9133,11 @@ public final class JesterOuterClass {
           }
           result.entryType_ = entryType_;
           result.text_ = text_;
-          result.timeStamp_ = timeStamp_;
+          if (timeStampBuilder_ == null) {
+            result.timeStamp_ = timeStamp_;
+          } else {
+            result.timeStamp_ = timeStampBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -9102,8 +9199,8 @@ public final class JesterOuterClass {
             text_ = other.text_;
             onChanged();
           }
-          if (other.getTimeStamp() != 0) {
-            setTimeStamp(other.getTimeStamp());
+          if (other.hasTimeStamp()) {
+            mergeTimeStamp(other.getTimeStamp());
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -9372,30 +9469,121 @@ public final class JesterOuterClass {
           return this;
         }
 
-        private int timeStamp_ ;
+        private com.google.protobuf.Timestamp timeStamp_ = null;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeStampBuilder_;
         /**
-         * <code>int32 time_stamp = 5;</code>
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
          */
-        public int getTimeStamp() {
-          return timeStamp_;
+        public boolean hasTimeStamp() {
+          return timeStampBuilder_ != null || timeStamp_ != null;
         }
         /**
-         * <code>int32 time_stamp = 5;</code>
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
          */
-        public Builder setTimeStamp(int value) {
-          
-          timeStamp_ = value;
-          onChanged();
+        public com.google.protobuf.Timestamp getTimeStamp() {
+          if (timeStampBuilder_ == null) {
+            return timeStamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
+          } else {
+            return timeStampBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        public Builder setTimeStamp(com.google.protobuf.Timestamp value) {
+          if (timeStampBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            timeStamp_ = value;
+            onChanged();
+          } else {
+            timeStampBuilder_.setMessage(value);
+          }
+
           return this;
         }
         /**
-         * <code>int32 time_stamp = 5;</code>
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        public Builder setTimeStamp(
+            com.google.protobuf.Timestamp.Builder builderForValue) {
+          if (timeStampBuilder_ == null) {
+            timeStamp_ = builderForValue.build();
+            onChanged();
+          } else {
+            timeStampBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        public Builder mergeTimeStamp(com.google.protobuf.Timestamp value) {
+          if (timeStampBuilder_ == null) {
+            if (timeStamp_ != null) {
+              timeStamp_ =
+                com.google.protobuf.Timestamp.newBuilder(timeStamp_).mergeFrom(value).buildPartial();
+            } else {
+              timeStamp_ = value;
+            }
+            onChanged();
+          } else {
+            timeStampBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
          */
         public Builder clearTimeStamp() {
-          
-          timeStamp_ = 0;
-          onChanged();
+          if (timeStampBuilder_ == null) {
+            timeStamp_ = null;
+            onChanged();
+          } else {
+            timeStamp_ = null;
+            timeStampBuilder_ = null;
+          }
+
           return this;
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        public com.google.protobuf.Timestamp.Builder getTimeStampBuilder() {
+          
+          onChanged();
+          return getTimeStampFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        public com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder() {
+          if (timeStampBuilder_ != null) {
+            return timeStampBuilder_.getMessageOrBuilder();
+          } else {
+            return timeStamp_ == null ?
+                com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
+          }
+        }
+        /**
+         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+            getTimeStampFieldBuilder() {
+          if (timeStampBuilder_ == null) {
+            timeStampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                    getTimeStamp(),
+                    getParentForChildren(),
+                    isClean());
+            timeStamp_ = null;
+          }
+          return timeStampBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -10481,55 +10669,57 @@ public final class JesterOuterClass {
     java.lang.String[] descriptorData = {
       "\n!asgt/jester/v1alpha1/jester.proto\022\024asg" +
       "t.jester.v1alpha1\032\034google/api/annotation" +
-      "s.proto\032\036google/protobuf/wrappers.proto\"" +
-      "\276\001\n\nConfidence\0225\n\005level\030\001 \001(\0162&.asgt.jes" +
-      "ter.v1alpha1.Confidence.Level\022*\n\005value\030\002" +
-      " \001(\0132\033.google.protobuf.FloatValue\"M\n\005Lev" +
-      "el\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007" +
-      "\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\256\001\n\nPre" +
-      "diction\022\016\n\006target\030\001 \001(\t\022>\n\ncandidates\030\002 " +
-      "\003(\0132*.asgt.jester.v1alpha1.Prediction.Ca" +
-      "ndidate\032P\n\tCandidate\022\r\n\005label\030\001 \001(\t\0224\n\nc" +
-      "onfidence\030\002 \001(\0132 .asgt.jester.v1alpha1.C" +
-      "onfidence\"L\n\023SuggestionsResponse\0225\n\013pred" +
-      "ictions\030\001 \003(\0132 .asgt.jester.v1alpha1.Pre" +
-      "diction\"m\n\021SuggestionOptions\022\030\n\020suggesti" +
-      "on_limit\030\001 \001(\005\022>\n\016min_confidence\030\002 \001(\0162&" +
-      ".asgt.jester.v1alpha1.Confidence.Level\"\306" +
-      "\001\n\025ScannedInvoiceRequest\022@\n\006inputs\030\001 \003(\013" +
-      "20.asgt.jester.v1alpha1.ScannedInvoiceRe" +
-      "quest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007opti" +
-      "ons\030\003 \001(\0132\'.asgt.jester.v1alpha1.Suggest" +
-      "ionOptions\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"" +
-      "\367\002\n\034ElectronicInvoiceLineRequest\022G\n\006inpu" +
-      "ts\030\001 \003(\01327.asgt.jester.v1alpha1.Electron" +
-      "icInvoiceLineRequest.Data\022\024\n\014dataset_nam" +
-      "e\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v" +
-      "1alpha1.SuggestionOptions\032\275\001\n\004Data\022\022\n\nis" +
-      "sue_date\030\001 \001(\t\022\020\n\010currency\030\002 \001(\t\022\023\n\013supp" +
-      "lier_id\030\003 \001(\t\022\025\n\rsupplier_name\030\004 \001(\t\022\032\n\022" +
-      "supplier_global_id\030\005 \001(\t\022\024\n\014customer_ref" +
-      "\030\006 \001(\t\022\r\n\005total\030\007 \001(\005\022\021\n\tline_text\030\010 \001(\t" +
-      "\022\017\n\007line_id\030\t \001(\t\"\231\002\n\013BankRequest\0226\n\006inp" +
-      "uts\030\001 \003(\0132&.asgt.jester.v1alpha1.BankReq" +
-      "uest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007optio" +
-      "ns\030\003 \001(\0132\'.asgt.jester.v1alpha1.Suggesti" +
-      "onOptions\032\201\001\n\004Data\022\026\n\016account_number\030\001 \001" +
-      "(\005\022+\n\006amount\030\002 \001(\0132\033.google.protobuf.Flo" +
-      "atValue\022\022\n\nentry_type\030\003 \001(\005\022\014\n\004text\030\004 \001(" +
-      "\t\022\022\n\ntime_stamp\030\005 \001(\0052\324\003\n\006Jester\022\232\001\n\031Sca" +
-      "nnedInvoiceSuggestions\022+.asgt.jester.v1a" +
-      "lpha1.ScannedInvoiceRequest\032).asgt.jeste" +
-      "r.v1alpha1.SuggestionsResponse\"%\202\323\344\223\002\037\"\032" +
-      "/v1/suggest:scannedinvoice:\001*\022\256\001\n\037Electr" +
-      "onicInvoicLineSuggestions\0222.asgt.jester." +
-      "v1alpha1.ElectronicInvoiceLineRequest\032)." +
-      "asgt.jester.v1alpha1.SuggestionsResponse" +
-      "\",\202\323\344\223\002&\"!/v1/suggest:electronicinvoicel" +
-      "ine:\001*\022|\n\017BankSuggestions\022!.asgt.jester." +
-      "v1alpha1.BankRequest\032).asgt.jester.v1alp" +
-      "ha1.SuggestionsResponse\"\033\202\323\344\223\002\025\"\020/v1/sug" +
-      "gest:bank:\001*B\010Z\006jesterb\006proto3"
+      "s.proto\032\037google/protobuf/timestamp.proto" +
+      "\032\036google/protobuf/wrappers.proto\"\276\001\n\nCon" +
+      "fidence\0225\n\005level\030\001 \001(\0162&.asgt.jester.v1a" +
+      "lpha1.Confidence.Level\022*\n\005value\030\002 \001(\0132\033." +
+      "google.protobuf.FloatValue\"M\n\005Level\022\013\n\007U" +
+      "NKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003" +
+      "\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\256\001\n\nPrediction" +
+      "\022\016\n\006target\030\001 \001(\t\022>\n\ncandidates\030\002 \003(\0132*.a" +
+      "sgt.jester.v1alpha1.Prediction.Candidate" +
+      "\032P\n\tCandidate\022\r\n\005label\030\001 \001(\t\0224\n\nconfiden" +
+      "ce\030\002 \001(\0132 .asgt.jester.v1alpha1.Confiden" +
+      "ce\"L\n\023SuggestionsResponse\0225\n\013predictions" +
+      "\030\001 \003(\0132 .asgt.jester.v1alpha1.Prediction" +
+      "\"m\n\021SuggestionOptions\022\030\n\020suggestion_limi" +
+      "t\030\001 \001(\005\022>\n\016min_confidence\030\002 \001(\0162&.asgt.j" +
+      "ester.v1alpha1.Confidence.Level\"\306\001\n\025Scan" +
+      "nedInvoiceRequest\022@\n\006inputs\030\001 \003(\01320.asgt" +
+      ".jester.v1alpha1.ScannedInvoiceRequest.D" +
+      "ata\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001" +
+      "(\0132\'.asgt.jester.v1alpha1.SuggestionOpti" +
+      "ons\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\223\003\n\034Ele" +
+      "ctronicInvoiceLineRequest\022G\n\006inputs\030\001 \003(" +
+      "\01327.asgt.jester.v1alpha1.ElectronicInvoi" +
+      "ceLineRequest.Data\022\024\n\014dataset_name\030\002 \001(\t" +
+      "\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1" +
+      ".SuggestionOptions\032\331\001\n\004Data\022.\n\nissue_dat" +
+      "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022\020\n\010c" +
+      "urrency\030\002 \001(\t\022\023\n\013supplier_id\030\003 \001(\t\022\025\n\rsu" +
+      "pplier_name\030\004 \001(\t\022\032\n\022supplier_global_id\030" +
+      "\005 \001(\t\022\024\n\014customer_ref\030\006 \001(\t\022\r\n\005total\030\007 \001" +
+      "(\005\022\021\n\tline_text\030\010 \001(\t\022\017\n\007line_id\030\t \001(\t\"\265" +
+      "\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.asgt.je" +
+      "ster.v1alpha1.BankRequest.Data\022\024\n\014datase" +
+      "t_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jes" +
+      "ter.v1alpha1.SuggestionOptions\032\235\001\n\004Data\022" +
+      "\026\n\016account_number\030\001 \001(\005\022+\n\006amount\030\002 \001(\0132" +
+      "\033.google.protobuf.FloatValue\022\022\n\nentry_ty" +
+      "pe\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stamp\030\005 \001" +
+      "(\0132\032.google.protobuf.Timestamp2\324\003\n\006Jeste" +
+      "r\022\232\001\n\031ScannedInvoiceSuggestions\022+.asgt.j" +
+      "ester.v1alpha1.ScannedInvoiceRequest\032).a" +
+      "sgt.jester.v1alpha1.SuggestionsResponse\"" +
+      "%\202\323\344\223\002\037\"\032/v1/suggest:scannedinvoice:\001*\022\256" +
+      "\001\n\037ElectronicInvoicLineSuggestions\0222.asg" +
+      "t.jester.v1alpha1.ElectronicInvoiceLineR" +
+      "equest\032).asgt.jester.v1alpha1.Suggestion" +
+      "sResponse\",\202\323\344\223\002&\"!/v1/suggest:electroni" +
+      "cinvoiceline:\001*\022|\n\017BankSuggestions\022!.asg" +
+      "t.jester.v1alpha1.BankRequest\032).asgt.jes" +
+      "ter.v1alpha1.SuggestionsResponse\"\033\202\323\344\223\002\025" +
+      "\"\020/v1/suggest:bank:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10543,6 +10733,7 @@ public final class JesterOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.AnnotationsProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_jester_v1alpha1_Confidence_descriptor =
@@ -10617,6 +10808,7 @@ public final class JesterOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

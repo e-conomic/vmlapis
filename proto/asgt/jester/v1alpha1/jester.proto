@@ -6,6 +6,7 @@ option go_package = "jester";
 
 import "google/api/annotations.proto";
 import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
 
 service Jester {
   rpc ScannedInvoiceSuggestions(ScannedInvoiceRequest) returns (SuggestionsResponse) {
@@ -81,7 +82,7 @@ message ScannedInvoiceRequest {
 // Electronic Invoice Line
 message ElectronicInvoiceLineRequest {
   message Data {
-    string issue_date = 1;
+    google.protobuf.Timestamp issue_date = 1;
     string currency = 2;
     string supplier_id = 3;
     string supplier_name = 4;
@@ -104,7 +105,7 @@ message BankRequest {
     google.protobuf.FloatValue amount = 2;
     int32 entry_type = 3;
     string text = 4;
-    int32 time_stamp = 5;
+    google.protobuf.Timestamp time_stamp = 5;
   }
 
   repeated Data inputs = 1;
