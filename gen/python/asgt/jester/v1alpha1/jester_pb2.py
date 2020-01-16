@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
@@ -22,163 +23,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.jester.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\006jester'),
-  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xbe\x01\n\nConfidence\x12\x35\n\x05level\x18\x01 \x01(\x0e\x32&.asgt.jester.v1alpha1.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xae\x01\n\nPrediction\x12\x0e\n\x06target\x18\x01 \x01(\t\x12>\n\ncandidates\x18\x02 \x03(\x0b\x32*.asgt.jester.v1alpha1.Prediction.Candidate\x1aP\n\tCandidate\x12\r\n\x05label\x18\x01 \x01(\t\x12\x34\n\nconfidence\x18\x02 \x01(\x0b\x32 .asgt.jester.v1alpha1.Confidence\"L\n\x13SuggestionsResponse\x12\x35\n\x0bpredictions\x18\x01 \x03(\x0b\x32 .asgt.jester.v1alpha1.Prediction\"m\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12>\n\x0emin_confidence\x18\x02 \x01(\x0e\x32&.asgt.jester.v1alpha1.Confidence.Level\"\xc6\x01\n\x15ScannedInvoiceRequest\x12@\n\x06inputs\x18\x01 \x03(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\x1b\n\x04\x44\x61ta\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\"\x93\x03\n\x1c\x45lectronicInvoiceLineRequest\x12G\n\x06inputs\x18\x01 \x03(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\xd9\x01\n\x04\x44\x61ta\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08\x63urrency\x18\x02 \x01(\t\x12\x13\n\x0bsupplier_id\x18\x03 \x01(\t\x12\x15\n\rsupplier_name\x18\x04 \x01(\t\x12\x1a\n\x12supplier_global_id\x18\x05 \x01(\t\x12\x14\n\x0c\x63ustomer_ref\x18\x06 \x01(\t\x12\r\n\x05total\x18\x07 \x01(\x05\x12\x11\n\tline_text\x18\x08 \x01(\t\x12\x0f\n\x07line_id\x18\t \x01(\t\"\xb5\x02\n\x0b\x42\x61nkRequest\x12\x36\n\x06inputs\x18\x01 \x03(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\x9d\x01\n\x04\x44\x61ta\x12\x16\n\x0e\x61\x63\x63ount_number\x18\x01 \x01(\x05\x12+\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x12\n\nentry_type\x18\x03 \x01(\x05\x12\x0c\n\x04text\x18\x04 \x01(\t\x12.\n\ntime_stamp\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2\xd4\x03\n\x06Jester\x12\x9a\x01\n\x19ScannedInvoiceSuggestions\x12+.asgt.jester.v1alpha1.ScannedInvoiceRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1a/v1/suggest:scannedinvoice:\x01*\x12\xae\x01\n\x1f\x45lectronicInvoicLineSuggestions\x12\x32.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\",\x82\xd3\xe4\x93\x02&\"!/v1/suggest:electronicinvoiceline:\x01*\x12|\n\x0f\x42\x61nkSuggestions\x12!.asgt.jester.v1alpha1.BankRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x10/v1/suggest:bank:\x01*B\x08Z\x06jesterb\x06proto3')
+  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\"A\n\x13SuggestionsResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\xc6\x01\n\x15ScannedInvoiceRequest\x12@\n\x06inputs\x18\x01 \x03(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\x1b\n\x04\x44\x61ta\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\"\x93\x03\n\x1c\x45lectronicInvoiceLineRequest\x12G\n\x06inputs\x18\x01 \x03(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\xd9\x01\n\x04\x44\x61ta\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x10\n\x08\x63urrency\x18\x02 \x01(\t\x12\x13\n\x0bsupplier_id\x18\x03 \x01(\t\x12\x15\n\rsupplier_name\x18\x04 \x01(\t\x12\x1a\n\x12supplier_global_id\x18\x05 \x01(\t\x12\x14\n\x0c\x63ustomer_ref\x18\x06 \x01(\t\x12\r\n\x05total\x18\x07 \x01(\x05\x12\x11\n\tline_text\x18\x08 \x01(\t\x12\x0f\n\x07line_id\x18\t \x01(\t\"\xb5\x02\n\x0b\x42\x61nkRequest\x12\x36\n\x06inputs\x18\x01 \x03(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\x1a\x9d\x01\n\x04\x44\x61ta\x12\x16\n\x0e\x61\x63\x63ount_number\x18\x01 \x01(\x05\x12+\n\x06\x61mount\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x12\n\nentry_type\x18\x03 \x01(\x05\x12\x0c\n\x04text\x18\x04 \x01(\t\x12.\n\ntime_stamp\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.Timestamp2\xd4\x03\n\x06Jester\x12\x9a\x01\n\x19ScannedInvoiceSuggestions\x12+.asgt.jester.v1alpha1.ScannedInvoiceRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"%\x82\xd3\xe4\x93\x02\x1f\"\x1a/v1/suggest:scannedinvoice:\x01*\x12\xae\x01\n\x1f\x45lectronicInvoicLineSuggestions\x12\x32.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\",\x82\xd3\xe4\x93\x02&\"!/v1/suggest:electronicinvoiceline:\x01*\x12|\n\x0f\x42\x61nkSuggestions\x12!.asgt.jester.v1alpha1.BankRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x10/v1/suggest:bank:\x01*B\x08Z\x06jesterb\x06proto3')
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
 
 
-
-_CONFIDENCE_LEVEL = _descriptor.EnumDescriptor(
-  name='Level',
-  full_name='asgt.jester.v1alpha1.Confidence.Level',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VERY_LOW', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LOW', index=2, number=2,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MID', index=3, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HIGH', index=4, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VERY_HIGH', index=5, number=5,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=268,
-  serialized_end=345,
-)
-_sym_db.RegisterEnumDescriptor(_CONFIDENCE_LEVEL)
-
-
-_CONFIDENCE = _descriptor.Descriptor(
-  name='Confidence',
-  full_name='asgt.jester.v1alpha1.Confidence',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='level', full_name='asgt.jester.v1alpha1.Confidence.level', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='asgt.jester.v1alpha1.Confidence.value', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-    _CONFIDENCE_LEVEL,
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=155,
-  serialized_end=345,
-)
-
-
-_PREDICTION_CANDIDATE = _descriptor.Descriptor(
-  name='Candidate',
-  full_name='asgt.jester.v1alpha1.Prediction.Candidate',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='label', full_name='asgt.jester.v1alpha1.Prediction.Candidate.label', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='confidence', full_name='asgt.jester.v1alpha1.Prediction.Candidate.confidence', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=442,
-  serialized_end=522,
-)
-
-_PREDICTION = _descriptor.Descriptor(
-  name='Prediction',
-  full_name='asgt.jester.v1alpha1.Prediction',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='target', full_name='asgt.jester.v1alpha1.Prediction.target', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='candidates', full_name='asgt.jester.v1alpha1.Prediction.candidates', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_PREDICTION_CANDIDATE, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=348,
-  serialized_end=522,
-)
 
 
 _SUGGESTIONSRESPONSE = _descriptor.Descriptor(
@@ -207,8 +56,8 @@ _SUGGESTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=524,
-  serialized_end=600,
+  serialized_start=182,
+  serialized_end=247,
 )
 
 
@@ -245,8 +94,8 @@ _SUGGESTIONOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=711,
+  serialized_start=249,
+  serialized_end=347,
 )
 
 
@@ -276,8 +125,8 @@ _SCANNEDINVOICEREQUEST_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=885,
-  serialized_end=912,
+  serialized_start=521,
+  serialized_end=548,
 )
 
 _SCANNEDINVOICEREQUEST = _descriptor.Descriptor(
@@ -320,8 +169,8 @@ _SCANNEDINVOICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=714,
-  serialized_end=912,
+  serialized_start=350,
+  serialized_end=548,
 )
 
 
@@ -407,8 +256,8 @@ _ELECTRONICINVOICELINEREQUEST_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1101,
-  serialized_end=1318,
+  serialized_start=737,
+  serialized_end=954,
 )
 
 _ELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
@@ -451,8 +300,8 @@ _ELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=915,
-  serialized_end=1318,
+  serialized_start=551,
+  serialized_end=954,
 )
 
 
@@ -510,8 +359,8 @@ _BANKREQUEST_DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1473,
-  serialized_end=1630,
+  serialized_start=1109,
+  serialized_end=1266,
 )
 
 _BANKREQUEST = _descriptor.Descriptor(
@@ -554,18 +403,12 @@ _BANKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1321,
-  serialized_end=1630,
+  serialized_start=957,
+  serialized_end=1266,
 )
 
-_CONFIDENCE.fields_by_name['level'].enum_type = _CONFIDENCE_LEVEL
-_CONFIDENCE.fields_by_name['value'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
-_CONFIDENCE_LEVEL.containing_type = _CONFIDENCE
-_PREDICTION_CANDIDATE.fields_by_name['confidence'].message_type = _CONFIDENCE
-_PREDICTION_CANDIDATE.containing_type = _PREDICTION
-_PREDICTION.fields_by_name['candidates'].message_type = _PREDICTION_CANDIDATE
-_SUGGESTIONSRESPONSE.fields_by_name['predictions'].message_type = _PREDICTION
-_SUGGESTIONOPTIONS.fields_by_name['min_confidence'].enum_type = _CONFIDENCE_LEVEL
+_SUGGESTIONSRESPONSE.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
+_SUGGESTIONOPTIONS.fields_by_name['min_confidence'].enum_type = asgt_dot_type_dot_prediction__pb2._CONFIDENCE_LEVEL
 _SCANNEDINVOICEREQUEST_DATA.containing_type = _SCANNEDINVOICEREQUEST
 _SCANNEDINVOICEREQUEST.fields_by_name['inputs'].message_type = _SCANNEDINVOICEREQUEST_DATA
 _SCANNEDINVOICEREQUEST.fields_by_name['options'].message_type = _SUGGESTIONOPTIONS
@@ -578,36 +421,12 @@ _BANKREQUEST_DATA.fields_by_name['time_stamp'].message_type = google_dot_protobu
 _BANKREQUEST_DATA.containing_type = _BANKREQUEST
 _BANKREQUEST.fields_by_name['inputs'].message_type = _BANKREQUEST_DATA
 _BANKREQUEST.fields_by_name['options'].message_type = _SUGGESTIONOPTIONS
-DESCRIPTOR.message_types_by_name['Confidence'] = _CONFIDENCE
-DESCRIPTOR.message_types_by_name['Prediction'] = _PREDICTION
 DESCRIPTOR.message_types_by_name['SuggestionsResponse'] = _SUGGESTIONSRESPONSE
 DESCRIPTOR.message_types_by_name['SuggestionOptions'] = _SUGGESTIONOPTIONS
 DESCRIPTOR.message_types_by_name['ScannedInvoiceRequest'] = _SCANNEDINVOICEREQUEST
 DESCRIPTOR.message_types_by_name['ElectronicInvoiceLineRequest'] = _ELECTRONICINVOICELINEREQUEST
 DESCRIPTOR.message_types_by_name['BankRequest'] = _BANKREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-Confidence = _reflection.GeneratedProtocolMessageType('Confidence', (_message.Message,), dict(
-  DESCRIPTOR = _CONFIDENCE,
-  __module__ = 'asgt.jester.v1alpha1.jester_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Confidence)
-  ))
-_sym_db.RegisterMessage(Confidence)
-
-Prediction = _reflection.GeneratedProtocolMessageType('Prediction', (_message.Message,), dict(
-
-  Candidate = _reflection.GeneratedProtocolMessageType('Candidate', (_message.Message,), dict(
-    DESCRIPTOR = _PREDICTION_CANDIDATE,
-    __module__ = 'asgt.jester.v1alpha1.jester_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Prediction.Candidate)
-    ))
-  ,
-  DESCRIPTOR = _PREDICTION,
-  __module__ = 'asgt.jester.v1alpha1.jester_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Prediction)
-  ))
-_sym_db.RegisterMessage(Prediction)
-_sym_db.RegisterMessage(Prediction.Candidate)
 
 SuggestionsResponse = _reflection.GeneratedProtocolMessageType('SuggestionsResponse', (_message.Message,), dict(
   DESCRIPTOR = _SUGGESTIONSRESPONSE,
@@ -677,8 +496,8 @@ _JESTER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1633,
-  serialized_end=2101,
+  serialized_start=1269,
+  serialized_end=1737,
   methods=[
   _descriptor.MethodDescriptor(
     name='ScannedInvoiceSuggestions',

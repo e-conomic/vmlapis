@@ -14,2646 +14,32 @@ public final class JesterOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface ConfidenceOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.Confidence)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
-     * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-     */
-    int getLevelValue();
-    /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
-     * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-     */
-    asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getLevel();
-
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    boolean hasValue();
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    com.google.protobuf.FloatValue getValue();
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
-  }
-  /**
-   * <pre>
-   * Common types
-   * </pre>
-   *
-   * Protobuf type {@code asgt.jester.v1alpha1.Confidence}
-   */
-  public  static final class Confidence extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.Confidence)
-      ConfidenceOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Confidence.newBuilder() to construct.
-    private Confidence(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Confidence() {
-      level_ = 0;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Confidence(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              int rawValue = input.readEnum();
-
-              level_ = rawValue;
-              break;
-            }
-            case 18: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Confidence_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Confidence_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.jester.v1alpha1.JesterOuterClass.Confidence.class, asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder.class);
-    }
-
-    /**
-     * Protobuf enum {@code asgt.jester.v1alpha1.Confidence.Level}
-     */
-    public enum Level
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>UNKNOWN = 0;</code>
-       */
-      UNKNOWN(0),
-      /**
-       * <code>VERY_LOW = 1;</code>
-       */
-      VERY_LOW(1),
-      /**
-       * <code>LOW = 2;</code>
-       */
-      LOW(2),
-      /**
-       * <code>MID = 3;</code>
-       */
-      MID(3),
-      /**
-       * <code>HIGH = 4;</code>
-       */
-      HIGH(4),
-      /**
-       * <code>VERY_HIGH = 5;</code>
-       */
-      VERY_HIGH(5),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>UNKNOWN = 0;</code>
-       */
-      public static final int UNKNOWN_VALUE = 0;
-      /**
-       * <code>VERY_LOW = 1;</code>
-       */
-      public static final int VERY_LOW_VALUE = 1;
-      /**
-       * <code>LOW = 2;</code>
-       */
-      public static final int LOW_VALUE = 2;
-      /**
-       * <code>MID = 3;</code>
-       */
-      public static final int MID_VALUE = 3;
-      /**
-       * <code>HIGH = 4;</code>
-       */
-      public static final int HIGH_VALUE = 4;
-      /**
-       * <code>VERY_HIGH = 5;</code>
-       */
-      public static final int VERY_HIGH_VALUE = 5;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Level valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static Level forNumber(int value) {
-        switch (value) {
-          case 0: return UNKNOWN;
-          case 1: return VERY_LOW;
-          case 2: return LOW;
-          case 3: return MID;
-          case 4: return HIGH;
-          case 5: return VERY_HIGH;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Level>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Level> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Level>() {
-              public Level findValueByNumber(int number) {
-                return Level.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Level[] VALUES = values();
-
-      public static Level valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Level(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:asgt.jester.v1alpha1.Confidence.Level)
-    }
-
-    public static final int LEVEL_FIELD_NUMBER = 1;
-    private int level_;
-    /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
-     * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-     */
-    public int getLevelValue() {
-      return level_;
-    }
-    /**
-     * <pre>
-     * A bucketized representation of confidence, which is intended to give clients
-     * highly stable results across model upgrades.
-     * </pre>
-     *
-     * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-     */
-    public asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getLevel() {
-      @SuppressWarnings("deprecation")
-      asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level result = asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.valueOf(level_);
-      return result == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNRECOGNIZED : result;
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 2;
-    private com.google.protobuf.FloatValue value_;
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    public boolean hasValue() {
-      return value_ != null;
-    }
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    public com.google.protobuf.FloatValue getValue() {
-      return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-    }
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-      return getValue();
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (level_ != asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
-        output.writeEnum(1, level_);
-      }
-      if (value_ != null) {
-        output.writeMessage(2, getValue());
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (level_ != asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, level_);
-      }
-      if (value_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getValue());
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.Confidence)) {
-        return super.equals(obj);
-      }
-      asgt.jester.v1alpha1.JesterOuterClass.Confidence other = (asgt.jester.v1alpha1.JesterOuterClass.Confidence) obj;
-
-      boolean result = true;
-      result = result && level_ == other.level_;
-      result = result && (hasValue() == other.hasValue());
-      if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
-      }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + level_;
-      if (hasValue()) {
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.Confidence prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Common types
-     * </pre>
-     *
-     * Protobuf type {@code asgt.jester.v1alpha1.Confidence}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.Confidence)
-        asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Confidence_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Confidence_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.Confidence.class, asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder.class);
-      }
-
-      // Construct using asgt.jester.v1alpha1.JesterOuterClass.Confidence.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        level_ = 0;
-
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Confidence_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence getDefaultInstanceForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence build() {
-        asgt.jester.v1alpha1.JesterOuterClass.Confidence result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence buildPartial() {
-        asgt.jester.v1alpha1.JesterOuterClass.Confidence result = new asgt.jester.v1alpha1.JesterOuterClass.Confidence(this);
-        result.level_ = level_;
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.Confidence) {
-          return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.Confidence)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.Confidence other) {
-        if (other == asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDefaultInstance()) return this;
-        if (other.level_ != 0) {
-          setLevelValue(other.getLevelValue());
-        }
-        if (other.hasValue()) {
-          mergeValue(other.getValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.jester.v1alpha1.JesterOuterClass.Confidence parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.Confidence) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int level_ = 0;
-      /**
-       * <pre>
-       * A bucketized representation of confidence, which is intended to give clients
-       * highly stable results across model upgrades.
-       * </pre>
-       *
-       * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-       */
-      public int getLevelValue() {
-        return level_;
-      }
-      /**
-       * <pre>
-       * A bucketized representation of confidence, which is intended to give clients
-       * highly stable results across model upgrades.
-       * </pre>
-       *
-       * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-       */
-      public Builder setLevelValue(int value) {
-        level_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * A bucketized representation of confidence, which is intended to give clients
-       * highly stable results across model upgrades.
-       * </pre>
-       *
-       * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getLevel() {
-        @SuppressWarnings("deprecation")
-        asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level result = asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.valueOf(level_);
-        return result == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * A bucketized representation of confidence, which is intended to give clients
-       * highly stable results across model upgrades.
-       * </pre>
-       *
-       * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-       */
-      public Builder setLevel(asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        level_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * A bucketized representation of confidence, which is intended to give clients
-       * highly stable results across model upgrades.
-       * </pre>
-       *
-       * <code>.asgt.jester.v1alpha1.Confidence.Level level = 1;</code>
-       */
-      public Builder clearLevel() {
-        
-        level_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.FloatValue value_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public com.google.protobuf.FloatValue getValue() {
-        if (valueBuilder_ == null) {
-          return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-        } else {
-          return valueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder setValue(com.google.protobuf.FloatValue value) {
-        if (valueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder setValue(
-          com.google.protobuf.FloatValue.Builder builderForValue) {
-        if (valueBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder mergeValue(com.google.protobuf.FloatValue value) {
-        if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.google.protobuf.FloatValue.newBuilder(value_).mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          valueBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public com.google.protobuf.FloatValue.Builder getValueBuilder() {
-        
-        onChanged();
-        return getValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-        if (valueBuilder_ != null) {
-          return valueBuilder_.getMessageOrBuilder();
-        } else {
-          return value_ == null ?
-              com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-        }
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-          getValueFieldBuilder() {
-        if (valueBuilder_ == null) {
-          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                  getValue(),
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        return valueBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.Confidence)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Confidence)
-    private static final asgt.jester.v1alpha1.JesterOuterClass.Confidence DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.Confidence();
-    }
-
-    public static asgt.jester.v1alpha1.JesterOuterClass.Confidence getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Confidence>
-        PARSER = new com.google.protobuf.AbstractParser<Confidence>() {
-      @java.lang.Override
-      public Confidence parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Confidence(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Confidence> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Confidence> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.jester.v1alpha1.JesterOuterClass.Confidence getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface PredictionOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.Prediction)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string target = 1;</code>
-     */
-    java.lang.String getTarget();
-    /**
-     * <code>string target = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getTargetBytes();
-
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> 
-        getCandidatesList();
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getCandidates(int index);
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    int getCandidatesCount();
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder> 
-        getCandidatesOrBuilderList();
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code asgt.jester.v1alpha1.Prediction}
-   */
-  public  static final class Prediction extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.Prediction)
-      PredictionOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Prediction.newBuilder() to construct.
-    private Prediction(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Prediction() {
-      target_ = "";
-      candidates_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Prediction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              target_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                candidates_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              candidates_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          candidates_ = java.util.Collections.unmodifiableList(candidates_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.jester.v1alpha1.JesterOuterClass.Prediction.class, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder.class);
-    }
-
-    public interface CandidateOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.Prediction.Candidate)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string label = 1;</code>
-       */
-      java.lang.String getLabel();
-      /**
-       * <code>string label = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getLabelBytes();
-
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      boolean hasConfidence();
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.Confidence getConfidence();
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
-    }
-    /**
-     * Protobuf type {@code asgt.jester.v1alpha1.Prediction.Candidate}
-     */
-    public  static final class Candidate extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.Prediction.Candidate)
-        CandidateOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Candidate.newBuilder() to construct.
-      private Candidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Candidate() {
-        label_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Candidate(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                label_ = s;
-                break;
-              }
-              case 18: {
-                asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder subBuilder = null;
-                if (confidence_ != null) {
-                  subBuilder = confidence_.toBuilder();
-                }
-                confidence_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.Confidence.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(confidence_);
-                  confidence_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_Candidate_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.class, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder.class);
-      }
-
-      public static final int LABEL_FIELD_NUMBER = 1;
-      private volatile java.lang.Object label_;
-      /**
-       * <code>string label = 1;</code>
-       */
-      public java.lang.String getLabel() {
-        java.lang.Object ref = label_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          label_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string label = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getLabelBytes() {
-        java.lang.Object ref = label_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          label_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int CONFIDENCE_FIELD_NUMBER = 2;
-      private asgt.jester.v1alpha1.JesterOuterClass.Confidence confidence_;
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      public boolean hasConfidence() {
-        return confidence_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence getConfidence() {
-        return confidence_ == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDefaultInstance() : confidence_;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-        return getConfidence();
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getLabelBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
-        }
-        if (confidence_ != null) {
-          output.writeMessage(2, getConfidence());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getLabelBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
-        }
-        if (confidence_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getConfidence());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate)) {
-          return super.equals(obj);
-        }
-        asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate other = (asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate) obj;
-
-        boolean result = true;
-        result = result && getLabel()
-            .equals(other.getLabel());
-        result = result && (hasConfidence() == other.hasConfidence());
-        if (hasConfidence()) {
-          result = result && getConfidence()
-              .equals(other.getConfidence());
-        }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + LABEL_FIELD_NUMBER;
-        hash = (53 * hash) + getLabel().hashCode();
-        if (hasConfidence()) {
-          hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-          hash = (53 * hash) + getConfidence().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.jester.v1alpha1.Prediction.Candidate}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.Prediction.Candidate)
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_Candidate_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.class, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder.class);
-        }
-
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          label_ = "";
-
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
-          } else {
-            confidence_ = null;
-            confidenceBuilder_ = null;
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate build() {
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate result = new asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate(this);
-          result.label_ = label_;
-          if (confidenceBuilder_ == null) {
-            result.confidence_ = confidence_;
-          } else {
-            result.confidence_ = confidenceBuilder_.build();
-          }
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.getDefaultInstance()) return this;
-          if (!other.getLabel().isEmpty()) {
-            label_ = other.label_;
-            onChanged();
-          }
-          if (other.hasConfidence()) {
-            mergeConfidence(other.getConfidence());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object label_ = "";
-        /**
-         * <code>string label = 1;</code>
-         */
-        public java.lang.String getLabel() {
-          java.lang.Object ref = label_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            label_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string label = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getLabelBytes() {
-          java.lang.Object ref = label_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            label_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string label = 1;</code>
-         */
-        public Builder setLabel(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          label_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string label = 1;</code>
-         */
-        public Builder clearLabel() {
-          
-          label_ = getDefaultInstance().getLabel();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string label = 1;</code>
-         */
-        public Builder setLabelBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          label_ = value;
-          onChanged();
-          return this;
-        }
-
-        private asgt.jester.v1alpha1.JesterOuterClass.Confidence confidence_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.Confidence, asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder, asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public boolean hasConfidence() {
-          return confidenceBuilder_ != null || confidence_ != null;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.Confidence getConfidence() {
-          if (confidenceBuilder_ == null) {
-            return confidence_ == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDefaultInstance() : confidence_;
-          } else {
-            return confidenceBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public Builder setConfidence(asgt.jester.v1alpha1.JesterOuterClass.Confidence value) {
-          if (confidenceBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            confidence_ = value;
-            onChanged();
-          } else {
-            confidenceBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public Builder setConfidence(
-            asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder builderForValue) {
-          if (confidenceBuilder_ == null) {
-            confidence_ = builderForValue.build();
-            onChanged();
-          } else {
-            confidenceBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public Builder mergeConfidence(asgt.jester.v1alpha1.JesterOuterClass.Confidence value) {
-          if (confidenceBuilder_ == null) {
-            if (confidence_ != null) {
-              confidence_ =
-                asgt.jester.v1alpha1.JesterOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
-            } else {
-              confidence_ = value;
-            }
-            onChanged();
-          } else {
-            confidenceBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public Builder clearConfidence() {
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
-            onChanged();
-          } else {
-            confidence_ = null;
-            confidenceBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder getConfidenceBuilder() {
-          
-          onChanged();
-          return getConfidenceFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-          if (confidenceBuilder_ != null) {
-            return confidenceBuilder_.getMessageOrBuilder();
-          } else {
-            return confidence_ == null ?
-                asgt.jester.v1alpha1.JesterOuterClass.Confidence.getDefaultInstance() : confidence_;
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.Confidence confidence = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.Confidence, asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder, asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder> 
-            getConfidenceFieldBuilder() {
-          if (confidenceBuilder_ == null) {
-            confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.jester.v1alpha1.JesterOuterClass.Confidence, asgt.jester.v1alpha1.JesterOuterClass.Confidence.Builder, asgt.jester.v1alpha1.JesterOuterClass.ConfidenceOrBuilder>(
-                    getConfidence(),
-                    getParentForChildren(),
-                    isClean());
-            confidence_ = null;
-          }
-          return confidenceBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.Prediction.Candidate)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Prediction.Candidate)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate();
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Candidate>
-          PARSER = new com.google.protobuf.AbstractParser<Candidate>() {
-        @java.lang.Override
-        public Candidate parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Candidate(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Candidate> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Candidate> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
-    private int bitField0_;
-    public static final int TARGET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object target_;
-    /**
-     * <code>string target = 1;</code>
-     */
-    public java.lang.String getTarget() {
-      java.lang.Object ref = target_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        target_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string target = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getTargetBytes() {
-      java.lang.Object ref = target_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        target_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CANDIDATES_FIELD_NUMBER = 2;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> candidates_;
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> getCandidatesList() {
-      return candidates_;
-    }
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder> 
-        getCandidatesOrBuilderList() {
-      return candidates_;
-    }
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    public int getCandidatesCount() {
-      return candidates_.size();
-    }
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getCandidates(int index) {
-      return candidates_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-     */
-    public asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
-        int index) {
-      return candidates_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getTargetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
-      }
-      for (int i = 0; i < candidates_.size(); i++) {
-        output.writeMessage(2, candidates_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getTargetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
-      }
-      for (int i = 0; i < candidates_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, candidates_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.Prediction)) {
-        return super.equals(obj);
-      }
-      asgt.jester.v1alpha1.JesterOuterClass.Prediction other = (asgt.jester.v1alpha1.JesterOuterClass.Prediction) obj;
-
-      boolean result = true;
-      result = result && getTarget()
-          .equals(other.getTarget());
-      result = result && getCandidatesList()
-          .equals(other.getCandidatesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TARGET_FIELD_NUMBER;
-      hash = (53 * hash) + getTarget().hashCode();
-      if (getCandidatesCount() > 0) {
-        hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
-        hash = (53 * hash) + getCandidatesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.Prediction prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code asgt.jester.v1alpha1.Prediction}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.Prediction)
-        asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.Prediction.class, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder.class);
-      }
-
-      // Construct using asgt.jester.v1alpha1.JesterOuterClass.Prediction.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCandidatesFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        target_ = "";
-
-        if (candidatesBuilder_ == null) {
-          candidates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          candidatesBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_Prediction_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction getDefaultInstanceForType() {
-        return asgt.jester.v1alpha1.JesterOuterClass.Prediction.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction build() {
-        asgt.jester.v1alpha1.JesterOuterClass.Prediction result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction buildPartial() {
-        asgt.jester.v1alpha1.JesterOuterClass.Prediction result = new asgt.jester.v1alpha1.JesterOuterClass.Prediction(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.target_ = target_;
-        if (candidatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            candidates_ = java.util.Collections.unmodifiableList(candidates_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.candidates_ = candidates_;
-        } else {
-          result.candidates_ = candidatesBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.Prediction) {
-          return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.Prediction)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.Prediction other) {
-        if (other == asgt.jester.v1alpha1.JesterOuterClass.Prediction.getDefaultInstance()) return this;
-        if (!other.getTarget().isEmpty()) {
-          target_ = other.target_;
-          onChanged();
-        }
-        if (candidatesBuilder_ == null) {
-          if (!other.candidates_.isEmpty()) {
-            if (candidates_.isEmpty()) {
-              candidates_ = other.candidates_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureCandidatesIsMutable();
-              candidates_.addAll(other.candidates_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.candidates_.isEmpty()) {
-            if (candidatesBuilder_.isEmpty()) {
-              candidatesBuilder_.dispose();
-              candidatesBuilder_ = null;
-              candidates_ = other.candidates_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              candidatesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getCandidatesFieldBuilder() : null;
-            } else {
-              candidatesBuilder_.addAllMessages(other.candidates_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.jester.v1alpha1.JesterOuterClass.Prediction parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.Prediction) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object target_ = "";
-      /**
-       * <code>string target = 1;</code>
-       */
-      public java.lang.String getTarget() {
-        java.lang.Object ref = target_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          target_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTargetBytes() {
-        java.lang.Object ref = target_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          target_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder setTarget(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        target_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder clearTarget() {
-        
-        target_ = getDefaultInstance().getTarget();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder setTargetBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        target_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> candidates_ =
-        java.util.Collections.emptyList();
-      private void ensureCandidatesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          candidates_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate>(candidates_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder, asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder> candidatesBuilder_;
-
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> getCandidatesList() {
-        if (candidatesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(candidates_);
-        } else {
-          return candidatesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public int getCandidatesCount() {
-        if (candidatesBuilder_ == null) {
-          return candidates_.size();
-        } else {
-          return candidatesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate getCandidates(int index) {
-        if (candidatesBuilder_ == null) {
-          return candidates_.get(index);
-        } else {
-          return candidatesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder setCandidates(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCandidatesIsMutable();
-          candidates_.set(index, value);
-          onChanged();
-        } else {
-          candidatesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder setCandidates(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          candidatesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder addCandidates(asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCandidatesIsMutable();
-          candidates_.add(value);
-          onChanged();
-        } else {
-          candidatesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder addCandidates(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCandidatesIsMutable();
-          candidates_.add(index, value);
-          onChanged();
-        } else {
-          candidatesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder addCandidates(
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.add(builderForValue.build());
-          onChanged();
-        } else {
-          candidatesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder addCandidates(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          candidatesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder addAllCandidates(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate> values) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, candidates_);
-          onChanged();
-        } else {
-          candidatesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder clearCandidates() {
-        if (candidatesBuilder_ == null) {
-          candidates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          candidatesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public Builder removeCandidates(int index) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.remove(index);
-          onChanged();
-        } else {
-          candidatesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder getCandidatesBuilder(
-          int index) {
-        return getCandidatesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
-          int index) {
-        if (candidatesBuilder_ == null) {
-          return candidates_.get(index);  } else {
-          return candidatesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder> 
-           getCandidatesOrBuilderList() {
-        if (candidatesBuilder_ != null) {
-          return candidatesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(candidates_);
-        }
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder addCandidatesBuilder() {
-        return getCandidatesFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder addCandidatesBuilder(
-          int index) {
-        return getCandidatesFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction.Candidate candidates = 2;</code>
-       */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder> 
-           getCandidatesBuilderList() {
-        return getCandidatesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder, asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder> 
-          getCandidatesFieldBuilder() {
-        if (candidatesBuilder_ == null) {
-          candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Candidate.Builder, asgt.jester.v1alpha1.JesterOuterClass.Prediction.CandidateOrBuilder>(
-                  candidates_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          candidates_ = null;
-        }
-        return candidatesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.Prediction)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.Prediction)
-    private static final asgt.jester.v1alpha1.JesterOuterClass.Prediction DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.Prediction();
-    }
-
-    public static asgt.jester.v1alpha1.JesterOuterClass.Prediction getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Prediction>
-        PARSER = new com.google.protobuf.AbstractParser<Prediction>() {
-      @java.lang.Override
-      public Prediction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Prediction(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Prediction> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Prediction> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.jester.v1alpha1.JesterOuterClass.Prediction getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface SuggestionsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.SuggestionsResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction> 
+    java.util.List<asgt.type.PredictionOuterClass.Prediction> 
         getPredictionsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.Prediction getPredictions(int index);
+    asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
     int getPredictionsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder> 
+    java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+    asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
   }
   /**
@@ -2702,11 +88,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                predictions_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.Prediction>();
+                predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
                 mutable_bitField0_ |= 0x00000001;
               }
               predictions_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.Prediction.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2745,36 +131,36 @@ public final class JesterOuterClass {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction> predictions_;
+    private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction> getPredictionsList() {
+    public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder> 
+    public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.Prediction getPredictions(int index) {
+    public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+    public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index) {
       return predictions_.get(index);
     }
@@ -3126,22 +512,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction> predictions_ =
+      private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_ =
         java.util.Collections.emptyList();
       private void ensurePredictionsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          predictions_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.Prediction>(predictions_);
+          predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>(predictions_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder, asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder> predictionsBuilder_;
+          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction> getPredictionsList() {
+      public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
         if (predictionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(predictions_);
         } else {
@@ -3149,7 +535,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public int getPredictionsCount() {
         if (predictionsBuilder_ == null) {
@@ -3159,9 +545,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction getPredictions(int index) {
+      public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
         if (predictionsBuilder_ == null) {
           return predictions_.get(index);
         } else {
@@ -3169,10 +555,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder setPredictions(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction value) {
+          int index, asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3186,10 +572,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder setPredictions(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder builderForValue) {
+          int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.set(index, builderForValue.build());
@@ -3200,9 +586,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public Builder addPredictions(asgt.jester.v1alpha1.JesterOuterClass.Prediction value) {
+      public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3216,10 +602,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction value) {
+          int index, asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3233,10 +619,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder builderForValue) {
+          asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.add(builderForValue.build());
@@ -3247,10 +633,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder builderForValue) {
+          int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.add(index, builderForValue.build());
@@ -3261,10 +647,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder addAllPredictions(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.Prediction> values) {
+          java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3276,7 +662,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -3289,7 +675,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
       public Builder removePredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -3302,16 +688,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder getPredictionsBuilder(
+      public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+      public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
         if (predictionsBuilder_ == null) {
           return predictions_.get(index);  } else {
@@ -3319,9 +705,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder> 
+      public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
            getPredictionsOrBuilderList() {
         if (predictionsBuilder_ != null) {
           return predictionsBuilder_.getMessageOrBuilderList();
@@ -3330,33 +716,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder addPredictionsBuilder() {
+      public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
         return getPredictionsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.Prediction.getDefaultInstance());
+            asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder addPredictionsBuilder(
+      public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.Prediction.getDefaultInstance());
+            index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder> 
+      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
            getPredictionsBuilderList() {
         return getPredictionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.Prediction, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder, asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder> 
+          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
           getPredictionsFieldBuilder() {
         if (predictionsBuilder_ == null) {
           predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.Prediction, asgt.jester.v1alpha1.JesterOuterClass.Prediction.Builder, asgt.jester.v1alpha1.JesterOuterClass.PredictionOrBuilder>(
+              asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
                   predictions_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -3428,13 +814,13 @@ public final class JesterOuterClass {
     int getSuggestionLimit();
 
     /**
-     * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
      */
     int getMinConfidenceValue();
     /**
-     * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getMinConfidence();
+    asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
   }
   /**
    * Protobuf type {@code asgt.jester.v1alpha1.SuggestionOptions}
@@ -3532,18 +918,18 @@ public final class JesterOuterClass {
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
     private int minConfidence_;
     /**
-     * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
      */
     public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
-     * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getMinConfidence() {
+    public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
       @SuppressWarnings("deprecation")
-      asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level result = asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.valueOf(minConfidence_);
-      return result == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNRECOGNIZED : result;
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3563,7 +949,7 @@ public final class JesterOuterClass {
       if (suggestionLimit_ != 0) {
         output.writeInt32(1, suggestionLimit_);
       }
-      if (minConfidence_ != asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(2, minConfidence_);
       }
       unknownFields.writeTo(output);
@@ -3579,7 +965,7 @@ public final class JesterOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, suggestionLimit_);
       }
-      if (minConfidence_ != asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, minConfidence_);
       }
@@ -3893,13 +1279,13 @@ public final class JesterOuterClass {
 
       private int minConfidence_ = 0;
       /**
-       * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
        */
       public int getMinConfidenceValue() {
         return minConfidence_;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
        */
       public Builder setMinConfidenceValue(int value) {
         minConfidence_ = value;
@@ -3907,17 +1293,17 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level getMinConfidence() {
+      public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
         @SuppressWarnings("deprecation")
-        asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level result = asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.valueOf(minConfidence_);
-        return result == null ? asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level.UNRECOGNIZED : result;
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
        */
-      public Builder setMinConfidence(asgt.jester.v1alpha1.JesterOuterClass.Confidence.Level value) {
+      public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3927,7 +1313,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.jester.v1alpha1.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
        */
       public Builder clearMinConfidence() {
         
@@ -10604,21 +7990,6 @@ public final class JesterOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_Confidence_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_Confidence_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_Prediction_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_Prediction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_Prediction_Candidate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_jester_v1alpha1_SuggestionsResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -10668,58 +8039,49 @@ public final class JesterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!asgt/jester/v1alpha1/jester.proto\022\024asg" +
-      "t.jester.v1alpha1\032\034google/api/annotation" +
-      "s.proto\032\037google/protobuf/timestamp.proto" +
-      "\032\036google/protobuf/wrappers.proto\"\276\001\n\nCon" +
-      "fidence\0225\n\005level\030\001 \001(\0162&.asgt.jester.v1a" +
-      "lpha1.Confidence.Level\022*\n\005value\030\002 \001(\0132\033." +
-      "google.protobuf.FloatValue\"M\n\005Level\022\013\n\007U" +
-      "NKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003" +
-      "\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\256\001\n\nPrediction" +
-      "\022\016\n\006target\030\001 \001(\t\022>\n\ncandidates\030\002 \003(\0132*.a" +
-      "sgt.jester.v1alpha1.Prediction.Candidate" +
-      "\032P\n\tCandidate\022\r\n\005label\030\001 \001(\t\0224\n\nconfiden" +
-      "ce\030\002 \001(\0132 .asgt.jester.v1alpha1.Confiden" +
-      "ce\"L\n\023SuggestionsResponse\0225\n\013predictions" +
-      "\030\001 \003(\0132 .asgt.jester.v1alpha1.Prediction" +
-      "\"m\n\021SuggestionOptions\022\030\n\020suggestion_limi" +
-      "t\030\001 \001(\005\022>\n\016min_confidence\030\002 \001(\0162&.asgt.j" +
-      "ester.v1alpha1.Confidence.Level\"\306\001\n\025Scan" +
-      "nedInvoiceRequest\022@\n\006inputs\030\001 \003(\01320.asgt" +
-      ".jester.v1alpha1.ScannedInvoiceRequest.D" +
-      "ata\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001" +
-      "(\0132\'.asgt.jester.v1alpha1.SuggestionOpti" +
-      "ons\032\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\223\003\n\034Ele" +
-      "ctronicInvoiceLineRequest\022G\n\006inputs\030\001 \003(" +
-      "\01327.asgt.jester.v1alpha1.ElectronicInvoi" +
-      "ceLineRequest.Data\022\024\n\014dataset_name\030\002 \001(\t" +
-      "\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1" +
-      ".SuggestionOptions\032\331\001\n\004Data\022.\n\nissue_dat" +
-      "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022\020\n\010c" +
-      "urrency\030\002 \001(\t\022\023\n\013supplier_id\030\003 \001(\t\022\025\n\rsu" +
-      "pplier_name\030\004 \001(\t\022\032\n\022supplier_global_id\030" +
-      "\005 \001(\t\022\024\n\014customer_ref\030\006 \001(\t\022\r\n\005total\030\007 \001" +
-      "(\005\022\021\n\tline_text\030\010 \001(\t\022\017\n\007line_id\030\t \001(\t\"\265" +
-      "\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.asgt.je" +
-      "ster.v1alpha1.BankRequest.Data\022\024\n\014datase" +
-      "t_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jes" +
-      "ter.v1alpha1.SuggestionOptions\032\235\001\n\004Data\022" +
-      "\026\n\016account_number\030\001 \001(\005\022+\n\006amount\030\002 \001(\0132" +
-      "\033.google.protobuf.FloatValue\022\022\n\nentry_ty" +
-      "pe\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stamp\030\005 \001" +
-      "(\0132\032.google.protobuf.Timestamp2\324\003\n\006Jeste" +
-      "r\022\232\001\n\031ScannedInvoiceSuggestions\022+.asgt.j" +
-      "ester.v1alpha1.ScannedInvoiceRequest\032).a" +
-      "sgt.jester.v1alpha1.SuggestionsResponse\"" +
-      "%\202\323\344\223\002\037\"\032/v1/suggest:scannedinvoice:\001*\022\256" +
-      "\001\n\037ElectronicInvoicLineSuggestions\0222.asg" +
-      "t.jester.v1alpha1.ElectronicInvoiceLineR" +
-      "equest\032).asgt.jester.v1alpha1.Suggestion" +
-      "sResponse\",\202\323\344\223\002&\"!/v1/suggest:electroni" +
-      "cinvoiceline:\001*\022|\n\017BankSuggestions\022!.asg" +
-      "t.jester.v1alpha1.BankRequest\032).asgt.jes" +
-      "ter.v1alpha1.SuggestionsResponse\"\033\202\323\344\223\002\025" +
-      "\"\020/v1/suggest:bank:\001*B\010Z\006jesterb\006proto3"
+      "t.jester.v1alpha1\032\032asgt/type/prediction." +
+      "proto\032\034google/api/annotations.proto\032\037goo" +
+      "gle/protobuf/timestamp.proto\032\036google/pro" +
+      "tobuf/wrappers.proto\"A\n\023SuggestionsRespo" +
+      "nse\022*\n\013predictions\030\001 \003(\0132\025.asgt.type.Pre" +
+      "diction\"b\n\021SuggestionOptions\022\030\n\020suggesti" +
+      "on_limit\030\001 \001(\005\0223\n\016min_confidence\030\002 \001(\0162\033" +
+      ".asgt.type.Confidence.Level\"\306\001\n\025ScannedI" +
+      "nvoiceRequest\022@\n\006inputs\030\001 \003(\01320.asgt.jes" +
+      "ter.v1alpha1.ScannedInvoiceRequest.Data\022" +
+      "\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'" +
+      ".asgt.jester.v1alpha1.SuggestionOptions\032" +
+      "\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\223\003\n\034Electro" +
+      "nicInvoiceLineRequest\022G\n\006inputs\030\001 \003(\01327." +
+      "asgt.jester.v1alpha1.ElectronicInvoiceLi" +
+      "neRequest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007" +
+      "options\030\003 \001(\0132\'.asgt.jester.v1alpha1.Sug" +
+      "gestionOptions\032\331\001\n\004Data\022.\n\nissue_date\030\001 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\020\n\010curre" +
+      "ncy\030\002 \001(\t\022\023\n\013supplier_id\030\003 \001(\t\022\025\n\rsuppli" +
+      "er_name\030\004 \001(\t\022\032\n\022supplier_global_id\030\005 \001(" +
+      "\t\022\024\n\014customer_ref\030\006 \001(\t\022\r\n\005total\030\007 \001(\005\022\021" +
+      "\n\tline_text\030\010 \001(\t\022\017\n\007line_id\030\t \001(\t\"\265\002\n\013B" +
+      "ankRequest\0226\n\006inputs\030\001 \003(\0132&.asgt.jester" +
+      ".v1alpha1.BankRequest.Data\022\024\n\014dataset_na" +
+      "me\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester." +
+      "v1alpha1.SuggestionOptions\032\235\001\n\004Data\022\026\n\016a" +
+      "ccount_number\030\001 \001(\005\022+\n\006amount\030\002 \001(\0132\033.go" +
+      "ogle.protobuf.FloatValue\022\022\n\nentry_type\030\003" +
+      " \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stamp\030\005 \001(\0132\032" +
+      ".google.protobuf.Timestamp2\324\003\n\006Jester\022\232\001" +
+      "\n\031ScannedInvoiceSuggestions\022+.asgt.jeste" +
+      "r.v1alpha1.ScannedInvoiceRequest\032).asgt." +
+      "jester.v1alpha1.SuggestionsResponse\"%\202\323\344" +
+      "\223\002\037\"\032/v1/suggest:scannedinvoice:\001*\022\256\001\n\037E" +
+      "lectronicInvoicLineSuggestions\0222.asgt.je" +
+      "ster.v1alpha1.ElectronicInvoiceLineReque" +
+      "st\032).asgt.jester.v1alpha1.SuggestionsRes" +
+      "ponse\",\202\323\344\223\002&\"!/v1/suggest:electronicinv" +
+      "oiceline:\001*\022|\n\017BankSuggestions\022!.asgt.je" +
+      "ster.v1alpha1.BankRequest\032).asgt.jester." +
+      "v1alpha1.SuggestionsResponse\"\033\202\323\344\223\002\025\"\020/v" +
+      "1/suggest:bank:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10732,42 +8094,25 @@ public final class JesterOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
-    internal_static_asgt_jester_v1alpha1_Confidence_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_Confidence_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_Confidence_descriptor,
-        new java.lang.String[] { "Level", "Value", });
-    internal_static_asgt_jester_v1alpha1_Prediction_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_jester_v1alpha1_Prediction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_Prediction_descriptor,
-        new java.lang.String[] { "Target", "Candidates", });
-    internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor =
-      internal_static_asgt_jester_v1alpha1_Prediction_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_Prediction_Candidate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_Prediction_Candidate_descriptor,
-        new java.lang.String[] { "Label", "Confidence", });
     internal_static_asgt_jester_v1alpha1_SuggestionsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_jester_v1alpha1_SuggestionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_SuggestionsResponse_descriptor,
         new java.lang.String[] { "Predictions", });
     internal_static_asgt_jester_v1alpha1_SuggestionOptions_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_jester_v1alpha1_SuggestionOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_SuggestionOptions_descriptor,
         new java.lang.String[] { "SuggestionLimit", "MinConfidence", });
     internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor,
@@ -10779,7 +8124,7 @@ public final class JesterOuterClass {
         internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor,
         new java.lang.String[] { "Description", });
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor,
@@ -10791,7 +8136,7 @@ public final class JesterOuterClass {
         internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor,
         new java.lang.String[] { "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId", });
     internal_static_asgt_jester_v1alpha1_BankRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_jester_v1alpha1_BankRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_BankRequest_descriptor,
@@ -10807,6 +8152,7 @@ public final class JesterOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
