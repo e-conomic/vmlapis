@@ -29,7 +29,7 @@ var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
 func request_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq ScannedInvoiceFeedbackRequest
+	var protoReq FeedbackRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)

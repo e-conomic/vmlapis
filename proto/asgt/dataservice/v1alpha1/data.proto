@@ -15,10 +15,21 @@ message PredictedTuple {
   repeated string predictions = 2;
 }
 
+// Dataservice
 message DeleteRequest {
   string model_type = 1;
   string dataset = 2;
   repeated string tags = 3;
+}
+
+message FeedbackRequest {
+  message Entry {
+    string id = 1;
+    repeated DataTuple true_values = 2;
+  }
+  string dataset = 1;
+  repeated string tags = 2;
+  repeated Entry entries = 3;
 }
 
 message RetentionPolicy {

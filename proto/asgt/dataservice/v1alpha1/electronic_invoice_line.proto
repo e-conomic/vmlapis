@@ -14,7 +14,7 @@ import "asgt/dataservice/v1alpha1/data.proto";
 
 service ElectronicInvoiceLine {
   rpc PrepareElectronicInvoiceLine(PrepareElectronicInvoiceLineRequest) returns (google.protobuf.Empty);
-  rpc ElectronicInvoiceLineFeedback(ElectronicInvoiceLineFeedbackRequest) returns (google.protobuf.Empty) {
+  rpc ElectronicInvoiceLineFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/feedback:electronicinvoiceline"
       body: "*"
@@ -55,20 +55,15 @@ message ElectronicInvoiceLineEntry {
   ];
 }
 
-
 message PrepareElectronicInvoiceLineRequest {
-  string id = 1;
-  string dataset = 2;
-  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 3;
-  repeated asgt.type.Prediction predictions = 4;
-  repeated string tags = 5;
-}
-
-message ElectronicInvoiceLineFeedbackRequest {
-  string id = 1;
-  string dataset = 2;
-  repeated string tags = 3;
-  repeated DataTuple true_values = 4;
+  message Entry {
+    string id = 1;
+    asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 2;
+    repeated asgt.type.Prediction predictions = 3;
+  }
+  string dataset = 1;
+  repeated string tags = 2;
+  repeated Entry entries = 3;
 }
 
 message AddElectronicInvoiceLineDataRequest {

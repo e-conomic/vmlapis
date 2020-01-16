@@ -23,7 +23,7 @@ class ElectronicInvoiceLineStub(object):
         )
     self.ElectronicInvoiceLineFeedback = channel.unary_unary(
         '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/ElectronicInvoiceLineFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.ElectronicInvoiceLineFeedbackRequest.SerializeToString,
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.AddElectronicInvoiceLineData = channel.unary_unary(
@@ -80,7 +80,7 @@ def add_ElectronicInvoiceLineServicer_to_server(servicer, server):
       ),
       'ElectronicInvoiceLineFeedback': grpc.unary_unary_rpc_method_handler(
           servicer.ElectronicInvoiceLineFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.ElectronicInvoiceLineFeedbackRequest.FromString,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'AddElectronicInvoiceLineData': grpc.unary_unary_rpc_method_handler(

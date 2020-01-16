@@ -1497,6 +1497,10 @@ public final class Data {
         getTagsBytes(int index);
   }
   /**
+   * <pre>
+   * Dataservice
+   * </pre>
+   *
    * Protobuf type {@code asgt.dataservice.v1alpha1.DeleteRequest}
    */
   public  static final class DeleteRequest extends
@@ -1875,6 +1879,10 @@ public final class Data {
       return builder;
     }
     /**
+     * <pre>
+     * Dataservice
+     * </pre>
+     *
      * Protobuf type {@code asgt.dataservice.v1alpha1.DeleteRequest}
      */
     public static final class Builder extends
@@ -2329,6 +2337,2039 @@ public final class Data {
 
     @java.lang.Override
     public asgt.dataservice.v1alpha1.Data.DeleteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface FeedbackRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string dataset = 1;</code>
+     */
+    java.lang.String getDataset();
+    /**
+     * <code>string dataset = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatasetBytes();
+
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> 
+        getEntriesList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getEntries(int index);
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    java.util.List<? extends asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackRequest}
+   */
+  public  static final class FeedbackRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.FeedbackRequest)
+      FeedbackRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use FeedbackRequest.newBuilder() to construct.
+    private FeedbackRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private FeedbackRequest() {
+      dataset_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private FeedbackRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              dataset_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              tags_.add(s);
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry>();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              entries_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1alpha1.Data.FeedbackRequest.class, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Builder.class);
+    }
+
+    public interface EntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.FeedbackRequest.Entry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string id = 1;</code>
+       */
+      java.lang.String getId();
+      /**
+       * <code>string id = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getIdBytes();
+
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> 
+          getTrueValuesList();
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index);
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      int getTrueValuesCount();
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+          getTrueValuesOrBuilderList();
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackRequest.Entry}
+     */
+    public  static final class Entry extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.FeedbackRequest.Entry)
+        EntryOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Entry.newBuilder() to construct.
+      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Entry() {
+        id_ = "";
+        trueValues_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Entry(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                id_ = s;
+                break;
+              }
+              case 18: {
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>();
+                  mutable_bitField0_ |= 0x00000002;
+                }
+                trueValues_.add(
+                    input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.class, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder.class);
+      }
+
+      private int bitField0_;
+      public static final int ID_FIELD_NUMBER = 1;
+      private volatile java.lang.Object id_;
+      /**
+       * <code>string id = 1;</code>
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string id = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int TRUE_VALUES_FIELD_NUMBER = 2;
+      private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_;
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+        return trueValues_;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+          getTrueValuesOrBuilderList() {
+        return trueValues_;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      public int getTrueValuesCount() {
+        return trueValues_.size();
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+        return trueValues_.get(index);
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
+          int index) {
+        return trueValues_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!getIdBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
+        }
+        for (int i = 0; i < trueValues_.size(); i++) {
+          output.writeMessage(2, trueValues_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!getIdBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+        }
+        for (int i = 0; i < trueValues_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, trueValues_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry)) {
+          return super.equals(obj);
+        }
+        asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry other = (asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry) obj;
+
+        boolean result = true;
+        result = result && getId()
+            .equals(other.getId());
+        result = result && getTrueValuesList()
+            .equals(other.getTrueValuesList());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
+        if (getTrueValuesCount() > 0) {
+          hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
+          hash = (53 * hash) + getTrueValuesList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackRequest.Entry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.FeedbackRequest.Entry)
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.class, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder.class);
+        }
+
+        // Construct using asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getTrueValuesFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          id_ = "";
+
+          if (trueValuesBuilder_ == null) {
+            trueValues_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            trueValuesBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor;
+        }
+
+        @java.lang.Override
+        public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getDefaultInstanceForType() {
+          return asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry build() {
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry buildPartial() {
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry result = new asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.id_ = id_;
+          if (trueValuesBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.trueValues_ = trueValues_;
+          } else {
+            result.trueValues_ = trueValuesBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry) {
+            return mergeFrom((asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry other) {
+          if (other == asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.getDefaultInstance()) return this;
+          if (!other.getId().isEmpty()) {
+            id_ = other.id_;
+            onChanged();
+          }
+          if (trueValuesBuilder_ == null) {
+            if (!other.trueValues_.isEmpty()) {
+              if (trueValues_.isEmpty()) {
+                trueValues_ = other.trueValues_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureTrueValuesIsMutable();
+                trueValues_.addAll(other.trueValues_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.trueValues_.isEmpty()) {
+              if (trueValuesBuilder_.isEmpty()) {
+                trueValuesBuilder_.dispose();
+                trueValuesBuilder_ = null;
+                trueValues_ = other.trueValues_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                trueValuesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getTrueValuesFieldBuilder() : null;
+              } else {
+                trueValuesBuilder_.addAllMessages(other.trueValues_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object id_ = "";
+        /**
+         * <code>string id = 1;</code>
+         */
+        public java.lang.String getId() {
+          java.lang.Object ref = id_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            id_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string id = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getIdBytes() {
+          java.lang.Object ref = id_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            id_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string id = 1;</code>
+         */
+        public Builder setId(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          id_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string id = 1;</code>
+         */
+        public Builder clearId() {
+          
+          id_ = getDefaultInstance().getId();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string id = 1;</code>
+         */
+        public Builder setIdBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          id_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_ =
+          java.util.Collections.emptyList();
+        private void ensureTrueValuesIsMutable() {
+          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+            trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>(trueValues_);
+            bitField0_ |= 0x00000002;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> trueValuesBuilder_;
+
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+          if (trueValuesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(trueValues_);
+          } else {
+            return trueValuesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public int getTrueValuesCount() {
+          if (trueValuesBuilder_ == null) {
+            return trueValues_.size();
+          } else {
+            return trueValuesBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+          if (trueValuesBuilder_ == null) {
+            return trueValues_.get(index);
+          } else {
+            return trueValuesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder setTrueValues(
+            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+          if (trueValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTrueValuesIsMutable();
+            trueValues_.set(index, value);
+            onChanged();
+          } else {
+            trueValuesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder setTrueValues(
+            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+          if (trueValuesBuilder_ == null) {
+            ensureTrueValuesIsMutable();
+            trueValues_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            trueValuesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder addTrueValues(asgt.dataservice.v1alpha1.Data.DataTuple value) {
+          if (trueValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTrueValuesIsMutable();
+            trueValues_.add(value);
+            onChanged();
+          } else {
+            trueValuesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder addTrueValues(
+            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+          if (trueValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureTrueValuesIsMutable();
+            trueValues_.add(index, value);
+            onChanged();
+          } else {
+            trueValuesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder addTrueValues(
+            asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+          if (trueValuesBuilder_ == null) {
+            ensureTrueValuesIsMutable();
+            trueValues_.add(builderForValue.build());
+            onChanged();
+          } else {
+            trueValuesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder addTrueValues(
+            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+          if (trueValuesBuilder_ == null) {
+            ensureTrueValuesIsMutable();
+            trueValues_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            trueValuesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder addAllTrueValues(
+            java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.DataTuple> values) {
+          if (trueValuesBuilder_ == null) {
+            ensureTrueValuesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, trueValues_);
+            onChanged();
+          } else {
+            trueValuesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder clearTrueValues() {
+          if (trueValuesBuilder_ == null) {
+            trueValues_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            trueValuesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public Builder removeTrueValues(int index) {
+          if (trueValuesBuilder_ == null) {
+            ensureTrueValuesIsMutable();
+            trueValues_.remove(index);
+            onChanged();
+          } else {
+            trueValuesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder getTrueValuesBuilder(
+            int index) {
+          return getTrueValuesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
+            int index) {
+          if (trueValuesBuilder_ == null) {
+            return trueValues_.get(index);  } else {
+            return trueValuesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+             getTrueValuesOrBuilderList() {
+          if (trueValuesBuilder_ != null) {
+            return trueValuesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(trueValues_);
+          }
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder() {
+          return getTrueValuesFieldBuilder().addBuilder(
+              asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder(
+            int index) {
+          return getTrueValuesFieldBuilder().addBuilder(
+              index, asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
+         */
+        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple.Builder> 
+             getTrueValuesBuilderList() {
+          return getTrueValuesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+            getTrueValuesFieldBuilder() {
+          if (trueValuesBuilder_ == null) {
+            trueValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder>(
+                    trueValues_,
+                    ((bitField0_ & 0x00000002) == 0x00000002),
+                    getParentForChildren(),
+                    isClean());
+            trueValues_ = null;
+          }
+          return trueValuesBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.FeedbackRequest.Entry)
+      }
+
+      // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.FeedbackRequest.Entry)
+      private static final asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry();
+      }
+
+      public static asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Entry>
+          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
+        @java.lang.Override
+        public Entry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Entry(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Entry> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Entry> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    private int bitField0_;
+    public static final int DATASET_FIELD_NUMBER = 1;
+    private volatile java.lang.Object dataset_;
+    /**
+     * <code>string dataset = 1;</code>
+     */
+    public java.lang.String getDataset() {
+      java.lang.Object ref = dataset_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        dataset_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatasetBytes() {
+      java.lang.Object ref = dataset_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        dataset_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 2;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 3;
+    private java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> entries_;
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    public java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDatasetBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(3, entries_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDatasetBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, entries_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Data.FeedbackRequest)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1alpha1.Data.FeedbackRequest other = (asgt.dataservice.v1alpha1.Data.FeedbackRequest) obj;
+
+      boolean result = true;
+      result = result && getDataset()
+          .equals(other.getDataset());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && getEntriesList()
+          .equals(other.getEntriesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASET_FIELD_NUMBER;
+      hash = (53 * hash) + getDataset().hashCode();
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Data.FeedbackRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.FeedbackRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.FeedbackRequest)
+        asgt.dataservice.v1alpha1.Data.FeedbackRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.Data.FeedbackRequest.class, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1alpha1.Data.FeedbackRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntriesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        dataset_ = "";
+
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1alpha1.Data.internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Data.FeedbackRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest build() {
+        asgt.dataservice.v1alpha1.Data.FeedbackRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest buildPartial() {
+        asgt.dataservice.v1alpha1.Data.FeedbackRequest result = new asgt.dataservice.v1alpha1.Data.FeedbackRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.dataset_ = dataset_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.tags_ = tags_;
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1alpha1.Data.FeedbackRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Data.FeedbackRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Data.FeedbackRequest other) {
+        if (other == asgt.dataservice.v1alpha1.Data.FeedbackRequest.getDefaultInstance()) return this;
+        if (!other.getDataset().isEmpty()) {
+          dataset_ = other.dataset_;
+          onChanged();
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1alpha1.Data.FeedbackRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1alpha1.Data.FeedbackRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object dataset_ = "";
+      /**
+       * <code>string dataset = 1;</code>
+       */
+      public java.lang.String getDataset() {
+        java.lang.Object ref = dataset_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          dataset_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatasetBytes() {
+        java.lang.Object ref = dataset_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          dataset_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset = 1;</code>
+       */
+      public Builder setDataset(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        dataset_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset = 1;</code>
+       */
+      public Builder clearDataset() {
+        
+        dataset_ = getDefaultInstance().getDataset();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset = 1;</code>
+       */
+      public Builder setDatasetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        dataset_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 2;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry>(entries_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder, asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder addEntries(asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder addEntries(
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.FeedbackRequest.Entry entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder, asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry, asgt.dataservice.v1alpha1.Data.FeedbackRequest.Entry.Builder, asgt.dataservice.v1alpha1.Data.FeedbackRequest.EntryOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.FeedbackRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.FeedbackRequest)
+    private static final asgt.dataservice.v1alpha1.Data.FeedbackRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Data.FeedbackRequest();
+    }
+
+    public static asgt.dataservice.v1alpha1.Data.FeedbackRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<FeedbackRequest>
+        PARSER = new com.google.protobuf.AbstractParser<FeedbackRequest>() {
+      @java.lang.Override
+      public FeedbackRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new FeedbackRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<FeedbackRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<FeedbackRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1alpha1.Data.FeedbackRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2987,6 +5028,16 @@ public final class Data {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3005,10 +5056,15 @@ public final class Data {
       "\n\006target\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"5\n\016Predict" +
       "edTuple\022\016\n\006target\030\001 \001(\t\022\023\n\013predictions\030\002" +
       " \003(\t\"B\n\rDeleteRequest\022\022\n\nmodel_type\030\001 \001(" +
-      "\t\022\017\n\007dataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"F\n\017Rete" +
-      "ntionPolicy\022\022\n\010max_days\030\001 \001(\005H\000\022\025\n\013max_r" +
-      "ecords\030\002 \001(\005H\000B\010\n\006policyB\rZ\013dataserviceb" +
-      "\006proto3"
+      "\t\022\017\n\007dataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"\303\001\n\017Fee" +
+      "dbackRequest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 " +
+      "\003(\t\022A\n\007entries\030\003 \003(\01320.asgt.dataservice." +
+      "v1alpha1.FeedbackRequest.Entry\032N\n\005Entry\022" +
+      "\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \003(\0132$.asgt." +
+      "dataservice.v1alpha1.DataTuple\"F\n\017Retent" +
+      "ionPolicy\022\022\n\010max_days\030\001 \001(\005H\000\022\025\n\013max_rec" +
+      "ords\030\002 \001(\005H\000B\010\n\006policyB\rZ\013dataserviceb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3040,8 +5096,20 @@ public final class Data {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DeleteRequest_descriptor,
         new java.lang.String[] { "ModelType", "Dataset", "Tags", });
-    internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_descriptor =
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor,
+        new java.lang.String[] { "Dataset", "Tags", "Entries", });
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor =
+      internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_FeedbackRequest_Entry_descriptor,
+        new java.lang.String[] { "Id", "TrueValues", });
+    internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_descriptor,

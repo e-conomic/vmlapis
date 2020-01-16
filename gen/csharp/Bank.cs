@@ -40,38 +40,35 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "dC5kYXRhc2VydmljZS52MWFscGhhMS5EYXRhVHVwbGUSPgoLcHJlZF92YWx1",
             "ZXMYByADKAsyKS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlByZWRpY3Rl",
             "ZFR1cGxlEiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgBEglUSU1FU1RBTVA6",
-            "Duo/CwoJYmFua19kYXRhIqIBChJQcmVwYXJlQmFua1JlcXVlc3QSCgoCaWQY",
-            "ASABKAkSDwoHZGF0YXNldBgCIAEoCRI1CgVpbnB1dBgDIAEoCzImLmFzZ3Qu",
-            "amVzdGVyLnYxYWxwaGExLkJhbmtSZXF1ZXN0LkRhdGESKgoLcHJlZGljdGlv",
-            "bnMYBCADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvbhIMCgR0YWdzGAUgAygJ",
-            "InsKE0JhbmtGZWVkYmFja1JlcXVlc3QSCgoCaWQYASABKAkSDwoHZGF0YXNl",
-            "dBgCIAEoCRIMCgR0YWdzGAMgAygJEjkKC3RydWVfdmFsdWVzGAQgAygLMiQu",
-            "YXNndC5kYXRhc2VydmljZS52MWFscGhhMS5EYXRhVHVwbGUiugIKEkFkZEJh",
-            "bmtEYXRhUmVxdWVzdBIPCgdkYXRhc2V0GAEgASgJEgwKBHRhZ3MYAiADKAkS",
-            "RAoHZW50cmllcxgDIAMoCzIzLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEu",
-            "QWRkQmFua0RhdGFSZXF1ZXN0LkVudHJ5EkQKEHJldGVudGlvbl9wb2xpY3kY",
-            "BCABKAsyKi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJldGVudGlvblBv",
-            "bGljeRp5CgVFbnRyeRI1CgVpbnB1dBgBIAEoCzImLmFzZ3QuamVzdGVyLnYx",
-            "YWxwaGExLkJhbmtSZXF1ZXN0LkRhdGESOQoLdHJ1ZV92YWx1ZXMYAiADKAsy",
-            "JC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRhdGFUdXBsZTLiAwoPQmFu",
-            "a0RhdGFzZXJ2aWNlElwKE1ByZXBhcmVCYW5rRmVlZGJhY2sSLS5hc2d0LmRh",
-            "dGFzZXJ2aWNlLnYxYWxwaGExLlByZXBhcmVCYW5rUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eRKEAQoMQmFua0ZlZWRiYWNrEi4uYXNndC5kYXRh",
-            "c2VydmljZS52MWFscGhhMS5CYW5rRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5IiyC0+STAiYiIS92MWFscGhhMS9mZWVkYmFjazpz",
-            "Y2FubmVkaW52b2ljZToBKhJ0CgtBZGRCYW5rRGF0YRItLmFzZ3QuZGF0YXNl",
-            "cnZpY2UudjFhbHBoYTEuQWRkQmFua0RhdGFSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5Ih6C0+STAhgiEy92MWFscGhhMS9kYXRhOmJhbms6ASoS",
-            "dAoORGVsZXRlQmFua0RhdGESKC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGEx",
-            "LkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiIILT5JMC",
-            "GiIVL3YxYWxwaGExL2RhdGE6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZw",
-            "cm90bzM="));
+            "Duo/CwoJYmFua19kYXRhIvEBChJQcmVwYXJlQmFua1JlcXVlc3QSDwoHZGF0",
+            "YXNldBgBIAEoCRIMCgR0YWdzGAIgAygJEkQKB2VudHJpZXMYAyADKAsyMy5h",
+            "c2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlByZXBhcmVCYW5rUmVxdWVzdC5F",
+            "bnRyeRp2CgVFbnRyeRIKCgJpZBgBIAEoCRI1CgVpbnB1dBgCIAEoCzImLmFz",
+            "Z3QuamVzdGVyLnYxYWxwaGExLkJhbmtSZXF1ZXN0LkRhdGESKgoLcHJlZGlj",
+            "dGlvbnMYAyADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvbiK6AgoSQWRkQmFu",
+            "a0RhdGFSZXF1ZXN0Eg8KB2RhdGFzZXQYASABKAkSDAoEdGFncxgCIAMoCRJE",
+            "CgdlbnRyaWVzGAMgAygLMjMuYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5B",
+            "ZGRCYW5rRGF0YVJlcXVlc3QuRW50cnkSRAoQcmV0ZW50aW9uX3BvbGljeRgE",
+            "IAEoCzIqLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuUmV0ZW50aW9uUG9s",
+            "aWN5GnkKBUVudHJ5EjUKBWlucHV0GAEgASgLMiYuYXNndC5qZXN0ZXIudjFh",
+            "bHBoYTEuQmFua1JlcXVlc3QuRGF0YRI5Cgt0cnVlX3ZhbHVlcxgCIAMoCzIk",
+            "LmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGF0YVR1cGxlMt4DCg9CYW5r",
+            "RGF0YXNlcnZpY2USXAoTUHJlcGFyZUJhbmtGZWVkYmFjaxItLmFzZ3QuZGF0",
+            "YXNlcnZpY2UudjFhbHBoYTEuUHJlcGFyZUJhbmtSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5EoABCgxCYW5rRmVlZGJhY2sSKi5hc2d0LmRhdGFz",
+            "ZXJ2aWNlLnYxYWxwaGExLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIsgtPkkwImIiEvdjFhbHBoYTEvZmVlZGJhY2s6c2Nhbm5l",
+            "ZGludm9pY2U6ASoSdAoLQWRkQmFua0RhdGESLS5hc2d0LmRhdGFzZXJ2aWNl",
+            "LnYxYWxwaGExLkFkZEJhbmtEYXRhUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSIegtPkkwIYIhMvdjFhbHBoYTEvZGF0YTpiYW5rOgEqEnQKDkRl",
+            "bGV0ZUJhbmtEYXRhEiguYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5EZWxl",
+            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiCC0+STAhoiFS92",
+            "MWFscGhhMS9kYXRhOmRlbGV0ZToBKkINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DataReflection.Descriptor, global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest), global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Parser, new[]{ "Id", "Dataset", "Input", "Predictions", "Tags" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankFeedbackRequest), global::Asgt.Dataservice.V1Alpha1.BankFeedbackRequest.Parser, new[]{ "Id", "Dataset", "Tags", "TrueValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest), global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Parser, new[]{ "Dataset", "Tags", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry), global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry.Parser, new[]{ "Id", "Input", "Predictions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AddBankDataRequest), global::Asgt.Dataservice.V1Alpha1.AddBankDataRequest.Parser, new[]{ "Dataset", "Tags", "Entries", "RetentionPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AddBankDataRequest.Types.Entry), global::Asgt.Dataservice.V1Alpha1.AddBankDataRequest.Types.Entry.Parser, new[]{ "Input", "TrueValues" }, null, null, null)})
           }));
     }
@@ -414,11 +411,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public PrepareBankRequest(PrepareBankRequest other) : this() {
-      id_ = other.id_;
       dataset_ = other.dataset_;
-      input_ = other.input_ != null ? other.input_.Clone() : null;
-      predictions_ = other.predictions_.Clone();
       tags_ = other.tags_.Clone();
+      entries_ = other.entries_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -427,19 +422,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       return new PrepareBankRequest(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 2;
+    public const int DatasetFieldNumber = 1;
     private string dataset_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Dataset {
@@ -449,35 +433,24 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "input" field.</summary>
-    public const int InputFieldNumber = 3;
-    private global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data input_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data Input {
-      get { return input_; }
-      set {
-        input_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "predictions" field.</summary>
-    public const int PredictionsFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
-        = pb::FieldCodec.ForMessage(34, global::Asgt.Type.Prediction.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
-      get { return predictions_; }
-    }
-
     /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 5;
+    public const int TagsFieldNumber = 2;
     private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(42);
+        = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry> entries_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Types.Entry> Entries {
+      get { return entries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -493,22 +466,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (Dataset != other.Dataset) return false;
-      if (!object.Equals(Input, other.Input)) return false;
-      if(!predictions_.Equals(other.predictions_)) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if(!entries_.Equals(other.entries_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
-      if (input_ != null) hash ^= Input.GetHashCode();
-      hash ^= predictions_.GetHashCode();
       hash ^= tags_.GetHashCode();
+      hash ^= entries_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -522,20 +491,12 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
       if (Dataset.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
-      if (input_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Input);
-      }
-      predictions_.WriteTo(output, _repeated_predictions_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
+      entries_.WriteTo(output, _repeated_entries_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -544,17 +505,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
       if (Dataset.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
       }
-      if (input_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
-      }
-      size += predictions_.CalculateSize(_repeated_predictions_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
+      size += entries_.CalculateSize(_repeated_entries_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -566,20 +521,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
       if (other.Dataset.Length != 0) {
         Dataset = other.Dataset;
       }
-      if (other.input_ != null) {
-        if (input_ == null) {
-          input_ = new global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data();
-        }
-        Input.MergeFrom(other.Input);
-      }
-      predictions_.Add(other.predictions_);
       tags_.Add(other.tags_);
+      entries_.Add(other.entries_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -592,228 +538,210 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
             Dataset = input.ReadString();
             break;
           }
+          case 18: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
           case 26: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PrepareBankRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class Entry : pb::IMessage<Entry> {
+        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Asgt.Dataservice.V1Alpha1.PrepareBankRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry(Entry other) : this() {
+          id_ = other.id_;
+          input_ = other.input_ != null ? other.input_.Clone() : null;
+          predictions_ = other.predictions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Entry Clone() {
+          return new Entry(this);
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 1;
+        private string id_ = "";
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "input" field.</summary>
+        public const int InputFieldNumber = 2;
+        private global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data input_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data Input {
+          get { return input_; }
+          set {
+            input_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "predictions" field.</summary>
+        public const int PredictionsFieldNumber = 3;
+        private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
+            = pb::FieldCodec.ForMessage(26, global::Asgt.Type.Prediction.Parser);
+        private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
+          get { return predictions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Entry);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Entry other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Id != other.Id) return false;
+          if (!object.Equals(Input, other.Input)) return false;
+          if(!predictions_.Equals(other.predictions_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (input_ != null) hash ^= Input.GetHashCode();
+          hash ^= predictions_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (input_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Input);
+          }
+          predictions_.WriteTo(output, _repeated_predictions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (input_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
+          }
+          size += predictions_.CalculateSize(_repeated_predictions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Entry other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          if (other.input_ != null) {
             if (input_ == null) {
               input_ = new global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data();
             }
-            input.ReadMessage(input_);
-            break;
+            Input.MergeFrom(other.Input);
           }
-          case 34: {
-            predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
-            break;
-          }
-          case 42: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
-            break;
+          predictions_.Add(other.predictions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                if (input_ == null) {
+                  input_ = new global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data();
+                }
+                input.ReadMessage(input_);
+                break;
+              }
+              case 26: {
+                predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
+                break;
+              }
+            }
           }
         }
+
       }
+
     }
-
-  }
-
-  public sealed partial class BankFeedbackRequest : pb::IMessage<BankFeedbackRequest> {
-    private static readonly pb::MessageParser<BankFeedbackRequest> _parser = new pb::MessageParser<BankFeedbackRequest>(() => new BankFeedbackRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<BankFeedbackRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.BankReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankFeedbackRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankFeedbackRequest(BankFeedbackRequest other) : this() {
-      id_ = other.id_;
-      dataset_ = other.dataset_;
-      tags_ = other.tags_.Clone();
-      trueValues_ = other.trueValues_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankFeedbackRequest Clone() {
-      return new BankFeedbackRequest(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 2;
-    private string dataset_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Dataset {
-      get { return dataset_; }
-      set {
-        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
-    }
-
-    /// <summary>Field number for the "true_values" field.</summary>
-    public const int TrueValuesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.DataTuple> _repeated_trueValues_codec
-        = pb::FieldCodec.ForMessage(34, global::Asgt.Dataservice.V1Alpha1.DataTuple.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> trueValues_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> TrueValues {
-      get { return trueValues_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as BankFeedbackRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(BankFeedbackRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Dataset != other.Dataset) return false;
-      if(!tags_.Equals(other.tags_)) return false;
-      if(!trueValues_.Equals(other.trueValues_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
-      hash ^= tags_.GetHashCode();
-      hash ^= trueValues_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
-      if (Dataset.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Dataset);
-      }
-      tags_.WriteTo(output, _repeated_tags_codec);
-      trueValues_.WriteTo(output, _repeated_trueValues_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
-      if (Dataset.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
-      }
-      size += tags_.CalculateSize(_repeated_tags_codec);
-      size += trueValues_.CalculateSize(_repeated_trueValues_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(BankFeedbackRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
-      if (other.Dataset.Length != 0) {
-        Dataset = other.Dataset;
-      }
-      tags_.Add(other.tags_);
-      trueValues_.Add(other.trueValues_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
-            Dataset = input.ReadString();
-            break;
-          }
-          case 26: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
-            break;
-          }
-          case 34: {
-            trueValues_.AddEntriesFrom(input, _repeated_trueValues_codec);
-            break;
-          }
-        }
-      }
-    }
+    #endregion
 
   }
 
@@ -825,7 +753,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.BankReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Asgt.Dataservice.V1Alpha1.BankReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -165,16 +165,16 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest,
+  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +187,13 @@ const methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new gr
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +204,7 @@ const methodInfo_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -225,7 +225,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.scanne
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata

@@ -23,7 +23,7 @@ class ScannedInvoiceDataserviceStub(object):
         )
     self.ScannedInvoiceFeedback = channel.unary_unary(
         '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.ScannedInvoiceFeedbackRequest.SerializeToString,
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.AddScannedInvoiceData = channel.unary_unary(
@@ -80,7 +80,7 @@ def add_ScannedInvoiceDataserviceServicer_to_server(servicer, server):
       ),
       'ScannedInvoiceFeedback': grpc.unary_unary_rpc_method_handler(
           servicer.ScannedInvoiceFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.ScannedInvoiceFeedbackRequest.FromString,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'AddScannedInvoiceData': grpc.unary_unary_rpc_method_handler(

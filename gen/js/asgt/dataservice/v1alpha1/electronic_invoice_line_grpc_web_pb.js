@@ -165,16 +165,16 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLinePromiseClient.prototype.pre
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/ElectronicInvoiceLineFeedback',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest,
+  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +187,13 @@ const methodDescriptor_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback = new
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +204,7 @@ const methodInfo_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback = new grpc.
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -225,7 +225,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineClient.prototype.electronic
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata

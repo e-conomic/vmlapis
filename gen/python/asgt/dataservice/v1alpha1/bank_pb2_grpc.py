@@ -23,7 +23,7 @@ class BankDataserviceStub(object):
         )
     self.BankFeedback = channel.unary_unary(
         '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.BankFeedbackRequest.SerializeToString,
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.AddBankData = channel.unary_unary(
@@ -80,7 +80,7 @@ def add_BankDataserviceServicer_to_server(servicer, server):
       ),
       'BankFeedback': grpc.unary_unary_rpc_method_handler(
           servicer.BankFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.BankFeedbackRequest.FromString,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'AddBankData': grpc.unary_unary_rpc_method_handler(

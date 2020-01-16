@@ -14,7 +14,7 @@ import "asgt/dataservice/v1alpha1/data.proto";
 
 service ScannedInvoiceDataservice {
   rpc PrepareScannedInvoice(PrepareScannedInvoiceRequest) returns (google.protobuf.Empty);
-  rpc ScannedInvoiceFeedback(ScannedInvoiceFeedbackRequest) returns (google.protobuf.Empty) {
+  rpc ScannedInvoiceFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/feedback:scannedinvoice"
       body: "*"
@@ -56,18 +56,14 @@ message ScannedInvoiceEntry {
 }
 
 message PrepareScannedInvoiceRequest {
-  string id = 1;
-  string dataset = 2;
-  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 3;
-  repeated asgt.type.Prediction predictions = 4;
-  repeated string tags = 5;
-}
-
-message ScannedInvoiceFeedbackRequest {
-  string id = 1;
-  string dataset = 2;
-  repeated string tags = 3;
-  repeated DataTuple true_values = 4;
+  message Entry {
+    string id = 1;
+    asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;
+    repeated asgt.type.Prediction predictions = 3;
+  }
+  string dataset = 1;
+  repeated string tags = 2;
+  repeated Entry entries = 3;
 }
 
 message AddScannedInvoiceDataRequest {

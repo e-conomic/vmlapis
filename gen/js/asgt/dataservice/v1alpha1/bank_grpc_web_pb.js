@@ -165,16 +165,16 @@ proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.prepareBa
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.BankFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_BankDataservice_BankFeedback = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.BankFeedbackRequest,
+  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.BankFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +187,13 @@ const methodDescriptor_BankDataservice_BankFeedback = new grpc.web.MethodDescrip
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.BankFeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_BankDataservice_BankFeedback = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.BankFeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +204,7 @@ const methodInfo_BankDataservice_BankFeedback = new grpc.web.AbstractClientBase.
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.BankFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -225,7 +225,7 @@ proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.bankFeedback =
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.BankFeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
