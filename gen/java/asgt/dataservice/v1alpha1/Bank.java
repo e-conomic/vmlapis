@@ -6609,19 +6609,19 @@ public final class Bank {
       "tentionPolicy\032y\n\005Entry\0225\n\005input\030\001 \001(\0132&." +
       "asgt.jester.v1alpha1.BankRequest.Data\0229\n" +
       "\013true_values\030\002 \003(\0132$.asgt.dataservice.v1" +
-      "alpha1.DataTuple2\336\003\n\017BankDataservice\022\\\n\023" +
+      "alpha1.DataTuple2\323\003\n\017BankDataservice\022\\\n\023" +
       "PrepareBankFeedback\022-.asgt.dataservice.v" +
       "1alpha1.PrepareBankRequest\032\026.google.prot" +
-      "obuf.Empty\022\200\001\n\014BankFeedback\022*.asgt.datas" +
-      "ervice.v1alpha1.FeedbackRequest\032\026.google" +
-      ".protobuf.Empty\",\202\323\344\223\002&\"!/v1alpha1/feedb" +
-      "ack:scannedinvoice:\001*\022t\n\013AddBankData\022-.a" +
-      "sgt.dataservice.v1alpha1.AddBankDataRequ" +
-      "est\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1" +
-      "alpha1/data:bank:\001*\022t\n\016DeleteBankData\022(." +
-      "asgt.dataservice.v1alpha1.DeleteRequest\032" +
-      "\026.google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alph" +
-      "a1/data:delete:\001*B\rZ\013dataserviceb\006proto3"
+      "obuf.Empty\022v\n\014BankFeedback\022*.asgt.datase" +
+      "rvice.v1alpha1.FeedbackRequest\032\026.google." +
+      "protobuf.Empty\"\"\202\323\344\223\002\034\"\027/v1alpha1/feedba" +
+      "ck:bank:\001*\022t\n\013AddBankData\022-.asgt.dataser" +
+      "vice.v1alpha1.AddBankDataRequest\032\026.googl" +
+      "e.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1alpha1/data" +
+      ":bank:\001*\022t\n\016DeleteBankData\022(.asgt.datase" +
+      "rvice.v1alpha1.DeleteRequest\032\026.google.pr" +
+      "otobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/data:del" +
+      "ete:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

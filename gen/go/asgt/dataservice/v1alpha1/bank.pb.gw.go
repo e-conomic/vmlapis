@@ -181,7 +181,7 @@ func RegisterBankDataserviceHandlerClient(ctx context.Context, mux *runtime.Serv
 }
 
 var (
-	pattern_BankDataservice_BankFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "feedback"}, "scannedinvoice"))
+	pattern_BankDataservice_BankFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "feedback"}, "bank"))
 
 	pattern_BankDataservice_AddBankData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "data"}, "bank"))
 
