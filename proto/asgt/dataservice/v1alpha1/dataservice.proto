@@ -75,7 +75,7 @@ message DeleteRequest {
 message ScannedInvoiceEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "scanned_invoice_data";
   string id = 1 [
-    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data",
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
@@ -84,7 +84,7 @@ message ScannedInvoiceEntry {
   asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 5;
   repeated DataTuple true_values = 6;
   repeated PredictedTuple pred_values = 7;
-  uint64 feedback_time = 8 [
+  uint64 time_added = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
       type_override: 'TIMESTAMP'
@@ -104,7 +104,7 @@ message PrepareScannedInvoiceFeedbackRequest {
 message ElectronicInvoiceLineEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "electronic_invoice_line_data";
   string id = 1 [
-    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data",
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
@@ -113,7 +113,7 @@ message ElectronicInvoiceLineEntry {
   asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 5;
   repeated DataTuple true_values = 6;
   repeated PredictedTuple pred_values = 7;
-  uint64 feedback_time = 8 [
+  uint64 time_added = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
       type_override: 'TIMESTAMP'
@@ -133,7 +133,7 @@ message PrepareElectronicInvoiceLineFeedbackRequest {
 message BankEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
   string id = 1 [
-    (gen_bq_schema.bigquery).description = "Feedback ID, same as Envoy request id",
+    (gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data",
     (gen_bq_schema.bigquery).require = true
   ];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
@@ -142,7 +142,7 @@ message BankEntry {
   asgt.jester.v1alpha1.BankRequest.Data input = 5;
   repeated DataTuple true_values = 6;
   repeated PredictedTuple pred_values = 7;
-  uint64 feedback_time = 8 [
+  uint64 time_added = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
       type_override: 'TIMESTAMP'
