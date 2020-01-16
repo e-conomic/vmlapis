@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+import "google/protobuf/wrappers.proto";
+
+// Common types
+message Confidence {
+  enum Level {
+    UNKNOWN = 0;
+    VERY_LOW = 1;
+    LOW = 2;
+    MID = 3;
+    HIGH = 4;
+    VERY_HIGH = 5;
+  }
+  // A bucketized representation of confidence, which is intended to give clients
+  // highly stable results across model upgrades.
+  Level level = 1;
+  // The confidence value
+  google.protobuf.FloatValue value = 2;
+}
+
+message Prediction {
+  message Candidate {
+    string label = 1;
+    Confidence confidence = 2;
+  }
+
+  string target = 1;
+  repeated Candidate candidates = 2;
+}

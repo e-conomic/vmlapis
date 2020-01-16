@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+import "gen_bq_schema/bq_field.proto";
+import "gen_bq_schema/bq_table.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "asgt/type/prediction.proto";
+import "asgt/jester/v1alpha1/jester.proto";
+import "asgt/dataservice/v1alpha1/data.proto";
+
+service BankDataservice {
+  rpc PrepareBankFeedback(PrepareBankRequest) returns (google.protobuf.Empty);
+  rpc BankFeedback(BankFeedbackRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/feedback:scannedinvoice"
+      body: "*"
+    };
+  }
+  rpc AddBankData(AddBankDataRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/data:bank"
+      body: "*"
+    };
+  }
+  rpc DeleteBankData(DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/data:delete"
+      body: "*"
+    };
+  }
+}
+
+// Bank
+message BankEntry {
+  option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
+  string id = 1 [
+    (gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data",
+    (gen_bq_schema.bigquery).require = true
+  ];
+  string consumer = 2 [(gen_bq_schema.bigquery).require = true];
+  string dataset = 3 [(gen_bq_schema.bigquery).require = true];
+  repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
+  asgt.jester.v1alpha1.BankRequest.Data input = 5;
+  repeated DataTuple true_values = 6;
+  repeated PredictedTuple pred_values = 7;
+  uint64 time_added = 8 [
+    (gen_bq_schema.bigquery) = {
+      require: true,
+      type_override: 'TIMESTAMP'
+    }
+  ];
+}
+
+message PrepareBankRequest {
+  string id = 1;
+  string dataset = 2;
+  asgt.jester.v1alpha1.BankRequest.Data input = 3;
+  repeated asgt.type.Prediction predictions = 4;
+  repeated string tags = 5;
+}
+
+message BankFeedbackRequest {
+  string id = 1;
+  string dataset = 2;
+  repeated string tags = 3;
+  repeated DataTuple true_values = 4;
+}
+
+message AddBankDataRequest {
+  message Entry {
+    asgt.jester.v1alpha1.BankRequest.Data input = 1;
+    repeated DataTuple true_values = 2;
+  }
+  string dataset = 1;
+  repeated string tags = 2;
+  repeated Entry entries = 3;
+  RetentionPolicy retention_policy = 4;
+}

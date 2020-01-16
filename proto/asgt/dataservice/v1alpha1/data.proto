@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+// Common Data types
+message DataTuple {
+  string target = 1;
+  string value = 2;
+}
+
+message PredictedTuple {
+  string target = 1;
+  repeated string predictions = 2;
+}
+
+message DeleteRequest {
+  string model_type = 1;
+  string dataset = 2;
+  repeated string tags = 3;
+}
+
+message RetentionPolicy {
+  oneof policy {
+    int32 max_days = 1;
+    int32 max_records = 2;
+  }
+}
