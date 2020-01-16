@@ -135,7 +135,7 @@ public final class ElectronicInvoiceLineOuterClass {
   }
   /**
    * <pre>
-   * Electronic Invoice Line
+   * Electronic Invoice Line BQ schema gen - could be used for adding direct developer data endpoints
    * </pre>
    *
    * Protobuf type {@code asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry}
@@ -767,7 +767,7 @@ public final class ElectronicInvoiceLineOuterClass {
     }
     /**
      * <pre>
-     * Electronic Invoice Line
+     * Electronic Invoice Line BQ schema gen - could be used for adding direct developer data endpoints
      * </pre>
      *
      * Protobuf type {@code asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry}

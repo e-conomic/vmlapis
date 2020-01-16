@@ -84,7 +84,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
   }
   #region Messages
   /// <summary>
-  /// Electronic Invoice Line
+  /// Electronic Invoice Line BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
   public sealed partial class ElectronicInvoiceLineEntry : pb::IMessage<ElectronicInvoiceLineEntry> {
     private static readonly pb::MessageParser<ElectronicInvoiceLineEntry> _parser = new pb::MessageParser<ElectronicInvoiceLineEntry>(() => new ElectronicInvoiceLineEntry());

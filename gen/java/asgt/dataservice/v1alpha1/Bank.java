@@ -135,7 +135,7 @@ public final class Bank {
   }
   /**
    * <pre>
-   * Bank
+   * Bank BQ schema gen - could be used for adding direct developer data endpoints
    * </pre>
    *
    * Protobuf type {@code asgt.dataservice.v1alpha1.BankEntry}
@@ -767,7 +767,7 @@ public final class Bank {
     }
     /**
      * <pre>
-     * Bank
+     * Bank BQ schema gen - could be used for adding direct developer data endpoints
      * </pre>
      *
      * Protobuf type {@code asgt.dataservice.v1alpha1.BankEntry}

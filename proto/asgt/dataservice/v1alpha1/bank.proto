@@ -34,7 +34,7 @@ service BankDataservice {
   }
 }
 
-// Bank
+// Bank BQ schema gen - could be used for adding direct developer data endpoints
 message BankEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
   string id = 1 [

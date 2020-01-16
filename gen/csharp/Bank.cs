@@ -77,7 +77,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
   }
   #region Messages
   /// <summary>
-  /// Bank
+  /// Bank BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
   public sealed partial class BankEntry : pb::IMessage<BankEntry> {
     private static readonly pb::MessageParser<BankEntry> _parser = new pb::MessageParser<BankEntry>(() => new BankEntry());

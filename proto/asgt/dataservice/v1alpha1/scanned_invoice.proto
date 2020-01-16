@@ -34,7 +34,7 @@ service ScannedInvoiceDataservice {
   }
 }
 
-// Scanned Invoice
+// Scanned Invoice BQ schema gen - could be used for adding direct developer data endpoints
 message ScannedInvoiceEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "scanned_invoice_data";
   string id = 1 [

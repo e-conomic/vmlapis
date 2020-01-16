@@ -34,7 +34,7 @@ service ElectronicInvoiceLine {
   }
 }
 
-// Electronic Invoice Line
+// Electronic Invoice Line BQ schema gen - could be used for adding direct developer data endpoints
 message ElectronicInvoiceLineEntry {
   option (gen_bq_schema.bigquery_opts).table_name = "electronic_invoice_line_data";
   string id = 1 [

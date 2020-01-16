@@ -81,7 +81,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
   }
   #region Messages
   /// <summary>
-  /// Scanned Invoice
+  /// Scanned Invoice BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
   public sealed partial class ScannedInvoiceEntry : pb::IMessage<ScannedInvoiceEntry> {
     private static readonly pb::MessageParser<ScannedInvoiceEntry> _parser = new pb::MessageParser<ScannedInvoiceEntry>(() => new ScannedInvoiceEntry());

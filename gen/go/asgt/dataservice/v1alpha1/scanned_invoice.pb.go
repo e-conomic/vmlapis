@@ -28,7 +28,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-// Scanned Invoice
+// Scanned Invoice BQ schema gen - could be used for adding direct developer data endpoints
 type ScannedInvoiceEntry struct {
 	Id                   string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                               `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
@@ -47,7 +47,7 @@ func (m *ScannedInvoiceEntry) Reset()         { *m = ScannedInvoiceEntry{} }
 func (m *ScannedInvoiceEntry) String() string { return proto.CompactTextString(m) }
 func (*ScannedInvoiceEntry) ProtoMessage()    {}
 func (*ScannedInvoiceEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanned_invoice_c7b4f8b33f0f475e, []int{0}
+	return fileDescriptor_scanned_invoice_894fd43e857d453f, []int{0}
 }
 func (m *ScannedInvoiceEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScannedInvoiceEntry.Unmarshal(m, b)
@@ -136,7 +136,7 @@ func (m *PrepareScannedInvoiceRequest) Reset()         { *m = PrepareScannedInvo
 func (m *PrepareScannedInvoiceRequest) String() string { return proto.CompactTextString(m) }
 func (*PrepareScannedInvoiceRequest) ProtoMessage()    {}
 func (*PrepareScannedInvoiceRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanned_invoice_c7b4f8b33f0f475e, []int{1}
+	return fileDescriptor_scanned_invoice_894fd43e857d453f, []int{1}
 }
 func (m *PrepareScannedInvoiceRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareScannedInvoiceRequest.Unmarshal(m, b)
@@ -190,7 +190,7 @@ func (m *PrepareScannedInvoiceRequest_Entry) Reset()         { *m = PrepareScann
 func (m *PrepareScannedInvoiceRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*PrepareScannedInvoiceRequest_Entry) ProtoMessage()    {}
 func (*PrepareScannedInvoiceRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanned_invoice_c7b4f8b33f0f475e, []int{1, 0}
+	return fileDescriptor_scanned_invoice_894fd43e857d453f, []int{1, 0}
 }
 func (m *PrepareScannedInvoiceRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareScannedInvoiceRequest_Entry.Unmarshal(m, b)
@@ -245,7 +245,7 @@ func (m *AddScannedInvoiceDataRequest) Reset()         { *m = AddScannedInvoiceD
 func (m *AddScannedInvoiceDataRequest) String() string { return proto.CompactTextString(m) }
 func (*AddScannedInvoiceDataRequest) ProtoMessage()    {}
 func (*AddScannedInvoiceDataRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanned_invoice_c7b4f8b33f0f475e, []int{2}
+	return fileDescriptor_scanned_invoice_894fd43e857d453f, []int{2}
 }
 func (m *AddScannedInvoiceDataRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddScannedInvoiceDataRequest.Unmarshal(m, b)
@@ -305,7 +305,7 @@ func (m *AddScannedInvoiceDataRequest_Entry) Reset()         { *m = AddScannedIn
 func (m *AddScannedInvoiceDataRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*AddScannedInvoiceDataRequest_Entry) ProtoMessage()    {}
 func (*AddScannedInvoiceDataRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_scanned_invoice_c7b4f8b33f0f475e, []int{2, 0}
+	return fileDescriptor_scanned_invoice_894fd43e857d453f, []int{2, 0}
 }
 func (m *AddScannedInvoiceDataRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddScannedInvoiceDataRequest_Entry.Unmarshal(m, b)
@@ -519,10 +519,10 @@ var _ScannedInvoiceDataservice_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/scanned_invoice.proto", fileDescriptor_scanned_invoice_c7b4f8b33f0f475e)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/scanned_invoice.proto", fileDescriptor_scanned_invoice_894fd43e857d453f)
 }
 
-var fileDescriptor_scanned_invoice_c7b4f8b33f0f475e = []byte{
+var fileDescriptor_scanned_invoice_894fd43e857d453f = []byte{
 	// 812 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x55, 0xdd, 0x6e, 0xe3, 0x44,
 	0x18, 0x95, 0x9d, 0x74, 0xdb, 0x4e, 0xb4, 0xb0, 0x1a, 0xb6, 0x95, 0x1b, 0x8a, 0x98, 0x5a, 0x2b,

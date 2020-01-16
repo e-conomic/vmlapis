@@ -28,7 +28,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-// Bank
+// Bank BQ schema gen - could be used for adding direct developer data endpoints
 type BankEntry struct {
 	Id                   string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                     `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
@@ -47,7 +47,7 @@ func (m *BankEntry) Reset()         { *m = BankEntry{} }
 func (m *BankEntry) String() string { return proto.CompactTextString(m) }
 func (*BankEntry) ProtoMessage()    {}
 func (*BankEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_dd615300f08c4327, []int{0}
+	return fileDescriptor_bank_0cd88e9f8f41168f, []int{0}
 }
 func (m *BankEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BankEntry.Unmarshal(m, b)
@@ -136,7 +136,7 @@ func (m *PrepareBankRequest) Reset()         { *m = PrepareBankRequest{} }
 func (m *PrepareBankRequest) String() string { return proto.CompactTextString(m) }
 func (*PrepareBankRequest) ProtoMessage()    {}
 func (*PrepareBankRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_dd615300f08c4327, []int{1}
+	return fileDescriptor_bank_0cd88e9f8f41168f, []int{1}
 }
 func (m *PrepareBankRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareBankRequest.Unmarshal(m, b)
@@ -190,7 +190,7 @@ func (m *PrepareBankRequest_Entry) Reset()         { *m = PrepareBankRequest_Ent
 func (m *PrepareBankRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*PrepareBankRequest_Entry) ProtoMessage()    {}
 func (*PrepareBankRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_dd615300f08c4327, []int{1, 0}
+	return fileDescriptor_bank_0cd88e9f8f41168f, []int{1, 0}
 }
 func (m *PrepareBankRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareBankRequest_Entry.Unmarshal(m, b)
@@ -245,7 +245,7 @@ func (m *AddBankDataRequest) Reset()         { *m = AddBankDataRequest{} }
 func (m *AddBankDataRequest) String() string { return proto.CompactTextString(m) }
 func (*AddBankDataRequest) ProtoMessage()    {}
 func (*AddBankDataRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_dd615300f08c4327, []int{2}
+	return fileDescriptor_bank_0cd88e9f8f41168f, []int{2}
 }
 func (m *AddBankDataRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddBankDataRequest.Unmarshal(m, b)
@@ -305,7 +305,7 @@ func (m *AddBankDataRequest_Entry) Reset()         { *m = AddBankDataRequest_Ent
 func (m *AddBankDataRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*AddBankDataRequest_Entry) ProtoMessage()    {}
 func (*AddBankDataRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_dd615300f08c4327, []int{2, 0}
+	return fileDescriptor_bank_0cd88e9f8f41168f, []int{2, 0}
 }
 func (m *AddBankDataRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddBankDataRequest_Entry.Unmarshal(m, b)
@@ -519,10 +519,10 @@ var _BankDataservice_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/bank.proto", fileDescriptor_bank_dd615300f08c4327)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/bank.proto", fileDescriptor_bank_0cd88e9f8f41168f)
 }
 
-var fileDescriptor_bank_dd615300f08c4327 = []byte{
+var fileDescriptor_bank_0cd88e9f8f41168f = []byte{
 	// 787 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x55, 0x41, 0x6b, 0xe3, 0x46,
 	0x18, 0x45, 0xb2, 0xbd, 0xb1, 0xc7, 0xdd, 0xec, 0x32, 0xcb, 0xb6, 0xaa, 0xbb, 0xb4, 0xb3, 0x62,

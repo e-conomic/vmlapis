@@ -28,7 +28,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-// Electronic Invoice Line
+// Electronic Invoice Line BQ schema gen - could be used for adding direct developer data endpoints
 type ElectronicInvoiceLineEntry struct {
 	Id                   string                                      `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                                      `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
@@ -47,7 +47,7 @@ func (m *ElectronicInvoiceLineEntry) Reset()         { *m = ElectronicInvoiceLin
 func (m *ElectronicInvoiceLineEntry) String() string { return proto.CompactTextString(m) }
 func (*ElectronicInvoiceLineEntry) ProtoMessage()    {}
 func (*ElectronicInvoiceLineEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_electronic_invoice_line_3665719ff73f797a, []int{0}
+	return fileDescriptor_electronic_invoice_line_95711cd2b689aa5b, []int{0}
 }
 func (m *ElectronicInvoiceLineEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ElectronicInvoiceLineEntry.Unmarshal(m, b)
@@ -136,7 +136,7 @@ func (m *PrepareElectronicInvoiceLineRequest) Reset()         { *m = PrepareElec
 func (m *PrepareElectronicInvoiceLineRequest) String() string { return proto.CompactTextString(m) }
 func (*PrepareElectronicInvoiceLineRequest) ProtoMessage()    {}
 func (*PrepareElectronicInvoiceLineRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_electronic_invoice_line_3665719ff73f797a, []int{1}
+	return fileDescriptor_electronic_invoice_line_95711cd2b689aa5b, []int{1}
 }
 func (m *PrepareElectronicInvoiceLineRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareElectronicInvoiceLineRequest.Unmarshal(m, b)
@@ -192,7 +192,7 @@ func (m *PrepareElectronicInvoiceLineRequest_Entry) Reset() {
 func (m *PrepareElectronicInvoiceLineRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*PrepareElectronicInvoiceLineRequest_Entry) ProtoMessage()    {}
 func (*PrepareElectronicInvoiceLineRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_electronic_invoice_line_3665719ff73f797a, []int{1, 0}
+	return fileDescriptor_electronic_invoice_line_95711cd2b689aa5b, []int{1, 0}
 }
 func (m *PrepareElectronicInvoiceLineRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareElectronicInvoiceLineRequest_Entry.Unmarshal(m, b)
@@ -247,7 +247,7 @@ func (m *AddElectronicInvoiceLineDataRequest) Reset()         { *m = AddElectron
 func (m *AddElectronicInvoiceLineDataRequest) String() string { return proto.CompactTextString(m) }
 func (*AddElectronicInvoiceLineDataRequest) ProtoMessage()    {}
 func (*AddElectronicInvoiceLineDataRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_electronic_invoice_line_3665719ff73f797a, []int{2}
+	return fileDescriptor_electronic_invoice_line_95711cd2b689aa5b, []int{2}
 }
 func (m *AddElectronicInvoiceLineDataRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddElectronicInvoiceLineDataRequest.Unmarshal(m, b)
@@ -309,7 +309,7 @@ func (m *AddElectronicInvoiceLineDataRequest_Entry) Reset() {
 func (m *AddElectronicInvoiceLineDataRequest_Entry) String() string { return proto.CompactTextString(m) }
 func (*AddElectronicInvoiceLineDataRequest_Entry) ProtoMessage()    {}
 func (*AddElectronicInvoiceLineDataRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_electronic_invoice_line_3665719ff73f797a, []int{2, 0}
+	return fileDescriptor_electronic_invoice_line_95711cd2b689aa5b, []int{2, 0}
 }
 func (m *AddElectronicInvoiceLineDataRequest_Entry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_AddElectronicInvoiceLineDataRequest_Entry.Unmarshal(m, b)
@@ -523,10 +523,10 @@ var _ElectronicInvoiceLine_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/electronic_invoice_line.proto", fileDescriptor_electronic_invoice_line_3665719ff73f797a)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/electronic_invoice_line.proto", fileDescriptor_electronic_invoice_line_95711cd2b689aa5b)
 }
 
-var fileDescriptor_electronic_invoice_line_3665719ff73f797a = []byte{
+var fileDescriptor_electronic_invoice_line_95711cd2b689aa5b = []byte{
 	// 827 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x55, 0x41, 0x8f, 0xdb, 0x44,
 	0x14, 0x96, 0x9d, 0x6c, 0x77, 0x77, 0xa2, 0x42, 0x35, 0xd2, 0x22, 0xe3, 0x2e, 0x30, 0xeb, 0xee,
