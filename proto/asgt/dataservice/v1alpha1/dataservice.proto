@@ -51,7 +51,7 @@ message ScannedInvoiceEntry {
   string user = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 5;
-  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data true_values = 6;
+  map<string, string> true_values = 6;
   uint64 feedback_time = 7 [
     (gen_bq_schema.bigquery) = {
       require: true,
@@ -85,7 +85,7 @@ message ElectronicInvoiceLineEntry {
   string user = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 5;
-  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data true_values = 6;
+  map<string, string> true_values = 6;
   uint64 feedback_time = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
