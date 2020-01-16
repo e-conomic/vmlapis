@@ -46,7 +46,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
   }
   #region Messages
   /// <summary>
-  /// Scanned Invoice
+  /// Dataset BQ schema
   /// </summary>
   public sealed partial class Dataset : pb::IMessage<Dataset> {
     private static readonly pb::MessageParser<Dataset> _parser = new pb::MessageParser<Dataset>(() => new Dataset());

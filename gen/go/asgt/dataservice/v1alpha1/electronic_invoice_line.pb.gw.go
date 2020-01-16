@@ -181,11 +181,11 @@ func RegisterElectronicInvoiceLineHandlerClient(ctx context.Context, mux *runtim
 }
 
 var (
-	pattern_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "feedback"}, "electronicinvoiceline"))
+	pattern_ElectronicInvoiceLine_ElectronicInvoiceLineFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "feedback"))
 
-	pattern_ElectronicInvoiceLine_AddElectronicInvoiceLineData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "data"}, "electronicinvoiceline"))
+	pattern_ElectronicInvoiceLine_AddElectronicInvoiceLineData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "data"))
 
-	pattern_ElectronicInvoiceLine_DeleteElectronicInvoiceLine_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "data"}, "delete"))
+	pattern_ElectronicInvoiceLine_DeleteElectronicInvoiceLine_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "delete"))
 )
 
 var (

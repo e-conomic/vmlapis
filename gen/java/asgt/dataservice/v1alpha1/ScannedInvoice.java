@@ -6612,21 +6612,21 @@ public final class ScannedInvoice {
       "input\030\001 \001(\01320.asgt.jester.v1alpha1.Scann" +
       "edInvoiceRequest.Data\0229\n\013true_values\030\002 \003" +
       "(\0132$.asgt.dataservice.v1alpha1.DataTuple" +
-      "2\243\004\n\031ScannedInvoiceDataservice\022h\n\025Prepar" +
+      "2\256\004\n\031ScannedInvoiceDataservice\022h\n\025Prepar" +
       "eScannedInvoice\0227.asgt.dataservice.v1alp" +
       "ha1.PrepareScannedInvoiceRequest\032\026.googl" +
       "e.protobuf.Empty\022\212\001\n\026ScannedInvoiceFeedb" +
       "ack\022*.asgt.dataservice.v1alpha1.Feedback" +
       "Request\032\026.google.protobuf.Empty\",\202\323\344\223\002&\"" +
-      "!/v1alpha1/feedback:scannedinvoice:\001*\022\222\001" +
+      "!/v1alpha1/scannedinvoice:feedback:\001*\022\222\001" +
       "\n\025AddScannedInvoiceData\0227.asgt.dataservi" +
       "ce.v1alpha1.AddScannedInvoiceDataRequest" +
       "\032\026.google.protobuf.Empty\"(\202\323\344\223\002\"\"\035/v1alp" +
-      "ha1/data:scannedinvoice:\001*\022z\n\024DeleteScan" +
-      "nedInvoice\022(.asgt.dataservice.v1alpha1.D" +
-      "eleteRequest\032\026.google.protobuf.Empty\" \202\323" +
-      "\344\223\002\032\"\025/v1alpha1/data:delete:\001*B\rZ\013datase" +
-      "rviceb\006proto3"
+      "ha1/scannedinvoice:data:\001*\022\204\001\n\024DeleteSca" +
+      "nnedInvoice\022(.asgt.dataservice.v1alpha1." +
+      "DeleteRequest\032\026.google.protobuf.Empty\"*\202" +
+      "\323\344\223\002$\"\037/v1alpha1/scannedinvoice:delete:\001" +
+      "*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

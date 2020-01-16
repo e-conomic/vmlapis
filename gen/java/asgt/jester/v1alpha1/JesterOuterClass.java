@@ -8551,15 +8551,15 @@ public final class JesterOuterClass {
       "Jester\022\232\001\n\031ScannedInvoiceSuggestions\022+.a" +
       "sgt.jester.v1alpha1.ScannedInvoiceReques" +
       "t\032).asgt.jester.v1alpha1.SuggestionsResp" +
-      "onse\"%\202\323\344\223\002\037\"\032/v1/suggest:scannedinvoice" +
+      "onse\"%\202\323\344\223\002\037\"\032/v1/scannedinvoice:suggest" +
       ":\001*\022\256\001\n\037ElectronicInvoicLineSuggestions\022" +
       "2.asgt.jester.v1alpha1.ElectronicInvoice" +
       "LineRequest\032).asgt.jester.v1alpha1.Sugge" +
-      "stionsResponse\",\202\323\344\223\002&\"!/v1/suggest:elec" +
-      "tronicinvoiceline:\001*\022|\n\017BankSuggestions\022" +
+      "stionsResponse\",\202\323\344\223\002&\"!/v1/electronicin" +
+      "voiceline:suggest:\001*\022|\n\017BankSuggestions\022" +
       "!.asgt.jester.v1alpha1.BankRequest\032).asg" +
       "t.jester.v1alpha1.SuggestionsResponse\"\033\202" +
-      "\323\344\223\002\025\"\020/v1/suggest:bank:\001*B\010Z\006jesterb\006pr" +
+      "\323\344\223\002\025\"\020/v1/bank:suggest:\001*B\010Z\006jesterb\006pr" +
       "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

@@ -59,15 +59,15 @@ namespace Asgt.Jester.V1Alpha1 {
             "cBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy1AMKBkplc3Rl",
             "chKaAQoZU2Nhbm5lZEludm9pY2VTdWdnZXN0aW9ucxIrLmFzZ3QuamVzdGVy",
             "LnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlUmVxdWVzdBopLmFzZ3QuamVzdGVy",
-            "LnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIaL3YxL3N1",
-            "Z2dlc3Q6c2Nhbm5lZGludm9pY2U6ASoSrgEKH0VsZWN0cm9uaWNJbnZvaWNM",
+            "LnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIaL3YxL3Nj",
+            "YW5uZWRpbnZvaWNlOnN1Z2dlc3Q6ASoSrgEKH0VsZWN0cm9uaWNJbnZvaWNM",
             "aW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmplc3Rlci52MWFscGhhMS5FbGVjdHJv",
             "bmljSW52b2ljZUxpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
-            "U3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvc3VnZ2VzdDplbGVj",
-            "dHJvbmljaW52b2ljZWxpbmU6ASoSfAoPQmFua1N1Z2dlc3Rpb25zEiEuYXNn",
+            "U3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvZWxlY3Ryb25pY2lu",
+            "dm9pY2VsaW5lOnN1Z2dlc3Q6ASoSfAoPQmFua1N1Z2dlc3Rpb25zEiEuYXNn",
             "dC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0Lmplc3Rlci52",
-            "MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92MS9zdWdn",
-            "ZXN0OmJhbms6ASpCCFoGamVzdGVyYgZwcm90bzM="));
+            "MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92MS9iYW5r",
+            "OnN1Z2dlc3Q6ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

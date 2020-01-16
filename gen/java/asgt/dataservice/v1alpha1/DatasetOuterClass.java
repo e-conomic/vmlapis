@@ -81,7 +81,7 @@ public final class DatasetOuterClass {
   }
   /**
    * <pre>
-   * Scanned Invoice
+   * Dataset BQ schema
    * </pre>
    *
    * Protobuf type {@code asgt.dataservice.v1alpha1.Dataset}
@@ -654,7 +654,7 @@ public final class DatasetOuterClass {
     }
     /**
      * <pre>
-     * Scanned Invoice
+     * Dataset BQ schema
      * </pre>
      *
      * Protobuf type {@code asgt.dataservice.v1alpha1.Dataset}

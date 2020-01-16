@@ -6613,23 +6613,23 @@ public final class ElectronicInvoiceLineOuterClass {
       "ntionPolicy\032\212\001\n\005Entry\022F\n\005input\030\001 \001(\01327.a" +
       "sgt.jester.v1alpha1.ElectronicInvoiceLin" +
       "eRequest.Data\0229\n\013true_values\030\002 \003(\0132$.asg" +
-      "t.dataservice.v1alpha1.DataTuple2\330\004\n\025Ele" +
+      "t.dataservice.v1alpha1.DataTuple2\351\004\n\025Ele" +
       "ctronicInvoiceLine\022v\n\034PrepareElectronicI" +
       "nvoiceLine\022>.asgt.dataservice.v1alpha1.P" +
       "repareElectronicInvoiceLineRequest\032\026.goo" +
       "gle.protobuf.Empty\022\230\001\n\035ElectronicInvoice" +
       "LineFeedback\022*.asgt.dataservice.v1alpha1" +
       ".FeedbackRequest\032\026.google.protobuf.Empty" +
-      "\"3\202\323\344\223\002-\"(/v1alpha1/feedback:electronici" +
-      "nvoiceline:\001*\022\247\001\n\034AddElectronicInvoiceLi" +
+      "\"3\202\323\344\223\002-\"(/v1alpha1/electronicinvoicelin" +
+      "e:feedback:\001*\022\247\001\n\034AddElectronicInvoiceLi" +
       "neData\022>.asgt.dataservice.v1alpha1.AddEl" +
       "ectronicInvoiceLineDataRequest\032\026.google." +
-      "protobuf.Empty\"/\202\323\344\223\002)\"$/v1alpha1/data:e" +
-      "lectronicinvoiceline:\001*\022\201\001\n\033DeleteElectr" +
+      "protobuf.Empty\"/\202\323\344\223\002)\"$/v1alpha1/electr" +
+      "onicinvoiceline:data:\001*\022\222\001\n\033DeleteElectr" +
       "onicInvoiceLine\022(.asgt.dataservice.v1alp" +
       "ha1.DeleteRequest\032\026.google.protobuf.Empt" +
-      "y\" \202\323\344\223\002\032\"\025/v1alpha1/data:delete:\001*B\rZ\013d" +
-      "ataserviceb\006proto3"
+      "y\"1\202\323\344\223\002+\"&/v1alpha1/electronicinvoiceli" +
+      "ne:delete:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

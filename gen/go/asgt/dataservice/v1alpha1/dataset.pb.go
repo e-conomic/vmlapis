@@ -42,10 +42,10 @@ func (x Dataset_Type) String() string {
 	return proto.EnumName(Dataset_Type_name, int32(x))
 }
 func (Dataset_Type) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_dataset_278e4fea492515e0, []int{0, 0}
+	return fileDescriptor_dataset_f5a982b7f24786da, []int{0, 0}
 }
 
-// Scanned Invoice
+// Dataset BQ schema
 type Dataset struct {
 	Consumer             string           `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
 	Name                 string           `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
@@ -61,7 +61,7 @@ func (m *Dataset) Reset()         { *m = Dataset{} }
 func (m *Dataset) String() string { return proto.CompactTextString(m) }
 func (*Dataset) ProtoMessage()    {}
 func (*Dataset) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataset_278e4fea492515e0, []int{0}
+	return fileDescriptor_dataset_f5a982b7f24786da, []int{0}
 }
 func (m *Dataset) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Dataset.Unmarshal(m, b)
@@ -122,10 +122,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/dataset.proto", fileDescriptor_dataset_278e4fea492515e0)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/dataset.proto", fileDescriptor_dataset_f5a982b7f24786da)
 }
 
-var fileDescriptor_dataset_278e4fea492515e0 = []byte{
+var fileDescriptor_dataset_f5a982b7f24786da = []byte{
 	// 313 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x7c, 0x51, 0xbd, 0x4e, 0xc2, 0x40,
 	0x1c, 0xb7, 0xa5, 0x48, 0xf9, 0x13, 0xa4, 0x39, 0x97, 0x42, 0x1c, 0x2a, 0x31, 0xa1, 0x71, 0x38,

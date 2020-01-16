@@ -181,11 +181,11 @@ func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *ru
 }
 
 var (
-	pattern_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "feedback"}, "scannedinvoice"))
+	pattern_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "feedback"))
 
-	pattern_ScannedInvoiceDataservice_AddScannedInvoiceData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "data"}, "scannedinvoice"))
+	pattern_ScannedInvoiceDataservice_AddScannedInvoiceData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "data"))
 
-	pattern_ScannedInvoiceDataservice_DeleteScannedInvoice_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "data"}, "delete"))
+	pattern_ScannedInvoiceDataservice_DeleteScannedInvoice_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "delete"))
 )
 
 var (
