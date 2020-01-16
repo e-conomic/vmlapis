@@ -11,7 +11,7 @@
   "mode": "REQUIRED"
  },
  {
-  "name": "user",
+  "name": "dataset",
   "type": "STRING",
   "mode": "REQUIRED"
  },
@@ -76,52 +76,34 @@
  {
   "name": "true_values",
   "type": "RECORD",
-  "mode": "NULLABLE",
+  "mode": "REPEATED",
   "fields": [
    {
-    "name": "issue_date",
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
    },
    {
-    "name": "currency",
+    "name": "value",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "pred_values",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
    },
    {
-    "name": "supplier_id",
+    "name": "predictions",
     "type": "STRING",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "supplier_name",
-    "type": "STRING",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "supplier_global_id",
-    "type": "STRING",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "customer_ref",
-    "type": "STRING",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "total",
-    "type": "INTEGER",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "line_text",
-    "type": "STRING",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "line_id",
-    "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REPEATED"
    }
   ]
  },

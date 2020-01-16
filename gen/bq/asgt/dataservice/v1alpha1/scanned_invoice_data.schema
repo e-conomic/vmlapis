@@ -11,7 +11,7 @@
   "mode": "REQUIRED"
  },
  {
-  "name": "user",
+  "name": "dataset",
   "type": "STRING",
   "mode": "REQUIRED"
  },
@@ -36,12 +36,34 @@
  {
   "name": "true_values",
   "type": "RECORD",
-  "mode": "NULLABLE",
+  "mode": "REPEATED",
   "fields": [
    {
-    "name": "description",
+    "name": "target",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "value",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "pred_values",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "target",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "predictions",
+    "type": "STRING",
+    "mode": "REPEATED"
    }
   ]
  },

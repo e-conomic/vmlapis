@@ -20,9 +20,9 @@ class DataServiceStub(object):
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.ScannedInvoiceFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.ScannedInvoiceFeedbackRequest.SerializeToString,
+    self.ScannedInvoiceAddData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceAddData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.PrepareElectronicInvoicLineFeedback = channel.unary_unary(
@@ -30,9 +30,19 @@ class DataServiceStub(object):
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.ElectronicInvoicLineFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.ScannedInvoiceFeedbackRequest.SerializeToString,
+    self.ElectronicInvoicLineAddData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineAddData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
+    self.PrepareBankFeedback = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.DataService/PrepareBankFeedback',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
+    self.BankAddData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.DataService/BankAddData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.Delete = channel.unary_unary(
@@ -53,7 +63,7 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ScannedInvoiceFeedback(self, request, context):
+  def ScannedInvoiceAddData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -67,7 +77,21 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ElectronicInvoicLineFeedback(self, request, context):
+  def ElectronicInvoicLineAddData(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def PrepareBankFeedback(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def BankAddData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -75,14 +99,8 @@ class DataServiceServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def Delete(self, request, context):
-    """TODO(helvind)
-    rpc AppendDataset(AppendDataRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
-    post: "/v1alpha1/feedback:append"
-    body: "*"
-    };
-    }
-    """
+    # missing associated documentation comment in .proto file
+    pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -95,9 +113,9 @@ def add_DataServiceServicer_to_server(servicer, server):
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'ScannedInvoiceFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.ScannedInvoiceFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.ScannedInvoiceFeedbackRequest.FromString,
+      'ScannedInvoiceAddData': grpc.unary_unary_rpc_method_handler(
+          servicer.ScannedInvoiceAddData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'PrepareElectronicInvoicLineFeedback': grpc.unary_unary_rpc_method_handler(
@@ -105,9 +123,19 @@ def add_DataServiceServicer_to_server(servicer, server):
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'ElectronicInvoicLineFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.ElectronicInvoicLineFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.ScannedInvoiceFeedbackRequest.FromString,
+      'ElectronicInvoicLineAddData': grpc.unary_unary_rpc_method_handler(
+          servicer.ElectronicInvoicLineAddData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'PrepareBankFeedback': grpc.unary_unary_rpc_method_handler(
+          servicer.PrepareBankFeedback,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.PrepareScannedInvoiceFeedbackRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'BankAddData': grpc.unary_unary_rpc_method_handler(
+          servicer.BankAddData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_dataservice__pb2.AddDataRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'Delete': grpc.unary_unary_rpc_method_handler(

@@ -27,15 +27,368 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
+// Common Data types
+type DataTuple struct {
+	Target               string   `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
+	Value                string   `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *DataTuple) Reset()         { *m = DataTuple{} }
+func (m *DataTuple) String() string { return proto.CompactTextString(m) }
+func (*DataTuple) ProtoMessage()    {}
+func (*DataTuple) Descriptor() ([]byte, []int) {
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{0}
+}
+func (m *DataTuple) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DataTuple.Unmarshal(m, b)
+}
+func (m *DataTuple) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DataTuple.Marshal(b, m, deterministic)
+}
+func (dst *DataTuple) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DataTuple.Merge(dst, src)
+}
+func (m *DataTuple) XXX_Size() int {
+	return xxx_messageInfo_DataTuple.Size(m)
+}
+func (m *DataTuple) XXX_DiscardUnknown() {
+	xxx_messageInfo_DataTuple.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DataTuple proto.InternalMessageInfo
+
+func (m *DataTuple) GetTarget() string {
+	if m != nil {
+		return m.Target
+	}
+	return ""
+}
+
+func (m *DataTuple) GetValue() string {
+	if m != nil {
+		return m.Value
+	}
+	return ""
+}
+
+type PredictedTuple struct {
+	Target               string   `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
+	Predictions          []string `protobuf:"bytes,2,rep,name=predictions,proto3" json:"predictions,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *PredictedTuple) Reset()         { *m = PredictedTuple{} }
+func (m *PredictedTuple) String() string { return proto.CompactTextString(m) }
+func (*PredictedTuple) ProtoMessage()    {}
+func (*PredictedTuple) Descriptor() ([]byte, []int) {
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{1}
+}
+func (m *PredictedTuple) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_PredictedTuple.Unmarshal(m, b)
+}
+func (m *PredictedTuple) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_PredictedTuple.Marshal(b, m, deterministic)
+}
+func (dst *PredictedTuple) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PredictedTuple.Merge(dst, src)
+}
+func (m *PredictedTuple) XXX_Size() int {
+	return xxx_messageInfo_PredictedTuple.Size(m)
+}
+func (m *PredictedTuple) XXX_DiscardUnknown() {
+	xxx_messageInfo_PredictedTuple.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PredictedTuple proto.InternalMessageInfo
+
+func (m *PredictedTuple) GetTarget() string {
+	if m != nil {
+		return m.Target
+	}
+	return ""
+}
+
+func (m *PredictedTuple) GetPredictions() []string {
+	if m != nil {
+		return m.Predictions
+	}
+	return nil
+}
+
+type AddDataRequest struct {
+	Id                   string                          `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	Dataset              string                          `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	Tags                 []string                        `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
+	TrueValues           []*DataTuple                    `protobuf:"bytes,4,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	RetentionPolicy      *AddDataRequest_RetentionPolicy `protobuf:"bytes,5,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                        `json:"-"`
+	XXX_unrecognized     []byte                          `json:"-"`
+	XXX_sizecache        int32                           `json:"-"`
+}
+
+func (m *AddDataRequest) Reset()         { *m = AddDataRequest{} }
+func (m *AddDataRequest) String() string { return proto.CompactTextString(m) }
+func (*AddDataRequest) ProtoMessage()    {}
+func (*AddDataRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{2}
+}
+func (m *AddDataRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AddDataRequest.Unmarshal(m, b)
+}
+func (m *AddDataRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AddDataRequest.Marshal(b, m, deterministic)
+}
+func (dst *AddDataRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AddDataRequest.Merge(dst, src)
+}
+func (m *AddDataRequest) XXX_Size() int {
+	return xxx_messageInfo_AddDataRequest.Size(m)
+}
+func (m *AddDataRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_AddDataRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_AddDataRequest proto.InternalMessageInfo
+
+func (m *AddDataRequest) GetId() string {
+	if m != nil {
+		return m.Id
+	}
+	return ""
+}
+
+func (m *AddDataRequest) GetDataset() string {
+	if m != nil {
+		return m.Dataset
+	}
+	return ""
+}
+
+func (m *AddDataRequest) GetTags() []string {
+	if m != nil {
+		return m.Tags
+	}
+	return nil
+}
+
+func (m *AddDataRequest) GetTrueValues() []*DataTuple {
+	if m != nil {
+		return m.TrueValues
+	}
+	return nil
+}
+
+func (m *AddDataRequest) GetRetentionPolicy() *AddDataRequest_RetentionPolicy {
+	if m != nil {
+		return m.RetentionPolicy
+	}
+	return nil
+}
+
+type AddDataRequest_RetentionPolicy struct {
+	// Types that are valid to be assigned to Policy:
+	//	*AddDataRequest_RetentionPolicy_MaxDays
+	//	*AddDataRequest_RetentionPolicy_MaxRecords
+	Policy               isAddDataRequest_RetentionPolicy_Policy `protobuf_oneof:"policy"`
+	XXX_NoUnkeyedLiteral struct{}                                `json:"-"`
+	XXX_unrecognized     []byte                                  `json:"-"`
+	XXX_sizecache        int32                                   `json:"-"`
+}
+
+func (m *AddDataRequest_RetentionPolicy) Reset()         { *m = AddDataRequest_RetentionPolicy{} }
+func (m *AddDataRequest_RetentionPolicy) String() string { return proto.CompactTextString(m) }
+func (*AddDataRequest_RetentionPolicy) ProtoMessage()    {}
+func (*AddDataRequest_RetentionPolicy) Descriptor() ([]byte, []int) {
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{2, 0}
+}
+func (m *AddDataRequest_RetentionPolicy) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AddDataRequest_RetentionPolicy.Unmarshal(m, b)
+}
+func (m *AddDataRequest_RetentionPolicy) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AddDataRequest_RetentionPolicy.Marshal(b, m, deterministic)
+}
+func (dst *AddDataRequest_RetentionPolicy) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AddDataRequest_RetentionPolicy.Merge(dst, src)
+}
+func (m *AddDataRequest_RetentionPolicy) XXX_Size() int {
+	return xxx_messageInfo_AddDataRequest_RetentionPolicy.Size(m)
+}
+func (m *AddDataRequest_RetentionPolicy) XXX_DiscardUnknown() {
+	xxx_messageInfo_AddDataRequest_RetentionPolicy.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_AddDataRequest_RetentionPolicy proto.InternalMessageInfo
+
+type isAddDataRequest_RetentionPolicy_Policy interface {
+	isAddDataRequest_RetentionPolicy_Policy()
+}
+
+type AddDataRequest_RetentionPolicy_MaxDays struct {
+	MaxDays int32 `protobuf:"varint,1,opt,name=max_days,json=maxDays,proto3,oneof"`
+}
+
+type AddDataRequest_RetentionPolicy_MaxRecords struct {
+	MaxRecords int32 `protobuf:"varint,2,opt,name=max_records,json=maxRecords,proto3,oneof"`
+}
+
+func (*AddDataRequest_RetentionPolicy_MaxDays) isAddDataRequest_RetentionPolicy_Policy() {}
+
+func (*AddDataRequest_RetentionPolicy_MaxRecords) isAddDataRequest_RetentionPolicy_Policy() {}
+
+func (m *AddDataRequest_RetentionPolicy) GetPolicy() isAddDataRequest_RetentionPolicy_Policy {
+	if m != nil {
+		return m.Policy
+	}
+	return nil
+}
+
+func (m *AddDataRequest_RetentionPolicy) GetMaxDays() int32 {
+	if x, ok := m.GetPolicy().(*AddDataRequest_RetentionPolicy_MaxDays); ok {
+		return x.MaxDays
+	}
+	return 0
+}
+
+func (m *AddDataRequest_RetentionPolicy) GetMaxRecords() int32 {
+	if x, ok := m.GetPolicy().(*AddDataRequest_RetentionPolicy_MaxRecords); ok {
+		return x.MaxRecords
+	}
+	return 0
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*AddDataRequest_RetentionPolicy) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _AddDataRequest_RetentionPolicy_OneofMarshaler, _AddDataRequest_RetentionPolicy_OneofUnmarshaler, _AddDataRequest_RetentionPolicy_OneofSizer, []interface{}{
+		(*AddDataRequest_RetentionPolicy_MaxDays)(nil),
+		(*AddDataRequest_RetentionPolicy_MaxRecords)(nil),
+	}
+}
+
+func _AddDataRequest_RetentionPolicy_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*AddDataRequest_RetentionPolicy)
+	// policy
+	switch x := m.Policy.(type) {
+	case *AddDataRequest_RetentionPolicy_MaxDays:
+		b.EncodeVarint(1<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.MaxDays))
+	case *AddDataRequest_RetentionPolicy_MaxRecords:
+		b.EncodeVarint(2<<3 | proto.WireVarint)
+		b.EncodeVarint(uint64(x.MaxRecords))
+	case nil:
+	default:
+		return fmt.Errorf("AddDataRequest_RetentionPolicy.Policy has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _AddDataRequest_RetentionPolicy_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*AddDataRequest_RetentionPolicy)
+	switch tag {
+	case 1: // policy.max_days
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.Policy = &AddDataRequest_RetentionPolicy_MaxDays{int32(x)}
+		return true, err
+	case 2: // policy.max_records
+		if wire != proto.WireVarint {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeVarint()
+		m.Policy = &AddDataRequest_RetentionPolicy_MaxRecords{int32(x)}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _AddDataRequest_RetentionPolicy_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*AddDataRequest_RetentionPolicy)
+	// policy
+	switch x := m.Policy.(type) {
+	case *AddDataRequest_RetentionPolicy_MaxDays:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.MaxDays))
+	case *AddDataRequest_RetentionPolicy_MaxRecords:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(x.MaxRecords))
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
+}
+
+type DeleteRequest struct {
+	ModelType            string   `protobuf:"bytes,1,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
+	Dataset              string   `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	Tags                 []string `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *DeleteRequest) Reset()         { *m = DeleteRequest{} }
+func (m *DeleteRequest) String() string { return proto.CompactTextString(m) }
+func (*DeleteRequest) ProtoMessage()    {}
+func (*DeleteRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{3}
+}
+func (m *DeleteRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_DeleteRequest.Unmarshal(m, b)
+}
+func (m *DeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_DeleteRequest.Marshal(b, m, deterministic)
+}
+func (dst *DeleteRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_DeleteRequest.Merge(dst, src)
+}
+func (m *DeleteRequest) XXX_Size() int {
+	return xxx_messageInfo_DeleteRequest.Size(m)
+}
+func (m *DeleteRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_DeleteRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_DeleteRequest proto.InternalMessageInfo
+
+func (m *DeleteRequest) GetModelType() string {
+	if m != nil {
+		return m.ModelType
+	}
+	return ""
+}
+
+func (m *DeleteRequest) GetDataset() string {
+	if m != nil {
+		return m.Dataset
+	}
+	return ""
+}
+
+func (m *DeleteRequest) GetTags() []string {
+	if m != nil {
+		return m.Tags
+	}
+	return nil
+}
+
 // Scanned Invoice
 type ScannedInvoiceEntry struct {
 	Id                   string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                               `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	User                 string                               `protobuf:"bytes,3,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                               `protobuf:"bytes,3,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Tags                 []string                             `protobuf:"bytes,4,rep,name=tags,proto3" json:"tags,omitempty"`
 	Input                *v1alpha1.ScannedInvoiceRequest_Data `protobuf:"bytes,5,opt,name=input,proto3" json:"input,omitempty"`
-	TrueValues           *v1alpha1.ScannedInvoiceRequest_Data `protobuf:"bytes,6,opt,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
-	FeedbackTime         uint64                               `protobuf:"varint,7,opt,name=feedback_time,json=feedbackTime,proto3" json:"feedback_time,omitempty"`
+	TrueValues           []*DataTuple                         `protobuf:"bytes,6,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	PredValues           []*PredictedTuple                    `protobuf:"bytes,7,rep,name=pred_values,json=predValues,proto3" json:"pred_values,omitempty"`
+	FeedbackTime         uint64                               `protobuf:"varint,8,opt,name=feedback_time,json=feedbackTime,proto3" json:"feedback_time,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                             `json:"-"`
 	XXX_unrecognized     []byte                               `json:"-"`
 	XXX_sizecache        int32                                `json:"-"`
@@ -45,7 +398,7 @@ func (m *ScannedInvoiceEntry) Reset()         { *m = ScannedInvoiceEntry{} }
 func (m *ScannedInvoiceEntry) String() string { return proto.CompactTextString(m) }
 func (*ScannedInvoiceEntry) ProtoMessage()    {}
 func (*ScannedInvoiceEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{0}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{4}
 }
 func (m *ScannedInvoiceEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScannedInvoiceEntry.Unmarshal(m, b)
@@ -79,9 +432,9 @@ func (m *ScannedInvoiceEntry) GetConsumer() string {
 	return ""
 }
 
-func (m *ScannedInvoiceEntry) GetUser() string {
+func (m *ScannedInvoiceEntry) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -100,9 +453,16 @@ func (m *ScannedInvoiceEntry) GetInput() *v1alpha1.ScannedInvoiceRequest_Data {
 	return nil
 }
 
-func (m *ScannedInvoiceEntry) GetTrueValues() *v1alpha1.ScannedInvoiceRequest_Data {
+func (m *ScannedInvoiceEntry) GetTrueValues() []*DataTuple {
 	if m != nil {
 		return m.TrueValues
+	}
+	return nil
+}
+
+func (m *ScannedInvoiceEntry) GetPredValues() []*PredictedTuple {
+	if m != nil {
+		return m.PredValues
 	}
 	return nil
 }
@@ -116,7 +476,7 @@ func (m *ScannedInvoiceEntry) GetFeedbackTime() uint64 {
 
 type PrepareScannedInvoiceFeedbackRequest struct {
 	Id                   string                               `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	User                 string                               `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                               `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Input                *v1alpha1.ScannedInvoiceRequest_Data `protobuf:"bytes,3,opt,name=input,proto3" json:"input,omitempty"`
 	Predictions          []*v1alpha1.Prediction               `protobuf:"bytes,4,rep,name=predictions,proto3" json:"predictions,omitempty"`
 	Tags                 []string                             `protobuf:"bytes,5,rep,name=tags,proto3" json:"tags,omitempty"`
@@ -129,7 +489,7 @@ func (m *PrepareScannedInvoiceFeedbackRequest) Reset()         { *m = PrepareSca
 func (m *PrepareScannedInvoiceFeedbackRequest) String() string { return proto.CompactTextString(m) }
 func (*PrepareScannedInvoiceFeedbackRequest) ProtoMessage()    {}
 func (*PrepareScannedInvoiceFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{1}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{5}
 }
 func (m *PrepareScannedInvoiceFeedbackRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareScannedInvoiceFeedbackRequest.Unmarshal(m, b)
@@ -156,9 +516,9 @@ func (m *PrepareScannedInvoiceFeedbackRequest) GetId() string {
 	return ""
 }
 
-func (m *PrepareScannedInvoiceFeedbackRequest) GetUser() string {
+func (m *PrepareScannedInvoiceFeedbackRequest) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -184,68 +544,15 @@ func (m *PrepareScannedInvoiceFeedbackRequest) GetTags() []string {
 	return nil
 }
 
-type ScannedInvoiceFeedbackRequest struct {
-	Id                   string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Tags                 []string          `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	TrueValues           map[string]string `protobuf:"bytes,3,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
-}
-
-func (m *ScannedInvoiceFeedbackRequest) Reset()         { *m = ScannedInvoiceFeedbackRequest{} }
-func (m *ScannedInvoiceFeedbackRequest) String() string { return proto.CompactTextString(m) }
-func (*ScannedInvoiceFeedbackRequest) ProtoMessage()    {}
-func (*ScannedInvoiceFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{2}
-}
-func (m *ScannedInvoiceFeedbackRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScannedInvoiceFeedbackRequest.Unmarshal(m, b)
-}
-func (m *ScannedInvoiceFeedbackRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScannedInvoiceFeedbackRequest.Marshal(b, m, deterministic)
-}
-func (dst *ScannedInvoiceFeedbackRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScannedInvoiceFeedbackRequest.Merge(dst, src)
-}
-func (m *ScannedInvoiceFeedbackRequest) XXX_Size() int {
-	return xxx_messageInfo_ScannedInvoiceFeedbackRequest.Size(m)
-}
-func (m *ScannedInvoiceFeedbackRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScannedInvoiceFeedbackRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ScannedInvoiceFeedbackRequest proto.InternalMessageInfo
-
-func (m *ScannedInvoiceFeedbackRequest) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *ScannedInvoiceFeedbackRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
-func (m *ScannedInvoiceFeedbackRequest) GetTrueValues() map[string]string {
-	if m != nil {
-		return m.TrueValues
-	}
-	return nil
-}
-
 // Electronic Invoice Line
 type ElectronicInvoiceLineEntry struct {
 	Id                   string                                      `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                                      `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	User                 string                                      `protobuf:"bytes,3,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                                      `protobuf:"bytes,3,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Tags                 []string                                    `protobuf:"bytes,4,rep,name=tags,proto3" json:"tags,omitempty"`
 	Input                *v1alpha1.ElectronicInvoiceLineRequest_Data `protobuf:"bytes,5,opt,name=input,proto3" json:"input,omitempty"`
-	TrueValues           *v1alpha1.ElectronicInvoiceLineRequest_Data `protobuf:"bytes,6,opt,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	TrueValues           []*DataTuple                                `protobuf:"bytes,6,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	PredValues           []*PredictedTuple                           `protobuf:"bytes,7,rep,name=pred_values,json=predValues,proto3" json:"pred_values,omitempty"`
 	FeedbackTime         uint64                                      `protobuf:"varint,8,opt,name=feedback_time,json=feedbackTime,proto3" json:"feedback_time,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                                    `json:"-"`
 	XXX_unrecognized     []byte                                      `json:"-"`
@@ -256,7 +563,7 @@ func (m *ElectronicInvoiceLineEntry) Reset()         { *m = ElectronicInvoiceLin
 func (m *ElectronicInvoiceLineEntry) String() string { return proto.CompactTextString(m) }
 func (*ElectronicInvoiceLineEntry) ProtoMessage()    {}
 func (*ElectronicInvoiceLineEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{3}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{6}
 }
 func (m *ElectronicInvoiceLineEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ElectronicInvoiceLineEntry.Unmarshal(m, b)
@@ -290,9 +597,9 @@ func (m *ElectronicInvoiceLineEntry) GetConsumer() string {
 	return ""
 }
 
-func (m *ElectronicInvoiceLineEntry) GetUser() string {
+func (m *ElectronicInvoiceLineEntry) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -311,9 +618,16 @@ func (m *ElectronicInvoiceLineEntry) GetInput() *v1alpha1.ElectronicInvoiceLineR
 	return nil
 }
 
-func (m *ElectronicInvoiceLineEntry) GetTrueValues() *v1alpha1.ElectronicInvoiceLineRequest_Data {
+func (m *ElectronicInvoiceLineEntry) GetTrueValues() []*DataTuple {
 	if m != nil {
 		return m.TrueValues
+	}
+	return nil
+}
+
+func (m *ElectronicInvoiceLineEntry) GetPredValues() []*PredictedTuple {
+	if m != nil {
+		return m.PredValues
 	}
 	return nil
 }
@@ -327,7 +641,7 @@ func (m *ElectronicInvoiceLineEntry) GetFeedbackTime() uint64 {
 
 type PrepareElectronicInvoiceLineFeedbackRequest struct {
 	Id                   string                                      `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	User                 string                                      `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                                      `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Input                *v1alpha1.ElectronicInvoiceLineRequest_Data `protobuf:"bytes,3,opt,name=input,proto3" json:"input,omitempty"`
 	Predictions          []*v1alpha1.Prediction                      `protobuf:"bytes,4,rep,name=predictions,proto3" json:"predictions,omitempty"`
 	Tags                 []string                                    `protobuf:"bytes,5,rep,name=tags,proto3" json:"tags,omitempty"`
@@ -344,7 +658,7 @@ func (m *PrepareElectronicInvoiceLineFeedbackRequest) String() string {
 }
 func (*PrepareElectronicInvoiceLineFeedbackRequest) ProtoMessage() {}
 func (*PrepareElectronicInvoiceLineFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{4}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{7}
 }
 func (m *PrepareElectronicInvoiceLineFeedbackRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareElectronicInvoiceLineFeedbackRequest.Unmarshal(m, b)
@@ -371,9 +685,9 @@ func (m *PrepareElectronicInvoiceLineFeedbackRequest) GetId() string {
 	return ""
 }
 
-func (m *PrepareElectronicInvoiceLineFeedbackRequest) GetUser() string {
+func (m *PrepareElectronicInvoiceLineFeedbackRequest) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -399,68 +713,15 @@ func (m *PrepareElectronicInvoiceLineFeedbackRequest) GetTags() []string {
 	return nil
 }
 
-type ElectronicInvoiceLineFeedbackRequest struct {
-	Id                   string            `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Tags                 []string          `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	TrueValues           map[string]string `protobuf:"bytes,3,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty" protobuf_key:"bytes,1,opt,name=key,proto3" protobuf_val:"bytes,2,opt,name=value,proto3"`
-	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
-	XXX_unrecognized     []byte            `json:"-"`
-	XXX_sizecache        int32             `json:"-"`
-}
-
-func (m *ElectronicInvoiceLineFeedbackRequest) Reset()         { *m = ElectronicInvoiceLineFeedbackRequest{} }
-func (m *ElectronicInvoiceLineFeedbackRequest) String() string { return proto.CompactTextString(m) }
-func (*ElectronicInvoiceLineFeedbackRequest) ProtoMessage()    {}
-func (*ElectronicInvoiceLineFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{5}
-}
-func (m *ElectronicInvoiceLineFeedbackRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest.Unmarshal(m, b)
-}
-func (m *ElectronicInvoiceLineFeedbackRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest.Marshal(b, m, deterministic)
-}
-func (dst *ElectronicInvoiceLineFeedbackRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest.Merge(dst, src)
-}
-func (m *ElectronicInvoiceLineFeedbackRequest) XXX_Size() int {
-	return xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest.Size(m)
-}
-func (m *ElectronicInvoiceLineFeedbackRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ElectronicInvoiceLineFeedbackRequest proto.InternalMessageInfo
-
-func (m *ElectronicInvoiceLineFeedbackRequest) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *ElectronicInvoiceLineFeedbackRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
-func (m *ElectronicInvoiceLineFeedbackRequest) GetTrueValues() map[string]string {
-	if m != nil {
-		return m.TrueValues
-	}
-	return nil
-}
-
 // Bank
 type BankEntry struct {
 	Id                   string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	Consumer             string                     `protobuf:"bytes,2,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	User                 string                     `protobuf:"bytes,3,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                     `protobuf:"bytes,3,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Tags                 []string                   `protobuf:"bytes,4,rep,name=tags,proto3" json:"tags,omitempty"`
 	Input                *v1alpha1.BankRequest_Data `protobuf:"bytes,5,opt,name=input,proto3" json:"input,omitempty"`
-	TrueValues           *v1alpha1.BankRequest_Data `protobuf:"bytes,6,opt,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	TrueValues           []*DataTuple               `protobuf:"bytes,6,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
+	PredValues           []*PredictedTuple          `protobuf:"bytes,7,rep,name=pred_values,json=predValues,proto3" json:"pred_values,omitempty"`
 	FeedbackTime         uint64                     `protobuf:"varint,8,opt,name=feedback_time,json=feedbackTime,proto3" json:"feedback_time,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
 	XXX_unrecognized     []byte                     `json:"-"`
@@ -471,7 +732,7 @@ func (m *BankEntry) Reset()         { *m = BankEntry{} }
 func (m *BankEntry) String() string { return proto.CompactTextString(m) }
 func (*BankEntry) ProtoMessage()    {}
 func (*BankEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{6}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{8}
 }
 func (m *BankEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BankEntry.Unmarshal(m, b)
@@ -505,9 +766,9 @@ func (m *BankEntry) GetConsumer() string {
 	return ""
 }
 
-func (m *BankEntry) GetUser() string {
+func (m *BankEntry) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -526,9 +787,16 @@ func (m *BankEntry) GetInput() *v1alpha1.BankRequest_Data {
 	return nil
 }
 
-func (m *BankEntry) GetTrueValues() *v1alpha1.BankRequest_Data {
+func (m *BankEntry) GetTrueValues() []*DataTuple {
 	if m != nil {
 		return m.TrueValues
+	}
+	return nil
+}
+
+func (m *BankEntry) GetPredValues() []*PredictedTuple {
+	if m != nil {
+		return m.PredValues
 	}
 	return nil
 }
@@ -542,7 +810,7 @@ func (m *BankEntry) GetFeedbackTime() uint64 {
 
 type PrepareBankFeedbackRequest struct {
 	Id                   string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	User                 string                     `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
+	Dataset              string                     `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	Input                *v1alpha1.BankRequest_Data `protobuf:"bytes,3,opt,name=input,proto3" json:"input,omitempty"`
 	Predictions          []*v1alpha1.Prediction     `protobuf:"bytes,4,rep,name=predictions,proto3" json:"predictions,omitempty"`
 	Tags                 []string                   `protobuf:"bytes,5,rep,name=tags,proto3" json:"tags,omitempty"`
@@ -555,7 +823,7 @@ func (m *PrepareBankFeedbackRequest) Reset()         { *m = PrepareBankFeedbackR
 func (m *PrepareBankFeedbackRequest) String() string { return proto.CompactTextString(m) }
 func (*PrepareBankFeedbackRequest) ProtoMessage()    {}
 func (*PrepareBankFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{7}
+	return fileDescriptor_dataservice_e19267081ff4bef6, []int{9}
 }
 func (m *PrepareBankFeedbackRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_PrepareBankFeedbackRequest.Unmarshal(m, b)
@@ -582,9 +850,9 @@ func (m *PrepareBankFeedbackRequest) GetId() string {
 	return ""
 }
 
-func (m *PrepareBankFeedbackRequest) GetUser() string {
+func (m *PrepareBankFeedbackRequest) GetDataset() string {
 	if m != nil {
-		return m.User
+		return m.Dataset
 	}
 	return ""
 }
@@ -610,128 +878,18 @@ func (m *PrepareBankFeedbackRequest) GetTags() []string {
 	return nil
 }
 
-type BankFeedbackRequest struct {
-	Id                   string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Tags                 []string                   `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	TrueValues           *v1alpha1.BankRequest_Data `protobuf:"bytes,3,opt,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
-	XXX_unrecognized     []byte                     `json:"-"`
-	XXX_sizecache        int32                      `json:"-"`
-}
-
-func (m *BankFeedbackRequest) Reset()         { *m = BankFeedbackRequest{} }
-func (m *BankFeedbackRequest) String() string { return proto.CompactTextString(m) }
-func (*BankFeedbackRequest) ProtoMessage()    {}
-func (*BankFeedbackRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{8}
-}
-func (m *BankFeedbackRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_BankFeedbackRequest.Unmarshal(m, b)
-}
-func (m *BankFeedbackRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_BankFeedbackRequest.Marshal(b, m, deterministic)
-}
-func (dst *BankFeedbackRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BankFeedbackRequest.Merge(dst, src)
-}
-func (m *BankFeedbackRequest) XXX_Size() int {
-	return xxx_messageInfo_BankFeedbackRequest.Size(m)
-}
-func (m *BankFeedbackRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_BankFeedbackRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_BankFeedbackRequest proto.InternalMessageInfo
-
-func (m *BankFeedbackRequest) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *BankFeedbackRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
-func (m *BankFeedbackRequest) GetTrueValues() *v1alpha1.BankRequest_Data {
-	if m != nil {
-		return m.TrueValues
-	}
-	return nil
-}
-
-// Delete
-type DeleteRequest struct {
-	ModelType            string   `protobuf:"bytes,1,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
-	User                 string   `protobuf:"bytes,2,opt,name=user,proto3" json:"user,omitempty"`
-	Tags                 []string `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *DeleteRequest) Reset()         { *m = DeleteRequest{} }
-func (m *DeleteRequest) String() string { return proto.CompactTextString(m) }
-func (*DeleteRequest) ProtoMessage()    {}
-func (*DeleteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataservice_27aabf5303ea0c37, []int{9}
-}
-func (m *DeleteRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DeleteRequest.Unmarshal(m, b)
-}
-func (m *DeleteRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DeleteRequest.Marshal(b, m, deterministic)
-}
-func (dst *DeleteRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteRequest.Merge(dst, src)
-}
-func (m *DeleteRequest) XXX_Size() int {
-	return xxx_messageInfo_DeleteRequest.Size(m)
-}
-func (m *DeleteRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_DeleteRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_DeleteRequest proto.InternalMessageInfo
-
-func (m *DeleteRequest) GetModelType() string {
-	if m != nil {
-		return m.ModelType
-	}
-	return ""
-}
-
-func (m *DeleteRequest) GetUser() string {
-	if m != nil {
-		return m.User
-	}
-	return ""
-}
-
-func (m *DeleteRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
 func init() {
+	proto.RegisterType((*DataTuple)(nil), "asgt.dataservice.v1alpha1.DataTuple")
+	proto.RegisterType((*PredictedTuple)(nil), "asgt.dataservice.v1alpha1.PredictedTuple")
+	proto.RegisterType((*AddDataRequest)(nil), "asgt.dataservice.v1alpha1.AddDataRequest")
+	proto.RegisterType((*AddDataRequest_RetentionPolicy)(nil), "asgt.dataservice.v1alpha1.AddDataRequest.RetentionPolicy")
+	proto.RegisterType((*DeleteRequest)(nil), "asgt.dataservice.v1alpha1.DeleteRequest")
 	proto.RegisterType((*ScannedInvoiceEntry)(nil), "asgt.dataservice.v1alpha1.ScannedInvoiceEntry")
 	proto.RegisterType((*PrepareScannedInvoiceFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.PrepareScannedInvoiceFeedbackRequest")
-	proto.RegisterType((*ScannedInvoiceFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest")
-	proto.RegisterMapType((map[string]string)(nil), "asgt.dataservice.v1alpha1.ScannedInvoiceFeedbackRequest.TrueValuesEntry")
 	proto.RegisterType((*ElectronicInvoiceLineEntry)(nil), "asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry")
 	proto.RegisterType((*PrepareElectronicInvoiceLineFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineFeedbackRequest")
-	proto.RegisterType((*ElectronicInvoiceLineFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest")
-	proto.RegisterMapType((map[string]string)(nil), "asgt.dataservice.v1alpha1.ElectronicInvoiceLineFeedbackRequest.TrueValuesEntry")
 	proto.RegisterType((*BankEntry)(nil), "asgt.dataservice.v1alpha1.BankEntry")
 	proto.RegisterType((*PrepareBankFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.PrepareBankFeedbackRequest")
-	proto.RegisterType((*BankFeedbackRequest)(nil), "asgt.dataservice.v1alpha1.BankFeedbackRequest")
-	proto.RegisterType((*DeleteRequest)(nil), "asgt.dataservice.v1alpha1.DeleteRequest")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -747,16 +905,11 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type DataServiceClient interface {
 	PrepareScannedInvoiceFeedback(ctx context.Context, in *PrepareScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	ScannedInvoiceFeedback(ctx context.Context, in *ScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	ScannedInvoiceAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	PrepareElectronicInvoicLineFeedback(ctx context.Context, in *PrepareScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	ElectronicInvoicLineFeedback(ctx context.Context, in *ScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	// TODO(helvind)
-	// rpc AppendDataset(AppendDataRequest) returns (google.protobuf.Empty) {
-	//   option (google.api.http) = {
-	//     post: "/v1alpha1/feedback:append"
-	//     body: "*"
-	//   };
-	// }
+	ElectronicInvoicLineAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	PrepareBankFeedback(ctx context.Context, in *PrepareScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	BankAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
@@ -777,9 +930,9 @@ func (c *dataServiceClient) PrepareScannedInvoiceFeedback(ctx context.Context, i
 	return out, nil
 }
 
-func (c *dataServiceClient) ScannedInvoiceFeedback(ctx context.Context, in *ScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *dataServiceClient) ScannedInvoiceAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceFeedback", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceAddData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -795,9 +948,27 @@ func (c *dataServiceClient) PrepareElectronicInvoicLineFeedback(ctx context.Cont
 	return out, nil
 }
 
-func (c *dataServiceClient) ElectronicInvoicLineFeedback(ctx context.Context, in *ScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *dataServiceClient) ElectronicInvoicLineAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineFeedback", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineAddData", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dataServiceClient) PrepareBankFeedback(ctx context.Context, in *PrepareScannedInvoiceFeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/PrepareBankFeedback", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *dataServiceClient) BankAddData(ctx context.Context, in *AddDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/BankAddData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -816,16 +987,11 @@ func (c *dataServiceClient) Delete(ctx context.Context, in *DeleteRequest, opts 
 // DataServiceServer is the server API for DataService service.
 type DataServiceServer interface {
 	PrepareScannedInvoiceFeedback(context.Context, *PrepareScannedInvoiceFeedbackRequest) (*empty.Empty, error)
-	ScannedInvoiceFeedback(context.Context, *ScannedInvoiceFeedbackRequest) (*empty.Empty, error)
+	ScannedInvoiceAddData(context.Context, *AddDataRequest) (*empty.Empty, error)
 	PrepareElectronicInvoicLineFeedback(context.Context, *PrepareScannedInvoiceFeedbackRequest) (*empty.Empty, error)
-	ElectronicInvoicLineFeedback(context.Context, *ScannedInvoiceFeedbackRequest) (*empty.Empty, error)
-	// TODO(helvind)
-	// rpc AppendDataset(AppendDataRequest) returns (google.protobuf.Empty) {
-	//   option (google.api.http) = {
-	//     post: "/v1alpha1/feedback:append"
-	//     body: "*"
-	//   };
-	// }
+	ElectronicInvoicLineAddData(context.Context, *AddDataRequest) (*empty.Empty, error)
+	PrepareBankFeedback(context.Context, *PrepareScannedInvoiceFeedbackRequest) (*empty.Empty, error)
+	BankAddData(context.Context, *AddDataRequest) (*empty.Empty, error)
 	Delete(context.Context, *DeleteRequest) (*empty.Empty, error)
 }
 
@@ -851,20 +1017,20 @@ func _DataService_PrepareScannedInvoiceFeedback_Handler(srv interface{}, ctx con
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DataService_ScannedInvoiceFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ScannedInvoiceFeedbackRequest)
+func _DataService_ScannedInvoiceAddData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddDataRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServiceServer).ScannedInvoiceFeedback(ctx, in)
+		return srv.(DataServiceServer).ScannedInvoiceAddData(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceFeedback",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/ScannedInvoiceAddData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).ScannedInvoiceFeedback(ctx, req.(*ScannedInvoiceFeedbackRequest))
+		return srv.(DataServiceServer).ScannedInvoiceAddData(ctx, req.(*AddDataRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -887,20 +1053,56 @@ func _DataService_PrepareElectronicInvoicLineFeedback_Handler(srv interface{}, c
 	return interceptor(ctx, in, info, handler)
 }
 
-func _DataService_ElectronicInvoicLineFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ScannedInvoiceFeedbackRequest)
+func _DataService_ElectronicInvoicLineAddData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddDataRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServiceServer).ElectronicInvoicLineFeedback(ctx, in)
+		return srv.(DataServiceServer).ElectronicInvoicLineAddData(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineFeedback",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/ElectronicInvoicLineAddData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).ElectronicInvoicLineFeedback(ctx, req.(*ScannedInvoiceFeedbackRequest))
+		return srv.(DataServiceServer).ElectronicInvoicLineAddData(ctx, req.(*AddDataRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DataService_PrepareBankFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PrepareScannedInvoiceFeedbackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).PrepareBankFeedback(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/PrepareBankFeedback",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).PrepareBankFeedback(ctx, req.(*PrepareScannedInvoiceFeedbackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _DataService_BankAddData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AddDataRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).BankAddData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/BankAddData",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).BankAddData(ctx, req.(*AddDataRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -932,16 +1134,24 @@ var _DataService_serviceDesc = grpc.ServiceDesc{
 			Handler:    _DataService_PrepareScannedInvoiceFeedback_Handler,
 		},
 		{
-			MethodName: "ScannedInvoiceFeedback",
-			Handler:    _DataService_ScannedInvoiceFeedback_Handler,
+			MethodName: "ScannedInvoiceAddData",
+			Handler:    _DataService_ScannedInvoiceAddData_Handler,
 		},
 		{
 			MethodName: "PrepareElectronicInvoicLineFeedback",
 			Handler:    _DataService_PrepareElectronicInvoicLineFeedback_Handler,
 		},
 		{
-			MethodName: "ElectronicInvoicLineFeedback",
-			Handler:    _DataService_ElectronicInvoicLineFeedback_Handler,
+			MethodName: "ElectronicInvoicLineAddData",
+			Handler:    _DataService_ElectronicInvoicLineAddData_Handler,
+		},
+		{
+			MethodName: "PrepareBankFeedback",
+			Handler:    _DataService_PrepareBankFeedback_Handler,
+		},
+		{
+			MethodName: "BankAddData",
+			Handler:    _DataService_BankAddData_Handler,
 		},
 		{
 			MethodName: "Delete",
@@ -953,70 +1163,75 @@ var _DataService_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/dataservice.proto", fileDescriptor_dataservice_27aabf5303ea0c37)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/dataservice.proto", fileDescriptor_dataservice_e19267081ff4bef6)
 }
 
-var fileDescriptor_dataservice_27aabf5303ea0c37 = []byte{
-	// 962 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xdc, 0x57, 0x4f, 0x6f, 0x1b, 0x45,
-	0x14, 0xd7, 0x7a, 0xe3, 0x10, 0x8f, 0x49, 0xa9, 0xa6, 0x55, 0xe4, 0x98, 0xa4, 0x9a, 0x2c, 0xa1,
-	0x58, 0x6d, 0x58, 0xd3, 0x54, 0x88, 0xca, 0x2a, 0x5a, 0xd5, 0xc4, 0x29, 0x91, 0x88, 0x08, 0x8e,
-	0x55, 0xa1, 0x5e, 0xac, 0xf1, 0xee, 0xb3, 0x33, 0x78, 0x3d, 0xbb, 0xd9, 0x1d, 0x5b, 0xf8, 0xc2,
-	0xa1, 0x5f, 0x81, 0x0b, 0x5f, 0x80, 0x6f, 0xc0, 0x91, 0x6f, 0x81, 0xc4, 0x8d, 0x1b, 0x27, 0x4b,
-	0xdc, 0x11, 0x5c, 0xaa, 0x9d, 0x9d, 0xf5, 0x9f, 0x76, 0x6d, 0xb9, 0x6e, 0x73, 0xc9, 0xcd, 0x3b,
-	0x6f, 0xf6, 0xf7, 0xde, 0xfc, 0x7e, 0xef, 0xb7, 0xf3, 0x8c, 0xee, 0xd3, 0xb0, 0x23, 0xca, 0x0e,
-	0x15, 0x34, 0x84, 0x60, 0xc0, 0x6c, 0x28, 0x0f, 0x1e, 0x50, 0xd7, 0xbf, 0xa0, 0x0f, 0xa6, 0x17,
-	0x4d, 0x3f, 0xf0, 0x84, 0x87, 0xb7, 0xa3, 0xcd, 0xe6, 0xf4, 0x7a, 0xb2, 0xb9, 0xb8, 0x27, 0x71,
-	0x7e, 0x80, 0x50, 0x40, 0x30, 0x81, 0x88, 0x9f, 0xe3, 0xb7, 0x8b, 0x3b, 0x1d, 0xe0, 0xcd, 0xd6,
-	0x65, 0x33, 0xb4, 0x2f, 0xa0, 0x47, 0xcb, 0xad, 0xcb, 0x66, 0x9b, 0x81, 0xeb, 0xcc, 0x8d, 0x0a,
-	0xda, 0x72, 0x61, 0x1c, 0xf5, 0xbc, 0x8e, 0x0b, 0x65, 0xea, 0xb3, 0x32, 0xe5, 0xdc, 0x13, 0x54,
-	0x30, 0x8f, 0x87, 0x2a, 0xfa, 0xa1, 0x8a, 0xca, 0xa7, 0x56, 0xbf, 0x5d, 0x86, 0x9e, 0x2f, 0x86,
-	0x71, 0xd0, 0xf8, 0x4b, 0x47, 0xb7, 0xce, 0x6d, 0xca, 0x39, 0x38, 0x27, 0x7c, 0xe0, 0x31, 0x1b,
-	0x6a, 0x5c, 0x04, 0x43, 0x6c, 0xa1, 0x0c, 0x73, 0x0a, 0x1a, 0xd1, 0x4a, 0xb9, 0x6a, 0x79, 0x64,
-	0x7d, 0x62, 0x7c, 0x7c, 0x0c, 0xe0, 0xb4, 0xa8, 0xdd, 0x25, 0x27, 0x47, 0x07, 0x24, 0xa4, 0x3d,
-	0x20, 0x34, 0x24, 0x35, 0x3e, 0xf0, 0x86, 0x24, 0x80, 0xcb, 0x3e, 0x84, 0x82, 0x30, 0x67, 0x64,
-	0x65, 0x36, 0xb4, 0x7a, 0x86, 0x39, 0x78, 0x0f, 0x6d, 0xd8, 0x1e, 0x0f, 0xfb, 0x3d, 0x08, 0x0a,
-	0x19, 0x09, 0x93, 0x8d, 0x83, 0xe3, 0x65, 0xbc, 0x8d, 0xd6, 0xfa, 0x21, 0x04, 0x05, 0x7d, 0x3a,
-	0x2c, 0x97, 0xf0, 0x73, 0xb4, 0x26, 0x68, 0x27, 0x2c, 0xac, 0x11, 0xbd, 0x94, 0xab, 0x1e, 0x8f,
-	0xac, 0xaf, 0x8c, 0x27, 0x0d, 0xda, 0x09, 0x89, 0x03, 0x6d, 0xc6, 0xc1, 0x21, 0xad, 0x21, 0x49,
-	0x70, 0x0e, 0x08, 0xf0, 0x80, 0xd9, 0x17, 0xf1, 0xaa, 0xe2, 0x9e, 0xb0, 0x36, 0x19, 0x50, 0x17,
-	0x44, 0x17, 0x86, 0x84, 0x85, 0xa4, 0x1f, 0x82, 0x53, 0x97, 0x98, 0xf8, 0x18, 0x65, 0x19, 0xf7,
-	0xfb, 0xa2, 0x90, 0x25, 0x5a, 0x29, 0x7f, 0xf8, 0x99, 0x29, 0x75, 0x53, 0x62, 0x24, 0xe2, 0x98,
-	0xb3, 0xa4, 0xd4, 0xe3, 0x13, 0x9a, 0x47, 0x54, 0xd0, 0x7a, 0xfc, 0x3a, 0xfe, 0x0e, 0xe5, 0x45,
-	0xd0, 0x87, 0xe6, 0x80, 0xba, 0x7d, 0x08, 0x0b, 0xeb, 0x2b, 0xa2, 0xa1, 0x08, 0xe4, 0x99, 0xc4,
-	0xc0, 0x9f, 0xa3, 0xcd, 0xb6, 0xa2, 0xb9, 0x29, 0x58, 0x0f, 0x0a, 0xef, 0x11, 0xad, 0xb4, 0x56,
-	0xbd, 0x39, 0xb2, 0x36, 0x37, 0x34, 0x9c, 0x6b, 0x9c, 0x9c, 0xd6, 0xce, 0x1b, 0x4f, 0x4e, 0xcf,
-	0xea, 0xef, 0x27, 0xdb, 0x1a, 0xac, 0x07, 0x95, 0xed, 0x91, 0xb5, 0x85, 0x6e, 0x87, 0x71, 0x8e,
-	0x26, 0x8b, 0x93, 0x34, 0xa3, 0x4e, 0x34, 0x46, 0x1a, 0xda, 0x3f, 0x0b, 0xc0, 0xa7, 0x01, 0xcc,
-	0xd6, 0x90, 0xc8, 0xa9, 0x6a, 0xc1, 0x37, 0x26, 0x82, 0x4b, 0xfd, 0xb0, 0x12, 0x47, 0x6a, 0xa7,
-	0x54, 0x19, 0x33, 0xa7, 0xbf, 0x1d, 0x73, 0x55, 0x94, 0xf7, 0x03, 0x70, 0x98, 0x2d, 0xdb, 0x54,
-	0x8a, 0x9c, 0x3f, 0x24, 0xe9, 0x68, 0x67, 0xe3, 0x8d, 0xf5, 0xe9, 0x97, 0xa2, 0xfa, 0x64, 0x87,
-	0x64, 0xa3, 0x0e, 0x89, 0x95, 0x35, 0xfe, 0xd1, 0xd0, 0xee, 0x1b, 0x9f, 0x52, 0xa2, 0x64, 0x26,
-	0x28, 0x98, 0xcd, 0xea, 0xaa, 0xcb, 0xea, 0xbe, 0x36, 0xe7, 0xba, 0xdb, 0x5c, 0x98, 0xd2, 0x6c,
-	0x8c, 0xe5, 0x95, 0xce, 0x9a, 0xd6, 0xbb, 0xf8, 0x25, 0xfa, 0xe0, 0x95, 0x30, 0xbe, 0x89, 0xf4,
-	0x2e, 0x0c, 0x55, 0x89, 0xd1, 0x4f, 0x7c, 0x1b, 0x65, 0x65, 0x29, 0x4a, 0x8a, 0xf8, 0xa1, 0x92,
-	0x79, 0xa4, 0x19, 0xff, 0xe9, 0xa8, 0x58, 0x73, 0xc1, 0x16, 0x81, 0xc7, 0x99, 0xad, 0xf2, 0x7f,
-	0xc3, 0xf8, 0xf5, 0xf7, 0xf0, 0xe9, 0xac, 0x87, 0xbf, 0x48, 0xef, 0x9d, 0x54, 0x6e, 0xd2, 0x1a,
-	0xf2, 0xfb, 0x34, 0x2b, 0xaf, 0x0c, 0xba, 0xd0, 0xd1, 0x1b, 0x4b, 0x39, 0x7a, 0x6f, 0x64, 0xdd,
-	0x41, 0x3b, 0x30, 0x4e, 0x35, 0x36, 0xb5, 0xcb, 0xb8, 0x72, 0xf6, 0xbf, 0x1a, 0xba, 0xaf, 0x9c,
-	0x9d, 0x5a, 0xd2, 0x2a, 0x06, 0x3f, 0x9d, 0x35, 0xf8, 0xdb, 0xd2, 0x7a, 0x55, 0x3e, 0xff, 0x5f,
-	0x43, 0xfb, 0xab, 0x9e, 0xf9, 0x35, 0xbb, 0xfb, 0x69, 0x76, 0xff, 0x76, 0x81, 0xdd, 0x97, 0xc9,
-	0x7c, 0x95, 0xae, 0xff, 0x4d, 0x47, 0xb9, 0x2a, 0xe5, 0xdd, 0x6b, 0x6f, 0xf2, 0xc7, 0xb3, 0x26,
-	0xbf, 0x9b, 0xde, 0x38, 0x11, 0x15, 0x69, 0xcd, 0xf7, 0x34, 0xcd, 0xd3, 0xcb, 0x62, 0xbc, 0x03,
-	0x0b, 0xdf, 0x18, 0x59, 0x79, 0x94, 0x6b, 0x51, 0xde, 0x8d, 0xfd, 0xfa, 0xa7, 0x86, 0x8a, 0xca,
-	0xaf, 0x51, 0xba, 0x55, 0xec, 0xf9, 0x78, 0xd6, 0x9e, 0x6f, 0x48, 0xc8, 0x55, 0xb9, 0xf1, 0x85,
-	0x86, 0x6e, 0x2d, 0x79, 0xa2, 0xd7, 0xcc, 0xf7, 0xf4, 0x55, 0xf3, 0xad, 0x28, 0x92, 0xf1, 0x0c,
-	0x6d, 0x1e, 0x81, 0x0b, 0x22, 0xf9, 0x0e, 0xe1, 0x5d, 0x84, 0x7a, 0x9e, 0x03, 0x6e, 0x53, 0x0c,
-	0x7d, 0x50, 0x55, 0xe4, 0xe4, 0x4a, 0x63, 0xe8, 0x43, 0x2a, 0xbd, 0x49, 0x81, 0xfa, 0xa4, 0xc0,
-	0xc3, 0xdf, 0xb3, 0x28, 0x1f, 0x25, 0x3b, 0x8f, 0xbb, 0x15, 0xff, 0x88, 0x76, 0x17, 0x8e, 0x53,
-	0xd8, 0x5a, 0xf0, 0xe5, 0x58, 0x66, 0x10, 0x2b, 0x6e, 0x99, 0xf1, 0xbc, 0x6e, 0x26, 0xf3, 0xba,
-	0x59, 0x8b, 0xe6, 0x75, 0xfc, 0x8b, 0x86, 0xb6, 0xe6, 0xe4, 0x7c, 0xb4, 0xea, 0x70, 0x32, 0x2f,
-	0x99, 0x71, 0xf0, 0xe2, 0x8f, 0xbf, 0x7f, 0xce, 0xdc, 0x35, 0xf6, 0x26, 0xff, 0x56, 0x92, 0xe6,
-	0xae, 0xa8, 0x39, 0x53, 0xdd, 0x48, 0x15, 0xed, 0x1e, 0xfe, 0x09, 0x7d, 0x34, 0xe7, 0x26, 0x9a,
-	0xfe, 0x34, 0x5e, 0x1d, 0x35, 0xbf, 0x6a, 0x68, 0x67, 0x61, 0xe6, 0x77, 0x4f, 0xd0, 0x43, 0x49,
-	0xd0, 0xa7, 0x46, 0x29, 0x85, 0xa0, 0xc9, 0xb5, 0xad, 0x38, 0x8a, 0x2e, 0xed, 0x88, 0x27, 0x1f,
-	0xad, 0xc7, 0x4d, 0x8a, 0x4b, 0x0b, 0x0a, 0x9a, 0xe9, 0xe3, 0xb9, 0x05, 0xec, 0xcb, 0x02, 0xee,
-	0x18, 0xdb, 0x29, 0x05, 0x38, 0x12, 0xa1, 0xa2, 0xdd, 0xab, 0x6e, 0x3e, 0xcf, 0x4f, 0xe5, 0x68,
-	0xad, 0x4b, 0x90, 0x87, 0x2f, 0x03, 0x00, 0x00, 0xff, 0xff, 0x9d, 0xd7, 0x40, 0x27, 0xd8, 0x0e,
-	0x00, 0x00,
+var fileDescriptor_dataservice_e19267081ff4bef6 = []byte{
+	// 1043 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe4, 0x57, 0x41, 0x6f, 0x1b, 0x45,
+	0x14, 0x66, 0x1d, 0xdb, 0xb5, 0x9f, 0x49, 0x5a, 0x4d, 0xda, 0xc8, 0x75, 0x9a, 0x32, 0x59, 0x02,
+	0x38, 0x6d, 0x65, 0xd3, 0x20, 0x84, 0x1a, 0x55, 0xb2, 0x62, 0xe2, 0x88, 0x54, 0x44, 0x8a, 0x1c,
+	0x8b, 0x43, 0x41, 0xb2, 0xc6, 0xbb, 0x2f, 0xce, 0x90, 0xf5, 0xec, 0x66, 0x77, 0x6c, 0xc5, 0x17,
+	0x0e, 0xa8, 0x7f, 0x00, 0xf1, 0x13, 0xf8, 0x15, 0xfc, 0x0e, 0x2e, 0x1c, 0x38, 0x72, 0xf2, 0x09,
+	0xf1, 0x03, 0x10, 0xda, 0x9d, 0xf1, 0xc6, 0x1b, 0xd9, 0x86, 0xa4, 0xcd, 0xa5, 0xbd, 0x79, 0xde,
+	0x9b, 0xf7, 0xcd, 0x7b, 0xdf, 0x7b, 0xdf, 0xac, 0x07, 0x1e, 0xb3, 0xa0, 0x2b, 0xab, 0x36, 0x93,
+	0x2c, 0x40, 0x7f, 0xc0, 0x2d, 0xac, 0x0e, 0x9e, 0x32, 0xc7, 0x3b, 0x61, 0x4f, 0x27, 0x8d, 0x15,
+	0xcf, 0x77, 0xa5, 0x4b, 0xee, 0x87, 0x9b, 0x2b, 0x93, 0xf6, 0xf1, 0xe6, 0xd2, 0x7a, 0x84, 0xf3,
+	0x3d, 0x06, 0x12, 0xfd, 0x0b, 0x08, 0xb5, 0x56, 0xd1, 0xa5, 0x07, 0x5d, 0x14, 0xed, 0xce, 0x59,
+	0x3b, 0xb0, 0x4e, 0xb0, 0xc7, 0xaa, 0x9d, 0xb3, 0xf6, 0x31, 0x47, 0xc7, 0x9e, 0xe9, 0x95, 0xac,
+	0xe3, 0x60, 0xec, 0x75, 0xdd, 0xae, 0x83, 0x55, 0xe6, 0xf1, 0x2a, 0x13, 0xc2, 0x95, 0x4c, 0x72,
+	0x57, 0x04, 0xda, 0xbb, 0xaa, 0xbd, 0xd1, 0xaa, 0xd3, 0x3f, 0xae, 0x62, 0xcf, 0x93, 0x43, 0xe5,
+	0x34, 0x9f, 0x41, 0x7e, 0x97, 0x49, 0xd6, 0xea, 0x7b, 0x0e, 0x92, 0x15, 0xc8, 0x4a, 0xe6, 0x77,
+	0x51, 0x16, 0x0d, 0x6a, 0x94, 0xf3, 0x4d, 0xbd, 0x22, 0x77, 0x21, 0x33, 0x60, 0x4e, 0x1f, 0x8b,
+	0xa9, 0xc8, 0xac, 0x16, 0xe6, 0x0b, 0x58, 0x3a, 0xf4, 0xd1, 0xe6, 0x96, 0x44, 0x7b, 0x7e, 0x3c,
+	0x85, 0x82, 0xa7, 0x76, 0x86, 0x69, 0x15, 0x53, 0x74, 0xa1, 0x9c, 0x6f, 0x4e, 0x9a, 0xcc, 0xdf,
+	0x53, 0xb0, 0xb4, 0x63, 0xdb, 0x61, 0x2a, 0x4d, 0x3c, 0xeb, 0x63, 0x20, 0xc9, 0x12, 0xa4, 0xb8,
+	0xad, 0x81, 0x52, 0xdc, 0x26, 0x45, 0xb8, 0xa5, 0xb8, 0x95, 0x3a, 0x8d, 0xf1, 0x92, 0x10, 0x48,
+	0x4b, 0xd6, 0x0d, 0x8a, 0x0b, 0x11, 0x6e, 0xf4, 0x9b, 0x34, 0xa0, 0x20, 0xfd, 0x3e, 0xb6, 0xa3,
+	0x54, 0x83, 0x62, 0x9a, 0x2e, 0x94, 0x0b, 0x5b, 0x1b, 0x95, 0x99, 0x2d, 0xaa, 0xc4, 0x2c, 0x34,
+	0x21, 0x0c, 0xfc, 0x26, 0x8a, 0x23, 0x36, 0xdc, 0xf1, 0x51, 0xa2, 0x08, 0xb3, 0x6c, 0x7b, 0xae,
+	0xc3, 0xad, 0x61, 0x31, 0x43, 0x8d, 0x72, 0x61, 0xeb, 0xd9, 0x1c, 0xac, 0x64, 0x25, 0x95, 0xe6,
+	0x18, 0xe1, 0x30, 0x02, 0x68, 0xde, 0xf6, 0x93, 0x86, 0xd2, 0xb7, 0x70, 0xfb, 0xd2, 0x1e, 0xb2,
+	0x0a, 0xb9, 0x1e, 0x3b, 0x6f, 0xdb, 0x6c, 0x18, 0x44, 0x1c, 0x64, 0xbe, 0x7a, 0xaf, 0x79, 0xab,
+	0xc7, 0xce, 0x77, 0xd9, 0x30, 0x20, 0xeb, 0x50, 0x08, 0x9d, 0x3e, 0x5a, 0xae, 0x6f, 0x07, 0x11,
+	0x1d, 0xa1, 0x1f, 0x7a, 0xec, 0xbc, 0xa9, 0x6c, 0xf5, 0x1c, 0x64, 0x55, 0xba, 0xe6, 0x77, 0xb0,
+	0xb8, 0x8b, 0x0e, 0x4a, 0x1c, 0x13, 0xbb, 0x06, 0xd0, 0x73, 0x6d, 0x74, 0xda, 0x72, 0xe8, 0xa1,
+	0x26, 0x38, 0x1f, 0x59, 0x5a, 0x43, 0x0f, 0xaf, 0xc6, 0xb3, 0xf9, 0x4b, 0x1a, 0x96, 0x8f, 0x2c,
+	0x26, 0x04, 0xda, 0xfb, 0x62, 0xe0, 0x72, 0x0b, 0x1b, 0x42, 0xfa, 0x43, 0x52, 0xbb, 0xe8, 0x5e,
+	0xbd, 0x3a, 0xaa, 0x7d, 0x62, 0x7e, 0xb4, 0x87, 0x68, 0x77, 0x98, 0x75, 0x4a, 0xf7, 0x77, 0x9f,
+	0xd0, 0x80, 0xf5, 0x90, 0xb2, 0x80, 0x36, 0xc4, 0xc0, 0x1d, 0x52, 0x5f, 0x65, 0x46, 0xb9, 0x3d,
+	0xaa, 0xa5, 0x72, 0x46, 0xd4, 0xee, 0x75, 0xc8, 0x59, 0xae, 0x08, 0xfa, 0x3d, 0xf4, 0x55, 0x1e,
+	0xf5, 0x8c, 0x72, 0xc6, 0x66, 0xf2, 0xc1, 0x45, 0xa6, 0x0b, 0x93, 0x3b, 0xe2, 0x84, 0x5f, 0xea,
+	0x84, 0xc3, 0xee, 0xe7, 0xeb, 0x7b, 0xa3, 0xda, 0x97, 0xe6, 0x4e, 0x8b, 0x75, 0x03, 0x6a, 0xe3,
+	0x31, 0x17, 0x68, 0xd3, 0xce, 0x90, 0x8e, 0xd1, 0x9e, 0x50, 0x14, 0x3e, 0xb7, 0x4e, 0x94, 0x55,
+	0xb7, 0x94, 0xf2, 0x63, 0x3a, 0x60, 0x0e, 0xca, 0x53, 0x1c, 0x52, 0x1e, 0xd0, 0x7e, 0x80, 0xb6,
+	0x1e, 0xb0, 0x3d, 0xc8, 0x70, 0xe1, 0xf5, 0xa5, 0x1e, 0x87, 0x4f, 0xd5, 0x38, 0x68, 0x49, 0xc7,
+	0x93, 0x90, 0xa4, 0x66, 0x3c, 0x10, 0xd1, 0x70, 0xa8, 0xf0, 0xcb, 0x83, 0x9a, 0xbd, 0xe6, 0xa0,
+	0xbe, 0x50, 0x12, 0x1b, 0xc3, 0xdc, 0x8a, 0x60, 0x36, 0xe7, 0xc0, 0x24, 0xa5, 0xdb, 0x84, 0x30,
+	0x5a, 0x63, 0x7d, 0x0e, 0x8b, 0xc7, 0xba, 0x59, 0x6d, 0xc9, 0x7b, 0x58, 0xcc, 0x51, 0xa3, 0x9c,
+	0xae, 0xdf, 0x19, 0xd5, 0x16, 0x73, 0x06, 0xc9, 0xb7, 0xf6, 0x0f, 0x1a, 0x47, 0xad, 0x9d, 0x83,
+	0xc3, 0xe6, 0xfb, 0xe3, 0x6d, 0x2d, 0xde, 0xc3, 0xed, 0xfb, 0xa3, 0xda, 0x0a, 0xdc, 0x0d, 0x54,
+	0xc5, 0x6d, 0xae, 0x4a, 0x6e, 0x87, 0x87, 0x9b, 0x7f, 0x19, 0xb0, 0x71, 0xe8, 0xa3, 0xc7, 0x7c,
+	0x4c, 0x32, 0x32, 0x1e, 0x8a, 0xab, 0x8b, 0x3e, 0xe6, 0x7f, 0xe1, 0xf5, 0xf8, 0xaf, 0x27, 0xef,
+	0x26, 0x75, 0x51, 0xd0, 0xe9, 0x68, 0x87, 0xf1, 0xc6, 0xc4, 0xed, 0x15, 0x0b, 0x23, 0x33, 0x21,
+	0x8c, 0x5f, 0xd3, 0x50, 0x6a, 0x38, 0x68, 0x49, 0xdf, 0x15, 0xdc, 0xd2, 0x09, 0x7c, 0xcd, 0xc5,
+	0xbb, 0xa2, 0x8f, 0x83, 0xa4, 0x3e, 0xbe, 0x98, 0xce, 0xe8, 0x54, 0x86, 0xde, 0x6e, 0x99, 0xac,
+	0x8f, 0x6a, 0x0f, 0xe1, 0x01, 0xc6, 0x85, 0xc7, 0x4a, 0x71, 0xb8, 0xd0, 0x72, 0xf9, 0xc7, 0x80,
+	0xc7, 0x5a, 0x2e, 0x53, 0x09, 0xba, 0xbe, 0x6a, 0x0e, 0x92, 0xaa, 0x79, 0xdd, 0xae, 0xdc, 0x94,
+	0x78, 0x5e, 0xa5, 0x21, 0x5f, 0x67, 0xe2, 0xf4, 0x1d, 0xd1, 0xca, 0xf3, 0xa4, 0x56, 0x3e, 0x9e,
+	0x4e, 0x60, 0x48, 0xc8, 0xdb, 0x2d, 0x8d, 0xa5, 0x51, 0xad, 0x00, 0xf9, 0x0e, 0x13, 0xa7, 0x4a,
+	0x07, 0x7f, 0x18, 0x50, 0xd2, 0x3a, 0x08, 0x8b, 0xbf, 0xfe, 0xd8, 0x3f, 0x4f, 0x8e, 0xfd, 0x15,
+	0x09, 0xbe, 0xa1, 0x29, 0xdf, 0xfa, 0x3b, 0x0b, 0x85, 0xf0, 0x9c, 0x23, 0xc5, 0x2c, 0x39, 0x87,
+	0xb5, 0xb9, 0x1f, 0x49, 0x52, 0x9b, 0xdf, 0x8d, 0xff, 0xfc, 0xbc, 0x96, 0x56, 0x2a, 0xea, 0x2d,
+	0x50, 0x19, 0xbf, 0x05, 0x2a, 0x8d, 0xf0, 0x2d, 0x40, 0x5e, 0x19, 0x70, 0x2f, 0x19, 0xa9, 0xff,
+	0xc2, 0x92, 0xcd, 0xff, 0xfd, 0x37, 0x77, 0x16, 0xb8, 0x59, 0xfe, 0xf1, 0xb7, 0x3f, 0x7f, 0x4e,
+	0x99, 0xe6, 0x5a, 0xf2, 0xf1, 0xb4, 0xad, 0xff, 0x29, 0xe8, 0xeb, 0x6f, 0xdb, 0x78, 0x44, 0x7e,
+	0x80, 0x0f, 0x67, 0x5c, 0x7b, 0x93, 0xb7, 0xde, 0xcd, 0xd1, 0xf0, 0x93, 0x01, 0xab, 0xd3, 0x4e,
+	0x7e, 0x83, 0x64, 0x54, 0x23, 0x32, 0x36, 0xcd, 0x8d, 0x4b, 0x64, 0x5c, 0x7c, 0x0f, 0x34, 0x1f,
+	0xe1, 0xd7, 0x20, 0xe4, 0x44, 0xc0, 0xf2, 0x14, 0x09, 0xdc, 0x1c, 0x07, 0x1e, 0x14, 0xc2, 0x83,
+	0xde, 0x60, 0xc9, 0x0f, 0xa3, 0x92, 0x8b, 0xe6, 0xf2, 0xa5, 0x92, 0x43, 0x9d, 0x87, 0x15, 0x3a,
+	0x90, 0x55, 0x0f, 0x14, 0x52, 0x9e, 0x77, 0x69, 0x4d, 0xbe, 0x61, 0x66, 0x9e, 0x45, 0xa3, 0xb3,
+	0x4a, 0xe6, 0xbd, 0x4b, 0x67, 0xd9, 0x51, 0xf4, 0xb6, 0xf1, 0xa8, 0xbe, 0xf8, 0xb2, 0x30, 0x81,
+	0xdf, 0xc9, 0x46, 0x00, 0x9f, 0xfd, 0x1b, 0x00, 0x00, 0xff, 0xff, 0x8a, 0x37, 0xeb, 0x07, 0xea,
+	0x0f, 0x00, 0x00,
 }
