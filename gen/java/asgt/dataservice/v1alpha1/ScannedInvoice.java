@@ -6584,49 +6584,49 @@ public final class ScannedInvoice {
       "/prediction.proto\032\034gen_bq_schema/bq_fiel" +
       "d.proto\032\034gen_bq_schema/bq_table.proto\032\034g" +
       "oogle/api/annotations.proto\032\033google/prot" +
-      "obuf/empty.proto\"\336\003\n\023ScannedInvoiceEntry" +
-      "\022C\n\002id\030\001 \001(\tB7\352?/\"-ID, matches Envoy req" +
-      "uest id if feedback data\352?\002\010\001\022\027\n\010consume" +
-      "r\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T" +
-      "\n\004tags\030\004 \003(\tBF\352?C\"ATags defined by consu" +
-      "mer, enriched by service if valetkey is " +
-      "used\022?\n\005input\030\005 \001(\01320.asgt.jester.v1alph" +
-      "a1.ScannedInvoiceRequest.Data\0229\n\013true_va" +
-      "lues\030\006 \003(\0132$.asgt.dataservice.v1alpha1.D" +
-      "ataTuple\022>\n\013pred_values\030\007 \003(\0132).asgt.dat" +
-      "aservice.v1alpha1.PredictedTuple\022$\n\ntime" +
-      "_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024sca" +
-      "nned_invoice_data\"\220\002\n\034PrepareScannedInvo" +
-      "iceRequest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(" +
-      "\t\022N\n\007entries\030\003 \003(\0132=.asgt.dataservice.v1" +
-      "alpha1.PrepareScannedInvoiceRequest.Entr" +
-      "y\032\200\001\n\005Entry\022\n\n\002id\030\001 \001(\t\022?\n\005input\030\002 \001(\01320" +
-      ".asgt.jester.v1alpha1.ScannedInvoiceRequ" +
-      "est.Data\022*\n\013predictions\030\003 \003(\0132\025.asgt.typ" +
-      "e.Prediction\"\331\002\n\034AddScannedInvoiceDataRe" +
+      "obuf/empty.proto\"\331\003\n\023ScannedInvoiceEntry" +
+      "\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy req" +
+      "uest id if feedback data\022\027\n\010consumer\030\002 \001" +
+      "(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tag" +
+      "s\030\004 \003(\tBF\352?C\"ATags defined by consumer, " +
+      "enriched by service if valetkey is used\022" +
+      "?\n\005input\030\005 \001(\01320.asgt.jester.v1alpha1.Sc" +
+      "annedInvoiceRequest.Data\0229\n\013true_values\030" +
+      "\006 \003(\0132$.asgt.dataservice.v1alpha1.DataTu" +
+      "ple\022>\n\013pred_values\030\007 \003(\0132).asgt.dataserv" +
+      "ice.v1alpha1.PredictedTuple\022$\n\ntime_adde" +
+      "d\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024scanned_" +
+      "invoice_data\"\220\002\n\034PrepareScannedInvoiceRe" +
       "quest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022N\n\007" +
       "entries\030\003 \003(\0132=.asgt.dataservice.v1alpha" +
-      "1.AddScannedInvoiceDataRequest.Entry\022D\n\020" +
-      "retention_policy\030\004 \001(\0132*.asgt.dataservic" +
-      "e.v1alpha1.RetentionPolicy\032\203\001\n\005Entry\022?\n\005" +
-      "input\030\001 \001(\01320.asgt.jester.v1alpha1.Scann" +
-      "edInvoiceRequest.Data\0229\n\013true_values\030\002 \003" +
-      "(\0132$.asgt.dataservice.v1alpha1.DataTuple" +
-      "2\256\004\n\031ScannedInvoiceDataservice\022h\n\025Prepar" +
-      "eScannedInvoice\0227.asgt.dataservice.v1alp" +
-      "ha1.PrepareScannedInvoiceRequest\032\026.googl" +
-      "e.protobuf.Empty\022\212\001\n\026ScannedInvoiceFeedb" +
-      "ack\022*.asgt.dataservice.v1alpha1.Feedback" +
-      "Request\032\026.google.protobuf.Empty\",\202\323\344\223\002&\"" +
-      "!/v1alpha1/scannedinvoice:feedback:\001*\022\222\001" +
-      "\n\025AddScannedInvoiceData\0227.asgt.dataservi" +
-      "ce.v1alpha1.AddScannedInvoiceDataRequest" +
-      "\032\026.google.protobuf.Empty\"(\202\323\344\223\002\"\"\035/v1alp" +
-      "ha1/scannedinvoice:data:\001*\022\204\001\n\024DeleteSca" +
-      "nnedInvoice\022(.asgt.dataservice.v1alpha1." +
-      "DeleteRequest\032\026.google.protobuf.Empty\"*\202" +
-      "\323\344\223\002$\"\037/v1alpha1/scannedinvoice:delete:\001" +
-      "*B\rZ\013dataserviceb\006proto3"
+      "1.PrepareScannedInvoiceRequest.Entry\032\200\001\n" +
+      "\005Entry\022\n\n\002id\030\001 \001(\t\022?\n\005input\030\002 \001(\01320.asgt" +
+      ".jester.v1alpha1.ScannedInvoiceRequest.D" +
+      "ata\022*\n\013predictions\030\003 \003(\0132\025.asgt.type.Pre" +
+      "diction\"\331\002\n\034AddScannedInvoiceDataRequest" +
+      "\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022N\n\007entri" +
+      "es\030\003 \003(\0132=.asgt.dataservice.v1alpha1.Add" +
+      "ScannedInvoiceDataRequest.Entry\022D\n\020reten" +
+      "tion_policy\030\004 \001(\0132*.asgt.dataservice.v1a" +
+      "lpha1.RetentionPolicy\032\203\001\n\005Entry\022?\n\005input" +
+      "\030\001 \001(\01320.asgt.jester.v1alpha1.ScannedInv" +
+      "oiceRequest.Data\0229\n\013true_values\030\002 \003(\0132$." +
+      "asgt.dataservice.v1alpha1.DataTuple2\256\004\n\031" +
+      "ScannedInvoiceDataservice\022h\n\025PrepareScan" +
+      "nedInvoice\0227.asgt.dataservice.v1alpha1.P" +
+      "repareScannedInvoiceRequest\032\026.google.pro" +
+      "tobuf.Empty\022\212\001\n\026ScannedInvoiceFeedback\022*" +
+      ".asgt.dataservice.v1alpha1.FeedbackReque" +
+      "st\032\026.google.protobuf.Empty\",\202\323\344\223\002&\"!/v1a" +
+      "lpha1/scannedinvoice:feedback:\001*\022\222\001\n\025Add" +
+      "ScannedInvoiceData\0227.asgt.dataservice.v1" +
+      "alpha1.AddScannedInvoiceDataRequest\032\026.go" +
+      "ogle.protobuf.Empty\"(\202\323\344\223\002\"\"\035/v1alpha1/s" +
+      "cannedinvoice:data:\001*\022\204\001\n\024DeleteScannedI" +
+      "nvoice\022(.asgt.dataservice.v1alpha1.Delet" +
+      "eRequest\032\026.google.protobuf.Empty\"*\202\323\344\223\002$" +
+      "\"\037/v1alpha1/scannedinvoice:delete:\001*B\rZ\013" +
+      "dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

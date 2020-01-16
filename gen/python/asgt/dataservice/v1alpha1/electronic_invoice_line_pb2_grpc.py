@@ -6,7 +6,7 @@ from asgt.dataservice.v1alpha1 import electronic_invoice_line_pb2 as asgt_dot_da
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-class ElectronicInvoiceLineStub(object):
+class ElectronicInvoiceLineDataserviceStub(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -17,28 +17,28 @@ class ElectronicInvoiceLineStub(object):
       channel: A grpc.Channel.
     """
     self.PrepareElectronicInvoiceLine = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/PrepareElectronicInvoiceLine',
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/PrepareElectronicInvoiceLine',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.PrepareElectronicInvoiceLineRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.ElectronicInvoiceLineFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/ElectronicInvoiceLineFeedback',
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/ElectronicInvoiceLineFeedback',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.AddElectronicInvoiceLineData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/AddElectronicInvoiceLineData',
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AddElectronicInvoiceLineData',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.AddElectronicInvoiceLineDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.DeleteElectronicInvoiceLine = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLine/DeleteElectronicInvoiceLine',
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLine',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
 
 
-class ElectronicInvoiceLineServicer(object):
+class ElectronicInvoiceLineDataserviceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -71,7 +71,7 @@ class ElectronicInvoiceLineServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_ElectronicInvoiceLineServicer_to_server(servicer, server):
+def add_ElectronicInvoiceLineDataserviceServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'PrepareElectronicInvoiceLine': grpc.unary_unary_rpc_method_handler(
           servicer.PrepareElectronicInvoiceLine,
@@ -95,5 +95,5 @@ def add_ElectronicInvoiceLineServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'asgt.dataservice.v1alpha1.ElectronicInvoiceLine', rpc_method_handlers)
+      'asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n7asgt/dataservice/v1alpha1/electronic_invoice_line.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xf4\x03\n\x1a\x45lectronicInvoiceLineEntry\x12\x43\n\x02id\x18\x01 \x01(\tB7\xea?/\"-ID, matches Envoy request id if feedback data\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xa5\x02\n#PrepareElectronicInvoiceLineRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry\x1a\x87\x01\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x46\n\x05input\x18\x02 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12*\n\x0bpredictions\x18\x03 \x03(\x0b\x32\x15.asgt.type.Prediction\"\xee\x02\n#AddElectronicInvoiceLineDataRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x1a\x8a\x01\n\x05\x45ntry\x12\x46\n\x05input\x18\x01 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple2\xe9\x04\n\x15\x45lectronicInvoiceLine\x12v\n\x1cPrepareElectronicInvoiceLine\x12>.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest\x1a\x16.google.protobuf.Empty\x12\x98\x01\n\x1d\x45lectronicInvoiceLineFeedback\x12*.asgt.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronicinvoiceline:feedback:\x01*\x12\xa7\x01\n\x1c\x41\x64\x64\x45lectronicInvoiceLineData\x12>.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"/\x82\xd3\xe4\x93\x02)\"$/v1alpha1/electronicinvoiceline:data:\x01*\x12\x92\x01\n\x1b\x44\x65leteElectronicInvoiceLine\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n7asgt/dataservice/v1alpha1/electronic_invoice_line.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xef\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xa5\x02\n#PrepareElectronicInvoiceLineRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry\x1a\x87\x01\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x46\n\x05input\x18\x02 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12*\n\x0bpredictions\x18\x03 \x03(\x0b\x32\x15.asgt.type.Prediction\"\xee\x02\n#AddElectronicInvoiceLineDataRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x1a\x8a\x01\n\x05\x45ntry\x12\x46\n\x05input\x18\x01 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple2\xf4\x04\n ElectronicInvoiceLineDataservice\x12v\n\x1cPrepareElectronicInvoiceLine\x12>.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest\x1a\x16.google.protobuf.Empty\x12\x98\x01\n\x1d\x45lectronicInvoiceLineFeedback\x12*.asgt.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronicinvoiceline:feedback:\x01*\x12\xa7\x01\n\x1c\x41\x64\x64\x45lectronicInvoiceLineData\x12>.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"/\x82\xd3\xe4\x93\x02)\"$/v1alpha1/electronicinvoiceline:data:\x01*\x12\x92\x01\n\x1b\x44\x65leteElectronicInvoiceLine\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -46,7 +46,7 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=_b('\352?/\"-ID, matches Envoy request id if feedback data\352?\002\010\001'), file=DESCRIPTOR),
+      serialized_options=_b('\352?/\"-ID, matches Envoy request id if feedback data'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='consumer', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.consumer', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -109,7 +109,7 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=307,
-  serialized_end=807,
+  serialized_end=802,
 )
 
 
@@ -153,8 +153,8 @@ _PREPAREELECTRONICINVOICELINEREQUEST_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=968,
-  serialized_end=1103,
+  serialized_start=963,
+  serialized_end=1098,
 )
 
 _PREPAREELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
@@ -197,8 +197,8 @@ _PREPAREELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=810,
-  serialized_end=1103,
+  serialized_start=805,
+  serialized_end=1098,
 )
 
 
@@ -235,8 +235,8 @@ _ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1334,
-  serialized_end=1472,
+  serialized_start=1329,
+  serialized_end=1467,
 )
 
 _ADDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
@@ -286,8 +286,8 @@ _ADDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1106,
-  serialized_end=1472,
+  serialized_start=1101,
+  serialized_end=1467,
 )
 
 _ELECTRONICINVOICELINEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
@@ -353,18 +353,18 @@ _ELECTRONICINVOICELINEENTRY.fields_by_name['tags']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['time_added']._options = None
 _ELECTRONICINVOICELINEENTRY._options = None
 
-_ELECTRONICINVOICELINE = _descriptor.ServiceDescriptor(
-  name='ElectronicInvoiceLine',
-  full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLine',
+_ELECTRONICINVOICELINEDATASERVICE = _descriptor.ServiceDescriptor(
+  name='ElectronicInvoiceLineDataservice',
+  full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1475,
-  serialized_end=2092,
+  serialized_start=1470,
+  serialized_end=2098,
   methods=[
   _descriptor.MethodDescriptor(
     name='PrepareElectronicInvoiceLine',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLine',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.PrepareElectronicInvoiceLine',
     index=0,
     containing_service=None,
     input_type=_PREPAREELECTRONICINVOICELINEREQUEST,
@@ -373,7 +373,7 @@ _ELECTRONICINVOICELINE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='ElectronicInvoiceLineFeedback',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineFeedback',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.ElectronicInvoiceLineFeedback',
     index=1,
     containing_service=None,
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._FEEDBACKREQUEST,
@@ -382,7 +382,7 @@ _ELECTRONICINVOICELINE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AddElectronicInvoiceLineData',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineData',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.AddElectronicInvoiceLineData',
     index=2,
     containing_service=None,
     input_type=_ADDELECTRONICINVOICELINEDATAREQUEST,
@@ -391,7 +391,7 @@ _ELECTRONICINVOICELINE = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteElectronicInvoiceLine',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLine.DeleteElectronicInvoiceLine',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.DeleteElectronicInvoiceLine',
     index=3,
     containing_service=None,
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DELETEREQUEST,
@@ -399,8 +399,8 @@ _ELECTRONICINVOICELINE = _descriptor.ServiceDescriptor(
     serialized_options=_b('\202\323\344\223\002+\"&/v1alpha1/electronicinvoiceline:delete:\001*'),
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_ELECTRONICINVOICELINE)
+_sym_db.RegisterServiceDescriptor(_ELECTRONICINVOICELINEDATASERVICE)
 
-DESCRIPTOR.services_by_name['ElectronicInvoiceLine'] = _ELECTRONICINVOICELINE
+DESCRIPTOR.services_by_name['ElectronicInvoiceLineDataservice'] = _ELECTRONICINVOICELINEDATASERVICE
 
 # @@protoc_insertion_point(module_scope)

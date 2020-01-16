@@ -6584,44 +6584,44 @@ public final class Bank {
       ".proto\032\034gen_bq_schema/bq_field.proto\032\034ge" +
       "n_bq_schema/bq_table.proto\032\034google/api/a" +
       "nnotations.proto\032\033google/protobuf/empty." +
-      "proto\"\277\003\n\tBankEntry\022C\n\002id\030\001 \001(\tB7\352?/\"-ID" +
+      "proto\"\272\003\n\tBankEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID" +
       ", matches Envoy request id if feedback d" +
-      "ata\352?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dat" +
-      "aset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATa" +
-      "gs defined by consumer, enriched by serv" +
-      "ice if valetkey is used\0225\n\005input\030\005 \001(\0132&" +
-      ".asgt.jester.v1alpha1.BankRequest.Data\0229" +
-      "\n\013true_values\030\006 \003(\0132$.asgt.dataservice.v" +
-      "1alpha1.DataTuple\022>\n\013pred_values\030\007 \003(\0132)" +
-      ".asgt.dataservice.v1alpha1.PredictedTupl" +
-      "e\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:" +
-      "\016\352?\013\n\tbank_data\"\361\001\n\022PrepareBankRequest\022\017" +
-      "\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries" +
-      "\030\003 \003(\01323.asgt.dataservice.v1alpha1.Prepa" +
-      "reBankRequest.Entry\032v\n\005Entry\022\n\n\002id\030\001 \001(\t" +
-      "\0225\n\005input\030\002 \001(\0132&.asgt.jester.v1alpha1.B" +
-      "ankRequest.Data\022*\n\013predictions\030\003 \003(\0132\025.a" +
-      "sgt.type.Prediction\"\272\002\n\022AddBankDataReque" +
-      "st\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007ent" +
-      "ries\030\003 \003(\01323.asgt.dataservice.v1alpha1.A" +
-      "ddBankDataRequest.Entry\022D\n\020retention_pol" +
-      "icy\030\004 \001(\0132*.asgt.dataservice.v1alpha1.Re" +
-      "tentionPolicy\032y\n\005Entry\0225\n\005input\030\001 \001(\0132&." +
-      "asgt.jester.v1alpha1.BankRequest.Data\0229\n" +
-      "\013true_values\030\002 \003(\0132$.asgt.dataservice.v1" +
-      "alpha1.DataTuple2\323\003\n\017BankDataservice\022\\\n\023" +
-      "PrepareBankFeedback\022-.asgt.dataservice.v" +
-      "1alpha1.PrepareBankRequest\032\026.google.prot" +
-      "obuf.Empty\022v\n\014BankFeedback\022*.asgt.datase" +
-      "rvice.v1alpha1.FeedbackRequest\032\026.google." +
-      "protobuf.Empty\"\"\202\323\344\223\002\034\"\027/v1alpha1/bank:f" +
-      "eedback:\001*\022t\n\013AddBankData\022-.asgt.dataser" +
-      "vice.v1alpha1.AddBankDataRequest\032\026.googl" +
-      "e.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1alpha1/bank" +
-      ":data:\001*\022t\n\016DeleteBankData\022(.asgt.datase" +
-      "rvice.v1alpha1.DeleteRequest\032\026.google.pr" +
-      "otobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:del" +
-      "ete:\001*B\rZ\013dataserviceb\006proto3"
+      "ata\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030" +
+      "\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags de" +
+      "fined by consumer, enriched by service i" +
+      "f valetkey is used\0225\n\005input\030\005 \001(\0132&.asgt" +
+      ".jester.v1alpha1.BankRequest.Data\0229\n\013tru" +
+      "e_values\030\006 \003(\0132$.asgt.dataservice.v1alph" +
+      "a1.DataTuple\022>\n\013pred_values\030\007 \003(\0132).asgt" +
+      ".dataservice.v1alpha1.PredictedTuple\022$\n\n" +
+      "time_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n" +
+      "\tbank_data\"\361\001\n\022PrepareBankRequest\022\017\n\007dat" +
+      "aset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries\030\003 \003(" +
+      "\01323.asgt.dataservice.v1alpha1.PrepareBan" +
+      "kRequest.Entry\032v\n\005Entry\022\n\n\002id\030\001 \001(\t\0225\n\005i" +
+      "nput\030\002 \001(\0132&.asgt.jester.v1alpha1.BankRe" +
+      "quest.Data\022*\n\013predictions\030\003 \003(\0132\025.asgt.t" +
+      "ype.Prediction\"\272\002\n\022AddBankDataRequest\022\017\n" +
+      "\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries\030" +
+      "\003 \003(\01323.asgt.dataservice.v1alpha1.AddBan" +
+      "kDataRequest.Entry\022D\n\020retention_policy\030\004" +
+      " \001(\0132*.asgt.dataservice.v1alpha1.Retenti" +
+      "onPolicy\032y\n\005Entry\0225\n\005input\030\001 \001(\0132&.asgt." +
+      "jester.v1alpha1.BankRequest.Data\0229\n\013true" +
+      "_values\030\002 \003(\0132$.asgt.dataservice.v1alpha" +
+      "1.DataTuple2\323\003\n\017BankDataservice\022\\\n\023Prepa" +
+      "reBankFeedback\022-.asgt.dataservice.v1alph" +
+      "a1.PrepareBankRequest\032\026.google.protobuf." +
+      "Empty\022v\n\014BankFeedback\022*.asgt.dataservice" +
+      ".v1alpha1.FeedbackRequest\032\026.google.proto" +
+      "buf.Empty\"\"\202\323\344\223\002\034\"\027/v1alpha1/bank:feedba" +
+      "ck:\001*\022t\n\013AddBankData\022-.asgt.dataservice." +
+      "v1alpha1.AddBankDataRequest\032\026.google.pro" +
+      "tobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1alpha1/bank:data" +
+      ":\001*\022t\n\016DeleteBankData\022(.asgt.dataservice" +
+      ".v1alpha1.DeleteRequest\032\026.google.protobu" +
+      "f.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:\001" +
+      "*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

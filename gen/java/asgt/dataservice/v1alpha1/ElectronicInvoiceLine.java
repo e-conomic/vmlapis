@@ -3,8 +3,8 @@
 
 package asgt.dataservice.v1alpha1;
 
-public final class ElectronicInvoiceLineOuterClass {
-  private ElectronicInvoiceLineOuterClass() {}
+public final class ElectronicInvoiceLine {
+  private ElectronicInvoiceLine() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -276,15 +276,15 @@ public final class ElectronicInvoiceLineOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.Builder.class);
+              asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.Builder.class);
     }
 
     private int bitField0_;
@@ -609,10 +609,10 @@ public final class ElectronicInvoiceLineOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry) obj;
+      asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry) obj;
 
       boolean result = true;
       result = result && getId()
@@ -675,69 +675,69 @@ public final class ElectronicInvoiceLineOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -750,7 +750,7 @@ public final class ElectronicInvoiceLineOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -775,21 +775,21 @@ public final class ElectronicInvoiceLineOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry)
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntryOrBuilder {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.Builder.class);
+                asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -843,17 +843,17 @@ public final class ElectronicInvoiceLineOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry build() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry result = buildPartial();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry build() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -861,8 +861,8 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry buildPartial() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry(this);
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry buildPartial() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.id_ = id_;
@@ -936,16 +936,16 @@ public final class ElectronicInvoiceLineOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry) {
-          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry)other);
+        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry other) {
-        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry other) {
+        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
           onChanged();
@@ -1041,11 +1041,11 @@ public final class ElectronicInvoiceLineOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry parsedMessage = null;
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1996,12 +1996,12 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry)
-    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry();
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2026,7 +2026,7 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.ElectronicInvoiceLineEntry getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.ElectronicInvoiceLineEntry getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2068,12 +2068,12 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> 
+    java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> 
         getEntriesList();
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index);
+    asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index);
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
@@ -2081,12 +2081,12 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
+    java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
         getEntriesOrBuilderList();
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
         int index);
   }
   /**
@@ -2148,11 +2148,11 @@ public final class ElectronicInvoiceLineOuterClass {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry>();
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry>();
                 mutable_bitField0_ |= 0x00000004;
               }
               entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.parser(), extensionRegistry));
+                  input.readMessage(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2182,15 +2182,15 @@ public final class ElectronicInvoiceLineOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Builder.class);
+              asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Builder.class);
     }
 
     public interface EntryOrBuilder extends
@@ -2337,15 +2337,15 @@ public final class ElectronicInvoiceLineOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder.class);
+                asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder.class);
       }
 
       private int bitField0_;
@@ -2492,10 +2492,10 @@ public final class ElectronicInvoiceLineOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry)) {
+        if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry)) {
           return super.equals(obj);
         }
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry) obj;
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry) obj;
 
         boolean result = true;
         result = result && getId()
@@ -2533,69 +2533,69 @@ public final class ElectronicInvoiceLineOuterClass {
         return hash;
       }
 
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(byte[] data)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseDelimitedFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -2608,7 +2608,7 @@ public final class ElectronicInvoiceLineOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry prototype) {
+      public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -2629,21 +2629,21 @@ public final class ElectronicInvoiceLineOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry)
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_fieldAccessorTable
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder.class);
+                  asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder.class);
         }
 
-        // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.newBuilder()
+        // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -2682,17 +2682,17 @@ public final class ElectronicInvoiceLineOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_Entry_descriptor;
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance();
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstanceForType() {
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry build() {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry result = buildPartial();
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry build() {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -2700,8 +2700,8 @@ public final class ElectronicInvoiceLineOuterClass {
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry(this);
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry buildPartial() {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           result.id_ = id_;
@@ -2758,16 +2758,16 @@ public final class ElectronicInvoiceLineOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry)other);
+          if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry) {
+            return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry other) {
+          if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance()) return this;
           if (!other.getId().isEmpty()) {
             id_ = other.id_;
             onChanged();
@@ -2816,11 +2816,11 @@ public final class ElectronicInvoiceLineOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry parsedMessage = null;
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry) e.getUnfinishedMessage();
+            parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -3273,12 +3273,12 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry DEFAULT_INSTANCE;
+      private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry();
+        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry();
       }
 
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstance() {
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -3303,7 +3303,7 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstanceForType() {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -3374,17 +3374,17 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> entries_;
+    private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> entries_;
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> getEntriesList() {
+    public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> getEntriesList() {
       return entries_;
     }
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
+    public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
@@ -3397,13 +3397,13 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index) {
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index) {
       return entries_.get(index);
     }
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
@@ -3465,10 +3465,10 @@ public final class ElectronicInvoiceLineOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest) obj;
+      asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest) obj;
 
       boolean result = true;
       result = result && getDataset()
@@ -3503,69 +3503,69 @@ public final class ElectronicInvoiceLineOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3578,7 +3578,7 @@ public final class ElectronicInvoiceLineOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3599,21 +3599,21 @@ public final class ElectronicInvoiceLineOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest)
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequestOrBuilder {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Builder.class);
+                asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3648,17 +3648,17 @@ public final class ElectronicInvoiceLineOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest build() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest build() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3666,8 +3666,8 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest buildPartial() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest(this);
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest buildPartial() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.dataset_ = dataset_;
@@ -3724,16 +3724,16 @@ public final class ElectronicInvoiceLineOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest other) {
-        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest other) {
+        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.getDefaultInstance()) return this;
         if (!other.getDataset().isEmpty()) {
           dataset_ = other.dataset_;
           onChanged();
@@ -3789,11 +3789,11 @@ public final class ElectronicInvoiceLineOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3967,22 +3967,22 @@ public final class ElectronicInvoiceLineOuterClass {
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> entries_ =
+      private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry>(entries_);
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry>(entries_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> entriesBuilder_;
 
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> getEntriesList() {
+      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
         } else {
@@ -4002,7 +4002,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index) {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
         } else {
@@ -4013,7 +4013,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4030,7 +4030,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.set(index, builderForValue.build());
@@ -4043,7 +4043,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry value) {
+      public Builder addEntries(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4060,7 +4060,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4077,7 +4077,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(builderForValue.build());
@@ -4091,7 +4091,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(index, builderForValue.build());
@@ -4105,7 +4105,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
       public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry> values) {
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4145,14 +4145,14 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);  } else {
@@ -4162,7 +4162,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
+      public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
           return entriesBuilder_.getMessageOrBuilderList();
@@ -4173,31 +4173,31 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder addEntriesBuilder() {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance());
+            asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance());
+            index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder> 
+      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder> 
           getEntriesFieldBuilder() {
         if (entriesBuilder_ == null) {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest.EntryOrBuilder>(
+              asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest.EntryOrBuilder>(
                   entries_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -4223,12 +4223,12 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest)
-    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest();
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4253,7 +4253,7 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.PrepareElectronicInvoiceLineRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.PrepareElectronicInvoiceLineRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4295,12 +4295,12 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> 
+    java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> 
         getEntriesList();
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index);
+    asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index);
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
@@ -4308,12 +4308,12 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
+    java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
         getEntriesOrBuilderList();
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
         int index);
 
     /**
@@ -4388,11 +4388,11 @@ public final class ElectronicInvoiceLineOuterClass {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry>();
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry>();
                 mutable_bitField0_ |= 0x00000004;
               }
               entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.parser(), extensionRegistry));
+                  input.readMessage(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.parser(), extensionRegistry));
               break;
             }
             case 34: {
@@ -4435,15 +4435,15 @@ public final class ElectronicInvoiceLineOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Builder.class);
+              asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Builder.class);
     }
 
     public interface EntryOrBuilder extends
@@ -4573,15 +4573,15 @@ public final class ElectronicInvoiceLineOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder.class);
+                asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder.class);
       }
 
       private int bitField0_;
@@ -4688,10 +4688,10 @@ public final class ElectronicInvoiceLineOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry)) {
+        if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry)) {
           return super.equals(obj);
         }
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry) obj;
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry) obj;
 
         boolean result = true;
         result = result && (hasInput() == other.hasInput());
@@ -4725,69 +4725,69 @@ public final class ElectronicInvoiceLineOuterClass {
         return hash;
       }
 
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(byte[] data)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseDelimitedFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -4800,7 +4800,7 @@ public final class ElectronicInvoiceLineOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry prototype) {
+      public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -4821,21 +4821,21 @@ public final class ElectronicInvoiceLineOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry)
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_fieldAccessorTable
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder.class);
+                  asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder.class);
         }
 
-        // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.newBuilder()
+        // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -4872,17 +4872,17 @@ public final class ElectronicInvoiceLineOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_Entry_descriptor;
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance();
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstanceForType() {
+          return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry build() {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry result = buildPartial();
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry build() {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -4890,8 +4890,8 @@ public final class ElectronicInvoiceLineOuterClass {
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry(this);
+        public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry buildPartial() {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           if (inputBuilder_ == null) {
@@ -4947,16 +4947,16 @@ public final class ElectronicInvoiceLineOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry)other);
+          if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry) {
+            return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry other) {
+          if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance()) return this;
           if (other.hasInput()) {
             mergeInput(other.getInput());
           }
@@ -5001,11 +5001,11 @@ public final class ElectronicInvoiceLineOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry parsedMessage = null;
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry) e.getUnfinishedMessage();
+            parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -5389,12 +5389,12 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry DEFAULT_INSTANCE;
+      private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry();
+        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry();
       }
 
-      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstance() {
+      public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -5419,7 +5419,7 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstanceForType() {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -5490,17 +5490,17 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> entries_;
+    private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> entries_;
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> getEntriesList() {
+    public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> getEntriesList() {
       return entries_;
     }
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
+    public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
@@ -5513,13 +5513,13 @@ public final class ElectronicInvoiceLineOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index) {
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index) {
       return entries_.get(index);
     }
     /**
      * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
@@ -5609,10 +5609,10 @@ public final class ElectronicInvoiceLineOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest) obj;
+      asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest other = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest) obj;
 
       boolean result = true;
       result = result && getDataset()
@@ -5656,69 +5656,69 @@ public final class ElectronicInvoiceLineOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5731,7 +5731,7 @@ public final class ElectronicInvoiceLineOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5752,21 +5752,21 @@ public final class ElectronicInvoiceLineOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest)
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequestOrBuilder {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Builder.class);
+                asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.class, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5807,17 +5807,17 @@ public final class ElectronicInvoiceLineOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.internal_static_asgt_dataservice_v1alpha1_AddElectronicInvoiceLineDataRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest build() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest build() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5825,8 +5825,8 @@ public final class ElectronicInvoiceLineOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest buildPartial() {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest(this);
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest buildPartial() {
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest result = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.dataset_ = dataset_;
@@ -5888,16 +5888,16 @@ public final class ElectronicInvoiceLineOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest other) {
-        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest other) {
+        if (other == asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.getDefaultInstance()) return this;
         if (!other.getDataset().isEmpty()) {
           dataset_ = other.dataset_;
           onChanged();
@@ -5956,11 +5956,11 @@ public final class ElectronicInvoiceLineOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6134,22 +6134,22 @@ public final class ElectronicInvoiceLineOuterClass {
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> entries_ =
+      private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry>(entries_);
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry>(entries_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> entriesBuilder_;
 
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> getEntriesList() {
+      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
         } else {
@@ -6169,7 +6169,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index) {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
         } else {
@@ -6180,7 +6180,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6197,7 +6197,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.set(index, builderForValue.build());
@@ -6210,7 +6210,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry value) {
+      public Builder addEntries(asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6227,7 +6227,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6244,7 +6244,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(builderForValue.build());
@@ -6258,7 +6258,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(index, builderForValue.build());
@@ -6272,7 +6272,7 @@ public final class ElectronicInvoiceLineOuterClass {
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
       public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry> values) {
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -6312,14 +6312,14 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);  } else {
@@ -6329,7 +6329,7 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
+      public java.util.List<? extends asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
           return entriesBuilder_.getMessageOrBuilderList();
@@ -6340,31 +6340,31 @@ public final class ElectronicInvoiceLineOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder addEntriesBuilder() {
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance());
+            asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance());
+            index, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder> 
+      public java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
+          asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder> 
           getEntriesFieldBuilder() {
         if (entriesBuilder_ == null) {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest.EntryOrBuilder>(
+              asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest.EntryOrBuilder>(
                   entries_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -6507,12 +6507,12 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest)
-    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest();
     }
 
-    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6537,7 +6537,7 @@ public final class ElectronicInvoiceLineOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.ElectronicInvoiceLineOuterClass.AddElectronicInvoiceLineDataRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.ElectronicInvoiceLine.AddElectronicInvoiceLineDataRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6584,52 +6584,53 @@ public final class ElectronicInvoiceLineOuterClass {
       "sgt/type/prediction.proto\032\034gen_bq_schema" +
       "/bq_field.proto\032\034gen_bq_schema/bq_table." +
       "proto\032\034google/api/annotations.proto\032\033goo" +
-      "gle/protobuf/empty.proto\"\364\003\n\032ElectronicI" +
-      "nvoiceLineEntry\022C\n\002id\030\001 \001(\tB7\352?/\"-ID, ma" +
-      "tches Envoy request id if feedback data\352" +
-      "?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset" +
-      "\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags d" +
-      "efined by consumer, enriched by service " +
-      "if valetkey is used\022F\n\005input\030\005 \001(\01327.asg" +
-      "t.jester.v1alpha1.ElectronicInvoiceLineR" +
-      "equest.Data\0229\n\013true_values\030\006 \003(\0132$.asgt." +
-      "dataservice.v1alpha1.DataTuple\022>\n\013pred_v" +
-      "alues\030\007 \003(\0132).asgt.dataservice.v1alpha1." +
-      "PredictedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010" +
-      "\001\022\tTIMESTAMP:!\352?\036\n\034electronic_invoice_li" +
-      "ne_data\"\245\002\n#PrepareElectronicInvoiceLine" +
-      "Request\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022U" +
-      "\n\007entries\030\003 \003(\0132D.asgt.dataservice.v1alp" +
-      "ha1.PrepareElectronicInvoiceLineRequest." +
-      "Entry\032\207\001\n\005Entry\022\n\n\002id\030\001 \001(\t\022F\n\005input\030\002 \001" +
-      "(\01327.asgt.jester.v1alpha1.ElectronicInvo" +
-      "iceLineRequest.Data\022*\n\013predictions\030\003 \003(\013" +
-      "2\025.asgt.type.Prediction\"\356\002\n#AddElectroni" +
-      "cInvoiceLineDataRequest\022\017\n\007dataset\030\001 \001(\t" +
-      "\022\014\n\004tags\030\002 \003(\t\022U\n\007entries\030\003 \003(\0132D.asgt.d" +
-      "ataservice.v1alpha1.AddElectronicInvoice" +
-      "LineDataRequest.Entry\022D\n\020retention_polic" +
-      "y\030\004 \001(\0132*.asgt.dataservice.v1alpha1.Rete" +
-      "ntionPolicy\032\212\001\n\005Entry\022F\n\005input\030\001 \001(\01327.a" +
-      "sgt.jester.v1alpha1.ElectronicInvoiceLin" +
-      "eRequest.Data\0229\n\013true_values\030\002 \003(\0132$.asg" +
-      "t.dataservice.v1alpha1.DataTuple2\351\004\n\025Ele" +
-      "ctronicInvoiceLine\022v\n\034PrepareElectronicI" +
-      "nvoiceLine\022>.asgt.dataservice.v1alpha1.P" +
-      "repareElectronicInvoiceLineRequest\032\026.goo" +
-      "gle.protobuf.Empty\022\230\001\n\035ElectronicInvoice" +
-      "LineFeedback\022*.asgt.dataservice.v1alpha1" +
-      ".FeedbackRequest\032\026.google.protobuf.Empty" +
-      "\"3\202\323\344\223\002-\"(/v1alpha1/electronicinvoicelin" +
-      "e:feedback:\001*\022\247\001\n\034AddElectronicInvoiceLi" +
-      "neData\022>.asgt.dataservice.v1alpha1.AddEl" +
-      "ectronicInvoiceLineDataRequest\032\026.google." +
-      "protobuf.Empty\"/\202\323\344\223\002)\"$/v1alpha1/electr" +
-      "onicinvoiceline:data:\001*\022\222\001\n\033DeleteElectr" +
-      "onicInvoiceLine\022(.asgt.dataservice.v1alp" +
-      "ha1.DeleteRequest\032\026.google.protobuf.Empt" +
-      "y\"1\202\323\344\223\002+\"&/v1alpha1/electronicinvoiceli" +
-      "ne:delete:\001*B\rZ\013dataserviceb\006proto3"
+      "gle/protobuf/empty.proto\"\357\003\n\032ElectronicI" +
+      "nvoiceLineEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, ma" +
+      "tches Envoy request id if feedback data\022" +
+      "\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(" +
+      "\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags define" +
+      "d by consumer, enriched by service if va" +
+      "letkey is used\022F\n\005input\030\005 \001(\01327.asgt.jes" +
+      "ter.v1alpha1.ElectronicInvoiceLineReques" +
+      "t.Data\0229\n\013true_values\030\006 \003(\0132$.asgt.datas" +
+      "ervice.v1alpha1.DataTuple\022>\n\013pred_values" +
+      "\030\007 \003(\0132).asgt.dataservice.v1alpha1.Predi" +
+      "ctedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTI" +
+      "MESTAMP:!\352?\036\n\034electronic_invoice_line_da" +
+      "ta\"\245\002\n#PrepareElectronicInvoiceLineReque" +
+      "st\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022U\n\007ent" +
+      "ries\030\003 \003(\0132D.asgt.dataservice.v1alpha1.P" +
+      "repareElectronicInvoiceLineRequest.Entry" +
+      "\032\207\001\n\005Entry\022\n\n\002id\030\001 \001(\t\022F\n\005input\030\002 \001(\01327." +
+      "asgt.jester.v1alpha1.ElectronicInvoiceLi" +
+      "neRequest.Data\022*\n\013predictions\030\003 \003(\0132\025.as" +
+      "gt.type.Prediction\"\356\002\n#AddElectronicInvo" +
+      "iceLineDataRequest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004t" +
+      "ags\030\002 \003(\t\022U\n\007entries\030\003 \003(\0132D.asgt.datase" +
+      "rvice.v1alpha1.AddElectronicInvoiceLineD" +
+      "ataRequest.Entry\022D\n\020retention_policy\030\004 \001" +
+      "(\0132*.asgt.dataservice.v1alpha1.Retention" +
+      "Policy\032\212\001\n\005Entry\022F\n\005input\030\001 \001(\01327.asgt.j" +
+      "ester.v1alpha1.ElectronicInvoiceLineRequ" +
+      "est.Data\0229\n\013true_values\030\002 \003(\0132$.asgt.dat" +
+      "aservice.v1alpha1.DataTuple2\364\004\n Electron" +
+      "icInvoiceLineDataservice\022v\n\034PrepareElect" +
+      "ronicInvoiceLine\022>.asgt.dataservice.v1al" +
+      "pha1.PrepareElectronicInvoiceLineRequest" +
+      "\032\026.google.protobuf.Empty\022\230\001\n\035ElectronicI" +
+      "nvoiceLineFeedback\022*.asgt.dataservice.v1" +
+      "alpha1.FeedbackRequest\032\026.google.protobuf" +
+      ".Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronicinvo" +
+      "iceline:feedback:\001*\022\247\001\n\034AddElectronicInv" +
+      "oiceLineData\022>.asgt.dataservice.v1alpha1" +
+      ".AddElectronicInvoiceLineDataRequest\032\026.g" +
+      "oogle.protobuf.Empty\"/\202\323\344\223\002)\"$/v1alpha1/" +
+      "electronicinvoiceline:data:\001*\022\222\001\n\033Delete" +
+      "ElectronicInvoiceLine\022(.asgt.dataservice" +
+      ".v1alpha1.DeleteRequest\032\026.google.protobu" +
+      "f.Empty\"1\202\323\344\223\002+\"&/v1alpha1/electronicinv" +
+      "oiceline:delete:\001*B\rZ\013dataserviceb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

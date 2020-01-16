@@ -2,7 +2,7 @@
  {
   "name": "id",
   "type": "STRING",
-  "mode": "REQUIRED",
+  "mode": "NULLABLE",
   "description": "ID, matches Envoy request id if feedback data"
  },
  {
