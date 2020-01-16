@@ -6,6 +6,8 @@ package jester
 import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
+import _type "github.com/e-conomic/vmlapis/gen/go/asgt/type"
+import timestamp "github.com/golang/protobuf/ptypes/timestamp"
 import wrappers "github.com/golang/protobuf/ptypes/wrappers"
 import _ "google.golang.org/genproto/googleapis/api/annotations"
 
@@ -25,150 +27,58 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
-type Confidence_Level int32
-
-const (
-	Confidence_UNKNOWN   Confidence_Level = 0
-	Confidence_VERY_LOW  Confidence_Level = 1
-	Confidence_LOW       Confidence_Level = 2
-	Confidence_MID       Confidence_Level = 3
-	Confidence_HIGH      Confidence_Level = 4
-	Confidence_VERY_HIGH Confidence_Level = 5
-)
-
-var Confidence_Level_name = map[int32]string{
-	0: "UNKNOWN",
-	1: "VERY_LOW",
-	2: "LOW",
-	3: "MID",
-	4: "HIGH",
-	5: "VERY_HIGH",
-}
-var Confidence_Level_value = map[string]int32{
-	"UNKNOWN":   0,
-	"VERY_LOW":  1,
-	"LOW":       2,
-	"MID":       3,
-	"HIGH":      4,
-	"VERY_HIGH": 5,
+// AutoSuggest
+type SuggestionsResponse struct {
+	Predictions          []*_type.Prediction `protobuf:"bytes,1,rep,name=predictions,proto3" json:"predictions,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
 }
 
-func (x Confidence_Level) String() string {
-	return proto.EnumName(Confidence_Level_name, int32(x))
+func (m *SuggestionsResponse) Reset()         { *m = SuggestionsResponse{} }
+func (m *SuggestionsResponse) String() string { return proto.CompactTextString(m) }
+func (*SuggestionsResponse) ProtoMessage()    {}
+func (*SuggestionsResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_jester_02046e05de1c28ac, []int{0}
 }
-func (Confidence_Level) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{0, 0}
+func (m *SuggestionsResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_SuggestionsResponse.Unmarshal(m, b)
 }
-
-// Common types
-type Confidence struct {
-	// A bucketized representation of confidence, which is intended to give clients
-	// highly stable results across model upgrades.
-	Level Confidence_Level `protobuf:"varint,1,opt,name=level,proto3,enum=asgt.jester.v1alpha1.Confidence_Level" json:"level,omitempty"`
-	// The confidence value
-	Value                *wrappers.FloatValue `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+func (m *SuggestionsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_SuggestionsResponse.Marshal(b, m, deterministic)
 }
-
-func (m *Confidence) Reset()         { *m = Confidence{} }
-func (m *Confidence) String() string { return proto.CompactTextString(m) }
-func (*Confidence) ProtoMessage()    {}
-func (*Confidence) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{0}
+func (dst *SuggestionsResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_SuggestionsResponse.Merge(dst, src)
 }
-func (m *Confidence) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Confidence.Unmarshal(m, b)
+func (m *SuggestionsResponse) XXX_Size() int {
+	return xxx_messageInfo_SuggestionsResponse.Size(m)
 }
-func (m *Confidence) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Confidence.Marshal(b, m, deterministic)
-}
-func (dst *Confidence) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Confidence.Merge(dst, src)
-}
-func (m *Confidence) XXX_Size() int {
-	return xxx_messageInfo_Confidence.Size(m)
-}
-func (m *Confidence) XXX_DiscardUnknown() {
-	xxx_messageInfo_Confidence.DiscardUnknown(m)
+func (m *SuggestionsResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_SuggestionsResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_Confidence proto.InternalMessageInfo
+var xxx_messageInfo_SuggestionsResponse proto.InternalMessageInfo
 
-func (m *Confidence) GetLevel() Confidence_Level {
+func (m *SuggestionsResponse) GetPredictions() []*_type.Prediction {
 	if m != nil {
-		return m.Level
-	}
-	return Confidence_UNKNOWN
-}
-
-func (m *Confidence) GetValue() *wrappers.FloatValue {
-	if m != nil {
-		return m.Value
-	}
-	return nil
-}
-
-type Candidate struct {
-	Label                string      `protobuf:"bytes,1,opt,name=label,proto3" json:"label,omitempty"`
-	Confidence           *Confidence `protobuf:"bytes,2,opt,name=confidence,proto3" json:"confidence,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}    `json:"-"`
-	XXX_unrecognized     []byte      `json:"-"`
-	XXX_sizecache        int32       `json:"-"`
-}
-
-func (m *Candidate) Reset()         { *m = Candidate{} }
-func (m *Candidate) String() string { return proto.CompactTextString(m) }
-func (*Candidate) ProtoMessage()    {}
-func (*Candidate) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{1}
-}
-func (m *Candidate) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_Candidate.Unmarshal(m, b)
-}
-func (m *Candidate) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_Candidate.Marshal(b, m, deterministic)
-}
-func (dst *Candidate) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Candidate.Merge(dst, src)
-}
-func (m *Candidate) XXX_Size() int {
-	return xxx_messageInfo_Candidate.Size(m)
-}
-func (m *Candidate) XXX_DiscardUnknown() {
-	xxx_messageInfo_Candidate.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_Candidate proto.InternalMessageInfo
-
-func (m *Candidate) GetLabel() string {
-	if m != nil {
-		return m.Label
-	}
-	return ""
-}
-
-func (m *Candidate) GetConfidence() *Confidence {
-	if m != nil {
-		return m.Confidence
+		return m.Predictions
 	}
 	return nil
 }
 
 type SuggestionOptions struct {
-	SuggestionLimit      int32            `protobuf:"varint,1,opt,name=suggestion_limit,json=suggestionLimit,proto3" json:"suggestion_limit,omitempty"`
-	MinConfidence        Confidence_Level `protobuf:"varint,2,opt,name=min_confidence,json=minConfidence,proto3,enum=asgt.jester.v1alpha1.Confidence_Level" json:"min_confidence,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}         `json:"-"`
-	XXX_unrecognized     []byte           `json:"-"`
-	XXX_sizecache        int32            `json:"-"`
+	SuggestionLimit      int32                  `protobuf:"varint,1,opt,name=suggestion_limit,json=suggestionLimit,proto3" json:"suggestion_limit,omitempty"`
+	MinConfidence        _type.Confidence_Level `protobuf:"varint,2,opt,name=min_confidence,json=minConfidence,proto3,enum=asgt.type.Confidence_Level" json:"min_confidence,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}               `json:"-"`
+	XXX_unrecognized     []byte                 `json:"-"`
+	XXX_sizecache        int32                  `json:"-"`
 }
 
 func (m *SuggestionOptions) Reset()         { *m = SuggestionOptions{} }
 func (m *SuggestionOptions) String() string { return proto.CompactTextString(m) }
 func (*SuggestionOptions) ProtoMessage()    {}
 func (*SuggestionOptions) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{2}
+	return fileDescriptor_jester_02046e05de1c28ac, []int{1}
 }
 func (m *SuggestionOptions) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_SuggestionOptions.Unmarshal(m, b)
@@ -195,113 +105,28 @@ func (m *SuggestionOptions) GetSuggestionLimit() int32 {
 	return 0
 }
 
-func (m *SuggestionOptions) GetMinConfidence() Confidence_Level {
+func (m *SuggestionOptions) GetMinConfidence() _type.Confidence_Level {
 	if m != nil {
 		return m.MinConfidence
 	}
-	return Confidence_UNKNOWN
-}
-
-// AutoSuggest
-type SuggestionsResponse struct {
-	Predictions          []*SuggestionsResponse_Prediction `protobuf:"bytes,1,rep,name=predictions,proto3" json:"predictions,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                          `json:"-"`
-	XXX_unrecognized     []byte                            `json:"-"`
-	XXX_sizecache        int32                             `json:"-"`
-}
-
-func (m *SuggestionsResponse) Reset()         { *m = SuggestionsResponse{} }
-func (m *SuggestionsResponse) String() string { return proto.CompactTextString(m) }
-func (*SuggestionsResponse) ProtoMessage()    {}
-func (*SuggestionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{3}
-}
-func (m *SuggestionsResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SuggestionsResponse.Unmarshal(m, b)
-}
-func (m *SuggestionsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SuggestionsResponse.Marshal(b, m, deterministic)
-}
-func (dst *SuggestionsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SuggestionsResponse.Merge(dst, src)
-}
-func (m *SuggestionsResponse) XXX_Size() int {
-	return xxx_messageInfo_SuggestionsResponse.Size(m)
-}
-func (m *SuggestionsResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_SuggestionsResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SuggestionsResponse proto.InternalMessageInfo
-
-func (m *SuggestionsResponse) GetPredictions() []*SuggestionsResponse_Prediction {
-	if m != nil {
-		return m.Predictions
-	}
-	return nil
-}
-
-type SuggestionsResponse_Prediction struct {
-	Target               string       `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
-	Candidates           []*Candidate `protobuf:"bytes,2,rep,name=candidates,proto3" json:"candidates,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
-	XXX_unrecognized     []byte       `json:"-"`
-	XXX_sizecache        int32        `json:"-"`
-}
-
-func (m *SuggestionsResponse_Prediction) Reset()         { *m = SuggestionsResponse_Prediction{} }
-func (m *SuggestionsResponse_Prediction) String() string { return proto.CompactTextString(m) }
-func (*SuggestionsResponse_Prediction) ProtoMessage()    {}
-func (*SuggestionsResponse_Prediction) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{3, 0}
-}
-func (m *SuggestionsResponse_Prediction) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SuggestionsResponse_Prediction.Unmarshal(m, b)
-}
-func (m *SuggestionsResponse_Prediction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SuggestionsResponse_Prediction.Marshal(b, m, deterministic)
-}
-func (dst *SuggestionsResponse_Prediction) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SuggestionsResponse_Prediction.Merge(dst, src)
-}
-func (m *SuggestionsResponse_Prediction) XXX_Size() int {
-	return xxx_messageInfo_SuggestionsResponse_Prediction.Size(m)
-}
-func (m *SuggestionsResponse_Prediction) XXX_DiscardUnknown() {
-	xxx_messageInfo_SuggestionsResponse_Prediction.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_SuggestionsResponse_Prediction proto.InternalMessageInfo
-
-func (m *SuggestionsResponse_Prediction) GetTarget() string {
-	if m != nil {
-		return m.Target
-	}
-	return ""
-}
-
-func (m *SuggestionsResponse_Prediction) GetCandidates() []*Candidate {
-	if m != nil {
-		return m.Candidates
-	}
-	return nil
+	return _type.Confidence_UNKNOWN
 }
 
 // Scanned Invoice
 type ScannedInvoiceRequest struct {
-	Inputs               []*ScannedInvoiceRequest_Input `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
-	Targets              []string                       `protobuf:"bytes,2,rep,name=targets,proto3" json:"targets,omitempty"`
-	Options              *SuggestionOptions             `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                       `json:"-"`
-	XXX_unrecognized     []byte                         `json:"-"`
-	XXX_sizecache        int32                          `json:"-"`
+	Inputs               []*ScannedInvoiceRequest_Data `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
+	DatasetName          string                        `protobuf:"bytes,2,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	Options              *SuggestionOptions            `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}                      `json:"-"`
+	XXX_unrecognized     []byte                        `json:"-"`
+	XXX_sizecache        int32                         `json:"-"`
 }
 
 func (m *ScannedInvoiceRequest) Reset()         { *m = ScannedInvoiceRequest{} }
 func (m *ScannedInvoiceRequest) String() string { return proto.CompactTextString(m) }
 func (*ScannedInvoiceRequest) ProtoMessage()    {}
 func (*ScannedInvoiceRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{4}
+	return fileDescriptor_jester_02046e05de1c28ac, []int{2}
 }
 func (m *ScannedInvoiceRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_ScannedInvoiceRequest.Unmarshal(m, b)
@@ -321,18 +146,18 @@ func (m *ScannedInvoiceRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_ScannedInvoiceRequest proto.InternalMessageInfo
 
-func (m *ScannedInvoiceRequest) GetInputs() []*ScannedInvoiceRequest_Input {
+func (m *ScannedInvoiceRequest) GetInputs() []*ScannedInvoiceRequest_Data {
 	if m != nil {
 		return m.Inputs
 	}
 	return nil
 }
 
-func (m *ScannedInvoiceRequest) GetTargets() []string {
+func (m *ScannedInvoiceRequest) GetDatasetName() string {
 	if m != nil {
-		return m.Targets
+		return m.DatasetName
 	}
-	return nil
+	return ""
 }
 
 func (m *ScannedInvoiceRequest) GetOptions() *SuggestionOptions {
@@ -342,38 +167,38 @@ func (m *ScannedInvoiceRequest) GetOptions() *SuggestionOptions {
 	return nil
 }
 
-type ScannedInvoiceRequest_Input struct {
+type ScannedInvoiceRequest_Data struct {
 	Description          string   `protobuf:"bytes,1,opt,name=description,proto3" json:"description,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *ScannedInvoiceRequest_Input) Reset()         { *m = ScannedInvoiceRequest_Input{} }
-func (m *ScannedInvoiceRequest_Input) String() string { return proto.CompactTextString(m) }
-func (*ScannedInvoiceRequest_Input) ProtoMessage()    {}
-func (*ScannedInvoiceRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{4, 0}
+func (m *ScannedInvoiceRequest_Data) Reset()         { *m = ScannedInvoiceRequest_Data{} }
+func (m *ScannedInvoiceRequest_Data) String() string { return proto.CompactTextString(m) }
+func (*ScannedInvoiceRequest_Data) ProtoMessage()    {}
+func (*ScannedInvoiceRequest_Data) Descriptor() ([]byte, []int) {
+	return fileDescriptor_jester_02046e05de1c28ac, []int{2, 0}
 }
-func (m *ScannedInvoiceRequest_Input) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ScannedInvoiceRequest_Input.Unmarshal(m, b)
+func (m *ScannedInvoiceRequest_Data) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ScannedInvoiceRequest_Data.Unmarshal(m, b)
 }
-func (m *ScannedInvoiceRequest_Input) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ScannedInvoiceRequest_Input.Marshal(b, m, deterministic)
+func (m *ScannedInvoiceRequest_Data) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ScannedInvoiceRequest_Data.Marshal(b, m, deterministic)
 }
-func (dst *ScannedInvoiceRequest_Input) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ScannedInvoiceRequest_Input.Merge(dst, src)
+func (dst *ScannedInvoiceRequest_Data) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ScannedInvoiceRequest_Data.Merge(dst, src)
 }
-func (m *ScannedInvoiceRequest_Input) XXX_Size() int {
-	return xxx_messageInfo_ScannedInvoiceRequest_Input.Size(m)
+func (m *ScannedInvoiceRequest_Data) XXX_Size() int {
+	return xxx_messageInfo_ScannedInvoiceRequest_Data.Size(m)
 }
-func (m *ScannedInvoiceRequest_Input) XXX_DiscardUnknown() {
-	xxx_messageInfo_ScannedInvoiceRequest_Input.DiscardUnknown(m)
+func (m *ScannedInvoiceRequest_Data) XXX_DiscardUnknown() {
+	xxx_messageInfo_ScannedInvoiceRequest_Data.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ScannedInvoiceRequest_Input proto.InternalMessageInfo
+var xxx_messageInfo_ScannedInvoiceRequest_Data proto.InternalMessageInfo
 
-func (m *ScannedInvoiceRequest_Input) GetDescription() string {
+func (m *ScannedInvoiceRequest_Data) GetDescription() string {
 	if m != nil {
 		return m.Description
 	}
@@ -381,177 +206,177 @@ func (m *ScannedInvoiceRequest_Input) GetDescription() string {
 }
 
 // Electronic Invoice Line
-type ElectronicInvoicLineRequest struct {
-	Inputs               []*ElectronicInvoicLineRequest_Input `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
-	Targets              []string                             `protobuf:"bytes,2,rep,name=targets,proto3" json:"targets,omitempty"`
+type ElectronicInvoiceLineRequest struct {
+	Inputs               []*ElectronicInvoiceLineRequest_Data `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
+	DatasetName          string                               `protobuf:"bytes,2,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
 	Options              *SuggestionOptions                   `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                             `json:"-"`
 	XXX_unrecognized     []byte                               `json:"-"`
 	XXX_sizecache        int32                                `json:"-"`
 }
 
-func (m *ElectronicInvoicLineRequest) Reset()         { *m = ElectronicInvoicLineRequest{} }
-func (m *ElectronicInvoicLineRequest) String() string { return proto.CompactTextString(m) }
-func (*ElectronicInvoicLineRequest) ProtoMessage()    {}
-func (*ElectronicInvoicLineRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{5}
+func (m *ElectronicInvoiceLineRequest) Reset()         { *m = ElectronicInvoiceLineRequest{} }
+func (m *ElectronicInvoiceLineRequest) String() string { return proto.CompactTextString(m) }
+func (*ElectronicInvoiceLineRequest) ProtoMessage()    {}
+func (*ElectronicInvoiceLineRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_jester_02046e05de1c28ac, []int{3}
 }
-func (m *ElectronicInvoicLineRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ElectronicInvoicLineRequest.Unmarshal(m, b)
+func (m *ElectronicInvoiceLineRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest.Unmarshal(m, b)
 }
-func (m *ElectronicInvoicLineRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ElectronicInvoicLineRequest.Marshal(b, m, deterministic)
+func (m *ElectronicInvoiceLineRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest.Marshal(b, m, deterministic)
 }
-func (dst *ElectronicInvoicLineRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ElectronicInvoicLineRequest.Merge(dst, src)
+func (dst *ElectronicInvoiceLineRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ElectronicInvoiceLineRequest.Merge(dst, src)
 }
-func (m *ElectronicInvoicLineRequest) XXX_Size() int {
-	return xxx_messageInfo_ElectronicInvoicLineRequest.Size(m)
+func (m *ElectronicInvoiceLineRequest) XXX_Size() int {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest.Size(m)
 }
-func (m *ElectronicInvoicLineRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_ElectronicInvoicLineRequest.DiscardUnknown(m)
+func (m *ElectronicInvoiceLineRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_ElectronicInvoiceLineRequest.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ElectronicInvoicLineRequest proto.InternalMessageInfo
+var xxx_messageInfo_ElectronicInvoiceLineRequest proto.InternalMessageInfo
 
-func (m *ElectronicInvoicLineRequest) GetInputs() []*ElectronicInvoicLineRequest_Input {
+func (m *ElectronicInvoiceLineRequest) GetInputs() []*ElectronicInvoiceLineRequest_Data {
 	if m != nil {
 		return m.Inputs
 	}
 	return nil
 }
 
-func (m *ElectronicInvoicLineRequest) GetTargets() []string {
+func (m *ElectronicInvoiceLineRequest) GetDatasetName() string {
 	if m != nil {
-		return m.Targets
+		return m.DatasetName
 	}
-	return nil
+	return ""
 }
 
-func (m *ElectronicInvoicLineRequest) GetOptions() *SuggestionOptions {
+func (m *ElectronicInvoiceLineRequest) GetOptions() *SuggestionOptions {
 	if m != nil {
 		return m.Options
 	}
 	return nil
 }
 
-type ElectronicInvoicLineRequest_Input struct {
-	IssueDate            string   `protobuf:"bytes,1,opt,name=issue_date,json=issueDate,proto3" json:"issue_date,omitempty"`
-	Currency             string   `protobuf:"bytes,2,opt,name=currency,proto3" json:"currency,omitempty"`
-	SupplierId           string   `protobuf:"bytes,3,opt,name=supplier_id,json=supplierId,proto3" json:"supplier_id,omitempty"`
-	SupplierName         string   `protobuf:"bytes,4,opt,name=supplier_name,json=supplierName,proto3" json:"supplier_name,omitempty"`
-	SupplierGlobalId     string   `protobuf:"bytes,5,opt,name=supplier_global_id,json=supplierGlobalId,proto3" json:"supplier_global_id,omitempty"`
-	CustomerRef          string   `protobuf:"bytes,6,opt,name=customer_ref,json=customerRef,proto3" json:"customer_ref,omitempty"`
-	Total                int32    `protobuf:"varint,7,opt,name=total,proto3" json:"total,omitempty"`
-	LineText             string   `protobuf:"bytes,8,opt,name=line_text,json=lineText,proto3" json:"line_text,omitempty"`
-	LineId               string   `protobuf:"bytes,9,opt,name=line_id,json=lineId,proto3" json:"line_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+type ElectronicInvoiceLineRequest_Data struct {
+	IssueDate            *timestamp.Timestamp  `protobuf:"bytes,1,opt,name=issue_date,json=issueDate,proto3" json:"issue_date,omitempty"`
+	Currency             *wrappers.StringValue `protobuf:"bytes,2,opt,name=currency,proto3" json:"currency,omitempty"`
+	SupplierId           string                `protobuf:"bytes,3,opt,name=supplier_id,json=supplierId,proto3" json:"supplier_id,omitempty"`
+	SupplierName         *wrappers.StringValue `protobuf:"bytes,4,opt,name=supplier_name,json=supplierName,proto3" json:"supplier_name,omitempty"`
+	SupplierGlobalId     *wrappers.StringValue `protobuf:"bytes,5,opt,name=supplier_global_id,json=supplierGlobalId,proto3" json:"supplier_global_id,omitempty"`
+	CustomerRef          *wrappers.StringValue `protobuf:"bytes,6,opt,name=customer_ref,json=customerRef,proto3" json:"customer_ref,omitempty"`
+	Total                *wrappers.Int32Value  `protobuf:"bytes,7,opt,name=total,proto3" json:"total,omitempty"`
+	LineText             *wrappers.StringValue `protobuf:"bytes,8,opt,name=line_text,json=lineText,proto3" json:"line_text,omitempty"`
+	LineId               *wrappers.StringValue `protobuf:"bytes,9,opt,name=line_id,json=lineId,proto3" json:"line_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
 }
 
-func (m *ElectronicInvoicLineRequest_Input) Reset()         { *m = ElectronicInvoicLineRequest_Input{} }
-func (m *ElectronicInvoicLineRequest_Input) String() string { return proto.CompactTextString(m) }
-func (*ElectronicInvoicLineRequest_Input) ProtoMessage()    {}
-func (*ElectronicInvoicLineRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{5, 0}
+func (m *ElectronicInvoiceLineRequest_Data) Reset()         { *m = ElectronicInvoiceLineRequest_Data{} }
+func (m *ElectronicInvoiceLineRequest_Data) String() string { return proto.CompactTextString(m) }
+func (*ElectronicInvoiceLineRequest_Data) ProtoMessage()    {}
+func (*ElectronicInvoiceLineRequest_Data) Descriptor() ([]byte, []int) {
+	return fileDescriptor_jester_02046e05de1c28ac, []int{3, 0}
 }
-func (m *ElectronicInvoicLineRequest_Input) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ElectronicInvoicLineRequest_Input.Unmarshal(m, b)
+func (m *ElectronicInvoiceLineRequest_Data) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest_Data.Unmarshal(m, b)
 }
-func (m *ElectronicInvoicLineRequest_Input) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ElectronicInvoicLineRequest_Input.Marshal(b, m, deterministic)
+func (m *ElectronicInvoiceLineRequest_Data) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest_Data.Marshal(b, m, deterministic)
 }
-func (dst *ElectronicInvoicLineRequest_Input) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ElectronicInvoicLineRequest_Input.Merge(dst, src)
+func (dst *ElectronicInvoiceLineRequest_Data) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ElectronicInvoiceLineRequest_Data.Merge(dst, src)
 }
-func (m *ElectronicInvoicLineRequest_Input) XXX_Size() int {
-	return xxx_messageInfo_ElectronicInvoicLineRequest_Input.Size(m)
+func (m *ElectronicInvoiceLineRequest_Data) XXX_Size() int {
+	return xxx_messageInfo_ElectronicInvoiceLineRequest_Data.Size(m)
 }
-func (m *ElectronicInvoicLineRequest_Input) XXX_DiscardUnknown() {
-	xxx_messageInfo_ElectronicInvoicLineRequest_Input.DiscardUnknown(m)
+func (m *ElectronicInvoiceLineRequest_Data) XXX_DiscardUnknown() {
+	xxx_messageInfo_ElectronicInvoiceLineRequest_Data.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_ElectronicInvoicLineRequest_Input proto.InternalMessageInfo
+var xxx_messageInfo_ElectronicInvoiceLineRequest_Data proto.InternalMessageInfo
 
-func (m *ElectronicInvoicLineRequest_Input) GetIssueDate() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetIssueDate() *timestamp.Timestamp {
 	if m != nil {
 		return m.IssueDate
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetCurrency() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetCurrency() *wrappers.StringValue {
 	if m != nil {
 		return m.Currency
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetSupplierId() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetSupplierId() string {
 	if m != nil {
 		return m.SupplierId
 	}
 	return ""
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetSupplierName() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetSupplierName() *wrappers.StringValue {
 	if m != nil {
 		return m.SupplierName
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetSupplierGlobalId() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetSupplierGlobalId() *wrappers.StringValue {
 	if m != nil {
 		return m.SupplierGlobalId
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetCustomerRef() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetCustomerRef() *wrappers.StringValue {
 	if m != nil {
 		return m.CustomerRef
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetTotal() int32 {
+func (m *ElectronicInvoiceLineRequest_Data) GetTotal() *wrappers.Int32Value {
 	if m != nil {
 		return m.Total
 	}
-	return 0
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetLineText() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetLineText() *wrappers.StringValue {
 	if m != nil {
 		return m.LineText
 	}
-	return ""
+	return nil
 }
 
-func (m *ElectronicInvoicLineRequest_Input) GetLineId() string {
+func (m *ElectronicInvoiceLineRequest_Data) GetLineId() *wrappers.StringValue {
 	if m != nil {
 		return m.LineId
 	}
-	return ""
+	return nil
 }
 
 // Bank
 type BankRequest struct {
-	Inputs               []*BankRequest_Input `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
-	Targets              []string             `protobuf:"bytes,2,rep,name=targets,proto3" json:"targets,omitempty"`
-	Options              *SuggestionOptions   `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
-	XXX_unrecognized     []byte               `json:"-"`
-	XXX_sizecache        int32                `json:"-"`
+	Inputs               []*BankRequest_Data `protobuf:"bytes,1,rep,name=inputs,proto3" json:"inputs,omitempty"`
+	DatasetName          string              `protobuf:"bytes,2,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	Options              *SuggestionOptions  `protobuf:"bytes,3,opt,name=options,proto3" json:"options,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}            `json:"-"`
+	XXX_unrecognized     []byte              `json:"-"`
+	XXX_sizecache        int32               `json:"-"`
 }
 
 func (m *BankRequest) Reset()         { *m = BankRequest{} }
 func (m *BankRequest) String() string { return proto.CompactTextString(m) }
 func (*BankRequest) ProtoMessage()    {}
 func (*BankRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{6}
+	return fileDescriptor_jester_02046e05de1c28ac, []int{4}
 }
 func (m *BankRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BankRequest.Unmarshal(m, b)
@@ -571,18 +396,18 @@ func (m *BankRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_BankRequest proto.InternalMessageInfo
 
-func (m *BankRequest) GetInputs() []*BankRequest_Input {
+func (m *BankRequest) GetInputs() []*BankRequest_Data {
 	if m != nil {
 		return m.Inputs
 	}
 	return nil
 }
 
-func (m *BankRequest) GetTargets() []string {
+func (m *BankRequest) GetDatasetName() string {
 	if m != nil {
-		return m.Targets
+		return m.DatasetName
 	}
-	return nil
+	return ""
 }
 
 func (m *BankRequest) GetOptions() *SuggestionOptions {
@@ -592,89 +417,85 @@ func (m *BankRequest) GetOptions() *SuggestionOptions {
 	return nil
 }
 
-type BankRequest_Input struct {
+type BankRequest_Data struct {
 	AccountNumber        int32                `protobuf:"varint,1,opt,name=account_number,json=accountNumber,proto3" json:"account_number,omitempty"`
 	Amount               *wrappers.FloatValue `protobuf:"bytes,2,opt,name=amount,proto3" json:"amount,omitempty"`
 	EntryType            int32                `protobuf:"varint,3,opt,name=entry_type,json=entryType,proto3" json:"entry_type,omitempty"`
 	Text                 string               `protobuf:"bytes,4,opt,name=text,proto3" json:"text,omitempty"`
-	TimeStamp            int32                `protobuf:"varint,5,opt,name=time_stamp,json=timeStamp,proto3" json:"time_stamp,omitempty"`
+	TimeStamp            *timestamp.Timestamp `protobuf:"bytes,5,opt,name=time_stamp,json=timeStamp,proto3" json:"time_stamp,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}             `json:"-"`
 	XXX_unrecognized     []byte               `json:"-"`
 	XXX_sizecache        int32                `json:"-"`
 }
 
-func (m *BankRequest_Input) Reset()         { *m = BankRequest_Input{} }
-func (m *BankRequest_Input) String() string { return proto.CompactTextString(m) }
-func (*BankRequest_Input) ProtoMessage()    {}
-func (*BankRequest_Input) Descriptor() ([]byte, []int) {
-	return fileDescriptor_jester_2f9cab385cd11793, []int{6, 0}
+func (m *BankRequest_Data) Reset()         { *m = BankRequest_Data{} }
+func (m *BankRequest_Data) String() string { return proto.CompactTextString(m) }
+func (*BankRequest_Data) ProtoMessage()    {}
+func (*BankRequest_Data) Descriptor() ([]byte, []int) {
+	return fileDescriptor_jester_02046e05de1c28ac, []int{4, 0}
 }
-func (m *BankRequest_Input) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_BankRequest_Input.Unmarshal(m, b)
+func (m *BankRequest_Data) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_BankRequest_Data.Unmarshal(m, b)
 }
-func (m *BankRequest_Input) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_BankRequest_Input.Marshal(b, m, deterministic)
+func (m *BankRequest_Data) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_BankRequest_Data.Marshal(b, m, deterministic)
 }
-func (dst *BankRequest_Input) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_BankRequest_Input.Merge(dst, src)
+func (dst *BankRequest_Data) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BankRequest_Data.Merge(dst, src)
 }
-func (m *BankRequest_Input) XXX_Size() int {
-	return xxx_messageInfo_BankRequest_Input.Size(m)
+func (m *BankRequest_Data) XXX_Size() int {
+	return xxx_messageInfo_BankRequest_Data.Size(m)
 }
-func (m *BankRequest_Input) XXX_DiscardUnknown() {
-	xxx_messageInfo_BankRequest_Input.DiscardUnknown(m)
+func (m *BankRequest_Data) XXX_DiscardUnknown() {
+	xxx_messageInfo_BankRequest_Data.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_BankRequest_Input proto.InternalMessageInfo
+var xxx_messageInfo_BankRequest_Data proto.InternalMessageInfo
 
-func (m *BankRequest_Input) GetAccountNumber() int32 {
+func (m *BankRequest_Data) GetAccountNumber() int32 {
 	if m != nil {
 		return m.AccountNumber
 	}
 	return 0
 }
 
-func (m *BankRequest_Input) GetAmount() *wrappers.FloatValue {
+func (m *BankRequest_Data) GetAmount() *wrappers.FloatValue {
 	if m != nil {
 		return m.Amount
 	}
 	return nil
 }
 
-func (m *BankRequest_Input) GetEntryType() int32 {
+func (m *BankRequest_Data) GetEntryType() int32 {
 	if m != nil {
 		return m.EntryType
 	}
 	return 0
 }
 
-func (m *BankRequest_Input) GetText() string {
+func (m *BankRequest_Data) GetText() string {
 	if m != nil {
 		return m.Text
 	}
 	return ""
 }
 
-func (m *BankRequest_Input) GetTimeStamp() int32 {
+func (m *BankRequest_Data) GetTimeStamp() *timestamp.Timestamp {
 	if m != nil {
 		return m.TimeStamp
 	}
-	return 0
+	return nil
 }
 
 func init() {
-	proto.RegisterType((*Confidence)(nil), "asgt.jester.v1alpha1.Confidence")
-	proto.RegisterType((*Candidate)(nil), "asgt.jester.v1alpha1.Candidate")
-	proto.RegisterType((*SuggestionOptions)(nil), "asgt.jester.v1alpha1.SuggestionOptions")
 	proto.RegisterType((*SuggestionsResponse)(nil), "asgt.jester.v1alpha1.SuggestionsResponse")
-	proto.RegisterType((*SuggestionsResponse_Prediction)(nil), "asgt.jester.v1alpha1.SuggestionsResponse.Prediction")
+	proto.RegisterType((*SuggestionOptions)(nil), "asgt.jester.v1alpha1.SuggestionOptions")
 	proto.RegisterType((*ScannedInvoiceRequest)(nil), "asgt.jester.v1alpha1.ScannedInvoiceRequest")
-	proto.RegisterType((*ScannedInvoiceRequest_Input)(nil), "asgt.jester.v1alpha1.ScannedInvoiceRequest.Input")
-	proto.RegisterType((*ElectronicInvoicLineRequest)(nil), "asgt.jester.v1alpha1.ElectronicInvoicLineRequest")
-	proto.RegisterType((*ElectronicInvoicLineRequest_Input)(nil), "asgt.jester.v1alpha1.ElectronicInvoicLineRequest.Input")
+	proto.RegisterType((*ScannedInvoiceRequest_Data)(nil), "asgt.jester.v1alpha1.ScannedInvoiceRequest.Data")
+	proto.RegisterType((*ElectronicInvoiceLineRequest)(nil), "asgt.jester.v1alpha1.ElectronicInvoiceLineRequest")
+	proto.RegisterType((*ElectronicInvoiceLineRequest_Data)(nil), "asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data")
 	proto.RegisterType((*BankRequest)(nil), "asgt.jester.v1alpha1.BankRequest")
-	proto.RegisterType((*BankRequest_Input)(nil), "asgt.jester.v1alpha1.BankRequest.Input")
-	proto.RegisterEnum("asgt.jester.v1alpha1.Confidence_Level", Confidence_Level_name, Confidence_Level_value)
+	proto.RegisterType((*BankRequest_Data)(nil), "asgt.jester.v1alpha1.BankRequest.Data")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -690,7 +511,7 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type JesterClient interface {
 	ScannedInvoiceSuggestions(ctx context.Context, in *ScannedInvoiceRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error)
-	ElectronicInvoicLineSuggestions(ctx context.Context, in *ElectronicInvoicLineRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error)
+	ElectronicInvoicLineSuggestions(ctx context.Context, in *ElectronicInvoiceLineRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error)
 	BankSuggestions(ctx context.Context, in *BankRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error)
 }
 
@@ -711,7 +532,7 @@ func (c *jesterClient) ScannedInvoiceSuggestions(ctx context.Context, in *Scanne
 	return out, nil
 }
 
-func (c *jesterClient) ElectronicInvoicLineSuggestions(ctx context.Context, in *ElectronicInvoicLineRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error) {
+func (c *jesterClient) ElectronicInvoicLineSuggestions(ctx context.Context, in *ElectronicInvoiceLineRequest, opts ...grpc.CallOption) (*SuggestionsResponse, error) {
 	out := new(SuggestionsResponse)
 	err := c.cc.Invoke(ctx, "/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions", in, out, opts...)
 	if err != nil {
@@ -732,7 +553,7 @@ func (c *jesterClient) BankSuggestions(ctx context.Context, in *BankRequest, opt
 // JesterServer is the server API for Jester service.
 type JesterServer interface {
 	ScannedInvoiceSuggestions(context.Context, *ScannedInvoiceRequest) (*SuggestionsResponse, error)
-	ElectronicInvoicLineSuggestions(context.Context, *ElectronicInvoicLineRequest) (*SuggestionsResponse, error)
+	ElectronicInvoicLineSuggestions(context.Context, *ElectronicInvoiceLineRequest) (*SuggestionsResponse, error)
 	BankSuggestions(context.Context, *BankRequest) (*SuggestionsResponse, error)
 }
 
@@ -759,7 +580,7 @@ func _Jester_ScannedInvoiceSuggestions_Handler(srv interface{}, ctx context.Cont
 }
 
 func _Jester_ElectronicInvoicLineSuggestions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ElectronicInvoicLineRequest)
+	in := new(ElectronicInvoiceLineRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -771,7 +592,7 @@ func _Jester_ElectronicInvoicLineSuggestions_Handler(srv interface{}, ctx contex
 		FullMethod: "/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JesterServer).ElectronicInvoicLineSuggestions(ctx, req.(*ElectronicInvoicLineRequest))
+		return srv.(JesterServer).ElectronicInvoicLineSuggestions(ctx, req.(*ElectronicInvoiceLineRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -816,68 +637,63 @@ var _Jester_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/jester/v1alpha1/jester.proto", fileDescriptor_jester_2f9cab385cd11793)
+	proto.RegisterFile("asgt/jester/v1alpha1/jester.proto", fileDescriptor_jester_02046e05de1c28ac)
 }
 
-var fileDescriptor_jester_2f9cab385cd11793 = []byte{
-	// 934 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x55, 0x4f, 0x73, 0xdb, 0x44,
-	0x14, 0x47, 0x76, 0x64, 0x5b, 0xcf, 0x49, 0x6a, 0x96, 0x16, 0x84, 0x03, 0xc4, 0x11, 0xd3, 0x92,
-	0x94, 0x8e, 0x3c, 0x4e, 0x99, 0x61, 0x26, 0xc3, 0x4c, 0xa1, 0x7f, 0x68, 0x0d, 0x89, 0xc3, 0x28,
-	0x25, 0x1d, 0xb8, 0x68, 0xd6, 0xd2, 0x8b, 0x59, 0x2a, 0xad, 0x84, 0xb4, 0x32, 0xcd, 0x0c, 0x27,
-	0xee, 0x9c, 0xb8, 0x71, 0xe7, 0xc8, 0x91, 0x6f, 0xc1, 0xad, 0x7c, 0x03, 0x38, 0x71, 0xe5, 0x0b,
-	0x30, 0xbb, 0x92, 0x6c, 0x91, 0x71, 0x9a, 0xf8, 0xd2, 0x9b, 0xde, 0xef, 0xfd, 0xfb, 0xbd, 0x3f,
-	0xfb, 0x04, 0x5b, 0x34, 0x9d, 0x88, 0xfe, 0xb7, 0x98, 0x0a, 0x4c, 0xfa, 0xd3, 0x01, 0x0d, 0xe2,
-	0x6f, 0xe8, 0xa0, 0x90, 0xed, 0x38, 0x89, 0x44, 0x44, 0xae, 0x4a, 0x13, 0xbb, 0x80, 0x4a, 0x93,
-	0xee, 0x5b, 0x93, 0x28, 0x9a, 0x04, 0xd8, 0xa7, 0x31, 0xeb, 0x53, 0xce, 0x23, 0x41, 0x05, 0x8b,
-	0x78, 0x9a, 0xfb, 0x74, 0xdf, 0x29, 0xb4, 0x4a, 0x1a, 0x67, 0x27, 0xfd, 0xef, 0x13, 0x1a, 0xc7,
-	0x98, 0x14, 0x7a, 0xeb, 0x0f, 0x0d, 0xe0, 0x5e, 0xc4, 0x4f, 0x98, 0x8f, 0xdc, 0x43, 0xf2, 0x11,
-	0xe8, 0x01, 0x4e, 0x31, 0x30, 0xb5, 0x9e, 0xb6, 0xbd, 0xbe, 0x7b, 0xc3, 0x5e, 0x94, 0xd2, 0x9e,
-	0x3b, 0xd8, 0xfb, 0xd2, 0xda, 0xc9, 0x9d, 0xc8, 0x00, 0xf4, 0x29, 0x0d, 0x32, 0x34, 0x6b, 0x3d,
-	0x6d, 0xbb, 0xbd, 0xbb, 0x61, 0xe7, 0xc9, 0xed, 0x32, 0xb9, 0xfd, 0x69, 0x10, 0x51, 0x71, 0x2c,
-	0x4d, 0x9c, 0xdc, 0xd2, 0x3a, 0x00, 0x5d, 0x85, 0x20, 0x6d, 0x68, 0x7e, 0x39, 0xfa, 0x7c, 0x74,
-	0xf8, 0x64, 0xd4, 0x79, 0x85, 0xac, 0x42, 0xeb, 0xf8, 0x81, 0xf3, 0x95, 0xbb, 0x7f, 0xf8, 0xa4,
-	0xa3, 0x91, 0x26, 0xd4, 0xe5, 0x47, 0x4d, 0x7e, 0x1c, 0x0c, 0xef, 0x77, 0xea, 0xa4, 0x05, 0x2b,
-	0x8f, 0x86, 0x0f, 0x1f, 0x75, 0x56, 0xc8, 0x1a, 0x18, 0xca, 0x52, 0x89, 0xba, 0xe5, 0x81, 0x71,
-	0x8f, 0x72, 0x9f, 0xf9, 0x54, 0x20, 0xb9, 0x0a, 0x7a, 0x40, 0xc7, 0x45, 0x31, 0x86, 0x93, 0x0b,
-	0xe4, 0x63, 0x00, 0x6f, 0xc6, 0xbf, 0x60, 0xda, 0xbb, 0xa8, 0x4e, 0xa7, 0xe2, 0x63, 0xfd, 0xa4,
-	0xc1, 0xab, 0x47, 0xd9, 0x64, 0x82, 0xa9, 0xec, 0xf4, 0x61, 0xac, 0xfa, 0x4d, 0x76, 0xa0, 0x93,
-	0xce, 0x40, 0x37, 0x60, 0x21, 0x13, 0x2a, 0xb1, 0xee, 0x5c, 0x99, 0xe3, 0xfb, 0x12, 0x26, 0x07,
-	0xb0, 0x1e, 0x32, 0xee, 0x9e, 0xa1, 0x71, 0xf9, 0x76, 0xaf, 0x85, 0x8c, 0xcf, 0x41, 0xeb, 0x4f,
-	0x0d, 0x5e, 0x9b, 0xf3, 0x49, 0x1d, 0x4c, 0xe3, 0x88, 0xa7, 0x48, 0x8e, 0xa1, 0x1d, 0x27, 0xe8,
-	0x33, 0x4f, 0xc1, 0xa6, 0xd6, 0xab, 0x6f, 0xb7, 0x77, 0x3f, 0x58, 0x9c, 0x63, 0x81, 0xbf, 0xfd,
-	0xc5, 0xcc, 0xd9, 0xa9, 0x06, 0xea, 0x22, 0xc0, 0x5c, 0x45, 0x5e, 0x87, 0x86, 0xa0, 0xc9, 0x04,
-	0x45, 0xd1, 0xe6, 0x42, 0x22, 0x77, 0x00, 0xbc, 0x72, 0x14, 0xa9, 0x59, 0x53, 0xc9, 0x37, 0xcf,
-	0x29, 0xb0, 0xb4, 0x73, 0x2a, 0x2e, 0xd6, 0x3f, 0x1a, 0x5c, 0x3b, 0xf2, 0x28, 0xe7, 0xe8, 0x0f,
-	0xf9, 0x34, 0x62, 0x1e, 0x3a, 0xf8, 0x5d, 0x86, 0xa9, 0x20, 0x43, 0x68, 0x30, 0x1e, 0x67, 0xa2,
-	0xac, 0x69, 0x70, 0x4e, 0x4d, 0x8b, 0x9c, 0xed, 0xa1, 0xf4, 0x74, 0x8a, 0x00, 0xc4, 0x84, 0x66,
-	0xce, 0x37, 0xa7, 0x68, 0x38, 0xa5, 0x48, 0x3e, 0x81, 0x66, 0x94, 0x8f, 0xd6, 0xac, 0xab, 0x25,
-	0x79, 0xef, 0xa2, 0xce, 0x15, 0x9b, 0xe0, 0x94, 0x7e, 0xdd, 0x1d, 0xd0, 0x55, 0x36, 0xd2, 0x83,
-	0xb6, 0x8f, 0xa9, 0x97, 0x30, 0xa5, 0x28, 0x1a, 0x55, 0x85, 0xac, 0x7f, 0xeb, 0xb0, 0xf1, 0x20,
-	0x40, 0x4f, 0x24, 0x11, 0x67, 0x5e, 0x4e, 0x79, 0x9f, 0xf1, 0x59, 0xc9, 0x87, 0x67, 0x4a, 0xfe,
-	0x70, 0x31, 0x99, 0x17, 0x84, 0x78, 0x99, 0x85, 0xff, 0x5a, 0x2b, 0x2b, 0x7f, 0x1b, 0x80, 0xa5,
-	0x69, 0x86, 0xae, 0x9c, 0x69, 0x51, 0xb8, 0xa1, 0x90, 0xfb, 0xf2, 0x89, 0x76, 0xa1, 0xe5, 0x65,
-	0x49, 0x82, 0xdc, 0x3b, 0x55, 0x6f, 0xc0, 0x70, 0x66, 0x32, 0xd9, 0x84, 0x76, 0x9a, 0xc5, 0x71,
-	0xc0, 0x30, 0x71, 0x99, 0xaf, 0xb8, 0x18, 0x0e, 0x94, 0xd0, 0xd0, 0x27, 0xef, 0xc2, 0xda, 0xcc,
-	0x80, 0xd3, 0x10, 0xcd, 0x15, 0x65, 0xb2, 0x5a, 0x82, 0x23, 0x1a, 0x22, 0xb9, 0x05, 0x64, 0x66,
-	0x34, 0x09, 0xa2, 0x31, 0x0d, 0x64, 0x30, 0x5d, 0x59, 0x76, 0x4a, 0xcd, 0x43, 0xa5, 0x18, 0xfa,
-	0x64, 0x0b, 0x56, 0xbd, 0x2c, 0x15, 0x51, 0x88, 0x89, 0x9b, 0xe0, 0x89, 0xd9, 0xc8, 0x27, 0x55,
-	0x62, 0x0e, 0x9e, 0xc8, 0xab, 0x22, 0x22, 0x41, 0x03, 0xb3, 0xa9, 0x1e, 0x77, 0x2e, 0x90, 0x0d,
-	0x30, 0x02, 0xc6, 0xd1, 0x15, 0xf8, 0x4c, 0x98, 0xad, 0xbc, 0x12, 0x09, 0x3c, 0xc6, 0x67, 0x82,
-	0xbc, 0x01, 0x4d, 0xa5, 0x64, 0xbe, 0x69, 0xe4, 0x6f, 0x44, 0x8a, 0x43, 0xdf, 0xfa, 0xab, 0x06,
-	0xed, 0xbb, 0x94, 0x3f, 0x2d, 0xa7, 0x7c, 0xe7, 0xcc, 0x94, 0xcf, 0xe9, 0x7c, 0xc5, 0xe5, 0x65,
-	0x4e, 0xf5, 0x77, 0xad, 0x9c, 0xea, 0x75, 0x58, 0xa7, 0x9e, 0x17, 0x65, 0x5c, 0xb8, 0x3c, 0x0b,
-	0xc7, 0x98, 0x14, 0x97, 0x6e, 0xad, 0x40, 0x47, 0x0a, 0x24, 0xb7, 0xa1, 0x41, 0x43, 0x29, 0x5f,
-	0xe6, 0x87, 0x50, 0x98, 0xca, 0x8d, 0x41, 0x2e, 0x92, 0x53, 0x57, 0x9c, 0xc6, 0xa8, 0xb8, 0xea,
-	0x8e, 0xa1, 0x90, 0xc7, 0xa7, 0x31, 0x12, 0x02, 0x2b, 0xaa, 0xc7, 0xf9, 0xac, 0xd5, 0xb7, 0x74,
-	0x11, 0x2c, 0x44, 0x37, 0x15, 0x34, 0x8c, 0xd5, 0x6c, 0x75, 0xc7, 0x90, 0xc8, 0x91, 0x04, 0x76,
-	0x9f, 0xd7, 0xa1, 0xf1, 0x99, 0x2a, 0x93, 0xfc, 0xa2, 0xc1, 0x9b, 0xff, 0x3f, 0x0b, 0x95, 0xc3,
-	0x47, 0xde, 0x5f, 0xe2, 0x8e, 0x74, 0x77, 0x2e, 0x7d, 0x48, 0xad, 0xeb, 0x3f, 0x3e, 0xff, 0xfb,
-	0xe7, 0xda, 0xa6, 0xd5, 0xed, 0x4f, 0x07, 0xfd, 0xe2, 0x67, 0xb0, 0x97, 0xe6, 0x51, 0x59, 0x1e,
-	0x75, 0x4f, 0xbb, 0x49, 0x7e, 0xd3, 0x60, 0x73, 0xd1, 0x03, 0xae, 0x52, 0x1c, 0x2c, 0xfd, 0xee,
-	0x97, 0x21, 0x7a, 0x4b, 0x11, 0xbd, 0x61, 0x6d, 0x55, 0x89, 0xe2, 0x2c, 0x76, 0xc1, 0x55, 0x2e,
-	0xaf, 0xe4, 0xfb, 0x03, 0x5c, 0x91, 0x9b, 0x58, 0xa5, 0xb7, 0x75, 0xe1, 0xc2, 0x2e, 0x43, 0x67,
-	0x43, 0xd1, 0xb9, 0x66, 0x75, 0xaa, 0x74, 0xc6, 0x94, 0x3f, 0xdd, 0xd3, 0x6e, 0xde, 0x6d, 0x7d,
-	0xdd, 0xc8, 0x63, 0x8c, 0x1b, 0x6a, 0x9d, 0x6e, 0xff, 0x17, 0x00, 0x00, 0xff, 0xff, 0xb0, 0x89,
-	0x74, 0xd9, 0x43, 0x09, 0x00, 0x00,
+var fileDescriptor_jester_02046e05de1c28ac = []byte{
+	// 853 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xc4, 0x55, 0xcf, 0x6f, 0xe3, 0x44,
+	0x14, 0x96, 0xb7, 0x49, 0xda, 0x3c, 0xb7, 0xdd, 0x32, 0x50, 0x29, 0xa4, 0x85, 0xa6, 0x96, 0x76,
+	0xc9, 0x02, 0x72, 0x68, 0x2a, 0xb4, 0xec, 0x1e, 0x40, 0x5b, 0x96, 0x1f, 0x59, 0x55, 0x5d, 0xe4,
+	0x56, 0x1c, 0xb8, 0x58, 0x13, 0xfb, 0x35, 0x0c, 0x6b, 0xcf, 0x18, 0xcf, 0xb8, 0x6c, 0x25, 0x4e,
+	0x7b, 0xe0, 0x8e, 0xb8, 0xf1, 0x47, 0xf0, 0xb7, 0x20, 0xc1, 0x9f, 0xc0, 0x85, 0x23, 0xff, 0x01,
+	0x9a, 0xf1, 0xd8, 0x09, 0x69, 0xd9, 0x4d, 0x4e, 0xbd, 0xd9, 0xdf, 0x7c, 0xdf, 0x9b, 0x6f, 0x9e,
+	0x3f, 0xbf, 0x81, 0x7d, 0x2a, 0x27, 0x6a, 0xf0, 0x1d, 0x4a, 0x85, 0xf9, 0xe0, 0xe2, 0x80, 0x26,
+	0xd9, 0xb7, 0xf4, 0xc0, 0xbe, 0xfb, 0x59, 0x2e, 0x94, 0x20, 0x6f, 0x68, 0x8a, 0x6f, 0xa1, 0x8a,
+	0xd2, 0xed, 0x1a, 0xa1, 0xba, 0xcc, 0x70, 0x90, 0xe5, 0x18, 0xb3, 0x48, 0x31, 0xc1, 0x4b, 0x45,
+	0x77, 0x77, 0x22, 0xc4, 0x24, 0xc1, 0x01, 0xcd, 0xd8, 0x80, 0x72, 0x2e, 0x14, 0xd5, 0x8b, 0xd2,
+	0xae, 0xee, 0xd9, 0x55, 0xf3, 0x36, 0x2e, 0xce, 0x07, 0x8a, 0xa5, 0x28, 0x15, 0x4d, 0x33, 0x4b,
+	0x78, 0x7b, 0x9e, 0xf0, 0x43, 0x4e, 0xb3, 0x0c, 0x73, 0x5b, 0xc0, 0x3b, 0x81, 0xd7, 0x4f, 0x8b,
+	0xc9, 0x04, 0xa5, 0xa9, 0x1a, 0xa0, 0xcc, 0x04, 0x97, 0x48, 0xee, 0x83, 0x3b, 0x75, 0x22, 0x3b,
+	0x4e, 0x6f, 0xa5, 0xef, 0x0e, 0xb7, 0x7d, 0xe3, 0x5e, 0xfb, 0xf4, 0xbf, 0xaa, 0x57, 0x83, 0x59,
+	0xa6, 0xf7, 0xc2, 0x81, 0xd7, 0xa6, 0x05, 0x9f, 0x66, 0x06, 0x25, 0xf7, 0x60, 0x4b, 0xd6, 0x60,
+	0x98, 0xb0, 0x94, 0xa9, 0x8e, 0xd3, 0x73, 0xfa, 0xcd, 0xe0, 0xf6, 0x14, 0x3f, 0xd6, 0x30, 0x39,
+	0x82, 0xcd, 0x94, 0xf1, 0x30, 0x12, 0xfc, 0x9c, 0xc5, 0xc8, 0x23, 0xec, 0xdc, 0xea, 0x39, 0xfd,
+	0xcd, 0xe1, 0xce, 0xcc, 0xe6, 0x9f, 0xd6, 0x8b, 0xfe, 0x31, 0x5e, 0x60, 0x12, 0x6c, 0xa4, 0x8c,
+	0x4f, 0x41, 0xef, 0x1f, 0x07, 0xb6, 0x4f, 0x23, 0xca, 0x39, 0xc6, 0x23, 0x7e, 0x21, 0x58, 0x84,
+	0x01, 0x7e, 0x5f, 0xa0, 0x54, 0xe4, 0x4b, 0x68, 0x31, 0x9e, 0x15, 0xaa, 0x3a, 0xd2, 0x07, 0xfe,
+	0x75, 0x1f, 0xc4, 0xbf, 0x56, 0xec, 0x3f, 0xa6, 0x8a, 0x06, 0x56, 0x4f, 0xf6, 0x61, 0x3d, 0xa6,
+	0x8a, 0x4a, 0x54, 0x21, 0xa7, 0x69, 0xe9, 0xb2, 0x1d, 0xb8, 0x16, 0x3b, 0xa1, 0x29, 0x92, 0x47,
+	0xb0, 0x2a, 0xca, 0x06, 0x74, 0x56, 0x7a, 0x4e, 0xdf, 0x1d, 0xbe, 0xf3, 0x3f, 0xbb, 0xcd, 0xf7,
+	0x2b, 0xa8, 0x74, 0xdd, 0x3e, 0x34, 0xf4, 0xae, 0xa4, 0x07, 0x6e, 0x8c, 0x32, 0xca, 0x99, 0xc1,
+	0x4d, 0xef, 0xf4, 0x66, 0x53, 0xc8, 0xfb, 0xbb, 0x09, 0xbb, 0x9f, 0x25, 0x18, 0xa9, 0x5c, 0x70,
+	0x16, 0x59, 0xe7, 0xc7, 0x8c, 0xd7, 0x47, 0x7f, 0x3a, 0x77, 0xf4, 0xfb, 0xd7, 0x9b, 0x79, 0x59,
+	0x8d, 0x9b, 0xe8, 0xc0, 0xcf, 0x0d, 0xdb, 0x82, 0x07, 0x00, 0x4c, 0xca, 0x02, 0xc3, 0x98, 0x2a,
+	0x34, 0x1d, 0x70, 0x87, 0x5d, 0xbf, 0x8c, 0xb7, 0x5f, 0xc5, 0xdb, 0x3f, 0xab, 0xf2, 0x1f, 0xb4,
+	0x0d, 0xfb, 0x31, 0x55, 0x48, 0x3e, 0x82, 0xb5, 0xa8, 0xc8, 0x73, 0xe4, 0xd1, 0xa5, 0x71, 0xe9,
+	0x0e, 0x77, 0xaf, 0x08, 0x4f, 0x55, 0xce, 0xf8, 0xe4, 0x6b, 0x9a, 0x14, 0x18, 0xd4, 0x6c, 0xb2,
+	0x07, 0xae, 0x2c, 0xb2, 0x2c, 0x61, 0x98, 0x87, 0x2c, 0x36, 0x87, 0x68, 0x07, 0x50, 0x41, 0xa3,
+	0x98, 0x3c, 0x82, 0x8d, 0x9a, 0x60, 0xba, 0xd0, 0x58, 0xa0, 0xfe, 0x7a, 0x25, 0x31, 0x4d, 0x7a,
+	0x02, 0xa4, 0x2e, 0x31, 0x49, 0xc4, 0x98, 0x26, 0x7a, 0xab, 0xe6, 0x02, 0x75, 0xb6, 0x2a, 0xdd,
+	0x17, 0x46, 0x36, 0x8a, 0xc9, 0x27, 0xb0, 0x1e, 0x15, 0x52, 0x89, 0x14, 0xf3, 0x30, 0xc7, 0xf3,
+	0x4e, 0x6b, 0x81, 0x2a, 0x6e, 0xa5, 0x08, 0xf0, 0x9c, 0x1c, 0x40, 0x53, 0x09, 0x45, 0x93, 0xce,
+	0xaa, 0x51, 0xee, 0x5c, 0x51, 0x8e, 0xb8, 0x3a, 0x1c, 0x96, 0xc2, 0x92, 0x49, 0x1e, 0x40, 0x3b,
+	0x61, 0x1c, 0x43, 0x85, 0xcf, 0x55, 0x67, 0x6d, 0x91, 0xf6, 0x6a, 0xfa, 0x19, 0x3e, 0x57, 0xe4,
+	0x43, 0x58, 0x35, 0x52, 0x16, 0x77, 0xda, 0x0b, 0x08, 0x5b, 0x9a, 0x3c, 0x8a, 0xbd, 0x9f, 0x56,
+	0xc0, 0x3d, 0xa2, 0xfc, 0x59, 0x15, 0xed, 0x8f, 0xe7, 0xa2, 0x7d, 0xf7, 0xfa, 0x94, 0xcd, 0x48,
+	0x6e, 0x22, 0xc9, 0xbf, 0x3b, 0x36, 0xc9, 0x77, 0x60, 0x93, 0x46, 0x91, 0x28, 0xb8, 0x0a, 0x79,
+	0x91, 0x8e, 0x31, 0xb7, 0xb3, 0x70, 0xc3, 0xa2, 0x27, 0x06, 0x24, 0x87, 0xd0, 0xa2, 0xa9, 0x7e,
+	0xb7, 0x99, 0xbd, 0xfa, 0x2d, 0x3e, 0x4f, 0x04, 0x55, 0xb6, 0x35, 0x25, 0x95, 0xbc, 0x05, 0x80,
+	0x5c, 0xe5, 0x97, 0xa1, 0x1e, 0x94, 0xc6, 0x6a, 0x33, 0x68, 0x1b, 0xe4, 0xec, 0x32, 0x43, 0x42,
+	0xa0, 0x61, 0x3e, 0x53, 0xc3, 0x9c, 0xd0, 0x3c, 0xeb, 0x1f, 0x4b, 0xdf, 0x1a, 0xa1, 0xf9, 0x6d,
+	0x6c, 0xee, 0x5e, 0xfa, 0x63, 0x69, 0xf6, 0xa9, 0x7e, 0x1c, 0xfe, 0xb9, 0x02, 0xad, 0x27, 0xa6,
+	0x03, 0xe4, 0x57, 0x07, 0xde, 0xfc, 0xef, 0xd8, 0x9c, 0xb9, 0x57, 0xc8, 0x7b, 0x4b, 0xcc, 0xd9,
+	0xee, 0xbd, 0x57, 0xb5, 0xb6, 0xbe, 0xa7, 0xbc, 0x3b, 0x2f, 0xfe, 0xf8, 0xeb, 0x97, 0x5b, 0x7b,
+	0x5e, 0x77, 0x70, 0x71, 0x30, 0x90, 0x65, 0x35, 0x56, 0x56, 0x7b, 0x68, 0x6f, 0x96, 0x87, 0xce,
+	0xbb, 0xe4, 0x37, 0x07, 0xf6, 0xe6, 0x07, 0x9b, 0x9e, 0x6b, 0xb3, 0x16, 0x87, 0xcb, 0xcf, 0xc3,
+	0x65, 0x9c, 0xbe, 0x6f, 0x9c, 0xde, 0xf5, 0xf6, 0xb5, 0x53, 0xac, 0x8b, 0x5a, 0xb3, 0x3a, 0xd8,
+	0xb3, 0x86, 0x7f, 0x84, 0xdb, 0x3a, 0xad, 0xb3, 0xfe, 0xf6, 0x5f, 0x19, 0xea, 0x65, 0xec, 0xec,
+	0x18, 0x3b, 0xdb, 0xde, 0x96, 0xb6, 0x33, 0xa6, 0xfc, 0xd9, 0xcc, 0xee, 0x47, 0x6b, 0xdf, 0xb4,
+	0xca, 0x1a, 0xe3, 0x96, 0xf9, 0xfe, 0x87, 0xff, 0x06, 0x00, 0x00, 0xff, 0xff, 0xc9, 0xcb, 0xcd,
+	0x73, 0xdb, 0x08, 0x00, 0x00,
 }

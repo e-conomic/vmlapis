@@ -46,7 +46,7 @@ func request_Jester_ScannedInvoiceSuggestions_0(ctx context.Context, marshaler r
 }
 
 func request_Jester_ElectronicInvoicLineSuggestions_0(ctx context.Context, marshaler runtime.Marshaler, client JesterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq ElectronicInvoicLineRequest
+	var protoReq ElectronicInvoiceLineRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -181,11 +181,11 @@ func RegisterJesterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 }
 
 var (
-	pattern_Jester_ScannedInvoiceSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "suggest"}, "scannedinvoice"))
+	pattern_Jester_ScannedInvoiceSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "scannedinvoice"}, "suggest"))
 
-	pattern_Jester_ElectronicInvoicLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "suggest"}, "electronicinvoiceline"))
+	pattern_Jester_ElectronicInvoicLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "electronicinvoiceline"}, "suggest"))
 
-	pattern_Jester_BankSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "suggest"}, "bank"))
+	pattern_Jester_BankSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1", "bank"}, "suggest"))
 )
 
 var (

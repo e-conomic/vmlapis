@@ -25,61 +25,57 @@ namespace Asgt.Jester.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFhc2d0L2plc3Rlci92MWFscGhhMS9qZXN0ZXIucHJvdG8SFGFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh5n",
-            "b29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8ivgEKCkNvbmZpZGVuY2US",
-            "NQoFbGV2ZWwYASABKA4yJi5hc2d0Lmplc3Rlci52MWFscGhhMS5Db25maWRl",
-            "bmNlLkxldmVsEioKBXZhbHVlGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZs",
-            "b2F0VmFsdWUiTQoFTGV2ZWwSCwoHVU5LTk9XThAAEgwKCFZFUllfTE9XEAES",
-            "BwoDTE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0KCVZFUllfSElHSBAFIlAK",
-            "CUNhbmRpZGF0ZRINCgVsYWJlbBgBIAEoCRI0Cgpjb25maWRlbmNlGAIgASgL",
-            "MiAuYXNndC5qZXN0ZXIudjFhbHBoYTEuQ29uZmlkZW5jZSJtChFTdWdnZXN0",
-            "aW9uT3B0aW9ucxIYChBzdWdnZXN0aW9uX2xpbWl0GAEgASgFEj4KDm1pbl9j",
-            "b25maWRlbmNlGAIgASgOMiYuYXNndC5qZXN0ZXIudjFhbHBoYTEuQ29uZmlk",
-            "ZW5jZS5MZXZlbCKzAQoTU3VnZ2VzdGlvbnNSZXNwb25zZRJJCgtwcmVkaWN0",
-            "aW9ucxgBIAMoCzI0LmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25z",
-            "UmVzcG9uc2UuUHJlZGljdGlvbhpRCgpQcmVkaWN0aW9uEg4KBnRhcmdldBgB",
-            "IAEoCRIzCgpjYW5kaWRhdGVzGAIgAygLMh8uYXNndC5qZXN0ZXIudjFhbHBo",
-            "YTEuQ2FuZGlkYXRlIsMBChVTY2FubmVkSW52b2ljZVJlcXVlc3QSQQoGaW5w",
-            "dXRzGAEgAygLMjEuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9p",
-            "Y2VSZXF1ZXN0LklucHV0Eg8KB3RhcmdldHMYAiADKAkSOAoHb3B0aW9ucxgD",
-            "IAEoCzInLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25z",
-            "GhwKBUlucHV0EhMKC2Rlc2NyaXB0aW9uGAEgASgJIvICChtFbGVjdHJvbmlj",
-            "SW52b2ljTGluZVJlcXVlc3QSRwoGaW5wdXRzGAEgAygLMjcuYXNndC5qZXN0",
-            "ZXIudjFhbHBoYTEuRWxlY3Ryb25pY0ludm9pY0xpbmVSZXF1ZXN0LklucHV0",
-            "Eg8KB3RhcmdldHMYAiADKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGr4BCgVJbnB1dBISCgpp",
-            "c3N1ZV9kYXRlGAEgASgJEhAKCGN1cnJlbmN5GAIgASgJEhMKC3N1cHBsaWVy",
-            "X2lkGAMgASgJEhUKDXN1cHBsaWVyX25hbWUYBCABKAkSGgoSc3VwcGxpZXJf",
-            "Z2xvYmFsX2lkGAUgASgJEhQKDGN1c3RvbWVyX3JlZhgGIAEoCRINCgV0b3Rh",
-            "bBgHIAEoBRIRCglsaW5lX3RleHQYCCABKAkSDwoHbGluZV9pZBgJIAEoCSKW",
-            "AgoLQmFua1JlcXVlc3QSNwoGaW5wdXRzGAEgAygLMicuYXNndC5qZXN0ZXIu",
-            "djFhbHBoYTEuQmFua1JlcXVlc3QuSW5wdXQSDwoHdGFyZ2V0cxgCIAMoCRI4",
-            "CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2Vz",
-            "dGlvbk9wdGlvbnMaggEKBUlucHV0EhYKDmFjY291bnRfbnVtYmVyGAEgASgF",
-            "EisKBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVl",
-            "EhIKCmVudHJ5X3R5cGUYAyABKAUSDAoEdGV4dBgEIAEoCRISCgp0aW1lX3N0",
-            "YW1wGAUgASgFMtMDCgZKZXN0ZXISmgEKGVNjYW5uZWRJbnZvaWNlU3VnZ2Vz",
-            "dGlvbnMSKy5hc2d0Lmplc3Rlci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJl",
-            "cXVlc3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3Bv",
-            "bnNlIiWC0+STAh8iGi92MS9zdWdnZXN0OnNjYW5uZWRpbnZvaWNlOgEqEq0B",
-            "Ch9FbGVjdHJvbmljSW52b2ljTGluZVN1Z2dlc3Rpb25zEjEuYXNndC5qZXN0",
-            "ZXIudjFhbHBoYTEuRWxlY3Ryb25pY0ludm9pY0xpbmVSZXF1ZXN0GikuYXNn",
-            "dC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwIm",
-            "IiEvdjEvc3VnZ2VzdDplbGVjdHJvbmljaW52b2ljZWxpbmU6ASoSfAoPQmFu",
-            "a1N1Z2dlc3Rpb25zEiEuYXNndC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVl",
-            "c3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNl",
-            "IhuC0+STAhUiEC92MS9zdWdnZXN0OmJhbms6ASpCCFoGamVzdGVyYgZwcm90",
-            "bzM="));
+            "dGVyLnYxYWxwaGExGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxocZ29v",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
+            "bWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3Rv",
+            "IkEKE1N1Z2dlc3Rpb25zUmVzcG9uc2USKgoLcHJlZGljdGlvbnMYASADKAsy",
+            "FS5hc2d0LnR5cGUuUHJlZGljdGlvbiJiChFTdWdnZXN0aW9uT3B0aW9ucxIY",
+            "ChBzdWdnZXN0aW9uX2xpbWl0GAEgASgFEjMKDm1pbl9jb25maWRlbmNlGAIg",
+            "ASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWwixgEKFVNjYW5uZWRJ",
+            "bnZvaWNlUmVxdWVzdBJACgZpbnB1dHMYASADKAsyMC5hc2d0Lmplc3Rlci52",
+            "MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QuRGF0YRIUCgxkYXRhc2V0",
+            "X25hbWUYAiABKAkSOAoHb3B0aW9ucxgDIAEoCzInLmFzZ3QuamVzdGVyLnYx",
+            "YWxwaGExLlN1Z2dlc3Rpb25PcHRpb25zGhsKBERhdGESEwoLZGVzY3JpcHRp",
+            "b24YASABKAki5AQKHEVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QSRwoG",
+            "aW5wdXRzGAEgAygLMjcuYXNndC5qZXN0ZXIudjFhbHBoYTEuRWxlY3Ryb25p",
+            "Y0ludm9pY2VMaW5lUmVxdWVzdC5EYXRhEhQKDGRhdGFzZXRfbmFtZRgCIAEo",
+            "CRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3Vn",
+            "Z2VzdGlvbk9wdGlvbnMaqgMKBERhdGESLgoKaXNzdWVfZGF0ZRgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoIY3VycmVuY3kYAiABKAsy",
+            "HC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSEwoLc3VwcGxpZXJfaWQY",
+            "AyABKAkSMwoNc3VwcGxpZXJfbmFtZRgEIAEoCzIcLmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJpbmdWYWx1ZRI4ChJzdXBwbGllcl9nbG9iYWxfaWQYBSABKAsyHC5n",
+            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSMgoMY3VzdG9tZXJfcmVmGAYg",
+            "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBXRvdGFsGAcg",
+            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSLwoJbGluZV90ZXh0",
+            "GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2xpbmVf",
+            "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUitQIKC0Jh",
+            "bmtSZXF1ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxw",
+            "aGExLkJhbmtSZXF1ZXN0LkRhdGESFAoMZGF0YXNldF9uYW1lGAIgASgJEjgK",
+            "B29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0",
+            "aW9uT3B0aW9ucxqdAQoERGF0YRIWCg5hY2NvdW50X251bWJlchgBIAEoBRIr",
+            "CgZhbW91bnQYAiABKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZRIS",
+            "CgplbnRyeV90eXBlGAMgASgFEgwKBHRleHQYBCABKAkSLgoKdGltZV9zdGFt",
+            "cBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy1AMKBkplc3Rl",
+            "chKaAQoZU2Nhbm5lZEludm9pY2VTdWdnZXN0aW9ucxIrLmFzZ3QuamVzdGVy",
+            "LnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlUmVxdWVzdBopLmFzZ3QuamVzdGVy",
+            "LnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIaL3YxL3Nj",
+            "YW5uZWRpbnZvaWNlOnN1Z2dlc3Q6ASoSrgEKH0VsZWN0cm9uaWNJbnZvaWNM",
+            "aW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmplc3Rlci52MWFscGhhMS5FbGVjdHJv",
+            "bmljSW52b2ljZUxpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
+            "U3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvZWxlY3Ryb25pY2lu",
+            "dm9pY2VsaW5lOnN1Z2dlc3Q6ASoSfAoPQmFua1N1Z2dlc3Rpb25zEiEuYXNn",
+            "dC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0Lmplc3Rlci52",
+            "MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92MS9iYW5r",
+            "OnN1Z2dlc3Q6ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Confidence), global::Asgt.Jester.V1Alpha1.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Jester.V1Alpha1.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.Candidate), global::Asgt.Jester.V1Alpha1.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Parser, new[]{ "Predictions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Parser, new[]{ "Predictions" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction.Parser, new[]{ "Target", "Candidates" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input.Parser, new[]{ "Description" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input), global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "Targets", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser, new[]{ "Description" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
           }));
     }
     #endregion
@@ -87,13 +83,13 @@ namespace Asgt.Jester.V1Alpha1 {
   }
   #region Messages
   /// <summary>
-  /// Common types
+  /// AutoSuggest
   /// </summary>
-  public sealed partial class Confidence : pb::IMessage<Confidence> {
-    private static readonly pb::MessageParser<Confidence> _parser = new pb::MessageParser<Confidence>(() => new Confidence());
+  public sealed partial class SuggestionsResponse : pb::IMessage<SuggestionsResponse> {
+    private static readonly pb::MessageParser<SuggestionsResponse> _parser = new pb::MessageParser<SuggestionsResponse>(() => new SuggestionsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Confidence> Parser { get { return _parser; } }
+    public static pb::MessageParser<SuggestionsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -106,77 +102,54 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Confidence() {
+    public SuggestionsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Confidence(Confidence other) : this() {
-      level_ = other.level_;
-      Value = other.Value;
+    public SuggestionsResponse(SuggestionsResponse other) : this() {
+      predictions_ = other.predictions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Confidence Clone() {
-      return new Confidence(this);
+    public SuggestionsResponse Clone() {
+      return new SuggestionsResponse(this);
     }
 
-    /// <summary>Field number for the "level" field.</summary>
-    public const int LevelFieldNumber = 1;
-    private global::Asgt.Jester.V1Alpha1.Confidence.Types.Level level_ = 0;
-    /// <summary>
-    /// A bucketized representation of confidence, which is intended to give clients
-    /// highly stable results across model upgrades.
-    /// </summary>
+    /// <summary>Field number for the "predictions" field.</summary>
+    public const int PredictionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Prediction.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.Confidence.Types.Level Level {
-      get { return level_; }
-      set {
-        level_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 2;
-    private static readonly pb::FieldCodec<float?> _single_value_codec = pb::FieldCodec.ForStructWrapper<float>(18);
-    private float? value_;
-    /// <summary>
-    /// The confidence value
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float? Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
+    public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
+      get { return predictions_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as Confidence);
+      return Equals(other as SuggestionsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Confidence other) {
+    public bool Equals(SuggestionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Level != other.Level) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Value, other.Value)) return false;
+      if(!predictions_.Equals(other.predictions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
-      if (value_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Value);
+      hash ^= predictions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -190,13 +163,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Level != 0) {
-        output.WriteRawTag(8);
-        output.WriteEnum((int) Level);
-      }
-      if (value_ != null) {
-        _single_value_codec.WriteTagAndValue(output, Value);
-      }
+      predictions_.WriteTo(output, _repeated_predictions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,12 +172,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
-      }
-      if (value_ != null) {
-        size += _single_value_codec.CalculateSizeWithTag(Value);
-      }
+      size += predictions_.CalculateSize(_repeated_predictions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -218,197 +180,11 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Confidence other) {
+    public void MergeFrom(SuggestionsResponse other) {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
-        Level = other.Level;
-      }
-      if (other.value_ != null) {
-        if (value_ == null || other.Value != 0F) {
-          Value = other.Value;
-        }
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            level_ = (global::Asgt.Jester.V1Alpha1.Confidence.Types.Level) input.ReadEnum();
-            break;
-          }
-          case 18: {
-            float? value = _single_value_codec.Read(input);
-            if (value_ == null || value != 0F) {
-              Value = value;
-            }
-            break;
-          }
-        }
-      }
-    }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the Confidence message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Level {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("VERY_LOW")] VeryLow = 1,
-        [pbr::OriginalName("LOW")] Low = 2,
-        [pbr::OriginalName("MID")] Mid = 3,
-        [pbr::OriginalName("HIGH")] High = 4,
-        [pbr::OriginalName("VERY_HIGH")] VeryHigh = 5,
-      }
-
-    }
-    #endregion
-
-  }
-
-  public sealed partial class Candidate : pb::IMessage<Candidate> {
-    private static readonly pb::MessageParser<Candidate> _parser = new pb::MessageParser<Candidate>(() => new Candidate());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Candidate> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Candidate() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Candidate(Candidate other) : this() {
-      label_ = other.label_;
-      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Candidate Clone() {
-      return new Candidate(this);
-    }
-
-    /// <summary>Field number for the "label" field.</summary>
-    public const int LabelFieldNumber = 1;
-    private string label_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Label {
-      get { return label_; }
-      set {
-        label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 2;
-    private global::Asgt.Jester.V1Alpha1.Confidence confidence_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.Confidence Confidence {
-      get { return confidence_; }
-      set {
-        confidence_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Candidate);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Candidate other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Label != other.Label) return false;
-      if (!object.Equals(Confidence, other.Confidence)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Label.Length != 0) hash ^= Label.GetHashCode();
-      if (confidence_ != null) hash ^= Confidence.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Label.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Label);
-      }
-      if (confidence_ != null) {
-        output.WriteRawTag(18);
-        output.WriteMessage(Confidence);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Label.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
-      }
-      if (confidence_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Candidate other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Label.Length != 0) {
-        Label = other.Label;
-      }
-      if (other.confidence_ != null) {
-        if (confidence_ == null) {
-          confidence_ = new global::Asgt.Jester.V1Alpha1.Confidence();
-        }
-        Confidence.MergeFrom(other.Confidence);
-      }
+      predictions_.Add(other.predictions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -421,14 +197,7 @@ namespace Asgt.Jester.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Label = input.ReadString();
-            break;
-          }
-          case 18: {
-            if (confidence_ == null) {
-              confidence_ = new global::Asgt.Jester.V1Alpha1.Confidence();
-            }
-            input.ReadMessage(confidence_);
+            predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
             break;
           }
         }
@@ -445,7 +214,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -485,9 +254,9 @@ namespace Asgt.Jester.V1Alpha1 {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 2;
-    private global::Asgt.Jester.V1Alpha1.Confidence.Types.Level minConfidence_ = 0;
+    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = 0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.Confidence.Types.Level MinConfidence {
+    public global::Asgt.Type.Confidence.Types.Level MinConfidence {
       get { return minConfidence_; }
       set {
         minConfidence_ = value;
@@ -585,292 +354,12 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 16: {
-            minConfidence_ = (global::Asgt.Jester.V1Alpha1.Confidence.Types.Level) input.ReadEnum();
+            minConfidence_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
       }
     }
-
-  }
-
-  /// <summary>
-  /// AutoSuggest
-  /// </summary>
-  public sealed partial class SuggestionsResponse : pb::IMessage<SuggestionsResponse> {
-    private static readonly pb::MessageParser<SuggestionsResponse> _parser = new pb::MessageParser<SuggestionsResponse>(() => new SuggestionsResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SuggestionsResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse(SuggestionsResponse other) : this() {
-      predictions_ = other.predictions_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse Clone() {
-      return new SuggestionsResponse(this);
-    }
-
-    /// <summary>Field number for the "predictions" field.</summary>
-    public const int PredictionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction> _repeated_predictions_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Types.Prediction> Predictions {
-      get { return predictions_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as SuggestionsResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SuggestionsResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!predictions_.Equals(other.predictions_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= predictions_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      predictions_.WriteTo(output, _repeated_predictions_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += predictions_.CalculateSize(_repeated_predictions_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SuggestionsResponse other) {
-      if (other == null) {
-        return;
-      }
-      predictions_.Add(other.predictions_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
-            break;
-          }
-        }
-      }
-    }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the SuggestionsResponse message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class Prediction : pb::IMessage<Prediction> {
-        private static readonly pb::MessageParser<Prediction> _parser = new pb::MessageParser<Prediction>(() => new Prediction());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Prediction> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Prediction() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Prediction(Prediction other) : this() {
-          target_ = other.target_;
-          candidates_ = other.candidates_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Prediction Clone() {
-          return new Prediction(this);
-        }
-
-        /// <summary>Field number for the "target" field.</summary>
-        public const int TargetFieldNumber = 1;
-        private string target_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Target {
-          get { return target_; }
-          set {
-            target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "candidates" field.</summary>
-        public const int CandidatesFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.Candidate> _repeated_candidates_codec
-            = pb::FieldCodec.ForMessage(18, global::Asgt.Jester.V1Alpha1.Candidate.Parser);
-        private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.Candidate> candidates_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.Candidate>();
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.Candidate> Candidates {
-          get { return candidates_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Prediction);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Prediction other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (Target != other.Target) return false;
-          if(!candidates_.Equals(other.candidates_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (Target.Length != 0) hash ^= Target.GetHashCode();
-          hash ^= candidates_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (Target.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Target);
-          }
-          candidates_.WriteTo(output, _repeated_candidates_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (Target.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
-          }
-          size += candidates_.CalculateSize(_repeated_candidates_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Prediction other) {
-          if (other == null) {
-            return;
-          }
-          if (other.Target.Length != 0) {
-            Target = other.Target;
-          }
-          candidates_.Add(other.candidates_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                Target = input.ReadString();
-                break;
-              }
-              case 18: {
-                candidates_.AddEntriesFrom(input, _repeated_candidates_codec);
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-    }
-    #endregion
 
   }
 
@@ -885,7 +374,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -903,7 +392,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ScannedInvoiceRequest(ScannedInvoiceRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -915,22 +404,23 @@ namespace Asgt.Jester.V1Alpha1 {
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -958,7 +448,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -967,7 +457,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -983,7 +473,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -997,7 +490,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1013,7 +508,9 @@ namespace Asgt.Jester.V1Alpha1 {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1036,7 +533,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {
@@ -1054,11 +551,11 @@ namespace Asgt.Jester.V1Alpha1 {
     /// <summary>Container for nested types declared in the ScannedInvoiceRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1071,21 +568,21 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
+        public Data(Data other) : this() {
           description_ = other.description_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "description" field.</summary>
@@ -1101,11 +598,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1155,7 +652,7 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
@@ -1191,15 +688,15 @@ namespace Asgt.Jester.V1Alpha1 {
   /// <summary>
   /// Electronic Invoice Line
   /// </summary>
-  public sealed partial class ElectronicInvoicLineRequest : pb::IMessage<ElectronicInvoicLineRequest> {
-    private static readonly pb::MessageParser<ElectronicInvoicLineRequest> _parser = new pb::MessageParser<ElectronicInvoicLineRequest>(() => new ElectronicInvoicLineRequest());
+  public sealed partial class ElectronicInvoiceLineRequest : pb::IMessage<ElectronicInvoiceLineRequest> {
+    private static readonly pb::MessageParser<ElectronicInvoiceLineRequest> _parser = new pb::MessageParser<ElectronicInvoiceLineRequest>(() => new ElectronicInvoiceLineRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ElectronicInvoicLineRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<ElectronicInvoiceLineRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1208,43 +705,44 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest() {
+    public ElectronicInvoiceLineRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest(ElectronicInvoicLineRequest other) : this() {
+    public ElectronicInvoiceLineRequest(ElectronicInvoiceLineRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoicLineRequest Clone() {
-      return new ElectronicInvoicLineRequest(this);
+    public ElectronicInvoiceLineRequest Clone() {
+      return new ElectronicInvoiceLineRequest(this);
     }
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -1260,11 +758,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ElectronicInvoicLineRequest);
+      return Equals(other as ElectronicInvoiceLineRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ElectronicInvoicLineRequest other) {
+    public bool Equals(ElectronicInvoiceLineRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1272,7 +770,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1281,7 +779,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1297,7 +795,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -1311,7 +812,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1322,12 +825,14 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ElectronicInvoicLineRequest other) {
+    public void MergeFrom(ElectronicInvoiceLineRequest other) {
       if (other == null) {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1350,7 +855,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {
@@ -1365,18 +870,18 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     #region Nested types
-    /// <summary>Container for nested types declared in the ElectronicInvoicLineRequest message type.</summary>
+    /// <summary>Container for nested types declared in the ElectronicInvoiceLineRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Jester.V1Alpha1.ElectronicInvoicLineRequest.Descriptor.NestedTypes[0]; }
+          get { return global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1385,50 +890,51 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
-          issueDate_ = other.issueDate_;
-          currency_ = other.currency_;
+        public Data(Data other) : this() {
+          issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
+          Currency = other.Currency;
           supplierId_ = other.supplierId_;
-          supplierName_ = other.supplierName_;
-          supplierGlobalId_ = other.supplierGlobalId_;
-          customerRef_ = other.customerRef_;
-          total_ = other.total_;
-          lineText_ = other.lineText_;
-          lineId_ = other.lineId_;
+          SupplierName = other.SupplierName;
+          SupplierGlobalId = other.SupplierGlobalId;
+          CustomerRef = other.CustomerRef;
+          Total = other.Total;
+          LineText = other.LineText;
+          LineId = other.LineId;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "issue_date" field.</summary>
         public const int IssueDateFieldNumber = 1;
-        private string issueDate_ = "";
+        private global::Google.Protobuf.WellKnownTypes.Timestamp issueDate_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string IssueDate {
+        public global::Google.Protobuf.WellKnownTypes.Timestamp IssueDate {
           get { return issueDate_; }
           set {
-            issueDate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            issueDate_ = value;
           }
         }
 
         /// <summary>Field number for the "currency" field.</summary>
         public const int CurrencyFieldNumber = 2;
-        private string currency_ = "";
+        private static readonly pb::FieldCodec<string> _single_currency_codec = pb::FieldCodec.ForClassWrapper<string>(18);
+        private string currency_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string Currency {
           get { return currency_; }
           set {
-            currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            currency_ = value;
           }
         }
 
@@ -1445,42 +951,46 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "supplier_name" field.</summary>
         public const int SupplierNameFieldNumber = 4;
-        private string supplierName_ = "";
+        private static readonly pb::FieldCodec<string> _single_supplierName_codec = pb::FieldCodec.ForClassWrapper<string>(34);
+        private string supplierName_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SupplierName {
           get { return supplierName_; }
           set {
-            supplierName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            supplierName_ = value;
           }
         }
 
         /// <summary>Field number for the "supplier_global_id" field.</summary>
         public const int SupplierGlobalIdFieldNumber = 5;
-        private string supplierGlobalId_ = "";
+        private static readonly pb::FieldCodec<string> _single_supplierGlobalId_codec = pb::FieldCodec.ForClassWrapper<string>(42);
+        private string supplierGlobalId_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string SupplierGlobalId {
           get { return supplierGlobalId_; }
           set {
-            supplierGlobalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            supplierGlobalId_ = value;
           }
         }
 
         /// <summary>Field number for the "customer_ref" field.</summary>
         public const int CustomerRefFieldNumber = 6;
-        private string customerRef_ = "";
+        private static readonly pb::FieldCodec<string> _single_customerRef_codec = pb::FieldCodec.ForClassWrapper<string>(50);
+        private string customerRef_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string CustomerRef {
           get { return customerRef_; }
           set {
-            customerRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            customerRef_ = value;
           }
         }
 
         /// <summary>Field number for the "total" field.</summary>
         public const int TotalFieldNumber = 7;
-        private int total_;
+        private static readonly pb::FieldCodec<int?> _single_total_codec = pb::FieldCodec.ForStructWrapper<int>(58);
+        private int? total_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int Total {
+        public int? Total {
           get { return total_; }
           set {
             total_ = value;
@@ -1489,40 +999,42 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "line_text" field.</summary>
         public const int LineTextFieldNumber = 8;
-        private string lineText_ = "";
+        private static readonly pb::FieldCodec<string> _single_lineText_codec = pb::FieldCodec.ForClassWrapper<string>(66);
+        private string lineText_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string LineText {
           get { return lineText_; }
           set {
-            lineText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            lineText_ = value;
           }
         }
 
         /// <summary>Field number for the "line_id" field.</summary>
         public const int LineIdFieldNumber = 9;
-        private string lineId_ = "";
+        private static readonly pb::FieldCodec<string> _single_lineId_codec = pb::FieldCodec.ForClassWrapper<string>(74);
+        private string lineId_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public string LineId {
           get { return lineId_; }
           set {
-            lineId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            lineId_ = value;
           }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (IssueDate != other.IssueDate) return false;
+          if (!object.Equals(IssueDate, other.IssueDate)) return false;
           if (Currency != other.Currency) return false;
           if (SupplierId != other.SupplierId) return false;
           if (SupplierName != other.SupplierName) return false;
@@ -1537,15 +1049,15 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (IssueDate.Length != 0) hash ^= IssueDate.GetHashCode();
-          if (Currency.Length != 0) hash ^= Currency.GetHashCode();
+          if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
+          if (currency_ != null) hash ^= Currency.GetHashCode();
           if (SupplierId.Length != 0) hash ^= SupplierId.GetHashCode();
-          if (SupplierName.Length != 0) hash ^= SupplierName.GetHashCode();
-          if (SupplierGlobalId.Length != 0) hash ^= SupplierGlobalId.GetHashCode();
-          if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
-          if (Total != 0) hash ^= Total.GetHashCode();
-          if (LineText.Length != 0) hash ^= LineText.GetHashCode();
-          if (LineId.Length != 0) hash ^= LineId.GetHashCode();
+          if (supplierName_ != null) hash ^= SupplierName.GetHashCode();
+          if (supplierGlobalId_ != null) hash ^= SupplierGlobalId.GetHashCode();
+          if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
+          if (total_ != null) hash ^= Total.GetHashCode();
+          if (lineText_ != null) hash ^= LineText.GetHashCode();
+          if (lineId_ != null) hash ^= LineId.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1559,41 +1071,34 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (IssueDate.Length != 0) {
+          if (issueDate_ != null) {
             output.WriteRawTag(10);
-            output.WriteString(IssueDate);
+            output.WriteMessage(IssueDate);
           }
-          if (Currency.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(Currency);
+          if (currency_ != null) {
+            _single_currency_codec.WriteTagAndValue(output, Currency);
           }
           if (SupplierId.Length != 0) {
             output.WriteRawTag(26);
             output.WriteString(SupplierId);
           }
-          if (SupplierName.Length != 0) {
-            output.WriteRawTag(34);
-            output.WriteString(SupplierName);
+          if (supplierName_ != null) {
+            _single_supplierName_codec.WriteTagAndValue(output, SupplierName);
           }
-          if (SupplierGlobalId.Length != 0) {
-            output.WriteRawTag(42);
-            output.WriteString(SupplierGlobalId);
+          if (supplierGlobalId_ != null) {
+            _single_supplierGlobalId_codec.WriteTagAndValue(output, SupplierGlobalId);
           }
-          if (CustomerRef.Length != 0) {
-            output.WriteRawTag(50);
-            output.WriteString(CustomerRef);
+          if (customerRef_ != null) {
+            _single_customerRef_codec.WriteTagAndValue(output, CustomerRef);
           }
-          if (Total != 0) {
-            output.WriteRawTag(56);
-            output.WriteInt32(Total);
+          if (total_ != null) {
+            _single_total_codec.WriteTagAndValue(output, Total);
           }
-          if (LineText.Length != 0) {
-            output.WriteRawTag(66);
-            output.WriteString(LineText);
+          if (lineText_ != null) {
+            _single_lineText_codec.WriteTagAndValue(output, LineText);
           }
-          if (LineId.Length != 0) {
-            output.WriteRawTag(74);
-            output.WriteString(LineId);
+          if (lineId_ != null) {
+            _single_lineId_codec.WriteTagAndValue(output, LineId);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -1603,32 +1108,32 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (IssueDate.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(IssueDate);
+          if (issueDate_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(IssueDate);
           }
-          if (Currency.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
+          if (currency_ != null) {
+            size += _single_currency_codec.CalculateSizeWithTag(Currency);
           }
           if (SupplierId.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierId);
           }
-          if (SupplierName.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierName);
+          if (supplierName_ != null) {
+            size += _single_supplierName_codec.CalculateSizeWithTag(SupplierName);
           }
-          if (SupplierGlobalId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(SupplierGlobalId);
+          if (supplierGlobalId_ != null) {
+            size += _single_supplierGlobalId_codec.CalculateSizeWithTag(SupplierGlobalId);
           }
-          if (CustomerRef.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
+          if (customerRef_ != null) {
+            size += _single_customerRef_codec.CalculateSizeWithTag(CustomerRef);
           }
-          if (Total != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Total);
+          if (total_ != null) {
+            size += _single_total_codec.CalculateSizeWithTag(Total);
           }
-          if (LineText.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(LineText);
+          if (lineText_ != null) {
+            size += _single_lineText_codec.CalculateSizeWithTag(LineText);
           }
-          if (LineId.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(LineId);
+          if (lineId_ != null) {
+            size += _single_lineId_codec.CalculateSizeWithTag(LineId);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1637,36 +1142,53 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
-          if (other.IssueDate.Length != 0) {
-            IssueDate = other.IssueDate;
+          if (other.issueDate_ != null) {
+            if (issueDate_ == null) {
+              issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            IssueDate.MergeFrom(other.IssueDate);
           }
-          if (other.Currency.Length != 0) {
-            Currency = other.Currency;
+          if (other.currency_ != null) {
+            if (currency_ == null || other.Currency != "") {
+              Currency = other.Currency;
+            }
           }
           if (other.SupplierId.Length != 0) {
             SupplierId = other.SupplierId;
           }
-          if (other.SupplierName.Length != 0) {
-            SupplierName = other.SupplierName;
+          if (other.supplierName_ != null) {
+            if (supplierName_ == null || other.SupplierName != "") {
+              SupplierName = other.SupplierName;
+            }
           }
-          if (other.SupplierGlobalId.Length != 0) {
-            SupplierGlobalId = other.SupplierGlobalId;
+          if (other.supplierGlobalId_ != null) {
+            if (supplierGlobalId_ == null || other.SupplierGlobalId != "") {
+              SupplierGlobalId = other.SupplierGlobalId;
+            }
           }
-          if (other.CustomerRef.Length != 0) {
-            CustomerRef = other.CustomerRef;
+          if (other.customerRef_ != null) {
+            if (customerRef_ == null || other.CustomerRef != "") {
+              CustomerRef = other.CustomerRef;
+            }
           }
-          if (other.Total != 0) {
-            Total = other.Total;
+          if (other.total_ != null) {
+            if (total_ == null || other.Total != 0) {
+              Total = other.Total;
+            }
           }
-          if (other.LineText.Length != 0) {
-            LineText = other.LineText;
+          if (other.lineText_ != null) {
+            if (lineText_ == null || other.LineText != "") {
+              LineText = other.LineText;
+            }
           }
-          if (other.LineId.Length != 0) {
-            LineId = other.LineId;
+          if (other.lineId_ != null) {
+            if (lineId_ == null || other.LineId != "") {
+              LineId = other.LineId;
+            }
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1680,11 +1202,17 @@ namespace Asgt.Jester.V1Alpha1 {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                IssueDate = input.ReadString();
+                if (issueDate_ == null) {
+                  issueDate_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(issueDate_);
                 break;
               }
               case 18: {
-                Currency = input.ReadString();
+                string value = _single_currency_codec.Read(input);
+                if (currency_ == null || value != "") {
+                  Currency = value;
+                }
                 break;
               }
               case 26: {
@@ -1692,27 +1220,45 @@ namespace Asgt.Jester.V1Alpha1 {
                 break;
               }
               case 34: {
-                SupplierName = input.ReadString();
+                string value = _single_supplierName_codec.Read(input);
+                if (supplierName_ == null || value != "") {
+                  SupplierName = value;
+                }
                 break;
               }
               case 42: {
-                SupplierGlobalId = input.ReadString();
+                string value = _single_supplierGlobalId_codec.Read(input);
+                if (supplierGlobalId_ == null || value != "") {
+                  SupplierGlobalId = value;
+                }
                 break;
               }
               case 50: {
-                CustomerRef = input.ReadString();
+                string value = _single_customerRef_codec.Read(input);
+                if (customerRef_ == null || value != "") {
+                  CustomerRef = value;
+                }
                 break;
               }
-              case 56: {
-                Total = input.ReadInt32();
+              case 58: {
+                int? value = _single_total_codec.Read(input);
+                if (total_ == null || value != 0) {
+                  Total = value;
+                }
                 break;
               }
               case 66: {
-                LineText = input.ReadString();
+                string value = _single_lineText_codec.Read(input);
+                if (lineText_ == null || value != "") {
+                  LineText = value;
+                }
                 break;
               }
               case 74: {
-                LineId = input.ReadString();
+                string value = _single_lineId_codec.Read(input);
+                if (lineId_ == null || value != "") {
+                  LineId = value;
+                }
                 break;
               }
             }
@@ -1737,7 +1283,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1755,7 +1301,7 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BankRequest(BankRequest other) : this() {
       inputs_ = other.inputs_.Clone();
-      targets_ = other.targets_.Clone();
+      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1767,22 +1313,23 @@ namespace Asgt.Jester.V1Alpha1 {
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input>();
+    private static readonly pb::FieldCodec<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Input> Inputs {
+    public pbc::RepeatedField<global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data> Inputs {
       get { return inputs_; }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 2;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "options" field.</summary>
@@ -1810,7 +1357,7 @@ namespace Asgt.Jester.V1Alpha1 {
         return true;
       }
       if(!inputs_.Equals(other.inputs_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1819,7 +1366,7 @@ namespace Asgt.Jester.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1835,7 +1382,10 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
       inputs_.WriteTo(output, _repeated_inputs_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetName);
+      }
       if (options_ != null) {
         output.WriteRawTag(26);
         output.WriteMessage(Options);
@@ -1849,7 +1399,9 @@ namespace Asgt.Jester.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -1865,7 +1417,9 @@ namespace Asgt.Jester.V1Alpha1 {
         return;
       }
       inputs_.Add(other.inputs_);
-      targets_.Add(other.targets_);
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -1888,7 +1442,7 @@ namespace Asgt.Jester.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            DatasetName = input.ReadString();
             break;
           }
           case 26: {
@@ -1906,11 +1460,11 @@ namespace Asgt.Jester.V1Alpha1 {
     /// <summary>Container for nested types declared in the BankRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Input : pb::IMessage<Input> {
-        private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
+      public sealed partial class Data : pb::IMessage<Data> {
+        private static readonly pb::MessageParser<Data> _parser = new pb::MessageParser<Data>(() => new Data());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Input> Parser { get { return _parser; } }
+        public static pb::MessageParser<Data> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1923,25 +1477,25 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input() {
+        public Data() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input(Input other) : this() {
+        public Data(Data other) : this() {
           accountNumber_ = other.accountNumber_;
           Amount = other.Amount;
           entryType_ = other.entryType_;
           text_ = other.text_;
-          timeStamp_ = other.timeStamp_;
+          timeStamp_ = other.timeStamp_ != null ? other.timeStamp_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Input Clone() {
-          return new Input(this);
+        public Data Clone() {
+          return new Data(this);
         }
 
         /// <summary>Field number for the "account_number" field.</summary>
@@ -1991,9 +1545,9 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "time_stamp" field.</summary>
         public const int TimeStampFieldNumber = 5;
-        private int timeStamp_;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp timeStamp_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int TimeStamp {
+        public global::Google.Protobuf.WellKnownTypes.Timestamp TimeStamp {
           get { return timeStamp_; }
           set {
             timeStamp_ = value;
@@ -2002,11 +1556,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Input);
+          return Equals(other as Data);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Input other) {
+        public bool Equals(Data other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -2017,7 +1571,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
           if (EntryType != other.EntryType) return false;
           if (Text != other.Text) return false;
-          if (TimeStamp != other.TimeStamp) return false;
+          if (!object.Equals(TimeStamp, other.TimeStamp)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2028,7 +1582,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Amount);
           if (EntryType != 0) hash ^= EntryType.GetHashCode();
           if (Text.Length != 0) hash ^= Text.GetHashCode();
-          if (TimeStamp != 0) hash ^= TimeStamp.GetHashCode();
+          if (timeStamp_ != null) hash ^= TimeStamp.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2057,9 +1611,9 @@ namespace Asgt.Jester.V1Alpha1 {
             output.WriteRawTag(34);
             output.WriteString(Text);
           }
-          if (TimeStamp != 0) {
-            output.WriteRawTag(40);
-            output.WriteInt32(TimeStamp);
+          if (timeStamp_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(TimeStamp);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -2081,8 +1635,8 @@ namespace Asgt.Jester.V1Alpha1 {
           if (Text.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
           }
-          if (TimeStamp != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TimeStamp);
+          if (timeStamp_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeStamp);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2091,7 +1645,7 @@ namespace Asgt.Jester.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Input other) {
+        public void MergeFrom(Data other) {
           if (other == null) {
             return;
           }
@@ -2109,8 +1663,11 @@ namespace Asgt.Jester.V1Alpha1 {
           if (other.Text.Length != 0) {
             Text = other.Text;
           }
-          if (other.TimeStamp != 0) {
-            TimeStamp = other.TimeStamp;
+          if (other.timeStamp_ != null) {
+            if (timeStamp_ == null) {
+              timeStamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            TimeStamp.MergeFrom(other.TimeStamp);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2142,8 +1699,11 @@ namespace Asgt.Jester.V1Alpha1 {
                 Text = input.ReadString();
                 break;
               }
-              case 40: {
-                TimeStamp = input.ReadInt32();
+              case 42: {
+                if (timeStamp_ == null) {
+                  timeStamp_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(timeStamp_);
                 break;
               }
             }
