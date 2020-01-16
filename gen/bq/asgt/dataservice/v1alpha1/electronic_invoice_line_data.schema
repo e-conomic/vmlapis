@@ -28,7 +28,7 @@
   "fields": [
    {
     "name": "issue_date",
-    "type": "STRING",
+    "type": "TIMESTAMP",
     "mode": "NULLABLE"
    },
    {
