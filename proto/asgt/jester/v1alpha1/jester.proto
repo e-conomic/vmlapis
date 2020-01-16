@@ -12,21 +12,21 @@ import "asgt/type/prediction.proto";
 service Jester {
   rpc ScannedInvoiceSuggestions(ScannedInvoiceRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1/suggest:scannedinvoice"
+      post: "/v1/scannedinvoice:suggest"
       body: "*"
     };
   }
 
   rpc ElectronicInvoicLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1/suggest:electronicinvoiceline"
+      post: "/v1/electronicinvoiceline:suggest"
       body: "*"
     };
   }
 
   rpc BankSuggestions(BankRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1/suggest:bank"
+      post: "/v1/bank:suggest"
       body: "*"
     };
   }

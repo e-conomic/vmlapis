@@ -16,19 +16,19 @@ service BankDataservice {
   rpc PrepareBankFeedback(PrepareBankRequest) returns (google.protobuf.Empty);
   rpc BankFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:bank"
+      post: "/v1alpha1/bank:feedback"
       body: "*"
     };
   }
   rpc AddBankData(AddBankDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:bank"
+      post: "/v1alpha1/bank:data"
       body: "*"
     };
   }
   rpc DeleteBankData(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:delete"
+      post: "/v1alpha1/bank:delete"
       body: "*"
     };
   }

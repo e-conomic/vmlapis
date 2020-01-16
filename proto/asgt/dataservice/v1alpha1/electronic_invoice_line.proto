@@ -16,19 +16,19 @@ service ElectronicInvoiceLine {
   rpc PrepareElectronicInvoiceLine(PrepareElectronicInvoiceLineRequest) returns (google.protobuf.Empty);
   rpc ElectronicInvoiceLineFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:electronicinvoiceline"
+      post: "/v1alpha1/electronicinvoiceline:feedback"
       body: "*"
     };
   }
   rpc AddElectronicInvoiceLineData(AddElectronicInvoiceLineDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:electronicinvoiceline"
+      post: "/v1alpha1/electronicinvoiceline:data"
       body: "*"
     };
   }
   rpc DeleteElectronicInvoiceLine(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:delete"
+      post: "/v1alpha1/electronicinvoiceline:delete"
       body: "*"
     };
   }

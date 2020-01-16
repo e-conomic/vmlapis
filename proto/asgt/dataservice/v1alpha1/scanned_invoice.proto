@@ -16,19 +16,19 @@ service ScannedInvoiceDataservice {
   rpc PrepareScannedInvoice(PrepareScannedInvoiceRequest) returns (google.protobuf.Empty);
   rpc ScannedInvoiceFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:scannedinvoice"
+      post: "/v1alpha1/scannedinvoice:feedback"
       body: "*"
     };
   }
   rpc AddScannedInvoiceData(AddScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:scannedinvoice"
+      post: "/v1alpha1/scannedinvoice:data"
       body: "*"
     };
   }
   rpc DeleteScannedInvoice(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/data:delete"
+      post: "/v1alpha1/scannedinvoice:delete"
       body: "*"
     };
   }
