@@ -4528,9 +4528,9 @@ public final class Dataservice {
         int index);
 
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    long getFeedbackTime();
+    long getTimeAdded();
   }
   /**
    * <pre>
@@ -4555,7 +4555,7 @@ public final class Dataservice {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       trueValues_ = java.util.Collections.emptyList();
       predValues_ = java.util.Collections.emptyList();
-      feedbackTime_ = 0L;
+      timeAdded_ = 0L;
     }
 
     @java.lang.Override
@@ -4642,7 +4642,7 @@ public final class Dataservice {
             }
             case 64: {
 
-              feedbackTime_ = input.readUInt64();
+              timeAdded_ = input.readUInt64();
               break;
             }
             default: {
@@ -4909,13 +4909,13 @@ public final class Dataservice {
       return predValues_.get(index);
     }
 
-    public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
-    private long feedbackTime_;
+    public static final int TIME_ADDED_FIELD_NUMBER = 8;
+    private long timeAdded_;
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    public long getFeedbackTime() {
-      return feedbackTime_;
+    public long getTimeAdded() {
+      return timeAdded_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4953,8 +4953,8 @@ public final class Dataservice {
       for (int i = 0; i < predValues_.size(); i++) {
         output.writeMessage(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
-        output.writeUInt64(8, feedbackTime_);
+      if (timeAdded_ != 0L) {
+        output.writeUInt64(8, timeAdded_);
       }
       unknownFields.writeTo(output);
     }
@@ -4994,9 +4994,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
+      if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, feedbackTime_);
+          .computeUInt64Size(8, timeAdded_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5031,8 +5031,8 @@ public final class Dataservice {
           .equals(other.getTrueValuesList());
       result = result && getPredValuesList()
           .equals(other.getPredValuesList());
-      result = result && (getFeedbackTime()
-          == other.getFeedbackTime());
+      result = result && (getTimeAdded()
+          == other.getTimeAdded());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5066,9 +5066,9 @@ public final class Dataservice {
         hash = (37 * hash) + PRED_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getPredValuesList().hashCode();
       }
-      hash = (37 * hash) + FEEDBACK_TIME_FIELD_NUMBER;
+      hash = (37 * hash) + TIME_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFeedbackTime());
+          getTimeAdded());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5234,7 +5234,7 @@ public final class Dataservice {
         } else {
           predValuesBuilder_.clear();
         }
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
 
         return this;
       }
@@ -5295,7 +5295,7 @@ public final class Dataservice {
         } else {
           result.predValues_ = predValuesBuilder_.build();
         }
-        result.feedbackTime_ = feedbackTime_;
+        result.timeAdded_ = timeAdded_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -5422,8 +5422,8 @@ public final class Dataservice {
             }
           }
         }
-        if (other.getFeedbackTime() != 0L) {
-          setFeedbackTime(other.getFeedbackTime());
+        if (other.getTimeAdded() != 0L) {
+          setTimeAdded(other.getTimeAdded());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6353,28 +6353,28 @@ public final class Dataservice {
         return predValuesBuilder_;
       }
 
-      private long feedbackTime_ ;
+      private long timeAdded_ ;
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public long getFeedbackTime() {
-        return feedbackTime_;
+      public long getTimeAdded() {
+        return timeAdded_;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder setFeedbackTime(long value) {
+      public Builder setTimeAdded(long value) {
         
-        feedbackTime_ = value;
+        timeAdded_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder clearFeedbackTime() {
+      public Builder clearTimeAdded() {
         
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
         onChanged();
         return this;
       }
@@ -7988,9 +7988,9 @@ public final class Dataservice {
         int index);
 
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    long getFeedbackTime();
+    long getTimeAdded();
   }
   /**
    * <pre>
@@ -8015,7 +8015,7 @@ public final class Dataservice {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       trueValues_ = java.util.Collections.emptyList();
       predValues_ = java.util.Collections.emptyList();
-      feedbackTime_ = 0L;
+      timeAdded_ = 0L;
     }
 
     @java.lang.Override
@@ -8102,7 +8102,7 @@ public final class Dataservice {
             }
             case 64: {
 
-              feedbackTime_ = input.readUInt64();
+              timeAdded_ = input.readUInt64();
               break;
             }
             default: {
@@ -8369,13 +8369,13 @@ public final class Dataservice {
       return predValues_.get(index);
     }
 
-    public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
-    private long feedbackTime_;
+    public static final int TIME_ADDED_FIELD_NUMBER = 8;
+    private long timeAdded_;
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    public long getFeedbackTime() {
-      return feedbackTime_;
+    public long getTimeAdded() {
+      return timeAdded_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8413,8 +8413,8 @@ public final class Dataservice {
       for (int i = 0; i < predValues_.size(); i++) {
         output.writeMessage(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
-        output.writeUInt64(8, feedbackTime_);
+      if (timeAdded_ != 0L) {
+        output.writeUInt64(8, timeAdded_);
       }
       unknownFields.writeTo(output);
     }
@@ -8454,9 +8454,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
+      if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, feedbackTime_);
+          .computeUInt64Size(8, timeAdded_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8491,8 +8491,8 @@ public final class Dataservice {
           .equals(other.getTrueValuesList());
       result = result && getPredValuesList()
           .equals(other.getPredValuesList());
-      result = result && (getFeedbackTime()
-          == other.getFeedbackTime());
+      result = result && (getTimeAdded()
+          == other.getTimeAdded());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -8526,9 +8526,9 @@ public final class Dataservice {
         hash = (37 * hash) + PRED_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getPredValuesList().hashCode();
       }
-      hash = (37 * hash) + FEEDBACK_TIME_FIELD_NUMBER;
+      hash = (37 * hash) + TIME_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFeedbackTime());
+          getTimeAdded());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -8694,7 +8694,7 @@ public final class Dataservice {
         } else {
           predValuesBuilder_.clear();
         }
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
 
         return this;
       }
@@ -8755,7 +8755,7 @@ public final class Dataservice {
         } else {
           result.predValues_ = predValuesBuilder_.build();
         }
-        result.feedbackTime_ = feedbackTime_;
+        result.timeAdded_ = timeAdded_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8882,8 +8882,8 @@ public final class Dataservice {
             }
           }
         }
-        if (other.getFeedbackTime() != 0L) {
-          setFeedbackTime(other.getFeedbackTime());
+        if (other.getTimeAdded() != 0L) {
+          setTimeAdded(other.getTimeAdded());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9813,28 +9813,28 @@ public final class Dataservice {
         return predValuesBuilder_;
       }
 
-      private long feedbackTime_ ;
+      private long timeAdded_ ;
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public long getFeedbackTime() {
-        return feedbackTime_;
+      public long getTimeAdded() {
+        return timeAdded_;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder setFeedbackTime(long value) {
+      public Builder setTimeAdded(long value) {
         
-        feedbackTime_ = value;
+        timeAdded_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder clearFeedbackTime() {
+      public Builder clearTimeAdded() {
         
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
         onChanged();
         return this;
       }
@@ -11448,9 +11448,9 @@ public final class Dataservice {
         int index);
 
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    long getFeedbackTime();
+    long getTimeAdded();
   }
   /**
    * <pre>
@@ -11475,7 +11475,7 @@ public final class Dataservice {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       trueValues_ = java.util.Collections.emptyList();
       predValues_ = java.util.Collections.emptyList();
-      feedbackTime_ = 0L;
+      timeAdded_ = 0L;
     }
 
     @java.lang.Override
@@ -11562,7 +11562,7 @@ public final class Dataservice {
             }
             case 64: {
 
-              feedbackTime_ = input.readUInt64();
+              timeAdded_ = input.readUInt64();
               break;
             }
             default: {
@@ -11829,13 +11829,13 @@ public final class Dataservice {
       return predValues_.get(index);
     }
 
-    public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
-    private long feedbackTime_;
+    public static final int TIME_ADDED_FIELD_NUMBER = 8;
+    private long timeAdded_;
     /**
-     * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+     * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
-    public long getFeedbackTime() {
-      return feedbackTime_;
+    public long getTimeAdded() {
+      return timeAdded_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -11873,8 +11873,8 @@ public final class Dataservice {
       for (int i = 0; i < predValues_.size(); i++) {
         output.writeMessage(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
-        output.writeUInt64(8, feedbackTime_);
+      if (timeAdded_ != 0L) {
+        output.writeUInt64(8, timeAdded_);
       }
       unknownFields.writeTo(output);
     }
@@ -11914,9 +11914,9 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, predValues_.get(i));
       }
-      if (feedbackTime_ != 0L) {
+      if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt64Size(8, feedbackTime_);
+          .computeUInt64Size(8, timeAdded_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -11951,8 +11951,8 @@ public final class Dataservice {
           .equals(other.getTrueValuesList());
       result = result && getPredValuesList()
           .equals(other.getPredValuesList());
-      result = result && (getFeedbackTime()
-          == other.getFeedbackTime());
+      result = result && (getTimeAdded()
+          == other.getTimeAdded());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -11986,9 +11986,9 @@ public final class Dataservice {
         hash = (37 * hash) + PRED_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getPredValuesList().hashCode();
       }
-      hash = (37 * hash) + FEEDBACK_TIME_FIELD_NUMBER;
+      hash = (37 * hash) + TIME_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getFeedbackTime());
+          getTimeAdded());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -12154,7 +12154,7 @@ public final class Dataservice {
         } else {
           predValuesBuilder_.clear();
         }
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
 
         return this;
       }
@@ -12215,7 +12215,7 @@ public final class Dataservice {
         } else {
           result.predValues_ = predValuesBuilder_.build();
         }
-        result.feedbackTime_ = feedbackTime_;
+        result.timeAdded_ = timeAdded_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -12342,8 +12342,8 @@ public final class Dataservice {
             }
           }
         }
-        if (other.getFeedbackTime() != 0L) {
-          setFeedbackTime(other.getFeedbackTime());
+        if (other.getTimeAdded() != 0L) {
+          setTimeAdded(other.getTimeAdded());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -13273,28 +13273,28 @@ public final class Dataservice {
         return predValuesBuilder_;
       }
 
-      private long feedbackTime_ ;
+      private long timeAdded_ ;
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public long getFeedbackTime() {
-        return feedbackTime_;
+      public long getTimeAdded() {
+        return timeAdded_;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder setFeedbackTime(long value) {
+      public Builder setTimeAdded(long value) {
         
-        feedbackTime_ = value;
+        timeAdded_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint64 feedback_time = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
+       * <code>uint64 time_added = 8 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
-      public Builder clearFeedbackTime() {
+      public Builder clearTimeAdded() {
         
-        feedbackTime_ = 0L;
+        timeAdded_ = 0L;
         onChanged();
         return this;
       }
@@ -14873,81 +14873,81 @@ public final class Dataservice {
       "ntionPolicy\032F\n\017RetentionPolicy\022\022\n\010max_da" +
       "ys\030\001 \001(\005H\000\022\025\n\013max_records\030\002 \001(\005H\000B\010\n\006pol" +
       "icy\"B\n\rDeleteRequest\022\022\n\nmodel_type\030\001 \001(\t" +
-      "\022\017\n\007dataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"\331\003\n\023Scan" +
-      "nedInvoiceEntry\022;\n\002id\030\001 \001(\tB/\352?\'\"%Feedba" +
-      "ck ID, same as Envoy request id\352?\002\010\001\022\027\n\010" +
-      "consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005" +
-      "\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined b" +
-      "y consumer, enriched by service if valet" +
-      "key is used\022?\n\005input\030\005 \001(\01320.asgt.jester" +
-      ".v1alpha1.ScannedInvoiceRequest.Data\0229\n\013" +
-      "true_values\030\006 \003(\0132$.asgt.dataservice.v1a" +
-      "lpha1.DataTuple\022>\n\013pred_values\030\007 \003(\0132).a" +
-      "sgt.dataservice.v1alpha1.PredictedTuple\022" +
-      "\'\n\rfeedback_time\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP" +
-      ":\031\352?\026\n\024scanned_invoice_data\"\311\001\n$PrepareS" +
-      "cannedInvoiceFeedbackRequest\022\n\n\002id\030\001 \001(\t" +
-      "\022\017\n\007dataset\030\002 \001(\t\022?\n\005input\030\003 \001(\01320.asgt." +
-      "jester.v1alpha1.ScannedInvoiceRequest.Da" +
+      "\022\017\n\007dataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"\336\003\n\023Scan" +
+      "nedInvoiceEntry\022C\n\002id\030\001 \001(\tB7\352?/\"-ID, ma" +
+      "tches Envoy request id if feedback data\352" +
+      "?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset" +
+      "\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags d" +
+      "efined by consumer, enriched by service " +
+      "if valetkey is used\022?\n\005input\030\005 \001(\01320.asg" +
+      "t.jester.v1alpha1.ScannedInvoiceRequest." +
+      "Data\0229\n\013true_values\030\006 \003(\0132$.asgt.dataser" +
+      "vice.v1alpha1.DataTuple\022>\n\013pred_values\030\007" +
+      " \003(\0132).asgt.dataservice.v1alpha1.Predict" +
+      "edTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIME" +
+      "STAMP:\031\352?\026\n\024scanned_invoice_data\"\311\001\n$Pre" +
+      "pareScannedInvoiceFeedbackRequest\022\n\n\002id\030" +
+      "\001 \001(\t\022\017\n\007dataset\030\002 \001(\t\022?\n\005input\030\003 \001(\01320." +
+      "asgt.jester.v1alpha1.ScannedInvoiceReque" +
+      "st.Data\0225\n\013predictions\030\004 \003(\0132 .asgt.jest" +
+      "er.v1alpha1.Prediction\022\014\n\004tags\030\005 \003(\t\"\364\003\n" +
+      "\032ElectronicInvoiceLineEntry\022C\n\002id\030\001 \001(\tB" +
+      "7\352?/\"-ID, matches Envoy request id if fe" +
+      "edback data\352?\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010" +
+      "\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tB" +
+      "F\352?C\"ATags defined by consumer, enriched" +
+      " by service if valetkey is used\022F\n\005input" +
+      "\030\005 \001(\01327.asgt.jester.v1alpha1.Electronic" +
+      "InvoiceLineRequest.Data\0229\n\013true_values\030\006" +
+      " \003(\0132$.asgt.dataservice.v1alpha1.DataTup" +
+      "le\022>\n\013pred_values\030\007 \003(\0132).asgt.dataservi" +
+      "ce.v1alpha1.PredictedTuple\022$\n\ntime_added" +
+      "\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034electroni" +
+      "c_invoice_line_data\"\327\001\n+PrepareElectroni" +
+      "cInvoiceLineFeedbackRequest\022\n\n\002id\030\001 \001(\t\022" +
+      "\017\n\007dataset\030\002 \001(\t\022F\n\005input\030\003 \001(\01327.asgt.j" +
+      "ester.v1alpha1.ElectronicInvoiceLineRequ" +
+      "est.Data\0225\n\013predictions\030\004 \003(\0132 .asgt.jes" +
+      "ter.v1alpha1.Prediction\022\014\n\004tags\030\005 \003(\t\"\277\003" +
+      "\n\tBankEntry\022C\n\002id\030\001 \001(\tB7\352?/\"-ID, matche" +
+      "s Envoy request id if feedback data\352?\002\010\001" +
+      "\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001" +
+      "(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defin" +
+      "ed by consumer, enriched by service if v" +
+      "aletkey is used\0225\n\005input\030\005 \001(\0132&.asgt.je" +
+      "ster.v1alpha1.BankRequest.Data\0229\n\013true_v" +
+      "alues\030\006 \003(\0132$.asgt.dataservice.v1alpha1." +
+      "DataTuple\022>\n\013pred_values\030\007 \003(\0132).asgt.da" +
+      "taservice.v1alpha1.PredictedTuple\022$\n\ntim" +
+      "e_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tba" +
+      "nk_data\"\265\001\n\032PrepareBankFeedbackRequest\022\n" +
+      "\n\002id\030\001 \001(\t\022\017\n\007dataset\030\002 \001(\t\0225\n\005input\030\003 \001" +
+      "(\0132&.asgt.jester.v1alpha1.BankRequest.Da" +
       "ta\0225\n\013predictions\030\004 \003(\0132 .asgt.jester.v1" +
-      "alpha1.Prediction\022\014\n\004tags\030\005 \003(\t\"\357\003\n\032Elec" +
-      "tronicInvoiceLineEntry\022;\n\002id\030\001 \001(\tB/\352?\'\"" +
-      "%Feedback ID, same as Envoy request id\352?" +
-      "\002\010\001\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030" +
-      "\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags de" +
-      "fined by consumer, enriched by service i" +
-      "f valetkey is used\022F\n\005input\030\005 \001(\01327.asgt" +
-      ".jester.v1alpha1.ElectronicInvoiceLineRe" +
-      "quest.Data\0229\n\013true_values\030\006 \003(\0132$.asgt.d" +
-      "ataservice.v1alpha1.DataTuple\022>\n\013pred_va" +
-      "lues\030\007 \003(\0132).asgt.dataservice.v1alpha1.P" +
-      "redictedTuple\022\'\n\rfeedback_time\030\010 \001(\004B\020\352?" +
-      "\r\010\001\022\tTIMESTAMP:!\352?\036\n\034electronic_invoice_" +
-      "line_data\"\327\001\n+PrepareElectronicInvoiceLi" +
-      "neFeedbackRequest\022\n\n\002id\030\001 \001(\t\022\017\n\007dataset" +
-      "\030\002 \001(\t\022F\n\005input\030\003 \001(\01327.asgt.jester.v1al" +
-      "pha1.ElectronicInvoiceLineRequest.Data\0225" +
-      "\n\013predictions\030\004 \003(\0132 .asgt.jester.v1alph" +
-      "a1.Prediction\022\014\n\004tags\030\005 \003(\t\"\272\003\n\tBankEntr" +
-      "y\022;\n\002id\030\001 \001(\tB/\352?\'\"%Feedback ID, same as" +
-      " Envoy request id\352?\002\010\001\022\027\n\010consumer\030\002 \001(\t" +
-      "B\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030" +
-      "\004 \003(\tBF\352?C\"ATags defined by consumer, en" +
-      "riched by service if valetkey is used\0225\n" +
-      "\005input\030\005 \001(\0132&.asgt.jester.v1alpha1.Bank" +
-      "Request.Data\0229\n\013true_values\030\006 \003(\0132$.asgt" +
-      ".dataservice.v1alpha1.DataTuple\022>\n\013pred_" +
-      "values\030\007 \003(\0132).asgt.dataservice.v1alpha1" +
-      ".PredictedTuple\022\'\n\rfeedback_time\030\010 \001(\004B\020" +
-      "\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_data\"\265\001\n\032Pre" +
-      "pareBankFeedbackRequest\022\n\n\002id\030\001 \001(\t\022\017\n\007d" +
-      "ataset\030\002 \001(\t\0225\n\005input\030\003 \001(\0132&.asgt.jeste" +
-      "r.v1alpha1.BankRequest.Data\0225\n\013predictio" +
-      "ns\030\004 \003(\0132 .asgt.jester.v1alpha1.Predicti" +
-      "on\022\014\n\004tags\030\005 \003(\t2\362\006\n\013DataService\022x\n\035Prep" +
-      "areScannedInvoiceFeedback\022?.asgt.dataser" +
-      "vice.v1alpha1.PrepareScannedInvoiceFeedb" +
-      "ackRequest\032\026.google.protobuf.Empty\022\204\001\n\025S" +
-      "cannedInvoiceAddData\022).asgt.dataservice." +
-      "v1alpha1.AddDataRequest\032\026.google.protobu" +
-      "f.Empty\"(\202\323\344\223\002\"\"\035/v1alpha1/data:scannedi" +
-      "nvoice:\001*\022~\n#PrepareElectronicInvoicLine" +
-      "Feedback\022?.asgt.dataservice.v1alpha1.Pre" +
-      "pareScannedInvoiceFeedbackRequest\032\026.goog" +
-      "le.protobuf.Empty\022\221\001\n\033ElectronicInvoicLi" +
-      "neAddData\022).asgt.dataservice.v1alpha1.Ad" +
-      "dDataRequest\032\026.google.protobuf.Empty\"/\202\323" +
-      "\344\223\002)\"$/v1alpha1/data:electronicinvoiceli" +
-      "ne:\001*\022n\n\023PrepareBankFeedback\022?.asgt.data" +
-      "service.v1alpha1.PrepareScannedInvoiceFe" +
-      "edbackRequest\032\026.google.protobuf.Empty\022p\n" +
-      "\013BankAddData\022).asgt.dataservice.v1alpha1" +
-      ".AddDataRequest\032\026.google.protobuf.Empty\"" +
-      "\036\202\323\344\223\002\030\"\023/v1alpha1/data:bank:\001*\022l\n\006Delet" +
-      "e\022(.asgt.dataservice.v1alpha1.DeleteRequ" +
-      "est\032\026.google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1" +
-      "alpha1/data:delete:\001*B\rZ\013dataserviceb\006pr" +
-      "oto3"
+      "alpha1.Prediction\022\014\n\004tags\030\005 \003(\t2\362\006\n\013Data" +
+      "Service\022x\n\035PrepareScannedInvoiceFeedback" +
+      "\022?.asgt.dataservice.v1alpha1.PrepareScan" +
+      "nedInvoiceFeedbackRequest\032\026.google.proto" +
+      "buf.Empty\022\204\001\n\025ScannedInvoiceAddData\022).as" +
+      "gt.dataservice.v1alpha1.AddDataRequest\032\026" +
+      ".google.protobuf.Empty\"(\202\323\344\223\002\"\"\035/v1alpha" +
+      "1/data:scannedinvoice:\001*\022~\n#PrepareElect" +
+      "ronicInvoicLineFeedback\022?.asgt.dataservi" +
+      "ce.v1alpha1.PrepareScannedInvoiceFeedbac" +
+      "kRequest\032\026.google.protobuf.Empty\022\221\001\n\033Ele" +
+      "ctronicInvoicLineAddData\022).asgt.dataserv" +
+      "ice.v1alpha1.AddDataRequest\032\026.google.pro" +
+      "tobuf.Empty\"/\202\323\344\223\002)\"$/v1alpha1/data:elec" +
+      "tronicinvoiceline:\001*\022n\n\023PrepareBankFeedb" +
+      "ack\022?.asgt.dataservice.v1alpha1.PrepareS" +
+      "cannedInvoiceFeedbackRequest\032\026.google.pr" +
+      "otobuf.Empty\022p\n\013BankAddData\022).asgt.datas" +
+      "ervice.v1alpha1.AddDataRequest\032\026.google." +
+      "protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1alpha1/data:b" +
+      "ank:\001*\022l\n\006Delete\022(.asgt.dataservice.v1al" +
+      "pha1.DeleteRequest\032\026.google.protobuf.Emp" +
+      "ty\" \202\323\344\223\002\032\"\025/v1alpha1/data:delete:\001*B\rZ\013" +
+      "dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15001,7 +15001,7 @@ public final class Dataservice {
     internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "FeedbackTime", });
+        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceFeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceFeedbackRequest_fieldAccessorTable = new
@@ -15013,7 +15013,7 @@ public final class Dataservice {
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "FeedbackTime", });
+        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineFeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_asgt_dataservice_v1alpha1_PrepareElectronicInvoiceLineFeedbackRequest_fieldAccessorTable = new
@@ -15025,7 +15025,7 @@ public final class Dataservice {
     internal_static_asgt_dataservice_v1alpha1_BankEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "FeedbackTime", });
+        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_PrepareBankFeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_asgt_dataservice_v1alpha1_PrepareBankFeedbackRequest_fieldAccessorTable = new

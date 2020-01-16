@@ -3,7 +3,7 @@
   "name": "id",
   "type": "STRING",
   "mode": "REQUIRED",
-  "description": "Feedback ID, same as Envoy request id"
+  "description": "ID, matches Envoy request id if feedback data"
  },
  {
   "name": "consumer",
@@ -88,7 +88,7 @@
   ]
  },
  {
-  "name": "feedback_time",
+  "name": "time_added",
   "type": "TIMESTAMP",
   "mode": "REQUIRED"
  }

@@ -1196,7 +1196,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.toObject = function(includeI
     proto.asgt.dataservice.v1alpha1.DataTuple.toObject, includeInstance),
     predValuesList: jspb.Message.toObjectList(msg.getPredValuesList(),
     proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject, includeInstance),
-    feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -1266,7 +1266,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.deserializeBinaryFromReader 
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setFeedbackTime(value);
+      msg.setTimeAdded(value);
       break;
     default:
       reader.skipField();
@@ -1349,7 +1349,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.serializeBinaryToWriter = fu
       proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter
     );
   }
-  f = message.getFeedbackTime();
+  f = message.getTimeAdded();
   if (f !== 0) {
     writer.writeUint64(
       8,
@@ -1526,16 +1526,16 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.clearPredValuesLis
 
 
 /**
- * optional uint64 feedback_time = 8;
+ * optional uint64 time_added = 8;
  * @return {number}
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getFeedbackTime = function() {
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getTimeAdded = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setFeedbackTime = function(value) {
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setTimeAdded = function(value) {
   jspb.Message.setProto3IntField(this, 8, value);
 };
 
@@ -1910,7 +1910,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.toObject = function(i
     proto.asgt.dataservice.v1alpha1.DataTuple.toObject, includeInstance),
     predValuesList: jspb.Message.toObjectList(msg.getPredValuesList(),
     proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject, includeInstance),
-    feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -1980,7 +1980,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.deserializeBinaryFrom
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setFeedbackTime(value);
+      msg.setTimeAdded(value);
       break;
     default:
       reader.skipField();
@@ -2063,7 +2063,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.serializeBinaryToWrit
       proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter
     );
   }
-  f = message.getFeedbackTime();
+  f = message.getTimeAdded();
   if (f !== 0) {
     writer.writeUint64(
       8,
@@ -2240,16 +2240,16 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.clearPredVa
 
 
 /**
- * optional uint64 feedback_time = 8;
+ * optional uint64 time_added = 8;
  * @return {number}
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getFeedbackTime = function() {
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getTimeAdded = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setFeedbackTime = function(value) {
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setTimeAdded = function(value) {
   jspb.Message.setProto3IntField(this, 8, value);
 };
 
@@ -2624,7 +2624,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.toObject = function(includeInstance, m
     proto.asgt.dataservice.v1alpha1.DataTuple.toObject, includeInstance),
     predValuesList: jspb.Message.toObjectList(msg.getPredValuesList(),
     proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject, includeInstance),
-    feedbackTime: jspb.Message.getFieldWithDefault(msg, 8, 0)
+    timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
   if (includeInstance) {
@@ -2694,7 +2694,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.deserializeBinaryFromReader = function
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
-      msg.setFeedbackTime(value);
+      msg.setTimeAdded(value);
       break;
     default:
       reader.skipField();
@@ -2777,7 +2777,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.serializeBinaryToWriter = function(mes
       proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter
     );
   }
-  f = message.getFeedbackTime();
+  f = message.getTimeAdded();
   if (f !== 0) {
     writer.writeUint64(
       8,
@@ -2954,16 +2954,16 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearPredValuesList = functi
 
 
 /**
- * optional uint64 feedback_time = 8;
+ * optional uint64 time_added = 8;
  * @return {number}
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getFeedbackTime = function() {
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getTimeAdded = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
 };
 
 
 /** @param {number} value */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setFeedbackTime = function(value) {
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setTimeAdded = function(value) {
   jspb.Message.setProto3IntField(this, 8, value);
 };
 
