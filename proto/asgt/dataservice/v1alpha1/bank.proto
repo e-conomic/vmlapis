@@ -16,7 +16,7 @@ service BankDataservice {
   rpc PrepareBankFeedback(PrepareBankRequest) returns (google.protobuf.Empty);
   rpc BankFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/feedback:scannedinvoice"
+      post: "/v1alpha1/feedback:bank"
       body: "*"
     };
   }
