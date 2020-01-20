@@ -49,25 +49,25 @@ namespace Asgt.Jester.V1Alpha1 {
             "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBXRvdGFsGAcg",
             "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSLwoJbGluZV90ZXh0",
             "GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2xpbmVf",
-            "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUitQIKC0Jh",
+            "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUitgIKC0Jh",
             "bmtSZXF1ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxw",
             "aGExLkJhbmtSZXF1ZXN0LkRhdGESFAoMZGF0YXNldF9uYW1lGAIgASgJEjgK",
             "B29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0",
-            "aW9uT3B0aW9ucxqdAQoERGF0YRIWCg5hY2NvdW50X251bWJlchgBIAEoBRIr",
-            "CgZhbW91bnQYAiABKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZRIS",
-            "CgplbnRyeV90eXBlGAMgASgFEgwKBHRleHQYBCABKAkSLgoKdGltZV9zdGFt",
-            "cBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy1AMKBkplc3Rl",
-            "chKaAQoZU2Nhbm5lZEludm9pY2VTdWdnZXN0aW9ucxIrLmFzZ3QuamVzdGVy",
-            "LnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlUmVxdWVzdBopLmFzZ3QuamVzdGVy",
-            "LnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiJYLT5JMCHyIaL3YxL3Nj",
-            "YW5uZWRpbnZvaWNlOnN1Z2dlc3Q6ASoSrgEKH0VsZWN0cm9uaWNJbnZvaWNM",
-            "aW5lU3VnZ2VzdGlvbnMSMi5hc2d0Lmplc3Rlci52MWFscGhhMS5FbGVjdHJv",
-            "bmljSW52b2ljZUxpbmVSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
-            "U3VnZ2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjEvZWxlY3Ryb25pY2lu",
-            "dm9pY2VsaW5lOnN1Z2dlc3Q6ASoSfAoPQmFua1N1Z2dlc3Rpb25zEiEuYXNn",
-            "dC5qZXN0ZXIudjFhbHBoYTEuQmFua1JlcXVlc3QaKS5hc2d0Lmplc3Rlci52",
-            "MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIhuC0+STAhUiEC92MS9iYW5r",
-            "OnN1Z2dlc3Q6ASpCCFoGamVzdGVyYgZwcm90bzM="));
+            "aW9uT3B0aW9ucxqeAQoERGF0YRIWCg5hY2NvdW50X251bWJlchgBIAEoBRIs",
+            "CgZhbW91bnQYAiABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUS",
+            "EgoKZW50cnlfdHlwZRgDIAEoBRIMCgR0ZXh0GAQgASgJEi4KCnRpbWVfc3Rh",
+            "bXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMtQDCgZKZXN0",
+            "ZXISmgEKGVNjYW5uZWRJbnZvaWNlU3VnZ2VzdGlvbnMSKy5hc2d0Lmplc3Rl",
+            "ci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QaKS5hc2d0Lmplc3Rl",
+            "ci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiWC0+STAh8iGi92MS9z",
+            "Y2FubmVkaW52b2ljZTpzdWdnZXN0OgEqEq4BCh9FbGVjdHJvbmljSW52b2lj",
+            "TGluZVN1Z2dlc3Rpb25zEjIuYXNndC5qZXN0ZXIudjFhbHBoYTEuRWxlY3Ry",
+            "b25pY0ludm9pY2VMaW5lUmVxdWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGEx",
+            "LlN1Z2dlc3Rpb25zUmVzcG9uc2UiLILT5JMCJiIhL3YxL2VsZWN0cm9uaWNp",
+            "bnZvaWNlbGluZTpzdWdnZXN0OgEqEnwKD0JhbmtTdWdnZXN0aW9ucxIhLmFz",
+            "Z3QuamVzdGVyLnYxYWxwaGExLkJhbmtSZXF1ZXN0GikuYXNndC5qZXN0ZXIu",
+            "djFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIbgtPkkwIVIhAvdjEvYmFu",
+            "azpzdWdnZXN0OgEqQghaBmplc3RlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -1511,10 +1511,10 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "amount" field.</summary>
         public const int AmountFieldNumber = 2;
-        private static readonly pb::FieldCodec<float?> _single_amount_codec = pb::FieldCodec.ForStructWrapper<float>(18);
-        private float? amount_;
+        private static readonly pb::FieldCodec<double?> _single_amount_codec = pb::FieldCodec.ForStructWrapper<double>(18);
+        private double? amount_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public float? Amount {
+        public double? Amount {
           get { return amount_; }
           set {
             amount_ = value;
@@ -1568,7 +1568,7 @@ namespace Asgt.Jester.V1Alpha1 {
             return true;
           }
           if (AccountNumber != other.AccountNumber) return false;
-          if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
           if (EntryType != other.EntryType) return false;
           if (Text != other.Text) return false;
           if (!object.Equals(TimeStamp, other.TimeStamp)) return false;
@@ -1579,7 +1579,7 @@ namespace Asgt.Jester.V1Alpha1 {
         public override int GetHashCode() {
           int hash = 1;
           if (AccountNumber != 0) hash ^= AccountNumber.GetHashCode();
-          if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Amount);
+          if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(Amount);
           if (EntryType != 0) hash ^= EntryType.GetHashCode();
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           if (timeStamp_ != null) hash ^= TimeStamp.GetHashCode();
@@ -1653,7 +1653,7 @@ namespace Asgt.Jester.V1Alpha1 {
             AccountNumber = other.AccountNumber;
           }
           if (other.amount_ != null) {
-            if (amount_ == null || other.Amount != 0F) {
+            if (amount_ == null || other.Amount != 0D) {
               Amount = other.Amount;
             }
           }
@@ -1685,8 +1685,8 @@ namespace Asgt.Jester.V1Alpha1 {
                 break;
               }
               case 18: {
-                float? value = _single_amount_codec.Read(input);
-                if (amount_ == null || value != 0F) {
+                double? value = _single_amount_codec.Read(input);
+                if (amount_ == null || value != 0D) {
                   Amount = value;
                 }
                 break;
