@@ -22,7 +22,7 @@
  {
   "name": "retention_policy",
   "type": "RECORD",
-  "mode": "NULLABLE",
+  "mode": "REQUIRED",
   "fields": [
    {
     "name": "max_days",
@@ -35,5 +35,10 @@
     "mode": "NULLABLE"
    }
   ]
+ },
+ {
+  "name": "hash",
+  "type": "STRING",
+  "mode": "REQUIRED"
  }
 ]

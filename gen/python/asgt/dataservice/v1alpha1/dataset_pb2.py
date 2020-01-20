@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n\'asgt/dataservice/v1alpha1/dataset.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\"\x8b\x02\n\x07\x44\x61taset\x12\x17\n\x08\x63onsumer\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04name\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12<\n\x04type\x18\x03 \x01(\x0e\x32\'.asgt.dataservice.v1alpha1.Dataset.TypeB\x05\xea?\x02\x08\x01\x12\x0f\n\x07targets\x18\x04 \x03(\t\x12\x44\n\x10retention_policy\x18\x05 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\".\n\x04Type\x12\x08\n\x04\x42\x41NK\x10\x00\x12\x13\n\x0fSCANNED_INVOICE\x10\x01\x12\x07\n\x03\x45IL\x10\x02:\r\xea?\n\n\x08\x64\x61tasetsB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n\'asgt/dataservice/v1alpha1/dataset.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\"\xa7\x02\n\x07\x44\x61taset\x12\x17\n\x08\x63onsumer\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04name\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12<\n\x04type\x18\x03 \x01(\x0e\x32\'.asgt.dataservice.v1alpha1.Dataset.TypeB\x05\xea?\x02\x08\x01\x12\x0f\n\x07targets\x18\x04 \x03(\t\x12K\n\x10retention_policy\x18\x05 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicyB\x05\xea?\x02\x08\x01\x12\x13\n\x04hash\x18\x06 \x01(\tB\x05\xea?\x02\x08\x01\".\n\x04Type\x12\x08\n\x04\x42\x41NK\x10\x00\x12\x13\n\x0fSCANNED_INVOICE\x10\x01\x12\x07\n\x03\x45IL\x10\x02:\r\xea?\n\n\x08\x64\x61tasetsB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,])
 
@@ -49,8 +49,8 @@ _DATASET_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=375,
-  serialized_end=421,
+  serialized_start=403,
+  serialized_end=449,
 )
 _sym_db.RegisterEnumDescriptor(_DATASET_TYPE)
 
@@ -96,7 +96,14 @@ _DATASET = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='hash', full_name='asgt.dataservice.v1alpha1.Dataset.hash', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -111,7 +118,7 @@ _DATASET = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=169,
-  serialized_end=436,
+  serialized_end=464,
 )
 
 _DATASET.fields_by_name['type'].enum_type = _DATASET_TYPE
@@ -132,5 +139,7 @@ DESCRIPTOR._options = None
 _DATASET.fields_by_name['consumer']._options = None
 _DATASET.fields_by_name['name']._options = None
 _DATASET.fields_by_name['type']._options = None
+_DATASET.fields_by_name['retention_policy']._options = None
+_DATASET.fields_by_name['hash']._options = None
 _DATASET._options = None
 # @@protoc_insertion_point(module_scope)

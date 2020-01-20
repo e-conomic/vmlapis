@@ -74,7 +74,8 @@ proto.asgt.dataservice.v1alpha1.Dataset.toObject = function(includeInstance, msg
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     type: jspb.Message.getFieldWithDefault(msg, 3, 0),
     targetsList: jspb.Message.getRepeatedField(msg, 4),
-    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.toObject(includeInstance, f)
+    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.toObject(includeInstance, f),
+    hash: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -131,6 +132,10 @@ proto.asgt.dataservice.v1alpha1.Dataset.deserializeBinaryFromReader = function(m
       var value = new asgt_dataservice_v1alpha1_data_pb.RetentionPolicy;
       reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.deserializeBinaryFromReader);
       msg.setRetentionPolicy(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setHash(value);
       break;
     default:
       reader.skipField();
@@ -195,6 +200,13 @@ proto.asgt.dataservice.v1alpha1.Dataset.serializeBinaryToWriter = function(messa
       5,
       f,
       asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.serializeBinaryToWriter
+    );
+  }
+  f = message.getHash();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
+      f
     );
   }
 };
@@ -310,6 +322,21 @@ proto.asgt.dataservice.v1alpha1.Dataset.prototype.clearRetentionPolicy = functio
  */
 proto.asgt.dataservice.v1alpha1.Dataset.prototype.hasRetentionPolicy = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional string hash = 6;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.Dataset.prototype.getHash = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.Dataset.prototype.setHash = function(value) {
+  jspb.Message.setProto3StringField(this, 6, value);
 };
 
 
