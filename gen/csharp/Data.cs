@@ -34,7 +34,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "dmljZS52MWFscGhhMS5GZWVkYmFja1JlcXVlc3QuRW50cnkaTgoFRW50cnkS",
             "CgoCaWQYASABKAkSOQoLdHJ1ZV92YWx1ZXMYAiADKAsyJC5hc2d0LmRhdGFz",
             "ZXJ2aWNlLnYxYWxwaGExLkRhdGFUdXBsZSJGCg9SZXRlbnRpb25Qb2xpY3kS",
-            "EgoIbWF4X2RheXMYASABKAVIABIVCgttYXhfcmVjb3JkcxgCIAEoBUgAQggK",
+            "EgoIbWF4X2RheXMYASABKANIABIVCgttYXhfcmVjb3JkcxgCIAEoA0gAQggK",
             "BnBvbGljeUINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -909,8 +909,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     /// <summary>Field number for the "max_days" field.</summary>
     public const int MaxDaysFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxDays {
-      get { return policyCase_ == PolicyOneofCase.MaxDays ? (int) policy_ : 0; }
+    public long MaxDays {
+      get { return policyCase_ == PolicyOneofCase.MaxDays ? (long) policy_ : 0L; }
       set {
         policy_ = value;
         policyCase_ = PolicyOneofCase.MaxDays;
@@ -920,8 +920,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     /// <summary>Field number for the "max_records" field.</summary>
     public const int MaxRecordsFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxRecords {
-      get { return policyCase_ == PolicyOneofCase.MaxRecords ? (int) policy_ : 0; }
+    public long MaxRecords {
+      get { return policyCase_ == PolicyOneofCase.MaxRecords ? (long) policy_ : 0L; }
       set {
         policy_ = value;
         policyCase_ = PolicyOneofCase.MaxRecords;
@@ -987,11 +987,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public void WriteTo(pb::CodedOutputStream output) {
       if (policyCase_ == PolicyOneofCase.MaxDays) {
         output.WriteRawTag(8);
-        output.WriteInt32(MaxDays);
+        output.WriteInt64(MaxDays);
       }
       if (policyCase_ == PolicyOneofCase.MaxRecords) {
         output.WriteRawTag(16);
-        output.WriteInt32(MaxRecords);
+        output.WriteInt64(MaxRecords);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1002,10 +1002,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public int CalculateSize() {
       int size = 0;
       if (policyCase_ == PolicyOneofCase.MaxDays) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDays);
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxDays);
       }
       if (policyCase_ == PolicyOneofCase.MaxRecords) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxRecords);
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxRecords);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1039,11 +1039,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            MaxDays = input.ReadInt32();
+            MaxDays = input.ReadInt64();
             break;
           }
           case 16: {
-            MaxRecords = input.ReadInt32();
+            MaxRecords = input.ReadInt64();
             break;
           }
         }

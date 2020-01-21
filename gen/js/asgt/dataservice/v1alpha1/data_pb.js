@@ -1136,11 +1136,11 @@ proto.asgt.dataservice.v1alpha1.RetentionPolicy.deserializeBinaryFromReader = fu
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setMaxDays(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt32());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setMaxRecords(value);
       break;
     default:
@@ -1174,14 +1174,14 @@ proto.asgt.dataservice.v1alpha1.RetentionPolicy.serializeBinaryToWriter = functi
   var f = undefined;
   f = /** @type {number} */ (jspb.Message.getField(message, 1));
   if (f != null) {
-    writer.writeInt32(
+    writer.writeInt64(
       1,
       f
     );
   }
   f = /** @type {number} */ (jspb.Message.getField(message, 2));
   if (f != null) {
-    writer.writeInt32(
+    writer.writeInt64(
       2,
       f
     );
@@ -1190,7 +1190,7 @@ proto.asgt.dataservice.v1alpha1.RetentionPolicy.serializeBinaryToWriter = functi
 
 
 /**
- * optional int32 max_days = 1;
+ * optional int64 max_days = 1;
  * @return {number}
  */
 proto.asgt.dataservice.v1alpha1.RetentionPolicy.prototype.getMaxDays = function() {
@@ -1219,7 +1219,7 @@ proto.asgt.dataservice.v1alpha1.RetentionPolicy.prototype.hasMaxDays = function(
 
 
 /**
- * optional int32 max_records = 2;
+ * optional int64 max_records = 2;
  * @return {number}
  */
 proto.asgt.dataservice.v1alpha1.RetentionPolicy.prototype.getMaxRecords = function() {

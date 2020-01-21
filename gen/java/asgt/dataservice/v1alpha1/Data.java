@@ -4380,14 +4380,14 @@ public final class Data {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int32 max_days = 1;</code>
+     * <code>int64 max_days = 1;</code>
      */
-    int getMaxDays();
+    long getMaxDays();
 
     /**
-     * <code>int32 max_records = 2;</code>
+     * <code>int64 max_records = 2;</code>
      */
-    int getMaxRecords();
+    long getMaxRecords();
 
     public asgt.dataservice.v1alpha1.Data.RetentionPolicy.PolicyCase getPolicyCase();
   }
@@ -4432,12 +4432,12 @@ public final class Data {
               break;
             case 8: {
               policyCase_ = 1;
-              policy_ = input.readInt32();
+              policy_ = input.readInt64();
               break;
             }
             case 16: {
               policyCase_ = 2;
-              policy_ = input.readInt32();
+              policy_ = input.readInt64();
               break;
             }
             default: {
@@ -4512,24 +4512,24 @@ public final class Data {
 
     public static final int MAX_DAYS_FIELD_NUMBER = 1;
     /**
-     * <code>int32 max_days = 1;</code>
+     * <code>int64 max_days = 1;</code>
      */
-    public int getMaxDays() {
+    public long getMaxDays() {
       if (policyCase_ == 1) {
-        return (java.lang.Integer) policy_;
+        return (java.lang.Long) policy_;
       }
-      return 0;
+      return 0L;
     }
 
     public static final int MAX_RECORDS_FIELD_NUMBER = 2;
     /**
-     * <code>int32 max_records = 2;</code>
+     * <code>int64 max_records = 2;</code>
      */
-    public int getMaxRecords() {
+    public long getMaxRecords() {
       if (policyCase_ == 2) {
-        return (java.lang.Integer) policy_;
+        return (java.lang.Long) policy_;
       }
-      return 0;
+      return 0L;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4547,12 +4547,12 @@ public final class Data {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (policyCase_ == 1) {
-        output.writeInt32(
-            1, (int)((java.lang.Integer) policy_));
+        output.writeInt64(
+            1, (long)((java.lang.Long) policy_));
       }
       if (policyCase_ == 2) {
-        output.writeInt32(
-            2, (int)((java.lang.Integer) policy_));
+        output.writeInt64(
+            2, (long)((java.lang.Long) policy_));
       }
       unknownFields.writeTo(output);
     }
@@ -4565,13 +4565,13 @@ public final class Data {
       size = 0;
       if (policyCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(
-              1, (int)((java.lang.Integer) policy_));
+          .computeInt64Size(
+              1, (long)((java.lang.Long) policy_));
       }
       if (policyCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(
-              2, (int)((java.lang.Integer) policy_));
+          .computeInt64Size(
+              2, (long)((java.lang.Long) policy_));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4618,11 +4618,13 @@ public final class Data {
       switch (policyCase_) {
         case 1:
           hash = (37 * hash) + MAX_DAYS_FIELD_NUMBER;
-          hash = (53 * hash) + getMaxDays();
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMaxDays());
           break;
         case 2:
           hash = (37 * hash) + MAX_RECORDS_FIELD_NUMBER;
-          hash = (53 * hash) + getMaxRecords();
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getMaxRecords());
           break;
         case 0:
         default:
@@ -4901,25 +4903,25 @@ public final class Data {
 
 
       /**
-       * <code>int32 max_days = 1;</code>
+       * <code>int64 max_days = 1;</code>
        */
-      public int getMaxDays() {
+      public long getMaxDays() {
         if (policyCase_ == 1) {
-          return (java.lang.Integer) policy_;
+          return (java.lang.Long) policy_;
         }
-        return 0;
+        return 0L;
       }
       /**
-       * <code>int32 max_days = 1;</code>
+       * <code>int64 max_days = 1;</code>
        */
-      public Builder setMaxDays(int value) {
+      public Builder setMaxDays(long value) {
         policyCase_ = 1;
         policy_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 max_days = 1;</code>
+       * <code>int64 max_days = 1;</code>
        */
       public Builder clearMaxDays() {
         if (policyCase_ == 1) {
@@ -4931,25 +4933,25 @@ public final class Data {
       }
 
       /**
-       * <code>int32 max_records = 2;</code>
+       * <code>int64 max_records = 2;</code>
        */
-      public int getMaxRecords() {
+      public long getMaxRecords() {
         if (policyCase_ == 2) {
-          return (java.lang.Integer) policy_;
+          return (java.lang.Long) policy_;
         }
-        return 0;
+        return 0L;
       }
       /**
-       * <code>int32 max_records = 2;</code>
+       * <code>int64 max_records = 2;</code>
        */
-      public Builder setMaxRecords(int value) {
+      public Builder setMaxRecords(long value) {
         policyCase_ = 2;
         policy_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>int32 max_records = 2;</code>
+       * <code>int64 max_records = 2;</code>
        */
       public Builder clearMaxRecords() {
         if (policyCase_ == 2) {
@@ -5062,8 +5064,8 @@ public final class Data {
       "v1alpha1.FeedbackRequest.Entry\032N\n\005Entry\022" +
       "\n\n\002id\030\001 \001(\t\0229\n\013true_values\030\002 \003(\0132$.asgt." +
       "dataservice.v1alpha1.DataTuple\"F\n\017Retent" +
-      "ionPolicy\022\022\n\010max_days\030\001 \001(\005H\000\022\025\n\013max_rec" +
-      "ords\030\002 \001(\005H\000B\010\n\006policyB\rZ\013dataserviceb\006p" +
+      "ionPolicy\022\022\n\010max_days\030\001 \001(\003H\000\022\025\n\013max_rec" +
+      "ords\030\002 \001(\003H\000B\010\n\006policyB\rZ\013dataserviceb\006p" +
       "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
