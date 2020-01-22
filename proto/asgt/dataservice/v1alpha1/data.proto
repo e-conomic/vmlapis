@@ -34,7 +34,7 @@ message FeedbackRequest {
 
 message RetentionPolicy {
   oneof policy {
-    int32 max_days = 1;
-    int32 max_records = 2;
+    int64 max_days = 1;
+    int64 max_records = 2;
   }
 }

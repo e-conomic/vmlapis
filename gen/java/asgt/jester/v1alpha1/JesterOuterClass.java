@@ -6443,17 +6443,17 @@ public final class JesterOuterClass {
       int getAccountNumber();
 
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
       boolean hasAmount();
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
-      com.google.protobuf.FloatValue getAmount();
+      com.google.protobuf.DoubleValue getAmount();
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
-      com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder();
+      com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder();
 
       /**
        * <code>int32 entry_type = 3;</code>
@@ -6531,11 +6531,11 @@ public final class JesterOuterClass {
                 break;
               }
               case 18: {
-                com.google.protobuf.FloatValue.Builder subBuilder = null;
+                com.google.protobuf.DoubleValue.Builder subBuilder = null;
                 if (amount_ != null) {
                   subBuilder = amount_.toBuilder();
                 }
-                amount_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+                amount_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(amount_);
                   amount_ = subBuilder.buildPartial();
@@ -6609,23 +6609,23 @@ public final class JesterOuterClass {
       }
 
       public static final int AMOUNT_FIELD_NUMBER = 2;
-      private com.google.protobuf.FloatValue amount_;
+      private com.google.protobuf.DoubleValue amount_;
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
       public boolean hasAmount() {
         return amount_ != null;
       }
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
-      public com.google.protobuf.FloatValue getAmount() {
-        return amount_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
+      public com.google.protobuf.DoubleValue getAmount() {
+        return amount_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
       }
       /**
-       * <code>.google.protobuf.FloatValue amount = 2;</code>
+       * <code>.google.protobuf.DoubleValue amount = 2;</code>
        */
-      public com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder() {
+      public com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder() {
         return getAmount();
       }
 
@@ -7116,29 +7116,29 @@ public final class JesterOuterClass {
           return this;
         }
 
-        private com.google.protobuf.FloatValue amount_ = null;
+        private com.google.protobuf.DoubleValue amount_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> amountBuilder_;
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> amountBuilder_;
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
         public boolean hasAmount() {
           return amountBuilder_ != null || amount_ != null;
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
-        public com.google.protobuf.FloatValue getAmount() {
+        public com.google.protobuf.DoubleValue getAmount() {
           if (amountBuilder_ == null) {
-            return amount_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
+            return amount_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
           } else {
             return amountBuilder_.getMessage();
           }
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
-        public Builder setAmount(com.google.protobuf.FloatValue value) {
+        public Builder setAmount(com.google.protobuf.DoubleValue value) {
           if (amountBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -7152,10 +7152,10 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
         public Builder setAmount(
-            com.google.protobuf.FloatValue.Builder builderForValue) {
+            com.google.protobuf.DoubleValue.Builder builderForValue) {
           if (amountBuilder_ == null) {
             amount_ = builderForValue.build();
             onChanged();
@@ -7166,13 +7166,13 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
-        public Builder mergeAmount(com.google.protobuf.FloatValue value) {
+        public Builder mergeAmount(com.google.protobuf.DoubleValue value) {
           if (amountBuilder_ == null) {
             if (amount_ != null) {
               amount_ =
-                com.google.protobuf.FloatValue.newBuilder(amount_).mergeFrom(value).buildPartial();
+                com.google.protobuf.DoubleValue.newBuilder(amount_).mergeFrom(value).buildPartial();
             } else {
               amount_ = value;
             }
@@ -7184,7 +7184,7 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
         public Builder clearAmount() {
           if (amountBuilder_ == null) {
@@ -7198,33 +7198,33 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
-        public com.google.protobuf.FloatValue.Builder getAmountBuilder() {
+        public com.google.protobuf.DoubleValue.Builder getAmountBuilder() {
           
           onChanged();
           return getAmountFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
-        public com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder() {
+        public com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder() {
           if (amountBuilder_ != null) {
             return amountBuilder_.getMessageOrBuilder();
           } else {
             return amount_ == null ?
-                com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
+                com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
           }
         }
         /**
-         * <code>.google.protobuf.FloatValue amount = 2;</code>
+         * <code>.google.protobuf.DoubleValue amount = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
             getAmountFieldBuilder() {
           if (amountBuilder_ == null) {
             amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
                     getAmount(),
                     getParentForChildren(),
                     isClean());
@@ -8540,27 +8540,27 @@ public final class JesterOuterClass {
       ".google.protobuf.Int32Value\022/\n\tline_text" +
       "\030\010 \001(\0132\034.google.protobuf.StringValue\022-\n\007" +
       "line_id\030\t \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\265\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
+      "lue\"\266\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
       "gt.jester.v1alpha1.BankRequest.Data\022\024\n\014d" +
       "ataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asg" +
-      "t.jester.v1alpha1.SuggestionOptions\032\235\001\n\004" +
-      "Data\022\026\n\016account_number\030\001 \001(\005\022+\n\006amount\030\002" +
-      " \001(\0132\033.google.protobuf.FloatValue\022\022\n\nent" +
-      "ry_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stam" +
-      "p\030\005 \001(\0132\032.google.protobuf.Timestamp2\324\003\n\006" +
-      "Jester\022\232\001\n\031ScannedInvoiceSuggestions\022+.a" +
-      "sgt.jester.v1alpha1.ScannedInvoiceReques" +
-      "t\032).asgt.jester.v1alpha1.SuggestionsResp" +
-      "onse\"%\202\323\344\223\002\037\"\032/v1/scannedinvoice:suggest" +
-      ":\001*\022\256\001\n\037ElectronicInvoicLineSuggestions\022" +
-      "2.asgt.jester.v1alpha1.ElectronicInvoice" +
-      "LineRequest\032).asgt.jester.v1alpha1.Sugge" +
-      "stionsResponse\",\202\323\344\223\002&\"!/v1/electronicin" +
-      "voiceline:suggest:\001*\022|\n\017BankSuggestions\022" +
-      "!.asgt.jester.v1alpha1.BankRequest\032).asg" +
-      "t.jester.v1alpha1.SuggestionsResponse\"\033\202" +
-      "\323\344\223\002\025\"\020/v1/bank:suggest:\001*B\010Z\006jesterb\006pr" +
-      "oto3"
+      "t.jester.v1alpha1.SuggestionOptions\032\236\001\n\004" +
+      "Data\022\026\n\016account_number\030\001 \001(\005\022,\n\006amount\030\002" +
+      " \001(\0132\034.google.protobuf.DoubleValue\022\022\n\nen" +
+      "try_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_sta" +
+      "mp\030\005 \001(\0132\032.google.protobuf.Timestamp2\324\003\n" +
+      "\006Jester\022\232\001\n\031ScannedInvoiceSuggestions\022+." +
+      "asgt.jester.v1alpha1.ScannedInvoiceReque" +
+      "st\032).asgt.jester.v1alpha1.SuggestionsRes" +
+      "ponse\"%\202\323\344\223\002\037\"\032/v1/scannedinvoice:sugges" +
+      "t:\001*\022\256\001\n\037ElectronicInvoicLineSuggestions" +
+      "\0222.asgt.jester.v1alpha1.ElectronicInvoic" +
+      "eLineRequest\032).asgt.jester.v1alpha1.Sugg" +
+      "estionsResponse\",\202\323\344\223\002&\"!/v1/electronici" +
+      "nvoiceline:suggest:\001*\022|\n\017BankSuggestions" +
+      "\022!.asgt.jester.v1alpha1.BankRequest\032).as" +
+      "gt.jester.v1alpha1.SuggestionsResponse\"\033" +
+      "\202\323\344\223\002\025\"\020/v1/bank:suggest:\001*B\010Z\006jesterb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

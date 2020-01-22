@@ -1685,7 +1685,7 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.toObject = function(opt_in
 proto.asgt.jester.v1alpha1.BankRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
     accountNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
+    amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.DoubleValue.toObject(includeInstance, f),
     entryType: jspb.Message.getFieldWithDefault(msg, 3, 0),
     text: jspb.Message.getFieldWithDefault(msg, 4, ""),
     timeStamp: (f = msg.getTimeStamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
@@ -1730,8 +1730,8 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader = functi
       msg.setAccountNumber(value);
       break;
     case 2:
-      var value = new google_protobuf_wrappers_pb.FloatValue;
-      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      var value = new google_protobuf_wrappers_pb.DoubleValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.DoubleValue.deserializeBinaryFromReader);
       msg.setAmount(value);
       break;
     case 3:
@@ -1788,7 +1788,7 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter = function(m
     writer.writeMessage(
       2,
       f,
-      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+      google_protobuf_wrappers_pb.DoubleValue.serializeBinaryToWriter
     );
   }
   f = message.getEntryType();
@@ -1832,16 +1832,16 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAccountNumber = functio
 
 
 /**
- * optional google.protobuf.FloatValue amount = 2;
- * @return {?proto.google.protobuf.FloatValue}
+ * optional google.protobuf.DoubleValue amount = 2;
+ * @return {?proto.google.protobuf.DoubleValue}
  */
 proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getAmount = function() {
-  return /** @type{?proto.google.protobuf.FloatValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 2));
+  return /** @type{?proto.google.protobuf.DoubleValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.DoubleValue, 2));
 };
 
 
-/** @param {?proto.google.protobuf.FloatValue|undefined} value */
+/** @param {?proto.google.protobuf.DoubleValue|undefined} value */
 proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAmount = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };

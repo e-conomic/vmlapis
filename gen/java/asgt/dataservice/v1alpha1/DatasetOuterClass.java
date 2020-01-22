@@ -67,17 +67,27 @@ public final class DatasetOuterClass {
         getTargetsBytes(int index);
 
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     boolean hasRetentionPolicy();
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+
+    /**
+     * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.lang.String getHash();
+    /**
+     * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    com.google.protobuf.ByteString
+        getHashBytes();
   }
   /**
    * <pre>
@@ -100,6 +110,7 @@ public final class DatasetOuterClass {
       name_ = "";
       type_ = 0;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      hash_ = "";
     }
 
     @java.lang.Override
@@ -164,6 +175,12 @@ public final class DatasetOuterClass {
                 retentionPolicy_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              hash_ = s;
               break;
             }
             default: {
@@ -426,22 +443,56 @@ public final class DatasetOuterClass {
     public static final int RETENTION_POLICY_FIELD_NUMBER = 5;
     private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
-     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
+    }
+
+    public static final int HASH_FIELD_NUMBER = 6;
+    private volatile java.lang.Object hash_;
+    /**
+     * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.lang.String getHash() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        hash_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public com.google.protobuf.ByteString
+        getHashBytes() {
+      java.lang.Object ref = hash_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        hash_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -472,6 +523,9 @@ public final class DatasetOuterClass {
       }
       if (retentionPolicy_ != null) {
         output.writeMessage(5, getRetentionPolicy());
+      }
+      if (!getHashBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, hash_);
       }
       unknownFields.writeTo(output);
     }
@@ -504,6 +558,9 @@ public final class DatasetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getRetentionPolicy());
       }
+      if (!getHashBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, hash_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -532,6 +589,8 @@ public final class DatasetOuterClass {
         result = result && getRetentionPolicy()
             .equals(other.getRetentionPolicy());
       }
+      result = result && getHash()
+          .equals(other.getHash());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -557,6 +616,8 @@ public final class DatasetOuterClass {
         hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPolicy().hashCode();
       }
+      hash = (37 * hash) + HASH_FIELD_NUMBER;
+      hash = (53 * hash) + getHash().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -708,6 +769,8 @@ public final class DatasetOuterClass {
           retentionPolicy_ = null;
           retentionPolicyBuilder_ = null;
         }
+        hash_ = "";
+
         return this;
       }
 
@@ -749,6 +812,7 @@ public final class DatasetOuterClass {
         } else {
           result.retentionPolicy_ = retentionPolicyBuilder_.build();
         }
+        result.hash_ = hash_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -821,6 +885,10 @@ public final class DatasetOuterClass {
         }
         if (other.hasRetentionPolicy()) {
           mergeRetentionPolicy(other.getRetentionPolicy());
+        }
+        if (!other.getHash().isEmpty()) {
+          hash_ = other.hash_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1133,13 +1201,13 @@ public final class DatasetOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -1149,7 +1217,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -1165,7 +1233,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setRetentionPolicy(
           asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
@@ -1179,7 +1247,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
@@ -1197,7 +1265,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -1211,7 +1279,7 @@ public final class DatasetOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
@@ -1219,7 +1287,7 @@ public final class DatasetOuterClass {
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
@@ -1230,7 +1298,7 @@ public final class DatasetOuterClass {
         }
       }
       /**
-       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5;</code>
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
@@ -1244,6 +1312,75 @@ public final class DatasetOuterClass {
           retentionPolicy_ = null;
         }
         return retentionPolicyBuilder_;
+      }
+
+      private java.lang.Object hash_ = "";
+      /**
+       * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.lang.String getHash() {
+        java.lang.Object ref = hash_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          hash_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public com.google.protobuf.ByteString
+          getHashBytes() {
+        java.lang.Object ref = hash_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          hash_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setHash(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        hash_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearHash() {
+        
+        hash_ = getDefaultInstance().getHash();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string hash = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setHashBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        hash_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1316,14 +1453,15 @@ public final class DatasetOuterClass {
       "o\022\031asgt.dataservice.v1alpha1\032$asgt/datas" +
       "ervice/v1alpha1/data.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\034gen_bq_schema/bq_table" +
-      ".proto\"\213\002\n\007Dataset\022\027\n\010consumer\030\001 \001(\tB\005\352?" +
+      ".proto\"\247\002\n\007Dataset\022\027\n\010consumer\030\001 \001(\tB\005\352?" +
       "\002\010\001\022\023\n\004name\030\002 \001(\tB\005\352?\002\010\001\022<\n\004type\030\003 \001(\0162\'" +
       ".asgt.dataservice.v1alpha1.Dataset.TypeB" +
-      "\005\352?\002\010\001\022\017\n\007targets\030\004 \003(\t\022D\n\020retention_pol" +
+      "\005\352?\002\010\001\022\017\n\007targets\030\004 \003(\t\022K\n\020retention_pol" +
       "icy\030\005 \001(\0132*.asgt.dataservice.v1alpha1.Re" +
-      "tentionPolicy\".\n\004Type\022\010\n\004BANK\020\000\022\023\n\017SCANN" +
-      "ED_INVOICE\020\001\022\007\n\003EIL\020\002:\r\352?\n\n\010datasetsB\rZ\013" +
-      "dataserviceb\006proto3"
+      "tentionPolicyB\005\352?\002\010\001\022\023\n\004hash\030\006 \001(\tB\005\352?\002\010" +
+      "\001\".\n\004Type\022\010\n\004BANK\020\000\022\023\n\017SCANNED_INVOICE\020\001" +
+      "\022\007\n\003EIL\020\002:\r\352?\n\n\010datasetsB\rZ\013dataserviceb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1345,7 +1483,7 @@ public final class DatasetOuterClass {
     internal_static_asgt_dataservice_v1alpha1_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_Dataset_descriptor,
-        new java.lang.String[] { "Consumer", "Name", "Type", "Targets", "RetentionPolicy", });
+        new java.lang.String[] { "Consumer", "Name", "Type", "Targets", "RetentionPolicy", "Hash", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);

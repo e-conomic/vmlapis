@@ -20,5 +20,6 @@ message Dataset {
   string name = 2 [(gen_bq_schema.bigquery).require = true];
   Type type = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string targets = 4;
-  RetentionPolicy retention_policy = 5;
+  RetentionPolicy retention_policy = 5 [(gen_bq_schema.bigquery).require = true];
+  string hash = 6 [(gen_bq_schema.bigquery).require = true];
 }
