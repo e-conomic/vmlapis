@@ -7,7 +7,8 @@ all:
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \
 		proto/ssn/access/v1/access.proto \
-		proto/ssn/dataservice/v1alpha1/dataservice.proto
+		proto/ssn/dataservice/v1alpha1/dataservice.proto \
+		proto/asgt/jester/v1alpha1/jester.proto
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
 	./scripts/js_fixes.sh
