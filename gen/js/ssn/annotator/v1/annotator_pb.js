@@ -198,7 +198,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   OCR_LINE_NO_PAYMENT_ID: 20,
   OCR_LINE_FI_PAYMENT_ID: 21,
   OCR_LINE_NL_PAYMENT_ID: 22,
-  TEXT: 23
+  TEXT: 23,
+  IBAN: 24
 };
 
 /**
@@ -522,7 +523,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25];
 
 
 
@@ -597,7 +598,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ocrLineNlPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineNlPaymentIdList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     text: jspb.Message.getFieldWithDefault(msg, 23, ""),
-    feedbackId: jspb.Message.getFieldWithDefault(msg, 24, "")
+    feedbackId: jspb.Message.getFieldWithDefault(msg, 24, ""),
+    ibanList: jspb.Message.toObjectList(msg.getIbanList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -751,6 +754,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
     case 24:
       var value = /** @type {string} */ (reader.readString());
       msg.setFeedbackId(value);
+      break;
+    case 25:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addIban(value);
       break;
     default:
       reader.skipField();
@@ -969,6 +977,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeString(
       24,
       f
+    );
+  }
+  f = message.getIbanList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -1682,6 +1698,37 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getFeedbackId = funct
 /** @param {string} value */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setFeedbackId = function(value) {
   jspb.Message.setProto3StringField(this, 24, value);
+};
+
+
+/**
+ * repeated ssn.type.Candidate iban = 25;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getIbanList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 25));
+};
+
+
+/** @param {!Array<!proto.ssn.type.Candidate>} value */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setIbanList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addIban = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearIbanList = function() {
+  this.setIbanList([]);
 };
 
 
