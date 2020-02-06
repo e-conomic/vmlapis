@@ -350,6 +350,14 @@ public final class Annotator {
        * <code>TEXT = 23;</code>
        */
       TEXT(23),
+      /**
+       * <pre>
+       * Run IBAN detection
+       * </pre>
+       *
+       * <code>IBAN = 24;</code>
+       */
+      IBAN(24),
       UNRECOGNIZED(-1),
       ;
 
@@ -545,6 +553,14 @@ public final class Annotator {
        * <code>TEXT = 23;</code>
        */
       public static final int TEXT_VALUE = 23;
+      /**
+       * <pre>
+       * Run IBAN detection
+       * </pre>
+       *
+       * <code>IBAN = 24;</code>
+       */
+      public static final int IBAN_VALUE = 24;
 
 
       public final int getNumber() {
@@ -589,6 +605,7 @@ public final class Annotator {
           case 21: return OCR_LINE_FI_PAYMENT_ID;
           case 22: return OCR_LINE_NL_PAYMENT_ID;
           case 23: return TEXT;
+          case 24: return IBAN;
           default: return null;
         }
       }
@@ -3541,6 +3558,60 @@ public final class Annotator {
      */
     com.google.protobuf.ByteString
         getFeedbackIdBytes();
+
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getIbanList();
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getIban(int index);
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    int getIbanCount();
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getIbanOrBuilderList();
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -3578,6 +3649,7 @@ public final class Annotator {
       ocrLineNlPaymentId_ = java.util.Collections.emptyList();
       text_ = "";
       feedbackId_ = "";
+      iban_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3818,6 +3890,15 @@ public final class Annotator {
               feedbackId_ = s;
               break;
             }
+            case 202: {
+              if (!((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+                iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>();
+                mutable_bitField0_ |= 0x01000000;
+              }
+              iban_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3895,6 +3976,9 @@ public final class Annotator {
         }
         if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
           ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
+        }
+        if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
+          iban_ = java.util.Collections.unmodifiableList(iban_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5308,6 +5392,71 @@ public final class Annotator {
       }
     }
 
+    public static final int IBAN_FIELD_NUMBER = 25;
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_;
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
+      return iban_;
+    }
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getIbanOrBuilderList() {
+      return iban_;
+    }
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    public int getIbanCount() {
+      return iban_.size();
+    }
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
+      return iban_.get(index);
+    }
+    /**
+     * <pre>
+     * The first two letters are a country code. The next two digits are
+     * check digits for the ISO 7064 Mod 97, 10 checksum
+     * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate iban = 25;</code>
+     */
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
+        int index) {
+      return iban_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5393,6 +5542,9 @@ public final class Annotator {
       }
       if (!getFeedbackIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 24, feedbackId_);
+      }
+      for (int i = 0; i < iban_.size(); i++) {
+        output.writeMessage(25, iban_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5497,6 +5649,10 @@ public final class Annotator {
       if (!getFeedbackIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(24, feedbackId_);
       }
+      for (int i = 0; i < iban_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(25, iban_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5564,6 +5720,8 @@ public final class Annotator {
           .equals(other.getText());
       result = result && getFeedbackId()
           .equals(other.getFeedbackId());
+      result = result && getIbanList()
+          .equals(other.getIbanList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5667,6 +5825,10 @@ public final class Annotator {
       hash = (53 * hash) + getText().hashCode();
       hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
       hash = (53 * hash) + getFeedbackId().hashCode();
+      if (getIbanCount() > 0) {
+        hash = (37 * hash) + IBAN_FIELD_NUMBER;
+        hash = (53 * hash) + getIbanList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -5816,6 +5978,7 @@ public final class Annotator {
           getOcrLineNoPaymentIdFieldBuilder();
           getOcrLineFiPaymentIdFieldBuilder();
           getOcrLineNlPaymentIdFieldBuilder();
+          getIbanFieldBuilder();
         }
       }
       @java.lang.Override
@@ -5957,6 +6120,12 @@ public final class Annotator {
 
         feedbackId_ = "";
 
+        if (ibanBuilder_ == null) {
+          iban_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x01000000);
+        } else {
+          ibanBuilder_.clear();
+        }
         return this;
       }
 
@@ -6181,6 +6350,15 @@ public final class Annotator {
         }
         result.text_ = text_;
         result.feedbackId_ = feedbackId_;
+        if (ibanBuilder_ == null) {
+          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+            iban_ = java.util.Collections.unmodifiableList(iban_);
+            bitField0_ = (bitField0_ & ~0x01000000);
+          }
+          result.iban_ = iban_;
+        } else {
+          result.iban_ = ibanBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6786,6 +6964,32 @@ public final class Annotator {
         if (!other.getFeedbackId().isEmpty()) {
           feedbackId_ = other.feedbackId_;
           onChanged();
+        }
+        if (ibanBuilder_ == null) {
+          if (!other.iban_.isEmpty()) {
+            if (iban_.isEmpty()) {
+              iban_ = other.iban_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+            } else {
+              ensureIbanIsMutable();
+              iban_.addAll(other.iban_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.iban_.isEmpty()) {
+            if (ibanBuilder_.isEmpty()) {
+              ibanBuilder_.dispose();
+              ibanBuilder_ = null;
+              iban_ = other.iban_;
+              bitField0_ = (bitField0_ & ~0x01000000);
+              ibanBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getIbanFieldBuilder() : null;
+            } else {
+              ibanBuilder_.addAllMessages(other.iban_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14147,6 +14351,354 @@ public final class Annotator {
         onChanged();
         return this;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_ =
+        java.util.Collections.emptyList();
+      private void ensureIbanIsMutable() {
+        if (!((bitField0_ & 0x01000000) == 0x01000000)) {
+          iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(iban_);
+          bitField0_ |= 0x01000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> ibanBuilder_;
+
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getIbanList() {
+        if (ibanBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(iban_);
+        } else {
+          return ibanBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public int getIbanCount() {
+        if (ibanBuilder_ == null) {
+          return iban_.size();
+        } else {
+          return ibanBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getIban(int index) {
+        if (ibanBuilder_ == null) {
+          return iban_.get(index);
+        } else {
+          return ibanBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder setIban(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (ibanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIbanIsMutable();
+          iban_.set(index, value);
+          onChanged();
+        } else {
+          ibanBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder setIban(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (ibanBuilder_ == null) {
+          ensureIbanIsMutable();
+          iban_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          ibanBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder addIban(ssn.type.CandidateOuterClass.Candidate value) {
+        if (ibanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIbanIsMutable();
+          iban_.add(value);
+          onChanged();
+        } else {
+          ibanBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder addIban(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (ibanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureIbanIsMutable();
+          iban_.add(index, value);
+          onChanged();
+        } else {
+          ibanBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder addIban(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (ibanBuilder_ == null) {
+          ensureIbanIsMutable();
+          iban_.add(builderForValue.build());
+          onChanged();
+        } else {
+          ibanBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder addIban(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (ibanBuilder_ == null) {
+          ensureIbanIsMutable();
+          iban_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          ibanBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder addAllIban(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (ibanBuilder_ == null) {
+          ensureIbanIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, iban_);
+          onChanged();
+        } else {
+          ibanBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder clearIban() {
+        if (ibanBuilder_ == null) {
+          iban_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x01000000);
+          onChanged();
+        } else {
+          ibanBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public Builder removeIban(int index) {
+        if (ibanBuilder_ == null) {
+          ensureIbanIsMutable();
+          iban_.remove(index);
+          onChanged();
+        } else {
+          ibanBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getIbanBuilder(
+          int index) {
+        return getIbanFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
+          int index) {
+        if (ibanBuilder_ == null) {
+          return iban_.get(index);  } else {
+          return ibanBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getIbanOrBuilderList() {
+        if (ibanBuilder_ != null) {
+          return ibanBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(iban_);
+        }
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder() {
+        return getIbanFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addIbanBuilder(
+          int index) {
+        return getIbanFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * The first two letters are a country code. The next two digits are
+       * check digits for the ISO 7064 Mod 97, 10 checksum
+       * example: "DK50 0040 0440 1162 43", "NO8330001234567"
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate iban = 25;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getIbanBuilderList() {
+        return getIbanFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getIbanFieldBuilder() {
+        if (ibanBuilder_ == null) {
+          ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  iban_,
+                  ((bitField0_ & 0x01000000) == 0x01000000),
+                  getParentForChildren(),
+                  isClean());
+          iban_ = null;
+        }
+        return ibanBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -15652,10 +16204,10 @@ public final class Annotator {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
       "to\032\030ssn/type/candidate.proto\032\036ssn/type/t" +
-      "ext_annotation.proto\"\267\005\n\007Feature\022,\n\004type" +
+      "ext_annotation.proto\"\301\005\n\007Feature\022,\n\004type" +
       "\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type\022\023" +
       "\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030\003 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\"\264\004\n\004Type" +
+      "\001(\0162\032.ssn.type.Confidence.Level\"\276\004\n\004Type" +
       "\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\nOR" +
       "DER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CURR" +
       "ENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VAT\020" +
@@ -15669,47 +16221,48 @@ public final class Annotator {
       "_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OCR_LINE_S" +
       "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
       "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
-      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\"\203" +
-      "\001\n\030DocumentAnnotatorRequest\022,\n\010document\030" +
-      "\001 \001(\0132\032.ssn.annotator.v1.Document\022+\n\010fea" +
-      "tures\030\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014" +
-      "\n\004tags\030\003 \003(\t\"\200\t\n\031DocumentAnnotatorRespon" +
-      "se\022\'\n\norder_date\030\001 \003(\0132\023.ssn.type.Candid" +
-      "ate\022-\n\020payment_due_date\030\002 \003(\0132\023.ssn.type" +
-      ".Candidate\022%\n\010currency\030\003 \003(\0132\023.ssn.type." +
-      "Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type." +
-      "Candidate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn." +
-      "type.Candidate\022+\n\016total_excl_vat\030\006 \003(\0132\023" +
-      ".ssn.type.Candidate\0222\n\025supplier_corporat" +
-      "e_id\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025suppl" +
-      "ier_country_code\030\010 \003(\0132\023.ssn.type.Candid" +
-      "ate\022*\n\rdocument_type\030\t \003(\0132\023.ssn.type.Ca" +
-      "ndidate\022+\n\016payment_method\030\n \003(\0132\023.ssn.ty" +
-      "pe.Candidate\0222\n\025credit_card_last_four\030\013 " +
-      "\003(\0132\023.ssn.type.Candidate\022+\n\016invoice_numb" +
-      "er\030\014 \003(\0132\023.ssn.type.Candidate\0221\n\017text_an" +
-      "notation\030\r \001(\0132\030.ssn.type.TextAnnotation" +
-      "\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132" +
-      "\023.ssn.type.Candidate\0224\n\027ocr_line_dk_cred" +
-      "itor_id\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
-      "r_line_se_payment_id\030\021 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\022=\n ocr_line_se_bankgiro_creditor" +
-      "_id\030\022 \003(\0132\023.ssn.type.Candidate\022=\n ocr_li" +
-      "ne_se_plusgiro_creditor_id\030\023 \003(\0132\023.ssn.t" +
-      "ype.Candidate\0223\n\026ocr_line_no_payment_id\030" +
-      "\024 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_f" +
-      "i_payment_id\030\025 \003(\0132\023.ssn.type.Candidate\022" +
-      "3\n\026ocr_line_nl_payment_id\030\026 \003(\0132\023.ssn.ty" +
-      "pe.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_i" +
-      "d\030\030 \001(\t\"M\n\010Document\022\017\n\007content\030\001 \001(\014\0220\n\006" +
-      "source\030\002 \001(\0132 .ssn.annotator.v1.Document" +
-      "Source\"\"\n\016DocumentSource\022\020\n\010http_uri\030\001 \001" +
-      "(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDoc" +
-      "ument\022*.ssn.annotator.v1.DocumentAnnotat" +
-      "orRequest\032+.ssn.annotator.v1.DocumentAnn" +
-      "otatorResponse\" \202\323\344\223\002\032\"\025/v1/document:ann" +
-      "otate:\001*B\013Z\tannotatorb\006proto3"
+      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010" +
+      "\n\004IBAN\020\030\"\203\001\n\030DocumentAnnotatorRequest\022,\n" +
+      "\010document\030\001 \001(\0132\032.ssn.annotator.v1.Docum" +
+      "ent\022+\n\010features\030\002 \003(\0132\031.ssn.annotator.v1" +
+      ".Feature\022\014\n\004tags\030\003 \003(\t\"\243\t\n\031DocumentAnnot" +
+      "atorResponse\022\'\n\norder_date\030\001 \003(\0132\023.ssn.t" +
+      "ype.Candidate\022-\n\020payment_due_date\030\002 \003(\0132" +
+      "\023.ssn.type.Candidate\022%\n\010currency\030\003 \003(\0132\023" +
+      ".ssn.type.Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023" +
+      ".ssn.type.Candidate\022+\n\016total_incl_vat\030\005 " +
+      "\003(\0132\023.ssn.type.Candidate\022+\n\016total_excl_v" +
+      "at\030\006 \003(\0132\023.ssn.type.Candidate\0222\n\025supplie" +
+      "r_corporate_id\030\007 \003(\0132\023.ssn.type.Candidat" +
+      "e\0222\n\025supplier_country_code\030\010 \003(\0132\023.ssn.t" +
+      "ype.Candidate\022*\n\rdocument_type\030\t \003(\0132\023.s" +
+      "sn.type.Candidate\022+\n\016payment_method\030\n \003(" +
+      "\0132\023.ssn.type.Candidate\0222\n\025credit_card_la" +
+      "st_four\030\013 \003(\0132\023.ssn.type.Candidate\022+\n\016in" +
+      "voice_number\030\014 \003(\0132\023.ssn.type.Candidate\022" +
+      "1\n\017text_annotation\030\r \001(\0132\030.ssn.type.Text" +
+      "Annotation\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.s" +
+      "sn.type.Candidate\0223\n\026ocr_line_dk_payment" +
+      "_id\030\017 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_li" +
+      "ne_dk_creditor_id\030\020 \003(\0132\023.ssn.type.Candi" +
+      "date\0223\n\026ocr_line_se_payment_id\030\021 \003(\0132\023.s" +
+      "sn.type.Candidate\022=\n ocr_line_se_bankgir" +
+      "o_creditor_id\030\022 \003(\0132\023.ssn.type.Candidate" +
+      "\022=\n ocr_line_se_plusgiro_creditor_id\030\023 \003" +
+      "(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_no_p" +
+      "ayment_id\030\024 \003(\0132\023.ssn.type.Candidate\0223\n\026" +
+      "ocr_line_fi_payment_id\030\025 \003(\0132\023.ssn.type." +
+      "Candidate\0223\n\026ocr_line_nl_payment_id\030\026 \003(" +
+      "\0132\023.ssn.type.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013" +
+      "feedback_id\030\030 \001(\t\022!\n\004iban\030\031 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\"M\n\010Document\022\017\n\007content\030\001 \001(" +
+      "\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Doc" +
+      "umentSource\"\"\n\016DocumentSource\022\020\n\010http_ur" +
+      "i\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Annota" +
+      "teDocument\022*.ssn.annotator.v1.DocumentAn" +
+      "notatorRequest\032+.ssn.annotator.v1.Docume" +
+      "ntAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/documen" +
+      "t:annotate:\001*B\013Z\tannotatorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15743,7 +16296,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new
