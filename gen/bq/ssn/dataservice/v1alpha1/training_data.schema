@@ -125,6 +125,11 @@
     "name": "invoice_number",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "iban",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },
@@ -235,6 +240,11 @@
    },
    {
     "name": "invoice_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "iban",
     "type": "STRING",
     "mode": "REPEATED"
    }
