@@ -8,7 +8,10 @@ all:
 		proto/ssn/annotator/v1/annotator.proto \
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1alpha1/dataservice.proto \
-		proto/asgt/jester/v1alpha1/jester.proto
+		proto/asgt/jester/v1alpha1/jester.proto \
+		proto/asgt/dataservice/v1alpha1/bank.proto \
+		proto/asgt/dataservice/v1alpha1/electronic_invoice_line.proto \
+		proto/asgt/dataservice/v1alpha1/scanned_invoice.proto
 	./scripts/gomock.sh
 	./scripts/py_fixes.sh
 	./scripts/js_fixes.sh
@@ -21,7 +24,7 @@ docker:
 	docker rm $$DOCKERID
 
 bigquery:
-	cp -r ./gen/bq/ssn/dataservice ../ssn-terraform/bq
+	cp -r ./gen/bq/ ../ssn-terraform/bq
 
 .PHONY: all
 .PHONY: docker
