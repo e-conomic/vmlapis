@@ -75,6 +75,7 @@ message TrueValues {
   google.protobuf.StringValue supplier_corporate_id = 19;
   google.protobuf.StringValue supplier_country_code = 20;
   google.protobuf.StringValue invoice_number = 21;
+  google.protobuf.StringValue iban = 22;
 }
 
 message PredictionValues {
@@ -99,6 +100,7 @@ message PredictionValues {
   repeated google.protobuf.StringValue supplier_corporate_id = 19;
   repeated google.protobuf.StringValue supplier_country_code = 20;
   repeated google.protobuf.StringValue invoice_number = 21;
+  repeated google.protobuf.StringValue iban = 22;
 }
 
 message CreateDocumentRequest {
