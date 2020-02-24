@@ -3287,17 +3287,17 @@ public final class JesterOuterClass {
       com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder();
 
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
       boolean hasTotal();
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
-      com.google.protobuf.Int32Value getTotal();
+      com.google.protobuf.FloatValue getTotal();
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
-      com.google.protobuf.Int32ValueOrBuilder getTotalOrBuilder();
+      com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder();
 
       /**
        * <code>.google.protobuf.StringValue line_text = 8;</code>
@@ -3437,11 +3437,11 @@ public final class JesterOuterClass {
                 break;
               }
               case 58: {
-                com.google.protobuf.Int32Value.Builder subBuilder = null;
+                com.google.protobuf.FloatValue.Builder subBuilder = null;
                 if (total_ != null) {
                   subBuilder = total_.toBuilder();
                 }
-                total_ = input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
+                total_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(total_);
                   total_ = subBuilder.buildPartial();
@@ -3647,23 +3647,23 @@ public final class JesterOuterClass {
       }
 
       public static final int TOTAL_FIELD_NUMBER = 7;
-      private com.google.protobuf.Int32Value total_;
+      private com.google.protobuf.FloatValue total_;
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
       public boolean hasTotal() {
         return total_ != null;
       }
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
-      public com.google.protobuf.Int32Value getTotal() {
-        return total_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : total_;
+      public com.google.protobuf.FloatValue getTotal() {
+        return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
       }
       /**
-       * <code>.google.protobuf.Int32Value total = 7;</code>
+       * <code>.google.protobuf.FloatValue total = 7;</code>
        */
-      public com.google.protobuf.Int32ValueOrBuilder getTotalOrBuilder() {
+      public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
         return getTotal();
       }
 
@@ -4906,29 +4906,29 @@ public final class JesterOuterClass {
           return customerRefBuilder_;
         }
 
-        private com.google.protobuf.Int32Value total_ = null;
+        private com.google.protobuf.FloatValue total_ = null;
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> totalBuilder_;
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalBuilder_;
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
         public boolean hasTotal() {
           return totalBuilder_ != null || total_ != null;
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
-        public com.google.protobuf.Int32Value getTotal() {
+        public com.google.protobuf.FloatValue getTotal() {
           if (totalBuilder_ == null) {
-            return total_ == null ? com.google.protobuf.Int32Value.getDefaultInstance() : total_;
+            return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
           } else {
             return totalBuilder_.getMessage();
           }
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
-        public Builder setTotal(com.google.protobuf.Int32Value value) {
+        public Builder setTotal(com.google.protobuf.FloatValue value) {
           if (totalBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -4942,10 +4942,10 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
         public Builder setTotal(
-            com.google.protobuf.Int32Value.Builder builderForValue) {
+            com.google.protobuf.FloatValue.Builder builderForValue) {
           if (totalBuilder_ == null) {
             total_ = builderForValue.build();
             onChanged();
@@ -4956,13 +4956,13 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
-        public Builder mergeTotal(com.google.protobuf.Int32Value value) {
+        public Builder mergeTotal(com.google.protobuf.FloatValue value) {
           if (totalBuilder_ == null) {
             if (total_ != null) {
               total_ =
-                com.google.protobuf.Int32Value.newBuilder(total_).mergeFrom(value).buildPartial();
+                com.google.protobuf.FloatValue.newBuilder(total_).mergeFrom(value).buildPartial();
             } else {
               total_ = value;
             }
@@ -4974,7 +4974,7 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
         public Builder clearTotal() {
           if (totalBuilder_ == null) {
@@ -4988,33 +4988,33 @@ public final class JesterOuterClass {
           return this;
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
-        public com.google.protobuf.Int32Value.Builder getTotalBuilder() {
+        public com.google.protobuf.FloatValue.Builder getTotalBuilder() {
           
           onChanged();
           return getTotalFieldBuilder().getBuilder();
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
-        public com.google.protobuf.Int32ValueOrBuilder getTotalOrBuilder() {
+        public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
           if (totalBuilder_ != null) {
             return totalBuilder_.getMessageOrBuilder();
           } else {
             return total_ == null ?
-                com.google.protobuf.Int32Value.getDefaultInstance() : total_;
+                com.google.protobuf.FloatValue.getDefaultInstance() : total_;
           }
         }
         /**
-         * <code>.google.protobuf.Int32Value total = 7;</code>
+         * <code>.google.protobuf.FloatValue total = 7;</code>
          */
         private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder> 
+            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
             getTotalFieldBuilder() {
           if (totalBuilder_ == null) {
             totalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Int32Value, com.google.protobuf.Int32Value.Builder, com.google.protobuf.Int32ValueOrBuilder>(
+                com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                     getTotal(),
                     getParentForChildren(),
                     isClean());
@@ -8537,7 +8537,7 @@ public final class JesterOuterClass {
       "plier_global_id\030\005 \001(\0132\034.google.protobuf." +
       "StringValue\0222\n\014customer_ref\030\006 \001(\0132\034.goog" +
       "le.protobuf.StringValue\022*\n\005total\030\007 \001(\0132\033" +
-      ".google.protobuf.Int32Value\022/\n\tline_text" +
+      ".google.protobuf.FloatValue\022/\n\tline_text" +
       "\030\010 \001(\0132\034.google.protobuf.StringValue\022-\n\007" +
       "line_id\030\t \001(\0132\034.google.protobuf.StringVa" +
       "lue\"\266\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
