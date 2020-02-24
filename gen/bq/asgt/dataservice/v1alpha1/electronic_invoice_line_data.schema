@@ -58,7 +58,7 @@
    },
    {
     "name": "total",
-    "type": "INTEGER",
+    "type": "FLOAT",
     "mode": "NULLABLE"
    },
    {

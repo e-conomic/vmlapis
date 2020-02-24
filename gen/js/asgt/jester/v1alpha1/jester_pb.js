@@ -957,7 +957,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.toObject = function
     supplierName: (f = msg.getSupplierName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierGlobalId: (f = msg.getSupplierGlobalId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     customerRef: (f = msg.getCustomerRef()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    total: (f = msg.getTotal()) && google_protobuf_wrappers_pb.Int32Value.toObject(includeInstance, f),
+    total: (f = msg.getTotal()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
     lineText: (f = msg.getLineText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     lineId: (f = msg.getLineId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
@@ -1026,8 +1026,8 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.deserializeBinaryFr
       msg.setCustomerRef(value);
       break;
     case 7:
-      var value = new google_protobuf_wrappers_pb.Int32Value;
-      reader.readMessage(value,google_protobuf_wrappers_pb.Int32Value.deserializeBinaryFromReader);
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.setTotal(value);
       break;
     case 8:
@@ -1121,7 +1121,7 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.serializeBinaryToWr
     writer.writeMessage(
       7,
       f,
-      google_protobuf_wrappers_pb.Int32Value.serializeBinaryToWriter
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
   }
   f = message.getLineText();
@@ -1309,16 +1309,16 @@ proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.hasCustom
 
 
 /**
- * optional google.protobuf.Int32Value total = 7;
- * @return {?proto.google.protobuf.Int32Value}
+ * optional google.protobuf.FloatValue total = 7;
+ * @return {?proto.google.protobuf.FloatValue}
  */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.getTotal = function() {
-  return /** @type{?proto.google.protobuf.Int32Value} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.Int32Value, 7));
+  return /** @type{?proto.google.protobuf.FloatValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 7));
 };
 
 
-/** @param {?proto.google.protobuf.Int32Value|undefined} value */
+/** @param {?proto.google.protobuf.FloatValue|undefined} value */
 proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data.prototype.setTotal = function(value) {
   jspb.Message.setWrapperField(this, 7, value);
 };

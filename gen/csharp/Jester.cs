@@ -47,7 +47,7 @@ namespace Asgt.Jester.V1Alpha1 {
             "Zi5TdHJpbmdWYWx1ZRI4ChJzdXBwbGllcl9nbG9iYWxfaWQYBSABKAsyHC5n",
             "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSMgoMY3VzdG9tZXJfcmVmGAYg",
             "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBXRvdGFsGAcg",
-            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSLwoJbGluZV90ZXh0",
+            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSLwoJbGluZV90ZXh0",
             "GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2xpbmVf",
             "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUitgIKC0Jh",
             "bmtSZXF1ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxw",
@@ -988,10 +988,10 @@ namespace Asgt.Jester.V1Alpha1 {
 
         /// <summary>Field number for the "total" field.</summary>
         public const int TotalFieldNumber = 7;
-        private static readonly pb::FieldCodec<int?> _single_total_codec = pb::FieldCodec.ForStructWrapper<int>(58);
-        private int? total_;
+        private static readonly pb::FieldCodec<float?> _single_total_codec = pb::FieldCodec.ForStructWrapper<float>(58);
+        private float? total_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int? Total {
+        public float? Total {
           get { return total_; }
           set {
             total_ = value;
@@ -1041,7 +1041,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (SupplierName != other.SupplierName) return false;
           if (SupplierGlobalId != other.SupplierGlobalId) return false;
           if (CustomerRef != other.CustomerRef) return false;
-          if (Total != other.Total) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Total, other.Total)) return false;
           if (LineText != other.LineText) return false;
           if (LineId != other.LineId) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -1056,7 +1056,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (supplierName_ != null) hash ^= SupplierName.GetHashCode();
           if (supplierGlobalId_ != null) hash ^= SupplierGlobalId.GetHashCode();
           if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
-          if (total_ != null) hash ^= Total.GetHashCode();
+          if (total_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Total);
           if (lineText_ != null) hash ^= LineText.GetHashCode();
           if (lineId_ != null) hash ^= LineId.GetHashCode();
           if (_unknownFields != null) {
@@ -1177,7 +1177,7 @@ namespace Asgt.Jester.V1Alpha1 {
             }
           }
           if (other.total_ != null) {
-            if (total_ == null || other.Total != 0) {
+            if (total_ == null || other.Total != 0F) {
               Total = other.Total;
             }
           }
@@ -1242,8 +1242,8 @@ namespace Asgt.Jester.V1Alpha1 {
                 break;
               }
               case 58: {
-                int? value = _single_total_codec.Read(input);
-                if (total_ == null || value != 0) {
+                float? value = _single_total_codec.Read(input);
+                if (total_ == null || value != 0F) {
                   Total = value;
                 }
                 break;
