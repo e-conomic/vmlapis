@@ -42,9 +42,25 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>float value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2;</code>
      */
-    float getValue();
+    boolean hasValue();
+    /**
+     * <pre>
+     * The confidence value
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue value = 2;</code>
+     */
+    com.google.protobuf.FloatValue getValue();
+    /**
+     * <pre>
+     * The confidence value
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue value = 2;</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
   }
   /**
    * <pre>
@@ -64,7 +80,6 @@ public final class PredictionOuterClass {
     }
     private Confidence() {
       level_ = 0;
-      value_ = 0F;
     }
 
     @java.lang.Override
@@ -97,9 +112,17 @@ public final class PredictionOuterClass {
               level_ = rawValue;
               break;
             }
-            case 21: {
+            case 18: {
+              com.google.protobuf.FloatValue.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
 
-              value_ = input.readFloat();
               break;
             }
             default: {
@@ -296,16 +319,36 @@ public final class PredictionOuterClass {
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
-    private float value_;
+    private com.google.protobuf.FloatValue value_;
     /**
      * <pre>
      * The confidence value
      * </pre>
      *
-     * <code>float value = 2;</code>
+     * <code>.google.protobuf.FloatValue value = 2;</code>
      */
-    public float getValue() {
-      return value_;
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <pre>
+     * The confidence value
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue value = 2;</code>
+     */
+    public com.google.protobuf.FloatValue getValue() {
+      return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
+    }
+    /**
+     * <pre>
+     * The confidence value
+     * </pre>
+     *
+     * <code>.google.protobuf.FloatValue value = 2;</code>
+     */
+    public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
+      return getValue();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -325,8 +368,8 @@ public final class PredictionOuterClass {
       if (level_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(1, level_);
       }
-      if (value_ != 0F) {
-        output.writeFloat(2, value_);
+      if (value_ != null) {
+        output.writeMessage(2, getValue());
       }
       unknownFields.writeTo(output);
     }
@@ -341,9 +384,9 @@ public final class PredictionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, level_);
       }
-      if (value_ != 0F) {
+      if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, value_);
+          .computeMessageSize(2, getValue());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -362,10 +405,11 @@ public final class PredictionOuterClass {
 
       boolean result = true;
       result = result && level_ == other.level_;
-      result = result && (
-          java.lang.Float.floatToIntBits(getValue())
-          == java.lang.Float.floatToIntBits(
-              other.getValue()));
+      result = result && (hasValue() == other.hasValue());
+      if (hasValue()) {
+        result = result && getValue()
+            .equals(other.getValue());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -379,9 +423,10 @@ public final class PredictionOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + level_;
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + java.lang.Float.floatToIntBits(
-          getValue());
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -521,8 +566,12 @@ public final class PredictionOuterClass {
         super.clear();
         level_ = 0;
 
-        value_ = 0F;
-
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
         return this;
       }
 
@@ -550,7 +599,11 @@ public final class PredictionOuterClass {
       public asgt.type.PredictionOuterClass.Confidence buildPartial() {
         asgt.type.PredictionOuterClass.Confidence result = new asgt.type.PredictionOuterClass.Confidence(this);
         result.level_ = level_;
-        result.value_ = value_;
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -602,8 +655,8 @@ public final class PredictionOuterClass {
         if (other.level_ != 0) {
           setLevelValue(other.getLevelValue());
         }
-        if (other.getValue() != 0F) {
-          setValue(other.getValue());
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -704,28 +757,51 @@ public final class PredictionOuterClass {
         return this;
       }
 
-      private float value_ ;
+      private com.google.protobuf.FloatValue value_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
       /**
        * <pre>
        * The confidence value
        * </pre>
        *
-       * <code>float value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2;</code>
        */
-      public float getValue() {
-        return value_;
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
       }
       /**
        * <pre>
        * The confidence value
        * </pre>
        *
-       * <code>float value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2;</code>
        */
-      public Builder setValue(float value) {
-        
-        value_ = value;
-        onChanged();
+      public com.google.protobuf.FloatValue getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      public Builder setValue(com.google.protobuf.FloatValue value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
@@ -733,13 +809,105 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>float value = 2;</code>
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      public Builder setValue(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      public Builder mergeValue(com.google.protobuf.FloatValue value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              com.google.protobuf.FloatValue.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
        */
       public Builder clearValue() {
-        
-        value_ = 0F;
-        onChanged();
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
         return this;
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              com.google.protobuf.FloatValue.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <pre>
+       * The confidence value
+       * </pre>
+       *
+       * <code>.google.protobuf.FloatValue value = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3271,17 +3439,19 @@ public final class PredictionOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032asgt/type/prediction.proto\022\tasgt.type\"" +
-      "\226\001\n\nConfidence\022*\n\005level\030\001 \001(\0162\033.asgt.typ" +
-      "e.Confidence.Level\022\r\n\005value\030\002 \001(\002\"M\n\005Lev" +
-      "el\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007" +
-      "\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\331\001\n\nPre" +
-      "diction\022-\n\007targets\030\001 \003(\0132\034.asgt.type.Pre" +
-      "diction.Target\032\233\001\n\006Target\022\016\n\006target\030\001 \001(" +
-      "\t\022:\n\ncandidates\030\002 \003(\0132&.asgt.type.Predic" +
-      "tion.Target.Candidate\032E\n\tCandidate\022\r\n\005la" +
-      "bel\030\001 \001(\t\022)\n\nconfidence\030\002 \001(\0132\025.asgt.typ" +
-      "e.ConfidenceB\006Z\004typeb\006proto3"
+      "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
+      "\036google/protobuf/wrappers.proto\"\263\001\n\nConf" +
+      "idence\022*\n\005level\030\001 \001(\0162\033.asgt.type.Confid" +
+      "ence.Level\022*\n\005value\030\002 \001(\0132\033.google.proto" +
+      "buf.FloatValue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010" +
+      "VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r" +
+      "\n\tVERY_HIGH\020\005\"\331\001\n\nPrediction\022-\n\007targets\030" +
+      "\001 \003(\0132\034.asgt.type.Prediction.Target\032\233\001\n\006" +
+      "Target\022\016\n\006target\030\001 \001(\t\022:\n\ncandidates\030\002 \003" +
+      "(\0132&.asgt.type.Prediction.Target.Candida" +
+      "te\032E\n\tCandidate\022\r\n\005label\030\001 \001(\t\022)\n\nconfid" +
+      "ence\030\002 \001(\0132\025.asgt.type.ConfidenceB\006Z\004typ" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3294,6 +3464,7 @@ public final class PredictionOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3319,6 +3490,7 @@ public final class PredictionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Prediction_Target_Candidate_descriptor,
         new java.lang.String[] { "Label", "Confidence", });
+    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
