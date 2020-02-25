@@ -24,18 +24,19 @@ namespace Asgt.Type {
     static PredictionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlIpYBCgpD",
-            "b25maWRlbmNlEioKBWxldmVsGAEgASgOMhsuYXNndC50eXBlLkNvbmZpZGVu",
-            "Y2UuTGV2ZWwSDQoFdmFsdWUYAiABKAIiTQoFTGV2ZWwSCwoHVU5LTk9XThAA",
-            "EgwKCFZFUllfTE9XEAESBwoDTE9XEAISBwoDTUlEEAMSCAoESElHSBAEEg0K",
-            "CVZFUllfSElHSBAFItkBCgpQcmVkaWN0aW9uEi0KB3RhcmdldHMYASADKAsy",
-            "HC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQamwEKBlRhcmdldBIOCgZ0",
-            "YXJnZXQYASABKAkSOgoKY2FuZGlkYXRlcxgCIAMoCzImLmFzZ3QudHlwZS5Q",
-            "cmVkaWN0aW9uLlRhcmdldC5DYW5kaWRhdGUaRQoJQ2FuZGlkYXRlEg0KBWxh",
-            "YmVsGAEgASgJEikKCmNvbmZpZGVuY2UYAiABKAsyFS5hc2d0LnR5cGUuQ29u",
-            "ZmlkZW5jZUIGWgR0eXBlYgZwcm90bzM="));
+            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlGh5nb29n",
+            "bGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8iswEKCkNvbmZpZGVuY2USKgoF",
+            "bGV2ZWwYASABKA4yGy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2",
+            "YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxl",
+            "dmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01J",
+            "RBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSLZAQoKUHJlZGljdGlvbhIt",
+            "Cgd0YXJnZXRzGAEgAygLMhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0",
+            "GpsBCgZUYXJnZXQSDgoGdGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiAD",
+            "KAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkUK",
+            "CUNhbmRpZGF0ZRINCgVsYWJlbBgBIAEoCRIpCgpjb25maWRlbmNlGAIgASgL",
+            "MhUuYXNndC50eXBlLkNvbmZpZGVuY2VCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)})})
@@ -74,7 +75,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Confidence(Confidence other) : this() {
       level_ = other.level_;
-      value_ = other.value_;
+      Value = other.Value;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -100,12 +101,13 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
-    private float value_;
+    private static readonly pb::FieldCodec<float?> _single_value_codec = pb::FieldCodec.ForStructWrapper<float>(18);
+    private float? value_;
     /// <summary>
     /// The confidence value
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Value {
+    public float? Value {
       get { return value_; }
       set {
         value_ = value;
@@ -126,7 +128,7 @@ namespace Asgt.Type {
         return true;
       }
       if (Level != other.Level) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Value, other.Value)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -134,7 +136,7 @@ namespace Asgt.Type {
     public override int GetHashCode() {
       int hash = 1;
       if (Level != 0) hash ^= Level.GetHashCode();
-      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
+      if (value_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Value);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -152,9 +154,8 @@ namespace Asgt.Type {
         output.WriteRawTag(8);
         output.WriteEnum((int) Level);
       }
-      if (Value != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(Value);
+      if (value_ != null) {
+        _single_value_codec.WriteTagAndValue(output, Value);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -167,8 +168,8 @@ namespace Asgt.Type {
       if (Level != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
       }
-      if (Value != 0F) {
-        size += 1 + 4;
+      if (value_ != null) {
+        size += _single_value_codec.CalculateSizeWithTag(Value);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -184,8 +185,10 @@ namespace Asgt.Type {
       if (other.Level != 0) {
         Level = other.Level;
       }
-      if (other.Value != 0F) {
-        Value = other.Value;
+      if (other.value_ != null) {
+        if (value_ == null || other.Value != 0F) {
+          Value = other.Value;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -202,8 +205,11 @@ namespace Asgt.Type {
             level_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
-          case 21: {
-            Value = input.ReadFloat();
+          case 18: {
+            float? value = _single_value_codec.Read(input);
+            if (value_ == null || value != 0F) {
+              Value = value;
+            }
             break;
           }
         }

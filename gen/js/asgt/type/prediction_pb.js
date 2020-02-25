@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.type.Confidence', null, global);
 goog.exportSymbol('proto.asgt.type.Confidence.Level', null, global);
 goog.exportSymbol('proto.asgt.type.Prediction', null, global);
@@ -64,7 +65,7 @@ proto.asgt.type.Confidence.prototype.toObject = function(opt_includeInstance) {
 proto.asgt.type.Confidence.toObject = function(includeInstance, msg) {
   var f, obj = {
     level: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    value: +jspb.Message.getFieldWithDefault(msg, 2, 0.0)
+    value: (f = msg.getValue()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -106,7 +107,8 @@ proto.asgt.type.Confidence.deserializeBinaryFromReader = function(msg, reader) {
       msg.setLevel(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readFloat());
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.setValue(value);
       break;
     default:
@@ -146,10 +148,11 @@ proto.asgt.type.Confidence.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getValue();
-  if (f !== 0.0) {
-    writer.writeFloat(
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
   }
 };
@@ -183,17 +186,32 @@ proto.asgt.type.Confidence.prototype.setLevel = function(value) {
 
 
 /**
- * optional float value = 2;
- * @return {number}
+ * optional google.protobuf.FloatValue value = 2;
+ * @return {?proto.google.protobuf.FloatValue}
  */
 proto.asgt.type.Confidence.prototype.getValue = function() {
-  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+  return /** @type{?proto.google.protobuf.FloatValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 2));
 };
 
 
-/** @param {number} value */
+/** @param {?proto.google.protobuf.FloatValue|undefined} value */
 proto.asgt.type.Confidence.prototype.setValue = function(value) {
-  jspb.Message.setProto3FloatField(this, 2, value);
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.type.Confidence.prototype.clearValue = function() {
+  this.setValue(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.type.Confidence.prototype.hasValue = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

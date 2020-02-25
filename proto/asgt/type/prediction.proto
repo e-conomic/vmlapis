@@ -4,6 +4,7 @@ package asgt.type;
 
 option go_package = "type";
 
+import "google/protobuf/wrappers.proto";
 
 // Common types
 message Confidence {
@@ -19,7 +20,7 @@ message Confidence {
   // highly stable results across model upgrades.
   Level level = 1;
   // The confidence value
-  float value = 2;
+  google.protobuf.FloatValue value = 2;
 }
 
 
