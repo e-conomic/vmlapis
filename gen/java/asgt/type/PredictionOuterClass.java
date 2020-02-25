@@ -42,25 +42,9 @@ public final class PredictionOuterClass {
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>float value = 2;</code>
      */
-    boolean hasValue();
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    com.google.protobuf.FloatValue getValue();
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    com.google.protobuf.FloatValueOrBuilder getValueOrBuilder();
+    float getValue();
   }
   /**
    * <pre>
@@ -80,6 +64,7 @@ public final class PredictionOuterClass {
     }
     private Confidence() {
       level_ = 0;
+      value_ = 0F;
     }
 
     @java.lang.Override
@@ -112,17 +97,9 @@ public final class PredictionOuterClass {
               level_ = rawValue;
               break;
             }
-            case 18: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (value_ != null) {
-                subBuilder = value_.toBuilder();
-              }
-              value_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(value_);
-                value_ = subBuilder.buildPartial();
-              }
+            case 21: {
 
+              value_ = input.readFloat();
               break;
             }
             default: {
@@ -319,36 +296,16 @@ public final class PredictionOuterClass {
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
-    private com.google.protobuf.FloatValue value_;
+    private float value_;
     /**
      * <pre>
      * The confidence value
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
+     * <code>float value = 2;</code>
      */
-    public boolean hasValue() {
-      return value_ != null;
-    }
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    public com.google.protobuf.FloatValue getValue() {
-      return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-    }
-    /**
-     * <pre>
-     * The confidence value
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue value = 2;</code>
-     */
-    public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-      return getValue();
+    public float getValue() {
+      return value_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -368,8 +325,8 @@ public final class PredictionOuterClass {
       if (level_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(1, level_);
       }
-      if (value_ != null) {
-        output.writeMessage(2, getValue());
+      if (value_ != 0F) {
+        output.writeFloat(2, value_);
       }
       unknownFields.writeTo(output);
     }
@@ -384,9 +341,9 @@ public final class PredictionOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, level_);
       }
-      if (value_ != null) {
+      if (value_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getValue());
+          .computeFloatSize(2, value_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -405,11 +362,10 @@ public final class PredictionOuterClass {
 
       boolean result = true;
       result = result && level_ == other.level_;
-      result = result && (hasValue() == other.hasValue());
-      if (hasValue()) {
-        result = result && getValue()
-            .equals(other.getValue());
-      }
+      result = result && (
+          java.lang.Float.floatToIntBits(getValue())
+          == java.lang.Float.floatToIntBits(
+              other.getValue()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -423,10 +379,9 @@ public final class PredictionOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + LEVEL_FIELD_NUMBER;
       hash = (53 * hash) + level_;
-      if (hasValue()) {
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-      }
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getValue());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -566,12 +521,8 @@ public final class PredictionOuterClass {
         super.clear();
         level_ = 0;
 
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
+        value_ = 0F;
+
         return this;
       }
 
@@ -599,11 +550,7 @@ public final class PredictionOuterClass {
       public asgt.type.PredictionOuterClass.Confidence buildPartial() {
         asgt.type.PredictionOuterClass.Confidence result = new asgt.type.PredictionOuterClass.Confidence(this);
         result.level_ = level_;
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
+        result.value_ = value_;
         onBuilt();
         return result;
       }
@@ -655,8 +602,8 @@ public final class PredictionOuterClass {
         if (other.level_ != 0) {
           setLevelValue(other.getLevelValue());
         }
-        if (other.hasValue()) {
-          mergeValue(other.getValue());
+        if (other.getValue() != 0F) {
+          setValue(other.getValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -757,51 +704,28 @@ public final class PredictionOuterClass {
         return this;
       }
 
-      private com.google.protobuf.FloatValue value_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> valueBuilder_;
+      private float value_ ;
       /**
        * <pre>
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>float value = 2;</code>
        */
-      public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
+      public float getValue() {
+        return value_;
       }
       /**
        * <pre>
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>float value = 2;</code>
        */
-      public com.google.protobuf.FloatValue getValue() {
-        if (valueBuilder_ == null) {
-          return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-        } else {
-          return valueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder setValue(com.google.protobuf.FloatValue value) {
-        if (valueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          value_ = value;
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(value);
-        }
-
+      public Builder setValue(float value) {
+        
+        value_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -809,105 +733,13 @@ public final class PredictionOuterClass {
        * The confidence value
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder setValue(
-          com.google.protobuf.FloatValue.Builder builderForValue) {
-        if (valueBuilder_ == null) {
-          value_ = builderForValue.build();
-          onChanged();
-        } else {
-          valueBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public Builder mergeValue(com.google.protobuf.FloatValue value) {
-        if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.google.protobuf.FloatValue.newBuilder(value_).mergeFrom(value).buildPartial();
-          } else {
-            value_ = value;
-          }
-          onChanged();
-        } else {
-          valueBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
+       * <code>float value = 2;</code>
        */
       public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
-          valueBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public com.google.protobuf.FloatValue.Builder getValueBuilder() {
         
+        value_ = 0F;
         onChanged();
-        return getValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-        if (valueBuilder_ != null) {
-          return valueBuilder_.getMessageOrBuilder();
-        } else {
-          return value_ == null ?
-              com.google.protobuf.FloatValue.getDefaultInstance() : value_;
-        }
-      }
-      /**
-       * <pre>
-       * The confidence value
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue value = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-          getValueFieldBuilder() {
-        if (valueBuilder_ == null) {
-          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                  getValue(),
-                  getParentForChildren(),
-                  isClean());
-          value_ = null;
-        }
-        return valueBuilder_;
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -967,37 +799,27 @@ public final class PredictionOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string target = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    java.lang.String getTarget();
+    java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> 
+        getTargetsList();
     /**
-     * <code>string target = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getTargetBytes();
-
+    asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index);
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate> 
-        getCandidatesList();
+    int getTargetsCount();
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    asgt.type.PredictionOuterClass.Prediction.Candidate getCandidates(int index);
+    java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
+        getTargetsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    int getCandidatesCount();
-    /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
-     */
-    java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder> 
-        getCandidatesOrBuilderList();
-    /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
-     */
-    asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
+    asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
         int index);
   }
   /**
@@ -1013,8 +835,7 @@ public final class PredictionOuterClass {
       super(builder);
     }
     private Prediction() {
-      target_ = "";
-      candidates_ = java.util.Collections.emptyList();
+      targets_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -1042,18 +863,12 @@ public final class PredictionOuterClass {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              target_ = s;
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Candidate>();
-                mutable_bitField0_ |= 0x00000002;
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                targets_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>();
+                mutable_bitField0_ |= 0x00000001;
               }
-              candidates_.add(
-                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.Candidate.parser(), extensionRegistry));
+              targets_.add(
+                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -1071,8 +886,8 @@ public final class PredictionOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          candidates_ = java.util.Collections.unmodifiableList(candidates_);
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          targets_ = java.util.Collections.unmodifiableList(targets_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1091,47 +906,59 @@ public final class PredictionOuterClass {
               asgt.type.PredictionOuterClass.Prediction.class, asgt.type.PredictionOuterClass.Prediction.Builder.class);
     }
 
-    public interface CandidateOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.type.Prediction.Candidate)
+    public interface TargetOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:asgt.type.Prediction.Target)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string label = 1;</code>
+       * <code>string target = 1;</code>
        */
-      java.lang.String getLabel();
+      java.lang.String getTarget();
       /**
-       * <code>string label = 1;</code>
+       * <code>string target = 1;</code>
        */
       com.google.protobuf.ByteString
-          getLabelBytes();
+          getTargetBytes();
 
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      boolean hasConfidence();
+      java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> 
+          getCandidatesList();
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      asgt.type.PredictionOuterClass.Confidence getConfidence();
+      asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index);
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
+      int getCandidatesCount();
+      /**
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       */
+      java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
+          getCandidatesOrBuilderList();
+      /**
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       */
+      asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
+          int index);
     }
     /**
-     * Protobuf type {@code asgt.type.Prediction.Candidate}
+     * Protobuf type {@code asgt.type.Prediction.Target}
      */
-    public  static final class Candidate extends
+    public  static final class Target extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.type.Prediction.Candidate)
-        CandidateOrBuilder {
+        // @@protoc_insertion_point(message_implements:asgt.type.Prediction.Target)
+        TargetOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use Candidate.newBuilder() to construct.
-      private Candidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Target.newBuilder() to construct.
+      private Target(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private Candidate() {
-        label_ = "";
+      private Target() {
+        target_ = "";
+        candidates_ = java.util.Collections.emptyList();
       }
 
       @java.lang.Override
@@ -1139,7 +966,7 @@ public final class PredictionOuterClass {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private Candidate(
+      private Target(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1161,20 +988,16 @@ public final class PredictionOuterClass {
               case 10: {
                 java.lang.String s = input.readStringRequireUtf8();
 
-                label_ = s;
+                target_ = s;
                 break;
               }
               case 18: {
-                asgt.type.PredictionOuterClass.Confidence.Builder subBuilder = null;
-                if (confidence_ != null) {
-                  subBuilder = confidence_.toBuilder();
+                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                  candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>();
+                  mutable_bitField0_ |= 0x00000002;
                 }
-                confidence_ = input.readMessage(asgt.type.PredictionOuterClass.Confidence.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(confidence_);
-                  confidence_ = subBuilder.buildPartial();
-                }
-
+                candidates_.add(
+                    input.readMessage(asgt.type.PredictionOuterClass.Prediction.Target.Candidate.parser(), extensionRegistry));
                 break;
               }
               default: {
@@ -1192,76 +1015,838 @@ public final class PredictionOuterClass {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
         } finally {
+          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+            candidates_ = java.util.Collections.unmodifiableList(candidates_);
+          }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Candidate_descriptor;
+        return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Candidate_fieldAccessorTable
+        return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.type.PredictionOuterClass.Prediction.Candidate.class, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder.class);
+                asgt.type.PredictionOuterClass.Prediction.Target.class, asgt.type.PredictionOuterClass.Prediction.Target.Builder.class);
       }
 
-      public static final int LABEL_FIELD_NUMBER = 1;
-      private volatile java.lang.Object label_;
+      public interface CandidateOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:asgt.type.Prediction.Target.Candidate)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>string label = 1;</code>
+         */
+        java.lang.String getLabel();
+        /**
+         * <code>string label = 1;</code>
+         */
+        com.google.protobuf.ByteString
+            getLabelBytes();
+
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        boolean hasConfidence();
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        asgt.type.PredictionOuterClass.Confidence getConfidence();
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
+      }
       /**
-       * <code>string label = 1;</code>
+       * Protobuf type {@code asgt.type.Prediction.Target.Candidate}
        */
-      public java.lang.String getLabel() {
-        java.lang.Object ref = label_;
+      public  static final class Candidate extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:asgt.type.Prediction.Target.Candidate)
+          CandidateOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use Candidate.newBuilder() to construct.
+        private Candidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private Candidate() {
+          label_ = "";
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private Candidate(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  java.lang.String s = input.readStringRequireUtf8();
+
+                  label_ = s;
+                  break;
+                }
+                case 18: {
+                  asgt.type.PredictionOuterClass.Confidence.Builder subBuilder = null;
+                  if (confidence_ != null) {
+                    subBuilder = confidence_.toBuilder();
+                  }
+                  confidence_ = input.readMessage(asgt.type.PredictionOuterClass.Confidence.parser(), extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(confidence_);
+                    confidence_ = subBuilder.buildPartial();
+                  }
+
+                  break;
+                }
+                default: {
+                  if (!parseUnknownFieldProto3(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  asgt.type.PredictionOuterClass.Prediction.Target.Candidate.class, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder.class);
+        }
+
+        public static final int LABEL_FIELD_NUMBER = 1;
+        private volatile java.lang.Object label_;
+        /**
+         * <code>string label = 1;</code>
+         */
+        public java.lang.String getLabel() {
+          java.lang.Object ref = label_;
+          if (ref instanceof java.lang.String) {
+            return (java.lang.String) ref;
+          } else {
+            com.google.protobuf.ByteString bs = 
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            label_ = s;
+            return s;
+          }
+        }
+        /**
+         * <code>string label = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getLabelBytes() {
+          java.lang.Object ref = label_;
+          if (ref instanceof java.lang.String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            label_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+
+        public static final int CONFIDENCE_FIELD_NUMBER = 2;
+        private asgt.type.PredictionOuterClass.Confidence confidence_;
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        public boolean hasConfidence() {
+          return confidence_ != null;
+        }
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Confidence getConfidence() {
+          return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+        }
+        /**
+         * <code>.asgt.type.Confidence confidence = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
+          return getConfidence();
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (!getLabelBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
+          }
+          if (confidence_ != null) {
+            output.writeMessage(2, getConfidence());
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (!getLabelBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
+          }
+          if (confidence_ != null) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(2, getConfidence());
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof asgt.type.PredictionOuterClass.Prediction.Target.Candidate)) {
+            return super.equals(obj);
+          }
+          asgt.type.PredictionOuterClass.Prediction.Target.Candidate other = (asgt.type.PredictionOuterClass.Prediction.Target.Candidate) obj;
+
+          boolean result = true;
+          result = result && getLabel()
+              .equals(other.getLabel());
+          result = result && (hasConfidence() == other.hasConfidence());
+          if (hasConfidence()) {
+            result = result && getConfidence()
+                .equals(other.getConfidence());
+          }
+          result = result && unknownFields.equals(other.unknownFields);
+          return result;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + LABEL_FIELD_NUMBER;
+          hash = (53 * hash) + getLabel().hashCode();
+          if (hasConfidence()) {
+            hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
+            hash = (53 * hash) + getConfidence().hashCode();
+          }
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(asgt.type.PredictionOuterClass.Prediction.Target.Candidate prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code asgt.type.Prediction.Target.Candidate}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:asgt.type.Prediction.Target.Candidate)
+            asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    asgt.type.PredictionOuterClass.Prediction.Target.Candidate.class, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder.class);
+          }
+
+          // Construct using asgt.type.PredictionOuterClass.Prediction.Target.Candidate.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            label_ = "";
+
+            if (confidenceBuilder_ == null) {
+              confidence_ = null;
+            } else {
+              confidence_ = null;
+              confidenceBuilder_ = null;
+            }
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_Candidate_descriptor;
+          }
+
+          @java.lang.Override
+          public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getDefaultInstanceForType() {
+            return asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public asgt.type.PredictionOuterClass.Prediction.Target.Candidate build() {
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public asgt.type.PredictionOuterClass.Prediction.Target.Candidate buildPartial() {
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate result = new asgt.type.PredictionOuterClass.Prediction.Target.Candidate(this);
+            result.label_ = label_;
+            if (confidenceBuilder_ == null) {
+              result.confidence_ = confidence_;
+            } else {
+              result.confidence_ = confidenceBuilder_.build();
+            }
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return (Builder) super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return (Builder) super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return (Builder) super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return (Builder) super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return (Builder) super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return (Builder) super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof asgt.type.PredictionOuterClass.Prediction.Target.Candidate) {
+              return mergeFrom((asgt.type.PredictionOuterClass.Prediction.Target.Candidate)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(asgt.type.PredictionOuterClass.Prediction.Target.Candidate other) {
+            if (other == asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance()) return this;
+            if (!other.getLabel().isEmpty()) {
+              label_ = other.label_;
+              onChanged();
+            }
+            if (other.hasConfidence()) {
+              mergeConfidence(other.getConfidence());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (asgt.type.PredictionOuterClass.Prediction.Target.Candidate) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private java.lang.Object label_ = "";
+          /**
+           * <code>string label = 1;</code>
+           */
+          public java.lang.String getLabel() {
+            java.lang.Object ref = label_;
+            if (!(ref instanceof java.lang.String)) {
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              label_ = s;
+              return s;
+            } else {
+              return (java.lang.String) ref;
+            }
+          }
+          /**
+           * <code>string label = 1;</code>
+           */
+          public com.google.protobuf.ByteString
+              getLabelBytes() {
+            java.lang.Object ref = label_;
+            if (ref instanceof String) {
+              com.google.protobuf.ByteString b = 
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                      (java.lang.String) ref);
+              label_ = b;
+              return b;
+            } else {
+              return (com.google.protobuf.ByteString) ref;
+            }
+          }
+          /**
+           * <code>string label = 1;</code>
+           */
+          public Builder setLabel(
+              java.lang.String value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  
+            label_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string label = 1;</code>
+           */
+          public Builder clearLabel() {
+            
+            label_ = getDefaultInstance().getLabel();
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>string label = 1;</code>
+           */
+          public Builder setLabelBytes(
+              com.google.protobuf.ByteString value) {
+            if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+            
+            label_ = value;
+            onChanged();
+            return this;
+          }
+
+          private asgt.type.PredictionOuterClass.Confidence confidence_ = null;
+          private com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public boolean hasConfidence() {
+            return confidenceBuilder_ != null || confidence_ != null;
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public asgt.type.PredictionOuterClass.Confidence getConfidence() {
+            if (confidenceBuilder_ == null) {
+              return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+            } else {
+              return confidenceBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public Builder setConfidence(asgt.type.PredictionOuterClass.Confidence value) {
+            if (confidenceBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              confidence_ = value;
+              onChanged();
+            } else {
+              confidenceBuilder_.setMessage(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public Builder setConfidence(
+              asgt.type.PredictionOuterClass.Confidence.Builder builderForValue) {
+            if (confidenceBuilder_ == null) {
+              confidence_ = builderForValue.build();
+              onChanged();
+            } else {
+              confidenceBuilder_.setMessage(builderForValue.build());
+            }
+
+            return this;
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public Builder mergeConfidence(asgt.type.PredictionOuterClass.Confidence value) {
+            if (confidenceBuilder_ == null) {
+              if (confidence_ != null) {
+                confidence_ =
+                  asgt.type.PredictionOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
+              } else {
+                confidence_ = value;
+              }
+              onChanged();
+            } else {
+              confidenceBuilder_.mergeFrom(value);
+            }
+
+            return this;
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public Builder clearConfidence() {
+            if (confidenceBuilder_ == null) {
+              confidence_ = null;
+              onChanged();
+            } else {
+              confidence_ = null;
+              confidenceBuilder_ = null;
+            }
+
+            return this;
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public asgt.type.PredictionOuterClass.Confidence.Builder getConfidenceBuilder() {
+            
+            onChanged();
+            return getConfidenceFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
+            if (confidenceBuilder_ != null) {
+              return confidenceBuilder_.getMessageOrBuilder();
+            } else {
+              return confidence_ == null ?
+                  asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+            }
+          }
+          /**
+           * <code>.asgt.type.Confidence confidence = 2;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> 
+              getConfidenceFieldBuilder() {
+            if (confidenceBuilder_ == null) {
+              confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                  asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder>(
+                      getConfidence(),
+                      getParentForChildren(),
+                      isClean());
+              confidence_ = null;
+            }
+            return confidenceBuilder_;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFieldsProto3(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:asgt.type.Prediction.Target.Candidate)
+        }
+
+        // @@protoc_insertion_point(class_scope:asgt.type.Prediction.Target.Candidate)
+        private static final asgt.type.PredictionOuterClass.Prediction.Target.Candidate DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new asgt.type.PredictionOuterClass.Prediction.Target.Candidate();
+        }
+
+        public static asgt.type.PredictionOuterClass.Prediction.Target.Candidate getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<Candidate>
+            PARSER = new com.google.protobuf.AbstractParser<Candidate>() {
+          @java.lang.Override
+          public Candidate parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new Candidate(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<Candidate> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<Candidate> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
+      private int bitField0_;
+      public static final int TARGET_FIELD_NUMBER = 1;
+      private volatile java.lang.Object target_;
+      /**
+       * <code>string target = 1;</code>
+       */
+      public java.lang.String getTarget() {
+        java.lang.Object ref = target_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
           com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          label_ = s;
+          target_ = s;
           return s;
         }
       }
       /**
-       * <code>string label = 1;</code>
+       * <code>string target = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getLabelBytes() {
-        java.lang.Object ref = label_;
+          getTargetBytes() {
+        java.lang.Object ref = target_;
         if (ref instanceof java.lang.String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          label_ = b;
+          target_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
 
-      public static final int CONFIDENCE_FIELD_NUMBER = 2;
-      private asgt.type.PredictionOuterClass.Confidence confidence_;
+      public static final int CANDIDATES_FIELD_NUMBER = 2;
+      private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_;
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      public boolean hasConfidence() {
-        return confidence_ != null;
+      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
+        return candidates_;
       }
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      public asgt.type.PredictionOuterClass.Confidence getConfidence() {
-        return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+      public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
+          getCandidatesOrBuilderList() {
+        return candidates_;
       }
       /**
-       * <code>.asgt.type.Confidence confidence = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
        */
-      public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-        return getConfidence();
+      public int getCandidatesCount() {
+        return candidates_.size();
+      }
+      /**
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       */
+      public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
+        return candidates_.get(index);
+      }
+      /**
+       * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+       */
+      public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
+          int index) {
+        return candidates_.get(index);
       }
 
       private byte memoizedIsInitialized = -1;
@@ -1278,11 +1863,11 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getLabelBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
+        if (!getTargetBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
         }
-        if (confidence_ != null) {
-          output.writeMessage(2, getConfidence());
+        for (int i = 0; i < candidates_.size(); i++) {
+          output.writeMessage(2, candidates_.get(i));
         }
         unknownFields.writeTo(output);
       }
@@ -1293,12 +1878,12 @@ public final class PredictionOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (!getLabelBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
+        if (!getTargetBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
         }
-        if (confidence_ != null) {
+        for (int i = 0; i < candidates_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getConfidence());
+            .computeMessageSize(2, candidates_.get(i));
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -1310,19 +1895,16 @@ public final class PredictionOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.type.PredictionOuterClass.Prediction.Candidate)) {
+        if (!(obj instanceof asgt.type.PredictionOuterClass.Prediction.Target)) {
           return super.equals(obj);
         }
-        asgt.type.PredictionOuterClass.Prediction.Candidate other = (asgt.type.PredictionOuterClass.Prediction.Candidate) obj;
+        asgt.type.PredictionOuterClass.Prediction.Target other = (asgt.type.PredictionOuterClass.Prediction.Target) obj;
 
         boolean result = true;
-        result = result && getLabel()
-            .equals(other.getLabel());
-        result = result && (hasConfidence() == other.hasConfidence());
-        if (hasConfidence()) {
-          result = result && getConfidence()
-              .equals(other.getConfidence());
-        }
+        result = result && getTarget()
+            .equals(other.getTarget());
+        result = result && getCandidatesList()
+            .equals(other.getCandidatesList());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -1334,80 +1916,80 @@ public final class PredictionOuterClass {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + LABEL_FIELD_NUMBER;
-        hash = (53 * hash) + getLabel().hashCode();
-        if (hasConfidence()) {
-          hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
-          hash = (53 * hash) + getConfidence().hashCode();
+        hash = (37 * hash) + TARGET_FIELD_NUMBER;
+        hash = (53 * hash) + getTarget().hashCode();
+        if (getCandidatesCount() > 0) {
+          hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
+          hash = (53 * hash) + getCandidatesList().hashCode();
         }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(byte[] data)
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(java.io.InputStream input)
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseDelimitedFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate parseFrom(
+      public static asgt.type.PredictionOuterClass.Prediction.Target parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1420,7 +2002,7 @@ public final class PredictionOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.type.PredictionOuterClass.Prediction.Candidate prototype) {
+      public static Builder newBuilder(asgt.type.PredictionOuterClass.Prediction.Target prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -1436,26 +2018,26 @@ public final class PredictionOuterClass {
         return builder;
       }
       /**
-       * Protobuf type {@code asgt.type.Prediction.Candidate}
+       * Protobuf type {@code asgt.type.Prediction.Target}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.type.Prediction.Candidate)
-          asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder {
+          // @@protoc_insertion_point(builder_implements:asgt.type.Prediction.Target)
+          asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Candidate_descriptor;
+          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Candidate_fieldAccessorTable
+          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.type.PredictionOuterClass.Prediction.Candidate.class, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder.class);
+                  asgt.type.PredictionOuterClass.Prediction.Target.class, asgt.type.PredictionOuterClass.Prediction.Target.Builder.class);
         }
 
-        // Construct using asgt.type.PredictionOuterClass.Prediction.Candidate.newBuilder()
+        // Construct using asgt.type.PredictionOuterClass.Prediction.Target.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1468,18 +2050,19 @@ public final class PredictionOuterClass {
         private void maybeForceBuilderInitialization() {
           if (com.google.protobuf.GeneratedMessageV3
                   .alwaysUseFieldBuilders) {
+            getCandidatesFieldBuilder();
           }
         }
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          label_ = "";
+          target_ = "";
 
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
+          if (candidatesBuilder_ == null) {
+            candidates_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            confidence_ = null;
-            confidenceBuilder_ = null;
+            candidatesBuilder_.clear();
           }
           return this;
         }
@@ -1487,17 +2070,17 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Candidate_descriptor;
+          return asgt.type.PredictionOuterClass.internal_static_asgt_type_Prediction_Target_descriptor;
         }
 
         @java.lang.Override
-        public asgt.type.PredictionOuterClass.Prediction.Candidate getDefaultInstanceForType() {
-          return asgt.type.PredictionOuterClass.Prediction.Candidate.getDefaultInstance();
+        public asgt.type.PredictionOuterClass.Prediction.Target getDefaultInstanceForType() {
+          return asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.type.PredictionOuterClass.Prediction.Candidate build() {
-          asgt.type.PredictionOuterClass.Prediction.Candidate result = buildPartial();
+        public asgt.type.PredictionOuterClass.Prediction.Target build() {
+          asgt.type.PredictionOuterClass.Prediction.Target result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1505,14 +2088,21 @@ public final class PredictionOuterClass {
         }
 
         @java.lang.Override
-        public asgt.type.PredictionOuterClass.Prediction.Candidate buildPartial() {
-          asgt.type.PredictionOuterClass.Prediction.Candidate result = new asgt.type.PredictionOuterClass.Prediction.Candidate(this);
-          result.label_ = label_;
-          if (confidenceBuilder_ == null) {
-            result.confidence_ = confidence_;
+        public asgt.type.PredictionOuterClass.Prediction.Target buildPartial() {
+          asgt.type.PredictionOuterClass.Prediction.Target result = new asgt.type.PredictionOuterClass.Prediction.Target(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          result.target_ = target_;
+          if (candidatesBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              candidates_ = java.util.Collections.unmodifiableList(candidates_);
+              bitField0_ = (bitField0_ & ~0x00000002);
+            }
+            result.candidates_ = candidates_;
           } else {
-            result.confidence_ = confidenceBuilder_.build();
+            result.candidates_ = candidatesBuilder_.build();
           }
+          result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
         }
@@ -1551,22 +2141,45 @@ public final class PredictionOuterClass {
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.type.PredictionOuterClass.Prediction.Candidate) {
-            return mergeFrom((asgt.type.PredictionOuterClass.Prediction.Candidate)other);
+          if (other instanceof asgt.type.PredictionOuterClass.Prediction.Target) {
+            return mergeFrom((asgt.type.PredictionOuterClass.Prediction.Target)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.type.PredictionOuterClass.Prediction.Candidate other) {
-          if (other == asgt.type.PredictionOuterClass.Prediction.Candidate.getDefaultInstance()) return this;
-          if (!other.getLabel().isEmpty()) {
-            label_ = other.label_;
+        public Builder mergeFrom(asgt.type.PredictionOuterClass.Prediction.Target other) {
+          if (other == asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance()) return this;
+          if (!other.getTarget().isEmpty()) {
+            target_ = other.target_;
             onChanged();
           }
-          if (other.hasConfidence()) {
-            mergeConfidence(other.getConfidence());
+          if (candidatesBuilder_ == null) {
+            if (!other.candidates_.isEmpty()) {
+              if (candidates_.isEmpty()) {
+                candidates_ = other.candidates_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+              } else {
+                ensureCandidatesIsMutable();
+                candidates_.addAll(other.candidates_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.candidates_.isEmpty()) {
+              if (candidatesBuilder_.isEmpty()) {
+                candidatesBuilder_.dispose();
+                candidatesBuilder_ = null;
+                candidates_ = other.candidates_;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                candidatesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getCandidatesFieldBuilder() : null;
+              } else {
+                candidatesBuilder_.addAllMessages(other.candidates_);
+              }
+            }
           }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
@@ -1583,11 +2196,11 @@ public final class PredictionOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.type.PredictionOuterClass.Prediction.Candidate parsedMessage = null;
+          asgt.type.PredictionOuterClass.Prediction.Target parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.type.PredictionOuterClass.Prediction.Candidate) e.getUnfinishedMessage();
+            parsedMessage = (asgt.type.PredictionOuterClass.Prediction.Target) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -1596,191 +2209,315 @@ public final class PredictionOuterClass {
           }
           return this;
         }
+        private int bitField0_;
 
-        private java.lang.Object label_ = "";
+        private java.lang.Object target_ = "";
         /**
-         * <code>string label = 1;</code>
+         * <code>string target = 1;</code>
          */
-        public java.lang.String getLabel() {
-          java.lang.Object ref = label_;
+        public java.lang.String getTarget() {
+          java.lang.Object ref = target_;
           if (!(ref instanceof java.lang.String)) {
             com.google.protobuf.ByteString bs =
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            label_ = s;
+            target_ = s;
             return s;
           } else {
             return (java.lang.String) ref;
           }
         }
         /**
-         * <code>string label = 1;</code>
+         * <code>string target = 1;</code>
          */
         public com.google.protobuf.ByteString
-            getLabelBytes() {
-          java.lang.Object ref = label_;
+            getTargetBytes() {
+          java.lang.Object ref = target_;
           if (ref instanceof String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            label_ = b;
+            target_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
           }
         }
         /**
-         * <code>string label = 1;</code>
+         * <code>string target = 1;</code>
          */
-        public Builder setLabel(
+        public Builder setTarget(
             java.lang.String value) {
           if (value == null) {
     throw new NullPointerException();
   }
   
-          label_ = value;
+          target_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>string label = 1;</code>
+         * <code>string target = 1;</code>
          */
-        public Builder clearLabel() {
+        public Builder clearTarget() {
           
-          label_ = getDefaultInstance().getLabel();
+          target_ = getDefaultInstance().getTarget();
           onChanged();
           return this;
         }
         /**
-         * <code>string label = 1;</code>
+         * <code>string target = 1;</code>
          */
-        public Builder setLabelBytes(
+        public Builder setTargetBytes(
             com.google.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
           
-          label_ = value;
+          target_ = value;
           onChanged();
           return this;
         }
 
-        private asgt.type.PredictionOuterClass.Confidence confidence_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
-        /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
-         */
-        public boolean hasConfidence() {
-          return confidenceBuilder_ != null || confidence_ != null;
+        private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_ =
+          java.util.Collections.emptyList();
+        private void ensureCandidatesIsMutable() {
+          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+            candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>(candidates_);
+            bitField0_ |= 0x00000002;
+           }
         }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> candidatesBuilder_;
+
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public asgt.type.PredictionOuterClass.Confidence getConfidence() {
-          if (confidenceBuilder_ == null) {
-            return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+        public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> getCandidatesList() {
+          if (candidatesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(candidates_);
           } else {
-            return confidenceBuilder_.getMessage();
+            return candidatesBuilder_.getMessageList();
           }
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public Builder setConfidence(asgt.type.PredictionOuterClass.Confidence value) {
-          if (confidenceBuilder_ == null) {
+        public int getCandidatesCount() {
+          if (candidatesBuilder_ == null) {
+            return candidates_.size();
+          } else {
+            return candidatesBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Prediction.Target.Candidate getCandidates(int index) {
+          if (candidatesBuilder_ == null) {
+            return candidates_.get(index);
+          } else {
+            return candidatesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public Builder setCandidates(
+            int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
+          if (candidatesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
             }
-            confidence_ = value;
+            ensureCandidatesIsMutable();
+            candidates_.set(index, value);
             onChanged();
           } else {
-            confidenceBuilder_.setMessage(value);
+            candidatesBuilder_.setMessage(index, value);
           }
-
           return this;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public Builder setConfidence(
-            asgt.type.PredictionOuterClass.Confidence.Builder builderForValue) {
-          if (confidenceBuilder_ == null) {
-            confidence_ = builderForValue.build();
+        public Builder setCandidates(
+            int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
+          if (candidatesBuilder_ == null) {
+            ensureCandidatesIsMutable();
+            candidates_.set(index, builderForValue.build());
             onChanged();
           } else {
-            confidenceBuilder_.setMessage(builderForValue.build());
+            candidatesBuilder_.setMessage(index, builderForValue.build());
           }
-
           return this;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public Builder mergeConfidence(asgt.type.PredictionOuterClass.Confidence value) {
-          if (confidenceBuilder_ == null) {
-            if (confidence_ != null) {
-              confidence_ =
-                asgt.type.PredictionOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
-            } else {
-              confidence_ = value;
+        public Builder addCandidates(asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
+          if (candidatesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
             }
+            ensureCandidatesIsMutable();
+            candidates_.add(value);
             onChanged();
           } else {
-            confidenceBuilder_.mergeFrom(value);
+            candidatesBuilder_.addMessage(value);
           }
-
           return this;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public Builder clearConfidence() {
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
+        public Builder addCandidates(
+            int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate value) {
+          if (candidatesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureCandidatesIsMutable();
+            candidates_.add(index, value);
             onChanged();
           } else {
-            confidence_ = null;
-            confidenceBuilder_ = null;
+            candidatesBuilder_.addMessage(index, value);
           }
-
           return this;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public asgt.type.PredictionOuterClass.Confidence.Builder getConfidenceBuilder() {
-          
-          onChanged();
-          return getConfidenceFieldBuilder().getBuilder();
+        public Builder addCandidates(
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
+          if (candidatesBuilder_ == null) {
+            ensureCandidatesIsMutable();
+            candidates_.add(builderForValue.build());
+            onChanged();
+          } else {
+            candidatesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-          if (confidenceBuilder_ != null) {
-            return confidenceBuilder_.getMessageOrBuilder();
+        public Builder addCandidates(
+            int index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder builderForValue) {
+          if (candidatesBuilder_ == null) {
+            ensureCandidatesIsMutable();
+            candidates_.add(index, builderForValue.build());
+            onChanged();
           } else {
-            return confidence_ == null ?
-                asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
+            candidatesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public Builder addAllCandidates(
+            java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target.Candidate> values) {
+          if (candidatesBuilder_ == null) {
+            ensureCandidatesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, candidates_);
+            onChanged();
+          } else {
+            candidatesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public Builder clearCandidates() {
+          if (candidatesBuilder_ == null) {
+            candidates_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000002);
+            onChanged();
+          } else {
+            candidatesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public Builder removeCandidates(int index) {
+          if (candidatesBuilder_ == null) {
+            ensureCandidatesIsMutable();
+            candidates_.remove(index);
+            onChanged();
+          } else {
+            candidatesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder getCandidatesBuilder(
+            int index) {
+          return getCandidatesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder getCandidatesOrBuilder(
+            int index) {
+          if (candidatesBuilder_ == null) {
+            return candidates_.get(index);  } else {
+            return candidatesBuilder_.getMessageOrBuilder(index);
           }
         }
         /**
-         * <code>.asgt.type.Confidence confidence = 2;</code>
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder> 
-            getConfidenceFieldBuilder() {
-          if (confidenceBuilder_ == null) {
-            confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.type.PredictionOuterClass.Confidence, asgt.type.PredictionOuterClass.Confidence.Builder, asgt.type.PredictionOuterClass.ConfidenceOrBuilder>(
-                    getConfidence(),
+        public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
+             getCandidatesOrBuilderList() {
+          if (candidatesBuilder_ != null) {
+            return candidatesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(candidates_);
+          }
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder() {
+          return getCandidatesFieldBuilder().addBuilder(
+              asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder addCandidatesBuilder(
+            int index) {
+          return getCandidatesFieldBuilder().addBuilder(
+              index, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2;</code>
+         */
+        public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder> 
+             getCandidatesBuilderList() {
+          return getCandidatesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder> 
+            getCandidatesFieldBuilder() {
+          if (candidatesBuilder_ == null) {
+            candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder>(
+                    candidates_,
+                    ((bitField0_ & 0x00000002) == 0x00000002),
                     getParentForChildren(),
                     isClean());
-            confidence_ = null;
+            candidates_ = null;
           }
-          return confidenceBuilder_;
+          return candidatesBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -1795,114 +2532,79 @@ public final class PredictionOuterClass {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:asgt.type.Prediction.Candidate)
+        // @@protoc_insertion_point(builder_scope:asgt.type.Prediction.Target)
       }
 
-      // @@protoc_insertion_point(class_scope:asgt.type.Prediction.Candidate)
-      private static final asgt.type.PredictionOuterClass.Prediction.Candidate DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:asgt.type.Prediction.Target)
+      private static final asgt.type.PredictionOuterClass.Prediction.Target DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.type.PredictionOuterClass.Prediction.Candidate();
+        DEFAULT_INSTANCE = new asgt.type.PredictionOuterClass.Prediction.Target();
       }
 
-      public static asgt.type.PredictionOuterClass.Prediction.Candidate getDefaultInstance() {
+      public static asgt.type.PredictionOuterClass.Prediction.Target getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<Candidate>
-          PARSER = new com.google.protobuf.AbstractParser<Candidate>() {
+      private static final com.google.protobuf.Parser<Target>
+          PARSER = new com.google.protobuf.AbstractParser<Target>() {
         @java.lang.Override
-        public Candidate parsePartialFrom(
+        public Target parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Candidate(input, extensionRegistry);
+          return new Target(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<Candidate> parser() {
+      public static com.google.protobuf.Parser<Target> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Candidate> getParserForType() {
+      public com.google.protobuf.Parser<Target> getParserForType() {
         return PARSER;
       }
 
       @java.lang.Override
-      public asgt.type.PredictionOuterClass.Prediction.Candidate getDefaultInstanceForType() {
+      public asgt.type.PredictionOuterClass.Prediction.Target getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
-    private int bitField0_;
-    public static final int TARGET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object target_;
+    public static final int TARGETS_FIELD_NUMBER = 1;
+    private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_;
     /**
-     * <code>string target = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    public java.lang.String getTarget() {
-      java.lang.Object ref = target_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        target_ = s;
-        return s;
-      }
+    public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
+      return targets_;
     }
     /**
-     * <code>string target = 1;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getTargetBytes() {
-      java.lang.Object ref = target_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        target_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CANDIDATES_FIELD_NUMBER = 2;
-    private java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate> candidates_;
-    /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
-     */
-    public java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate> getCandidatesList() {
-      return candidates_;
+    public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
+        getTargetsOrBuilderList() {
+      return targets_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder> 
-        getCandidatesOrBuilderList() {
-      return candidates_;
+    public int getTargetsCount() {
+      return targets_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    public int getCandidatesCount() {
-      return candidates_.size();
+    public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
+      return targets_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+     * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
      */
-    public asgt.type.PredictionOuterClass.Prediction.Candidate getCandidates(int index) {
-      return candidates_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
-     */
-    public asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
+    public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
         int index) {
-      return candidates_.get(index);
+      return targets_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1919,11 +2621,8 @@ public final class PredictionOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
-      }
-      for (int i = 0; i < candidates_.size(); i++) {
-        output.writeMessage(2, candidates_.get(i));
+      for (int i = 0; i < targets_.size(); i++) {
+        output.writeMessage(1, targets_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -1934,12 +2633,9 @@ public final class PredictionOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
-      }
-      for (int i = 0; i < candidates_.size(); i++) {
+      for (int i = 0; i < targets_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, candidates_.get(i));
+          .computeMessageSize(1, targets_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1957,10 +2653,8 @@ public final class PredictionOuterClass {
       asgt.type.PredictionOuterClass.Prediction other = (asgt.type.PredictionOuterClass.Prediction) obj;
 
       boolean result = true;
-      result = result && getTarget()
-          .equals(other.getTarget());
-      result = result && getCandidatesList()
-          .equals(other.getCandidatesList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1972,11 +2666,9 @@ public final class PredictionOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TARGET_FIELD_NUMBER;
-      hash = (53 * hash) + getTarget().hashCode();
-      if (getCandidatesCount() > 0) {
-        hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
-        hash = (53 * hash) + getCandidatesList().hashCode();
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2106,19 +2798,17 @@ public final class PredictionOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getCandidatesFieldBuilder();
+          getTargetsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        target_ = "";
-
-        if (candidatesBuilder_ == null) {
-          candidates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          candidatesBuilder_.clear();
+          targetsBuilder_.clear();
         }
         return this;
       }
@@ -2147,18 +2837,15 @@ public final class PredictionOuterClass {
       public asgt.type.PredictionOuterClass.Prediction buildPartial() {
         asgt.type.PredictionOuterClass.Prediction result = new asgt.type.PredictionOuterClass.Prediction(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.target_ = target_;
-        if (candidatesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            candidates_ = java.util.Collections.unmodifiableList(candidates_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+        if (targetsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            targets_ = java.util.Collections.unmodifiableList(targets_);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.candidates_ = candidates_;
+          result.targets_ = targets_;
         } else {
-          result.candidates_ = candidatesBuilder_.build();
+          result.targets_ = targetsBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -2207,33 +2894,29 @@ public final class PredictionOuterClass {
 
       public Builder mergeFrom(asgt.type.PredictionOuterClass.Prediction other) {
         if (other == asgt.type.PredictionOuterClass.Prediction.getDefaultInstance()) return this;
-        if (!other.getTarget().isEmpty()) {
-          target_ = other.target_;
-          onChanged();
-        }
-        if (candidatesBuilder_ == null) {
-          if (!other.candidates_.isEmpty()) {
-            if (candidates_.isEmpty()) {
-              candidates_ = other.candidates_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+        if (targetsBuilder_ == null) {
+          if (!other.targets_.isEmpty()) {
+            if (targets_.isEmpty()) {
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureCandidatesIsMutable();
-              candidates_.addAll(other.candidates_);
+              ensureTargetsIsMutable();
+              targets_.addAll(other.targets_);
             }
             onChanged();
           }
         } else {
-          if (!other.candidates_.isEmpty()) {
-            if (candidatesBuilder_.isEmpty()) {
-              candidatesBuilder_.dispose();
-              candidatesBuilder_ = null;
-              candidates_ = other.candidates_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              candidatesBuilder_ = 
+          if (!other.targets_.isEmpty()) {
+            if (targetsBuilder_.isEmpty()) {
+              targetsBuilder_.dispose();
+              targetsBuilder_ = null;
+              targets_ = other.targets_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              targetsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getCandidatesFieldBuilder() : null;
+                   getTargetsFieldBuilder() : null;
             } else {
-              candidatesBuilder_.addAllMessages(other.candidates_);
+              targetsBuilder_.addAllMessages(other.targets_);
             }
           }
         }
@@ -2267,313 +2950,244 @@ public final class PredictionOuterClass {
       }
       private int bitField0_;
 
-      private java.lang.Object target_ = "";
-      /**
-       * <code>string target = 1;</code>
-       */
-      public java.lang.String getTarget() {
-        java.lang.Object ref = target_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          target_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTargetBytes() {
-        java.lang.Object ref = target_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          target_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder setTarget(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        target_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder clearTarget() {
-        
-        target_ = getDefaultInstance().getTarget();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string target = 1;</code>
-       */
-      public Builder setTargetBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        target_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate> candidates_ =
+      private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_ =
         java.util.Collections.emptyList();
-      private void ensureCandidatesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Candidate>(candidates_);
-          bitField0_ |= 0x00000002;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          targets_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target>(targets_);
+          bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction.Candidate, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder> candidatesBuilder_;
+          asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> targetsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate> getCandidatesList() {
-        if (candidatesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(candidates_);
+      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> getTargetsList() {
+        if (targetsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targets_);
         } else {
-          return candidatesBuilder_.getMessageList();
+          return targetsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public int getCandidatesCount() {
-        if (candidatesBuilder_ == null) {
-          return candidates_.size();
+      public int getTargetsCount() {
+        if (targetsBuilder_ == null) {
+          return targets_.size();
         } else {
-          return candidatesBuilder_.getCount();
+          return targetsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Candidate getCandidates(int index) {
-        if (candidatesBuilder_ == null) {
-          return candidates_.get(index);
+      public asgt.type.PredictionOuterClass.Prediction.Target getTargets(int index) {
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);
         } else {
-          return candidatesBuilder_.getMessage(index);
+          return targetsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder setCandidates(
-          int index, asgt.type.PredictionOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
+      public Builder setTargets(
+          int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
+        if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCandidatesIsMutable();
-          candidates_.set(index, value);
+          ensureTargetsIsMutable();
+          targets_.set(index, value);
           onChanged();
         } else {
-          candidatesBuilder_.setMessage(index, value);
+          targetsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder setCandidates(
-          int index, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.set(index, builderForValue.build());
+      public Builder setTargets(
+          int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.set(index, builderForValue.build());
           onChanged();
         } else {
-          candidatesBuilder_.setMessage(index, builderForValue.build());
+          targetsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder addCandidates(asgt.type.PredictionOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
+      public Builder addTargets(asgt.type.PredictionOuterClass.Prediction.Target value) {
+        if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCandidatesIsMutable();
-          candidates_.add(value);
+          ensureTargetsIsMutable();
+          targets_.add(value);
           onChanged();
         } else {
-          candidatesBuilder_.addMessage(value);
+          targetsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder addCandidates(
-          int index, asgt.type.PredictionOuterClass.Prediction.Candidate value) {
-        if (candidatesBuilder_ == null) {
+      public Builder addTargets(
+          int index, asgt.type.PredictionOuterClass.Prediction.Target value) {
+        if (targetsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureCandidatesIsMutable();
-          candidates_.add(index, value);
+          ensureTargetsIsMutable();
+          targets_.add(index, value);
           onChanged();
         } else {
-          candidatesBuilder_.addMessage(index, value);
+          targetsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder addCandidates(
-          asgt.type.PredictionOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.add(builderForValue.build());
+      public Builder addTargets(
+          asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(builderForValue.build());
           onChanged();
         } else {
-          candidatesBuilder_.addMessage(builderForValue.build());
+          targetsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder addCandidates(
-          int index, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder builderForValue) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.add(index, builderForValue.build());
+      public Builder addTargets(
+          int index, asgt.type.PredictionOuterClass.Prediction.Target.Builder builderForValue) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.add(index, builderForValue.build());
           onChanged();
         } else {
-          candidatesBuilder_.addMessage(index, builderForValue.build());
+          targetsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder addAllCandidates(
-          java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Candidate> values) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
+      public Builder addAllTargets(
+          java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction.Target> values) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, candidates_);
+              values, targets_);
           onChanged();
         } else {
-          candidatesBuilder_.addAllMessages(values);
+          targetsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder clearCandidates() {
-        if (candidatesBuilder_ == null) {
-          candidates_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+      public Builder clearTargets() {
+        if (targetsBuilder_ == null) {
+          targets_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          candidatesBuilder_.clear();
+          targetsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public Builder removeCandidates(int index) {
-        if (candidatesBuilder_ == null) {
-          ensureCandidatesIsMutable();
-          candidates_.remove(index);
+      public Builder removeTargets(int index) {
+        if (targetsBuilder_ == null) {
+          ensureTargetsIsMutable();
+          targets_.remove(index);
           onChanged();
         } else {
-          candidatesBuilder_.remove(index);
+          targetsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Candidate.Builder getCandidatesBuilder(
+      public asgt.type.PredictionOuterClass.Prediction.Target.Builder getTargetsBuilder(
           int index) {
-        return getCandidatesFieldBuilder().getBuilder(index);
+        return getTargetsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder getCandidatesOrBuilder(
+      public asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder getTargetsOrBuilder(
           int index) {
-        if (candidatesBuilder_ == null) {
-          return candidates_.get(index);  } else {
-          return candidatesBuilder_.getMessageOrBuilder(index);
+        if (targetsBuilder_ == null) {
+          return targets_.get(index);  } else {
+          return targetsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder> 
-           getCandidatesOrBuilderList() {
-        if (candidatesBuilder_ != null) {
-          return candidatesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
+           getTargetsOrBuilderList() {
+        if (targetsBuilder_ != null) {
+          return targetsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(candidates_);
+          return java.util.Collections.unmodifiableList(targets_);
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Candidate.Builder addCandidatesBuilder() {
-        return getCandidatesFieldBuilder().addBuilder(
-            asgt.type.PredictionOuterClass.Prediction.Candidate.getDefaultInstance());
+      public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder() {
+        return getTargetsFieldBuilder().addBuilder(
+            asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Candidate.Builder addCandidatesBuilder(
+      public asgt.type.PredictionOuterClass.Prediction.Target.Builder addTargetsBuilder(
           int index) {
-        return getCandidatesFieldBuilder().addBuilder(
-            index, asgt.type.PredictionOuterClass.Prediction.Candidate.getDefaultInstance());
+        return getTargetsFieldBuilder().addBuilder(
+            index, asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction.Candidate candidates = 2;</code>
+       * <code>repeated .asgt.type.Prediction.Target targets = 1;</code>
        */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Candidate.Builder> 
-           getCandidatesBuilderList() {
-        return getCandidatesFieldBuilder().getBuilderList();
+      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Builder> 
+           getTargetsBuilderList() {
+        return getTargetsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction.Candidate, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder> 
-          getCandidatesFieldBuilder() {
-        if (candidatesBuilder_ == null) {
-          candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.PredictionOuterClass.Prediction.Candidate, asgt.type.PredictionOuterClass.Prediction.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.CandidateOrBuilder>(
-                  candidates_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
+          asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder> 
+          getTargetsFieldBuilder() {
+        if (targetsBuilder_ == null) {
+          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.PredictionOuterClass.Prediction.Target, asgt.type.PredictionOuterClass.Prediction.Target.Builder, asgt.type.PredictionOuterClass.Prediction.TargetOrBuilder>(
+                  targets_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
                   isClean());
-          candidates_ = null;
+          targets_ = null;
         }
-        return candidatesBuilder_;
+        return targetsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2639,10 +3253,15 @@ public final class PredictionOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_type_Prediction_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_type_Prediction_Candidate_descriptor;
+    internal_static_asgt_type_Prediction_Target_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_type_Prediction_Candidate_fieldAccessorTable;
+      internal_static_asgt_type_Prediction_Target_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_type_Prediction_Target_Candidate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_type_Prediction_Target_Candidate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2652,17 +3271,17 @@ public final class PredictionOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
-      "\036google/protobuf/wrappers.proto\"\263\001\n\nConf" +
-      "idence\022*\n\005level\030\001 \001(\0162\033.asgt.type.Confid" +
-      "ence.Level\022*\n\005value\030\002 \001(\0132\033.google.proto" +
-      "buf.FloatValue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010" +
-      "VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r" +
-      "\n\tVERY_HIGH\020\005\"\230\001\n\nPrediction\022\016\n\006target\030\001" +
-      " \001(\t\0223\n\ncandidates\030\002 \003(\0132\037.asgt.type.Pre" +
-      "diction.Candidate\032E\n\tCandidate\022\r\n\005label\030" +
-      "\001 \001(\t\022)\n\nconfidence\030\002 \001(\0132\025.asgt.type.Co" +
-      "nfidenceB\006Z\004typeb\006proto3"
+      "\n\032asgt/type/prediction.proto\022\tasgt.type\"" +
+      "\226\001\n\nConfidence\022*\n\005level\030\001 \001(\0162\033.asgt.typ" +
+      "e.Confidence.Level\022\r\n\005value\030\002 \001(\002\"M\n\005Lev" +
+      "el\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007" +
+      "\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\331\001\n\nPre" +
+      "diction\022-\n\007targets\030\001 \003(\0132\034.asgt.type.Pre" +
+      "diction.Target\032\233\001\n\006Target\022\016\n\006target\030\001 \001(" +
+      "\t\022:\n\ncandidates\030\002 \003(\0132&.asgt.type.Predic" +
+      "tion.Target.Candidate\032E\n\tCandidate\022\r\n\005la" +
+      "bel\030\001 \001(\t\022)\n\nconfidence\030\002 \001(\0132\025.asgt.typ" +
+      "e.ConfidenceB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2675,7 +3294,6 @@ public final class PredictionOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_type_Confidence_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -2688,14 +3306,19 @@ public final class PredictionOuterClass {
     internal_static_asgt_type_Prediction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Prediction_descriptor,
-        new java.lang.String[] { "Target", "Candidates", });
-    internal_static_asgt_type_Prediction_Candidate_descriptor =
+        new java.lang.String[] { "Targets", });
+    internal_static_asgt_type_Prediction_Target_descriptor =
       internal_static_asgt_type_Prediction_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_type_Prediction_Candidate_fieldAccessorTable = new
+    internal_static_asgt_type_Prediction_Target_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_type_Prediction_Candidate_descriptor,
+        internal_static_asgt_type_Prediction_Target_descriptor,
+        new java.lang.String[] { "Target", "Candidates", });
+    internal_static_asgt_type_Prediction_Target_Candidate_descriptor =
+      internal_static_asgt_type_Prediction_Target_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_type_Prediction_Target_Candidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_type_Prediction_Target_Candidate_descriptor,
         new java.lang.String[] { "Label", "Confidence", });
-    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
