@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package asgt.modelregistry.v1alpha1;
+
+option go_package = "modelregistry";
+
+service ModelRegistry {
+    rpc RegisterModel(RegisterModelRequest) returns (RegisterModelResponse);
+}
+
+message RegisterModelRequest {
+    string model_type = 1;
+    string model_id = 2;
+}
+
+message RegisterModelResponse {
+    string shard_name = 1;
+}
