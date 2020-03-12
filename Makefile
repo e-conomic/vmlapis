@@ -8,6 +8,7 @@ all:
 		proto/ssn/annotator/v1/annotator.proto \
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1alpha1/dataservice.proto \
+		proto/ssn/dataservice/v1/dataservice.proto \
 		proto/asgt/jester/v1alpha1/jester.proto \
 		proto/asgt/dataservice/v1alpha1/bank.proto \
 		proto/asgt/dataservice/v1alpha1/electronic_invoice_line.proto \

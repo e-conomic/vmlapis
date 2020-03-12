@@ -22,6 +22,9 @@ generate:
   - name: java
     output: ../gen/java
   - name: csharp
+    # NOTE An empty base_namespace flag creates a directory hierarchy for corresponding to the C# namespace
+    # See https://developers.google.com/protocol-buffers/docs/reference/csharp-generated#compiler_options
+    flags: base_namespace=
     output: ../gen/csharp
   - name: grpc-python
     path: grpc_python_plugin
