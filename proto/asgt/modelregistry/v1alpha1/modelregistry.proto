@@ -9,7 +9,9 @@ import "google/protobuf/empty.proto";
 service ModelRegistry {
     rpc RegisterModel(RegisterModelRequest) returns (RegisterModelResponse);
     rpc DeleteModel(DeleteModelRequest) returns (google.protobuf.Empty);
-    rpc LocateModel(LocateModelRequest) returns (LocateModelResponse);
+
+    // List the most recent versions of a model trained with a specified dataset
+    rpc ListModelVersions(ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
 
 message RegisterModelRequest {
@@ -27,17 +29,18 @@ message DeleteModelRequest {
     string model_id = 3;
 }
 
-message LocateModelRequest {
+message ListModelVersionsRequest {
     string consumer = 1;
     string dataset_name = 2;
     string model_type = 3;
+    int32 max_results = 4;
 }
 
-message LocateModelResponse {
-    message LocationInfo {
+message ListModelVersionsResponse {
+    message VersionInfo {
         string shard_name = 1;
         string model_id = 2;
     }
 
-    LocationInfo latest = 1;
+    repeated VersionInfo versions = 1;
 }
