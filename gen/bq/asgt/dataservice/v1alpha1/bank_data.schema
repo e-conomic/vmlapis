@@ -1,0 +1,95 @@
+[
+ {
+  "name": "id",
+  "type": "STRING",
+  "mode": "NULLABLE",
+  "description": "ID, matches Envoy request id if feedback data"
+ },
+ {
+  "name": "consumer",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "dataset",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "tags",
+  "type": "STRING",
+  "mode": "REPEATED",
+  "description": "Tags defined by consumer, enriched by service if valetkey is used"
+ },
+ {
+  "name": "input",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "account_number",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "amount",
+    "type": "FLOAT",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "entry_type",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "text",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "time_stamp",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "true_values",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "target",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "value",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "pred_values",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "target",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "predictions",
+    "type": "STRING",
+    "mode": "REPEATED"
+   }
+  ]
+ },
+ {
+  "name": "time_added",
+  "type": "TIMESTAMP",
+  "mode": "REQUIRED"
+ }
+]
