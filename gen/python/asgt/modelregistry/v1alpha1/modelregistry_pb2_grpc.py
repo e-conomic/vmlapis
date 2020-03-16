@@ -2,6 +2,7 @@
 import grpc
 
 from asgt.modelregistry.v1alpha1 import modelregistry_pb2 as asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class ModelRegistryStub(object):
@@ -19,6 +20,16 @@ class ModelRegistryStub(object):
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.RegisterModelRequest.SerializeToString,
         response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.RegisterModelResponse.FromString,
         )
+    self.DeleteModel = channel.unary_unary(
+        '/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel',
+        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.DeleteModelRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
+    self.LocateModel = channel.unary_unary(
+        '/asgt.modelregistry.v1alpha1.ModelRegistry/LocateModel',
+        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.LocateModelRequest.SerializeToString,
+        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.LocateModelResponse.FromString,
+        )
 
 
 class ModelRegistryServicer(object):
@@ -32,6 +43,20 @@ class ModelRegistryServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def DeleteModel(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def LocateModel(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_ModelRegistryServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -39,6 +64,16 @@ def add_ModelRegistryServicer_to_server(servicer, server):
           servicer.RegisterModel,
           request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.RegisterModelRequest.FromString,
           response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.RegisterModelResponse.SerializeToString,
+      ),
+      'DeleteModel': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteModel,
+          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.DeleteModelRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'LocateModel': grpc.unary_unary_rpc_method_handler(
+          servicer.LocateModel,
+          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.LocateModelRequest.FromString,
+          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_modelregistry__pb2.LocateModelResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

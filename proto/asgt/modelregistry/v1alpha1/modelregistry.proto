@@ -4,8 +4,12 @@ package asgt.modelregistry.v1alpha1;
 
 option go_package = "modelregistry";
 
+import "google/protobuf/empty.proto";
+
 service ModelRegistry {
     rpc RegisterModel(RegisterModelRequest) returns (RegisterModelResponse);
+    rpc DeleteModel(DeleteModelRequest) returns (google.protobuf.Empty);
+    rpc LocateModel(LocateModelRequest) returns (LocateModelResponse);
 }
 
 message RegisterModelRequest {
@@ -15,4 +19,25 @@ message RegisterModelRequest {
 
 message RegisterModelResponse {
     string shard_name = 1;
+}
+
+message DeleteModelRequest {
+    string shard_name = 1;
+    string model_type = 2;
+    string model_id = 3;
+}
+
+message LocateModelRequest {
+    string consumer = 1;
+    string dataset_name = 2;
+    string model_type = 3;
+}
+
+message LocateModelResponse {
+    message LocationInfo {
+        string shard_name = 1;
+        string model_id = 2;
+    }
+
+    LocationInfo latest = 1;
 }
