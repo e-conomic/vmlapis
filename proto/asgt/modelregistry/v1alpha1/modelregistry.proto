@@ -15,8 +15,8 @@ service ModelRegistry {
 }
 
 message RegisterModelRequest {
-    string model_type = 1;
-    string model_id = 2;
+    string model_name = 1;
+    string model_version = 2;
 }
 
 message RegisterModelResponse {
@@ -25,22 +25,22 @@ message RegisterModelResponse {
 
 message DeleteModelRequest {
     string shard_name = 1;
-    string model_type = 2;
-    string model_id = 3;
+    string model_name = 2;
+    string model_version = 3;
 }
 
 message ListModelVersionsRequest {
     string consumer = 1;
     string dataset_name = 2;
-    string model_type = 3;
+    string model_name = 3;
     int32 max_results = 4;
 }
 
 message ListModelVersionsResponse {
     message VersionInfo {
-        string shard_name = 1;
-        string model_id = 2;
+        string version = 1;
+        string shard_name = 2;
     }
 
-    repeated VersionInfo versions = 1;
+    repeated VersionInfo results = 1;
 }
