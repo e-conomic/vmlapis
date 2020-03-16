@@ -1,7 +1,10 @@
 all:
 	@rm -rf gen
 	@echo "Generate all the things"
-	cd proto && prototool all
+	cd proto && prototool \
+	    --protoc-bin-path=/usr/bin/protoc \
+	    --protoc-wkt-path=/usr/include \
+	    all
 	protoc -I./deps/googleapis -I./proto \
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
