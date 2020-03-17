@@ -27,13 +27,13 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             "Ci9hc2d0L21vZGVscmVnaXN0cnkvdjFhbHBoYTEvbW9kZWxyZWdpc3RyeS5w",
             "cm90bxIbYXNndC5tb2RlbHJlZ2lzdHJ5LnYxYWxwaGExGhtnb29nbGUvcHJv",
             "dG9idWYvZW1wdHkucHJvdG8iaQoUUmVnaXN0ZXJNb2RlbFJlcXVlc3QSEAoI",
-            "Y29uc3VtZXIYAyABKAkSEgoKbW9kZWxfbmFtZRgBIAEoCRIVCg1tb2RlbF92",
+            "Y29uc3VtZXIYAyABKAkSEgoKbW9kZWxfdHlwZRgBIAEoCRIVCg1tb2RlbF92",
             "ZXJzaW9uGAIgASgDEhQKDGRhdGFzZXRfbmFtZRgEIAEoCSIrChVSZWdpc3Rl",
             "ck1vZGVsUmVzcG9uc2USEgoKc2hhcmRfbmFtZRgBIAEoCSI/ChJEZWxldGVN",
-            "b2RlbFJlcXVlc3QSEgoKbW9kZWxfbmFtZRgCIAEoCRIVCg1tb2RlbF92ZXJz",
+            "b2RlbFJlcXVlc3QSEgoKbW9kZWxfdHlwZRgCIAEoCRIVCg1tb2RlbF92ZXJz",
             "aW9uGAMgASgDInAKHUdldExhdGVzdE1vZGVsVmVyc2lvbnNSZXF1ZXN0EhAK",
             "CGNvbnN1bWVyGAEgASgJEhQKDGRhdGFzZXRfbmFtZRgCIAEoCRISCgptb2Rl",
-            "bF9uYW1lGAMgASgJEhMKC21heF9yZXN1bHRzGAQgASgFIq4BCh5HZXRMYXRl",
+            "bF90eXBlGAMgASgJEhMKC21heF9yZXN1bHRzGAQgASgFIq4BCh5HZXRMYXRl",
             "c3RNb2RlbFZlcnNpb25zUmVzcG9uc2USWAoHcmVzdWx0cxgBIAMoCzJHLmFz",
             "Z3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5HZXRMYXRlc3RNb2RlbFZlcnNp",
             "b25zUmVzcG9uc2UuVmVyc2lvbkluZm8aMgoLVmVyc2lvbkluZm8SDwoHdmVy",
@@ -50,10 +50,10 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "Consumer", "ModelName", "ModelVersion", "DatasetName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "Consumer", "ModelType", "ModelVersion", "DatasetName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse), global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse.Parser, new[]{ "ShardName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest), global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest.Parser, new[]{ "ModelName", "ModelVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest.Parser, new[]{ "Consumer", "DatasetName", "ModelName", "MaxResults" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest), global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest.Parser, new[]{ "ModelType", "ModelVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest.Parser, new[]{ "Consumer", "DatasetName", "ModelType", "MaxResults" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Parser, new[]{ "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo.Parser, new[]{ "Version", "ShardName" }, null, null, null)})
           }));
     }
@@ -87,7 +87,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RegisterModelRequest(RegisterModelRequest other) : this() {
       consumer_ = other.consumer_;
-      modelName_ = other.modelName_;
+      modelType_ = other.modelType_;
       modelVersion_ = other.modelVersion_;
       datasetName_ = other.datasetName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -109,14 +109,14 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "model_name" field.</summary>
-    public const int ModelNameFieldNumber = 1;
-    private string modelName_ = "";
+    /// <summary>Field number for the "model_type" field.</summary>
+    public const int ModelTypeFieldNumber = 1;
+    private string modelType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelName {
-      get { return modelName_; }
+    public string ModelType {
+      get { return modelType_; }
       set {
-        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -156,7 +156,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         return true;
       }
       if (Consumer != other.Consumer) return false;
-      if (ModelName != other.ModelName) return false;
+      if (ModelType != other.ModelType) return false;
       if (ModelVersion != other.ModelVersion) return false;
       if (DatasetName != other.DatasetName) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -166,7 +166,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (_unknownFields != null) {
@@ -182,9 +182,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelName.Length != 0) {
+      if (ModelType.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ModelName);
+        output.WriteString(ModelType);
       }
       if (ModelVersion != 0L) {
         output.WriteRawTag(16);
@@ -209,8 +209,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (Consumer.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
       }
-      if (ModelName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      if (ModelType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
       }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
@@ -232,8 +232,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other.Consumer.Length != 0) {
         Consumer = other.Consumer;
       }
-      if (other.ModelName.Length != 0) {
-        ModelName = other.ModelName;
+      if (other.ModelType.Length != 0) {
+        ModelType = other.ModelType;
       }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
@@ -253,7 +253,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            ModelName = input.ReadString();
+            ModelType = input.ReadString();
             break;
           }
           case 16: {
@@ -428,7 +428,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteModelRequest(DeleteModelRequest other) : this() {
-      modelName_ = other.modelName_;
+      modelType_ = other.modelType_;
       modelVersion_ = other.modelVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -438,14 +438,14 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       return new DeleteModelRequest(this);
     }
 
-    /// <summary>Field number for the "model_name" field.</summary>
-    public const int ModelNameFieldNumber = 2;
-    private string modelName_ = "";
+    /// <summary>Field number for the "model_type" field.</summary>
+    public const int ModelTypeFieldNumber = 2;
+    private string modelType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelName {
-      get { return modelName_; }
+    public string ModelType {
+      get { return modelType_; }
       set {
-        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -473,7 +473,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ModelName != other.ModelName) return false;
+      if (ModelType != other.ModelType) return false;
       if (ModelVersion != other.ModelVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -481,7 +481,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -496,9 +496,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelName.Length != 0) {
+      if (ModelType.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(ModelName);
+        output.WriteString(ModelType);
       }
       if (ModelVersion != 0L) {
         output.WriteRawTag(24);
@@ -512,8 +512,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ModelName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      if (ModelType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
       }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
@@ -529,8 +529,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.ModelName.Length != 0) {
-        ModelName = other.ModelName;
+      if (other.ModelType.Length != 0) {
+        ModelType = other.ModelType;
       }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
@@ -547,7 +547,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 18: {
-            ModelName = input.ReadString();
+            ModelType = input.ReadString();
             break;
           }
           case 24: {
@@ -587,7 +587,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     public GetLatestModelVersionsRequest(GetLatestModelVersionsRequest other) : this() {
       consumer_ = other.consumer_;
       datasetName_ = other.datasetName_;
-      modelName_ = other.modelName_;
+      modelType_ = other.modelType_;
       maxResults_ = other.maxResults_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -619,14 +619,14 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "model_name" field.</summary>
-    public const int ModelNameFieldNumber = 3;
-    private string modelName_ = "";
+    /// <summary>Field number for the "model_type" field.</summary>
+    public const int ModelTypeFieldNumber = 3;
+    private string modelType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelName {
-      get { return modelName_; }
+    public string ModelType {
+      get { return modelType_; }
       set {
-        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -656,7 +656,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       }
       if (Consumer != other.Consumer) return false;
       if (DatasetName != other.DatasetName) return false;
-      if (ModelName != other.ModelName) return false;
+      if (ModelType != other.ModelType) return false;
       if (MaxResults != other.MaxResults) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -666,7 +666,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       int hash = 1;
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
       if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -689,9 +689,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         output.WriteRawTag(18);
         output.WriteString(DatasetName);
       }
-      if (ModelName.Length != 0) {
+      if (ModelType.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(ModelName);
+        output.WriteString(ModelType);
       }
       if (MaxResults != 0) {
         output.WriteRawTag(32);
@@ -711,8 +711,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
-      if (ModelName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      if (ModelType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
       }
       if (MaxResults != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
@@ -734,8 +734,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other.DatasetName.Length != 0) {
         DatasetName = other.DatasetName;
       }
-      if (other.ModelName.Length != 0) {
-        ModelName = other.ModelName;
+      if (other.ModelType.Length != 0) {
+        ModelType = other.ModelType;
       }
       if (other.MaxResults != 0) {
         MaxResults = other.MaxResults;
@@ -760,7 +760,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             break;
           }
           case 26: {
-            ModelName = input.ReadString();
+            ModelType = input.ReadString();
             break;
           }
           case 32: {

@@ -66,7 +66,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.toObject = func
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     consumer: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    modelName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    modelType: jspb.Message.getFieldWithDefault(msg, 1, ""),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 2, 0),
     datasetName: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
@@ -111,7 +111,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.deserializeBinaryFromRead
       break;
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setModelName(value);
+      msg.setModelType(value);
       break;
     case 2:
       var value = /** @type {number} */ (reader.readInt64());
@@ -157,7 +157,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.serializeBinaryToWriter =
       f
     );
   }
-  f = message.getModelName();
+  f = message.getModelType();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -197,16 +197,16 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setConsumer = f
 
 
 /**
- * optional string model_name = 1;
+ * optional string model_type = 1;
  * @return {string}
  */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getModelName = function() {
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getModelType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setModelName = function(value) {
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setModelType = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -430,7 +430,7 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.toObject = functi
  */
 proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    modelName: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    modelType: jspb.Message.getFieldWithDefault(msg, 2, ""),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
@@ -470,7 +470,7 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.deserializeBinaryFromReader
     switch (field) {
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setModelName(value);
+      msg.setModelType(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
@@ -505,7 +505,7 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.serializeBinary =
  */
 proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getModelName();
+  f = message.getModelType();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -523,16 +523,16 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.serializeBinaryToWriter = f
 
 
 /**
- * optional string model_name = 2;
+ * optional string model_type = 2;
  * @return {string}
  */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.getModelName = function() {
+proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.getModelType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelName = function(value) {
+proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelType = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -601,7 +601,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.toObject = funct
   var f, obj = {
     consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     datasetName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    modelName: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    modelType: jspb.Message.getFieldWithDefault(msg, 3, ""),
     maxResults: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
@@ -649,7 +649,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.deserializeBinar
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setModelName(value);
+      msg.setModelType(value);
       break;
     case 4:
       var value = /** @type {number} */ (reader.readInt32());
@@ -698,7 +698,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.serializeBinaryT
       f
     );
   }
-  f = message.getModelName();
+  f = message.getModelType();
   if (f.length > 0) {
     writer.writeString(
       3,
@@ -746,16 +746,16 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.prototype.setDat
 
 
 /**
- * optional string model_name = 3;
+ * optional string model_type = 3;
  * @return {string}
  */
-proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.prototype.getModelName = function() {
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.prototype.getModelType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.prototype.setModelName = function(value) {
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.prototype.setModelType = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
 };
 

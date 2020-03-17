@@ -29,14 +29,14 @@ public final class Modelregistry {
         getConsumerBytes();
 
     /**
-     * <code>string model_name = 1;</code>
+     * <code>string model_type = 1;</code>
      */
-    java.lang.String getModelName();
+    java.lang.String getModelType();
     /**
-     * <code>string model_name = 1;</code>
+     * <code>string model_type = 1;</code>
      */
     com.google.protobuf.ByteString
-        getModelNameBytes();
+        getModelTypeBytes();
 
     /**
      * <code>int64 model_version = 2;</code>
@@ -67,7 +67,7 @@ public final class Modelregistry {
     }
     private RegisterModelRequest() {
       consumer_ = "";
-      modelName_ = "";
+      modelType_ = "";
       modelVersion_ = 0L;
       datasetName_ = "";
     }
@@ -99,7 +99,7 @@ public final class Modelregistry {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              modelName_ = s;
+              modelType_ = s;
               break;
             }
             case 16: {
@@ -185,34 +185,34 @@ public final class Modelregistry {
       }
     }
 
-    public static final int MODEL_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelName_;
+    public static final int MODEL_TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelType_;
     /**
-     * <code>string model_name = 1;</code>
+     * <code>string model_type = 1;</code>
      */
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
+    public java.lang.String getModelType() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
+        modelType_ = s;
         return s;
       }
     }
     /**
-     * <code>string model_name = 1;</code>
+     * <code>string model_type = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
+        getModelTypeBytes() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        modelName_ = b;
+        modelType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -276,8 +276,8 @@ public final class Modelregistry {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelType_);
       }
       if (modelVersion_ != 0L) {
         output.writeInt64(2, modelVersion_);
@@ -297,8 +297,8 @@ public final class Modelregistry {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelType_);
       }
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -328,8 +328,8 @@ public final class Modelregistry {
       boolean result = true;
       result = result && getConsumer()
           .equals(other.getConsumer());
-      result = result && getModelName()
-          .equals(other.getModelName());
+      result = result && getModelType()
+          .equals(other.getModelType());
       result = result && (getModelVersion()
           == other.getModelVersion());
       result = result && getDatasetName()
@@ -347,8 +347,8 @@ public final class Modelregistry {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
       hash = (53 * hash) + getConsumer().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
+      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getModelType().hashCode();
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
@@ -489,7 +489,7 @@ public final class Modelregistry {
         super.clear();
         consumer_ = "";
 
-        modelName_ = "";
+        modelType_ = "";
 
         modelVersion_ = 0L;
 
@@ -522,7 +522,7 @@ public final class Modelregistry {
       public asgt.modelregistry.v1alpha1.Modelregistry.RegisterModelRequest buildPartial() {
         asgt.modelregistry.v1alpha1.Modelregistry.RegisterModelRequest result = new asgt.modelregistry.v1alpha1.Modelregistry.RegisterModelRequest(this);
         result.consumer_ = consumer_;
-        result.modelName_ = modelName_;
+        result.modelType_ = modelType_;
         result.modelVersion_ = modelVersion_;
         result.datasetName_ = datasetName_;
         onBuilt();
@@ -577,8 +577,8 @@ public final class Modelregistry {
           consumer_ = other.consumer_;
           onChanged();
         }
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
+        if (!other.getModelType().isEmpty()) {
+          modelType_ = other.modelType_;
           onChanged();
         }
         if (other.getModelVersion() != 0L) {
@@ -686,71 +686,71 @@ public final class Modelregistry {
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
+      private java.lang.Object modelType_ = "";
       /**
-       * <code>string model_name = 1;</code>
+       * <code>string model_type = 1;</code>
        */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
+      public java.lang.String getModelType() {
+        java.lang.Object ref = modelType_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
+          modelType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string model_name = 1;</code>
+       * <code>string model_type = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
+          getModelTypeBytes() {
+        java.lang.Object ref = modelType_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          modelName_ = b;
+          modelType_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string model_name = 1;</code>
+       * <code>string model_type = 1;</code>
        */
-      public Builder setModelName(
+      public Builder setModelType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 1;</code>
+       * <code>string model_type = 1;</code>
        */
-      public Builder clearModelName() {
+      public Builder clearModelType() {
         
-        modelName_ = getDefaultInstance().getModelName();
+        modelType_ = getDefaultInstance().getModelType();
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 1;</code>
+       * <code>string model_type = 1;</code>
        */
-      public Builder setModelNameBytes(
+      public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
@@ -1457,14 +1457,14 @@ public final class Modelregistry {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string model_name = 2;</code>
+     * <code>string model_type = 2;</code>
      */
-    java.lang.String getModelName();
+    java.lang.String getModelType();
     /**
-     * <code>string model_name = 2;</code>
+     * <code>string model_type = 2;</code>
      */
     com.google.protobuf.ByteString
-        getModelNameBytes();
+        getModelTypeBytes();
 
     /**
      * <code>int64 model_version = 3;</code>
@@ -1484,7 +1484,7 @@ public final class Modelregistry {
       super(builder);
     }
     private DeleteModelRequest() {
-      modelName_ = "";
+      modelType_ = "";
       modelVersion_ = 0L;
     }
 
@@ -1515,7 +1515,7 @@ public final class Modelregistry {
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              modelName_ = s;
+              modelType_ = s;
               break;
             }
             case 24: {
@@ -1555,34 +1555,34 @@ public final class Modelregistry {
               asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest.class, asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest.Builder.class);
     }
 
-    public static final int MODEL_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelName_;
+    public static final int MODEL_TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object modelType_;
     /**
-     * <code>string model_name = 2;</code>
+     * <code>string model_type = 2;</code>
      */
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
+    public java.lang.String getModelType() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
+        modelType_ = s;
         return s;
       }
     }
     /**
-     * <code>string model_name = 2;</code>
+     * <code>string model_type = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
+        getModelTypeBytes() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        modelName_ = b;
+        modelType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1612,8 +1612,8 @@ public final class Modelregistry {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelType_);
       }
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
@@ -1627,8 +1627,8 @@ public final class Modelregistry {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelType_);
       }
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -1650,8 +1650,8 @@ public final class Modelregistry {
       asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest other = (asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest) obj;
 
       boolean result = true;
-      result = result && getModelName()
-          .equals(other.getModelName());
+      result = result && getModelType()
+          .equals(other.getModelType());
       result = result && (getModelVersion()
           == other.getModelVersion());
       result = result && unknownFields.equals(other.unknownFields);
@@ -1665,8 +1665,8 @@ public final class Modelregistry {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
+      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getModelType().hashCode();
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
@@ -1803,7 +1803,7 @@ public final class Modelregistry {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        modelName_ = "";
+        modelType_ = "";
 
         modelVersion_ = 0L;
 
@@ -1833,7 +1833,7 @@ public final class Modelregistry {
       @java.lang.Override
       public asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest buildPartial() {
         asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest result = new asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest(this);
-        result.modelName_ = modelName_;
+        result.modelType_ = modelType_;
         result.modelVersion_ = modelVersion_;
         onBuilt();
         return result;
@@ -1883,8 +1883,8 @@ public final class Modelregistry {
 
       public Builder mergeFrom(asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest other) {
         if (other == asgt.modelregistry.v1alpha1.Modelregistry.DeleteModelRequest.getDefaultInstance()) return this;
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
+        if (!other.getModelType().isEmpty()) {
+          modelType_ = other.modelType_;
           onChanged();
         }
         if (other.getModelVersion() != 0L) {
@@ -1919,71 +1919,71 @@ public final class Modelregistry {
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
+      private java.lang.Object modelType_ = "";
       /**
-       * <code>string model_name = 2;</code>
+       * <code>string model_type = 2;</code>
        */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
+      public java.lang.String getModelType() {
+        java.lang.Object ref = modelType_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
+          modelType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string model_name = 2;</code>
+       * <code>string model_type = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
+          getModelTypeBytes() {
+        java.lang.Object ref = modelType_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          modelName_ = b;
+          modelType_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string model_name = 2;</code>
+       * <code>string model_type = 2;</code>
        */
-      public Builder setModelName(
+      public Builder setModelType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 2;</code>
+       * <code>string model_type = 2;</code>
        */
-      public Builder clearModelName() {
+      public Builder clearModelType() {
         
-        modelName_ = getDefaultInstance().getModelName();
+        modelType_ = getDefaultInstance().getModelType();
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 2;</code>
+       * <code>string model_type = 2;</code>
        */
-      public Builder setModelNameBytes(
+      public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
@@ -2091,14 +2091,14 @@ public final class Modelregistry {
         getDatasetNameBytes();
 
     /**
-     * <code>string model_name = 3;</code>
+     * <code>string model_type = 3;</code>
      */
-    java.lang.String getModelName();
+    java.lang.String getModelType();
     /**
-     * <code>string model_name = 3;</code>
+     * <code>string model_type = 3;</code>
      */
     com.google.protobuf.ByteString
-        getModelNameBytes();
+        getModelTypeBytes();
 
     /**
      * <code>int32 max_results = 4;</code>
@@ -2120,7 +2120,7 @@ public final class Modelregistry {
     private GetLatestModelVersionsRequest() {
       consumer_ = "";
       datasetName_ = "";
-      modelName_ = "";
+      modelType_ = "";
       maxResults_ = 0;
     }
 
@@ -2163,7 +2163,7 @@ public final class Modelregistry {
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              modelName_ = s;
+              modelType_ = s;
               break;
             }
             case 32: {
@@ -2271,34 +2271,34 @@ public final class Modelregistry {
       }
     }
 
-    public static final int MODEL_NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object modelName_;
+    public static final int MODEL_TYPE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object modelType_;
     /**
-     * <code>string model_name = 3;</code>
+     * <code>string model_type = 3;</code>
      */
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
+    public java.lang.String getModelType() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
+        modelType_ = s;
         return s;
       }
     }
     /**
-     * <code>string model_name = 3;</code>
+     * <code>string model_type = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
+        getModelTypeBytes() {
+      java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        modelName_ = b;
+        modelType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2334,8 +2334,8 @@ public final class Modelregistry {
       if (!getDatasetNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetName_);
       }
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, modelType_);
       }
       if (maxResults_ != 0) {
         output.writeInt32(4, maxResults_);
@@ -2355,8 +2355,8 @@ public final class Modelregistry {
       if (!getDatasetNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetName_);
       }
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, modelName_);
+      if (!getModelTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, modelType_);
       }
       if (maxResults_ != 0) {
         size += com.google.protobuf.CodedOutputStream
@@ -2382,8 +2382,8 @@ public final class Modelregistry {
           .equals(other.getConsumer());
       result = result && getDatasetName()
           .equals(other.getDatasetName());
-      result = result && getModelName()
-          .equals(other.getModelName());
+      result = result && getModelType()
+          .equals(other.getModelType());
       result = result && (getMaxResults()
           == other.getMaxResults());
       result = result && unknownFields.equals(other.unknownFields);
@@ -2401,8 +2401,8 @@ public final class Modelregistry {
       hash = (53 * hash) + getConsumer().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
+      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getModelType().hashCode();
       hash = (37 * hash) + MAX_RESULTS_FIELD_NUMBER;
       hash = (53 * hash) + getMaxResults();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -2542,7 +2542,7 @@ public final class Modelregistry {
 
         datasetName_ = "";
 
-        modelName_ = "";
+        modelType_ = "";
 
         maxResults_ = 0;
 
@@ -2574,7 +2574,7 @@ public final class Modelregistry {
         asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsRequest result = new asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsRequest(this);
         result.consumer_ = consumer_;
         result.datasetName_ = datasetName_;
-        result.modelName_ = modelName_;
+        result.modelType_ = modelType_;
         result.maxResults_ = maxResults_;
         onBuilt();
         return result;
@@ -2632,8 +2632,8 @@ public final class Modelregistry {
           datasetName_ = other.datasetName_;
           onChanged();
         }
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
+        if (!other.getModelType().isEmpty()) {
+          modelType_ = other.modelType_;
           onChanged();
         }
         if (other.getMaxResults() != 0) {
@@ -2806,71 +2806,71 @@ public final class Modelregistry {
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
+      private java.lang.Object modelType_ = "";
       /**
-       * <code>string model_name = 3;</code>
+       * <code>string model_type = 3;</code>
        */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
+      public java.lang.String getModelType() {
+        java.lang.Object ref = modelType_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
+          modelType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string model_name = 3;</code>
+       * <code>string model_type = 3;</code>
        */
       public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
+          getModelTypeBytes() {
+        java.lang.Object ref = modelType_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          modelName_ = b;
+          modelType_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string model_name = 3;</code>
+       * <code>string model_type = 3;</code>
        */
-      public Builder setModelName(
+      public Builder setModelType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 3;</code>
+       * <code>string model_type = 3;</code>
        */
-      public Builder clearModelName() {
+      public Builder clearModelType() {
         
-        modelName_ = getDefaultInstance().getModelName();
+        modelType_ = getDefaultInstance().getModelType();
         onChanged();
         return this;
       }
       /**
-       * <code>string model_name = 3;</code>
+       * <code>string model_type = 3;</code>
        */
-      public Builder setModelNameBytes(
+      public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        modelName_ = value;
+        modelType_ = value;
         onChanged();
         return this;
       }
@@ -4391,14 +4391,14 @@ public final class Modelregistry {
       "\n/asgt/modelregistry/v1alpha1/modelregis" +
       "try.proto\022\033asgt.modelregistry.v1alpha1\032\033" +
       "google/protobuf/empty.proto\"i\n\024RegisterM" +
-      "odelRequest\022\020\n\010consumer\030\003 \001(\t\022\022\n\nmodel_n" +
-      "ame\030\001 \001(\t\022\025\n\rmodel_version\030\002 \001(\003\022\024\n\014data" +
+      "odelRequest\022\020\n\010consumer\030\003 \001(\t\022\022\n\nmodel_t" +
+      "ype\030\001 \001(\t\022\025\n\rmodel_version\030\002 \001(\003\022\024\n\014data" +
       "set_name\030\004 \001(\t\"+\n\025RegisterModelResponse\022" +
       "\022\n\nshard_name\030\001 \001(\t\"?\n\022DeleteModelReques" +
-      "t\022\022\n\nmodel_name\030\002 \001(\t\022\025\n\rmodel_version\030\003" +
+      "t\022\022\n\nmodel_type\030\002 \001(\t\022\025\n\rmodel_version\030\003" +
       " \001(\003\"p\n\035GetLatestModelVersionsRequest\022\020\n" +
       "\010consumer\030\001 \001(\t\022\024\n\014dataset_name\030\002 \001(\t\022\022\n" +
-      "\nmodel_name\030\003 \001(\t\022\023\n\013max_results\030\004 \001(\005\"\256" +
+      "\nmodel_type\030\003 \001(\t\022\023\n\013max_results\030\004 \001(\005\"\256" +
       "\001\n\036GetLatestModelVersionsResponse\022X\n\007res" +
       "ults\030\001 \003(\0132G.asgt.modelregistry.v1alpha1" +
       ".GetLatestModelVersionsResponse.VersionI" +
@@ -4433,7 +4433,7 @@ public final class Modelregistry {
     internal_static_asgt_modelregistry_v1alpha1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1alpha1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Consumer", "ModelName", "ModelVersion", "DatasetName", });
+        new java.lang.String[] { "Consumer", "ModelType", "ModelVersion", "DatasetName", });
     internal_static_asgt_modelregistry_v1alpha1_RegisterModelResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_modelregistry_v1alpha1_RegisterModelResponse_fieldAccessorTable = new
@@ -4445,13 +4445,13 @@ public final class Modelregistry {
     internal_static_asgt_modelregistry_v1alpha1_DeleteModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1alpha1_DeleteModelRequest_descriptor,
-        new java.lang.String[] { "ModelName", "ModelVersion", });
+        new java.lang.String[] { "ModelType", "ModelVersion", });
     internal_static_asgt_modelregistry_v1alpha1_GetLatestModelVersionsRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_modelregistry_v1alpha1_GetLatestModelVersionsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1alpha1_GetLatestModelVersionsRequest_descriptor,
-        new java.lang.String[] { "Consumer", "DatasetName", "ModelName", "MaxResults", });
+        new java.lang.String[] { "Consumer", "DatasetName", "ModelType", "MaxResults", });
     internal_static_asgt_modelregistry_v1alpha1_GetLatestModelVersionsResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_modelregistry_v1alpha1_GetLatestModelVersionsResponse_fieldAccessorTable = new
