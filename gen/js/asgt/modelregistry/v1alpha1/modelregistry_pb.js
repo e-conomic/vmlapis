@@ -67,7 +67,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.toObject = function(inclu
   var f, obj = {
     consumer: jspb.Message.getFieldWithDefault(msg, 3, ""),
     modelName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    modelVersion: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    modelVersion: jspb.Message.getFieldWithDefault(msg, 2, 0),
     datasetName: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
@@ -114,7 +114,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.deserializeBinaryFromRead
       msg.setModelName(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setModelVersion(value);
       break;
     case 4:
@@ -165,8 +165,8 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.serializeBinaryToWriter =
     );
   }
   f = message.getModelVersion();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt64(
       2,
       f
     );
@@ -212,17 +212,17 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setModelName = 
 
 
 /**
- * optional string model_version = 2;
- * @return {string}
+ * optional int64 model_version = 2;
+ * @return {number}
  */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getModelVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
-/** @param {string} value */
+/** @param {number} value */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setModelVersion = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -431,7 +431,7 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.toObject = functi
 proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     modelName: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, "")
+    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
   if (includeInstance) {
@@ -473,7 +473,7 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.deserializeBinaryFromReader
       msg.setModelName(value);
       break;
     case 3:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setModelVersion(value);
       break;
     default:
@@ -513,8 +513,8 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.serializeBinaryToWriter = f
     );
   }
   f = message.getModelVersion();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt64(
       3,
       f
     );
@@ -538,17 +538,17 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelName = fu
 
 
 /**
- * optional string model_version = 3;
- * @return {string}
+ * optional int64 model_version = 3;
+ * @return {number}
  */
 proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.getModelVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
-/** @param {string} value */
+/** @param {number} value */
 proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelVersion = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -959,7 +959,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.pro
  */
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    version: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    version: jspb.Message.getFieldWithDefault(msg, 1, 0),
     shardName: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -998,7 +998,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.des
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {number} */ (reader.readInt64());
       msg.setVersion(value);
       break;
     case 2:
@@ -1035,8 +1035,8 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.pro
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getVersion();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0) {
+    writer.writeInt64(
       1,
       f
     );
@@ -1052,17 +1052,17 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.ser
 
 
 /**
- * optional string version = 1;
- * @return {string}
+ * optional int64 version = 1;
+ * @return {number}
  */
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.getVersion = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
-/** @param {string} value */
+/** @param {number} value */
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.setVersion = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 

@@ -28,16 +28,16 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             "cm90bxIbYXNndC5tb2RlbHJlZ2lzdHJ5LnYxYWxwaGExGhtnb29nbGUvcHJv",
             "dG9idWYvZW1wdHkucHJvdG8iaQoUUmVnaXN0ZXJNb2RlbFJlcXVlc3QSEAoI",
             "Y29uc3VtZXIYAyABKAkSEgoKbW9kZWxfbmFtZRgBIAEoCRIVCg1tb2RlbF92",
-            "ZXJzaW9uGAIgASgJEhQKDGRhdGFzZXRfbmFtZRgEIAEoCSIrChVSZWdpc3Rl",
+            "ZXJzaW9uGAIgASgDEhQKDGRhdGFzZXRfbmFtZRgEIAEoCSIrChVSZWdpc3Rl",
             "ck1vZGVsUmVzcG9uc2USEgoKc2hhcmRfbmFtZRgBIAEoCSI/ChJEZWxldGVN",
             "b2RlbFJlcXVlc3QSEgoKbW9kZWxfbmFtZRgCIAEoCRIVCg1tb2RlbF92ZXJz",
-            "aW9uGAMgASgJInAKHUdldExhdGVzdE1vZGVsVmVyc2lvbnNSZXF1ZXN0EhAK",
+            "aW9uGAMgASgDInAKHUdldExhdGVzdE1vZGVsVmVyc2lvbnNSZXF1ZXN0EhAK",
             "CGNvbnN1bWVyGAEgASgJEhQKDGRhdGFzZXRfbmFtZRgCIAEoCRISCgptb2Rl",
             "bF9uYW1lGAMgASgJEhMKC21heF9yZXN1bHRzGAQgASgFIq4BCh5HZXRMYXRl",
             "c3RNb2RlbFZlcnNpb25zUmVzcG9uc2USWAoHcmVzdWx0cxgBIAMoCzJHLmFz",
             "Z3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5HZXRMYXRlc3RNb2RlbFZlcnNp",
             "b25zUmVzcG9uc2UuVmVyc2lvbkluZm8aMgoLVmVyc2lvbkluZm8SDwoHdmVy",
-            "c2lvbhgBIAEoCRISCgpzaGFyZF9uYW1lGAIgASgJMvMCCg1Nb2RlbFJlZ2lz",
+            "c2lvbhgBIAEoAxISCgpzaGFyZF9uYW1lGAIgASgJMvMCCg1Nb2RlbFJlZ2lz",
             "dHJ5EnYKDVJlZ2lzdGVyTW9kZWwSMS5hc2d0Lm1vZGVscmVnaXN0cnkudjFh",
             "bHBoYTEuUmVnaXN0ZXJNb2RlbFJlcXVlc3QaMi5hc2d0Lm1vZGVscmVnaXN0",
             "cnkudjFhbHBoYTEuUmVnaXN0ZXJNb2RlbFJlc3BvbnNlElYKC0RlbGV0ZU1v",
@@ -122,12 +122,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     /// <summary>Field number for the "model_version" field.</summary>
     public const int ModelVersionFieldNumber = 2;
-    private string modelVersion_ = "";
+    private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelVersion {
+    public long ModelVersion {
       get { return modelVersion_; }
       set {
-        modelVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modelVersion_ = value;
       }
     }
 
@@ -167,7 +167,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       int hash = 1;
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
-      if (ModelVersion.Length != 0) hash ^= ModelVersion.GetHashCode();
+      if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -186,9 +186,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(ModelName);
       }
-      if (ModelVersion.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ModelVersion);
+      if (ModelVersion != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(ModelVersion);
       }
       if (Consumer.Length != 0) {
         output.WriteRawTag(26);
@@ -212,8 +212,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (ModelName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
       }
-      if (ModelVersion.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelVersion);
+      if (ModelVersion != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
       }
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
@@ -235,7 +235,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other.ModelName.Length != 0) {
         ModelName = other.ModelName;
       }
-      if (other.ModelVersion.Length != 0) {
+      if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
       if (other.DatasetName.Length != 0) {
@@ -256,8 +256,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             ModelName = input.ReadString();
             break;
           }
-          case 18: {
-            ModelVersion = input.ReadString();
+          case 16: {
+            ModelVersion = input.ReadInt64();
             break;
           }
           case 26: {
@@ -451,12 +451,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     /// <summary>Field number for the "model_version" field.</summary>
     public const int ModelVersionFieldNumber = 3;
-    private string modelVersion_ = "";
+    private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelVersion {
+    public long ModelVersion {
       get { return modelVersion_; }
       set {
-        modelVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modelVersion_ = value;
       }
     }
 
@@ -482,7 +482,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
-      if (ModelVersion.Length != 0) hash ^= ModelVersion.GetHashCode();
+      if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -500,9 +500,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         output.WriteRawTag(18);
         output.WriteString(ModelName);
       }
-      if (ModelVersion.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(ModelVersion);
+      if (ModelVersion != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ModelVersion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -515,8 +515,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (ModelName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
       }
-      if (ModelVersion.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelVersion);
+      if (ModelVersion != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -532,7 +532,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other.ModelName.Length != 0) {
         ModelName = other.ModelName;
       }
-      if (other.ModelVersion.Length != 0) {
+      if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -550,8 +550,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             ModelName = input.ReadString();
             break;
           }
-          case 26: {
-            ModelVersion = input.ReadString();
+          case 24: {
+            ModelVersion = input.ReadInt64();
             break;
           }
         }
@@ -933,12 +933,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
         /// <summary>Field number for the "version" field.</summary>
         public const int VersionFieldNumber = 1;
-        private string version_ = "";
+        private long version_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Version {
+        public long Version {
           get { return version_; }
           set {
-            version_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            version_ = value;
           }
         }
 
@@ -974,7 +974,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Version.Length != 0) hash ^= Version.GetHashCode();
+          if (Version != 0L) hash ^= Version.GetHashCode();
           if (ShardName.Length != 0) hash ^= ShardName.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -989,9 +989,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Version.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Version);
+          if (Version != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Version);
           }
           if (ShardName.Length != 0) {
             output.WriteRawTag(18);
@@ -1005,8 +1005,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Version.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Version);
+          if (Version != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
           }
           if (ShardName.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ShardName);
@@ -1022,7 +1022,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
           if (other == null) {
             return;
           }
-          if (other.Version.Length != 0) {
+          if (other.Version != 0L) {
             Version = other.Version;
           }
           if (other.ShardName.Length != 0) {
@@ -1039,8 +1039,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
-              case 10: {
-                Version = input.ReadString();
+              case 8: {
+                Version = input.ReadInt64();
                 break;
               }
               case 18: {

@@ -17,7 +17,7 @@ service ModelRegistry {
 message RegisterModelRequest {
     string consumer = 3;
     string model_name = 1;
-    string model_version = 2;
+    int64 model_version = 2;
     string dataset_name = 4;
 }
 
@@ -27,7 +27,7 @@ message RegisterModelResponse {
 
 message DeleteModelRequest {
     string model_name = 2;
-    string model_version = 3;
+    int64 model_version = 3;
 }
 
 message GetLatestModelVersionsRequest {
@@ -39,7 +39,7 @@ message GetLatestModelVersionsRequest {
 
 message GetLatestModelVersionsResponse {
     message VersionInfo {
-        string version = 1;
+        int64 version = 1;
         string shard_name = 2;
     }
 

@@ -39,14 +39,9 @@ public final class Modelregistry {
         getModelNameBytes();
 
     /**
-     * <code>string model_version = 2;</code>
+     * <code>int64 model_version = 2;</code>
      */
-    java.lang.String getModelVersion();
-    /**
-     * <code>string model_version = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getModelVersionBytes();
+    long getModelVersion();
 
     /**
      * <code>string dataset_name = 4;</code>
@@ -73,7 +68,7 @@ public final class Modelregistry {
     private RegisterModelRequest() {
       consumer_ = "";
       modelName_ = "";
-      modelVersion_ = "";
+      modelVersion_ = 0L;
       datasetName_ = "";
     }
 
@@ -107,10 +102,9 @@ public final class Modelregistry {
               modelName_ = s;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 16: {
 
-              modelVersion_ = s;
+              modelVersion_ = input.readInt64();
               break;
             }
             case 26: {
@@ -226,37 +220,12 @@ public final class Modelregistry {
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelVersion_;
+    private long modelVersion_;
     /**
-     * <code>string model_version = 2;</code>
+     * <code>int64 model_version = 2;</code>
      */
-    public java.lang.String getModelVersion() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelVersion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model_version = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getModelVersionBytes() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getModelVersion() {
+      return modelVersion_;
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 4;
@@ -310,8 +279,8 @@ public final class Modelregistry {
       if (!getModelNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelName_);
       }
-      if (!getModelVersionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelVersion_);
+      if (modelVersion_ != 0L) {
+        output.writeInt64(2, modelVersion_);
       }
       if (!getConsumerBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, consumer_);
@@ -331,8 +300,9 @@ public final class Modelregistry {
       if (!getModelNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelName_);
       }
-      if (!getModelVersionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelVersion_);
+      if (modelVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, modelVersion_);
       }
       if (!getConsumerBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, consumer_);
@@ -360,8 +330,8 @@ public final class Modelregistry {
           .equals(other.getConsumer());
       result = result && getModelName()
           .equals(other.getModelName());
-      result = result && getModelVersion()
-          .equals(other.getModelVersion());
+      result = result && (getModelVersion()
+          == other.getModelVersion());
       result = result && getDatasetName()
           .equals(other.getDatasetName());
       result = result && unknownFields.equals(other.unknownFields);
@@ -380,7 +350,8 @@ public final class Modelregistry {
       hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getModelName().hashCode();
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getModelVersion());
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -520,7 +491,7 @@ public final class Modelregistry {
 
         modelName_ = "";
 
-        modelVersion_ = "";
+        modelVersion_ = 0L;
 
         datasetName_ = "";
 
@@ -610,9 +581,8 @@ public final class Modelregistry {
           modelName_ = other.modelName_;
           onChanged();
         }
-        if (!other.getModelVersion().isEmpty()) {
-          modelVersion_ = other.modelVersion_;
-          onChanged();
+        if (other.getModelVersion() != 0L) {
+          setModelVersion(other.getModelVersion());
         }
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
@@ -785,71 +755,28 @@ public final class Modelregistry {
         return this;
       }
 
-      private java.lang.Object modelVersion_ = "";
+      private long modelVersion_ ;
       /**
-       * <code>string model_version = 2;</code>
+       * <code>int64 model_version = 2;</code>
        */
-      public java.lang.String getModelVersion() {
-        java.lang.Object ref = modelVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getModelVersion() {
+        return modelVersion_;
       }
       /**
-       * <code>string model_version = 2;</code>
+       * <code>int64 model_version = 2;</code>
        */
-      public com.google.protobuf.ByteString
-          getModelVersionBytes() {
-        java.lang.Object ref = modelVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model_version = 2;</code>
-       */
-      public Builder setModelVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setModelVersion(long value) {
+        
         modelVersion_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_version = 2;</code>
+       * <code>int64 model_version = 2;</code>
        */
       public Builder clearModelVersion() {
         
-        modelVersion_ = getDefaultInstance().getModelVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_version = 2;</code>
-       */
-      public Builder setModelVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelVersion_ = value;
+        modelVersion_ = 0L;
         onChanged();
         return this;
       }
@@ -1540,14 +1467,9 @@ public final class Modelregistry {
         getModelNameBytes();
 
     /**
-     * <code>string model_version = 3;</code>
+     * <code>int64 model_version = 3;</code>
      */
-    java.lang.String getModelVersion();
-    /**
-     * <code>string model_version = 3;</code>
-     */
-    com.google.protobuf.ByteString
-        getModelVersionBytes();
+    long getModelVersion();
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1alpha1.DeleteModelRequest}
@@ -1563,7 +1485,7 @@ public final class Modelregistry {
     }
     private DeleteModelRequest() {
       modelName_ = "";
-      modelVersion_ = "";
+      modelVersion_ = 0L;
     }
 
     @java.lang.Override
@@ -1596,10 +1518,9 @@ public final class Modelregistry {
               modelName_ = s;
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 24: {
 
-              modelVersion_ = s;
+              modelVersion_ = input.readInt64();
               break;
             }
             default: {
@@ -1669,37 +1590,12 @@ public final class Modelregistry {
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 3;
-    private volatile java.lang.Object modelVersion_;
+    private long modelVersion_;
     /**
-     * <code>string model_version = 3;</code>
+     * <code>int64 model_version = 3;</code>
      */
-    public java.lang.String getModelVersion() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelVersion_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model_version = 3;</code>
-     */
-    public com.google.protobuf.ByteString
-        getModelVersionBytes() {
-      java.lang.Object ref = modelVersion_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelVersion_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public long getModelVersion() {
+      return modelVersion_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1719,8 +1615,8 @@ public final class Modelregistry {
       if (!getModelNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelName_);
       }
-      if (!getModelVersionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, modelVersion_);
+      if (modelVersion_ != 0L) {
+        output.writeInt64(3, modelVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -1734,8 +1630,9 @@ public final class Modelregistry {
       if (!getModelNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelName_);
       }
-      if (!getModelVersionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, modelVersion_);
+      if (modelVersion_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(3, modelVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1755,8 +1652,8 @@ public final class Modelregistry {
       boolean result = true;
       result = result && getModelName()
           .equals(other.getModelName());
-      result = result && getModelVersion()
-          .equals(other.getModelVersion());
+      result = result && (getModelVersion()
+          == other.getModelVersion());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1771,7 +1668,8 @@ public final class Modelregistry {
       hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getModelName().hashCode();
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
-      hash = (53 * hash) + getModelVersion().hashCode();
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getModelVersion());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1907,7 +1805,7 @@ public final class Modelregistry {
         super.clear();
         modelName_ = "";
 
-        modelVersion_ = "";
+        modelVersion_ = 0L;
 
         return this;
       }
@@ -1989,9 +1887,8 @@ public final class Modelregistry {
           modelName_ = other.modelName_;
           onChanged();
         }
-        if (!other.getModelVersion().isEmpty()) {
-          modelVersion_ = other.modelVersion_;
-          onChanged();
+        if (other.getModelVersion() != 0L) {
+          setModelVersion(other.getModelVersion());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2091,71 +1988,28 @@ public final class Modelregistry {
         return this;
       }
 
-      private java.lang.Object modelVersion_ = "";
+      private long modelVersion_ ;
       /**
-       * <code>string model_version = 3;</code>
+       * <code>int64 model_version = 3;</code>
        */
-      public java.lang.String getModelVersion() {
-        java.lang.Object ref = modelVersion_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelVersion_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      public long getModelVersion() {
+        return modelVersion_;
       }
       /**
-       * <code>string model_version = 3;</code>
+       * <code>int64 model_version = 3;</code>
        */
-      public com.google.protobuf.ByteString
-          getModelVersionBytes() {
-        java.lang.Object ref = modelVersion_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelVersion_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model_version = 3;</code>
-       */
-      public Builder setModelVersion(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+      public Builder setModelVersion(long value) {
+        
         modelVersion_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_version = 3;</code>
+       * <code>int64 model_version = 3;</code>
        */
       public Builder clearModelVersion() {
         
-        modelVersion_ = getDefaultInstance().getModelVersion();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_version = 3;</code>
-       */
-      public Builder setModelVersionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelVersion_ = value;
+        modelVersion_ = 0L;
         onChanged();
         return this;
       }
@@ -3216,14 +3070,9 @@ public final class Modelregistry {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string version = 1;</code>
+       * <code>int64 version = 1;</code>
        */
-      java.lang.String getVersion();
-      /**
-       * <code>string version = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getVersionBytes();
+      long getVersion();
 
       /**
        * <code>string shard_name = 2;</code>
@@ -3248,7 +3097,7 @@ public final class Modelregistry {
         super(builder);
       }
       private VersionInfo() {
-        version_ = "";
+        version_ = 0L;
         shardName_ = "";
       }
 
@@ -3276,10 +3125,9 @@ public final class Modelregistry {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
+              case 8: {
 
-                version_ = s;
+                version_ = input.readInt64();
                 break;
               }
               case 18: {
@@ -3321,37 +3169,12 @@ public final class Modelregistry {
       }
 
       public static final int VERSION_FIELD_NUMBER = 1;
-      private volatile java.lang.Object version_;
+      private long version_;
       /**
-       * <code>string version = 1;</code>
+       * <code>int64 version = 1;</code>
        */
-      public java.lang.String getVersion() {
-        java.lang.Object ref = version_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          version_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string version = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getVersionBytes() {
-        java.lang.Object ref = version_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          version_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      public long getVersion() {
+        return version_;
       }
 
       public static final int SHARD_NAME_FIELD_NUMBER = 2;
@@ -3402,8 +3225,8 @@ public final class Modelregistry {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (!getVersionBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, version_);
+        if (version_ != 0L) {
+          output.writeInt64(1, version_);
         }
         if (!getShardNameBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shardName_);
@@ -3417,8 +3240,9 @@ public final class Modelregistry {
         if (size != -1) return size;
 
         size = 0;
-        if (!getVersionBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, version_);
+        if (version_ != 0L) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt64Size(1, version_);
         }
         if (!getShardNameBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shardName_);
@@ -3439,8 +3263,8 @@ public final class Modelregistry {
         asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsResponse.VersionInfo other = (asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsResponse.VersionInfo) obj;
 
         boolean result = true;
-        result = result && getVersion()
-            .equals(other.getVersion());
+        result = result && (getVersion()
+            == other.getVersion());
         result = result && getShardName()
             .equals(other.getShardName());
         result = result && unknownFields.equals(other.unknownFields);
@@ -3455,7 +3279,8 @@ public final class Modelregistry {
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
         hash = (37 * hash) + VERSION_FIELD_NUMBER;
-        hash = (53 * hash) + getVersion().hashCode();
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            getVersion());
         hash = (37 * hash) + SHARD_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getShardName().hashCode();
         hash = (29 * hash) + unknownFields.hashCode();
@@ -3591,7 +3416,7 @@ public final class Modelregistry {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          version_ = "";
+          version_ = 0L;
 
           shardName_ = "";
 
@@ -3671,9 +3496,8 @@ public final class Modelregistry {
 
         public Builder mergeFrom(asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsResponse.VersionInfo other) {
           if (other == asgt.modelregistry.v1alpha1.Modelregistry.GetLatestModelVersionsResponse.VersionInfo.getDefaultInstance()) return this;
-          if (!other.getVersion().isEmpty()) {
-            version_ = other.version_;
-            onChanged();
+          if (other.getVersion() != 0L) {
+            setVersion(other.getVersion());
           }
           if (!other.getShardName().isEmpty()) {
             shardName_ = other.shardName_;
@@ -3708,71 +3532,28 @@ public final class Modelregistry {
           return this;
         }
 
-        private java.lang.Object version_ = "";
+        private long version_ ;
         /**
-         * <code>string version = 1;</code>
+         * <code>int64 version = 1;</code>
          */
-        public java.lang.String getVersion() {
-          java.lang.Object ref = version_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            version_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
+        public long getVersion() {
+          return version_;
         }
         /**
-         * <code>string version = 1;</code>
+         * <code>int64 version = 1;</code>
          */
-        public com.google.protobuf.ByteString
-            getVersionBytes() {
-          java.lang.Object ref = version_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            version_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string version = 1;</code>
-         */
-        public Builder setVersion(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        public Builder setVersion(long value) {
+          
           version_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>string version = 1;</code>
+         * <code>int64 version = 1;</code>
          */
         public Builder clearVersion() {
           
-          version_ = getDefaultInstance().getVersion();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string version = 1;</code>
-         */
-        public Builder setVersionBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          version_ = value;
+          version_ = 0L;
           onChanged();
           return this;
         }
@@ -4611,17 +4392,17 @@ public final class Modelregistry {
       "try.proto\022\033asgt.modelregistry.v1alpha1\032\033" +
       "google/protobuf/empty.proto\"i\n\024RegisterM" +
       "odelRequest\022\020\n\010consumer\030\003 \001(\t\022\022\n\nmodel_n" +
-      "ame\030\001 \001(\t\022\025\n\rmodel_version\030\002 \001(\t\022\024\n\014data" +
+      "ame\030\001 \001(\t\022\025\n\rmodel_version\030\002 \001(\003\022\024\n\014data" +
       "set_name\030\004 \001(\t\"+\n\025RegisterModelResponse\022" +
       "\022\n\nshard_name\030\001 \001(\t\"?\n\022DeleteModelReques" +
       "t\022\022\n\nmodel_name\030\002 \001(\t\022\025\n\rmodel_version\030\003" +
-      " \001(\t\"p\n\035GetLatestModelVersionsRequest\022\020\n" +
+      " \001(\003\"p\n\035GetLatestModelVersionsRequest\022\020\n" +
       "\010consumer\030\001 \001(\t\022\024\n\014dataset_name\030\002 \001(\t\022\022\n" +
       "\nmodel_name\030\003 \001(\t\022\023\n\013max_results\030\004 \001(\005\"\256" +
       "\001\n\036GetLatestModelVersionsResponse\022X\n\007res" +
       "ults\030\001 \003(\0132G.asgt.modelregistry.v1alpha1" +
       ".GetLatestModelVersionsResponse.VersionI" +
-      "nfo\0322\n\013VersionInfo\022\017\n\007version\030\001 \001(\t\022\022\n\ns" +
+      "nfo\0322\n\013VersionInfo\022\017\n\007version\030\001 \001(\003\022\022\n\ns" +
       "hard_name\030\002 \001(\t2\363\002\n\rModelRegistry\022v\n\rReg" +
       "isterModel\0221.asgt.modelregistry.v1alpha1" +
       ".RegisterModelRequest\0322.asgt.modelregist" +
