@@ -189,8 +189,10 @@ type PrepareElectronicInvoiceLineRequest_Entry struct {
 func (m *PrepareElectronicInvoiceLineRequest_Entry) Reset() {
 	*m = PrepareElectronicInvoiceLineRequest_Entry{}
 }
-func (m *PrepareElectronicInvoiceLineRequest_Entry) String() string { return proto.CompactTextString(m) }
-func (*PrepareElectronicInvoiceLineRequest_Entry) ProtoMessage()    {}
+func (m *PrepareElectronicInvoiceLineRequest_Entry) String() string {
+	return proto.CompactTextString(m)
+}
+func (*PrepareElectronicInvoiceLineRequest_Entry) ProtoMessage() {}
 func (*PrepareElectronicInvoiceLineRequest_Entry) Descriptor() ([]byte, []int) {
 	return fileDescriptor_electronic_invoice_line_824ab4f15de6c28c, []int{1, 0}
 }
@@ -306,8 +308,10 @@ type AddElectronicInvoiceLineDataRequest_Entry struct {
 func (m *AddElectronicInvoiceLineDataRequest_Entry) Reset() {
 	*m = AddElectronicInvoiceLineDataRequest_Entry{}
 }
-func (m *AddElectronicInvoiceLineDataRequest_Entry) String() string { return proto.CompactTextString(m) }
-func (*AddElectronicInvoiceLineDataRequest_Entry) ProtoMessage()    {}
+func (m *AddElectronicInvoiceLineDataRequest_Entry) String() string {
+	return proto.CompactTextString(m)
+}
+func (*AddElectronicInvoiceLineDataRequest_Entry) ProtoMessage() {}
 func (*AddElectronicInvoiceLineDataRequest_Entry) Descriptor() ([]byte, []int) {
 	return fileDescriptor_electronic_invoice_line_824ab4f15de6c28c, []int{2, 0}
 }
