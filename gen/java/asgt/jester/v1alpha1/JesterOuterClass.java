@@ -8547,20 +8547,20 @@ public final class JesterOuterClass {
       "Data\022\026\n\016account_number\030\001 \001(\005\022,\n\006amount\030\002" +
       " \001(\0132\034.google.protobuf.DoubleValue\022\022\n\nen" +
       "try_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_sta" +
-      "mp\030\005 \001(\0132\032.google.protobuf.Timestamp2\347\003\n" +
+      "mp\030\005 \001(\0132\032.google.protobuf.Timestamp2\350\003\n" +
       "\006Jester\022\240\001\n\031ScannedInvoiceSuggestions\022+." +
       "asgt.jester.v1alpha1.ScannedInvoiceReque" +
       "st\032).asgt.jester.v1alpha1.SuggestionsRes" +
       "ponse\"+\202\323\344\223\002%\" /v1alpha1/scannedinvoice:" +
-      "suggest:\001*\022\264\001\n\037ElectronicInvoicLineSugge" +
-      "stions\0222.asgt.jester.v1alpha1.Electronic" +
-      "InvoiceLineRequest\032).asgt.jester.v1alpha" +
-      "1.SuggestionsResponse\"2\202\323\344\223\002,\"\'/v1alpha1" +
-      "/electronicinvoiceline:suggest:\001*\022\202\001\n\017Ba" +
-      "nkSuggestions\022!.asgt.jester.v1alpha1.Ban" +
-      "kRequest\032).asgt.jester.v1alpha1.Suggesti" +
-      "onsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/bank:sugg" +
-      "est:\001*B\010Z\006jesterb\006proto3"
+      "suggest:\001*\022\265\001\n ElectronicInvoiceLineSugg" +
+      "estions\0222.asgt.jester.v1alpha1.Electroni" +
+      "cInvoiceLineRequest\032).asgt.jester.v1alph" +
+      "a1.SuggestionsResponse\"2\202\323\344\223\002,\"\'/v1alpha" +
+      "1/electronicinvoiceline:suggest:\001*\022\202\001\n\017B" +
+      "ankSuggestions\022!.asgt.jester.v1alpha1.Ba" +
+      "nkRequest\032).asgt.jester.v1alpha1.Suggest" +
+      "ionsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/bank:sug" +
+      "gest:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

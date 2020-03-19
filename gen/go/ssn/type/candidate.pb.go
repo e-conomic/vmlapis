@@ -241,9 +241,7 @@ func init() {
 	proto.RegisterEnum("ssn.type.Candidate_Type", Candidate_Type_name, Candidate_Type_value)
 }
 
-func init() {
-	proto.RegisterFile("ssn/type/candidate.proto", fileDescriptor_candidate_1a7fbca24cdc979f)
-}
+func init() { proto.RegisterFile("ssn/type/candidate.proto", fileDescriptor_candidate_1a7fbca24cdc979f) }
 
 var fileDescriptor_candidate_1a7fbca24cdc979f = []byte{
 	// 399 bytes of a gzipped FileDescriptorProto

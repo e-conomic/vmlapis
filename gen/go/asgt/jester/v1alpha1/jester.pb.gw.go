@@ -45,7 +45,7 @@ func request_Jester_ScannedInvoiceSuggestions_0(ctx context.Context, marshaler r
 
 }
 
-func request_Jester_ElectronicInvoicLineSuggestions_0(ctx context.Context, marshaler runtime.Marshaler, client JesterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_Jester_ElectronicInvoiceLineSuggestions_0(ctx context.Context, marshaler runtime.Marshaler, client JesterClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq ElectronicInvoiceLineRequest
 	var metadata runtime.ServerMetadata
 
@@ -57,7 +57,7 @@ func request_Jester_ElectronicInvoicLineSuggestions_0(ctx context.Context, marsh
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.ElectronicInvoicLineSuggestions(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.ElectronicInvoiceLineSuggestions(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
@@ -137,7 +137,7 @@ func RegisterJesterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 
 	})
 
-	mux.Handle("POST", pattern_Jester_ElectronicInvoicLineSuggestions_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_Jester_ElectronicInvoiceLineSuggestions_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -146,14 +146,14 @@ func RegisterJesterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Jester_ElectronicInvoicLineSuggestions_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_Jester_ElectronicInvoiceLineSuggestions_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Jester_ElectronicInvoicLineSuggestions_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_Jester_ElectronicInvoiceLineSuggestions_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -183,7 +183,7 @@ func RegisterJesterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 var (
 	pattern_Jester_ScannedInvoiceSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "suggest"))
 
-	pattern_Jester_ElectronicInvoicLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "suggest"))
+	pattern_Jester_ElectronicInvoiceLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "suggest"))
 
 	pattern_Jester_BankSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "bank"}, "suggest"))
 )
@@ -191,7 +191,7 @@ var (
 var (
 	forward_Jester_ScannedInvoiceSuggestions_0 = runtime.ForwardResponseMessage
 
-	forward_Jester_ElectronicInvoicLineSuggestions_0 = runtime.ForwardResponseMessage
+	forward_Jester_ElectronicInvoiceLineSuggestions_0 = runtime.ForwardResponseMessage
 
 	forward_Jester_BankSuggestions_0 = runtime.ForwardResponseMessage
 )
