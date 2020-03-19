@@ -17,7 +17,7 @@ service Jester {
     };
   }
 
-  rpc ElectronicInvoicLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
+  rpc ElectronicInvoiceLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/electronicinvoiceline:suggest"
       body: "*"
