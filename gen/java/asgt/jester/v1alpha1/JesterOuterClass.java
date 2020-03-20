@@ -6438,27 +6438,9 @@ public final class JesterOuterClass {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>int32 account_number = 1;</code>
+       * <code>float amount = 2;</code>
        */
-      int getAccountNumber();
-
-      /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
-       */
-      boolean hasAmount();
-      /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
-       */
-      com.google.protobuf.DoubleValue getAmount();
-      /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
-       */
-      com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder();
-
-      /**
-       * <code>int32 entry_type = 3;</code>
-       */
-      int getEntryType();
+      float getAmount();
 
       /**
        * <code>string text = 4;</code>
@@ -6496,8 +6478,7 @@ public final class JesterOuterClass {
         super(builder);
       }
       private Data() {
-        accountNumber_ = 0;
-        entryType_ = 0;
+        amount_ = 0F;
         text_ = "";
       }
 
@@ -6525,27 +6506,9 @@ public final class JesterOuterClass {
               case 0:
                 done = true;
                 break;
-              case 8: {
+              case 21: {
 
-                accountNumber_ = input.readInt32();
-                break;
-              }
-              case 18: {
-                com.google.protobuf.DoubleValue.Builder subBuilder = null;
-                if (amount_ != null) {
-                  subBuilder = amount_.toBuilder();
-                }
-                amount_ = input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(amount_);
-                  amount_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 24: {
-
-                entryType_ = input.readInt32();
+                amount_ = input.readFloat();
                 break;
               }
               case 34: {
@@ -6599,43 +6562,13 @@ public final class JesterOuterClass {
                 asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder.class);
       }
 
-      public static final int ACCOUNT_NUMBER_FIELD_NUMBER = 1;
-      private int accountNumber_;
-      /**
-       * <code>int32 account_number = 1;</code>
-       */
-      public int getAccountNumber() {
-        return accountNumber_;
-      }
-
       public static final int AMOUNT_FIELD_NUMBER = 2;
-      private com.google.protobuf.DoubleValue amount_;
+      private float amount_;
       /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
+       * <code>float amount = 2;</code>
        */
-      public boolean hasAmount() {
-        return amount_ != null;
-      }
-      /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
-       */
-      public com.google.protobuf.DoubleValue getAmount() {
-        return amount_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
-      }
-      /**
-       * <code>.google.protobuf.DoubleValue amount = 2;</code>
-       */
-      public com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder() {
-        return getAmount();
-      }
-
-      public static final int ENTRY_TYPE_FIELD_NUMBER = 3;
-      private int entryType_;
-      /**
-       * <code>int32 entry_type = 3;</code>
-       */
-      public int getEntryType() {
-        return entryType_;
+      public float getAmount() {
+        return amount_;
       }
 
       public static final int TEXT_FIELD_NUMBER = 4;
@@ -6707,14 +6640,8 @@ public final class JesterOuterClass {
       @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (accountNumber_ != 0) {
-          output.writeInt32(1, accountNumber_);
-        }
-        if (amount_ != null) {
-          output.writeMessage(2, getAmount());
-        }
-        if (entryType_ != 0) {
-          output.writeInt32(3, entryType_);
+        if (amount_ != 0F) {
+          output.writeFloat(2, amount_);
         }
         if (!getTextBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
@@ -6731,17 +6658,9 @@ public final class JesterOuterClass {
         if (size != -1) return size;
 
         size = 0;
-        if (accountNumber_ != 0) {
+        if (amount_ != 0F) {
           size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(1, accountNumber_);
-        }
-        if (amount_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getAmount());
-        }
-        if (entryType_ != 0) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeInt32Size(3, entryType_);
+            .computeFloatSize(2, amount_);
         }
         if (!getTextBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
@@ -6766,15 +6685,10 @@ public final class JesterOuterClass {
         asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) obj;
 
         boolean result = true;
-        result = result && (getAccountNumber()
-            == other.getAccountNumber());
-        result = result && (hasAmount() == other.hasAmount());
-        if (hasAmount()) {
-          result = result && getAmount()
-              .equals(other.getAmount());
-        }
-        result = result && (getEntryType()
-            == other.getEntryType());
+        result = result && (
+            java.lang.Float.floatToIntBits(getAmount())
+            == java.lang.Float.floatToIntBits(
+                other.getAmount()));
         result = result && getText()
             .equals(other.getText());
         result = result && (hasTimeStamp() == other.hasTimeStamp());
@@ -6793,14 +6707,9 @@ public final class JesterOuterClass {
         }
         int hash = 41;
         hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ACCOUNT_NUMBER_FIELD_NUMBER;
-        hash = (53 * hash) + getAccountNumber();
-        if (hasAmount()) {
-          hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-          hash = (53 * hash) + getAmount().hashCode();
-        }
-        hash = (37 * hash) + ENTRY_TYPE_FIELD_NUMBER;
-        hash = (53 * hash) + getEntryType();
+        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+        hash = (53 * hash) + java.lang.Float.floatToIntBits(
+            getAmount());
         hash = (37 * hash) + TEXT_FIELD_NUMBER;
         hash = (53 * hash) + getText().hashCode();
         if (hasTimeStamp()) {
@@ -6940,15 +6849,7 @@ public final class JesterOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
-          accountNumber_ = 0;
-
-          if (amountBuilder_ == null) {
-            amount_ = null;
-          } else {
-            amount_ = null;
-            amountBuilder_ = null;
-          }
-          entryType_ = 0;
+          amount_ = 0F;
 
           text_ = "";
 
@@ -6984,13 +6885,7 @@ public final class JesterOuterClass {
         @java.lang.Override
         public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data buildPartial() {
           asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data(this);
-          result.accountNumber_ = accountNumber_;
-          if (amountBuilder_ == null) {
-            result.amount_ = amount_;
-          } else {
-            result.amount_ = amountBuilder_.build();
-          }
-          result.entryType_ = entryType_;
+          result.amount_ = amount_;
           result.text_ = text_;
           if (timeStampBuilder_ == null) {
             result.timeStamp_ = timeStamp_;
@@ -7045,14 +6940,8 @@ public final class JesterOuterClass {
 
         public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other) {
           if (other == asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance()) return this;
-          if (other.getAccountNumber() != 0) {
-            setAccountNumber(other.getAccountNumber());
-          }
-          if (other.hasAmount()) {
-            mergeAmount(other.getAmount());
-          }
-          if (other.getEntryType() != 0) {
-            setEntryType(other.getEntryType());
+          if (other.getAmount() != 0F) {
+            setAmount(other.getAmount());
           }
           if (!other.getText().isEmpty()) {
             text_ = other.text_;
@@ -7090,171 +6979,28 @@ public final class JesterOuterClass {
           return this;
         }
 
-        private int accountNumber_ ;
+        private float amount_ ;
         /**
-         * <code>int32 account_number = 1;</code>
+         * <code>float amount = 2;</code>
          */
-        public int getAccountNumber() {
-          return accountNumber_;
+        public float getAmount() {
+          return amount_;
         }
         /**
-         * <code>int32 account_number = 1;</code>
+         * <code>float amount = 2;</code>
          */
-        public Builder setAccountNumber(int value) {
+        public Builder setAmount(float value) {
           
-          accountNumber_ = value;
+          amount_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>int32 account_number = 1;</code>
-         */
-        public Builder clearAccountNumber() {
-          
-          accountNumber_ = 0;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.DoubleValue amount_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> amountBuilder_;
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public boolean hasAmount() {
-          return amountBuilder_ != null || amount_ != null;
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public com.google.protobuf.DoubleValue getAmount() {
-          if (amountBuilder_ == null) {
-            return amount_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
-          } else {
-            return amountBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public Builder setAmount(com.google.protobuf.DoubleValue value) {
-          if (amountBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            amount_ = value;
-            onChanged();
-          } else {
-            amountBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public Builder setAmount(
-            com.google.protobuf.DoubleValue.Builder builderForValue) {
-          if (amountBuilder_ == null) {
-            amount_ = builderForValue.build();
-            onChanged();
-          } else {
-            amountBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public Builder mergeAmount(com.google.protobuf.DoubleValue value) {
-          if (amountBuilder_ == null) {
-            if (amount_ != null) {
-              amount_ =
-                com.google.protobuf.DoubleValue.newBuilder(amount_).mergeFrom(value).buildPartial();
-            } else {
-              amount_ = value;
-            }
-            onChanged();
-          } else {
-            amountBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
+         * <code>float amount = 2;</code>
          */
         public Builder clearAmount() {
-          if (amountBuilder_ == null) {
-            amount_ = null;
-            onChanged();
-          } else {
-            amount_ = null;
-            amountBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public com.google.protobuf.DoubleValue.Builder getAmountBuilder() {
           
-          onChanged();
-          return getAmountFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        public com.google.protobuf.DoubleValueOrBuilder getAmountOrBuilder() {
-          if (amountBuilder_ != null) {
-            return amountBuilder_.getMessageOrBuilder();
-          } else {
-            return amount_ == null ?
-                com.google.protobuf.DoubleValue.getDefaultInstance() : amount_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.DoubleValue amount = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
-            getAmountFieldBuilder() {
-          if (amountBuilder_ == null) {
-            amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
-                    getAmount(),
-                    getParentForChildren(),
-                    isClean());
-            amount_ = null;
-          }
-          return amountBuilder_;
-        }
-
-        private int entryType_ ;
-        /**
-         * <code>int32 entry_type = 3;</code>
-         */
-        public int getEntryType() {
-          return entryType_;
-        }
-        /**
-         * <code>int32 entry_type = 3;</code>
-         */
-        public Builder setEntryType(int value) {
-          
-          entryType_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>int32 entry_type = 3;</code>
-         */
-        public Builder clearEntryType() {
-          
-          entryType_ = 0;
+          amount_ = 0F;
           onChanged();
           return this;
         }
@@ -8540,27 +8286,25 @@ public final class JesterOuterClass {
       ".google.protobuf.FloatValue\022/\n\tline_text" +
       "\030\010 \001(\0132\034.google.protobuf.StringValue\022-\n\007" +
       "line_id\030\t \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\266\002\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
+      "lue\"\353\001\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
       "gt.jester.v1alpha1.BankRequest.Data\022\024\n\014d" +
       "ataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asg" +
-      "t.jester.v1alpha1.SuggestionOptions\032\236\001\n\004" +
-      "Data\022\026\n\016account_number\030\001 \001(\005\022,\n\006amount\030\002" +
-      " \001(\0132\034.google.protobuf.DoubleValue\022\022\n\nen" +
-      "try_type\030\003 \001(\005\022\014\n\004text\030\004 \001(\t\022.\n\ntime_sta" +
-      "mp\030\005 \001(\0132\032.google.protobuf.Timestamp2\350\003\n" +
-      "\006Jester\022\240\001\n\031ScannedInvoiceSuggestions\022+." +
-      "asgt.jester.v1alpha1.ScannedInvoiceReque" +
-      "st\032).asgt.jester.v1alpha1.SuggestionsRes" +
-      "ponse\"+\202\323\344\223\002%\" /v1alpha1/scannedinvoice:" +
-      "suggest:\001*\022\265\001\n ElectronicInvoiceLineSugg" +
-      "estions\0222.asgt.jester.v1alpha1.Electroni" +
-      "cInvoiceLineRequest\032).asgt.jester.v1alph" +
-      "a1.SuggestionsResponse\"2\202\323\344\223\002,\"\'/v1alpha" +
-      "1/electronicinvoiceline:suggest:\001*\022\202\001\n\017B" +
-      "ankSuggestions\022!.asgt.jester.v1alpha1.Ba" +
-      "nkRequest\032).asgt.jester.v1alpha1.Suggest" +
-      "ionsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/bank:sug" +
-      "gest:\001*B\010Z\006jesterb\006proto3"
+      "t.jester.v1alpha1.SuggestionOptions\032T\n\004D" +
+      "ata\022\016\n\006amount\030\002 \001(\002\022\014\n\004text\030\004 \001(\t\022.\n\ntim" +
+      "e_stamp\030\005 \001(\0132\032.google.protobuf.Timestam" +
+      "p2\350\003\n\006Jester\022\240\001\n\031ScannedInvoiceSuggestio" +
+      "ns\022+.asgt.jester.v1alpha1.ScannedInvoice" +
+      "Request\032).asgt.jester.v1alpha1.Suggestio" +
+      "nsResponse\"+\202\323\344\223\002%\" /v1alpha1/scannedinv" +
+      "oice:suggest:\001*\022\265\001\n ElectronicInvoiceLin" +
+      "eSuggestions\0222.asgt.jester.v1alpha1.Elec" +
+      "tronicInvoiceLineRequest\032).asgt.jester.v" +
+      "1alpha1.SuggestionsResponse\"2\202\323\344\223\002,\"\'/v1" +
+      "alpha1/electronicinvoiceline:suggest:\001*\022" +
+      "\202\001\n\017BankSuggestions\022!.asgt.jester.v1alph" +
+      "a1.BankRequest\032).asgt.jester.v1alpha1.Su" +
+      "ggestionsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/ban" +
+      "k:suggest:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8625,7 +8369,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor,
-        new java.lang.String[] { "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp", });
+        new java.lang.String[] { "Amount", "Text", "TimeStamp", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

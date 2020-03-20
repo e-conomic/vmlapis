@@ -75,9 +75,7 @@ message ElectronicInvoiceLineRequest {
 // Bank
 message BankRequest {
   message Data {
-    int32 account_number = 1;
-    google.protobuf.DoubleValue amount = 2;
-    int32 entry_type = 3;
+    float amount = 2;
     string text = 4;
     google.protobuf.Timestamp time_stamp = 5;
   }
