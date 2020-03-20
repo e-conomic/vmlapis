@@ -27,18 +27,8 @@
   "mode": "NULLABLE",
   "fields": [
    {
-    "name": "account_number",
-    "type": "INTEGER",
-    "mode": "NULLABLE"
-   },
-   {
     "name": "amount",
     "type": "FLOAT",
-    "mode": "NULLABLE"
-   },
-   {
-    "name": "entry_type",
-    "type": "INTEGER",
     "mode": "NULLABLE"
    },
    {
