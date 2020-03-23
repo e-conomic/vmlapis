@@ -16,23 +16,18 @@ class ScannedInvoiceDataserviceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.PrepareScannedInvoice = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/PrepareScannedInvoice',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.PrepareScannedInvoiceRequest.SerializeToString,
+    self.CreateScannedInvoiceDataset = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/CreateScannedInvoiceDataset',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.CreateScannedInvoiceDatasetRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.ScannedInvoiceFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
+    self.AppendScannedInvoiceData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AppendScannedInvoiceData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.AppendScannedInvoiceDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.AddScannedInvoiceData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AddScannedInvoiceData',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.AddScannedInvoiceDataRequest.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
-    self.DeleteScannedInvoice = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoice',
+    self.DeleteScannedInvoiceData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoiceData',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
@@ -42,28 +37,21 @@ class ScannedInvoiceDataserviceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def PrepareScannedInvoice(self, request, context):
+  def CreateScannedInvoiceDataset(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ScannedInvoiceFeedback(self, request, context):
+  def AppendScannedInvoiceData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def AddScannedInvoiceData(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def DeleteScannedInvoice(self, request, context):
+  def DeleteScannedInvoiceData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -73,23 +61,18 @@ class ScannedInvoiceDataserviceServicer(object):
 
 def add_ScannedInvoiceDataserviceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'PrepareScannedInvoice': grpc.unary_unary_rpc_method_handler(
-          servicer.PrepareScannedInvoice,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.PrepareScannedInvoiceRequest.FromString,
+      'CreateScannedInvoiceDataset': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateScannedInvoiceDataset,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.CreateScannedInvoiceDatasetRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'ScannedInvoiceFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.ScannedInvoiceFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
+      'AppendScannedInvoiceData': grpc.unary_unary_rpc_method_handler(
+          servicer.AppendScannedInvoiceData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.AppendScannedInvoiceDataRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'AddScannedInvoiceData': grpc.unary_unary_rpc_method_handler(
-          servicer.AddScannedInvoiceData,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_scanned__invoice__pb2.AddScannedInvoiceDataRequest.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-      'DeleteScannedInvoice': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteScannedInvoice,
+      'DeleteScannedInvoiceData': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteScannedInvoiceData,
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DeleteRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),

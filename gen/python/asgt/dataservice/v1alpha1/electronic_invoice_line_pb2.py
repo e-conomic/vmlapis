@@ -14,7 +14,6 @@ _sym_db = _symbol_database.Default()
 
 from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
 from asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
-from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -26,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n7asgt/dataservice/v1alpha1/electronic_invoice_line.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xef\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xa5\x02\n#PrepareElectronicInvoiceLineRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry\x1a\x87\x01\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x46\n\x05input\x18\x02 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12*\n\x0bpredictions\x18\x03 \x03(\x0b\x32\x15.asgt.type.Prediction\"\xee\x02\n#AddElectronicInvoiceLineDataRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12U\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x44.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x1a\x8a\x01\n\x05\x45ntry\x12\x46\n\x05input\x18\x01 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple2\xf4\x04\n ElectronicInvoiceLineDataservice\x12v\n\x1cPrepareElectronicInvoiceLine\x12>.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest\x1a\x16.google.protobuf.Empty\x12\x98\x01\n\x1d\x45lectronicInvoiceLineFeedback\x12*.asgt.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronicinvoiceline:feedback:\x01*\x12\xa7\x01\n\x1c\x41\x64\x64\x45lectronicInvoiceLineData\x12>.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"/\x82\xd3\xe4\x93\x02)\"$/v1alpha1/electronicinvoiceline:data:\x01*\x12\x92\x01\n\x1b\x44\x65leteElectronicInvoiceLine\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n7asgt/dataservice/v1alpha1/electronic_invoice_line.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xef\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x46\n\x05input\x18\x05 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xa4\x01\n\x1f\x45lectronicInvoiceLineEntryInput\x12\x46\n\x05input\x18\x01 \x01(\x0b\x32\x37.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xe2\x01\n)CreateElectronicInvoiceLineDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"\x8b\x01\n&AppendElectronicInvoiceLineDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput2\xa5\x04\n ElectronicInvoiceLineDataservice\x12\xb5\x01\n\"CreateElectronicInvoiceLineDataset\x12\x44.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:create:\x01*\x12\xaf\x01\n\x1f\x41ppendElectronicInvoiceLineData\x12\x41.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:append:\x01*\x12\x96\x01\n\x1f\x44\x65leteElectronicInvoiceLineData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronicinvoiceline:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -108,116 +107,27 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=307,
-  serialized_end=802,
+  serialized_start=279,
+  serialized_end=774,
 )
 
 
-_PREPAREELECTRONICINVOICELINEREQUEST_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry',
+_ELECTRONICINVOICELINEENTRYINPUT = _descriptor.Descriptor(
+  name='ElectronicInvoiceLineEntryInput',
+  full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='input', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry.input', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='predictions', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry.predictions', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=963,
-  serialized_end=1098,
-)
-
-_PREPAREELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
-  name='PrepareElectronicInvoiceLineRequest',
-  full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.dataset', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.tags', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='entries', full_name='asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.entries', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_PREPAREELECTRONICINVOICELINEREQUEST_ENTRY, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=805,
-  serialized_end=1098,
-)
-
-
-_ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='input', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry.input', index=0,
+      name='input', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput.input', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='true_values', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry.true_values', index=1,
+      name='true_values', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput.true_values', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -235,40 +145,41 @@ _ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1329,
-  serialized_end=1467,
+  serialized_start=777,
+  serialized_end=941,
 )
 
-_ADDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
-  name='AddElectronicInvoiceLineDataRequest',
-  full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest',
+
+_CREATEELECTRONICINVOICELINEDATASETREQUEST = _descriptor.Descriptor(
+  name='CreateElectronicInvoiceLineDatasetRequest',
+  full_name='asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.dataset', index=0,
+      name='dataset_name', full_name='asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.dataset_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.tags', index=1,
+      name='tags', full_name='asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.tags', index=1,
       number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='entries', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.entries', index=2,
+      name='entries', full_name='asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.entries', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='retention_policy', full_name='asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.retention_policy', index=3,
+      name='retention_policy', full_name='asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.retention_policy', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -277,7 +188,7 @@ _ADDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -286,25 +197,60 @@ _ADDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1101,
-  serialized_end=1467,
+  serialized_start=944,
+  serialized_end=1170,
+)
+
+
+_APPENDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
+  name='AppendElectronicInvoiceLineDataRequest',
+  full_name='asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dataset_name', full_name='asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest.dataset_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='entries', full_name='asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest.entries', index=1,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1173,
+  serialized_end=1312,
 )
 
 _ELECTRONICINVOICELINEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
 _ELECTRONICINVOICELINEENTRY.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
 _ELECTRONICINVOICELINEENTRY.fields_by_name['pred_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._PREDICTEDTUPLE
-_PREPAREELECTRONICINVOICELINEREQUEST_ENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
-_PREPAREELECTRONICINVOICELINEREQUEST_ENTRY.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
-_PREPAREELECTRONICINVOICELINEREQUEST_ENTRY.containing_type = _PREPAREELECTRONICINVOICELINEREQUEST
-_PREPAREELECTRONICINVOICELINEREQUEST.fields_by_name['entries'].message_type = _PREPAREELECTRONICINVOICELINEREQUEST_ENTRY
-_ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
-_ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
-_ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY.containing_type = _ADDELECTRONICINVOICELINEDATAREQUEST
-_ADDELECTRONICINVOICELINEDATAREQUEST.fields_by_name['entries'].message_type = _ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY
-_ADDELECTRONICINVOICELINEDATAREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_ELECTRONICINVOICELINEENTRYINPUT.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._ELECTRONICINVOICELINEREQUEST_DATA
+_ELECTRONICINVOICELINEENTRYINPUT.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
+_CREATEELECTRONICINVOICELINEDATASETREQUEST.fields_by_name['entries'].message_type = _ELECTRONICINVOICELINEENTRYINPUT
+_CREATEELECTRONICINVOICELINEDATASETREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_APPENDELECTRONICINVOICELINEDATAREQUEST.fields_by_name['entries'].message_type = _ELECTRONICINVOICELINEENTRYINPUT
 DESCRIPTOR.message_types_by_name['ElectronicInvoiceLineEntry'] = _ELECTRONICINVOICELINEENTRY
-DESCRIPTOR.message_types_by_name['PrepareElectronicInvoiceLineRequest'] = _PREPAREELECTRONICINVOICELINEREQUEST
-DESCRIPTOR.message_types_by_name['AddElectronicInvoiceLineDataRequest'] = _ADDELECTRONICINVOICELINEDATAREQUEST
+DESCRIPTOR.message_types_by_name['ElectronicInvoiceLineEntryInput'] = _ELECTRONICINVOICELINEENTRYINPUT
+DESCRIPTOR.message_types_by_name['CreateElectronicInvoiceLineDatasetRequest'] = _CREATEELECTRONICINVOICELINEDATASETREQUEST
+DESCRIPTOR.message_types_by_name['AppendElectronicInvoiceLineDataRequest'] = _APPENDELECTRONICINVOICELINEDATAREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ElectronicInvoiceLineEntry = _reflection.GeneratedProtocolMessageType('ElectronicInvoiceLineEntry', (_message.Message,), dict(
@@ -314,35 +260,26 @@ ElectronicInvoiceLineEntry = _reflection.GeneratedProtocolMessageType('Electroni
   ))
 _sym_db.RegisterMessage(ElectronicInvoiceLineEntry)
 
-PrepareElectronicInvoiceLineRequest = _reflection.GeneratedProtocolMessageType('PrepareElectronicInvoiceLineRequest', (_message.Message,), dict(
-
-  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
-    DESCRIPTOR = _PREPAREELECTRONICINVOICELINEREQUEST_ENTRY,
-    __module__ = 'asgt.dataservice.v1alpha1.electronic_invoice_line_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest.Entry)
-    ))
-  ,
-  DESCRIPTOR = _PREPAREELECTRONICINVOICELINEREQUEST,
+ElectronicInvoiceLineEntryInput = _reflection.GeneratedProtocolMessageType('ElectronicInvoiceLineEntryInput', (_message.Message,), dict(
+  DESCRIPTOR = _ELECTRONICINVOICELINEENTRYINPUT,
   __module__ = 'asgt.dataservice.v1alpha1.electronic_invoice_line_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest)
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput)
   ))
-_sym_db.RegisterMessage(PrepareElectronicInvoiceLineRequest)
-_sym_db.RegisterMessage(PrepareElectronicInvoiceLineRequest.Entry)
+_sym_db.RegisterMessage(ElectronicInvoiceLineEntryInput)
 
-AddElectronicInvoiceLineDataRequest = _reflection.GeneratedProtocolMessageType('AddElectronicInvoiceLineDataRequest', (_message.Message,), dict(
-
-  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
-    DESCRIPTOR = _ADDELECTRONICINVOICELINEDATAREQUEST_ENTRY,
-    __module__ = 'asgt.dataservice.v1alpha1.electronic_invoice_line_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest.Entry)
-    ))
-  ,
-  DESCRIPTOR = _ADDELECTRONICINVOICELINEDATAREQUEST,
+CreateElectronicInvoiceLineDatasetRequest = _reflection.GeneratedProtocolMessageType('CreateElectronicInvoiceLineDatasetRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CREATEELECTRONICINVOICELINEDATASETREQUEST,
   __module__ = 'asgt.dataservice.v1alpha1.electronic_invoice_line_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest)
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest)
   ))
-_sym_db.RegisterMessage(AddElectronicInvoiceLineDataRequest)
-_sym_db.RegisterMessage(AddElectronicInvoiceLineDataRequest.Entry)
+_sym_db.RegisterMessage(CreateElectronicInvoiceLineDatasetRequest)
+
+AppendElectronicInvoiceLineDataRequest = _reflection.GeneratedProtocolMessageType('AppendElectronicInvoiceLineDataRequest', (_message.Message,), dict(
+  DESCRIPTOR = _APPENDELECTRONICINVOICELINEDATAREQUEST,
+  __module__ = 'asgt.dataservice.v1alpha1.electronic_invoice_line_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest)
+  ))
+_sym_db.RegisterMessage(AppendElectronicInvoiceLineDataRequest)
 
 
 DESCRIPTOR._options = None
@@ -359,40 +296,31 @@ _ELECTRONICINVOICELINEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1470,
-  serialized_end=2098,
+  serialized_start=1315,
+  serialized_end=1864,
   methods=[
   _descriptor.MethodDescriptor(
-    name='PrepareElectronicInvoiceLine',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.PrepareElectronicInvoiceLine',
+    name='CreateElectronicInvoiceLineDataset',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.CreateElectronicInvoiceLineDataset',
     index=0,
     containing_service=None,
-    input_type=_PREPAREELECTRONICINVOICELINEREQUEST,
+    input_type=_CREATEELECTRONICINVOICELINEDATASETREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=None,
+    serialized_options=_b('\202\323\344\223\002+\"&/v1alpha1/electronicinvoiceline:create:\001*'),
   ),
   _descriptor.MethodDescriptor(
-    name='ElectronicInvoiceLineFeedback',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.ElectronicInvoiceLineFeedback',
+    name='AppendElectronicInvoiceLineData',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.AppendElectronicInvoiceLineData',
     index=1,
     containing_service=None,
-    input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._FEEDBACKREQUEST,
+    input_type=_APPENDELECTRONICINVOICELINEDATAREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=_b('\202\323\344\223\002-\"(/v1alpha1/electronicinvoiceline:feedback:\001*'),
+    serialized_options=_b('\202\323\344\223\002+\"&/v1alpha1/electronicinvoiceline:append:\001*'),
   ),
   _descriptor.MethodDescriptor(
-    name='AddElectronicInvoiceLineData',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.AddElectronicInvoiceLineData',
+    name='DeleteElectronicInvoiceLineData',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.DeleteElectronicInvoiceLineData',
     index=2,
-    containing_service=None,
-    input_type=_ADDELECTRONICINVOICELINEDATAREQUEST,
-    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=_b('\202\323\344\223\002)\"$/v1alpha1/electronicinvoiceline:data:\001*'),
-  ),
-  _descriptor.MethodDescriptor(
-    name='DeleteElectronicInvoiceLine',
-    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice.DeleteElectronicInvoiceLine',
-    index=3,
     containing_service=None,
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DELETEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,

@@ -16,19 +16,14 @@ class BankDataserviceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.PrepareBankFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.PrepareBankRequest.SerializeToString,
+    self.CreateBankDataset = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.CreateBankDatasetRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.BankFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
-    self.AddBankData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.BankDataservice/AddBankData',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.AddBankDataRequest.SerializeToString,
+    self.AppendBankData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.AppendBankDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.DeleteBankData = channel.unary_unary(
@@ -42,21 +37,14 @@ class BankDataserviceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def PrepareBankFeedback(self, request, context):
+  def CreateBankDataset(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def BankFeedback(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def AddBankData(self, request, context):
+  def AppendBankData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -73,19 +61,14 @@ class BankDataserviceServicer(object):
 
 def add_BankDataserviceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'PrepareBankFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.PrepareBankFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.PrepareBankRequest.FromString,
+      'CreateBankDataset': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateBankDataset,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.CreateBankDatasetRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'BankFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.BankFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-      'AddBankData': grpc.unary_unary_rpc_method_handler(
-          servicer.AddBankData,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.AddBankDataRequest.FromString,
+      'AppendBankData': grpc.unary_unary_rpc_method_handler(
+          servicer.AppendBankData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_bank__pb2.AppendBankDataRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'DeleteBankData': grpc.unary_unary_rpc_method_handler(

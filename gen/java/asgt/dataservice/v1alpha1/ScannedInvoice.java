@@ -2032,79 +2032,61 @@ public final class ScannedInvoice {
 
   }
 
-  public interface PrepareScannedInvoiceRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
+  public interface ScannedInvoiceEntryInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
      */
-    java.lang.String getDataset();
+    boolean hasInput();
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getDatasetBytes();
+    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput();
+    /**
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+     */
+    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder();
 
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getTagsList();
+    java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> 
+        getTrueValuesList();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    int getTagsCount();
+    asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index);
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.lang.String getTags(int index);
+    int getTrueValuesCount();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getTagsBytes(int index);
-
+    java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+        getTrueValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> 
-        getEntriesList();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getEntries(int index);
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    int getEntriesCount();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder> 
-        getEntriesOrBuilderList();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest}
+   * Protobuf type {@code asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput}
    */
-  public  static final class PrepareScannedInvoiceRequest extends
+  public  static final class ScannedInvoiceEntryInput extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
-      PrepareScannedInvoiceRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
+      ScannedInvoiceEntryInputOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PrepareScannedInvoiceRequest.newBuilder() to construct.
-    private PrepareScannedInvoiceRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ScannedInvoiceEntryInput.newBuilder() to construct.
+    private ScannedInvoiceEntryInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PrepareScannedInvoiceRequest() {
-      dataset_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      entries_ = java.util.Collections.emptyList();
+    private ScannedInvoiceEntryInput() {
+      trueValues_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2112,7 +2094,7 @@ public final class ScannedInvoice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PrepareScannedInvoiceRequest(
+    private ScannedInvoiceEntryInput(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2132,27 +2114,25 @@ public final class ScannedInvoice {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder subBuilder = null;
+              if (input_ != null) {
+                subBuilder = input_.toBuilder();
+              }
+              input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(input_);
+                input_ = subBuilder.buildPartial();
+              }
 
-              dataset_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
+                trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              tags_.add(s);
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.parser(), extensionRegistry));
+              trueValues_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2171,10 +2151,7 @@ public final class ScannedInvoice {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = java.util.Collections.unmodifiableList(entries_);
+          trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2182,1230 +2159,72 @@ public final class ScannedInvoice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor;
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Builder.class);
-    }
-
-    public interface EntryOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string id = 1;</code>
-       */
-      java.lang.String getId();
-      /**
-       * <code>string id = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getIdBytes();
-
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      boolean hasInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder();
-
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      java.util.List<asgt.type.PredictionOuterClass.Prediction> 
-          getPredictionsList();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      int getPredictionsCount();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-          getPredictionsOrBuilderList();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-          int index);
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry}
-     */
-    public  static final class Entry extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-        EntryOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Entry.newBuilder() to construct.
-      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Entry() {
-        id_ = "";
-        predictions_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Entry(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                id_ = s;
-                break;
-              }
-              case 18: {
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder subBuilder = null;
-                if (input_ != null) {
-                  subBuilder = input_.toBuilder();
-                }
-                input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(input_);
-                  input_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 26: {
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                  predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
-                  mutable_bitField0_ |= 0x00000004;
-                }
-                predictions_.add(
-                    input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-            predictions_ = java.util.Collections.unmodifiableList(predictions_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.class, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object id_;
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int INPUT_FIELD_NUMBER = 2;
-      private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_;
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      public boolean hasInput() {
-        return input_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
-        return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
-        return getInput();
-      }
-
-      public static final int PREDICTIONS_FIELD_NUMBER = 3;
-      private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
-        return predictions_;
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-          getPredictionsOrBuilderList() {
-        return predictions_;
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public int getPredictionsCount() {
-        return predictions_.size();
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
-        return predictions_.get(index);
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-          int index) {
-        return predictions_.get(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-        }
-        if (input_ != null) {
-          output.writeMessage(2, getInput());
-        }
-        for (int i = 0; i < predictions_.size(); i++) {
-          output.writeMessage(3, predictions_.get(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-        }
-        if (input_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getInput());
-        }
-        for (int i = 0; i < predictions_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, predictions_.get(i));
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry)) {
-          return super.equals(obj);
-        }
-        asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry other = (asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry) obj;
-
-        boolean result = true;
-        result = result && getId()
-            .equals(other.getId());
-        result = result && (hasInput() == other.hasInput());
-        if (hasInput()) {
-          result = result && getInput()
-              .equals(other.getInput());
-        }
-        result = result && getPredictionsList()
-            .equals(other.getPredictionsList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
-        if (hasInput()) {
-          hash = (37 * hash) + INPUT_FIELD_NUMBER;
-          hash = (53 * hash) + getInput().hashCode();
-        }
-        if (getPredictionsCount() > 0) {
-          hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
-          hash = (53 * hash) + getPredictionsList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.class, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder.class);
-        }
-
-        // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getPredictionsFieldBuilder();
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          id_ = "";
-
-          if (inputBuilder_ == null) {
-            input_ = null;
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-          if (predictionsBuilder_ == null) {
-            predictions_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            predictionsBuilder_.clear();
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry build() {
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry result = new asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          result.id_ = id_;
-          if (inputBuilder_ == null) {
-            result.input_ = input_;
-          } else {
-            result.input_ = inputBuilder_.build();
-          }
-          if (predictionsBuilder_ == null) {
-            if (((bitField0_ & 0x00000004) == 0x00000004)) {
-              predictions_ = java.util.Collections.unmodifiableList(predictions_);
-              bitField0_ = (bitField0_ & ~0x00000004);
-            }
-            result.predictions_ = predictions_;
-          } else {
-            result.predictions_ = predictionsBuilder_.build();
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.getDefaultInstance()) return this;
-          if (!other.getId().isEmpty()) {
-            id_ = other.id_;
-            onChanged();
-          }
-          if (other.hasInput()) {
-            mergeInput(other.getInput());
-          }
-          if (predictionsBuilder_ == null) {
-            if (!other.predictions_.isEmpty()) {
-              if (predictions_.isEmpty()) {
-                predictions_ = other.predictions_;
-                bitField0_ = (bitField0_ & ~0x00000004);
-              } else {
-                ensurePredictionsIsMutable();
-                predictions_.addAll(other.predictions_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.predictions_.isEmpty()) {
-              if (predictionsBuilder_.isEmpty()) {
-                predictionsBuilder_.dispose();
-                predictionsBuilder_ = null;
-                predictions_ = other.predictions_;
-                bitField0_ = (bitField0_ & ~0x00000004);
-                predictionsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getPredictionsFieldBuilder() : null;
-              } else {
-                predictionsBuilder_.addAllMessages(other.predictions_);
-              }
-            }
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object id_ = "";
-        /**
-         * <code>string id = 1;</code>
-         */
-        public java.lang.String getId() {
-          java.lang.Object ref = id_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            id_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getIdBytes() {
-          java.lang.Object ref = id_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            id_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder setId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          id_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder clearId() {
-          
-          id_ = getDefaultInstance().getId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder setIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          id_ = value;
-          onChanged();
-          return this;
-        }
-
-        private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> inputBuilder_;
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public boolean hasInput() {
-          return inputBuilder_ != null || input_ != null;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
-          if (inputBuilder_ == null) {
-            return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-          } else {
-            return inputBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            input_ = value;
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public Builder setInput(
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
-          if (inputBuilder_ == null) {
-            input_ = builderForValue.build();
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (input_ != null) {
-              input_ =
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
-            } else {
-              input_ = value;
-            }
-            onChanged();
-          } else {
-            inputBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public Builder clearInput() {
-          if (inputBuilder_ == null) {
-            input_ = null;
-            onChanged();
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getInputBuilder() {
-          
-          onChanged();
-          return getInputFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
-          if (inputBuilder_ != null) {
-            return inputBuilder_.getMessageOrBuilder();
-          } else {
-            return input_ == null ?
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
-            getInputFieldBuilder() {
-          if (inputBuilder_ == null) {
-            inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
-                    getInput(),
-                    getParentForChildren(),
-                    isClean());
-            input_ = null;
-          }
-          return inputBuilder_;
-        }
-
-        private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_ =
-          java.util.Collections.emptyList();
-        private void ensurePredictionsIsMutable() {
-          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-            predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>(predictions_);
-            bitField0_ |= 0x00000004;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
-
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
-          if (predictionsBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(predictions_);
-          } else {
-            return predictionsBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public int getPredictionsCount() {
-          if (predictionsBuilder_ == null) {
-            return predictions_.size();
-          } else {
-            return predictionsBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
-          if (predictionsBuilder_ == null) {
-            return predictions_.get(index);
-          } else {
-            return predictionsBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder setPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.set(index, value);
-            onChanged();
-          } else {
-            predictionsBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder setPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.add(value);
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.add(index, value);
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.add(builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addAllPredictions(
-            java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, predictions_);
-            onChanged();
-          } else {
-            predictionsBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder clearPredictions() {
-          if (predictionsBuilder_ == null) {
-            predictions_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000004);
-            onChanged();
-          } else {
-            predictionsBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder removePredictions(int index) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.remove(index);
-            onChanged();
-          } else {
-            predictionsBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
-            int index) {
-          return getPredictionsFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-            int index) {
-          if (predictionsBuilder_ == null) {
-            return predictions_.get(index);  } else {
-            return predictionsBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-             getPredictionsOrBuilderList() {
-          if (predictionsBuilder_ != null) {
-            return predictionsBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(predictions_);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
-          return getPredictionsFieldBuilder().addBuilder(
-              asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
-            int index) {
-          return getPredictionsFieldBuilder().addBuilder(
-              index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
-             getPredictionsBuilderList() {
-          return getPredictionsFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-            getPredictionsFieldBuilder() {
-          if (predictionsBuilder_ == null) {
-            predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
-                    predictions_,
-                    ((bitField0_ & 0x00000004) == 0x00000004),
-                    getParentForChildren(),
-                    isClean());
-            predictions_ = null;
-          }
-          return predictionsBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry();
-      }
-
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Entry>
-          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
-        @java.lang.Override
-        public Entry parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Entry(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Entry> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Entry> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
+              asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.class, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder.class);
     }
 
     private int bitField0_;
-    public static final int DATASET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dataset_;
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_;
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
      */
-    public java.lang.String getDataset() {
-      java.lang.Object ref = dataset_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dataset_ = s;
-        return s;
-      }
+    public boolean hasInput() {
+      return input_ != null;
     }
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getDatasetBytes() {
-      java.lang.Object ref = dataset_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dataset_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
+      return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
+    }
+    /**
+     * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+     */
+    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
+      return getInput();
     }
 
-    public static final int TAGS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList tags_;
+    public static final int TRUE_VALUES_FIELD_NUMBER = 2;
+    private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_;
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
+    public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+      return trueValues_;
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public int getTagsCount() {
-      return tags_.size();
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+        getTrueValuesOrBuilderList() {
+      return trueValues_;
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
+    public int getTrueValuesCount() {
+      return trueValues_.size();
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
-    }
-
-    public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> entries_;
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> getEntriesList() {
-      return entries_;
+    public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+      return trueValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder> 
-        getEntriesOrBuilderList() {
-      return entries_;
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    public int getEntriesCount() {
-      return entries_.size();
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getEntries(int index) {
-      return entries_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
-     */
-    public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
         int index) {
-      return entries_.get(index);
+      return trueValues_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3422,14 +2241,11 @@ public final class ScannedInvoice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
       }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
-      }
-      for (int i = 0; i < entries_.size(); i++) {
-        output.writeMessage(3, entries_.get(i));
+      for (int i = 0; i < trueValues_.size(); i++) {
+        output.writeMessage(2, trueValues_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3440,20 +2256,13 @@ public final class ScannedInvoice {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
-      }
-      for (int i = 0; i < entries_.size(); i++) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, entries_.get(i));
+          .computeMessageSize(1, getInput());
+      }
+      for (int i = 0; i < trueValues_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, trueValues_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3465,18 +2274,19 @@ public final class ScannedInvoice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest other = (asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest) obj;
+      asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput other = (asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput) obj;
 
       boolean result = true;
-      result = result && getDataset()
-          .equals(other.getDataset());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && getEntriesList()
-          .equals(other.getEntriesList());
+      result = result && (hasInput() == other.hasInput());
+      if (hasInput()) {
+        result = result && getInput()
+            .equals(other.getInput());
+      }
+      result = result && getTrueValuesList()
+          .equals(other.getTrueValuesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3488,84 +2298,82 @@ public final class ScannedInvoice {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + getDataset().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
       }
-      if (getEntriesCount() > 0) {
-        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
-        hash = (53 * hash) + getEntriesList().hashCode();
+      if (getTrueValuesCount() > 0) {
+        hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrueValuesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3578,7 +2386,7 @@ public final class ScannedInvoice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3594,26 +2402,26 @@ public final class ScannedInvoice {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest}
+     * Protobuf type {@code asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
-        asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
+        asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Builder.class);
+                asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.class, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3626,21 +2434,23 @@ public final class ScannedInvoice {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getEntriesFieldBuilder();
+          getTrueValuesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        dataset_ = "";
-
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (entriesBuilder_ == null) {
-          entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+        if (inputBuilder_ == null) {
+          input_ = null;
         } else {
-          entriesBuilder_.clear();
+          input_ = null;
+          inputBuilder_ = null;
+        }
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          trueValuesBuilder_.clear();
         }
         return this;
       }
@@ -3648,17 +2458,17 @@ public final class ScannedInvoice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest build() {
-        asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput build() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3666,24 +2476,23 @@ public final class ScannedInvoice {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest buildPartial() {
-        asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest result = new asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest(this);
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput buildPartial() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput result = new asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.dataset_ = dataset_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.tags_ = tags_;
-        if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.entries_ = entries_;
+        if (inputBuilder_ == null) {
+          result.input_ = input_;
         } else {
-          result.entries_ = entriesBuilder_.build();
+          result.input_ = inputBuilder_.build();
+        }
+        if (trueValuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.trueValues_ = trueValues_;
+        } else {
+          result.trueValues_ = trueValuesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3724,53 +2533,42 @@ public final class ScannedInvoice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest other) {
-        if (other == asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.getDefaultInstance()) return this;
-        if (!other.getDataset().isEmpty()) {
-          dataset_ = other.dataset_;
-          onChanged();
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput other) {
+        if (other == asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
         }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        if (entriesBuilder_ == null) {
-          if (!other.entries_.isEmpty()) {
-            if (entries_.isEmpty()) {
-              entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+        if (trueValuesBuilder_ == null) {
+          if (!other.trueValues_.isEmpty()) {
+            if (trueValues_.isEmpty()) {
+              trueValues_ = other.trueValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureEntriesIsMutable();
-              entries_.addAll(other.entries_);
+              ensureTrueValuesIsMutable();
+              trueValues_.addAll(other.trueValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.entries_.isEmpty()) {
-            if (entriesBuilder_.isEmpty()) {
-              entriesBuilder_.dispose();
-              entriesBuilder_ = null;
-              entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              entriesBuilder_ = 
+          if (!other.trueValues_.isEmpty()) {
+            if (trueValuesBuilder_.isEmpty()) {
+              trueValuesBuilder_.dispose();
+              trueValuesBuilder_ = null;
+              trueValues_ = other.trueValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              trueValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEntriesFieldBuilder() : null;
+                   getTrueValuesFieldBuilder() : null;
             } else {
-              entriesBuilder_.addAllMessages(other.entries_);
+              trueValuesBuilder_.addAllMessages(other.trueValues_);
             }
           }
         }
@@ -3789,11 +2587,11 @@ public final class ScannedInvoice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3804,407 +2602,361 @@ public final class ScannedInvoice {
       }
       private int bitField0_;
 
-      private java.lang.Object dataset_ = "";
+      private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> inputBuilder_;
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
        */
-      public java.lang.String getDataset() {
-        java.lang.Object ref = dataset_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dataset_ = s;
-          return s;
+      public boolean hasInput() {
+        return inputBuilder_ != null || input_ != null;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
         } else {
-          return (java.lang.String) ref;
+          return inputBuilder_.getMessage();
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getDatasetBytes() {
-        java.lang.Object ref = dataset_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dataset_ = b;
-          return b;
+      public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          inputBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public Builder setInput(
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
+        if (inputBuilder_ == null) {
+          if (input_ != null) {
+            input_ =
+              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
+          } else {
+            input_ = value;
+          }
+          onChanged();
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public Builder clearInput() {
+        if (inputBuilder_ == null) {
+          input_ = null;
+          onChanged();
+        } else {
+          input_ = null;
+          inputBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getInputBuilder() {
+        
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
        */
-      public Builder setDataset(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        dataset_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataset = 1;</code>
-       */
-      public Builder clearDataset() {
-        
-        dataset_ = getDefaultInstance().getDataset();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataset = 1;</code>
-       */
-      public Builder setDatasetBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        dataset_ = value;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
+      private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_ =
+        java.util.Collections.emptyList();
+      private void ensureTrueValuesIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>(trueValues_);
           bitField0_ |= 0x00000002;
          }
       }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addTags(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addTagsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> entries_ =
-        java.util.Collections.emptyList();
-      private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry>(entries_);
-          bitField0_ |= 0x00000004;
-         }
-      }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> trueValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> getEntriesList() {
-        if (entriesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(entries_);
+      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+        if (trueValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trueValues_);
         } else {
-          return entriesBuilder_.getMessageList();
+          return trueValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public int getEntriesCount() {
-        if (entriesBuilder_ == null) {
-          return entries_.size();
+      public int getTrueValuesCount() {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.size();
         } else {
-          return entriesBuilder_.getCount();
+          return trueValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry getEntries(int index) {
-        if (entriesBuilder_ == null) {
-          return entries_.get(index);
+      public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.get(index);
         } else {
-          return entriesBuilder_.getMessage(index);
+          return trueValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder setTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.set(index, value);
+          ensureTrueValuesIsMutable();
+          trueValues_.set(index, value);
           onChanged();
         } else {
-          entriesBuilder_.setMessage(index, value);
+          trueValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.set(index, builderForValue.build());
+      public Builder setTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.setMessage(index, builderForValue.build());
+          trueValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder addTrueValues(asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.add(value);
+          ensureTrueValuesIsMutable();
+          trueValues_.add(value);
           onChanged();
         } else {
-          entriesBuilder_.addMessage(value);
+          trueValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder addTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.add(index, value);
+          ensureTrueValuesIsMutable();
+          trueValues_.add(index, value);
           onChanged();
         } else {
-          entriesBuilder_.addMessage(index, value);
+          trueValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.add(builderForValue.build());
+      public Builder addTrueValues(
+          asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.add(builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.addMessage(builderForValue.build());
+          trueValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.add(index, builderForValue.build());
+      public Builder addTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.addMessage(index, builderForValue.build());
+          trueValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry> values) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
+      public Builder addAllTrueValues(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.DataTuple> values) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, entries_);
+              values, trueValues_);
           onChanged();
         } else {
-          entriesBuilder_.addAllMessages(values);
+          trueValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder clearEntries() {
-        if (entriesBuilder_ == null) {
-          entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+      public Builder clearTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          entriesBuilder_.clear();
+          trueValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder removeEntries(int index) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.remove(index);
+      public Builder removeTrueValues(int index) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.remove(index);
           onChanged();
         } else {
-          entriesBuilder_.remove(index);
+          trueValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder getTrueValuesBuilder(
           int index) {
-        return getEntriesFieldBuilder().getBuilder(index);
+        return getTrueValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
           int index) {
-        if (entriesBuilder_ == null) {
-          return entries_.get(index);  } else {
-          return entriesBuilder_.getMessageOrBuilder(index);
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.get(index);  } else {
+          return trueValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder> 
-           getEntriesOrBuilderList() {
-        if (entriesBuilder_ != null) {
-          return entriesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+           getTrueValuesOrBuilderList() {
+        if (trueValuesBuilder_ != null) {
+          return trueValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(entries_);
+          return java.util.Collections.unmodifiableList(trueValues_);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder addEntriesBuilder() {
-        return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.getDefaultInstance());
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder() {
+        return getTrueValuesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder(
           int index) {
-        return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.getDefaultInstance());
+        return getTrueValuesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder> 
-           getEntriesBuilderList() {
-        return getEntriesFieldBuilder().getBuilderList();
+      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple.Builder> 
+           getTrueValuesBuilderList() {
+        return getTrueValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder> 
-          getEntriesFieldBuilder() {
-        if (entriesBuilder_ == null) {
-          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest.EntryOrBuilder>(
-                  entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+          asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+          getTrueValuesFieldBuilder() {
+        if (trueValuesBuilder_ == null) {
+          trueValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder>(
+                  trueValues_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
-          entries_ = null;
+          trueValues_ = null;
         }
-        return entriesBuilder_;
+        return trueValuesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4219,59 +2971,59 @@ public final class ScannedInvoice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
-    private static final asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
+    private static final asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput();
     }
 
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PrepareScannedInvoiceRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PrepareScannedInvoiceRequest>() {
+    private static final com.google.protobuf.Parser<ScannedInvoiceEntryInput>
+        PARSER = new com.google.protobuf.AbstractParser<ScannedInvoiceEntryInput>() {
       @java.lang.Override
-      public PrepareScannedInvoiceRequest parsePartialFrom(
+      public ScannedInvoiceEntryInput parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrepareScannedInvoiceRequest(input, extensionRegistry);
+        return new ScannedInvoiceEntryInput(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PrepareScannedInvoiceRequest> parser() {
+    public static com.google.protobuf.Parser<ScannedInvoiceEntryInput> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PrepareScannedInvoiceRequest> getParserForType() {
+    public com.google.protobuf.Parser<ScannedInvoiceEntryInput> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.ScannedInvoice.PrepareScannedInvoiceRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AddScannedInvoiceDataRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
+  public interface CreateScannedInvoiceDatasetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
-    java.lang.String getDataset();
+    java.lang.String getDatasetName();
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetBytes();
+        getDatasetNameBytes();
 
     /**
      * <code>repeated string tags = 2;</code>
@@ -4293,27 +3045,27 @@ public final class ScannedInvoice {
         getTagsBytes(int index);
 
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> 
+    java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> 
         getEntriesList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getEntries(int index);
+    asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index);
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
     int getEntriesCount();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder> 
+    java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
         getEntriesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
         int index);
 
     /**
@@ -4330,19 +3082,19 @@ public final class ScannedInvoice {
     asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
   /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest}
+   * Protobuf type {@code asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest}
    */
-  public  static final class AddScannedInvoiceDataRequest extends
+  public  static final class CreateScannedInvoiceDatasetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
-      AddScannedInvoiceDataRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
+      CreateScannedInvoiceDatasetRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AddScannedInvoiceDataRequest.newBuilder() to construct.
-    private AddScannedInvoiceDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CreateScannedInvoiceDatasetRequest.newBuilder() to construct.
+    private CreateScannedInvoiceDatasetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AddScannedInvoiceDataRequest() {
-      dataset_ = "";
+    private CreateScannedInvoiceDatasetRequest() {
+      datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       entries_ = java.util.Collections.emptyList();
     }
@@ -4352,7 +3104,7 @@ public final class ScannedInvoice {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AddScannedInvoiceDataRequest(
+    private CreateScannedInvoiceDatasetRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4374,7 +3126,7 @@ public final class ScannedInvoice {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              dataset_ = s;
+              datasetName_ = s;
               break;
             }
             case 18: {
@@ -4388,11 +3140,11 @@ public final class ScannedInvoice {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry>();
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput>();
                 mutable_bitField0_ |= 0x00000004;
               }
               entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.parser(), extensionRegistry));
+                  input.readMessage(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.parser(), extensionRegistry));
               break;
             }
             case 34: {
@@ -4435,1025 +3187,46 @@ public final class ScannedInvoice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor;
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Builder.class);
-    }
-
-    public interface EntryOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      boolean hasInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder();
-
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> 
-          getTrueValuesList();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index);
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      int getTrueValuesCount();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-          getTrueValuesOrBuilderList();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-          int index);
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry}
-     */
-    public  static final class Entry extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-        EntryOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Entry.newBuilder() to construct.
-      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Entry() {
-        trueValues_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Entry(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder subBuilder = null;
-                if (input_ != null) {
-                  subBuilder = input_.toBuilder();
-                }
-                input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(input_);
-                  input_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                trueValues_.add(
-                    input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.class, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int INPUT_FIELD_NUMBER = 1;
-      private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_;
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      public boolean hasInput() {
-        return input_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
-        return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
-        return getInput();
-      }
-
-      public static final int TRUE_VALUES_FIELD_NUMBER = 2;
-      private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_;
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
-        return trueValues_;
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-          getTrueValuesOrBuilderList() {
-        return trueValues_;
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public int getTrueValuesCount() {
-        return trueValues_.size();
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
-        return trueValues_.get(index);
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-          int index) {
-        return trueValues_.get(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (input_ != null) {
-          output.writeMessage(1, getInput());
-        }
-        for (int i = 0; i < trueValues_.size(); i++) {
-          output.writeMessage(2, trueValues_.get(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (input_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getInput());
-        }
-        for (int i = 0; i < trueValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, trueValues_.get(i));
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry)) {
-          return super.equals(obj);
-        }
-        asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry other = (asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry) obj;
-
-        boolean result = true;
-        result = result && (hasInput() == other.hasInput());
-        if (hasInput()) {
-          result = result && getInput()
-              .equals(other.getInput());
-        }
-        result = result && getTrueValuesList()
-            .equals(other.getTrueValuesList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasInput()) {
-          hash = (37 * hash) + INPUT_FIELD_NUMBER;
-          hash = (53 * hash) + getInput().hashCode();
-        }
-        if (getTrueValuesCount() > 0) {
-          hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
-          hash = (53 * hash) + getTrueValuesList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.class, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder.class);
-        }
-
-        // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getTrueValuesFieldBuilder();
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          if (inputBuilder_ == null) {
-            input_ = null;
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-          if (trueValuesBuilder_ == null) {
-            trueValues_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            trueValuesBuilder_.clear();
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry build() {
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry result = new asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (inputBuilder_ == null) {
-            result.input_ = input_;
-          } else {
-            result.input_ = inputBuilder_.build();
-          }
-          if (trueValuesBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) == 0x00000002)) {
-              trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
-              bitField0_ = (bitField0_ & ~0x00000002);
-            }
-            result.trueValues_ = trueValues_;
-          } else {
-            result.trueValues_ = trueValuesBuilder_.build();
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.getDefaultInstance()) return this;
-          if (other.hasInput()) {
-            mergeInput(other.getInput());
-          }
-          if (trueValuesBuilder_ == null) {
-            if (!other.trueValues_.isEmpty()) {
-              if (trueValues_.isEmpty()) {
-                trueValues_ = other.trueValues_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-              } else {
-                ensureTrueValuesIsMutable();
-                trueValues_.addAll(other.trueValues_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.trueValues_.isEmpty()) {
-              if (trueValuesBuilder_.isEmpty()) {
-                trueValuesBuilder_.dispose();
-                trueValuesBuilder_ = null;
-                trueValues_ = other.trueValues_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                trueValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getTrueValuesFieldBuilder() : null;
-              } else {
-                trueValuesBuilder_.addAllMessages(other.trueValues_);
-              }
-            }
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data input_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> inputBuilder_;
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public boolean hasInput() {
-          return inputBuilder_ != null || input_ != null;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInput() {
-          if (inputBuilder_ == null) {
-            return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-          } else {
-            return inputBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            input_ = value;
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public Builder setInput(
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
-          if (inputBuilder_ == null) {
-            input_ = builderForValue.build();
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (input_ != null) {
-              input_ =
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
-            } else {
-              input_ = value;
-            }
-            onChanged();
-          } else {
-            inputBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public Builder clearInput() {
-          if (inputBuilder_ == null) {
-            input_ = null;
-            onChanged();
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getInputBuilder() {
-          
-          onChanged();
-          return getInputFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputOrBuilder() {
-          if (inputBuilder_ != null) {
-            return inputBuilder_.getMessageOrBuilder();
-          } else {
-            return input_ == null ?
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance() : input_;
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
-            getInputFieldBuilder() {
-          if (inputBuilder_ == null) {
-            inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
-                    getInput(),
-                    getParentForChildren(),
-                    isClean());
-            input_ = null;
-          }
-          return inputBuilder_;
-        }
-
-        private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_ =
-          java.util.Collections.emptyList();
-        private void ensureTrueValuesIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>(trueValues_);
-            bitField0_ |= 0x00000002;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> trueValuesBuilder_;
-
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
-          if (trueValuesBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(trueValues_);
-          } else {
-            return trueValuesBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public int getTrueValuesCount() {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.size();
-          } else {
-            return trueValuesBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.get(index);
-          } else {
-            return trueValuesBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder setTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.set(index, value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder setTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.add(value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.add(index, value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.add(builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addAllTrueValues(
-            java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.DataTuple> values) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, trueValues_);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder clearTrueValues() {
-          if (trueValuesBuilder_ == null) {
-            trueValues_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-            onChanged();
-          } else {
-            trueValuesBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder removeTrueValues(int index) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.remove(index);
-            onChanged();
-          } else {
-            trueValuesBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder getTrueValuesBuilder(
-            int index) {
-          return getTrueValuesFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-            int index) {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.get(index);  } else {
-            return trueValuesBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-             getTrueValuesOrBuilderList() {
-          if (trueValuesBuilder_ != null) {
-            return trueValuesBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(trueValues_);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder() {
-          return getTrueValuesFieldBuilder().addBuilder(
-              asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder(
-            int index) {
-          return getTrueValuesFieldBuilder().addBuilder(
-              index, asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple.Builder> 
-             getTrueValuesBuilderList() {
-          return getTrueValuesFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-            getTrueValuesFieldBuilder() {
-          if (trueValuesBuilder_ == null) {
-            trueValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder>(
-                    trueValues_,
-                    ((bitField0_ & 0x00000002) == 0x00000002),
-                    getParentForChildren(),
-                    isClean());
-            trueValues_ = null;
-          }
-          return trueValuesBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry();
-      }
-
-      public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Entry>
-          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
-        @java.lang.Override
-        public Entry parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Entry(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Entry> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Entry> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
+              asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.Builder.class);
     }
 
     private int bitField0_;
-    public static final int DATASET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dataset_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
-    public java.lang.String getDataset() {
-      java.lang.Object ref = dataset_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        dataset_ = s;
+        datasetName_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetBytes() {
-      java.lang.Object ref = dataset_;
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        dataset_ = b;
+        datasetName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5490,36 +3263,36 @@ public final class ScannedInvoice {
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> entries_;
+    private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> entries_;
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> getEntriesList() {
+    public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> getEntriesList() {
       return entries_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder> 
+    public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
     public int getEntriesCount() {
       return entries_.size();
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getEntries(int index) {
+    public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index) {
       return entries_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
@@ -5559,8 +3332,8 @@ public final class ScannedInvoice {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
@@ -5580,8 +3353,8 @@ public final class ScannedInvoice {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       {
         int dataSize = 0;
@@ -5609,14 +3382,14 @@ public final class ScannedInvoice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest other = (asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest) obj;
+      asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest other = (asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest) obj;
 
       boolean result = true;
-      result = result && getDataset()
-          .equals(other.getDataset());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
       result = result && getTagsList()
           .equals(other.getTagsList());
       result = result && getEntriesList()
@@ -5637,8 +3410,8 @@ public final class ScannedInvoice {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + getDataset().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -5656,69 +3429,69 @@ public final class ScannedInvoice {
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5731,7 +3504,7 @@ public final class ScannedInvoice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5747,26 +3520,26 @@ public final class ScannedInvoice {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest}
+     * Protobuf type {@code asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
-        asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
+        asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Builder.class);
+                asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5785,7 +3558,7 @@ public final class ScannedInvoice {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        dataset_ = "";
+        datasetName_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -5807,17 +3580,17 @@ public final class ScannedInvoice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest build() {
-        asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest build() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5825,11 +3598,11 @@ public final class ScannedInvoice {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest buildPartial() {
-        asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest result = new asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest(this);
+      public asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest buildPartial() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest result = new asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.dataset_ = dataset_;
+        result.datasetName_ = datasetName_;
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -5888,18 +3661,18 @@ public final class ScannedInvoice {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest other) {
-        if (other == asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.getDefaultInstance()) return this;
-        if (!other.getDataset().isEmpty()) {
-          dataset_ = other.dataset_;
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest other) {
+        if (other == asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest.getDefaultInstance()) return this;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
@@ -5956,11 +3729,11 @@ public final class ScannedInvoice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5971,71 +3744,71 @@ public final class ScannedInvoice {
       }
       private int bitField0_;
 
-      private java.lang.Object dataset_ = "";
+      private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public java.lang.String getDataset() {
-        java.lang.Object ref = dataset_;
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          dataset_ = s;
+          datasetName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetBytes() {
-        java.lang.Object ref = dataset_;
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          dataset_ = b;
+          datasetName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder setDataset(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        dataset_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder clearDataset() {
+      public Builder clearDatasetName() {
         
-        dataset_ = getDefaultInstance().getDataset();
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder setDatasetBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        dataset_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -6134,22 +3907,22 @@ public final class ScannedInvoice {
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> entries_ =
+      private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry>(entries_);
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput>(entries_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> entriesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> getEntriesList() {
+      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
         } else {
@@ -6157,7 +3930,7 @@ public final class ScannedInvoice {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public int getEntriesCount() {
         if (entriesBuilder_ == null) {
@@ -6167,9 +3940,9 @@ public final class ScannedInvoice {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry getEntries(int index) {
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
         } else {
@@ -6177,10 +3950,10 @@ public final class ScannedInvoice {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6194,10 +3967,10 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.set(index, builderForValue.build());
@@ -6208,9 +3981,9 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry value) {
+      public Builder addEntries(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6224,10 +3997,10 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6241,10 +4014,10 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(builderForValue.build());
@@ -6255,10 +4028,10 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(index, builderForValue.build());
@@ -6269,10 +4042,10 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry> values) {
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -6284,7 +4057,7 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
@@ -6297,7 +4070,7 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
       public Builder removeEntries(int index) {
         if (entriesBuilder_ == null) {
@@ -6310,16 +4083,16 @@ public final class ScannedInvoice {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);  } else {
@@ -6327,9 +4100,9 @@ public final class ScannedInvoice {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder> 
+      public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
           return entriesBuilder_.getMessageOrBuilderList();
@@ -6338,33 +4111,33 @@ public final class ScannedInvoice {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder addEntriesBuilder() {
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.getDefaultInstance());
+            asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.getDefaultInstance());
+            index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder> 
+      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder> 
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
           getEntriesFieldBuilder() {
         if (entriesBuilder_ == null) {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest.EntryOrBuilder>(
+              asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder>(
                   entries_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -6503,41 +4276,963 @@ public final class ScannedInvoice {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
-    private static final asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
+    private static final asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest();
     }
 
-    public static asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddScannedInvoiceDataRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AddScannedInvoiceDataRequest>() {
+    private static final com.google.protobuf.Parser<CreateScannedInvoiceDatasetRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateScannedInvoiceDatasetRequest>() {
       @java.lang.Override
-      public AddScannedInvoiceDataRequest parsePartialFrom(
+      public CreateScannedInvoiceDatasetRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AddScannedInvoiceDataRequest(input, extensionRegistry);
+        return new CreateScannedInvoiceDatasetRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AddScannedInvoiceDataRequest> parser() {
+    public static com.google.protobuf.Parser<CreateScannedInvoiceDatasetRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AddScannedInvoiceDataRequest> getParserForType() {
+    public com.google.protobuf.Parser<CreateScannedInvoiceDatasetRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.ScannedInvoice.AddScannedInvoiceDataRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.ScannedInvoice.CreateScannedInvoiceDatasetRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AppendScannedInvoiceDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    java.lang.String getDatasetName();
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatasetNameBytes();
+
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> 
+        getEntriesList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index);
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest}
+   */
+  public  static final class AppendScannedInvoiceDataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+      AppendScannedInvoiceDataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppendScannedInvoiceDataRequest.newBuilder() to construct.
+    private AppendScannedInvoiceDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppendScannedInvoiceDataRequest() {
+      datasetName_ = "";
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AppendScannedInvoiceDataRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetName_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              entries_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 3;
+    private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> entries_;
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(3, entries_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, entries_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest other = (asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest) obj;
+
+      boolean result = true;
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
+      result = result && getEntriesList()
+          .equals(other.getEntriesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+        asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.class, asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntriesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        datasetName_ = "";
+
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest build() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest buildPartial() {
+        asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest result = new asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.datasetName_ = datasetName_;
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest other) {
+        if (other == asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest.getDefaultInstance()) return this;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
+          onChanged();
+        }
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object datasetName_ = "";
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder setDatasetName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder clearDatasetName() {
+        
+        datasetName_ = getDefaultInstance().getDatasetName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder setDatasetNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput>(entries_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public java.util.List<? extends asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoice.ScannedInvoiceEntryInputOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+    private static final asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest();
+    }
+
+    public static asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AppendScannedInvoiceDataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AppendScannedInvoiceDataRequest>() {
+      @java.lang.Override
+      public AppendScannedInvoiceDataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AppendScannedInvoiceDataRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppendScannedInvoiceDataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppendScannedInvoiceDataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1alpha1.ScannedInvoice.AppendScannedInvoiceDataRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6549,25 +5244,20 @@ public final class ScannedInvoice {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6580,53 +5270,47 @@ public final class ScannedInvoice {
       "\n/asgt/dataservice/v1alpha1/scanned_invo" +
       "ice.proto\022\031asgt.dataservice.v1alpha1\032$as" +
       "gt/dataservice/v1alpha1/data.proto\032!asgt" +
-      "/jester/v1alpha1/jester.proto\032\032asgt/type" +
-      "/prediction.proto\032\034gen_bq_schema/bq_fiel" +
-      "d.proto\032\034gen_bq_schema/bq_table.proto\032\034g" +
-      "oogle/api/annotations.proto\032\033google/prot" +
-      "obuf/empty.proto\"\331\003\n\023ScannedInvoiceEntry" +
-      "\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy req" +
-      "uest id if feedback data\022\027\n\010consumer\030\002 \001" +
-      "(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tag" +
-      "s\030\004 \003(\tBF\352?C\"ATags defined by consumer, " +
-      "enriched by service if valetkey is used\022" +
-      "?\n\005input\030\005 \001(\01320.asgt.jester.v1alpha1.Sc" +
-      "annedInvoiceRequest.Data\0229\n\013true_values\030" +
-      "\006 \003(\0132$.asgt.dataservice.v1alpha1.DataTu" +
-      "ple\022>\n\013pred_values\030\007 \003(\0132).asgt.dataserv" +
-      "ice.v1alpha1.PredictedTuple\022$\n\ntime_adde" +
-      "d\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024scanned_" +
-      "invoice_data\"\220\002\n\034PrepareScannedInvoiceRe" +
-      "quest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022N\n\007" +
-      "entries\030\003 \003(\0132=.asgt.dataservice.v1alpha" +
-      "1.PrepareScannedInvoiceRequest.Entry\032\200\001\n" +
-      "\005Entry\022\n\n\002id\030\001 \001(\t\022?\n\005input\030\002 \001(\01320.asgt" +
-      ".jester.v1alpha1.ScannedInvoiceRequest.D" +
-      "ata\022*\n\013predictions\030\003 \003(\0132\025.asgt.type.Pre" +
-      "diction\"\331\002\n\034AddScannedInvoiceDataRequest" +
-      "\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022N\n\007entri" +
-      "es\030\003 \003(\0132=.asgt.dataservice.v1alpha1.Add" +
-      "ScannedInvoiceDataRequest.Entry\022D\n\020reten" +
-      "tion_policy\030\004 \001(\0132*.asgt.dataservice.v1a" +
-      "lpha1.RetentionPolicy\032\203\001\n\005Entry\022?\n\005input" +
-      "\030\001 \001(\01320.asgt.jester.v1alpha1.ScannedInv" +
-      "oiceRequest.Data\0229\n\013true_values\030\002 \003(\0132$." +
-      "asgt.dataservice.v1alpha1.DataTuple2\256\004\n\031" +
-      "ScannedInvoiceDataservice\022h\n\025PrepareScan" +
-      "nedInvoice\0227.asgt.dataservice.v1alpha1.P" +
-      "repareScannedInvoiceRequest\032\026.google.pro" +
-      "tobuf.Empty\022\212\001\n\026ScannedInvoiceFeedback\022*" +
-      ".asgt.dataservice.v1alpha1.FeedbackReque" +
-      "st\032\026.google.protobuf.Empty\",\202\323\344\223\002&\"!/v1a" +
-      "lpha1/scannedinvoice:feedback:\001*\022\222\001\n\025Add" +
-      "ScannedInvoiceData\0227.asgt.dataservice.v1" +
-      "alpha1.AddScannedInvoiceDataRequest\032\026.go" +
-      "ogle.protobuf.Empty\"(\202\323\344\223\002\"\"\035/v1alpha1/s" +
-      "cannedinvoice:data:\001*\022\204\001\n\024DeleteScannedI" +
-      "nvoice\022(.asgt.dataservice.v1alpha1.Delet" +
-      "eRequest\032\026.google.protobuf.Empty\"*\202\323\344\223\002$" +
-      "\"\037/v1alpha1/scannedinvoice:delete:\001*B\rZ\013" +
-      "dataserviceb\006proto3"
+      "/jester/v1alpha1/jester.proto\032\034gen_bq_sc" +
+      "hema/bq_field.proto\032\034gen_bq_schema/bq_ta" +
+      "ble.proto\032\034google/api/annotations.proto\032" +
+      "\033google/protobuf/empty.proto\"\331\003\n\023Scanned" +
+      "InvoiceEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, match" +
+      "es Envoy request id if feedback data\022\027\n\010" +
+      "consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005" +
+      "\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined b" +
+      "y consumer, enriched by service if valet" +
+      "key is used\022?\n\005input\030\005 \001(\01320.asgt.jester" +
+      ".v1alpha1.ScannedInvoiceRequest.Data\0229\n\013" +
+      "true_values\030\006 \003(\0132$.asgt.dataservice.v1a" +
+      "lpha1.DataTuple\022>\n\013pred_values\030\007 \003(\0132).a" +
+      "sgt.dataservice.v1alpha1.PredictedTuple\022" +
+      "$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352" +
+      "?\026\n\024scanned_invoice_data\"\226\001\n\030ScannedInvo" +
+      "iceEntryInput\022?\n\005input\030\001 \001(\01320.asgt.jest" +
+      "er.v1alpha1.ScannedInvoiceRequest.Data\0229" +
+      "\n\013true_values\030\002 \003(\0132$.asgt.dataservice.v" +
+      "1alpha1.DataTuple\"\324\001\n\"CreateScannedInvoi" +
+      "ceDatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014" +
+      "\n\004tags\030\002 \003(\t\022D\n\007entries\030\003 \003(\01323.asgt.dat" +
+      "aservice.v1alpha1.ScannedInvoiceEntryInp" +
+      "ut\022D\n\020retention_policy\030\004 \001(\0132*.asgt.data" +
+      "service.v1alpha1.RetentionPolicy\"}\n\037Appe" +
+      "ndScannedInvoiceDataRequest\022\024\n\014dataset_n" +
+      "ame\030\001 \001(\t\022D\n\007entries\030\003 \003(\01323.asgt.datase" +
+      "rvice.v1alpha1.ScannedInvoiceEntryInput2" +
+      "\346\003\n\031ScannedInvoiceDataservice\022\240\001\n\033Create" +
+      "ScannedInvoiceDataset\022=.asgt.dataservice" +
+      ".v1alpha1.CreateScannedInvoiceDatasetReq" +
+      "uest\032\026.google.protobuf.Empty\"*\202\323\344\223\002$\"\037/v" +
+      "1alpha1/scannedinvoice:create:\001*\022\232\001\n\030App" +
+      "endScannedInvoiceData\022:.asgt.dataservice" +
+      ".v1alpha1.AppendScannedInvoiceDataReques" +
+      "t\032\026.google.protobuf.Empty\"*\202\323\344\223\002$\"\037/v1al" +
+      "pha1/scannedinvoice:append:\001*\022\210\001\n\030Delete" +
+      "ScannedInvoiceData\022(.asgt.dataservice.v1" +
+      "alpha1.DeleteRequest\032\026.google.protobuf.E" +
+      "mpty\"*\202\323\344\223\002$\"\037/v1alpha1/scannedinvoice:d" +
+      "elete:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6641,7 +5325,6 @@ public final class ScannedInvoice {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -6653,30 +5336,24 @@ public final class ScannedInvoice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_descriptor,
         new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor =
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_fieldAccessorTable = new
+    internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Tags", "Entries", });
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor =
-      internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_PrepareScannedInvoiceRequest_Entry_descriptor,
-        new java.lang.String[] { "Id", "Input", "Predictions", });
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Tags", "Entries", "RetentionPolicy", });
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor =
-      internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_AddScannedInvoiceDataRequest_Entry_descriptor,
+        internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntryInput_descriptor,
         new java.lang.String[] { "Input", "TrueValues", });
+    internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "Tags", "Entries", "RetentionPolicy", });
+    internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "Entries", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);
@@ -6686,7 +5363,6 @@ public final class ScannedInvoice {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

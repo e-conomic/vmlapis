@@ -8,25 +8,25 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/type/prediction.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
 
 service ScannedInvoiceDataservice {
-  rpc PrepareScannedInvoice(PrepareScannedInvoiceRequest) returns (google.protobuf.Empty);
-  rpc ScannedInvoiceFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
+  rpc CreateScannedInvoiceDataset(CreateScannedInvoiceDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/scannedinvoice:feedback"
+      post: "/v1alpha1/scannedinvoice:create"
       body: "*"
     };
   }
-  rpc AddScannedInvoiceData(AddScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
+
+  rpc AppendScannedInvoiceData(AppendScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/scannedinvoice:data"
+      post: "/v1alpha1/scannedinvoice:append"
       body: "*"
     };
   }
-  rpc DeleteScannedInvoice(DeleteRequest) returns (google.protobuf.Empty) {
+
+  rpc DeleteScannedInvoiceData(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/scannedinvoice:delete"
       body: "*"
@@ -52,24 +52,19 @@ message ScannedInvoiceEntry {
   ];
 }
 
-message PrepareScannedInvoiceRequest {
-  message Entry {
-    string id = 1;
-    asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 2;
-    repeated asgt.type.Prediction predictions = 3;
-  }
-  string dataset = 1;
-  repeated string tags = 2;
-  repeated Entry entries = 3;
+message ScannedInvoiceEntryInput {
+  asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;
+  repeated DataTuple true_values = 2;
 }
 
-message AddScannedInvoiceDataRequest {
-  message Entry {
-    asgt.jester.v1alpha1.ScannedInvoiceRequest.Data input = 1;
-    repeated DataTuple true_values = 2;
-  }
-  string dataset = 1;
+message CreateScannedInvoiceDatasetRequest {
+  string dataset_name = 1;
   repeated string tags = 2;
-  repeated Entry entries = 3;
+  repeated ScannedInvoiceEntryInput entries = 3;
   RetentionPolicy retention_policy = 4;
+}
+
+message AppendScannedInvoiceDataRequest {
+  string dataset_name = 1;
+  repeated ScannedInvoiceEntryInput entries = 3;
 }

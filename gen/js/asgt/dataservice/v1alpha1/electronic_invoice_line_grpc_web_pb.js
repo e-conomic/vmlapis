@@ -16,8 +16,6 @@ var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alp
 
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js')
 
-var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
-
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')
 
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js')
@@ -85,16 +83,16 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/PrepareElectronicInvoiceLine',
+const methodDescriptor_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/CreateElectronicInvoiceLineDataset',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest,
+  proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -107,13 +105,13 @@ const methodDescriptor_ElectronicInvoiceLineDataservice_PrepareElectronicInvoice
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -124,7 +122,7 @@ const methodInfo_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine =
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -133,48 +131,48 @@ const methodInfo_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine =
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.prepareElectronicInvoiceLine =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.createElectronicInvoiceLineDataset =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/PrepareElectronicInvoiceLine',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/CreateElectronicInvoiceLineDataset',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine,
+      methodDescriptor_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareElectronicInvoiceLineRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.prepareElectronicInvoiceLine =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.createElectronicInvoiceLineDataset =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/PrepareElectronicInvoiceLine',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/CreateElectronicInvoiceLineDataset',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_PrepareElectronicInvoiceLine);
+      methodDescriptor_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset);
 };
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/ElectronicInvoiceLineFeedback',
+const methodDescriptor_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AppendElectronicInvoiceLineData',
   grpc.web.MethodType.UNARY,
-  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
+  proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +185,13 @@ const methodDescriptor_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFee
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +202,7 @@ const methodInfo_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback 
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -213,112 +211,32 @@ const methodInfo_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback 
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.electronicInvoiceLineFeedback =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.appendElectronicInvoiceLineData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/ElectronicInvoiceLineFeedback',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AppendElectronicInvoiceLineData',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback,
+      methodDescriptor_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.electronicInvoiceLineFeedback =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.appendElectronicInvoiceLineData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/ElectronicInvoiceLineFeedback',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AppendElectronicInvoiceLineData',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback);
-};
-
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodDescriptor_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AddElectronicInvoiceLineData',
-  grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest,
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodInfo_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.addElectronicInvoiceLineData =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AddElectronicInvoiceLineData',
-      request,
-      metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData,
-      callback);
-};
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddElectronicInvoiceLineDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.google.protobuf.Empty>}
- *     A native promise that resolves to the response
- */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.addElectronicInvoiceLineData =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AddElectronicInvoiceLineData',
-      request,
-      metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData);
+      methodDescriptor_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData);
 };
 
 
@@ -328,8 +246,8 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.pr
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLine',
+const methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLineData',
   grpc.web.MethodType.UNARY,
   asgt_dataservice_v1alpha1_data_pb.DeleteRequest,
   google_protobuf_empty_pb.Empty,
@@ -350,7 +268,7 @@ const methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceL
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.DeleteRequest} request
@@ -373,13 +291,13 @@ const methodInfo_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine = 
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.deleteElectronicInvoiceLine =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype.deleteElectronicInvoiceLineData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLine',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLineData',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine,
+      methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData,
       callback);
 };
 
@@ -392,13 +310,13 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataserviceClient.prototype
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.deleteElectronicInvoiceLine =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservicePromiseClient.prototype.deleteElectronicInvoiceLineData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLine',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLineData',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine);
+      methodDescriptor_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData);
 };
 
 

@@ -7,7 +7,6 @@ import proto "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 import v1alpha1 "github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1alpha1"
-import _type "github.com/e-conomic/vmlapis/gen/go/asgt/type"
 import _ "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema"
 import empty "github.com/golang/protobuf/ptypes/empty"
 import _ "google.golang.org/genproto/googleapis/api/annotations"
@@ -47,7 +46,7 @@ func (m *BankEntry) Reset()         { *m = BankEntry{} }
 func (m *BankEntry) String() string { return proto.CompactTextString(m) }
 func (*BankEntry) ProtoMessage()    {}
 func (*BankEntry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_09f460dcbe85ae43, []int{0}
+	return fileDescriptor_bank_8dabe4524a14e40d, []int{0}
 }
 func (m *BankEntry) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_BankEntry.Unmarshal(m, b)
@@ -123,177 +122,7 @@ func (m *BankEntry) GetTimeAdded() uint64 {
 	return 0
 }
 
-type PrepareBankRequest struct {
-	Dataset              string                      `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
-	Tags                 []string                    `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	Entries              []*PrepareBankRequest_Entry `protobuf:"bytes,3,rep,name=entries,proto3" json:"entries,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                    `json:"-"`
-	XXX_unrecognized     []byte                      `json:"-"`
-	XXX_sizecache        int32                       `json:"-"`
-}
-
-func (m *PrepareBankRequest) Reset()         { *m = PrepareBankRequest{} }
-func (m *PrepareBankRequest) String() string { return proto.CompactTextString(m) }
-func (*PrepareBankRequest) ProtoMessage()    {}
-func (*PrepareBankRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_09f460dcbe85ae43, []int{1}
-}
-func (m *PrepareBankRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrepareBankRequest.Unmarshal(m, b)
-}
-func (m *PrepareBankRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrepareBankRequest.Marshal(b, m, deterministic)
-}
-func (dst *PrepareBankRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrepareBankRequest.Merge(dst, src)
-}
-func (m *PrepareBankRequest) XXX_Size() int {
-	return xxx_messageInfo_PrepareBankRequest.Size(m)
-}
-func (m *PrepareBankRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrepareBankRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrepareBankRequest proto.InternalMessageInfo
-
-func (m *PrepareBankRequest) GetDataset() string {
-	if m != nil {
-		return m.Dataset
-	}
-	return ""
-}
-
-func (m *PrepareBankRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
-func (m *PrepareBankRequest) GetEntries() []*PrepareBankRequest_Entry {
-	if m != nil {
-		return m.Entries
-	}
-	return nil
-}
-
-type PrepareBankRequest_Entry struct {
-	Id                   string                     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Input                *v1alpha1.BankRequest_Data `protobuf:"bytes,2,opt,name=input,proto3" json:"input,omitempty"`
-	Predictions          []*_type.Prediction        `protobuf:"bytes,3,rep,name=predictions,proto3" json:"predictions,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
-	XXX_unrecognized     []byte                     `json:"-"`
-	XXX_sizecache        int32                      `json:"-"`
-}
-
-func (m *PrepareBankRequest_Entry) Reset()         { *m = PrepareBankRequest_Entry{} }
-func (m *PrepareBankRequest_Entry) String() string { return proto.CompactTextString(m) }
-func (*PrepareBankRequest_Entry) ProtoMessage()    {}
-func (*PrepareBankRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_09f460dcbe85ae43, []int{1, 0}
-}
-func (m *PrepareBankRequest_Entry) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PrepareBankRequest_Entry.Unmarshal(m, b)
-}
-func (m *PrepareBankRequest_Entry) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PrepareBankRequest_Entry.Marshal(b, m, deterministic)
-}
-func (dst *PrepareBankRequest_Entry) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PrepareBankRequest_Entry.Merge(dst, src)
-}
-func (m *PrepareBankRequest_Entry) XXX_Size() int {
-	return xxx_messageInfo_PrepareBankRequest_Entry.Size(m)
-}
-func (m *PrepareBankRequest_Entry) XXX_DiscardUnknown() {
-	xxx_messageInfo_PrepareBankRequest_Entry.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_PrepareBankRequest_Entry proto.InternalMessageInfo
-
-func (m *PrepareBankRequest_Entry) GetId() string {
-	if m != nil {
-		return m.Id
-	}
-	return ""
-}
-
-func (m *PrepareBankRequest_Entry) GetInput() *v1alpha1.BankRequest_Data {
-	if m != nil {
-		return m.Input
-	}
-	return nil
-}
-
-func (m *PrepareBankRequest_Entry) GetPredictions() []*_type.Prediction {
-	if m != nil {
-		return m.Predictions
-	}
-	return nil
-}
-
-type AddBankDataRequest struct {
-	Dataset              string                      `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
-	Tags                 []string                    `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
-	Entries              []*AddBankDataRequest_Entry `protobuf:"bytes,3,rep,name=entries,proto3" json:"entries,omitempty"`
-	RetentionPolicy      *RetentionPolicy            `protobuf:"bytes,4,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                    `json:"-"`
-	XXX_unrecognized     []byte                      `json:"-"`
-	XXX_sizecache        int32                       `json:"-"`
-}
-
-func (m *AddBankDataRequest) Reset()         { *m = AddBankDataRequest{} }
-func (m *AddBankDataRequest) String() string { return proto.CompactTextString(m) }
-func (*AddBankDataRequest) ProtoMessage()    {}
-func (*AddBankDataRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_09f460dcbe85ae43, []int{2}
-}
-func (m *AddBankDataRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AddBankDataRequest.Unmarshal(m, b)
-}
-func (m *AddBankDataRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AddBankDataRequest.Marshal(b, m, deterministic)
-}
-func (dst *AddBankDataRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AddBankDataRequest.Merge(dst, src)
-}
-func (m *AddBankDataRequest) XXX_Size() int {
-	return xxx_messageInfo_AddBankDataRequest.Size(m)
-}
-func (m *AddBankDataRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_AddBankDataRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_AddBankDataRequest proto.InternalMessageInfo
-
-func (m *AddBankDataRequest) GetDataset() string {
-	if m != nil {
-		return m.Dataset
-	}
-	return ""
-}
-
-func (m *AddBankDataRequest) GetTags() []string {
-	if m != nil {
-		return m.Tags
-	}
-	return nil
-}
-
-func (m *AddBankDataRequest) GetEntries() []*AddBankDataRequest_Entry {
-	if m != nil {
-		return m.Entries
-	}
-	return nil
-}
-
-func (m *AddBankDataRequest) GetRetentionPolicy() *RetentionPolicy {
-	if m != nil {
-		return m.RetentionPolicy
-	}
-	return nil
-}
-
-type AddBankDataRequest_Entry struct {
+type BankEntryInput struct {
 	Input                *v1alpha1.BankRequest_Data `protobuf:"bytes,1,opt,name=input,proto3" json:"input,omitempty"`
 	TrueValues           []*DataTuple               `protobuf:"bytes,2,rep,name=true_values,json=trueValues,proto3" json:"true_values,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}                   `json:"-"`
@@ -301,50 +130,157 @@ type AddBankDataRequest_Entry struct {
 	XXX_sizecache        int32                      `json:"-"`
 }
 
-func (m *AddBankDataRequest_Entry) Reset()         { *m = AddBankDataRequest_Entry{} }
-func (m *AddBankDataRequest_Entry) String() string { return proto.CompactTextString(m) }
-func (*AddBankDataRequest_Entry) ProtoMessage()    {}
-func (*AddBankDataRequest_Entry) Descriptor() ([]byte, []int) {
-	return fileDescriptor_bank_09f460dcbe85ae43, []int{2, 0}
+func (m *BankEntryInput) Reset()         { *m = BankEntryInput{} }
+func (m *BankEntryInput) String() string { return proto.CompactTextString(m) }
+func (*BankEntryInput) ProtoMessage()    {}
+func (*BankEntryInput) Descriptor() ([]byte, []int) {
+	return fileDescriptor_bank_8dabe4524a14e40d, []int{1}
 }
-func (m *AddBankDataRequest_Entry) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_AddBankDataRequest_Entry.Unmarshal(m, b)
+func (m *BankEntryInput) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_BankEntryInput.Unmarshal(m, b)
 }
-func (m *AddBankDataRequest_Entry) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_AddBankDataRequest_Entry.Marshal(b, m, deterministic)
+func (m *BankEntryInput) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_BankEntryInput.Marshal(b, m, deterministic)
 }
-func (dst *AddBankDataRequest_Entry) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_AddBankDataRequest_Entry.Merge(dst, src)
+func (dst *BankEntryInput) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_BankEntryInput.Merge(dst, src)
 }
-func (m *AddBankDataRequest_Entry) XXX_Size() int {
-	return xxx_messageInfo_AddBankDataRequest_Entry.Size(m)
+func (m *BankEntryInput) XXX_Size() int {
+	return xxx_messageInfo_BankEntryInput.Size(m)
 }
-func (m *AddBankDataRequest_Entry) XXX_DiscardUnknown() {
-	xxx_messageInfo_AddBankDataRequest_Entry.DiscardUnknown(m)
+func (m *BankEntryInput) XXX_DiscardUnknown() {
+	xxx_messageInfo_BankEntryInput.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_AddBankDataRequest_Entry proto.InternalMessageInfo
+var xxx_messageInfo_BankEntryInput proto.InternalMessageInfo
 
-func (m *AddBankDataRequest_Entry) GetInput() *v1alpha1.BankRequest_Data {
+func (m *BankEntryInput) GetInput() *v1alpha1.BankRequest_Data {
 	if m != nil {
 		return m.Input
 	}
 	return nil
 }
 
-func (m *AddBankDataRequest_Entry) GetTrueValues() []*DataTuple {
+func (m *BankEntryInput) GetTrueValues() []*DataTuple {
 	if m != nil {
 		return m.TrueValues
 	}
 	return nil
 }
 
+type CreateBankDatasetRequest struct {
+	DatasetName          string            `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	Tags                 []string          `protobuf:"bytes,2,rep,name=tags,proto3" json:"tags,omitempty"`
+	Entries              []*BankEntryInput `protobuf:"bytes,3,rep,name=entries,proto3" json:"entries,omitempty"`
+	RetentionPolicy      *RetentionPolicy  `protobuf:"bytes,4,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *CreateBankDatasetRequest) Reset()         { *m = CreateBankDatasetRequest{} }
+func (m *CreateBankDatasetRequest) String() string { return proto.CompactTextString(m) }
+func (*CreateBankDatasetRequest) ProtoMessage()    {}
+func (*CreateBankDatasetRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_bank_8dabe4524a14e40d, []int{2}
+}
+func (m *CreateBankDatasetRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_CreateBankDatasetRequest.Unmarshal(m, b)
+}
+func (m *CreateBankDatasetRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_CreateBankDatasetRequest.Marshal(b, m, deterministic)
+}
+func (dst *CreateBankDatasetRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_CreateBankDatasetRequest.Merge(dst, src)
+}
+func (m *CreateBankDatasetRequest) XXX_Size() int {
+	return xxx_messageInfo_CreateBankDatasetRequest.Size(m)
+}
+func (m *CreateBankDatasetRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_CreateBankDatasetRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_CreateBankDatasetRequest proto.InternalMessageInfo
+
+func (m *CreateBankDatasetRequest) GetDatasetName() string {
+	if m != nil {
+		return m.DatasetName
+	}
+	return ""
+}
+
+func (m *CreateBankDatasetRequest) GetTags() []string {
+	if m != nil {
+		return m.Tags
+	}
+	return nil
+}
+
+func (m *CreateBankDatasetRequest) GetEntries() []*BankEntryInput {
+	if m != nil {
+		return m.Entries
+	}
+	return nil
+}
+
+func (m *CreateBankDatasetRequest) GetRetentionPolicy() *RetentionPolicy {
+	if m != nil {
+		return m.RetentionPolicy
+	}
+	return nil
+}
+
+type AppendBankDataRequest struct {
+	DatasetName          string            `protobuf:"bytes,1,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
+	Entries              []*BankEntryInput `protobuf:"bytes,3,rep,name=entries,proto3" json:"entries,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}          `json:"-"`
+	XXX_unrecognized     []byte            `json:"-"`
+	XXX_sizecache        int32             `json:"-"`
+}
+
+func (m *AppendBankDataRequest) Reset()         { *m = AppendBankDataRequest{} }
+func (m *AppendBankDataRequest) String() string { return proto.CompactTextString(m) }
+func (*AppendBankDataRequest) ProtoMessage()    {}
+func (*AppendBankDataRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_bank_8dabe4524a14e40d, []int{3}
+}
+func (m *AppendBankDataRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AppendBankDataRequest.Unmarshal(m, b)
+}
+func (m *AppendBankDataRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AppendBankDataRequest.Marshal(b, m, deterministic)
+}
+func (dst *AppendBankDataRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AppendBankDataRequest.Merge(dst, src)
+}
+func (m *AppendBankDataRequest) XXX_Size() int {
+	return xxx_messageInfo_AppendBankDataRequest.Size(m)
+}
+func (m *AppendBankDataRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_AppendBankDataRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_AppendBankDataRequest proto.InternalMessageInfo
+
+func (m *AppendBankDataRequest) GetDatasetName() string {
+	if m != nil {
+		return m.DatasetName
+	}
+	return ""
+}
+
+func (m *AppendBankDataRequest) GetEntries() []*BankEntryInput {
+	if m != nil {
+		return m.Entries
+	}
+	return nil
+}
+
 func init() {
 	proto.RegisterType((*BankEntry)(nil), "asgt.dataservice.v1alpha1.BankEntry")
-	proto.RegisterType((*PrepareBankRequest)(nil), "asgt.dataservice.v1alpha1.PrepareBankRequest")
-	proto.RegisterType((*PrepareBankRequest_Entry)(nil), "asgt.dataservice.v1alpha1.PrepareBankRequest.Entry")
-	proto.RegisterType((*AddBankDataRequest)(nil), "asgt.dataservice.v1alpha1.AddBankDataRequest")
-	proto.RegisterType((*AddBankDataRequest_Entry)(nil), "asgt.dataservice.v1alpha1.AddBankDataRequest.Entry")
+	proto.RegisterType((*BankEntryInput)(nil), "asgt.dataservice.v1alpha1.BankEntryInput")
+	proto.RegisterType((*CreateBankDatasetRequest)(nil), "asgt.dataservice.v1alpha1.CreateBankDatasetRequest")
+	proto.RegisterType((*AppendBankDataRequest)(nil), "asgt.dataservice.v1alpha1.AppendBankDataRequest")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -359,9 +295,8 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type BankDataserviceClient interface {
-	PrepareBankFeedback(ctx context.Context, in *PrepareBankRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	BankFeedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	AddBankData(ctx context.Context, in *AddBankDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	CreateBankDataset(ctx context.Context, in *CreateBankDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	AppendBankData(ctx context.Context, in *AppendBankDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	DeleteBankData(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
@@ -373,27 +308,18 @@ func NewBankDataserviceClient(cc *grpc.ClientConn) BankDataserviceClient {
 	return &bankDataserviceClient{cc}
 }
 
-func (c *bankDataserviceClient) PrepareBankFeedback(ctx context.Context, in *PrepareBankRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *bankDataserviceClient) CreateBankDataset(ctx context.Context, in *CreateBankDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *bankDataserviceClient) BankFeedback(ctx context.Context, in *FeedbackRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *bankDataserviceClient) AppendBankData(ctx context.Context, in *AppendBankDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *bankDataserviceClient) AddBankData(ctx context.Context, in *AddBankDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
-	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.BankDataservice/AddBankData", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -411,9 +337,8 @@ func (c *bankDataserviceClient) DeleteBankData(ctx context.Context, in *DeleteRe
 
 // BankDataserviceServer is the server API for BankDataservice service.
 type BankDataserviceServer interface {
-	PrepareBankFeedback(context.Context, *PrepareBankRequest) (*empty.Empty, error)
-	BankFeedback(context.Context, *FeedbackRequest) (*empty.Empty, error)
-	AddBankData(context.Context, *AddBankDataRequest) (*empty.Empty, error)
+	CreateBankDataset(context.Context, *CreateBankDatasetRequest) (*empty.Empty, error)
+	AppendBankData(context.Context, *AppendBankDataRequest) (*empty.Empty, error)
 	DeleteBankData(context.Context, *DeleteRequest) (*empty.Empty, error)
 }
 
@@ -421,56 +346,38 @@ func RegisterBankDataserviceServer(s *grpc.Server, srv BankDataserviceServer) {
 	s.RegisterService(&_BankDataservice_serviceDesc, srv)
 }
 
-func _BankDataservice_PrepareBankFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PrepareBankRequest)
+func _BankDataservice_CreateBankDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateBankDatasetRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(BankDataserviceServer).PrepareBankFeedback(ctx, in)
+		return srv.(BankDataserviceServer).CreateBankDataset(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback",
+		FullMethod: "/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BankDataserviceServer).PrepareBankFeedback(ctx, req.(*PrepareBankRequest))
+		return srv.(BankDataserviceServer).CreateBankDataset(ctx, req.(*CreateBankDatasetRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _BankDataservice_BankFeedback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(FeedbackRequest)
+func _BankDataservice_AppendBankData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AppendBankDataRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(BankDataserviceServer).BankFeedback(ctx, in)
+		return srv.(BankDataserviceServer).AppendBankData(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback",
+		FullMethod: "/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BankDataserviceServer).BankFeedback(ctx, req.(*FeedbackRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _BankDataservice_AddBankData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(AddBankDataRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(BankDataserviceServer).AddBankData(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.BankDataservice/AddBankData",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(BankDataserviceServer).AddBankData(ctx, req.(*AddBankDataRequest))
+		return srv.(BankDataserviceServer).AppendBankData(ctx, req.(*AppendBankDataRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -498,16 +405,12 @@ var _BankDataservice_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*BankDataserviceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "PrepareBankFeedback",
-			Handler:    _BankDataservice_PrepareBankFeedback_Handler,
+			MethodName: "CreateBankDataset",
+			Handler:    _BankDataservice_CreateBankDataset_Handler,
 		},
 		{
-			MethodName: "BankFeedback",
-			Handler:    _BankDataservice_BankFeedback_Handler,
-		},
-		{
-			MethodName: "AddBankData",
-			Handler:    _BankDataservice_AddBankData_Handler,
+			MethodName: "AppendBankData",
+			Handler:    _BankDataservice_AppendBankData_Handler,
 		},
 		{
 			MethodName: "DeleteBankData",
@@ -519,58 +422,54 @@ var _BankDataservice_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/bank.proto", fileDescriptor_bank_09f460dcbe85ae43)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/bank.proto", fileDescriptor_bank_8dabe4524a14e40d)
 }
 
-var fileDescriptor_bank_09f460dcbe85ae43 = []byte{
-	// 781 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xb4, 0x55, 0xc1, 0x6a, 0xeb, 0x46,
-	0x14, 0x45, 0xb2, 0xfd, 0x62, 0x8f, 0xfb, 0xf2, 0x1e, 0xf3, 0x78, 0xad, 0xea, 0x3e, 0xda, 0x89,
-	0x08, 0xc5, 0x0d, 0x89, 0x44, 0x9c, 0x45, 0xc1, 0x14, 0x8c, 0xdd, 0x38, 0x90, 0x42, 0xc0, 0xa8,
-	0x6e, 0x17, 0xa1, 0x60, 0x46, 0x9a, 0x6b, 0x7b, 0x6a, 0x59, 0x52, 0xa4, 0x91, 0xc1, 0xcb, 0x76,
-	0x5d, 0xba, 0xe9, 0x1f, 0xf4, 0x97, 0xf2, 0x0b, 0x5d, 0xf9, 0x07, 0xba, 0x2d, 0x33, 0x92, 0x6c,
-	0xc7, 0x21, 0x0e, 0x0d, 0xed, 0xd2, 0x73, 0xcf, 0x3d, 0x57, 0xf7, 0x9c, 0x33, 0x63, 0x74, 0x4c,
-	0x93, 0x89, 0xb0, 0x19, 0x15, 0x34, 0x81, 0x78, 0xc1, 0x3d, 0xb0, 0x17, 0xe7, 0xd4, 0x8f, 0xa6,
-	0xf4, 0xdc, 0x76, 0x69, 0x30, 0xb3, 0xa2, 0x38, 0x14, 0x21, 0xfe, 0x54, 0xa2, 0xac, 0x2d, 0x94,
-	0x55, 0xa0, 0x1a, 0x7b, 0x08, 0xe4, 0x61, 0x46, 0xd0, 0x38, 0x52, 0xa8, 0x9f, 0x21, 0x11, 0x10,
-	0x6f, 0x00, 0xd9, 0xef, 0x1c, 0xd2, 0x50, 0x10, 0xb1, 0x8c, 0xc0, 0x8e, 0x62, 0x60, 0xdc, 0x13,
-	0x3c, 0x0c, 0xf2, 0xda, 0x87, 0x09, 0x04, 0x23, 0xf7, 0x6e, 0x94, 0x78, 0x53, 0x98, 0x53, 0xdb,
-	0xbd, 0x1b, 0x8d, 0x39, 0xf8, 0xec, 0xc9, 0xaa, 0xa0, 0xae, 0x0f, 0xeb, 0x6a, 0x18, 0x4e, 0x7c,
-	0xb0, 0x69, 0xc4, 0x6d, 0x1a, 0x04, 0xa1, 0xa0, 0x92, 0x38, 0xc9, 0xab, 0x9f, 0xe5, 0x55, 0xf5,
-	0xcb, 0x4d, 0xc7, 0x36, 0xcc, 0x23, 0xb1, 0xcc, 0x8a, 0xe6, 0x2f, 0x65, 0x54, 0xeb, 0xd1, 0x60,
-	0xd6, 0x0f, 0x44, 0xbc, 0xc4, 0x3d, 0xa4, 0x73, 0x66, 0x68, 0x44, 0x6b, 0xd6, 0x7a, 0xad, 0x55,
-	0xc7, 0x36, 0xcf, 0xae, 0x2f, 0x4f, 0xc9, 0x9c, 0x0a, 0x6f, 0x0a, 0x09, 0xe9, 0x07, 0x8b, 0x70,
-	0x49, 0x62, 0xb8, 0x4b, 0x21, 0x11, 0x84, 0x33, 0xc2, 0xc7, 0x64, 0x0c, 0xc0, 0x5c, 0xea, 0xcd,
-	0x88, 0x54, 0xc2, 0xd1, 0x39, 0xc3, 0x47, 0xa8, 0xea, 0x85, 0x41, 0x92, 0xce, 0x21, 0x36, 0x74,
-	0xc5, 0x54, 0x59, 0x75, 0xf4, 0xaa, 0xe6, 0xac, 0x8f, 0xf1, 0x17, 0xe8, 0x20, 0x53, 0x53, 0x18,
-	0xa5, 0x6d, 0x44, 0x71, 0x8a, 0x6f, 0x51, 0x59, 0xd0, 0x49, 0x62, 0x94, 0x49, 0xa9, 0x59, 0xeb,
-	0x5d, 0xad, 0x3a, 0xdf, 0x9a, 0xdd, 0x21, 0x9d, 0x24, 0x84, 0xc1, 0x98, 0x07, 0xc0, 0x88, 0xbb,
-	0x24, 0x05, 0xdb, 0x29, 0x81, 0x20, 0xe6, 0xde, 0x34, 0x3b, 0xcd, 0x1d, 0x92, 0x9f, 0xb6, 0xa0,
-	0x3e, 0x88, 0x19, 0x2c, 0x09, 0x4f, 0x48, 0x9a, 0x00, 0x73, 0x14, 0x27, 0xfe, 0x06, 0x55, 0x78,
-	0x10, 0xa5, 0xc2, 0xa8, 0x10, 0xad, 0x59, 0x6f, 0x7d, 0x69, 0x29, 0xe3, 0x73, 0x9f, 0x0a, 0xdf,
-	0x2c, 0xa9, 0x89, 0x93, 0x6d, 0x6a, 0x5d, 0xca, 0xd5, 0xb2, 0x26, 0xdc, 0x47, 0x75, 0x11, 0xa7,
-	0x30, 0x5a, 0x50, 0x3f, 0x85, 0xc4, 0x78, 0x45, 0x4a, 0xcd, 0x7a, 0xeb, 0xd8, 0x7a, 0x32, 0x3c,
-	0xaa, 0x79, 0x98, 0x46, 0x3e, 0x38, 0x48, 0x36, 0xfe, 0xa8, 0xfa, 0xf0, 0x77, 0xa8, 0x2e, 0x13,
-	0x50, 0xd0, 0x1c, 0x28, 0x9a, 0xaf, 0xf6, 0xd0, 0x0c, 0xb2, 0xbc, 0x00, 0xcb, 0xb9, 0x64, 0x77,
-	0xce, 0x65, 0x23, 0x24, 0xf8, 0x1c, 0x46, 0x94, 0x31, 0x60, 0x46, 0x95, 0x68, 0xcd, 0x72, 0xef,
-	0xed, 0xaa, 0xf3, 0xba, 0xaa, 0xe1, 0xda, 0xf0, 0xfa, 0xa6, 0xff, 0xfd, 0xb0, 0x7b, 0x33, 0x70,
-	0x6a, 0x12, 0xd3, 0x95, 0x90, 0xf6, 0xe1, 0xaa, 0x53, 0x47, 0x35, 0x99, 0xfd, 0x91, 0x9c, 0x65,
-	0xfe, 0xa9, 0x23, 0x3c, 0x88, 0x21, 0xa2, 0x31, 0x6c, 0xad, 0x8d, 0x8d, 0x8d, 0x4b, 0x2a, 0x11,
-	0x1b, 0x7b, 0x70, 0x6e, 0x8f, 0x2e, 0xed, 0xc9, 0x65, 0xbd, 0x41, 0x07, 0x10, 0x88, 0x98, 0x43,
-	0x62, 0x94, 0xd4, 0x36, 0x17, 0xfb, 0xb7, 0xd9, 0x99, 0x66, 0xa9, 0x00, 0x3a, 0x05, 0x47, 0xe3,
-	0x77, 0x0d, 0x55, 0xb2, 0x4c, 0x1e, 0x6e, 0x32, 0xa9, 0xf2, 0xb5, 0xf6, 0x4f, 0x7f, 0x89, 0x7f,
-	0x5f, 0x67, 0xc2, 0x67, 0x57, 0xaf, 0xf8, 0xd4, 0xf7, 0x19, 0x87, 0xbc, 0x98, 0x85, 0xd0, 0x3c,
-	0x0c, 0x9c, 0x6d, 0xa4, 0xf9, 0xb7, 0x8e, 0x70, 0x97, 0x31, 0xc9, 0xab, 0xf8, 0xfe, 0x7f, 0x91,
-	0x1e, 0x4f, 0xdb, 0x11, 0x09, 0xff, 0x80, 0xde, 0xc6, 0x20, 0x20, 0x90, 0x5f, 0x38, 0x8a, 0x42,
-	0x9f, 0x7b, 0x4b, 0xa3, 0xac, 0x54, 0x39, 0xd9, 0xc3, 0xeb, 0x14, 0x2d, 0x03, 0xd5, 0xe1, 0xbc,
-	0x89, 0x1f, 0x1e, 0x34, 0x7e, 0x5b, 0x6b, 0xbf, 0xd6, 0x5a, 0xfb, 0x0f, 0xee, 0x8a, 0xfe, 0xb2,
-	0xbb, 0xd2, 0xba, 0x2f, 0xa1, 0x37, 0x85, 0x10, 0x79, 0x0b, 0xfe, 0x09, 0xbd, 0xdb, 0xca, 0xd0,
-	0x55, 0xfe, 0x08, 0xe1, 0xb3, 0x7f, 0x95, 0xb9, 0xc6, 0xc7, 0x56, 0xf6, 0x34, 0x5a, 0xc5, 0xd3,
-	0x68, 0xf5, 0xe5, 0xd3, 0x88, 0x17, 0xe8, 0xa3, 0x07, 0xb4, 0xfb, 0xd4, 0x2c, 0x40, 0xcf, 0x70,
-	0x9a, 0xe6, 0xaf, 0xf7, 0x7f, 0xfd, 0xa1, 0x7f, 0x30, 0x3f, 0x79, 0xf8, 0xef, 0xd3, 0x2e, 0x1e,
-	0xd0, 0xb6, 0x76, 0x82, 0x05, 0xaa, 0x6f, 0x99, 0xbe, 0x77, 0x9b, 0xc7, 0xe1, 0x78, 0x72, 0xf2,
-	0xe7, 0x6a, 0xb2, 0x61, 0xbe, 0xdb, 0x99, 0x2c, 0x79, 0xb3, 0xa9, 0x87, 0x97, 0xe0, 0x83, 0x80,
-	0xf5, 0xe0, 0xe6, 0x3e, 0x8f, 0x14, 0xf4, 0xb9, 0x99, 0x44, 0xcd, 0x6c, 0x98, 0xef, 0x77, 0x67,
-	0xaa, 0xee, 0xb6, 0x76, 0xd2, 0x7b, 0x7d, 0x5b, 0xdf, 0xe2, 0x77, 0x5f, 0x29, 0x82, 0x8b, 0x7f,
-	0x02, 0x00, 0x00, 0xff, 0xff, 0x39, 0xb4, 0x33, 0x89, 0xad, 0x07, 0x00, 0x00,
+var fileDescriptor_bank_8dabe4524a14e40d = []byte{
+	// 717 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xac, 0x54, 0x41, 0x6b, 0xeb, 0x46,
+	0x10, 0x46, 0xb6, 0xf3, 0x62, 0xaf, 0xfb, 0xfc, 0x5e, 0x17, 0x52, 0x54, 0xb7, 0xd0, 0x8d, 0x08,
+	0xc5, 0x0d, 0xa9, 0xd4, 0x38, 0x37, 0x53, 0x30, 0x76, 0xec, 0x42, 0x0a, 0x29, 0x41, 0x75, 0x7b,
+	0xc8, 0x45, 0xac, 0xb4, 0x63, 0x7b, 0x6b, 0x79, 0xa5, 0x48, 0x2b, 0x83, 0xa1, 0x50, 0x9a, 0x63,
+	0xaf, 0xa5, 0xbf, 0xac, 0x7f, 0xa1, 0x27, 0x43, 0xff, 0x43, 0xd9, 0x95, 0xe4, 0xc4, 0xb4, 0x71,
+	0x49, 0xc8, 0x51, 0x33, 0xdf, 0xf7, 0xcd, 0xce, 0x37, 0xa3, 0x41, 0x27, 0x34, 0x9d, 0x49, 0x87,
+	0x51, 0x49, 0x53, 0x48, 0x56, 0x3c, 0x00, 0x67, 0x75, 0x4e, 0xc3, 0x78, 0x4e, 0xcf, 0x1d, 0x9f,
+	0x8a, 0x85, 0x1d, 0x27, 0x91, 0x8c, 0xf0, 0xc7, 0x0a, 0x65, 0x3f, 0x42, 0xd9, 0x25, 0xaa, 0xbd,
+	0x47, 0x40, 0x05, 0x73, 0x81, 0xf6, 0xb1, 0x46, 0xfd, 0x04, 0xa9, 0x84, 0xe4, 0x01, 0x90, 0x7f,
+	0x17, 0x90, 0x4f, 0x67, 0x20, 0x3c, 0xff, 0xce, 0x4b, 0x83, 0x39, 0x2c, 0xa9, 0xe3, 0xdf, 0x79,
+	0x53, 0x0e, 0x21, 0x7b, 0x32, 0x2b, 0xa9, 0x1f, 0xc2, 0x36, 0x1b, 0x45, 0xb3, 0x10, 0x1c, 0x1a,
+	0x73, 0x87, 0x0a, 0x11, 0x49, 0x2a, 0x79, 0x24, 0xd2, 0x22, 0xfb, 0x49, 0x91, 0xd5, 0x5f, 0x7e,
+	0x36, 0x75, 0x60, 0x19, 0xcb, 0x75, 0x9e, 0xb4, 0x7e, 0xad, 0xa1, 0xc6, 0x90, 0x8a, 0xc5, 0x58,
+	0xc8, 0x64, 0x8d, 0x87, 0xa8, 0xc2, 0x99, 0x69, 0x10, 0xa3, 0xd3, 0x18, 0x76, 0x37, 0x7d, 0xc7,
+	0xfa, 0xf2, 0x6a, 0x74, 0x46, 0x96, 0x54, 0x06, 0x73, 0x48, 0xc9, 0x58, 0xac, 0xa2, 0x35, 0x49,
+	0xe0, 0x2e, 0x83, 0x54, 0x12, 0xce, 0x08, 0x9f, 0x92, 0x29, 0x00, 0xf3, 0x69, 0xb0, 0x20, 0xaa,
+	0x5b, 0xb7, 0xc2, 0x19, 0x3e, 0x46, 0xf5, 0x20, 0x12, 0x69, 0xb6, 0x84, 0xc4, 0xac, 0x68, 0xa5,
+	0x83, 0x4d, 0xbf, 0x52, 0x37, 0xdc, 0x6d, 0x18, 0x7f, 0x86, 0x0e, 0x73, 0xc7, 0xa4, 0x59, 0x7d,
+	0x8c, 0x28, 0xa3, 0xf8, 0x16, 0xd5, 0x24, 0x9d, 0xa5, 0x66, 0x8d, 0x54, 0x3b, 0x8d, 0xe1, 0x37,
+	0x9b, 0xfe, 0xa5, 0x35, 0x98, 0xd0, 0x59, 0x4a, 0x18, 0x4c, 0xb9, 0x00, 0x46, 0xfc, 0x35, 0x29,
+	0xd5, 0xce, 0x08, 0x88, 0x84, 0x07, 0xf3, 0x3c, 0x5a, 0x4c, 0x41, 0x3d, 0x6d, 0x45, 0x43, 0x90,
+	0x0b, 0x58, 0x13, 0x9e, 0x92, 0x2c, 0x05, 0xe6, 0x6a, 0x4d, 0xfc, 0x35, 0x3a, 0xe0, 0x22, 0xce,
+	0xa4, 0x79, 0x40, 0x8c, 0x4e, 0xb3, 0xfb, 0xb9, 0xad, 0x87, 0x5b, 0xcc, 0xa2, 0x9c, 0x8d, 0xad,
+	0x3c, 0x71, 0xf3, 0x4e, 0xed, 0x91, 0x6a, 0x2d, 0x27, 0xe1, 0x31, 0x6a, 0xca, 0x24, 0x03, 0x6f,
+	0x45, 0xc3, 0x0c, 0x52, 0xf3, 0x0d, 0xa9, 0x76, 0x9a, 0xdd, 0x13, 0xfb, 0xc9, 0x05, 0xd1, 0xe4,
+	0x49, 0x16, 0x87, 0xe0, 0x22, 0x45, 0xfc, 0x51, 0xf3, 0xf0, 0xb7, 0xa8, 0x19, 0x27, 0xc0, 0x4a,
+	0x99, 0x43, 0x2d, 0xf3, 0xc5, 0x1e, 0x99, 0x9b, 0x04, 0x18, 0x0f, 0x24, 0xb0, 0x42, 0x4b, 0xb1,
+	0x0b, 0x2d, 0x07, 0x21, 0xc9, 0x97, 0xe0, 0x51, 0xc6, 0x80, 0x99, 0x75, 0x62, 0x74, 0x6a, 0xc3,
+	0xf7, 0x9b, 0xfe, 0xdb, 0xba, 0x81, 0x1b, 0x93, 0xab, 0xeb, 0xf1, 0xf7, 0x93, 0xc1, 0xf5, 0x8d,
+	0xdb, 0x50, 0x98, 0x81, 0x82, 0xf4, 0x5a, 0x9b, 0x7e, 0x13, 0x35, 0xd4, 0x7e, 0x7b, 0xaa, 0x96,
+	0xf5, 0x87, 0x81, 0x5a, 0xdb, 0x1d, 0xb8, 0xd2, 0x6d, 0x6e, 0x4d, 0x32, 0x5e, 0xc1, 0xa4, 0xca,
+	0xcb, 0x4c, 0xb2, 0xfe, 0x36, 0x90, 0x79, 0x99, 0x00, 0x95, 0xa0, 0x0a, 0x8d, 0xf2, 0xdd, 0x28,
+	0xea, 0xe1, 0x63, 0xf4, 0x41, 0xb1, 0x2d, 0x9e, 0xa0, 0x4b, 0xc8, 0x97, 0xd6, 0x6d, 0x16, 0xb1,
+	0xef, 0xe8, 0x12, 0x30, 0x2e, 0xb6, 0x48, 0xd5, 0x6f, 0x14, 0xd3, 0xbf, 0x44, 0x87, 0x20, 0x64,
+	0xc2, 0x21, 0x35, 0xab, 0xff, 0x6b, 0xfa, 0xae, 0x29, 0x6e, 0xc9, 0xc4, 0x3f, 0xa0, 0xf7, 0x09,
+	0x48, 0x10, 0xea, 0x2f, 0xf3, 0xe2, 0x28, 0xe4, 0xc1, 0xda, 0xac, 0x69, 0xa3, 0x4e, 0xf7, 0xa8,
+	0xb9, 0x25, 0xe5, 0x46, 0x33, 0xdc, 0x77, 0xc9, 0x6e, 0xc0, 0xfa, 0x05, 0x1d, 0x0d, 0xe2, 0x18,
+	0x04, 0x2b, 0xdb, 0x7d, 0x46, 0xaf, 0xaf, 0xd1, 0x57, 0xf7, 0xb7, 0x2a, 0x7a, 0xf7, 0x60, 0xb5,
+	0x26, 0xe1, 0x7b, 0x03, 0x7d, 0xf8, 0xaf, 0x21, 0xe0, 0x8b, 0x3d, 0xea, 0x4f, 0x8d, 0xac, 0xfd,
+	0x91, 0x9d, 0x5f, 0x22, 0xbb, 0xbc, 0x44, 0xf6, 0x58, 0x5d, 0x22, 0x8b, 0xdc, 0xff, 0xf9, 0xd7,
+	0xef, 0x95, 0xb6, 0x75, 0xb4, 0x7b, 0x7c, 0x7b, 0x81, 0x16, 0xea, 0x19, 0xa7, 0xf8, 0x67, 0xd4,
+	0xda, 0x75, 0x06, 0x7f, 0xb5, 0xe7, 0x01, 0xff, 0x69, 0xe2, 0xb3, 0xab, 0x53, 0xad, 0xa2, 0xaa,
+	0x4b, 0xd4, 0x1a, 0x41, 0x08, 0x0f, 0x3d, 0xe1, 0xce, 0xbe, 0x5d, 0xd6, 0xd0, 0x97, 0x56, 0x65,
+	0x9a, 0xdd, 0x33, 0x4e, 0x87, 0x6f, 0x6f, 0x9b, 0x8f, 0xf4, 0xfd, 0x37, 0x5a, 0xe0, 0xe2, 0x9f,
+	0x00, 0x00, 0x00, 0xff, 0xff, 0x64, 0x10, 0x8d, 0x9e, 0xb2, 0x06, 0x00, 0x00,
 }

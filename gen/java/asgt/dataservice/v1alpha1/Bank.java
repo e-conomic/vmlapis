@@ -2032,79 +2032,61 @@ public final class Bank {
 
   }
 
-  public interface PrepareBankRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.PrepareBankRequest)
+  public interface BankEntryInputOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.BankEntryInput)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
      */
-    java.lang.String getDataset();
+    boolean hasInput();
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getDatasetBytes();
+    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput();
+    /**
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+     */
+    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder();
 
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.util.List<java.lang.String>
-        getTagsList();
+    java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> 
+        getTrueValuesList();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    int getTagsCount();
+    asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index);
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.lang.String getTags(int index);
+    int getTrueValuesCount();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    com.google.protobuf.ByteString
-        getTagsBytes(int index);
-
+    java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+        getTrueValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> 
-        getEntriesList();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getEntries(int index);
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    int getEntriesCount();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    java.util.List<? extends asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder> 
-        getEntriesOrBuilderList();
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareBankRequest}
+   * Protobuf type {@code asgt.dataservice.v1alpha1.BankEntryInput}
    */
-  public  static final class PrepareBankRequest extends
+  public  static final class BankEntryInput extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.PrepareBankRequest)
-      PrepareBankRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.BankEntryInput)
+      BankEntryInputOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use PrepareBankRequest.newBuilder() to construct.
-    private PrepareBankRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use BankEntryInput.newBuilder() to construct.
+    private BankEntryInput(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private PrepareBankRequest() {
-      dataset_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      entries_ = java.util.Collections.emptyList();
+    private BankEntryInput() {
+      trueValues_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -2112,7 +2094,7 @@ public final class Bank {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PrepareBankRequest(
+    private BankEntryInput(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2132,27 +2114,25 @@ public final class Bank {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder subBuilder = null;
+              if (input_ != null) {
+                subBuilder = input_.toBuilder();
+              }
+              input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(input_);
+                input_ = subBuilder.buildPartial();
+              }
 
-              dataset_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
+                trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              tags_.add(s);
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.parser(), extensionRegistry));
+              trueValues_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2171,10 +2151,7 @@ public final class Bank {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = java.util.Collections.unmodifiableList(entries_);
+          trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2182,1230 +2159,72 @@ public final class Bank {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor;
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_BankEntryInput_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.class, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Builder.class);
-    }
-
-    public interface EntryOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.PrepareBankRequest.Entry)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string id = 1;</code>
-       */
-      java.lang.String getId();
-      /**
-       * <code>string id = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getIdBytes();
-
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      boolean hasInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder();
-
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      java.util.List<asgt.type.PredictionOuterClass.Prediction> 
-          getPredictionsList();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      int getPredictionsCount();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-          getPredictionsOrBuilderList();
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-          int index);
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareBankRequest.Entry}
-     */
-    public  static final class Entry extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.PrepareBankRequest.Entry)
-        EntryOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Entry.newBuilder() to construct.
-      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Entry() {
-        id_ = "";
-        predictions_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Entry(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                id_ = s;
-                break;
-              }
-              case 18: {
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder subBuilder = null;
-                if (input_ != null) {
-                  subBuilder = input_.toBuilder();
-                }
-                input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(input_);
-                  input_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 26: {
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                  predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
-                  mutable_bitField0_ |= 0x00000004;
-                }
-                predictions_.add(
-                    input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-            predictions_ = java.util.Collections.unmodifiableList(predictions_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.class, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int ID_FIELD_NUMBER = 1;
-      private volatile java.lang.Object id_;
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int INPUT_FIELD_NUMBER = 2;
-      private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_;
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      public boolean hasInput() {
-        return input_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
-        return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
-        return getInput();
-      }
-
-      public static final int PREDICTIONS_FIELD_NUMBER = 3;
-      private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
-        return predictions_;
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-          getPredictionsOrBuilderList() {
-        return predictions_;
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public int getPredictionsCount() {
-        return predictions_.size();
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
-        return predictions_.get(index);
-      }
-      /**
-       * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-       */
-      public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-          int index) {
-        return predictions_.get(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-        }
-        if (input_ != null) {
-          output.writeMessage(2, getInput());
-        }
-        for (int i = 0; i < predictions_.size(); i++) {
-          output.writeMessage(3, predictions_.get(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-        }
-        if (input_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getInput());
-        }
-        for (int i = 0; i < predictions_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, predictions_.get(i));
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry)) {
-          return super.equals(obj);
-        }
-        asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry other = (asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry) obj;
-
-        boolean result = true;
-        result = result && getId()
-            .equals(other.getId());
-        result = result && (hasInput() == other.hasInput());
-        if (hasInput()) {
-          result = result && getInput()
-              .equals(other.getInput());
-        }
-        result = result && getPredictionsList()
-            .equals(other.getPredictionsList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
-        if (hasInput()) {
-          hash = (37 * hash) + INPUT_FIELD_NUMBER;
-          hash = (53 * hash) + getInput().hashCode();
-        }
-        if (getPredictionsCount() > 0) {
-          hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
-          hash = (53 * hash) + getPredictionsList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareBankRequest.Entry}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareBankRequest.Entry)
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.class, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder.class);
-        }
-
-        // Construct using asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getPredictionsFieldBuilder();
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          id_ = "";
-
-          if (inputBuilder_ == null) {
-            input_ = null;
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-          if (predictionsBuilder_ == null) {
-            predictions_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            predictionsBuilder_.clear();
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry build() {
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry result = new asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          result.id_ = id_;
-          if (inputBuilder_ == null) {
-            result.input_ = input_;
-          } else {
-            result.input_ = inputBuilder_.build();
-          }
-          if (predictionsBuilder_ == null) {
-            if (((bitField0_ & 0x00000004) == 0x00000004)) {
-              predictions_ = java.util.Collections.unmodifiableList(predictions_);
-              bitField0_ = (bitField0_ & ~0x00000004);
-            }
-            result.predictions_ = predictions_;
-          } else {
-            result.predictions_ = predictionsBuilder_.build();
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.getDefaultInstance()) return this;
-          if (!other.getId().isEmpty()) {
-            id_ = other.id_;
-            onChanged();
-          }
-          if (other.hasInput()) {
-            mergeInput(other.getInput());
-          }
-          if (predictionsBuilder_ == null) {
-            if (!other.predictions_.isEmpty()) {
-              if (predictions_.isEmpty()) {
-                predictions_ = other.predictions_;
-                bitField0_ = (bitField0_ & ~0x00000004);
-              } else {
-                ensurePredictionsIsMutable();
-                predictions_.addAll(other.predictions_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.predictions_.isEmpty()) {
-              if (predictionsBuilder_.isEmpty()) {
-                predictionsBuilder_.dispose();
-                predictionsBuilder_ = null;
-                predictions_ = other.predictions_;
-                bitField0_ = (bitField0_ & ~0x00000004);
-                predictionsBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getPredictionsFieldBuilder() : null;
-              } else {
-                predictionsBuilder_.addAllMessages(other.predictions_);
-              }
-            }
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private java.lang.Object id_ = "";
-        /**
-         * <code>string id = 1;</code>
-         */
-        public java.lang.String getId() {
-          java.lang.Object ref = id_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            id_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getIdBytes() {
-          java.lang.Object ref = id_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            id_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder setId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          id_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder clearId() {
-          
-          id_ = getDefaultInstance().getId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string id = 1;</code>
-         */
-        public Builder setIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          id_ = value;
-          onChanged();
-          return this;
-        }
-
-        private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> inputBuilder_;
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public boolean hasInput() {
-          return inputBuilder_ != null || input_ != null;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
-          if (inputBuilder_ == null) {
-            return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-          } else {
-            return inputBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            input_ = value;
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public Builder setInput(
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
-          if (inputBuilder_ == null) {
-            input_ = builderForValue.build();
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (input_ != null) {
-              input_ =
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
-            } else {
-              input_ = value;
-            }
-            onChanged();
-          } else {
-            inputBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public Builder clearInput() {
-          if (inputBuilder_ == null) {
-            input_ = null;
-            onChanged();
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder getInputBuilder() {
-          
-          onChanged();
-          return getInputFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
-          if (inputBuilder_ != null) {
-            return inputBuilder_.getMessageOrBuilder();
-          } else {
-            return input_ == null ?
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
-            getInputFieldBuilder() {
-          if (inputBuilder_ == null) {
-            inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder>(
-                    getInput(),
-                    getParentForChildren(),
-                    isClean());
-            input_ = null;
-          }
-          return inputBuilder_;
-        }
-
-        private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_ =
-          java.util.Collections.emptyList();
-        private void ensurePredictionsIsMutable() {
-          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-            predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>(predictions_);
-            bitField0_ |= 0x00000004;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
-
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
-          if (predictionsBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(predictions_);
-          } else {
-            return predictionsBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public int getPredictionsCount() {
-          if (predictionsBuilder_ == null) {
-            return predictions_.size();
-          } else {
-            return predictionsBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
-          if (predictionsBuilder_ == null) {
-            return predictions_.get(index);
-          } else {
-            return predictionsBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder setPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.set(index, value);
-            onChanged();
-          } else {
-            predictionsBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder setPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.add(value);
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction value) {
-          if (predictionsBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensurePredictionsIsMutable();
-            predictions_.add(index, value);
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.add(builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addPredictions(
-            int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            predictionsBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder addAllPredictions(
-            java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, predictions_);
-            onChanged();
-          } else {
-            predictionsBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder clearPredictions() {
-          if (predictionsBuilder_ == null) {
-            predictions_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000004);
-            onChanged();
-          } else {
-            predictionsBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public Builder removePredictions(int index) {
-          if (predictionsBuilder_ == null) {
-            ensurePredictionsIsMutable();
-            predictions_.remove(index);
-            onChanged();
-          } else {
-            predictionsBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
-            int index) {
-          return getPredictionsFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
-            int index) {
-          if (predictionsBuilder_ == null) {
-            return predictions_.get(index);  } else {
-            return predictionsBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-             getPredictionsOrBuilderList() {
-          if (predictionsBuilder_ != null) {
-            return predictionsBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(predictions_);
-          }
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
-          return getPredictionsFieldBuilder().addBuilder(
-              asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
-            int index) {
-          return getPredictionsFieldBuilder().addBuilder(
-              index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.type.Prediction predictions = 3;</code>
-         */
-        public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
-             getPredictionsBuilderList() {
-          return getPredictionsFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
-            getPredictionsFieldBuilder() {
-          if (predictionsBuilder_ == null) {
-            predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
-                    predictions_,
-                    ((bitField0_ & 0x00000004) == 0x00000004),
-                    getParentForChildren(),
-                    isClean());
-            predictions_ = null;
-          }
-          return predictionsBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.PrepareBankRequest.Entry)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareBankRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry();
-      }
-
-      public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Entry>
-          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
-        @java.lang.Override
-        public Entry parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Entry(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Entry> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Entry> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
+              asgt.dataservice.v1alpha1.Bank.BankEntryInput.class, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder.class);
     }
 
     private int bitField0_;
-    public static final int DATASET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dataset_;
+    public static final int INPUT_FIELD_NUMBER = 1;
+    private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_;
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
      */
-    public java.lang.String getDataset() {
-      java.lang.Object ref = dataset_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        dataset_ = s;
-        return s;
-      }
+    public boolean hasInput() {
+      return input_ != null;
     }
     /**
-     * <code>string dataset = 1;</code>
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getDatasetBytes() {
-      java.lang.Object ref = dataset_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        dataset_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
+      return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
+    }
+    /**
+     * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+     */
+    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
+      return getInput();
     }
 
-    public static final int TAGS_FIELD_NUMBER = 2;
-    private com.google.protobuf.LazyStringList tags_;
+    public static final int TRUE_VALUES_FIELD_NUMBER = 2;
+    private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_;
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
+    public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+      return trueValues_;
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public int getTagsCount() {
-      return tags_.size();
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+        getTrueValuesOrBuilderList() {
+      return trueValues_;
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
+    public int getTrueValuesCount() {
+      return trueValues_.size();
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
-    }
-
-    public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> entries_;
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    public java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> getEntriesList() {
-      return entries_;
+    public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+      return trueValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder> 
-        getEntriesOrBuilderList() {
-      return entries_;
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    public int getEntriesCount() {
-      return entries_.size();
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getEntries(int index) {
-      return entries_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
-     */
-    public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
         int index) {
-      return entries_.get(index);
+      return trueValues_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3422,14 +2241,11 @@ public final class Bank {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
+      if (input_ != null) {
+        output.writeMessage(1, getInput());
       }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
-      }
-      for (int i = 0; i < entries_.size(); i++) {
-        output.writeMessage(3, entries_.get(i));
+      for (int i = 0; i < trueValues_.size(); i++) {
+        output.writeMessage(2, trueValues_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -3440,20 +2256,13 @@ public final class Bank {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
-      }
-      for (int i = 0; i < entries_.size(); i++) {
+      if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, entries_.get(i));
+          .computeMessageSize(1, getInput());
+      }
+      for (int i = 0; i < trueValues_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, trueValues_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3465,18 +2274,19 @@ public final class Bank {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.PrepareBankRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.BankEntryInput)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.Bank.PrepareBankRequest other = (asgt.dataservice.v1alpha1.Bank.PrepareBankRequest) obj;
+      asgt.dataservice.v1alpha1.Bank.BankEntryInput other = (asgt.dataservice.v1alpha1.Bank.BankEntryInput) obj;
 
       boolean result = true;
-      result = result && getDataset()
-          .equals(other.getDataset());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && getEntriesList()
-          .equals(other.getEntriesList());
+      result = result && (hasInput() == other.hasInput());
+      if (hasInput()) {
+        result = result && getInput()
+            .equals(other.getInput());
+      }
+      result = result && getTrueValuesList()
+          .equals(other.getTrueValuesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3488,84 +2298,82 @@ public final class Bank {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + getDataset().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
+      if (hasInput()) {
+        hash = (37 * hash) + INPUT_FIELD_NUMBER;
+        hash = (53 * hash) + getInput().hashCode();
       }
-      if (getEntriesCount() > 0) {
-        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
-        hash = (53 * hash) + getEntriesList().hashCode();
+      if (getTrueValuesCount() > 0) {
+        hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTrueValuesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3578,7 +2386,7 @@ public final class Bank {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.BankEntryInput prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3594,26 +2402,26 @@ public final class Bank {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.PrepareBankRequest}
+     * Protobuf type {@code asgt.dataservice.v1alpha1.BankEntryInput}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.PrepareBankRequest)
-        asgt.dataservice.v1alpha1.Bank.PrepareBankRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.BankEntryInput)
+        asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor;
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_BankEntryInput_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.class, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Builder.class);
+                asgt.dataservice.v1alpha1.Bank.BankEntryInput.class, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.Bank.BankEntryInput.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3626,21 +2434,23 @@ public final class Bank {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getEntriesFieldBuilder();
+          getTrueValuesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        dataset_ = "";
-
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (entriesBuilder_ == null) {
-          entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+        if (inputBuilder_ == null) {
+          input_ = null;
         } else {
-          entriesBuilder_.clear();
+          input_ = null;
+          inputBuilder_ = null;
+        }
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          trueValuesBuilder_.clear();
         }
         return this;
       }
@@ -3648,17 +2458,17 @@ public final class Bank {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor;
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest build() {
-        asgt.dataservice.v1alpha1.Bank.PrepareBankRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput build() {
+        asgt.dataservice.v1alpha1.Bank.BankEntryInput result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3666,24 +2476,23 @@ public final class Bank {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest buildPartial() {
-        asgt.dataservice.v1alpha1.Bank.PrepareBankRequest result = new asgt.dataservice.v1alpha1.Bank.PrepareBankRequest(this);
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput buildPartial() {
+        asgt.dataservice.v1alpha1.Bank.BankEntryInput result = new asgt.dataservice.v1alpha1.Bank.BankEntryInput(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.dataset_ = dataset_;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.tags_ = tags_;
-        if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.entries_ = entries_;
+        if (inputBuilder_ == null) {
+          result.input_ = input_;
         } else {
-          result.entries_ = entriesBuilder_.build();
+          result.input_ = inputBuilder_.build();
+        }
+        if (trueValuesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.trueValues_ = trueValues_;
+        } else {
+          result.trueValues_ = trueValuesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -3724,53 +2533,42 @@ public final class Bank {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.Bank.PrepareBankRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.Bank.PrepareBankRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.Bank.BankEntryInput) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Bank.BankEntryInput)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest other) {
-        if (other == asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.getDefaultInstance()) return this;
-        if (!other.getDataset().isEmpty()) {
-          dataset_ = other.dataset_;
-          onChanged();
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.BankEntryInput other) {
+        if (other == asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance()) return this;
+        if (other.hasInput()) {
+          mergeInput(other.getInput());
         }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
-        if (entriesBuilder_ == null) {
-          if (!other.entries_.isEmpty()) {
-            if (entries_.isEmpty()) {
-              entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+        if (trueValuesBuilder_ == null) {
+          if (!other.trueValues_.isEmpty()) {
+            if (trueValues_.isEmpty()) {
+              trueValues_ = other.trueValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureEntriesIsMutable();
-              entries_.addAll(other.entries_);
+              ensureTrueValuesIsMutable();
+              trueValues_.addAll(other.trueValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.entries_.isEmpty()) {
-            if (entriesBuilder_.isEmpty()) {
-              entriesBuilder_.dispose();
-              entriesBuilder_ = null;
-              entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              entriesBuilder_ = 
+          if (!other.trueValues_.isEmpty()) {
+            if (trueValuesBuilder_.isEmpty()) {
+              trueValuesBuilder_.dispose();
+              trueValuesBuilder_ = null;
+              trueValues_ = other.trueValues_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              trueValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEntriesFieldBuilder() : null;
+                   getTrueValuesFieldBuilder() : null;
             } else {
-              entriesBuilder_.addAllMessages(other.entries_);
+              trueValuesBuilder_.addAllMessages(other.trueValues_);
             }
           }
         }
@@ -3789,11 +2587,11 @@ public final class Bank {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.Bank.PrepareBankRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.Bank.BankEntryInput parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.Bank.PrepareBankRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.Bank.BankEntryInput) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3804,407 +2602,361 @@ public final class Bank {
       }
       private int bitField0_;
 
-      private java.lang.Object dataset_ = "";
+      private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> inputBuilder_;
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
        */
-      public java.lang.String getDataset() {
-        java.lang.Object ref = dataset_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          dataset_ = s;
-          return s;
+      public boolean hasInput() {
+        return inputBuilder_ != null || input_ != null;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
+        if (inputBuilder_ == null) {
+          return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
         } else {
-          return (java.lang.String) ref;
+          return inputBuilder_.getMessage();
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getDatasetBytes() {
-        java.lang.Object ref = dataset_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          dataset_ = b;
-          return b;
+      public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
+        if (inputBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          input_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          inputBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public Builder setInput(
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
+        if (inputBuilder_ == null) {
+          input_ = builderForValue.build();
+          onChanged();
+        } else {
+          inputBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
+        if (inputBuilder_ == null) {
+          if (input_ != null) {
+            input_ =
+              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
+          } else {
+            input_ = value;
+          }
+          onChanged();
+        } else {
+          inputBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public Builder clearInput() {
+        if (inputBuilder_ == null) {
+          input_ = null;
+          onChanged();
+        } else {
+          input_ = null;
+          inputBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder getInputBuilder() {
+        
+        onChanged();
+        return getInputFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
+       */
+      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
+        if (inputBuilder_ != null) {
+          return inputBuilder_.getMessageOrBuilder();
+        } else {
+          return input_ == null ?
+              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
        */
-      public Builder setDataset(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        dataset_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataset = 1;</code>
-       */
-      public Builder clearDataset() {
-        
-        dataset_ = getDefaultInstance().getDataset();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string dataset = 1;</code>
-       */
-      public Builder setDatasetBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        dataset_ = value;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
+          getInputFieldBuilder() {
+        if (inputBuilder_ == null) {
+          inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder>(
+                  getInput(),
+                  getParentForChildren(),
+                  isClean());
+          input_ = null;
+        }
+        return inputBuilder_;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
+      private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_ =
+        java.util.Collections.emptyList();
+      private void ensureTrueValuesIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>(trueValues_);
           bitField0_ |= 0x00000002;
          }
       }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addTags(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 2;</code>
-       */
-      public Builder addTagsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-
-      private java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> entries_ =
-        java.util.Collections.emptyList();
-      private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry>(entries_);
-          bitField0_ |= 0x00000004;
-         }
-      }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> trueValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> getEntriesList() {
-        if (entriesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(entries_);
+      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
+        if (trueValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(trueValues_);
         } else {
-          return entriesBuilder_.getMessageList();
+          return trueValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public int getEntriesCount() {
-        if (entriesBuilder_ == null) {
-          return entries_.size();
+      public int getTrueValuesCount() {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.size();
         } else {
-          return entriesBuilder_.getCount();
+          return trueValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry getEntries(int index) {
-        if (entriesBuilder_ == null) {
-          return entries_.get(index);
+      public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.get(index);
         } else {
-          return entriesBuilder_.getMessage(index);
+          return trueValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder setTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.set(index, value);
+          ensureTrueValuesIsMutable();
+          trueValues_.set(index, value);
           onChanged();
         } else {
-          entriesBuilder_.setMessage(index, value);
+          trueValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.set(index, builderForValue.build());
+      public Builder setTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.setMessage(index, builderForValue.build());
+          trueValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder addTrueValues(asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.add(value);
+          ensureTrueValuesIsMutable();
+          trueValues_.add(value);
           onChanged();
         } else {
-          entriesBuilder_.addMessage(value);
+          trueValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry value) {
-        if (entriesBuilder_ == null) {
+      public Builder addTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
+        if (trueValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEntriesIsMutable();
-          entries_.add(index, value);
+          ensureTrueValuesIsMutable();
+          trueValues_.add(index, value);
           onChanged();
         } else {
-          entriesBuilder_.addMessage(index, value);
+          trueValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.add(builderForValue.build());
+      public Builder addTrueValues(
+          asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.add(builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.addMessage(builderForValue.build());
+          trueValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder builderForValue) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.add(index, builderForValue.build());
+      public Builder addTrueValues(
+          int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          entriesBuilder_.addMessage(index, builderForValue.build());
+          trueValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry> values) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
+      public Builder addAllTrueValues(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.DataTuple> values) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, entries_);
+              values, trueValues_);
           onChanged();
         } else {
-          entriesBuilder_.addAllMessages(values);
+          trueValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder clearEntries() {
-        if (entriesBuilder_ == null) {
-          entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+      public Builder clearTrueValues() {
+        if (trueValuesBuilder_ == null) {
+          trueValues_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          entriesBuilder_.clear();
+          trueValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public Builder removeEntries(int index) {
-        if (entriesBuilder_ == null) {
-          ensureEntriesIsMutable();
-          entries_.remove(index);
+      public Builder removeTrueValues(int index) {
+        if (trueValuesBuilder_ == null) {
+          ensureTrueValuesIsMutable();
+          trueValues_.remove(index);
           onChanged();
         } else {
-          entriesBuilder_.remove(index);
+          trueValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder getTrueValuesBuilder(
           int index) {
-        return getEntriesFieldBuilder().getBuilder(index);
+        return getTrueValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
           int index) {
-        if (entriesBuilder_ == null) {
-          return entries_.get(index);  } else {
-          return entriesBuilder_.getMessageOrBuilder(index);
+        if (trueValuesBuilder_ == null) {
+          return trueValues_.get(index);  } else {
+          return trueValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder> 
-           getEntriesOrBuilderList() {
-        if (entriesBuilder_ != null) {
-          return entriesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+           getTrueValuesOrBuilderList() {
+        if (trueValuesBuilder_ != null) {
+          return trueValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(entries_);
+          return java.util.Collections.unmodifiableList(trueValues_);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder addEntriesBuilder() {
-        return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.getDefaultInstance());
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder() {
+        return getTrueValuesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder(
           int index) {
-        return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.getDefaultInstance());
+        return getTrueValuesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PrepareBankRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder> 
-           getEntriesBuilderList() {
-        return getEntriesFieldBuilder().getBuilderList();
+      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple.Builder> 
+           getTrueValuesBuilderList() {
+        return getTrueValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder> 
-          getEntriesFieldBuilder() {
-        if (entriesBuilder_ == null) {
-          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.PrepareBankRequest.EntryOrBuilder>(
-                  entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+          asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
+          getTrueValuesFieldBuilder() {
+        if (trueValuesBuilder_ == null) {
+          trueValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder>(
+                  trueValues_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
-          entries_ = null;
+          trueValues_ = null;
         }
-        return entriesBuilder_;
+        return trueValuesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4219,59 +2971,59 @@ public final class Bank {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.PrepareBankRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.BankEntryInput)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareBankRequest)
-    private static final asgt.dataservice.v1alpha1.Bank.PrepareBankRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.BankEntryInput)
+    private static final asgt.dataservice.v1alpha1.Bank.BankEntryInput DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.PrepareBankRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.BankEntryInput();
     }
 
-    public static asgt.dataservice.v1alpha1.Bank.PrepareBankRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.Bank.BankEntryInput getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<PrepareBankRequest>
-        PARSER = new com.google.protobuf.AbstractParser<PrepareBankRequest>() {
+    private static final com.google.protobuf.Parser<BankEntryInput>
+        PARSER = new com.google.protobuf.AbstractParser<BankEntryInput>() {
       @java.lang.Override
-      public PrepareBankRequest parsePartialFrom(
+      public BankEntryInput parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PrepareBankRequest(input, extensionRegistry);
+        return new BankEntryInput(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<PrepareBankRequest> parser() {
+    public static com.google.protobuf.Parser<BankEntryInput> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PrepareBankRequest> getParserForType() {
+    public com.google.protobuf.Parser<BankEntryInput> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.Bank.PrepareBankRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.Bank.BankEntryInput getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface AddBankDataRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AddBankDataRequest)
+  public interface CreateBankDatasetRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.CreateBankDatasetRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
-    java.lang.String getDataset();
+    java.lang.String getDatasetName();
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetBytes();
+        getDatasetNameBytes();
 
     /**
      * <code>repeated string tags = 2;</code>
@@ -4293,27 +3045,27 @@ public final class Bank {
         getTagsBytes(int index);
 
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> 
+    java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> 
         getEntriesList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getEntries(int index);
+    asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index);
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
     int getEntriesCount();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder> 
+    java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
         getEntriesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
         int index);
 
     /**
@@ -4330,19 +3082,19 @@ public final class Bank {
     asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
   /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.AddBankDataRequest}
+   * Protobuf type {@code asgt.dataservice.v1alpha1.CreateBankDatasetRequest}
    */
-  public  static final class AddBankDataRequest extends
+  public  static final class CreateBankDatasetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AddBankDataRequest)
-      AddBankDataRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.CreateBankDatasetRequest)
+      CreateBankDatasetRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use AddBankDataRequest.newBuilder() to construct.
-    private AddBankDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use CreateBankDatasetRequest.newBuilder() to construct.
+    private CreateBankDatasetRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private AddBankDataRequest() {
-      dataset_ = "";
+    private CreateBankDatasetRequest() {
+      datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       entries_ = java.util.Collections.emptyList();
     }
@@ -4352,7 +3104,7 @@ public final class Bank {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private AddBankDataRequest(
+    private CreateBankDatasetRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -4374,7 +3126,7 @@ public final class Bank {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              dataset_ = s;
+              datasetName_ = s;
               break;
             }
             case 18: {
@@ -4388,11 +3140,11 @@ public final class Bank {
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry>();
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.BankEntryInput>();
                 mutable_bitField0_ |= 0x00000004;
               }
               entries_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.parser(), extensionRegistry));
+                  input.readMessage(asgt.dataservice.v1alpha1.Bank.BankEntryInput.parser(), extensionRegistry));
               break;
             }
             case 34: {
@@ -4435,1025 +3187,46 @@ public final class Bank {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor;
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_fieldAccessorTable
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.class, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Builder.class);
-    }
-
-    public interface EntryOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AddBankDataRequest.Entry)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      boolean hasInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput();
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder();
-
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> 
-          getTrueValuesList();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index);
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      int getTrueValuesCount();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-          getTrueValuesOrBuilderList();
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-          int index);
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.AddBankDataRequest.Entry}
-     */
-    public  static final class Entry extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AddBankDataRequest.Entry)
-        EntryOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Entry.newBuilder() to construct.
-      private Entry(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Entry() {
-        trueValues_ = java.util.Collections.emptyList();
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Entry(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder subBuilder = null;
-                if (input_ != null) {
-                  subBuilder = input_.toBuilder();
-                }
-                input_ = input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(input_);
-                  input_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 18: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                trueValues_.add(
-                    input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.class, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder.class);
-      }
-
-      private int bitField0_;
-      public static final int INPUT_FIELD_NUMBER = 1;
-      private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_;
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      public boolean hasInput() {
-        return input_ != null;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
-        return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-      }
-      /**
-       * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-       */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
-        return getInput();
-      }
-
-      public static final int TRUE_VALUES_FIELD_NUMBER = 2;
-      private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_;
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
-        return trueValues_;
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-          getTrueValuesOrBuilderList() {
-        return trueValues_;
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public int getTrueValuesCount() {
-        return trueValues_.size();
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
-        return trueValues_.get(index);
-      }
-      /**
-       * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-       */
-      public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-          int index) {
-        return trueValues_.get(index);
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (input_ != null) {
-          output.writeMessage(1, getInput());
-        }
-        for (int i = 0; i < trueValues_.size(); i++) {
-          output.writeMessage(2, trueValues_.get(i));
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (input_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getInput());
-        }
-        for (int i = 0; i < trueValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, trueValues_.get(i));
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry)) {
-          return super.equals(obj);
-        }
-        asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry other = (asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry) obj;
-
-        boolean result = true;
-        result = result && (hasInput() == other.hasInput());
-        if (hasInput()) {
-          result = result && getInput()
-              .equals(other.getInput());
-        }
-        result = result && getTrueValuesList()
-            .equals(other.getTrueValuesList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasInput()) {
-          hash = (37 * hash) + INPUT_FIELD_NUMBER;
-          hash = (53 * hash) + getInput().hashCode();
-        }
-        if (getTrueValuesCount() > 0) {
-          hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
-          hash = (53 * hash) + getTrueValuesList().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.dataservice.v1alpha1.AddBankDataRequest.Entry}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddBankDataRequest.Entry)
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.class, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder.class);
-        }
-
-        // Construct using asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-            getTrueValuesFieldBuilder();
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          if (inputBuilder_ == null) {
-            input_ = null;
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-          if (trueValuesBuilder_ == null) {
-            trueValues_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            trueValuesBuilder_.clear();
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getDefaultInstanceForType() {
-          return asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry build() {
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry buildPartial() {
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry result = new asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (inputBuilder_ == null) {
-            result.input_ = input_;
-          } else {
-            result.input_ = inputBuilder_.build();
-          }
-          if (trueValuesBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) == 0x00000002)) {
-              trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
-              bitField0_ = (bitField0_ & ~0x00000002);
-            }
-            result.trueValues_ = trueValues_;
-          } else {
-            result.trueValues_ = trueValuesBuilder_.build();
-          }
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry) {
-            return mergeFrom((asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry other) {
-          if (other == asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.getDefaultInstance()) return this;
-          if (other.hasInput()) {
-            mergeInput(other.getInput());
-          }
-          if (trueValuesBuilder_ == null) {
-            if (!other.trueValues_.isEmpty()) {
-              if (trueValues_.isEmpty()) {
-                trueValues_ = other.trueValues_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-              } else {
-                ensureTrueValuesIsMutable();
-                trueValues_.addAll(other.trueValues_);
-              }
-              onChanged();
-            }
-          } else {
-            if (!other.trueValues_.isEmpty()) {
-              if (trueValuesBuilder_.isEmpty()) {
-                trueValuesBuilder_.dispose();
-                trueValuesBuilder_ = null;
-                trueValues_ = other.trueValues_;
-                bitField0_ = (bitField0_ & ~0x00000002);
-                trueValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                     getTrueValuesFieldBuilder() : null;
-              } else {
-                trueValuesBuilder_.addAllMessages(other.trueValues_);
-              }
-            }
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-        private int bitField0_;
-
-        private asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data input_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> inputBuilder_;
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public boolean hasInput() {
-          return inputBuilder_ != null || input_ != null;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInput() {
-          if (inputBuilder_ == null) {
-            return input_ == null ? asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-          } else {
-            return inputBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public Builder setInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            input_ = value;
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public Builder setInput(
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
-          if (inputBuilder_ == null) {
-            input_ = builderForValue.build();
-            onChanged();
-          } else {
-            inputBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public Builder mergeInput(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
-          if (inputBuilder_ == null) {
-            if (input_ != null) {
-              input_ =
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.newBuilder(input_).mergeFrom(value).buildPartial();
-            } else {
-              input_ = value;
-            }
-            onChanged();
-          } else {
-            inputBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public Builder clearInput() {
-          if (inputBuilder_ == null) {
-            input_ = null;
-            onChanged();
-          } else {
-            input_ = null;
-            inputBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder getInputBuilder() {
-          
-          onChanged();
-          return getInputFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputOrBuilder() {
-          if (inputBuilder_ != null) {
-            return inputBuilder_.getMessageOrBuilder();
-          } else {
-            return input_ == null ?
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance() : input_;
-          }
-        }
-        /**
-         * <code>.asgt.jester.v1alpha1.BankRequest.Data input = 1;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
-            getInputFieldBuilder() {
-          if (inputBuilder_ == null) {
-            inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder>(
-                    getInput(),
-                    getParentForChildren(),
-                    isClean());
-            input_ = null;
-          }
-          return inputBuilder_;
-        }
-
-        private java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> trueValues_ =
-          java.util.Collections.emptyList();
-        private void ensureTrueValuesIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            trueValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.DataTuple>(trueValues_);
-            bitField0_ |= 0x00000002;
-           }
-        }
-
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> trueValuesBuilder_;
-
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple> getTrueValuesList() {
-          if (trueValuesBuilder_ == null) {
-            return java.util.Collections.unmodifiableList(trueValues_);
-          } else {
-            return trueValuesBuilder_.getMessageList();
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public int getTrueValuesCount() {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.size();
-          } else {
-            return trueValuesBuilder_.getCount();
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple getTrueValues(int index) {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.get(index);
-          } else {
-            return trueValuesBuilder_.getMessage(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder setTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.set(index, value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.setMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder setTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.set(index, builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.setMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.add(value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple value) {
-          if (trueValuesBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            ensureTrueValuesIsMutable();
-            trueValues_.add(index, value);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(index, value);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.add(builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addTrueValues(
-            int index, asgt.dataservice.v1alpha1.Data.DataTuple.Builder builderForValue) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.add(index, builderForValue.build());
-            onChanged();
-          } else {
-            trueValuesBuilder_.addMessage(index, builderForValue.build());
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder addAllTrueValues(
-            java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.DataTuple> values) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                values, trueValues_);
-            onChanged();
-          } else {
-            trueValuesBuilder_.addAllMessages(values);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder clearTrueValues() {
-          if (trueValuesBuilder_ == null) {
-            trueValues_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
-            onChanged();
-          } else {
-            trueValuesBuilder_.clear();
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public Builder removeTrueValues(int index) {
-          if (trueValuesBuilder_ == null) {
-            ensureTrueValuesIsMutable();
-            trueValues_.remove(index);
-            onChanged();
-          } else {
-            trueValuesBuilder_.remove(index);
-          }
-          return this;
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder getTrueValuesBuilder(
-            int index) {
-          return getTrueValuesFieldBuilder().getBuilder(index);
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder getTrueValuesOrBuilder(
-            int index) {
-          if (trueValuesBuilder_ == null) {
-            return trueValues_.get(index);  } else {
-            return trueValuesBuilder_.getMessageOrBuilder(index);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<? extends asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-             getTrueValuesOrBuilderList() {
-          if (trueValuesBuilder_ != null) {
-            return trueValuesBuilder_.getMessageOrBuilderList();
-          } else {
-            return java.util.Collections.unmodifiableList(trueValues_);
-          }
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder() {
-          return getTrueValuesFieldBuilder().addBuilder(
-              asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public asgt.dataservice.v1alpha1.Data.DataTuple.Builder addTrueValuesBuilder(
-            int index) {
-          return getTrueValuesFieldBuilder().addBuilder(
-              index, asgt.dataservice.v1alpha1.Data.DataTuple.getDefaultInstance());
-        }
-        /**
-         * <code>repeated .asgt.dataservice.v1alpha1.DataTuple true_values = 2;</code>
-         */
-        public java.util.List<asgt.dataservice.v1alpha1.Data.DataTuple.Builder> 
-             getTrueValuesBuilderList() {
-          return getTrueValuesFieldBuilder().getBuilderList();
-        }
-        private com.google.protobuf.RepeatedFieldBuilderV3<
-            asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder> 
-            getTrueValuesFieldBuilder() {
-          if (trueValuesBuilder_ == null) {
-            trueValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                asgt.dataservice.v1alpha1.Data.DataTuple, asgt.dataservice.v1alpha1.Data.DataTuple.Builder, asgt.dataservice.v1alpha1.Data.DataTupleOrBuilder>(
-                    trueValues_,
-                    ((bitField0_ & 0x00000002) == 0x00000002),
-                    getParentForChildren(),
-                    isClean());
-            trueValues_ = null;
-          }
-          return trueValuesBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AddBankDataRequest.Entry)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddBankDataRequest.Entry)
-      private static final asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry();
-      }
-
-      public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Entry>
-          PARSER = new com.google.protobuf.AbstractParser<Entry>() {
-        @java.lang.Override
-        public Entry parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Entry(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Entry> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Entry> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
+              asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.class, asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.Builder.class);
     }
 
     private int bitField0_;
-    public static final int DATASET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dataset_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
-    public java.lang.String getDataset() {
-      java.lang.Object ref = dataset_;
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        dataset_ = s;
+        datasetName_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset = 1;</code>
+     * <code>string dataset_name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetBytes() {
-      java.lang.Object ref = dataset_;
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        dataset_ = b;
+        datasetName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -5490,36 +3263,36 @@ public final class Bank {
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> entries_;
+    private java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> entries_;
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> getEntriesList() {
+    public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> getEntriesList() {
       return entries_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder> 
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
         getEntriesOrBuilderList() {
       return entries_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
     public int getEntriesCount() {
       return entries_.size();
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getEntries(int index) {
+    public asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index) {
       return entries_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder getEntriesOrBuilder(
+    public asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
         int index) {
       return entries_.get(index);
     }
@@ -5559,8 +3332,8 @@ public final class Bank {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
@@ -5580,8 +3353,8 @@ public final class Bank {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
       }
       {
         int dataSize = 0;
@@ -5609,14 +3382,14 @@ public final class Bank {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.AddBankDataRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1alpha1.Bank.AddBankDataRequest other = (asgt.dataservice.v1alpha1.Bank.AddBankDataRequest) obj;
+      asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest other = (asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest) obj;
 
       boolean result = true;
-      result = result && getDataset()
-          .equals(other.getDataset());
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
       result = result && getTagsList()
           .equals(other.getTagsList());
       result = result && getEntriesList()
@@ -5637,8 +3410,8 @@ public final class Bank {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + getDataset().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -5656,69 +3429,69 @@ public final class Bank {
       return hash;
     }
 
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parseFrom(
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5731,7 +3504,7 @@ public final class Bank {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5747,26 +3520,26 @@ public final class Bank {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.AddBankDataRequest}
+     * Protobuf type {@code asgt.dataservice.v1alpha1.CreateBankDatasetRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AddBankDataRequest)
-        asgt.dataservice.v1alpha1.Bank.AddBankDataRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.CreateBankDatasetRequest)
+        asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_fieldAccessorTable
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.class, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Builder.class);
+                asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.class, asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.newBuilder()
+      // Construct using asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5785,7 +3558,7 @@ public final class Bank {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        dataset_ = "";
+        datasetName_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -5807,17 +3580,17 @@ public final class Bank {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor;
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.getDefaultInstance();
+      public asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest build() {
-        asgt.dataservice.v1alpha1.Bank.AddBankDataRequest result = buildPartial();
+      public asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest build() {
+        asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5825,11 +3598,11 @@ public final class Bank {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest buildPartial() {
-        asgt.dataservice.v1alpha1.Bank.AddBankDataRequest result = new asgt.dataservice.v1alpha1.Bank.AddBankDataRequest(this);
+      public asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest buildPartial() {
+        asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest result = new asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.dataset_ = dataset_;
+        result.datasetName_ = datasetName_;
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -5888,18 +3661,18 @@ public final class Bank {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.Bank.AddBankDataRequest) {
-          return mergeFrom((asgt.dataservice.v1alpha1.Bank.AddBankDataRequest)other);
+        if (other instanceof asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest other) {
-        if (other == asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.getDefaultInstance()) return this;
-        if (!other.getDataset().isEmpty()) {
-          dataset_ = other.dataset_;
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest other) {
+        if (other == asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest.getDefaultInstance()) return this;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
@@ -5956,11 +3729,11 @@ public final class Bank {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1alpha1.Bank.AddBankDataRequest parsedMessage = null;
+        asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.Bank.AddBankDataRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5971,71 +3744,71 @@ public final class Bank {
       }
       private int bitField0_;
 
-      private java.lang.Object dataset_ = "";
+      private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public java.lang.String getDataset() {
-        java.lang.Object ref = dataset_;
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          dataset_ = s;
+          datasetName_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetBytes() {
-        java.lang.Object ref = dataset_;
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          dataset_ = b;
+          datasetName_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder setDataset(
+      public Builder setDatasetName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        dataset_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder clearDataset() {
+      public Builder clearDatasetName() {
         
-        dataset_ = getDefaultInstance().getDataset();
+        datasetName_ = getDefaultInstance().getDatasetName();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset = 1;</code>
+       * <code>string dataset_name = 1;</code>
        */
-      public Builder setDatasetBytes(
+      public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        dataset_ = value;
+        datasetName_ = value;
         onChanged();
         return this;
       }
@@ -6134,22 +3907,22 @@ public final class Bank {
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> entries_ =
+      private java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry>(entries_);
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.BankEntryInput>(entries_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder> entriesBuilder_;
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> entriesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> getEntriesList() {
+      public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> getEntriesList() {
         if (entriesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(entries_);
         } else {
@@ -6157,7 +3930,7 @@ public final class Bank {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public int getEntriesCount() {
         if (entriesBuilder_ == null) {
@@ -6167,9 +3940,9 @@ public final class Bank {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry getEntries(int index) {
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);
         } else {
@@ -6177,10 +3950,10 @@ public final class Bank {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6194,10 +3967,10 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder setEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.set(index, builderForValue.build());
@@ -6208,9 +3981,9 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public Builder addEntries(asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry value) {
+      public Builder addEntries(asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6224,10 +3997,10 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry value) {
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
         if (entriesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6241,10 +4014,10 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(builderForValue.build());
@@ -6255,10 +4028,10 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder addEntries(
-          int index, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder builderForValue) {
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           entries_.add(index, builderForValue.build());
@@ -6269,10 +4042,10 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder addAllEntries(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry> values) {
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInput> values) {
         if (entriesBuilder_ == null) {
           ensureEntriesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -6284,7 +4057,7 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
@@ -6297,7 +4070,7 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
       public Builder removeEntries(int index) {
         if (entriesBuilder_ == null) {
@@ -6310,16 +4083,16 @@ public final class Bank {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder getEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder getEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder getEntriesOrBuilder(
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
           int index) {
         if (entriesBuilder_ == null) {
           return entries_.get(index);  } else {
@@ -6327,9 +4100,9 @@ public final class Bank {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder> 
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
            getEntriesOrBuilderList() {
         if (entriesBuilder_ != null) {
           return entriesBuilder_.getMessageOrBuilderList();
@@ -6338,33 +4111,33 @@ public final class Bank {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder addEntriesBuilder() {
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder addEntriesBuilder() {
         return getEntriesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.getDefaultInstance());
+            asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder addEntriesBuilder(
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder addEntriesBuilder(
           int index) {
         return getEntriesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.getDefaultInstance());
+            index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.AddBankDataRequest.Entry entries = 3;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder> 
+      public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder> 
            getEntriesBuilderList() {
         return getEntriesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder> 
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
           getEntriesFieldBuilder() {
         if (entriesBuilder_ == null) {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.Entry.Builder, asgt.dataservice.v1alpha1.Bank.AddBankDataRequest.EntryOrBuilder>(
+              asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder>(
                   entries_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -6503,41 +4276,963 @@ public final class Bank {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AddBankDataRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.CreateBankDatasetRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddBankDataRequest)
-    private static final asgt.dataservice.v1alpha1.Bank.AddBankDataRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.CreateBankDatasetRequest)
+    private static final asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.AddBankDataRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest();
     }
 
-    public static asgt.dataservice.v1alpha1.Bank.AddBankDataRequest getDefaultInstance() {
+    public static asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AddBankDataRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AddBankDataRequest>() {
+    private static final com.google.protobuf.Parser<CreateBankDatasetRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CreateBankDatasetRequest>() {
       @java.lang.Override
-      public AddBankDataRequest parsePartialFrom(
+      public CreateBankDatasetRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AddBankDataRequest(input, extensionRegistry);
+        return new CreateBankDatasetRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<AddBankDataRequest> parser() {
+    public static com.google.protobuf.Parser<CreateBankDatasetRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AddBankDataRequest> getParserForType() {
+    public com.google.protobuf.Parser<CreateBankDatasetRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1alpha1.Bank.AddBankDataRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1alpha1.Bank.CreateBankDatasetRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AppendBankDataRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.AppendBankDataRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    java.lang.String getDatasetName();
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatasetNameBytes();
+
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> 
+        getEntriesList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index);
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    int getEntriesCount();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
+        getEntriesOrBuilderList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1alpha1.AppendBankDataRequest}
+   */
+  public  static final class AppendBankDataRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.AppendBankDataRequest)
+      AppendBankDataRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use AppendBankDataRequest.newBuilder() to construct.
+    private AppendBankDataRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private AppendBankDataRequest() {
+      datasetName_ = "";
+      entries_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private AppendBankDataRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetName_ = s;
+              break;
+            }
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.BankEntryInput>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              entries_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Bank.BankEntryInput.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.class, asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DATASET_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetName_;
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    public java.lang.String getDatasetName() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatasetNameBytes() {
+      java.lang.Object ref = datasetName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENTRIES_FIELD_NUMBER = 3;
+    private java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> entries_;
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> getEntriesList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
+        getEntriesOrBuilderList() {
+      return entries_;
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    public int getEntriesCount() {
+      return entries_.size();
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index) {
+      return entries_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+     */
+    public asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
+        int index) {
+      return entries_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getDatasetNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        output.writeMessage(3, entries_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getDatasetNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      }
+      for (int i = 0; i < entries_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, entries_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest other = (asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest) obj;
+
+      boolean result = true;
+      result = result && getDatasetName()
+          .equals(other.getDatasetName());
+      result = result && getEntriesList()
+          .equals(other.getEntriesList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetName().hashCode();
+      if (getEntriesCount() > 0) {
+        hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
+        hash = (53 * hash) + getEntriesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1alpha1.AppendBankDataRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.AppendBankDataRequest)
+        asgt.dataservice.v1alpha1.Bank.AppendBankDataRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.class, asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEntriesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        datasetName_ = "";
+
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1alpha1.Bank.internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest build() {
+        asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest buildPartial() {
+        asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest result = new asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.datasetName_ = datasetName_;
+        if (entriesBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            entries_ = java.util.Collections.unmodifiableList(entries_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.entries_ = entries_;
+        } else {
+          result.entries_ = entriesBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest) {
+          return mergeFrom((asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest other) {
+        if (other == asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest.getDefaultInstance()) return this;
+        if (!other.getDatasetName().isEmpty()) {
+          datasetName_ = other.datasetName_;
+          onChanged();
+        }
+        if (entriesBuilder_ == null) {
+          if (!other.entries_.isEmpty()) {
+            if (entries_.isEmpty()) {
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEntriesIsMutable();
+              entries_.addAll(other.entries_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.entries_.isEmpty()) {
+            if (entriesBuilder_.isEmpty()) {
+              entriesBuilder_.dispose();
+              entriesBuilder_ = null;
+              entries_ = other.entries_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              entriesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEntriesFieldBuilder() : null;
+            } else {
+              entriesBuilder_.addAllMessages(other.entries_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object datasetName_ = "";
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public java.lang.String getDatasetName() {
+        java.lang.Object ref = datasetName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatasetNameBytes() {
+        java.lang.Object ref = datasetName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder setDatasetName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder clearDatasetName() {
+        
+        datasetName_ = getDefaultInstance().getDatasetName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_name = 1;</code>
+       */
+      public Builder setDatasetNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> entries_ =
+        java.util.Collections.emptyList();
+      private void ensureEntriesIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Bank.BankEntryInput>(entries_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> entriesBuilder_;
+
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput> getEntriesList() {
+        if (entriesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(entries_);
+        } else {
+          return entriesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public int getEntriesCount() {
+        if (entriesBuilder_ == null) {
+          return entries_.size();
+        } else {
+          return entriesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput getEntries(int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);
+        } else {
+          return entriesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.set(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder setEntries(
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput value) {
+        if (entriesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEntriesIsMutable();
+          entries_.add(index, value);
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder addEntries(
+          int index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder builderForValue) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          entriesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder addAllEntries(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInput> values) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, entries_);
+          onChanged();
+        } else {
+          entriesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder clearEntries() {
+        if (entriesBuilder_ == null) {
+          entries_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          entriesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public Builder removeEntries(int index) {
+        if (entriesBuilder_ == null) {
+          ensureEntriesIsMutable();
+          entries_.remove(index);
+          onChanged();
+        } else {
+          entriesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder getEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder getEntriesOrBuilder(
+          int index) {
+        if (entriesBuilder_ == null) {
+          return entries_.get(index);  } else {
+          return entriesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
+           getEntriesOrBuilderList() {
+        if (entriesBuilder_ != null) {
+          return entriesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(entries_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder addEntriesBuilder() {
+        return getEntriesFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder addEntriesBuilder(
+          int index) {
+        return getEntriesFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Bank.BankEntryInput.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
+       */
+      public java.util.List<asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder> 
+           getEntriesBuilderList() {
+        return getEntriesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder> 
+          getEntriesFieldBuilder() {
+        if (entriesBuilder_ == null) {
+          entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Bank.BankEntryInput, asgt.dataservice.v1alpha1.Bank.BankEntryInput.Builder, asgt.dataservice.v1alpha1.Bank.BankEntryInputOrBuilder>(
+                  entries_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          entries_ = null;
+        }
+        return entriesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.AppendBankDataRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AppendBankDataRequest)
+    private static final asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest();
+    }
+
+    public static asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AppendBankDataRequest>
+        PARSER = new com.google.protobuf.AbstractParser<AppendBankDataRequest>() {
+      @java.lang.Override
+      public AppendBankDataRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new AppendBankDataRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<AppendBankDataRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AppendBankDataRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1alpha1.Bank.AppendBankDataRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6549,25 +5244,20 @@ public final class Bank {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1alpha1_BankEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_BankEntryInput_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor;
+    internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_fieldAccessorTable;
+      internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6580,48 +5270,42 @@ public final class Bank {
       "\n$asgt/dataservice/v1alpha1/bank.proto\022\031" +
       "asgt.dataservice.v1alpha1\032$asgt/dataserv" +
       "ice/v1alpha1/data.proto\032!asgt/jester/v1a" +
-      "lpha1/jester.proto\032\032asgt/type/prediction" +
-      ".proto\032\034gen_bq_schema/bq_field.proto\032\034ge" +
-      "n_bq_schema/bq_table.proto\032\034google/api/a" +
-      "nnotations.proto\032\033google/protobuf/empty." +
-      "proto\"\272\003\n\tBankEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID" +
-      ", matches Envoy request id if feedback d" +
-      "ata\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030" +
-      "\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags de" +
-      "fined by consumer, enriched by service i" +
-      "f valetkey is used\0225\n\005input\030\005 \001(\0132&.asgt" +
-      ".jester.v1alpha1.BankRequest.Data\0229\n\013tru" +
-      "e_values\030\006 \003(\0132$.asgt.dataservice.v1alph" +
-      "a1.DataTuple\022>\n\013pred_values\030\007 \003(\0132).asgt" +
-      ".dataservice.v1alpha1.PredictedTuple\022$\n\n" +
-      "time_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n" +
-      "\tbank_data\"\361\001\n\022PrepareBankRequest\022\017\n\007dat" +
-      "aset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries\030\003 \003(" +
-      "\01323.asgt.dataservice.v1alpha1.PrepareBan" +
-      "kRequest.Entry\032v\n\005Entry\022\n\n\002id\030\001 \001(\t\0225\n\005i" +
-      "nput\030\002 \001(\0132&.asgt.jester.v1alpha1.BankRe" +
-      "quest.Data\022*\n\013predictions\030\003 \003(\0132\025.asgt.t" +
-      "ype.Prediction\"\272\002\n\022AddBankDataRequest\022\017\n" +
-      "\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries\030" +
-      "\003 \003(\01323.asgt.dataservice.v1alpha1.AddBan" +
-      "kDataRequest.Entry\022D\n\020retention_policy\030\004" +
-      " \001(\0132*.asgt.dataservice.v1alpha1.Retenti" +
-      "onPolicy\032y\n\005Entry\0225\n\005input\030\001 \001(\0132&.asgt." +
-      "jester.v1alpha1.BankRequest.Data\0229\n\013true" +
-      "_values\030\002 \003(\0132$.asgt.dataservice.v1alpha" +
-      "1.DataTuple2\323\003\n\017BankDataservice\022\\\n\023Prepa" +
-      "reBankFeedback\022-.asgt.dataservice.v1alph" +
-      "a1.PrepareBankRequest\032\026.google.protobuf." +
-      "Empty\022v\n\014BankFeedback\022*.asgt.dataservice" +
-      ".v1alpha1.FeedbackRequest\032\026.google.proto" +
-      "buf.Empty\"\"\202\323\344\223\002\034\"\027/v1alpha1/bank:feedba" +
-      "ck:\001*\022t\n\013AddBankData\022-.asgt.dataservice." +
-      "v1alpha1.AddBankDataRequest\032\026.google.pro" +
-      "tobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1alpha1/bank:data" +
-      ":\001*\022t\n\016DeleteBankData\022(.asgt.dataservice" +
-      ".v1alpha1.DeleteRequest\032\026.google.protobu" +
-      "f.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:\001" +
-      "*B\rZ\013dataserviceb\006proto3"
+      "lpha1/jester.proto\032\034gen_bq_schema/bq_fie" +
+      "ld.proto\032\034gen_bq_schema/bq_table.proto\032\034" +
+      "google/api/annotations.proto\032\033google/pro" +
+      "tobuf/empty.proto\"\272\003\n\tBankEntry\022>\n\002id\030\001 " +
+      "\001(\tB2\352?/\"-ID, matches Envoy request id i" +
+      "f feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001" +
+      "\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF" +
+      "\352?C\"ATags defined by consumer, enriched " +
+      "by service if valetkey is used\0225\n\005input\030" +
+      "\005 \001(\0132&.asgt.jester.v1alpha1.BankRequest" +
+      ".Data\0229\n\013true_values\030\006 \003(\0132$.asgt.datase" +
+      "rvice.v1alpha1.DataTuple\022>\n\013pred_values\030" +
+      "\007 \003(\0132).asgt.dataservice.v1alpha1.Predic" +
+      "tedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIM" +
+      "ESTAMP:\016\352?\013\n\tbank_data\"\202\001\n\016BankEntryInpu" +
+      "t\0225\n\005input\030\001 \001(\0132&.asgt.jester.v1alpha1." +
+      "BankRequest.Data\0229\n\013true_values\030\002 \003(\0132$." +
+      "asgt.dataservice.v1alpha1.DataTuple\"\300\001\n\030" +
+      "CreateBankDatasetRequest\022\024\n\014dataset_name" +
+      "\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022:\n\007entries\030\003 \003(\0132)." +
+      "asgt.dataservice.v1alpha1.BankEntryInput" +
+      "\022D\n\020retention_policy\030\004 \001(\0132*.asgt.datase" +
+      "rvice.v1alpha1.RetentionPolicy\"i\n\025Append" +
+      "BankDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022:\n" +
+      "\007entries\030\003 \003(\0132).asgt.dataservice.v1alph" +
+      "a1.BankEntryInput2\212\003\n\017BankDataservice\022\202\001" +
+      "\n\021CreateBankDataset\0223.asgt.dataservice.v" +
+      "1alpha1.CreateBankDatasetRequest\032\026.googl" +
+      "e.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank" +
+      ":create:\001*\022|\n\016AppendBankData\0220.asgt.data" +
+      "service.v1alpha1.AppendBankDataRequest\032\026" +
+      ".google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha" +
+      "1/bank:append:\001*\022t\n\016DeleteBankData\022(.asg" +
+      "t.dataservice.v1alpha1.DeleteRequest\032\026.g" +
+      "oogle.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/" +
+      "bank:delete:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6636,7 +5320,6 @@ public final class Bank {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -6648,30 +5331,24 @@ public final class Bank {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor,
         new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor =
+    internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_fieldAccessorTable = new
+    internal_static_asgt_dataservice_v1alpha1_BankEntryInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Tags", "Entries", });
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor =
-      internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_PrepareBankRequest_Entry_descriptor,
-        new java.lang.String[] { "Id", "Input", "Predictions", });
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Tags", "Entries", "RetentionPolicy", });
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor =
-      internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_AddBankDataRequest_Entry_descriptor,
+        internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor,
         new java.lang.String[] { "Input", "TrueValues", });
+    internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "Tags", "Entries", "RetentionPolicy", });
+    internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "Entries", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);
@@ -6681,7 +5358,6 @@ public final class Bank {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
