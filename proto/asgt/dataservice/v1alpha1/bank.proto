@@ -20,7 +20,7 @@ service BankDataservice {
     };
   }
 
-  rpc CreateBankDataset(AppendDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
        option (google.api.http) = {
       post: "/v1alpha1/bank:append"
       body: "*"
