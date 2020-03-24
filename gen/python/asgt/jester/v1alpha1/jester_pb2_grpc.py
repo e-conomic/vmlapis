@@ -19,8 +19,8 @@ class JesterStub(object):
         request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ScannedInvoiceRequest.SerializeToString,
         response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
         )
-    self.ElectronicInvoicLineSuggestions = channel.unary_unary(
-        '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
+    self.ElectronicInvoiceLineSuggestions = channel.unary_unary(
+        '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
         request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.SerializeToString,
         response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
         )
@@ -42,7 +42,7 @@ class JesterServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ElectronicInvoicLineSuggestions(self, request, context):
+  def ElectronicInvoiceLineSuggestions(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -64,8 +64,8 @@ def add_JesterServicer_to_server(servicer, server):
           request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ScannedInvoiceRequest.FromString,
           response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
       ),
-      'ElectronicInvoicLineSuggestions': grpc.unary_unary_rpc_method_handler(
-          servicer.ElectronicInvoicLineSuggestions,
+      'ElectronicInvoiceLineSuggestions': grpc.unary_unary_rpc_method_handler(
+          servicer.ElectronicInvoiceLineSuggestions,
           request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.FromString,
           response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
       ),

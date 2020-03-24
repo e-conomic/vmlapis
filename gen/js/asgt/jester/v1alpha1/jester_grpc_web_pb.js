@@ -162,8 +162,8 @@ proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.scannedInvoiceSuggestio
  *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
  *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
  */
-const methodDescriptor_Jester_ElectronicInvoicLineSuggestions = new grpc.web.MethodDescriptor(
-  '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
+const methodDescriptor_Jester_ElectronicInvoiceLineSuggestions = new grpc.web.MethodDescriptor(
+  '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
   grpc.web.MethodType.UNARY,
   proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
   proto.asgt.jester.v1alpha1.SuggestionsResponse,
@@ -184,7 +184,7 @@ const methodDescriptor_Jester_ElectronicInvoicLineSuggestions = new grpc.web.Met
  *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
  *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
  */
-const methodInfo_Jester_ElectronicInvoicLineSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_Jester_ElectronicInvoiceLineSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
   proto.asgt.jester.v1alpha1.SuggestionsResponse,
   /**
    * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request
@@ -207,13 +207,13 @@ const methodInfo_Jester_ElectronicInvoicLineSuggestions = new grpc.web.AbstractC
  * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1alpha1.SuggestionsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.jester.v1alpha1.JesterClient.prototype.electronicInvoicLineSuggestions =
+proto.asgt.jester.v1alpha1.JesterClient.prototype.electronicInvoiceLineSuggestions =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
+      '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
       request,
       metadata || {},
-      methodDescriptor_Jester_ElectronicInvoicLineSuggestions,
+      methodDescriptor_Jester_ElectronicInvoiceLineSuggestions,
       callback);
 };
 
@@ -226,13 +226,13 @@ proto.asgt.jester.v1alpha1.JesterClient.prototype.electronicInvoicLineSuggestion
  * @return {!Promise<!proto.asgt.jester.v1alpha1.SuggestionsResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.electronicInvoicLineSuggestions =
+proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.electronicInvoiceLineSuggestions =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ElectronicInvoicLineSuggestions',
+      '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
       request,
       metadata || {},
-      methodDescriptor_Jester_ElectronicInvoicLineSuggestions);
+      methodDescriptor_Jester_ElectronicInvoiceLineSuggestions);
 };
 
 

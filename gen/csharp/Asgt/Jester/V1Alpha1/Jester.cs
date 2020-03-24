@@ -49,26 +49,24 @@ namespace Asgt.Jester.V1Alpha1 {
             "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBXRvdGFsGAcg",
             "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSLwoJbGluZV90ZXh0",
             "GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2xpbmVf",
-            "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUitgIKC0Jh",
+            "aWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUi6wEKC0Jh",
             "bmtSZXF1ZXN0EjYKBmlucHV0cxgBIAMoCzImLmFzZ3QuamVzdGVyLnYxYWxw",
             "aGExLkJhbmtSZXF1ZXN0LkRhdGESFAoMZGF0YXNldF9uYW1lGAIgASgJEjgK",
             "B29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0",
-            "aW9uT3B0aW9ucxqeAQoERGF0YRIWCg5hY2NvdW50X251bWJlchgBIAEoBRIs",
-            "CgZhbW91bnQYAiABKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUS",
-            "EgoKZW50cnlfdHlwZRgDIAEoBRIMCgR0ZXh0GAQgASgJEi4KCnRpbWVfc3Rh",
-            "bXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMucDCgZKZXN0",
-            "ZXISoAEKGVNjYW5uZWRJbnZvaWNlU3VnZ2VzdGlvbnMSKy5hc2d0Lmplc3Rl",
-            "ci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QaKS5hc2d0Lmplc3Rl",
-            "ci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIiuC0+STAiUiIC92MWFs",
-            "cGhhMS9zY2FubmVkaW52b2ljZTpzdWdnZXN0OgEqErQBCh9FbGVjdHJvbmlj",
-            "SW52b2ljTGluZVN1Z2dlc3Rpb25zEjIuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
-            "RWxlY3Ryb25pY0ludm9pY2VMaW5lUmVxdWVzdBopLmFzZ3QuamVzdGVyLnYx",
-            "YWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiMoLT5JMCLCInL3YxYWxwaGEx",
-            "L2VsZWN0cm9uaWNpbnZvaWNlbGluZTpzdWdnZXN0OgEqEoIBCg9CYW5rU3Vn",
-            "Z2VzdGlvbnMSIS5hc2d0Lmplc3Rlci52MWFscGhhMS5CYW5rUmVxdWVzdBop",
-            "LmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25zUmVzcG9uc2UiIYLT",
-            "5JMCGyIWL3YxYWxwaGExL2Jhbms6c3VnZ2VzdDoBKkIIWgZqZXN0ZXJiBnBy",
-            "b3RvMw=="));
+            "aW9uT3B0aW9ucxpUCgREYXRhEg4KBmFtb3VudBgCIAEoAhIMCgR0ZXh0GAQg",
+            "ASgJEi4KCnRpbWVfc3RhbXAYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wMugDCgZKZXN0ZXISoAEKGVNjYW5uZWRJbnZvaWNlU3VnZ2VzdGlv",
+            "bnMSKy5hc2d0Lmplc3Rlci52MWFscGhhMS5TY2FubmVkSW52b2ljZVJlcXVl",
+            "c3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNl",
+            "IiuC0+STAiUiIC92MWFscGhhMS9zY2FubmVkaW52b2ljZTpzdWdnZXN0OgEq",
+            "ErUBCiBFbGVjdHJvbmljSW52b2ljZUxpbmVTdWdnZXN0aW9ucxIyLmFzZ3Qu",
+            "amVzdGVyLnYxYWxwaGExLkVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3Qa",
+            "KS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uc1Jlc3BvbnNlIjKC",
+            "0+STAiwiJy92MWFscGhhMS9lbGVjdHJvbmljaW52b2ljZWxpbmU6c3VnZ2Vz",
+            "dDoBKhKCAQoPQmFua1N1Z2dlc3Rpb25zEiEuYXNndC5qZXN0ZXIudjFhbHBo",
+            "YTEuQmFua1JlcXVlc3QaKS5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0",
+            "aW9uc1Jlc3BvbnNlIiGC0+STAhsiFi92MWFscGhhMS9iYW5rOnN1Z2dlc3Q6",
+            "ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,7 +74,7 @@ namespace Asgt.Jester.V1Alpha1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data.Parser, new[]{ "Description" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Types.Data.Parser, new[]{ "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "AccountNumber", "Amount", "EntryType", "Text", "TimeStamp" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data), global::Asgt.Jester.V1Alpha1.BankRequest.Types.Data.Parser, new[]{ "Amount", "Text", "TimeStamp" }, null, null, null)})
           }));
     }
     #endregion
@@ -1486,9 +1484,7 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Data(Data other) : this() {
-          accountNumber_ = other.accountNumber_;
-          Amount = other.Amount;
-          entryType_ = other.entryType_;
+          amount_ = other.amount_;
           text_ = other.text_;
           timeStamp_ = other.timeStamp_ != null ? other.timeStamp_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1499,37 +1495,14 @@ namespace Asgt.Jester.V1Alpha1 {
           return new Data(this);
         }
 
-        /// <summary>Field number for the "account_number" field.</summary>
-        public const int AccountNumberFieldNumber = 1;
-        private int accountNumber_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int AccountNumber {
-          get { return accountNumber_; }
-          set {
-            accountNumber_ = value;
-          }
-        }
-
         /// <summary>Field number for the "amount" field.</summary>
         public const int AmountFieldNumber = 2;
-        private static readonly pb::FieldCodec<double?> _single_amount_codec = pb::FieldCodec.ForStructWrapper<double>(18);
-        private double? amount_;
+        private float amount_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public double? Amount {
+        public float Amount {
           get { return amount_; }
           set {
             amount_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "entry_type" field.</summary>
-        public const int EntryTypeFieldNumber = 3;
-        private int entryType_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int EntryType {
-          get { return entryType_; }
-          set {
-            entryType_ = value;
           }
         }
 
@@ -1568,9 +1541,7 @@ namespace Asgt.Jester.V1Alpha1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (AccountNumber != other.AccountNumber) return false;
-          if (!pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-          if (EntryType != other.EntryType) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
           if (Text != other.Text) return false;
           if (!object.Equals(TimeStamp, other.TimeStamp)) return false;
           return Equals(_unknownFields, other._unknownFields);
@@ -1579,9 +1550,7 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (AccountNumber != 0) hash ^= AccountNumber.GetHashCode();
-          if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableDoubleEqualityComparer.GetHashCode(Amount);
-          if (EntryType != 0) hash ^= EntryType.GetHashCode();
+          if (Amount != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Amount);
           if (Text.Length != 0) hash ^= Text.GetHashCode();
           if (timeStamp_ != null) hash ^= TimeStamp.GetHashCode();
           if (_unknownFields != null) {
@@ -1597,16 +1566,9 @@ namespace Asgt.Jester.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (AccountNumber != 0) {
-            output.WriteRawTag(8);
-            output.WriteInt32(AccountNumber);
-          }
-          if (amount_ != null) {
-            _single_amount_codec.WriteTagAndValue(output, Amount);
-          }
-          if (EntryType != 0) {
-            output.WriteRawTag(24);
-            output.WriteInt32(EntryType);
+          if (Amount != 0F) {
+            output.WriteRawTag(21);
+            output.WriteFloat(Amount);
           }
           if (Text.Length != 0) {
             output.WriteRawTag(34);
@@ -1624,14 +1586,8 @@ namespace Asgt.Jester.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (AccountNumber != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(AccountNumber);
-          }
-          if (amount_ != null) {
-            size += _single_amount_codec.CalculateSizeWithTag(Amount);
-          }
-          if (EntryType != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeInt32Size(EntryType);
+          if (Amount != 0F) {
+            size += 1 + 4;
           }
           if (Text.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
@@ -1650,16 +1606,8 @@ namespace Asgt.Jester.V1Alpha1 {
           if (other == null) {
             return;
           }
-          if (other.AccountNumber != 0) {
-            AccountNumber = other.AccountNumber;
-          }
-          if (other.amount_ != null) {
-            if (amount_ == null || other.Amount != 0D) {
-              Amount = other.Amount;
-            }
-          }
-          if (other.EntryType != 0) {
-            EntryType = other.EntryType;
+          if (other.Amount != 0F) {
+            Amount = other.Amount;
           }
           if (other.Text.Length != 0) {
             Text = other.Text;
@@ -1681,19 +1629,8 @@ namespace Asgt.Jester.V1Alpha1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
-              case 8: {
-                AccountNumber = input.ReadInt32();
-                break;
-              }
-              case 18: {
-                double? value = _single_amount_codec.Read(input);
-                if (amount_ == null || value != 0D) {
-                  Amount = value;
-                }
-                break;
-              }
-              case 24: {
-                EntryType = input.ReadInt32();
+              case 21: {
+                Amount = input.ReadFloat();
                 break;
               }
               case 34: {
