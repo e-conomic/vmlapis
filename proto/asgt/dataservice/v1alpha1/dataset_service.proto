@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+import "google/protobuf/timestamp.proto";
+
+service DatasetService {
+    rpc GetDataset (GetDatasetRequest) returns (GetDatasetResponse);
+}
+
+message GetDatasetRequest {
+    string consumer = 1;
+    string dataset_name = 2;
+    string dataset_type = 3;
+}
+
+message DatasetInfo {
+    string consumer = 1;
+    string name = 2;
+    string type = 3;
+    reserved 4 to 9;
+    google.protobuf.Timestamp training_grace_period_end = 10;
+}
+
+message GetDatasetResponse {
+    DatasetInfo info = 1;
+}
