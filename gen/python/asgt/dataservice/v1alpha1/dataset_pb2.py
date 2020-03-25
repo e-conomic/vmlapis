@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
+from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 

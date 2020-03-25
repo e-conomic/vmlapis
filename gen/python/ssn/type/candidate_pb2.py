@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
-from vml_proto.ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
+from ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
