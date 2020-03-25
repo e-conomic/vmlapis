@@ -6,7 +6,7 @@ assert tag
 version = tag.strip('v')
 
 setuptools.setup(
-    name="vml_proto-test",
+    name="vml_proto",
     version=version,
     description="A package containing vml protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
