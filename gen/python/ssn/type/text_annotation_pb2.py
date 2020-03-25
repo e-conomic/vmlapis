@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
+from vml_proto.ssn.type import geometry_pb2 as ssn_dot_type_dot_geometry__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
