@@ -6,10 +6,14 @@ steps:
   - |
     if [ "$TAG_NAME" ] ; then
       pip install twine
-      # fofoof
+      # Replace asgt imports based on proto structure with package name.
+      # replace for asgt modules with no version(eg. v1alpha)
       sed -i 's/from asgt/from vml_proto.asgt/' gen/python/asgt/*/*.py
+      # replace for asgt modules with version(eg. v1alpha)
       sed -i 's/from asgt/from vml_proto.asgt/' gen/python/asgt/*/*/*.py
+      # replace for ssn modules with no version(eg. v1alpha)
       sed -i 's/from ssn/from vml_proto.ssn/' gen/python/ssn/*/*.py
+      # replace for ssn modules with version(eg. v1alpha)
       sed -i 's/from ssn/from vml_proto.ssn/' gen/python/ssn/*/*/*.py
       python setup.py bdist_wheel
       twine upload --repository-url https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi -u vml-rw -p $$ARTIFACTORY_PW dist/*
