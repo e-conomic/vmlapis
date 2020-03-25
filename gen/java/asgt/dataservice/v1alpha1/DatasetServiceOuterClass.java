@@ -873,6 +873,19 @@ public final class DatasetServiceOuterClass {
         getTypeBytes();
 
     /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    boolean hasRetentionPolicy();
+    /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
+    /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+
+    /**
      * <code>.google.protobuf.Timestamp training_grace_period_end = 10;</code>
      */
     boolean hasTrainingGracePeriodEnd();
@@ -943,6 +956,19 @@ public final class DatasetServiceOuterClass {
               java.lang.String s = input.readStringRequireUtf8();
 
               type_ = s;
+              break;
+            }
+            case 74: {
+              asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder subBuilder = null;
+              if (retentionPolicy_ != null) {
+                subBuilder = retentionPolicy_.toBuilder();
+              }
+              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.Data.RetentionPolicy.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(retentionPolicy_);
+                retentionPolicy_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             case 82: {
@@ -1092,6 +1118,27 @@ public final class DatasetServiceOuterClass {
       }
     }
 
+    public static final int RETENTION_POLICY_FIELD_NUMBER = 9;
+    private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
+    /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    public boolean hasRetentionPolicy() {
+      return retentionPolicy_ != null;
+    }
+    /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+    }
+    /**
+     * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+      return getRetentionPolicy();
+    }
+
     public static final int TRAINING_GRACE_PERIOD_END_FIELD_NUMBER = 10;
     private com.google.protobuf.Timestamp trainingGracePeriodEnd_;
     /**
@@ -1136,6 +1183,9 @@ public final class DatasetServiceOuterClass {
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
+      if (retentionPolicy_ != null) {
+        output.writeMessage(9, getRetentionPolicy());
+      }
       if (trainingGracePeriodEnd_ != null) {
         output.writeMessage(10, getTrainingGracePeriodEnd());
       }
@@ -1156,6 +1206,10 @@ public final class DatasetServiceOuterClass {
       }
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
+      }
+      if (retentionPolicy_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getRetentionPolicy());
       }
       if (trainingGracePeriodEnd_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1183,6 +1237,11 @@ public final class DatasetServiceOuterClass {
           .equals(other.getName());
       result = result && getType()
           .equals(other.getType());
+      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
+      if (hasRetentionPolicy()) {
+        result = result && getRetentionPolicy()
+            .equals(other.getRetentionPolicy());
+      }
       result = result && (hasTrainingGracePeriodEnd() == other.hasTrainingGracePeriodEnd());
       if (hasTrainingGracePeriodEnd()) {
         result = result && getTrainingGracePeriodEnd()
@@ -1205,6 +1264,10 @@ public final class DatasetServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      if (hasRetentionPolicy()) {
+        hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
+        hash = (53 * hash) + getRetentionPolicy().hashCode();
+      }
       if (hasTrainingGracePeriodEnd()) {
         hash = (37 * hash) + TRAINING_GRACE_PERIOD_END_FIELD_NUMBER;
         hash = (53 * hash) + getTrainingGracePeriodEnd().hashCode();
@@ -1348,6 +1411,12 @@ public final class DatasetServiceOuterClass {
 
         type_ = "";
 
+        if (retentionPolicyBuilder_ == null) {
+          retentionPolicy_ = null;
+        } else {
+          retentionPolicy_ = null;
+          retentionPolicyBuilder_ = null;
+        }
         if (trainingGracePeriodEndBuilder_ == null) {
           trainingGracePeriodEnd_ = null;
         } else {
@@ -1383,6 +1452,11 @@ public final class DatasetServiceOuterClass {
         result.consumer_ = consumer_;
         result.name_ = name_;
         result.type_ = type_;
+        if (retentionPolicyBuilder_ == null) {
+          result.retentionPolicy_ = retentionPolicy_;
+        } else {
+          result.retentionPolicy_ = retentionPolicyBuilder_.build();
+        }
         if (trainingGracePeriodEndBuilder_ == null) {
           result.trainingGracePeriodEnd_ = trainingGracePeriodEnd_;
         } else {
@@ -1447,6 +1521,9 @@ public final class DatasetServiceOuterClass {
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
           onChanged();
+        }
+        if (other.hasRetentionPolicy()) {
+          mergeRetentionPolicy(other.getRetentionPolicy());
         }
         if (other.hasTrainingGracePeriodEnd()) {
           mergeTrainingGracePeriodEnd(other.getTrainingGracePeriodEnd());
@@ -1685,6 +1762,123 @@ public final class DatasetServiceOuterClass {
         type_ = value;
         onChanged();
         return this;
+      }
+
+      private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public boolean hasRetentionPolicy() {
+        return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+        if (retentionPolicyBuilder_ == null) {
+          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+        } else {
+          return retentionPolicyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+        if (retentionPolicyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          retentionPolicy_ = value;
+          onChanged();
+        } else {
+          retentionPolicyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public Builder setRetentionPolicy(
+          asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
+        if (retentionPolicyBuilder_ == null) {
+          retentionPolicy_ = builderForValue.build();
+          onChanged();
+        } else {
+          retentionPolicyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+        if (retentionPolicyBuilder_ == null) {
+          if (retentionPolicy_ != null) {
+            retentionPolicy_ =
+              asgt.dataservice.v1alpha1.Data.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+          } else {
+            retentionPolicy_ = value;
+          }
+          onChanged();
+        } else {
+          retentionPolicyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public Builder clearRetentionPolicy() {
+        if (retentionPolicyBuilder_ == null) {
+          retentionPolicy_ = null;
+          onChanged();
+        } else {
+          retentionPolicy_ = null;
+          retentionPolicyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
+        
+        onChanged();
+        return getRetentionPolicyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+        if (retentionPolicyBuilder_ != null) {
+          return retentionPolicyBuilder_.getMessageOrBuilder();
+        } else {
+          return retentionPolicy_ == null ?
+              asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+        }
+      }
+      /**
+       * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
+          getRetentionPolicyFieldBuilder() {
+        if (retentionPolicyBuilder_ == null) {
+          retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder>(
+                  getRetentionPolicy(),
+                  getParentForChildren(),
+                  isClean());
+          retentionPolicy_ = null;
+        }
+        return retentionPolicyBuilder_;
       }
 
       private com.google.protobuf.Timestamp trainingGracePeriodEnd_ = null;
@@ -2488,19 +2682,22 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n/asgt/dataservice/v1alpha1/dataset_serv" +
-      "ice.proto\022\031asgt.dataservice.v1alpha1\032\037go" +
-      "ogle/protobuf/timestamp.proto\"Q\n\021GetData" +
-      "setRequest\022\020\n\010consumer\030\001 \001(\t\022\024\n\014dataset_" +
-      "name\030\002 \001(\t\022\024\n\014dataset_type\030\003 \001(\t\"\200\001\n\013Dat" +
-      "asetInfo\022\020\n\010consumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t" +
-      "\022\014\n\004type\030\003 \001(\t\022=\n\031training_grace_period_" +
-      "end\030\n \001(\0132\032.google.protobuf.TimestampJ\004\010" +
-      "\004\020\n\"J\n\022GetDatasetResponse\0224\n\004info\030\001 \001(\0132" +
-      "&.asgt.dataservice.v1alpha1.DatasetInfo2" +
-      "{\n\016DatasetService\022i\n\nGetDataset\022,.asgt.d" +
-      "ataservice.v1alpha1.GetDatasetRequest\032-." +
-      "asgt.dataservice.v1alpha1.GetDatasetResp" +
-      "onseB\rZ\013dataserviceb\006proto3"
+      "ice.proto\022\031asgt.dataservice.v1alpha1\032$as" +
+      "gt/dataservice/v1alpha1/data.proto\032\037goog" +
+      "le/protobuf/timestamp.proto\"Q\n\021GetDatase" +
+      "tRequest\022\020\n\010consumer\030\001 \001(\t\022\024\n\014dataset_na" +
+      "me\030\002 \001(\t\022\024\n\014dataset_type\030\003 \001(\t\"\306\001\n\013Datas" +
+      "etInfo\022\020\n\010consumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014" +
+      "\n\004type\030\003 \001(\t\022D\n\020retention_policy\030\t \001(\0132*" +
+      ".asgt.dataservice.v1alpha1.RetentionPoli" +
+      "cy\022=\n\031training_grace_period_end\030\n \001(\0132\032." +
+      "google.protobuf.TimestampJ\004\010\004\020\t\"J\n\022GetDa" +
+      "tasetResponse\0224\n\004info\030\001 \001(\0132&.asgt.datas" +
+      "ervice.v1alpha1.DatasetInfo2{\n\016DatasetSe" +
+      "rvice\022i\n\nGetDataset\022,.asgt.dataservice.v" +
+      "1alpha1.GetDatasetRequest\032-.asgt.dataser" +
+      "vice.v1alpha1.GetDatasetResponseB\rZ\013data" +
+      "serviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2513,6 +2710,7 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.dataservice.v1alpha1.Data.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_dataservice_v1alpha1_GetDatasetRequest_descriptor =
@@ -2526,13 +2724,14 @@ public final class DatasetServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_DatasetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DatasetInfo_descriptor,
-        new java.lang.String[] { "Consumer", "Name", "Type", "TrainingGracePeriodEnd", });
+        new java.lang.String[] { "Consumer", "Name", "Type", "RetentionPolicy", "TrainingGracePeriodEnd", });
     internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_descriptor,
         new java.lang.String[] { "Info", });
+    asgt.dataservice.v1alpha1.Data.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

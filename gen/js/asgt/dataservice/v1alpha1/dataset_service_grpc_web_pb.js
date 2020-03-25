@@ -12,6 +12,8 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js')
+
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
 const proto = {};
 proto.asgt = {};

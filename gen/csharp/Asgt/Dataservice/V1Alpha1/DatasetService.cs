@@ -25,23 +25,25 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9hc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2RhdGFzZXRfc2VydmljZS5w",
-            "cm90bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byJRChFHZXREYXRhc2V0UmVxdWVzdBIQCghj",
-            "b25zdW1lchgBIAEoCRIUCgxkYXRhc2V0X25hbWUYAiABKAkSFAoMZGF0YXNl",
-            "dF90eXBlGAMgASgJIoABCgtEYXRhc2V0SW5mbxIQCghjb25zdW1lchgBIAEo",
-            "CRIMCgRuYW1lGAIgASgJEgwKBHR5cGUYAyABKAkSPQoZdHJhaW5pbmdfZ3Jh",
-            "Y2VfcGVyaW9kX2VuZBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBKBAgEEAoiSgoSR2V0RGF0YXNldFJlc3BvbnNlEjQKBGluZm8YASABKAsy",
-            "Ji5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRhdGFzZXRJbmZvMnsKDkRh",
-            "dGFzZXRTZXJ2aWNlEmkKCkdldERhdGFzZXQSLC5hc2d0LmRhdGFzZXJ2aWNl",
-            "LnYxYWxwaGExLkdldERhdGFzZXRSZXF1ZXN0Gi0uYXNndC5kYXRhc2Vydmlj",
-            "ZS52MWFscGhhMS5HZXREYXRhc2V0UmVzcG9uc2VCDVoLZGF0YXNlcnZpY2Vi",
-            "BnByb3RvMw=="));
+            "cm90bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRokYXNndC9kYXRhc2Vy",
+            "dmljZS92MWFscGhhMS9kYXRhLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIlEKEUdldERhdGFzZXRSZXF1ZXN0EhAKCGNvbnN1bWVy",
+            "GAEgASgJEhQKDGRhdGFzZXRfbmFtZRgCIAEoCRIUCgxkYXRhc2V0X3R5cGUY",
+            "AyABKAkixgEKC0RhdGFzZXRJbmZvEhAKCGNvbnN1bWVyGAEgASgJEgwKBG5h",
+            "bWUYAiABKAkSDAoEdHlwZRgDIAEoCRJEChByZXRlbnRpb25fcG9saWN5GAkg",
+            "ASgLMiouYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5SZXRlbnRpb25Qb2xp",
+            "Y3kSPQoZdHJhaW5pbmdfZ3JhY2VfcGVyaW9kX2VuZBgKIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBKBAgEEAkiSgoSR2V0RGF0YXNldFJlc3Bv",
+            "bnNlEjQKBGluZm8YASABKAsyJi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGEx",
+            "LkRhdGFzZXRJbmZvMnsKDkRhdGFzZXRTZXJ2aWNlEmkKCkdldERhdGFzZXQS",
+            "LC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldERhdGFzZXRSZXF1ZXN0",
+            "Gi0uYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5HZXREYXRhc2V0UmVzcG9u",
+            "c2VCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest), global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest.Parser, new[]{ "Consumer", "DatasetName", "DatasetType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DatasetInfo), global::Asgt.Dataservice.V1Alpha1.DatasetInfo.Parser, new[]{ "Consumer", "Name", "Type", "TrainingGracePeriodEnd" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DatasetInfo), global::Asgt.Dataservice.V1Alpha1.DatasetInfo.Parser, new[]{ "Consumer", "Name", "Type", "RetentionPolicy", "TrainingGracePeriodEnd" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse), global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse.Parser, new[]{ "Info" }, null, null, null)
           }));
     }
@@ -262,6 +264,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       consumer_ = other.consumer_;
       name_ = other.name_;
       type_ = other.type_;
+      retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
       trainingGracePeriodEnd_ = other.trainingGracePeriodEnd_ != null ? other.trainingGracePeriodEnd_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -304,6 +307,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
+    /// <summary>Field number for the "retention_policy" field.</summary>
+    public const int RetentionPolicyFieldNumber = 9;
+    private global::Asgt.Dataservice.V1Alpha1.RetentionPolicy retentionPolicy_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Dataservice.V1Alpha1.RetentionPolicy RetentionPolicy {
+      get { return retentionPolicy_; }
+      set {
+        retentionPolicy_ = value;
+      }
+    }
+
     /// <summary>Field number for the "training_grace_period_end" field.</summary>
     public const int TrainingGracePeriodEndFieldNumber = 10;
     private global::Google.Protobuf.WellKnownTypes.Timestamp trainingGracePeriodEnd_;
@@ -331,6 +345,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Consumer != other.Consumer) return false;
       if (Name != other.Name) return false;
       if (Type != other.Type) return false;
+      if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
       if (!object.Equals(TrainingGracePeriodEnd, other.TrainingGracePeriodEnd)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -341,6 +356,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
+      if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
       if (trainingGracePeriodEnd_ != null) hash ^= TrainingGracePeriodEnd.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -367,6 +383,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(26);
         output.WriteString(Type);
       }
+      if (retentionPolicy_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(RetentionPolicy);
+      }
       if (trainingGracePeriodEnd_ != null) {
         output.WriteRawTag(82);
         output.WriteMessage(TrainingGracePeriodEnd);
@@ -387,6 +407,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (Type.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      if (retentionPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
       }
       if (trainingGracePeriodEnd_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainingGracePeriodEnd);
@@ -410,6 +433,12 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (other.Type.Length != 0) {
         Type = other.Type;
+      }
+      if (other.retentionPolicy_ != null) {
+        if (retentionPolicy_ == null) {
+          retentionPolicy_ = new global::Asgt.Dataservice.V1Alpha1.RetentionPolicy();
+        }
+        RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
       if (other.trainingGracePeriodEnd_ != null) {
         if (trainingGracePeriodEnd_ == null) {
@@ -438,6 +467,13 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 26: {
             Type = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (retentionPolicy_ == null) {
+              retentionPolicy_ = new global::Asgt.Dataservice.V1Alpha1.RetentionPolicy();
+            }
+            input.ReadMessage(retentionPolicy_);
             break;
           }
           case 82: {

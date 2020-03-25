@@ -5,6 +5,7 @@ package asgt.dataservice.v1alpha1;
 option go_package = "dataservice";
 
 import "google/protobuf/timestamp.proto";
+import "asgt/dataservice/v1alpha1/data.proto";
 
 service DatasetService {
     rpc GetDataset (GetDatasetRequest) returns (GetDatasetResponse);
@@ -20,7 +21,8 @@ message DatasetInfo {
     string consumer = 1;
     string name = 2;
     string type = 3;
-    reserved 4 to 9;
+    reserved 4 to 8;
+    RetentionPolicy retention_policy = 9;
     google.protobuf.Timestamp training_grace_period_end = 10;
 }
 

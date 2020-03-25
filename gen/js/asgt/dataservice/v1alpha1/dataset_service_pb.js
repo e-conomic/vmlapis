@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DatasetInfo', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.GetDatasetRequest', null, global);
@@ -261,6 +262,7 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.toObject = function(includeInstance,
     consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     type: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.toObject(includeInstance, f),
     trainingGracePeriodEnd: (f = msg.getTrainingGracePeriodEnd()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
@@ -309,6 +311,11 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.deserializeBinaryFromReader = functi
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setType(value);
+      break;
+    case 9:
+      var value = new asgt_dataservice_v1alpha1_data_pb.RetentionPolicy;
+      reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.deserializeBinaryFromReader);
+      msg.setRetentionPolicy(value);
       break;
     case 10:
       var value = new google_protobuf_timestamp_pb.Timestamp;
@@ -365,6 +372,14 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.serializeBinaryToWriter = function(m
       f
     );
   }
+  f = message.getRetentionPolicy();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.serializeBinaryToWriter
+    );
+  }
   f = message.getTrainingGracePeriodEnd();
   if (f != null) {
     writer.writeMessage(
@@ -418,6 +433,36 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getType = function() {
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional RetentionPolicy retention_policy = 9;
+ * @return {?proto.asgt.dataservice.v1alpha1.RetentionPolicy}
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getRetentionPolicy = function() {
+  return /** @type{?proto.asgt.dataservice.v1alpha1.RetentionPolicy} */ (
+    jspb.Message.getWrapperField(this, asgt_dataservice_v1alpha1_data_pb.RetentionPolicy, 9));
+};
+
+
+/** @param {?proto.asgt.dataservice.v1alpha1.RetentionPolicy|undefined} value */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setRetentionPolicy = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.clearRetentionPolicy = function() {
+  this.setRetentionPolicy(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.hasRetentionPolicy = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
