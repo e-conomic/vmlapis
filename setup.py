@@ -10,10 +10,7 @@ setuptools.setup(
     version=version,
     description="A package containing vml protobuf definitions for python",
     url="https://github.com/economic/vmlapis",
-    packages=setuptools.find_packages(where='gen/python/'),
-    package_dir={'ssn': 'gen/python/ssn',
-                 'gen_bq_schema': 'gen/python/gen_bq_schema',
-                 'asgt': 'gen/python/asgt'},
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
     ],

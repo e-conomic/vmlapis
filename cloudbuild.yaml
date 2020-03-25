@@ -6,6 +6,8 @@ steps:
   - |
     if [ "$TAG_NAME" ] ; then
       pip install twine
+      sh scripts/py_rls.sh
+      cd python_package/
       python setup.py bdist_wheel
       twine upload --repository-url https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi -u vml-rw -p $$ARTIFACTORY_PW dist/*
     fi
