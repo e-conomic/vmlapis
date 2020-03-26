@@ -17,7 +17,6 @@ all:
 		proto/asgt/dataservice/v1alpha1/electronic_invoice_line.proto \
 		proto/asgt/dataservice/v1alpha1/scanned_invoice.proto
 	./scripts/gomock.sh
-	./scripts/py_fixes.sh
 	./scripts/js_fixes.sh
 
 docker:
