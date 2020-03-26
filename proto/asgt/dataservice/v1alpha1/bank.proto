@@ -8,24 +8,24 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/type/prediction.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
 
 service BankDataservice {
-  rpc PrepareBankFeedback(PrepareBankRequest) returns (google.protobuf.Empty);
-  rpc BankFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
+  rpc CreateBankDataset(CreateBankDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/bank:feedback"
+      post: "/v1alpha1/bank:create"
       body: "*"
     };
   }
-  rpc AddBankData(AddBankDataRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
-      post: "/v1alpha1/bank:data"
+
+  rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
+       option (google.api.http) = {
+      post: "/v1alpha1/bank:append"
       body: "*"
     };
   }
+
   rpc DeleteBankData(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:delete"
@@ -52,24 +52,19 @@ message BankEntry {
   ];
 }
 
-message PrepareBankRequest {
-  message Entry {
-    string id = 1;
-    asgt.jester.v1alpha1.BankRequest.Data input = 2;
-    repeated asgt.type.Prediction predictions = 3;
-  }
-  string dataset = 1;
-  repeated string tags = 2;
-  repeated Entry entries = 3;
+message BankEntryInput {
+  asgt.jester.v1alpha1.BankRequest.Data input = 1;
+  repeated DataTuple true_values = 2;
 }
 
-message AddBankDataRequest {
-  message Entry {
-    asgt.jester.v1alpha1.BankRequest.Data input = 1;
-    repeated DataTuple true_values = 2;
-  }
-  string dataset = 1;
+message CreateBankDatasetRequest {
+  string dataset_name = 1;
   repeated string tags = 2;
-  repeated Entry entries = 3;
+  repeated BankEntryInput entries = 3;
   RetentionPolicy retention_policy = 4;
+}
+
+message AppendBankDataRequest {
+  string dataset_name = 1;
+  repeated BankEntryInput entries = 3;
 }

@@ -28,8 +28,8 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-func request_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq FeedbackRequest
+func request_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq CreateScannedInvoiceDatasetRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -40,13 +40,13 @@ func request_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0(ctx context.Cont
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.ScannedInvoiceFeedback(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.CreateScannedInvoiceDataset(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func request_ScannedInvoiceDataservice_AddScannedInvoiceData_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq AddScannedInvoiceDataRequest
+func request_ScannedInvoiceDataservice_AppendScannedInvoiceData_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AppendScannedInvoiceDataRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -57,12 +57,12 @@ func request_ScannedInvoiceDataservice_AddScannedInvoiceData_0(ctx context.Conte
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.AddScannedInvoiceData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.AppendScannedInvoiceData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func request_ScannedInvoiceDataservice_DeleteScannedInvoice_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0(ctx context.Context, marshaler runtime.Marshaler, client ScannedInvoiceDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteRequest
 	var metadata runtime.ServerMetadata
 
@@ -74,7 +74,7 @@ func request_ScannedInvoiceDataservice_DeleteScannedInvoice_0(ctx context.Contex
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.DeleteScannedInvoice(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.DeleteScannedInvoiceData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
@@ -117,7 +117,7 @@ func RegisterScannedInvoiceDataserviceHandler(ctx context.Context, mux *runtime.
 // "ScannedInvoiceDataserviceClient" to call the correct interceptors.
 func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client ScannedInvoiceDataserviceClient) error {
 
-	mux.Handle("POST", pattern_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -126,18 +126,18 @@ func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *ru
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_ScannedInvoiceDataservice_AddScannedInvoiceData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ScannedInvoiceDataservice_AppendScannedInvoiceData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -146,18 +146,18 @@ func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *ru
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ScannedInvoiceDataservice_AddScannedInvoiceData_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ScannedInvoiceDataservice_AppendScannedInvoiceData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ScannedInvoiceDataservice_AddScannedInvoiceData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ScannedInvoiceDataservice_AppendScannedInvoiceData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_ScannedInvoiceDataservice_DeleteScannedInvoice_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -166,14 +166,14 @@ func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *ru
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ScannedInvoiceDataservice_DeleteScannedInvoice_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ScannedInvoiceDataservice_DeleteScannedInvoice_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -181,17 +181,17 @@ func RegisterScannedInvoiceDataserviceHandlerClient(ctx context.Context, mux *ru
 }
 
 var (
-	pattern_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "feedback"))
+	pattern_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "create"))
 
-	pattern_ScannedInvoiceDataservice_AddScannedInvoiceData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "data"))
+	pattern_ScannedInvoiceDataservice_AppendScannedInvoiceData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "append"))
 
-	pattern_ScannedInvoiceDataservice_DeleteScannedInvoice_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "delete"))
+	pattern_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "delete"))
 )
 
 var (
-	forward_ScannedInvoiceDataservice_ScannedInvoiceFeedback_0 = runtime.ForwardResponseMessage
+	forward_ScannedInvoiceDataservice_CreateScannedInvoiceDataset_0 = runtime.ForwardResponseMessage
 
-	forward_ScannedInvoiceDataservice_AddScannedInvoiceData_0 = runtime.ForwardResponseMessage
+	forward_ScannedInvoiceDataservice_AppendScannedInvoiceData_0 = runtime.ForwardResponseMessage
 
-	forward_ScannedInvoiceDataservice_DeleteScannedInvoice_0 = runtime.ForwardResponseMessage
+	forward_ScannedInvoiceDataservice_DeleteScannedInvoiceData_0 = runtime.ForwardResponseMessage
 )

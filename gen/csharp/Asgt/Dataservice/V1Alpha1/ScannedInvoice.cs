@@ -27,53 +27,49 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Ci9hc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL3NjYW5uZWRfaW52b2ljZS5w",
             "cm90bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRokYXNndC9kYXRhc2Vy",
             "dmljZS92MWFscGhhMS9kYXRhLnByb3RvGiFhc2d0L2plc3Rlci92MWFscGhh",
-            "MS9qZXN0ZXIucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9uLnByb3RvGhxn",
-            "ZW5fYnFfc2NoZW1hL2JxX2ZpZWxkLnByb3RvGhxnZW5fYnFfc2NoZW1hL2Jx",
-            "X3RhYmxlLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhtn",
-            "b29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8i2QMKE1NjYW5uZWRJbnZvaWNl",
-            "RW50cnkSPgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kgcmVx",
-            "dWVzdCBpZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJQgXq",
-            "PwIIARIWCgdkYXRhc2V0GAMgASgJQgXqPwIIARJUCgR0YWdzGAQgAygJQkbq",
-            "P0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2Vy",
-            "dmljZSBpZiB2YWxldGtleSBpcyB1c2VkEj8KBWlucHV0GAUgASgLMjAuYXNn",
-            "dC5qZXN0ZXIudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VSZXF1ZXN0LkRhdGES",
-            "OQoLdHJ1ZV92YWx1ZXMYBiADKAsyJC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxw",
-            "aGExLkRhdGFUdXBsZRI+CgtwcmVkX3ZhbHVlcxgHIAMoCzIpLmFzZ3QuZGF0",
-            "YXNlcnZpY2UudjFhbHBoYTEuUHJlZGljdGVkVHVwbGUSJAoKdGltZV9hZGRl",
-            "ZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoZ6j8WChRzY2FubmVkX2ludm9p",
-            "Y2VfZGF0YSKQAgocUHJlcGFyZVNjYW5uZWRJbnZvaWNlUmVxdWVzdBIPCgdk",
-            "YXRhc2V0GAEgASgJEgwKBHRhZ3MYAiADKAkSTgoHZW50cmllcxgDIAMoCzI9",
-            "LmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuUHJlcGFyZVNjYW5uZWRJbnZv",
-            "aWNlUmVxdWVzdC5FbnRyeRqAAQoFRW50cnkSCgoCaWQYASABKAkSPwoFaW5w",
-            "dXQYAiABKAsyMC5hc2d0Lmplc3Rlci52MWFscGhhMS5TY2FubmVkSW52b2lj",
-            "ZVJlcXVlc3QuRGF0YRIqCgtwcmVkaWN0aW9ucxgDIAMoCzIVLmFzZ3QudHlw",
-            "ZS5QcmVkaWN0aW9uItkCChxBZGRTY2FubmVkSW52b2ljZURhdGFSZXF1ZXN0",
-            "Eg8KB2RhdGFzZXQYASABKAkSDAoEdGFncxgCIAMoCRJOCgdlbnRyaWVzGAMg",
-            "AygLMj0uYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5BZGRTY2FubmVkSW52",
-            "b2ljZURhdGFSZXF1ZXN0LkVudHJ5EkQKEHJldGVudGlvbl9wb2xpY3kYBCAB",
-            "KAsyKi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJldGVudGlvblBvbGlj",
-            "eRqDAQoFRW50cnkSPwoFaW5wdXQYASABKAsyMC5hc2d0Lmplc3Rlci52MWFs",
-            "cGhhMS5TY2FubmVkSW52b2ljZVJlcXVlc3QuRGF0YRI5Cgt0cnVlX3ZhbHVl",
-            "cxgCIAMoCzIkLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGF0YVR1cGxl",
-            "Mq4EChlTY2FubmVkSW52b2ljZURhdGFzZXJ2aWNlEmgKFVByZXBhcmVTY2Fu",
-            "bmVkSW52b2ljZRI3LmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuUHJlcGFy",
-            "ZVNjYW5uZWRJbnZvaWNlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eRKKAQoWU2Nhbm5lZEludm9pY2VGZWVkYmFjaxIqLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
-            "LkVtcHR5IiyC0+STAiYiIS92MWFscGhhMS9zY2FubmVkaW52b2ljZTpmZWVk",
-            "YmFjazoBKhKSAQoVQWRkU2Nhbm5lZEludm9pY2VEYXRhEjcuYXNndC5kYXRh",
-            "c2VydmljZS52MWFscGhhMS5BZGRTY2FubmVkSW52b2ljZURhdGFSZXF1ZXN0",
-            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiiC0+STAiIiHS92MWFscGhhMS9z",
-            "Y2FubmVkaW52b2ljZTpkYXRhOgEqEoQBChREZWxldGVTY2FubmVkSW52b2lj",
-            "ZRIoLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIqgtPkkwIkIh8vdjFhbHBoYTEvc2Nh",
-            "bm5lZGludm9pY2U6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "MS9qZXN0ZXIucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfZmllbGQucHJvdG8a",
+            "HGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
+            "b3RhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90byLZ",
+            "AwoTU2Nhbm5lZEludm9pY2VFbnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwg",
+            "bWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoI",
+            "Y29uc3VtZXIYAiABKAlCBeo/AggBEhYKB2RhdGFzZXQYAyABKAlCBeo/AggB",
+            "ElQKBHRhZ3MYBCADKAlCRuo/QyJBVGFncyBkZWZpbmVkIGJ5IGNvbnN1bWVy",
+            "LCBlbnJpY2hlZCBieSBzZXJ2aWNlIGlmIHZhbGV0a2V5IGlzIHVzZWQSPwoF",
+            "aW5wdXQYBSABKAsyMC5hc2d0Lmplc3Rlci52MWFscGhhMS5TY2FubmVkSW52",
+            "b2ljZVJlcXVlc3QuRGF0YRI5Cgt0cnVlX3ZhbHVlcxgGIAMoCzIkLmFzZ3Qu",
+            "ZGF0YXNlcnZpY2UudjFhbHBoYTEuRGF0YVR1cGxlEj4KC3ByZWRfdmFsdWVz",
+            "GAcgAygLMikuYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5QcmVkaWN0ZWRU",
+            "dXBsZRIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNUQU1QOhnq",
+            "PxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhIpYBChhTY2FubmVkSW52b2ljZUVu",
+            "dHJ5SW5wdXQSPwoFaW5wdXQYASABKAsyMC5hc2d0Lmplc3Rlci52MWFscGhh",
+            "MS5TY2FubmVkSW52b2ljZVJlcXVlc3QuRGF0YRI5Cgt0cnVlX3ZhbHVlcxgC",
+            "IAMoCzIkLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGF0YVR1cGxlItQB",
+            "CiJDcmVhdGVTY2FubmVkSW52b2ljZURhdGFzZXRSZXF1ZXN0EhQKDGRhdGFz",
+            "ZXRfbmFtZRgBIAEoCRIMCgR0YWdzGAIgAygJEkQKB2VudHJpZXMYAyADKAsy",
+            "My5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlRW50",
+            "cnlJbnB1dBJEChByZXRlbnRpb25fcG9saWN5GAQgASgLMiouYXNndC5kYXRh",
+            "c2VydmljZS52MWFscGhhMS5SZXRlbnRpb25Qb2xpY3kifQofQXBwZW5kU2Nh",
+            "bm5lZEludm9pY2VEYXRhUmVxdWVzdBIUCgxkYXRhc2V0X25hbWUYASABKAkS",
+            "RAoHZW50cmllcxgDIAMoCzIzLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEu",
+            "U2Nhbm5lZEludm9pY2VFbnRyeUlucHV0MuYDChlTY2FubmVkSW52b2ljZURh",
+            "dGFzZXJ2aWNlEqABChtDcmVhdGVTY2FubmVkSW52b2ljZURhdGFzZXQSPS5h",
+            "c2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZVNjYW5uZWRJbnZvaWNl",
+            "RGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiKoLT5JMC",
+            "JCIfL3YxYWxwaGExL3NjYW5uZWRpbnZvaWNlOmNyZWF0ZToBKhKaAQoYQXBw",
+            "ZW5kU2Nhbm5lZEludm9pY2VEYXRhEjouYXNndC5kYXRhc2VydmljZS52MWFs",
+            "cGhhMS5BcHBlbmRTY2FubmVkSW52b2ljZURhdGFSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IiqC0+STAiQiHy92MWFscGhhMS9zY2FubmVkaW52",
+            "b2ljZTphcHBlbmQ6ASoSiAEKGERlbGV0ZVNjYW5uZWRJbnZvaWNlRGF0YRIo",
+            "LmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIqgtPkkwIkIh8vdjFhbHBoYTEvc2Nhbm5l",
+            "ZGludm9pY2U6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DataReflection.Descriptor, global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DataReflection.Descriptor, global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry.Parser, new[]{ "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest), global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Parser, new[]{ "Dataset", "Tags", "Entries" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry), global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry.Parser, new[]{ "Id", "Input", "Predictions" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest), global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Parser, new[]{ "Dataset", "Tags", "Entries", "RetentionPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry), global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry.Parser, new[]{ "Input", "TrueValues" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput.Parser, new[]{ "Input", "TrueValues" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest), global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest.Parser, new[]{ "DatasetName", "Tags", "Entries", "RetentionPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendScannedInvoiceDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendScannedInvoiceDataRequest.Parser, new[]{ "DatasetName", "Entries" }, null, null, null)
           }));
     }
     #endregion
@@ -390,11 +386,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
   }
 
-  public sealed partial class PrepareScannedInvoiceRequest : pb::IMessage<PrepareScannedInvoiceRequest> {
-    private static readonly pb::MessageParser<PrepareScannedInvoiceRequest> _parser = new pb::MessageParser<PrepareScannedInvoiceRequest>(() => new PrepareScannedInvoiceRequest());
+  public sealed partial class ScannedInvoiceEntryInput : pb::IMessage<ScannedInvoiceEntryInput> {
+    private static readonly pb::MessageParser<ScannedInvoiceEntryInput> _parser = new pb::MessageParser<ScannedInvoiceEntryInput>(() => new ScannedInvoiceEntryInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<PrepareScannedInvoiceRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<ScannedInvoiceEntryInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -407,81 +403,68 @@ namespace Asgt.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareScannedInvoiceRequest() {
+    public ScannedInvoiceEntryInput() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareScannedInvoiceRequest(PrepareScannedInvoiceRequest other) : this() {
-      dataset_ = other.dataset_;
-      tags_ = other.tags_.Clone();
-      entries_ = other.entries_.Clone();
+    public ScannedInvoiceEntryInput(ScannedInvoiceEntryInput other) : this() {
+      input_ = other.input_ != null ? other.input_.Clone() : null;
+      trueValues_ = other.trueValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PrepareScannedInvoiceRequest Clone() {
-      return new PrepareScannedInvoiceRequest(this);
+    public ScannedInvoiceEntryInput Clone() {
+      return new ScannedInvoiceEntryInput(this);
     }
 
-    /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 1;
-    private string dataset_ = "";
+    /// <summary>Field number for the "input" field.</summary>
+    public const int InputFieldNumber = 1;
+    private global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data input_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Dataset {
-      get { return dataset_; }
+    public global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data Input {
+      get { return input_; }
       set {
-        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        input_ = value;
       }
     }
 
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "true_values" field.</summary>
+    public const int TrueValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.DataTuple> _repeated_trueValues_codec
+        = pb::FieldCodec.ForMessage(18, global::Asgt.Dataservice.V1Alpha1.DataTuple.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> trueValues_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
-    }
-
-    /// <summary>Field number for the "entries" field.</summary>
-    public const int EntriesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry> _repeated_entries_codec
-        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry> entries_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Types.Entry> Entries {
-      get { return entries_; }
+    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> TrueValues {
+      get { return trueValues_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as PrepareScannedInvoiceRequest);
+      return Equals(other as ScannedInvoiceEntryInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(PrepareScannedInvoiceRequest other) {
+    public bool Equals(ScannedInvoiceEntryInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Dataset != other.Dataset) return false;
-      if(!tags_.Equals(other.tags_)) return false;
-      if(!entries_.Equals(other.entries_)) return false;
+      if (!object.Equals(Input, other.Input)) return false;
+      if(!trueValues_.Equals(other.trueValues_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
-      hash ^= tags_.GetHashCode();
-      hash ^= entries_.GetHashCode();
+      if (input_ != null) hash ^= Input.GetHashCode();
+      hash ^= trueValues_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -495,12 +478,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Dataset.Length != 0) {
+      if (input_ != null) {
         output.WriteRawTag(10);
-        output.WriteString(Dataset);
+        output.WriteMessage(Input);
       }
-      tags_.WriteTo(output, _repeated_tags_codec);
-      entries_.WriteTo(output, _repeated_entries_codec);
+      trueValues_.WriteTo(output, _repeated_trueValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -509,11 +491,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Dataset.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      if (input_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
       }
-      size += tags_.CalculateSize(_repeated_tags_codec);
-      size += entries_.CalculateSize(_repeated_entries_codec);
+      size += trueValues_.CalculateSize(_repeated_trueValues_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -521,15 +502,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(PrepareScannedInvoiceRequest other) {
+    public void MergeFrom(ScannedInvoiceEntryInput other) {
       if (other == null) {
         return;
       }
-      if (other.Dataset.Length != 0) {
-        Dataset = other.Dataset;
+      if (other.input_ != null) {
+        if (input_ == null) {
+          input_ = new global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data();
+        }
+        Input.MergeFrom(other.Input);
       }
-      tags_.Add(other.tags_);
-      entries_.Add(other.entries_);
+      trueValues_.Add(other.trueValues_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -542,218 +525,27 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Dataset = input.ReadString();
-            break;
-          }
-          case 18: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
-            break;
-          }
-          case 26: {
-            entries_.AddEntriesFrom(input, _repeated_entries_codec);
-            break;
-          }
-        }
-      }
-    }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the PrepareScannedInvoiceRequest message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class Entry : pb::IMessage<Entry> {
-        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Dataservice.V1Alpha1.PrepareScannedInvoiceRequest.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry(Entry other) : this() {
-          id_ = other.id_;
-          input_ = other.input_ != null ? other.input_.Clone() : null;
-          predictions_ = other.predictions_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry Clone() {
-          return new Entry(this);
-        }
-
-        /// <summary>Field number for the "id" field.</summary>
-        public const int IdFieldNumber = 1;
-        private string id_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Id {
-          get { return id_; }
-          set {
-            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        /// <summary>Field number for the "input" field.</summary>
-        public const int InputFieldNumber = 2;
-        private global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data input_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data Input {
-          get { return input_; }
-          set {
-            input_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "predictions" field.</summary>
-        public const int PredictionsFieldNumber = 3;
-        private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
-            = pb::FieldCodec.ForMessage(26, global::Asgt.Type.Prediction.Parser);
-        private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
-          get { return predictions_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Entry);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Entry other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (Id != other.Id) return false;
-          if (!object.Equals(Input, other.Input)) return false;
-          if(!predictions_.Equals(other.predictions_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (Id.Length != 0) hash ^= Id.GetHashCode();
-          if (input_ != null) hash ^= Input.GetHashCode();
-          hash ^= predictions_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (Id.Length != 0) {
-            output.WriteRawTag(10);
-            output.WriteString(Id);
-          }
-          if (input_ != null) {
-            output.WriteRawTag(18);
-            output.WriteMessage(Input);
-          }
-          predictions_.WriteTo(output, _repeated_predictions_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (Id.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-          }
-          if (input_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
-          }
-          size += predictions_.CalculateSize(_repeated_predictions_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Entry other) {
-          if (other == null) {
-            return;
-          }
-          if (other.Id.Length != 0) {
-            Id = other.Id;
-          }
-          if (other.input_ != null) {
             if (input_ == null) {
               input_ = new global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data();
             }
-            Input.MergeFrom(other.Input);
+            input.ReadMessage(input_);
+            break;
           }
-          predictions_.Add(other.predictions_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                Id = input.ReadString();
-                break;
-              }
-              case 18: {
-                if (input_ == null) {
-                  input_ = new global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data();
-                }
-                input.ReadMessage(input_);
-                break;
-              }
-              case 26: {
-                predictions_.AddEntriesFrom(input, _repeated_predictions_codec);
-                break;
-              }
-            }
+          case 18: {
+            trueValues_.AddEntriesFrom(input, _repeated_trueValues_codec);
+            break;
           }
         }
-
       }
-
     }
-    #endregion
 
   }
 
-  public sealed partial class AddScannedInvoiceDataRequest : pb::IMessage<AddScannedInvoiceDataRequest> {
-    private static readonly pb::MessageParser<AddScannedInvoiceDataRequest> _parser = new pb::MessageParser<AddScannedInvoiceDataRequest>(() => new AddScannedInvoiceDataRequest());
+  public sealed partial class CreateScannedInvoiceDatasetRequest : pb::IMessage<CreateScannedInvoiceDatasetRequest> {
+    private static readonly pb::MessageParser<CreateScannedInvoiceDatasetRequest> _parser = new pb::MessageParser<CreateScannedInvoiceDatasetRequest>(() => new CreateScannedInvoiceDatasetRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<AddScannedInvoiceDataRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateScannedInvoiceDatasetRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -766,15 +558,15 @@ namespace Asgt.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddScannedInvoiceDataRequest() {
+    public CreateScannedInvoiceDatasetRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddScannedInvoiceDataRequest(AddScannedInvoiceDataRequest other) : this() {
-      dataset_ = other.dataset_;
+    public CreateScannedInvoiceDatasetRequest(CreateScannedInvoiceDatasetRequest other) : this() {
+      datasetName_ = other.datasetName_;
       tags_ = other.tags_.Clone();
       entries_ = other.entries_.Clone();
       retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
@@ -782,18 +574,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public AddScannedInvoiceDataRequest Clone() {
-      return new AddScannedInvoiceDataRequest(this);
+    public CreateScannedInvoiceDatasetRequest Clone() {
+      return new CreateScannedInvoiceDatasetRequest(this);
     }
 
-    /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 1;
-    private string dataset_ = "";
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 1;
+    private string datasetName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Dataset {
-      get { return dataset_; }
+    public string DatasetName {
+      get { return datasetName_; }
       set {
-        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -809,11 +601,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "entries" field.</summary>
     public const int EntriesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry> _repeated_entries_codec
-        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry> entries_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry>();
+    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> entries_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Types.Entry> Entries {
+    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> Entries {
       get { return entries_; }
     }
 
@@ -830,18 +622,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as AddScannedInvoiceDataRequest);
+      return Equals(other as CreateScannedInvoiceDatasetRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(AddScannedInvoiceDataRequest other) {
+    public bool Equals(CreateScannedInvoiceDatasetRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Dataset != other.Dataset) return false;
+      if (DatasetName != other.DatasetName) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if(!entries_.Equals(other.entries_)) return false;
       if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
@@ -851,7 +643,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= tags_.GetHashCode();
       hash ^= entries_.GetHashCode();
       if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
@@ -868,9 +660,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Dataset.Length != 0) {
+      if (DatasetName.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Dataset);
+        output.WriteString(DatasetName);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       entries_.WriteTo(output, _repeated_entries_codec);
@@ -886,8 +678,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Dataset.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       size += entries_.CalculateSize(_repeated_entries_codec);
@@ -901,12 +693,12 @@ namespace Asgt.Dataservice.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(AddScannedInvoiceDataRequest other) {
+    public void MergeFrom(CreateScannedInvoiceDatasetRequest other) {
       if (other == null) {
         return;
       }
-      if (other.Dataset.Length != 0) {
-        Dataset = other.Dataset;
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
       }
       tags_.Add(other.tags_);
       entries_.Add(other.entries_);
@@ -928,7 +720,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Dataset = input.ReadString();
+            DatasetName = input.ReadString();
             break;
           }
           case 18: {
@@ -950,167 +742,154 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    #region Nested types
-    /// <summary>Container for nested types declared in the AddScannedInvoiceDataRequest message type.</summary>
+  }
+
+  public sealed partial class AppendScannedInvoiceDataRequest : pb::IMessage<AppendScannedInvoiceDataRequest> {
+    private static readonly pb::MessageParser<AppendScannedInvoiceDataRequest> _parser = new pb::MessageParser<AppendScannedInvoiceDataRequest>(() => new AppendScannedInvoiceDataRequest());
+    private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class Entry : pb::IMessage<Entry> {
-        private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Entry> Parser { get { return _parser; } }
+    public static pb::MessageParser<AppendScannedInvoiceDataRequest> Parser { get { return _parser; } }
 
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Dataservice.V1Alpha1.AddScannedInvoiceDataRequest.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry(Entry other) : this() {
-          input_ = other.input_ != null ? other.input_.Clone() : null;
-          trueValues_ = other.trueValues_.Clone();
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Entry Clone() {
-          return new Entry(this);
-        }
-
-        /// <summary>Field number for the "input" field.</summary>
-        public const int InputFieldNumber = 1;
-        private global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data input_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data Input {
-          get { return input_; }
-          set {
-            input_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "true_values" field.</summary>
-        public const int TrueValuesFieldNumber = 2;
-        private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.DataTuple> _repeated_trueValues_codec
-            = pb::FieldCodec.ForMessage(18, global::Asgt.Dataservice.V1Alpha1.DataTuple.Parser);
-        private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> trueValues_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple>();
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.DataTuple> TrueValues {
-          get { return trueValues_; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as Entry);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Entry other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (!object.Equals(Input, other.Input)) return false;
-          if(!trueValues_.Equals(other.trueValues_)) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (input_ != null) hash ^= Input.GetHashCode();
-          hash ^= trueValues_.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (input_ != null) {
-            output.WriteRawTag(10);
-            output.WriteMessage(Input);
-          }
-          trueValues_.WriteTo(output, _repeated_trueValues_codec);
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (input_ != null) {
-            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Input);
-          }
-          size += trueValues_.CalculateSize(_repeated_trueValues_codec);
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Entry other) {
-          if (other == null) {
-            return;
-          }
-          if (other.input_ != null) {
-            if (input_ == null) {
-              input_ = new global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data();
-            }
-            Input.MergeFrom(other.Input);
-          }
-          trueValues_.Add(other.trueValues_);
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 10: {
-                if (input_ == null) {
-                  input_ = new global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Types.Data();
-                }
-                input.ReadMessage(input_);
-                break;
-              }
-              case 18: {
-                trueValues_.AddEntriesFrom(input, _repeated_trueValues_codec);
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceReflection.Descriptor.MessageTypes[3]; }
     }
-    #endregion
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppendScannedInvoiceDataRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppendScannedInvoiceDataRequest(AppendScannedInvoiceDataRequest other) : this() {
+      datasetName_ = other.datasetName_;
+      entries_ = other.entries_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AppendScannedInvoiceDataRequest Clone() {
+      return new AppendScannedInvoiceDataRequest(this);
+    }
+
+    /// <summary>Field number for the "dataset_name" field.</summary>
+    public const int DatasetNameFieldNumber = 1;
+    private string datasetName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetName {
+      get { return datasetName_; }
+      set {
+        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entries" field.</summary>
+    public const int EntriesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> _repeated_entries_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> entries_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput> Entries {
+      get { return entries_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AppendScannedInvoiceDataRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AppendScannedInvoiceDataRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DatasetName != other.DatasetName) return false;
+      if(!entries_.Equals(other.entries_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
+      hash ^= entries_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (DatasetName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DatasetName);
+      }
+      entries_.WriteTo(output, _repeated_entries_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (DatasetName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
+      size += entries_.CalculateSize(_repeated_entries_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AppendScannedInvoiceDataRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DatasetName.Length != 0) {
+        DatasetName = other.DatasetName;
+      }
+      entries_.Add(other.entries_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DatasetName = input.ReadString();
+            break;
+          }
+          case 26: {
+            entries_.AddEntriesFrom(input, _repeated_entries_codec);
+            break;
+          }
+        }
+      }
+    }
 
   }
 

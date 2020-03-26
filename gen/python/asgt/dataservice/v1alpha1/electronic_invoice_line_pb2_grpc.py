@@ -16,23 +16,18 @@ class ElectronicInvoiceLineDataserviceStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.PrepareElectronicInvoiceLine = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/PrepareElectronicInvoiceLine',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.PrepareElectronicInvoiceLineRequest.SerializeToString,
+    self.CreateElectronicInvoiceLineDataset = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/CreateElectronicInvoiceLineDataset',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.CreateElectronicInvoiceLineDatasetRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.ElectronicInvoiceLineFeedback = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/ElectronicInvoiceLineFeedback',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.SerializeToString,
+    self.AppendElectronicInvoiceLineData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AppendElectronicInvoiceLineData',
+        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.AppendElectronicInvoiceLineDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.AddElectronicInvoiceLineData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/AddElectronicInvoiceLineData',
-        request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.AddElectronicInvoiceLineDataRequest.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
-    self.DeleteElectronicInvoiceLine = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLine',
+    self.DeleteElectronicInvoiceLineData = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataservice/DeleteElectronicInvoiceLineData',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
@@ -42,28 +37,21 @@ class ElectronicInvoiceLineDataserviceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def PrepareElectronicInvoiceLine(self, request, context):
+  def CreateElectronicInvoiceLineDataset(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ElectronicInvoiceLineFeedback(self, request, context):
+  def AppendElectronicInvoiceLineData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def AddElectronicInvoiceLineData(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def DeleteElectronicInvoiceLine(self, request, context):
+  def DeleteElectronicInvoiceLineData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -73,23 +61,18 @@ class ElectronicInvoiceLineDataserviceServicer(object):
 
 def add_ElectronicInvoiceLineDataserviceServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'PrepareElectronicInvoiceLine': grpc.unary_unary_rpc_method_handler(
-          servicer.PrepareElectronicInvoiceLine,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.PrepareElectronicInvoiceLineRequest.FromString,
+      'CreateElectronicInvoiceLineDataset': grpc.unary_unary_rpc_method_handler(
+          servicer.CreateElectronicInvoiceLineDataset,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.CreateElectronicInvoiceLineDatasetRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'ElectronicInvoiceLineFeedback': grpc.unary_unary_rpc_method_handler(
-          servicer.ElectronicInvoiceLineFeedback,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.FeedbackRequest.FromString,
+      'AppendElectronicInvoiceLineData': grpc.unary_unary_rpc_method_handler(
+          servicer.AppendElectronicInvoiceLineData,
+          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.AppendElectronicInvoiceLineDataRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'AddElectronicInvoiceLineData': grpc.unary_unary_rpc_method_handler(
-          servicer.AddElectronicInvoiceLineData,
-          request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_electronic__invoice__line__pb2.AddElectronicInvoiceLineDataRequest.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-      'DeleteElectronicInvoiceLine': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteElectronicInvoiceLine,
+      'DeleteElectronicInvoiceLineData': grpc.unary_unary_rpc_method_handler(
+          servicer.DeleteElectronicInvoiceLineData,
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DeleteRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),

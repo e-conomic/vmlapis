@@ -14,7 +14,6 @@ _sym_db = _symbol_database.Default()
 
 from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
 from asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
-from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -26,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/scanned_invoice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xd9\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\x90\x02\n\x1cPrepareScannedInvoiceRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12N\n\x07\x65ntries\x18\x03 \x03(\x0b\x32=.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry\x1a\x80\x01\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12?\n\x05input\x18\x02 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12*\n\x0bpredictions\x18\x03 \x03(\x0b\x32\x15.asgt.type.Prediction\"\xd9\x02\n\x1c\x41\x64\x64ScannedInvoiceDataRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12N\n\x07\x65ntries\x18\x03 \x03(\x0b\x32=.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x1a\x83\x01\n\x05\x45ntry\x12?\n\x05input\x18\x01 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple2\xae\x04\n\x19ScannedInvoiceDataservice\x12h\n\x15PrepareScannedInvoice\x12\x37.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest\x1a\x16.google.protobuf.Empty\x12\x8a\x01\n\x16ScannedInvoiceFeedback\x12*.asgt.dataservice.v1alpha1.FeedbackRequest\x1a\x16.google.protobuf.Empty\",\x82\xd3\xe4\x93\x02&\"!/v1alpha1/scannedinvoice:feedback:\x01*\x12\x92\x01\n\x15\x41\x64\x64ScannedInvoiceData\x12\x37.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"(\x82\xd3\xe4\x93\x02\"\"\x1d/v1alpha1/scannedinvoice:data:\x01*\x12\x84\x01\n\x14\x44\x65leteScannedInvoice\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/scanned_invoice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xd9\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\x96\x01\n\x18ScannedInvoiceEntryInput\x12?\n\x05input\x18\x01 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xd4\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe6\x03\n\x19ScannedInvoiceDataservice\x12\xa0\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:create:\x01*\x12\x9a\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:append:\x01*\x12\x88\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -108,116 +107,27 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=299,
-  serialized_end=772,
+  serialized_start=271,
+  serialized_end=744,
 )
 
 
-_PREPARESCANNEDINVOICEREQUEST_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry',
+_SCANNEDINVOICEENTRYINPUT = _descriptor.Descriptor(
+  name='ScannedInvoiceEntryInput',
+  full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='input', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry.input', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='predictions', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry.predictions', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=919,
-  serialized_end=1047,
-)
-
-_PREPARESCANNEDINVOICEREQUEST = _descriptor.Descriptor(
-  name='PrepareScannedInvoiceRequest',
-  full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.dataset', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.tags', index=1,
-      number=2, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='entries', full_name='asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.entries', index=2,
-      number=3, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[_PREPARESCANNEDINVOICEREQUEST_ENTRY, ],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=775,
-  serialized_end=1047,
-)
-
-
-_ADDSCANNEDINVOICEDATAREQUEST_ENTRY = _descriptor.Descriptor(
-  name='Entry',
-  full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='input', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry.input', index=0,
+      name='input', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput.input', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='true_values', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry.true_values', index=1,
+      name='true_values', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput.true_values', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -235,40 +145,41 @@ _ADDSCANNEDINVOICEDATAREQUEST_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1264,
-  serialized_end=1395,
+  serialized_start=747,
+  serialized_end=897,
 )
 
-_ADDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
-  name='AddScannedInvoiceDataRequest',
-  full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest',
+
+_CREATESCANNEDINVOICEDATASETREQUEST = _descriptor.Descriptor(
+  name='CreateScannedInvoiceDatasetRequest',
+  full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.dataset', index=0,
+      name='dataset_name', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.dataset_name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.tags', index=1,
+      name='tags', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.tags', index=1,
       number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='entries', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.entries', index=2,
+      name='entries', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.entries', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='retention_policy', full_name='asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.retention_policy', index=3,
+      name='retention_policy', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.retention_policy', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -277,7 +188,7 @@ _ADDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_ADDSCANNEDINVOICEDATAREQUEST_ENTRY, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -286,25 +197,60 @@ _ADDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1050,
-  serialized_end=1395,
+  serialized_start=900,
+  serialized_end=1112,
+)
+
+
+_APPENDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
+  name='AppendScannedInvoiceDataRequest',
+  full_name='asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='dataset_name', full_name='asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest.dataset_name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='entries', full_name='asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest.entries', index=1,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1114,
+  serialized_end=1239,
 )
 
 _SCANNEDINVOICEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
 _SCANNEDINVOICEENTRY.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
 _SCANNEDINVOICEENTRY.fields_by_name['pred_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._PREDICTEDTUPLE
-_PREPARESCANNEDINVOICEREQUEST_ENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
-_PREPARESCANNEDINVOICEREQUEST_ENTRY.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
-_PREPARESCANNEDINVOICEREQUEST_ENTRY.containing_type = _PREPARESCANNEDINVOICEREQUEST
-_PREPARESCANNEDINVOICEREQUEST.fields_by_name['entries'].message_type = _PREPARESCANNEDINVOICEREQUEST_ENTRY
-_ADDSCANNEDINVOICEDATAREQUEST_ENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
-_ADDSCANNEDINVOICEDATAREQUEST_ENTRY.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
-_ADDSCANNEDINVOICEDATAREQUEST_ENTRY.containing_type = _ADDSCANNEDINVOICEDATAREQUEST
-_ADDSCANNEDINVOICEDATAREQUEST.fields_by_name['entries'].message_type = _ADDSCANNEDINVOICEDATAREQUEST_ENTRY
-_ADDSCANNEDINVOICEDATAREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_SCANNEDINVOICEENTRYINPUT.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
+_SCANNEDINVOICEENTRYINPUT.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
+_CREATESCANNEDINVOICEDATASETREQUEST.fields_by_name['entries'].message_type = _SCANNEDINVOICEENTRYINPUT
+_CREATESCANNEDINVOICEDATASETREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_APPENDSCANNEDINVOICEDATAREQUEST.fields_by_name['entries'].message_type = _SCANNEDINVOICEENTRYINPUT
 DESCRIPTOR.message_types_by_name['ScannedInvoiceEntry'] = _SCANNEDINVOICEENTRY
-DESCRIPTOR.message_types_by_name['PrepareScannedInvoiceRequest'] = _PREPARESCANNEDINVOICEREQUEST
-DESCRIPTOR.message_types_by_name['AddScannedInvoiceDataRequest'] = _ADDSCANNEDINVOICEDATAREQUEST
+DESCRIPTOR.message_types_by_name['ScannedInvoiceEntryInput'] = _SCANNEDINVOICEENTRYINPUT
+DESCRIPTOR.message_types_by_name['CreateScannedInvoiceDatasetRequest'] = _CREATESCANNEDINVOICEDATASETREQUEST
+DESCRIPTOR.message_types_by_name['AppendScannedInvoiceDataRequest'] = _APPENDSCANNEDINVOICEDATAREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 ScannedInvoiceEntry = _reflection.GeneratedProtocolMessageType('ScannedInvoiceEntry', (_message.Message,), dict(
@@ -314,35 +260,26 @@ ScannedInvoiceEntry = _reflection.GeneratedProtocolMessageType('ScannedInvoiceEn
   ))
 _sym_db.RegisterMessage(ScannedInvoiceEntry)
 
-PrepareScannedInvoiceRequest = _reflection.GeneratedProtocolMessageType('PrepareScannedInvoiceRequest', (_message.Message,), dict(
-
-  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
-    DESCRIPTOR = _PREPARESCANNEDINVOICEREQUEST_ENTRY,
-    __module__ = 'asgt.dataservice.v1alpha1.scanned_invoice_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest.Entry)
-    ))
-  ,
-  DESCRIPTOR = _PREPARESCANNEDINVOICEREQUEST,
+ScannedInvoiceEntryInput = _reflection.GeneratedProtocolMessageType('ScannedInvoiceEntryInput', (_message.Message,), dict(
+  DESCRIPTOR = _SCANNEDINVOICEENTRYINPUT,
   __module__ = 'asgt.dataservice.v1alpha1.scanned_invoice_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest)
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput)
   ))
-_sym_db.RegisterMessage(PrepareScannedInvoiceRequest)
-_sym_db.RegisterMessage(PrepareScannedInvoiceRequest.Entry)
+_sym_db.RegisterMessage(ScannedInvoiceEntryInput)
 
-AddScannedInvoiceDataRequest = _reflection.GeneratedProtocolMessageType('AddScannedInvoiceDataRequest', (_message.Message,), dict(
-
-  Entry = _reflection.GeneratedProtocolMessageType('Entry', (_message.Message,), dict(
-    DESCRIPTOR = _ADDSCANNEDINVOICEDATAREQUEST_ENTRY,
-    __module__ = 'asgt.dataservice.v1alpha1.scanned_invoice_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest.Entry)
-    ))
-  ,
-  DESCRIPTOR = _ADDSCANNEDINVOICEDATAREQUEST,
+CreateScannedInvoiceDatasetRequest = _reflection.GeneratedProtocolMessageType('CreateScannedInvoiceDatasetRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CREATESCANNEDINVOICEDATASETREQUEST,
   __module__ = 'asgt.dataservice.v1alpha1.scanned_invoice_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest)
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest)
   ))
-_sym_db.RegisterMessage(AddScannedInvoiceDataRequest)
-_sym_db.RegisterMessage(AddScannedInvoiceDataRequest.Entry)
+_sym_db.RegisterMessage(CreateScannedInvoiceDatasetRequest)
+
+AppendScannedInvoiceDataRequest = _reflection.GeneratedProtocolMessageType('AppendScannedInvoiceDataRequest', (_message.Message,), dict(
+  DESCRIPTOR = _APPENDSCANNEDINVOICEDATAREQUEST,
+  __module__ = 'asgt.dataservice.v1alpha1.scanned_invoice_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest)
+  ))
+_sym_db.RegisterMessage(AppendScannedInvoiceDataRequest)
 
 
 DESCRIPTOR._options = None
@@ -359,40 +296,31 @@ _SCANNEDINVOICEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1398,
-  serialized_end=1956,
+  serialized_start=1242,
+  serialized_end=1728,
   methods=[
   _descriptor.MethodDescriptor(
-    name='PrepareScannedInvoice',
-    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.PrepareScannedInvoice',
+    name='CreateScannedInvoiceDataset',
+    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.CreateScannedInvoiceDataset',
     index=0,
     containing_service=None,
-    input_type=_PREPARESCANNEDINVOICEREQUEST,
+    input_type=_CREATESCANNEDINVOICEDATASETREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=None,
+    serialized_options=_b('\202\323\344\223\002$\"\037/v1alpha1/scannedinvoice:create:\001*'),
   ),
   _descriptor.MethodDescriptor(
-    name='ScannedInvoiceFeedback',
-    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.ScannedInvoiceFeedback',
+    name='AppendScannedInvoiceData',
+    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.AppendScannedInvoiceData',
     index=1,
     containing_service=None,
-    input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._FEEDBACKREQUEST,
+    input_type=_APPENDSCANNEDINVOICEDATAREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=_b('\202\323\344\223\002&\"!/v1alpha1/scannedinvoice:feedback:\001*'),
+    serialized_options=_b('\202\323\344\223\002$\"\037/v1alpha1/scannedinvoice:append:\001*'),
   ),
   _descriptor.MethodDescriptor(
-    name='AddScannedInvoiceData',
-    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.AddScannedInvoiceData',
+    name='DeleteScannedInvoiceData',
+    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.DeleteScannedInvoiceData',
     index=2,
-    containing_service=None,
-    input_type=_ADDSCANNEDINVOICEDATAREQUEST,
-    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
-    serialized_options=_b('\202\323\344\223\002\"\"\035/v1alpha1/scannedinvoice:data:\001*'),
-  ),
-  _descriptor.MethodDescriptor(
-    name='DeleteScannedInvoice',
-    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataservice.DeleteScannedInvoice',
-    index=3,
     containing_service=None,
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DELETEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
