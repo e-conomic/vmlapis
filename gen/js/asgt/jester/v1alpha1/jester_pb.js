@@ -1684,9 +1684,7 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.toObject = function(opt_in
  */
 proto.asgt.jester.v1alpha1.BankRequest.Data.toObject = function(includeInstance, msg) {
   var f, obj = {
-    accountNumber: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.DoubleValue.toObject(includeInstance, f),
-    entryType: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    amount: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
     text: jspb.Message.getFieldWithDefault(msg, 4, ""),
     timeStamp: (f = msg.getTimeStamp()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
@@ -1725,18 +1723,9 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.deserializeBinaryFromReader = functi
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setAccountNumber(value);
-      break;
     case 2:
-      var value = new google_protobuf_wrappers_pb.DoubleValue;
-      reader.readMessage(value,google_protobuf_wrappers_pb.DoubleValue.deserializeBinaryFromReader);
+      var value = /** @type {number} */ (reader.readFloat());
       msg.setAmount(value);
-      break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setEntryType(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -1776,25 +1765,10 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.serializeBinary = function
  */
 proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAccountNumber();
-  if (f !== 0) {
-    writer.writeInt32(
-      1,
-      f
-    );
-  }
   f = message.getAmount();
-  if (f != null) {
-    writer.writeMessage(
+  if (f !== 0.0) {
+    writer.writeFloat(
       2,
-      f,
-      google_protobuf_wrappers_pb.DoubleValue.serializeBinaryToWriter
-    );
-  }
-  f = message.getEntryType();
-  if (f !== 0) {
-    writer.writeInt32(
-      3,
       f
     );
   }
@@ -1817,62 +1791,17 @@ proto.asgt.jester.v1alpha1.BankRequest.Data.serializeBinaryToWriter = function(m
 
 
 /**
- * optional int32 account_number = 1;
+ * optional float amount = 2;
  * @return {number}
- */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getAccountNumber = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAccountNumber = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
-};
-
-
-/**
- * optional google.protobuf.DoubleValue amount = 2;
- * @return {?proto.google.protobuf.DoubleValue}
  */
 proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getAmount = function() {
-  return /** @type{?proto.google.protobuf.DoubleValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.DoubleValue, 2));
-};
-
-
-/** @param {?proto.google.protobuf.DoubleValue|undefined} value */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAmount = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
-};
-
-
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.clearAmount = function() {
-  this.setAmount(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.hasAmount = function() {
-  return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional int32 entry_type = 3;
- * @return {number}
- */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.getEntryType = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
 };
 
 
 /** @param {number} value */
-proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setEntryType = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
+proto.asgt.jester.v1alpha1.BankRequest.Data.prototype.setAmount = function(value) {
+  jspb.Message.setProto3FloatField(this, 2, value);
 };
 
 

@@ -16,8 +16,6 @@ var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alp
 
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js')
 
-var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
-
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')
 
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js')
@@ -85,16 +83,16 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ScannedInvoiceDataservice_PrepareScannedInvoice = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/PrepareScannedInvoice',
+const methodDescriptor_ScannedInvoiceDataservice_CreateScannedInvoiceDataset = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/CreateScannedInvoiceDataset',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest,
+  proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -107,13 +105,13 @@ const methodDescriptor_ScannedInvoiceDataservice_PrepareScannedInvoice = new grp
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ScannedInvoiceDataservice_PrepareScannedInvoice = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ScannedInvoiceDataservice_CreateScannedInvoiceDataset = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -124,7 +122,7 @@ const methodInfo_ScannedInvoiceDataservice_PrepareScannedInvoice = new grpc.web.
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -133,48 +131,48 @@ const methodInfo_ScannedInvoiceDataservice_PrepareScannedInvoice = new grpc.web.
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.prepareScannedInvoice =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.createScannedInvoiceDataset =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/PrepareScannedInvoice',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/CreateScannedInvoiceDataset',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_PrepareScannedInvoice,
+      methodDescriptor_ScannedInvoiceDataservice_CreateScannedInvoiceDataset,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareScannedInvoiceRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.prepareScannedInvoice =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.createScannedInvoiceDataset =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/PrepareScannedInvoice',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/CreateScannedInvoiceDataset',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_PrepareScannedInvoice);
+      methodDescriptor_ScannedInvoiceDataservice_CreateScannedInvoiceDataset);
 };
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
+const methodDescriptor_ScannedInvoiceDataservice_AppendScannedInvoiceData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AppendScannedInvoiceData',
   grpc.web.MethodType.UNARY,
-  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
+  proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +185,13 @@ const methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new gr
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ScannedInvoiceDataservice_AppendScannedInvoiceData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +202,7 @@ const methodInfo_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -213,112 +211,32 @@ const methodInfo_ScannedInvoiceDataservice_ScannedInvoiceFeedback = new grpc.web
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.scannedInvoiceFeedback =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.appendScannedInvoiceData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AppendScannedInvoiceData',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback,
+      methodDescriptor_ScannedInvoiceDataservice_AppendScannedInvoiceData,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.scannedInvoiceFeedback =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.appendScannedInvoiceData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/ScannedInvoiceFeedback',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AppendScannedInvoiceData',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_ScannedInvoiceFeedback);
-};
-
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodDescriptor_ScannedInvoiceDataservice_AddScannedInvoiceData = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AddScannedInvoiceData',
-  grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest,
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodInfo_ScannedInvoiceDataservice_AddScannedInvoiceData = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.addScannedInvoiceData =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AddScannedInvoiceData',
-      request,
-      metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_AddScannedInvoiceData,
-      callback);
-};
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddScannedInvoiceDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.google.protobuf.Empty>}
- *     A native promise that resolves to the response
- */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.addScannedInvoiceData =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/AddScannedInvoiceData',
-      request,
-      metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_AddScannedInvoiceData);
+      methodDescriptor_ScannedInvoiceDataservice_AppendScannedInvoiceData);
 };
 
 
@@ -328,8 +246,8 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoice = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoice',
+const methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoiceData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoiceData',
   grpc.web.MethodType.UNARY,
   asgt_dataservice_v1alpha1_data_pb.DeleteRequest,
   google_protobuf_empty_pb.Empty,
@@ -350,7 +268,7 @@ const methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoice = new grpc
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_ScannedInvoiceDataservice_DeleteScannedInvoice = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ScannedInvoiceDataservice_DeleteScannedInvoiceData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.DeleteRequest} request
@@ -373,13 +291,13 @@ const methodInfo_ScannedInvoiceDataservice_DeleteScannedInvoice = new grpc.web.A
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.deleteScannedInvoice =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.deleteScannedInvoiceData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoice',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoiceData',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoice,
+      methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoiceData,
       callback);
 };
 
@@ -392,13 +310,13 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataserviceClient.prototype.delete
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.deleteScannedInvoice =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataservicePromiseClient.prototype.deleteScannedInvoiceData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoice',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataservice/DeleteScannedInvoiceData',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoice);
+      methodDescriptor_ScannedInvoiceDataservice_DeleteScannedInvoiceData);
 };
 
 

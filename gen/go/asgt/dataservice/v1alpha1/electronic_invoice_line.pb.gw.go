@@ -28,8 +28,8 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-func request_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq FeedbackRequest
+func request_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq CreateElectronicInvoiceLineDatasetRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -40,13 +40,13 @@ func request_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0(ct
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.ElectronicInvoiceLineFeedback(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.CreateElectronicInvoiceLineDataset(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func request_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
-	var protoReq AddElectronicInvoiceLineDataRequest
+func request_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+	var protoReq AppendElectronicInvoiceLineDataRequest
 	var metadata runtime.ServerMetadata
 
 	newReader, berr := utilities.IOReaderFactory(req.Body)
@@ -57,12 +57,12 @@ func request_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0(ctx
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.AddElectronicInvoiceLineData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.AppendElectronicInvoiceLineData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
 
-func request_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0(ctx context.Context, marshaler runtime.Marshaler, client ElectronicInvoiceLineDataserviceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteRequest
 	var metadata runtime.ServerMetadata
 
@@ -74,7 +74,7 @@ func request_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0(ctx 
 		return nil, metadata, status.Errorf(codes.InvalidArgument, "%v", err)
 	}
 
-	msg, err := client.DeleteElectronicInvoiceLine(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
+	msg, err := client.DeleteElectronicInvoiceLineData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
 	return msg, metadata, err
 
 }
@@ -117,7 +117,7 @@ func RegisterElectronicInvoiceLineDataserviceHandler(ctx context.Context, mux *r
 // "ElectronicInvoiceLineDataserviceClient" to call the correct interceptors.
 func RegisterElectronicInvoiceLineDataserviceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client ElectronicInvoiceLineDataserviceClient) error {
 
-	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -126,18 +126,18 @@ func RegisterElectronicInvoiceLineDataserviceHandlerClient(ctx context.Context, 
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -146,18 +146,18 @@ func RegisterElectronicInvoiceLineDataserviceHandlerClient(ctx context.Context, 
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -166,14 +166,14 @@ func RegisterElectronicInvoiceLineDataserviceHandlerClient(ctx context.Context, 
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -181,17 +181,17 @@ func RegisterElectronicInvoiceLineDataserviceHandlerClient(ctx context.Context, 
 }
 
 var (
-	pattern_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "feedback"))
+	pattern_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "create"))
 
-	pattern_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "data"))
+	pattern_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "append"))
 
-	pattern_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "delete"))
+	pattern_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "delete"))
 )
 
 var (
-	forward_ElectronicInvoiceLineDataservice_ElectronicInvoiceLineFeedback_0 = runtime.ForwardResponseMessage
+	forward_ElectronicInvoiceLineDataservice_CreateElectronicInvoiceLineDataset_0 = runtime.ForwardResponseMessage
 
-	forward_ElectronicInvoiceLineDataservice_AddElectronicInvoiceLineData_0 = runtime.ForwardResponseMessage
+	forward_ElectronicInvoiceLineDataservice_AppendElectronicInvoiceLineData_0 = runtime.ForwardResponseMessage
 
-	forward_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLine_0 = runtime.ForwardResponseMessage
+	forward_ElectronicInvoiceLineDataservice_DeleteElectronicInvoiceLineData_0 = runtime.ForwardResponseMessage
 )

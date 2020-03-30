@@ -16,8 +16,6 @@ var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alp
 
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js')
 
-var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
-
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')
 
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js')
@@ -85,16 +83,16 @@ proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.PrepareBankRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_BankDataservice_PrepareBankFeedback = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback',
+const methodDescriptor_BankDataservice_CreateBankDataset = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset',
   grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.PrepareBankRequest,
+  proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareBankRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -107,13 +105,13 @@ const methodDescriptor_BankDataservice_PrepareBankFeedback = new grpc.web.Method
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.PrepareBankRequest,
+ *   !proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_BankDataservice_PrepareBankFeedback = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_BankDataservice_CreateBankDataset = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.PrepareBankRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -124,7 +122,7 @@ const methodInfo_BankDataservice_PrepareBankFeedback = new grpc.web.AbstractClie
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareBankRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -133,48 +131,48 @@ const methodInfo_BankDataservice_PrepareBankFeedback = new grpc.web.AbstractClie
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.prepareBankFeedback =
+proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.createBankDataset =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback',
+      '/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset',
       request,
       metadata || {},
-      methodDescriptor_BankDataservice_PrepareBankFeedback,
+      methodDescriptor_BankDataservice_CreateBankDataset,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PrepareBankRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.CreateBankDatasetRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.prepareBankFeedback =
+proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.createBankDataset =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/PrepareBankFeedback',
+      '/asgt.dataservice.v1alpha1.BankDataservice/CreateBankDataset',
       request,
       metadata || {},
-      methodDescriptor_BankDataservice_PrepareBankFeedback);
+      methodDescriptor_BankDataservice_CreateBankDataset);
 };
 
 
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendBankDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_BankDataservice_BankFeedback = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
+const methodDescriptor_BankDataservice_AppendBankData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData',
   grpc.web.MethodType.UNARY,
-  asgt_dataservice_v1alpha1_data_pb.FeedbackRequest,
+  proto.asgt.dataservice.v1alpha1.AppendBankDataRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendBankDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -187,13 +185,13 @@ const methodDescriptor_BankDataservice_BankFeedback = new grpc.web.MethodDescrip
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.FeedbackRequest,
+ *   !proto.asgt.dataservice.v1alpha1.AppendBankDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_BankDataservice_BankFeedback = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_BankDataservice_AppendBankData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request
+   * @param {!proto.asgt.dataservice.v1alpha1.AppendBankDataRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -204,7 +202,7 @@ const methodInfo_BankDataservice_BankFeedback = new grpc.web.AbstractClientBase.
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendBankDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -213,112 +211,32 @@ const methodInfo_BankDataservice_BankFeedback = new grpc.web.AbstractClientBase.
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.bankFeedback =
+proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.appendBankData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
+      '/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData',
       request,
       metadata || {},
-      methodDescriptor_BankDataservice_BankFeedback,
+      methodDescriptor_BankDataservice_AppendBankData,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.FeedbackRequest} request The
+ * @param {!proto.asgt.dataservice.v1alpha1.AppendBankDataRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.bankFeedback =
+proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.appendBankData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/BankFeedback',
+      '/asgt.dataservice.v1alpha1.BankDataservice/AppendBankData',
       request,
       metadata || {},
-      methodDescriptor_BankDataservice_BankFeedback);
-};
-
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.dataservice.v1alpha1.AddBankDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodDescriptor_BankDataservice_AddBankData = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.BankDataservice/AddBankData',
-  grpc.web.MethodType.UNARY,
-  proto.asgt.dataservice.v1alpha1.AddBankDataRequest,
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddBankDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.dataservice.v1alpha1.AddBankDataRequest,
- *   !proto.google.protobuf.Empty>}
- */
-const methodInfo_BankDataservice_AddBankData = new grpc.web.AbstractClientBase.MethodInfo(
-  google_protobuf_empty_pb.Empty,
-  /**
-   * @param {!proto.asgt.dataservice.v1alpha1.AddBankDataRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  google_protobuf_empty_pb.Empty.deserializeBinary
-);
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddBankDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.asgt.dataservice.v1alpha1.BankDataserviceClient.prototype.addBankData =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/AddBankData',
-      request,
-      metadata || {},
-      methodDescriptor_BankDataservice_AddBankData,
-      callback);
-};
-
-
-/**
- * @param {!proto.asgt.dataservice.v1alpha1.AddBankDataRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.google.protobuf.Empty>}
- *     A native promise that resolves to the response
- */
-proto.asgt.dataservice.v1alpha1.BankDataservicePromiseClient.prototype.addBankData =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.BankDataservice/AddBankData',
-      request,
-      metadata || {},
-      methodDescriptor_BankDataservice_AddBankData);
+      methodDescriptor_BankDataservice_AppendBankData);
 };
 
 

@@ -8,7 +8,6 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/type/prediction.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
 
@@ -20,7 +19,7 @@ service BankDataservice {
     };
   }
 
-  rpc CreateBankDataset(AppendDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
        option (google.api.http) = {
       post: "/v1alpha1/bank:append"
       body: "*"

@@ -8,25 +8,25 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/type/prediction.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
 
 service ElectronicInvoiceLineDataservice {
-  rpc PrepareElectronicInvoiceLine(PrepareElectronicInvoiceLineRequest) returns (google.protobuf.Empty);
-  rpc ElectronicInvoiceLineFeedback(FeedbackRequest) returns (google.protobuf.Empty) {
+  rpc CreateElectronicInvoiceLineDataset(CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:feedback"
+      post: "/v1alpha1/electronicinvoiceline:create"
       body: "*"
     };
   }
-  rpc AddElectronicInvoiceLineData(AddElectronicInvoiceLineDataRequest) returns (google.protobuf.Empty) {
+
+  rpc AppendElectronicInvoiceLineData(AppendElectronicInvoiceLineDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:data"
+      post: "/v1alpha1/electronicinvoiceline:append"
       body: "*"
     };
   }
-  rpc DeleteElectronicInvoiceLine(DeleteRequest) returns (google.protobuf.Empty) {
+
+  rpc DeleteElectronicInvoiceLineData(DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/electronicinvoiceline:delete"
       body: "*"
@@ -52,24 +52,19 @@ message ElectronicInvoiceLineEntry {
   ];
 }
 
-message PrepareElectronicInvoiceLineRequest {
-  message Entry {
-    string id = 1;
-    asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 2;
-    repeated asgt.type.Prediction predictions = 3;
-  }
-  string dataset = 1;
-  repeated string tags = 2;
-  repeated Entry entries = 3;
+message ElectronicInvoiceLineEntryInput {
+  asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 1;
+  repeated DataTuple true_values = 2;
 }
 
-message AddElectronicInvoiceLineDataRequest {
-  message Entry {
-    asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 1;
-    repeated DataTuple true_values = 2;
-  }
-  string dataset = 1;
+message CreateElectronicInvoiceLineDatasetRequest {
+  string dataset_name = 1;
   repeated string tags = 2;
-  repeated Entry entries = 3;
+  repeated ElectronicInvoiceLineEntryInput entries = 3;
   RetentionPolicy retention_policy = 4;
+}
+
+message AppendElectronicInvoiceLineDataRequest {
+  string dataset_name = 1;
+  repeated ElectronicInvoiceLineEntryInput entries = 3;
 }
