@@ -23,15 +23,15 @@ option java_package = "com.google.rpc";
 option objc_class_prefix = "RPC";
 
 
-// The canonical core codes for Google APIs.
+// The canonical error codes for Google APIs.
 //
 //
-// Sometimes multiple core codes may apply.  Services should return
-// the most specific core code that applies.  For example, prefer
+// Sometimes multiple error codes may apply.  Services should return
+// the most specific error code that applies.  For example, prefer
 // `OUT_OF_RANGE` over `FAILED_PRECONDITION` if both codes apply.
 // Similarly prefer `NOT_FOUND` or `ALREADY_EXISTS` over `FAILED_PRECONDITION`.
 enum Code {
-  // Not an core; returned on success
+  // Not an error; returned on success
   //
   // HTTP Mapping: 200 OK
   OK = 0;
@@ -41,11 +41,11 @@ enum Code {
   // HTTP Mapping: 499 Client Closed Request
   CANCELLED = 1;
 
-  // Unknown core.  For example, this core may be returned when
+  // Unknown error.  For example, this error may be returned when
   // a `Status` value received from another address space belongs to
-  // an core space that is not known in this address space.  Also
-  // errors raised by APIs that do not return enough core information
-  // may be converted to this core.
+  // an error space that is not known in this address space.  Also
+  // errors raised by APIs that do not return enough error information
+  // may be converted to this error.
   //
   // HTTP Mapping: 500 Internal Server Error
   UNKNOWN = 2;
@@ -59,7 +59,7 @@ enum Code {
   INVALID_ARGUMENT = 3;
 
   // The deadline expired before the operation could complete. For operations
-  // that change the state of the system, this core may be returned
+  // that change the state of the system, this error may be returned
   // even if the operation has completed successfully.  For example, a
   // successful response from a server could have been delayed long
   // enough for the deadline to expire.
@@ -89,7 +89,7 @@ enum Code {
   // caused by exhausting some resource (use `RESOURCE_EXHAUSTED`
   // instead for those errors). `PERMISSION_DENIED` must not be
   // used if the caller can not be identified (use `UNAUTHENTICATED`
-  // instead for those errors). This core code does not imply the
+  // instead for those errors). This error code does not imply the
   // request is valid or the requested entity exists or satisfies
   // other pre-conditions.
   //
@@ -140,7 +140,7 @@ enum Code {
   // The operation was attempted past the valid range.  E.g., seeking or
   // reading past end-of-file.
   //
-  // Unlike `INVALID_ARGUMENT`, this core indicates a problem that may
+  // Unlike `INVALID_ARGUMENT`, this error indicates a problem that may
   // be fixed if the system state changes. For example, a 32-bit file
   // system will generate `INVALID_ARGUMENT` if asked to read at an
   // offset that is not in the range [0,2^32-1], but it will generate
@@ -149,8 +149,8 @@ enum Code {
   //
   // There is a fair bit of overlap between `FAILED_PRECONDITION` and
   // `OUT_OF_RANGE`.  We recommend using `OUT_OF_RANGE` (the more specific
-  // core) when it applies so that callers who are iterating through
-  // a space can easily look for an `OUT_OF_RANGE` core to detect when
+  // error) when it applies so that callers who are iterating through
+  // a space can easily look for an `OUT_OF_RANGE` error to detect when
   // they are done.
   //
   // HTTP Mapping: 400 Bad Request
@@ -163,7 +163,7 @@ enum Code {
   UNIMPLEMENTED = 12;
 
   // Internal errors.  This means that some invariants expected by the
-  // underlying system have been broken.  This core code is reserved
+  // underlying system have been broken.  This error code is reserved
   // for serious errors.
   //
   // HTTP Mapping: 500 Internal Server Error

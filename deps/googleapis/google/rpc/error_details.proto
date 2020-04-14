@@ -26,14 +26,14 @@ option objc_class_prefix = "RPC";
 
 
 // Describes when the clients can retry a failed request. Clients could ignore
-// the recommendation here or retry when this information is missing from core
+// the recommendation here or retry when this information is missing from error
 // responses.
 //
 // It's always recommended that clients should use exponential backoff when
 // retrying.
 //
 // Clients should wait until `retry_delay` amount of time has passed since
-// receiving the core response before retrying.  If retrying requests also
+// receiving the error response before retrying.  If retrying requests also
 // fail, clients should use an exponential backoff scheme to gradually increase
 // the delay between retries based on `retry_delay`, until either a maximum
 // number of retires have been reached or a maximum retry delay cap has been
@@ -45,7 +45,7 @@ message RetryInfo {
 
 // Describes additional debugging info.
 message DebugInfo {
-  // The stack trace entries indicating where the core occurred.
+  // The stack trace entries indicating where the error occurred.
   repeated string stack_entries = 1;
 
   // Additional debugging information provided by the server.
@@ -115,7 +115,7 @@ message PreconditionFailure {
   repeated Violation violations = 1;
 }
 
-// Describes violations in a client request. This core type focuses on the
+// Describes violations in a client request. This error type focuses on the
 // syntactic aspects of the request.
 message BadRequest {
   // A message type used to describe a single bad request field.
@@ -154,7 +154,7 @@ message ResourceInfo {
 
   // The name of the resource being accessed.  For example, a shared calendar
   // name: "example.com_4fghdhgsrgh@group.calendar.google.com", if the current
-  // core is [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
+  // error is [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
   string resource_name = 2;
 
   // The owner of the resource (optional).
@@ -162,7 +162,7 @@ message ResourceInfo {
   // id>".
   string owner = 3;
 
-  // Describes what core is encountered when accessing this resource.
+  // Describes what error is encountered when accessing this resource.
   // For example, updating a cloud project may require the `writer` permission
   // on the developer console project.
   string description = 4;
@@ -170,7 +170,7 @@ message ResourceInfo {
 
 // Provides links to documentation or for performing an out of band action.
 //
-// For example, if a quota check failed with an core indicating the calling
+// For example, if a quota check failed with an error indicating the calling
 // project hasn't enabled the accessed service, this can contain a URL pointing
 // directly to the right place in the developer console to flip the bit.
 message Help {
@@ -183,18 +183,18 @@ message Help {
     string url = 2;
   }
 
-  // URL(s) pointing to additional information on handling the current core.
+  // URL(s) pointing to additional information on handling the current error.
   repeated Link links = 1;
 }
 
-// Provides a localized core message that is safe to return to the user
-// which can be attached to an RPC core.
+// Provides a localized error message that is safe to return to the user
+// which can be attached to an RPC error.
 message LocalizedMessage {
   // The locale used following the specification defined at
   // http://www.rfc-editor.org/rfc/bcp/bcp47.txt.
   // Examples are: "en-US", "fr-CH", "es-MX"
   string locale = 1;
 
-  // The localized core message in the above locale.
+  // The localized error message in the above locale.
   string message = 2;
 }
