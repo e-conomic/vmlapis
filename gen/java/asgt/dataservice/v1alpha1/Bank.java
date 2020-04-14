@@ -105,27 +105,40 @@ public final class Bank {
         int index);
 
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple> 
-        getPredValuesList();
+    boolean hasModel();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    asgt.dataservice.v1alpha1.Data.PredictedTuple getPredValues(int index);
+    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    int getPredValuesCount();
+    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
+
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder> 
-        getPredValuesOrBuilderList();
+    java.util.List<asgt.dataservice.v1alpha1.Data.Prediction> 
+        getPredictionsList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
      */
-    asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder getPredValuesOrBuilder(
+    asgt.dataservice.v1alpha1.Data.Prediction getPredictions(int index);
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    int getPredictionsCount();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictionOrBuilder> 
+        getPredictionsOrBuilderList();
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    asgt.dataservice.v1alpha1.Data.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
 
     /**
@@ -155,7 +168,7 @@ public final class Bank {
       dataset_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       trueValues_ = java.util.Collections.emptyList();
-      predValues_ = java.util.Collections.emptyList();
+      predictions_ = java.util.Collections.emptyList();
       timeAdded_ = 0L;
     }
 
@@ -232,18 +245,31 @@ public final class Bank {
                   input.readMessage(asgt.dataservice.v1alpha1.Data.DataTuple.parser(), extensionRegistry));
               break;
             }
-            case 58: {
-              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                predValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.PredictedTuple>();
-                mutable_bitField0_ |= 0x00000040;
-              }
-              predValues_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.Data.PredictedTuple.parser(), extensionRegistry));
-              break;
-            }
             case 64: {
 
               timeAdded_ = input.readUInt64();
+              break;
+            }
+            case 74: {
+              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              if (model_ != null) {
+                subBuilder = model_.toBuilder();
+              }
+              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(model_);
+                model_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                predictions_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.Prediction>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              predictions_.add(
+                  input.readMessage(asgt.dataservice.v1alpha1.Data.Prediction.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -267,8 +293,8 @@ public final class Bank {
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
           trueValues_ = java.util.Collections.unmodifiableList(trueValues_);
         }
-        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          predValues_ = java.util.Collections.unmodifiableList(predValues_);
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          predictions_ = java.util.Collections.unmodifiableList(predictions_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -475,39 +501,60 @@ public final class Bank {
       return trueValues_.get(index);
     }
 
-    public static final int PRED_VALUES_FIELD_NUMBER = 7;
-    private java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple> predValues_;
+    public static final int MODEL_FIELD_NUMBER = 9;
+    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple> getPredValuesList() {
-      return predValues_;
+    public boolean hasModel() {
+      return model_ != null;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder> 
-        getPredValuesOrBuilderList() {
-      return predValues_;
+    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>.asgt.type.ModelInfo model = 9;</code>
      */
-    public int getPredValuesCount() {
-      return predValues_.size();
+    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      return getModel();
+    }
+
+    public static final int PREDICTIONS_FIELD_NUMBER = 10;
+    private java.util.List<asgt.dataservice.v1alpha1.Data.Prediction> predictions_;
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    public java.util.List<asgt.dataservice.v1alpha1.Data.Prediction> getPredictionsList() {
+      return predictions_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.PredictedTuple getPredValues(int index) {
-      return predValues_.get(index);
+    public java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictionOrBuilder> 
+        getPredictionsOrBuilderList() {
+      return predictions_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder getPredValuesOrBuilder(
+    public int getPredictionsCount() {
+      return predictions_.size();
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.Prediction getPredictions(int index) {
+      return predictions_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
+     */
+    public asgt.dataservice.v1alpha1.Data.PredictionOrBuilder getPredictionsOrBuilder(
         int index) {
-      return predValues_.get(index);
+      return predictions_.get(index);
     }
 
     public static final int TIME_ADDED_FIELD_NUMBER = 8;
@@ -551,11 +598,14 @@ public final class Bank {
       for (int i = 0; i < trueValues_.size(); i++) {
         output.writeMessage(6, trueValues_.get(i));
       }
-      for (int i = 0; i < predValues_.size(); i++) {
-        output.writeMessage(7, predValues_.get(i));
-      }
       if (timeAdded_ != 0L) {
         output.writeUInt64(8, timeAdded_);
+      }
+      if (model_ != null) {
+        output.writeMessage(9, getModel());
+      }
+      for (int i = 0; i < predictions_.size(); i++) {
+        output.writeMessage(10, predictions_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -591,13 +641,17 @@ public final class Bank {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, trueValues_.get(i));
       }
-      for (int i = 0; i < predValues_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, predValues_.get(i));
-      }
       if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt64Size(8, timeAdded_);
+      }
+      if (model_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getModel());
+      }
+      for (int i = 0; i < predictions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, predictions_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -630,8 +684,13 @@ public final class Bank {
       }
       result = result && getTrueValuesList()
           .equals(other.getTrueValuesList());
-      result = result && getPredValuesList()
-          .equals(other.getPredValuesList());
+      result = result && (hasModel() == other.hasModel());
+      if (hasModel()) {
+        result = result && getModel()
+            .equals(other.getModel());
+      }
+      result = result && getPredictionsList()
+          .equals(other.getPredictionsList());
       result = result && (getTimeAdded()
           == other.getTimeAdded());
       result = result && unknownFields.equals(other.unknownFields);
@@ -663,9 +722,13 @@ public final class Bank {
         hash = (37 * hash) + TRUE_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getTrueValuesList().hashCode();
       }
-      if (getPredValuesCount() > 0) {
-        hash = (37 * hash) + PRED_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getPredValuesList().hashCode();
+      if (hasModel()) {
+        hash = (37 * hash) + MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getModel().hashCode();
+      }
+      if (getPredictionsCount() > 0) {
+        hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPredictionsList().hashCode();
       }
       hash = (37 * hash) + TIME_ADDED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -803,7 +866,7 @@ public final class Bank {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
           getTrueValuesFieldBuilder();
-          getPredValuesFieldBuilder();
+          getPredictionsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -829,11 +892,17 @@ public final class Bank {
         } else {
           trueValuesBuilder_.clear();
         }
-        if (predValuesBuilder_ == null) {
-          predValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+        if (modelBuilder_ == null) {
+          model_ = null;
         } else {
-          predValuesBuilder_.clear();
+          model_ = null;
+          modelBuilder_ = null;
+        }
+        if (predictionsBuilder_ == null) {
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+        } else {
+          predictionsBuilder_.clear();
         }
         timeAdded_ = 0L;
 
@@ -887,14 +956,19 @@ public final class Bank {
         } else {
           result.trueValues_ = trueValuesBuilder_.build();
         }
-        if (predValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            predValues_ = java.util.Collections.unmodifiableList(predValues_);
-            bitField0_ = (bitField0_ & ~0x00000040);
-          }
-          result.predValues_ = predValues_;
+        if (modelBuilder_ == null) {
+          result.model_ = model_;
         } else {
-          result.predValues_ = predValuesBuilder_.build();
+          result.model_ = modelBuilder_.build();
+        }
+        if (predictionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080)) {
+            predictions_ = java.util.Collections.unmodifiableList(predictions_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.predictions_ = predictions_;
+        } else {
+          result.predictions_ = predictionsBuilder_.build();
         }
         result.timeAdded_ = timeAdded_;
         result.bitField0_ = to_bitField0_;
@@ -997,29 +1071,32 @@ public final class Bank {
             }
           }
         }
-        if (predValuesBuilder_ == null) {
-          if (!other.predValues_.isEmpty()) {
-            if (predValues_.isEmpty()) {
-              predValues_ = other.predValues_;
-              bitField0_ = (bitField0_ & ~0x00000040);
+        if (other.hasModel()) {
+          mergeModel(other.getModel());
+        }
+        if (predictionsBuilder_ == null) {
+          if (!other.predictions_.isEmpty()) {
+            if (predictions_.isEmpty()) {
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
-              ensurePredValuesIsMutable();
-              predValues_.addAll(other.predValues_);
+              ensurePredictionsIsMutable();
+              predictions_.addAll(other.predictions_);
             }
             onChanged();
           }
         } else {
-          if (!other.predValues_.isEmpty()) {
-            if (predValuesBuilder_.isEmpty()) {
-              predValuesBuilder_.dispose();
-              predValuesBuilder_ = null;
-              predValues_ = other.predValues_;
-              bitField0_ = (bitField0_ & ~0x00000040);
-              predValuesBuilder_ = 
+          if (!other.predictions_.isEmpty()) {
+            if (predictionsBuilder_.isEmpty()) {
+              predictionsBuilder_.dispose();
+              predictionsBuilder_ = null;
+              predictions_ = other.predictions_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              predictionsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getPredValuesFieldBuilder() : null;
+                   getPredictionsFieldBuilder() : null;
             } else {
-              predValuesBuilder_.addAllMessages(other.predValues_);
+              predictionsBuilder_.addAllMessages(other.predictions_);
             }
           }
         }
@@ -1714,244 +1791,361 @@ public final class Bank {
         return trueValuesBuilder_;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple> predValues_ =
+      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public boolean hasModel() {
+        return modelBuilder_ != null || model_ != null;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+        if (modelBuilder_ == null) {
+          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+        } else {
+          return modelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+        if (modelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          model_ = value;
+          onChanged();
+        } else {
+          modelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public Builder setModel(
+          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+        if (modelBuilder_ == null) {
+          model_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+        if (modelBuilder_ == null) {
+          if (model_ != null) {
+            model_ =
+              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+          } else {
+            model_ = value;
+          }
+          onChanged();
+        } else {
+          modelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public Builder clearModel() {
+        if (modelBuilder_ == null) {
+          model_ = null;
+          onChanged();
+        } else {
+          model_ = null;
+          modelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+        
+        onChanged();
+        return getModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+        if (modelBuilder_ != null) {
+          return modelBuilder_.getMessageOrBuilder();
+        } else {
+          return model_ == null ?
+              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          getModelFieldBuilder() {
+        if (modelBuilder_ == null) {
+          modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+                  getModel(),
+                  getParentForChildren(),
+                  isClean());
+          model_ = null;
+        }
+        return modelBuilder_;
+      }
+
+      private java.util.List<asgt.dataservice.v1alpha1.Data.Prediction> predictions_ =
         java.util.Collections.emptyList();
-      private void ensurePredValuesIsMutable() {
-        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          predValues_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.PredictedTuple>(predValues_);
-          bitField0_ |= 0x00000040;
+      private void ensurePredictionsIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          predictions_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Data.Prediction>(predictions_);
+          bitField0_ |= 0x00000080;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.PredictedTuple, asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder, asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder> predValuesBuilder_;
+          asgt.dataservice.v1alpha1.Data.Prediction, asgt.dataservice.v1alpha1.Data.Prediction.Builder, asgt.dataservice.v1alpha1.Data.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple> getPredValuesList() {
-        if (predValuesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(predValues_);
+      public java.util.List<asgt.dataservice.v1alpha1.Data.Prediction> getPredictionsList() {
+        if (predictionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(predictions_);
         } else {
-          return predValuesBuilder_.getMessageList();
+          return predictionsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public int getPredValuesCount() {
-        if (predValuesBuilder_ == null) {
-          return predValues_.size();
+      public int getPredictionsCount() {
+        if (predictionsBuilder_ == null) {
+          return predictions_.size();
         } else {
-          return predValuesBuilder_.getCount();
+          return predictionsBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.PredictedTuple getPredValues(int index) {
-        if (predValuesBuilder_ == null) {
-          return predValues_.get(index);
+      public asgt.dataservice.v1alpha1.Data.Prediction getPredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);
         } else {
-          return predValuesBuilder_.getMessage(index);
+          return predictionsBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder setPredValues(
-          int index, asgt.dataservice.v1alpha1.Data.PredictedTuple value) {
-        if (predValuesBuilder_ == null) {
+      public Builder setPredictions(
+          int index, asgt.dataservice.v1alpha1.Data.Prediction value) {
+        if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePredValuesIsMutable();
-          predValues_.set(index, value);
+          ensurePredictionsIsMutable();
+          predictions_.set(index, value);
           onChanged();
         } else {
-          predValuesBuilder_.setMessage(index, value);
+          predictionsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder setPredValues(
-          int index, asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder builderForValue) {
-        if (predValuesBuilder_ == null) {
-          ensurePredValuesIsMutable();
-          predValues_.set(index, builderForValue.build());
+      public Builder setPredictions(
+          int index, asgt.dataservice.v1alpha1.Data.Prediction.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.set(index, builderForValue.build());
           onChanged();
         } else {
-          predValuesBuilder_.setMessage(index, builderForValue.build());
+          predictionsBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder addPredValues(asgt.dataservice.v1alpha1.Data.PredictedTuple value) {
-        if (predValuesBuilder_ == null) {
+      public Builder addPredictions(asgt.dataservice.v1alpha1.Data.Prediction value) {
+        if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePredValuesIsMutable();
-          predValues_.add(value);
+          ensurePredictionsIsMutable();
+          predictions_.add(value);
           onChanged();
         } else {
-          predValuesBuilder_.addMessage(value);
+          predictionsBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder addPredValues(
-          int index, asgt.dataservice.v1alpha1.Data.PredictedTuple value) {
-        if (predValuesBuilder_ == null) {
+      public Builder addPredictions(
+          int index, asgt.dataservice.v1alpha1.Data.Prediction value) {
+        if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensurePredValuesIsMutable();
-          predValues_.add(index, value);
+          ensurePredictionsIsMutable();
+          predictions_.add(index, value);
           onChanged();
         } else {
-          predValuesBuilder_.addMessage(index, value);
+          predictionsBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder addPredValues(
-          asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder builderForValue) {
-        if (predValuesBuilder_ == null) {
-          ensurePredValuesIsMutable();
-          predValues_.add(builderForValue.build());
+      public Builder addPredictions(
+          asgt.dataservice.v1alpha1.Data.Prediction.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.add(builderForValue.build());
           onChanged();
         } else {
-          predValuesBuilder_.addMessage(builderForValue.build());
+          predictionsBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder addPredValues(
-          int index, asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder builderForValue) {
-        if (predValuesBuilder_ == null) {
-          ensurePredValuesIsMutable();
-          predValues_.add(index, builderForValue.build());
+      public Builder addPredictions(
+          int index, asgt.dataservice.v1alpha1.Data.Prediction.Builder builderForValue) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.add(index, builderForValue.build());
           onChanged();
         } else {
-          predValuesBuilder_.addMessage(index, builderForValue.build());
+          predictionsBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder addAllPredValues(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.PredictedTuple> values) {
-        if (predValuesBuilder_ == null) {
-          ensurePredValuesIsMutable();
+      public Builder addAllPredictions(
+          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Data.Prediction> values) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, predValues_);
+              values, predictions_);
           onChanged();
         } else {
-          predValuesBuilder_.addAllMessages(values);
+          predictionsBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder clearPredValues() {
-        if (predValuesBuilder_ == null) {
-          predValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000040);
+      public Builder clearPredictions() {
+        if (predictionsBuilder_ == null) {
+          predictions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
-          predValuesBuilder_.clear();
+          predictionsBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public Builder removePredValues(int index) {
-        if (predValuesBuilder_ == null) {
-          ensurePredValuesIsMutable();
-          predValues_.remove(index);
+      public Builder removePredictions(int index) {
+        if (predictionsBuilder_ == null) {
+          ensurePredictionsIsMutable();
+          predictions_.remove(index);
           onChanged();
         } else {
-          predValuesBuilder_.remove(index);
+          predictionsBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder getPredValuesBuilder(
+      public asgt.dataservice.v1alpha1.Data.Prediction.Builder getPredictionsBuilder(
           int index) {
-        return getPredValuesFieldBuilder().getBuilder(index);
+        return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder getPredValuesOrBuilder(
+      public asgt.dataservice.v1alpha1.Data.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
-        if (predValuesBuilder_ == null) {
-          return predValues_.get(index);  } else {
-          return predValuesBuilder_.getMessageOrBuilder(index);
+        if (predictionsBuilder_ == null) {
+          return predictions_.get(index);  } else {
+          return predictionsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder> 
-           getPredValuesOrBuilderList() {
-        if (predValuesBuilder_ != null) {
-          return predValuesBuilder_.getMessageOrBuilderList();
+      public java.util.List<? extends asgt.dataservice.v1alpha1.Data.PredictionOrBuilder> 
+           getPredictionsOrBuilderList() {
+        if (predictionsBuilder_ != null) {
+          return predictionsBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(predValues_);
+          return java.util.Collections.unmodifiableList(predictions_);
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder addPredValuesBuilder() {
-        return getPredValuesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.Data.PredictedTuple.getDefaultInstance());
+      public asgt.dataservice.v1alpha1.Data.Prediction.Builder addPredictionsBuilder() {
+        return getPredictionsFieldBuilder().addBuilder(
+            asgt.dataservice.v1alpha1.Data.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder addPredValuesBuilder(
+      public asgt.dataservice.v1alpha1.Data.Prediction.Builder addPredictionsBuilder(
           int index) {
-        return getPredValuesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.Data.PredictedTuple.getDefaultInstance());
+        return getPredictionsFieldBuilder().addBuilder(
+            index, asgt.dataservice.v1alpha1.Data.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.PredictedTuple pred_values = 7;</code>
+       * <code>repeated .asgt.dataservice.v1alpha1.Prediction predictions = 10;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder> 
-           getPredValuesBuilderList() {
-        return getPredValuesFieldBuilder().getBuilderList();
+      public java.util.List<asgt.dataservice.v1alpha1.Data.Prediction.Builder> 
+           getPredictionsBuilderList() {
+        return getPredictionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.PredictedTuple, asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder, asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder> 
-          getPredValuesFieldBuilder() {
-        if (predValuesBuilder_ == null) {
-          predValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Data.PredictedTuple, asgt.dataservice.v1alpha1.Data.PredictedTuple.Builder, asgt.dataservice.v1alpha1.Data.PredictedTupleOrBuilder>(
-                  predValues_,
-                  ((bitField0_ & 0x00000040) == 0x00000040),
+          asgt.dataservice.v1alpha1.Data.Prediction, asgt.dataservice.v1alpha1.Data.Prediction.Builder, asgt.dataservice.v1alpha1.Data.PredictionOrBuilder> 
+          getPredictionsFieldBuilder() {
+        if (predictionsBuilder_ == null) {
+          predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.dataservice.v1alpha1.Data.Prediction, asgt.dataservice.v1alpha1.Data.Prediction.Builder, asgt.dataservice.v1alpha1.Data.PredictionOrBuilder>(
+                  predictions_,
+                  ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
                   isClean());
-          predValues_ = null;
+          predictions_ = null;
         }
-        return predValuesBuilder_;
+        return predictionsBuilder_;
       }
 
       private long timeAdded_ ;
@@ -5270,42 +5464,44 @@ public final class Bank {
       "\n$asgt/dataservice/v1alpha1/bank.proto\022\031" +
       "asgt.dataservice.v1alpha1\032$asgt/dataserv" +
       "ice/v1alpha1/data.proto\032!asgt/jester/v1a" +
-      "lpha1/jester.proto\032\034gen_bq_schema/bq_fie" +
-      "ld.proto\032\034gen_bq_schema/bq_table.proto\032\034" +
-      "google/api/annotations.proto\032\033google/pro" +
-      "tobuf/empty.proto\"\272\003\n\tBankEntry\022>\n\002id\030\001 " +
-      "\001(\tB2\352?/\"-ID, matches Envoy request id i" +
-      "f feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001" +
-      "\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF" +
-      "\352?C\"ATags defined by consumer, enriched " +
-      "by service if valetkey is used\0225\n\005input\030" +
-      "\005 \001(\0132&.asgt.jester.v1alpha1.BankRequest" +
-      ".Data\0229\n\013true_values\030\006 \003(\0132$.asgt.datase" +
-      "rvice.v1alpha1.DataTuple\022>\n\013pred_values\030" +
-      "\007 \003(\0132).asgt.dataservice.v1alpha1.Predic" +
-      "tedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIM" +
-      "ESTAMP:\016\352?\013\n\tbank_data\"\202\001\n\016BankEntryInpu" +
-      "t\0225\n\005input\030\001 \001(\0132&.asgt.jester.v1alpha1." +
-      "BankRequest.Data\0229\n\013true_values\030\002 \003(\0132$." +
-      "asgt.dataservice.v1alpha1.DataTuple\"\300\001\n\030" +
-      "CreateBankDatasetRequest\022\024\n\014dataset_name" +
-      "\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022:\n\007entries\030\003 \003(\0132)." +
-      "asgt.dataservice.v1alpha1.BankEntryInput" +
-      "\022D\n\020retention_policy\030\004 \001(\0132*.asgt.datase" +
-      "rvice.v1alpha1.RetentionPolicy\"i\n\025Append" +
-      "BankDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022:\n" +
-      "\007entries\030\003 \003(\0132).asgt.dataservice.v1alph" +
-      "a1.BankEntryInput2\212\003\n\017BankDataservice\022\202\001" +
-      "\n\021CreateBankDataset\0223.asgt.dataservice.v" +
-      "1alpha1.CreateBankDatasetRequest\032\026.googl" +
-      "e.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank" +
-      ":create:\001*\022|\n\016AppendBankData\0220.asgt.data" +
-      "service.v1alpha1.AppendBankDataRequest\032\026" +
-      ".google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha" +
-      "1/bank:append:\001*\022t\n\016DeleteBankData\022(.asg" +
-      "t.dataservice.v1alpha1.DeleteRequest\032\026.g" +
-      "oogle.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/" +
-      "bank:delete:\001*B\rZ\013dataserviceb\006proto3"
+      "lpha1/jester.proto\032\032asgt/type/model_info" +
+      ".proto\032\034gen_bq_schema/bq_field.proto\032\034ge" +
+      "n_bq_schema/bq_table.proto\032\034google/api/a" +
+      "nnotations.proto\032\033google/protobuf/empty." +
+      "proto\"\333\003\n\tBankEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID" +
+      ", matches Envoy request id if feedback d" +
+      "ata\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030" +
+      "\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags de" +
+      "fined by consumer, enriched by service i" +
+      "f valetkey is used\0225\n\005input\030\005 \001(\0132&.asgt" +
+      ".jester.v1alpha1.BankRequest.Data\0229\n\013tru" +
+      "e_values\030\006 \003(\0132$.asgt.dataservice.v1alph" +
+      "a1.DataTuple\022#\n\005model\030\t \001(\0132\024.asgt.type." +
+      "ModelInfo\022:\n\013predictions\030\n \003(\0132%.asgt.da" +
+      "taservice.v1alpha1.Prediction\022$\n\ntime_ad" +
+      "ded\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_d" +
+      "ata\"\202\001\n\016BankEntryInput\0225\n\005input\030\001 \001(\0132&." +
+      "asgt.jester.v1alpha1.BankRequest.Data\0229\n" +
+      "\013true_values\030\002 \003(\0132$.asgt.dataservice.v1" +
+      "alpha1.DataTuple\"\300\001\n\030CreateBankDatasetRe" +
+      "quest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(" +
+      "\t\022:\n\007entries\030\003 \003(\0132).asgt.dataservice.v1" +
+      "alpha1.BankEntryInput\022D\n\020retention_polic" +
+      "y\030\004 \001(\0132*.asgt.dataservice.v1alpha1.Rete" +
+      "ntionPolicy\"i\n\025AppendBankDataRequest\022\024\n\014" +
+      "dataset_name\030\001 \001(\t\022:\n\007entries\030\003 \003(\0132).as" +
+      "gt.dataservice.v1alpha1.BankEntryInput2\212" +
+      "\003\n\017BankDataservice\022\202\001\n\021CreateBankDataset" +
+      "\0223.asgt.dataservice.v1alpha1.CreateBankD" +
+      "atasetRequest\032\026.google.protobuf.Empty\" \202" +
+      "\323\344\223\002\032\"\025/v1alpha1/bank:create:\001*\022|\n\016Appen" +
+      "dBankData\0220.asgt.dataservice.v1alpha1.Ap" +
+      "pendBankDataRequest\032\026.google.protobuf.Em" +
+      "pty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:append:\001*\022t\n" +
+      "\016DeleteBankData\022(.asgt.dataservice.v1alp" +
+      "ha1.DeleteRequest\032\026.google.protobuf.Empt" +
+      "y\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:\001*B\rZ\013d" +
+      "ataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5320,6 +5516,7 @@ public final class Bank {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
+          asgt.type.ModelInfoOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -5330,7 +5527,7 @@ public final class Bank {
     internal_static_asgt_dataservice_v1alpha1_BankEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "PredValues", "TimeAdded", });
+        new java.lang.String[] { "Id", "Consumer", "Dataset", "Tags", "Input", "TrueValues", "Model", "Predictions", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_BankEntryInput_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_BankEntryInput_fieldAccessorTable = new
@@ -5358,6 +5555,7 @@ public final class Bank {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
+    asgt.type.ModelInfoOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

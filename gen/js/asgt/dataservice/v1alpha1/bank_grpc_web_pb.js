@@ -16,6 +16,8 @@ var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alp
 
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js')
 
+var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js')
+
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')
 
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js')

@@ -11,11 +11,13 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DataTuple', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DeleteRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.FeedbackRequest.Entry', null, global);
-goog.exportSymbol('proto.asgt.dataservice.v1alpha1.PredictedTuple', null, global);
+goog.exportSymbol('proto.asgt.dataservice.v1alpha1.Prediction', null, global);
+goog.exportSymbol('proto.asgt.dataservice.v1alpha1.Prediction.Candidate', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.RetentionPolicy', null, global);
 
 /**
@@ -197,19 +199,19 @@ proto.asgt.dataservice.v1alpha1.DataTuple.prototype.setValue = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.dataservice.v1alpha1.PredictedTuple.repeatedFields_, null);
+proto.asgt.dataservice.v1alpha1.Prediction = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.dataservice.v1alpha1.Prediction.repeatedFields_, null);
 };
-goog.inherits(proto.asgt.dataservice.v1alpha1.PredictedTuple, jspb.Message);
+goog.inherits(proto.asgt.dataservice.v1alpha1.Prediction, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.dataservice.v1alpha1.PredictedTuple.displayName = 'proto.asgt.dataservice.v1alpha1.PredictedTuple';
+  proto.asgt.dataservice.v1alpha1.Prediction.displayName = 'proto.asgt.dataservice.v1alpha1.Prediction';
 }
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.repeatedFields_ = [2];
+proto.asgt.dataservice.v1alpha1.Prediction.repeatedFields_ = [2];
 
 
 
@@ -224,8 +226,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject(opt_includeInstance, this);
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.dataservice.v1alpha1.Prediction.toObject(opt_includeInstance, this);
 };
 
 
@@ -234,14 +236,15 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.dataservice.v1alpha1.PredictedTuple} msg The msg instance to transform.
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject = function(includeInstance, msg) {
+proto.asgt.dataservice.v1alpha1.Prediction.toObject = function(includeInstance, msg) {
   var f, obj = {
     target: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    predictionsList: jspb.Message.getRepeatedField(msg, 2)
+    candidatesList: jspb.Message.toObjectList(msg.getCandidatesList(),
+    proto.asgt.dataservice.v1alpha1.Prediction.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -255,23 +258,23 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.dataservice.v1alpha1.PredictedTuple}
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.deserializeBinary = function(bytes) {
+proto.asgt.dataservice.v1alpha1.Prediction.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.dataservice.v1alpha1.PredictedTuple;
-  return proto.asgt.dataservice.v1alpha1.PredictedTuple.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.dataservice.v1alpha1.Prediction;
+  return proto.asgt.dataservice.v1alpha1.Prediction.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.dataservice.v1alpha1.PredictedTuple} msg The message object to deserialize into.
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.dataservice.v1alpha1.PredictedTuple}
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.dataservice.v1alpha1.Prediction.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -283,8 +286,9 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.deserializeBinaryFromReader = fun
       msg.setTarget(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addPredictions(value);
+      var value = new proto.asgt.dataservice.v1alpha1.Prediction.Candidate;
+      reader.readMessage(value,proto.asgt.dataservice.v1alpha1.Prediction.Candidate.deserializeBinaryFromReader);
+      msg.addCandidates(value);
       break;
     default:
       reader.skipField();
@@ -299,9 +303,9 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.serializeBinary = function() {
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter(this, writer);
+  proto.asgt.dataservice.v1alpha1.Prediction.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -309,11 +313,11 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.dataservice.v1alpha1.PredictedTuple} message
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.dataservice.v1alpha1.Prediction.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTarget();
   if (f.length > 0) {
@@ -322,13 +326,200 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter = functio
       f
     );
   }
-  f = message.getPredictionsList();
+  f = message.getCandidatesList();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeRepeatedMessage(
       2,
+      f,
+      proto.asgt.dataservice.v1alpha1.Prediction.Candidate.serializeBinaryToWriter
+    );
+  }
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.asgt.dataservice.v1alpha1.Prediction.Candidate, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.asgt.dataservice.v1alpha1.Prediction.Candidate.displayName = 'proto.asgt.dataservice.v1alpha1.Prediction.Candidate';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.dataservice.v1alpha1.Prediction.Candidate.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    value: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    confidence: (f = msg.getConfidence()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.asgt.dataservice.v1alpha1.Prediction.Candidate;
+  return proto.asgt.dataservice.v1alpha1.Prediction.Candidate.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setValue(value);
+      break;
+    case 2:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.setConfidence(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.asgt.dataservice.v1alpha1.Prediction.Candidate.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getValue();
+  if (f.length > 0) {
+    writer.writeString(
+      1,
       f
     );
   }
+  f = message.getConfidence();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+};
+
+
+/**
+ * optional string value = 1;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.getValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.setValue = function(value) {
+  jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional google.protobuf.FloatValue confidence = 2;
+ * @return {?proto.google.protobuf.FloatValue}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.getConfidence = function() {
+  return /** @type{?proto.google.protobuf.FloatValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 2));
+};
+
+
+/** @param {?proto.google.protobuf.FloatValue|undefined} value */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.setConfidence = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.clearConfidence = function() {
+  this.setConfidence(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.Prediction.Candidate.prototype.hasConfidence = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -336,43 +527,45 @@ proto.asgt.dataservice.v1alpha1.PredictedTuple.serializeBinaryToWriter = functio
  * optional string target = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.getTarget = function() {
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.getTarget = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.setTarget = function(value) {
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.setTarget = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * repeated string predictions = 2;
- * @return {!Array<string>}
+ * repeated Candidate candidates = 2;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.Prediction.Candidate>}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.getPredictionsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.getCandidatesList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.Prediction.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.dataservice.v1alpha1.Prediction.Candidate, 2));
 };
 
 
-/** @param {!Array<string>} value */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.setPredictionsList = function(value) {
-  jspb.Message.setField(this, 2, value || []);
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.Prediction.Candidate>} value */
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.setCandidatesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!string} value
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate=} opt_value
  * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction.Candidate}
  */
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.addPredictions = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.addCandidates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.dataservice.v1alpha1.Prediction.Candidate, opt_index);
 };
 
 
-proto.asgt.dataservice.v1alpha1.PredictedTuple.prototype.clearPredictionsList = function() {
-  this.setPredictionsList([]);
+proto.asgt.dataservice.v1alpha1.Prediction.prototype.clearCandidatesList = function() {
+  this.setCandidatesList([]);
 };
 
 

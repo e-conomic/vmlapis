@@ -13,6 +13,7 @@ var global = Function('return this')();
 
 var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js');
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js');
+var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js');
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js');
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
@@ -44,7 +45,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.repeatedFields_ = [4,6,7];
+proto.asgt.dataservice.v1alpha1.BankEntry.repeatedFields_ = [4,6,10];
 
 
 
@@ -82,8 +83,9 @@ proto.asgt.dataservice.v1alpha1.BankEntry.toObject = function(includeInstance, m
     input: (f = msg.getInput()) && asgt_jester_v1alpha1_jester_pb.BankRequest.Data.toObject(includeInstance, f),
     trueValuesList: jspb.Message.toObjectList(msg.getTrueValuesList(),
     asgt_dataservice_v1alpha1_data_pb.DataTuple.toObject, includeInstance),
-    predValuesList: jspb.Message.toObjectList(msg.getPredValuesList(),
-    asgt_dataservice_v1alpha1_data_pb.PredictedTuple.toObject, includeInstance),
+    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
+    predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
+    asgt_dataservice_v1alpha1_data_pb.Prediction.toObject, includeInstance),
     timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
   };
 
@@ -147,10 +149,15 @@ proto.asgt.dataservice.v1alpha1.BankEntry.deserializeBinaryFromReader = function
       reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.DataTuple.deserializeBinaryFromReader);
       msg.addTrueValues(value);
       break;
-    case 7:
-      var value = new asgt_dataservice_v1alpha1_data_pb.PredictedTuple;
-      reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.PredictedTuple.deserializeBinaryFromReader);
-      msg.addPredValues(value);
+    case 9:
+      var value = new asgt_type_model_info_pb.ModelInfo;
+      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      msg.setModel(value);
+      break;
+    case 10:
+      var value = new asgt_dataservice_v1alpha1_data_pb.Prediction;
+      reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.Prediction.deserializeBinaryFromReader);
+      msg.addPredictions(value);
       break;
     case 8:
       var value = /** @type {number} */ (reader.readUint64());
@@ -229,12 +236,20 @@ proto.asgt.dataservice.v1alpha1.BankEntry.serializeBinaryToWriter = function(mes
       asgt_dataservice_v1alpha1_data_pb.DataTuple.serializeBinaryToWriter
     );
   }
-  f = message.getPredValuesList();
+  f = message.getModel();
+  if (f != null) {
+    writer.writeMessage(
+      9,
+      f,
+      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+    );
+  }
+  f = message.getPredictionsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      7,
+      10,
       f,
-      asgt_dataservice_v1alpha1_data_pb.PredictedTuple.serializeBinaryToWriter
+      asgt_dataservice_v1alpha1_data_pb.Prediction.serializeBinaryToWriter
     );
   }
   f = message.getTimeAdded();
@@ -383,33 +398,63 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearTrueValuesList = functi
 
 
 /**
- * repeated PredictedTuple pred_values = 7;
- * @return {!Array<!proto.asgt.dataservice.v1alpha1.PredictedTuple>}
+ * optional asgt.type.ModelInfo model = 9;
+ * @return {?proto.asgt.type.ModelInfo}
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getPredValuesList = function() {
-  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.PredictedTuple>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_dataservice_v1alpha1_data_pb.PredictedTuple, 7));
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getModel = function() {
+  return /** @type{?proto.asgt.type.ModelInfo} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 9));
 };
 
 
-/** @param {!Array<!proto.asgt.dataservice.v1alpha1.PredictedTuple>} value */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setPredValuesList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 7, value);
+/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setModel = function(value) {
+  jspb.Message.setWrapperField(this, 9, value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearModel = function() {
+  this.setModel(undefined);
 };
 
 
 /**
- * @param {!proto.asgt.dataservice.v1alpha1.PredictedTuple=} opt_value
- * @param {number=} opt_index
- * @return {!proto.asgt.dataservice.v1alpha1.PredictedTuple}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.addPredValues = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.asgt.dataservice.v1alpha1.PredictedTuple, opt_index);
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.hasModel = function() {
+  return jspb.Message.getField(this, 9) != null;
 };
 
 
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearPredValuesList = function() {
-  this.setPredValuesList([]);
+/**
+ * repeated Prediction predictions = 10;
+ * @return {!Array<!proto.asgt.dataservice.v1alpha1.Prediction>}
+ */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getPredictionsList = function() {
+  return /** @type{!Array<!proto.asgt.dataservice.v1alpha1.Prediction>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_dataservice_v1alpha1_data_pb.Prediction, 10));
+};
+
+
+/** @param {!Array<!proto.asgt.dataservice.v1alpha1.Prediction>} value */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setPredictionsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.Prediction=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.dataservice.v1alpha1.Prediction}
+ */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.addPredictions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.asgt.dataservice.v1alpha1.Prediction, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearPredictionsList = function() {
+  this.setPredictionsList([]);
 };
 
 

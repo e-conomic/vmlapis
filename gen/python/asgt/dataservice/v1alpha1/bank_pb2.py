@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
 from asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
+from asgt.type import model_info_pb2 as asgt_dot_type_dot_model__info__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/bank.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xba\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x35\n\x05input\x18\x05 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\x82\x01\n\x0e\x42\x61nkEntryInput\x12\x35\n\x05input\x18\x01 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xc0\x01\n\x18\x43reateBankDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"i\n\x15\x41ppendBankDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput2\x8a\x03\n\x0f\x42\x61nkDataservice\x12\x82\x01\n\x11\x43reateBankDataset\x12\x33.asgt.dataservice.v1alpha1.CreateBankDatasetRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:create:\x01*\x12|\n\x0e\x41ppendBankData\x12\x30.asgt.dataservice.v1alpha1.AppendBankDataRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:append:\x01*\x12t\n\x0e\x44\x65leteBankData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/bank.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xdb\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x35\n\x05input\x18\x05 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12:\n\x0bpredictions\x18\n \x03(\x0b\x32%.asgt.dataservice.v1alpha1.Prediction\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\x82\x01\n\x0e\x42\x61nkEntryInput\x12\x35\n\x05input\x18\x01 \x01(\x0b\x32&.asgt.jester.v1alpha1.BankRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xc0\x01\n\x18\x43reateBankDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"i\n\x15\x41ppendBankDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput2\x8a\x03\n\x0f\x42\x61nkDataservice\x12\x82\x01\n\x11\x43reateBankDataset\x12\x33.asgt.dataservice.v1alpha1.CreateBankDatasetRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:create:\x01*\x12|\n\x0e\x41ppendBankData\x12\x30.asgt.dataservice.v1alpha1.AppendBankDataRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:append:\x01*\x12t\n\x0e\x44\x65leteBankData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,asgt_dot_type_dot_model__info__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -82,14 +83,21 @@ _BANKENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pred_values', full_name='asgt.dataservice.v1alpha1.BankEntry.pred_values', index=6,
-      number=7, type=11, cpp_type=10, label=3,
+      name='model', full_name='asgt.dataservice.v1alpha1.BankEntry.model', index=6,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='predictions', full_name='asgt.dataservice.v1alpha1.BankEntry.predictions', index=7,
+      number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_added', full_name='asgt.dataservice.v1alpha1.BankEntry.time_added', index=7,
+      name='time_added', full_name='asgt.dataservice.v1alpha1.BankEntry.time_added', index=8,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -107,8 +115,8 @@ _BANKENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=260,
-  serialized_end=702,
+  serialized_start=288,
+  serialized_end=763,
 )
 
 
@@ -145,8 +153,8 @@ _BANKENTRYINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=705,
-  serialized_end=835,
+  serialized_start=766,
+  serialized_end=896,
 )
 
 
@@ -197,8 +205,8 @@ _CREATEBANKDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=838,
-  serialized_end=1030,
+  serialized_start=899,
+  serialized_end=1091,
 )
 
 
@@ -235,13 +243,14 @@ _APPENDBANKDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1032,
-  serialized_end=1137,
+  serialized_start=1093,
+  serialized_end=1198,
 )
 
 _BANKENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._BANKREQUEST_DATA
 _BANKENTRY.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
-_BANKENTRY.fields_by_name['pred_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._PREDICTEDTUPLE
+_BANKENTRY.fields_by_name['model'].message_type = asgt_dot_type_dot_model__info__pb2._MODELINFO
+_BANKENTRY.fields_by_name['predictions'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._PREDICTION
 _BANKENTRYINPUT.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._BANKREQUEST_DATA
 _BANKENTRYINPUT.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
 _CREATEBANKDATASETREQUEST.fields_by_name['entries'].message_type = _BANKENTRYINPUT
@@ -296,8 +305,8 @@ _BANKDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1140,
-  serialized_end=1534,
+  serialized_start=1201,
+  serialized_end=1595,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateBankDataset',

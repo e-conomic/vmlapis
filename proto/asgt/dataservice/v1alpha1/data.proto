@@ -4,15 +4,22 @@ package asgt.dataservice.v1alpha1;
 
 option go_package = "dataservice";
 
+import "google/protobuf/wrappers.proto";
+
 // Common Data types
 message DataTuple {
   string target = 1;
   string value = 2;
 }
 
-message PredictedTuple {
+message Prediction {
+  message Candidate {
+    string value = 1;
+    google.protobuf.FloatValue confidence = 2;
+  }
+
   string target = 1;
-  repeated string predictions = 2;
+  repeated Candidate candidates = 2;
 }
 
 // Dataservice

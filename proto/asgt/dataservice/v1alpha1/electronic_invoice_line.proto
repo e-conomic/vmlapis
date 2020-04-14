@@ -10,6 +10,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/type/model_info.proto";
 
 service ElectronicInvoiceLineDataservice {
   rpc CreateElectronicInvoiceLineDataset(CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
@@ -43,7 +44,8 @@ message ElectronicInvoiceLineEntry {
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data input = 5;
   repeated DataTuple true_values = 6;
-  repeated PredictedTuple pred_values = 7;
+  asgt.type.ModelInfo model = 9;
+  repeated Prediction predictions = 10;
   uint64 time_added = 8 [
     (gen_bq_schema.bigquery) = {
       require: true,
