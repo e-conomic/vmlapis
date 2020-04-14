@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js');
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
@@ -78,7 +79,8 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.toObject = function(opt
 proto.asgt.jester.v1alpha1.SuggestionsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
-    asgt_type_prediction_pb.Prediction.toObject, includeInstance)
+    asgt_type_prediction_pb.Prediction.toObject, includeInstance),
+    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -120,6 +122,11 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinaryFromReader = fun
       reader.readMessage(value,asgt_type_prediction_pb.Prediction.deserializeBinaryFromReader);
       msg.addPredictions(value);
       break;
+    case 2:
+      var value = new asgt_type_model_info_pb.ModelInfo;
+      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      msg.setModel(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -157,6 +164,14 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.serializeBinaryToWriter = functio
       asgt_type_prediction_pb.Prediction.serializeBinaryToWriter
     );
   }
+  f = message.getModel();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -188,6 +203,36 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.addPredictions = functi
 
 proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.clearPredictionsList = function() {
   this.setPredictionsList([]);
+};
+
+
+/**
+ * optional asgt.type.ModelInfo model = 2;
+ * @return {?proto.asgt.type.ModelInfo}
+ */
+proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.getModel = function() {
+  return /** @type{?proto.asgt.type.ModelInfo} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 2));
+};
+
+
+/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.setModel = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.clearModel = function() {
+  this.setModel(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.hasModel = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

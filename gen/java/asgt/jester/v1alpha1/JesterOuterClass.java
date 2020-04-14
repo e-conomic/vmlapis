@@ -41,6 +41,19 @@ public final class JesterOuterClass {
      */
     asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
+
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    boolean hasModel();
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
   }
   /**
    * <pre>
@@ -95,6 +108,19 @@ public final class JesterOuterClass {
                   input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
               break;
             }
+            case 18: {
+              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              if (model_ != null) {
+                subBuilder = model_.toBuilder();
+              }
+              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(model_);
+                model_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -130,6 +156,7 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.SuggestionsResponse.class, asgt.jester.v1alpha1.JesterOuterClass.SuggestionsResponse.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
@@ -165,6 +192,27 @@ public final class JesterOuterClass {
       return predictions_.get(index);
     }
 
+    public static final int MODEL_FIELD_NUMBER = 2;
+    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    public boolean hasModel() {
+      return model_ != null;
+    }
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+    }
+    /**
+     * <code>.asgt.type.ModelInfo model = 2;</code>
+     */
+    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      return getModel();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -182,6 +230,9 @@ public final class JesterOuterClass {
       for (int i = 0; i < predictions_.size(); i++) {
         output.writeMessage(1, predictions_.get(i));
       }
+      if (model_ != null) {
+        output.writeMessage(2, getModel());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -194,6 +245,10 @@ public final class JesterOuterClass {
       for (int i = 0; i < predictions_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, predictions_.get(i));
+      }
+      if (model_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getModel());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -213,6 +268,11 @@ public final class JesterOuterClass {
       boolean result = true;
       result = result && getPredictionsList()
           .equals(other.getPredictionsList());
+      result = result && (hasModel() == other.hasModel());
+      if (hasModel()) {
+        result = result && getModel()
+            .equals(other.getModel());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -227,6 +287,10 @@ public final class JesterOuterClass {
       if (getPredictionsCount() > 0) {
         hash = (37 * hash) + PREDICTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getPredictionsList().hashCode();
+      }
+      if (hasModel()) {
+        hash = (37 * hash) + MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getModel().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -372,6 +436,12 @@ public final class JesterOuterClass {
         } else {
           predictionsBuilder_.clear();
         }
+        if (modelBuilder_ == null) {
+          model_ = null;
+        } else {
+          model_ = null;
+          modelBuilder_ = null;
+        }
         return this;
       }
 
@@ -399,6 +469,7 @@ public final class JesterOuterClass {
       public asgt.jester.v1alpha1.JesterOuterClass.SuggestionsResponse buildPartial() {
         asgt.jester.v1alpha1.JesterOuterClass.SuggestionsResponse result = new asgt.jester.v1alpha1.JesterOuterClass.SuggestionsResponse(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (predictionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             predictions_ = java.util.Collections.unmodifiableList(predictions_);
@@ -408,6 +479,12 @@ public final class JesterOuterClass {
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
+        if (modelBuilder_ == null) {
+          result.model_ = model_;
+        } else {
+          result.model_ = modelBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -481,6 +558,9 @@ public final class JesterOuterClass {
               predictionsBuilder_.addAllMessages(other.predictions_);
             }
           }
+        }
+        if (other.hasModel()) {
+          mergeModel(other.getModel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -750,6 +830,123 @@ public final class JesterOuterClass {
           predictions_ = null;
         }
         return predictionsBuilder_;
+      }
+
+      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public boolean hasModel() {
+        return modelBuilder_ != null || model_ != null;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+        if (modelBuilder_ == null) {
+          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+        } else {
+          return modelBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+        if (modelBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          model_ = value;
+          onChanged();
+        } else {
+          modelBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public Builder setModel(
+          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+        if (modelBuilder_ == null) {
+          model_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+        if (modelBuilder_ == null) {
+          if (model_ != null) {
+            model_ =
+              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+          } else {
+            model_ = value;
+          }
+          onChanged();
+        } else {
+          modelBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public Builder clearModel() {
+        if (modelBuilder_ == null) {
+          model_ = null;
+          onChanged();
+        } else {
+          model_ = null;
+          modelBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+        
+        onChanged();
+        return getModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+        if (modelBuilder_ != null) {
+          return modelBuilder_.getMessageOrBuilder();
+        } else {
+          return model_ == null ?
+              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelInfo model = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          getModelFieldBuilder() {
+        if (modelBuilder_ == null) {
+          modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+                  getModel(),
+                  getParentForChildren(),
+                  isClean());
+          model_ = null;
+        }
+        return modelBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8258,53 +8455,55 @@ public final class JesterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!asgt/jester/v1alpha1/jester.proto\022\024asg" +
-      "t.jester.v1alpha1\032\032asgt/type/prediction." +
-      "proto\032\034google/api/annotations.proto\032\037goo" +
-      "gle/protobuf/timestamp.proto\032\036google/pro" +
-      "tobuf/wrappers.proto\"A\n\023SuggestionsRespo" +
-      "nse\022*\n\013predictions\030\001 \003(\0132\025.asgt.type.Pre" +
-      "diction\"b\n\021SuggestionOptions\022\030\n\020suggesti" +
-      "on_limit\030\001 \001(\005\0223\n\016min_confidence\030\002 \001(\0162\033" +
-      ".asgt.type.Confidence.Level\"\306\001\n\025ScannedI" +
-      "nvoiceRequest\022@\n\006inputs\030\001 \003(\01320.asgt.jes" +
-      "ter.v1alpha1.ScannedInvoiceRequest.Data\022" +
+      "t.jester.v1alpha1\032\032asgt/type/model_info." +
+      "proto\032\032asgt/type/prediction.proto\032\034googl" +
+      "e/api/annotations.proto\032\037google/protobuf" +
+      "/timestamp.proto\032\036google/protobuf/wrappe" +
+      "rs.proto\"f\n\023SuggestionsResponse\022*\n\013predi" +
+      "ctions\030\001 \003(\0132\025.asgt.type.Prediction\022#\n\005m" +
+      "odel\030\002 \001(\0132\024.asgt.type.ModelInfo\"b\n\021Sugg" +
+      "estionOptions\022\030\n\020suggestion_limit\030\001 \001(\005\022" +
+      "3\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Conf" +
+      "idence.Level\"\306\001\n\025ScannedInvoiceRequest\022@" +
+      "\n\006inputs\030\001 \003(\01320.asgt.jester.v1alpha1.Sc" +
+      "annedInvoiceRequest.Data\022\024\n\014dataset_name" +
+      "\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1" +
+      "alpha1.SuggestionOptions\032\033\n\004Data\022\023\n\013desc" +
+      "ription\030\001 \001(\t\"\344\004\n\034ElectronicInvoiceLineR" +
+      "equest\022G\n\006inputs\030\001 \003(\01327.asgt.jester.v1a" +
+      "lpha1.ElectronicInvoiceLineRequest.Data\022" +
       "\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'" +
       ".asgt.jester.v1alpha1.SuggestionOptions\032" +
-      "\033\n\004Data\022\023\n\013description\030\001 \001(\t\"\344\004\n\034Electro" +
-      "nicInvoiceLineRequest\022G\n\006inputs\030\001 \003(\01327." +
+      "\252\003\n\004Data\022.\n\nissue_date\030\001 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022.\n\010currency\030\002 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022\023\n\013supplier_id\030" +
+      "\003 \001(\t\0223\n\rsupplier_name\030\004 \001(\0132\034.google.pr" +
+      "otobuf.StringValue\0228\n\022supplier_global_id" +
+      "\030\005 \001(\0132\034.google.protobuf.StringValue\0222\n\014" +
+      "customer_ref\030\006 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022*\n\005total\030\007 \001(\0132\033.google.protobu" +
+      "f.FloatValue\022/\n\tline_text\030\010 \001(\0132\034.google" +
+      ".protobuf.StringValue\022-\n\007line_id\030\t \001(\0132\034" +
+      ".google.protobuf.StringValue\"\353\001\n\013BankReq" +
+      "uest\0226\n\006inputs\030\001 \003(\0132&.asgt.jester.v1alp" +
+      "ha1.BankRequest.Data\022\024\n\014dataset_name\030\002 \001" +
+      "(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1alph" +
+      "a1.SuggestionOptions\032T\n\004Data\022\016\n\006amount\030\002" +
+      " \001(\002\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stamp\030\005 \001(\0132\032" +
+      ".google.protobuf.Timestamp2\350\003\n\006Jester\022\240\001" +
+      "\n\031ScannedInvoiceSuggestions\022+.asgt.jeste" +
+      "r.v1alpha1.ScannedInvoiceRequest\032).asgt." +
+      "jester.v1alpha1.SuggestionsResponse\"+\202\323\344" +
+      "\223\002%\" /v1alpha1/scannedinvoice:suggest:\001*" +
+      "\022\265\001\n ElectronicInvoiceLineSuggestions\0222." +
       "asgt.jester.v1alpha1.ElectronicInvoiceLi" +
-      "neRequest.Data\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007" +
-      "options\030\003 \001(\0132\'.asgt.jester.v1alpha1.Sug" +
-      "gestionOptions\032\252\003\n\004Data\022.\n\nissue_date\030\001 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022.\n\010curre" +
-      "ncy\030\002 \001(\0132\034.google.protobuf.StringValue\022" +
-      "\023\n\013supplier_id\030\003 \001(\t\0223\n\rsupplier_name\030\004 " +
-      "\001(\0132\034.google.protobuf.StringValue\0228\n\022sup" +
-      "plier_global_id\030\005 \001(\0132\034.google.protobuf." +
-      "StringValue\0222\n\014customer_ref\030\006 \001(\0132\034.goog" +
-      "le.protobuf.StringValue\022*\n\005total\030\007 \001(\0132\033" +
-      ".google.protobuf.FloatValue\022/\n\tline_text" +
-      "\030\010 \001(\0132\034.google.protobuf.StringValue\022-\n\007" +
-      "line_id\030\t \001(\0132\034.google.protobuf.StringVa" +
-      "lue\"\353\001\n\013BankRequest\0226\n\006inputs\030\001 \003(\0132&.as" +
-      "gt.jester.v1alpha1.BankRequest.Data\022\024\n\014d" +
-      "ataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asg" +
-      "t.jester.v1alpha1.SuggestionOptions\032T\n\004D" +
-      "ata\022\016\n\006amount\030\002 \001(\002\022\014\n\004text\030\004 \001(\t\022.\n\ntim" +
-      "e_stamp\030\005 \001(\0132\032.google.protobuf.Timestam" +
-      "p2\350\003\n\006Jester\022\240\001\n\031ScannedInvoiceSuggestio" +
-      "ns\022+.asgt.jester.v1alpha1.ScannedInvoice" +
-      "Request\032).asgt.jester.v1alpha1.Suggestio" +
-      "nsResponse\"+\202\323\344\223\002%\" /v1alpha1/scannedinv" +
-      "oice:suggest:\001*\022\265\001\n ElectronicInvoiceLin" +
-      "eSuggestions\0222.asgt.jester.v1alpha1.Elec" +
-      "tronicInvoiceLineRequest\032).asgt.jester.v" +
-      "1alpha1.SuggestionsResponse\"2\202\323\344\223\002,\"\'/v1" +
-      "alpha1/electronicinvoiceline:suggest:\001*\022" +
-      "\202\001\n\017BankSuggestions\022!.asgt.jester.v1alph" +
-      "a1.BankRequest\032).asgt.jester.v1alpha1.Su" +
-      "ggestionsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/ban" +
-      "k:suggest:\001*B\010Z\006jesterb\006proto3"
+      "neRequest\032).asgt.jester.v1alpha1.Suggest" +
+      "ionsResponse\"2\202\323\344\223\002,\"\'/v1alpha1/electron" +
+      "icinvoiceline:suggest:\001*\022\202\001\n\017BankSuggest" +
+      "ions\022!.asgt.jester.v1alpha1.BankRequest\032" +
+      ").asgt.jester.v1alpha1.SuggestionsRespon" +
+      "se\"!\202\323\344\223\002\033\"\026/v1alpha1/bank:suggest:\001*B\010Z" +
+      "\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8317,6 +8516,7 @@ public final class JesterOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.ModelInfoOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -8327,7 +8527,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1alpha1_SuggestionsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_SuggestionsResponse_descriptor,
-        new java.lang.String[] { "Predictions", });
+        new java.lang.String[] { "Predictions", "Model", });
     internal_static_asgt_jester_v1alpha1_SuggestionOptions_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_jester_v1alpha1_SuggestionOptions_fieldAccessorTable = new
@@ -8375,6 +8575,7 @@ public final class JesterOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.ModelInfoOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

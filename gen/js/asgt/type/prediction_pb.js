@@ -548,7 +548,7 @@ proto.asgt.type.Prediction.Target.Candidate.prototype.toObject = function(opt_in
  */
 proto.asgt.type.Prediction.Target.Candidate.toObject = function(includeInstance, msg) {
   var f, obj = {
-    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    value: jspb.Message.getFieldWithDefault(msg, 1, ""),
     confidence: (f = msg.getConfidence()) && proto.asgt.type.Confidence.toObject(includeInstance, f)
   };
 
@@ -588,7 +588,7 @@ proto.asgt.type.Prediction.Target.Candidate.deserializeBinaryFromReader = functi
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setLabel(value);
+      msg.setValue(value);
       break;
     case 2:
       var value = new proto.asgt.type.Confidence;
@@ -624,7 +624,7 @@ proto.asgt.type.Prediction.Target.Candidate.prototype.serializeBinary = function
  */
 proto.asgt.type.Prediction.Target.Candidate.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getLabel();
+  f = message.getValue();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -643,16 +643,16 @@ proto.asgt.type.Prediction.Target.Candidate.serializeBinaryToWriter = function(m
 
 
 /**
- * optional string label = 1;
+ * optional string value = 1;
  * @return {string}
  */
-proto.asgt.type.Prediction.Target.Candidate.prototype.getLabel = function() {
+proto.asgt.type.Prediction.Target.Candidate.prototype.getValue = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.type.Prediction.Target.Candidate.prototype.setLabel = function(value) {
+proto.asgt.type.Prediction.Target.Candidate.prototype.setValue = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1egoogle/protobuf/wrappers.proto\"\xb3\x01\n\nConfidence\x12*\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xd9\x01\n\nPrediction\x12-\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x1a\x9b\x01\n\x06Target\x12\x0e\n\x06target\x18\x01 \x01(\t\x12:\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.Candidate\x1a\x45\n\tCandidate\x12\r\n\x05label\x18\x01 \x01(\t\x12)\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1egoogle/protobuf/wrappers.proto\"\xb3\x01\n\nConfidence\x12*\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xd9\x01\n\nPrediction\x12-\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x1a\x9b\x01\n\x06Target\x12\x0e\n\x06target\x18\x01 \x01(\t\x12:\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.Candidate\x1a\x45\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12)\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
 
@@ -112,7 +112,7 @@ _PREDICTION_TARGET_CANDIDATE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='label', full_name='asgt.type.Prediction.Target.Candidate.label', index=0,
+      name='value', full_name='asgt.type.Prediction.Target.Candidate.value', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,

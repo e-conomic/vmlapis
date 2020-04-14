@@ -181,10 +181,8 @@ type CreateElectronicInvoiceLineDatasetRequest struct {
 func (m *CreateElectronicInvoiceLineDatasetRequest) Reset() {
 	*m = CreateElectronicInvoiceLineDatasetRequest{}
 }
-func (m *CreateElectronicInvoiceLineDatasetRequest) String() string {
-	return proto.CompactTextString(m)
-}
-func (*CreateElectronicInvoiceLineDatasetRequest) ProtoMessage() {}
+func (m *CreateElectronicInvoiceLineDatasetRequest) String() string { return proto.CompactTextString(m) }
+func (*CreateElectronicInvoiceLineDatasetRequest) ProtoMessage()    {}
 func (*CreateElectronicInvoiceLineDatasetRequest) Descriptor() ([]byte, []int) {
 	return fileDescriptor_electronic_invoice_line_a413735c242c7b36, []int{2}
 }
