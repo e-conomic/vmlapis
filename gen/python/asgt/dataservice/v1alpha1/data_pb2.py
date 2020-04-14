@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/data.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1egoogle/protobuf/wrappers.proto\"*\n\tDataTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xae\x01\n\nPrediction\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x43\n\ncandidates\x18\x02 \x03(\x0b\x32/.asgt.dataservice.v1alpha1.Prediction.Candidate\x1aK\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12/\n\nconfidence\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"B\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xc3\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x41\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.asgt.dataservice.v1alpha1.FeedbackRequest.Entry\x1aN\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"F\n\x0fRetentionPolicy\x12\x12\n\x08max_days\x18\x01 \x01(\x03H\x00\x12\x15\n\x0bmax_records\x18\x02 \x01(\x03H\x00\x42\x08\n\x06policyB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/data.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1egoogle/protobuf/wrappers.proto\"*\n\tDataTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xbc\x01\n\nPrediction\x12\x15\n\x06target\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12\x43\n\ncandidates\x18\x02 \x03(\x0b\x32/.asgt.dataservice.v1alpha1.Prediction.Candidate\x1aR\n\tCandidate\x12\x14\n\x05value\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\nconfidence\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"B\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xc3\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x41\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.asgt.dataservice.v1alpha1.FeedbackRequest.Entry\x1aN\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"F\n\x0fRetentionPolicy\x12\x12\n\x08max_days\x18\x01 \x01(\x03H\x00\x12\x15\n\x0bmax_records\x18\x02 \x01(\x03H\x00\x42\x08\n\x06policyB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
+  dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
 
 
 
@@ -60,8 +61,8 @@ _DATATUPLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=99,
-  serialized_end=141,
+  serialized_start=129,
+  serialized_end=171,
 )
 
 
@@ -78,7 +79,7 @@ _PREDICTION_CANDIDATE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='confidence', full_name='asgt.dataservice.v1alpha1.Prediction.Candidate.confidence', index=1,
       number=2, type=11, cpp_type=10, label=1,
@@ -98,8 +99,8 @@ _PREDICTION_CANDIDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=243,
-  serialized_end=318,
+  serialized_start=280,
+  serialized_end=362,
 )
 
 _PREDICTION = _descriptor.Descriptor(
@@ -115,7 +116,7 @@ _PREDICTION = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='candidates', full_name='asgt.dataservice.v1alpha1.Prediction.candidates', index=1,
       number=2, type=11, cpp_type=10, label=3,
@@ -135,8 +136,8 @@ _PREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=144,
-  serialized_end=318,
+  serialized_start=174,
+  serialized_end=362,
 )
 
 
@@ -180,8 +181,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=320,
-  serialized_end=386,
+  serialized_start=364,
+  serialized_end=430,
 )
 
 
@@ -218,8 +219,8 @@ _FEEDBACKREQUEST_ENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=506,
-  serialized_end=584,
+  serialized_start=550,
+  serialized_end=628,
 )
 
 _FEEDBACKREQUEST = _descriptor.Descriptor(
@@ -262,8 +263,8 @@ _FEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=389,
-  serialized_end=584,
+  serialized_start=433,
+  serialized_end=628,
 )
 
 
@@ -303,8 +304,8 @@ _RETENTIONPOLICY = _descriptor.Descriptor(
       name='policy', full_name='asgt.dataservice.v1alpha1.RetentionPolicy.policy',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=586,
-  serialized_end=656,
+  serialized_start=630,
+  serialized_end=700,
 )
 
 _PREDICTION_CANDIDATE.fields_by_name['confidence'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
@@ -379,4 +380,6 @@ _sym_db.RegisterMessage(RetentionPolicy)
 
 
 DESCRIPTOR._options = None
+_PREDICTION_CANDIDATE.fields_by_name['value']._options = None
+_PREDICTION.fields_by_name['target']._options = None
 # @@protoc_insertion_point(module_scope)

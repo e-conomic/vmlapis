@@ -68,7 +68,7 @@
    {
     "name": "version",
     "type": "INTEGER",
-    "mode": "NULLABLE"
+    "mode": "REQUIRED"
    }
   ]
  },
@@ -80,7 +80,7 @@
    {
     "name": "target",
     "type": "STRING",
-    "mode": "NULLABLE"
+    "mode": "REQUIRED"
    },
    {
     "name": "candidates",
@@ -90,7 +90,7 @@
      {
       "name": "value",
       "type": "STRING",
-      "mode": "NULLABLE"
+      "mode": "REQUIRED"
      },
      {
       "name": "confidence",

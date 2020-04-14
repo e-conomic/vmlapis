@@ -714,11 +714,11 @@ public final class Data {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     java.lang.String getTarget();
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTargetBytes();
@@ -843,11 +843,11 @@ public final class Data {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       java.lang.String getValue();
       /**
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       com.google.protobuf.ByteString
           getValueBytes();
@@ -959,7 +959,7 @@ public final class Data {
       public static final int VALUE_FIELD_NUMBER = 1;
       private volatile java.lang.Object value_;
       /**
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.lang.String getValue() {
         java.lang.Object ref = value_;
@@ -974,7 +974,7 @@ public final class Data {
         }
       }
       /**
-       * <code>string value = 1;</code>
+       * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getValueBytes() {
@@ -1346,7 +1346,7 @@ public final class Data {
 
         private java.lang.Object value_ = "";
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -1361,7 +1361,7 @@ public final class Data {
           }
         }
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -1377,7 +1377,7 @@ public final class Data {
           }
         }
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public Builder setValue(
             java.lang.String value) {
@@ -1390,7 +1390,7 @@ public final class Data {
           return this;
         }
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public Builder clearValue() {
           
@@ -1399,7 +1399,7 @@ public final class Data {
           return this;
         }
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public Builder setValueBytes(
             com.google.protobuf.ByteString value) {
@@ -1586,7 +1586,7 @@ public final class Data {
     public static final int TARGET_FIELD_NUMBER = 1;
     private volatile java.lang.Object target_;
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.lang.String getTarget() {
       java.lang.Object ref = target_;
@@ -1601,7 +1601,7 @@ public final class Data {
       }
     }
     /**
-     * <code>string target = 1;</code>
+     * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTargetBytes() {
@@ -2016,7 +2016,7 @@ public final class Data {
 
       private java.lang.Object target_ = "";
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.lang.String getTarget() {
         java.lang.Object ref = target_;
@@ -2031,7 +2031,7 @@ public final class Data {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTargetBytes() {
@@ -2047,7 +2047,7 @@ public final class Data {
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTarget(
           java.lang.String value) {
@@ -2060,7 +2060,7 @@ public final class Data {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearTarget() {
         
@@ -2069,7 +2069,7 @@ public final class Data {
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string target = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTargetBytes(
           com.google.protobuf.ByteString value) {
@@ -5981,22 +5981,24 @@ public final class Data {
   static {
     java.lang.String[] descriptorData = {
       "\n$asgt/dataservice/v1alpha1/data.proto\022\031" +
-      "asgt.dataservice.v1alpha1\032\036google/protob" +
-      "uf/wrappers.proto\"*\n\tDataTuple\022\016\n\006target" +
-      "\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"\256\001\n\nPrediction\022\016\n\006" +
-      "target\030\001 \001(\t\022C\n\ncandidates\030\002 \003(\0132/.asgt." +
-      "dataservice.v1alpha1.Prediction.Candidat" +
-      "e\032K\n\tCandidate\022\r\n\005value\030\001 \001(\t\022/\n\nconfide" +
-      "nce\030\002 \001(\0132\033.google.protobuf.FloatValue\"B" +
-      "\n\rDeleteRequest\022\022\n\nmodel_type\030\001 \001(\t\022\017\n\007d" +
-      "ataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"\303\001\n\017FeedbackR" +
-      "equest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022A\n" +
-      "\007entries\030\003 \003(\01320.asgt.dataservice.v1alph" +
-      "a1.FeedbackRequest.Entry\032N\n\005Entry\022\n\n\002id\030" +
-      "\001 \001(\t\0229\n\013true_values\030\002 \003(\0132$.asgt.datase" +
-      "rvice.v1alpha1.DataTuple\"F\n\017RetentionPol" +
-      "icy\022\022\n\010max_days\030\001 \001(\003H\000\022\025\n\013max_records\030\002" +
-      " \001(\003H\000B\010\n\006policyB\rZ\013dataserviceb\006proto3"
+      "asgt.dataservice.v1alpha1\032\034gen_bq_schema" +
+      "/bq_field.proto\032\036google/protobuf/wrapper" +
+      "s.proto\"*\n\tDataTuple\022\016\n\006target\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t\"\274\001\n\nPrediction\022\025\n\006target\030\001 \001" +
+      "(\tB\005\352?\002\010\001\022C\n\ncandidates\030\002 \003(\0132/.asgt.dat" +
+      "aservice.v1alpha1.Prediction.Candidate\032R" +
+      "\n\tCandidate\022\024\n\005value\030\001 \001(\tB\005\352?\002\010\001\022/\n\ncon" +
+      "fidence\030\002 \001(\0132\033.google.protobuf.FloatVal" +
+      "ue\"B\n\rDeleteRequest\022\022\n\nmodel_type\030\001 \001(\t\022" +
+      "\017\n\007dataset\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\"\303\001\n\017Feedb" +
+      "ackRequest\022\017\n\007dataset\030\001 \001(\t\022\014\n\004tags\030\002 \003(" +
+      "\t\022A\n\007entries\030\003 \003(\01320.asgt.dataservice.v1" +
+      "alpha1.FeedbackRequest.Entry\032N\n\005Entry\022\n\n" +
+      "\002id\030\001 \001(\t\0229\n\013true_values\030\002 \003(\0132$.asgt.da" +
+      "taservice.v1alpha1.DataTuple\"F\n\017Retentio" +
+      "nPolicy\022\022\n\010max_days\030\001 \001(\003H\000\022\025\n\013max_recor" +
+      "ds\030\002 \001(\003H\000B\010\n\006policyB\rZ\013dataserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6009,6 +6011,7 @@ public final class Data {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_dataservice_v1alpha1_DataTuple_descriptor =
@@ -6053,6 +6056,12 @@ public final class Data {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_RetentionPolicy_descriptor,
         new java.lang.String[] { "MaxDays", "MaxRecords", "Policy", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.bigquery);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

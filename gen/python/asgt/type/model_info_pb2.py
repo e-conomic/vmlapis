@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1a\x61sgt/type/model_info.proto\x12\tasgt.type\"\"\n\tModelInfo\x12\x0f\n\x07version\x18\x03 \x01(\x03J\x04\x08\x01\x10\x03\x42\x06Z\x04typeb\x06proto3')
-)
+  serialized_pb=_b('\n\x1a\x61sgt/type/model_info.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\")\n\tModelInfo\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01J\x04\x08\x01\x10\x03\x42\x06Z\x04typeb\x06proto3')
+  ,
+  dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,])
 
 
 
@@ -38,7 +40,7 @@ _MODELINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -51,8 +53,8 @@ _MODELINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=41,
-  serialized_end=75,
+  serialized_start=71,
+  serialized_end=112,
 )
 
 DESCRIPTOR.message_types_by_name['ModelInfo'] = _MODELINFO
@@ -67,4 +69,5 @@ _sym_db.RegisterMessage(ModelInfo)
 
 
 DESCRIPTOR._options = None
+_MODELINFO.fields_by_name['version']._options = None
 # @@protoc_insertion_point(module_scope)

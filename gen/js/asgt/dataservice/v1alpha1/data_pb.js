@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DataTuple', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DeleteRequest', null, global);

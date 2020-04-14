@@ -5,6 +5,7 @@ package asgt.dataservice.v1alpha1;
 option go_package = "dataservice";
 
 import "google/protobuf/wrappers.proto";
+import "gen_bq_schema/bq_field.proto";
 
 // Common Data types
 message DataTuple {
@@ -14,11 +15,11 @@ message DataTuple {
 
 message Prediction {
   message Candidate {
-    string value = 1;
+    string value = 1 [(gen_bq_schema.bigquery).require = true];
     google.protobuf.FloatValue confidence = 2;
   }
 
-  string target = 1;
+  string target = 1 [(gen_bq_schema.bigquery).require = true];
   repeated Candidate candidates = 2;
 }
 
