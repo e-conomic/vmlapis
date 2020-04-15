@@ -12,21 +12,21 @@ import "asgt/type/invoice_line.proto";
 import "asgt/type/scanned_invoice.proto";
 
 service Jester {
-  rpc ScannedInvoiceSuggestions(ScannedInvoiceRequest) returns (SuggestionsResponse) {
+  rpc ScannedInvoiceSuggestions (ScannedInvoiceRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/scannedinvoice:suggest"
+      post: "/v1alpha1/scanned-invoice:suggest"
       body: "*"
     };
   }
 
-  rpc ElectronicInvoiceLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
+  rpc ElectronicInvoiceLineSuggestions (ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:suggest"
+      post: "/v1alpha1/electronic-invoice-line:suggest"
       body: "*"
     };
   }
 
-  rpc BankSuggestions(BankRequest) returns (SuggestionsResponse) {
+  rpc BankSuggestions (BankRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:suggest"
       body: "*"

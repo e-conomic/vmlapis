@@ -11,22 +11,22 @@ import "asgt/type/bank_transaction.proto";
 import "asgt/type/retention_policy.proto";
 import "asgt/type/target_label.proto";
 
-service BankDataservice {
-  rpc CreateBankDataset(CreateBankDatasetRequest) returns (google.protobuf.Empty) {
+service BankDataService {
+  rpc CreateBankDataset (CreateBankDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:create"
       body: "*"
     };
   }
 
-  rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendBankData (AppendBankDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:append"
       body: "*"
     };
   }
 
-  rpc DeleteBankData(DeleteRequest) returns (google.protobuf.Empty) {
+  rpc DeleteBankData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:delete"
       body: "*"

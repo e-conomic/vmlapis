@@ -11,24 +11,24 @@ import "asgt/type/invoice_line.proto";
 import "asgt/type/retention_policy.proto";
 import "asgt/type/target_label.proto";
 
-service ElectronicInvoiceLineDataservice {
-  rpc CreateElectronicInvoiceLineDataset(CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
+service ElectronicInvoiceLineDataService {
+  rpc CreateElectronicInvoiceLineDataset (CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:create"
+      post: "/v1alpha1/electronic-invoice-line:create"
       body: "*"
     };
   }
 
-  rpc AppendElectronicInvoiceLineData(AppendElectronicInvoiceLineDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendElectronicInvoiceLineData (AppendElectronicInvoiceLineDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:append"
+      post: "/v1alpha1/electronic-invoice-line:append"
       body: "*"
     };
   }
 
-  rpc DeleteElectronicInvoiceLineData(DeleteRequest) returns (google.protobuf.Empty) {
+  rpc DeleteElectronicInvoiceLineData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:delete"
+      post: "/v1alpha1/electronic-invoice-line:delete"
       body: "*"
     };
   }

@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "asgt/dataservice/v1alpha1/delete.proto";
+import "asgt/type/scanned_invoice.proto";
+import "asgt/type/retention_policy.proto";
+import "asgt/type/target_label.proto";
+
+service ScannedInvoiceDataService {
+  rpc CreateScannedInvoiceDataset (CreateScannedInvoiceDatasetRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/scanned-invoice:create"
+      body: "*"
+    };
+  }
+
+  rpc AppendScannedInvoiceData (AppendScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/scanned-invoice:append"
+      body: "*"
+    };
+  }
+
+  rpc DeleteScannedInvoiceData (DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/scanned-invoice:delete"
+      body: "*"
+    };
+  }
+}
+
+
+message ScannedInvoiceEntryInput {
+  asgt.type.ScannedInvoice input = 1;
+  repeated asgt.type.TargetLabel targets = 2;
+}
+
+message CreateScannedInvoiceDatasetRequest {
+  string dataset_name = 1;
+  repeated string tags = 2;
+  repeated ScannedInvoiceEntryInput entries = 3;
+  asgt.type.RetentionPolicy retention_policy = 4;
+}
+
+message AppendScannedInvoiceDataRequest {
+  string dataset_name = 1;
+  repeated ScannedInvoiceEntryInput entries = 3;
+}
