@@ -1,0 +1,44 @@
+[
+ {
+  "name": "consumer",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "name",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "type",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "targets",
+  "type": "STRING",
+  "mode": "REPEATED"
+ },
+ {
+  "name": "retention_policy",
+  "type": "RECORD",
+  "mode": "REQUIRED",
+  "fields": [
+   {
+    "name": "max_days",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "max_records",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "hash",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ }
+]
