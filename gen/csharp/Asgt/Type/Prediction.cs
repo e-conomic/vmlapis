@@ -33,13 +33,13 @@ namespace Asgt.Type {
             "Cgd0YXJnZXRzGAEgAygLMhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0",
             "GpsBCgZUYXJnZXQSDgoGdGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiAD",
             "KAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkUK",
-            "CUNhbmRpZGF0ZRINCgVsYWJlbBgBIAEoCRIpCgpjb25maWRlbmNlGAIgASgL",
+            "CUNhbmRpZGF0ZRINCgV2YWx1ZRgBIAEoCRIpCgpjb25maWRlbmNlGAIgASgL",
             "MhUuYXNndC50eXBlLkNvbmZpZGVuY2VCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
           }));
     }
     #endregion
@@ -533,7 +533,7 @@ namespace Asgt.Type {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public Candidate(Candidate other) : this() {
-              label_ = other.label_;
+              value_ = other.value_;
               confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -543,14 +543,14 @@ namespace Asgt.Type {
               return new Candidate(this);
             }
 
-            /// <summary>Field number for the "label" field.</summary>
-            public const int LabelFieldNumber = 1;
-            private string label_ = "";
+            /// <summary>Field number for the "value" field.</summary>
+            public const int ValueFieldNumber = 1;
+            private string value_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public string Label {
-              get { return label_; }
+            public string Value {
+              get { return value_; }
               set {
-                label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
             }
 
@@ -578,7 +578,7 @@ namespace Asgt.Type {
               if (ReferenceEquals(other, this)) {
                 return true;
               }
-              if (Label != other.Label) return false;
+              if (Value != other.Value) return false;
               if (!object.Equals(Confidence, other.Confidence)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -586,7 +586,7 @@ namespace Asgt.Type {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override int GetHashCode() {
               int hash = 1;
-              if (Label.Length != 0) hash ^= Label.GetHashCode();
+              if (Value.Length != 0) hash ^= Value.GetHashCode();
               if (confidence_ != null) hash ^= Confidence.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -601,9 +601,9 @@ namespace Asgt.Type {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
-              if (Label.Length != 0) {
+              if (Value.Length != 0) {
                 output.WriteRawTag(10);
-                output.WriteString(Label);
+                output.WriteString(Value);
               }
               if (confidence_ != null) {
                 output.WriteRawTag(18);
@@ -617,8 +617,8 @@ namespace Asgt.Type {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
               int size = 0;
-              if (Label.Length != 0) {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
+              if (Value.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
               }
               if (confidence_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
@@ -634,8 +634,8 @@ namespace Asgt.Type {
               if (other == null) {
                 return;
               }
-              if (other.Label.Length != 0) {
-                Label = other.Label;
+              if (other.Value.Length != 0) {
+                Value = other.Value;
               }
               if (other.confidence_ != null) {
                 if (confidence_ == null) {
@@ -655,7 +655,7 @@ namespace Asgt.Type {
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
                   case 10: {
-                    Label = input.ReadString();
+                    Value = input.ReadString();
                     break;
                   }
                   case 18: {

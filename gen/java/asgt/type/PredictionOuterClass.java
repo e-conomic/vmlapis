@@ -1208,14 +1208,14 @@ public final class PredictionOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>string label = 1;</code>
+         * <code>string value = 1;</code>
          */
-        java.lang.String getLabel();
+        java.lang.String getValue();
         /**
-         * <code>string label = 1;</code>
+         * <code>string value = 1;</code>
          */
         com.google.protobuf.ByteString
-            getLabelBytes();
+            getValueBytes();
 
         /**
          * <code>.asgt.type.Confidence confidence = 2;</code>
@@ -1243,7 +1243,7 @@ public final class PredictionOuterClass {
           super(builder);
         }
         private Candidate() {
-          label_ = "";
+          value_ = "";
         }
 
         @java.lang.Override
@@ -1273,7 +1273,7 @@ public final class PredictionOuterClass {
                 case 10: {
                   java.lang.String s = input.readStringRequireUtf8();
 
-                  label_ = s;
+                  value_ = s;
                   break;
                 }
                 case 18: {
@@ -1321,34 +1321,34 @@ public final class PredictionOuterClass {
                   asgt.type.PredictionOuterClass.Prediction.Target.Candidate.class, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder.class);
         }
 
-        public static final int LABEL_FIELD_NUMBER = 1;
-        private volatile java.lang.Object label_;
+        public static final int VALUE_FIELD_NUMBER = 1;
+        private volatile java.lang.Object value_;
         /**
-         * <code>string label = 1;</code>
+         * <code>string value = 1;</code>
          */
-        public java.lang.String getLabel() {
-          java.lang.Object ref = label_;
+        public java.lang.String getValue() {
+          java.lang.Object ref = value_;
           if (ref instanceof java.lang.String) {
             return (java.lang.String) ref;
           } else {
             com.google.protobuf.ByteString bs = 
                 (com.google.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
-            label_ = s;
+            value_ = s;
             return s;
           }
         }
         /**
-         * <code>string label = 1;</code>
+         * <code>string value = 1;</code>
          */
         public com.google.protobuf.ByteString
-            getLabelBytes() {
-          java.lang.Object ref = label_;
+            getValueBytes() {
+          java.lang.Object ref = value_;
           if (ref instanceof java.lang.String) {
             com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
-            label_ = b;
+            value_ = b;
             return b;
           } else {
             return (com.google.protobuf.ByteString) ref;
@@ -1390,8 +1390,8 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (!getLabelBytes().isEmpty()) {
-            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, label_);
+          if (!getValueBytes().isEmpty()) {
+            com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
           }
           if (confidence_ != null) {
             output.writeMessage(2, getConfidence());
@@ -1405,8 +1405,8 @@ public final class PredictionOuterClass {
           if (size != -1) return size;
 
           size = 0;
-          if (!getLabelBytes().isEmpty()) {
-            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, label_);
+          if (!getValueBytes().isEmpty()) {
+            size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
           }
           if (confidence_ != null) {
             size += com.google.protobuf.CodedOutputStream
@@ -1428,8 +1428,8 @@ public final class PredictionOuterClass {
           asgt.type.PredictionOuterClass.Prediction.Target.Candidate other = (asgt.type.PredictionOuterClass.Prediction.Target.Candidate) obj;
 
           boolean result = true;
-          result = result && getLabel()
-              .equals(other.getLabel());
+          result = result && getValue()
+              .equals(other.getValue());
           result = result && (hasConfidence() == other.hasConfidence());
           if (hasConfidence()) {
             result = result && getConfidence()
@@ -1446,8 +1446,8 @@ public final class PredictionOuterClass {
           }
           int hash = 41;
           hash = (19 * hash) + getDescriptor().hashCode();
-          hash = (37 * hash) + LABEL_FIELD_NUMBER;
-          hash = (53 * hash) + getLabel().hashCode();
+          hash = (37 * hash) + VALUE_FIELD_NUMBER;
+          hash = (53 * hash) + getValue().hashCode();
           if (hasConfidence()) {
             hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
             hash = (53 * hash) + getConfidence().hashCode();
@@ -1585,7 +1585,7 @@ public final class PredictionOuterClass {
           @java.lang.Override
           public Builder clear() {
             super.clear();
-            label_ = "";
+            value_ = "";
 
             if (confidenceBuilder_ == null) {
               confidence_ = null;
@@ -1619,7 +1619,7 @@ public final class PredictionOuterClass {
           @java.lang.Override
           public asgt.type.PredictionOuterClass.Prediction.Target.Candidate buildPartial() {
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate result = new asgt.type.PredictionOuterClass.Prediction.Target.Candidate(this);
-            result.label_ = label_;
+            result.value_ = value_;
             if (confidenceBuilder_ == null) {
               result.confidence_ = confidence_;
             } else {
@@ -1673,8 +1673,8 @@ public final class PredictionOuterClass {
 
           public Builder mergeFrom(asgt.type.PredictionOuterClass.Prediction.Target.Candidate other) {
             if (other == asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance()) return this;
-            if (!other.getLabel().isEmpty()) {
-              label_ = other.label_;
+            if (!other.getValue().isEmpty()) {
+              value_ = other.value_;
               onChanged();
             }
             if (other.hasConfidence()) {
@@ -1709,71 +1709,71 @@ public final class PredictionOuterClass {
             return this;
           }
 
-          private java.lang.Object label_ = "";
+          private java.lang.Object value_ = "";
           /**
-           * <code>string label = 1;</code>
+           * <code>string value = 1;</code>
            */
-          public java.lang.String getLabel() {
-            java.lang.Object ref = label_;
+          public java.lang.String getValue() {
+            java.lang.Object ref = value_;
             if (!(ref instanceof java.lang.String)) {
               com.google.protobuf.ByteString bs =
                   (com.google.protobuf.ByteString) ref;
               java.lang.String s = bs.toStringUtf8();
-              label_ = s;
+              value_ = s;
               return s;
             } else {
               return (java.lang.String) ref;
             }
           }
           /**
-           * <code>string label = 1;</code>
+           * <code>string value = 1;</code>
            */
           public com.google.protobuf.ByteString
-              getLabelBytes() {
-            java.lang.Object ref = label_;
+              getValueBytes() {
+            java.lang.Object ref = value_;
             if (ref instanceof String) {
               com.google.protobuf.ByteString b = 
                   com.google.protobuf.ByteString.copyFromUtf8(
                       (java.lang.String) ref);
-              label_ = b;
+              value_ = b;
               return b;
             } else {
               return (com.google.protobuf.ByteString) ref;
             }
           }
           /**
-           * <code>string label = 1;</code>
+           * <code>string value = 1;</code>
            */
-          public Builder setLabel(
+          public Builder setValue(
               java.lang.String value) {
             if (value == null) {
     throw new NullPointerException();
   }
   
-            label_ = value;
+            value_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>string label = 1;</code>
+           * <code>string value = 1;</code>
            */
-          public Builder clearLabel() {
+          public Builder clearValue() {
             
-            label_ = getDefaultInstance().getLabel();
+            value_ = getDefaultInstance().getValue();
             onChanged();
             return this;
           }
           /**
-           * <code>string label = 1;</code>
+           * <code>string value = 1;</code>
            */
-          public Builder setLabelBytes(
+          public Builder setValueBytes(
               com.google.protobuf.ByteString value) {
             if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
             
-            label_ = value;
+            value_ = value;
             onChanged();
             return this;
           }
@@ -3449,7 +3449,7 @@ public final class PredictionOuterClass {
       "\001 \003(\0132\034.asgt.type.Prediction.Target\032\233\001\n\006" +
       "Target\022\016\n\006target\030\001 \001(\t\022:\n\ncandidates\030\002 \003" +
       "(\0132&.asgt.type.Prediction.Target.Candida" +
-      "te\032E\n\tCandidate\022\r\n\005label\030\001 \001(\t\022)\n\nconfid" +
+      "te\032E\n\tCandidate\022\r\n\005value\030\001 \001(\t\022)\n\nconfid" +
       "ence\030\002 \001(\0132\025.asgt.type.ConfidenceB\006Z\004typ" +
       "eb\006proto3"
     };
@@ -3489,7 +3489,7 @@ public final class PredictionOuterClass {
     internal_static_asgt_type_Prediction_Target_Candidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Prediction_Target_Candidate_descriptor,
-        new java.lang.String[] { "Label", "Confidence", });
+        new java.lang.String[] { "Value", "Confidence", });
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

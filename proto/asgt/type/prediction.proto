@@ -23,12 +23,10 @@ message Confidence {
   google.protobuf.FloatValue value = 2;
 }
 
-
-
 message Prediction {
   message Target {
     message Candidate {
-      string label = 1;
+      string value = 1;
       Confidence confidence = 2;
     }
     string target = 1;
