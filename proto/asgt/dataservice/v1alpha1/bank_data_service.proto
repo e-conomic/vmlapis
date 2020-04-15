@@ -36,7 +36,7 @@ service BankDataService {
 
 
 message BankEntryInput {
-  asgt.type.BankTransaction input = 1;
+  asgt.type.BankTransaction data = 1;
   repeated asgt.type.TargetLabel targets = 2;
 }
 

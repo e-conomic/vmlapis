@@ -36,7 +36,7 @@ service ScannedInvoiceDataService {
 
 
 message ScannedInvoiceEntryInput {
-  asgt.type.ScannedInvoice input = 1;
+  asgt.type.ScannedInvoice data = 1;
   repeated asgt.type.TargetLabel targets = 2;
 }
 

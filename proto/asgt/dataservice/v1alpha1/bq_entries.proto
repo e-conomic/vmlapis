@@ -35,7 +35,7 @@ message ElectronicInvoiceLineEntry {
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-  asgt.type.InvoiceLine input = 5;
+  asgt.type.InvoiceLine data = 5;
   repeated asgt.type.TargetLabel targets = 6;
   asgt.type.ModelInfo model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;
@@ -49,7 +49,7 @@ message ScannedInvoiceEntry {
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-  asgt.type.ScannedInvoice input = 5;
+  asgt.type.ScannedInvoice data = 5;
   repeated asgt.type.TargetLabel targets = 6;
   asgt.type.ModelInfo model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;

@@ -35,7 +35,7 @@ service ElectronicInvoiceLineDataService {
 }
 
 message ElectronicInvoiceLineEntryInput {
-  asgt.type.InvoiceLine input = 1;
+  asgt.type.InvoiceLine data = 1;
   repeated asgt.type.TargetLabel targets = 2;
 }
 
