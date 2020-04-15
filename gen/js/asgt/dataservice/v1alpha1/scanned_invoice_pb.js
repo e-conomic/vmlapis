@@ -12,6 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js');
+var asgt_dataservice_v1alpha1_retention_policy_pb = require('../../../asgt/dataservice/v1alpha1/retention_policy_pb.js');
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js');
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js');
 var gen_bq_schema_bq_table_pb = require('../../../gen_bq_schema/bq_table_pb.js');
@@ -698,7 +699,7 @@ proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.toObject = fu
     tagsList: jspb.Message.getRepeatedField(msg, 2),
     entriesList: jspb.Message.toObjectList(msg.getEntriesList(),
     proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput.toObject, includeInstance),
-    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.toObject(includeInstance, f)
+    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -749,8 +750,8 @@ proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.deserializeBi
       msg.addEntries(value);
       break;
     case 4:
-      var value = new asgt_dataservice_v1alpha1_data_pb.RetentionPolicy;
-      reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.deserializeBinaryFromReader);
+      var value = new asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy;
+      reader.readMessage(value,asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.deserializeBinaryFromReader);
       msg.setRetentionPolicy(value);
       break;
     default:
@@ -809,7 +810,7 @@ proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.serializeBina
     writer.writeMessage(
       4,
       f,
-      asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.serializeBinaryToWriter
+      asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.serializeBinaryToWriter
     );
   }
 };
@@ -896,7 +897,7 @@ proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.prototype.cle
  */
 proto.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.prototype.getRetentionPolicy = function() {
   return /** @type{?proto.asgt.dataservice.v1alpha1.RetentionPolicy} */ (
-    jspb.Message.getWrapperField(this, asgt_dataservice_v1alpha1_data_pb.RetentionPolicy, 4));
+    jspb.Message.getWrapperField(this, asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy, 4));
 };
 
 

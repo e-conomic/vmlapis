@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
+from asgt.dataservice.v1alpha1 import retention_policy_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/dataset_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\"\xc6\x01\n\x0b\x44\x61tasetInfo\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x44\n\x10retention_policy\x18\t \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x12=\n\x19training_grace_period_end\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampJ\x04\x08\x04\x10\t\"J\n\x12GetDatasetResponse\x12\x34\n\x04info\x18\x01 \x01(\x0b\x32&.asgt.dataservice.v1alpha1.DatasetInfo2{\n\x0e\x44\x61tasetService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/dataset_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x30\x61sgt/dataservice/v1alpha1/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\"\xc6\x01\n\x0b\x44\x61tasetInfo\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x44\n\x10retention_policy\x18\t \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\x12=\n\x19training_grace_period_end\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampJ\x04\x08\x04\x10\t\"J\n\x12GetDatasetResponse\x12\x34\n\x04info\x18\x01 \x01(\x0b\x32&.asgt.dataservice.v1alpha1.DatasetInfo2{\n\x0e\x44\x61tasetService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -68,8 +68,8 @@ _GETDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=149,
-  serialized_end=230,
+  serialized_start=161,
+  serialized_end=242,
 )
 
 
@@ -127,8 +127,8 @@ _DATASETINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=233,
-  serialized_end=431,
+  serialized_start=245,
+  serialized_end=443,
 )
 
 
@@ -158,11 +158,11 @@ _GETDATASETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=433,
-  serialized_end=507,
+  serialized_start=445,
+  serialized_end=519,
 )
 
-_DATASETINFO.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_DATASETINFO.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2._RETENTIONPOLICY
 _DATASETINFO.fields_by_name['training_grace_period_end'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _GETDATASETRESPONSE.fields_by_name['info'].message_type = _DATASETINFO
 DESCRIPTOR.message_types_by_name['GetDatasetRequest'] = _GETDATASETREQUEST
@@ -200,8 +200,8 @@ _DATASETSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=509,
-  serialized_end=632,
+  serialized_start=521,
+  serialized_end=644,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetDataset',

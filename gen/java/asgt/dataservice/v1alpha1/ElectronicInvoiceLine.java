@@ -3075,11 +3075,11 @@ public final class ElectronicInvoiceLine {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest}
@@ -3148,11 +3148,11 @@ public final class ElectronicInvoiceLine {
               break;
             }
             case 34: {
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder subBuilder = null;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
                 subBuilder = retentionPolicy_.toBuilder();
               }
-              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.Data.RetentionPolicy.parser(), extensionRegistry);
+              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionPolicy_);
                 retentionPolicy_ = subBuilder.buildPartial();
@@ -3298,7 +3298,7 @@ public final class ElectronicInvoiceLine {
     }
 
     public static final int RETENTION_POLICY_FIELD_NUMBER = 4;
-    private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
+    private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
@@ -3308,13 +3308,13 @@ public final class ElectronicInvoiceLine {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
-      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
+      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
 
@@ -4147,9 +4147,9 @@ public final class ElectronicInvoiceLine {
         return entriesBuilder_;
       }
 
-      private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_ = null;
+      private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
@@ -4159,9 +4159,9 @@ public final class ElectronicInvoiceLine {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
-          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         } else {
           return retentionPolicyBuilder_.getMessage();
         }
@@ -4169,7 +4169,7 @@ public final class ElectronicInvoiceLine {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4186,7 +4186,7 @@ public final class ElectronicInvoiceLine {
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       public Builder setRetentionPolicy(
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
           onChanged();
@@ -4199,11 +4199,11 @@ public final class ElectronicInvoiceLine {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (retentionPolicy_ != null) {
             retentionPolicy_ =
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
           } else {
             retentionPolicy_ = value;
           }
@@ -4231,7 +4231,7 @@ public final class ElectronicInvoiceLine {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
@@ -4239,23 +4239,23 @@ public final class ElectronicInvoiceLine {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
           return retentionPolicyBuilder_.getMessageOrBuilder();
         } else {
           return retentionPolicy_ == null ?
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         }
       }
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
           getRetentionPolicyFieldBuilder() {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder>(
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder>(
                   getRetentionPolicy(),
                   getParentForChildren(),
                   isClean());
@@ -5270,51 +5270,52 @@ public final class ElectronicInvoiceLine {
       "\n7asgt/dataservice/v1alpha1/electronic_i" +
       "nvoice_line.proto\022\031asgt.dataservice.v1al" +
       "pha1\032$asgt/dataservice/v1alpha1/data.pro" +
-      "to\032!asgt/jester/v1alpha1/jester.proto\032\034g" +
-      "en_bq_schema/bq_field.proto\032\034gen_bq_sche" +
-      "ma/bq_table.proto\032\034google/api/annotation" +
-      "s.proto\032\033google/protobuf/empty.proto\"\357\003\n" +
-      "\032ElectronicInvoiceLineEntry\022>\n\002id\030\001 \001(\tB" +
-      "2\352?/\"-ID, matches Envoy request id if fe" +
-      "edback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007" +
-      "dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"" +
-      "ATags defined by consumer, enriched by s" +
-      "ervice if valetkey is used\022F\n\005input\030\005 \001(" +
-      "\01327.asgt.jester.v1alpha1.ElectronicInvoi" +
-      "ceLineRequest.Data\0229\n\013true_values\030\006 \003(\0132" +
-      "$.asgt.dataservice.v1alpha1.DataTuple\022>\n" +
-      "\013pred_values\030\007 \003(\0132).asgt.dataservice.v1" +
-      "alpha1.PredictedTuple\022$\n\ntime_added\030\010 \001(" +
-      "\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034electronic_inv" +
-      "oice_line_data\"\244\001\n\037ElectronicInvoiceLine" +
-      "EntryInput\022F\n\005input\030\001 \001(\01327.asgt.jester." +
-      "v1alpha1.ElectronicInvoiceLineRequest.Da" +
-      "ta\0229\n\013true_values\030\002 \003(\0132$.asgt.dataservi" +
-      "ce.v1alpha1.DataTuple\"\342\001\n)CreateElectron" +
-      "icInvoiceLineDatasetRequest\022\024\n\014dataset_n" +
-      "ame\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022K\n\007entries\030\003 \003(\013" +
-      "2:.asgt.dataservice.v1alpha1.ElectronicI" +
-      "nvoiceLineEntryInput\022D\n\020retention_policy" +
-      "\030\004 \001(\0132*.asgt.dataservice.v1alpha1.Reten" +
-      "tionPolicy\"\213\001\n&AppendElectronicInvoiceLi" +
-      "neDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022K\n\007e" +
-      "ntries\030\003 \003(\0132:.asgt.dataservice.v1alpha1" +
-      ".ElectronicInvoiceLineEntryInput2\245\004\n Ele" +
-      "ctronicInvoiceLineDataservice\022\265\001\n\"Create" +
-      "ElectronicInvoiceLineDataset\022D.asgt.data" +
-      "service.v1alpha1.CreateElectronicInvoice" +
-      "LineDatasetRequest\032\026.google.protobuf.Emp" +
-      "ty\"1\202\323\344\223\002+\"&/v1alpha1/electronicinvoicel" +
-      "ine:create:\001*\022\257\001\n\037AppendElectronicInvoic" +
-      "eLineData\022A.asgt.dataservice.v1alpha1.Ap" +
-      "pendElectronicInvoiceLineDataRequest\032\026.g" +
-      "oogle.protobuf.Empty\"1\202\323\344\223\002+\"&/v1alpha1/" +
-      "electronicinvoiceline:append:\001*\022\226\001\n\037Dele" +
-      "teElectronicInvoiceLineData\022(.asgt.datas" +
-      "ervice.v1alpha1.DeleteRequest\032\026.google.p" +
-      "rotobuf.Empty\"1\202\323\344\223\002+\"&/v1alpha1/electro" +
-      "nicinvoiceline:delete:\001*B\rZ\013dataserviceb" +
-      "\006proto3"
+      "to\0320asgt/dataservice/v1alpha1/retention_" +
+      "policy.proto\032!asgt/jester/v1alpha1/jeste" +
+      "r.proto\032\034gen_bq_schema/bq_field.proto\032\034g" +
+      "en_bq_schema/bq_table.proto\032\034google/api/" +
+      "annotations.proto\032\033google/protobuf/empty" +
+      ".proto\"\357\003\n\032ElectronicInvoiceLineEntry\022>\n" +
+      "\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy reques" +
+      "t id if feedback data\022\027\n\010consumer\030\002 \001(\tB" +
+      "\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004" +
+      " \003(\tBF\352?C\"ATags defined by consumer, enr" +
+      "iched by service if valetkey is used\022F\n\005" +
+      "input\030\005 \001(\01327.asgt.jester.v1alpha1.Elect" +
+      "ronicInvoiceLineRequest.Data\0229\n\013true_val" +
+      "ues\030\006 \003(\0132$.asgt.dataservice.v1alpha1.Da" +
+      "taTuple\022>\n\013pred_values\030\007 \003(\0132).asgt.data" +
+      "service.v1alpha1.PredictedTuple\022$\n\ntime_" +
+      "added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034elec" +
+      "tronic_invoice_line_data\"\244\001\n\037ElectronicI" +
+      "nvoiceLineEntryInput\022F\n\005input\030\001 \001(\01327.as" +
+      "gt.jester.v1alpha1.ElectronicInvoiceLine" +
+      "Request.Data\0229\n\013true_values\030\002 \003(\0132$.asgt" +
+      ".dataservice.v1alpha1.DataTuple\"\342\001\n)Crea" +
+      "teElectronicInvoiceLineDatasetRequest\022\024\n" +
+      "\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022K\n\007ent" +
+      "ries\030\003 \003(\0132:.asgt.dataservice.v1alpha1.E" +
+      "lectronicInvoiceLineEntryInput\022D\n\020retent" +
+      "ion_policy\030\004 \001(\0132*.asgt.dataservice.v1al" +
+      "pha1.RetentionPolicy\"\213\001\n&AppendElectroni" +
+      "cInvoiceLineDataRequest\022\024\n\014dataset_name\030" +
+      "\001 \001(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dataservic" +
+      "e.v1alpha1.ElectronicInvoiceLineEntryInp" +
+      "ut2\245\004\n ElectronicInvoiceLineDataservice\022" +
+      "\265\001\n\"CreateElectronicInvoiceLineDataset\022D" +
+      ".asgt.dataservice.v1alpha1.CreateElectro" +
+      "nicInvoiceLineDatasetRequest\032\026.google.pr" +
+      "otobuf.Empty\"1\202\323\344\223\002+\"&/v1alpha1/electron" +
+      "icinvoiceline:create:\001*\022\257\001\n\037AppendElectr" +
+      "onicInvoiceLineData\022A.asgt.dataservice.v" +
+      "1alpha1.AppendElectronicInvoiceLineDataR" +
+      "equest\032\026.google.protobuf.Empty\"1\202\323\344\223\002+\"&" +
+      "/v1alpha1/electronicinvoiceline:append:\001" +
+      "*\022\226\001\n\037DeleteElectronicInvoiceLineData\022(." +
+      "asgt.dataservice.v1alpha1.DeleteRequest\032" +
+      "\026.google.protobuf.Empty\"1\202\323\344\223\002+\"&/v1alph" +
+      "a1/electronicinvoiceline:delete:\001*B\rZ\013da" +
+      "taserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5328,6 +5329,7 @@ public final class ElectronicInvoiceLine {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
@@ -5366,6 +5368,7 @@ public final class ElectronicInvoiceLine {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();

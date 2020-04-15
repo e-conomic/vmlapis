@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
+from asgt.dataservice.v1alpha1 import retention_policy_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2
 from asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/scanned_invoice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xd9\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\x96\x01\n\x18ScannedInvoiceEntryInput\x12?\n\x05input\x18\x01 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xd4\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe6\x03\n\x19ScannedInvoiceDataservice\x12\xa0\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:create:\x01*\x12\x9a\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:append:\x01*\x12\x88\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n/asgt/dataservice/v1alpha1/scanned_invoice.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a\x30\x61sgt/dataservice/v1alpha1/retention_policy.proto\x1a!asgt/jester/v1alpha1/jester.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xd9\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x16\n\x07\x64\x61taset\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12?\n\x05input\x18\x05 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x06 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\x12>\n\x0bpred_values\x18\x07 \x03(\x0b\x32).asgt.dataservice.v1alpha1.PredictedTuple\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_data\"\x96\x01\n\x18ScannedInvoiceEntryInput\x12?\n\x05input\x18\x01 \x01(\x0b\x32\x30.asgt.jester.v1alpha1.ScannedInvoiceRequest.Data\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"\xd4\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x44\n\x10retention_policy\x18\x04 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe6\x03\n\x19ScannedInvoiceDataservice\x12\xa0\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:create:\x01*\x12\x9a\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:append:\x01*\x12\x88\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/scannedinvoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -107,8 +108,8 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=744,
+  serialized_start=321,
+  serialized_end=794,
 )
 
 
@@ -145,8 +146,8 @@ _SCANNEDINVOICEENTRYINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=747,
-  serialized_end=897,
+  serialized_start=797,
+  serialized_end=947,
 )
 
 
@@ -197,8 +198,8 @@ _CREATESCANNEDINVOICEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=900,
-  serialized_end=1112,
+  serialized_start=950,
+  serialized_end=1162,
 )
 
 
@@ -235,8 +236,8 @@ _APPENDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1114,
-  serialized_end=1239,
+  serialized_start=1164,
+  serialized_end=1289,
 )
 
 _SCANNEDINVOICEENTRY.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
@@ -245,7 +246,7 @@ _SCANNEDINVOICEENTRY.fields_by_name['pred_values'].message_type = asgt_dot_datas
 _SCANNEDINVOICEENTRYINPUT.fields_by_name['input'].message_type = asgt_dot_jester_dot_v1alpha1_dot_jester__pb2._SCANNEDINVOICEREQUEST_DATA
 _SCANNEDINVOICEENTRYINPUT.fields_by_name['true_values'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._DATATUPLE
 _CREATESCANNEDINVOICEDATASETREQUEST.fields_by_name['entries'].message_type = _SCANNEDINVOICEENTRYINPUT
-_CREATESCANNEDINVOICEDATASETREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_CREATESCANNEDINVOICEDATASETREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2._RETENTIONPOLICY
 _APPENDSCANNEDINVOICEDATAREQUEST.fields_by_name['entries'].message_type = _SCANNEDINVOICEENTRYINPUT
 DESCRIPTOR.message_types_by_name['ScannedInvoiceEntry'] = _SCANNEDINVOICEENTRY
 DESCRIPTOR.message_types_by_name['ScannedInvoiceEntryInput'] = _SCANNEDINVOICEENTRYINPUT
@@ -296,8 +297,8 @@ _SCANNEDINVOICEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1242,
-  serialized_end=1728,
+  serialized_start=1292,
+  serialized_end=1778,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateScannedInvoiceDataset',

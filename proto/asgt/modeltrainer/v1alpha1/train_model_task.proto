@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package asgt.trainingservice.v1alpha1;
+
+option go_package = "trainingservice";
+
+import "asgt/dataservice/v1alpha1/retention_policy.proto";
+import "asgt/modeltrainer/v1alpha1/training_service.proto";
+
+message TrainModelTask {
+    message Args {
+        TrainModelRequest request = 1;
+        asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 2;
+    }
+
+    message Result {
+        reserved 1;
+        int64 version = 2;
+    }
+
+    Args args = 1;
+    Result result = 2;
+}

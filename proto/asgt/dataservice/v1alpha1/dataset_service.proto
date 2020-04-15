@@ -5,7 +5,7 @@ package asgt.dataservice.v1alpha1;
 option go_package = "dataservice";
 
 import "google/protobuf/timestamp.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/retention_policy.proto";
 
 service DatasetService {
     rpc GetDataset (GetDatasetRequest) returns (GetDatasetResponse);

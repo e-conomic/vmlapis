@@ -6,7 +6,7 @@ option go_package = "dataservice";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/retention_policy.proto";
 
 // Dataset BQ schema
 message Dataset {

@@ -879,11 +879,11 @@ public final class DatasetServiceOuterClass {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
 
     /**
      * <code>.google.protobuf.Timestamp training_grace_period_end = 10;</code>
@@ -959,11 +959,11 @@ public final class DatasetServiceOuterClass {
               break;
             }
             case 74: {
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder subBuilder = null;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
                 subBuilder = retentionPolicy_.toBuilder();
               }
-              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.Data.RetentionPolicy.parser(), extensionRegistry);
+              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionPolicy_);
                 retentionPolicy_ = subBuilder.buildPartial();
@@ -1119,7 +1119,7 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int RETENTION_POLICY_FIELD_NUMBER = 9;
-    private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
+    private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
      */
@@ -1129,13 +1129,13 @@ public final class DatasetServiceOuterClass {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
-      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
+      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
 
@@ -1764,9 +1764,9 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_ = null;
+      private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
@@ -1776,9 +1776,9 @@ public final class DatasetServiceOuterClass {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
-          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         } else {
           return retentionPolicyBuilder_.getMessage();
         }
@@ -1786,7 +1786,7 @@ public final class DatasetServiceOuterClass {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
-      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1803,7 +1803,7 @@ public final class DatasetServiceOuterClass {
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
       public Builder setRetentionPolicy(
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
           onChanged();
@@ -1816,11 +1816,11 @@ public final class DatasetServiceOuterClass {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
-      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (retentionPolicy_ != null) {
             retentionPolicy_ =
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
           } else {
             retentionPolicy_ = value;
           }
@@ -1848,7 +1848,7 @@ public final class DatasetServiceOuterClass {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
@@ -1856,23 +1856,23 @@ public final class DatasetServiceOuterClass {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
           return retentionPolicyBuilder_.getMessageOrBuilder();
         } else {
           return retentionPolicy_ == null ?
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         }
       }
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
           getRetentionPolicyFieldBuilder() {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder>(
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder>(
                   getRetentionPolicy(),
                   getParentForChildren(),
                   isClean());
@@ -2682,22 +2682,22 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n/asgt/dataservice/v1alpha1/dataset_serv" +
-      "ice.proto\022\031asgt.dataservice.v1alpha1\032$as" +
-      "gt/dataservice/v1alpha1/data.proto\032\037goog" +
-      "le/protobuf/timestamp.proto\"Q\n\021GetDatase" +
-      "tRequest\022\020\n\010consumer\030\001 \001(\t\022\024\n\014dataset_na" +
-      "me\030\002 \001(\t\022\024\n\014dataset_type\030\003 \001(\t\"\306\001\n\013Datas" +
-      "etInfo\022\020\n\010consumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014" +
-      "\n\004type\030\003 \001(\t\022D\n\020retention_policy\030\t \001(\0132*" +
-      ".asgt.dataservice.v1alpha1.RetentionPoli" +
-      "cy\022=\n\031training_grace_period_end\030\n \001(\0132\032." +
-      "google.protobuf.TimestampJ\004\010\004\020\t\"J\n\022GetDa" +
-      "tasetResponse\0224\n\004info\030\001 \001(\0132&.asgt.datas" +
-      "ervice.v1alpha1.DatasetInfo2{\n\016DatasetSe" +
-      "rvice\022i\n\nGetDataset\022,.asgt.dataservice.v" +
-      "1alpha1.GetDatasetRequest\032-.asgt.dataser" +
-      "vice.v1alpha1.GetDatasetResponseB\rZ\013data" +
-      "serviceb\006proto3"
+      "ice.proto\022\031asgt.dataservice.v1alpha1\0320as" +
+      "gt/dataservice/v1alpha1/retention_policy" +
+      ".proto\032\037google/protobuf/timestamp.proto\"" +
+      "Q\n\021GetDatasetRequest\022\020\n\010consumer\030\001 \001(\t\022\024" +
+      "\n\014dataset_name\030\002 \001(\t\022\024\n\014dataset_type\030\003 \001" +
+      "(\t\"\306\001\n\013DatasetInfo\022\020\n\010consumer\030\001 \001(\t\022\014\n\004" +
+      "name\030\002 \001(\t\022\014\n\004type\030\003 \001(\t\022D\n\020retention_po" +
+      "licy\030\t \001(\0132*.asgt.dataservice.v1alpha1.R" +
+      "etentionPolicy\022=\n\031training_grace_period_" +
+      "end\030\n \001(\0132\032.google.protobuf.TimestampJ\004\010" +
+      "\004\020\t\"J\n\022GetDatasetResponse\0224\n\004info\030\001 \001(\0132" +
+      "&.asgt.dataservice.v1alpha1.DatasetInfo2" +
+      "{\n\016DatasetService\022i\n\nGetDataset\022,.asgt.d" +
+      "ataservice.v1alpha1.GetDatasetRequest\032-." +
+      "asgt.dataservice.v1alpha1.GetDatasetResp" +
+      "onseB\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2710,7 +2710,7 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.dataservice.v1alpha1.Data.getDescriptor(),
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_dataservice_v1alpha1_GetDatasetRequest_descriptor =
@@ -2731,7 +2731,7 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_descriptor,
         new java.lang.String[] { "Info", });
-    asgt.dataservice.v1alpha1.Data.getDescriptor();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -5,7 +5,7 @@ package asgt.trainingservice.v1alpha1;
 option go_package = "trainingservice";
 
 service TrainingService {
-    rpc TrainModel(TrainModelRequest) returns (TrainModelResponse);
+    rpc TrainModel (TrainModelRequest) returns (TrainModelResponse);
 }
 
 message TrainModelRequest {
@@ -16,6 +16,4 @@ message TrainModelRequest {
     string run_name = 5;
 }
 
-message TrainModelResponse {
-    string version_name = 1;
-}
+message TrainModelResponse {}

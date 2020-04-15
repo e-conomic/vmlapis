@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+message RetentionPolicy {
+    oneof policy {
+        int64 max_days = 1;
+        int64 max_records = 2;
+    }
+}

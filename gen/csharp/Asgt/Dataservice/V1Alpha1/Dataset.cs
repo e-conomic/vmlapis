@@ -25,18 +25,19 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidhc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2RhdGFzZXQucHJvdG8SGWFz",
-            "Z3QuZGF0YXNlcnZpY2UudjFhbHBoYTEaJGFzZ3QvZGF0YXNlcnZpY2UvdjFh",
-            "bHBoYTEvZGF0YS5wcm90bxocZ2VuX2JxX3NjaGVtYS9icV9maWVsZC5wcm90",
-            "bxocZ2VuX2JxX3NjaGVtYS9icV90YWJsZS5wcm90byKnAgoHRGF0YXNldBIX",
-            "Cghjb25zdW1lchgBIAEoCUIF6j8CCAESEwoEbmFtZRgCIAEoCUIF6j8CCAES",
-            "PAoEdHlwZRgDIAEoDjInLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRGF0",
-            "YXNldC5UeXBlQgXqPwIIARIPCgd0YXJnZXRzGAQgAygJEksKEHJldGVudGlv",
-            "bl9wb2xpY3kYBSABKAsyKi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlJl",
-            "dGVudGlvblBvbGljeUIF6j8CCAESEwoEaGFzaBgGIAEoCUIF6j8CCAEiLgoE",
-            "VHlwZRIICgRCQU5LEAASEwoPU0NBTk5FRF9JTlZPSUNFEAESBwoDRUlMEAI6",
-            "Deo/CgoIZGF0YXNldHNCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
+            "Z3QuZGF0YXNlcnZpY2UudjFhbHBoYTEaMGFzZ3QvZGF0YXNlcnZpY2UvdjFh",
+            "bHBoYTEvcmV0ZW50aW9uX3BvbGljeS5wcm90bxocZ2VuX2JxX3NjaGVtYS9i",
+            "cV9maWVsZC5wcm90bxocZ2VuX2JxX3NjaGVtYS9icV90YWJsZS5wcm90byKn",
+            "AgoHRGF0YXNldBIXCghjb25zdW1lchgBIAEoCUIF6j8CCAESEwoEbmFtZRgC",
+            "IAEoCUIF6j8CCAESPAoEdHlwZRgDIAEoDjInLmFzZ3QuZGF0YXNlcnZpY2Uu",
+            "djFhbHBoYTEuRGF0YXNldC5UeXBlQgXqPwIIARIPCgd0YXJnZXRzGAQgAygJ",
+            "EksKEHJldGVudGlvbl9wb2xpY3kYBSABKAsyKi5hc2d0LmRhdGFzZXJ2aWNl",
+            "LnYxYWxwaGExLlJldGVudGlvblBvbGljeUIF6j8CCAESEwoEaGFzaBgGIAEo",
+            "CUIF6j8CCAEiLgoEVHlwZRIICgRCQU5LEAASEwoPU0NBTk5FRF9JTlZPSUNF",
+            "EAESBwoDRUlMEAI6Deo/CgoIZGF0YXNldHNCDVoLZGF0YXNlcnZpY2ViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DataReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.RetentionPolicyReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.Dataset), global::Asgt.Dataservice.V1Alpha1.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Targets", "RetentionPolicy", "Hash" }, null, new[]{ typeof(global::Asgt.Dataservice.V1Alpha1.Dataset.Types.Type) }, null)
           }));

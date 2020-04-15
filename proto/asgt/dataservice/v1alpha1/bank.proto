@@ -10,6 +10,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/jester/v1alpha1/jester.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/retention_policy.proto";
 
 service BankDataservice {
   rpc CreateBankDataset(CreateBankDatasetRequest) returns (google.protobuf.Empty) {
@@ -20,7 +21,7 @@ service BankDataservice {
   }
 
   rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
-       option (google.api.http) = {
+    option (google.api.http) = {
       post: "/v1alpha1/bank:append"
       body: "*"
     };

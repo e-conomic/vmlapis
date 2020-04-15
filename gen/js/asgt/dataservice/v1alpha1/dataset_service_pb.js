@@ -11,7 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js');
+var asgt_dataservice_v1alpha1_retention_policy_pb = require('../../../asgt/dataservice/v1alpha1/retention_policy_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DatasetInfo', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1alpha1.GetDatasetRequest', null, global);
@@ -262,7 +262,7 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.toObject = function(includeInstance,
     consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     type: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.toObject(includeInstance, f),
+    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f),
     trainingGracePeriodEnd: (f = msg.getTrainingGracePeriodEnd()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
 
@@ -313,8 +313,8 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.deserializeBinaryFromReader = functi
       msg.setType(value);
       break;
     case 9:
-      var value = new asgt_dataservice_v1alpha1_data_pb.RetentionPolicy;
-      reader.readMessage(value,asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.deserializeBinaryFromReader);
+      var value = new asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy;
+      reader.readMessage(value,asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.deserializeBinaryFromReader);
       msg.setRetentionPolicy(value);
       break;
     case 10:
@@ -377,7 +377,7 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.serializeBinaryToWriter = function(m
     writer.writeMessage(
       9,
       f,
-      asgt_dataservice_v1alpha1_data_pb.RetentionPolicy.serializeBinaryToWriter
+      asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy.serializeBinaryToWriter
     );
   }
   f = message.getTrainingGracePeriodEnd();
@@ -442,7 +442,7 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setType = function(value) 
  */
 proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getRetentionPolicy = function() {
   return /** @type{?proto.asgt.dataservice.v1alpha1.RetentionPolicy} */ (
-    jspb.Message.getWrapperField(this, asgt_dataservice_v1alpha1_data_pb.RetentionPolicy, 9));
+    jspb.Message.getWrapperField(this, asgt_dataservice_v1alpha1_retention_policy_pb.RetentionPolicy, 9));
 };
 
 

@@ -14,6 +14,8 @@ grpc.web = require('grpc-web');
 
 var asgt_dataservice_v1alpha1_data_pb = require('../../../asgt/dataservice/v1alpha1/data_pb.js')
 
+var asgt_dataservice_v1alpha1_retention_policy_pb = require('../../../asgt/dataservice/v1alpha1/retention_policy_pb.js')
+
 var asgt_jester_v1alpha1_jester_pb = require('../../../asgt/jester/v1alpha1/jester_pb.js')
 
 var gen_bq_schema_bq_field_pb = require('../../../gen_bq_schema/bq_field_pb.js')

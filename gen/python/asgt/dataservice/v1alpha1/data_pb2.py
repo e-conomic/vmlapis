@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/data.proto\x12\x19\x61sgt.dataservice.v1alpha1\"*\n\tDataTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"5\n\x0ePredictedTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x13\n\x0bpredictions\x18\x02 \x03(\t\"B\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xc3\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x41\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.asgt.dataservice.v1alpha1.FeedbackRequest.Entry\x1aN\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTuple\"F\n\x0fRetentionPolicy\x12\x12\n\x08max_days\x18\x01 \x01(\x03H\x00\x12\x15\n\x0bmax_records\x18\x02 \x01(\x03H\x00\x42\x08\n\x06policyB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/data.proto\x12\x19\x61sgt.dataservice.v1alpha1\"*\n\tDataTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"5\n\x0ePredictedTuple\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x13\n\x0bpredictions\x18\x02 \x03(\t\"B\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\"\xc3\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x41\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.asgt.dataservice.v1alpha1.FeedbackRequest.Entry\x1aN\n\x05\x45ntry\x12\n\n\x02id\x18\x01 \x01(\t\x12\x39\n\x0btrue_values\x18\x02 \x03(\x0b\x32$.asgt.dataservice.v1alpha1.DataTupleB\rZ\x0b\x64\x61taserviceb\x06proto3')
 )
 
 
@@ -227,61 +227,13 @@ _FEEDBACKREQUEST = _descriptor.Descriptor(
   serialized_end=430,
 )
 
-
-_RETENTIONPOLICY = _descriptor.Descriptor(
-  name='RetentionPolicy',
-  full_name='asgt.dataservice.v1alpha1.RetentionPolicy',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='max_days', full_name='asgt.dataservice.v1alpha1.RetentionPolicy.max_days', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_records', full_name='asgt.dataservice.v1alpha1.RetentionPolicy.max_records', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-    _descriptor.OneofDescriptor(
-      name='policy', full_name='asgt.dataservice.v1alpha1.RetentionPolicy.policy',
-      index=0, containing_type=None, fields=[]),
-  ],
-  serialized_start=432,
-  serialized_end=502,
-)
-
 _FEEDBACKREQUEST_ENTRY.fields_by_name['true_values'].message_type = _DATATUPLE
 _FEEDBACKREQUEST_ENTRY.containing_type = _FEEDBACKREQUEST
 _FEEDBACKREQUEST.fields_by_name['entries'].message_type = _FEEDBACKREQUEST_ENTRY
-_RETENTIONPOLICY.oneofs_by_name['policy'].fields.append(
-  _RETENTIONPOLICY.fields_by_name['max_days'])
-_RETENTIONPOLICY.fields_by_name['max_days'].containing_oneof = _RETENTIONPOLICY.oneofs_by_name['policy']
-_RETENTIONPOLICY.oneofs_by_name['policy'].fields.append(
-  _RETENTIONPOLICY.fields_by_name['max_records'])
-_RETENTIONPOLICY.fields_by_name['max_records'].containing_oneof = _RETENTIONPOLICY.oneofs_by_name['policy']
 DESCRIPTOR.message_types_by_name['DataTuple'] = _DATATUPLE
 DESCRIPTOR.message_types_by_name['PredictedTuple'] = _PREDICTEDTUPLE
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
 DESCRIPTOR.message_types_by_name['FeedbackRequest'] = _FEEDBACKREQUEST
-DESCRIPTOR.message_types_by_name['RetentionPolicy'] = _RETENTIONPOLICY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DataTuple = _reflection.GeneratedProtocolMessageType('DataTuple', (_message.Message,), dict(
@@ -319,13 +271,6 @@ FeedbackRequest = _reflection.GeneratedProtocolMessageType('FeedbackRequest', (_
   ))
 _sym_db.RegisterMessage(FeedbackRequest)
 _sym_db.RegisterMessage(FeedbackRequest.Entry)
-
-RetentionPolicy = _reflection.GeneratedProtocolMessageType('RetentionPolicy', (_message.Message,), dict(
-  DESCRIPTOR = _RETENTIONPOLICY,
-  __module__ = 'asgt.dataservice.v1alpha1.data_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.RetentionPolicy)
-  ))
-_sym_db.RegisterMessage(RetentionPolicy)
 
 
 DESCRIPTOR._options = None

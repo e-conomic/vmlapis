@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
+from asgt.dataservice.v1alpha1 import retention_policy_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2
 from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n\'asgt/dataservice/v1alpha1/dataset.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a$asgt/dataservice/v1alpha1/data.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\"\xa7\x02\n\x07\x44\x61taset\x12\x17\n\x08\x63onsumer\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04name\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12<\n\x04type\x18\x03 \x01(\x0e\x32\'.asgt.dataservice.v1alpha1.Dataset.TypeB\x05\xea?\x02\x08\x01\x12\x0f\n\x07targets\x18\x04 \x03(\t\x12K\n\x10retention_policy\x18\x05 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicyB\x05\xea?\x02\x08\x01\x12\x13\n\x04hash\x18\x06 \x01(\tB\x05\xea?\x02\x08\x01\".\n\x04Type\x12\x08\n\x04\x42\x41NK\x10\x00\x12\x13\n\x0fSCANNED_INVOICE\x10\x01\x12\x07\n\x03\x45IL\x10\x02:\r\xea?\n\n\x08\x64\x61tasetsB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n\'asgt/dataservice/v1alpha1/dataset.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x30\x61sgt/dataservice/v1alpha1/retention_policy.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\"\xa7\x02\n\x07\x44\x61taset\x12\x17\n\x08\x63onsumer\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12\x13\n\x04name\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12<\n\x04type\x18\x03 \x01(\x0e\x32\'.asgt.dataservice.v1alpha1.Dataset.TypeB\x05\xea?\x02\x08\x01\x12\x0f\n\x07targets\x18\x04 \x03(\t\x12K\n\x10retention_policy\x18\x05 \x01(\x0b\x32*.asgt.dataservice.v1alpha1.RetentionPolicyB\x05\xea?\x02\x08\x01\x12\x13\n\x04hash\x18\x06 \x01(\tB\x05\xea?\x02\x08\x01\".\n\x04Type\x12\x08\n\x04\x42\x41NK\x10\x00\x12\x13\n\x0fSCANNED_INVOICE\x10\x01\x12\x07\n\x03\x45IL\x10\x02:\r\xea?\n\n\x08\x64\x61tasetsB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,])
 
 
 
@@ -49,8 +49,8 @@ _DATASET_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=403,
-  serialized_end=449,
+  serialized_start=415,
+  serialized_end=461,
 )
 _sym_db.RegisterEnumDescriptor(_DATASET_TYPE)
 
@@ -117,12 +117,12 @@ _DATASET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=169,
-  serialized_end=464,
+  serialized_start=181,
+  serialized_end=476,
 )
 
 _DATASET.fields_by_name['type'].enum_type = _DATASET_TYPE
-_DATASET.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2._RETENTIONPOLICY
+_DATASET.fields_by_name['retention_policy'].message_type = asgt_dot_dataservice_dot_v1alpha1_dot_retention__policy__pb2._RETENTIONPOLICY
 _DATASET_TYPE.containing_type = _DATASET
 DESCRIPTOR.message_types_by_name['Dataset'] = _DATASET
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)

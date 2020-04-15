@@ -3075,11 +3075,11 @@ public final class Bank {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.CreateBankDatasetRequest}
@@ -3148,11 +3148,11 @@ public final class Bank {
               break;
             }
             case 34: {
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder subBuilder = null;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
                 subBuilder = retentionPolicy_.toBuilder();
               }
-              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.Data.RetentionPolicy.parser(), extensionRegistry);
+              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionPolicy_);
                 retentionPolicy_ = subBuilder.buildPartial();
@@ -3298,7 +3298,7 @@ public final class Bank {
     }
 
     public static final int RETENTION_POLICY_FIELD_NUMBER = 4;
-    private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
+    private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
@@ -3308,13 +3308,13 @@ public final class Bank {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
-      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
+      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
 
@@ -4147,9 +4147,9 @@ public final class Bank {
         return entriesBuilder_;
       }
 
-      private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_ = null;
+      private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
@@ -4159,9 +4159,9 @@ public final class Bank {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
-          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         } else {
           return retentionPolicyBuilder_.getMessage();
         }
@@ -4169,7 +4169,7 @@ public final class Bank {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4186,7 +4186,7 @@ public final class Bank {
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       public Builder setRetentionPolicy(
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
           onChanged();
@@ -4199,11 +4199,11 @@ public final class Bank {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (retentionPolicy_ != null) {
             retentionPolicy_ =
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
           } else {
             retentionPolicy_ = value;
           }
@@ -4231,7 +4231,7 @@ public final class Bank {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
@@ -4239,23 +4239,23 @@ public final class Bank {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
           return retentionPolicyBuilder_.getMessageOrBuilder();
         } else {
           return retentionPolicy_ == null ?
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         }
       }
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
           getRetentionPolicyFieldBuilder() {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder>(
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder>(
                   getRetentionPolicy(),
                   getParentForChildren(),
                   isClean());
@@ -5269,43 +5269,45 @@ public final class Bank {
     java.lang.String[] descriptorData = {
       "\n$asgt/dataservice/v1alpha1/bank.proto\022\031" +
       "asgt.dataservice.v1alpha1\032$asgt/dataserv" +
-      "ice/v1alpha1/data.proto\032!asgt/jester/v1a" +
-      "lpha1/jester.proto\032\034gen_bq_schema/bq_fie" +
-      "ld.proto\032\034gen_bq_schema/bq_table.proto\032\034" +
-      "google/api/annotations.proto\032\033google/pro" +
-      "tobuf/empty.proto\"\272\003\n\tBankEntry\022>\n\002id\030\001 " +
-      "\001(\tB2\352?/\"-ID, matches Envoy request id i" +
-      "f feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001" +
-      "\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF" +
-      "\352?C\"ATags defined by consumer, enriched " +
-      "by service if valetkey is used\0225\n\005input\030" +
-      "\005 \001(\0132&.asgt.jester.v1alpha1.BankRequest" +
-      ".Data\0229\n\013true_values\030\006 \003(\0132$.asgt.datase" +
-      "rvice.v1alpha1.DataTuple\022>\n\013pred_values\030" +
-      "\007 \003(\0132).asgt.dataservice.v1alpha1.Predic" +
-      "tedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIM" +
-      "ESTAMP:\016\352?\013\n\tbank_data\"\202\001\n\016BankEntryInpu" +
-      "t\0225\n\005input\030\001 \001(\0132&.asgt.jester.v1alpha1." +
-      "BankRequest.Data\0229\n\013true_values\030\002 \003(\0132$." +
-      "asgt.dataservice.v1alpha1.DataTuple\"\300\001\n\030" +
-      "CreateBankDatasetRequest\022\024\n\014dataset_name" +
-      "\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022:\n\007entries\030\003 \003(\0132)." +
-      "asgt.dataservice.v1alpha1.BankEntryInput" +
-      "\022D\n\020retention_policy\030\004 \001(\0132*.asgt.datase" +
-      "rvice.v1alpha1.RetentionPolicy\"i\n\025Append" +
-      "BankDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022:\n" +
-      "\007entries\030\003 \003(\0132).asgt.dataservice.v1alph" +
-      "a1.BankEntryInput2\212\003\n\017BankDataservice\022\202\001" +
-      "\n\021CreateBankDataset\0223.asgt.dataservice.v" +
-      "1alpha1.CreateBankDatasetRequest\032\026.googl" +
-      "e.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank" +
-      ":create:\001*\022|\n\016AppendBankData\0220.asgt.data" +
-      "service.v1alpha1.AppendBankDataRequest\032\026" +
-      ".google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha" +
-      "1/bank:append:\001*\022t\n\016DeleteBankData\022(.asg" +
-      "t.dataservice.v1alpha1.DeleteRequest\032\026.g" +
-      "oogle.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/" +
-      "bank:delete:\001*B\rZ\013dataserviceb\006proto3"
+      "ice/v1alpha1/data.proto\0320asgt/dataservic" +
+      "e/v1alpha1/retention_policy.proto\032!asgt/" +
+      "jester/v1alpha1/jester.proto\032\034gen_bq_sch" +
+      "ema/bq_field.proto\032\034gen_bq_schema/bq_tab" +
+      "le.proto\032\034google/api/annotations.proto\032\033" +
+      "google/protobuf/empty.proto\"\272\003\n\tBankEntr" +
+      "y\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy re" +
+      "quest id if feedback data\022\027\n\010consumer\030\002 " +
+      "\001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005\352?\002\010\001\022T\n\004ta" +
+      "gs\030\004 \003(\tBF\352?C\"ATags defined by consumer," +
+      " enriched by service if valetkey is used" +
+      "\0225\n\005input\030\005 \001(\0132&.asgt.jester.v1alpha1.B" +
+      "ankRequest.Data\0229\n\013true_values\030\006 \003(\0132$.a" +
+      "sgt.dataservice.v1alpha1.DataTuple\022>\n\013pr" +
+      "ed_values\030\007 \003(\0132).asgt.dataservice.v1alp" +
+      "ha1.PredictedTuple\022$\n\ntime_added\030\010 \001(\004B\020" +
+      "\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_data\"\202\001\n\016Ban" +
+      "kEntryInput\0225\n\005input\030\001 \001(\0132&.asgt.jester" +
+      ".v1alpha1.BankRequest.Data\0229\n\013true_value" +
+      "s\030\002 \003(\0132$.asgt.dataservice.v1alpha1.Data" +
+      "Tuple\"\300\001\n\030CreateBankDatasetRequest\022\024\n\014da" +
+      "taset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022:\n\007entrie" +
+      "s\030\003 \003(\0132).asgt.dataservice.v1alpha1.Bank" +
+      "EntryInput\022D\n\020retention_policy\030\004 \001(\0132*.a" +
+      "sgt.dataservice.v1alpha1.RetentionPolicy" +
+      "\"i\n\025AppendBankDataRequest\022\024\n\014dataset_nam" +
+      "e\030\001 \001(\t\022:\n\007entries\030\003 \003(\0132).asgt.dataserv" +
+      "ice.v1alpha1.BankEntryInput2\212\003\n\017BankData" +
+      "service\022\202\001\n\021CreateBankDataset\0223.asgt.dat" +
+      "aservice.v1alpha1.CreateBankDatasetReque" +
+      "st\032\026.google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1a" +
+      "lpha1/bank:create:\001*\022|\n\016AppendBankData\0220" +
+      ".asgt.dataservice.v1alpha1.AppendBankDat" +
+      "aRequest\032\026.google.protobuf.Empty\" \202\323\344\223\002\032" +
+      "\"\025/v1alpha1/bank:append:\001*\022t\n\016DeleteBank" +
+      "Data\022(.asgt.dataservice.v1alpha1.DeleteR" +
+      "equest\032\026.google.protobuf.Empty\" \202\323\344\223\002\032\"\025" +
+      "/v1alpha1/bank:delete:\001*B\rZ\013dataserviceb" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5319,6 +5321,7 @@ public final class Bank {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
@@ -5357,6 +5360,7 @@ public final class Bank {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();

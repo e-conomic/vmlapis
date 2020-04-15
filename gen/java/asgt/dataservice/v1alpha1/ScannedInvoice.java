@@ -3075,11 +3075,11 @@ public final class ScannedInvoice {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest}
@@ -3148,11 +3148,11 @@ public final class ScannedInvoice {
               break;
             }
             case 34: {
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder subBuilder = null;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
                 subBuilder = retentionPolicy_.toBuilder();
               }
-              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.Data.RetentionPolicy.parser(), extensionRegistry);
+              retentionPolicy_ = input.readMessage(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(retentionPolicy_);
                 retentionPolicy_ = subBuilder.buildPartial();
@@ -3298,7 +3298,7 @@ public final class ScannedInvoice {
     }
 
     public static final int RETENTION_POLICY_FIELD_NUMBER = 4;
-    private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_;
+    private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
@@ -3308,13 +3308,13 @@ public final class ScannedInvoice {
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
-      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
+      return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+    public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
 
@@ -4147,9 +4147,9 @@ public final class ScannedInvoice {
         return entriesBuilder_;
       }
 
-      private asgt.dataservice.v1alpha1.Data.RetentionPolicy retentionPolicy_ = null;
+      private asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
@@ -4159,9 +4159,9 @@ public final class ScannedInvoice {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy getRetentionPolicy() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
-          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+          return retentionPolicy_ == null ? asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         } else {
           return retentionPolicyBuilder_.getMessage();
         }
@@ -4169,7 +4169,7 @@ public final class ScannedInvoice {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder setRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4186,7 +4186,7 @@ public final class ScannedInvoice {
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       public Builder setRetentionPolicy(
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder builderForValue) {
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
           onChanged();
@@ -4199,11 +4199,11 @@ public final class ScannedInvoice {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.Data.RetentionPolicy value) {
+      public Builder mergeRetentionPolicy(asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
           if (retentionPolicy_ != null) {
             retentionPolicy_ =
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
           } else {
             retentionPolicy_ = value;
           }
@@ -4231,7 +4231,7 @@ public final class ScannedInvoice {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder getRetentionPolicyBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
         
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
@@ -4239,23 +4239,23 @@ public final class ScannedInvoice {
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
+      public asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
         if (retentionPolicyBuilder_ != null) {
           return retentionPolicyBuilder_.getMessageOrBuilder();
         } else {
           return retentionPolicy_ == null ?
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
         }
       }
       /**
        * <code>.asgt.dataservice.v1alpha1.RetentionPolicy retention_policy = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder> 
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> 
           getRetentionPolicyFieldBuilder() {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Data.RetentionPolicy, asgt.dataservice.v1alpha1.Data.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.Data.RetentionPolicyOrBuilder>(
+              asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.RetentionPolicyOrBuilder>(
                   getRetentionPolicy(),
                   getParentForChildren(),
                   isClean());
@@ -5269,48 +5269,50 @@ public final class ScannedInvoice {
     java.lang.String[] descriptorData = {
       "\n/asgt/dataservice/v1alpha1/scanned_invo" +
       "ice.proto\022\031asgt.dataservice.v1alpha1\032$as" +
-      "gt/dataservice/v1alpha1/data.proto\032!asgt" +
-      "/jester/v1alpha1/jester.proto\032\034gen_bq_sc" +
-      "hema/bq_field.proto\032\034gen_bq_schema/bq_ta" +
-      "ble.proto\032\034google/api/annotations.proto\032" +
-      "\033google/protobuf/empty.proto\"\331\003\n\023Scanned" +
-      "InvoiceEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, match" +
-      "es Envoy request id if feedback data\022\027\n\010" +
-      "consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007dataset\030\003 \001(\tB\005" +
-      "\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined b" +
-      "y consumer, enriched by service if valet" +
-      "key is used\022?\n\005input\030\005 \001(\01320.asgt.jester" +
-      ".v1alpha1.ScannedInvoiceRequest.Data\0229\n\013" +
-      "true_values\030\006 \003(\0132$.asgt.dataservice.v1a" +
-      "lpha1.DataTuple\022>\n\013pred_values\030\007 \003(\0132).a" +
-      "sgt.dataservice.v1alpha1.PredictedTuple\022" +
-      "$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352" +
-      "?\026\n\024scanned_invoice_data\"\226\001\n\030ScannedInvo" +
-      "iceEntryInput\022?\n\005input\030\001 \001(\01320.asgt.jest" +
-      "er.v1alpha1.ScannedInvoiceRequest.Data\0229" +
-      "\n\013true_values\030\002 \003(\0132$.asgt.dataservice.v" +
-      "1alpha1.DataTuple\"\324\001\n\"CreateScannedInvoi" +
-      "ceDatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014" +
-      "\n\004tags\030\002 \003(\t\022D\n\007entries\030\003 \003(\01323.asgt.dat" +
-      "aservice.v1alpha1.ScannedInvoiceEntryInp" +
-      "ut\022D\n\020retention_policy\030\004 \001(\0132*.asgt.data" +
-      "service.v1alpha1.RetentionPolicy\"}\n\037Appe" +
-      "ndScannedInvoiceDataRequest\022\024\n\014dataset_n" +
-      "ame\030\001 \001(\t\022D\n\007entries\030\003 \003(\01323.asgt.datase" +
-      "rvice.v1alpha1.ScannedInvoiceEntryInput2" +
-      "\346\003\n\031ScannedInvoiceDataservice\022\240\001\n\033Create" +
-      "ScannedInvoiceDataset\022=.asgt.dataservice" +
-      ".v1alpha1.CreateScannedInvoiceDatasetReq" +
-      "uest\032\026.google.protobuf.Empty\"*\202\323\344\223\002$\"\037/v" +
-      "1alpha1/scannedinvoice:create:\001*\022\232\001\n\030App" +
-      "endScannedInvoiceData\022:.asgt.dataservice" +
-      ".v1alpha1.AppendScannedInvoiceDataReques" +
-      "t\032\026.google.protobuf.Empty\"*\202\323\344\223\002$\"\037/v1al" +
-      "pha1/scannedinvoice:append:\001*\022\210\001\n\030Delete" +
-      "ScannedInvoiceData\022(.asgt.dataservice.v1" +
-      "alpha1.DeleteRequest\032\026.google.protobuf.E" +
-      "mpty\"*\202\323\344\223\002$\"\037/v1alpha1/scannedinvoice:d" +
-      "elete:\001*B\rZ\013dataserviceb\006proto3"
+      "gt/dataservice/v1alpha1/data.proto\0320asgt" +
+      "/dataservice/v1alpha1/retention_policy.p" +
+      "roto\032!asgt/jester/v1alpha1/jester.proto\032" +
+      "\034gen_bq_schema/bq_field.proto\032\034gen_bq_sc" +
+      "hema/bq_table.proto\032\034google/api/annotati" +
+      "ons.proto\032\033google/protobuf/empty.proto\"\331" +
+      "\003\n\023ScannedInvoiceEntry\022>\n\002id\030\001 \001(\tB2\352?/\"" +
+      "-ID, matches Envoy request id if feedbac" +
+      "k data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\026\n\007datas" +
+      "et\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags" +
+      " defined by consumer, enriched by servic" +
+      "e if valetkey is used\022?\n\005input\030\005 \001(\01320.a" +
+      "sgt.jester.v1alpha1.ScannedInvoiceReques" +
+      "t.Data\0229\n\013true_values\030\006 \003(\0132$.asgt.datas" +
+      "ervice.v1alpha1.DataTuple\022>\n\013pred_values" +
+      "\030\007 \003(\0132).asgt.dataservice.v1alpha1.Predi" +
+      "ctedTuple\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTI" +
+      "MESTAMP:\031\352?\026\n\024scanned_invoice_data\"\226\001\n\030S" +
+      "cannedInvoiceEntryInput\022?\n\005input\030\001 \001(\01320" +
+      ".asgt.jester.v1alpha1.ScannedInvoiceRequ" +
+      "est.Data\0229\n\013true_values\030\002 \003(\0132$.asgt.dat" +
+      "aservice.v1alpha1.DataTuple\"\324\001\n\"CreateSc" +
+      "annedInvoiceDatasetRequest\022\024\n\014dataset_na" +
+      "me\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007entries\030\003 \003(\0132" +
+      "3.asgt.dataservice.v1alpha1.ScannedInvoi" +
+      "ceEntryInput\022D\n\020retention_policy\030\004 \001(\0132*" +
+      ".asgt.dataservice.v1alpha1.RetentionPoli" +
+      "cy\"}\n\037AppendScannedInvoiceDataRequest\022\024\n" +
+      "\014dataset_name\030\001 \001(\t\022D\n\007entries\030\003 \003(\01323.a" +
+      "sgt.dataservice.v1alpha1.ScannedInvoiceE" +
+      "ntryInput2\346\003\n\031ScannedInvoiceDataservice\022" +
+      "\240\001\n\033CreateScannedInvoiceDataset\022=.asgt.d" +
+      "ataservice.v1alpha1.CreateScannedInvoice" +
+      "DatasetRequest\032\026.google.protobuf.Empty\"*" +
+      "\202\323\344\223\002$\"\037/v1alpha1/scannedinvoice:create:" +
+      "\001*\022\232\001\n\030AppendScannedInvoiceData\022:.asgt.d" +
+      "ataservice.v1alpha1.AppendScannedInvoice" +
+      "DataRequest\032\026.google.protobuf.Empty\"*\202\323\344" +
+      "\223\002$\"\037/v1alpha1/scannedinvoice:append:\001*\022" +
+      "\210\001\n\030DeleteScannedInvoiceData\022(.asgt.data" +
+      "service.v1alpha1.DeleteRequest\032\026.google." +
+      "protobuf.Empty\"*\202\323\344\223\002$\"\037/v1alpha1/scanne" +
+      "dinvoice:delete:\001*B\rZ\013dataserviceb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5324,6 +5326,7 @@ public final class ScannedInvoice {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Data.getDescriptor(),
+          asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor(),
           asgt.jester.v1alpha1.JesterOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           gen_bq_schema.BqTable.getDescriptor(),
@@ -5362,6 +5365,7 @@ public final class ScannedInvoice {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Data.getDescriptor();
+    asgt.dataservice.v1alpha1.RetentionPolicyOuterClass.getDescriptor();
     asgt.jester.v1alpha1.JesterOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     gen_bq_schema.BqTable.getDescriptor();
