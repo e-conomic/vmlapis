@@ -6,9 +6,10 @@ option go_package = "dataservice";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/delete.proto";
 import "asgt/type/invoice_line.proto";
 import "asgt/type/retention_policy.proto";
+import "asgt/type/target_label.proto";
 
 service ElectronicInvoiceLineDataservice {
   rpc CreateElectronicInvoiceLineDataset(CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
@@ -35,7 +36,7 @@ service ElectronicInvoiceLineDataservice {
 
 message ElectronicInvoiceLineEntryInput {
   asgt.type.InvoiceLine input = 1;
-  repeated DataTuple true_values = 2;
+  repeated asgt.type.TargetLabel targets = 2;
 }
 
 message CreateElectronicInvoiceLineDatasetRequest {

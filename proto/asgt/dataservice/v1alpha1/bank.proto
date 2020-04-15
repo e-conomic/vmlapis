@@ -6,9 +6,10 @@ option go_package = "dataservice";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/delete.proto";
 import "asgt/type/bank_transaction.proto";
 import "asgt/type/retention_policy.proto";
+import "asgt/type/target_label.proto";
 
 service BankDataservice {
   rpc CreateBankDataset(CreateBankDatasetRequest) returns (google.protobuf.Empty) {
@@ -36,7 +37,7 @@ service BankDataservice {
 
 message BankEntryInput {
   asgt.type.BankTransaction input = 1;
-  repeated DataTuple true_values = 2;
+  repeated asgt.type.TargetLabel targets = 2;
 }
 
 message CreateBankDatasetRequest {

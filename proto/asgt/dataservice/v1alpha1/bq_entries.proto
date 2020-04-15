@@ -7,21 +7,24 @@ option go_package = "dataservice";
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
 import "asgt/type/bank_transaction.proto";
 import "asgt/type/invoice_line.proto";
 import "asgt/type/scanned_invoice.proto";
+import "asgt/type/model_info.proto";
+import "asgt/type/prediction.proto";
+import "asgt/type/target_label.proto";
 
 // Bank BQ schema gen - could be used for adding direct developer data endpoints
 message BankEntry {
     option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
     string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
     string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-    string dataset = 3 [(gen_bq_schema.bigquery).require = true];
+    string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
     repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-    asgt.type.BankTransaction input = 5;
-    repeated DataTuple true_values = 6;
-    repeated PredictedTuple pred_values = 7;
+    asgt.type.BankTransaction data = 5;
+    repeated asgt.type.TargetLabel targets = 6;
+    asgt.type.ModelInfo model = 9;
+    repeated asgt.type.Prediction.Target prediction = 10;
     uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
 }
 
@@ -30,11 +33,12 @@ message ElectronicInvoiceLineEntry {
     option (gen_bq_schema.bigquery_opts).table_name = "electronic_invoice_line_data";
     string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
     string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-    string dataset = 3 [(gen_bq_schema.bigquery).require = true];
+    string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
     repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
     asgt.type.InvoiceLine input = 5;
-    repeated DataTuple true_values = 6;
-    repeated PredictedTuple pred_values = 7;
+    repeated asgt.type.TargetLabel targets = 6;
+    asgt.type.ModelInfo model = 9;
+    repeated asgt.type.Prediction.Target prediction = 10;
     uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
 }
 
@@ -43,10 +47,11 @@ message ScannedInvoiceEntry {
     option (gen_bq_schema.bigquery_opts).table_name = "scanned_invoice_data";
     string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
     string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-    string dataset = 3 [(gen_bq_schema.bigquery).require = true];
+    string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
     repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
     asgt.type.ScannedInvoice input = 5;
-    repeated DataTuple true_values = 6;
-    repeated PredictedTuple pred_values = 7;
+    repeated asgt.type.TargetLabel targets = 6;
+    asgt.type.ModelInfo model = 9;
+    repeated asgt.type.Prediction.Target prediction = 10;
     uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
 }

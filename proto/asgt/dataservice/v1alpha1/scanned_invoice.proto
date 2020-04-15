@@ -6,47 +6,48 @@ option go_package = "dataservice";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/dataservice/v1alpha1/delete.proto";
 import "asgt/type/scanned_invoice.proto";
 import "asgt/type/retention_policy.proto";
+import "asgt/type/target_label.proto";
 
 service ScannedInvoiceDataservice {
-  rpc CreateScannedInvoiceDataset(CreateScannedInvoiceDatasetRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
+    rpc CreateScannedInvoiceDataset (CreateScannedInvoiceDatasetRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
       post: "/v1alpha1/scannedinvoice:create"
       body: "*"
     };
-  }
+    }
 
-  rpc AppendScannedInvoiceData(AppendScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
+    rpc AppendScannedInvoiceData (AppendScannedInvoiceDataRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
       post: "/v1alpha1/scannedinvoice:append"
       body: "*"
     };
-  }
+    }
 
-  rpc DeleteScannedInvoiceData(DeleteRequest) returns (google.protobuf.Empty) {
-    option (google.api.http) = {
+    rpc DeleteScannedInvoiceData (DeleteRequest) returns (google.protobuf.Empty) {
+        option (google.api.http) = {
       post: "/v1alpha1/scannedinvoice:delete"
       body: "*"
     };
-  }
+    }
 }
 
 
 message ScannedInvoiceEntryInput {
-  asgt.type.ScannedInvoice input = 1;
-  repeated DataTuple true_values = 2;
+    asgt.type.ScannedInvoice input = 1;
+    repeated asgt.type.TargetLabel targets = 2;
 }
 
 message CreateScannedInvoiceDatasetRequest {
-  string dataset_name = 1;
-  repeated string tags = 2;
-  repeated ScannedInvoiceEntryInput entries = 3;
-  asgt.type.RetentionPolicy retention_policy = 4;
+    string dataset_name = 1;
+    repeated string tags = 2;
+    repeated ScannedInvoiceEntryInput entries = 3;
+    asgt.type.RetentionPolicy retention_policy = 4;
 }
 
 message AppendScannedInvoiceDataRequest {
-  string dataset_name = 1;
-  repeated ScannedInvoiceEntryInput entries = 3;
+    string dataset_name = 1;
+    repeated ScannedInvoiceEntryInput entries = 3;
 }

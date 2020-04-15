@@ -10,12 +10,14 @@ import "asgt/type/retention_policy.proto";
 
 // Dataset BQ schema
 message Dataset {
-  enum Type {
-    BANK = 0;
-    SCANNED_INVOICE = 1;
-    EIL = 2;
-  }
   option (gen_bq_schema.bigquery_opts).table_name = "datasets";
+
+  enum Type {
+    BANK_TRANSACTION = 0;
+    SCANNED_INVOICE = 1;
+    INVOICE_LINE = 2;
+  }
+
   string consumer = 1 [(gen_bq_schema.bigquery).require = true];
   string name = 2 [(gen_bq_schema.bigquery).require = true];
   Type type = 3 [(gen_bq_schema.bigquery).require = true];
