@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+//import "google/protobuf/timestamp.proto";
+
+message BankTransaction {
+    float amount = 2;
+    string text = 4;
+    reserved 5;
+    // NOTE(lys) it seems as if this timestamp was only used for ordering; value or booking date
+    // google.protobuf.Timestamp time_stamp = 5;
+}

@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+// NOTE(lys) previously: ElectronicInvoiceLine
+// NOTE(lys) review whether all these values are nullable
+message InvoiceLine {
+    // NOTE(lys) why is this called a date when it is not a date?
+    google.protobuf.Timestamp issue_date = 1;
+
+    // name of the currency as a string
+    google.protobuf.StringValue currency = 2;
+
+    //  id of the supplier, not nullable
+    string supplier_id = 3;
+
+    // name of the supplier
+    google.protobuf.StringValue supplier_name = 4;
+
+    // global id of the supplier
+    google.protobuf.StringValue supplier_global_id = 5;
+
+    // reference of the customer
+    google.protobuf.StringValue customer_ref = 6;
+
+    // total of the invoice
+    google.protobuf.FloatValue total = 7;
+
+    // text of the invoice line
+    google.protobuf.StringValue line_text = 8;
+
+    // id of the line
+    google.protobuf.StringValue line_id = 9;
+  }

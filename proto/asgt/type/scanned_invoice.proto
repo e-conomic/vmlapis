@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+message ScannedInvoice {
+    // NOTE(lys) why is this called description and not text?
+    // invoice text from the SmartScan product
+    string description = 1;
+}
