@@ -4,8 +4,6 @@ package asgt.dataservice.v1alpha1;
 
 option go_package = "dataservice";
 
-import "gen_bq_schema/bq_field.proto";
-import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
@@ -21,7 +19,7 @@ service BankDataservice {
   }
 
   rpc AppendBankData(AppendBankDataRequest) returns (google.protobuf.Empty) {
-       option (google.api.http) = {
+    option (google.api.http) = {
       post: "/v1alpha1/bank:append"
       body: "*"
     };
@@ -35,23 +33,6 @@ service BankDataservice {
   }
 }
 
-// Bank BQ schema gen - could be used for adding direct developer data endpoints
-message BankEntry {
-  option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
-  string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
-  string consumer = 2 [(gen_bq_schema.bigquery).require = true];
-  string dataset = 3 [(gen_bq_schema.bigquery).require = true];
-  repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
-  asgt.type.BankTransaction input = 5;
-  repeated DataTuple true_values = 6;
-  repeated PredictedTuple pred_values = 7;
-  uint64 time_added = 8 [
-    (gen_bq_schema.bigquery) = {
-      require: true,
-      type_override: 'TIMESTAMP'
-    }
-  ];
-}
 
 message BankEntryInput {
   asgt.type.BankTransaction input = 1;
