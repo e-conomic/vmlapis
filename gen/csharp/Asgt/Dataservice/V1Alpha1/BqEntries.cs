@@ -31,44 +31,45 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Y3Rpb24ucHJvdG8aH2FzZ3QvdHlwZS9zY2FubmVkX2ludm9pY2UucHJvdG8a",
             "HGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEv",
             "YnFfZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8itwMKCUJhbmtFbnRyeRI+",
+            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ivQMKCUJhbmtFbnRyeRI+",
             "CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlk",
             "IGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/AggBEhsK",
             "DGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoEdGFncxgEIAMoCUJG6j9D",
             "IkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmljaGVkIGJ5IHNlcnZp",
             "Y2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIoCgRkYXRhGAUgASgLMhouYXNndC50",
-            "eXBlLkJhbmtUcmFuc2FjdGlvbhInCgd0YXJnZXRzGAYgAygLMhYuYXNndC50",
-            "eXBlLlRhcmdldFZhbHVlEiMKBW1vZGVsGAkgASgLMhQuYXNndC50eXBlLk1v",
-            "ZGVsSW5mbxIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNndC50eXBlLlByZWRp",
-            "Y3Rpb24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgBEglUSU1F",
-            "U1RBTVA6Duo/CwoJYmFua19kYXRhItcDChpFbGVjdHJvbmljSW52b2ljZUxp",
-            "bmVFbnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSBy",
-            "ZXF1ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlC",
-            "Beo/AggBEhsKDGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoEdGFncxgE",
-            "IAMoCUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmljaGVk",
-            "IGJ5IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIkCgRkYXRhGAUgASgL",
-            "MhYuYXNndC50eXBlLkludm9pY2VMaW5lEicKB3RhcmdldHMYBiADKAsyFi5h",
-            "c2d0LnR5cGUuVGFyZ2V0VmFsdWUSIwoFbW9kZWwYCSABKAsyFC5hc2d0LnR5",
-            "cGUuTW9kZWxJbmZvEjAKCnByZWRpY3Rpb24YCiADKAsyHC5hc2d0LnR5cGUu",
-            "UHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgIIAEoBEIQ6j8NCAES",
-            "CVRJTUVTVEFNUDoh6j8eChxlbGVjdHJvbmljX2ludm9pY2VfbGluZV9kYXRh",
-            "IssDChNTY2FubmVkSW52b2ljZUVudHJ5Ej4KAmlkGAEgASgJQjLqPy8iLUlE",
-            "LCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVlZGJhY2sgZGF0YRIX",
-            "Cghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNldF9uYW1lGAMgASgJ",
-            "QgXqPwIIARJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBj",
-            "b25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1",
-            "c2VkEicKBGRhdGEYBSABKAsyGS5hc2d0LnR5cGUuU2Nhbm5lZEludm9pY2US",
-            "JwoHdGFyZ2V0cxgGIAMoCzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVt",
-            "b2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlv",
-            "bhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1l",
-            "X2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNUQU1QOhnqPxYKFHNjYW5uZWRf",
-            "aW52b2ljZV9kYXRhQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "eXBlLkJhbmtUcmFuc2FjdGlvbhItCg10YXJnZXRfdmFsdWVzGAYgAygLMhYu",
+            "YXNndC50eXBlLlRhcmdldFZhbHVlEiMKBW1vZGVsGAkgASgLMhQuYXNndC50",
+            "eXBlLk1vZGVsSW5mbxIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNndC50eXBl",
+            "LlByZWRpY3Rpb24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgB",
+            "EglUSU1FU1RBTVA6Duo/CwoJYmFua19kYXRhIt0DChpFbGVjdHJvbmljSW52",
+            "b2ljZUxpbmVFbnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBF",
+            "bnZveSByZXF1ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIY",
+            "AiABKAlCBeo/AggBEhsKDGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoE",
+            "dGFncxgEIAMoCUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVu",
+            "cmljaGVkIGJ5IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIkCgRkYXRh",
+            "GAUgASgLMhYuYXNndC50eXBlLkludm9pY2VMaW5lEi0KDXRhcmdldF92YWx1",
+            "ZXMYBiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUSIwoFbW9kZWwYCSAB",
+            "KAsyFC5hc2d0LnR5cGUuTW9kZWxJbmZvEjAKCnByZWRpY3Rpb24YCiADKAsy",
+            "HC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgI",
+            "IAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoh6j8eChxlbGVjdHJvbmljX2ludm9p",
+            "Y2VfbGluZV9kYXRhItEDChNTY2FubmVkSW52b2ljZUVudHJ5Ej4KAmlkGAEg",
+            "ASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVl",
+            "ZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNl",
+            "dF9uYW1lGAMgASgJQgXqPwIIARJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3Mg",
+            "ZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2",
+            "YWxldGtleSBpcyB1c2VkEicKBGRhdGEYBSABKAsyGS5hc2d0LnR5cGUuU2Nh",
+            "bm5lZEludm9pY2USLQoNdGFyZ2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3QudHlw",
+            "ZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2Rl",
+            "bEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0",
+            "aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNU",
+            "QU1QOhnqPxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhQg1aC2RhdGFzZXJ2aWNl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelInfoReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
           }));
     }
     #endregion
@@ -108,7 +109,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       datasetName_ = other.datasetName_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      targets_ = other.targets_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
       prediction_ = other.prediction_.Clone();
       timeAdded_ = other.timeAdded_;
@@ -174,14 +175,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targets_codec
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(50, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targets_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> Targets {
-      get { return targets_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
     }
 
     /// <summary>Field number for the "model" field.</summary>
@@ -234,7 +235,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName != other.DatasetName) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       if (!object.Equals(Model, other.Model)) return false;
       if(!prediction_.Equals(other.prediction_)) return false;
       if (TimeAdded != other.TimeAdded) return false;
@@ -249,7 +250,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
       hash ^= prediction_.GetHashCode();
       if (TimeAdded != 0UL) hash ^= TimeAdded.GetHashCode();
@@ -283,7 +284,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(42);
         output.WriteMessage(Data);
       }
-      targets_.WriteTo(output, _repeated_targets_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (TimeAdded != 0UL) {
         output.WriteRawTag(64);
         output.WriteUInt64(TimeAdded);
@@ -314,7 +315,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
       }
@@ -349,7 +350,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Data.MergeFrom(other.Data);
       }
-      targets_.Add(other.targets_);
+      targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
           model_ = new global::Asgt.Type.ModelInfo();
@@ -395,7 +396,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           }
           case 50: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
           case 64: {
@@ -452,7 +453,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       datasetName_ = other.datasetName_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      targets_ = other.targets_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
       prediction_ = other.prediction_.Clone();
       timeAdded_ = other.timeAdded_;
@@ -518,14 +519,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targets_codec
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(50, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targets_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> Targets {
-      get { return targets_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
     }
 
     /// <summary>Field number for the "model" field.</summary>
@@ -578,7 +579,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName != other.DatasetName) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       if (!object.Equals(Model, other.Model)) return false;
       if(!prediction_.Equals(other.prediction_)) return false;
       if (TimeAdded != other.TimeAdded) return false;
@@ -593,7 +594,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
       hash ^= prediction_.GetHashCode();
       if (TimeAdded != 0UL) hash ^= TimeAdded.GetHashCode();
@@ -627,7 +628,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(42);
         output.WriteMessage(Data);
       }
-      targets_.WriteTo(output, _repeated_targets_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (TimeAdded != 0UL) {
         output.WriteRawTag(64);
         output.WriteUInt64(TimeAdded);
@@ -658,7 +659,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
       }
@@ -693,7 +694,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Data.MergeFrom(other.Data);
       }
-      targets_.Add(other.targets_);
+      targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
           model_ = new global::Asgt.Type.ModelInfo();
@@ -739,7 +740,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           }
           case 50: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
           case 64: {
@@ -796,7 +797,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       datasetName_ = other.datasetName_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      targets_ = other.targets_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
       prediction_ = other.prediction_.Clone();
       timeAdded_ = other.timeAdded_;
@@ -862,14 +863,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 6;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targets_codec
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(50, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targets_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> Targets {
-      get { return targets_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
     }
 
     /// <summary>Field number for the "model" field.</summary>
@@ -922,7 +923,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName != other.DatasetName) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       if (!object.Equals(Model, other.Model)) return false;
       if(!prediction_.Equals(other.prediction_)) return false;
       if (TimeAdded != other.TimeAdded) return false;
@@ -937,7 +938,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
       hash ^= prediction_.GetHashCode();
       if (TimeAdded != 0UL) hash ^= TimeAdded.GetHashCode();
@@ -971,7 +972,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(42);
         output.WriteMessage(Data);
       }
-      targets_.WriteTo(output, _repeated_targets_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (TimeAdded != 0UL) {
         output.WriteRawTag(64);
         output.WriteUInt64(TimeAdded);
@@ -1002,7 +1003,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
       }
@@ -1037,7 +1038,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Data.MergeFrom(other.Data);
       }
-      targets_.Add(other.targets_);
+      targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
           model_ = new global::Asgt.Type.ModelInfo();
@@ -1083,7 +1084,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           }
           case 50: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
           case 64: {

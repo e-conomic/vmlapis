@@ -36,7 +36,7 @@ service ElectronicInvoiceLineDataService {
 
 message ElectronicInvoiceLineEntryInput {
   asgt.type.InvoiceLine data = 1;
-  repeated asgt.type.TargetValue targets = 2;
+  repeated asgt.type.TargetValue target_values = 2;
 }
 
 message CreateElectronicInvoiceLineDatasetRequest {

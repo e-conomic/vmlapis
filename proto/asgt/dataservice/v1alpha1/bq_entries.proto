@@ -22,7 +22,7 @@ message BankEntry {
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.BankTransaction data = 5;
-  repeated asgt.type.TargetValue targets = 6;
+  repeated asgt.type.TargetValue target_values = 6;
   asgt.type.ModelInfo model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;
   uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
@@ -36,7 +36,7 @@ message ElectronicInvoiceLineEntry {
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.InvoiceLine data = 5;
-  repeated asgt.type.TargetValue targets = 6;
+  repeated asgt.type.TargetValue target_values = 6;
   asgt.type.ModelInfo model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;
   uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
@@ -50,7 +50,7 @@ message ScannedInvoiceEntry {
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.ScannedInvoice data = 5;
-  repeated asgt.type.TargetValue targets = 6;
+  repeated asgt.type.TargetValue target_values = 6;
   asgt.type.ModelInfo model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;
   uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];

@@ -39,7 +39,7 @@
   ]
  },
  {
-  "name": "targets",
+  "name": "target_values",
   "type": "RECORD",
   "mode": "REPEATED",
   "fields": [

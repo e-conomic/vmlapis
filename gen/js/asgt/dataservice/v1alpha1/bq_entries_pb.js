@@ -82,7 +82,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.toObject = function(includeInstance, m
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_bank_transaction_pb.BankTransaction.toObject(includeInstance, f),
-    targetsList: jspb.Message.toObjectList(msg.getTargetsList(),
+    targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
     model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
@@ -148,7 +148,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.deserializeBinaryFromReader = function
     case 6:
       var value = new asgt_type_target_value_pb.TargetValue;
       reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
-      msg.addTargets(value);
+      msg.addTargetValues(value);
       break;
     case 9:
       var value = new asgt_type_model_info_pb.ModelInfo;
@@ -229,7 +229,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.serializeBinaryToWriter = function(mes
       asgt_type_bank_transaction_pb.BankTransaction.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getTargetValuesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       6,
@@ -368,17 +368,17 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.hasData = function() {
 
 
 /**
- * repeated asgt.type.TargetValue targets = 6;
+ * repeated asgt.type.TargetValue target_values = 6;
  * @return {!Array<!proto.asgt.type.TargetValue>}
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getTargetsList = function() {
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getTargetValuesList = function() {
   return /** @type{!Array<!proto.asgt.type.TargetValue>} */ (
     jspb.Message.getRepeatedWrapperField(this, asgt_type_target_value_pb.TargetValue, 6));
 };
 
 
 /** @param {!Array<!proto.asgt.type.TargetValue>} value */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setTargetsList = function(value) {
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setTargetValuesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
@@ -388,13 +388,13 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setTargetsList = function(va
  * @param {number=} opt_index
  * @return {!proto.asgt.type.TargetValue}
  */
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.addTargets = function(opt_value, opt_index) {
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.addTargetValues = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.asgt.type.TargetValue, opt_index);
 };
 
 
-proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearTargetValuesList = function() {
+  this.setTargetValuesList([]);
 };
 
 
@@ -533,7 +533,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.toObject = function(i
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_invoice_line_pb.InvoiceLine.toObject(includeInstance, f),
-    targetsList: jspb.Message.toObjectList(msg.getTargetsList(),
+    targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
     model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
@@ -599,7 +599,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.deserializeBinaryFrom
     case 6:
       var value = new asgt_type_target_value_pb.TargetValue;
       reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
-      msg.addTargets(value);
+      msg.addTargetValues(value);
       break;
     case 9:
       var value = new asgt_type_model_info_pb.ModelInfo;
@@ -680,7 +680,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.serializeBinaryToWrit
       asgt_type_invoice_line_pb.InvoiceLine.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getTargetValuesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       6,
@@ -819,17 +819,17 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.hasData = f
 
 
 /**
- * repeated asgt.type.TargetValue targets = 6;
+ * repeated asgt.type.TargetValue target_values = 6;
  * @return {!Array<!proto.asgt.type.TargetValue>}
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getTargetsList = function() {
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getTargetValuesList = function() {
   return /** @type{!Array<!proto.asgt.type.TargetValue>} */ (
     jspb.Message.getRepeatedWrapperField(this, asgt_type_target_value_pb.TargetValue, 6));
 };
 
 
 /** @param {!Array<!proto.asgt.type.TargetValue>} value */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setTargetsList = function(value) {
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setTargetValuesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
@@ -839,13 +839,13 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setTargetsL
  * @param {number=} opt_index
  * @return {!proto.asgt.type.TargetValue}
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.addTargets = function(opt_value, opt_index) {
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.addTargetValues = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.asgt.type.TargetValue, opt_index);
 };
 
 
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.clearTargetValuesList = function() {
+  this.setTargetValuesList([]);
 };
 
 
@@ -984,7 +984,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.toObject = function(includeI
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_scanned_invoice_pb.ScannedInvoice.toObject(includeInstance, f),
-    targetsList: jspb.Message.toObjectList(msg.getTargetsList(),
+    targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
     model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
@@ -1050,7 +1050,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.deserializeBinaryFromReader 
     case 6:
       var value = new asgt_type_target_value_pb.TargetValue;
       reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
-      msg.addTargets(value);
+      msg.addTargetValues(value);
       break;
     case 9:
       var value = new asgt_type_model_info_pb.ModelInfo;
@@ -1131,7 +1131,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.serializeBinaryToWriter = fu
       asgt_type_scanned_invoice_pb.ScannedInvoice.serializeBinaryToWriter
     );
   }
-  f = message.getTargetsList();
+  f = message.getTargetValuesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       6,
@@ -1270,17 +1270,17 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.hasData = function
 
 
 /**
- * repeated asgt.type.TargetValue targets = 6;
+ * repeated asgt.type.TargetValue target_values = 6;
  * @return {!Array<!proto.asgt.type.TargetValue>}
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getTargetsList = function() {
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getTargetValuesList = function() {
   return /** @type{!Array<!proto.asgt.type.TargetValue>} */ (
     jspb.Message.getRepeatedWrapperField(this, asgt_type_target_value_pb.TargetValue, 6));
 };
 
 
 /** @param {!Array<!proto.asgt.type.TargetValue>} value */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setTargetsList = function(value) {
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setTargetValuesList = function(value) {
   jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
@@ -1290,13 +1290,13 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setTargetsList = f
  * @param {number=} opt_index
  * @return {!proto.asgt.type.TargetValue}
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.addTargets = function(opt_value, opt_index) {
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.addTargetValues = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.asgt.type.TargetValue, opt_index);
 };
 
 
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.clearTargetsList = function() {
-  this.setTargetsList([]);
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.clearTargetValuesList = function() {
+  this.setTargetValuesList([]);
 };
 
 

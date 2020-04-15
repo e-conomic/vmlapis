@@ -30,34 +30,34 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "dG8aHGFzZ3QvdHlwZS9pbnZvaWNlX2xpbmUucHJvdG8aIGFzZ3QvdHlwZS9y",
             "ZXRlbnRpb25fcG9saWN5LnByb3RvGhxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVl",
             "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhtnb29nbGUv",
-            "cHJvdG9idWYvZW1wdHkucHJvdG8icAofRWxlY3Ryb25pY0ludm9pY2VMaW5l",
+            "cHJvdG9idWYvZW1wdHkucHJvdG8idgofRWxlY3Ryb25pY0ludm9pY2VMaW5l",
             "RW50cnlJbnB1dBIkCgRkYXRhGAEgASgLMhYuYXNndC50eXBlLkludm9pY2VM",
-            "aW5lEicKB3RhcmdldHMYAiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUi",
-            "0gEKKUNyZWF0ZUVsZWN0cm9uaWNJbnZvaWNlTGluZURhdGFzZXRSZXF1ZXN0",
-            "EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIMCgR0YWdzGAIgAygJEksKB2VudHJp",
-            "ZXMYAyADKAsyOi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkVsZWN0cm9u",
-            "aWNJbnZvaWNlTGluZUVudHJ5SW5wdXQSNAoQcmV0ZW50aW9uX3BvbGljeRgE",
-            "IAEoCzIaLmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3kiiwEKJkFwcGVuZEVs",
-            "ZWN0cm9uaWNJbnZvaWNlTGluZURhdGFSZXF1ZXN0EhQKDGRhdGFzZXRfbmFt",
-            "ZRgBIAEoCRJLCgdlbnRyaWVzGAMgAygLMjouYXNndC5kYXRhc2VydmljZS52",
-            "MWFscGhhMS5FbGVjdHJvbmljSW52b2ljZUxpbmVFbnRyeUlucHV0MqsECiBF",
-            "bGVjdHJvbmljSW52b2ljZUxpbmVEYXRhU2VydmljZRK3AQoiQ3JlYXRlRWxl",
-            "Y3Ryb25pY0ludm9pY2VMaW5lRGF0YXNldBJELmFzZ3QuZGF0YXNlcnZpY2Uu",
-            "djFhbHBoYTEuQ3JlYXRlRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YXNldFJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSIoL3YxYWxw",
-            "aGExL2VsZWN0cm9uaWMtaW52b2ljZS1saW5lOmNyZWF0ZToBKhKxAQofQXBw",
-            "ZW5kRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YRJBLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuQXBwZW5kRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YVJl",
-            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSIoL3YxYWxw",
-            "aGExL2VsZWN0cm9uaWMtaW52b2ljZS1saW5lOmFwcGVuZDoBKhKYAQofRGVs",
-            "ZXRlRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YRIoLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIzgtPkkwItIigvdjFhbHBoYTEvZWxlY3Ryb25pYy1pbnZvaWNlLWxp",
-            "bmU6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "aW5lEi0KDXRhcmdldF92YWx1ZXMYAiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0",
+            "VmFsdWUi0gEKKUNyZWF0ZUVsZWN0cm9uaWNJbnZvaWNlTGluZURhdGFzZXRS",
+            "ZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIMCgR0YWdzGAIgAygJEksK",
+            "B2VudHJpZXMYAyADKAsyOi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkVs",
+            "ZWN0cm9uaWNJbnZvaWNlTGluZUVudHJ5SW5wdXQSNAoQcmV0ZW50aW9uX3Bv",
+            "bGljeRgEIAEoCzIaLmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3kiiwEKJkFw",
+            "cGVuZEVsZWN0cm9uaWNJbnZvaWNlTGluZURhdGFSZXF1ZXN0EhQKDGRhdGFz",
+            "ZXRfbmFtZRgBIAEoCRJLCgdlbnRyaWVzGAMgAygLMjouYXNndC5kYXRhc2Vy",
+            "dmljZS52MWFscGhhMS5FbGVjdHJvbmljSW52b2ljZUxpbmVFbnRyeUlucHV0",
+            "MqsECiBFbGVjdHJvbmljSW52b2ljZUxpbmVEYXRhU2VydmljZRK3AQoiQ3Jl",
+            "YXRlRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YXNldBJELmFzZ3QuZGF0YXNl",
+            "cnZpY2UudjFhbHBoYTEuQ3JlYXRlRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0",
+            "YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSIo",
+            "L3YxYWxwaGExL2VsZWN0cm9uaWMtaW52b2ljZS1saW5lOmNyZWF0ZToBKhKx",
+            "AQofQXBwZW5kRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YRJBLmFzZ3QuZGF0",
+            "YXNlcnZpY2UudjFhbHBoYTEuQXBwZW5kRWxlY3Ryb25pY0ludm9pY2VMaW5l",
+            "RGF0YVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSIo",
+            "L3YxYWxwaGExL2VsZWN0cm9uaWMtaW52b2ljZS1saW5lOmFwcGVuZDoBKhKY",
+            "AQofRGVsZXRlRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YRIoLmFzZ3QuZGF0",
+            "YXNlcnZpY2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIzgtPkkwItIigvdjFhbHBoYTEvZWxlY3Ryb25pYy1pbnZv",
+            "aWNlLWxpbmU6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DeleteReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntryInput), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntryInput.Parser, new[]{ "Data", "Targets" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntryInput), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntryInput.Parser, new[]{ "Data", "TargetValues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateElectronicInvoiceLineDatasetRequest), global::Asgt.Dataservice.V1Alpha1.CreateElectronicInvoiceLineDatasetRequest.Parser, new[]{ "DatasetName", "Tags", "Entries", "RetentionPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendElectronicInvoiceLineDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendElectronicInvoiceLineDataRequest.Parser, new[]{ "DatasetName", "Entries" }, null, null, null)
           }));
@@ -92,7 +92,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ElectronicInvoiceLineEntryInput(ElectronicInvoiceLineEntryInput other) : this() {
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      targets_ = other.targets_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -112,14 +112,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targets_codec
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targets_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> Targets {
-      get { return targets_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,7 +136,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         return true;
       }
       if (!object.Equals(Data, other.Data)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -144,7 +144,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -162,7 +162,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
-      targets_.WriteTo(output, _repeated_targets_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -174,7 +174,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -192,7 +192,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Data.MergeFrom(other.Data);
       }
-      targets_.Add(other.targets_);
+      targetValues_.Add(other.targetValues_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -212,7 +212,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
         }

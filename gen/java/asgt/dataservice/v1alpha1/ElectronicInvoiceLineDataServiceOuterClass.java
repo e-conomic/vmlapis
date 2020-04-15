@@ -32,27 +32,27 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
-        getTargetsList();
+        getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValue getTargets(int index);
+    asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    int getTargetsCount();
+    int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList();
+        getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
   }
   /**
@@ -68,7 +68,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       super(builder);
     }
     private ElectronicInvoiceLineEntryInput() {
-      targets_ = java.util.Collections.emptyList();
+      targetValues_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -110,10 +110,10 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
+                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              targets_.add(
+              targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
               break;
             }
@@ -133,7 +133,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = java.util.Collections.unmodifiableList(targets_);
+          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -174,39 +174,39 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       return getData();
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 2;
-    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_;
+    public static final int TARGET_VALUES_FIELD_NUMBER = 2;
+    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-      return targets_;
+    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList() {
-      return targets_;
+        getTargetValuesOrBuilderList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    public int getTargetsCount() {
-      return targets_.size();
+    public int getTargetValuesCount() {
+      return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-      return targets_.get(index);
+    public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+      return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
-      return targets_.get(index);
+      return targetValues_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -226,8 +226,8 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       if (data_ != null) {
         output.writeMessage(1, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        output.writeMessage(2, targets_.get(i));
+      for (int i = 0; i < targetValues_.size(); i++) {
+        output.writeMessage(2, targetValues_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -242,9 +242,9 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
+      for (int i = 0; i < targetValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, targets_.get(i));
+          .computeMessageSize(2, targetValues_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -267,8 +267,8 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         result = result && getData()
             .equals(other.getData());
       }
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getTargetValuesList()
+          .equals(other.getTargetValuesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -284,9 +284,9 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
+      if (getTargetValuesCount() > 0) {
+        hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetValuesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -416,7 +416,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTargetsFieldBuilder();
+          getTargetValuesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -428,11 +428,11 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
           data_ = null;
           dataBuilder_ = null;
         }
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         return this;
       }
@@ -467,14 +467,14 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         } else {
           result.data_ = dataBuilder_.build();
         }
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            targets_ = java.util.Collections.unmodifiableList(targets_);
+            targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
             bitField0_ = (bitField0_ & ~0x00000002);
           }
-          result.targets_ = targets_;
+          result.targetValues_ = targetValues_;
         } else {
-          result.targets_ = targetsBuilder_.build();
+          result.targetValues_ = targetValuesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -528,29 +528,29 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         if (other.hasData()) {
           mergeData(other.getData());
         }
-        if (targetsBuilder_ == null) {
-          if (!other.targets_.isEmpty()) {
-            if (targets_.isEmpty()) {
-              targets_ = other.targets_;
+        if (targetValuesBuilder_ == null) {
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValues_.isEmpty()) {
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000002);
             } else {
-              ensureTargetsIsMutable();
-              targets_.addAll(other.targets_);
+              ensureTargetValuesIsMutable();
+              targetValues_.addAll(other.targetValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.targets_.isEmpty()) {
-            if (targetsBuilder_.isEmpty()) {
-              targetsBuilder_.dispose();
-              targetsBuilder_ = null;
-              targets_ = other.targets_;
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValuesBuilder_.isEmpty()) {
+              targetValuesBuilder_.dispose();
+              targetValuesBuilder_ = null;
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000002);
-              targetsBuilder_ = 
+              targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTargetsFieldBuilder() : null;
+                   getTargetValuesFieldBuilder() : null;
             } else {
-              targetsBuilder_.addAllMessages(other.targets_);
+              targetValuesBuilder_.addAllMessages(other.targetValues_);
             }
           }
         }
@@ -701,244 +701,244 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         return dataBuilder_;
       }
 
-      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_ =
+      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
-      private void ensureTargetsIsMutable() {
+      private void ensureTargetValuesIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targets_);
+          targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetsBuilder_;
+          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-        if (targetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(targets_);
+      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+        if (targetValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetValues_);
         } else {
-          return targetsBuilder_.getMessageList();
+          return targetValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public int getTargetsCount() {
-        if (targetsBuilder_ == null) {
-          return targets_.size();
+      public int getTargetValuesCount() {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.size();
         } else {
-          return targetsBuilder_.getCount();
+          return targetValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);
+      public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);
         } else {
-          return targetsBuilder_.getMessage(index);
+          return targetValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.set(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, value);
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, value);
+          targetValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.set(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, builderForValue.build());
+          targetValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder addTargets(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+      public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(value);
+          targetValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, value);
+          targetValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(builderForValue.build());
+          targetValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, builderForValue.build());
+          targetValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder addAllTargets(
+      public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, targets_);
+              values, targetValues_);
           onChanged();
         } else {
-          targetsBuilder_.addAllMessages(values);
+          targetValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder clearTargets() {
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+      public Builder clearTargetValues() {
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public Builder removeTargets(int index) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.remove(index);
+      public Builder removeTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.remove(index);
           onChanged();
         } else {
-          targetsBuilder_.remove(index);
+          targetValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().getBuilder(index);
+        return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);  } else {
-          return targetsBuilder_.getMessageOrBuilder(index);
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);  } else {
+          return targetValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-           getTargetsOrBuilderList() {
-        if (targetsBuilder_ != null) {
-          return targetsBuilder_.getMessageOrBuilderList();
+           getTargetValuesOrBuilderList() {
+        if (targetValuesBuilder_ != null) {
+          return targetValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(targets_);
+          return java.util.Collections.unmodifiableList(targetValues_);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder() {
-        return getTargetsFieldBuilder().addBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
+        return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().addBuilder(
+        return getTargetValuesFieldBuilder().addBuilder(
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 2;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
-           getTargetsBuilderList() {
-        return getTargetsFieldBuilder().getBuilderList();
+           getTargetValuesBuilderList() {
+        return getTargetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetsFieldBuilder() {
-        if (targetsBuilder_ == null) {
-          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTargetValuesFieldBuilder() {
+        if (targetValuesBuilder_ == null) {
+          targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  targets_,
+                  targetValues_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
                   isClean());
-          targets_ = null;
+          targetValues_ = null;
         }
-        return targetsBuilder_;
+        return targetValuesBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3251,33 +3251,33 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       "e.proto\032 asgt/type/retention_policy.prot" +
       "o\032\034asgt/type/target_value.proto\032\034google/" +
       "api/annotations.proto\032\033google/protobuf/e" +
-      "mpty.proto\"p\n\037ElectronicInvoiceLineEntry" +
+      "mpty.proto\"v\n\037ElectronicInvoiceLineEntry" +
       "Input\022$\n\004data\030\001 \001(\0132\026.asgt.type.InvoiceL" +
-      "ine\022\'\n\007targets\030\002 \003(\0132\026.asgt.type.TargetV" +
-      "alue\"\322\001\n)CreateElectronicInvoiceLineData" +
-      "setRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags" +
-      "\030\002 \003(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dataservi" +
-      "ce.v1alpha1.ElectronicInvoiceLineEntryIn" +
-      "put\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.typ" +
-      "e.RetentionPolicy\"\213\001\n&AppendElectronicIn" +
-      "voiceLineDataRequest\022\024\n\014dataset_name\030\001 \001" +
-      "(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dataservice.v" +
-      "1alpha1.ElectronicInvoiceLineEntryInput2" +
-      "\253\004\n ElectronicInvoiceLineDataService\022\267\001\n" +
-      "\"CreateElectronicInvoiceLineDataset\022D.as" +
-      "gt.dataservice.v1alpha1.CreateElectronic" +
-      "InvoiceLineDatasetRequest\032\026.google.proto" +
-      "buf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic-" +
-      "invoice-line:create:\001*\022\261\001\n\037AppendElectro" +
-      "nicInvoiceLineData\022A.asgt.dataservice.v1" +
-      "alpha1.AppendElectronicInvoiceLineDataRe" +
-      "quest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-\"(/" +
-      "v1alpha1/electronic-invoice-line:append:" +
-      "\001*\022\230\001\n\037DeleteElectronicInvoiceLineData\022(" +
-      ".asgt.dataservice.v1alpha1.DeleteRequest" +
-      "\032\026.google.protobuf.Empty\"3\202\323\344\223\002-\"(/v1alp" +
-      "ha1/electronic-invoice-line:delete:\001*B\rZ" +
-      "\013dataserviceb\006proto3"
+      "ine\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.type.T" +
+      "argetValue\"\322\001\n)CreateElectronicInvoiceLi" +
+      "neDatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014" +
+      "\n\004tags\030\002 \003(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dat" +
+      "aservice.v1alpha1.ElectronicInvoiceLineE" +
+      "ntryInput\0224\n\020retention_policy\030\004 \001(\0132\032.as" +
+      "gt.type.RetentionPolicy\"\213\001\n&AppendElectr" +
+      "onicInvoiceLineDataRequest\022\024\n\014dataset_na" +
+      "me\030\001 \001(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dataser" +
+      "vice.v1alpha1.ElectronicInvoiceLineEntry" +
+      "Input2\253\004\n ElectronicInvoiceLineDataServi" +
+      "ce\022\267\001\n\"CreateElectronicInvoiceLineDatase" +
+      "t\022D.asgt.dataservice.v1alpha1.CreateElec" +
+      "tronicInvoiceLineDatasetRequest\032\026.google" +
+      ".protobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/elect" +
+      "ronic-invoice-line:create:\001*\022\261\001\n\037AppendE" +
+      "lectronicInvoiceLineData\022A.asgt.dataserv" +
+      "ice.v1alpha1.AppendElectronicInvoiceLine" +
+      "DataRequest\032\026.google.protobuf.Empty\"3\202\323\344" +
+      "\223\002-\"(/v1alpha1/electronic-invoice-line:a" +
+      "ppend:\001*\022\230\001\n\037DeleteElectronicInvoiceLine" +
+      "Data\022(.asgt.dataservice.v1alpha1.DeleteR" +
+      "equest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-\"(" +
+      "/v1alpha1/electronic-invoice-line:delete" +
+      ":\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3302,7 +3302,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntryInput_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntryInput_descriptor,
-        new java.lang.String[] { "Data", "Targets", });
+        new java.lang.String[] { "Data", "TargetValues", });
     internal_static_asgt_dataservice_v1alpha1_CreateElectronicInvoiceLineDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_CreateElectronicInvoiceLineDatasetRequest_fieldAccessorTable = new

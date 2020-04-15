@@ -37,7 +37,7 @@ service ScannedInvoiceDataService {
 
 message ScannedInvoiceEntryInput {
   asgt.type.ScannedInvoice data = 1;
-  repeated asgt.type.TargetValue targets = 2;
+  repeated asgt.type.TargetValue target_values = 2;
 }
 
 message CreateScannedInvoiceDatasetRequest {

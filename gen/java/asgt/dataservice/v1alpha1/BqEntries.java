@@ -81,27 +81,27 @@ public final class BqEntries {
     asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
-        getTargetsList();
+        getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValue getTargets(int index);
+    asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    int getTargetsCount();
+    int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList();
+        getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
 
     /**
@@ -167,7 +167,7 @@ public final class BqEntries {
       consumer_ = "";
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      targets_ = java.util.Collections.emptyList();
+      targetValues_ = java.util.Collections.emptyList();
       prediction_ = java.util.Collections.emptyList();
       timeAdded_ = 0L;
     }
@@ -238,10 +238,10 @@ public final class BqEntries {
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
+                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              targets_.add(
+              targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
               break;
             }
@@ -291,7 +291,7 @@ public final class BqEntries {
           tags_ = tags_.getUnmodifiableView();
         }
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = java.util.Collections.unmodifiableList(targets_);
+          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           prediction_ = java.util.Collections.unmodifiableList(prediction_);
@@ -466,39 +466,39 @@ public final class BqEntries {
       return getData();
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 6;
-    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_;
+    public static final int TARGET_VALUES_FIELD_NUMBER = 6;
+    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-      return targets_;
+    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList() {
-      return targets_;
+        getTargetValuesOrBuilderList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public int getTargetsCount() {
-      return targets_.size();
+    public int getTargetValuesCount() {
+      return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-      return targets_.get(index);
+    public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+      return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
-      return targets_.get(index);
+      return targetValues_.get(index);
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
@@ -595,8 +595,8 @@ public final class BqEntries {
       if (data_ != null) {
         output.writeMessage(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        output.writeMessage(6, targets_.get(i));
+      for (int i = 0; i < targetValues_.size(); i++) {
+        output.writeMessage(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         output.writeUInt64(8, timeAdded_);
@@ -637,9 +637,9 @@ public final class BqEntries {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
+      for (int i = 0; i < targetValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, targets_.get(i));
+          .computeMessageSize(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -682,8 +682,8 @@ public final class BqEntries {
         result = result && getData()
             .equals(other.getData());
       }
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getTargetValuesList()
+          .equals(other.getTargetValuesList());
       result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
         result = result && getModel()
@@ -718,9 +718,9 @@ public final class BqEntries {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
+      if (getTargetValuesCount() > 0) {
+        hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetValuesList().hashCode();
       }
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
@@ -865,7 +865,7 @@ public final class BqEntries {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTargetsFieldBuilder();
+          getTargetValuesFieldBuilder();
           getPredictionFieldBuilder();
         }
       }
@@ -886,11 +886,11 @@ public final class BqEntries {
           data_ = null;
           dataBuilder_ = null;
         }
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         if (modelBuilder_ == null) {
           model_ = null;
@@ -947,14 +947,14 @@ public final class BqEntries {
         } else {
           result.data_ = dataBuilder_.build();
         }
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            targets_ = java.util.Collections.unmodifiableList(targets_);
+            targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
-          result.targets_ = targets_;
+          result.targetValues_ = targetValues_;
         } else {
-          result.targets_ = targetsBuilder_.build();
+          result.targetValues_ = targetValuesBuilder_.build();
         }
         if (modelBuilder_ == null) {
           result.model_ = model_;
@@ -1045,29 +1045,29 @@ public final class BqEntries {
         if (other.hasData()) {
           mergeData(other.getData());
         }
-        if (targetsBuilder_ == null) {
-          if (!other.targets_.isEmpty()) {
-            if (targets_.isEmpty()) {
-              targets_ = other.targets_;
+        if (targetValuesBuilder_ == null) {
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValues_.isEmpty()) {
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
             } else {
-              ensureTargetsIsMutable();
-              targets_.addAll(other.targets_);
+              ensureTargetValuesIsMutable();
+              targetValues_.addAll(other.targetValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.targets_.isEmpty()) {
-            if (targetsBuilder_.isEmpty()) {
-              targetsBuilder_.dispose();
-              targetsBuilder_ = null;
-              targets_ = other.targets_;
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValuesBuilder_.isEmpty()) {
+              targetValuesBuilder_.dispose();
+              targetValuesBuilder_ = null;
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              targetsBuilder_ = 
+              targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTargetsFieldBuilder() : null;
+                   getTargetValuesFieldBuilder() : null;
             } else {
-              targetsBuilder_.addAllMessages(other.targets_);
+              targetValuesBuilder_.addAllMessages(other.targetValues_);
             }
           }
         }
@@ -1551,244 +1551,244 @@ public final class BqEntries {
         return dataBuilder_;
       }
 
-      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_ =
+      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
-      private void ensureTargetsIsMutable() {
+      private void ensureTargetValuesIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targets_);
+          targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetsBuilder_;
+          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-        if (targetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(targets_);
+      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+        if (targetValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetValues_);
         } else {
-          return targetsBuilder_.getMessageList();
+          return targetValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public int getTargetsCount() {
-        if (targetsBuilder_ == null) {
-          return targets_.size();
+      public int getTargetValuesCount() {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.size();
         } else {
-          return targetsBuilder_.getCount();
+          return targetValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);
+      public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);
         } else {
-          return targetsBuilder_.getMessage(index);
+          return targetValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.set(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, value);
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, value);
+          targetValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.set(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, builderForValue.build());
+          targetValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+      public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(value);
+          targetValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, value);
+          targetValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(builderForValue.build());
+          targetValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, builderForValue.build());
+          targetValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addAllTargets(
+      public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, targets_);
+              values, targetValues_);
           onChanged();
         } else {
-          targetsBuilder_.addAllMessages(values);
+          targetValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder clearTargets() {
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+      public Builder clearTargetValues() {
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder removeTargets(int index) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.remove(index);
+      public Builder removeTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.remove(index);
           onChanged();
         } else {
-          targetsBuilder_.remove(index);
+          targetValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().getBuilder(index);
+        return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);  } else {
-          return targetsBuilder_.getMessageOrBuilder(index);
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);  } else {
+          return targetValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-           getTargetsOrBuilderList() {
-        if (targetsBuilder_ != null) {
-          return targetsBuilder_.getMessageOrBuilderList();
+           getTargetValuesOrBuilderList() {
+        if (targetValuesBuilder_ != null) {
+          return targetValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(targets_);
+          return java.util.Collections.unmodifiableList(targetValues_);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder() {
-        return getTargetsFieldBuilder().addBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
+        return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().addBuilder(
+        return getTargetValuesFieldBuilder().addBuilder(
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
-           getTargetsBuilderList() {
-        return getTargetsFieldBuilder().getBuilderList();
+           getTargetValuesBuilderList() {
+        return getTargetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetsFieldBuilder() {
-        if (targetsBuilder_ == null) {
-          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTargetValuesFieldBuilder() {
+        if (targetValuesBuilder_ == null) {
+          targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  targets_,
+                  targetValues_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
-          targets_ = null;
+          targetValues_ = null;
         }
-        return targetsBuilder_;
+        return targetValuesBuilder_;
       }
 
       private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
@@ -2293,27 +2293,27 @@ public final class BqEntries {
     asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
-        getTargetsList();
+        getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValue getTargets(int index);
+    asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    int getTargetsCount();
+    int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList();
+        getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
 
     /**
@@ -2379,7 +2379,7 @@ public final class BqEntries {
       consumer_ = "";
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      targets_ = java.util.Collections.emptyList();
+      targetValues_ = java.util.Collections.emptyList();
       prediction_ = java.util.Collections.emptyList();
       timeAdded_ = 0L;
     }
@@ -2450,10 +2450,10 @@ public final class BqEntries {
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
+                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              targets_.add(
+              targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
               break;
             }
@@ -2503,7 +2503,7 @@ public final class BqEntries {
           tags_ = tags_.getUnmodifiableView();
         }
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = java.util.Collections.unmodifiableList(targets_);
+          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           prediction_ = java.util.Collections.unmodifiableList(prediction_);
@@ -2678,39 +2678,39 @@ public final class BqEntries {
       return getData();
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 6;
-    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_;
+    public static final int TARGET_VALUES_FIELD_NUMBER = 6;
+    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-      return targets_;
+    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList() {
-      return targets_;
+        getTargetValuesOrBuilderList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public int getTargetsCount() {
-      return targets_.size();
+    public int getTargetValuesCount() {
+      return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-      return targets_.get(index);
+    public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+      return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
-      return targets_.get(index);
+      return targetValues_.get(index);
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
@@ -2807,8 +2807,8 @@ public final class BqEntries {
       if (data_ != null) {
         output.writeMessage(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        output.writeMessage(6, targets_.get(i));
+      for (int i = 0; i < targetValues_.size(); i++) {
+        output.writeMessage(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         output.writeUInt64(8, timeAdded_);
@@ -2849,9 +2849,9 @@ public final class BqEntries {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
+      for (int i = 0; i < targetValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, targets_.get(i));
+          .computeMessageSize(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -2894,8 +2894,8 @@ public final class BqEntries {
         result = result && getData()
             .equals(other.getData());
       }
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getTargetValuesList()
+          .equals(other.getTargetValuesList());
       result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
         result = result && getModel()
@@ -2930,9 +2930,9 @@ public final class BqEntries {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
+      if (getTargetValuesCount() > 0) {
+        hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetValuesList().hashCode();
       }
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
@@ -3077,7 +3077,7 @@ public final class BqEntries {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTargetsFieldBuilder();
+          getTargetValuesFieldBuilder();
           getPredictionFieldBuilder();
         }
       }
@@ -3098,11 +3098,11 @@ public final class BqEntries {
           data_ = null;
           dataBuilder_ = null;
         }
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         if (modelBuilder_ == null) {
           model_ = null;
@@ -3159,14 +3159,14 @@ public final class BqEntries {
         } else {
           result.data_ = dataBuilder_.build();
         }
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            targets_ = java.util.Collections.unmodifiableList(targets_);
+            targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
-          result.targets_ = targets_;
+          result.targetValues_ = targetValues_;
         } else {
-          result.targets_ = targetsBuilder_.build();
+          result.targetValues_ = targetValuesBuilder_.build();
         }
         if (modelBuilder_ == null) {
           result.model_ = model_;
@@ -3257,29 +3257,29 @@ public final class BqEntries {
         if (other.hasData()) {
           mergeData(other.getData());
         }
-        if (targetsBuilder_ == null) {
-          if (!other.targets_.isEmpty()) {
-            if (targets_.isEmpty()) {
-              targets_ = other.targets_;
+        if (targetValuesBuilder_ == null) {
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValues_.isEmpty()) {
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
             } else {
-              ensureTargetsIsMutable();
-              targets_.addAll(other.targets_);
+              ensureTargetValuesIsMutable();
+              targetValues_.addAll(other.targetValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.targets_.isEmpty()) {
-            if (targetsBuilder_.isEmpty()) {
-              targetsBuilder_.dispose();
-              targetsBuilder_ = null;
-              targets_ = other.targets_;
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValuesBuilder_.isEmpty()) {
+              targetValuesBuilder_.dispose();
+              targetValuesBuilder_ = null;
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              targetsBuilder_ = 
+              targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTargetsFieldBuilder() : null;
+                   getTargetValuesFieldBuilder() : null;
             } else {
-              targetsBuilder_.addAllMessages(other.targets_);
+              targetValuesBuilder_.addAllMessages(other.targetValues_);
             }
           }
         }
@@ -3763,244 +3763,244 @@ public final class BqEntries {
         return dataBuilder_;
       }
 
-      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_ =
+      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
-      private void ensureTargetsIsMutable() {
+      private void ensureTargetValuesIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targets_);
+          targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetsBuilder_;
+          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-        if (targetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(targets_);
+      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+        if (targetValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetValues_);
         } else {
-          return targetsBuilder_.getMessageList();
+          return targetValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public int getTargetsCount() {
-        if (targetsBuilder_ == null) {
-          return targets_.size();
+      public int getTargetValuesCount() {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.size();
         } else {
-          return targetsBuilder_.getCount();
+          return targetValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);
+      public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);
         } else {
-          return targetsBuilder_.getMessage(index);
+          return targetValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.set(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, value);
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, value);
+          targetValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.set(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, builderForValue.build());
+          targetValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+      public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(value);
+          targetValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, value);
+          targetValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(builderForValue.build());
+          targetValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, builderForValue.build());
+          targetValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addAllTargets(
+      public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, targets_);
+              values, targetValues_);
           onChanged();
         } else {
-          targetsBuilder_.addAllMessages(values);
+          targetValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder clearTargets() {
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+      public Builder clearTargetValues() {
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder removeTargets(int index) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.remove(index);
+      public Builder removeTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.remove(index);
           onChanged();
         } else {
-          targetsBuilder_.remove(index);
+          targetValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().getBuilder(index);
+        return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);  } else {
-          return targetsBuilder_.getMessageOrBuilder(index);
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);  } else {
+          return targetValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-           getTargetsOrBuilderList() {
-        if (targetsBuilder_ != null) {
-          return targetsBuilder_.getMessageOrBuilderList();
+           getTargetValuesOrBuilderList() {
+        if (targetValuesBuilder_ != null) {
+          return targetValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(targets_);
+          return java.util.Collections.unmodifiableList(targetValues_);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder() {
-        return getTargetsFieldBuilder().addBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
+        return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().addBuilder(
+        return getTargetValuesFieldBuilder().addBuilder(
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
-           getTargetsBuilderList() {
-        return getTargetsFieldBuilder().getBuilderList();
+           getTargetValuesBuilderList() {
+        return getTargetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetsFieldBuilder() {
-        if (targetsBuilder_ == null) {
-          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTargetValuesFieldBuilder() {
+        if (targetValuesBuilder_ == null) {
+          targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  targets_,
+                  targetValues_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
-          targets_ = null;
+          targetValues_ = null;
         }
-        return targetsBuilder_;
+        return targetValuesBuilder_;
       }
 
       private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
@@ -4505,27 +4505,27 @@ public final class BqEntries {
     asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
-        getTargetsList();
+        getTargetValuesList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValue getTargets(int index);
+    asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    int getTargetsCount();
+    int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList();
+        getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
 
     /**
@@ -4591,7 +4591,7 @@ public final class BqEntries {
       consumer_ = "";
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      targets_ = java.util.Collections.emptyList();
+      targetValues_ = java.util.Collections.emptyList();
       prediction_ = java.util.Collections.emptyList();
       timeAdded_ = 0L;
     }
@@ -4662,10 +4662,10 @@ public final class BqEntries {
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
+                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
-              targets_.add(
+              targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
               break;
             }
@@ -4715,7 +4715,7 @@ public final class BqEntries {
           tags_ = tags_.getUnmodifiableView();
         }
         if (((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = java.util.Collections.unmodifiableList(targets_);
+          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
         }
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           prediction_ = java.util.Collections.unmodifiableList(prediction_);
@@ -4890,39 +4890,39 @@ public final class BqEntries {
       return getData();
     }
 
-    public static final int TARGETS_FIELD_NUMBER = 6;
-    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_;
+    public static final int TARGET_VALUES_FIELD_NUMBER = 6;
+    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-      return targets_;
+    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
     public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetsOrBuilderList() {
-      return targets_;
+        getTargetValuesOrBuilderList() {
+      return targetValues_;
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public int getTargetsCount() {
-      return targets_.size();
+    public int getTargetValuesCount() {
+      return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-      return targets_.get(index);
+    public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+      return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+     * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
      */
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
-      return targets_.get(index);
+      return targetValues_.get(index);
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
@@ -5019,8 +5019,8 @@ public final class BqEntries {
       if (data_ != null) {
         output.writeMessage(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
-        output.writeMessage(6, targets_.get(i));
+      for (int i = 0; i < targetValues_.size(); i++) {
+        output.writeMessage(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         output.writeUInt64(8, timeAdded_);
@@ -5061,9 +5061,9 @@ public final class BqEntries {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getData());
       }
-      for (int i = 0; i < targets_.size(); i++) {
+      for (int i = 0; i < targetValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, targets_.get(i));
+          .computeMessageSize(6, targetValues_.get(i));
       }
       if (timeAdded_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -5106,8 +5106,8 @@ public final class BqEntries {
         result = result && getData()
             .equals(other.getData());
       }
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
+      result = result && getTargetValuesList()
+          .equals(other.getTargetValuesList());
       result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
         result = result && getModel()
@@ -5142,9 +5142,9 @@ public final class BqEntries {
         hash = (37 * hash) + DATA_FIELD_NUMBER;
         hash = (53 * hash) + getData().hashCode();
       }
-      if (getTargetsCount() > 0) {
-        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetsList().hashCode();
+      if (getTargetValuesCount() > 0) {
+        hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetValuesList().hashCode();
       }
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
@@ -5289,7 +5289,7 @@ public final class BqEntries {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getTargetsFieldBuilder();
+          getTargetValuesFieldBuilder();
           getPredictionFieldBuilder();
         }
       }
@@ -5310,11 +5310,11 @@ public final class BqEntries {
           data_ = null;
           dataBuilder_ = null;
         }
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         if (modelBuilder_ == null) {
           model_ = null;
@@ -5371,14 +5371,14 @@ public final class BqEntries {
         } else {
           result.data_ = dataBuilder_.build();
         }
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            targets_ = java.util.Collections.unmodifiableList(targets_);
+            targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
             bitField0_ = (bitField0_ & ~0x00000020);
           }
-          result.targets_ = targets_;
+          result.targetValues_ = targetValues_;
         } else {
-          result.targets_ = targetsBuilder_.build();
+          result.targetValues_ = targetValuesBuilder_.build();
         }
         if (modelBuilder_ == null) {
           result.model_ = model_;
@@ -5469,29 +5469,29 @@ public final class BqEntries {
         if (other.hasData()) {
           mergeData(other.getData());
         }
-        if (targetsBuilder_ == null) {
-          if (!other.targets_.isEmpty()) {
-            if (targets_.isEmpty()) {
-              targets_ = other.targets_;
+        if (targetValuesBuilder_ == null) {
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValues_.isEmpty()) {
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
             } else {
-              ensureTargetsIsMutable();
-              targets_.addAll(other.targets_);
+              ensureTargetValuesIsMutable();
+              targetValues_.addAll(other.targetValues_);
             }
             onChanged();
           }
         } else {
-          if (!other.targets_.isEmpty()) {
-            if (targetsBuilder_.isEmpty()) {
-              targetsBuilder_.dispose();
-              targetsBuilder_ = null;
-              targets_ = other.targets_;
+          if (!other.targetValues_.isEmpty()) {
+            if (targetValuesBuilder_.isEmpty()) {
+              targetValuesBuilder_.dispose();
+              targetValuesBuilder_ = null;
+              targetValues_ = other.targetValues_;
               bitField0_ = (bitField0_ & ~0x00000020);
-              targetsBuilder_ = 
+              targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTargetsFieldBuilder() : null;
+                   getTargetValuesFieldBuilder() : null;
             } else {
-              targetsBuilder_.addAllMessages(other.targets_);
+              targetValuesBuilder_.addAllMessages(other.targetValues_);
             }
           }
         }
@@ -5975,244 +5975,244 @@ public final class BqEntries {
         return dataBuilder_;
       }
 
-      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targets_ =
+      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
-      private void ensureTargetsIsMutable() {
+      private void ensureTargetValuesIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          targets_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targets_);
+          targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetsBuilder_;
+          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetsList() {
-        if (targetsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(targets_);
+      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
+        if (targetValuesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetValues_);
         } else {
-          return targetsBuilder_.getMessageList();
+          return targetValuesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public int getTargetsCount() {
-        if (targetsBuilder_ == null) {
-          return targets_.size();
+      public int getTargetValuesCount() {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.size();
         } else {
-          return targetsBuilder_.getCount();
+          return targetValuesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargets(int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);
+      public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);
         } else {
-          return targetsBuilder_.getMessage(index);
+          return targetValuesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.set(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, value);
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, value);
+          targetValuesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder setTargets(
+      public Builder setTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.set(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.set(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.setMessage(index, builderForValue.build());
+          targetValuesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+      public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(value);
+          targetValuesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetsBuilder_ == null) {
+        if (targetValuesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureTargetsIsMutable();
-          targets_.add(index, value);
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, value);
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, value);
+          targetValuesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(builderForValue.build());
+          targetValuesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addTargets(
+      public Builder addTargetValues(
           int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.add(index, builderForValue.build());
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.add(index, builderForValue.build());
           onChanged();
         } else {
-          targetsBuilder_.addMessage(index, builderForValue.build());
+          targetValuesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder addAllTargets(
+      public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, targets_);
+              values, targetValues_);
           onChanged();
         } else {
-          targetsBuilder_.addAllMessages(values);
+          targetValuesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder clearTargets() {
-        if (targetsBuilder_ == null) {
-          targets_ = java.util.Collections.emptyList();
+      public Builder clearTargetValues() {
+        if (targetValuesBuilder_ == null) {
+          targetValues_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
-          targetsBuilder_.clear();
+          targetValuesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public Builder removeTargets(int index) {
-        if (targetsBuilder_ == null) {
-          ensureTargetsIsMutable();
-          targets_.remove(index);
+      public Builder removeTargetValues(int index) {
+        if (targetValuesBuilder_ == null) {
+          ensureTargetValuesIsMutable();
+          targetValues_.remove(index);
           onChanged();
         } else {
-          targetsBuilder_.remove(index);
+          targetValuesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().getBuilder(index);
+        return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetsOrBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
-        if (targetsBuilder_ == null) {
-          return targets_.get(index);  } else {
-          return targetsBuilder_.getMessageOrBuilder(index);
+        if (targetValuesBuilder_ == null) {
+          return targetValues_.get(index);  } else {
+          return targetValuesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-           getTargetsOrBuilderList() {
-        if (targetsBuilder_ != null) {
-          return targetsBuilder_.getMessageOrBuilderList();
+           getTargetValuesOrBuilderList() {
+        if (targetValuesBuilder_ != null) {
+          return targetValuesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(targets_);
+          return java.util.Collections.unmodifiableList(targetValues_);
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder() {
-        return getTargetsFieldBuilder().addBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
+        return getTargetValuesFieldBuilder().addBuilder(
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetsBuilder(
+      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
-        return getTargetsFieldBuilder().addBuilder(
+        return getTargetValuesFieldBuilder().addBuilder(
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetValue targets = 6;</code>
+       * <code>repeated .asgt.type.TargetValue target_values = 6;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
-           getTargetsBuilderList() {
-        return getTargetsFieldBuilder().getBuilderList();
+           getTargetValuesBuilderList() {
+        return getTargetValuesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetsFieldBuilder() {
-        if (targetsBuilder_ == null) {
-          targetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getTargetValuesFieldBuilder() {
+        if (targetValuesBuilder_ == null) {
+          targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  targets_,
+                  targetValues_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
                   isClean());
-          targets_ = null;
+          targetValues_ = null;
         }
-        return targetsBuilder_;
+        return targetValuesBuilder_;
       }
 
       private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
@@ -6682,42 +6682,43 @@ public final class BqEntries {
       "pe/scanned_invoice.proto\032\034asgt/type/targ" +
       "et_value.proto\032\034gen_bq_schema/bq_field.p" +
       "roto\032\034gen_bq_schema/bq_table.proto\032\034goog" +
-      "le/api/annotations.proto\"\267\003\n\tBankEntry\022>" +
+      "le/api/annotations.proto\"\275\003\n\tBankEntry\022>" +
       "\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy reque" +
       "st id if feedback data\022\027\n\010consumer\030\002 \001(\t" +
       "B\005\352?\002\010\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001\022T\n\004" +
       "tags\030\004 \003(\tBF\352?C\"ATags defined by consume" +
       "r, enriched by service if valetkey is us" +
       "ed\022(\n\004data\030\005 \001(\0132\032.asgt.type.BankTransac" +
-      "tion\022\'\n\007targets\030\006 \003(\0132\026.asgt.type.Target" +
-      "Value\022#\n\005model\030\t \001(\0132\024.asgt.type.ModelIn" +
-      "fo\0220\n\nprediction\030\n \003(\0132\034.asgt.type.Predi" +
-      "ction.Target\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022" +
-      "\tTIMESTAMP:\016\352?\013\n\tbank_data\"\327\003\n\032Electroni" +
-      "cInvoiceLineEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, " +
-      "matches Envoy request id if feedback dat" +
-      "a\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014dataset_na" +
-      "me\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags" +
-      " defined by consumer, enriched by servic" +
-      "e if valetkey is used\022$\n\004data\030\005 \001(\0132\026.as" +
-      "gt.type.InvoiceLine\022\'\n\007targets\030\006 \003(\0132\026.a" +
-      "sgt.type.TargetValue\022#\n\005model\030\t \001(\0132\024.as" +
-      "gt.type.ModelInfo\0220\n\nprediction\030\n \003(\0132\034." +
-      "asgt.type.Prediction.Target\022$\n\ntime_adde" +
-      "d\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034electron" +
-      "ic_invoice_line_data\"\313\003\n\023ScannedInvoiceE" +
-      "ntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy" +
-      " request id if feedback data\022\027\n\010consumer" +
-      "\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002" +
-      "\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined by c" +
-      "onsumer, enriched by service if valetkey" +
-      " is used\022\'\n\004data\030\005 \001(\0132\031.asgt.type.Scann" +
-      "edInvoice\022\'\n\007targets\030\006 \003(\0132\026.asgt.type.T" +
-      "argetValue\022#\n\005model\030\t \001(\0132\024.asgt.type.Mo" +
-      "delInfo\0220\n\nprediction\030\n \003(\0132\034.asgt.type." +
-      "Prediction.Target\022$\n\ntime_added\030\010 \001(\004B\020\352" +
-      "?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024scanned_invoice_da" +
-      "taB\rZ\013dataserviceb\006proto3"
+      "tion\022-\n\rtarget_values\030\006 \003(\0132\026.asgt.type." +
+      "TargetValue\022#\n\005model\030\t \001(\0132\024.asgt.type.M" +
+      "odelInfo\0220\n\nprediction\030\n \003(\0132\034.asgt.type" +
+      ".Prediction.Target\022$\n\ntime_added\030\010 \001(\004B\020" +
+      "\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_data\"\335\003\n\032Ele" +
+      "ctronicInvoiceLineEntry\022>\n\002id\030\001 \001(\tB2\352?/" +
+      "\"-ID, matches Envoy request id if feedba" +
+      "ck data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014data" +
+      "set_name\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C" +
+      "\"ATags defined by consumer, enriched by " +
+      "service if valetkey is used\022$\n\004data\030\005 \001(" +
+      "\0132\026.asgt.type.InvoiceLine\022-\n\rtarget_valu" +
+      "es\030\006 \003(\0132\026.asgt.type.TargetValue\022#\n\005mode" +
+      "l\030\t \001(\0132\024.asgt.type.ModelInfo\0220\n\npredict" +
+      "ion\030\n \003(\0132\034.asgt.type.Prediction.Target\022" +
+      "$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:!\352" +
+      "?\036\n\034electronic_invoice_line_data\"\321\003\n\023Sca" +
+      "nnedInvoiceEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-ID, m" +
+      "atches Envoy request id if feedback data" +
+      "\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014dataset_nam" +
+      "e\030\003 \001(\tB\005\352?\002\010\001\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags " +
+      "defined by consumer, enriched by service" +
+      " if valetkey is used\022\'\n\004data\030\005 \001(\0132\031.asg" +
+      "t.type.ScannedInvoice\022-\n\rtarget_values\030\006" +
+      " \003(\0132\026.asgt.type.TargetValue\022#\n\005model\030\t " +
+      "\001(\0132\024.asgt.type.ModelInfo\0220\n\nprediction\030" +
+      "\n \003(\0132\034.asgt.type.Prediction.Target\022$\n\nt" +
+      "ime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024" +
+      "scanned_invoice_dataB\rZ\013dataserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6745,19 +6746,19 @@ public final class BqEntries {
     internal_static_asgt_dataservice_v1alpha1_BankEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_BankEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded", });
+        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ElectronicInvoiceLineEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded", });
+        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded", });
     internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_ScannedInvoiceEntry_descriptor,
-        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "Targets", "Model", "Prediction", "TimeAdded", });
+        new java.lang.String[] { "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);

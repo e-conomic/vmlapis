@@ -37,7 +37,7 @@ service BankDataService {
 
 message BankEntryInput {
   asgt.type.BankTransaction data = 1;
-  repeated asgt.type.TargetValue targets = 2;
+  repeated asgt.type.TargetValue target_values = 2;
 }
 
 message CreateBankDatasetRequest {

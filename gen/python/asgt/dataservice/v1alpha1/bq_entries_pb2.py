@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n*asgt/dataservice/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xb7\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12(\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12\'\n\x07targets\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\xd7\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12$\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12\'\n\x07targets\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xcb\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\'\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12\'\n\x07targets\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_dataB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n*asgt/dataservice/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xbd\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12(\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\xdd\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12$\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xd1\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\'\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_dataB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_model__info__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -78,7 +78,7 @@ _BANKENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='targets', full_name='asgt.dataservice.v1alpha1.BankEntry.targets', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.BankEntry.target_values', index=5,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -118,7 +118,7 @@ _BANKENTRY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=347,
-  serialized_end=786,
+  serialized_end=792,
 )
 
 
@@ -165,7 +165,7 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='targets', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.targets', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.target_values', index=5,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -204,8 +204,8 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=789,
-  serialized_end=1260,
+  serialized_start=795,
+  serialized_end=1272,
 )
 
 
@@ -252,7 +252,7 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='targets', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.targets', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.target_values', index=5,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -291,20 +291,20 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1263,
-  serialized_end=1722,
+  serialized_start=1275,
+  serialized_end=1740,
 )
 
 _BANKENTRY.fields_by_name['data'].message_type = asgt_dot_type_dot_bank__transaction__pb2._BANKTRANSACTION
-_BANKENTRY.fields_by_name['targets'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
+_BANKENTRY.fields_by_name['target_values'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
 _BANKENTRY.fields_by_name['model'].message_type = asgt_dot_type_dot_model__info__pb2._MODELINFO
 _BANKENTRY.fields_by_name['prediction'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION_TARGET
 _ELECTRONICINVOICELINEENTRY.fields_by_name['data'].message_type = asgt_dot_type_dot_invoice__line__pb2._INVOICELINE
-_ELECTRONICINVOICELINEENTRY.fields_by_name['targets'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
+_ELECTRONICINVOICELINEENTRY.fields_by_name['target_values'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
 _ELECTRONICINVOICELINEENTRY.fields_by_name['model'].message_type = asgt_dot_type_dot_model__info__pb2._MODELINFO
 _ELECTRONICINVOICELINEENTRY.fields_by_name['prediction'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION_TARGET
 _SCANNEDINVOICEENTRY.fields_by_name['data'].message_type = asgt_dot_type_dot_scanned__invoice__pb2._SCANNEDINVOICE
-_SCANNEDINVOICEENTRY.fields_by_name['targets'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
+_SCANNEDINVOICEENTRY.fields_by_name['target_values'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
 _SCANNEDINVOICEENTRY.fields_by_name['model'].message_type = asgt_dot_type_dot_model__info__pb2._MODELINFO
 _SCANNEDINVOICEENTRY.fields_by_name['prediction'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION_TARGET
 DESCRIPTOR.message_types_by_name['BankEntry'] = _BANKENTRY

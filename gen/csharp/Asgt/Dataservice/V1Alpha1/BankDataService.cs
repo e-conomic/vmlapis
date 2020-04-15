@@ -30,29 +30,29 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "dHJhbnNhY3Rpb24ucHJvdG8aIGFzZ3QvdHlwZS9yZXRlbnRpb25fcG9saWN5",
             "LnByb3RvGhxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvGhxnb29nbGUv",
             "YXBpL2Fubm90YXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHku",
-            "cHJvdG8iYwoOQmFua0VudHJ5SW5wdXQSKAoEZGF0YRgBIAEoCzIaLmFzZ3Qu",
-            "dHlwZS5CYW5rVHJhbnNhY3Rpb24SJwoHdGFyZ2V0cxgCIAMoCzIWLmFzZ3Qu",
-            "dHlwZS5UYXJnZXRWYWx1ZSKwAQoYQ3JlYXRlQmFua0RhdGFzZXRSZXF1ZXN0",
-            "EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIMCgR0YWdzGAIgAygJEjoKB2VudHJp",
-            "ZXMYAyADKAsyKS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkJhbmtFbnRy",
-            "eUlucHV0EjQKEHJldGVudGlvbl9wb2xpY3kYBCABKAsyGi5hc2d0LnR5cGUu",
-            "UmV0ZW50aW9uUG9saWN5ImkKFUFwcGVuZEJhbmtEYXRhUmVxdWVzdBIUCgxk",
-            "YXRhc2V0X25hbWUYASABKAkSOgoHZW50cmllcxgDIAMoCzIpLmFzZ3QuZGF0",
-            "YXNlcnZpY2UudjFhbHBoYTEuQmFua0VudHJ5SW5wdXQyigMKD0JhbmtEYXRh",
-            "U2VydmljZRKCAQoRQ3JlYXRlQmFua0RhdGFzZXQSMy5hc2d0LmRhdGFzZXJ2",
-            "aWNlLnYxYWxwaGExLkNyZWF0ZUJhbmtEYXRhc2V0UmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIggtPkkwIaIhUvdjFhbHBoYTEvYmFuazpjcmVh",
-            "dGU6ASoSfAoOQXBwZW5kQmFua0RhdGESMC5hc2d0LmRhdGFzZXJ2aWNlLnYx",
-            "YWxwaGExLkFwcGVuZEJhbmtEYXRhUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIggtPkkwIaIhUvdjFhbHBoYTEvYmFuazphcHBlbmQ6ASoSdAoO",
-            "RGVsZXRlQmFua0RhdGESKC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRl",
-            "bGV0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiIILT5JMCGiIV",
-            "L3YxYWxwaGExL2Jhbms6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90",
-            "bzM="));
+            "cHJvdG8iaQoOQmFua0VudHJ5SW5wdXQSKAoEZGF0YRgBIAEoCzIaLmFzZ3Qu",
+            "dHlwZS5CYW5rVHJhbnNhY3Rpb24SLQoNdGFyZ2V0X3ZhbHVlcxgCIAMoCzIW",
+            "LmFzZ3QudHlwZS5UYXJnZXRWYWx1ZSKwAQoYQ3JlYXRlQmFua0RhdGFzZXRS",
+            "ZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIMCgR0YWdzGAIgAygJEjoK",
+            "B2VudHJpZXMYAyADKAsyKS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkJh",
+            "bmtFbnRyeUlucHV0EjQKEHJldGVudGlvbl9wb2xpY3kYBCABKAsyGi5hc2d0",
+            "LnR5cGUuUmV0ZW50aW9uUG9saWN5ImkKFUFwcGVuZEJhbmtEYXRhUmVxdWVz",
+            "dBIUCgxkYXRhc2V0X25hbWUYASABKAkSOgoHZW50cmllcxgDIAMoCzIpLmFz",
+            "Z3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuQmFua0VudHJ5SW5wdXQyigMKD0Jh",
+            "bmtEYXRhU2VydmljZRKCAQoRQ3JlYXRlQmFua0RhdGFzZXQSMy5hc2d0LmRh",
+            "dGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZUJhbmtEYXRhc2V0UmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIggtPkkwIaIhUvdjFhbHBoYTEvYmFu",
+            "azpjcmVhdGU6ASoSfAoOQXBwZW5kQmFua0RhdGESMC5hc2d0LmRhdGFzZXJ2",
+            "aWNlLnYxYWxwaGExLkFwcGVuZEJhbmtEYXRhUmVxdWVzdBoWLmdvb2dsZS5w",
+            "cm90b2J1Zi5FbXB0eSIggtPkkwIaIhUvdjFhbHBoYTEvYmFuazphcHBlbmQ6",
+            "ASoSdAoORGVsZXRlQmFua0RhdGESKC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxw",
+            "aGExLkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiIILT",
+            "5JMCGiIVL3YxYWxwaGExL2Jhbms6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DeleteReflection.Descriptor, global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntryInput), global::Asgt.Dataservice.V1Alpha1.BankEntryInput.Parser, new[]{ "Data", "Targets" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntryInput), global::Asgt.Dataservice.V1Alpha1.BankEntryInput.Parser, new[]{ "Data", "TargetValues" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateBankDatasetRequest), global::Asgt.Dataservice.V1Alpha1.CreateBankDatasetRequest.Parser, new[]{ "DatasetName", "Tags", "Entries", "RetentionPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendBankDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendBankDataRequest.Parser, new[]{ "DatasetName", "Entries" }, null, null, null)
           }));
@@ -87,7 +87,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public BankEntryInput(BankEntryInput other) : this() {
       data_ = other.data_ != null ? other.data_.Clone() : null;
-      targets_ = other.targets_.Clone();
+      targetValues_ = other.targetValues_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -107,14 +107,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targets_codec
+    /// <summary>Field number for the "target_values" field.</summary>
+    public const int TargetValuesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targets_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> Targets {
-      get { return targets_; }
+    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
+      get { return targetValues_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -131,7 +131,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         return true;
       }
       if (!object.Equals(Data, other.Data)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
+      if(!targetValues_.Equals(other.targetValues_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -139,7 +139,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targets_.GetHashCode();
+      hash ^= targetValues_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -157,7 +157,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteMessage(Data);
       }
-      targets_.WriteTo(output, _repeated_targets_codec);
+      targetValues_.WriteTo(output, _repeated_targetValues_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,7 +169,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (data_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
-      size += targets_.CalculateSize(_repeated_targets_codec);
+      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -187,7 +187,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Data.MergeFrom(other.Data);
       }
-      targets_.Add(other.targets_);
+      targetValues_.Add(other.targetValues_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -207,7 +207,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           }
           case 18: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
+            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
         }
