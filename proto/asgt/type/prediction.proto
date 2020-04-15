@@ -27,7 +27,7 @@ message Confidence {
 message Prediction {
   message Target {
     message Candidate {
-      string label = 1 [(gen_bq_schema.bigquery).require = true];
+      string value = 1 [(gen_bq_schema.bigquery).require = true];
       Confidence confidence = 2;
     }
     string target = 1;

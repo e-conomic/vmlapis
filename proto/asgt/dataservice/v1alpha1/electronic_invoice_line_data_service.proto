@@ -9,7 +9,7 @@ import "google/protobuf/empty.proto";
 import "asgt/dataservice/v1alpha1/delete.proto";
 import "asgt/type/invoice_line.proto";
 import "asgt/type/retention_policy.proto";
-import "asgt/type/target_label.proto";
+import "asgt/type/target_value.proto";
 
 service ElectronicInvoiceLineDataService {
   rpc CreateElectronicInvoiceLineDataset (CreateElectronicInvoiceLineDatasetRequest) returns (google.protobuf.Empty) {
@@ -36,7 +36,7 @@ service ElectronicInvoiceLineDataService {
 
 message ElectronicInvoiceLineEntryInput {
   asgt.type.InvoiceLine data = 1;
-  repeated asgt.type.TargetLabel targets = 2;
+  repeated asgt.type.TargetValue targets = 2;
 }
 
 message CreateElectronicInvoiceLineDatasetRequest {

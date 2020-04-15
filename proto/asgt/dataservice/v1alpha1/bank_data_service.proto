@@ -9,7 +9,7 @@ import "google/protobuf/empty.proto";
 import "asgt/dataservice/v1alpha1/delete.proto";
 import "asgt/type/bank_transaction.proto";
 import "asgt/type/retention_policy.proto";
-import "asgt/type/target_label.proto";
+import "asgt/type/target_value.proto";
 
 service BankDataService {
   rpc CreateBankDataset (CreateBankDatasetRequest) returns (google.protobuf.Empty) {
@@ -37,7 +37,7 @@ service BankDataService {
 
 message BankEntryInput {
   asgt.type.BankTransaction data = 1;
-  repeated asgt.type.TargetLabel targets = 2;
+  repeated asgt.type.TargetValue targets = 2;
 }
 
 message CreateBankDatasetRequest {
