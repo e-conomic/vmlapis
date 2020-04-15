@@ -6,7 +6,7 @@ option go_package = "dataservice";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
-import "asgt/dataservice/v1alpha1/data.proto";
+import "asgt/type/retention_policy.proto";
 
 // Dataset BQ schema
 message Dataset {
@@ -20,6 +20,6 @@ message Dataset {
   string name = 2 [(gen_bq_schema.bigquery).require = true];
   Type type = 3 [(gen_bq_schema.bigquery).require = true];
   repeated string targets = 4;
-  RetentionPolicy retention_policy = 5 [(gen_bq_schema.bigquery).require = true];
+  asgt.type.RetentionPolicy retention_policy = 5 [(gen_bq_schema.bigquery).require = true];
   string hash = 6 [(gen_bq_schema.bigquery).require = true];
 }

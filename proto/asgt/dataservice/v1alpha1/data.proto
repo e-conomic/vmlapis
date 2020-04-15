@@ -31,10 +31,3 @@ message FeedbackRequest {
   repeated string tags = 2;
   repeated Entry entries = 3;
 }
-
-message RetentionPolicy {
-  oneof policy {
-    int64 max_days = 1;
-    int64 max_records = 2;
-  }
-}

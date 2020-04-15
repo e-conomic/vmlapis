@@ -10,6 +10,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/dataservice/v1alpha1/data.proto";
 import "asgt/type/bank_transaction.proto";
+import "asgt/type/retention_policy.proto";
 
 service BankDataservice {
   rpc CreateBankDataset(CreateBankDatasetRequest) returns (google.protobuf.Empty) {
@@ -61,7 +62,7 @@ message CreateBankDatasetRequest {
   string dataset_name = 1;
   repeated string tags = 2;
   repeated BankEntryInput entries = 3;
-  RetentionPolicy retention_policy = 4;
+  asgt.type.RetentionPolicy retention_policy = 4;
 }
 
 message AppendBankDataRequest {
