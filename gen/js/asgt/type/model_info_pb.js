@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
 goog.exportSymbol('proto.asgt.type.ModelInfo', null, global);
 
 /**

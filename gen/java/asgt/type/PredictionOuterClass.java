@@ -1208,11 +1208,11 @@ public final class PredictionOuterClass {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         java.lang.String getValue();
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         com.google.protobuf.ByteString
             getValueBytes();
@@ -1324,7 +1324,7 @@ public final class PredictionOuterClass {
         public static final int VALUE_FIELD_NUMBER = 1;
         private volatile java.lang.Object value_;
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
@@ -1339,7 +1339,7 @@ public final class PredictionOuterClass {
           }
         }
         /**
-         * <code>string value = 1;</code>
+         * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
          */
         public com.google.protobuf.ByteString
             getValueBytes() {
@@ -1711,7 +1711,7 @@ public final class PredictionOuterClass {
 
           private java.lang.Object value_ = "";
           /**
-           * <code>string value = 1;</code>
+           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
            */
           public java.lang.String getValue() {
             java.lang.Object ref = value_;
@@ -1726,7 +1726,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1;</code>
+           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
            */
           public com.google.protobuf.ByteString
               getValueBytes() {
@@ -1742,7 +1742,7 @@ public final class PredictionOuterClass {
             }
           }
           /**
-           * <code>string value = 1;</code>
+           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
            */
           public Builder setValue(
               java.lang.String value) {
@@ -1755,7 +1755,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1;</code>
+           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
            */
           public Builder clearValue() {
             
@@ -1764,7 +1764,7 @@ public final class PredictionOuterClass {
             return this;
           }
           /**
-           * <code>string value = 1;</code>
+           * <code>string value = 1 [(.gen_bq_schema.bigquery) = { ... }</code>
            */
           public Builder setValueBytes(
               com.google.protobuf.ByteString value) {
@@ -3440,18 +3440,19 @@ public final class PredictionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\032asgt/type/prediction.proto\022\tasgt.type\032" +
-      "\036google/protobuf/wrappers.proto\"\263\001\n\nConf" +
-      "idence\022*\n\005level\030\001 \001(\0162\033.asgt.type.Confid" +
-      "ence.Level\022*\n\005value\030\002 \001(\0132\033.google.proto" +
-      "buf.FloatValue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010" +
-      "VERY_LOW\020\001\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r" +
-      "\n\tVERY_HIGH\020\005\"\331\001\n\nPrediction\022-\n\007targets\030" +
-      "\001 \003(\0132\034.asgt.type.Prediction.Target\032\233\001\n\006" +
-      "Target\022\016\n\006target\030\001 \001(\t\022:\n\ncandidates\030\002 \003" +
-      "(\0132&.asgt.type.Prediction.Target.Candida" +
-      "te\032E\n\tCandidate\022\r\n\005value\030\001 \001(\t\022)\n\nconfid" +
-      "ence\030\002 \001(\0132\025.asgt.type.ConfidenceB\006Z\004typ" +
-      "eb\006proto3"
+      "\034gen_bq_schema/bq_field.proto\032\036google/pr" +
+      "otobuf/wrappers.proto\"\263\001\n\nConfidence\022*\n\005" +
+      "level\030\001 \001(\0162\033.asgt.type.Confidence.Level" +
+      "\022*\n\005value\030\002 \001(\0132\033.google.protobuf.FloatV" +
+      "alue\"M\n\005Level\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001" +
+      "\022\007\n\003LOW\020\002\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIG" +
+      "H\020\005\"\340\001\n\nPrediction\022-\n\007targets\030\001 \003(\0132\034.as" +
+      "gt.type.Prediction.Target\032\242\001\n\006Target\022\016\n\006" +
+      "target\030\001 \001(\t\022:\n\ncandidates\030\002 \003(\0132&.asgt." +
+      "type.Prediction.Target.Candidate\032L\n\tCand" +
+      "idate\022\024\n\005value\030\001 \001(\tB\005\352?\002\010\001\022)\n\nconfidenc" +
+      "e\030\002 \001(\0132\025.asgt.type.ConfidenceB\006Z\004typeb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3464,6 +3465,7 @@ public final class PredictionOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_type_Confidence_descriptor =
@@ -3490,6 +3492,12 @@ public final class PredictionOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Prediction_Target_Candidate_descriptor,
         new java.lang.String[] { "Value", "Confidence", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.bigquery);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
   }
 

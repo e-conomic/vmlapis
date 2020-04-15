@@ -12,15 +12,17 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_type_bank_transaction_pb = require('../../../asgt/type/bank_transaction_pb.js')
+
+var asgt_type_invoice_line_pb = require('../../../asgt/type/invoice_line_pb.js')
+
 var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js')
 
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 
+var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js')
+
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
-
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
-
-var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.jester = {};

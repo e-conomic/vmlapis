@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "dataservice";
+
+message DeleteRequest {
+  string model_type = 1;
+  string dataset = 2;
+  repeated string tags = 3;
+}

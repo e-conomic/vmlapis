@@ -24,19 +24,20 @@ namespace Asgt.Type {
     static PredictionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlGh5nb29n",
-            "bGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8iswEKCkNvbmZpZGVuY2USKgoF",
-            "bGV2ZWwYASABKA4yGy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2",
-            "YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxl",
-            "dmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01J",
-            "RBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSLZAQoKUHJlZGljdGlvbhIt",
-            "Cgd0YXJnZXRzGAEgAygLMhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0",
-            "GpsBCgZUYXJnZXQSDgoGdGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiAD",
-            "KAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkUK",
-            "CUNhbmRpZGF0ZRINCgV2YWx1ZRgBIAEoCRIpCgpjb25maWRlbmNlGAIgASgL",
-            "MhUuYXNndC50eXBlLkNvbmZpZGVuY2VCBloEdHlwZWIGcHJvdG8z"));
+            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlGhxnZW5f",
+            "YnFfc2NoZW1hL2JxX2ZpZWxkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3Jh",
+            "cHBlcnMucHJvdG8iswEKCkNvbmZpZGVuY2USKgoFbGV2ZWwYASABKA4yGy5h",
+            "c2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04Q",
+            "ABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBIN",
+            "CglWRVJZX0hJR0gQBSLgAQoKUHJlZGljdGlvbhItCgd0YXJnZXRzGAEgAygL",
+            "MhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0GqIBCgZUYXJnZXQSDgoG",
+            "dGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiADKAsyJi5hc2d0LnR5cGUu",
+            "UHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkwKCUNhbmRpZGF0ZRIUCgV2",
+            "YWx1ZRgBIAEoCUIF6j8CCAESKQoKY29uZmlkZW5jZRgCIAEoCzIVLmFzZ3Qu",
+            "dHlwZS5Db25maWRlbmNlQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})

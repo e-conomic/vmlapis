@@ -24,11 +24,11 @@ namespace Asgt.Type {
     static ModelInfoReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3R5cGUvbW9kZWxfaW5mby5wcm90bxIJYXNndC50eXBlIiIKCU1v",
-            "ZGVsSW5mbxIPCgd2ZXJzaW9uGAMgASgDSgQIARADQgZaBHR5cGViBnByb3Rv",
-            "Mw=="));
+            "Chphc2d0L3R5cGUvbW9kZWxfaW5mby5wcm90bxIJYXNndC50eXBlGhxnZW5f",
+            "YnFfc2NoZW1hL2JxX2ZpZWxkLnByb3RvIikKCU1vZGVsSW5mbxIWCgd2ZXJz",
+            "aW9uGAMgASgDQgXqPwIIAUoECAEQA0IGWgR0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ModelInfo), global::Asgt.Type.ModelInfo.Parser, new[]{ "Version" }, null, null, null)
           }));

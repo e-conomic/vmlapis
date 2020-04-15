@@ -181,9 +181,9 @@ func RegisterJesterHandlerClient(ctx context.Context, mux *runtime.ServeMux, cli
 }
 
 var (
-	pattern_Jester_ScannedInvoiceSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scannedinvoice"}, "suggest"))
+	pattern_Jester_ScannedInvoiceSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "scanned-invoice"}, "suggest"))
 
-	pattern_Jester_ElectronicInvoiceLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronicinvoiceline"}, "suggest"))
+	pattern_Jester_ElectronicInvoiceLineSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "electronic-invoice-line"}, "suggest"))
 
 	pattern_Jester_BankSuggestions_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 2, 1}, []string{"v1alpha1", "bank"}, "suggest"))
 )

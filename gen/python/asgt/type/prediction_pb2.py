@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1egoogle/protobuf/wrappers.proto\"\xb3\x01\n\nConfidence\x12*\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xd9\x01\n\nPrediction\x12-\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x1a\x9b\x01\n\x06Target\x12\x0e\n\x06target\x18\x01 \x01(\t\x12:\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.Candidate\x1a\x45\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12)\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x1a\x61sgt/type/prediction.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xb3\x01\n\nConfidence\x12*\n\x05level\x18\x01 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe0\x01\n\nPrediction\x12-\n\x07targets\x18\x01 \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x1a\xa2\x01\n\x06Target\x12\x0e\n\x06target\x18\x01 \x01(\t\x12:\n\ncandidates\x18\x02 \x03(\x0b\x32&.asgt.type.Prediction.Target.Candidate\x1aL\n\tCandidate\x12\x14\n\x05value\x18\x01 \x01(\tB\x05\xea?\x02\x08\x01\x12)\n\nconfidence\x18\x02 \x01(\x0b\x32\x15.asgt.type.ConfidenceB\x06Z\x04typeb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
+  dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
 
 
 
@@ -59,8 +60,8 @@ _CONFIDENCE_LEVEL = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=176,
-  serialized_end=253,
+  serialized_start=206,
+  serialized_end=283,
 )
 _sym_db.RegisterEnumDescriptor(_CONFIDENCE_LEVEL)
 
@@ -99,8 +100,8 @@ _CONFIDENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=74,
-  serialized_end=253,
+  serialized_start=104,
+  serialized_end=283,
 )
 
 
@@ -117,7 +118,7 @@ _PREDICTION_TARGET_CANDIDATE = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='confidence', full_name='asgt.type.Prediction.Target.Candidate.confidence', index=1,
       number=2, type=11, cpp_type=10, label=1,
@@ -137,8 +138,8 @@ _PREDICTION_TARGET_CANDIDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=473,
+  serialized_start=434,
+  serialized_end=510,
 )
 
 _PREDICTION_TARGET = _descriptor.Descriptor(
@@ -174,8 +175,8 @@ _PREDICTION_TARGET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=473,
+  serialized_start=348,
+  serialized_end=510,
 )
 
 _PREDICTION = _descriptor.Descriptor(
@@ -204,8 +205,8 @@ _PREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=256,
-  serialized_end=473,
+  serialized_start=286,
+  serialized_end=510,
 )
 
 _CONFIDENCE.fields_by_name['level'].enum_type = _CONFIDENCE_LEVEL
@@ -252,4 +253,5 @@ _sym_db.RegisterMessage(Prediction.Target.Candidate)
 
 
 DESCRIPTOR._options = None
+_PREDICTION_TARGET_CANDIDATE.fields_by_name['value']._options = None
 # @@protoc_insertion_point(module_scope)
