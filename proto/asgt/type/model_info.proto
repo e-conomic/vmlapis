@@ -7,6 +7,6 @@ option go_package = "type";
 import "gen_bq_schema/bq_field.proto";
 
 message ModelInfo {
-    reserved 1 to 2;
-    int64 version = 3 [(gen_bq_schema.bigquery).require = true];
+  reserved 1 to 2;
+  int64 version = 3 [(gen_bq_schema.bigquery).require = true];
 }
