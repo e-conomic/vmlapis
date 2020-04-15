@@ -27,7 +27,7 @@
   "mode": "NULLABLE",
   "fields": [
    {
-    "name": "description",
+    "name": "text",
     "type": "STRING",
     "mode": "NULLABLE"
    }

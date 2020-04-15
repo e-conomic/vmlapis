@@ -25,12 +25,12 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9hc2d0L3R5cGUvc2Nhbm5lZF9pbnZvaWNlLnByb3RvEglhc2d0LnR5cGUi",
-            "JQoOU2Nhbm5lZEludm9pY2USEwoLZGVzY3JpcHRpb24YASABKAlCBloEdHlw",
-            "ZWIGcHJvdG8z"));
+            "HgoOU2Nhbm5lZEludm9pY2USDAoEdGV4dBgBIAEoCUIGWgR0eXBlYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ScannedInvoice), global::Asgt.Type.ScannedInvoice.Parser, new[]{ "Description" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ScannedInvoice), global::Asgt.Type.ScannedInvoice.Parser, new[]{ "Text" }, null, null, null)
           }));
     }
     #endregion
@@ -62,7 +62,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public ScannedInvoice(ScannedInvoice other) : this() {
-      description_ = other.description_;
+      text_ = other.text_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -71,18 +71,17 @@ namespace Asgt.Type {
       return new ScannedInvoice(this);
     }
 
-    /// <summary>Field number for the "description" field.</summary>
-    public const int DescriptionFieldNumber = 1;
-    private string description_ = "";
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 1;
+    private string text_ = "";
     /// <summary>
-    /// NOTE(lys) why is this called description and not text?
     /// invoice text from the SmartScan product
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Description {
-      get { return description_; }
+    public string Text {
+      get { return text_; }
       set {
-        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -99,14 +98,14 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Description != other.Description) return false;
+      if (Text != other.Text) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -120,9 +119,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Description.Length != 0) {
+      if (Text.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Description);
+        output.WriteString(Text);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -132,8 +131,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Description.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -146,8 +145,8 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.Description.Length != 0) {
-        Description = other.Description;
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -161,7 +160,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Description = input.ReadString();
+            Text = input.ReadString();
             break;
           }
         }

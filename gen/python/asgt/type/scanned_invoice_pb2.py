@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1f\x61sgt/type/scanned_invoice.proto\x12\tasgt.type\"%\n\x0eScannedInvoice\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\tB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x1f\x61sgt/type/scanned_invoice.proto\x12\tasgt.type\"\x1e\n\x0eScannedInvoice\x12\x0c\n\x04text\x18\x01 \x01(\tB\x06Z\x04typeb\x06proto3')
 )
 
 
@@ -33,7 +33,7 @@ _SCANNEDINVOICE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='description', full_name='asgt.type.ScannedInvoice.description', index=0,
+      name='text', full_name='asgt.type.ScannedInvoice.text', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -52,7 +52,7 @@ _SCANNEDINVOICE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=46,
-  serialized_end=83,
+  serialized_end=76,
 )
 
 DESCRIPTOR.message_types_by_name['ScannedInvoice'] = _SCANNEDINVOICE

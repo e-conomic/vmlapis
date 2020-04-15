@@ -20,23 +20,21 @@ public final class ScannedInvoiceOuterClass {
 
     /**
      * <pre>
-     * NOTE(lys) why is this called description and not text?
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string description = 1;</code>
+     * <code>string text = 1;</code>
      */
-    java.lang.String getDescription();
+    java.lang.String getText();
     /**
      * <pre>
-     * NOTE(lys) why is this called description and not text?
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string description = 1;</code>
+     * <code>string text = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDescriptionBytes();
+        getTextBytes();
   }
   /**
    * Protobuf type {@code asgt.type.ScannedInvoice}
@@ -51,7 +49,7 @@ public final class ScannedInvoiceOuterClass {
       super(builder);
     }
     private ScannedInvoice() {
-      description_ = "";
+      text_ = "";
     }
 
     @java.lang.Override
@@ -81,7 +79,7 @@ public final class ScannedInvoiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              description_ = s;
+              text_ = s;
               break;
             }
             default: {
@@ -116,44 +114,42 @@ public final class ScannedInvoiceOuterClass {
               asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.class, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder.class);
     }
 
-    public static final int DESCRIPTION_FIELD_NUMBER = 1;
-    private volatile java.lang.Object description_;
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
     /**
      * <pre>
-     * NOTE(lys) why is this called description and not text?
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string description = 1;</code>
+     * <code>string text = 1;</code>
      */
-    public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        description_ = s;
+        text_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * NOTE(lys) why is this called description and not text?
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string description = 1;</code>
+     * <code>string text = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDescriptionBytes() {
-      java.lang.Object ref = description_;
+        getTextBytes() {
+      java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        description_ = b;
+        text_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -174,8 +170,8 @@ public final class ScannedInvoiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDescriptionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
       }
       unknownFields.writeTo(output);
     }
@@ -186,8 +182,8 @@ public final class ScannedInvoiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDescriptionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -205,8 +201,8 @@ public final class ScannedInvoiceOuterClass {
       asgt.type.ScannedInvoiceOuterClass.ScannedInvoice other = (asgt.type.ScannedInvoiceOuterClass.ScannedInvoice) obj;
 
       boolean result = true;
-      result = result && getDescription()
-          .equals(other.getDescription());
+      result = result && getText()
+          .equals(other.getText());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -218,8 +214,8 @@ public final class ScannedInvoiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDescription().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -353,7 +349,7 @@ public final class ScannedInvoiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        description_ = "";
+        text_ = "";
 
         return this;
       }
@@ -381,7 +377,7 @@ public final class ScannedInvoiceOuterClass {
       @java.lang.Override
       public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice buildPartial() {
         asgt.type.ScannedInvoiceOuterClass.ScannedInvoice result = new asgt.type.ScannedInvoiceOuterClass.ScannedInvoice(this);
-        result.description_ = description_;
+        result.text_ = text_;
         onBuilt();
         return result;
       }
@@ -430,8 +426,8 @@ public final class ScannedInvoiceOuterClass {
 
       public Builder mergeFrom(asgt.type.ScannedInvoiceOuterClass.ScannedInvoice other) {
         if (other == asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.getDefaultInstance()) return this;
-        if (!other.getDescription().isEmpty()) {
-          description_ = other.description_;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -463,22 +459,21 @@ public final class ScannedInvoiceOuterClass {
         return this;
       }
 
-      private java.lang.Object description_ = "";
+      private java.lang.Object text_ = "";
       /**
        * <pre>
-       * NOTE(lys) why is this called description and not text?
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string description = 1;</code>
+       * <code>string text = 1;</code>
        */
-      public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          description_ = s;
+          text_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
@@ -486,20 +481,19 @@ public final class ScannedInvoiceOuterClass {
       }
       /**
        * <pre>
-       * NOTE(lys) why is this called description and not text?
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string description = 1;</code>
+       * <code>string text = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDescriptionBytes() {
-        java.lang.Object ref = description_;
+          getTextBytes() {
+        java.lang.Object ref = text_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          description_ = b;
+          text_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
@@ -507,52 +501,49 @@ public final class ScannedInvoiceOuterClass {
       }
       /**
        * <pre>
-       * NOTE(lys) why is this called description and not text?
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string description = 1;</code>
+       * <code>string text = 1;</code>
        */
-      public Builder setDescription(
+      public Builder setText(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        description_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * NOTE(lys) why is this called description and not text?
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string description = 1;</code>
+       * <code>string text = 1;</code>
        */
-      public Builder clearDescription() {
+      public Builder clearText() {
         
-        description_ = getDefaultInstance().getDescription();
+        text_ = getDefaultInstance().getText();
         onChanged();
         return this;
       }
       /**
        * <pre>
-       * NOTE(lys) why is this called description and not text?
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string description = 1;</code>
+       * <code>string text = 1;</code>
        */
-      public Builder setDescriptionBytes(
+      public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        description_ = value;
+        text_ = value;
         onChanged();
         return this;
       }
@@ -624,8 +615,8 @@ public final class ScannedInvoiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/type/scanned_invoice.proto\022\tasgt." +
-      "type\"%\n\016ScannedInvoice\022\023\n\013description\030\001 " +
-      "\001(\tB\006Z\004typeb\006proto3"
+      "type\"\036\n\016ScannedInvoice\022\014\n\004text\030\001 \001(\tB\006Z\004" +
+      "typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -644,7 +635,7 @@ public final class ScannedInvoiceOuterClass {
     internal_static_asgt_type_ScannedInvoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_ScannedInvoice_descriptor,
-        new java.lang.String[] { "Description", });
+        new java.lang.String[] { "Text", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

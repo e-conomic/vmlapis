@@ -59,7 +59,7 @@ proto.asgt.type.ScannedInvoice.prototype.toObject = function(opt_includeInstance
  */
 proto.asgt.type.ScannedInvoice.toObject = function(includeInstance, msg) {
   var f, obj = {
-    description: jspb.Message.getFieldWithDefault(msg, 1, "")
+    text: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -98,7 +98,7 @@ proto.asgt.type.ScannedInvoice.deserializeBinaryFromReader = function(msg, reade
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDescription(value);
+      msg.setText(value);
       break;
     default:
       reader.skipField();
@@ -129,7 +129,7 @@ proto.asgt.type.ScannedInvoice.prototype.serializeBinary = function() {
  */
 proto.asgt.type.ScannedInvoice.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDescription();
+  f = message.getText();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -140,16 +140,16 @@ proto.asgt.type.ScannedInvoice.serializeBinaryToWriter = function(message, write
 
 
 /**
- * optional string description = 1;
+ * optional string text = 1;
  * @return {string}
  */
-proto.asgt.type.ScannedInvoice.prototype.getDescription = function() {
+proto.asgt.type.ScannedInvoice.prototype.getText = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.type.ScannedInvoice.prototype.setDescription = function(value) {
+proto.asgt.type.ScannedInvoice.prototype.setText = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
