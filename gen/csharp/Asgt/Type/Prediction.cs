@@ -24,22 +24,23 @@ namespace Asgt.Type {
     static PredictionReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlGh5nb29n",
-            "bGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8iswEKCkNvbmZpZGVuY2USKgoF",
-            "bGV2ZWwYASABKA4yGy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2",
-            "YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxl",
-            "dmVsEgsKB1VOS05PV04QABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01J",
-            "RBADEggKBEhJR0gQBBINCglWRVJZX0hJR0gQBSLZAQoKUHJlZGljdGlvbhIt",
-            "Cgd0YXJnZXRzGAEgAygLMhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0",
-            "GpsBCgZUYXJnZXQSDgoGdGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiAD",
-            "KAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkUK",
-            "CUNhbmRpZGF0ZRINCgV2YWx1ZRgBIAEoCRIpCgpjb25maWRlbmNlGAIgASgL",
-            "MhUuYXNndC50eXBlLkNvbmZpZGVuY2VCBloEdHlwZWIGcHJvdG8z"));
+            "Chphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxIJYXNndC50eXBlGhxnZW5f",
+            "YnFfc2NoZW1hL2JxX2ZpZWxkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3Jh",
+            "cHBlcnMucHJvdG8iswEKCkNvbmZpZGVuY2USKgoFbGV2ZWwYASABKA4yGy5h",
+            "c2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdv",
+            "b2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04Q",
+            "ABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBIN",
+            "CglWRVJZX0hJR0gQBSLgAQoKUHJlZGljdGlvbhItCgd0YXJnZXRzGAEgAygL",
+            "MhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0GqIBCgZUYXJnZXQSDgoG",
+            "dGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiADKAsyJi5hc2d0LnR5cGUu",
+            "UHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkwKCUNhbmRpZGF0ZRIUCgVs",
+            "YWJlbBgBIAEoCUIF6j8CCAESKQoKY29uZmlkZW5jZRgCIAEoCzIVLmFzZ3Qu",
+            "dHlwZS5Db25maWRlbmNlQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Label", "Confidence" }, null, null, null)})})
           }));
     }
     #endregion
@@ -533,7 +534,7 @@ namespace Asgt.Type {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public Candidate(Candidate other) : this() {
-              value_ = other.value_;
+              label_ = other.label_;
               confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
@@ -543,14 +544,14 @@ namespace Asgt.Type {
               return new Candidate(this);
             }
 
-            /// <summary>Field number for the "value" field.</summary>
-            public const int ValueFieldNumber = 1;
-            private string value_ = "";
+            /// <summary>Field number for the "label" field.</summary>
+            public const int LabelFieldNumber = 1;
+            private string label_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-            public string Value {
-              get { return value_; }
+            public string Label {
+              get { return label_; }
               set {
-                value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                label_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
               }
             }
 
@@ -578,7 +579,7 @@ namespace Asgt.Type {
               if (ReferenceEquals(other, this)) {
                 return true;
               }
-              if (Value != other.Value) return false;
+              if (Label != other.Label) return false;
               if (!object.Equals(Confidence, other.Confidence)) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
@@ -586,7 +587,7 @@ namespace Asgt.Type {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public override int GetHashCode() {
               int hash = 1;
-              if (Value.Length != 0) hash ^= Value.GetHashCode();
+              if (Label.Length != 0) hash ^= Label.GetHashCode();
               if (confidence_ != null) hash ^= Confidence.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
@@ -601,9 +602,9 @@ namespace Asgt.Type {
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public void WriteTo(pb::CodedOutputStream output) {
-              if (Value.Length != 0) {
+              if (Label.Length != 0) {
                 output.WriteRawTag(10);
-                output.WriteString(Value);
+                output.WriteString(Label);
               }
               if (confidence_ != null) {
                 output.WriteRawTag(18);
@@ -617,8 +618,8 @@ namespace Asgt.Type {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             public int CalculateSize() {
               int size = 0;
-              if (Value.Length != 0) {
-                size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+              if (Label.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Label);
               }
               if (confidence_ != null) {
                 size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
@@ -634,8 +635,8 @@ namespace Asgt.Type {
               if (other == null) {
                 return;
               }
-              if (other.Value.Length != 0) {
-                Value = other.Value;
+              if (other.Label.Length != 0) {
+                Label = other.Label;
               }
               if (other.confidence_ != null) {
                 if (confidence_ == null) {
@@ -655,7 +656,7 @@ namespace Asgt.Type {
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
                   case 10: {
-                    Value = input.ReadString();
+                    Label = input.ReadString();
                     break;
                   }
                   case 18: {

@@ -1576,27 +1576,27 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> 
+    java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index);
+    asgt.type.ScannedInvoiceOuterClass.ScannedInvoice getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
+    java.util.List<? extends asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
+    asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -1669,11 +1669,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data>();
+                inputs_ = new java.util.ArrayList<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -1730,588 +1730,38 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Builder.class);
     }
 
-    public interface DataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>string description = 1;</code>
-       */
-      java.lang.String getDescription();
-      /**
-       * <code>string description = 1;</code>
-       */
-      com.google.protobuf.ByteString
-          getDescriptionBytes();
-    }
-    /**
-     * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
-     */
-    public  static final class Data extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
-        DataOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Data.newBuilder() to construct.
-      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Data() {
-        description_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Data(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                description_ = s;
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder.class);
-      }
-
-      public static final int DESCRIPTION_FIELD_NUMBER = 1;
-      private volatile java.lang.Object description_;
-      /**
-       * <code>string description = 1;</code>
-       */
-      public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          description_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string description = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDescriptionBytes() {
-        java.lang.Object ref = description_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          description_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (!getDescriptionBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, description_);
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (!getDescriptionBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, description_);
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data)) {
-          return super.equals(obj);
-        }
-        asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) obj;
-
-        boolean result = true;
-        result = result && getDescription()
-            .equals(other.getDescription());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
-        hash = (53 * hash) + getDescription().hashCode();
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.jester.v1alpha1.ScannedInvoiceRequest.Data}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder.class);
-        }
-
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          description_ = "";
-
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data build() {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data(this);
-          result.description_ = description_;
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance()) return this;
-          if (!other.getDescription().isEmpty()) {
-            description_ = other.description_;
-            onChanged();
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private java.lang.Object description_ = "";
-        /**
-         * <code>string description = 1;</code>
-         */
-        public java.lang.String getDescription() {
-          java.lang.Object ref = description_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            description_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string description = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getDescriptionBytes() {
-          java.lang.Object ref = description_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            description_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string description = 1;</code>
-         */
-        public Builder setDescription(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          description_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string description = 1;</code>
-         */
-        public Builder clearDescription() {
-          
-          description_ = getDefaultInstance().getDescription();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string description = 1;</code>
-         */
-        public Builder setDescriptionBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          description_ = value;
-          onChanged();
-          return this;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ScannedInvoiceRequest.Data)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data();
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Data>
-          PARSER = new com.google.protobuf.AbstractParser<Data>() {
-        @java.lang.Override
-        public Data parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Data(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Data> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Data> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> inputs_;
+    private java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> getInputsList() {
+    public java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
+    public java.util.List<? extends asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index) {
+    public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
+    public asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -2767,22 +2217,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> inputs_ =
+      private java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> inputsBuilder_;
+          asgt.type.ScannedInvoiceOuterClass.ScannedInvoice, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder, asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> getInputsList() {
+      public java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -2790,7 +2240,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -2800,9 +2250,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data getInputs(int index) {
+      public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -2810,10 +2260,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
+          int index, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2827,10 +2277,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
+          int index, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -2841,9 +2291,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
+      public Builder addInputs(asgt.type.ScannedInvoiceOuterClass.ScannedInvoice value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2857,10 +2307,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data value) {
+          int index, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2874,10 +2324,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
+          asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -2888,10 +2338,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder builderForValue) {
+          int index, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -2902,10 +2352,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data> values) {
+          java.lang.Iterable<? extends asgt.type.ScannedInvoiceOuterClass.ScannedInvoice> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2917,7 +2367,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -2930,7 +2380,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -2943,16 +2393,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder getInputsBuilder(
+      public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder getInputsOrBuilder(
+      public asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -2960,9 +2410,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
+      public java.util.List<? extends asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -2971,33 +2421,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder addInputsBuilder() {
+      public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance());
+            asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder addInputsBuilder(
+      public asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.getDefaultInstance());
+            index, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ScannedInvoiceRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.ScannedInvoice inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder> 
+      public java.util.List<asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder> 
+          asgt.type.ScannedInvoiceOuterClass.ScannedInvoice, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder, asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ScannedInvoiceRequest.DataOrBuilder>(
+              asgt.type.ScannedInvoiceOuterClass.ScannedInvoice, asgt.type.ScannedInvoiceOuterClass.ScannedInvoice.Builder, asgt.type.ScannedInvoiceOuterClass.ScannedInvoiceOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -3250,27 +2700,27 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> 
+    java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index);
+    asgt.type.InvoiceLineOuterClass.InvoiceLine getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
+    java.util.List<? extends asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
+    asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -3343,11 +2793,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data>();
+                inputs_ = new java.util.ArrayList<asgt.type.InvoiceLineOuterClass.InvoiceLine>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.InvoiceLineOuterClass.InvoiceLine.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -3404,2140 +2854,38 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Builder.class);
     }
 
-    public interface DataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      boolean hasIssueDate();
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      com.google.protobuf.Timestamp getIssueDate();
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder();
-
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      boolean hasCurrency();
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      com.google.protobuf.StringValue getCurrency();
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
-
-      /**
-       * <code>string supplier_id = 3;</code>
-       */
-      java.lang.String getSupplierId();
-      /**
-       * <code>string supplier_id = 3;</code>
-       */
-      com.google.protobuf.ByteString
-          getSupplierIdBytes();
-
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      boolean hasSupplierName();
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      com.google.protobuf.StringValue getSupplierName();
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder();
-
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      boolean hasSupplierGlobalId();
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      com.google.protobuf.StringValue getSupplierGlobalId();
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getSupplierGlobalIdOrBuilder();
-
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      boolean hasCustomerRef();
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      com.google.protobuf.StringValue getCustomerRef();
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder();
-
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      boolean hasTotal();
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      com.google.protobuf.FloatValue getTotal();
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder();
-
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      boolean hasLineText();
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      com.google.protobuf.StringValue getLineText();
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getLineTextOrBuilder();
-
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      boolean hasLineId();
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      com.google.protobuf.StringValue getLineId();
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      com.google.protobuf.StringValueOrBuilder getLineIdOrBuilder();
-    }
-    /**
-     * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
-     */
-    public  static final class Data extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
-        DataOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Data.newBuilder() to construct.
-      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Data() {
-        supplierId_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Data(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (issueDate_ != null) {
-                  subBuilder = issueDate_.toBuilder();
-                }
-                issueDate_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(issueDate_);
-                  issueDate_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 18: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (currency_ != null) {
-                  subBuilder = currency_.toBuilder();
-                }
-                currency_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(currency_);
-                  currency_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 26: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                supplierId_ = s;
-                break;
-              }
-              case 34: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (supplierName_ != null) {
-                  subBuilder = supplierName_.toBuilder();
-                }
-                supplierName_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(supplierName_);
-                  supplierName_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 42: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (supplierGlobalId_ != null) {
-                  subBuilder = supplierGlobalId_.toBuilder();
-                }
-                supplierGlobalId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(supplierGlobalId_);
-                  supplierGlobalId_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 50: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (customerRef_ != null) {
-                  subBuilder = customerRef_.toBuilder();
-                }
-                customerRef_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(customerRef_);
-                  customerRef_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 58: {
-                com.google.protobuf.FloatValue.Builder subBuilder = null;
-                if (total_ != null) {
-                  subBuilder = total_.toBuilder();
-                }
-                total_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(total_);
-                  total_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 66: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (lineText_ != null) {
-                  subBuilder = lineText_.toBuilder();
-                }
-                lineText_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(lineText_);
-                  lineText_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              case 74: {
-                com.google.protobuf.StringValue.Builder subBuilder = null;
-                if (lineId_ != null) {
-                  subBuilder = lineId_.toBuilder();
-                }
-                lineId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(lineId_);
-                  lineId_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder.class);
-      }
-
-      public static final int ISSUE_DATE_FIELD_NUMBER = 1;
-      private com.google.protobuf.Timestamp issueDate_;
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public boolean hasIssueDate() {
-        return issueDate_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public com.google.protobuf.Timestamp getIssueDate() {
-        return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
-        return getIssueDate();
-      }
-
-      public static final int CURRENCY_FIELD_NUMBER = 2;
-      private com.google.protobuf.StringValue currency_;
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      public boolean hasCurrency() {
-        return currency_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      public com.google.protobuf.StringValue getCurrency() {
-        return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue currency = 2;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-        return getCurrency();
-      }
-
-      public static final int SUPPLIER_ID_FIELD_NUMBER = 3;
-      private volatile java.lang.Object supplierId_;
-      /**
-       * <code>string supplier_id = 3;</code>
-       */
-      public java.lang.String getSupplierId() {
-        java.lang.Object ref = supplierId_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          supplierId_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string supplier_id = 3;</code>
-       */
-      public com.google.protobuf.ByteString
-          getSupplierIdBytes() {
-        java.lang.Object ref = supplierId_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          supplierId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int SUPPLIER_NAME_FIELD_NUMBER = 4;
-      private com.google.protobuf.StringValue supplierName_;
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      public boolean hasSupplierName() {
-        return supplierName_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      public com.google.protobuf.StringValue getSupplierName() {
-        return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
-        return getSupplierName();
-      }
-
-      public static final int SUPPLIER_GLOBAL_ID_FIELD_NUMBER = 5;
-      private com.google.protobuf.StringValue supplierGlobalId_;
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      public boolean hasSupplierGlobalId() {
-        return supplierGlobalId_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      public com.google.protobuf.StringValue getSupplierGlobalId() {
-        return supplierGlobalId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierGlobalId_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getSupplierGlobalIdOrBuilder() {
-        return getSupplierGlobalId();
-      }
-
-      public static final int CUSTOMER_REF_FIELD_NUMBER = 6;
-      private com.google.protobuf.StringValue customerRef_;
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      public boolean hasCustomerRef() {
-        return customerRef_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      public com.google.protobuf.StringValue getCustomerRef() {
-        return customerRef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder() {
-        return getCustomerRef();
-      }
-
-      public static final int TOTAL_FIELD_NUMBER = 7;
-      private com.google.protobuf.FloatValue total_;
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public boolean hasTotal() {
-        return total_ != null;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public com.google.protobuf.FloatValue getTotal() {
-        return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
-        return getTotal();
-      }
-
-      public static final int LINE_TEXT_FIELD_NUMBER = 8;
-      private com.google.protobuf.StringValue lineText_;
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      public boolean hasLineText() {
-        return lineText_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      public com.google.protobuf.StringValue getLineText() {
-        return lineText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lineText_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue line_text = 8;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getLineTextOrBuilder() {
-        return getLineText();
-      }
-
-      public static final int LINE_ID_FIELD_NUMBER = 9;
-      private com.google.protobuf.StringValue lineId_;
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      public boolean hasLineId() {
-        return lineId_ != null;
-      }
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      public com.google.protobuf.StringValue getLineId() {
-        return lineId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lineId_;
-      }
-      /**
-       * <code>.google.protobuf.StringValue line_id = 9;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getLineIdOrBuilder() {
-        return getLineId();
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (issueDate_ != null) {
-          output.writeMessage(1, getIssueDate());
-        }
-        if (currency_ != null) {
-          output.writeMessage(2, getCurrency());
-        }
-        if (!getSupplierIdBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, supplierId_);
-        }
-        if (supplierName_ != null) {
-          output.writeMessage(4, getSupplierName());
-        }
-        if (supplierGlobalId_ != null) {
-          output.writeMessage(5, getSupplierGlobalId());
-        }
-        if (customerRef_ != null) {
-          output.writeMessage(6, getCustomerRef());
-        }
-        if (total_ != null) {
-          output.writeMessage(7, getTotal());
-        }
-        if (lineText_ != null) {
-          output.writeMessage(8, getLineText());
-        }
-        if (lineId_ != null) {
-          output.writeMessage(9, getLineId());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (issueDate_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(1, getIssueDate());
-        }
-        if (currency_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(2, getCurrency());
-        }
-        if (!getSupplierIdBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, supplierId_);
-        }
-        if (supplierName_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(4, getSupplierName());
-        }
-        if (supplierGlobalId_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, getSupplierGlobalId());
-        }
-        if (customerRef_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(6, getCustomerRef());
-        }
-        if (total_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, getTotal());
-        }
-        if (lineText_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(8, getLineText());
-        }
-        if (lineId_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(9, getLineId());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data)) {
-          return super.equals(obj);
-        }
-        asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) obj;
-
-        boolean result = true;
-        result = result && (hasIssueDate() == other.hasIssueDate());
-        if (hasIssueDate()) {
-          result = result && getIssueDate()
-              .equals(other.getIssueDate());
-        }
-        result = result && (hasCurrency() == other.hasCurrency());
-        if (hasCurrency()) {
-          result = result && getCurrency()
-              .equals(other.getCurrency());
-        }
-        result = result && getSupplierId()
-            .equals(other.getSupplierId());
-        result = result && (hasSupplierName() == other.hasSupplierName());
-        if (hasSupplierName()) {
-          result = result && getSupplierName()
-              .equals(other.getSupplierName());
-        }
-        result = result && (hasSupplierGlobalId() == other.hasSupplierGlobalId());
-        if (hasSupplierGlobalId()) {
-          result = result && getSupplierGlobalId()
-              .equals(other.getSupplierGlobalId());
-        }
-        result = result && (hasCustomerRef() == other.hasCustomerRef());
-        if (hasCustomerRef()) {
-          result = result && getCustomerRef()
-              .equals(other.getCustomerRef());
-        }
-        result = result && (hasTotal() == other.hasTotal());
-        if (hasTotal()) {
-          result = result && getTotal()
-              .equals(other.getTotal());
-        }
-        result = result && (hasLineText() == other.hasLineText());
-        if (hasLineText()) {
-          result = result && getLineText()
-              .equals(other.getLineText());
-        }
-        result = result && (hasLineId() == other.hasLineId());
-        if (hasLineId()) {
-          result = result && getLineId()
-              .equals(other.getLineId());
-        }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        if (hasIssueDate()) {
-          hash = (37 * hash) + ISSUE_DATE_FIELD_NUMBER;
-          hash = (53 * hash) + getIssueDate().hashCode();
-        }
-        if (hasCurrency()) {
-          hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-          hash = (53 * hash) + getCurrency().hashCode();
-        }
-        hash = (37 * hash) + SUPPLIER_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getSupplierId().hashCode();
-        if (hasSupplierName()) {
-          hash = (37 * hash) + SUPPLIER_NAME_FIELD_NUMBER;
-          hash = (53 * hash) + getSupplierName().hashCode();
-        }
-        if (hasSupplierGlobalId()) {
-          hash = (37 * hash) + SUPPLIER_GLOBAL_ID_FIELD_NUMBER;
-          hash = (53 * hash) + getSupplierGlobalId().hashCode();
-        }
-        if (hasCustomerRef()) {
-          hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
-          hash = (53 * hash) + getCustomerRef().hashCode();
-        }
-        if (hasTotal()) {
-          hash = (37 * hash) + TOTAL_FIELD_NUMBER;
-          hash = (53 * hash) + getTotal().hashCode();
-        }
-        if (hasLineText()) {
-          hash = (37 * hash) + LINE_TEXT_FIELD_NUMBER;
-          hash = (53 * hash) + getLineText().hashCode();
-        }
-        if (hasLineId()) {
-          hash = (37 * hash) + LINE_ID_FIELD_NUMBER;
-          hash = (53 * hash) + getLineId().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder.class);
-        }
-
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          if (issueDateBuilder_ == null) {
-            issueDate_ = null;
-          } else {
-            issueDate_ = null;
-            issueDateBuilder_ = null;
-          }
-          if (currencyBuilder_ == null) {
-            currency_ = null;
-          } else {
-            currency_ = null;
-            currencyBuilder_ = null;
-          }
-          supplierId_ = "";
-
-          if (supplierNameBuilder_ == null) {
-            supplierName_ = null;
-          } else {
-            supplierName_ = null;
-            supplierNameBuilder_ = null;
-          }
-          if (supplierGlobalIdBuilder_ == null) {
-            supplierGlobalId_ = null;
-          } else {
-            supplierGlobalId_ = null;
-            supplierGlobalIdBuilder_ = null;
-          }
-          if (customerRefBuilder_ == null) {
-            customerRef_ = null;
-          } else {
-            customerRef_ = null;
-            customerRefBuilder_ = null;
-          }
-          if (totalBuilder_ == null) {
-            total_ = null;
-          } else {
-            total_ = null;
-            totalBuilder_ = null;
-          }
-          if (lineTextBuilder_ == null) {
-            lineText_ = null;
-          } else {
-            lineText_ = null;
-            lineTextBuilder_ = null;
-          }
-          if (lineIdBuilder_ == null) {
-            lineId_ = null;
-          } else {
-            lineId_ = null;
-            lineIdBuilder_ = null;
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data build() {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data(this);
-          if (issueDateBuilder_ == null) {
-            result.issueDate_ = issueDate_;
-          } else {
-            result.issueDate_ = issueDateBuilder_.build();
-          }
-          if (currencyBuilder_ == null) {
-            result.currency_ = currency_;
-          } else {
-            result.currency_ = currencyBuilder_.build();
-          }
-          result.supplierId_ = supplierId_;
-          if (supplierNameBuilder_ == null) {
-            result.supplierName_ = supplierName_;
-          } else {
-            result.supplierName_ = supplierNameBuilder_.build();
-          }
-          if (supplierGlobalIdBuilder_ == null) {
-            result.supplierGlobalId_ = supplierGlobalId_;
-          } else {
-            result.supplierGlobalId_ = supplierGlobalIdBuilder_.build();
-          }
-          if (customerRefBuilder_ == null) {
-            result.customerRef_ = customerRef_;
-          } else {
-            result.customerRef_ = customerRefBuilder_.build();
-          }
-          if (totalBuilder_ == null) {
-            result.total_ = total_;
-          } else {
-            result.total_ = totalBuilder_.build();
-          }
-          if (lineTextBuilder_ == null) {
-            result.lineText_ = lineText_;
-          } else {
-            result.lineText_ = lineTextBuilder_.build();
-          }
-          if (lineIdBuilder_ == null) {
-            result.lineId_ = lineId_;
-          } else {
-            result.lineId_ = lineIdBuilder_.build();
-          }
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance()) return this;
-          if (other.hasIssueDate()) {
-            mergeIssueDate(other.getIssueDate());
-          }
-          if (other.hasCurrency()) {
-            mergeCurrency(other.getCurrency());
-          }
-          if (!other.getSupplierId().isEmpty()) {
-            supplierId_ = other.supplierId_;
-            onChanged();
-          }
-          if (other.hasSupplierName()) {
-            mergeSupplierName(other.getSupplierName());
-          }
-          if (other.hasSupplierGlobalId()) {
-            mergeSupplierGlobalId(other.getSupplierGlobalId());
-          }
-          if (other.hasCustomerRef()) {
-            mergeCustomerRef(other.getCustomerRef());
-          }
-          if (other.hasTotal()) {
-            mergeTotal(other.getTotal());
-          }
-          if (other.hasLineText()) {
-            mergeLineText(other.getLineText());
-          }
-          if (other.hasLineId()) {
-            mergeLineId(other.getLineId());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private com.google.protobuf.Timestamp issueDate_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> issueDateBuilder_;
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public boolean hasIssueDate() {
-          return issueDateBuilder_ != null || issueDate_ != null;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public com.google.protobuf.Timestamp getIssueDate() {
-          if (issueDateBuilder_ == null) {
-            return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-          } else {
-            return issueDateBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public Builder setIssueDate(com.google.protobuf.Timestamp value) {
-          if (issueDateBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            issueDate_ = value;
-            onChanged();
-          } else {
-            issueDateBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public Builder setIssueDate(
-            com.google.protobuf.Timestamp.Builder builderForValue) {
-          if (issueDateBuilder_ == null) {
-            issueDate_ = builderForValue.build();
-            onChanged();
-          } else {
-            issueDateBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
-          if (issueDateBuilder_ == null) {
-            if (issueDate_ != null) {
-              issueDate_ =
-                com.google.protobuf.Timestamp.newBuilder(issueDate_).mergeFrom(value).buildPartial();
-            } else {
-              issueDate_ = value;
-            }
-            onChanged();
-          } else {
-            issueDateBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public Builder clearIssueDate() {
-          if (issueDateBuilder_ == null) {
-            issueDate_ = null;
-            onChanged();
-          } else {
-            issueDate_ = null;
-            issueDateBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
-          
-          onChanged();
-          return getIssueDateFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
-          if (issueDateBuilder_ != null) {
-            return issueDateBuilder_.getMessageOrBuilder();
-          } else {
-            return issueDate_ == null ?
-                com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.Timestamp issue_date = 1;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-            getIssueDateFieldBuilder() {
-          if (issueDateBuilder_ == null) {
-            issueDateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                    getIssueDate(),
-                    getParentForChildren(),
-                    isClean());
-            issueDate_ = null;
-          }
-          return issueDateBuilder_;
-        }
-
-        private com.google.protobuf.StringValue currency_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public boolean hasCurrency() {
-          return currencyBuilder_ != null || currency_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public com.google.protobuf.StringValue getCurrency() {
-          if (currencyBuilder_ == null) {
-            return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-          } else {
-            return currencyBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public Builder setCurrency(com.google.protobuf.StringValue value) {
-          if (currencyBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            currency_ = value;
-            onChanged();
-          } else {
-            currencyBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public Builder setCurrency(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (currencyBuilder_ == null) {
-            currency_ = builderForValue.build();
-            onChanged();
-          } else {
-            currencyBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public Builder mergeCurrency(com.google.protobuf.StringValue value) {
-          if (currencyBuilder_ == null) {
-            if (currency_ != null) {
-              currency_ =
-                com.google.protobuf.StringValue.newBuilder(currency_).mergeFrom(value).buildPartial();
-            } else {
-              currency_ = value;
-            }
-            onChanged();
-          } else {
-            currencyBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public Builder clearCurrency() {
-          if (currencyBuilder_ == null) {
-            currency_ = null;
-            onChanged();
-          } else {
-            currency_ = null;
-            currencyBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
-          
-          onChanged();
-          return getCurrencyFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-          if (currencyBuilder_ != null) {
-            return currencyBuilder_.getMessageOrBuilder();
-          } else {
-            return currency_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue currency = 2;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getCurrencyFieldBuilder() {
-          if (currencyBuilder_ == null) {
-            currencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getCurrency(),
-                    getParentForChildren(),
-                    isClean());
-            currency_ = null;
-          }
-          return currencyBuilder_;
-        }
-
-        private java.lang.Object supplierId_ = "";
-        /**
-         * <code>string supplier_id = 3;</code>
-         */
-        public java.lang.String getSupplierId() {
-          java.lang.Object ref = supplierId_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            supplierId_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string supplier_id = 3;</code>
-         */
-        public com.google.protobuf.ByteString
-            getSupplierIdBytes() {
-          java.lang.Object ref = supplierId_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            supplierId_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string supplier_id = 3;</code>
-         */
-        public Builder setSupplierId(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          supplierId_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string supplier_id = 3;</code>
-         */
-        public Builder clearSupplierId() {
-          
-          supplierId_ = getDefaultInstance().getSupplierId();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string supplier_id = 3;</code>
-         */
-        public Builder setSupplierIdBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          supplierId_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.StringValue supplierName_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierNameBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public boolean hasSupplierName() {
-          return supplierNameBuilder_ != null || supplierName_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public com.google.protobuf.StringValue getSupplierName() {
-          if (supplierNameBuilder_ == null) {
-            return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
-          } else {
-            return supplierNameBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public Builder setSupplierName(com.google.protobuf.StringValue value) {
-          if (supplierNameBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            supplierName_ = value;
-            onChanged();
-          } else {
-            supplierNameBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public Builder setSupplierName(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (supplierNameBuilder_ == null) {
-            supplierName_ = builderForValue.build();
-            onChanged();
-          } else {
-            supplierNameBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public Builder mergeSupplierName(com.google.protobuf.StringValue value) {
-          if (supplierNameBuilder_ == null) {
-            if (supplierName_ != null) {
-              supplierName_ =
-                com.google.protobuf.StringValue.newBuilder(supplierName_).mergeFrom(value).buildPartial();
-            } else {
-              supplierName_ = value;
-            }
-            onChanged();
-          } else {
-            supplierNameBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public Builder clearSupplierName() {
-          if (supplierNameBuilder_ == null) {
-            supplierName_ = null;
-            onChanged();
-          } else {
-            supplierName_ = null;
-            supplierNameBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getSupplierNameBuilder() {
-          
-          onChanged();
-          return getSupplierNameFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
-          if (supplierNameBuilder_ != null) {
-            return supplierNameBuilder_.getMessageOrBuilder();
-          } else {
-            return supplierName_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_name = 4;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getSupplierNameFieldBuilder() {
-          if (supplierNameBuilder_ == null) {
-            supplierNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getSupplierName(),
-                    getParentForChildren(),
-                    isClean());
-            supplierName_ = null;
-          }
-          return supplierNameBuilder_;
-        }
-
-        private com.google.protobuf.StringValue supplierGlobalId_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> supplierGlobalIdBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public boolean hasSupplierGlobalId() {
-          return supplierGlobalIdBuilder_ != null || supplierGlobalId_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public com.google.protobuf.StringValue getSupplierGlobalId() {
-          if (supplierGlobalIdBuilder_ == null) {
-            return supplierGlobalId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierGlobalId_;
-          } else {
-            return supplierGlobalIdBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public Builder setSupplierGlobalId(com.google.protobuf.StringValue value) {
-          if (supplierGlobalIdBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            supplierGlobalId_ = value;
-            onChanged();
-          } else {
-            supplierGlobalIdBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public Builder setSupplierGlobalId(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (supplierGlobalIdBuilder_ == null) {
-            supplierGlobalId_ = builderForValue.build();
-            onChanged();
-          } else {
-            supplierGlobalIdBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public Builder mergeSupplierGlobalId(com.google.protobuf.StringValue value) {
-          if (supplierGlobalIdBuilder_ == null) {
-            if (supplierGlobalId_ != null) {
-              supplierGlobalId_ =
-                com.google.protobuf.StringValue.newBuilder(supplierGlobalId_).mergeFrom(value).buildPartial();
-            } else {
-              supplierGlobalId_ = value;
-            }
-            onChanged();
-          } else {
-            supplierGlobalIdBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public Builder clearSupplierGlobalId() {
-          if (supplierGlobalIdBuilder_ == null) {
-            supplierGlobalId_ = null;
-            onChanged();
-          } else {
-            supplierGlobalId_ = null;
-            supplierGlobalIdBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getSupplierGlobalIdBuilder() {
-          
-          onChanged();
-          return getSupplierGlobalIdFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getSupplierGlobalIdOrBuilder() {
-          if (supplierGlobalIdBuilder_ != null) {
-            return supplierGlobalIdBuilder_.getMessageOrBuilder();
-          } else {
-            return supplierGlobalId_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : supplierGlobalId_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue supplier_global_id = 5;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getSupplierGlobalIdFieldBuilder() {
-          if (supplierGlobalIdBuilder_ == null) {
-            supplierGlobalIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getSupplierGlobalId(),
-                    getParentForChildren(),
-                    isClean());
-            supplierGlobalId_ = null;
-          }
-          return supplierGlobalIdBuilder_;
-        }
-
-        private com.google.protobuf.StringValue customerRef_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerRefBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public boolean hasCustomerRef() {
-          return customerRefBuilder_ != null || customerRef_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public com.google.protobuf.StringValue getCustomerRef() {
-          if (customerRefBuilder_ == null) {
-            return customerRef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
-          } else {
-            return customerRefBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public Builder setCustomerRef(com.google.protobuf.StringValue value) {
-          if (customerRefBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            customerRef_ = value;
-            onChanged();
-          } else {
-            customerRefBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public Builder setCustomerRef(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (customerRefBuilder_ == null) {
-            customerRef_ = builderForValue.build();
-            onChanged();
-          } else {
-            customerRefBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public Builder mergeCustomerRef(com.google.protobuf.StringValue value) {
-          if (customerRefBuilder_ == null) {
-            if (customerRef_ != null) {
-              customerRef_ =
-                com.google.protobuf.StringValue.newBuilder(customerRef_).mergeFrom(value).buildPartial();
-            } else {
-              customerRef_ = value;
-            }
-            onChanged();
-          } else {
-            customerRefBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public Builder clearCustomerRef() {
-          if (customerRefBuilder_ == null) {
-            customerRef_ = null;
-            onChanged();
-          } else {
-            customerRef_ = null;
-            customerRefBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getCustomerRefBuilder() {
-          
-          onChanged();
-          return getCustomerRefFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder() {
-          if (customerRefBuilder_ != null) {
-            return customerRefBuilder_.getMessageOrBuilder();
-          } else {
-            return customerRef_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue customer_ref = 6;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getCustomerRefFieldBuilder() {
-          if (customerRefBuilder_ == null) {
-            customerRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getCustomerRef(),
-                    getParentForChildren(),
-                    isClean());
-            customerRef_ = null;
-          }
-          return customerRefBuilder_;
-        }
-
-        private com.google.protobuf.FloatValue total_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalBuilder_;
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public boolean hasTotal() {
-          return totalBuilder_ != null || total_ != null;
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public com.google.protobuf.FloatValue getTotal() {
-          if (totalBuilder_ == null) {
-            return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-          } else {
-            return totalBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public Builder setTotal(com.google.protobuf.FloatValue value) {
-          if (totalBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            total_ = value;
-            onChanged();
-          } else {
-            totalBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public Builder setTotal(
-            com.google.protobuf.FloatValue.Builder builderForValue) {
-          if (totalBuilder_ == null) {
-            total_ = builderForValue.build();
-            onChanged();
-          } else {
-            totalBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public Builder mergeTotal(com.google.protobuf.FloatValue value) {
-          if (totalBuilder_ == null) {
-            if (total_ != null) {
-              total_ =
-                com.google.protobuf.FloatValue.newBuilder(total_).mergeFrom(value).buildPartial();
-            } else {
-              total_ = value;
-            }
-            onChanged();
-          } else {
-            totalBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public Builder clearTotal() {
-          if (totalBuilder_ == null) {
-            total_ = null;
-            onChanged();
-          } else {
-            total_ = null;
-            totalBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public com.google.protobuf.FloatValue.Builder getTotalBuilder() {
-          
-          onChanged();
-          return getTotalFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
-          if (totalBuilder_ != null) {
-            return totalBuilder_.getMessageOrBuilder();
-          } else {
-            return total_ == null ?
-                com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.FloatValue total = 7;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-            getTotalFieldBuilder() {
-          if (totalBuilder_ == null) {
-            totalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                    getTotal(),
-                    getParentForChildren(),
-                    isClean());
-            total_ = null;
-          }
-          return totalBuilder_;
-        }
-
-        private com.google.protobuf.StringValue lineText_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lineTextBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public boolean hasLineText() {
-          return lineTextBuilder_ != null || lineText_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public com.google.protobuf.StringValue getLineText() {
-          if (lineTextBuilder_ == null) {
-            return lineText_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lineText_;
-          } else {
-            return lineTextBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public Builder setLineText(com.google.protobuf.StringValue value) {
-          if (lineTextBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            lineText_ = value;
-            onChanged();
-          } else {
-            lineTextBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public Builder setLineText(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (lineTextBuilder_ == null) {
-            lineText_ = builderForValue.build();
-            onChanged();
-          } else {
-            lineTextBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public Builder mergeLineText(com.google.protobuf.StringValue value) {
-          if (lineTextBuilder_ == null) {
-            if (lineText_ != null) {
-              lineText_ =
-                com.google.protobuf.StringValue.newBuilder(lineText_).mergeFrom(value).buildPartial();
-            } else {
-              lineText_ = value;
-            }
-            onChanged();
-          } else {
-            lineTextBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public Builder clearLineText() {
-          if (lineTextBuilder_ == null) {
-            lineText_ = null;
-            onChanged();
-          } else {
-            lineText_ = null;
-            lineTextBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getLineTextBuilder() {
-          
-          onChanged();
-          return getLineTextFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getLineTextOrBuilder() {
-          if (lineTextBuilder_ != null) {
-            return lineTextBuilder_.getMessageOrBuilder();
-          } else {
-            return lineText_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : lineText_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_text = 8;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getLineTextFieldBuilder() {
-          if (lineTextBuilder_ == null) {
-            lineTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getLineText(),
-                    getParentForChildren(),
-                    isClean());
-            lineText_ = null;
-          }
-          return lineTextBuilder_;
-        }
-
-        private com.google.protobuf.StringValue lineId_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> lineIdBuilder_;
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public boolean hasLineId() {
-          return lineIdBuilder_ != null || lineId_ != null;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public com.google.protobuf.StringValue getLineId() {
-          if (lineIdBuilder_ == null) {
-            return lineId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : lineId_;
-          } else {
-            return lineIdBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public Builder setLineId(com.google.protobuf.StringValue value) {
-          if (lineIdBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            lineId_ = value;
-            onChanged();
-          } else {
-            lineIdBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public Builder setLineId(
-            com.google.protobuf.StringValue.Builder builderForValue) {
-          if (lineIdBuilder_ == null) {
-            lineId_ = builderForValue.build();
-            onChanged();
-          } else {
-            lineIdBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public Builder mergeLineId(com.google.protobuf.StringValue value) {
-          if (lineIdBuilder_ == null) {
-            if (lineId_ != null) {
-              lineId_ =
-                com.google.protobuf.StringValue.newBuilder(lineId_).mergeFrom(value).buildPartial();
-            } else {
-              lineId_ = value;
-            }
-            onChanged();
-          } else {
-            lineIdBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public Builder clearLineId() {
-          if (lineIdBuilder_ == null) {
-            lineId_ = null;
-            onChanged();
-          } else {
-            lineId_ = null;
-            lineIdBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public com.google.protobuf.StringValue.Builder getLineIdBuilder() {
-          
-          onChanged();
-          return getLineIdFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        public com.google.protobuf.StringValueOrBuilder getLineIdOrBuilder() {
-          if (lineIdBuilder_ != null) {
-            return lineIdBuilder_.getMessageOrBuilder();
-          } else {
-            return lineId_ == null ?
-                com.google.protobuf.StringValue.getDefaultInstance() : lineId_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.StringValue line_id = 9;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-            getLineIdFieldBuilder() {
-          if (lineIdBuilder_ == null) {
-            lineIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                    getLineId(),
-                    getParentForChildren(),
-                    isClean());
-            lineId_ = null;
-          }
-          return lineIdBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data();
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Data>
-          PARSER = new com.google.protobuf.AbstractParser<Data>() {
-        @java.lang.Override
-        public Data parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Data(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Data> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Data> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> inputs_;
+    private java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> getInputsList() {
+    public java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
+    public java.util.List<? extends asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index) {
+    public asgt.type.InvoiceLineOuterClass.InvoiceLine getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
+    public asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -5993,22 +3341,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> inputs_ =
+      private java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.type.InvoiceLineOuterClass.InvoiceLine>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> inputsBuilder_;
+          asgt.type.InvoiceLineOuterClass.InvoiceLine, asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder, asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> getInputsList() {
+      public java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -6016,7 +3364,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -6026,9 +3374,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data getInputs(int index) {
+      public asgt.type.InvoiceLineOuterClass.InvoiceLine getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -6036,10 +3384,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
+          int index, asgt.type.InvoiceLineOuterClass.InvoiceLine value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6053,10 +3401,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
+          int index, asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -6067,9 +3415,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
+      public Builder addInputs(asgt.type.InvoiceLineOuterClass.InvoiceLine value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6083,10 +3431,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data value) {
+          int index, asgt.type.InvoiceLineOuterClass.InvoiceLine value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6100,10 +3448,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
+          asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -6114,10 +3462,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder builderForValue) {
+          int index, asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -6128,10 +3476,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data> values) {
+          java.lang.Iterable<? extends asgt.type.InvoiceLineOuterClass.InvoiceLine> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -6143,7 +3491,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -6156,7 +3504,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -6169,16 +3517,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder getInputsBuilder(
+      public asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder getInputsOrBuilder(
+      public asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -6186,9 +3534,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
+      public java.util.List<? extends asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -6197,33 +3545,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder addInputsBuilder() {
+      public asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance());
+            asgt.type.InvoiceLineOuterClass.InvoiceLine.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder addInputsBuilder(
+      public asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.getDefaultInstance());
+            index, asgt.type.InvoiceLineOuterClass.InvoiceLine.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.ElectronicInvoiceLineRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.InvoiceLine inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder> 
+      public java.util.List<asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder> 
+          asgt.type.InvoiceLineOuterClass.InvoiceLine, asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder, asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.ElectronicInvoiceLineRequest.DataOrBuilder>(
+              asgt.type.InvoiceLineOuterClass.InvoiceLine, asgt.type.InvoiceLineOuterClass.InvoiceLine.Builder, asgt.type.InvoiceLineOuterClass.InvoiceLineOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -6476,27 +3824,27 @@ public final class JesterOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> 
+    java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction> 
         getInputsList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index);
+    asgt.type.BankTransactionOuterClass.BankTransaction getInputs(int index);
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
+    java.util.List<? extends asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
+    asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -6569,11 +3917,11 @@ public final class JesterOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data>();
+                inputs_ = new java.util.ArrayList<asgt.type.BankTransactionOuterClass.BankTransaction>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.BankTransactionOuterClass.BankTransaction.parser(), extensionRegistry));
               break;
             }
             case 18: {
@@ -6630,848 +3978,38 @@ public final class JesterOuterClass {
               asgt.jester.v1alpha1.JesterOuterClass.BankRequest.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Builder.class);
     }
 
-    public interface DataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:asgt.jester.v1alpha1.BankRequest.Data)
-        com.google.protobuf.MessageOrBuilder {
-
-      /**
-       * <code>float amount = 2;</code>
-       */
-      float getAmount();
-
-      /**
-       * <code>string text = 4;</code>
-       */
-      java.lang.String getText();
-      /**
-       * <code>string text = 4;</code>
-       */
-      com.google.protobuf.ByteString
-          getTextBytes();
-
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      boolean hasTimeStamp();
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      com.google.protobuf.Timestamp getTimeStamp();
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder();
-    }
-    /**
-     * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Data}
-     */
-    public  static final class Data extends
-        com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:asgt.jester.v1alpha1.BankRequest.Data)
-        DataOrBuilder {
-    private static final long serialVersionUID = 0L;
-      // Use Data.newBuilder() to construct.
-      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-        super(builder);
-      }
-      private Data() {
-        amount_ = 0F;
-        text_ = "";
-      }
-
-      @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Data(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 21: {
-
-                amount_ = input.readFloat();
-                break;
-              }
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                text_ = s;
-                break;
-              }
-              case 42: {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (timeStamp_ != null) {
-                  subBuilder = timeStamp_.toBuilder();
-                }
-                timeStamp_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(timeStamp_);
-                  timeStamp_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-              default: {
-                if (!parseUnknownFieldProto3(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder.class);
-      }
-
-      public static final int AMOUNT_FIELD_NUMBER = 2;
-      private float amount_;
-      /**
-       * <code>float amount = 2;</code>
-       */
-      public float getAmount() {
-        return amount_;
-      }
-
-      public static final int TEXT_FIELD_NUMBER = 4;
-      private volatile java.lang.Object text_;
-      /**
-       * <code>string text = 4;</code>
-       */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (ref instanceof java.lang.String) {
-          return (java.lang.String) ref;
-        } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          text_ = s;
-          return s;
-        }
-      }
-      /**
-       * <code>string text = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-
-      public static final int TIME_STAMP_FIELD_NUMBER = 5;
-      private com.google.protobuf.Timestamp timeStamp_;
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      public boolean hasTimeStamp() {
-        return timeStamp_ != null;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      public com.google.protobuf.Timestamp getTimeStamp() {
-        return timeStamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
-      }
-      /**
-       * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-       */
-      public com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder() {
-        return getTimeStamp();
-      }
-
-      private byte memoizedIsInitialized = -1;
-      @java.lang.Override
-      public final boolean isInitialized() {
-        byte isInitialized = memoizedIsInitialized;
-        if (isInitialized == 1) return true;
-        if (isInitialized == 0) return false;
-
-        memoizedIsInitialized = 1;
-        return true;
-      }
-
-      @java.lang.Override
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
-                          throws java.io.IOException {
-        if (amount_ != 0F) {
-          output.writeFloat(2, amount_);
-        }
-        if (!getTextBytes().isEmpty()) {
-          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
-        }
-        if (timeStamp_ != null) {
-          output.writeMessage(5, getTimeStamp());
-        }
-        unknownFields.writeTo(output);
-      }
-
-      @java.lang.Override
-      public int getSerializedSize() {
-        int size = memoizedSize;
-        if (size != -1) return size;
-
-        size = 0;
-        if (amount_ != 0F) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeFloatSize(2, amount_);
-        }
-        if (!getTextBytes().isEmpty()) {
-          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
-        }
-        if (timeStamp_ != null) {
-          size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(5, getTimeStamp());
-        }
-        size += unknownFields.getSerializedSize();
-        memoizedSize = size;
-        return size;
-      }
-
-      @java.lang.Override
-      public boolean equals(final java.lang.Object obj) {
-        if (obj == this) {
-         return true;
-        }
-        if (!(obj instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data)) {
-          return super.equals(obj);
-        }
-        asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) obj;
-
-        boolean result = true;
-        result = result && (
-            java.lang.Float.floatToIntBits(getAmount())
-            == java.lang.Float.floatToIntBits(
-                other.getAmount()));
-        result = result && getText()
-            .equals(other.getText());
-        result = result && (hasTimeStamp() == other.hasTimeStamp());
-        if (hasTimeStamp()) {
-          result = result && getTimeStamp()
-              .equals(other.getTimeStamp());
-        }
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
-      }
-
-      @java.lang.Override
-      public int hashCode() {
-        if (memoizedHashCode != 0) {
-          return memoizedHashCode;
-        }
-        int hash = 41;
-        hash = (19 * hash) + getDescriptor().hashCode();
-        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-        hash = (53 * hash) + java.lang.Float.floatToIntBits(
-            getAmount());
-        hash = (37 * hash) + TEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getText().hashCode();
-        if (hasTimeStamp()) {
-          hash = (37 * hash) + TIME_STAMP_FIELD_NUMBER;
-          hash = (53 * hash) + getTimeStamp().hashCode();
-        }
-        hash = (29 * hash) + unknownFields.hashCode();
-        memoizedHashCode = hash;
-        return hash;
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          java.nio.ByteBuffer data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          java.nio.ByteBuffer data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return PARSER.parseFrom(data, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseDelimitedFrom(java.io.InputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseDelimitedFrom(
-          java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input);
-      }
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        return com.google.protobuf.GeneratedMessageV3
-            .parseWithIOException(PARSER, input, extensionRegistry);
-      }
-
-      @java.lang.Override
-      public Builder newBuilderForType() { return newBuilder(); }
-      public static Builder newBuilder() {
-        return DEFAULT_INSTANCE.toBuilder();
-      }
-      public static Builder newBuilder(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data prototype) {
-        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-      }
-      @java.lang.Override
-      public Builder toBuilder() {
-        return this == DEFAULT_INSTANCE
-            ? new Builder() : new Builder().mergeFrom(this);
-      }
-
-      @java.lang.Override
-      protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        Builder builder = new Builder(parent);
-        return builder;
-      }
-      /**
-       * Protobuf type {@code asgt.jester.v1alpha1.BankRequest.Data}
-       */
-      public static final class Builder extends
-          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:asgt.jester.v1alpha1.BankRequest.Data)
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
-            getDescriptor() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-            internalGetFieldAccessorTable() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable
-              .ensureFieldAccessorsInitialized(
-                  asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.class, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder.class);
-        }
-
-        // Construct using asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
-
-        private Builder(
-            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-          super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
-        }
-        @java.lang.Override
-        public Builder clear() {
-          super.clear();
-          amount_ = 0F;
-
-          text_ = "";
-
-          if (timeStampBuilder_ == null) {
-            timeStamp_ = null;
-          } else {
-            timeStamp_ = null;
-            timeStampBuilder_ = null;
-          }
-          return this;
-        }
-
-        @java.lang.Override
-        public com.google.protobuf.Descriptors.Descriptor
-            getDescriptorForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstanceForType() {
-          return asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance();
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data build() {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data result = buildPartial();
-          if (!result.isInitialized()) {
-            throw newUninitializedMessageException(result);
-          }
-          return result;
-        }
-
-        @java.lang.Override
-        public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data buildPartial() {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data result = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data(this);
-          result.amount_ = amount_;
-          result.text_ = text_;
-          if (timeStampBuilder_ == null) {
-            result.timeStamp_ = timeStamp_;
-          } else {
-            result.timeStamp_ = timeStampBuilder_.build();
-          }
-          onBuilt();
-          return result;
-        }
-
-        @java.lang.Override
-        public Builder clone() {
-          return (Builder) super.clone();
-        }
-        @java.lang.Override
-        public Builder setField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.setField(field, value);
-        }
-        @java.lang.Override
-        public Builder clearField(
-            com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
-        }
-        @java.lang.Override
-        public Builder clearOneof(
-            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
-        }
-        @java.lang.Override
-        public Builder setRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
-        }
-        @java.lang.Override
-        public Builder addRepeatedField(
-            com.google.protobuf.Descriptors.FieldDescriptor field,
-            java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
-        }
-        @java.lang.Override
-        public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) {
-            return mergeFrom((asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data)other);
-          } else {
-            super.mergeFrom(other);
-            return this;
-          }
-        }
-
-        public Builder mergeFrom(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data other) {
-          if (other == asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance()) return this;
-          if (other.getAmount() != 0F) {
-            setAmount(other.getAmount());
-          }
-          if (!other.getText().isEmpty()) {
-            text_ = other.text_;
-            onChanged();
-          }
-          if (other.hasTimeStamp()) {
-            mergeTimeStamp(other.getTimeStamp());
-          }
-          this.mergeUnknownFields(other.unknownFields);
-          onChanged();
-          return this;
-        }
-
-        @java.lang.Override
-        public final boolean isInitialized() {
-          return true;
-        }
-
-        @java.lang.Override
-        public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws java.io.IOException {
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data parsedMessage = null;
-          try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data) e.getUnfinishedMessage();
-            throw e.unwrapIOException();
-          } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
-          return this;
-        }
-
-        private float amount_ ;
-        /**
-         * <code>float amount = 2;</code>
-         */
-        public float getAmount() {
-          return amount_;
-        }
-        /**
-         * <code>float amount = 2;</code>
-         */
-        public Builder setAmount(float value) {
-          
-          amount_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>float amount = 2;</code>
-         */
-        public Builder clearAmount() {
-          
-          amount_ = 0F;
-          onChanged();
-          return this;
-        }
-
-        private java.lang.Object text_ = "";
-        /**
-         * <code>string text = 4;</code>
-         */
-        public java.lang.String getText() {
-          java.lang.Object ref = text_;
-          if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            text_ = s;
-            return s;
-          } else {
-            return (java.lang.String) ref;
-          }
-        }
-        /**
-         * <code>string text = 4;</code>
-         */
-        public com.google.protobuf.ByteString
-            getTextBytes() {
-          java.lang.Object ref = text_;
-          if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            text_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-        /**
-         * <code>string text = 4;</code>
-         */
-        public Builder setText(
-            java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
-          text_ = value;
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string text = 4;</code>
-         */
-        public Builder clearText() {
-          
-          text_ = getDefaultInstance().getText();
-          onChanged();
-          return this;
-        }
-        /**
-         * <code>string text = 4;</code>
-         */
-        public Builder setTextBytes(
-            com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
-          text_ = value;
-          onChanged();
-          return this;
-        }
-
-        private com.google.protobuf.Timestamp timeStamp_ = null;
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> timeStampBuilder_;
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public boolean hasTimeStamp() {
-          return timeStampBuilder_ != null || timeStamp_ != null;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public com.google.protobuf.Timestamp getTimeStamp() {
-          if (timeStampBuilder_ == null) {
-            return timeStamp_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
-          } else {
-            return timeStampBuilder_.getMessage();
-          }
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public Builder setTimeStamp(com.google.protobuf.Timestamp value) {
-          if (timeStampBuilder_ == null) {
-            if (value == null) {
-              throw new NullPointerException();
-            }
-            timeStamp_ = value;
-            onChanged();
-          } else {
-            timeStampBuilder_.setMessage(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public Builder setTimeStamp(
-            com.google.protobuf.Timestamp.Builder builderForValue) {
-          if (timeStampBuilder_ == null) {
-            timeStamp_ = builderForValue.build();
-            onChanged();
-          } else {
-            timeStampBuilder_.setMessage(builderForValue.build());
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public Builder mergeTimeStamp(com.google.protobuf.Timestamp value) {
-          if (timeStampBuilder_ == null) {
-            if (timeStamp_ != null) {
-              timeStamp_ =
-                com.google.protobuf.Timestamp.newBuilder(timeStamp_).mergeFrom(value).buildPartial();
-            } else {
-              timeStamp_ = value;
-            }
-            onChanged();
-          } else {
-            timeStampBuilder_.mergeFrom(value);
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public Builder clearTimeStamp() {
-          if (timeStampBuilder_ == null) {
-            timeStamp_ = null;
-            onChanged();
-          } else {
-            timeStamp_ = null;
-            timeStampBuilder_ = null;
-          }
-
-          return this;
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public com.google.protobuf.Timestamp.Builder getTimeStampBuilder() {
-          
-          onChanged();
-          return getTimeStampFieldBuilder().getBuilder();
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        public com.google.protobuf.TimestampOrBuilder getTimeStampOrBuilder() {
-          if (timeStampBuilder_ != null) {
-            return timeStampBuilder_.getMessageOrBuilder();
-          } else {
-            return timeStamp_ == null ?
-                com.google.protobuf.Timestamp.getDefaultInstance() : timeStamp_;
-          }
-        }
-        /**
-         * <code>.google.protobuf.Timestamp time_stamp = 5;</code>
-         */
-        private com.google.protobuf.SingleFieldBuilderV3<
-            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
-            getTimeStampFieldBuilder() {
-          if (timeStampBuilder_ == null) {
-            timeStampBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-                com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
-                    getTimeStamp(),
-                    getParentForChildren(),
-                    isClean());
-            timeStamp_ = null;
-          }
-          return timeStampBuilder_;
-        }
-        @java.lang.Override
-        public final Builder setUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
-        }
-
-        @java.lang.Override
-        public final Builder mergeUnknownFields(
-            final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.mergeUnknownFields(unknownFields);
-        }
-
-
-        // @@protoc_insertion_point(builder_scope:asgt.jester.v1alpha1.BankRequest.Data)
-      }
-
-      // @@protoc_insertion_point(class_scope:asgt.jester.v1alpha1.BankRequest.Data)
-      private static final asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data DEFAULT_INSTANCE;
-      static {
-        DEFAULT_INSTANCE = new asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data();
-      }
-
-      public static asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstance() {
-        return DEFAULT_INSTANCE;
-      }
-
-      private static final com.google.protobuf.Parser<Data>
-          PARSER = new com.google.protobuf.AbstractParser<Data>() {
-        @java.lang.Override
-        public Data parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Data(input, extensionRegistry);
-        }
-      };
-
-      public static com.google.protobuf.Parser<Data> parser() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Parser<Data> getParserForType() {
-        return PARSER;
-      }
-
-      @java.lang.Override
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getDefaultInstanceForType() {
-        return DEFAULT_INSTANCE;
-      }
-
-    }
-
     private int bitField0_;
     public static final int INPUTS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> inputs_;
+    private java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction> inputs_;
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> getInputsList() {
+    public java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
+    public java.util.List<? extends asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index) {
+    public asgt.type.BankTransactionOuterClass.BankTransaction getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+     * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
      */
-    public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
+    public asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -7927,22 +4465,22 @@ public final class JesterOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> inputs_ =
+      private java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          inputs_ = new java.util.ArrayList<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.type.BankTransactionOuterClass.BankTransaction>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> inputsBuilder_;
+          asgt.type.BankTransactionOuterClass.BankTransaction, asgt.type.BankTransactionOuterClass.BankTransaction.Builder, asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> getInputsList() {
+      public java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -7950,7 +4488,7 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -7960,9 +4498,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data getInputs(int index) {
+      public asgt.type.BankTransactionOuterClass.BankTransaction getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -7970,10 +4508,10 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
+          int index, asgt.type.BankTransactionOuterClass.BankTransaction value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7987,10 +4525,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder setInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
+          int index, asgt.type.BankTransactionOuterClass.BankTransaction.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -8001,9 +4539,9 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public Builder addInputs(asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
+      public Builder addInputs(asgt.type.BankTransactionOuterClass.BankTransaction value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8017,10 +4555,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data value) {
+          int index, asgt.type.BankTransactionOuterClass.BankTransaction value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8034,10 +4572,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder addInputs(
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
+          asgt.type.BankTransactionOuterClass.BankTransaction.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -8048,10 +4586,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder addInputs(
-          int index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder builderForValue) {
+          int index, asgt.type.BankTransactionOuterClass.BankTransaction.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -8062,10 +4600,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data> values) {
+          java.lang.Iterable<? extends asgt.type.BankTransactionOuterClass.BankTransaction> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -8077,7 +4615,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -8090,7 +4628,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -8103,16 +4641,16 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder getInputsBuilder(
+      public asgt.type.BankTransactionOuterClass.BankTransaction.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder getInputsOrBuilder(
+      public asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -8120,9 +4658,9 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public java.util.List<? extends asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
+      public java.util.List<? extends asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -8131,33 +4669,33 @@ public final class JesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder addInputsBuilder() {
+      public asgt.type.BankTransactionOuterClass.BankTransaction.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance());
+            asgt.type.BankTransactionOuterClass.BankTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder addInputsBuilder(
+      public asgt.type.BankTransactionOuterClass.BankTransaction.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.getDefaultInstance());
+            index, asgt.type.BankTransactionOuterClass.BankTransaction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.jester.v1alpha1.BankRequest.Data inputs = 1;</code>
+       * <code>repeated .asgt.type.BankTransaction inputs = 1;</code>
        */
-      public java.util.List<asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder> 
+      public java.util.List<asgt.type.BankTransactionOuterClass.BankTransaction.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder> 
+          asgt.type.BankTransactionOuterClass.BankTransaction, asgt.type.BankTransactionOuterClass.BankTransaction.Builder, asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.Data.Builder, asgt.jester.v1alpha1.JesterOuterClass.BankRequest.DataOrBuilder>(
+              asgt.type.BankTransactionOuterClass.BankTransaction, asgt.type.BankTransactionOuterClass.BankTransaction.Builder, asgt.type.BankTransactionOuterClass.BankTransactionOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -8421,30 +4959,15 @@ public final class JesterOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_jester_v1alpha1_BankRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_jester_v1alpha1_BankRequest_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8455,55 +4978,40 @@ public final class JesterOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n!asgt/jester/v1alpha1/jester.proto\022\024asg" +
-      "t.jester.v1alpha1\032\032asgt/type/model_info." +
-      "proto\032\032asgt/type/prediction.proto\032\034googl" +
-      "e/api/annotations.proto\032\037google/protobuf" +
-      "/timestamp.proto\032\036google/protobuf/wrappe" +
-      "rs.proto\"f\n\023SuggestionsResponse\022*\n\013predi" +
-      "ctions\030\001 \003(\0132\025.asgt.type.Prediction\022#\n\005m" +
-      "odel\030\002 \001(\0132\024.asgt.type.ModelInfo\"b\n\021Sugg" +
-      "estionOptions\022\030\n\020suggestion_limit\030\001 \001(\005\022" +
-      "3\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Conf" +
-      "idence.Level\"\306\001\n\025ScannedInvoiceRequest\022@" +
-      "\n\006inputs\030\001 \003(\01320.asgt.jester.v1alpha1.Sc" +
-      "annedInvoiceRequest.Data\022\024\n\014dataset_name" +
-      "\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1" +
-      "alpha1.SuggestionOptions\032\033\n\004Data\022\023\n\013desc" +
-      "ription\030\001 \001(\t\"\344\004\n\034ElectronicInvoiceLineR" +
-      "equest\022G\n\006inputs\030\001 \003(\01327.asgt.jester.v1a" +
-      "lpha1.ElectronicInvoiceLineRequest.Data\022" +
-      "\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'" +
-      ".asgt.jester.v1alpha1.SuggestionOptions\032" +
-      "\252\003\n\004Data\022.\n\nissue_date\030\001 \001(\0132\032.google.pr" +
-      "otobuf.Timestamp\022.\n\010currency\030\002 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022\023\n\013supplier_id\030" +
-      "\003 \001(\t\0223\n\rsupplier_name\030\004 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\0228\n\022supplier_global_id" +
-      "\030\005 \001(\0132\034.google.protobuf.StringValue\0222\n\014" +
-      "customer_ref\030\006 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022*\n\005total\030\007 \001(\0132\033.google.protobu" +
-      "f.FloatValue\022/\n\tline_text\030\010 \001(\0132\034.google" +
-      ".protobuf.StringValue\022-\n\007line_id\030\t \001(\0132\034" +
-      ".google.protobuf.StringValue\"\353\001\n\013BankReq" +
-      "uest\0226\n\006inputs\030\001 \003(\0132&.asgt.jester.v1alp" +
-      "ha1.BankRequest.Data\022\024\n\014dataset_name\030\002 \001" +
-      "(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1alph" +
-      "a1.SuggestionOptions\032T\n\004Data\022\016\n\006amount\030\002" +
-      " \001(\002\022\014\n\004text\030\004 \001(\t\022.\n\ntime_stamp\030\005 \001(\0132\032" +
-      ".google.protobuf.Timestamp2\350\003\n\006Jester\022\240\001" +
-      "\n\031ScannedInvoiceSuggestions\022+.asgt.jeste" +
-      "r.v1alpha1.ScannedInvoiceRequest\032).asgt." +
-      "jester.v1alpha1.SuggestionsResponse\"+\202\323\344" +
-      "\223\002%\" /v1alpha1/scannedinvoice:suggest:\001*" +
-      "\022\265\001\n ElectronicInvoiceLineSuggestions\0222." +
-      "asgt.jester.v1alpha1.ElectronicInvoiceLi" +
-      "neRequest\032).asgt.jester.v1alpha1.Suggest" +
-      "ionsResponse\"2\202\323\344\223\002,\"\'/v1alpha1/electron" +
-      "icinvoiceline:suggest:\001*\022\202\001\n\017BankSuggest" +
-      "ions\022!.asgt.jester.v1alpha1.BankRequest\032" +
-      ").asgt.jester.v1alpha1.SuggestionsRespon" +
-      "se\"!\202\323\344\223\002\033\"\026/v1alpha1/bank:suggest:\001*B\010Z" +
-      "\006jesterb\006proto3"
+      "t.jester.v1alpha1\032 asgt/type/bank_transa" +
+      "ction.proto\032\034asgt/type/invoice_line.prot" +
+      "o\032\032asgt/type/model_info.proto\032\032asgt/type" +
+      "/prediction.proto\032\037asgt/type/scanned_inv" +
+      "oice.proto\032\034google/api/annotations.proto" +
+      "\"f\n\023SuggestionsResponse\022*\n\013predictions\030\001" +
+      " \003(\0132\025.asgt.type.Prediction\022#\n\005model\030\002 \001" +
+      "(\0132\024.asgt.type.ModelInfo\"b\n\021SuggestionOp" +
+      "tions\022\030\n\020suggestion_limit\030\001 \001(\005\0223\n\016min_c" +
+      "onfidence\030\002 \001(\0162\033.asgt.type.Confidence.L" +
+      "evel\"\222\001\n\025ScannedInvoiceRequest\022)\n\006inputs" +
+      "\030\001 \003(\0132\031.asgt.type.ScannedInvoice\022\024\n\014dat" +
+      "aset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt." +
+      "jester.v1alpha1.SuggestionOptions\"\226\001\n\034El" +
+      "ectronicInvoiceLineRequest\022&\n\006inputs\030\001 \003" +
+      "(\0132\026.asgt.type.InvoiceLine\022\024\n\014dataset_na" +
+      "me\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester." +
+      "v1alpha1.SuggestionOptions\"\211\001\n\013BankReque" +
+      "st\022*\n\006inputs\030\001 \003(\0132\032.asgt.type.BankTrans" +
+      "action\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030" +
+      "\003 \001(\0132\'.asgt.jester.v1alpha1.SuggestionO" +
+      "ptions2\353\003\n\006Jester\022\241\001\n\031ScannedInvoiceSugg" +
+      "estions\022+.asgt.jester.v1alpha1.ScannedIn" +
+      "voiceRequest\032).asgt.jester.v1alpha1.Sugg" +
+      "estionsResponse\",\202\323\344\223\002&\"!/v1alpha1/scann" +
+      "ed-invoice:suggest:\001*\022\267\001\n ElectronicInvo" +
+      "iceLineSuggestions\0222.asgt.jester.v1alpha" +
+      "1.ElectronicInvoiceLineRequest\032).asgt.je" +
+      "ster.v1alpha1.SuggestionsResponse\"4\202\323\344\223\002" +
+      ".\")/v1alpha1/electronic-invoice-line:sug" +
+      "gest:\001*\022\202\001\n\017BankSuggestions\022!.asgt.jeste" +
+      "r.v1alpha1.BankRequest\032).asgt.jester.v1a" +
+      "lpha1.SuggestionsResponse\"!\202\323\344\223\002\033\"\026/v1al" +
+      "pha1/bank:suggest:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8516,11 +5024,12 @@ public final class JesterOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.BankTransactionOuterClass.getDescriptor(),
+          asgt.type.InvoiceLineOuterClass.getDescriptor(),
           asgt.type.ModelInfoOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
+          asgt.type.ScannedInvoiceOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_jester_v1alpha1_SuggestionsResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -8540,46 +5049,29 @@ public final class JesterOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor,
         new java.lang.String[] { "Inputs", "DatasetName", "Options", });
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor =
-      internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_ScannedInvoiceRequest_Data_descriptor,
-        new java.lang.String[] { "Description", });
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor,
         new java.lang.String[] { "Inputs", "DatasetName", "Options", });
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor =
-      internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_ElectronicInvoiceLineRequest_Data_descriptor,
-        new java.lang.String[] { "IssueDate", "Currency", "SupplierId", "SupplierName", "SupplierGlobalId", "CustomerRef", "Total", "LineText", "LineId", });
     internal_static_asgt_jester_v1alpha1_BankRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_jester_v1alpha1_BankRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1alpha1_BankRequest_descriptor,
         new java.lang.String[] { "Inputs", "DatasetName", "Options", });
-    internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor =
-      internal_static_asgt_jester_v1alpha1_BankRequest_descriptor.getNestedTypes().get(0);
-    internal_static_asgt_jester_v1alpha1_BankRequest_Data_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_jester_v1alpha1_BankRequest_Data_descriptor,
-        new java.lang.String[] { "Amount", "Text", "TimeStamp", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.BankTransactionOuterClass.getDescriptor();
+    asgt.type.InvoiceLineOuterClass.getDescriptor();
     asgt.type.ModelInfoOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
+    asgt.type.ScannedInvoiceOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

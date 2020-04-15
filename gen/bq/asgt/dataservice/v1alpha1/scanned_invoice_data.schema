@@ -11,7 +11,7 @@
   "mode": "REQUIRED"
  },
  {
-  "name": "dataset",
+  "name": "dataset_name",
   "type": "STRING",
   "mode": "REQUIRED"
  },
@@ -34,7 +34,7 @@
   ]
  },
  {
-  "name": "true_values",
+  "name": "targets",
   "type": "RECORD",
   "mode": "REPEATED",
   "fields": [
@@ -44,14 +44,26 @@
     "mode": "NULLABLE"
    },
    {
-    "name": "value",
+    "name": "label",
     "type": "STRING",
     "mode": "NULLABLE"
    }
   ]
  },
  {
-  "name": "pred_values",
+  "name": "model",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "version",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+   }
+  ]
+ },
+ {
+  "name": "prediction",
   "type": "RECORD",
   "mode": "REPEATED",
   "fields": [
@@ -61,9 +73,33 @@
     "mode": "NULLABLE"
    },
    {
-    "name": "predictions",
-    "type": "STRING",
-    "mode": "REPEATED"
+    "name": "candidates",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "label",
+      "type": "STRING",
+      "mode": "REQUIRED"
+     },
+     {
+      "name": "confidence",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+       {
+        "name": "level",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "value",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+       }
+      ]
+     }
+    ]
    }
   ]
  },

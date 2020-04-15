@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 goog.exportSymbol('proto.asgt.type.Confidence', null, global);
 goog.exportSymbol('proto.asgt.type.Confidence.Level', null, global);
@@ -548,7 +549,7 @@ proto.asgt.type.Prediction.Target.Candidate.prototype.toObject = function(opt_in
  */
 proto.asgt.type.Prediction.Target.Candidate.toObject = function(includeInstance, msg) {
   var f, obj = {
-    value: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    label: jspb.Message.getFieldWithDefault(msg, 1, ""),
     confidence: (f = msg.getConfidence()) && proto.asgt.type.Confidence.toObject(includeInstance, f)
   };
 
@@ -588,7 +589,7 @@ proto.asgt.type.Prediction.Target.Candidate.deserializeBinaryFromReader = functi
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setValue(value);
+      msg.setLabel(value);
       break;
     case 2:
       var value = new proto.asgt.type.Confidence;
@@ -624,7 +625,7 @@ proto.asgt.type.Prediction.Target.Candidate.prototype.serializeBinary = function
  */
 proto.asgt.type.Prediction.Target.Candidate.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getValue();
+  f = message.getLabel();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -643,16 +644,16 @@ proto.asgt.type.Prediction.Target.Candidate.serializeBinaryToWriter = function(m
 
 
 /**
- * optional string value = 1;
+ * optional string label = 1;
  * @return {string}
  */
-proto.asgt.type.Prediction.Target.Candidate.prototype.getValue = function() {
+proto.asgt.type.Prediction.Target.Candidate.prototype.getLabel = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.type.Prediction.Target.Candidate.prototype.setValue = function(value) {
+proto.asgt.type.Prediction.Target.Candidate.prototype.setLabel = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

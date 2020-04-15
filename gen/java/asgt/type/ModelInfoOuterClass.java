@@ -19,7 +19,7 @@ public final class ModelInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 version = 3;</code>
+     * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     long getVersion();
   }
@@ -103,7 +103,7 @@ public final class ModelInfoOuterClass {
     public static final int VERSION_FIELD_NUMBER = 3;
     private long version_;
     /**
-     * <code>int64 version = 3;</code>
+     * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public long getVersion() {
       return version_;
@@ -415,13 +415,13 @@ public final class ModelInfoOuterClass {
 
       private long version_ ;
       /**
-       * <code>int64 version = 3;</code>
+       * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public long getVersion() {
         return version_;
       }
       /**
-       * <code>int64 version = 3;</code>
+       * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setVersion(long value) {
         
@@ -430,7 +430,7 @@ public final class ModelInfoOuterClass {
         return this;
       }
       /**
-       * <code>int64 version = 3;</code>
+       * <code>int64 version = 3 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearVersion() {
         
@@ -505,9 +505,10 @@ public final class ModelInfoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032asgt/type/model_info.proto\022\tasgt.type\"" +
-      "\"\n\tModelInfo\022\017\n\007version\030\003 \001(\003J\004\010\001\020\003B\006Z\004t" +
-      "ypeb\006proto3"
+      "\n\032asgt/type/model_info.proto\022\tasgt.type\032" +
+      "\034gen_bq_schema/bq_field.proto\")\n\tModelIn" +
+      "fo\022\026\n\007version\030\003 \001(\003B\005\352?\002\010\001J\004\010\001\020\003B\006Z\004type" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -520,6 +521,7 @@ public final class ModelInfoOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          gen_bq_schema.BqField.getDescriptor(),
         }, assigner);
     internal_static_asgt_type_ModelInfo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -527,6 +529,12 @@ public final class ModelInfoOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_ModelInfo_descriptor,
         new java.lang.String[] { "Version", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(gen_bq_schema.BqField.bigquery);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    gen_bq_schema.BqField.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
