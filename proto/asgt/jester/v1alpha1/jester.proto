@@ -5,27 +5,28 @@ package asgt.jester.v1alpha1;
 option go_package = "jester";
 
 import "google/api/annotations.proto";
-import "google/protobuf/wrappers.proto";
-import "google/protobuf/timestamp.proto";
 import "asgt/type/prediction.proto";
 import "asgt/type/model_info.proto";
+import "asgt/type/bank_transaction.proto";
+import "asgt/type/invoice_line.proto";
+import "asgt/type/scanned_invoice.proto";
 
 service Jester {
-  rpc ScannedInvoiceSuggestions(ScannedInvoiceRequest) returns (SuggestionsResponse) {
+  rpc ScannedInvoiceSuggestions (ScannedInvoiceRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/scannedinvoice:suggest"
+      post: "/v1alpha1/scanned-invoice:suggest"
       body: "*"
     };
   }
 
-  rpc ElectronicInvoiceLineSuggestions(ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
+  rpc ElectronicInvoiceLineSuggestions (ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/electronicinvoiceline:suggest"
+      post: "/v1alpha1/electronic-invoice-line:suggest"
       body: "*"
     };
   }
 
-  rpc BankSuggestions(BankRequest) returns (SuggestionsResponse) {
+  rpc BankSuggestions (BankRequest) returns (SuggestionsResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/bank:suggest"
       body: "*"
@@ -46,43 +47,21 @@ message SuggestionOptions {
 
 // Scanned Invoice
 message ScannedInvoiceRequest {
-  message Data {
-    string description = 1;
-  }
-
-  repeated Data inputs = 1;
+  repeated asgt.type.ScannedInvoice inputs = 1;
   string dataset_name = 2;
   SuggestionOptions options = 3;
 }
 
 // Electronic Invoice Line
 message ElectronicInvoiceLineRequest {
-  message Data {
-    google.protobuf.Timestamp issue_date = 1;
-    google.protobuf.StringValue currency = 2;
-    string supplier_id = 3;
-    google.protobuf.StringValue supplier_name = 4;
-    google.protobuf.StringValue supplier_global_id = 5;
-    google.protobuf.StringValue customer_ref = 6;
-    google.protobuf.FloatValue total = 7;
-    google.protobuf.StringValue line_text = 8;
-    google.protobuf.StringValue line_id = 9;
-  }
-
-  repeated Data inputs = 1;
+  repeated asgt.type.InvoiceLine inputs = 1;
   string dataset_name = 2;
   SuggestionOptions options = 3;
 }
 
 // Bank
 message BankRequest {
-  message Data {
-    float amount = 2;
-    string text = 4;
-    google.protobuf.Timestamp time_stamp = 5;
-  }
-
-  repeated Data inputs = 1;
+  repeated asgt.type.BankTransaction inputs = 1;
   string dataset_name = 2;
   SuggestionOptions options = 3;
 }

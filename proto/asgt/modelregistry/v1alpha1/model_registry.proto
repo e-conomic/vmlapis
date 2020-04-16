@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package asgt.modelregistry.v1alpha1;
+
+option go_package = "modelregistry";
+
+import "google/protobuf/empty.proto";
+
+service ModelRegistry {
+  rpc RegisterModel (RegisterModelRequest) returns (RegisterModelResponse);
+  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
+
+  // List the most recent versions of a model trained with a specified dataset
+  rpc GetLatestModelVersions (GetLatestModelVersionsRequest) returns (GetLatestModelVersionsResponse);
+}
+
+message RegisterModelRequest {
+  string consumer = 3;
+  string model_type = 1;
+  int64 model_version = 2;
+  string dataset_name = 4;
+}
+
+message RegisterModelResponse {
+  string shard_name = 1;
+}
+
+message DeleteModelRequest {
+  string model_type = 2;
+  int64 model_version = 3;
+}
+
+message GetLatestModelVersionsRequest {
+  string consumer = 1;
+  string dataset_name = 2;
+  string model_type = 3;
+  int32 max_results = 4;
+}
+
+message GetLatestModelVersionsResponse {
+  message VersionInfo {
+    int64 version = 1;
+    string shard_name = 2;
+  }
+
+  repeated VersionInfo results = 1;
+}

@@ -5,6 +5,7 @@ package asgt.type;
 option go_package = "type";
 
 import "google/protobuf/wrappers.proto";
+import "gen_bq_schema/bq_field.proto";
 
 // Common types
 message Confidence {
@@ -26,7 +27,7 @@ message Confidence {
 message Prediction {
   message Target {
     message Candidate {
-      string value = 1;
+      string value = 1 [(gen_bq_schema.bigquery).require = true];
       Confidence confidence = 2;
     }
     string target = 1;

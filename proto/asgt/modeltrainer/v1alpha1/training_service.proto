@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package asgt.modeltrainer.v1alpha1;
+
+option go_package = "modeltrainer";
+
+service TrainingService {
+  rpc TrainModel (TrainModelRequest) returns (TrainModelResponse);
+}
+
+message TrainModelRequest {
+  string model_type = 1;
+  string consumer = 2;
+  string dataset_name = 3;
+  string image_tag = 4;
+  string run_name = 5;
+}
+
+message TrainModelResponse {
+  string version_name = 1;
+}

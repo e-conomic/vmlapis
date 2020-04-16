@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+// Record mapping a target name to a value
+message TargetValue {
+  string target = 1;
+  string value = 2;
+}
