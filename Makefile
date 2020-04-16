@@ -18,6 +18,7 @@ all:
 		proto/asgt/dataservice/v1alpha1/scanned_invoice.proto
 	./scripts/gomock.sh
 	./scripts/js_fixes.sh
+	./scripts/py_fixes.sh
 
 docker:
 	@rm -rf gen

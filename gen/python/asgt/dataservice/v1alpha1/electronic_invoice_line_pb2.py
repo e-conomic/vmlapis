@@ -12,10 +12,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
-from asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
-from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
-from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
+from vml_proto.asgt.dataservice.v1alpha1 import data_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_data__pb2
+from vml_proto.asgt.jester.v1alpha1 import jester_pb2 as asgt_dot_jester_dot_v1alpha1_dot_jester__pb2
+from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
+from vml_proto.gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
