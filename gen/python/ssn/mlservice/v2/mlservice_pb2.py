@@ -13,8 +13,8 @@ _sym_db = _symbol_database.Default()
 
 
 from google.type import date_pb2 as google_dot_type_dot_date__pb2
-from ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
-from ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
+from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
+from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 from tensorflow.core.example import example_pb2 as tensorflow_dot_core_dot_example_dot_example__pb2
 
 

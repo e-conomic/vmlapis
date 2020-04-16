@@ -12,10 +12,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.dataservice.v1alpha1 import delete_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2
-from asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
-from asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
-from asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
+from vml_proto.asgt.dataservice.v1alpha1 import delete_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2
+from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
+from vml_proto.asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
+from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 

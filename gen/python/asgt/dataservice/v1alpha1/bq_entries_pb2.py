@@ -12,14 +12,14 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from asgt.type import bank_transaction_pb2 as asgt_dot_type_dot_bank__transaction__pb2
-from asgt.type import invoice_line_pb2 as asgt_dot_type_dot_invoice__line__pb2
-from asgt.type import model_info_pb2 as asgt_dot_type_dot_model__info__pb2
-from asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
-from asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
-from asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
-from gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
-from gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
+from vml_proto.asgt.type import bank_transaction_pb2 as asgt_dot_type_dot_bank__transaction__pb2
+from vml_proto.asgt.type import invoice_line_pb2 as asgt_dot_type_dot_invoice__line__pb2
+from vml_proto.asgt.type import model_info_pb2 as asgt_dot_type_dot_model__info__pb2
+from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
+from vml_proto.asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
+from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
+from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__field__pb2
+from vml_proto.gen_bq_schema import bq_table_pb2 as gen__bq__schema_dot_bq__table__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
