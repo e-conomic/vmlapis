@@ -255,7 +255,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.repeatedFields_ = [2,3];
+proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.repeatedFields_ = [2,5,3];
 
 
 
@@ -288,6 +288,7 @@ proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.toObje
   var f, obj = {
     datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 2),
+    targetsList: jspb.Message.getRepeatedField(msg, 5),
     entriesList: jspb.Message.toObjectList(msg.getEntriesList(),
     proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput.toObject, includeInstance),
     retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f)
@@ -334,6 +335,10 @@ proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.deseri
     case 2:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTargets(value);
       break;
     case 3:
       var value = new proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput;
@@ -385,6 +390,13 @@ proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.serial
   if (f.length > 0) {
     writer.writeRepeatedString(
       2,
+      f
+    );
+  }
+  f = message.getTargetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
       f
     );
   }
@@ -448,6 +460,35 @@ proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.protot
 
 proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.prototype.clearTagsList = function() {
   this.setTagsList([]);
+};
+
+
+/**
+ * repeated string targets = 5;
+ * @return {!Array<string>}
+ */
+proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.prototype.getTargetsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/** @param {!Array<string>} value */
+proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.prototype.setTargetsList = function(value) {
+  jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.prototype.addTargets = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest.prototype.clearTargetsList = function() {
+  this.setTargetsList([]);
 };
 
 

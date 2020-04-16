@@ -43,6 +43,7 @@ message ScannedInvoiceEntryInput {
 message CreateScannedInvoiceDatasetRequest {
   string dataset_name = 1;
   repeated string tags = 2;
+  repeated string targets = 5;
   repeated ScannedInvoiceEntryInput entries = 3;
   asgt.type.RetentionPolicy retention_policy = 4;
 }

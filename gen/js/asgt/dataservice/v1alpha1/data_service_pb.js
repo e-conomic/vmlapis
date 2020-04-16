@@ -224,12 +224,19 @@ proto.asgt.dataservice.v1alpha1.GetDatasetRequest.prototype.setDatasetType = fun
  * @constructor
  */
 proto.asgt.dataservice.v1alpha1.DatasetInfo = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.dataservice.v1alpha1.DatasetInfo.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.dataservice.v1alpha1.DatasetInfo, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.dataservice.v1alpha1.DatasetInfo.displayName = 'proto.asgt.dataservice.v1alpha1.DatasetInfo';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.repeatedFields_ = [4,5];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -262,6 +269,8 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.toObject = function(includeInstance,
     consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     type: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    tagsList: jspb.Message.getRepeatedField(msg, 4),
+    targetsList: jspb.Message.getRepeatedField(msg, 5),
     retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f),
     trainingGracePeriodEnd: (f = msg.getTrainingGracePeriodEnd()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
   };
@@ -311,6 +320,14 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.deserializeBinaryFromReader = functi
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setType(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTargets(value);
       break;
     case 9:
       var value = new asgt_type_retention_policy_pb.RetentionPolicy;
@@ -369,6 +386,20 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      4,
+      f
+    );
+  }
+  f = message.getTargetsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
       f
     );
   }
@@ -433,6 +464,64 @@ proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getType = function() {
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * repeated string tags = 4;
+ * @return {!Array<string>}
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+};
+
+
+/** @param {!Array<string>} value */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 4, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.clearTagsList = function() {
+  this.setTagsList([]);
+};
+
+
+/**
+ * repeated string targets = 5;
+ * @return {!Array<string>}
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.getTargetsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/** @param {!Array<string>} value */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.setTargetsList = function(value) {
+  jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.addTargets = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+proto.asgt.dataservice.v1alpha1.DatasetInfo.prototype.clearTargetsList = function() {
+  this.setTargetsList([]);
 };
 
 

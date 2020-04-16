@@ -21,7 +21,9 @@ message DatasetInfo {
   string consumer = 1;
   string name = 2;
   string type = 3;
-  reserved 4 to 8;
+  repeated string tags = 4;
+  repeated string targets = 5;
+  reserved 6 to 8;
   asgt.type.RetentionPolicy retention_policy = 9;
   google.protobuf.Timestamp training_grace_period_end = 10;
 }

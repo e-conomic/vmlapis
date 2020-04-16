@@ -873,6 +873,44 @@ public final class DataServiceOuterClass {
         getTypeBytes();
 
     /**
+     * <code>repeated string tags = 4;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+
+    /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
      */
     boolean hasRetentionPolicy();
@@ -914,6 +952,8 @@ public final class DataServiceOuterClass {
       consumer_ = "";
       name_ = "";
       type_ = "";
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -958,6 +998,24 @@ public final class DataServiceOuterClass {
               type_ = s;
               break;
             }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              tags_.add(s);
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              targets_.add(s);
+              break;
+            }
             case 74: {
               asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder subBuilder = null;
               if (retentionPolicy_ != null) {
@@ -999,6 +1057,12 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          targets_ = targets_.getUnmodifiableView();
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1016,6 +1080,7 @@ public final class DataServiceOuterClass {
               asgt.dataservice.v1alpha1.DataServiceOuterClass.DatasetInfo.class, asgt.dataservice.v1alpha1.DataServiceOuterClass.DatasetInfo.Builder.class);
     }
 
+    private int bitField0_;
     public static final int CONSUMER_FIELD_NUMBER = 1;
     private volatile java.lang.Object consumer_;
     /**
@@ -1118,6 +1183,64 @@ public final class DataServiceOuterClass {
       }
     }
 
+    public static final int TAGS_FIELD_NUMBER = 4;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
+    }
+
     public static final int RETENTION_POLICY_FIELD_NUMBER = 9;
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
@@ -1183,6 +1306,12 @@ public final class DataServiceOuterClass {
       if (!getTypeBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, type_);
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tags_.getRaw(i));
+      }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targets_.getRaw(i));
+      }
       if (retentionPolicy_ != null) {
         output.writeMessage(9, getRetentionPolicy());
       }
@@ -1206,6 +1335,22 @@ public final class DataServiceOuterClass {
       }
       if (!getTypeBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, type_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetsList().size();
       }
       if (retentionPolicy_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -1237,6 +1382,10 @@ public final class DataServiceOuterClass {
           .equals(other.getName());
       result = result && getType()
           .equals(other.getType());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
       result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
       if (hasRetentionPolicy()) {
         result = result && getRetentionPolicy()
@@ -1264,6 +1413,14 @@ public final class DataServiceOuterClass {
       hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + TYPE_FIELD_NUMBER;
       hash = (53 * hash) + getType().hashCode();
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
+      }
       if (hasRetentionPolicy()) {
         hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPolicy().hashCode();
@@ -1411,6 +1568,10 @@ public final class DataServiceOuterClass {
 
         type_ = "";
 
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = null;
         } else {
@@ -1449,9 +1610,21 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public asgt.dataservice.v1alpha1.DataServiceOuterClass.DatasetInfo buildPartial() {
         asgt.dataservice.v1alpha1.DataServiceOuterClass.DatasetInfo result = new asgt.dataservice.v1alpha1.DataServiceOuterClass.DatasetInfo(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.consumer_ = consumer_;
         result.name_ = name_;
         result.type_ = type_;
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.tags_ = tags_;
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.targets_ = targets_;
         if (retentionPolicyBuilder_ == null) {
           result.retentionPolicy_ = retentionPolicy_;
         } else {
@@ -1462,6 +1635,7 @@ public final class DataServiceOuterClass {
         } else {
           result.trainingGracePeriodEnd_ = trainingGracePeriodEndBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -1522,6 +1696,26 @@ public final class DataServiceOuterClass {
           type_ = other.type_;
           onChanged();
         }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
         if (other.hasRetentionPolicy()) {
           mergeRetentionPolicy(other.getRetentionPolicy());
         }
@@ -1556,6 +1750,7 @@ public final class DataServiceOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object consumer_ = "";
       /**
@@ -1760,6 +1955,194 @@ public final class DataServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         type_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 4;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
         onChanged();
         return this;
       }
@@ -2686,17 +3069,18 @@ public final class DataServiceOuterClass {
       "type/retention_policy.proto\032\037google/prot" +
       "obuf/timestamp.proto\"Q\n\021GetDatasetReques" +
       "t\022\020\n\010consumer\030\001 \001(\t\022\024\n\014dataset_name\030\002 \001(" +
-      "\t\022\024\n\014dataset_type\030\003 \001(\t\"\266\001\n\013DatasetInfo\022" +
+      "\t\022\024\n\014dataset_type\030\003 \001(\t\"\325\001\n\013DatasetInfo\022" +
       "\020\n\010consumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004type\030" +
-      "\003 \001(\t\0224\n\020retention_policy\030\t \001(\0132\032.asgt.t" +
-      "ype.RetentionPolicy\022=\n\031training_grace_pe" +
-      "riod_end\030\n \001(\0132\032.google.protobuf.Timesta" +
-      "mpJ\004\010\004\020\t\"J\n\022GetDatasetResponse\0224\n\004info\030\001" +
-      " \001(\0132&.asgt.dataservice.v1alpha1.Dataset" +
-      "Info2x\n\013DataService\022i\n\nGetDataset\022,.asgt" +
-      ".dataservice.v1alpha1.GetDatasetRequest\032" +
-      "-.asgt.dataservice.v1alpha1.GetDatasetRe" +
-      "sponseB\rZ\013dataserviceb\006proto3"
+      "\003 \001(\t\022\014\n\004tags\030\004 \003(\t\022\017\n\007targets\030\005 \003(\t\0224\n\020" +
+      "retention_policy\030\t \001(\0132\032.asgt.type.Reten" +
+      "tionPolicy\022=\n\031training_grace_period_end\030" +
+      "\n \001(\0132\032.google.protobuf.TimestampJ\004\010\006\020\t\"" +
+      "J\n\022GetDatasetResponse\0224\n\004info\030\001 \001(\0132&.as" +
+      "gt.dataservice.v1alpha1.DatasetInfo2x\n\013D" +
+      "ataService\022i\n\nGetDataset\022,.asgt.dataserv" +
+      "ice.v1alpha1.GetDatasetRequest\032-.asgt.da" +
+      "taservice.v1alpha1.GetDatasetResponseB\rZ" +
+      "\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2723,7 +3107,7 @@ public final class DataServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_DatasetInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DatasetInfo_descriptor,
-        new java.lang.String[] { "Consumer", "Name", "Type", "RetentionPolicy", "TrainingGracePeriodEnd", });
+        new java.lang.String[] { "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "TrainingGracePeriodEnd", });
     internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_fieldAccessorTable = new

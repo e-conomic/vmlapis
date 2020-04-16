@@ -32,31 +32,31 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3Rv",
             "YnVmL2VtcHR5LnByb3RvInIKGFNjYW5uZWRJbnZvaWNlRW50cnlJbnB1dBIn",
             "CgRkYXRhGAEgASgLMhkuYXNndC50eXBlLlNjYW5uZWRJbnZvaWNlEi0KDXRh",
-            "cmdldF92YWx1ZXMYAiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUixAEK",
+            "cmdldF92YWx1ZXMYAiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUi1QEK",
             "IkNyZWF0ZVNjYW5uZWRJbnZvaWNlRGF0YXNldFJlcXVlc3QSFAoMZGF0YXNl",
-            "dF9uYW1lGAEgASgJEgwKBHRhZ3MYAiADKAkSRAoHZW50cmllcxgDIAMoCzIz",
-            "LmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuU2Nhbm5lZEludm9pY2VFbnRy",
-            "eUlucHV0EjQKEHJldGVudGlvbl9wb2xpY3kYBCABKAsyGi5hc2d0LnR5cGUu",
-            "UmV0ZW50aW9uUG9saWN5In0KH0FwcGVuZFNjYW5uZWRJbnZvaWNlRGF0YVJl",
-            "cXVlc3QSFAoMZGF0YXNldF9uYW1lGAEgASgJEkQKB2VudHJpZXMYAyADKAsy",
-            "My5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLlNjYW5uZWRJbnZvaWNlRW50",
-            "cnlJbnB1dDLpAwoZU2Nhbm5lZEludm9pY2VEYXRhU2VydmljZRKhAQobQ3Jl",
-            "YXRlU2Nhbm5lZEludm9pY2VEYXRhc2V0Ej0uYXNndC5kYXRhc2VydmljZS52",
-            "MWFscGhhMS5DcmVhdGVTY2FubmVkSW52b2ljZURhdGFzZXRSZXF1ZXN0GhYu",
+            "dF9uYW1lGAEgASgJEgwKBHRhZ3MYAiADKAkSDwoHdGFyZ2V0cxgFIAMoCRJE",
+            "CgdlbnRyaWVzGAMgAygLMjMuYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5T",
+            "Y2FubmVkSW52b2ljZUVudHJ5SW5wdXQSNAoQcmV0ZW50aW9uX3BvbGljeRgE",
+            "IAEoCzIaLmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3kifQofQXBwZW5kU2Nh",
+            "bm5lZEludm9pY2VEYXRhUmVxdWVzdBIUCgxkYXRhc2V0X25hbWUYASABKAkS",
+            "RAoHZW50cmllcxgDIAMoCzIzLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEu",
+            "U2Nhbm5lZEludm9pY2VFbnRyeUlucHV0MukDChlTY2FubmVkSW52b2ljZURh",
+            "dGFTZXJ2aWNlEqEBChtDcmVhdGVTY2FubmVkSW52b2ljZURhdGFzZXQSPS5h",
+            "c2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZVNjYW5uZWRJbnZvaWNl",
+            "RGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiK4LT5JMC",
+            "JSIgL3YxYWxwaGExL3NjYW5uZWQtaW52b2ljZTpjcmVhdGU6ASoSmwEKGEFw",
+            "cGVuZFNjYW5uZWRJbnZvaWNlRGF0YRI6LmFzZ3QuZGF0YXNlcnZpY2UudjFh",
+            "bHBoYTEuQXBwZW5kU2Nhbm5lZEludm9pY2VEYXRhUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSIrgtPkkwIlIiAvdjFhbHBoYTEvc2Nhbm5lZC1p",
+            "bnZvaWNlOmFwcGVuZDoBKhKJAQoYRGVsZXRlU2Nhbm5lZEludm9pY2VEYXRh",
+            "EiguYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5EZWxldGVSZXF1ZXN0GhYu",
             "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IiuC0+STAiUiIC92MWFscGhhMS9zY2Fu",
-            "bmVkLWludm9pY2U6Y3JlYXRlOgEqEpsBChhBcHBlbmRTY2FubmVkSW52b2lj",
-            "ZURhdGESOi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkFwcGVuZFNjYW5u",
-            "ZWRJbnZvaWNlRGF0YVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "K4LT5JMCJSIgL3YxYWxwaGExL3NjYW5uZWQtaW52b2ljZTphcHBlbmQ6ASoS",
-            "iQEKGERlbGV0ZVNjYW5uZWRJbnZvaWNlRGF0YRIoLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIrgtPkkwIlIiAvdjFhbHBoYTEvc2Nhbm5lZC1pbnZvaWNlOmRlbGV0",
-            "ZToBKkINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
+            "bmVkLWludm9pY2U6ZGVsZXRlOgEqQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DeleteReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntryInput.Parser, new[]{ "Data", "TargetValues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest), global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest.Parser, new[]{ "DatasetName", "Tags", "Entries", "RetentionPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest), global::Asgt.Dataservice.V1Alpha1.CreateScannedInvoiceDatasetRequest.Parser, new[]{ "DatasetName", "Tags", "Targets", "Entries", "RetentionPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendScannedInvoiceDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendScannedInvoiceDataRequest.Parser, new[]{ "DatasetName", "Entries" }, null, null, null)
           }));
     }
@@ -246,6 +246,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public CreateScannedInvoiceDatasetRequest(CreateScannedInvoiceDatasetRequest other) : this() {
       datasetName_ = other.datasetName_;
       tags_ = other.tags_.Clone();
+      targets_ = other.targets_.Clone();
       entries_ = other.entries_.Clone();
       retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -275,6 +276,16 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
+    }
+
+    /// <summary>Field number for the "targets" field.</summary>
+    public const int TargetsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_targets_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Targets {
+      get { return targets_; }
     }
 
     /// <summary>Field number for the "entries" field.</summary>
@@ -313,6 +324,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (DatasetName != other.DatasetName) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if(!targets_.Equals(other.targets_)) return false;
       if(!entries_.Equals(other.entries_)) return false;
       if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -323,6 +335,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       int hash = 1;
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       hash ^= tags_.GetHashCode();
+      hash ^= targets_.GetHashCode();
       hash ^= entries_.GetHashCode();
       if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
       if (_unknownFields != null) {
@@ -348,6 +361,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(34);
         output.WriteMessage(RetentionPolicy);
       }
+      targets_.WriteTo(output, _repeated_targets_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -360,6 +374,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
+      size += targets_.CalculateSize(_repeated_targets_codec);
       size += entries_.CalculateSize(_repeated_entries_codec);
       if (retentionPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
@@ -379,6 +394,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         DatasetName = other.DatasetName;
       }
       tags_.Add(other.tags_);
+      targets_.Add(other.targets_);
       entries_.Add(other.entries_);
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
@@ -414,6 +430,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
               retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
             }
             input.ReadMessage(retentionPolicy_);
+            break;
+          }
+          case 42: {
+            targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
         }

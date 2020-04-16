@@ -1027,6 +1027,25 @@ public final class ScannedInvoiceDataServiceOuterClass {
         getTagsBytes(int index);
 
     /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+
+    /**
      * <code>repeated .asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput entries = 3;</code>
      */
     java.util.List<asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput> 
@@ -1078,6 +1097,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
     private CreateScannedInvoiceDatasetRequest() {
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       entries_ = java.util.Collections.emptyList();
     }
 
@@ -1121,9 +1141,9 @@ public final class ScannedInvoiceDataServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               entries_.add(
                   input.readMessage(asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput.parser(), extensionRegistry));
@@ -1140,6 +1160,15 @@ public final class ScannedInvoiceDataServiceOuterClass {
                 retentionPolicy_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              targets_.add(s);
               break;
             }
             default: {
@@ -1160,8 +1189,11 @@ public final class ScannedInvoiceDataServiceOuterClass {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1242,6 +1274,35 @@ public final class ScannedInvoiceDataServiceOuterClass {
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
       return tags_.getByteString(index);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
@@ -1326,6 +1387,9 @@ public final class ScannedInvoiceDataServiceOuterClass {
       if (retentionPolicy_ != null) {
         output.writeMessage(4, getRetentionPolicy());
       }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targets_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1354,6 +1418,14 @@ public final class ScannedInvoiceDataServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRetentionPolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1374,6 +1446,8 @@ public final class ScannedInvoiceDataServiceOuterClass {
           .equals(other.getDatasetName());
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
       result = result && getEntriesList()
           .equals(other.getEntriesList());
       result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
@@ -1397,6 +1471,10 @@ public final class ScannedInvoiceDataServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
       }
       if (getEntriesCount() > 0) {
         hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
@@ -1544,9 +1622,11 @@ public final class ScannedInvoiceDataServiceOuterClass {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           entriesBuilder_.clear();
         }
@@ -1590,10 +1670,15 @@ public final class ScannedInvoiceDataServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.targets_ = targets_;
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.entries_ = entries_;
         } else {
@@ -1667,11 +1752,21 @@ public final class ScannedInvoiceDataServiceOuterClass {
           }
           onChanged();
         }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
         if (entriesBuilder_ == null) {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -1684,7 +1779,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -1889,12 +1984,106 @@ public final class ScannedInvoiceDataServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+
       private java.util.List<asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput>(entries_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -2044,7 +2233,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -2121,7 +2310,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput, asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInput.Builder, asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceOuterClass.ScannedInvoiceEntryInputOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -3254,28 +3443,28 @@ public final class ScannedInvoiceDataServiceOuterClass {
       "proto\"r\n\030ScannedInvoiceEntryInput\022\'\n\004dat" +
       "a\030\001 \001(\0132\031.asgt.type.ScannedInvoice\022-\n\rta" +
       "rget_values\030\002 \003(\0132\026.asgt.type.TargetValu" +
-      "e\"\304\001\n\"CreateScannedInvoiceDatasetRequest" +
-      "\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022D\n\007" +
-      "entries\030\003 \003(\01323.asgt.dataservice.v1alpha" +
-      "1.ScannedInvoiceEntryInput\0224\n\020retention_" +
-      "policy\030\004 \001(\0132\032.asgt.type.RetentionPolicy" +
-      "\"}\n\037AppendScannedInvoiceDataRequest\022\024\n\014d" +
-      "ataset_name\030\001 \001(\t\022D\n\007entries\030\003 \003(\01323.asg" +
-      "t.dataservice.v1alpha1.ScannedInvoiceEnt" +
-      "ryInput2\351\003\n\031ScannedInvoiceDataService\022\241\001" +
-      "\n\033CreateScannedInvoiceDataset\022=.asgt.dat" +
-      "aservice.v1alpha1.CreateScannedInvoiceDa" +
-      "tasetRequest\032\026.google.protobuf.Empty\"+\202\323" +
-      "\344\223\002%\" /v1alpha1/scanned-invoice:create:\001" +
-      "*\022\233\001\n\030AppendScannedInvoiceData\022:.asgt.da" +
-      "taservice.v1alpha1.AppendScannedInvoiceD" +
-      "ataRequest\032\026.google.protobuf.Empty\"+\202\323\344\223" +
-      "\002%\" /v1alpha1/scanned-invoice:append:\001*\022" +
-      "\211\001\n\030DeleteScannedInvoiceData\022(.asgt.data" +
-      "service.v1alpha1.DeleteRequest\032\026.google." +
-      "protobuf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanne" +
-      "d-invoice:delete:\001*B\rZ\013dataserviceb\006prot" +
-      "o3"
+      "e\"\325\001\n\"CreateScannedInvoiceDatasetRequest" +
+      "\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022\017\n\007" +
+      "targets\030\005 \003(\t\022D\n\007entries\030\003 \003(\01323.asgt.da" +
+      "taservice.v1alpha1.ScannedInvoiceEntryIn" +
+      "put\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.typ" +
+      "e.RetentionPolicy\"}\n\037AppendScannedInvoic" +
+      "eDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022D\n\007en" +
+      "tries\030\003 \003(\01323.asgt.dataservice.v1alpha1." +
+      "ScannedInvoiceEntryInput2\351\003\n\031ScannedInvo" +
+      "iceDataService\022\241\001\n\033CreateScannedInvoiceD" +
+      "ataset\022=.asgt.dataservice.v1alpha1.Creat" +
+      "eScannedInvoiceDatasetRequest\032\026.google.p" +
+      "rotobuf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanned" +
+      "-invoice:create:\001*\022\233\001\n\030AppendScannedInvo" +
+      "iceData\022:.asgt.dataservice.v1alpha1.Appe" +
+      "ndScannedInvoiceDataRequest\032\026.google.pro" +
+      "tobuf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanned-i" +
+      "nvoice:append:\001*\022\211\001\n\030DeleteScannedInvoic" +
+      "eData\022(.asgt.dataservice.v1alpha1.Delete" +
+      "Request\032\026.google.protobuf.Empty\"+\202\323\344\223\002%\"" +
+      " /v1alpha1/scanned-invoice:delete:\001*B\rZ\013" +
+      "dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3306,7 +3495,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_CreateScannedInvoiceDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Tags", "Entries", "RetentionPolicy", });
+        new java.lang.String[] { "DatasetName", "Tags", "Targets", "Entries", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_AppendScannedInvoiceDataRequest_fieldAccessorTable = new
