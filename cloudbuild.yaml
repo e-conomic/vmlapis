@@ -15,6 +15,8 @@ steps:
       sed -i 's/from ssn/from vml_proto.ssn/' gen/python/ssn/*/*.py
       # replace for ssn modules with version(eg. v1alpha)
       sed -i 's/from ssn/from vml_proto.ssn/' gen/python/ssn/*/*/*.py
+      # replace for gen_bq_schema modules
+      sed -i 's/from gen_bq_schema/from vml_proto.gen_bq_schema/' gen/python/**/*.py
       python setup.py bdist_wheel
       twine upload --repository-url https://vismaartifactory.jfrog.io/vismaartifactory/api/pypi/vml-pypi -u vml-rw -p $$ARTIFACTORY_PW dist/*
     fi
