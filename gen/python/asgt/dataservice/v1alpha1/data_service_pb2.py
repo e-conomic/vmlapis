@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n,asgt/dataservice/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\"\xb6\x01\n\x0b\x44\x61tasetInfo\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x34\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\x12=\n\x19training_grace_period_end\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampJ\x04\x08\x04\x10\t\"J\n\x12GetDatasetResponse\x12\x34\n\x04info\x18\x01 \x01(\x0b\x32&.asgt.dataservice.v1alpha1.DatasetInfo2x\n\x0b\x44\x61taService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n,asgt/dataservice/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\"\xd5\x01\n\x0b\x44\x61tasetInfo\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x34\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\x12=\n\x19training_grace_period_end\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampJ\x04\x08\x06\x10\t\"J\n\x12GetDatasetResponse\x12\x34\n\x04info\x18\x01 \x01(\x0b\x32&.asgt.dataservice.v1alpha1.DatasetInfo2x\n\x0b\x44\x61taService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -102,14 +102,28 @@ _DATASETINFO = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='retention_policy', full_name='asgt.dataservice.v1alpha1.DatasetInfo.retention_policy', index=3,
+      name='tags', full_name='asgt.dataservice.v1alpha1.DatasetInfo.tags', index=3,
+      number=4, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='targets', full_name='asgt.dataservice.v1alpha1.DatasetInfo.targets', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='retention_policy', full_name='asgt.dataservice.v1alpha1.DatasetInfo.retention_policy', index=5,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='training_grace_period_end', full_name='asgt.dataservice.v1alpha1.DatasetInfo.training_grace_period_end', index=4,
+      name='training_grace_period_end', full_name='asgt.dataservice.v1alpha1.DatasetInfo.training_grace_period_end', index=6,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -128,7 +142,7 @@ _DATASETINFO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=226,
-  serialized_end=408,
+  serialized_end=439,
 )
 
 
@@ -158,8 +172,8 @@ _GETDATASETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=410,
-  serialized_end=484,
+  serialized_start=441,
+  serialized_end=515,
 )
 
 _DATASETINFO.fields_by_name['retention_policy'].message_type = asgt_dot_type_dot_retention__policy__pb2._RETENTIONPOLICY
@@ -200,8 +214,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=486,
-  serialized_end=606,
+  serialized_start=517,
+  serialized_end=637,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetDataset',

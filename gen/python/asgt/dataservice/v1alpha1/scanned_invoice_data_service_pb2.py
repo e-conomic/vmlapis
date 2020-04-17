@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n<asgt/dataservice/v1alpha1/scanned_invoice_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a asgt/type/retention_policy.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"r\n\x18ScannedInvoiceEntryInput\x12\'\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xc4\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe9\x03\n\x19ScannedInvoiceDataService\x12\xa1\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:create:\x01*\x12\x9b\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:append:\x01*\x12\x89\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n<asgt/dataservice/v1alpha1/scanned_invoice_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a asgt/type/retention_policy.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"r\n\x18ScannedInvoiceEntryInput\x12\'\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xd5\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe9\x03\n\x19ScannedInvoiceDataService\x12\xa1\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:create:\x01*\x12\x9b\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:append:\x01*\x12\x89\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -92,14 +92,21 @@ _CREATESCANNEDINVOICEDATASETREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='entries', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.entries', index=2,
+      name='targets', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.targets', index=2,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='entries', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.entries', index=3,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='retention_policy', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.retention_policy', index=3,
+      name='retention_policy', full_name='asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest.retention_policy', index=4,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -118,7 +125,7 @@ _CREATESCANNEDINVOICEDATASETREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=404,
-  serialized_end=600,
+  serialized_end=617,
 )
 
 
@@ -155,8 +162,8 @@ _APPENDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=602,
-  serialized_end=727,
+  serialized_start=619,
+  serialized_end=744,
 )
 
 _SCANNEDINVOICEENTRYINPUT.fields_by_name['data'].message_type = asgt_dot_type_dot_scanned__invoice__pb2._SCANNEDINVOICE
@@ -199,8 +206,8 @@ _SCANNEDINVOICEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=730,
-  serialized_end=1219,
+  serialized_start=747,
+  serialized_end=1236,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateScannedInvoiceDataset',

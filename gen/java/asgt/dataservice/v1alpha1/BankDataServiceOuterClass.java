@@ -1027,6 +1027,25 @@ public final class BankDataServiceOuterClass {
         getTagsBytes(int index);
 
     /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+
+    /**
      * <code>repeated .asgt.dataservice.v1alpha1.BankEntryInput entries = 3;</code>
      */
     java.util.List<asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput> 
@@ -1078,6 +1097,7 @@ public final class BankDataServiceOuterClass {
     private CreateBankDatasetRequest() {
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       entries_ = java.util.Collections.emptyList();
     }
 
@@ -1121,9 +1141,9 @@ public final class BankDataServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               entries_.add(
                   input.readMessage(asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput.parser(), extensionRegistry));
@@ -1140,6 +1160,15 @@ public final class BankDataServiceOuterClass {
                 retentionPolicy_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              targets_.add(s);
               break;
             }
             default: {
@@ -1160,8 +1189,11 @@ public final class BankDataServiceOuterClass {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1242,6 +1274,35 @@ public final class BankDataServiceOuterClass {
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
       return tags_.getByteString(index);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
@@ -1326,6 +1387,9 @@ public final class BankDataServiceOuterClass {
       if (retentionPolicy_ != null) {
         output.writeMessage(4, getRetentionPolicy());
       }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targets_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1354,6 +1418,14 @@ public final class BankDataServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRetentionPolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1374,6 +1446,8 @@ public final class BankDataServiceOuterClass {
           .equals(other.getDatasetName());
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
       result = result && getEntriesList()
           .equals(other.getEntriesList());
       result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
@@ -1397,6 +1471,10 @@ public final class BankDataServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
       }
       if (getEntriesCount() > 0) {
         hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
@@ -1544,9 +1622,11 @@ public final class BankDataServiceOuterClass {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           entriesBuilder_.clear();
         }
@@ -1590,10 +1670,15 @@ public final class BankDataServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.targets_ = targets_;
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.entries_ = entries_;
         } else {
@@ -1667,11 +1752,21 @@ public final class BankDataServiceOuterClass {
           }
           onChanged();
         }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
         if (entriesBuilder_ == null) {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -1684,7 +1779,7 @@ public final class BankDataServiceOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -1889,12 +1984,106 @@ public final class BankDataServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+
       private java.util.List<asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput>(entries_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -2044,7 +2233,7 @@ public final class BankDataServiceOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -2121,7 +2310,7 @@ public final class BankDataServiceOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput, asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInput.Builder, asgt.dataservice.v1alpha1.BankDataServiceOuterClass.BankEntryInputOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -3253,25 +3442,25 @@ public final class BankDataServiceOuterClass {
       ".proto\032\033google/protobuf/empty.proto\"i\n\016B" +
       "ankEntryInput\022(\n\004data\030\001 \001(\0132\032.asgt.type." +
       "BankTransaction\022-\n\rtarget_values\030\002 \003(\0132\026" +
-      ".asgt.type.TargetValue\"\260\001\n\030CreateBankDat" +
+      ".asgt.type.TargetValue\"\301\001\n\030CreateBankDat" +
       "asetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tag" +
-      "s\030\002 \003(\t\022:\n\007entries\030\003 \003(\0132).asgt.dataserv" +
-      "ice.v1alpha1.BankEntryInput\0224\n\020retention" +
-      "_policy\030\004 \001(\0132\032.asgt.type.RetentionPolic" +
-      "y\"i\n\025AppendBankDataRequest\022\024\n\014dataset_na" +
-      "me\030\001 \001(\t\022:\n\007entries\030\003 \003(\0132).asgt.dataser" +
-      "vice.v1alpha1.BankEntryInput2\212\003\n\017BankDat" +
-      "aService\022\202\001\n\021CreateBankDataset\0223.asgt.da" +
-      "taservice.v1alpha1.CreateBankDatasetRequ" +
-      "est\032\026.google.protobuf.Empty\" \202\323\344\223\002\032\"\025/v1" +
-      "alpha1/bank:create:\001*\022|\n\016AppendBankData\022" +
-      "0.asgt.dataservice.v1alpha1.AppendBankDa" +
-      "taRequest\032\026.google.protobuf.Empty\" \202\323\344\223\002" +
-      "\032\"\025/v1alpha1/bank:append:\001*\022t\n\016DeleteBan" +
-      "kData\022(.asgt.dataservice.v1alpha1.Delete" +
-      "Request\032\026.google.protobuf.Empty\" \202\323\344\223\002\032\"" +
-      "\025/v1alpha1/bank:delete:\001*B\rZ\013dataservice" +
-      "b\006proto3"
+      "s\030\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022:\n\007entries\030\003 \003(" +
+      "\0132).asgt.dataservice.v1alpha1.BankEntryI" +
+      "nput\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.ty" +
+      "pe.RetentionPolicy\"i\n\025AppendBankDataRequ" +
+      "est\022\024\n\014dataset_name\030\001 \001(\t\022:\n\007entries\030\003 \003" +
+      "(\0132).asgt.dataservice.v1alpha1.BankEntry" +
+      "Input2\212\003\n\017BankDataService\022\202\001\n\021CreateBank" +
+      "Dataset\0223.asgt.dataservice.v1alpha1.Crea" +
+      "teBankDatasetRequest\032\026.google.protobuf.E" +
+      "mpty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:create:\001*\022|" +
+      "\n\016AppendBankData\0220.asgt.dataservice.v1al" +
+      "pha1.AppendBankDataRequest\032\026.google.prot" +
+      "obuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:appen" +
+      "d:\001*\022t\n\016DeleteBankData\022(.asgt.dataservic" +
+      "e.v1alpha1.DeleteRequest\032\026.google.protob" +
+      "uf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:" +
+      "\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3302,7 +3491,7 @@ public final class BankDataServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_CreateBankDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Tags", "Entries", "RetentionPolicy", });
+        new java.lang.String[] { "DatasetName", "Tags", "Targets", "Entries", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_AppendBankDataRequest_fieldAccessorTable = new
