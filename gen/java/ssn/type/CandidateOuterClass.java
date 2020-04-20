@@ -2765,6 +2765,2409 @@ public final class CandidateOuterClass {
 
   }
 
+  public interface LineOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.type.Line)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string text = 1;</code>
+     */
+    java.lang.String getText();
+    /**
+     * <code>string text = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <code>double amount = 2;</code>
+     */
+    double getAmount();
+  }
+  /**
+   * Protobuf type {@code ssn.type.Line}
+   */
+  public  static final class Line extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.type.Line)
+      LineOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Line.newBuilder() to construct.
+    private Line(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Line() {
+      text_ = "";
+      amount_ = 0D;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Line(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 17: {
+
+              amount_ = input.readDouble();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_Line_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_Line_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.type.CandidateOuterClass.Line.class, ssn.type.CandidateOuterClass.Line.Builder.class);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>string text = 1;</code>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string text = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private double amount_;
+    /**
+     * <code>double amount = 2;</code>
+     */
+    public double getAmount() {
+      return amount_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      }
+      if (amount_ != 0D) {
+        output.writeDouble(2, amount_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      if (amount_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, amount_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.type.CandidateOuterClass.Line)) {
+        return super.equals(obj);
+      }
+      ssn.type.CandidateOuterClass.Line other = (ssn.type.CandidateOuterClass.Line) obj;
+
+      boolean result = true;
+      result = result && getText()
+          .equals(other.getText());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getAmount())
+          == java.lang.Double.doubleToLongBits(
+              other.getAmount()));
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAmount()));
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.Line parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.type.CandidateOuterClass.Line prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.type.Line}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.type.Line)
+        ssn.type.CandidateOuterClass.LineOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_Line_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_Line_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.type.CandidateOuterClass.Line.class, ssn.type.CandidateOuterClass.Line.Builder.class);
+      }
+
+      // Construct using ssn.type.CandidateOuterClass.Line.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        text_ = "";
+
+        amount_ = 0D;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_Line_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.Line getDefaultInstanceForType() {
+        return ssn.type.CandidateOuterClass.Line.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.Line build() {
+        ssn.type.CandidateOuterClass.Line result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.Line buildPartial() {
+        ssn.type.CandidateOuterClass.Line result = new ssn.type.CandidateOuterClass.Line(this);
+        result.text_ = text_;
+        result.amount_ = amount_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.type.CandidateOuterClass.Line) {
+          return mergeFrom((ssn.type.CandidateOuterClass.Line)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.type.CandidateOuterClass.Line other) {
+        if (other == ssn.type.CandidateOuterClass.Line.getDefaultInstance()) return this;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.getAmount() != 0D) {
+          setAmount(other.getAmount());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.type.CandidateOuterClass.Line parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.type.CandidateOuterClass.Line) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>string text = 1;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string text = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string text = 1;</code>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 1;</code>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 1;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double amount_ ;
+      /**
+       * <code>double amount = 2;</code>
+       */
+      public double getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>double amount = 2;</code>
+       */
+      public Builder setAmount(double value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double amount = 2;</code>
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0D;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.type.Line)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.type.Line)
+    private static final ssn.type.CandidateOuterClass.Line DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.type.CandidateOuterClass.Line();
+    }
+
+    public static ssn.type.CandidateOuterClass.Line getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Line>
+        PARSER = new com.google.protobuf.AbstractParser<Line>() {
+      @java.lang.Override
+      public Line parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Line(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Line> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Line> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Line getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface LineCandidateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.type.LineCandidate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    ssn.type.CandidateOuterClass.Line getValue();
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    ssn.type.CandidateOuterClass.LineOrBuilder getValueOrBuilder();
+
+    /**
+     * <code>string text = 2;</code>
+     */
+    java.lang.String getText();
+    /**
+     * <code>string text = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    boolean hasConfidence();
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    ssn.type.CandidateOuterClass.Confidence getConfidence();
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder();
+
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    boolean hasBoundingBox();
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    ssn.type.Geometry.BoundingPoly getBoundingBox();
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder();
+
+    /**
+     * <pre>
+     * Indicate the type of the candidate
+     * </pre>
+     *
+     * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+     */
+    int getTypeValue();
+    /**
+     * <pre>
+     * Indicate the type of the candidate
+     * </pre>
+     *
+     * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+     */
+    ssn.type.CandidateOuterClass.LineCandidate.Type getType();
+
+    /**
+     * <pre>
+     * A reference to the page where the candidate was found.
+     * page_ref start from 1.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 6;</code>
+     */
+    int getPageRef();
+  }
+  /**
+   * Protobuf type {@code ssn.type.LineCandidate}
+   */
+  public  static final class LineCandidate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.type.LineCandidate)
+      LineCandidateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LineCandidate.newBuilder() to construct.
+    private LineCandidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LineCandidate() {
+      text_ = "";
+      type_ = 0;
+      pageRef_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LineCandidate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              ssn.type.CandidateOuterClass.Line.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(ssn.type.CandidateOuterClass.Line.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 26: {
+              ssn.type.CandidateOuterClass.Confidence.Builder subBuilder = null;
+              if (confidence_ != null) {
+                subBuilder = confidence_.toBuilder();
+              }
+              confidence_ = input.readMessage(ssn.type.CandidateOuterClass.Confidence.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confidence_);
+                confidence_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              ssn.type.Geometry.BoundingPoly.Builder subBuilder = null;
+              if (boundingBox_ != null) {
+                subBuilder = boundingBox_.toBuilder();
+              }
+              boundingBox_ = input.readMessage(ssn.type.Geometry.BoundingPoly.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(boundingBox_);
+                boundingBox_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              type_ = rawValue;
+              break;
+            }
+            case 48: {
+
+              pageRef_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.type.CandidateOuterClass.LineCandidate.class, ssn.type.CandidateOuterClass.LineCandidate.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code ssn.type.LineCandidate.Type}
+     */
+    public enum Type
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      UNKNOWN(0),
+      /**
+       * <code>FIELD = 1;</code>
+       */
+      FIELD(1),
+      /**
+       * <code>DOCUMENT = 2;</code>
+       */
+      DOCUMENT(2),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>UNKNOWN = 0;</code>
+       */
+      public static final int UNKNOWN_VALUE = 0;
+      /**
+       * <code>FIELD = 1;</code>
+       */
+      public static final int FIELD_VALUE = 1;
+      /**
+       * <code>DOCUMENT = 2;</code>
+       */
+      public static final int DOCUMENT_VALUE = 2;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static Type valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static Type forNumber(int value) {
+        switch (value) {
+          case 0: return UNKNOWN;
+          case 1: return FIELD;
+          case 2: return DOCUMENT;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<Type>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          Type> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<Type>() {
+              public Type findValueByNumber(int number) {
+                return Type.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return ssn.type.CandidateOuterClass.LineCandidate.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final Type[] VALUES = values();
+
+      public static Type valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private Type(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:ssn.type.LineCandidate.Type)
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private ssn.type.CandidateOuterClass.Line value_;
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    public ssn.type.CandidateOuterClass.Line getValue() {
+      return value_ == null ? ssn.type.CandidateOuterClass.Line.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.ssn.type.Line value = 1;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineOrBuilder getValueOrBuilder() {
+      return getValue();
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private volatile java.lang.Object text_;
+    /**
+     * <code>string text = 2;</code>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string text = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CONFIDENCE_FIELD_NUMBER = 3;
+    private ssn.type.CandidateOuterClass.Confidence confidence_;
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    public boolean hasConfidence() {
+      return confidence_ != null;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    public ssn.type.CandidateOuterClass.Confidence getConfidence() {
+      return confidence_ == null ? ssn.type.CandidateOuterClass.Confidence.getDefaultInstance() : confidence_;
+    }
+    /**
+     * <pre>
+     * Confidence
+     * </pre>
+     *
+     * <code>.ssn.type.Confidence confidence = 3;</code>
+     */
+    public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
+      return getConfidence();
+    }
+
+    public static final int BOUNDING_BOX_FIELD_NUMBER = 4;
+    private ssn.type.Geometry.BoundingPoly boundingBox_;
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    public boolean hasBoundingBox() {
+      return boundingBox_ != null;
+    }
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    public ssn.type.Geometry.BoundingPoly getBoundingBox() {
+      return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
+    }
+    /**
+     * <pre>
+     * The bounding box for the block.
+     * The vertices are in the order of top-left, top-right, bottom-right,
+     * bottom-left. When a rotation of the bounding box is detected the rotation
+     * is represented as around the top-left corner as defined when the text is
+     * read in the 'natural' orientation.
+     * For example:
+     * * when the text is horizontal it might look like:
+     *         0----1
+     *         |    |
+     *         3----2
+     * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *         2----3
+     *         |    |
+     *         1----0
+     *   and the vertex order will still be (0, 1, 2, 3).
+     * </pre>
+     *
+     * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+     */
+    public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
+      return getBoundingBox();
+    }
+
+    public static final int TYPE_FIELD_NUMBER = 5;
+    private int type_;
+    /**
+     * <pre>
+     * Indicate the type of the candidate
+     * </pre>
+     *
+     * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+     */
+    public int getTypeValue() {
+      return type_;
+    }
+    /**
+     * <pre>
+     * Indicate the type of the candidate
+     * </pre>
+     *
+     * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineCandidate.Type getType() {
+      @SuppressWarnings("deprecation")
+      ssn.type.CandidateOuterClass.LineCandidate.Type result = ssn.type.CandidateOuterClass.LineCandidate.Type.valueOf(type_);
+      return result == null ? ssn.type.CandidateOuterClass.LineCandidate.Type.UNRECOGNIZED : result;
+    }
+
+    public static final int PAGE_REF_FIELD_NUMBER = 6;
+    private int pageRef_;
+    /**
+     * <pre>
+     * A reference to the page where the candidate was found.
+     * page_ref start from 1.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 6;</code>
+     */
+    public int getPageRef() {
+      return pageRef_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (value_ != null) {
+        output.writeMessage(1, getValue());
+      }
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, text_);
+      }
+      if (confidence_ != null) {
+        output.writeMessage(3, getConfidence());
+      }
+      if (boundingBox_ != null) {
+        output.writeMessage(4, getBoundingBox());
+      }
+      if (type_ != ssn.type.CandidateOuterClass.LineCandidate.Type.UNKNOWN.getNumber()) {
+        output.writeEnum(5, type_);
+      }
+      if (pageRef_ != 0) {
+        output.writeUInt32(6, pageRef_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getValue());
+      }
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, text_);
+      }
+      if (confidence_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getConfidence());
+      }
+      if (boundingBox_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getBoundingBox());
+      }
+      if (type_ != ssn.type.CandidateOuterClass.LineCandidate.Type.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, type_);
+      }
+      if (pageRef_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, pageRef_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.type.CandidateOuterClass.LineCandidate)) {
+        return super.equals(obj);
+      }
+      ssn.type.CandidateOuterClass.LineCandidate other = (ssn.type.CandidateOuterClass.LineCandidate) obj;
+
+      boolean result = true;
+      result = result && (hasValue() == other.hasValue());
+      if (hasValue()) {
+        result = result && getValue()
+            .equals(other.getValue());
+      }
+      result = result && getText()
+          .equals(other.getText());
+      result = result && (hasConfidence() == other.hasConfidence());
+      if (hasConfidence()) {
+        result = result && getConfidence()
+            .equals(other.getConfidence());
+      }
+      result = result && (hasBoundingBox() == other.hasBoundingBox());
+      if (hasBoundingBox()) {
+        result = result && getBoundingBox()
+            .equals(other.getBoundingBox());
+      }
+      result = result && type_ == other.type_;
+      result = result && (getPageRef()
+          == other.getPageRef());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      if (hasConfidence()) {
+        hash = (37 * hash) + CONFIDENCE_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidence().hashCode();
+      }
+      if (hasBoundingBox()) {
+        hash = (37 * hash) + BOUNDING_BOX_FIELD_NUMBER;
+        hash = (53 * hash) + getBoundingBox().hashCode();
+      }
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + type_;
+      hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
+      hash = (53 * hash) + getPageRef();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.type.CandidateOuterClass.LineCandidate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.type.LineCandidate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.type.LineCandidate)
+        ssn.type.CandidateOuterClass.LineCandidateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.type.CandidateOuterClass.LineCandidate.class, ssn.type.CandidateOuterClass.LineCandidate.Builder.class);
+      }
+
+      // Construct using ssn.type.CandidateOuterClass.LineCandidate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+        text_ = "";
+
+        if (confidenceBuilder_ == null) {
+          confidence_ = null;
+        } else {
+          confidence_ = null;
+          confidenceBuilder_ = null;
+        }
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+        type_ = 0;
+
+        pageRef_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate getDefaultInstanceForType() {
+        return ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate build() {
+        ssn.type.CandidateOuterClass.LineCandidate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate buildPartial() {
+        ssn.type.CandidateOuterClass.LineCandidate result = new ssn.type.CandidateOuterClass.LineCandidate(this);
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        result.text_ = text_;
+        if (confidenceBuilder_ == null) {
+          result.confidence_ = confidence_;
+        } else {
+          result.confidence_ = confidenceBuilder_.build();
+        }
+        if (boundingBoxBuilder_ == null) {
+          result.boundingBox_ = boundingBox_;
+        } else {
+          result.boundingBox_ = boundingBoxBuilder_.build();
+        }
+        result.type_ = type_;
+        result.pageRef_ = pageRef_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.type.CandidateOuterClass.LineCandidate) {
+          return mergeFrom((ssn.type.CandidateOuterClass.LineCandidate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.type.CandidateOuterClass.LineCandidate other) {
+        if (other == ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.hasConfidence()) {
+          mergeConfidence(other.getConfidence());
+        }
+        if (other.hasBoundingBox()) {
+          mergeBoundingBox(other.getBoundingBox());
+        }
+        if (other.type_ != 0) {
+          setTypeValue(other.getTypeValue());
+        }
+        if (other.getPageRef() != 0) {
+          setPageRef(other.getPageRef());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.type.CandidateOuterClass.LineCandidate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.type.CandidateOuterClass.LineCandidate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private ssn.type.CandidateOuterClass.Line value_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Line, ssn.type.CandidateOuterClass.Line.Builder, ssn.type.CandidateOuterClass.LineOrBuilder> valueBuilder_;
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public ssn.type.CandidateOuterClass.Line getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? ssn.type.CandidateOuterClass.Line.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public Builder setValue(ssn.type.CandidateOuterClass.Line value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public Builder setValue(
+          ssn.type.CandidateOuterClass.Line.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public Builder mergeValue(ssn.type.CandidateOuterClass.Line value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              ssn.type.CandidateOuterClass.Line.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public ssn.type.CandidateOuterClass.Line.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              ssn.type.CandidateOuterClass.Line.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.ssn.type.Line value = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Line, ssn.type.CandidateOuterClass.Line.Builder, ssn.type.CandidateOuterClass.LineOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Line, ssn.type.CandidateOuterClass.Line.Builder, ssn.type.CandidateOuterClass.LineOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>string text = 2;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string text = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string text = 2;</code>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 2;</code>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string text = 2;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private ssn.type.CandidateOuterClass.Confidence confidence_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder> confidenceBuilder_;
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public boolean hasConfidence() {
+        return confidenceBuilder_ != null || confidence_ != null;
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public ssn.type.CandidateOuterClass.Confidence getConfidence() {
+        if (confidenceBuilder_ == null) {
+          return confidence_ == null ? ssn.type.CandidateOuterClass.Confidence.getDefaultInstance() : confidence_;
+        } else {
+          return confidenceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public Builder setConfidence(ssn.type.CandidateOuterClass.Confidence value) {
+        if (confidenceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidence_ = value;
+          onChanged();
+        } else {
+          confidenceBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public Builder setConfidence(
+          ssn.type.CandidateOuterClass.Confidence.Builder builderForValue) {
+        if (confidenceBuilder_ == null) {
+          confidence_ = builderForValue.build();
+          onChanged();
+        } else {
+          confidenceBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public Builder mergeConfidence(ssn.type.CandidateOuterClass.Confidence value) {
+        if (confidenceBuilder_ == null) {
+          if (confidence_ != null) {
+            confidence_ =
+              ssn.type.CandidateOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
+          } else {
+            confidence_ = value;
+          }
+          onChanged();
+        } else {
+          confidenceBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public Builder clearConfidence() {
+        if (confidenceBuilder_ == null) {
+          confidence_ = null;
+          onChanged();
+        } else {
+          confidence_ = null;
+          confidenceBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public ssn.type.CandidateOuterClass.Confidence.Builder getConfidenceBuilder() {
+        
+        onChanged();
+        return getConfidenceFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
+        if (confidenceBuilder_ != null) {
+          return confidenceBuilder_.getMessageOrBuilder();
+        } else {
+          return confidence_ == null ?
+              ssn.type.CandidateOuterClass.Confidence.getDefaultInstance() : confidence_;
+        }
+      }
+      /**
+       * <pre>
+       * Confidence
+       * </pre>
+       *
+       * <code>.ssn.type.Confidence confidence = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder> 
+          getConfidenceFieldBuilder() {
+        if (confidenceBuilder_ == null) {
+          confidenceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Confidence, ssn.type.CandidateOuterClass.Confidence.Builder, ssn.type.CandidateOuterClass.ConfidenceOrBuilder>(
+                  getConfidence(),
+                  getParentForChildren(),
+                  isClean());
+          confidence_ = null;
+        }
+        return confidenceBuilder_;
+      }
+
+      private ssn.type.Geometry.BoundingPoly boundingBox_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> boundingBoxBuilder_;
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public boolean hasBoundingBox() {
+        return boundingBoxBuilder_ != null || boundingBox_ != null;
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public ssn.type.Geometry.BoundingPoly getBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
+        } else {
+          return boundingBoxBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public Builder setBoundingBox(ssn.type.Geometry.BoundingPoly value) {
+        if (boundingBoxBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          boundingBox_ = value;
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public Builder setBoundingBox(
+          ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = builderForValue.build();
+          onChanged();
+        } else {
+          boundingBoxBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
+        if (boundingBoxBuilder_ == null) {
+          if (boundingBox_ != null) {
+            boundingBox_ =
+              ssn.type.Geometry.BoundingPoly.newBuilder(boundingBox_).mergeFrom(value).buildPartial();
+          } else {
+            boundingBox_ = value;
+          }
+          onChanged();
+        } else {
+          boundingBoxBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public Builder clearBoundingBox() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBox_ = null;
+          onChanged();
+        } else {
+          boundingBox_ = null;
+          boundingBoxBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
+        
+        onChanged();
+        return getBoundingBoxFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
+        if (boundingBoxBuilder_ != null) {
+          return boundingBoxBuilder_.getMessageOrBuilder();
+        } else {
+          return boundingBox_ == null ?
+              ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
+        }
+      }
+      /**
+       * <pre>
+       * The bounding box for the block.
+       * The vertices are in the order of top-left, top-right, bottom-right,
+       * bottom-left. When a rotation of the bounding box is detected the rotation
+       * is represented as around the top-left corner as defined when the text is
+       * read in the 'natural' orientation.
+       * For example:
+       * * when the text is horizontal it might look like:
+       *         0----1
+       *         |    |
+       *         3----2
+       * * when it's rotated 180 degrees around the top-left corner it becomes:
+       *         2----3
+       *         |    |
+       *         1----0
+       *   and the vertex order will still be (0, 1, 2, 3).
+       * </pre>
+       *
+       * <code>.ssn.type.BoundingPoly bounding_box = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder> 
+          getBoundingBoxFieldBuilder() {
+        if (boundingBoxBuilder_ == null) {
+          boundingBoxBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.type.Geometry.BoundingPoly, ssn.type.Geometry.BoundingPoly.Builder, ssn.type.Geometry.BoundingPolyOrBuilder>(
+                  getBoundingBox(),
+                  getParentForChildren(),
+                  isClean());
+          boundingBox_ = null;
+        }
+        return boundingBoxBuilder_;
+      }
+
+      private int type_ = 0;
+      /**
+       * <pre>
+       * Indicate the type of the candidate
+       * </pre>
+       *
+       * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+       */
+      public int getTypeValue() {
+        return type_;
+      }
+      /**
+       * <pre>
+       * Indicate the type of the candidate
+       * </pre>
+       *
+       * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+       */
+      public Builder setTypeValue(int value) {
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicate the type of the candidate
+       * </pre>
+       *
+       * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Type getType() {
+        @SuppressWarnings("deprecation")
+        ssn.type.CandidateOuterClass.LineCandidate.Type result = ssn.type.CandidateOuterClass.LineCandidate.Type.valueOf(type_);
+        return result == null ? ssn.type.CandidateOuterClass.LineCandidate.Type.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Indicate the type of the candidate
+       * </pre>
+       *
+       * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+       */
+      public Builder setType(ssn.type.CandidateOuterClass.LineCandidate.Type value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Indicate the type of the candidate
+       * </pre>
+       *
+       * <code>.ssn.type.LineCandidate.Type type = 5;</code>
+       */
+      public Builder clearType() {
+        
+        type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int pageRef_ ;
+      /**
+       * <pre>
+       * A reference to the page where the candidate was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public int getPageRef() {
+        return pageRef_;
+      }
+      /**
+       * <pre>
+       * A reference to the page where the candidate was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public Builder setPageRef(int value) {
+        
+        pageRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A reference to the page where the candidate was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public Builder clearPageRef() {
+        
+        pageRef_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.type.LineCandidate)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.type.LineCandidate)
+    private static final ssn.type.CandidateOuterClass.LineCandidate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.type.CandidateOuterClass.LineCandidate();
+    }
+
+    public static ssn.type.CandidateOuterClass.LineCandidate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LineCandidate>
+        PARSER = new com.google.protobuf.AbstractParser<LineCandidate>() {
+      @java.lang.Override
+      public LineCandidate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LineCandidate(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LineCandidate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LineCandidate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.LineCandidate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_type_Confidence_descriptor;
   private static final 
@@ -2775,6 +5178,16 @@ public final class CandidateOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_Candidate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_Line_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_Line_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_LineCandidate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_LineCandidate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2796,8 +5209,15 @@ public final class CandidateOuterClass {
       ",\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Boundin" +
       "gPoly\022&\n\004type\030\005 \001(\0162\030.ssn.type.Candidate" +
       ".Type\022\020\n\010page_ref\030\006 \001(\r\",\n\004Type\022\013\n\007UNKNO" +
-      "WN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002B\006Z\004typeb\006p" +
-      "roto3"
+      "WN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"$\n\004Line\022\014\n" +
+      "\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\"\200\002\n\rLineCand" +
+      "idate\022\035\n\005value\030\001 \001(\0132\016.ssn.type.Line\022\014\n\004" +
+      "text\030\002 \001(\t\022(\n\nconfidence\030\003 \001(\0132\024.ssn.typ" +
+      "e.Confidence\022,\n\014bounding_box\030\004 \001(\0132\026.ssn" +
+      ".type.BoundingPoly\022*\n\004type\030\005 \001(\0162\034.ssn.t" +
+      "ype.LineCandidate.Type\022\020\n\010page_ref\030\006 \001(\r" +
+      "\",\n\004Type\022\013\n\007UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCU" +
+      "MENT\020\002B\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2824,6 +5244,18 @@ public final class CandidateOuterClass {
     internal_static_ssn_type_Candidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_Candidate_descriptor,
+        new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", });
+    internal_static_ssn_type_Line_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_type_Line_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_Line_descriptor,
+        new java.lang.String[] { "Text", "Amount", });
+    internal_static_ssn_type_LineCandidate_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ssn_type_LineCandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_LineCandidate_descriptor,
         new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ssn.type.Geometry.getDescriptor();

@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.mlservice.v2',
   syntax='proto3',
   serialized_options=_b('Z\tmlservice'),
-  serialized_pb=_b('\n ssn/mlservice/v2/mlservice.proto\x12\x10ssn.mlservice.v2\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"\xa2\x06\n\x11\x46\x65\x61tureGenRequest\x12\x45\n\x0ctruth_labels\x18\x01 \x01(\x0b\x32/.ssn.mlservice.v2.FeatureGenRequest.TruthLabels\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\n\n\x02id\x18\x03 \x01(\t\x1a\x86\x05\n\x0bTruthLabels\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\x01\x12\x11\n\ttotal_vat\x18\x02 \x01(\x01\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\x01\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x1e\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"T\n\x0ePredictRequest\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\x12\x1c\n\x14top_n_most_confident\x18\x02 \x01(\r\"\xc0\x08\n\x0fPredictResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12/\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10ocr_line_dk_type\x18\r \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\x12!\n\x04iban\x18\x16 \x03(\x0b\x32\x13.ssn.type.Candidate\"\x97\x01\n\x18\x46\x65\x61tureGenPredictRequest\x12@\n\x13\x66\x65\x61ture_gen_request\x18\x01 \x01(\x0b\x32#.ssn.mlservice.v2.FeatureGenRequest\x12\x39\n\x0fpredict_request\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v2.PredictRequest2\x98\x02\n\tMlService\x12W\n\nFeatureGen\x12#.ssn.mlservice.v2.FeatureGenRequest\x1a$.ssn.mlservice.v2.FeatureGenResponse\x12N\n\x07Predict\x12 .ssn.mlservice.v2.PredictRequest\x1a!.ssn.mlservice.v2.PredictResponse\x12\x62\n\x11\x46\x65\x61tureGenPredict\x12*.ssn.mlservice.v2.FeatureGenPredictRequest\x1a!.ssn.mlservice.v2.PredictResponseB\x0bZ\tmlserviceb\x06proto3')
+  serialized_pb=_b('\n ssn/mlservice/v2/mlservice.proto\x12\x10ssn.mlservice.v2\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a%tensorflow/core/example/example.proto\"\xa2\x06\n\x11\x46\x65\x61tureGenRequest\x12\x45\n\x0ctruth_labels\x18\x01 \x01(\x0b\x32/.ssn.mlservice.v2.FeatureGenRequest.TruthLabels\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\n\n\x02id\x18\x03 \x01(\t\x1a\x86\x05\n\x0bTruthLabels\x12\x16\n\x0etotal_incl_vat\x18\x01 \x01(\x01\x12\x11\n\ttotal_vat\x18\x02 \x01(\x01\x12\x16\n\x0etotal_excl_vat\x18\x03 \x01(\x01\x12%\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.Date\x12+\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.Date\x12\x15\n\rdocument_type\x18\x06 \x01(\t\x12\x10\n\x08\x63urrency\x18\x07 \x01(\t\x12\x1a\n\x12\x63redit_card_number\x18\x08 \x01(\t\x12\x16\n\x0epayment_method\x18\t \x01(\t\x12\x18\n\x10ocr_line_dk_type\x18\n \x01(\t\x12\x1e\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\t\x12\x1f\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\t\x12\x1e\n\x16ocr_line_se_payment_id\x18\r \x01(\t\x12(\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\t\x12(\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\t\x12\x1e\n\x16ocr_line_no_payment_id\x18\x10 \x01(\t\x12\x1e\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\t\x12\x1e\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\t\x12\x1d\n\x15supplier_corporate_id\x18\x13 \x01(\t\x12\x1d\n\x15supplier_country_code\x18\x14 \x01(\t\x12\x16\n\x0einvoice_number\x18\x15 \x01(\t\":\n\x12\x46\x65\x61tureGenResponse\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\"T\n\x0ePredictRequest\x12$\n\x07\x65xample\x18\x01 \x01(\x0b\x32\x13.tensorflow.Example\x12\x1c\n\x14top_n_most_confident\x18\x02 \x01(\r\"\xe8\x08\n\x0fPredictResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12/\n\x12\x63redit_card_number\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10ocr_line_dk_type\x18\r \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\x12!\n\x04iban\x18\x16 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\x05lines\x18\x17 \x03(\x0b\x32\x17.ssn.type.LineCandidate\"\x97\x01\n\x18\x46\x65\x61tureGenPredictRequest\x12@\n\x13\x66\x65\x61ture_gen_request\x18\x01 \x01(\x0b\x32#.ssn.mlservice.v2.FeatureGenRequest\x12\x39\n\x0fpredict_request\x18\x02 \x01(\x0b\x32 .ssn.mlservice.v2.PredictRequest2\x98\x02\n\tMlService\x12W\n\nFeatureGen\x12#.ssn.mlservice.v2.FeatureGenRequest\x1a$.ssn.mlservice.v2.FeatureGenResponse\x12N\n\x07Predict\x12 .ssn.mlservice.v2.PredictRequest\x1a!.ssn.mlservice.v2.PredictResponse\x12\x62\n\x11\x46\x65\x61tureGenPredict\x12*.ssn.mlservice.v2.FeatureGenPredictRequest\x1a!.ssn.mlservice.v2.PredictResponseB\x0bZ\tmlserviceb\x06proto3')
   ,
   dependencies=[google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_candidate__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,tensorflow_dot_core_dot_example_dot_example__pb2.DESCRIPTOR,])
 
@@ -475,6 +475,13 @@ _PREDICTRESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='lines', full_name='ssn.mlservice.v2.PredictResponse.lines', index=22,
+      number=23, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -488,7 +495,7 @@ _PREDICTRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=1127,
-  serialized_end=2215,
+  serialized_end=2255,
 )
 
 
@@ -525,8 +532,8 @@ _FEATUREGENPREDICTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2218,
-  serialized_end=2369,
+  serialized_start=2258,
+  serialized_end=2409,
 )
 
 _FEATUREGENREQUEST_TRUTHLABELS.fields_by_name['order_date'].message_type = google_dot_type_dot_date__pb2._DATE
@@ -558,6 +565,7 @@ _PREDICTRESPONSE.fields_by_name['ocr_line_no_payment_id'].message_type = ssn_dot
 _PREDICTRESPONSE.fields_by_name['ocr_line_fi_payment_id'].message_type = ssn_dot_type_dot_candidate__pb2._CANDIDATE
 _PREDICTRESPONSE.fields_by_name['ocr_line_nl_payment_id'].message_type = ssn_dot_type_dot_candidate__pb2._CANDIDATE
 _PREDICTRESPONSE.fields_by_name['iban'].message_type = ssn_dot_type_dot_candidate__pb2._CANDIDATE
+_PREDICTRESPONSE.fields_by_name['lines'].message_type = ssn_dot_type_dot_candidate__pb2._LINECANDIDATE
 _FEATUREGENPREDICTREQUEST.fields_by_name['feature_gen_request'].message_type = _FEATUREGENREQUEST
 _FEATUREGENPREDICTREQUEST.fields_by_name['predict_request'].message_type = _PREDICTREQUEST
 DESCRIPTOR.message_types_by_name['FeatureGenRequest'] = _FEATUREGENREQUEST
@@ -619,8 +627,8 @@ _MLSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=2372,
-  serialized_end=2652,
+  serialized_start=2412,
+  serialized_end=2692,
   methods=[
   _descriptor.MethodDescriptor(
     name='FeatureGen',
