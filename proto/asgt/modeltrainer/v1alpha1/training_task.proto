@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package asgt.trainingservice.v1alpha1;
+
+option go_package = "modeltrainer";
+
+import "asgt/type/dataset_info.proto";
+
+message TrainModelTask {
+  enum Status {
+    UNKNOWN = 0;
+    SCHEDULED = 1;
+    QUEUED = 2; // XXX(lys) May remove QUEUED
+    STARTED = 3;
+    SUCCEEDED = 4;
+    FAILED = 5;
+    EXPIRED = 6; // XXX(lys) May remove EXPIRED
+  }
+  string id = 1;
+  asgt.type.DatasetInfo dataset_info = 2;
+  int64 model_version = 3;
+  string status = 4;
+}

@@ -4,18 +4,17 @@ package asgt.modeltrainer.v1alpha1;
 
 option go_package = "modeltrainer";
 
+import "google/protobuf/empty.proto";
+
 service TrainingService {
-  rpc TrainModel (TrainModelRequest) returns (TrainModelResponse);
+  rpc TrainModel (TrainModelRequest) returns (google.protobuf.Empty);
+  rpc RunScheduler (RunSchedulerRequest) returns (google.protobuf.Empty);
 }
 
 message TrainModelRequest {
-  string model_type = 1;
-  string consumer = 2;
+  string consumer = 1;
+  string model_type = 2;
   string dataset_name = 3;
-  string image_tag = 4;
-  string run_name = 5;
 }
 
-message TrainModelResponse {
-  string version_name = 1;
-}
+message RunSchedulerRequest {}
