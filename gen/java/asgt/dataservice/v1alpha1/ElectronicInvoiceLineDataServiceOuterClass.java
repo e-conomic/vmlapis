@@ -1027,6 +1027,25 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         getTagsBytes(int index);
 
     /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTargetsList();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    int getTargetsCount();
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    java.lang.String getTargets(int index);
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTargetsBytes(int index);
+
+    /**
      * <code>repeated .asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput entries = 3;</code>
      */
     java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput> 
@@ -1078,6 +1097,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     private CreateElectronicInvoiceLineDatasetRequest() {
       datasetName_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       entries_ = java.util.Collections.emptyList();
     }
 
@@ -1121,9 +1141,9 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000008;
               }
               entries_.add(
                   input.readMessage(asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput.parser(), extensionRegistry));
@@ -1140,6 +1160,15 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
                 retentionPolicy_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                targets_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              targets_.add(s);
               break;
             }
             default: {
@@ -1160,8 +1189,11 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = java.util.Collections.unmodifiableList(entries_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1242,6 +1274,35 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
       return tags_.getByteString(index);
+    }
+
+    public static final int TARGETS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList targets_;
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTargetsList() {
+      return targets_;
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public int getTargetsCount() {
+      return targets_.size();
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public java.lang.String getTargets(int index) {
+      return targets_.get(index);
+    }
+    /**
+     * <code>repeated string targets = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTargetsBytes(int index) {
+      return targets_.getByteString(index);
     }
 
     public static final int ENTRIES_FIELD_NUMBER = 3;
@@ -1326,6 +1387,9 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       if (retentionPolicy_ != null) {
         output.writeMessage(4, getRetentionPolicy());
       }
+      for (int i = 0; i < targets_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, targets_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1354,6 +1418,14 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getRetentionPolicy());
       }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < targets_.size(); i++) {
+          dataSize += computeStringSizeNoTag(targets_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTargetsList().size();
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1374,6 +1446,8 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
           .equals(other.getDatasetName());
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && getTargetsList()
+          .equals(other.getTargetsList());
       result = result && getEntriesList()
           .equals(other.getEntriesList());
       result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
@@ -1397,6 +1471,10 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (getTargetsCount() > 0) {
+        hash = (37 * hash) + TARGETS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetsList().hashCode();
       }
       if (getEntriesCount() > 0) {
         hash = (37 * hash) + ENTRIES_FIELD_NUMBER;
@@ -1544,9 +1622,11 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         } else {
           entriesBuilder_.clear();
         }
@@ -1590,10 +1670,15 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.targets_ = targets_;
         if (entriesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
             entries_ = java.util.Collections.unmodifiableList(entries_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.entries_ = entries_;
         } else {
@@ -1667,11 +1752,21 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
           }
           onChanged();
         }
+        if (!other.targets_.isEmpty()) {
+          if (targets_.isEmpty()) {
+            targets_ = other.targets_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTargetsIsMutable();
+            targets_.addAll(other.targets_);
+          }
+          onChanged();
+        }
         if (entriesBuilder_ == null) {
           if (!other.entries_.isEmpty()) {
             if (entries_.isEmpty()) {
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureEntriesIsMutable();
               entries_.addAll(other.entries_);
@@ -1684,7 +1779,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
               entriesBuilder_.dispose();
               entriesBuilder_ = null;
               entries_ = other.entries_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
               entriesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getEntriesFieldBuilder() : null;
@@ -1889,12 +1984,106 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
         return this;
       }
 
+      private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTargetsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTargetsList() {
+        return targets_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public int getTargetsCount() {
+        return targets_.size();
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public java.lang.String getTargets(int index) {
+        return targets_.get(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTargetsBytes(int index) {
+        return targets_.getByteString(index);
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder setTargets(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargets(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addAllTargets(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTargetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder clearTargets() {
+        targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string targets = 5;</code>
+       */
+      public Builder addTargetsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTargetsIsMutable();
+        targets_.add(value);
+        onChanged();
+        return this;
+      }
+
       private java.util.List<asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput> entries_ =
         java.util.Collections.emptyList();
       private void ensureEntriesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           entries_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput>(entries_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -2044,7 +2233,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       public Builder clearEntries() {
         if (entriesBuilder_ == null) {
           entries_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           entriesBuilder_.clear();
@@ -2121,7 +2310,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
           entriesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput, asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInput.Builder, asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceOuterClass.ElectronicInvoiceLineEntryInputOrBuilder>(
                   entries_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
                   isClean());
           entries_ = null;
@@ -3254,30 +3443,31 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       "mpty.proto\"v\n\037ElectronicInvoiceLineEntry" +
       "Input\022$\n\004data\030\001 \001(\0132\026.asgt.type.InvoiceL" +
       "ine\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.type.T" +
-      "argetValue\"\322\001\n)CreateElectronicInvoiceLi" +
+      "argetValue\"\343\001\n)CreateElectronicInvoiceLi" +
       "neDatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014" +
-      "\n\004tags\030\002 \003(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dat" +
-      "aservice.v1alpha1.ElectronicInvoiceLineE" +
-      "ntryInput\0224\n\020retention_policy\030\004 \001(\0132\032.as" +
-      "gt.type.RetentionPolicy\"\213\001\n&AppendElectr" +
-      "onicInvoiceLineDataRequest\022\024\n\014dataset_na" +
-      "me\030\001 \001(\t\022K\n\007entries\030\003 \003(\0132:.asgt.dataser" +
-      "vice.v1alpha1.ElectronicInvoiceLineEntry" +
-      "Input2\253\004\n ElectronicInvoiceLineDataServi" +
-      "ce\022\267\001\n\"CreateElectronicInvoiceLineDatase" +
-      "t\022D.asgt.dataservice.v1alpha1.CreateElec" +
-      "tronicInvoiceLineDatasetRequest\032\026.google" +
-      ".protobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/elect" +
-      "ronic-invoice-line:create:\001*\022\261\001\n\037AppendE" +
-      "lectronicInvoiceLineData\022A.asgt.dataserv" +
-      "ice.v1alpha1.AppendElectronicInvoiceLine" +
-      "DataRequest\032\026.google.protobuf.Empty\"3\202\323\344" +
-      "\223\002-\"(/v1alpha1/electronic-invoice-line:a" +
-      "ppend:\001*\022\230\001\n\037DeleteElectronicInvoiceLine" +
-      "Data\022(.asgt.dataservice.v1alpha1.DeleteR" +
-      "equest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-\"(" +
-      "/v1alpha1/electronic-invoice-line:delete" +
-      ":\001*B\rZ\013dataserviceb\006proto3"
+      "\n\004tags\030\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022K\n\007entries" +
+      "\030\003 \003(\0132:.asgt.dataservice.v1alpha1.Elect" +
+      "ronicInvoiceLineEntryInput\0224\n\020retention_" +
+      "policy\030\004 \001(\0132\032.asgt.type.RetentionPolicy" +
+      "\"\213\001\n&AppendElectronicInvoiceLineDataRequ" +
+      "est\022\024\n\014dataset_name\030\001 \001(\t\022K\n\007entries\030\003 \003" +
+      "(\0132:.asgt.dataservice.v1alpha1.Electroni" +
+      "cInvoiceLineEntryInput2\253\004\n ElectronicInv" +
+      "oiceLineDataService\022\267\001\n\"CreateElectronic" +
+      "InvoiceLineDataset\022D.asgt.dataservice.v1" +
+      "alpha1.CreateElectronicInvoiceLineDatase" +
+      "tRequest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-" +
+      "\"(/v1alpha1/electronic-invoice-line:crea" +
+      "te:\001*\022\261\001\n\037AppendElectronicInvoiceLineDat" +
+      "a\022A.asgt.dataservice.v1alpha1.AppendElec" +
+      "tronicInvoiceLineDataRequest\032\026.google.pr" +
+      "otobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electron" +
+      "ic-invoice-line:append:\001*\022\230\001\n\037DeleteElec" +
+      "tronicInvoiceLineData\022(.asgt.dataservice" +
+      ".v1alpha1.DeleteRequest\032\026.google.protobu" +
+      "f.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic-in" +
+      "voice-line:delete:\001*B\rZ\013dataserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3308,7 +3498,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     internal_static_asgt_dataservice_v1alpha1_CreateElectronicInvoiceLineDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_CreateElectronicInvoiceLineDatasetRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "Tags", "Entries", "RetentionPolicy", });
+        new java.lang.String[] { "DatasetName", "Tags", "Targets", "Entries", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1alpha1_AppendElectronicInvoiceLineDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1alpha1_AppendElectronicInvoiceLineDataRequest_fieldAccessorTable = new

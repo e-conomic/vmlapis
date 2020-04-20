@@ -43,6 +43,7 @@ message BankEntryInput {
 message CreateBankDatasetRequest {
   string dataset_name = 1;
   repeated string tags = 2;
+  repeated string targets = 5;
   repeated BankEntryInput entries = 3;
   asgt.type.RetentionPolicy retention_policy = 4;
 }

@@ -28,21 +28,22 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRogYXNndC90eXBlL3JldGVu",
             "dGlvbl9wb2xpY3kucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
             "cHJvdG8iUQoRR2V0RGF0YXNldFJlcXVlc3QSEAoIY29uc3VtZXIYASABKAkS",
-            "FAoMZGF0YXNldF9uYW1lGAIgASgJEhQKDGRhdGFzZXRfdHlwZRgDIAEoCSK2",
+            "FAoMZGF0YXNldF9uYW1lGAIgASgJEhQKDGRhdGFzZXRfdHlwZRgDIAEoCSLV",
             "AQoLRGF0YXNldEluZm8SEAoIY29uc3VtZXIYASABKAkSDAoEbmFtZRgCIAEo",
-            "CRIMCgR0eXBlGAMgASgJEjQKEHJldGVudGlvbl9wb2xpY3kYCSABKAsyGi5h",
-            "c2d0LnR5cGUuUmV0ZW50aW9uUG9saWN5Ej0KGXRyYWluaW5nX2dyYWNlX3Bl",
-            "cmlvZF9lbmQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSgQI",
-            "BBAJIkoKEkdldERhdGFzZXRSZXNwb25zZRI0CgRpbmZvGAEgASgLMiYuYXNn",
-            "dC5kYXRhc2VydmljZS52MWFscGhhMS5EYXRhc2V0SW5mbzJ4CgtEYXRhU2Vy",
-            "dmljZRJpCgpHZXREYXRhc2V0EiwuYXNndC5kYXRhc2VydmljZS52MWFscGhh",
-            "MS5HZXREYXRhc2V0UmVxdWVzdBotLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBo",
-            "YTEuR2V0RGF0YXNldFJlc3BvbnNlQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "CRIMCgR0eXBlGAMgASgJEgwKBHRhZ3MYBCADKAkSDwoHdGFyZ2V0cxgFIAMo",
+            "CRI0ChByZXRlbnRpb25fcG9saWN5GAkgASgLMhouYXNndC50eXBlLlJldGVu",
+            "dGlvblBvbGljeRI9Chl0cmFpbmluZ19ncmFjZV9wZXJpb2RfZW5kGAogASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEoECAYQCSJKChJHZXREYXRh",
+            "c2V0UmVzcG9uc2USNAoEaW5mbxgBIAEoCzImLmFzZ3QuZGF0YXNlcnZpY2Uu",
+            "djFhbHBoYTEuRGF0YXNldEluZm8yeAoLRGF0YVNlcnZpY2USaQoKR2V0RGF0",
+            "YXNldBIsLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuR2V0RGF0YXNldFJl",
+            "cXVlc3QaLS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldERhdGFzZXRS",
+            "ZXNwb25zZUINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest), global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest.Parser, new[]{ "Consumer", "DatasetName", "DatasetType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DatasetInfo), global::Asgt.Dataservice.V1Alpha1.DatasetInfo.Parser, new[]{ "Consumer", "Name", "Type", "RetentionPolicy", "TrainingGracePeriodEnd" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DatasetInfo), global::Asgt.Dataservice.V1Alpha1.DatasetInfo.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "TrainingGracePeriodEnd" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse), global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse.Parser, new[]{ "Info" }, null, null, null)
           }));
     }
@@ -263,6 +264,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       consumer_ = other.consumer_;
       name_ = other.name_;
       type_ = other.type_;
+      tags_ = other.tags_.Clone();
+      targets_ = other.targets_.Clone();
       retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
       trainingGracePeriodEnd_ = other.trainingGracePeriodEnd_ != null ? other.trainingGracePeriodEnd_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -306,6 +309,26 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
+    }
+
+    /// <summary>Field number for the "targets" field.</summary>
+    public const int TargetsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_targets_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Targets {
+      get { return targets_; }
+    }
+
     /// <summary>Field number for the "retention_policy" field.</summary>
     public const int RetentionPolicyFieldNumber = 9;
     private global::Asgt.Type.RetentionPolicy retentionPolicy_;
@@ -344,6 +367,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Consumer != other.Consumer) return false;
       if (Name != other.Name) return false;
       if (Type != other.Type) return false;
+      if(!tags_.Equals(other.tags_)) return false;
+      if(!targets_.Equals(other.targets_)) return false;
       if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
       if (!object.Equals(TrainingGracePeriodEnd, other.TrainingGracePeriodEnd)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -355,6 +380,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
+      hash ^= tags_.GetHashCode();
+      hash ^= targets_.GetHashCode();
       if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
       if (trainingGracePeriodEnd_ != null) hash ^= TrainingGracePeriodEnd.GetHashCode();
       if (_unknownFields != null) {
@@ -382,6 +409,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(26);
         output.WriteString(Type);
       }
+      tags_.WriteTo(output, _repeated_tags_codec);
+      targets_.WriteTo(output, _repeated_targets_codec);
       if (retentionPolicy_ != null) {
         output.WriteRawTag(74);
         output.WriteMessage(RetentionPolicy);
@@ -407,6 +436,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Type.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
+      size += tags_.CalculateSize(_repeated_tags_codec);
+      size += targets_.CalculateSize(_repeated_targets_codec);
       if (retentionPolicy_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
       }
@@ -433,6 +464,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other.Type.Length != 0) {
         Type = other.Type;
       }
+      tags_.Add(other.tags_);
+      targets_.Add(other.targets_);
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
           retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
@@ -466,6 +499,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 26: {
             Type = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            targets_.AddEntriesFrom(input, _repeated_targets_codec);
             break;
           }
           case 74: {
