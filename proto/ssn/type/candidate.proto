@@ -65,7 +65,11 @@ message Candidate {
 }
 
 message Line {
+  // Text of the line without the amount
+  // Example: "3 Dark and Stormy"
   string text = 1;
+  // Normalized amount (price) on the line
+  // Example: 300.0
   double amount = 2;
 }
 
@@ -77,6 +81,7 @@ message LineCandidate {
   }
 
   Line value = 1;
+  // The text as found on the document "3 Dark and Stormy 300.0"
   string text = 2;
   // Confidence
   Confidence confidence = 3;
