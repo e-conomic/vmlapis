@@ -19,5 +19,5 @@ message TrainModelTask {
   string id = 1;
   asgt.type.DatasetInfo dataset_info = 2;
   int64 model_version = 3;
-  string status = 4;
+  Status status = 4;
 }
