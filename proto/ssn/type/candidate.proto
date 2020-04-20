@@ -63,3 +63,47 @@ message Candidate {
   // page_ref start from 1.
   uint32 page_ref = 6;
 }
+
+message Line {
+  string text = 1;
+  double amount = 2;
+}
+
+message LineCandidate {
+  enum Type {
+    UNKNOWN = 0;
+    FIELD = 1;
+    DOCUMENT = 2;
+  }
+
+  Line value = 1;
+  string text = 2;
+  // Confidence
+  Confidence confidence = 3;
+  // The bounding box for the block.
+  // The vertices are in the order of top-left, top-right, bottom-right,
+  // bottom-left. When a rotation of the bounding box is detected the rotation
+  // is represented as around the top-left corner as defined when the text is
+  // read in the 'natural' orientation.
+  // For example:
+  //
+  // * when the text is horizontal it might look like:
+  //
+  //         0----1
+  //         |    |
+  //         3----2
+  //
+  // * when it's rotated 180 degrees around the top-left corner it becomes:
+  //
+  //         2----3
+  //         |    |
+  //         1----0
+  //
+  //   and the vertex order will still be (0, 1, 2, 3).
+  ssn.type.BoundingPoly bounding_box = 4;
+  // Indicate the type of the candidate
+  Type type = 5;
+  // A reference to the page where the candidate was found.
+  // page_ref start from 1.
+  uint32 page_ref = 6;
+}
