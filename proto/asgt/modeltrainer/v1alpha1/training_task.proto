@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asgt.trainingservice.v1alpha1;
+package asgt.modeltrainer.v1alpha1;
 
 option go_package = "modeltrainer";
 
