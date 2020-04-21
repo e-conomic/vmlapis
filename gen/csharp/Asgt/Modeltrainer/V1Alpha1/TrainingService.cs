@@ -25,20 +25,26 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFhc2d0L21vZGVsdHJhaW5lci92MWFscGhhMS90cmFpbmluZ19zZXJ2aWNl",
-            "LnByb3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvIk8KEVRyYWluTW9kZWxSZXF1ZXN0EhAKCGNv",
-            "bnN1bWVyGAEgASgJEhIKCm1vZGVsX3R5cGUYAiABKAkSFAoMZGF0YXNldF9u",
-            "YW1lGAMgASgJIhUKE1J1blNjaGVkdWxlclJlcXVlc3QyvwEKD1RyYWluaW5n",
-            "U2VydmljZRJTCgpUcmFpbk1vZGVsEi0uYXNndC5tb2RlbHRyYWluZXIudjFh",
-            "bHBoYTEuVHJhaW5Nb2RlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkSVwoMUnVuU2NoZWR1bGVyEi8uYXNndC5tb2RlbHRyYWluZXIudjFhbHBo",
-            "YTEuUnVuU2NoZWR1bGVyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eUIOWgxtb2RlbHRyYWluZXJiBnByb3RvMw=="));
+            "LnByb3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRouYXNndC9tb2Rl",
+            "bHRyYWluZXIvdjFhbHBoYTEvdHJhaW5pbmdfdGFzay5wcm90bxobZ29vZ2xl",
+            "L3Byb3RvYnVmL2VtcHR5LnByb3RvIk8KEVRyYWluTW9kZWxSZXF1ZXN0EhAK",
+            "CGNvbnN1bWVyGAEgASgJEhIKCm1vZGVsX3R5cGUYAiABKAkSFAoMZGF0YXNl",
+            "dF9uYW1lGAMgASgJIhUKE1J1blNjaGVkdWxlclJlcXVlc3QiUAoUU2V0VGFz",
+            "a1N0YXR1c1JlcXVlc3QSOAoEdGFzaxgBIAEoCzIqLmFzZ3QubW9kZWx0cmFp",
+            "bmVyLnYxYWxwaGExLlRyYWluTW9kZWxUYXNrMpoCCg9UcmFpbmluZ1NlcnZp",
+            "Y2USUwoKVHJhaW5Nb2RlbBItLmFzZ3QubW9kZWx0cmFpbmVyLnYxYWxwaGEx",
+            "LlRyYWluTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElcK",
+            "DFJ1blNjaGVkdWxlchIvLmFzZ3QubW9kZWx0cmFpbmVyLnYxYWxwaGExLlJ1",
+            "blNjaGVkdWxlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSWQoN",
+            "U2V0VGFza1N0YXR1cxIwLmFzZ3QubW9kZWx0cmFpbmVyLnYxYWxwaGExLlNl",
+            "dFRhc2tTdGF0dXNSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Qg5a",
+            "DG1vZGVsdHJhaW5lcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Modeltrainer.V1Alpha1.TrainingTaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelRequest), global::Asgt.Modeltrainer.V1Alpha1.TrainModelRequest.Parser, new[]{ "Consumer", "ModelType", "DatasetName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.RunSchedulerRequest), global::Asgt.Modeltrainer.V1Alpha1.RunSchedulerRequest.Parser, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.RunSchedulerRequest), global::Asgt.Modeltrainer.V1Alpha1.RunSchedulerRequest.Parser, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.SetTaskStatusRequest), global::Asgt.Modeltrainer.V1Alpha1.SetTaskStatusRequest.Parser, new[]{ "Task" }, null, null, null)
           }));
     }
     #endregion
@@ -325,6 +331,141 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class SetTaskStatusRequest : pb::IMessage<SetTaskStatusRequest> {
+    private static readonly pb::MessageParser<SetTaskStatusRequest> _parser = new pb::MessageParser<SetTaskStatusRequest>(() => new SetTaskStatusRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<SetTaskStatusRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Modeltrainer.V1Alpha1.TrainingServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetTaskStatusRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetTaskStatusRequest(SetTaskStatusRequest other) : this() {
+      task_ = other.task_ != null ? other.task_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public SetTaskStatusRequest Clone() {
+      return new SetTaskStatusRequest(this);
+    }
+
+    /// <summary>Field number for the "task" field.</summary>
+    public const int TaskFieldNumber = 1;
+    private global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask task_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask Task {
+      get { return task_; }
+      set {
+        task_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as SetTaskStatusRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(SetTaskStatusRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Task, other.Task)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (task_ != null) hash ^= Task.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (task_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Task);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (task_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Task);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(SetTaskStatusRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.task_ != null) {
+        if (task_ == null) {
+          task_ = new global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask();
+        }
+        Task.MergeFrom(other.Task);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (task_ == null) {
+              task_ = new global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask();
+            }
+            input.ReadMessage(task_);
+            break;
+          }
         }
       }
     }

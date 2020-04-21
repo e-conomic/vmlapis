@@ -1250,6 +1250,613 @@ public final class TrainingServiceOuterClass {
 
   }
 
+  public interface SetTaskStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    boolean hasTask();
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask();
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder();
+  }
+  /**
+   * Protobuf type {@code asgt.modeltrainer.v1alpha1.SetTaskStatusRequest}
+   */
+  public  static final class SetTaskStatusRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+      SetTaskStatusRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SetTaskStatusRequest.newBuilder() to construct.
+    private SetTaskStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SetTaskStatusRequest() {
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SetTaskStatusRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder subBuilder = null;
+              if (task_ != null) {
+                subBuilder = task_.toBuilder();
+              }
+              task_ = input.readMessage(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(task_);
+                task_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.Builder.class);
+    }
+
+    public static final int TASK_FIELD_NUMBER = 1;
+    private asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask task_;
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    public boolean hasTask() {
+      return task_ != null;
+    }
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask() {
+      return task_ == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
+    }
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder() {
+      return getTask();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (task_ != null) {
+        output.writeMessage(1, getTask());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (task_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTask());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest)) {
+        return super.equals(obj);
+      }
+      asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest other = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) obj;
+
+      boolean result = true;
+      result = result && (hasTask() == other.hasTask());
+      if (hasTask()) {
+        result = result && getTask()
+            .equals(other.getTask());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasTask()) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTask().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.modeltrainer.v1alpha1.SetTaskStatusRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.Builder.class);
+      }
+
+      // Construct using asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (taskBuilder_ == null) {
+          task_ = null;
+        } else {
+          task_ = null;
+          taskBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstanceForType() {
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest build() {
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest buildPartial() {
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest result = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest(this);
+        if (taskBuilder_ == null) {
+          result.task_ = task_;
+        } else {
+          result.task_ = taskBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) {
+          return mergeFrom((asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest other) {
+        if (other == asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.getDefaultInstance()) return this;
+        if (other.hasTask()) {
+          mergeTask(other.getTask());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask task_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder> taskBuilder_;
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public boolean hasTask() {
+        return taskBuilder_ != null || task_ != null;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask() {
+        if (taskBuilder_ == null) {
+          return task_ == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
+        } else {
+          return taskBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder setTask(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          task_ = value;
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder setTask(
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          task_ = builderForValue.build();
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder mergeTask(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask value) {
+        if (taskBuilder_ == null) {
+          if (task_ != null) {
+            task_ =
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.newBuilder(task_).mergeFrom(value).buildPartial();
+          } else {
+            task_ = value;
+          }
+          onChanged();
+        } else {
+          taskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder clearTask() {
+        if (taskBuilder_ == null) {
+          task_ = null;
+          onChanged();
+        } else {
+          task_ = null;
+          taskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder getTaskBuilder() {
+        
+        onChanged();
+        return getTaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder() {
+        if (taskBuilder_ != null) {
+          return taskBuilder_.getMessageOrBuilder();
+        } else {
+          return task_ == null ?
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
+        }
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          taskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder>(
+                  getTask(),
+                  getParentForChildren(),
+                  isClean());
+          task_ = null;
+        }
+        return taskBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+    private static final asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest();
+    }
+
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SetTaskStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetTaskStatusRequest>() {
+      @java.lang.Override
+      public SetTaskStatusRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SetTaskStatusRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SetTaskStatusRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SetTaskStatusRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_descriptor;
   private static final 
@@ -1260,6 +1867,11 @@ public final class TrainingServiceOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_modeltrainer_v1alpha1_RunSchedulerRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1271,15 +1883,21 @@ public final class TrainingServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n1asgt/modeltrainer/v1alpha1/training_se" +
       "rvice.proto\022\032asgt.modeltrainer.v1alpha1\032" +
-      "\033google/protobuf/empty.proto\"O\n\021TrainMod" +
-      "elRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nmodel_typ" +
-      "e\030\002 \001(\t\022\024\n\014dataset_name\030\003 \001(\t\"\025\n\023RunSche" +
-      "dulerRequest2\277\001\n\017TrainingService\022S\n\nTrai" +
-      "nModel\022-.asgt.modeltrainer.v1alpha1.Trai" +
-      "nModelRequest\032\026.google.protobuf.Empty\022W\n" +
-      "\014RunScheduler\022/.asgt.modeltrainer.v1alph" +
-      "a1.RunSchedulerRequest\032\026.google.protobuf" +
-      ".EmptyB\016Z\014modeltrainerb\006proto3"
+      ".asgt/modeltrainer/v1alpha1/training_tas" +
+      "k.proto\032\033google/protobuf/empty.proto\"O\n\021" +
+      "TrainModelRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nm" +
+      "odel_type\030\002 \001(\t\022\024\n\014dataset_name\030\003 \001(\t\"\025\n" +
+      "\023RunSchedulerRequest\"P\n\024SetTaskStatusReq" +
+      "uest\0228\n\004task\030\001 \001(\0132*.asgt.modeltrainer.v" +
+      "1alpha1.TrainModelTask2\232\002\n\017TrainingServi" +
+      "ce\022S\n\nTrainModel\022-.asgt.modeltrainer.v1a" +
+      "lpha1.TrainModelRequest\032\026.google.protobu" +
+      "f.Empty\022W\n\014RunScheduler\022/.asgt.modeltrai" +
+      "ner.v1alpha1.RunSchedulerRequest\032\026.googl" +
+      "e.protobuf.Empty\022Y\n\rSetTaskStatus\0220.asgt" +
+      ".modeltrainer.v1alpha1.SetTaskStatusRequ" +
+      "est\032\026.google.protobuf.EmptyB\016Z\014modeltrai" +
+      "nerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1292,6 +1910,7 @@ public final class TrainingServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.modeltrainer.v1alpha1.TrainingTask.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_descriptor =
@@ -1306,6 +1925,13 @@ public final class TrainingServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modeltrainer_v1alpha1_RunSchedulerRequest_descriptor,
         new java.lang.String[] { });
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor,
+        new java.lang.String[] { "Task", });
+    asgt.modeltrainer.v1alpha1.TrainingTask.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

@@ -25,6 +25,11 @@ class TrainingServiceStub(object):
         request_serializer=asgt_dot_modeltrainer_dot_v1alpha1_dot_training__service__pb2.RunSchedulerRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
+    self.SetTaskStatus = channel.unary_unary(
+        '/asgt.modeltrainer.v1alpha1.TrainingService/SetTaskStatus',
+        request_serializer=asgt_dot_modeltrainer_dot_v1alpha1_dot_training__service__pb2.SetTaskStatusRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
 
 
 class TrainingServiceServicer(object):
@@ -45,6 +50,13 @@ class TrainingServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def SetTaskStatus(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_TrainingServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -56,6 +68,11 @@ def add_TrainingServiceServicer_to_server(servicer, server):
       'RunScheduler': grpc.unary_unary_rpc_method_handler(
           servicer.RunScheduler,
           request_deserializer=asgt_dot_modeltrainer_dot_v1alpha1_dot_training__service__pb2.RunSchedulerRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'SetTaskStatus': grpc.unary_unary_rpc_method_handler(
+          servicer.SetTaskStatus,
+          request_deserializer=asgt_dot_modeltrainer_dot_v1alpha1_dot_training__service__pb2.SetTaskStatusRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
   }

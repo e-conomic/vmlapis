@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from vml_proto.asgt.modeltrainer.v1alpha1 import training_task_pb2 as asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modeltrainer.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\014modeltrainer'),
-  serialized_pb=_b('\n1asgt/modeltrainer/v1alpha1/training_service.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x1bgoogle/protobuf/empty.proto\"O\n\x11TrainModelRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x03 \x01(\t\"\x15\n\x13RunSchedulerRequest2\xbf\x01\n\x0fTrainingService\x12S\n\nTrainModel\x12-.asgt.modeltrainer.v1alpha1.TrainModelRequest\x1a\x16.google.protobuf.Empty\x12W\n\x0cRunScheduler\x12/.asgt.modeltrainer.v1alpha1.RunSchedulerRequest\x1a\x16.google.protobuf.EmptyB\x0eZ\x0cmodeltrainerb\x06proto3')
+  serialized_pb=_b('\n1asgt/modeltrainer/v1alpha1/training_service.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a.asgt/modeltrainer/v1alpha1/training_task.proto\x1a\x1bgoogle/protobuf/empty.proto\"O\n\x11TrainModelRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x03 \x01(\t\"\x15\n\x13RunSchedulerRequest\"P\n\x14SetTaskStatusRequest\x12\x38\n\x04task\x18\x01 \x01(\x0b\x32*.asgt.modeltrainer.v1alpha1.TrainModelTask2\x9a\x02\n\x0fTrainingService\x12S\n\nTrainModel\x12-.asgt.modeltrainer.v1alpha1.TrainModelRequest\x1a\x16.google.protobuf.Empty\x12W\n\x0cRunScheduler\x12/.asgt.modeltrainer.v1alpha1.RunSchedulerRequest\x1a\x16.google.protobuf.Empty\x12Y\n\rSetTaskStatus\x12\x30.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest\x1a\x16.google.protobuf.EmptyB\x0eZ\x0cmodeltrainerb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -67,8 +68,8 @@ _TRAINMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=189,
+  serialized_start=158,
+  serialized_end=237,
 )
 
 
@@ -91,12 +92,45 @@ _RUNSCHEDULERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=191,
-  serialized_end=212,
+  serialized_start=239,
+  serialized_end=260,
 )
 
+
+_SETTASKSTATUSREQUEST = _descriptor.Descriptor(
+  name='SetTaskStatusRequest',
+  full_name='asgt.modeltrainer.v1alpha1.SetTaskStatusRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='task', full_name='asgt.modeltrainer.v1alpha1.SetTaskStatusRequest.task', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=262,
+  serialized_end=342,
+)
+
+_SETTASKSTATUSREQUEST.fields_by_name['task'].message_type = asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2._TRAINMODELTASK
 DESCRIPTOR.message_types_by_name['TrainModelRequest'] = _TRAINMODELREQUEST
 DESCRIPTOR.message_types_by_name['RunSchedulerRequest'] = _RUNSCHEDULERREQUEST
+DESCRIPTOR.message_types_by_name['SetTaskStatusRequest'] = _SETTASKSTATUSREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TrainModelRequest = _reflection.GeneratedProtocolMessageType('TrainModelRequest', (_message.Message,), dict(
@@ -113,6 +147,13 @@ RunSchedulerRequest = _reflection.GeneratedProtocolMessageType('RunSchedulerRequ
   ))
 _sym_db.RegisterMessage(RunSchedulerRequest)
 
+SetTaskStatusRequest = _reflection.GeneratedProtocolMessageType('SetTaskStatusRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SETTASKSTATUSREQUEST,
+  __module__ = 'asgt.modeltrainer.v1alpha1.training_service_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+  ))
+_sym_db.RegisterMessage(SetTaskStatusRequest)
+
 
 DESCRIPTOR._options = None
 
@@ -122,8 +163,8 @@ _TRAININGSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=215,
-  serialized_end=406,
+  serialized_start=345,
+  serialized_end=627,
   methods=[
   _descriptor.MethodDescriptor(
     name='TrainModel',
@@ -140,6 +181,15 @@ _TRAININGSERVICE = _descriptor.ServiceDescriptor(
     index=1,
     containing_service=None,
     input_type=_RUNSCHEDULERREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SetTaskStatus',
+    full_name='asgt.modeltrainer.v1alpha1.TrainingService.SetTaskStatus',
+    index=2,
+    containing_service=None,
+    input_type=_SETTASKSTATUSREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
   ),

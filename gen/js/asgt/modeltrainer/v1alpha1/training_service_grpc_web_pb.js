@@ -12,6 +12,8 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_modeltrainer_v1alpha1_training_task_pb = require('../../../asgt/modeltrainer/v1alpha1/training_task_pb.js')
+
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 const proto = {};
 proto.asgt = {};
@@ -227,6 +229,86 @@ proto.asgt.modeltrainer.v1alpha1.TrainingServicePromiseClient.prototype.runSched
       request,
       metadata || {},
       methodDescriptor_TrainingService_RunScheduler);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_TrainingService_SetTaskStatus = new grpc.web.MethodDescriptor(
+  '/asgt.modeltrainer.v1alpha1.TrainingService/SetTaskStatus',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodInfo_TrainingService_SetTaskStatus = new grpc.web.AbstractClientBase.MethodInfo(
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.modeltrainer.v1alpha1.TrainingServiceClient.prototype.setTaskStatus =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.modeltrainer.v1alpha1.TrainingService/SetTaskStatus',
+      request,
+      metadata || {},
+      methodDescriptor_TrainingService_SetTaskStatus,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.modeltrainer.v1alpha1.TrainingServicePromiseClient.prototype.setTaskStatus =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.modeltrainer.v1alpha1.TrainingService/SetTaskStatus',
+      request,
+      metadata || {},
+      methodDescriptor_TrainingService_SetTaskStatus);
 };
 
 

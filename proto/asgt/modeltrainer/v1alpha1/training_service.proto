@@ -5,10 +5,12 @@ package asgt.modeltrainer.v1alpha1;
 option go_package = "modeltrainer";
 
 import "google/protobuf/empty.proto";
+import "asgt/modeltrainer/v1alpha1/training_task.proto";
 
 service TrainingService {
   rpc TrainModel (TrainModelRequest) returns (google.protobuf.Empty);
   rpc RunScheduler (RunSchedulerRequest) returns (google.protobuf.Empty);
+  rpc SetTaskStatus (SetTaskStatusRequest) returns (google.protobuf.Empty);
 }
 
 message TrainModelRequest {
@@ -18,3 +20,7 @@ message TrainModelRequest {
 }
 
 message RunSchedulerRequest {}
+
+message SetTaskStatusRequest {
+  TrainModelTask task = 1;
+}
