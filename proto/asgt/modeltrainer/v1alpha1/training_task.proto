@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package asgt.modeltrainer.v1alpha1;
+
+option go_package = "modeltrainer";
+
+import "asgt/type/dataset_info.proto";
+
+message TrainModelTask {
+  enum Status {
+    UNKNOWN = 0;
+    SCHEDULED = 1;
+    STARTED = 3;
+    SUCCEEDED = 4;
+    FAILED = 5;
+  }
+  string id = 1;
+  asgt.type.DatasetInfo dataset_info = 2;
+  int64 model_version = 3;
+  Status status = 4;
+}

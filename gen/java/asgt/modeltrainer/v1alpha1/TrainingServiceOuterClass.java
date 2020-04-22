@@ -19,24 +19,24 @@ public final class TrainingServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string model_type = 1;</code>
-     */
-    java.lang.String getModelType();
-    /**
-     * <code>string model_type = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getModelTypeBytes();
-
-    /**
-     * <code>string consumer = 2;</code>
+     * <code>string consumer = 1;</code>
      */
     java.lang.String getConsumer();
     /**
-     * <code>string consumer = 2;</code>
+     * <code>string consumer = 1;</code>
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
+
+    /**
+     * <code>string model_type = 2;</code>
+     */
+    java.lang.String getModelType();
+    /**
+     * <code>string model_type = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getModelTypeBytes();
 
     /**
      * <code>string dataset_name = 3;</code>
@@ -47,26 +47,6 @@ public final class TrainingServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getDatasetNameBytes();
-
-    /**
-     * <code>string image_tag = 4;</code>
-     */
-    java.lang.String getImageTag();
-    /**
-     * <code>string image_tag = 4;</code>
-     */
-    com.google.protobuf.ByteString
-        getImageTagBytes();
-
-    /**
-     * <code>string run_name = 5;</code>
-     */
-    java.lang.String getRunName();
-    /**
-     * <code>string run_name = 5;</code>
-     */
-    com.google.protobuf.ByteString
-        getRunNameBytes();
   }
   /**
    * Protobuf type {@code asgt.modeltrainer.v1alpha1.TrainModelRequest}
@@ -81,11 +61,9 @@ public final class TrainingServiceOuterClass {
       super(builder);
     }
     private TrainModelRequest() {
-      modelType_ = "";
       consumer_ = "";
+      modelType_ = "";
       datasetName_ = "";
-      imageTag_ = "";
-      runName_ = "";
     }
 
     @java.lang.Override
@@ -115,31 +93,19 @@ public final class TrainingServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              modelType_ = s;
+              consumer_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              consumer_ = s;
+              modelType_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
 
               datasetName_ = s;
-              break;
-            }
-            case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              imageTag_ = s;
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              runName_ = s;
               break;
             }
             default: {
@@ -174,44 +140,10 @@ public final class TrainingServiceOuterClass {
               asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest.Builder.class);
     }
 
-    public static final int MODEL_TYPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelType_;
-    /**
-     * <code>string model_type = 1;</code>
-     */
-    public java.lang.String getModelType() {
-      java.lang.Object ref = modelType_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelType_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string model_type = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getModelTypeBytes() {
-      java.lang.Object ref = modelType_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelType_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int CONSUMER_FIELD_NUMBER = 2;
+    public static final int CONSUMER_FIELD_NUMBER = 1;
     private volatile java.lang.Object consumer_;
     /**
-     * <code>string consumer = 2;</code>
+     * <code>string consumer = 1;</code>
      */
     public java.lang.String getConsumer() {
       java.lang.Object ref = consumer_;
@@ -226,7 +158,7 @@ public final class TrainingServiceOuterClass {
       }
     }
     /**
-     * <code>string consumer = 2;</code>
+     * <code>string consumer = 1;</code>
      */
     public com.google.protobuf.ByteString
         getConsumerBytes() {
@@ -236,6 +168,40 @@ public final class TrainingServiceOuterClass {
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         consumer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object modelType_;
+    /**
+     * <code>string model_type = 2;</code>
+     */
+    public java.lang.String getModelType() {
+      java.lang.Object ref = modelType_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelType_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string model_type = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getModelTypeBytes() {
+      java.lang.Object ref = modelType_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -276,74 +242,6 @@ public final class TrainingServiceOuterClass {
       }
     }
 
-    public static final int IMAGE_TAG_FIELD_NUMBER = 4;
-    private volatile java.lang.Object imageTag_;
-    /**
-     * <code>string image_tag = 4;</code>
-     */
-    public java.lang.String getImageTag() {
-      java.lang.Object ref = imageTag_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        imageTag_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string image_tag = 4;</code>
-     */
-    public com.google.protobuf.ByteString
-        getImageTagBytes() {
-      java.lang.Object ref = imageTag_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        imageTag_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int RUN_NAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object runName_;
-    /**
-     * <code>string run_name = 5;</code>
-     */
-    public java.lang.String getRunName() {
-      java.lang.Object ref = runName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        runName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string run_name = 5;</code>
-     */
-    public com.google.protobuf.ByteString
-        getRunNameBytes() {
-      java.lang.Object ref = runName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        runName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -358,20 +256,14 @@ public final class TrainingServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelType_);
-      }
       if (!getConsumerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, consumer_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumer_);
+      }
+      if (!getModelTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelType_);
       }
       if (!getDatasetNameBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, datasetName_);
-      }
-      if (!getImageTagBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, imageTag_);
-      }
-      if (!getRunNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, runName_);
       }
       unknownFields.writeTo(output);
     }
@@ -382,20 +274,14 @@ public final class TrainingServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelType_);
-      }
       if (!getConsumerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, consumer_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumer_);
+      }
+      if (!getModelTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelType_);
       }
       if (!getDatasetNameBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, datasetName_);
-      }
-      if (!getImageTagBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, imageTag_);
-      }
-      if (!getRunNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, runName_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -413,16 +299,12 @@ public final class TrainingServiceOuterClass {
       asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest other = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest) obj;
 
       boolean result = true;
-      result = result && getModelType()
-          .equals(other.getModelType());
       result = result && getConsumer()
           .equals(other.getConsumer());
+      result = result && getModelType()
+          .equals(other.getModelType());
       result = result && getDatasetName()
           .equals(other.getDatasetName());
-      result = result && getImageTag()
-          .equals(other.getImageTag());
-      result = result && getRunName()
-          .equals(other.getRunName());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -434,16 +316,12 @@ public final class TrainingServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getModelType().hashCode();
       hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
       hash = (53 * hash) + getConsumer().hashCode();
+      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getModelType().hashCode();
       hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + IMAGE_TAG_FIELD_NUMBER;
-      hash = (53 * hash) + getImageTag().hashCode();
-      hash = (37 * hash) + RUN_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getRunName().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -577,15 +455,11 @@ public final class TrainingServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        modelType_ = "";
-
         consumer_ = "";
 
+        modelType_ = "";
+
         datasetName_ = "";
-
-        imageTag_ = "";
-
-        runName_ = "";
 
         return this;
       }
@@ -613,11 +487,9 @@ public final class TrainingServiceOuterClass {
       @java.lang.Override
       public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest buildPartial() {
         asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest result = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest(this);
-        result.modelType_ = modelType_;
         result.consumer_ = consumer_;
+        result.modelType_ = modelType_;
         result.datasetName_ = datasetName_;
-        result.imageTag_ = imageTag_;
-        result.runName_ = runName_;
         onBuilt();
         return result;
       }
@@ -666,24 +538,16 @@ public final class TrainingServiceOuterClass {
 
       public Builder mergeFrom(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest other) {
         if (other == asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelRequest.getDefaultInstance()) return this;
-        if (!other.getModelType().isEmpty()) {
-          modelType_ = other.modelType_;
-          onChanged();
-        }
         if (!other.getConsumer().isEmpty()) {
           consumer_ = other.consumer_;
           onChanged();
         }
+        if (!other.getModelType().isEmpty()) {
+          modelType_ = other.modelType_;
+          onChanged();
+        }
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
-          onChanged();
-        }
-        if (!other.getImageTag().isEmpty()) {
-          imageTag_ = other.imageTag_;
-          onChanged();
-        }
-        if (!other.getRunName().isEmpty()) {
-          runName_ = other.runName_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -715,78 +579,9 @@ public final class TrainingServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object modelType_ = "";
-      /**
-       * <code>string model_type = 1;</code>
-       */
-      public java.lang.String getModelType() {
-        java.lang.Object ref = modelType_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelType_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string model_type = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getModelTypeBytes() {
-        java.lang.Object ref = modelType_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelType_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string model_type = 1;</code>
-       */
-      public Builder setModelType(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        modelType_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_type = 1;</code>
-       */
-      public Builder clearModelType() {
-        
-        modelType_ = getDefaultInstance().getModelType();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string model_type = 1;</code>
-       */
-      public Builder setModelTypeBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelType_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object consumer_ = "";
       /**
-       * <code>string consumer = 2;</code>
+       * <code>string consumer = 1;</code>
        */
       public java.lang.String getConsumer() {
         java.lang.Object ref = consumer_;
@@ -801,7 +596,7 @@ public final class TrainingServiceOuterClass {
         }
       }
       /**
-       * <code>string consumer = 2;</code>
+       * <code>string consumer = 1;</code>
        */
       public com.google.protobuf.ByteString
           getConsumerBytes() {
@@ -817,7 +612,7 @@ public final class TrainingServiceOuterClass {
         }
       }
       /**
-       * <code>string consumer = 2;</code>
+       * <code>string consumer = 1;</code>
        */
       public Builder setConsumer(
           java.lang.String value) {
@@ -830,7 +625,7 @@ public final class TrainingServiceOuterClass {
         return this;
       }
       /**
-       * <code>string consumer = 2;</code>
+       * <code>string consumer = 1;</code>
        */
       public Builder clearConsumer() {
         
@@ -839,7 +634,7 @@ public final class TrainingServiceOuterClass {
         return this;
       }
       /**
-       * <code>string consumer = 2;</code>
+       * <code>string consumer = 1;</code>
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
@@ -849,6 +644,75 @@ public final class TrainingServiceOuterClass {
   checkByteStringIsUtf8(value);
         
         consumer_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object modelType_ = "";
+      /**
+       * <code>string model_type = 2;</code>
+       */
+      public java.lang.String getModelType() {
+        java.lang.Object ref = modelType_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelType_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string model_type = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getModelTypeBytes() {
+        java.lang.Object ref = modelType_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelType_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string model_type = 2;</code>
+       */
+      public Builder setModelType(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_type = 2;</code>
+       */
+      public Builder clearModelType() {
+        
+        modelType_ = getDefaultInstance().getModelType();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string model_type = 2;</code>
+       */
+      public Builder setModelTypeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelType_ = value;
         onChanged();
         return this;
       }
@@ -921,144 +785,6 @@ public final class TrainingServiceOuterClass {
         onChanged();
         return this;
       }
-
-      private java.lang.Object imageTag_ = "";
-      /**
-       * <code>string image_tag = 4;</code>
-       */
-      public java.lang.String getImageTag() {
-        java.lang.Object ref = imageTag_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          imageTag_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string image_tag = 4;</code>
-       */
-      public com.google.protobuf.ByteString
-          getImageTagBytes() {
-        java.lang.Object ref = imageTag_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          imageTag_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string image_tag = 4;</code>
-       */
-      public Builder setImageTag(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        imageTag_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string image_tag = 4;</code>
-       */
-      public Builder clearImageTag() {
-        
-        imageTag_ = getDefaultInstance().getImageTag();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string image_tag = 4;</code>
-       */
-      public Builder setImageTagBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        imageTag_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object runName_ = "";
-      /**
-       * <code>string run_name = 5;</code>
-       */
-      public java.lang.String getRunName() {
-        java.lang.Object ref = runName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          runName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string run_name = 5;</code>
-       */
-      public com.google.protobuf.ByteString
-          getRunNameBytes() {
-        java.lang.Object ref = runName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          runName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string run_name = 5;</code>
-       */
-      public Builder setRunName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        runName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string run_name = 5;</code>
-       */
-      public Builder clearRunName() {
-        
-        runName_ = getDefaultInstance().getRunName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string run_name = 5;</code>
-       */
-      public Builder setRunNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        runName_ = value;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1112,34 +838,36 @@ public final class TrainingServiceOuterClass {
 
   }
 
-  public interface TrainModelResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.modeltrainer.v1alpha1.TrainModelResponse)
+  public interface SetTaskStatusRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string version_name = 1;</code>
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
      */
-    java.lang.String getVersionName();
+    boolean hasTask();
     /**
-     * <code>string version_name = 1;</code>
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
      */
-    com.google.protobuf.ByteString
-        getVersionNameBytes();
+    asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask();
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder();
   }
   /**
-   * Protobuf type {@code asgt.modeltrainer.v1alpha1.TrainModelResponse}
+   * Protobuf type {@code asgt.modeltrainer.v1alpha1.SetTaskStatusRequest}
    */
-  public  static final class TrainModelResponse extends
+  public  static final class SetTaskStatusRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.modeltrainer.v1alpha1.TrainModelResponse)
-      TrainModelResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+      SetTaskStatusRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use TrainModelResponse.newBuilder() to construct.
-    private TrainModelResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use SetTaskStatusRequest.newBuilder() to construct.
+    private SetTaskStatusRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private TrainModelResponse() {
-      versionName_ = "";
+    private SetTaskStatusRequest() {
     }
 
     @java.lang.Override
@@ -1147,7 +875,7 @@ public final class TrainingServiceOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private TrainModelResponse(
+    private SetTaskStatusRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1167,9 +895,16 @@ public final class TrainingServiceOuterClass {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder subBuilder = null;
+              if (task_ != null) {
+                subBuilder = task_.toBuilder();
+              }
+              task_ = input.readMessage(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(task_);
+                task_ = subBuilder.buildPartial();
+              }
 
-              versionName_ = s;
               break;
             }
             default: {
@@ -1193,49 +928,36 @@ public final class TrainingServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor;
+      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_fieldAccessorTable
+      return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.Builder.class);
+              asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.Builder.class);
     }
 
-    public static final int VERSION_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object versionName_;
+    public static final int TASK_FIELD_NUMBER = 1;
+    private asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask task_;
     /**
-     * <code>string version_name = 1;</code>
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
      */
-    public java.lang.String getVersionName() {
-      java.lang.Object ref = versionName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        versionName_ = s;
-        return s;
-      }
+    public boolean hasTask() {
+      return task_ != null;
     }
     /**
-     * <code>string version_name = 1;</code>
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
      */
-    public com.google.protobuf.ByteString
-        getVersionNameBytes() {
-      java.lang.Object ref = versionName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        versionName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask() {
+      return task_ == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
+    }
+    /**
+     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+     */
+    public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder() {
+      return getTask();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1252,8 +974,8 @@ public final class TrainingServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getVersionNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, versionName_);
+      if (task_ != null) {
+        output.writeMessage(1, getTask());
       }
       unknownFields.writeTo(output);
     }
@@ -1264,8 +986,9 @@ public final class TrainingServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getVersionNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, versionName_);
+      if (task_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getTask());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1277,14 +1000,17 @@ public final class TrainingServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse)) {
+      if (!(obj instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest)) {
         return super.equals(obj);
       }
-      asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse other = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse) obj;
+      asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest other = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) obj;
 
       boolean result = true;
-      result = result && getVersionName()
-          .equals(other.getVersionName());
+      result = result && (hasTask() == other.hasTask());
+      if (hasTask()) {
+        result = result && getTask()
+            .equals(other.getTask());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1296,76 +1022,78 @@ public final class TrainingServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VERSION_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getVersionName().hashCode();
+      if (hasTask()) {
+        hash = (37 * hash) + TASK_FIELD_NUMBER;
+        hash = (53 * hash) + getTask().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(byte[] data)
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(java.io.InputStream input)
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseDelimitedFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parseFrom(
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1378,7 +1106,7 @@ public final class TrainingServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse prototype) {
+    public static Builder newBuilder(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1394,26 +1122,26 @@ public final class TrainingServiceOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.modeltrainer.v1alpha1.TrainModelResponse}
+     * Protobuf type {@code asgt.modeltrainer.v1alpha1.SetTaskStatusRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.modeltrainer.v1alpha1.TrainModelResponse)
-        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor;
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_fieldAccessorTable
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.Builder.class);
+                asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.class, asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.Builder.class);
       }
 
-      // Construct using asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.newBuilder()
+      // Construct using asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1431,25 +1159,29 @@ public final class TrainingServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        versionName_ = "";
-
+        if (taskBuilder_ == null) {
+          task_ = null;
+        } else {
+          task_ = null;
+          taskBuilder_ = null;
+        }
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor;
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse getDefaultInstanceForType() {
-        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.getDefaultInstance();
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstanceForType() {
+        return asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse build() {
-        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse result = buildPartial();
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest build() {
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1457,9 +1189,13 @@ public final class TrainingServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse buildPartial() {
-        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse result = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse(this);
-        result.versionName_ = versionName_;
+      public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest buildPartial() {
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest result = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest(this);
+        if (taskBuilder_ == null) {
+          result.task_ = task_;
+        } else {
+          result.task_ = taskBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -1498,19 +1234,18 @@ public final class TrainingServiceOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse) {
-          return mergeFrom((asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse)other);
+        if (other instanceof asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) {
+          return mergeFrom((asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse other) {
-        if (other == asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse.getDefaultInstance()) return this;
-        if (!other.getVersionName().isEmpty()) {
-          versionName_ = other.versionName_;
-          onChanged();
+      public Builder mergeFrom(asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest other) {
+        if (other == asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest.getDefaultInstance()) return this;
+        if (other.hasTask()) {
+          mergeTask(other.getTask());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1527,11 +1262,11 @@ public final class TrainingServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse parsedMessage = null;
+        asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse) e.getUnfinishedMessage();
+          parsedMessage = (asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1541,73 +1276,121 @@ public final class TrainingServiceOuterClass {
         return this;
       }
 
-      private java.lang.Object versionName_ = "";
+      private asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask task_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder> taskBuilder_;
       /**
-       * <code>string version_name = 1;</code>
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
        */
-      public java.lang.String getVersionName() {
-        java.lang.Object ref = versionName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          versionName_ = s;
-          return s;
+      public boolean hasTask() {
+        return taskBuilder_ != null || task_ != null;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask getTask() {
+        if (taskBuilder_ == null) {
+          return task_ == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
         } else {
-          return (java.lang.String) ref;
+          return taskBuilder_.getMessage();
         }
       }
       /**
-       * <code>string version_name = 1;</code>
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
        */
-      public com.google.protobuf.ByteString
-          getVersionNameBytes() {
-        java.lang.Object ref = versionName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          versionName_ = b;
-          return b;
+      public Builder setTask(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask value) {
+        if (taskBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          task_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          taskBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder setTask(
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder builderForValue) {
+        if (taskBuilder_ == null) {
+          task_ = builderForValue.build();
+          onChanged();
+        } else {
+          taskBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder mergeTask(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask value) {
+        if (taskBuilder_ == null) {
+          if (task_ != null) {
+            task_ =
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.newBuilder(task_).mergeFrom(value).buildPartial();
+          } else {
+            task_ = value;
+          }
+          onChanged();
+        } else {
+          taskBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public Builder clearTask() {
+        if (taskBuilder_ == null) {
+          task_ = null;
+          onChanged();
+        } else {
+          task_ = null;
+          taskBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder getTaskBuilder() {
+        
+        onChanged();
+        return getTaskFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
+       */
+      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder getTaskOrBuilder() {
+        if (taskBuilder_ != null) {
+          return taskBuilder_.getMessageOrBuilder();
+        } else {
+          return task_ == null ?
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance() : task_;
         }
       }
       /**
-       * <code>string version_name = 1;</code>
+       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask task = 1;</code>
        */
-      public Builder setVersionName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        versionName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string version_name = 1;</code>
-       */
-      public Builder clearVersionName() {
-        
-        versionName_ = getDefaultInstance().getVersionName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string version_name = 1;</code>
-       */
-      public Builder setVersionNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        versionName_ = value;
-        onChanged();
-        return this;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder> 
+          getTaskFieldBuilder() {
+        if (taskBuilder_ == null) {
+          taskBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTaskOrBuilder>(
+                  getTask(),
+                  getParentForChildren(),
+                  isClean());
+          task_ = null;
+        }
+        return taskBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1622,41 +1405,41 @@ public final class TrainingServiceOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.modeltrainer.v1alpha1.TrainModelResponse)
+      // @@protoc_insertion_point(builder_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.TrainModelResponse)
-    private static final asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
+    private static final asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse();
+      DEFAULT_INSTANCE = new asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest();
     }
 
-    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse getDefaultInstance() {
+    public static asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<TrainModelResponse>
-        PARSER = new com.google.protobuf.AbstractParser<TrainModelResponse>() {
+    private static final com.google.protobuf.Parser<SetTaskStatusRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SetTaskStatusRequest>() {
       @java.lang.Override
-      public TrainModelResponse parsePartialFrom(
+      public SetTaskStatusRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new TrainModelResponse(input, extensionRegistry);
+        return new SetTaskStatusRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<TrainModelResponse> parser() {
+    public static com.google.protobuf.Parser<SetTaskStatusRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<TrainModelResponse> getParserForType() {
+    public com.google.protobuf.Parser<SetTaskStatusRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.TrainModelResponse getDefaultInstanceForType() {
+    public asgt.modeltrainer.v1alpha1.TrainingServiceOuterClass.SetTaskStatusRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1668,10 +1451,10 @@ public final class TrainingServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor;
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_fieldAccessorTable;
+      internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1682,15 +1465,19 @@ public final class TrainingServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n1asgt/modeltrainer/v1alpha1/training_se" +
-      "rvice.proto\022\032asgt.modeltrainer.v1alpha1\"" +
-      "t\n\021TrainModelRequest\022\022\n\nmodel_type\030\001 \001(\t" +
-      "\022\020\n\010consumer\030\002 \001(\t\022\024\n\014dataset_name\030\003 \001(\t" +
-      "\022\021\n\timage_tag\030\004 \001(\t\022\020\n\010run_name\030\005 \001(\t\"*\n" +
-      "\022TrainModelResponse\022\024\n\014version_name\030\001 \001(" +
-      "\t2~\n\017TrainingService\022k\n\nTrainModel\022-.asg" +
-      "t.modeltrainer.v1alpha1.TrainModelReques" +
-      "t\032..asgt.modeltrainer.v1alpha1.TrainMode" +
-      "lResponseB\016Z\014modeltrainerb\006proto3"
+      "rvice.proto\022\032asgt.modeltrainer.v1alpha1\032" +
+      ".asgt/modeltrainer/v1alpha1/training_tas" +
+      "k.proto\032\033google/protobuf/empty.proto\"O\n\021" +
+      "TrainModelRequest\022\020\n\010consumer\030\001 \001(\t\022\022\n\nm" +
+      "odel_type\030\002 \001(\t\022\024\n\014dataset_name\030\003 \001(\t\"P\n" +
+      "\024SetTaskStatusRequest\0228\n\004task\030\001 \001(\0132*.as" +
+      "gt.modeltrainer.v1alpha1.TrainModelTask2" +
+      "\301\001\n\017TrainingService\022S\n\nTrainModel\022-.asgt" +
+      ".modeltrainer.v1alpha1.TrainModelRequest" +
+      "\032\026.google.protobuf.Empty\022Y\n\rSetTaskStatu" +
+      "s\0220.asgt.modeltrainer.v1alpha1.SetTaskSt" +
+      "atusRequest\032\026.google.protobuf.EmptyB\016Z\014m" +
+      "odeltrainerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1703,19 +1490,23 @@ public final class TrainingServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.modeltrainer.v1alpha1.TrainingTask.getDescriptor(),
+          com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modeltrainer_v1alpha1_TrainModelRequest_descriptor,
-        new java.lang.String[] { "ModelType", "Consumer", "DatasetName", "ImageTag", "RunName", });
-    internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor =
+        new java.lang.String[] { "Consumer", "ModelType", "DatasetName", });
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_fieldAccessorTable = new
+    internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_modeltrainer_v1alpha1_TrainModelResponse_descriptor,
-        new java.lang.String[] { "VersionName", });
+        internal_static_asgt_modeltrainer_v1alpha1_SetTaskStatusRequest_descriptor,
+        new java.lang.String[] { "Task", });
+    asgt.modeltrainer.v1alpha1.TrainingTask.getDescriptor();
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

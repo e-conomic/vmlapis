@@ -12,9 +12,7 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js')
-
-var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
+var asgt_type_dataset_info_pb = require('../../../asgt/type/dataset_info_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.dataservice = {};

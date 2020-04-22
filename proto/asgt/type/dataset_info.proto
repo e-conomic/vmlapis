@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+import "asgt/type/retention_policy.proto";
+
+message DatasetInfo {
+  string consumer = 1;
+  string name = 2;
+  string type = 3;
+  repeated string tags = 4;
+  repeated string targets = 5;
+  reserved 6 to 8;
+  asgt.type.RetentionPolicy retention_policy = 9;
+}
