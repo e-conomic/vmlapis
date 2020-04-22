@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modeltrainer.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\014modeltrainer'),
-  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x1c\x61sgt/type/dataset_info.proto\"\x8b\x02\n\x0eTrainModelTask\x12\n\n\x02id\x18\x01 \x01(\t\x12,\n\x0c\x64\x61taset_info\x18\x02 \x01(\x0b\x32\x16.asgt.type.DatasetInfo\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x41\n\x06status\x18\x04 \x01(\x0e\x32\x31.asgt.modeltrainer.v1alpha1.TrainModelTask.Status\"e\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tSCHEDULED\x10\x01\x12\n\n\x06QUEUED\x10\x02\x12\x0b\n\x07STARTED\x10\x03\x12\r\n\tSUCCEEDED\x10\x04\x12\n\n\x06\x46\x41ILED\x10\x05\x12\x0b\n\x07\x45XPIRED\x10\x06\x42\x0eZ\x0cmodeltrainerb\x06proto3')
+  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x1c\x61sgt/type/dataset_info.proto\"\xf2\x01\n\x0eTrainModelTask\x12\n\n\x02id\x18\x01 \x01(\t\x12,\n\x0c\x64\x61taset_info\x18\x02 \x01(\x0b\x32\x16.asgt.type.DatasetInfo\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x41\n\x06status\x18\x04 \x01(\x0e\x32\x31.asgt.modeltrainer.v1alpha1.TrainModelTask.Status\"L\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tSCHEDULED\x10\x01\x12\x0b\n\x07STARTED\x10\x03\x12\r\n\tSUCCEEDED\x10\x04\x12\n\n\x06\x46\x41ILED\x10\x05\x42\x0eZ\x0cmodeltrainerb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__info__pb2.DESCRIPTOR,])
 
@@ -41,30 +41,22 @@ _TRAINMODELTASK_STATUS = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='QUEUED', index=2, number=2,
+      name='STARTED', index=2, number=3,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='STARTED', index=3, number=3,
+      name='SUCCEEDED', index=3, number=4,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='SUCCEEDED', index=4, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED', index=5, number=5,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EXPIRED', index=6, number=6,
+      name='FAILED', index=4, number=5,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=275,
-  serialized_end=376,
+  serialized_end=351,
 )
 _sym_db.RegisterEnumDescriptor(_TRAINMODELTASK_STATUS)
 
@@ -118,7 +110,7 @@ _TRAINMODELTASK = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=109,
-  serialized_end=376,
+  serialized_end=351,
 )
 
 _TRAINMODELTASK.fields_by_name['dataset_info'].message_type = asgt_dot_type_dot_dataset__info__pb2._DATASETINFO

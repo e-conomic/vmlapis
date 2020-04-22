@@ -173,14 +173,6 @@ public final class TrainingTask {
        */
       SCHEDULED(1),
       /**
-       * <pre>
-       * XXX(lys) May remove QUEUED
-       * </pre>
-       *
-       * <code>QUEUED = 2;</code>
-       */
-      QUEUED(2),
-      /**
        * <code>STARTED = 3;</code>
        */
       STARTED(3),
@@ -192,14 +184,6 @@ public final class TrainingTask {
        * <code>FAILED = 5;</code>
        */
       FAILED(5),
-      /**
-       * <pre>
-       * XXX(lys) May remove EXPIRED
-       * </pre>
-       *
-       * <code>EXPIRED = 6;</code>
-       */
-      EXPIRED(6),
       UNRECOGNIZED(-1),
       ;
 
@@ -212,14 +196,6 @@ public final class TrainingTask {
        */
       public static final int SCHEDULED_VALUE = 1;
       /**
-       * <pre>
-       * XXX(lys) May remove QUEUED
-       * </pre>
-       *
-       * <code>QUEUED = 2;</code>
-       */
-      public static final int QUEUED_VALUE = 2;
-      /**
        * <code>STARTED = 3;</code>
        */
       public static final int STARTED_VALUE = 3;
@@ -231,14 +207,6 @@ public final class TrainingTask {
        * <code>FAILED = 5;</code>
        */
       public static final int FAILED_VALUE = 5;
-      /**
-       * <pre>
-       * XXX(lys) May remove EXPIRED
-       * </pre>
-       *
-       * <code>EXPIRED = 6;</code>
-       */
-      public static final int EXPIRED_VALUE = 6;
 
 
       public final int getNumber() {
@@ -261,11 +229,9 @@ public final class TrainingTask {
         switch (value) {
           case 0: return UNKNOWN;
           case 1: return SCHEDULED;
-          case 2: return QUEUED;
           case 3: return STARTED;
           case 4: return SUCCEEDED;
           case 5: return FAILED;
-          case 6: return EXPIRED;
           default: return null;
         }
       }
@@ -1091,14 +1057,14 @@ public final class TrainingTask {
     java.lang.String[] descriptorData = {
       "\n.asgt/modeltrainer/v1alpha1/training_ta" +
       "sk.proto\022\032asgt.modeltrainer.v1alpha1\032\034as" +
-      "gt/type/dataset_info.proto\"\213\002\n\016TrainMode" +
+      "gt/type/dataset_info.proto\"\362\001\n\016TrainMode" +
       "lTask\022\n\n\002id\030\001 \001(\t\022,\n\014dataset_info\030\002 \001(\0132" +
       "\026.asgt.type.DatasetInfo\022\025\n\rmodel_version" +
       "\030\003 \001(\003\022A\n\006status\030\004 \001(\01621.asgt.modeltrain" +
-      "er.v1alpha1.TrainModelTask.Status\"e\n\006Sta" +
-      "tus\022\013\n\007UNKNOWN\020\000\022\r\n\tSCHEDULED\020\001\022\n\n\006QUEUE" +
-      "D\020\002\022\013\n\007STARTED\020\003\022\r\n\tSUCCEEDED\020\004\022\n\n\006FAILE" +
-      "D\020\005\022\013\n\007EXPIRED\020\006B\016Z\014modeltrainerb\006proto3"
+      "er.v1alpha1.TrainModelTask.Status\"L\n\006Sta" +
+      "tus\022\013\n\007UNKNOWN\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007START" +
+      "ED\020\003\022\r\n\tSUCCEEDED\020\004\022\n\n\006FAILED\020\005B\016Z\014model" +
+      "trainerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

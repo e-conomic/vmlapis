@@ -185,11 +185,9 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.serializeBinaryToWriter = functi
 proto.asgt.modeltrainer.v1alpha1.TrainModelTask.Status = {
   UNKNOWN: 0,
   SCHEDULED: 1,
-  QUEUED: 2,
   STARTED: 3,
   SUCCEEDED: 4,
-  FAILED: 5,
-  EXPIRED: 6
+  FAILED: 5
 };
 
 /**

@@ -26,13 +26,13 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
           string.Concat(
             "Ci5hc2d0L21vZGVsdHJhaW5lci92MWFscGhhMS90cmFpbmluZ190YXNrLnBy",
             "b3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRocYXNndC90eXBlL2Rh",
-            "dGFzZXRfaW5mby5wcm90byKLAgoOVHJhaW5Nb2RlbFRhc2sSCgoCaWQYASAB",
+            "dGFzZXRfaW5mby5wcm90byLyAQoOVHJhaW5Nb2RlbFRhc2sSCgoCaWQYASAB",
             "KAkSLAoMZGF0YXNldF9pbmZvGAIgASgLMhYuYXNndC50eXBlLkRhdGFzZXRJ",
             "bmZvEhUKDW1vZGVsX3ZlcnNpb24YAyABKAMSQQoGc3RhdHVzGAQgASgOMjEu",
             "YXNndC5tb2RlbHRyYWluZXIudjFhbHBoYTEuVHJhaW5Nb2RlbFRhc2suU3Rh",
-            "dHVzImUKBlN0YXR1cxILCgdVTktOT1dOEAASDQoJU0NIRURVTEVEEAESCgoG",
-            "UVVFVUVEEAISCwoHU1RBUlRFRBADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxF",
-            "RBAFEgsKB0VYUElSRUQQBkIOWgxtb2RlbHRyYWluZXJiBnByb3RvMw=="));
+            "dHVzIkwKBlN0YXR1cxILCgdVTktOT1dOEAASDQoJU0NIRURVTEVEEAESCwoH",
+            "U1RBUlRFRBADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAFQg5aDG1vZGVs",
+            "dHJhaW5lcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -267,17 +267,9 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       public enum Status {
         [pbr::OriginalName("UNKNOWN")] Unknown = 0,
         [pbr::OriginalName("SCHEDULED")] Scheduled = 1,
-        /// <summary>
-        /// XXX(lys) May remove QUEUED
-        /// </summary>
-        [pbr::OriginalName("QUEUED")] Queued = 2,
         [pbr::OriginalName("STARTED")] Started = 3,
         [pbr::OriginalName("SUCCEEDED")] Succeeded = 4,
         [pbr::OriginalName("FAILED")] Failed = 5,
-        /// <summary>
-        /// XXX(lys) May remove EXPIRED
-        /// </summary>
-        [pbr::OriginalName("EXPIRED")] Expired = 6,
       }
 
     }
