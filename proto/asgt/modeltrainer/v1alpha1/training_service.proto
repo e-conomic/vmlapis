@@ -9,7 +9,6 @@ import "asgt/modeltrainer/v1alpha1/training_task.proto";
 
 service TrainingService {
   rpc TrainModel (TrainModelRequest) returns (google.protobuf.Empty);
-  rpc RunScheduler (RunSchedulerRequest) returns (google.protobuf.Empty);
   rpc SetTaskStatus (SetTaskStatusRequest) returns (google.protobuf.Empty);
 }
 
@@ -18,8 +17,6 @@ message TrainModelRequest {
   string model_type = 2;
   string dataset_name = 3;
 }
-
-message RunSchedulerRequest {}
 
 message SetTaskStatusRequest {
   TrainModelTask task = 1;
