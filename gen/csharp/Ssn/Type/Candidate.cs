@@ -35,21 +35,15 @@ namespace Ssn.Type {
             "LAoMYm91bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5",
             "EiYKBHR5cGUYBSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZRIQCghw",
             "YWdlX3JlZhgGIAEoDSIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
-            "EgwKCERPQ1VNRU5UEAIiJAoETGluZRIMCgR0ZXh0GAEgASgJEg4KBmFtb3Vu",
-            "dBgCIAEoASKAAgoNTGluZUNhbmRpZGF0ZRIdCgV2YWx1ZRgBIAEoCzIOLnNz",
-            "bi50eXBlLkxpbmUSDAoEdGV4dBgCIAEoCRIoCgpjb25maWRlbmNlGAMgASgL",
-            "MhQuc3NuLnR5cGUuQ29uZmlkZW5jZRIsCgxib3VuZGluZ19ib3gYBCABKAsy",
-            "Fi5zc24udHlwZS5Cb3VuZGluZ1BvbHkSKgoEdHlwZRgFIAEoDjIcLnNzbi50",
-            "eXBlLkxpbmVDYW5kaWRhdGUuVHlwZRIQCghwYWdlX3JlZhgGIAEoDSIsCgRU",
-            "eXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBABEgwKCERPQ1VNRU5UEAJCBloE",
-            "dHlwZWIGcHJvdG8z"));
+            "EgwKCERPQ1VNRU5UEAIiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJ",
+            "Eg4KBmFtb3VudBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Line), global::Ssn.Type.Line.Parser, new[]{ "Text", "Amount" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.LineCandidate.Types.Type) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null)
           }));
     }
     #endregion
@@ -574,163 +568,6 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class Line : pb::IMessage<Line> {
-    private static readonly pb::MessageParser<Line> _parser = new pb::MessageParser<Line>(() => new Line());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Line> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Line() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Line(Line other) : this() {
-      text_ = other.text_;
-      amount_ = other.amount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Line Clone() {
-      return new Line(this);
-    }
-
-    /// <summary>Field number for the "text" field.</summary>
-    public const int TextFieldNumber = 1;
-    private string text_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Text {
-      get { return text_; }
-      set {
-        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 2;
-    private double amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public double Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Line);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Line other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Text != other.Text) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Text.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Text);
-      }
-      if (Amount != 0D) {
-        output.WriteRawTag(17);
-        output.WriteDouble(Amount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Text.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
-      }
-      if (Amount != 0D) {
-        size += 1 + 8;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Line other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Text.Length != 0) {
-        Text = other.Text;
-      }
-      if (other.Amount != 0D) {
-        Amount = other.Amount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Text = input.ReadString();
-            break;
-          }
-          case 17: {
-            Amount = input.ReadDouble();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
     private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
     private pb::UnknownFieldSet _unknownFields;
@@ -739,7 +576,7 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -756,11 +593,8 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public LineCandidate(LineCandidate other) : this() {
-      value_ = other.value_ != null ? other.value_.Clone() : null;
       text_ = other.text_;
-      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
-      boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
-      type_ = other.type_;
+      amount_ = other.amount_;
       pageRef_ = other.pageRef_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -770,20 +604,13 @@ namespace Ssn.Type {
       return new LineCandidate(this);
     }
 
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 1;
-    private global::Ssn.Type.Line value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Type.Line Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
     /// <summary>Field number for the "text" field.</summary>
-    public const int TextFieldNumber = 2;
+    public const int TextFieldNumber = 1;
     private string text_ = "";
+    /// <summary>
+    /// Text of the line without the amount
+    /// Example: "3 Dark and Stormy"
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
       get { return text_; }
@@ -792,64 +619,18 @@ namespace Ssn.Type {
       }
     }
 
-    /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 3;
-    private global::Ssn.Type.Confidence confidence_;
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    private double amount_;
     /// <summary>
-    /// Confidence
+    /// Normalized amount (price) of the line
+    /// Example: 300.0
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Type.Confidence Confidence {
-      get { return confidence_; }
+    public double Amount {
+      get { return amount_; }
       set {
-        confidence_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "bounding_box" field.</summary>
-    public const int BoundingBoxFieldNumber = 4;
-    private global::Ssn.Type.BoundingPoly boundingBox_;
-    /// <summary>
-    /// The bounding box for the block.
-    /// The vertices are in the order of top-left, top-right, bottom-right,
-    /// bottom-left. When a rotation of the bounding box is detected the rotation
-    /// is represented as around the top-left corner as defined when the text is
-    /// read in the 'natural' orientation.
-    /// For example:
-    ///
-    /// * when the text is horizontal it might look like:
-    ///
-    ///         0----1
-    ///         |    |
-    ///         3----2
-    ///
-    /// * when it's rotated 180 degrees around the top-left corner it becomes:
-    ///
-    ///         2----3
-    ///         |    |
-    ///         1----0
-    ///
-    ///   and the vertex order will still be (0, 1, 2, 3).
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Type.BoundingPoly BoundingBox {
-      get { return boundingBox_; }
-      set {
-        boundingBox_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 5;
-    private global::Ssn.Type.LineCandidate.Types.Type type_ = 0;
-    /// <summary>
-    /// Indicate the type of the candidate
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Type.LineCandidate.Types.Type Type {
-      get { return type_; }
-      set {
-        type_ = value;
+        amount_ = value;
       }
     }
 
@@ -857,7 +638,7 @@ namespace Ssn.Type {
     public const int PageRefFieldNumber = 6;
     private uint pageRef_;
     /// <summary>
-    /// A reference to the page where the candidate was found.
+    /// A reference to the page where the line was found.
     /// page_ref start from 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -881,11 +662,8 @@ namespace Ssn.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Value, other.Value)) return false;
       if (Text != other.Text) return false;
-      if (!object.Equals(Confidence, other.Confidence)) return false;
-      if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
-      if (Type != other.Type) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
       if (PageRef != other.PageRef) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -893,11 +671,8 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (value_ != null) hash ^= Value.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
-      if (confidence_ != null) hash ^= Confidence.GetHashCode();
-      if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -912,25 +687,13 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (value_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Value);
-      }
       if (Text.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Text);
       }
-      if (confidence_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Confidence);
-      }
-      if (boundingBox_ != null) {
-        output.WriteRawTag(34);
-        output.WriteMessage(BoundingBox);
-      }
-      if (Type != 0) {
-        output.WriteRawTag(40);
-        output.WriteEnum((int) Type);
+      if (Amount != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Amount);
       }
       if (PageRef != 0) {
         output.WriteRawTag(48);
@@ -944,20 +707,11 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (value_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Value);
-      }
       if (Text.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (confidence_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
-      }
-      if (boundingBox_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BoundingBox);
-      }
-      if (Type != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      if (Amount != 0D) {
+        size += 1 + 8;
       }
       if (PageRef != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
@@ -973,29 +727,11 @@ namespace Ssn.Type {
       if (other == null) {
         return;
       }
-      if (other.value_ != null) {
-        if (value_ == null) {
-          value_ = new global::Ssn.Type.Line();
-        }
-        Value.MergeFrom(other.Value);
-      }
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
-      if (other.confidence_ != null) {
-        if (confidence_ == null) {
-          confidence_ = new global::Ssn.Type.Confidence();
-        }
-        Confidence.MergeFrom(other.Confidence);
-      }
-      if (other.boundingBox_ != null) {
-        if (boundingBox_ == null) {
-          boundingBox_ = new global::Ssn.Type.BoundingPoly();
-        }
-        BoundingBox.MergeFrom(other.BoundingBox);
-      }
-      if (other.Type != 0) {
-        Type = other.Type;
+      if (other.Amount != 0D) {
+        Amount = other.Amount;
       }
       if (other.PageRef != 0) {
         PageRef = other.PageRef;
@@ -1012,32 +748,11 @@ namespace Ssn.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (value_ == null) {
-              value_ = new global::Ssn.Type.Line();
-            }
-            input.ReadMessage(value_);
-            break;
-          }
-          case 18: {
             Text = input.ReadString();
             break;
           }
-          case 26: {
-            if (confidence_ == null) {
-              confidence_ = new global::Ssn.Type.Confidence();
-            }
-            input.ReadMessage(confidence_);
-            break;
-          }
-          case 34: {
-            if (boundingBox_ == null) {
-              boundingBox_ = new global::Ssn.Type.BoundingPoly();
-            }
-            input.ReadMessage(boundingBox_);
-            break;
-          }
-          case 40: {
-            type_ = (global::Ssn.Type.LineCandidate.Types.Type) input.ReadEnum();
+          case 17: {
+            Amount = input.ReadDouble();
             break;
           }
           case 48: {
@@ -1047,19 +762,6 @@ namespace Ssn.Type {
         }
       }
     }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the LineCandidate message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Type {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("FIELD")] Field = 1,
-        [pbr::OriginalName("DOCUMENT")] Document = 2,
-      }
-
-    }
-    #endregion
 
   }
 
