@@ -12,6 +12,8 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from vml_proto.asgt.modeltrainer.v1alpha1 import training_task_pb2 as asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modeltrainer.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\014modeltrainer'),
-  serialized_pb=_b('\n1asgt/modeltrainer/v1alpha1/training_service.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\"t\n\x11TrainModelRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x10\n\x08\x63onsumer\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x03 \x01(\t\x12\x11\n\timage_tag\x18\x04 \x01(\t\x12\x10\n\x08run_name\x18\x05 \x01(\t\"*\n\x12TrainModelResponse\x12\x14\n\x0cversion_name\x18\x01 \x01(\t2~\n\x0fTrainingService\x12k\n\nTrainModel\x12-.asgt.modeltrainer.v1alpha1.TrainModelRequest\x1a..asgt.modeltrainer.v1alpha1.TrainModelResponseB\x0eZ\x0cmodeltrainerb\x06proto3')
-)
+  serialized_pb=_b('\n1asgt/modeltrainer/v1alpha1/training_service.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a.asgt/modeltrainer/v1alpha1/training_task.proto\x1a\x1bgoogle/protobuf/empty.proto\"O\n\x11TrainModelRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x03 \x01(\t\"P\n\x14SetTaskStatusRequest\x12\x38\n\x04task\x18\x01 \x01(\x0b\x32*.asgt.modeltrainer.v1alpha1.TrainModelTask2\xc1\x01\n\x0fTrainingService\x12S\n\nTrainModel\x12-.asgt.modeltrainer.v1alpha1.TrainModelRequest\x1a\x16.google.protobuf.Empty\x12Y\n\rSetTaskStatus\x12\x30.asgt.modeltrainer.v1alpha1.SetTaskStatusRequest\x1a\x16.google.protobuf.EmptyB\x0eZ\x0cmodeltrainerb\x06proto3')
+  ,
+  dependencies=[asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -33,14 +36,14 @@ _TRAINMODELREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.model_type', index=0,
+      name='consumer', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.consumer', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='consumer', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.consumer', index=1,
+      name='model_type', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.model_type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -53,20 +56,6 @@ _TRAINMODELREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='image_tag', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.image_tag', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='run_name', full_name='asgt.modeltrainer.v1alpha1.TrainModelRequest.run_name', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -79,22 +68,22 @@ _TRAINMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=81,
-  serialized_end=197,
+  serialized_start=158,
+  serialized_end=237,
 )
 
 
-_TRAINMODELRESPONSE = _descriptor.Descriptor(
-  name='TrainModelResponse',
-  full_name='asgt.modeltrainer.v1alpha1.TrainModelResponse',
+_SETTASKSTATUSREQUEST = _descriptor.Descriptor(
+  name='SetTaskStatusRequest',
+  full_name='asgt.modeltrainer.v1alpha1.SetTaskStatusRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='version_name', full_name='asgt.modeltrainer.v1alpha1.TrainModelResponse.version_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='task', full_name='asgt.modeltrainer.v1alpha1.SetTaskStatusRequest.task', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -110,12 +99,13 @@ _TRAINMODELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=199,
-  serialized_end=241,
+  serialized_start=239,
+  serialized_end=319,
 )
 
+_SETTASKSTATUSREQUEST.fields_by_name['task'].message_type = asgt_dot_modeltrainer_dot_v1alpha1_dot_training__task__pb2._TRAINMODELTASK
 DESCRIPTOR.message_types_by_name['TrainModelRequest'] = _TRAINMODELREQUEST
-DESCRIPTOR.message_types_by_name['TrainModelResponse'] = _TRAINMODELRESPONSE
+DESCRIPTOR.message_types_by_name['SetTaskStatusRequest'] = _SETTASKSTATUSREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 TrainModelRequest = _reflection.GeneratedProtocolMessageType('TrainModelRequest', (_message.Message,), dict(
@@ -125,12 +115,12 @@ TrainModelRequest = _reflection.GeneratedProtocolMessageType('TrainModelRequest'
   ))
 _sym_db.RegisterMessage(TrainModelRequest)
 
-TrainModelResponse = _reflection.GeneratedProtocolMessageType('TrainModelResponse', (_message.Message,), dict(
-  DESCRIPTOR = _TRAINMODELRESPONSE,
+SetTaskStatusRequest = _reflection.GeneratedProtocolMessageType('SetTaskStatusRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SETTASKSTATUSREQUEST,
   __module__ = 'asgt.modeltrainer.v1alpha1.training_service_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.TrainModelResponse)
+  # @@protoc_insertion_point(class_scope:asgt.modeltrainer.v1alpha1.SetTaskStatusRequest)
   ))
-_sym_db.RegisterMessage(TrainModelResponse)
+_sym_db.RegisterMessage(SetTaskStatusRequest)
 
 
 DESCRIPTOR._options = None
@@ -141,8 +131,8 @@ _TRAININGSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=243,
-  serialized_end=369,
+  serialized_start=322,
+  serialized_end=515,
   methods=[
   _descriptor.MethodDescriptor(
     name='TrainModel',
@@ -150,7 +140,16 @@ _TRAININGSERVICE = _descriptor.ServiceDescriptor(
     index=0,
     containing_service=None,
     input_type=_TRAINMODELREQUEST,
-    output_type=_TRAINMODELRESPONSE,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SetTaskStatus',
+    full_name='asgt.modeltrainer.v1alpha1.TrainingService.SetTaskStatus',
+    index=1,
+    containing_service=None,
+    input_type=_SETTASKSTATUSREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
   ),
 ])

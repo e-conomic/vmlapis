@@ -25,25 +25,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixhc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2RhdGFfc2VydmljZS5wcm90",
-            "bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRogYXNndC90eXBlL3JldGVu",
-            "dGlvbl9wb2xpY3kucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8iUQoRR2V0RGF0YXNldFJlcXVlc3QSEAoIY29uc3VtZXIYASABKAkS",
-            "FAoMZGF0YXNldF9uYW1lGAIgASgJEhQKDGRhdGFzZXRfdHlwZRgDIAEoCSLV",
-            "AQoLRGF0YXNldEluZm8SEAoIY29uc3VtZXIYASABKAkSDAoEbmFtZRgCIAEo",
-            "CRIMCgR0eXBlGAMgASgJEgwKBHRhZ3MYBCADKAkSDwoHdGFyZ2V0cxgFIAMo",
-            "CRI0ChByZXRlbnRpb25fcG9saWN5GAkgASgLMhouYXNndC50eXBlLlJldGVu",
-            "dGlvblBvbGljeRI9Chl0cmFpbmluZ19ncmFjZV9wZXJpb2RfZW5kGAogASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEoECAYQCSJKChJHZXREYXRh",
-            "c2V0UmVzcG9uc2USNAoEaW5mbxgBIAEoCzImLmFzZ3QuZGF0YXNlcnZpY2Uu",
-            "djFhbHBoYTEuRGF0YXNldEluZm8yeAoLRGF0YVNlcnZpY2USaQoKR2V0RGF0",
-            "YXNldBIsLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuR2V0RGF0YXNldFJl",
-            "cXVlc3QaLS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldERhdGFzZXRS",
-            "ZXNwb25zZUINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
+            "bxIZYXNndC5kYXRhc2VydmljZS52MWFscGhhMRocYXNndC90eXBlL2RhdGFz",
+            "ZXRfaW5mby5wcm90byJRChFHZXREYXRhc2V0UmVxdWVzdBIQCghjb25zdW1l",
+            "chgBIAEoCRIUCgxkYXRhc2V0X25hbWUYAiABKAkSFAoMZGF0YXNldF90eXBl",
+            "GAMgASgJIjoKEkdldERhdGFzZXRSZXNwb25zZRIkCgRpbmZvGAEgASgLMhYu",
+            "YXNndC50eXBlLkRhdGFzZXRJbmZvMngKC0RhdGFTZXJ2aWNlEmkKCkdldERh",
+            "dGFzZXQSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldERhdGFzZXRS",
+            "ZXF1ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5HZXREYXRhc2V0",
+            "UmVzcG9uc2VCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetInfoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest), global::Asgt.Dataservice.V1Alpha1.GetDatasetRequest.Parser, new[]{ "Consumer", "DatasetName", "DatasetType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DatasetInfo), global::Asgt.Dataservice.V1Alpha1.DatasetInfo.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "TrainingGracePeriodEnd" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse), global::Asgt.Dataservice.V1Alpha1.GetDatasetResponse.Parser, new[]{ "Info" }, null, null, null)
           }));
     }
@@ -236,299 +229,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
   }
 
-  public sealed partial class DatasetInfo : pb::IMessage<DatasetInfo> {
-    private static readonly pb::MessageParser<DatasetInfo> _parser = new pb::MessageParser<DatasetInfo>(() => new DatasetInfo());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DatasetInfo> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.DataServiceReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DatasetInfo() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DatasetInfo(DatasetInfo other) : this() {
-      consumer_ = other.consumer_;
-      name_ = other.name_;
-      type_ = other.type_;
-      tags_ = other.tags_.Clone();
-      targets_ = other.targets_.Clone();
-      retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
-      trainingGracePeriodEnd_ = other.trainingGracePeriodEnd_ != null ? other.trainingGracePeriodEnd_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DatasetInfo Clone() {
-      return new DatasetInfo(this);
-    }
-
-    /// <summary>Field number for the "consumer" field.</summary>
-    public const int ConsumerFieldNumber = 1;
-    private string consumer_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Consumer {
-      get { return consumer_; }
-      set {
-        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 2;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "type" field.</summary>
-    public const int TypeFieldNumber = 3;
-    private string type_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Type {
-      get { return type_; }
-      set {
-        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(34);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
-    }
-
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 5;
-    private static readonly pb::FieldCodec<string> _repeated_targets_codec
-        = pb::FieldCodec.ForString(42);
-    private readonly pbc::RepeatedField<string> targets_ = new pbc::RepeatedField<string>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Targets {
-      get { return targets_; }
-    }
-
-    /// <summary>Field number for the "retention_policy" field.</summary>
-    public const int RetentionPolicyFieldNumber = 9;
-    private global::Asgt.Type.RetentionPolicy retentionPolicy_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.RetentionPolicy RetentionPolicy {
-      get { return retentionPolicy_; }
-      set {
-        retentionPolicy_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "training_grace_period_end" field.</summary>
-    public const int TrainingGracePeriodEndFieldNumber = 10;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp trainingGracePeriodEnd_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp TrainingGracePeriodEnd {
-      get { return trainingGracePeriodEnd_; }
-      set {
-        trainingGracePeriodEnd_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DatasetInfo);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DatasetInfo other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Consumer != other.Consumer) return false;
-      if (Name != other.Name) return false;
-      if (Type != other.Type) return false;
-      if(!tags_.Equals(other.tags_)) return false;
-      if(!targets_.Equals(other.targets_)) return false;
-      if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
-      if (!object.Equals(TrainingGracePeriodEnd, other.TrainingGracePeriodEnd)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Type.Length != 0) hash ^= Type.GetHashCode();
-      hash ^= tags_.GetHashCode();
-      hash ^= targets_.GetHashCode();
-      if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
-      if (trainingGracePeriodEnd_ != null) hash ^= TrainingGracePeriodEnd.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Consumer.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Consumer);
-      }
-      if (Name.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Name);
-      }
-      if (Type.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Type);
-      }
-      tags_.WriteTo(output, _repeated_tags_codec);
-      targets_.WriteTo(output, _repeated_targets_codec);
-      if (retentionPolicy_ != null) {
-        output.WriteRawTag(74);
-        output.WriteMessage(RetentionPolicy);
-      }
-      if (trainingGracePeriodEnd_ != null) {
-        output.WriteRawTag(82);
-        output.WriteMessage(TrainingGracePeriodEnd);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Consumer.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
-      }
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Type.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
-      }
-      size += tags_.CalculateSize(_repeated_tags_codec);
-      size += targets_.CalculateSize(_repeated_targets_codec);
-      if (retentionPolicy_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
-      }
-      if (trainingGracePeriodEnd_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TrainingGracePeriodEnd);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DatasetInfo other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Consumer.Length != 0) {
-        Consumer = other.Consumer;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Type.Length != 0) {
-        Type = other.Type;
-      }
-      tags_.Add(other.tags_);
-      targets_.Add(other.targets_);
-      if (other.retentionPolicy_ != null) {
-        if (retentionPolicy_ == null) {
-          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
-        }
-        RetentionPolicy.MergeFrom(other.RetentionPolicy);
-      }
-      if (other.trainingGracePeriodEnd_ != null) {
-        if (trainingGracePeriodEnd_ == null) {
-          trainingGracePeriodEnd_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        TrainingGracePeriodEnd.MergeFrom(other.TrainingGracePeriodEnd);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Consumer = input.ReadString();
-            break;
-          }
-          case 18: {
-            Name = input.ReadString();
-            break;
-          }
-          case 26: {
-            Type = input.ReadString();
-            break;
-          }
-          case 34: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
-            break;
-          }
-          case 42: {
-            targets_.AddEntriesFrom(input, _repeated_targets_codec);
-            break;
-          }
-          case 74: {
-            if (retentionPolicy_ == null) {
-              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
-            }
-            input.ReadMessage(retentionPolicy_);
-            break;
-          }
-          case 82: {
-            if (trainingGracePeriodEnd_ == null) {
-              trainingGracePeriodEnd_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(trainingGracePeriodEnd_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class GetDatasetResponse : pb::IMessage<GetDatasetResponse> {
     private static readonly pb::MessageParser<GetDatasetResponse> _parser = new pb::MessageParser<GetDatasetResponse>(() => new GetDatasetResponse());
     private pb::UnknownFieldSet _unknownFields;
@@ -537,7 +237,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.DataServiceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.Dataservice.V1Alpha1.DataServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -565,9 +265,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "info" field.</summary>
     public const int InfoFieldNumber = 1;
-    private global::Asgt.Dataservice.V1Alpha1.DatasetInfo info_;
+    private global::Asgt.Type.DatasetInfo info_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Dataservice.V1Alpha1.DatasetInfo Info {
+    public global::Asgt.Type.DatasetInfo Info {
       get { return info_; }
       set {
         info_ = value;
@@ -636,7 +336,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (other.info_ != null) {
         if (info_ == null) {
-          info_ = new global::Asgt.Dataservice.V1Alpha1.DatasetInfo();
+          info_ = new global::Asgt.Type.DatasetInfo();
         }
         Info.MergeFrom(other.Info);
       }
@@ -653,7 +353,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           case 10: {
             if (info_ == null) {
-              info_ = new global::Asgt.Dataservice.V1Alpha1.DatasetInfo();
+              info_ = new global::Asgt.Type.DatasetInfo();
             }
             input.ReadMessage(info_);
             break;
