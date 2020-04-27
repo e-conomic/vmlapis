@@ -2765,6 +2765,780 @@ public final class CandidateOuterClass {
 
   }
 
+  public interface LineCandidateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.type.LineCandidate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Text of the line without the amount
+     * Example: "3 Dark and Stormy"
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     */
+    java.lang.String getText();
+    /**
+     * <pre>
+     * Text of the line without the amount
+     * Example: "3 Dark and Stormy"
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <pre>
+     * Normalized amount (price) of the line
+     * Example: 300.0
+     * </pre>
+     *
+     * <code>double amount = 2;</code>
+     */
+    double getAmount();
+
+    /**
+     * <pre>
+     * A reference to the page where the line was found.
+     * page_ref start from 1.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 6;</code>
+     */
+    int getPageRef();
+  }
+  /**
+   * Protobuf type {@code ssn.type.LineCandidate}
+   */
+  public  static final class LineCandidate extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.type.LineCandidate)
+      LineCandidateOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use LineCandidate.newBuilder() to construct.
+    private LineCandidate(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private LineCandidate() {
+      text_ = "";
+      amount_ = 0D;
+      pageRef_ = 0;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private LineCandidate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              text_ = s;
+              break;
+            }
+            case 17: {
+
+              amount_ = input.readDouble();
+              break;
+            }
+            case 48: {
+
+              pageRef_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.type.CandidateOuterClass.LineCandidate.class, ssn.type.CandidateOuterClass.LineCandidate.Builder.class);
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 1;
+    private volatile java.lang.Object text_;
+    /**
+     * <pre>
+     * Text of the line without the amount
+     * Example: "3 Dark and Stormy"
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Text of the line without the amount
+     * Example: "3 Dark and Stormy"
+     * </pre>
+     *
+     * <code>string text = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 2;
+    private double amount_;
+    /**
+     * <pre>
+     * Normalized amount (price) of the line
+     * Example: 300.0
+     * </pre>
+     *
+     * <code>double amount = 2;</code>
+     */
+    public double getAmount() {
+      return amount_;
+    }
+
+    public static final int PAGE_REF_FIELD_NUMBER = 6;
+    private int pageRef_;
+    /**
+     * <pre>
+     * A reference to the page where the line was found.
+     * page_ref start from 1.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 6;</code>
+     */
+    public int getPageRef() {
+      return pageRef_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, text_);
+      }
+      if (amount_ != 0D) {
+        output.writeDouble(2, amount_);
+      }
+      if (pageRef_ != 0) {
+        output.writeUInt32(6, pageRef_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, text_);
+      }
+      if (amount_ != 0D) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeDoubleSize(2, amount_);
+      }
+      if (pageRef_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, pageRef_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.type.CandidateOuterClass.LineCandidate)) {
+        return super.equals(obj);
+      }
+      ssn.type.CandidateOuterClass.LineCandidate other = (ssn.type.CandidateOuterClass.LineCandidate) obj;
+
+      boolean result = true;
+      result = result && getText()
+          .equals(other.getText());
+      result = result && (
+          java.lang.Double.doubleToLongBits(getAmount())
+          == java.lang.Double.doubleToLongBits(
+              other.getAmount()));
+      result = result && (getPageRef()
+          == other.getPageRef());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          java.lang.Double.doubleToLongBits(getAmount()));
+      hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
+      hash = (53 * hash) + getPageRef();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.LineCandidate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.type.CandidateOuterClass.LineCandidate prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.type.LineCandidate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.type.LineCandidate)
+        ssn.type.CandidateOuterClass.LineCandidateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.type.CandidateOuterClass.LineCandidate.class, ssn.type.CandidateOuterClass.LineCandidate.Builder.class);
+      }
+
+      // Construct using ssn.type.CandidateOuterClass.LineCandidate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        text_ = "";
+
+        amount_ = 0D;
+
+        pageRef_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_LineCandidate_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate getDefaultInstanceForType() {
+        return ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate build() {
+        ssn.type.CandidateOuterClass.LineCandidate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.LineCandidate buildPartial() {
+        ssn.type.CandidateOuterClass.LineCandidate result = new ssn.type.CandidateOuterClass.LineCandidate(this);
+        result.text_ = text_;
+        result.amount_ = amount_;
+        result.pageRef_ = pageRef_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.type.CandidateOuterClass.LineCandidate) {
+          return mergeFrom((ssn.type.CandidateOuterClass.LineCandidate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.type.CandidateOuterClass.LineCandidate other) {
+        if (other == ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance()) return this;
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.getAmount() != 0D) {
+          setAmount(other.getAmount());
+        }
+        if (other.getPageRef() != 0) {
+          setPageRef(other.getPageRef());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.type.CandidateOuterClass.LineCandidate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.type.CandidateOuterClass.LineCandidate) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
+       * Text of the line without the amount
+       * Example: "3 Dark and Stormy"
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the line without the amount
+       * Example: "3 Dark and Stormy"
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Text of the line without the amount
+       * Example: "3 Dark and Stormy"
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the line without the amount
+       * Example: "3 Dark and Stormy"
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       */
+      public Builder clearText() {
+        
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Text of the line without the amount
+       * Example: "3 Dark and Stormy"
+       * </pre>
+       *
+       * <code>string text = 1;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private double amount_ ;
+      /**
+       * <pre>
+       * Normalized amount (price) of the line
+       * Example: 300.0
+       * </pre>
+       *
+       * <code>double amount = 2;</code>
+       */
+      public double getAmount() {
+        return amount_;
+      }
+      /**
+       * <pre>
+       * Normalized amount (price) of the line
+       * Example: 300.0
+       * </pre>
+       *
+       * <code>double amount = 2;</code>
+       */
+      public Builder setAmount(double value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Normalized amount (price) of the line
+       * Example: 300.0
+       * </pre>
+       *
+       * <code>double amount = 2;</code>
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private int pageRef_ ;
+      /**
+       * <pre>
+       * A reference to the page where the line was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public int getPageRef() {
+        return pageRef_;
+      }
+      /**
+       * <pre>
+       * A reference to the page where the line was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public Builder setPageRef(int value) {
+        
+        pageRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * A reference to the page where the line was found.
+       * page_ref start from 1.
+       * </pre>
+       *
+       * <code>uint32 page_ref = 6;</code>
+       */
+      public Builder clearPageRef() {
+        
+        pageRef_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.type.LineCandidate)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.type.LineCandidate)
+    private static final ssn.type.CandidateOuterClass.LineCandidate DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.type.CandidateOuterClass.LineCandidate();
+    }
+
+    public static ssn.type.CandidateOuterClass.LineCandidate getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<LineCandidate>
+        PARSER = new com.google.protobuf.AbstractParser<LineCandidate>() {
+      @java.lang.Override
+      public LineCandidate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new LineCandidate(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<LineCandidate> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<LineCandidate> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.LineCandidate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_type_Confidence_descriptor;
   private static final 
@@ -2775,6 +3549,11 @@ public final class CandidateOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_Candidate_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_LineCandidate_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_LineCandidate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2796,8 +3575,9 @@ public final class CandidateOuterClass {
       ",\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Boundin" +
       "gPoly\022&\n\004type\030\005 \001(\0162\030.ssn.type.Candidate" +
       ".Type\022\020\n\010page_ref\030\006 \001(\r\",\n\004Type\022\013\n\007UNKNO" +
-      "WN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002B\006Z\004typeb\006p" +
-      "roto3"
+      "WN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"?\n\rLineCan" +
+      "didate\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\022\020\n\010" +
+      "page_ref\030\006 \001(\rB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2825,6 +3605,12 @@ public final class CandidateOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_Candidate_descriptor,
         new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", });
+    internal_static_ssn_type_LineCandidate_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_type_LineCandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_LineCandidate_descriptor,
+        new java.lang.String[] { "Text", "Amount", "PageRef", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ssn.type.Geometry.getDescriptor();
   }

@@ -79,6 +79,7 @@ message PredictResponse {
   repeated ssn.type.Candidate ocr_line_fi_payment_id = 20;
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 21;
   repeated ssn.type.Candidate iban = 22;
+  repeated ssn.type.LineCandidate lines = 23;
 }
 
 message FeatureGenPredictRequest {

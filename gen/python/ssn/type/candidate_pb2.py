@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe8\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08\x44OCUMENT\x10\x02\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe8\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08\x44OCUMENT\x10\x02\"?\n\rLineCandidate\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\x12\x10\n\x08page_ref\x18\x06 \x01(\rB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,])
 
@@ -197,6 +197,51 @@ _CANDIDATE = _descriptor.Descriptor(
   serialized_end=509,
 )
 
+
+_LINECANDIDATE = _descriptor.Descriptor(
+  name='LineCandidate',
+  full_name='ssn.type.LineCandidate',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='text', full_name='ssn.type.LineCandidate.text', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='amount', full_name='ssn.type.LineCandidate.amount', index=1,
+      number=2, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='page_ref', full_name='ssn.type.LineCandidate.page_ref', index=2,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=511,
+  serialized_end=574,
+)
+
 _CONFIDENCE.fields_by_name['level'].enum_type = _CONFIDENCE_LEVEL
 _CONFIDENCE.fields_by_name['value'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _CONFIDENCE_LEVEL.containing_type = _CONFIDENCE
@@ -206,6 +251,7 @@ _CANDIDATE.fields_by_name['type'].enum_type = _CANDIDATE_TYPE
 _CANDIDATE_TYPE.containing_type = _CANDIDATE
 DESCRIPTOR.message_types_by_name['Confidence'] = _CONFIDENCE
 DESCRIPTOR.message_types_by_name['Candidate'] = _CANDIDATE
+DESCRIPTOR.message_types_by_name['LineCandidate'] = _LINECANDIDATE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Confidence = _reflection.GeneratedProtocolMessageType('Confidence', (_message.Message,), dict(
@@ -221,6 +267,13 @@ Candidate = _reflection.GeneratedProtocolMessageType('Candidate', (_message.Mess
   # @@protoc_insertion_point(class_scope:ssn.type.Candidate)
   ))
 _sym_db.RegisterMessage(Candidate)
+
+LineCandidate = _reflection.GeneratedProtocolMessageType('LineCandidate', (_message.Message,), dict(
+  DESCRIPTOR = _LINECANDIDATE,
+  __module__ = 'ssn.type.candidate_pb2'
+  # @@protoc_insertion_point(class_scope:ssn.type.LineCandidate)
+  ))
+_sym_db.RegisterMessage(LineCandidate)
 
 
 DESCRIPTOR._options = None

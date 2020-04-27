@@ -1335,7 +1335,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
 
 
 
@@ -1409,7 +1409,9 @@ proto.ssn.mlservice.v2.PredictResponse.toObject = function(includeInstance, msg)
     ocrLineNlPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineNlPaymentIdList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
-    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    linesList: jspb.Message.toObjectList(msg.getLinesList(),
+    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1555,6 +1557,11 @@ proto.ssn.mlservice.v2.PredictResponse.deserializeBinaryFromReader = function(ms
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 23:
+      var value = new ssn_type_candidate_pb.LineCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.LineCandidate.deserializeBinaryFromReader);
+      msg.addLines(value);
       break;
     default:
       reader.skipField();
@@ -1759,6 +1766,14 @@ proto.ssn.mlservice.v2.PredictResponse.serializeBinaryToWriter = function(messag
       22,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getLinesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      23,
+      f,
+      ssn_type_candidate_pb.LineCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -2443,6 +2458,37 @@ proto.ssn.mlservice.v2.PredictResponse.prototype.addIban = function(opt_value, o
 
 proto.ssn.mlservice.v2.PredictResponse.prototype.clearIbanList = function() {
   this.setIbanList([]);
+};
+
+
+/**
+ * repeated ssn.type.LineCandidate lines = 23;
+ * @return {!Array<!proto.ssn.type.LineCandidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getLinesList = function() {
+  return /** @type{!Array<!proto.ssn.type.LineCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.LineCandidate, 23));
+};
+
+
+/** @param {!Array<!proto.ssn.type.LineCandidate>} value */
+proto.ssn.mlservice.v2.PredictResponse.prototype.setLinesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 23, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.LineCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.LineCandidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addLines = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 23, opt_value, proto.ssn.type.LineCandidate, opt_index);
+};
+
+
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearLinesList = function() {
+  this.setLinesList([]);
 };
 
 

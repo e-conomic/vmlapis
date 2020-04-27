@@ -35,12 +35,15 @@ namespace Ssn.Type {
             "LAoMYm91bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5",
             "EiYKBHR5cGUYBSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZRIQCghw",
             "YWdlX3JlZhgGIAEoDSIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
-            "EgwKCERPQ1VNRU5UEAJCBloEdHlwZWIGcHJvdG8z"));
+            "EgwKCERPQ1VNRU5UEAIiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJ",
+            "Eg4KBmFtb3VudBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null)
           }));
     }
     #endregion
@@ -562,6 +565,203 @@ namespace Ssn.Type {
 
     }
     #endregion
+
+  }
+
+  public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
+    private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<LineCandidate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LineCandidate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LineCandidate(LineCandidate other) : this() {
+      text_ = other.text_;
+      amount_ = other.amount_;
+      pageRef_ = other.pageRef_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public LineCandidate Clone() {
+      return new LineCandidate(this);
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 1;
+    private string text_ = "";
+    /// <summary>
+    /// Text of the line without the amount
+    /// Example: "3 Dark and Stormy"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    private double amount_;
+    /// <summary>
+    /// Normalized amount (price) of the line
+    /// Example: 300.0
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double Amount {
+      get { return amount_; }
+      set {
+        amount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_ref" field.</summary>
+    public const int PageRefFieldNumber = 6;
+    private uint pageRef_;
+    /// <summary>
+    /// A reference to the page where the line was found.
+    /// page_ref start from 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public uint PageRef {
+      get { return pageRef_; }
+      set {
+        pageRef_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as LineCandidate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(LineCandidate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Text != other.Text) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
+      if (PageRef != other.PageRef) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (Amount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
+      if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Text.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Text);
+      }
+      if (Amount != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Amount);
+      }
+      if (PageRef != 0) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(PageRef);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (Amount != 0D) {
+        size += 1 + 8;
+      }
+      if (PageRef != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(LineCandidate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      if (other.Amount != 0D) {
+        Amount = other.Amount;
+      }
+      if (other.PageRef != 0) {
+        PageRef = other.PageRef;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Text = input.ReadString();
+            break;
+          }
+          case 17: {
+            Amount = input.ReadDouble();
+            break;
+          }
+          case 48: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
 
   }
 

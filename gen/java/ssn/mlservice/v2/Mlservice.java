@@ -5951,6 +5951,30 @@ public final class Mlservice {
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.LineCandidate> 
+        getLinesList();
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    ssn.type.CandidateOuterClass.LineCandidate getLines(int index);
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    int getLinesCount();
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+        getLinesOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -5991,6 +6015,7 @@ public final class Mlservice {
       ocrLineFiPaymentId_ = java.util.Collections.emptyList();
       ocrLineNlPaymentId_ = java.util.Collections.emptyList();
       iban_ = java.util.Collections.emptyList();
+      lines_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -6215,6 +6240,15 @@ public final class Mlservice {
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
+            case 186: {
+              if (!((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+                lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>();
+                mutable_bitField0_ |= 0x00400000;
+              }
+              lines_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.LineCandidate.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -6295,6 +6329,9 @@ public final class Mlservice {
         }
         if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
+        }
+        if (((mutable_bitField0_ & 0x00400000) == 0x00400000)) {
+          lines_ = java.util.Collections.unmodifiableList(lines_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7083,6 +7120,41 @@ public final class Mlservice {
       return iban_.get(index);
     }
 
+    public static final int LINES_FIELD_NUMBER = 23;
+    private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_;
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
+      return lines_;
+    }
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+        getLinesOrBuilderList() {
+      return lines_;
+    }
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    public int getLinesCount() {
+      return lines_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
+      return lines_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+        int index) {
+      return lines_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7162,6 +7234,9 @@ public final class Mlservice {
       }
       for (int i = 0; i < iban_.size(); i++) {
         output.writeMessage(22, iban_.get(i));
+      }
+      for (int i = 0; i < lines_.size(); i++) {
+        output.writeMessage(23, lines_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -7260,6 +7335,10 @@ public final class Mlservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, iban_.get(i));
       }
+      for (int i = 0; i < lines_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(23, lines_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7320,6 +7399,8 @@ public final class Mlservice {
           .equals(other.getOcrLineNlPaymentIdList());
       result = result && getIbanList()
           .equals(other.getIbanList());
+      result = result && getLinesList()
+          .equals(other.getLinesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -7418,6 +7499,10 @@ public final class Mlservice {
       if (getIbanCount() > 0) {
         hash = (37 * hash) + IBAN_FIELD_NUMBER;
         hash = (53 * hash) + getIbanList().hashCode();
+      }
+      if (getLinesCount() > 0) {
+        hash = (37 * hash) + LINES_FIELD_NUMBER;
+        hash = (53 * hash) + getLinesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -7573,6 +7658,7 @@ public final class Mlservice {
           getOcrLineFiPaymentIdFieldBuilder();
           getOcrLineNlPaymentIdFieldBuilder();
           getIbanFieldBuilder();
+          getLinesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -7709,6 +7795,12 @@ public final class Mlservice {
           bitField0_ = (bitField0_ & ~0x00200000);
         } else {
           ibanBuilder_.clear();
+        }
+        if (linesBuilder_ == null) {
+          lines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00400000);
+        } else {
+          linesBuilder_.clear();
         }
         return this;
       }
@@ -7934,6 +8026,15 @@ public final class Mlservice {
           result.iban_ = iban_;
         } else {
           result.iban_ = ibanBuilder_.build();
+        }
+        if (linesBuilder_ == null) {
+          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+            lines_ = java.util.Collections.unmodifiableList(lines_);
+            bitField0_ = (bitField0_ & ~0x00400000);
+          }
+          result.lines_ = lines_;
+        } else {
+          result.lines_ = linesBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8552,6 +8653,32 @@ public final class Mlservice {
                    getIbanFieldBuilder() : null;
             } else {
               ibanBuilder_.addAllMessages(other.iban_);
+            }
+          }
+        }
+        if (linesBuilder_ == null) {
+          if (!other.lines_.isEmpty()) {
+            if (lines_.isEmpty()) {
+              lines_ = other.lines_;
+              bitField0_ = (bitField0_ & ~0x00400000);
+            } else {
+              ensureLinesIsMutable();
+              lines_.addAll(other.lines_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lines_.isEmpty()) {
+            if (linesBuilder_.isEmpty()) {
+              linesBuilder_.dispose();
+              linesBuilder_ = null;
+              lines_ = other.lines_;
+              bitField0_ = (bitField0_ & ~0x00400000);
+              linesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinesFieldBuilder() : null;
+            } else {
+              linesBuilder_.addAllMessages(other.lines_);
             }
           }
         }
@@ -13864,6 +13991,246 @@ public final class Mlservice {
         }
         return ibanBuilder_;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_ =
+        java.util.Collections.emptyList();
+      private void ensureLinesIsMutable() {
+        if (!((bitField0_ & 0x00400000) == 0x00400000)) {
+          lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>(lines_);
+          bitField0_ |= 0x00400000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder> linesBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
+        if (linesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lines_);
+        } else {
+          return linesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public int getLinesCount() {
+        if (linesBuilder_ == null) {
+          return lines_.size();
+        } else {
+          return linesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
+        if (linesBuilder_ == null) {
+          return lines_.get(index);
+        } else {
+          return linesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder setLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.set(index, value);
+          onChanged();
+        } else {
+          linesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder setLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder addLines(ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.add(value);
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder addLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.add(index, value);
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder addLines(
+          ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder addLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder addAllLines(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.LineCandidate> values) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lines_);
+          onChanged();
+        } else {
+          linesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder clearLines() {
+        if (linesBuilder_ == null) {
+          lines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00400000);
+          onChanged();
+        } else {
+          linesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public Builder removeLines(int index) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.remove(index);
+          onChanged();
+        } else {
+          linesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder getLinesBuilder(
+          int index) {
+        return getLinesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+          int index) {
+        if (linesBuilder_ == null) {
+          return lines_.get(index);  } else {
+          return linesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+           getLinesOrBuilderList() {
+        if (linesBuilder_ != null) {
+          return linesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lines_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder() {
+        return getLinesFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder(
+          int index) {
+        return getLinesFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.LineCandidate lines = 23;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.LineCandidate.Builder> 
+           getLinesBuilderList() {
+        return getLinesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+          getLinesFieldBuilder() {
+        if (linesBuilder_ == null) {
+          linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder>(
+                  lines_,
+                  ((bitField0_ & 0x00400000) == 0x00400000),
+                  getParentForChildren(),
+                  isClean());
+          lines_ = null;
+        }
+        return linesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -14785,7 +15152,7 @@ public final class Mlservice {
       "\022$\n\007example\030\001 \001(\0132\023.tensorflow.Example\"T" +
       "\n\016PredictRequest\022$\n\007example\030\001 \001(\0132\023.tens" +
       "orflow.Example\022\034\n\024top_n_most_confident\030\002" +
-      " \001(\r\"\300\010\n\017PredictResponse\022\'\n\norder_date\030\001" +
+      " \001(\r\"\350\010\n\017PredictResponse\022\'\n\norder_date\030\001" +
       " \003(\0132\023.ssn.type.Candidate\022-\n\020payment_due" +
       "_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010curr" +
       "ency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttotal" +
@@ -14812,7 +15179,8 @@ public final class Mlservice {
       "r_line_fi_payment_id\030\024 \003(\0132\023.ssn.type.Ca" +
       "ndidate\0223\n\026ocr_line_nl_payment_id\030\025 \003(\0132" +
       "\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\0132\023.ssn" +
-      ".type.Candidate\"\227\001\n\030FeatureGenPredictReq" +
+      ".type.Candidate\022&\n\005lines\030\027 \003(\0132\027.ssn.typ" +
+      "e.LineCandidate\"\227\001\n\030FeatureGenPredictReq" +
       "uest\022@\n\023feature_gen_request\030\001 \001(\0132#.ssn." +
       "mlservice.v2.FeatureGenRequest\0229\n\017predic" +
       "t_request\030\002 \001(\0132 .ssn.mlservice.v2.Predi" +
@@ -14870,7 +15238,7 @@ public final class Mlservice {
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", });
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_fieldAccessorTable = new
