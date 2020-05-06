@@ -199,7 +199,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   OCR_LINE_FI_PAYMENT_ID: 21,
   OCR_LINE_NL_PAYMENT_ID: 22,
   TEXT: 23,
-  IBAN: 24
+  IBAN: 24,
+  LINES: 25
 };
 
 /**
@@ -523,7 +524,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25,26];
 
 
 
@@ -600,7 +601,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     text: jspb.Message.getFieldWithDefault(msg, 23, ""),
     feedbackId: jspb.Message.getFieldWithDefault(msg, 24, ""),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
-    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    linesList: jspb.Message.toObjectList(msg.getLinesList(),
+    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -759,6 +762,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 26:
+      var value = new ssn_type_candidate_pb.LineCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.LineCandidate.deserializeBinaryFromReader);
+      msg.addLines(value);
       break;
     default:
       reader.skipField();
@@ -985,6 +993,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       25,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getLinesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      26,
+      f,
+      ssn_type_candidate_pb.LineCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -1729,6 +1745,37 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addIban = function(op
 
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearIbanList = function() {
   this.setIbanList([]);
+};
+
+
+/**
+ * repeated ssn.type.LineCandidate lines = 26;
+ * @return {!Array<!proto.ssn.type.LineCandidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getLinesList = function() {
+  return /** @type{!Array<!proto.ssn.type.LineCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.LineCandidate, 26));
+};
+
+
+/** @param {!Array<!proto.ssn.type.LineCandidate>} value */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setLinesList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 26, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.LineCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.LineCandidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addLines = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 26, opt_value, proto.ssn.type.LineCandidate, opt_index);
+};
+
+
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearLinesList = function() {
+  this.setLinesList([]);
 };
 
 
