@@ -14,6 +14,8 @@ grpc.web = require('grpc-web');
 
 var asgt_dataservice_v1alpha1_delete_pb = require('../../../asgt/dataservice/v1alpha1/delete_pb.js')
 
+var asgt_dataservice_v1alpha1_info_pb = require('../../../asgt/dataservice/v1alpha1/info_pb.js')
+
 var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js')
 
 var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js')
@@ -317,6 +319,86 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServicePromiseClient.prototype
       request,
       metadata || {},
       methodDescriptor_ScannedInvoiceDataService_DeleteScannedInvoiceData);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
+ *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
+ */
+const methodDescriptor_ScannedInvoiceDataService_GetBankInfo = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+  grpc.web.MethodType.UNARY,
+  asgt_dataservice_v1alpha1_info_pb.GetInfoRequest,
+  asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_dataservice_v1alpha1_info_pb.GetInfoResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
+ *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
+ */
+const methodInfo_ScannedInvoiceDataService_GetBankInfo = new grpc.web.AbstractClientBase.MethodInfo(
+  asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  asgt_dataservice_v1alpha1_info_pb.GetInfoResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.asgt.dataservice.v1alpha1.GetInfoResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceClient.prototype.getBankInfo =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+      request,
+      metadata || {},
+      methodDescriptor_ScannedInvoiceDataService_GetBankInfo,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServicePromiseClient.prototype.getBankInfo =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+      request,
+      metadata || {},
+      methodDescriptor_ScannedInvoiceDataService_GetBankInfo);
 };
 
 

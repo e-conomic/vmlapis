@@ -3436,35 +3436,40 @@ public final class ScannedInvoiceDataServiceOuterClass {
       "\n<asgt/dataservice/v1alpha1/scanned_invo" +
       "ice_data_service.proto\022\031asgt.dataservice" +
       ".v1alpha1\032&asgt/dataservice/v1alpha1/del" +
-      "ete.proto\032 asgt/type/retention_policy.pr" +
-      "oto\032\037asgt/type/scanned_invoice.proto\032\034as" +
-      "gt/type/target_value.proto\032\034google/api/a" +
-      "nnotations.proto\032\033google/protobuf/empty." +
-      "proto\"r\n\030ScannedInvoiceEntryInput\022\'\n\004dat" +
-      "a\030\001 \001(\0132\031.asgt.type.ScannedInvoice\022-\n\rta" +
-      "rget_values\030\002 \003(\0132\026.asgt.type.TargetValu" +
-      "e\"\325\001\n\"CreateScannedInvoiceDatasetRequest" +
-      "\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022\017\n\007" +
-      "targets\030\005 \003(\t\022D\n\007entries\030\003 \003(\01323.asgt.da" +
-      "taservice.v1alpha1.ScannedInvoiceEntryIn" +
-      "put\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.typ" +
-      "e.RetentionPolicy\"}\n\037AppendScannedInvoic" +
-      "eDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022D\n\007en" +
-      "tries\030\003 \003(\01323.asgt.dataservice.v1alpha1." +
-      "ScannedInvoiceEntryInput2\351\003\n\031ScannedInvo" +
-      "iceDataService\022\241\001\n\033CreateScannedInvoiceD" +
-      "ataset\022=.asgt.dataservice.v1alpha1.Creat" +
-      "eScannedInvoiceDatasetRequest\032\026.google.p" +
-      "rotobuf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanned" +
-      "-invoice:create:\001*\022\233\001\n\030AppendScannedInvo" +
-      "iceData\022:.asgt.dataservice.v1alpha1.Appe" +
-      "ndScannedInvoiceDataRequest\032\026.google.pro" +
+      "ete.proto\032$asgt/dataservice/v1alpha1/inf" +
+      "o.proto\032 asgt/type/retention_policy.prot" +
+      "o\032\037asgt/type/scanned_invoice.proto\032\034asgt" +
+      "/type/target_value.proto\032\034google/api/ann" +
+      "otations.proto\032\033google/protobuf/empty.pr" +
+      "oto\"r\n\030ScannedInvoiceEntryInput\022\'\n\004data\030" +
+      "\001 \001(\0132\031.asgt.type.ScannedInvoice\022-\n\rtarg" +
+      "et_values\030\002 \003(\0132\026.asgt.type.TargetValue\"" +
+      "\325\001\n\"CreateScannedInvoiceDatasetRequest\022\024" +
+      "\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\022\017\n\007ta" +
+      "rgets\030\005 \003(\t\022D\n\007entries\030\003 \003(\01323.asgt.data" +
+      "service.v1alpha1.ScannedInvoiceEntryInpu" +
+      "t\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.type." +
+      "RetentionPolicy\"}\n\037AppendScannedInvoiceD" +
+      "ataRequest\022\024\n\014dataset_name\030\001 \001(\t\022D\n\007entr" +
+      "ies\030\003 \003(\01323.asgt.dataservice.v1alpha1.Sc" +
+      "annedInvoiceEntryInput2\373\004\n\031ScannedInvoic" +
+      "eDataService\022\241\001\n\033CreateScannedInvoiceDat" +
+      "aset\022=.asgt.dataservice.v1alpha1.CreateS" +
+      "cannedInvoiceDatasetRequest\032\026.google.pro" +
       "tobuf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanned-i" +
-      "nvoice:append:\001*\022\211\001\n\030DeleteScannedInvoic" +
-      "eData\022(.asgt.dataservice.v1alpha1.Delete" +
-      "Request\032\026.google.protobuf.Empty\"+\202\323\344\223\002%\"" +
-      " /v1alpha1/scanned-invoice:delete:\001*B\rZ\013" +
-      "dataserviceb\006proto3"
+      "nvoice:create:\001*\022\233\001\n\030AppendScannedInvoic" +
+      "eData\022:.asgt.dataservice.v1alpha1.Append" +
+      "ScannedInvoiceDataRequest\032\026.google.proto" +
+      "buf.Empty\"+\202\323\344\223\002%\" /v1alpha1/scanned-inv" +
+      "oice:append:\001*\022\211\001\n\030DeleteScannedInvoiceD" +
+      "ata\022(.asgt.dataservice.v1alpha1.DeleteRe" +
+      "quest\032\026.google.protobuf.Empty\"+\202\323\344\223\002%\" /" +
+      "v1alpha1/scanned-invoice:delete:\001*\022\217\001\n\013G" +
+      "etBankInfo\022).asgt.dataservice.v1alpha1.G" +
+      "etInfoRequest\032*.asgt.dataservice.v1alpha" +
+      "1.GetInfoResponse\")\202\323\344\223\002#\"\036/v1alpha1/sca" +
+      "nned-invoice:info:\001*B\rZ\013dataserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3478,6 +3483,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Delete.getDescriptor(),
+          asgt.dataservice.v1alpha1.Info.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           asgt.type.ScannedInvoiceOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
@@ -3508,6 +3514,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Delete.getDescriptor();
+    asgt.dataservice.v1alpha1.Info.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     asgt.type.ScannedInvoiceOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();

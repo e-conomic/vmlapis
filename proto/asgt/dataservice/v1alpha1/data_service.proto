@@ -4,7 +4,7 @@ package asgt.dataservice.v1alpha1;
 
 option go_package = "dataservice";
 
-import "asgt/type/dataset_info.proto";
+import "asgt/type/dataset.proto";
 
 service DataService {
   rpc GetDataset (GetDatasetRequest) returns (GetDatasetResponse);
@@ -17,5 +17,5 @@ message GetDatasetRequest {
 }
 
 message GetDatasetResponse {
-  asgt.type.DatasetInfo info = 1;
+  asgt.type.Dataset dataset = 1;
 }

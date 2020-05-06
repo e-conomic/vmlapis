@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.dataservice.v1alpha1 import delete_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2
+from vml_proto.asgt.dataservice.v1alpha1 import info_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2
 from vml_proto.asgt.type import bank_transaction_pb2 as asgt_dot_type_dot_bank__transaction__pb2
 from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
 from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n1asgt/dataservice/v1alpha1/bank_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a asgt/type/bank_transaction.proto\x1a asgt/type/retention_policy.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"i\n\x0e\x42\x61nkEntryInput\x12(\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xc1\x01\n\x18\x43reateBankDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"i\n\x15\x41ppendBankDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput2\x8a\x03\n\x0f\x42\x61nkDataService\x12\x82\x01\n\x11\x43reateBankDataset\x12\x33.asgt.dataservice.v1alpha1.CreateBankDatasetRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:create:\x01*\x12|\n\x0e\x41ppendBankData\x12\x30.asgt.dataservice.v1alpha1.AppendBankDataRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:append:\x01*\x12t\n\x0e\x44\x65leteBankData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n1asgt/dataservice/v1alpha1/bank_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a$asgt/dataservice/v1alpha1/info.proto\x1a asgt/type/bank_transaction.proto\x1a asgt/type/retention_policy.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"i\n\x0e\x42\x61nkEntryInput\x12(\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xc1\x01\n\x18\x43reateBankDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"i\n\x15\x41ppendBankDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12:\n\x07\x65ntries\x18\x03 \x03(\x0b\x32).asgt.dataservice.v1alpha1.BankEntryInput2\x91\x04\n\x0f\x42\x61nkDataService\x12\x82\x01\n\x11\x43reateBankDataset\x12\x33.asgt.dataservice.v1alpha1.CreateBankDatasetRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:create:\x01*\x12|\n\x0e\x41ppendBankData\x12\x30.asgt.dataservice.v1alpha1.AppendBankDataRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:append:\x01*\x12t\n\x0e\x44\x65leteBankData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1alpha1/bank:delete:\x01*\x12\x84\x01\n\x0bGetBankInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1alpha1/bank:info:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +66,8 @@ _BANKENTRYINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=277,
-  serialized_end=382,
+  serialized_start=315,
+  serialized_end=420,
 )
 
 
@@ -124,8 +125,8 @@ _CREATEBANKDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=385,
-  serialized_end=578,
+  serialized_start=423,
+  serialized_end=616,
 )
 
 
@@ -162,8 +163,8 @@ _APPENDBANKDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=580,
-  serialized_end=685,
+  serialized_start=618,
+  serialized_end=723,
 )
 
 _BANKENTRYINPUT.fields_by_name['data'].message_type = asgt_dot_type_dot_bank__transaction__pb2._BANKTRANSACTION
@@ -206,8 +207,8 @@ _BANKDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=688,
-  serialized_end=1082,
+  serialized_start=726,
+  serialized_end=1255,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateBankDataset',
@@ -235,6 +236,15 @@ _BANKDATASERVICE = _descriptor.ServiceDescriptor(
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2._DELETEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=_b('\202\323\344\223\002\032\"\025/v1alpha1/bank:delete:\001*'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetBankInfo',
+    full_name='asgt.dataservice.v1alpha1.BankDataService.GetBankInfo',
+    index=3,
+    containing_service=None,
+    input_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFOREQUEST,
+    output_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFORESPONSE,
+    serialized_options=_b('\202\323\344\223\002\030\"\023/v1alpha1/bank:info:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_BANKDATASERVICE)

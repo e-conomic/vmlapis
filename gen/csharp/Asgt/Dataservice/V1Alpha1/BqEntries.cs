@@ -27,45 +27,44 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Ciphc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2JxX2VudHJpZXMucHJvdG8S",
             "GWFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEaIGFzZ3QvdHlwZS9iYW5rX3Ry",
             "YW5zYWN0aW9uLnByb3RvGhxhc2d0L3R5cGUvaW52b2ljZV9saW5lLnByb3Rv",
-            "Ghphc2d0L3R5cGUvbW9kZWxfaW5mby5wcm90bxoaYXNndC90eXBlL3ByZWRp",
-            "Y3Rpb24ucHJvdG8aH2FzZ3QvdHlwZS9zY2FubmVkX2ludm9pY2UucHJvdG8a",
-            "HGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEv",
-            "YnFfZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ivQMKCUJhbmtFbnRyeRI+",
-            "CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlk",
-            "IGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/AggBEhsK",
-            "DGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoEdGFncxgEIAMoCUJG6j9D",
-            "IkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmljaGVkIGJ5IHNlcnZp",
-            "Y2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIoCgRkYXRhGAUgASgLMhouYXNndC50",
-            "eXBlLkJhbmtUcmFuc2FjdGlvbhItCg10YXJnZXRfdmFsdWVzGAYgAygLMhYu",
-            "YXNndC50eXBlLlRhcmdldFZhbHVlEiMKBW1vZGVsGAkgASgLMhQuYXNndC50",
-            "eXBlLk1vZGVsSW5mbxIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNndC50eXBl",
-            "LlByZWRpY3Rpb24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgB",
-            "EglUSU1FU1RBTVA6Duo/CwoJYmFua19kYXRhIt0DChpFbGVjdHJvbmljSW52",
-            "b2ljZUxpbmVFbnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBF",
-            "bnZveSByZXF1ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIY",
-            "AiABKAlCBeo/AggBEhsKDGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoE",
-            "dGFncxgEIAMoCUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVu",
-            "cmljaGVkIGJ5IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIkCgRkYXRh",
-            "GAUgASgLMhYuYXNndC50eXBlLkludm9pY2VMaW5lEi0KDXRhcmdldF92YWx1",
-            "ZXMYBiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUSIwoFbW9kZWwYCSAB",
-            "KAsyFC5hc2d0LnR5cGUuTW9kZWxJbmZvEjAKCnByZWRpY3Rpb24YCiADKAsy",
-            "HC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgI",
-            "IAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoh6j8eChxlbGVjdHJvbmljX2ludm9p",
-            "Y2VfbGluZV9kYXRhItEDChNTY2FubmVkSW52b2ljZUVudHJ5Ej4KAmlkGAEg",
-            "ASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVl",
-            "ZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNl",
-            "dF9uYW1lGAMgASgJQgXqPwIIARJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3Mg",
-            "ZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2",
-            "YWxldGtleSBpcyB1c2VkEicKBGRhdGEYBSABKAsyGS5hc2d0LnR5cGUuU2Nh",
-            "bm5lZEludm9pY2USLQoNdGFyZ2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3QudHlw",
-            "ZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2Rl",
-            "bEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0",
-            "aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNU",
-            "QU1QOhnqPxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhQg1aC2RhdGFzZXJ2aWNl",
-            "YgZwcm90bzM="));
+            "GhVhc2d0L3R5cGUvbW9kZWwucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9u",
+            "LnByb3RvGh9hc2d0L3R5cGUvc2Nhbm5lZF9pbnZvaWNlLnByb3RvGhxhc2d0",
+            "L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2Zp",
+            "ZWxkLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX3RhYmxlLnByb3RvGhxnb29n",
+            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIrkDCglCYW5rRW50cnkSPgoCaWQY",
+            "ASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kgcmVxdWVzdCBpZCBpZiBm",
+            "ZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJQgXqPwIIARIbCgxkYXRh",
+            "c2V0X25hbWUYAyABKAlCBeo/AggBElQKBHRhZ3MYBCADKAlCRuo/QyJBVGFn",
+            "cyBkZWZpbmVkIGJ5IGNvbnN1bWVyLCBlbnJpY2hlZCBieSBzZXJ2aWNlIGlm",
+            "IHZhbGV0a2V5IGlzIHVzZWQSKAoEZGF0YRgFIAEoCzIaLmFzZ3QudHlwZS5C",
+            "YW5rVHJhbnNhY3Rpb24SLQoNdGFyZ2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3Qu",
+            "dHlwZS5UYXJnZXRWYWx1ZRIfCgVtb2RlbBgJIAEoCzIQLmFzZ3QudHlwZS5N",
+            "b2RlbBIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNndC50eXBlLlByZWRpY3Rp",
+            "b24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgBEglUSU1FU1RB",
+            "TVA6Duo/CwoJYmFua19kYXRhItkDChpFbGVjdHJvbmljSW52b2ljZUxpbmVF",
+            "bnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1",
+            "ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/",
+            "AggBEhsKDGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoEdGFncxgEIAMo",
+            "CUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmljaGVkIGJ5",
+            "IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIkCgRkYXRhGAUgASgLMhYu",
+            "YXNndC50eXBlLkludm9pY2VMaW5lEi0KDXRhcmdldF92YWx1ZXMYBiADKAsy",
+            "Fi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUSHwoFbW9kZWwYCSABKAsyEC5hc2d0",
+            "LnR5cGUuTW9kZWwSMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3QudHlwZS5Q",
+            "cmVkaWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJ",
+            "VElNRVNUQU1QOiHqPx4KHGVsZWN0cm9uaWNfaW52b2ljZV9saW5lX2RhdGEi",
+            "zQMKE1NjYW5uZWRJbnZvaWNlRW50cnkSPgoCaWQYASABKAlCMuo/LyItSUQs",
+            "IG1hdGNoZXMgRW52b3kgcmVxdWVzdCBpZCBpZiBmZWVkYmFjayBkYXRhEhcK",
+            "CGNvbnN1bWVyGAIgASgJQgXqPwIIARIbCgxkYXRhc2V0X25hbWUYAyABKAlC",
+            "Beo/AggBElQKBHRhZ3MYBCADKAlCRuo/QyJBVGFncyBkZWZpbmVkIGJ5IGNv",
+            "bnN1bWVyLCBlbnJpY2hlZCBieSBzZXJ2aWNlIGlmIHZhbGV0a2V5IGlzIHVz",
+            "ZWQSJwoEZGF0YRgFIAEoCzIZLmFzZ3QudHlwZS5TY2FubmVkSW52b2ljZRIt",
+            "Cg10YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVl",
+            "Eh8KBW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rp",
+            "b24YCiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGlt",
+            "ZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoZ6j8WChRzY2FubmVk",
+            "X2ludm9pY2VfZGF0YUINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelInfoReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
@@ -187,9 +186,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -353,7 +352,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -405,7 +404,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;
@@ -531,9 +530,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -697,7 +696,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -749,7 +748,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;
@@ -875,9 +874,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -1041,7 +1040,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -1093,7 +1092,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;

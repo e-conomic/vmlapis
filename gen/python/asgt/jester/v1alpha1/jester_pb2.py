@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 from vml_proto.asgt.type import bank_transaction_pb2 as asgt_dot_type_dot_bank__transaction__pb2
 from vml_proto.asgt.type import invoice_line_pb2 as asgt_dot_type_dot_invoice__line__pb2
-from vml_proto.asgt.type import model_info_pb2 as asgt_dot_type_dot_model__info__pb2
+from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
 from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from vml_proto.asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
@@ -25,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.jester.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\006jester'),
-  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1cgoogle/api/annotations.proto\"f\n\x13SuggestionsResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12#\n\x05model\x18\x02 \x01(\x0b\x32\x14.asgt.type.ModelInfo\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x92\x01\n\x15ScannedInvoiceRequest\x12)\n\x06inputs\x18\x01 \x03(\x0b\x32\x19.asgt.type.ScannedInvoice\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\"\x96\x01\n\x1c\x45lectronicInvoiceLineRequest\x12&\n\x06inputs\x18\x01 \x03(\x0b\x32\x16.asgt.type.InvoiceLine\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\"\x89\x01\n\x0b\x42\x61nkRequest\x12*\n\x06inputs\x18\x01 \x03(\x0b\x32\x1a.asgt.type.BankTransaction\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions2\xeb\x03\n\x06Jester\x12\xa1\x01\n\x19ScannedInvoiceSuggestions\x12+.asgt.jester.v1alpha1.ScannedInvoiceRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\",\x82\xd3\xe4\x93\x02&\"!/v1alpha1/scanned-invoice:suggest:\x01*\x12\xb7\x01\n ElectronicInvoiceLineSuggestions\x12\x32.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"4\x82\xd3\xe4\x93\x02.\")/v1alpha1/electronic-invoice-line:suggest:\x01*\x12\x82\x01\n\x0f\x42\x61nkSuggestions\x12!.asgt.jester.v1alpha1.BankRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/v1alpha1/bank:suggest:\x01*B\x08Z\x06jesterb\x06proto3')
+  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1cgoogle/api/annotations.proto\"b\n\x13SuggestionsResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x92\x01\n\x15ScannedInvoiceRequest\x12)\n\x06inputs\x18\x01 \x03(\x0b\x32\x19.asgt.type.ScannedInvoice\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\"\x96\x01\n\x1c\x45lectronicInvoiceLineRequest\x12&\n\x06inputs\x18\x01 \x03(\x0b\x32\x16.asgt.type.InvoiceLine\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions\"\x89\x01\n\x0b\x42\x61nkRequest\x12*\n\x06inputs\x18\x01 \x03(\x0b\x32\x1a.asgt.type.BankTransaction\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x38\n\x07options\x18\x03 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions2\xeb\x03\n\x06Jester\x12\xa1\x01\n\x19ScannedInvoiceSuggestions\x12+.asgt.jester.v1alpha1.ScannedInvoiceRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\",\x82\xd3\xe4\x93\x02&\"!/v1alpha1/scanned-invoice:suggest:\x01*\x12\xb7\x01\n ElectronicInvoiceLineSuggestions\x12\x32.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"4\x82\xd3\xe4\x93\x02.\")/v1alpha1/electronic-invoice-line:suggest:\x01*\x12\x82\x01\n\x0f\x42\x61nkSuggestions\x12!.asgt.jester.v1alpha1.BankRequest\x1a).asgt.jester.v1alpha1.SuggestionsResponse\"!\x82\xd3\xe4\x93\x02\x1b\"\x16/v1alpha1/bank:suggest:\x01*B\x08Z\x06jesterb\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_model__info__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +65,8 @@ _SUGGESTIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=242,
-  serialized_end=344,
+  serialized_start=237,
+  serialized_end=335,
 )
 
 
@@ -103,8 +103,8 @@ _SUGGESTIONOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=346,
-  serialized_end=444,
+  serialized_start=337,
+  serialized_end=435,
 )
 
 
@@ -148,8 +148,8 @@ _SCANNEDINVOICEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=447,
-  serialized_end=593,
+  serialized_start=438,
+  serialized_end=584,
 )
 
 
@@ -193,8 +193,8 @@ _ELECTRONICINVOICELINEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=596,
-  serialized_end=746,
+  serialized_start=587,
+  serialized_end=737,
 )
 
 
@@ -238,12 +238,12 @@ _BANKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=749,
-  serialized_end=886,
+  serialized_start=740,
+  serialized_end=877,
 )
 
 _SUGGESTIONSRESPONSE.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
-_SUGGESTIONSRESPONSE.fields_by_name['model'].message_type = asgt_dot_type_dot_model__info__pb2._MODELINFO
+_SUGGESTIONSRESPONSE.fields_by_name['model'].message_type = asgt_dot_type_dot_model__pb2._MODEL
 _SUGGESTIONOPTIONS.fields_by_name['min_confidence'].enum_type = asgt_dot_type_dot_prediction__pb2._CONFIDENCE_LEVEL
 _SCANNEDINVOICEREQUEST.fields_by_name['inputs'].message_type = asgt_dot_type_dot_scanned__invoice__pb2._SCANNEDINVOICE
 _SCANNEDINVOICEREQUEST.fields_by_name['options'].message_type = _SUGGESTIONOPTIONS
@@ -302,8 +302,8 @@ _JESTER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=889,
-  serialized_end=1380,
+  serialized_start=880,
+  serialized_end=1371,
   methods=[
   _descriptor.MethodDescriptor(
     name='ScannedInvoiceSuggestions',

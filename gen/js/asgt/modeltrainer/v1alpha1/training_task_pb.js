@@ -11,7 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var asgt_type_dataset_info_pb = require('../../../asgt/type/dataset_info_pb.js');
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 goog.exportSymbol('proto.asgt.modeltrainer.v1alpha1.TrainModelTask', null, global);
 goog.exportSymbol('proto.asgt.modeltrainer.v1alpha1.TrainModelTask.Status', null, global);
 
@@ -62,7 +62,7 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.toObject = function(op
 proto.asgt.modeltrainer.v1alpha1.TrainModelTask.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    datasetInfo: (f = msg.getDatasetInfo()) && asgt_type_dataset_info_pb.DatasetInfo.toObject(includeInstance, f),
+    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
     status: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
@@ -106,9 +106,9 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.deserializeBinaryFromReader = fu
       msg.setId(value);
       break;
     case 2:
-      var value = new asgt_type_dataset_info_pb.DatasetInfo;
-      reader.readMessage(value,asgt_type_dataset_info_pb.DatasetInfo.deserializeBinaryFromReader);
-      msg.setDatasetInfo(value);
+      var value = new asgt_type_dataset_pb.Dataset;
+      reader.readMessage(value,asgt_type_dataset_pb.Dataset.deserializeBinaryFromReader);
+      msg.setDataset(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
@@ -154,12 +154,12 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.serializeBinaryToWriter = functi
       f
     );
   }
-  f = message.getDatasetInfo();
+  f = message.getDataset();
   if (f != null) {
     writer.writeMessage(
       2,
       f,
-      asgt_type_dataset_info_pb.DatasetInfo.serializeBinaryToWriter
+      asgt_type_dataset_pb.Dataset.serializeBinaryToWriter
     );
   }
   f = message.getModelVersion();
@@ -206,23 +206,23 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.setId = function(value
 
 
 /**
- * optional asgt.type.DatasetInfo dataset_info = 2;
- * @return {?proto.asgt.type.DatasetInfo}
+ * optional asgt.type.Dataset dataset = 2;
+ * @return {?proto.asgt.type.Dataset}
  */
-proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.getDatasetInfo = function() {
-  return /** @type{?proto.asgt.type.DatasetInfo} */ (
-    jspb.Message.getWrapperField(this, asgt_type_dataset_info_pb.DatasetInfo, 2));
+proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.getDataset = function() {
+  return /** @type{?proto.asgt.type.Dataset} */ (
+    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Dataset, 2));
 };
 
 
-/** @param {?proto.asgt.type.DatasetInfo|undefined} value */
-proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.setDatasetInfo = function(value) {
+/** @param {?proto.asgt.type.Dataset|undefined} value */
+proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.setDataset = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };
 
 
-proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.clearDatasetInfo = function() {
-  this.setDatasetInfo(undefined);
+proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.clearDataset = function() {
+  this.setDataset(undefined);
 };
 
 
@@ -230,7 +230,7 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.clearDatasetInfo = fun
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.hasDatasetInfo = function() {
+proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.hasDataset = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 

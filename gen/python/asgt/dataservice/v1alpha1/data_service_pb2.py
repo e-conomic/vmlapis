@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.type import dataset_info_pb2 as asgt_dot_type_dot_dataset__info__pb2
+from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n,asgt/dataservice/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1c\x61sgt/type/dataset_info.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\":\n\x12GetDatasetResponse\x12$\n\x04info\x18\x01 \x01(\x0b\x32\x16.asgt.type.DatasetInfo2x\n\x0b\x44\x61taService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n,asgt/dataservice/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\"Q\n\x11GetDatasetRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x03 \x01(\t\"9\n\x12GetDatasetResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset2x\n\x0b\x44\x61taService\x12i\n\nGetDataset\x12,.asgt.dataservice.v1alpha1.GetDatasetRequest\x1a-.asgt.dataservice.v1alpha1.GetDatasetResponseB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_dataset__info__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,])
 
 
 
@@ -67,8 +67,8 @@ _GETDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=105,
-  serialized_end=186,
+  serialized_start=100,
+  serialized_end=181,
 )
 
 
@@ -80,7 +80,7 @@ _GETDATASETRESPONSE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='info', full_name='asgt.dataservice.v1alpha1.GetDatasetResponse.info', index=0,
+      name='dataset', full_name='asgt.dataservice.v1alpha1.GetDatasetResponse.dataset', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -98,11 +98,11 @@ _GETDATASETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=188,
-  serialized_end=246,
+  serialized_start=183,
+  serialized_end=240,
 )
 
-_GETDATASETRESPONSE.fields_by_name['info'].message_type = asgt_dot_type_dot_dataset__info__pb2._DATASETINFO
+_GETDATASETRESPONSE.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
 DESCRIPTOR.message_types_by_name['GetDatasetRequest'] = _GETDATASETREQUEST
 DESCRIPTOR.message_types_by_name['GetDatasetResponse'] = _GETDATASETRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -130,8 +130,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=248,
-  serialized_end=368,
+  serialized_start=242,
+  serialized_end=362,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetDataset',

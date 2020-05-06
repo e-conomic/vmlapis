@@ -13,7 +13,7 @@ var global = Function('return this')();
 
 var asgt_type_bank_transaction_pb = require('../../../asgt/type/bank_transaction_pb.js');
 var asgt_type_invoice_line_pb = require('../../../asgt/type/invoice_line_pb.js');
-var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js');
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js');
 var asgt_type_target_value_pb = require('../../../asgt/type/target_value_pb.js');
@@ -84,7 +84,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.toObject = function(includeInstance, m
     data: (f = msg.getData()) && asgt_type_bank_transaction_pb.BankTransaction.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
     asgt_type_prediction_pb.Prediction.Target.toObject, includeInstance),
     timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
@@ -151,8 +151,8 @@ proto.asgt.dataservice.v1alpha1.BankEntry.deserializeBinaryFromReader = function
       msg.addTargetValues(value);
       break;
     case 9:
-      var value = new asgt_type_model_info_pb.ModelInfo;
-      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     case 10:
@@ -242,7 +242,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.serializeBinaryToWriter = function(mes
     writer.writeMessage(
       9,
       f,
-      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
   f = message.getPredictionList();
@@ -399,16 +399,16 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.clearTargetValuesList = func
 
 
 /**
- * optional asgt.type.ModelInfo model = 9;
- * @return {?proto.asgt.type.ModelInfo}
+ * optional asgt.type.Model model = 9;
+ * @return {?proto.asgt.type.Model}
  */
 proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.ModelInfo} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 9));
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 9));
 };
 
 
-/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+/** @param {?proto.asgt.type.Model|undefined} value */
 proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setModel = function(value) {
   jspb.Message.setWrapperField(this, 9, value);
 };
@@ -535,7 +535,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.toObject = function(i
     data: (f = msg.getData()) && asgt_type_invoice_line_pb.InvoiceLine.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
     asgt_type_prediction_pb.Prediction.Target.toObject, includeInstance),
     timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
@@ -602,8 +602,8 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.deserializeBinaryFrom
       msg.addTargetValues(value);
       break;
     case 9:
-      var value = new asgt_type_model_info_pb.ModelInfo;
-      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     case 10:
@@ -693,7 +693,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.serializeBinaryToWrit
     writer.writeMessage(
       9,
       f,
-      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
   f = message.getPredictionList();
@@ -850,16 +850,16 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.clearTarget
 
 
 /**
- * optional asgt.type.ModelInfo model = 9;
- * @return {?proto.asgt.type.ModelInfo}
+ * optional asgt.type.Model model = 9;
+ * @return {?proto.asgt.type.Model}
  */
 proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.ModelInfo} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 9));
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 9));
 };
 
 
-/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+/** @param {?proto.asgt.type.Model|undefined} value */
 proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setModel = function(value) {
   jspb.Message.setWrapperField(this, 9, value);
 };
@@ -986,7 +986,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.toObject = function(includeI
     data: (f = msg.getData()) && asgt_type_scanned_invoice_pb.ScannedInvoice.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
     asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f),
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
     predictionList: jspb.Message.toObjectList(msg.getPredictionList(),
     asgt_type_prediction_pb.Prediction.Target.toObject, includeInstance),
     timeAdded: jspb.Message.getFieldWithDefault(msg, 8, 0)
@@ -1053,8 +1053,8 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.deserializeBinaryFromReader 
       msg.addTargetValues(value);
       break;
     case 9:
-      var value = new asgt_type_model_info_pb.ModelInfo;
-      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     case 10:
@@ -1144,7 +1144,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.serializeBinaryToWriter = fu
     writer.writeMessage(
       9,
       f,
-      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
   f = message.getPredictionList();
@@ -1301,16 +1301,16 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.clearTargetValuesL
 
 
 /**
- * optional asgt.type.ModelInfo model = 9;
- * @return {?proto.asgt.type.ModelInfo}
+ * optional asgt.type.Model model = 9;
+ * @return {?proto.asgt.type.Model}
  */
 proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.ModelInfo} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 9));
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 9));
 };
 
 
-/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+/** @param {?proto.asgt.type.Model|undefined} value */
 proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setModel = function(value) {
   jspb.Message.setWrapperField(this, 9, value);
 };

@@ -16,7 +16,7 @@ var asgt_type_bank_transaction_pb = require('../../../asgt/type/bank_transaction
 
 var asgt_type_invoice_line_pb = require('../../../asgt/type/invoice_line_pb.js')
 
-var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js')
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 

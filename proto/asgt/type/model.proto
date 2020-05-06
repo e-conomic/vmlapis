@@ -5,8 +5,11 @@ package asgt.type;
 option go_package = "type";
 
 import "gen_bq_schema/bq_field.proto";
+import "google/protobuf/timestamp.proto";
 
-message ModelInfo {
+message Model {
   reserved 1 to 2;
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
+
+  google.protobuf.Timestamp created_at = 4;
 }

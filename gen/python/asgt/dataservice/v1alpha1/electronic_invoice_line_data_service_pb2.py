@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.dataservice.v1alpha1 import delete_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2
+from vml_proto.asgt.dataservice.v1alpha1 import info_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2
 from vml_proto.asgt.type import invoice_line_pb2 as asgt_dot_type_dot_invoice__line__pb2
 from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
 from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\nDasgt/dataservice/v1alpha1/electronic_invoice_line_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a asgt/type/retention_policy.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"v\n\x1f\x45lectronicInvoiceLineEntryInput\x12$\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xe3\x01\n)CreateElectronicInvoiceLineDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"\x8b\x01\n&AppendElectronicInvoiceLineDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput2\xab\x04\n ElectronicInvoiceLineDataService\x12\xb7\x01\n\"CreateElectronicInvoiceLineDataset\x12\x44.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:create:\x01*\x12\xb1\x01\n\x1f\x41ppendElectronicInvoiceLineData\x12\x41.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:append:\x01*\x12\x98\x01\n\x1f\x44\x65leteElectronicInvoiceLineData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\nDasgt/dataservice/v1alpha1/electronic_invoice_line_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a$asgt/dataservice/v1alpha1/info.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a asgt/type/retention_policy.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"v\n\x1f\x45lectronicInvoiceLineEntryInput\x12$\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xe3\x01\n)CreateElectronicInvoiceLineDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"\x8b\x01\n&AppendElectronicInvoiceLineDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12K\n\x07\x65ntries\x18\x03 \x03(\x0b\x32:.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntryInput2\xc5\x05\n ElectronicInvoiceLineDataService\x12\xb7\x01\n\"CreateElectronicInvoiceLineDataset\x12\x44.asgt.dataservice.v1alpha1.CreateElectronicInvoiceLineDatasetRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:create:\x01*\x12\xb1\x01\n\x1f\x41ppendElectronicInvoiceLineData\x12\x41.asgt.dataservice.v1alpha1.AppendElectronicInvoiceLineDataRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:append:\x01*\x12\x98\x01\n\x1f\x44\x65leteElectronicInvoiceLineData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"3\x82\xd3\xe4\x93\x02-\"(/v1alpha1/electronic-invoice-line:delete:\x01*\x12\x97\x01\n\x0bGetBankInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"1\x82\xd3\xe4\x93\x02+\"&/v1alpha1/electronic-invoice-line:info:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +66,8 @@ _ELECTRONICINVOICELINEENTRYINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=292,
-  serialized_end=410,
+  serialized_start=330,
+  serialized_end=448,
 )
 
 
@@ -124,8 +125,8 @@ _CREATEELECTRONICINVOICELINEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=413,
-  serialized_end=640,
+  serialized_start=451,
+  serialized_end=678,
 )
 
 
@@ -162,8 +163,8 @@ _APPENDELECTRONICINVOICELINEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=643,
-  serialized_end=782,
+  serialized_start=681,
+  serialized_end=820,
 )
 
 _ELECTRONICINVOICELINEENTRYINPUT.fields_by_name['data'].message_type = asgt_dot_type_dot_invoice__line__pb2._INVOICELINE
@@ -206,8 +207,8 @@ _ELECTRONICINVOICELINEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=785,
-  serialized_end=1340,
+  serialized_start=823,
+  serialized_end=1532,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateElectronicInvoiceLineDataset',
@@ -235,6 +236,15 @@ _ELECTRONICINVOICELINEDATASERVICE = _descriptor.ServiceDescriptor(
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2._DELETEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=_b('\202\323\344\223\002-\"(/v1alpha1/electronic-invoice-line:delete:\001*'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetBankInfo',
+    full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService.GetBankInfo',
+    index=3,
+    containing_service=None,
+    input_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFOREQUEST,
+    output_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFORESPONSE,
+    serialized_options=_b('\202\323\344\223\002+\"&/v1alpha1/electronic-invoice-line:info:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_ELECTRONICINVOICELINEDATASERVICE)

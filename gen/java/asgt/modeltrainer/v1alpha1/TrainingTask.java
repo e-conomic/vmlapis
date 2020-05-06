@@ -29,17 +29,17 @@ public final class TrainingTask {
         getIdBytes();
 
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    boolean hasDatasetInfo();
+    boolean hasDataset();
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    asgt.type.DatasetInfoOuterClass.DatasetInfo getDatasetInfo();
+    asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder getDatasetInfoOrBuilder();
+    asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
      * <code>int64 model_version = 3;</code>
@@ -104,14 +104,14 @@ public final class TrainingTask {
               break;
             }
             case 18: {
-              asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder subBuilder = null;
-              if (datasetInfo_ != null) {
-                subBuilder = datasetInfo_.toBuilder();
+              asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
+              if (dataset_ != null) {
+                subBuilder = dataset_.toBuilder();
               }
-              datasetInfo_ = input.readMessage(asgt.type.DatasetInfoOuterClass.DatasetInfo.parser(), extensionRegistry);
+              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(datasetInfo_);
-                datasetInfo_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(dataset_);
+                dataset_ = subBuilder.buildPartial();
               }
 
               break;
@@ -318,25 +318,25 @@ public final class TrainingTask {
       }
     }
 
-    public static final int DATASET_INFO_FIELD_NUMBER = 2;
-    private asgt.type.DatasetInfoOuterClass.DatasetInfo datasetInfo_;
+    public static final int DATASET_FIELD_NUMBER = 2;
+    private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    public boolean hasDatasetInfo() {
-      return datasetInfo_ != null;
+    public boolean hasDataset() {
+      return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    public asgt.type.DatasetInfoOuterClass.DatasetInfo getDatasetInfo() {
-      return datasetInfo_ == null ? asgt.type.DatasetInfoOuterClass.DatasetInfo.getDefaultInstance() : datasetInfo_;
+    public asgt.type.DatasetOuterClass.Dataset getDataset() {
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 2;</code>
      */
-    public asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder getDatasetInfoOrBuilder() {
-      return getDatasetInfo();
+    public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
+      return getDataset();
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 3;
@@ -382,8 +382,8 @@ public final class TrainingTask {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (datasetInfo_ != null) {
-        output.writeMessage(2, getDatasetInfo());
+      if (dataset_ != null) {
+        output.writeMessage(2, getDataset());
       }
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
@@ -403,9 +403,9 @@ public final class TrainingTask {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (datasetInfo_ != null) {
+      if (dataset_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getDatasetInfo());
+          .computeMessageSize(2, getDataset());
       }
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
@@ -433,10 +433,10 @@ public final class TrainingTask {
       boolean result = true;
       result = result && getId()
           .equals(other.getId());
-      result = result && (hasDatasetInfo() == other.hasDatasetInfo());
-      if (hasDatasetInfo()) {
-        result = result && getDatasetInfo()
-            .equals(other.getDatasetInfo());
+      result = result && (hasDataset() == other.hasDataset());
+      if (hasDataset()) {
+        result = result && getDataset()
+            .equals(other.getDataset());
       }
       result = result && (getModelVersion()
           == other.getModelVersion());
@@ -454,9 +454,9 @@ public final class TrainingTask {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      if (hasDatasetInfo()) {
-        hash = (37 * hash) + DATASET_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getDatasetInfo().hashCode();
+      if (hasDataset()) {
+        hash = (37 * hash) + DATASET_FIELD_NUMBER;
+        hash = (53 * hash) + getDataset().hashCode();
       }
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
@@ -598,11 +598,11 @@ public final class TrainingTask {
         super.clear();
         id_ = "";
 
-        if (datasetInfoBuilder_ == null) {
-          datasetInfo_ = null;
+        if (datasetBuilder_ == null) {
+          dataset_ = null;
         } else {
-          datasetInfo_ = null;
-          datasetInfoBuilder_ = null;
+          dataset_ = null;
+          datasetBuilder_ = null;
         }
         modelVersion_ = 0L;
 
@@ -635,10 +635,10 @@ public final class TrainingTask {
       public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask buildPartial() {
         asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask result = new asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask(this);
         result.id_ = id_;
-        if (datasetInfoBuilder_ == null) {
-          result.datasetInfo_ = datasetInfo_;
+        if (datasetBuilder_ == null) {
+          result.dataset_ = dataset_;
         } else {
-          result.datasetInfo_ = datasetInfoBuilder_.build();
+          result.dataset_ = datasetBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
         result.status_ = status_;
@@ -694,8 +694,8 @@ public final class TrainingTask {
           id_ = other.id_;
           onChanged();
         }
-        if (other.hasDatasetInfo()) {
-          mergeDatasetInfo(other.getDatasetInfo());
+        if (other.hasDataset()) {
+          mergeDataset(other.getDataset());
         }
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
@@ -801,121 +801,121 @@ public final class TrainingTask {
         return this;
       }
 
-      private asgt.type.DatasetInfoOuterClass.DatasetInfo datasetInfo_ = null;
+      private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetInfoOuterClass.DatasetInfo, asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder, asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder> datasetInfoBuilder_;
+          asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public boolean hasDatasetInfo() {
-        return datasetInfoBuilder_ != null || datasetInfo_ != null;
+      public boolean hasDataset() {
+        return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public asgt.type.DatasetInfoOuterClass.DatasetInfo getDatasetInfo() {
-        if (datasetInfoBuilder_ == null) {
-          return datasetInfo_ == null ? asgt.type.DatasetInfoOuterClass.DatasetInfo.getDefaultInstance() : datasetInfo_;
+      public asgt.type.DatasetOuterClass.Dataset getDataset() {
+        if (datasetBuilder_ == null) {
+          return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
         } else {
-          return datasetInfoBuilder_.getMessage();
+          return datasetBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public Builder setDatasetInfo(asgt.type.DatasetInfoOuterClass.DatasetInfo value) {
-        if (datasetInfoBuilder_ == null) {
+      public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
+        if (datasetBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          datasetInfo_ = value;
+          dataset_ = value;
           onChanged();
         } else {
-          datasetInfoBuilder_.setMessage(value);
+          datasetBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public Builder setDatasetInfo(
-          asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder builderForValue) {
-        if (datasetInfoBuilder_ == null) {
-          datasetInfo_ = builderForValue.build();
+      public Builder setDataset(
+          asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
+        if (datasetBuilder_ == null) {
+          dataset_ = builderForValue.build();
           onChanged();
         } else {
-          datasetInfoBuilder_.setMessage(builderForValue.build());
+          datasetBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public Builder mergeDatasetInfo(asgt.type.DatasetInfoOuterClass.DatasetInfo value) {
-        if (datasetInfoBuilder_ == null) {
-          if (datasetInfo_ != null) {
-            datasetInfo_ =
-              asgt.type.DatasetInfoOuterClass.DatasetInfo.newBuilder(datasetInfo_).mergeFrom(value).buildPartial();
+      public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
+        if (datasetBuilder_ == null) {
+          if (dataset_ != null) {
+            dataset_ =
+              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
           } else {
-            datasetInfo_ = value;
+            dataset_ = value;
           }
           onChanged();
         } else {
-          datasetInfoBuilder_.mergeFrom(value);
+          datasetBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public Builder clearDatasetInfo() {
-        if (datasetInfoBuilder_ == null) {
-          datasetInfo_ = null;
+      public Builder clearDataset() {
+        if (datasetBuilder_ == null) {
+          dataset_ = null;
           onChanged();
         } else {
-          datasetInfo_ = null;
-          datasetInfoBuilder_ = null;
+          dataset_ = null;
+          datasetBuilder_ = null;
         }
 
         return this;
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder getDatasetInfoBuilder() {
+      public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
         onChanged();
-        return getDatasetInfoFieldBuilder().getBuilder();
+        return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
-      public asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder getDatasetInfoOrBuilder() {
-        if (datasetInfoBuilder_ != null) {
-          return datasetInfoBuilder_.getMessageOrBuilder();
+      public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
+        if (datasetBuilder_ != null) {
+          return datasetBuilder_.getMessageOrBuilder();
         } else {
-          return datasetInfo_ == null ?
-              asgt.type.DatasetInfoOuterClass.DatasetInfo.getDefaultInstance() : datasetInfo_;
+          return dataset_ == null ?
+              asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
         }
       }
       /**
-       * <code>.asgt.type.DatasetInfo dataset_info = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetInfoOuterClass.DatasetInfo, asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder, asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder> 
-          getDatasetInfoFieldBuilder() {
-        if (datasetInfoBuilder_ == null) {
-          datasetInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.DatasetInfoOuterClass.DatasetInfo, asgt.type.DatasetInfoOuterClass.DatasetInfo.Builder, asgt.type.DatasetInfoOuterClass.DatasetInfoOrBuilder>(
-                  getDatasetInfo(),
+          asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
+          getDatasetFieldBuilder() {
+        if (datasetBuilder_ == null) {
+          datasetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder>(
+                  getDataset(),
                   getParentForChildren(),
                   isClean());
-          datasetInfo_ = null;
+          dataset_ = null;
         }
-        return datasetInfoBuilder_;
+        return datasetBuilder_;
       }
 
       private long modelVersion_ ;
@@ -1056,15 +1056,15 @@ public final class TrainingTask {
   static {
     java.lang.String[] descriptorData = {
       "\n.asgt/modeltrainer/v1alpha1/training_ta" +
-      "sk.proto\022\032asgt.modeltrainer.v1alpha1\032\034as" +
-      "gt/type/dataset_info.proto\"\362\001\n\016TrainMode" +
-      "lTask\022\n\n\002id\030\001 \001(\t\022,\n\014dataset_info\030\002 \001(\0132" +
-      "\026.asgt.type.DatasetInfo\022\025\n\rmodel_version" +
-      "\030\003 \001(\003\022A\n\006status\030\004 \001(\01621.asgt.modeltrain" +
-      "er.v1alpha1.TrainModelTask.Status\"L\n\006Sta" +
-      "tus\022\013\n\007UNKNOWN\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007START" +
-      "ED\020\003\022\r\n\tSUCCEEDED\020\004\022\n\n\006FAILED\020\005B\016Z\014model" +
-      "trainerb\006proto3"
+      "sk.proto\022\032asgt.modeltrainer.v1alpha1\032\027as" +
+      "gt/type/dataset.proto\"\351\001\n\016TrainModelTask" +
+      "\022\n\n\002id\030\001 \001(\t\022#\n\007dataset\030\002 \001(\0132\022.asgt.typ" +
+      "e.Dataset\022\025\n\rmodel_version\030\003 \001(\003\022A\n\006stat" +
+      "us\030\004 \001(\01621.asgt.modeltrainer.v1alpha1.Tr" +
+      "ainModelTask.Status\"L\n\006Status\022\013\n\007UNKNOWN" +
+      "\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007STARTED\020\003\022\r\n\tSUCCEE" +
+      "DED\020\004\022\n\n\006FAILED\020\005B\016Z\014modeltrainerb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1077,15 +1077,15 @@ public final class TrainingTask {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DatasetInfoOuterClass.getDescriptor(),
+          asgt.type.DatasetOuterClass.getDescriptor(),
         }, assigner);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor,
-        new java.lang.String[] { "Id", "DatasetInfo", "ModelVersion", "Status", });
-    asgt.type.DatasetInfoOuterClass.getDescriptor();
+        new java.lang.String[] { "Id", "Dataset", "ModelVersion", "Status", });
+    asgt.type.DatasetOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

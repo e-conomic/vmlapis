@@ -13,7 +13,7 @@ var global = Function('return this')();
 
 var asgt_type_bank_transaction_pb = require('../../../asgt/type/bank_transaction_pb.js');
 var asgt_type_invoice_line_pb = require('../../../asgt/type/invoice_line_pb.js');
-var asgt_type_model_info_pb = require('../../../asgt/type/model_info_pb.js');
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
@@ -78,7 +78,7 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.toObject = function(includeInstan
   var f, obj = {
     predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
     asgt_type_prediction_pb.Prediction.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_info_pb.ModelInfo.toObject(includeInstance, f)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -121,8 +121,8 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinaryFromReader = fun
       msg.addPredictions(value);
       break;
     case 2:
-      var value = new asgt_type_model_info_pb.ModelInfo;
-      reader.readMessage(value,asgt_type_model_info_pb.ModelInfo.deserializeBinaryFromReader);
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     default:
@@ -167,7 +167,7 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.serializeBinaryToWriter = functio
     writer.writeMessage(
       2,
       f,
-      asgt_type_model_info_pb.ModelInfo.serializeBinaryToWriter
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
 };
@@ -205,16 +205,16 @@ proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.clearPredictionsList = 
 
 
 /**
- * optional asgt.type.ModelInfo model = 2;
- * @return {?proto.asgt.type.ModelInfo}
+ * optional asgt.type.Model model = 2;
+ * @return {?proto.asgt.type.Model}
  */
 proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.ModelInfo} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_info_pb.ModelInfo, 2));
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 2));
 };
 
 
-/** @param {?proto.asgt.type.ModelInfo|undefined} value */
+/** @param {?proto.asgt.type.Model|undefined} value */
 proto.asgt.jester.v1alpha1.SuggestionsResponse.prototype.setModel = function(value) {
   jspb.Message.setWrapperField(this, 2, value);
 };

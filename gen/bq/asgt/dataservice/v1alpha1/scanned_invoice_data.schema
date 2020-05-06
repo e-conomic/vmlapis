@@ -59,6 +59,11 @@
     "name": "version",
     "type": "INTEGER",
     "mode": "REQUIRED"
+   },
+   {
+    "name": "created_at",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
    }
   ]
  },
