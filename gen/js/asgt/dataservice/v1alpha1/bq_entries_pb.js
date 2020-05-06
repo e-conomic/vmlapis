@@ -80,6 +80,7 @@ proto.asgt.dataservice.v1alpha1.BankEntry.toObject = function(includeInstance, m
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    datasetId: jspb.Message.getFieldWithDefault(msg, 11, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_bank_transaction_pb.BankTransaction.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
@@ -135,6 +136,10 @@ proto.asgt.dataservice.v1alpha1.BankEntry.deserializeBinaryFromReader = function
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetName(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetId(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -211,6 +216,13 @@ proto.asgt.dataservice.v1alpha1.BankEntry.serializeBinaryToWriter = function(mes
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getDatasetId();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
       f
     );
   }
@@ -305,6 +317,21 @@ proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getDatasetName = function() 
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setDatasetName = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string dataset_id = 11;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.getDatasetId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.BankEntry.prototype.setDatasetId = function(value) {
+  jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
@@ -531,6 +558,7 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.toObject = function(i
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    datasetId: jspb.Message.getFieldWithDefault(msg, 11, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_invoice_line_pb.InvoiceLine.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
@@ -586,6 +614,10 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.deserializeBinaryFrom
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetName(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetId(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -662,6 +694,13 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.serializeBinaryToWrit
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getDatasetId();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
       f
     );
   }
@@ -756,6 +795,21 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getDatasetN
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setDatasetName = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string dataset_id = 11;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.getDatasetId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prototype.setDatasetId = function(value) {
+  jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
@@ -982,6 +1036,7 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.toObject = function(includeI
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 2, ""),
     datasetName: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    datasetId: jspb.Message.getFieldWithDefault(msg, 11, ""),
     tagsList: jspb.Message.getRepeatedField(msg, 4),
     data: (f = msg.getData()) && asgt_type_scanned_invoice_pb.ScannedInvoice.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
@@ -1037,6 +1092,10 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.deserializeBinaryFromReader 
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetName(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetId(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -1113,6 +1172,13 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.serializeBinaryToWriter = fu
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getDatasetId();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
       f
     );
   }
@@ -1207,6 +1273,21 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getDatasetName = f
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setDatasetName = function(value) {
   jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * optional string dataset_id = 11;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.getDatasetId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prototype.setDatasetId = function(value) {
+  jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
