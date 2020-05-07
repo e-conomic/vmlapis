@@ -16,6 +16,12 @@
   "mode": "REQUIRED"
  },
  {
+  "name": "dataset_id",
+  "type": "STRING",
+  "mode": "REQUIRED",
+  "description": "unique ID of dataset"
+ },
+ {
   "name": "tags",
   "type": "STRING",
   "mode": "REPEATED",

@@ -19,43 +19,36 @@ public final class Delete {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string model_type = 1;</code>
+     * <code>string dataset_type = 1;</code>
      */
-    java.lang.String getModelType();
+    java.lang.String getDatasetType();
     /**
-     * <code>string model_type = 1;</code>
+     * <code>string dataset_type = 1;</code>
      */
     com.google.protobuf.ByteString
-        getModelTypeBytes();
+        getDatasetTypeBytes();
 
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string name = 2;</code>
      */
-    java.lang.String getDataset();
+    java.lang.String getName();
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string name = 2;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetBytes();
+        getNameBytes();
 
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>string tag = 3;</code>
      */
-    java.util.List<java.lang.String>
-        getTagsList();
+    java.lang.String getTag();
     /**
-     * <code>repeated string tags = 3;</code>
-     */
-    int getTagsCount();
-    /**
-     * <code>repeated string tags = 3;</code>
-     */
-    java.lang.String getTags(int index);
-    /**
-     * <code>repeated string tags = 3;</code>
+     * <code>string tag = 3;</code>
      */
     com.google.protobuf.ByteString
-        getTagsBytes(int index);
+        getTagBytes();
+
+    public asgt.dataservice.v1alpha1.Delete.DeleteRequest.MatchCase getMatchCase();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.DeleteRequest}
@@ -70,9 +63,7 @@ public final class Delete {
       super(builder);
     }
     private DeleteRequest() {
-      modelType_ = "";
-      dataset_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      datasetType_ = "";
     }
 
     @java.lang.Override
@@ -102,22 +93,19 @@ public final class Delete {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              modelType_ = s;
+              datasetType_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
-
-              dataset_ = s;
+              matchCase_ = 2;
+              match_ = s;
               break;
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              tags_.add(s);
+              matchCase_ = 3;
+              match_ = s;
               break;
             }
             default: {
@@ -135,9 +123,6 @@ public final class Delete {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -155,102 +140,162 @@ public final class Delete {
               asgt.dataservice.v1alpha1.Delete.DeleteRequest.class, asgt.dataservice.v1alpha1.Delete.DeleteRequest.Builder.class);
     }
 
-    private int bitField0_;
-    public static final int MODEL_TYPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelType_;
+    private int matchCase_ = 0;
+    private java.lang.Object match_;
+    public enum MatchCase
+        implements com.google.protobuf.Internal.EnumLite {
+      NAME(2),
+      TAG(3),
+      MATCH_NOT_SET(0);
+      private final int value;
+      private MatchCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static MatchCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static MatchCase forNumber(int value) {
+        switch (value) {
+          case 2: return NAME;
+          case 3: return TAG;
+          case 0: return MATCH_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public MatchCase
+    getMatchCase() {
+      return MatchCase.forNumber(
+          matchCase_);
+    }
+
+    public static final int DATASET_TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object datasetType_;
     /**
-     * <code>string model_type = 1;</code>
+     * <code>string dataset_type = 1;</code>
      */
-    public java.lang.String getModelType() {
-      java.lang.Object ref = modelType_;
+    public java.lang.String getDatasetType() {
+      java.lang.Object ref = datasetType_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        modelType_ = s;
+        datasetType_ = s;
         return s;
       }
     }
     /**
-     * <code>string model_type = 1;</code>
+     * <code>string dataset_type = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getModelTypeBytes() {
-      java.lang.Object ref = modelType_;
+        getDatasetTypeBytes() {
+      java.lang.Object ref = datasetType_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        modelType_ = b;
+        datasetType_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DATASET_FIELD_NUMBER = 2;
-    private volatile java.lang.Object dataset_;
+    public static final int NAME_FIELD_NUMBER = 2;
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string name = 2;</code>
      */
-    public java.lang.String getDataset() {
-      java.lang.Object ref = dataset_;
+    public java.lang.String getName() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 2) {
+        ref = match_;
+      }
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        dataset_ = s;
+        if (matchCase_ == 2) {
+          match_ = s;
+        }
         return s;
       }
     }
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string name = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetBytes() {
-      java.lang.Object ref = dataset_;
+        getNameBytes() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 2) {
+        ref = match_;
+      }
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        dataset_ = b;
+        if (matchCase_ == 2) {
+          match_ = b;
+        }
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int TAGS_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList tags_;
+    public static final int TAG_FIELD_NUMBER = 3;
     /**
-     * <code>repeated string tags = 3;</code>
+     * <code>string tag = 3;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
+    public java.lang.String getTag() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 3) {
+        ref = match_;
+      }
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (matchCase_ == 3) {
+          match_ = s;
+        }
+        return s;
+      }
     }
     /**
-     * <code>repeated string tags = 3;</code>
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <code>repeated string tags = 3;</code>
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <code>repeated string tags = 3;</code>
+     * <code>string tag = 3;</code>
      */
     public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
+        getTagBytes() {
+      java.lang.Object ref = "";
+      if (matchCase_ == 3) {
+        ref = match_;
+      }
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (matchCase_ == 3) {
+          match_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -267,14 +312,14 @@ public final class Delete {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getModelTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelType_);
+      if (!getDatasetTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetType_);
       }
-      if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataset_);
+      if (matchCase_ == 2) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, match_);
       }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
+      if (matchCase_ == 3) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, match_);
       }
       unknownFields.writeTo(output);
     }
@@ -285,19 +330,14 @@ public final class Delete {
       if (size != -1) return size;
 
       size = 0;
-      if (!getModelTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelType_);
+      if (!getDatasetTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetType_);
       }
-      if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataset_);
+      if (matchCase_ == 2) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, match_);
       }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
+      if (matchCase_ == 3) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, match_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -315,12 +355,23 @@ public final class Delete {
       asgt.dataservice.v1alpha1.Delete.DeleteRequest other = (asgt.dataservice.v1alpha1.Delete.DeleteRequest) obj;
 
       boolean result = true;
-      result = result && getModelType()
-          .equals(other.getModelType());
-      result = result && getDataset()
-          .equals(other.getDataset());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
+      result = result && getDatasetType()
+          .equals(other.getDatasetType());
+      result = result && getMatchCase().equals(
+          other.getMatchCase());
+      if (!result) return false;
+      switch (matchCase_) {
+        case 2:
+          result = result && getName()
+              .equals(other.getName());
+          break;
+        case 3:
+          result = result && getTag()
+              .equals(other.getTag());
+          break;
+        case 0:
+        default:
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -332,13 +383,19 @@ public final class Delete {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getModelType().hashCode();
-      hash = (37 * hash) + DATASET_FIELD_NUMBER;
-      hash = (53 * hash) + getDataset().hashCode();
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
+      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetType().hashCode();
+      switch (matchCase_) {
+        case 2:
+          hash = (37 * hash) + NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getName().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + TAG_FIELD_NUMBER;
+          hash = (53 * hash) + getTag().hashCode();
+          break;
+        case 0:
+        default:
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -473,12 +530,10 @@ public final class Delete {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        modelType_ = "";
+        datasetType_ = "";
 
-        dataset_ = "";
-
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        matchCase_ = 0;
+        match_ = null;
         return this;
       }
 
@@ -505,16 +560,14 @@ public final class Delete {
       @java.lang.Override
       public asgt.dataservice.v1alpha1.Delete.DeleteRequest buildPartial() {
         asgt.dataservice.v1alpha1.Delete.DeleteRequest result = new asgt.dataservice.v1alpha1.Delete.DeleteRequest(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        result.modelType_ = modelType_;
-        result.dataset_ = dataset_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+        result.datasetType_ = datasetType_;
+        if (matchCase_ == 2) {
+          result.match_ = match_;
         }
-        result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
+        if (matchCase_ == 3) {
+          result.match_ = match_;
+        }
+        result.matchCase_ = matchCase_;
         onBuilt();
         return result;
       }
@@ -563,23 +616,26 @@ public final class Delete {
 
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Delete.DeleteRequest other) {
         if (other == asgt.dataservice.v1alpha1.Delete.DeleteRequest.getDefaultInstance()) return this;
-        if (!other.getModelType().isEmpty()) {
-          modelType_ = other.modelType_;
+        if (!other.getDatasetType().isEmpty()) {
+          datasetType_ = other.datasetType_;
           onChanged();
         }
-        if (!other.getDataset().isEmpty()) {
-          dataset_ = other.dataset_;
-          onChanged();
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000004);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
+        switch (other.getMatchCase()) {
+          case NAME: {
+            matchCase_ = 2;
+            match_ = other.match_;
+            onChanged();
+            break;
           }
-          onChanged();
+          case TAG: {
+            matchCase_ = 3;
+            match_ = other.match_;
+            onChanged();
+            break;
+          }
+          case MATCH_NOT_SET: {
+            break;
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -609,236 +665,247 @@ public final class Delete {
         }
         return this;
       }
-      private int bitField0_;
+      private int matchCase_ = 0;
+      private java.lang.Object match_;
+      public MatchCase
+          getMatchCase() {
+        return MatchCase.forNumber(
+            matchCase_);
+      }
 
-      private java.lang.Object modelType_ = "";
+      public Builder clearMatch() {
+        matchCase_ = 0;
+        match_ = null;
+        onChanged();
+        return this;
+      }
+
+
+      private java.lang.Object datasetType_ = "";
       /**
-       * <code>string model_type = 1;</code>
+       * <code>string dataset_type = 1;</code>
        */
-      public java.lang.String getModelType() {
-        java.lang.Object ref = modelType_;
+      public java.lang.String getDatasetType() {
+        java.lang.Object ref = datasetType_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          modelType_ = s;
+          datasetType_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string model_type = 1;</code>
+       * <code>string dataset_type = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getModelTypeBytes() {
-        java.lang.Object ref = modelType_;
+          getDatasetTypeBytes() {
+        java.lang.Object ref = datasetType_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          modelType_ = b;
+          datasetType_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string model_type = 1;</code>
+       * <code>string dataset_type = 1;</code>
        */
-      public Builder setModelType(
+      public Builder setDatasetType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        modelType_ = value;
+        datasetType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string model_type = 1;</code>
+       * <code>string dataset_type = 1;</code>
        */
-      public Builder clearModelType() {
+      public Builder clearDatasetType() {
         
-        modelType_ = getDefaultInstance().getModelType();
+        datasetType_ = getDefaultInstance().getDatasetType();
         onChanged();
         return this;
       }
       /**
-       * <code>string model_type = 1;</code>
+       * <code>string dataset_type = 1;</code>
        */
-      public Builder setModelTypeBytes(
+      public Builder setDatasetTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        modelType_ = value;
+        datasetType_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object dataset_ = "";
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string name = 2;</code>
        */
-      public java.lang.String getDataset() {
-        java.lang.Object ref = dataset_;
+      public java.lang.String getName() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 2) {
+          ref = match_;
+        }
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          dataset_ = s;
+          if (matchCase_ == 2) {
+            match_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string name = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetBytes() {
-        java.lang.Object ref = dataset_;
+          getNameBytes() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 2) {
+          ref = match_;
+        }
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          dataset_ = b;
+          if (matchCase_ == 2) {
+            match_ = b;
+          }
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string name = 2;</code>
        */
-      public Builder setDataset(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  
-        dataset_ = value;
+  matchCase_ = 2;
+        match_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string name = 2;</code>
        */
-      public Builder clearDataset() {
-        
-        dataset_ = getDefaultInstance().getDataset();
-        onChanged();
+      public Builder clearName() {
+        if (matchCase_ == 2) {
+          matchCase_ = 0;
+          match_ = null;
+          onChanged();
+        }
         return this;
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string name = 2;</code>
        */
-      public Builder setDatasetBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        
-        dataset_ = value;
+        matchCase_ = 2;
+        match_ = value;
         onChanged();
         return this;
       }
 
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000004;
-         }
-      }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>string tag = 3;</code>
        */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
+      public java.lang.String getTag() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 3) {
+          ref = match_;
+        }
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (matchCase_ == 3) {
+            match_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
       }
       /**
-       * <code>repeated string tags = 3;</code>
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <code>repeated string tags = 3;</code>
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <code>repeated string tags = 3;</code>
+       * <code>string tag = 3;</code>
        */
       public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
+          getTagBytes() {
+        java.lang.Object ref = "";
+        if (matchCase_ == 3) {
+          ref = match_;
+        }
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          if (matchCase_ == 3) {
+            match_ = b;
+          }
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>string tag = 3;</code>
        */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 3;</code>
-       */
-      public Builder addTags(
+      public Builder setTag(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  ensureTagsIsMutable();
-        tags_.add(value);
+  matchCase_ = 3;
+        match_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>string tag = 3;</code>
        */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
+      public Builder clearTag() {
+        if (matchCase_ == 3) {
+          matchCase_ = 0;
+          match_ = null;
+          onChanged();
+        }
         return this;
       }
       /**
-       * <code>repeated string tags = 3;</code>
+       * <code>string tag = 3;</code>
        */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 3;</code>
-       */
-      public Builder addTagsBytes(
+      public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
+        matchCase_ = 3;
+        match_ = value;
         onChanged();
         return this;
       }
@@ -910,9 +977,10 @@ public final class Delete {
   static {
     java.lang.String[] descriptorData = {
       "\n&asgt/dataservice/v1alpha1/delete.proto" +
-      "\022\031asgt.dataservice.v1alpha1\"B\n\rDeleteReq" +
-      "uest\022\022\n\nmodel_type\030\001 \001(\t\022\017\n\007dataset\030\002 \001(" +
-      "\t\022\014\n\004tags\030\003 \003(\tB\rZ\013dataserviceb\006proto3"
+      "\022\031asgt.dataservice.v1alpha1\"M\n\rDeleteReq" +
+      "uest\022\024\n\014dataset_type\030\001 \001(\t\022\016\n\004name\030\002 \001(\t" +
+      "H\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005matchB\rZ\013dataservic" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -931,7 +999,7 @@ public final class Delete {
     internal_static_asgt_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DeleteRequest_descriptor,
-        new java.lang.String[] { "ModelType", "Dataset", "Tags", });
+        new java.lang.String[] { "DatasetType", "Name", "Tag", "Match", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
