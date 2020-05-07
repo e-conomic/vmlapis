@@ -20,6 +20,7 @@ message BankEntry {
   string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset_id = 11 [(gen_bq_schema.bigquery) = {require: true, description: "unique ID of dataset"}];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.BankTransaction data = 5;
   repeated asgt.type.TargetValue target_values = 6;
@@ -34,6 +35,7 @@ message ElectronicInvoiceLineEntry {
   string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset_id = 11 [(gen_bq_schema.bigquery) = {require: true, description: "unique ID of dataset"}];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.InvoiceLine data = 5;
   repeated asgt.type.TargetValue target_values = 6;
@@ -48,6 +50,7 @@ message ScannedInvoiceEntry {
   string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset_id = 11 [(gen_bq_schema.bigquery) = {require: true, description: "unique ID of dataset"}];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
   asgt.type.ScannedInvoice data = 5;
   repeated asgt.type.TargetValue target_values = 6;

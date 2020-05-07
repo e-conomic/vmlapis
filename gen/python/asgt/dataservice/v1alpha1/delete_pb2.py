@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n&asgt/dataservice/v1alpha1/delete.proto\x12\x19\x61sgt.dataservice.v1alpha1\"B\n\rDeleteRequest\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\tB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n&asgt/dataservice/v1alpha1/delete.proto\x12\x19\x61sgt.dataservice.v1alpha1\"M\n\rDeleteRequest\x12\x14\n\x0c\x64\x61taset_type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05matchB\rZ\x0b\x64\x61taserviceb\x06proto3')
 )
 
 
@@ -33,23 +33,23 @@ _DELETEREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.dataservice.v1alpha1.DeleteRequest.model_type', index=0,
+      name='dataset_type', full_name='asgt.dataservice.v1alpha1.DeleteRequest.dataset_type', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1alpha1.DeleteRequest.dataset', index=1,
+      name='name', full_name='asgt.dataservice.v1alpha1.DeleteRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.DeleteRequest.tags', index=2,
-      number=3, type=9, cpp_type=9, label=3,
-      has_default_value=False, default_value=[],
+      name='tag', full_name='asgt.dataservice.v1alpha1.DeleteRequest.tag', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -64,11 +64,20 @@ _DELETEREQUEST = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
+    _descriptor.OneofDescriptor(
+      name='match', full_name='asgt.dataservice.v1alpha1.DeleteRequest.match',
+      index=0, containing_type=None, fields=[]),
   ],
   serialized_start=69,
-  serialized_end=135,
+  serialized_end=146,
 )
 
+_DELETEREQUEST.oneofs_by_name['match'].fields.append(
+  _DELETEREQUEST.fields_by_name['name'])
+_DELETEREQUEST.fields_by_name['name'].containing_oneof = _DELETEREQUEST.oneofs_by_name['match']
+_DELETEREQUEST.oneofs_by_name['match'].fields.append(
+  _DELETEREQUEST.fields_by_name['tag'])
+_DELETEREQUEST.fields_by_name['tag'].containing_oneof = _DELETEREQUEST.oneofs_by_name['match']
 DESCRIPTOR.message_types_by_name['DeleteRequest'] = _DELETEREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

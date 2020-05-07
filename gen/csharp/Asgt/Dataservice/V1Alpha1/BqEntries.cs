@@ -31,45 +31,48 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Y3Rpb24ucHJvdG8aH2FzZ3QvdHlwZS9zY2FubmVkX2ludm9pY2UucHJvdG8a",
             "HGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEv",
             "YnFfZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ivQMKCUJhbmtFbnRyeRI+",
+            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i7gMKCUJhbmtFbnRyeRI+",
             "CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlk",
             "IGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/AggBEhsK",
-            "DGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoEdGFncxgEIAMoCUJG6j9D",
-            "IkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVucmljaGVkIGJ5IHNlcnZp",
-            "Y2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIoCgRkYXRhGAUgASgLMhouYXNndC50",
-            "eXBlLkJhbmtUcmFuc2FjdGlvbhItCg10YXJnZXRfdmFsdWVzGAYgAygLMhYu",
-            "YXNndC50eXBlLlRhcmdldFZhbHVlEiMKBW1vZGVsGAkgASgLMhQuYXNndC50",
-            "eXBlLk1vZGVsSW5mbxIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNndC50eXBl",
-            "LlByZWRpY3Rpb24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARCEOo/DQgB",
-            "EglUSU1FU1RBTVA6Duo/CwoJYmFua19kYXRhIt0DChpFbGVjdHJvbmljSW52",
-            "b2ljZUxpbmVFbnRyeRI+CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBF",
-            "bnZveSByZXF1ZXN0IGlkIGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIY",
-            "AiABKAlCBeo/AggBEhsKDGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESVAoE",
-            "dGFncxgEIAMoCUJG6j9DIkFUYWdzIGRlZmluZWQgYnkgY29uc3VtZXIsIGVu",
-            "cmljaGVkIGJ5IHNlcnZpY2UgaWYgdmFsZXRrZXkgaXMgdXNlZBIkCgRkYXRh",
-            "GAUgASgLMhYuYXNndC50eXBlLkludm9pY2VMaW5lEi0KDXRhcmdldF92YWx1",
-            "ZXMYBiADKAsyFi5hc2d0LnR5cGUuVGFyZ2V0VmFsdWUSIwoFbW9kZWwYCSAB",
-            "KAsyFC5hc2d0LnR5cGUuTW9kZWxJbmZvEjAKCnByZWRpY3Rpb24YCiADKAsy",
-            "HC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgI",
-            "IAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoh6j8eChxlbGVjdHJvbmljX2ludm9p",
-            "Y2VfbGluZV9kYXRhItEDChNTY2FubmVkSW52b2ljZUVudHJ5Ej4KAmlkGAEg",
-            "ASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVl",
-            "ZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNl",
-            "dF9uYW1lGAMgASgJQgXqPwIIARJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3Mg",
-            "ZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2",
-            "YWxldGtleSBpcyB1c2VkEicKBGRhdGEYBSABKAsyGS5hc2d0LnR5cGUuU2Nh",
-            "bm5lZEludm9pY2USLQoNdGFyZ2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3QudHlw",
-            "ZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2Rl",
-            "bEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0",
-            "aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNU",
-            "QU1QOhnqPxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhQg1aC2RhdGFzZXJ2aWNl",
-            "YgZwcm90bzM="));
+            "DGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESLwoKZGF0YXNldF9pZBgLIAEo",
+            "CUIb6j8YCAEiFHVuaXF1ZSBJRCBvZiBkYXRhc2V0ElQKBHRhZ3MYBCADKAlC",
+            "Ruo/QyJBVGFncyBkZWZpbmVkIGJ5IGNvbnN1bWVyLCBlbnJpY2hlZCBieSBz",
+            "ZXJ2aWNlIGlmIHZhbGV0a2V5IGlzIHVzZWQSKAoEZGF0YRgFIAEoCzIaLmFz",
+            "Z3QudHlwZS5CYW5rVHJhbnNhY3Rpb24SLQoNdGFyZ2V0X3ZhbHVlcxgGIAMo",
+            "CzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFz",
+            "Z3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3Qu",
+            "dHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDq",
+            "Pw0IARIJVElNRVNUQU1QOg7qPwsKCWJhbmtfZGF0YSKOBAoaRWxlY3Ryb25p",
+            "Y0ludm9pY2VMaW5lRW50cnkSPgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNo",
+            "ZXMgRW52b3kgcmVxdWVzdCBpZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1",
+            "bWVyGAIgASgJQgXqPwIIARIbCgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggB",
+            "Ei8KCmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0",
+            "YXNldBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25z",
+            "dW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1c2Vk",
+            "EiQKBGRhdGEYBSABKAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmUSLQoNdGFy",
+            "Z2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVt",
+            "b2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlv",
+            "bhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1l",
+            "X2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNUQU1QOiHqPx4KHGVsZWN0cm9u",
+            "aWNfaW52b2ljZV9saW5lX2RhdGEiggQKE1NjYW5uZWRJbnZvaWNlRW50cnkS",
+            "PgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kgcmVxdWVzdCBp",
+            "ZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJQgXqPwIIARIb",
+            "CgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggBEi8KCmRhdGFzZXRfaWQYCyAB",
+            "KAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNldBJUCgR0YWdzGAQgAygJ",
+            "QkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkg",
+            "c2VydmljZSBpZiB2YWxldGtleSBpcyB1c2VkEicKBGRhdGEYBSABKAsyGS5h",
+            "c2d0LnR5cGUuU2Nhbm5lZEludm9pY2USLQoNdGFyZ2V0X3ZhbHVlcxgGIAMo",
+            "CzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFz",
+            "Z3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3Qu",
+            "dHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDq",
+            "Pw0IARIJVElNRVNUQU1QOhnqPxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhQg1a",
+            "C2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelInfoReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry), global::Asgt.Dataservice.V1Alpha1.ScannedInvoiceEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
           }));
     }
     #endregion
@@ -107,6 +110,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       id_ = other.id_;
       consumer_ = other.consumer_;
       datasetName_ = other.datasetName_;
+      datasetId_ = other.datasetId_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
       targetValues_ = other.targetValues_.Clone();
@@ -151,6 +155,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
       get { return datasetName_; }
       set {
         datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 11;
+    private string datasetId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -233,6 +248,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id != other.Id) return false;
       if (Consumer != other.Consumer) return false;
       if (DatasetName != other.DatasetName) return false;
+      if (DatasetId != other.DatasetId) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
       if(!targetValues_.Equals(other.targetValues_)) return false;
@@ -248,6 +264,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
       hash ^= targetValues_.GetHashCode();
@@ -294,6 +311,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteMessage(Model);
       }
       prediction_.WriteTo(output, _repeated_prediction_codec);
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(DatasetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -310,6 +331,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (data_ != null) {
@@ -342,6 +366,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (other.DatasetName.Length != 0) {
         DatasetName = other.DatasetName;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       tags_.Add(other.tags_);
       if (other.data_ != null) {
@@ -414,6 +441,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
             prediction_.AddEntriesFrom(input, _repeated_prediction_codec);
             break;
           }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -451,6 +482,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       id_ = other.id_;
       consumer_ = other.consumer_;
       datasetName_ = other.datasetName_;
+      datasetId_ = other.datasetId_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
       targetValues_ = other.targetValues_.Clone();
@@ -495,6 +527,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
       get { return datasetName_; }
       set {
         datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 11;
+    private string datasetId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -577,6 +620,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id != other.Id) return false;
       if (Consumer != other.Consumer) return false;
       if (DatasetName != other.DatasetName) return false;
+      if (DatasetId != other.DatasetId) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
       if(!targetValues_.Equals(other.targetValues_)) return false;
@@ -592,6 +636,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
       hash ^= targetValues_.GetHashCode();
@@ -638,6 +683,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteMessage(Model);
       }
       prediction_.WriteTo(output, _repeated_prediction_codec);
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(DatasetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -654,6 +703,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (data_ != null) {
@@ -686,6 +738,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (other.DatasetName.Length != 0) {
         DatasetName = other.DatasetName;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       tags_.Add(other.tags_);
       if (other.data_ != null) {
@@ -758,6 +813,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
             prediction_.AddEntriesFrom(input, _repeated_prediction_codec);
             break;
           }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -795,6 +854,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       id_ = other.id_;
       consumer_ = other.consumer_;
       datasetName_ = other.datasetName_;
+      datasetId_ = other.datasetId_;
       tags_ = other.tags_.Clone();
       data_ = other.data_ != null ? other.data_.Clone() : null;
       targetValues_ = other.targetValues_.Clone();
@@ -839,6 +899,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
       get { return datasetName_; }
       set {
         datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 11;
+    private string datasetId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -921,6 +992,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id != other.Id) return false;
       if (Consumer != other.Consumer) return false;
       if (DatasetName != other.DatasetName) return false;
+      if (DatasetId != other.DatasetId) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Data, other.Data)) return false;
       if(!targetValues_.Equals(other.targetValues_)) return false;
@@ -936,6 +1008,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (data_ != null) hash ^= Data.GetHashCode();
       hash ^= targetValues_.GetHashCode();
@@ -982,6 +1055,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteMessage(Model);
       }
       prediction_.WriteTo(output, _repeated_prediction_codec);
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(DatasetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -998,6 +1075,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (data_ != null) {
@@ -1030,6 +1110,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (other.DatasetName.Length != 0) {
         DatasetName = other.DatasetName;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       tags_.Add(other.tags_);
       if (other.data_ != null) {
@@ -1100,6 +1183,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 82: {
             prediction_.AddEntriesFrom(input, _repeated_prediction_codec);
+            break;
+          }
+          case 90: {
+            DatasetId = input.ReadString();
             break;
           }
         }

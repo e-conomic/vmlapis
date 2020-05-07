@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n*asgt/dataservice/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xbd\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12(\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\xdd\x03\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12$\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\xd1\x03\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\'\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_dataB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n*asgt/dataservice/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/bank_transaction.proto\x1a\x1c\x61sgt/type/invoice_line.proto\x1a\x1a\x61sgt/type/model_info.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xee\x03\n\tBankEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of dataset\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12(\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x1a.asgt.type.BankTransaction\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_data\"\x8e\x04\n\x1a\x45lectronicInvoiceLineEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of dataset\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12$\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x16.asgt.type.InvoiceLine\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:!\xea?\x1e\n\x1c\x65lectronic_invoice_line_data\"\x82\x04\n\x13ScannedInvoiceEntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of dataset\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\'\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12#\n\x05model\x18\t \x01(\x0b\x32\x14.asgt.type.ModelInfo\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x19\xea?\x16\n\x14scanned_invoice_dataB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_bank__transaction__pb2.DESCRIPTOR,asgt_dot_type_dot_invoice__line__pb2.DESCRIPTOR,asgt_dot_type_dot_model__info__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -64,42 +64,49 @@ _BANKENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.BankEntry.tags', index=3,
+      name='dataset_id', full_name='asgt.dataservice.v1alpha1.BankEntry.dataset_id', index=3,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\030\010\001\"\024unique ID of dataset'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='asgt.dataservice.v1alpha1.BankEntry.tags', index=4,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?C\"ATags defined by consumer, enriched by service if valetkey is used'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='asgt.dataservice.v1alpha1.BankEntry.data', index=4,
+      name='data', full_name='asgt.dataservice.v1alpha1.BankEntry.data', index=5,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_values', full_name='asgt.dataservice.v1alpha1.BankEntry.target_values', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.BankEntry.target_values', index=6,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model', full_name='asgt.dataservice.v1alpha1.BankEntry.model', index=6,
+      name='model', full_name='asgt.dataservice.v1alpha1.BankEntry.model', index=7,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction', full_name='asgt.dataservice.v1alpha1.BankEntry.prediction', index=7,
+      name='prediction', full_name='asgt.dataservice.v1alpha1.BankEntry.prediction', index=8,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_added', full_name='asgt.dataservice.v1alpha1.BankEntry.time_added', index=8,
+      name='time_added', full_name='asgt.dataservice.v1alpha1.BankEntry.time_added', index=9,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -118,7 +125,7 @@ _BANKENTRY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=347,
-  serialized_end=792,
+  serialized_end=841,
 )
 
 
@@ -151,42 +158,49 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.tags', index=3,
+      name='dataset_id', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.dataset_id', index=3,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\030\010\001\"\024unique ID of dataset'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.tags', index=4,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?C\"ATags defined by consumer, enriched by service if valetkey is used'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.data', index=4,
+      name='data', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.data', index=5,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_values', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.target_values', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.target_values', index=6,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.model', index=6,
+      name='model', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.model', index=7,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prediction', index=7,
+      name='prediction', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.prediction', index=8,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_added', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.time_added', index=8,
+      name='time_added', full_name='asgt.dataservice.v1alpha1.ElectronicInvoiceLineEntry.time_added', index=9,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -204,8 +218,8 @@ _ELECTRONICINVOICELINEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=795,
-  serialized_end=1272,
+  serialized_start=844,
+  serialized_end=1370,
 )
 
 
@@ -238,42 +252,49 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?\002\010\001'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.tags', index=3,
+      name='dataset_id', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.dataset_id', index=3,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=_b('\352?\030\010\001\"\024unique ID of dataset'), file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.tags', index=4,
       number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=_b('\352?C\"ATags defined by consumer, enriched by service if valetkey is used'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='data', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.data', index=4,
+      name='data', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.data', index=5,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_values', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.target_values', index=5,
+      name='target_values', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.target_values', index=6,
       number=6, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.model', index=6,
+      name='model', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.model', index=7,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='prediction', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prediction', index=7,
+      name='prediction', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.prediction', index=8,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='time_added', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.time_added', index=8,
+      name='time_added', full_name='asgt.dataservice.v1alpha1.ScannedInvoiceEntry.time_added', index=9,
       number=8, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -291,8 +312,8 @@ _SCANNEDINVOICEENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1275,
-  serialized_end=1740,
+  serialized_start=1373,
+  serialized_end=1887,
 )
 
 _BANKENTRY.fields_by_name['data'].message_type = asgt_dot_type_dot_bank__transaction__pb2._BANKTRANSACTION
@@ -338,18 +359,21 @@ DESCRIPTOR._options = None
 _BANKENTRY.fields_by_name['id']._options = None
 _BANKENTRY.fields_by_name['consumer']._options = None
 _BANKENTRY.fields_by_name['dataset_name']._options = None
+_BANKENTRY.fields_by_name['dataset_id']._options = None
 _BANKENTRY.fields_by_name['tags']._options = None
 _BANKENTRY.fields_by_name['time_added']._options = None
 _BANKENTRY._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['id']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['consumer']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['dataset_name']._options = None
+_ELECTRONICINVOICELINEENTRY.fields_by_name['dataset_id']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['tags']._options = None
 _ELECTRONICINVOICELINEENTRY.fields_by_name['time_added']._options = None
 _ELECTRONICINVOICELINEENTRY._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['id']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['consumer']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['dataset_name']._options = None
+_SCANNEDINVOICEENTRY.fields_by_name['dataset_id']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['tags']._options = None
 _SCANNEDINVOICEENTRY.fields_by_name['time_added']._options = None
 _SCANNEDINVOICEENTRY._options = None

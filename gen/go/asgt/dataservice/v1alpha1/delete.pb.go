@@ -19,19 +19,21 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type DeleteRequest struct {
-	ModelType            string   `protobuf:"bytes,1,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
-	Dataset              string   `protobuf:"bytes,2,opt,name=dataset,proto3" json:"dataset,omitempty"`
-	Tags                 []string `protobuf:"bytes,3,rep,name=tags,proto3" json:"tags,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	DatasetType string `protobuf:"bytes,1,opt,name=dataset_type,json=datasetType,proto3" json:"dataset_type,omitempty"`
+	// Types that are valid to be assigned to Match:
+	//	*DeleteRequest_Name
+	//	*DeleteRequest_Tag
+	Match                isDeleteRequest_Match `protobuf_oneof:"match"`
+	XXX_NoUnkeyedLiteral struct{}              `json:"-"`
+	XXX_unrecognized     []byte                `json:"-"`
+	XXX_sizecache        int32                 `json:"-"`
 }
 
 func (m *DeleteRequest) Reset()         { *m = DeleteRequest{} }
 func (m *DeleteRequest) String() string { return proto.CompactTextString(m) }
 func (*DeleteRequest) ProtoMessage()    {}
 func (*DeleteRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_delete_5254bf2bbd068fcc, []int{0}
+	return fileDescriptor_delete_066381ff78bb93ac, []int{0}
 }
 func (m *DeleteRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_DeleteRequest.Unmarshal(m, b)
@@ -51,25 +53,114 @@ func (m *DeleteRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_DeleteRequest proto.InternalMessageInfo
 
-func (m *DeleteRequest) GetModelType() string {
+func (m *DeleteRequest) GetDatasetType() string {
 	if m != nil {
-		return m.ModelType
+		return m.DatasetType
 	}
 	return ""
 }
 
-func (m *DeleteRequest) GetDataset() string {
-	if m != nil {
-		return m.Dataset
-	}
-	return ""
+type isDeleteRequest_Match interface {
+	isDeleteRequest_Match()
 }
 
-func (m *DeleteRequest) GetTags() []string {
+type DeleteRequest_Name struct {
+	Name string `protobuf:"bytes,2,opt,name=name,proto3,oneof"`
+}
+
+type DeleteRequest_Tag struct {
+	Tag string `protobuf:"bytes,3,opt,name=tag,proto3,oneof"`
+}
+
+func (*DeleteRequest_Name) isDeleteRequest_Match() {}
+
+func (*DeleteRequest_Tag) isDeleteRequest_Match() {}
+
+func (m *DeleteRequest) GetMatch() isDeleteRequest_Match {
 	if m != nil {
-		return m.Tags
+		return m.Match
 	}
 	return nil
+}
+
+func (m *DeleteRequest) GetName() string {
+	if x, ok := m.GetMatch().(*DeleteRequest_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+func (m *DeleteRequest) GetTag() string {
+	if x, ok := m.GetMatch().(*DeleteRequest_Tag); ok {
+		return x.Tag
+	}
+	return ""
+}
+
+// XXX_OneofFuncs is for the internal use of the proto package.
+func (*DeleteRequest) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
+	return _DeleteRequest_OneofMarshaler, _DeleteRequest_OneofUnmarshaler, _DeleteRequest_OneofSizer, []interface{}{
+		(*DeleteRequest_Name)(nil),
+		(*DeleteRequest_Tag)(nil),
+	}
+}
+
+func _DeleteRequest_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
+	m := msg.(*DeleteRequest)
+	// match
+	switch x := m.Match.(type) {
+	case *DeleteRequest_Name:
+		b.EncodeVarint(2<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Name)
+	case *DeleteRequest_Tag:
+		b.EncodeVarint(3<<3 | proto.WireBytes)
+		b.EncodeStringBytes(x.Tag)
+	case nil:
+	default:
+		return fmt.Errorf("DeleteRequest.Match has unexpected type %T", x)
+	}
+	return nil
+}
+
+func _DeleteRequest_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
+	m := msg.(*DeleteRequest)
+	switch tag {
+	case 2: // match.name
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Match = &DeleteRequest_Name{x}
+		return true, err
+	case 3: // match.tag
+		if wire != proto.WireBytes {
+			return true, proto.ErrInternalBadWireType
+		}
+		x, err := b.DecodeStringBytes()
+		m.Match = &DeleteRequest_Tag{x}
+		return true, err
+	default:
+		return false, nil
+	}
+}
+
+func _DeleteRequest_OneofSizer(msg proto.Message) (n int) {
+	m := msg.(*DeleteRequest)
+	// match
+	switch x := m.Match.(type) {
+	case *DeleteRequest_Name:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Name)))
+		n += len(x.Name)
+	case *DeleteRequest_Tag:
+		n += 1 // tag and wire
+		n += proto.SizeVarint(uint64(len(x.Tag)))
+		n += len(x.Tag)
+	case nil:
+	default:
+		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
+	}
+	return n
 }
 
 func init() {
@@ -77,19 +168,20 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/delete.proto", fileDescriptor_delete_5254bf2bbd068fcc)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/delete.proto", fileDescriptor_delete_066381ff78bb93ac)
 }
 
-var fileDescriptor_delete_5254bf2bbd068fcc = []byte{
-	// 157 bytes of a gzipped FileDescriptorProto
+var fileDescriptor_delete_066381ff78bb93ac = []byte{
+	// 164 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x52, 0x4b, 0x2c, 0x4e, 0x2f,
 	0xd1, 0x4f, 0x49, 0x2c, 0x49, 0x2c, 0x4e, 0x2d, 0x2a, 0xcb, 0x4c, 0x4e, 0xd5, 0x2f, 0x33, 0x4c,
 	0xcc, 0x29, 0xc8, 0x48, 0x34, 0xd4, 0x4f, 0x49, 0xcd, 0x49, 0x2d, 0x49, 0xd5, 0x2b, 0x28, 0xca,
-	0x2f, 0xc9, 0x17, 0x92, 0x04, 0xa9, 0xd3, 0x43, 0x52, 0xa7, 0x07, 0x53, 0xa7, 0x14, 0xc3, 0xc5,
-	0xeb, 0x02, 0x56, 0x1a, 0x94, 0x5a, 0x58, 0x9a, 0x5a, 0x5c, 0x22, 0x24, 0xcb, 0xc5, 0x95, 0x9b,
-	0x9f, 0x92, 0x9a, 0x13, 0x5f, 0x52, 0x59, 0x90, 0x2a, 0xc1, 0xa8, 0xc0, 0xa8, 0xc1, 0x19, 0xc4,
-	0x09, 0x16, 0x09, 0xa9, 0x2c, 0x48, 0x15, 0x92, 0xe0, 0x62, 0x87, 0x98, 0x53, 0x22, 0xc1, 0x04,
-	0x96, 0x83, 0x71, 0x85, 0x84, 0xb8, 0x58, 0x4a, 0x12, 0xd3, 0x8b, 0x25, 0x98, 0x15, 0x98, 0x35,
-	0x38, 0x83, 0xc0, 0x6c, 0x27, 0xde, 0x28, 0x6e, 0x24, 0x5b, 0x93, 0xd8, 0xc0, 0xce, 0x31, 0x06,
-	0x04, 0x00, 0x00, 0xff, 0xff, 0x84, 0x75, 0x09, 0x8a, 0xb8, 0x00, 0x00, 0x00,
+	0x2f, 0xc9, 0x17, 0x92, 0x04, 0xa9, 0xd3, 0x43, 0x52, 0xa7, 0x07, 0x53, 0xa7, 0x94, 0xca, 0xc5,
+	0xeb, 0x02, 0x56, 0x1a, 0x94, 0x5a, 0x58, 0x9a, 0x5a, 0x5c, 0x22, 0xa4, 0xc8, 0xc5, 0x03, 0x51,
+	0x58, 0x12, 0x5f, 0x52, 0x59, 0x90, 0x2a, 0xc1, 0xa8, 0xc0, 0xa8, 0xc1, 0x19, 0xc4, 0x0d, 0x15,
+	0x0b, 0xa9, 0x2c, 0x48, 0x15, 0x12, 0xe1, 0x62, 0xc9, 0x4b, 0xcc, 0x4d, 0x95, 0x60, 0x02, 0x49,
+	0x79, 0x30, 0x04, 0x81, 0x79, 0x42, 0x42, 0x5c, 0xcc, 0x25, 0x89, 0xe9, 0x12, 0xcc, 0x50, 0x41,
+	0x10, 0xc7, 0x89, 0x9d, 0x8b, 0x35, 0x37, 0xb1, 0x24, 0x39, 0xc3, 0x89, 0x37, 0x8a, 0x1b, 0xc9,
+	0xfa, 0x24, 0x36, 0xb0, 0xbb, 0x8c, 0x01, 0x01, 0x00, 0x00, 0xff, 0xff, 0x16, 0xf6, 0x1f, 0x43,
+	0xc1, 0x00, 0x00, 0x00,
 }
