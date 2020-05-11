@@ -64,7 +64,8 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.toObject = function(opt
  */
 proto.asgt.dataservice.v1alpha1.GetInfoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, "")
+    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    datasetType: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -105,6 +106,10 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.deserializeBinaryFromReader = fun
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetName(value);
       break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetType(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -141,6 +146,13 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.serializeBinaryToWriter = functio
       f
     );
   }
+  f = message.getDatasetType();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
 };
 
 
@@ -156,6 +168,21 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getDatasetName = functi
 /** @param {string} value */
 proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setDatasetName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
+};
+
+
+/**
+ * optional string dataset_type = 2;
+ * @return {string}
+ */
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getDatasetType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setDatasetType = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 

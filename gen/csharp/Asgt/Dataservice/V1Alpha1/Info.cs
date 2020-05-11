@@ -28,14 +28,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "ZGF0YXNlcnZpY2UudjFhbHBoYTEaF2FzZ3QvdHlwZS9kYXRhc2V0LnByb3Rv",
             "GhVhc2d0L3R5cGUvbW9kZWwucHJvdG8aIGFzZ3QvdHlwZS9yZXRlbnRpb25f",
             "cG9saWN5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IiYKDkdldEluZm9SZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCSJXCg9H",
-            "ZXRJbmZvUmVzcG9uc2USIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5E",
-            "YXRhc2V0Eh8KBW1vZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVsQg1aC2Rh",
-            "dGFzZXJ2aWNlYgZwcm90bzM="));
+            "IjwKDkdldEluZm9SZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIUCgxk",
+            "YXRhc2V0X3R5cGUYAiABKAkiVwoPR2V0SW5mb1Jlc3BvbnNlEiMKB2RhdGFz",
+            "ZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldBIfCgVtb2RlbBgCIAEoCzIQ",
+            "LmFzZ3QudHlwZS5Nb2RlbEINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoRequest), global::Asgt.Dataservice.V1Alpha1.GetInfoRequest.Parser, new[]{ "DatasetName" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoRequest), global::Asgt.Dataservice.V1Alpha1.GetInfoRequest.Parser, new[]{ "DatasetName", "DatasetType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoResponse), global::Asgt.Dataservice.V1Alpha1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null)
           }));
     }
@@ -69,6 +69,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetInfoRequest(GetInfoRequest other) : this() {
       datasetName_ = other.datasetName_;
+      datasetType_ = other.datasetType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -88,6 +89,17 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
+    /// <summary>Field number for the "dataset_type" field.</summary>
+    public const int DatasetTypeFieldNumber = 2;
+    private string datasetType_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetType {
+      get { return datasetType_; }
+      set {
+        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetInfoRequest);
@@ -102,6 +114,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
         return true;
       }
       if (DatasetName != other.DatasetName) return false;
+      if (DatasetType != other.DatasetType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -109,6 +122,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
+      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -126,6 +140,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(DatasetName);
       }
+      if (DatasetType.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DatasetType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -136,6 +154,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       int size = 0;
       if (DatasetName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      }
+      if (DatasetType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -151,6 +172,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other.DatasetName.Length != 0) {
         DatasetName = other.DatasetName;
       }
+      if (other.DatasetType.Length != 0) {
+        DatasetType = other.DatasetType;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -164,6 +188,10 @@ namespace Asgt.Dataservice.V1Alpha1 {
             break;
           case 10: {
             DatasetName = input.ReadString();
+            break;
+          }
+          case 18: {
+            DatasetType = input.ReadString();
             break;
           }
         }
