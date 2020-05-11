@@ -358,6 +358,14 @@ public final class Annotator {
        * <code>IBAN = 24;</code>
        */
       IBAN(24),
+      /**
+       * <pre>
+       * Run LINES detection
+       * </pre>
+       *
+       * <code>LINES = 25;</code>
+       */
+      LINES(25),
       UNRECOGNIZED(-1),
       ;
 
@@ -561,6 +569,14 @@ public final class Annotator {
        * <code>IBAN = 24;</code>
        */
       public static final int IBAN_VALUE = 24;
+      /**
+       * <pre>
+       * Run LINES detection
+       * </pre>
+       *
+       * <code>LINES = 25;</code>
+       */
+      public static final int LINES_VALUE = 25;
 
 
       public final int getNumber() {
@@ -606,6 +622,7 @@ public final class Annotator {
           case 22: return OCR_LINE_NL_PAYMENT_ID;
           case 23: return TEXT;
           case 24: return IBAN;
+          case 25: return LINES;
           default: return null;
         }
       }
@@ -3612,6 +3629,55 @@ public final class Annotator {
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getIbanOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.LineCandidate> 
+        getLinesList();
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    ssn.type.CandidateOuterClass.LineCandidate getLines(int index);
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    int getLinesCount();
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+        getLinesOrBuilderList();
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -3650,6 +3716,7 @@ public final class Annotator {
       text_ = "";
       feedbackId_ = "";
       iban_ = java.util.Collections.emptyList();
+      lines_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -3899,6 +3966,15 @@ public final class Annotator {
                   input.readMessage(ssn.type.CandidateOuterClass.Candidate.parser(), extensionRegistry));
               break;
             }
+            case 210: {
+              if (!((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+                lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>();
+                mutable_bitField0_ |= 0x02000000;
+              }
+              lines_.add(
+                  input.readMessage(ssn.type.CandidateOuterClass.LineCandidate.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -3979,6 +4055,9 @@ public final class Annotator {
         }
         if (((mutable_bitField0_ & 0x01000000) == 0x01000000)) {
           iban_ = java.util.Collections.unmodifiableList(iban_);
+        }
+        if (((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+          lines_ = java.util.Collections.unmodifiableList(lines_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -5457,6 +5536,66 @@ public final class Annotator {
       return iban_.get(index);
     }
 
+    public static final int LINES_FIELD_NUMBER = 26;
+    private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_;
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
+      return lines_;
+    }
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+        getLinesOrBuilderList() {
+      return lines_;
+    }
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    public int getLinesCount() {
+      return lines_.size();
+    }
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
+      return lines_.get(index);
+    }
+    /**
+     * <pre>
+     * Invoice lines represented in a form of text, amount and page reference
+     * to state on which page the line was found
+     * </pre>
+     *
+     * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+     */
+    public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+        int index) {
+      return lines_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5545,6 +5684,9 @@ public final class Annotator {
       }
       for (int i = 0; i < iban_.size(); i++) {
         output.writeMessage(25, iban_.get(i));
+      }
+      for (int i = 0; i < lines_.size(); i++) {
+        output.writeMessage(26, lines_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -5653,6 +5795,10 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(25, iban_.get(i));
       }
+      for (int i = 0; i < lines_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(26, lines_.get(i));
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5722,6 +5868,8 @@ public final class Annotator {
           .equals(other.getFeedbackId());
       result = result && getIbanList()
           .equals(other.getIbanList());
+      result = result && getLinesList()
+          .equals(other.getLinesList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5828,6 +5976,10 @@ public final class Annotator {
       if (getIbanCount() > 0) {
         hash = (37 * hash) + IBAN_FIELD_NUMBER;
         hash = (53 * hash) + getIbanList().hashCode();
+      }
+      if (getLinesCount() > 0) {
+        hash = (37 * hash) + LINES_FIELD_NUMBER;
+        hash = (53 * hash) + getLinesList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5979,6 +6131,7 @@ public final class Annotator {
           getOcrLineFiPaymentIdFieldBuilder();
           getOcrLineNlPaymentIdFieldBuilder();
           getIbanFieldBuilder();
+          getLinesFieldBuilder();
         }
       }
       @java.lang.Override
@@ -6125,6 +6278,12 @@ public final class Annotator {
           bitField0_ = (bitField0_ & ~0x01000000);
         } else {
           ibanBuilder_.clear();
+        }
+        if (linesBuilder_ == null) {
+          lines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+        } else {
+          linesBuilder_.clear();
         }
         return this;
       }
@@ -6358,6 +6517,15 @@ public final class Annotator {
           result.iban_ = iban_;
         } else {
           result.iban_ = ibanBuilder_.build();
+        }
+        if (linesBuilder_ == null) {
+          if (((bitField0_ & 0x02000000) == 0x02000000)) {
+            lines_ = java.util.Collections.unmodifiableList(lines_);
+            bitField0_ = (bitField0_ & ~0x02000000);
+          }
+          result.lines_ = lines_;
+        } else {
+          result.lines_ = linesBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -6988,6 +7156,32 @@ public final class Annotator {
                    getIbanFieldBuilder() : null;
             } else {
               ibanBuilder_.addAllMessages(other.iban_);
+            }
+          }
+        }
+        if (linesBuilder_ == null) {
+          if (!other.lines_.isEmpty()) {
+            if (lines_.isEmpty()) {
+              lines_ = other.lines_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              ensureLinesIsMutable();
+              lines_.addAll(other.lines_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.lines_.isEmpty()) {
+            if (linesBuilder_.isEmpty()) {
+              linesBuilder_.dispose();
+              linesBuilder_ = null;
+              lines_ = other.lines_;
+              bitField0_ = (bitField0_ & ~0x02000000);
+              linesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLinesFieldBuilder() : null;
+            } else {
+              linesBuilder_.addAllMessages(other.lines_);
             }
           }
         }
@@ -14699,6 +14893,336 @@ public final class Annotator {
         }
         return ibanBuilder_;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_ =
+        java.util.Collections.emptyList();
+      private void ensureLinesIsMutable() {
+        if (!((bitField0_ & 0x02000000) == 0x02000000)) {
+          lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>(lines_);
+          bitField0_ |= 0x02000000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder> linesBuilder_;
+
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.LineCandidate> getLinesList() {
+        if (linesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(lines_);
+        } else {
+          return linesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public int getLinesCount() {
+        if (linesBuilder_ == null) {
+          return lines_.size();
+        } else {
+          return linesBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate getLines(int index) {
+        if (linesBuilder_ == null) {
+          return lines_.get(index);
+        } else {
+          return linesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder setLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.set(index, value);
+          onChanged();
+        } else {
+          linesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder setLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder addLines(ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.add(value);
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder addLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate value) {
+        if (linesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLinesIsMutable();
+          lines_.add(index, value);
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder addLines(
+          ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.add(builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder addLines(
+          int index, ssn.type.CandidateOuterClass.LineCandidate.Builder builderForValue) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          linesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder addAllLines(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.LineCandidate> values) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, lines_);
+          onChanged();
+        } else {
+          linesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder clearLines() {
+        if (linesBuilder_ == null) {
+          lines_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x02000000);
+          onChanged();
+        } else {
+          linesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public Builder removeLines(int index) {
+        if (linesBuilder_ == null) {
+          ensureLinesIsMutable();
+          lines_.remove(index);
+          onChanged();
+        } else {
+          linesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder getLinesBuilder(
+          int index) {
+        return getLinesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
+          int index) {
+        if (linesBuilder_ == null) {
+          return lines_.get(index);  } else {
+          return linesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+           getLinesOrBuilderList() {
+        if (linesBuilder_ != null) {
+          return linesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(lines_);
+        }
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder() {
+        return getLinesFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public ssn.type.CandidateOuterClass.LineCandidate.Builder addLinesBuilder(
+          int index) {
+        return getLinesFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Invoice lines represented in a form of text, amount and page reference
+       * to state on which page the line was found
+       * </pre>
+       *
+       * <code>repeated .ssn.type.LineCandidate lines = 26;</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.LineCandidate.Builder> 
+           getLinesBuilderList() {
+        return getLinesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder> 
+          getLinesFieldBuilder() {
+        if (linesBuilder_ == null) {
+          linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder>(
+                  lines_,
+                  ((bitField0_ & 0x02000000) == 0x02000000),
+                  getParentForChildren(),
+                  isClean());
+          lines_ = null;
+        }
+        return linesBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16204,10 +16728,10 @@ public final class Annotator {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
       "to\032\030ssn/type/candidate.proto\032\036ssn/type/t" +
-      "ext_annotation.proto\"\301\005\n\007Feature\022,\n\004type" +
+      "ext_annotation.proto\"\314\005\n\007Feature\022,\n\004type" +
       "\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type\022\023" +
       "\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030\003 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\"\276\004\n\004Type" +
+      "\001(\0162\032.ssn.type.Confidence.Level\"\311\004\n\004Type" +
       "\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\nOR" +
       "DER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CURR" +
       "ENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VAT\020" +
@@ -16222,47 +16746,49 @@ public final class Annotator {
       "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
       "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
       "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010" +
-      "\n\004IBAN\020\030\"\203\001\n\030DocumentAnnotatorRequest\022,\n" +
-      "\010document\030\001 \001(\0132\032.ssn.annotator.v1.Docum" +
-      "ent\022+\n\010features\030\002 \003(\0132\031.ssn.annotator.v1" +
-      ".Feature\022\014\n\004tags\030\003 \003(\t\"\243\t\n\031DocumentAnnot" +
-      "atorResponse\022\'\n\norder_date\030\001 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022-\n\020payment_due_date\030\002 \003(\0132" +
-      "\023.ssn.type.Candidate\022%\n\010currency\030\003 \003(\0132\023" +
-      ".ssn.type.Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023" +
-      ".ssn.type.Candidate\022+\n\016total_incl_vat\030\005 " +
-      "\003(\0132\023.ssn.type.Candidate\022+\n\016total_excl_v" +
-      "at\030\006 \003(\0132\023.ssn.type.Candidate\0222\n\025supplie" +
-      "r_corporate_id\030\007 \003(\0132\023.ssn.type.Candidat" +
-      "e\0222\n\025supplier_country_code\030\010 \003(\0132\023.ssn.t" +
-      "ype.Candidate\022*\n\rdocument_type\030\t \003(\0132\023.s" +
-      "sn.type.Candidate\022+\n\016payment_method\030\n \003(" +
-      "\0132\023.ssn.type.Candidate\0222\n\025credit_card_la" +
-      "st_four\030\013 \003(\0132\023.ssn.type.Candidate\022+\n\016in" +
-      "voice_number\030\014 \003(\0132\023.ssn.type.Candidate\022" +
-      "1\n\017text_annotation\030\r \001(\0132\030.ssn.type.Text" +
-      "Annotation\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.s" +
-      "sn.type.Candidate\0223\n\026ocr_line_dk_payment" +
-      "_id\030\017 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_li" +
-      "ne_dk_creditor_id\030\020 \003(\0132\023.ssn.type.Candi" +
-      "date\0223\n\026ocr_line_se_payment_id\030\021 \003(\0132\023.s" +
-      "sn.type.Candidate\022=\n ocr_line_se_bankgir" +
-      "o_creditor_id\030\022 \003(\0132\023.ssn.type.Candidate" +
-      "\022=\n ocr_line_se_plusgiro_creditor_id\030\023 \003" +
-      "(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_no_p" +
-      "ayment_id\030\024 \003(\0132\023.ssn.type.Candidate\0223\n\026" +
-      "ocr_line_fi_payment_id\030\025 \003(\0132\023.ssn.type." +
-      "Candidate\0223\n\026ocr_line_nl_payment_id\030\026 \003(" +
-      "\0132\023.ssn.type.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013" +
-      "feedback_id\030\030 \001(\t\022!\n\004iban\030\031 \003(\0132\023.ssn.ty" +
-      "pe.Candidate\"M\n\010Document\022\017\n\007content\030\001 \001(" +
-      "\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Doc" +
-      "umentSource\"\"\n\016DocumentSource\022\020\n\010http_ur" +
-      "i\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Annota" +
-      "teDocument\022*.ssn.annotator.v1.DocumentAn" +
-      "notatorRequest\032+.ssn.annotator.v1.Docume" +
-      "ntAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/documen" +
-      "t:annotate:\001*B\013Z\tannotatorb\006proto3"
+      "\n\004IBAN\020\030\022\t\n\005LINES\020\031\"\203\001\n\030DocumentAnnotato" +
+      "rRequest\022,\n\010document\030\001 \001(\0132\032.ssn.annotat" +
+      "or.v1.Document\022+\n\010features\030\002 \003(\0132\031.ssn.a" +
+      "nnotator.v1.Feature\022\014\n\004tags\030\003 \003(\t\"\313\t\n\031Do" +
+      "cumentAnnotatorResponse\022\'\n\norder_date\030\001 " +
+      "\003(\0132\023.ssn.type.Candidate\022-\n\020payment_due_" +
+      "date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010curre" +
+      "ncy\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttotal_" +
+      "vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016total_" +
+      "incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022+\n\016t" +
+      "otal_excl_vat\030\006 \003(\0132\023.ssn.type.Candidate" +
+      "\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\0222\n\025supplier_country_code\030\010 " +
+      "\003(\0132\023.ssn.type.Candidate\022*\n\rdocument_typ" +
+      "e\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016payment_" +
+      "method\030\n \003(\0132\023.ssn.type.Candidate\0222\n\025cre" +
+      "dit_card_last_four\030\013 \003(\0132\023.ssn.type.Cand" +
+      "idate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn.type" +
+      ".Candidate\0221\n\017text_annotation\030\r \001(\0132\030.ss" +
+      "n.type.TextAnnotation\022-\n\020ocr_line_dk_typ" +
+      "e\030\016 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line" +
+      "_dk_payment_id\030\017 \003(\0132\023.ssn.type.Candidat" +
+      "e\0224\n\027ocr_line_dk_creditor_id\030\020 \003(\0132\023.ssn" +
+      ".type.Candidate\0223\n\026ocr_line_se_payment_i" +
+      "d\030\021 \003(\0132\023.ssn.type.Candidate\022=\n ocr_line" +
+      "_se_bankgiro_creditor_id\030\022 \003(\0132\023.ssn.typ" +
+      "e.Candidate\022=\n ocr_line_se_plusgiro_cred" +
+      "itor_id\030\023 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
+      "r_line_no_payment_id\030\024 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0223\n\026ocr_line_fi_payment_id\030\025 \003(\0132" +
+      "\023.ssn.type.Candidate\0223\n\026ocr_line_nl_paym" +
+      "ent_id\030\026 \003(\0132\023.ssn.type.Candidate\022\014\n\004tex" +
+      "t\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\022!\n\004iban\030\031 \003" +
+      "(\0132\023.ssn.type.Candidate\022&\n\005lines\030\032 \003(\0132\027" +
+      ".ssn.type.LineCandidate\"M\n\010Document\022\017\n\007c" +
+      "ontent\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 .ssn.annot" +
+      "ator.v1.DocumentSource\"\"\n\016DocumentSource" +
+      "\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021DocumentAnnotator" +
+      "\022\215\001\n\020AnnotateDocument\022*.ssn.annotator.v1" +
+      ".DocumentAnnotatorRequest\032+.ssn.annotato" +
+      "r.v1.DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025" +
+      "/v1/document:annotate:\001*B\013Z\tannotatorb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16296,7 +16822,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new

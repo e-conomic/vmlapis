@@ -24,18 +24,37 @@ goog.exportSymbol('proto.asgt.dataservice.v1alpha1.DeleteRequest', null, global)
  * @constructor
  */
 proto.asgt.dataservice.v1alpha1.DeleteRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.dataservice.v1alpha1.DeleteRequest.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_);
 };
 goog.inherits(proto.asgt.dataservice.v1alpha1.DeleteRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.dataservice.v1alpha1.DeleteRequest.displayName = 'proto.asgt.dataservice.v1alpha1.DeleteRequest';
 }
 /**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
+ * Oneof group definitions for this message. Each group defines the field
+ * numbers belonging to that group. When of these fields' value is set, all
+ * other fields in the group are cleared. During deserialization, if multiple
+ * fields are encountered for a group, only the last value seen will be kept.
+ * @private {!Array<!Array<number>>}
  * @const
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.repeatedFields_ = [3];
+proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_ = [[2,3]];
+
+/**
+ * @enum {number}
+ */
+proto.asgt.dataservice.v1alpha1.DeleteRequest.MatchCase = {
+  MATCH_NOT_SET: 0,
+  NAME: 2,
+  TAG: 3
+};
+
+/**
+ * @return {proto.asgt.dataservice.v1alpha1.DeleteRequest.MatchCase}
+ */
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getMatchCase = function() {
+  return /** @type {proto.asgt.dataservice.v1alpha1.DeleteRequest.MatchCase} */(jspb.Message.computeOneofCase(this, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_[0]));
+};
 
 
 
@@ -66,9 +85,9 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.toObject = function(opt_
  */
 proto.asgt.dataservice.v1alpha1.DeleteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    modelType: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    dataset: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    tagsList: jspb.Message.getRepeatedField(msg, 3)
+    datasetType: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    tag: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -107,15 +126,15 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.deserializeBinaryFromReader = func
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setModelType(value);
+      msg.setDatasetType(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDataset(value);
+      msg.setName(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.addTags(value);
+      msg.setTag(value);
       break;
     default:
       reader.skipField();
@@ -146,23 +165,23 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.serializeBinary = functi
  */
 proto.asgt.dataservice.v1alpha1.DeleteRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getModelType();
+  f = message.getDatasetType();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getDataset();
-  if (f.length > 0) {
+  f = /** @type {string} */ (jspb.Message.getField(message, 2));
+  if (f != null) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getTagsList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
+  f = /** @type {string} */ (jspb.Message.getField(message, 3));
+  if (f != null) {
+    writer.writeString(
       3,
       f
     );
@@ -171,61 +190,75 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.serializeBinaryToWriter = function
 
 
 /**
- * optional string model_type = 1;
+ * optional string dataset_type = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getModelType = function() {
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getDatasetType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setModelType = function(value) {
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setDatasetType = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string dataset = 2;
+ * optional string name = 2;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getDataset = function() {
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setDataset = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setName = function(value) {
+  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_[0], value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.clearName = function() {
+  jspb.Message.setOneofField(this, 2, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_[0], undefined);
 };
 
 
 /**
- * repeated string tags = 3;
- * @return {!Array<string>}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getTagsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 3));
-};
-
-
-/** @param {!Array<string>} value */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setTagsList = function(value) {
-  jspb.Message.setField(this, 3, value || []);
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.hasName = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * @param {!string} value
- * @param {number=} opt_index
+ * optional string tag = 3;
+ * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.addTags = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getTag = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.clearTagsList = function() {
-  this.setTagsList([]);
+/** @param {string} value */
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setTag = function(value) {
+  jspb.Message.setOneofField(this, 3, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_[0], value);
+};
+
+
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.clearTag = function() {
+  jspb.Message.setOneofField(this, 3, proto.asgt.dataservice.v1alpha1.DeleteRequest.oneofGroups_[0], undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.hasTag = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

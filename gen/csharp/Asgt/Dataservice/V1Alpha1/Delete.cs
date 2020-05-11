@@ -25,13 +25,13 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZhc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2RlbGV0ZS5wcm90bxIZYXNn",
-            "dC5kYXRhc2VydmljZS52MWFscGhhMSJCCg1EZWxldGVSZXF1ZXN0EhIKCm1v",
-            "ZGVsX3R5cGUYASABKAkSDwoHZGF0YXNldBgCIAEoCRIMCgR0YWdzGAMgAygJ",
-            "Qg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "dC5kYXRhc2VydmljZS52MWFscGhhMSJNCg1EZWxldGVSZXF1ZXN0EhQKDGRh",
+            "dGFzZXRfdHlwZRgBIAEoCRIOCgRuYW1lGAIgASgJSAASDQoDdGFnGAMgASgJ",
+            "SABCBwoFbWF0Y2hCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DeleteRequest), global::Asgt.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "ModelType", "Dataset", "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DeleteRequest), global::Asgt.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "DatasetType", "Name", "Tag" }, new[]{ "Match" }, null, null)
           }));
     }
     #endregion
@@ -63,9 +63,16 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteRequest(DeleteRequest other) : this() {
-      modelType_ = other.modelType_;
-      dataset_ = other.dataset_;
-      tags_ = other.tags_.Clone();
+      datasetType_ = other.datasetType_;
+      switch (other.MatchCase) {
+        case MatchOneofCase.Name:
+          Name = other.Name;
+          break;
+        case MatchOneofCase.Tag:
+          Tag = other.Tag;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -74,36 +81,56 @@ namespace Asgt.Dataservice.V1Alpha1 {
       return new DeleteRequest(this);
     }
 
-    /// <summary>Field number for the "model_type" field.</summary>
-    public const int ModelTypeFieldNumber = 1;
-    private string modelType_ = "";
+    /// <summary>Field number for the "dataset_type" field.</summary>
+    public const int DatasetTypeFieldNumber = 1;
+    private string datasetType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelType {
-      get { return modelType_; }
+    public string DatasetType {
+      get { return datasetType_; }
       set {
-        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 2;
-    private string dataset_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Dataset {
-      get { return dataset_; }
+    public string Name {
+      get { return matchCase_ == MatchOneofCase.Name ? (string) match_ : ""; }
       set {
-        dataset_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        matchCase_ = MatchOneofCase.Name;
       }
     }
 
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(26);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "tag" field.</summary>
+    public const int TagFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
+    public string Tag {
+      get { return matchCase_ == MatchOneofCase.Tag ? (string) match_ : ""; }
+      set {
+        match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        matchCase_ = MatchOneofCase.Tag;
+      }
+    }
+
+    private object match_;
+    /// <summary>Enum of possible cases for the "match" oneof.</summary>
+    public enum MatchOneofCase {
+      None = 0,
+      Name = 2,
+      Tag = 3,
+    }
+    private MatchOneofCase matchCase_ = MatchOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public MatchOneofCase MatchCase {
+      get { return matchCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearMatch() {
+      matchCase_ = MatchOneofCase.None;
+      match_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -119,18 +146,20 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ModelType != other.ModelType) return false;
-      if (Dataset != other.Dataset) return false;
-      if(!tags_.Equals(other.tags_)) return false;
+      if (DatasetType != other.DatasetType) return false;
+      if (Name != other.Name) return false;
+      if (Tag != other.Tag) return false;
+      if (MatchCase != other.MatchCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
-      if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
-      hash ^= tags_.GetHashCode();
+      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      if (matchCase_ == MatchOneofCase.Name) hash ^= Name.GetHashCode();
+      if (matchCase_ == MatchOneofCase.Tag) hash ^= Tag.GetHashCode();
+      hash ^= (int) matchCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -144,15 +173,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelType.Length != 0) {
+      if (DatasetType.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ModelType);
+        output.WriteString(DatasetType);
       }
-      if (Dataset.Length != 0) {
+      if (matchCase_ == MatchOneofCase.Name) {
         output.WriteRawTag(18);
-        output.WriteString(Dataset);
+        output.WriteString(Name);
       }
-      tags_.WriteTo(output, _repeated_tags_codec);
+      if (matchCase_ == MatchOneofCase.Tag) {
+        output.WriteRawTag(26);
+        output.WriteString(Tag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -161,13 +193,15 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ModelType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
+      if (DatasetType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
       }
-      if (Dataset.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+      if (matchCase_ == MatchOneofCase.Name) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      size += tags_.CalculateSize(_repeated_tags_codec);
+      if (matchCase_ == MatchOneofCase.Tag) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -179,13 +213,18 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.ModelType.Length != 0) {
-        ModelType = other.ModelType;
+      if (other.DatasetType.Length != 0) {
+        DatasetType = other.DatasetType;
       }
-      if (other.Dataset.Length != 0) {
-        Dataset = other.Dataset;
+      switch (other.MatchCase) {
+        case MatchOneofCase.Name:
+          Name = other.Name;
+          break;
+        case MatchOneofCase.Tag:
+          Tag = other.Tag;
+          break;
       }
-      tags_.Add(other.tags_);
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -198,15 +237,15 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            ModelType = input.ReadString();
+            DatasetType = input.ReadString();
             break;
           }
           case 18: {
-            Dataset = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 26: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            Tag = input.ReadString();
             break;
           }
         }
