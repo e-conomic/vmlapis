@@ -10,21 +10,21 @@ import "asgt/type/transaction.proto";
 import "asgt/type/target_value.proto";
 
 service DataService {
-  rpc CreateBankDataset (CreateRequest) returns (google.protobuf.Empty) {
+  rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/{dataset_type}:create"
       body: "*"
     };
   }
 
-  rpc AppendBankData (AppendDataRequest) returns (google.protobuf.Empty) {
+  rpc AppendData (AppendDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/{dataset_type}:append"
       body: "*"
     };
   }
 
-  rpc DeleteBankData (DeleteRequest) returns (google.protobuf.Empty) {
+  rpc DeleteData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/{dataset_type}:delete"
       body: "*"
