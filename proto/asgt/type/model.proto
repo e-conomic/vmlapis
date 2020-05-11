@@ -11,6 +11,4 @@ message Model {
   reserved 1 to 2;
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
   google.protobuf.Timestamp created_at = 4;
-
-  string shard_name = 5;
 }

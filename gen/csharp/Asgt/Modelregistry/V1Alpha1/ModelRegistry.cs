@@ -25,36 +25,37 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBhc2d0L21vZGVscmVnaXN0cnkvdjFhbHBoYTEvbW9kZWxfcmVnaXN0cnku",
-            "cHJvdG8SG2FzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMRobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvImkKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EhAK",
-            "CGNvbnN1bWVyGAMgASgJEhIKCm1vZGVsX3R5cGUYASABKAkSFQoNbW9kZWxf",
-            "dmVyc2lvbhgCIAEoAxIUCgxkYXRhc2V0X25hbWUYBCABKAkiKwoVUmVnaXN0",
-            "ZXJNb2RlbFJlc3BvbnNlEhIKCnNoYXJkX25hbWUYASABKAkiPwoSRGVsZXRl",
-            "TW9kZWxSZXF1ZXN0EhIKCm1vZGVsX3R5cGUYAiABKAkSFQoNbW9kZWxfdmVy",
-            "c2lvbhgDIAEoAyJwCh1HZXRMYXRlc3RNb2RlbFZlcnNpb25zUmVxdWVzdBIQ",
-            "Cghjb25zdW1lchgBIAEoCRIUCgxkYXRhc2V0X25hbWUYAiABKAkSEgoKbW9k",
-            "ZWxfdHlwZRgDIAEoCRITCgttYXhfcmVzdWx0cxgEIAEoBSKuAQoeR2V0TGF0",
-            "ZXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNlElgKB3Jlc3VsdHMYASADKAsyRy5h",
-            "c2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEuR2V0TGF0ZXN0TW9kZWxWZXJz",
-            "aW9uc1Jlc3BvbnNlLlZlcnNpb25JbmZvGjIKC1ZlcnNpb25JbmZvEg8KB3Zl",
-            "cnNpb24YASABKAMSEgoKc2hhcmRfbmFtZRgCIAEoCTLzAgoNTW9kZWxSZWdp",
-            "c3RyeRJ2Cg1SZWdpc3Rlck1vZGVsEjEuYXNndC5tb2RlbHJlZ2lzdHJ5LnYx",
-            "YWxwaGExLlJlZ2lzdGVyTW9kZWxSZXF1ZXN0GjIuYXNndC5tb2RlbHJlZ2lz",
-            "dHJ5LnYxYWxwaGExLlJlZ2lzdGVyTW9kZWxSZXNwb25zZRJWCgtEZWxldGVN",
-            "b2RlbBIvLmFzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5EZWxldGVNb2Rl",
-            "bFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSkQEKFkdldExhdGVz",
-            "dE1vZGVsVmVyc2lvbnMSOi5hc2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEu",
-            "R2V0TGF0ZXN0TW9kZWxWZXJzaW9uc1JlcXVlc3QaOy5hc2d0Lm1vZGVscmVn",
-            "aXN0cnkudjFhbHBoYTEuR2V0TGF0ZXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNl",
-            "Qg9aDW1vZGVscmVnaXN0cnliBnByb3RvMw=="));
+            "cHJvdG8SG2FzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMRoVYXNndC90eXBl",
+            "L21vZGVsLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8iaQoU",
+            "UmVnaXN0ZXJNb2RlbFJlcXVlc3QSEAoIY29uc3VtZXIYAyABKAkSEgoKbW9k",
+            "ZWxfdHlwZRgBIAEoCRIVCg1tb2RlbF92ZXJzaW9uGAIgASgDEhQKDGRhdGFz",
+            "ZXRfbmFtZRgEIAEoCSIrChVSZWdpc3Rlck1vZGVsUmVzcG9uc2USEgoKc2hh",
+            "cmRfbmFtZRgBIAEoCSI/ChJEZWxldGVNb2RlbFJlcXVlc3QSEgoKbW9kZWxf",
+            "dHlwZRgCIAEoCRIVCg1tb2RlbF92ZXJzaW9uGAMgASgDInAKHUdldExhdGVz",
+            "dE1vZGVsVmVyc2lvbnNSZXF1ZXN0EhAKCGNvbnN1bWVyGAEgASgJEhQKDGRh",
+            "dGFzZXRfbmFtZRgCIAEoCRISCgptb2RlbF90eXBlGAMgASgJEhMKC21heF9y",
+            "ZXN1bHRzGAQgASgFIr4BCh5HZXRMYXRlc3RNb2RlbFZlcnNpb25zUmVzcG9u",
+            "c2USWAoHcmVzdWx0cxgBIAMoCzJHLmFzZ3QubW9kZWxyZWdpc3RyeS52MWFs",
+            "cGhhMS5HZXRMYXRlc3RNb2RlbFZlcnNpb25zUmVzcG9uc2UuVmVyc2lvbklu",
+            "Zm8aQgoLVmVyc2lvbkluZm8SHwoFbW9kZWwYASABKAsyEC5hc2d0LnR5cGUu",
+            "TW9kZWwSEgoKc2hhcmRfbmFtZRgCIAEoCTLzAgoNTW9kZWxSZWdpc3RyeRJ2",
+            "Cg1SZWdpc3Rlck1vZGVsEjEuYXNndC5tb2RlbHJlZ2lzdHJ5LnYxYWxwaGEx",
+            "LlJlZ2lzdGVyTW9kZWxSZXF1ZXN0GjIuYXNndC5tb2RlbHJlZ2lzdHJ5LnYx",
+            "YWxwaGExLlJlZ2lzdGVyTW9kZWxSZXNwb25zZRJWCgtEZWxldGVNb2RlbBIv",
+            "LmFzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5EZWxldGVNb2RlbFJlcXVl",
+            "c3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSkQEKFkdldExhdGVzdE1vZGVs",
+            "VmVyc2lvbnMSOi5hc2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEuR2V0TGF0",
+            "ZXN0TW9kZWxWZXJzaW9uc1JlcXVlc3QaOy5hc2d0Lm1vZGVscmVnaXN0cnku",
+            "djFhbHBoYTEuR2V0TGF0ZXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNlQg9aDW1v",
+            "ZGVscmVnaXN0cnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "Consumer", "ModelType", "ModelVersion", "DatasetName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse), global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse.Parser, new[]{ "ShardName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest), global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest.Parser, new[]{ "ModelType", "ModelVersion" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest.Parser, new[]{ "Consumer", "DatasetName", "ModelType", "MaxResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Parser, new[]{ "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo.Parser, new[]{ "Version", "ShardName" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Parser, new[]{ "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo.Parser, new[]{ "Model", "ShardName" }, null, null, null)})
           }));
     }
     #endregion
@@ -921,7 +922,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public VersionInfo(VersionInfo other) : this() {
-          version_ = other.version_;
+          model_ = other.model_ != null ? other.model_.Clone() : null;
           shardName_ = other.shardName_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -931,14 +932,14 @@ namespace Asgt.Modelregistry.V1Alpha1 {
           return new VersionInfo(this);
         }
 
-        /// <summary>Field number for the "version" field.</summary>
-        public const int VersionFieldNumber = 1;
-        private long version_;
+        /// <summary>Field number for the "model" field.</summary>
+        public const int ModelFieldNumber = 1;
+        private global::Asgt.Type.Model model_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public long Version {
-          get { return version_; }
+        public global::Asgt.Type.Model Model {
+          get { return model_; }
           set {
-            version_ = value;
+            model_ = value;
           }
         }
 
@@ -966,7 +967,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (Version != other.Version) return false;
+          if (!object.Equals(Model, other.Model)) return false;
           if (ShardName != other.ShardName) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -974,7 +975,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Version != 0L) hash ^= Version.GetHashCode();
+          if (model_ != null) hash ^= Model.GetHashCode();
           if (ShardName.Length != 0) hash ^= ShardName.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -989,9 +990,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Version != 0L) {
-            output.WriteRawTag(8);
-            output.WriteInt64(Version);
+          if (model_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Model);
           }
           if (ShardName.Length != 0) {
             output.WriteRawTag(18);
@@ -1005,8 +1006,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Version != 0L) {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
+          if (model_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
           }
           if (ShardName.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ShardName);
@@ -1022,8 +1023,11 @@ namespace Asgt.Modelregistry.V1Alpha1 {
           if (other == null) {
             return;
           }
-          if (other.Version != 0L) {
-            Version = other.Version;
+          if (other.model_ != null) {
+            if (model_ == null) {
+              model_ = new global::Asgt.Type.Model();
+            }
+            Model.MergeFrom(other.Model);
           }
           if (other.ShardName.Length != 0) {
             ShardName = other.ShardName;
@@ -1039,8 +1043,11 @@ namespace Asgt.Modelregistry.V1Alpha1 {
               default:
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
-              case 8: {
-                Version = input.ReadInt64();
+              case 10: {
+                if (model_ == null) {
+                  model_ = new global::Asgt.Type.Model();
+                }
+                input.ReadMessage(model_);
                 break;
               }
               case 18: {

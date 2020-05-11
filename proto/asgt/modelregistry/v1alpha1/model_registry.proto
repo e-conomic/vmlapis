@@ -39,5 +39,10 @@ message GetLatestModelVersionsRequest {
 }
 
 message GetLatestModelVersionsResponse {
-  repeated asgt.type.Model results = 1;
+  message VersionInfo {
+    asgt.type.Model model = 1;
+    string shard_name = 2;
+  }
+
+  repeated VersionInfo results = 1;
 }
