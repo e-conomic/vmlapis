@@ -19,6 +19,6 @@ message GetInfoResponse {
   // The most recently trained model; empty if no model has been trained
   asgt.type.Model model = 2;
 
-  // Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+  // Number of entries in the dataset reflecting added entries within the retention policy
   int64 entry_count = 3;
 }
