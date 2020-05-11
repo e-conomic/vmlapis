@@ -69,6 +69,8 @@ message Feature {
     TEXT = 23;
     // Run IBAN detection
     IBAN = 24;
+    // Run LINES detection
+    LINES = 25;
   }
   // The feature type.
   Type type = 1;
@@ -163,6 +165,9 @@ message DocumentAnnotatorResponse {
   // check digits for the ISO 7064 Mod 97, 10 checksum
   // example: "DK50 0040 0440 1162 43", "NO8330001234567"
   repeated ssn.type.Candidate iban = 25;
+  // Invoice lines represented in a form of text, amount and page reference
+  // to state on which page the line was found
+  repeated ssn.type.LineCandidate lines = 26;
 }
 
 message Document {
