@@ -608,7 +608,7 @@ public final class Info {
 
     /**
      * <pre>
-     * Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+     * Number of entries in the dataset reflecting added entries within the retention policy
      * </pre>
      *
      * <code>int64 entry_count = 3;</code>
@@ -776,7 +776,7 @@ public final class Info {
     private long entryCount_;
     /**
      * <pre>
-     * Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+     * Number of entries in the dataset reflecting added entries within the retention policy
      * </pre>
      *
      * <code>int64 entry_count = 3;</code>
@@ -1422,7 +1422,7 @@ public final class Info {
       private long entryCount_ ;
       /**
        * <pre>
-       * Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+       * Number of entries in the dataset reflecting added entries within the retention policy
        * </pre>
        *
        * <code>int64 entry_count = 3;</code>
@@ -1432,7 +1432,7 @@ public final class Info {
       }
       /**
        * <pre>
-       * Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+       * Number of entries in the dataset reflecting added entries within the retention policy
        * </pre>
        *
        * <code>int64 entry_count = 3;</code>
@@ -1445,7 +1445,7 @@ public final class Info {
       }
       /**
        * <pre>
-       * Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+       * Number of entries in the dataset reflecting added entries within the retention policy
        * </pre>
        *
        * <code>int64 entry_count = 3;</code>

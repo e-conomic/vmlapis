@@ -237,7 +237,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public const int EntryCountFieldNumber = 3;
     private long entryCount_;
     /// <summary>
-    /// Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+    /// Number of entries in the dataset reflecting added entries within the retention policy
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long EntryCount {

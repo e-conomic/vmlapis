@@ -115,17 +115,17 @@ public final class BqEntries {
         int index);
 
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
+    asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
+    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
 
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
@@ -262,11 +262,11 @@ public final class BqEntries {
               break;
             }
             case 74: {
-              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -553,23 +553,23 @@ public final class BqEntries {
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
-    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
+    private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     public boolean hasModel() {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
-      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+    public asgt.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -1928,29 +1928,29 @@ public final class BqEntries {
         return targetValuesBuilder_;
       }
 
-      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1964,10 +1964,10 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder setModel(
-          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -1978,13 +1978,13 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -1996,7 +1996,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -2010,33 +2010,33 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -2464,17 +2464,17 @@ public final class BqEntries {
         int index);
 
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
+    asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
+    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
 
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
@@ -2611,11 +2611,11 @@ public final class BqEntries {
               break;
             }
             case 74: {
-              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -2902,23 +2902,23 @@ public final class BqEntries {
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
-    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
+    private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     public boolean hasModel() {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
-      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+    public asgt.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -4277,29 +4277,29 @@ public final class BqEntries {
         return targetValuesBuilder_;
       }
 
-      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4313,10 +4313,10 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder setModel(
-          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -4327,13 +4327,13 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -4345,7 +4345,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -4359,33 +4359,33 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -4813,17 +4813,17 @@ public final class BqEntries {
         int index);
 
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
+    asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
+    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
 
     /**
      * <code>repeated .asgt.type.Prediction.Target prediction = 10;</code>
@@ -4960,11 +4960,11 @@ public final class BqEntries {
               break;
             }
             case 74: {
-              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -5251,23 +5251,23 @@ public final class BqEntries {
     }
 
     public static final int MODEL_FIELD_NUMBER = 9;
-    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
+    private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
     public boolean hasModel() {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
-      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+    public asgt.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 9;</code>
+     * <code>.asgt.type.Model model = 9;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -6626,29 +6626,29 @@ public final class BqEntries {
         return targetValuesBuilder_;
       }
 
-      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6662,10 +6662,10 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder setModel(
-          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -6676,13 +6676,13 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -6694,7 +6694,7 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -6708,33 +6708,33 @@ public final class BqEntries {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 9;</code>
+       * <code>.asgt.type.Model model = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -7088,51 +7088,51 @@ public final class BqEntries {
       "\n*asgt/dataservice/v1alpha1/bq_entries.p" +
       "roto\022\031asgt.dataservice.v1alpha1\032 asgt/ty" +
       "pe/bank_transaction.proto\032\034asgt/type/inv" +
-      "oice_line.proto\032\032asgt/type/model_info.pr" +
-      "oto\032\032asgt/type/prediction.proto\032\037asgt/ty" +
-      "pe/scanned_invoice.proto\032\034asgt/type/targ" +
-      "et_value.proto\032\034gen_bq_schema/bq_field.p" +
-      "roto\032\034gen_bq_schema/bq_table.proto\032\034goog" +
-      "le/api/annotations.proto\"\356\003\n\tBankEntry\022>" +
-      "\n\002id\030\001 \001(\tB2\352?/\"-ID, matches Envoy reque" +
-      "st id if feedback data\022\027\n\010consumer\030\002 \001(\t" +
-      "B\005\352?\002\010\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\n" +
-      "dataset_id\030\013 \001(\tB\033\352?\030\010\001\"\024unique ID of da" +
-      "taset\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined b" +
-      "y consumer, enriched by service if valet" +
-      "key is used\022(\n\004data\030\005 \001(\0132\032.asgt.type.Ba" +
-      "nkTransaction\022-\n\rtarget_values\030\006 \003(\0132\026.a" +
-      "sgt.type.TargetValue\022#\n\005model\030\t \001(\0132\024.as" +
-      "gt.type.ModelInfo\0220\n\nprediction\030\n \003(\0132\034." +
-      "asgt.type.Prediction.Target\022$\n\ntime_adde" +
-      "d\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_dat" +
-      "a\"\216\004\n\032ElectronicInvoiceLineEntry\022>\n\002id\030\001" +
-      " \001(\tB2\352?/\"-ID, matches Envoy request id " +
-      "if feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010" +
-      "\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\ndatase" +
-      "t_id\030\013 \001(\tB\033\352?\030\010\001\"\024unique ID of dataset\022" +
-      "T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined by cons" +
-      "umer, enriched by service if valetkey is" +
-      " used\022$\n\004data\030\005 \001(\0132\026.asgt.type.InvoiceL" +
-      "ine\022-\n\rtarget_values\030\006 \003(\0132\026.asgt.type.T" +
-      "argetValue\022#\n\005model\030\t \001(\0132\024.asgt.type.Mo" +
-      "delInfo\0220\n\nprediction\030\n \003(\0132\034.asgt.type." +
-      "Prediction.Target\022$\n\ntime_added\030\010 \001(\004B\020\352" +
-      "?\r\010\001\022\tTIMESTAMP:!\352?\036\n\034electronic_invoice" +
-      "_line_data\"\202\004\n\023ScannedInvoiceEntry\022>\n\002id" +
-      "\030\001 \001(\tB2\352?/\"-ID, matches Envoy request i" +
-      "d if feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?" +
-      "\002\010\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\ndata" +
-      "set_id\030\013 \001(\tB\033\352?\030\010\001\"\024unique ID of datase" +
-      "t\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined by co" +
-      "nsumer, enriched by service if valetkey " +
-      "is used\022\'\n\004data\030\005 \001(\0132\031.asgt.type.Scanne" +
-      "dInvoice\022-\n\rtarget_values\030\006 \003(\0132\026.asgt.t" +
-      "ype.TargetValue\022#\n\005model\030\t \001(\0132\024.asgt.ty" +
-      "pe.ModelInfo\0220\n\nprediction\030\n \003(\0132\034.asgt." +
-      "type.Prediction.Target\022$\n\ntime_added\030\010 \001" +
-      "(\004B\020\352?\r\010\001\022\tTIMESTAMP:\031\352?\026\n\024scanned_invoi" +
-      "ce_dataB\rZ\013dataserviceb\006proto3"
+      "oice_line.proto\032\025asgt/type/model.proto\032\032" +
+      "asgt/type/prediction.proto\032\037asgt/type/sc" +
+      "anned_invoice.proto\032\034asgt/type/target_va" +
+      "lue.proto\032\034gen_bq_schema/bq_field.proto\032" +
+      "\034gen_bq_schema/bq_table.proto\032\034google/ap" +
+      "i/annotations.proto\"\352\003\n\tBankEntry\022>\n\002id\030" +
+      "\001 \001(\tB2\352?/\"-ID, matches Envoy request id" +
+      " if feedback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002" +
+      "\010\001\022\033\n\014dataset_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\ndatas" +
+      "et_id\030\013 \001(\tB\033\352?\030\010\001\"\024unique ID of dataset" +
+      "\022T\n\004tags\030\004 \003(\tBF\352?C\"ATags defined by con" +
+      "sumer, enriched by service if valetkey i" +
+      "s used\022(\n\004data\030\005 \001(\0132\032.asgt.type.BankTra" +
+      "nsaction\022-\n\rtarget_values\030\006 \003(\0132\026.asgt.t" +
+      "ype.TargetValue\022\037\n\005model\030\t \001(\0132\020.asgt.ty" +
+      "pe.Model\0220\n\nprediction\030\n \003(\0132\034.asgt.type" +
+      ".Prediction.Target\022$\n\ntime_added\030\010 \001(\004B\020" +
+      "\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_data\"\212\004\n\032Ele" +
+      "ctronicInvoiceLineEntry\022>\n\002id\030\001 \001(\tB2\352?/" +
+      "\"-ID, matches Envoy request id if feedba" +
+      "ck data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014data" +
+      "set_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\ndataset_id\030\013 \001(" +
+      "\tB\033\352?\030\010\001\"\024unique ID of dataset\022T\n\004tags\030\004" +
+      " \003(\tBF\352?C\"ATags defined by consumer, enr" +
+      "iched by service if valetkey is used\022$\n\004" +
+      "data\030\005 \001(\0132\026.asgt.type.InvoiceLine\022-\n\rta" +
+      "rget_values\030\006 \003(\0132\026.asgt.type.TargetValu" +
+      "e\022\037\n\005model\030\t \001(\0132\020.asgt.type.Model\0220\n\npr" +
+      "ediction\030\n \003(\0132\034.asgt.type.Prediction.Ta" +
+      "rget\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTA" +
+      "MP:!\352?\036\n\034electronic_invoice_line_data\"\376\003" +
+      "\n\023ScannedInvoiceEntry\022>\n\002id\030\001 \001(\tB2\352?/\"-" +
+      "ID, matches Envoy request id if feedback" +
+      " data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014datase" +
+      "t_name\030\003 \001(\tB\005\352?\002\010\001\022/\n\ndataset_id\030\013 \001(\tB" +
+      "\033\352?\030\010\001\"\024unique ID of dataset\022T\n\004tags\030\004 \003" +
+      "(\tBF\352?C\"ATags defined by consumer, enric" +
+      "hed by service if valetkey is used\022\'\n\004da" +
+      "ta\030\005 \001(\0132\031.asgt.type.ScannedInvoice\022-\n\rt" +
+      "arget_values\030\006 \003(\0132\026.asgt.type.TargetVal" +
+      "ue\022\037\n\005model\030\t \001(\0132\020.asgt.type.Model\0220\n\np" +
+      "rediction\030\n \003(\0132\034.asgt.type.Prediction.T" +
+      "arget\022$\n\ntime_added\030\010 \001(\004B\020\352?\r\010\001\022\tTIMEST" +
+      "AMP:\031\352?\026\n\024scanned_invoice_dataB\rZ\013datase" +
+      "rviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7147,7 +7147,7 @@ public final class BqEntries {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.BankTransactionOuterClass.getDescriptor(),
           asgt.type.InvoiceLineOuterClass.getDescriptor(),
-          asgt.type.ModelInfoOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           asgt.type.ScannedInvoiceOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
@@ -7181,7 +7181,7 @@ public final class BqEntries {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.BankTransactionOuterClass.getDescriptor();
     asgt.type.InvoiceLineOuterClass.getDescriptor();
-    asgt.type.ModelInfoOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     asgt.type.ScannedInvoiceOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();

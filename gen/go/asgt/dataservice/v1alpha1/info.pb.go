@@ -31,7 +31,7 @@ func (m *GetInfoRequest) Reset()         { *m = GetInfoRequest{} }
 func (m *GetInfoRequest) String() string { return proto.CompactTextString(m) }
 func (*GetInfoRequest) ProtoMessage()    {}
 func (*GetInfoRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_info_83d9ef223c3f4a2e, []int{0}
+	return fileDescriptor_info_aee70e21c615d204, []int{0}
 }
 func (m *GetInfoRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetInfoRequest.Unmarshal(m, b)
@@ -62,7 +62,7 @@ type GetInfoResponse struct {
 	Dataset *_type.Dataset `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
 	// The most recently trained model; empty if no model has been trained
 	Model *_type.Model `protobuf:"bytes,2,opt,name=model,proto3" json:"model,omitempty"`
-	// Number of entries added to the dataset; does not reflect entries that have expired due to the retention policy
+	// Number of entries in the dataset reflecting added entries within the retention policy
 	EntryCount           int64    `protobuf:"varint,3,opt,name=entry_count,json=entryCount,proto3" json:"entry_count,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -73,7 +73,7 @@ func (m *GetInfoResponse) Reset()         { *m = GetInfoResponse{} }
 func (m *GetInfoResponse) String() string { return proto.CompactTextString(m) }
 func (*GetInfoResponse) ProtoMessage()    {}
 func (*GetInfoResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_info_83d9ef223c3f4a2e, []int{1}
+	return fileDescriptor_info_aee70e21c615d204, []int{1}
 }
 func (m *GetInfoResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetInfoResponse.Unmarshal(m, b)
@@ -120,10 +120,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("asgt/dataservice/v1alpha1/info.proto", fileDescriptor_info_83d9ef223c3f4a2e)
+	proto.RegisterFile("asgt/dataservice/v1alpha1/info.proto", fileDescriptor_info_aee70e21c615d204)
 }
 
-var fileDescriptor_info_83d9ef223c3f4a2e = []byte{
+var fileDescriptor_info_aee70e21c615d204 = []byte{
 	// 267 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x4c, 0x90, 0xdf, 0x4a, 0xc3, 0x30,
 	0x14, 0xc6, 0xa9, 0x43, 0xc5, 0xd4, 0x7f, 0x04, 0xc4, 0xba, 0x9b, 0xd5, 0x21, 0xb2, 0x0b, 0x69,
