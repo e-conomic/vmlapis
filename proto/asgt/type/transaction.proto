@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+
+message Invoice {
+  google.protobuf.Timestamp issue_date = 1;
+
+  // invoice text from the SmartScan product
+  string text = 2;
+
+  // total of the invoice
+  google.protobuf.FloatValue total = 7;
+}
+
+message Supplier {
+  //  id of the supplier, not nullable
+  string id = 1;
+
+  // name of the supplier
+  google.protobuf.StringValue name = 4;
+
+  // global id of the supplier
+  google.protobuf.StringValue global_id = 5;
+}
+
+message Transaction {
+  Invoice invoice = 1;
+  Supplier supplier = 2;
+
+  // name of the currency as a string
+  google.protobuf.StringValue currency = 4;
+
+  google.protobuf.FloatValue amount = 3;
+
+  // text of the invoice line or bank transaction
+  google.protobuf.StringValue text = 5;
+
+  // reference of the customer
+  google.protobuf.StringValue customer_ref = 6;
+
+  // id of the product
+  google.protobuf.StringValue item_id = 7;
+}

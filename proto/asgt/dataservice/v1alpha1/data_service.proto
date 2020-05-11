@@ -4,11 +4,64 @@ package asgt.dataservice.v1alpha1;
 
 option go_package = "dataservice";
 
+import "google/api/annotations.proto";
 import "asgt/type/dataset.proto";
+import "asgt/type/transaction.proto";
+import "asgt/type/target_value.proto";
 
 service DataService {
+  rpc CreateBankDataset (CreateRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/{dataset_type}:create"
+      body: "*"
+    };
+  }
+
+  rpc AppendBankData (AppendDataRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/{dataset_type}:append"
+      body: "*"
+    };
+  }
+
+  rpc DeleteBankData (DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1alpha1/{dataset_type}:delete"
+      body: "*"
+    };
+  }
+
+  rpc GetBankInfo (GetInfoRequest) returns (GetInfoResponse) {
+    option (google.api.http) = {
+      post: "/v1alpha1/{dataset_type}:info"
+      body: "*"
+    };
+  }
+
   rpc GetDataset (GetDatasetRequest) returns (GetDatasetResponse);
 }
+
+
+message EntryInput {
+  asgt.type.Transaction data = 1;
+  repeated asgt.type.TargetValue target_values = 2;
+}
+
+message CreateRequest {
+  string dataset_name = 1;
+  string dataset_type = 6;
+  repeated string tags = 2;
+  repeated string targets = 5;
+  repeated EntryInput entries = 3;
+  asgt.type.RetentionPolicy retention_policy = 4;
+}
+
+message AppendDataRequest {
+  string dataset_name = 1;
+  string dataset_type = 2;
+  repeated EntryInput entries = 3;
+}
+
 
 message GetDatasetRequest {
   string consumer = 1;
