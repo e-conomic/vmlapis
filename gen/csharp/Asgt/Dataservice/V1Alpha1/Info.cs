@@ -28,15 +28,15 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "ZGF0YXNlcnZpY2UudjFhbHBoYTEaF2FzZ3QvdHlwZS9kYXRhc2V0LnByb3Rv",
             "GhVhc2d0L3R5cGUvbW9kZWwucHJvdG8aIGFzZ3QvdHlwZS9yZXRlbnRpb25f",
             "cG9saWN5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IiYKDkdldEluZm9SZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCSJsCg9H",
+            "IiYKDkdldEluZm9SZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCSJXCg9H",
             "ZXRJbmZvUmVzcG9uc2USIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5E",
-            "YXRhc2V0Eh8KBW1vZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVsEhMKC2Vu",
-            "dHJ5X2NvdW50GAMgASgDQg1aC2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "YXRhc2V0Eh8KBW1vZGVsGAIgASgLMhAuYXNndC50eXBlLk1vZGVsQg1aC2Rh",
+            "dGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoRequest), global::Asgt.Dataservice.V1Alpha1.GetInfoRequest.Parser, new[]{ "DatasetName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoResponse), global::Asgt.Dataservice.V1Alpha1.GetInfoResponse.Parser, new[]{ "Dataset", "Model", "EntryCount" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.GetInfoResponse), global::Asgt.Dataservice.V1Alpha1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null)
           }));
     }
     #endregion
@@ -199,7 +199,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
     public GetInfoResponse(GetInfoResponse other) : this() {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       model_ = other.model_ != null ? other.model_.Clone() : null;
-      entryCount_ = other.entryCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -233,20 +232,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "entry_count" field.</summary>
-    public const int EntryCountFieldNumber = 3;
-    private long entryCount_;
-    /// <summary>
-    /// Number of entries in the dataset reflecting added entries within the retention policy
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long EntryCount {
-      get { return entryCount_; }
-      set {
-        entryCount_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetInfoResponse);
@@ -262,7 +247,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (!object.Equals(Dataset, other.Dataset)) return false;
       if (!object.Equals(Model, other.Model)) return false;
-      if (EntryCount != other.EntryCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -271,7 +255,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
       int hash = 1;
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
       if (model_ != null) hash ^= Model.GetHashCode();
-      if (EntryCount != 0L) hash ^= EntryCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -293,10 +276,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
         output.WriteRawTag(18);
         output.WriteMessage(Model);
       }
-      if (EntryCount != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(EntryCount);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -310,9 +289,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
       }
       if (model_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
-      }
-      if (EntryCount != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EntryCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -337,9 +313,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
         }
         Model.MergeFrom(other.Model);
       }
-      if (other.EntryCount != 0L) {
-        EntryCount = other.EntryCount;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -363,10 +336,6 @@ namespace Asgt.Dataservice.V1Alpha1 {
               model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
-            break;
-          }
-          case 24: {
-            EntryCount = input.ReadInt64();
             break;
           }
         }

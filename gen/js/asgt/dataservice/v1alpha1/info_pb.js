@@ -207,8 +207,7 @@ proto.asgt.dataservice.v1alpha1.GetInfoResponse.prototype.toObject = function(op
 proto.asgt.dataservice.v1alpha1.GetInfoResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
-    entryCount: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -255,10 +254,6 @@ proto.asgt.dataservice.v1alpha1.GetInfoResponse.deserializeBinaryFromReader = fu
       reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
-    case 3:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setEntryCount(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -302,13 +297,6 @@ proto.asgt.dataservice.v1alpha1.GetInfoResponse.serializeBinaryToWriter = functi
       2,
       f,
       asgt_type_model_pb.Model.serializeBinaryToWriter
-    );
-  }
-  f = message.getEntryCount();
-  if (f !== 0) {
-    writer.writeInt64(
-      3,
-      f
     );
   }
 };
@@ -371,21 +359,6 @@ proto.asgt.dataservice.v1alpha1.GetInfoResponse.prototype.clearModel = function(
  */
 proto.asgt.dataservice.v1alpha1.GetInfoResponse.prototype.hasModel = function() {
   return jspb.Message.getField(this, 2) != null;
-};
-
-
-/**
- * optional int64 entry_count = 3;
- * @return {number}
- */
-proto.asgt.dataservice.v1alpha1.GetInfoResponse.prototype.getEntryCount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.dataservice.v1alpha1.GetInfoResponse.prototype.setEntryCount = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 

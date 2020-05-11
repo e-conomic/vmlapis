@@ -75,7 +75,8 @@ proto.asgt.type.Dataset.toObject = function(includeInstance, msg) {
     targetsList: jspb.Message.getRepeatedField(msg, 5),
     retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f),
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    updatedAt: (f = msg.getUpdatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    size: jspb.Message.getFieldWithDefault(msg, 12, 0)
   };
 
   if (includeInstance) {
@@ -146,6 +147,10 @@ proto.asgt.type.Dataset.deserializeBinaryFromReader = function(msg, reader) {
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setUpdatedAt(value);
+      break;
+    case 12:
+      var value = /** @type {number} */ (reader.readInt64());
+      msg.setSize(value);
       break;
     default:
       reader.skipField();
@@ -233,6 +238,13 @@ proto.asgt.type.Dataset.serializeBinaryToWriter = function(message, writer) {
       11,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getSize();
+  if (f !== 0) {
+    writer.writeInt64(
+      12,
+      f
     );
   }
 };
@@ -428,6 +440,21 @@ proto.asgt.type.Dataset.prototype.clearUpdatedAt = function() {
  */
 proto.asgt.type.Dataset.prototype.hasUpdatedAt = function() {
   return jspb.Message.getField(this, 11) != null;
+};
+
+
+/**
+ * optional int64 size = 12;
+ * @return {number}
+ */
+proto.asgt.type.Dataset.prototype.getSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 12, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.Dataset.prototype.setSize = function(value) {
+  jspb.Message.setProto3IntField(this, 12, value);
 };
 
 

@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/info.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"&\n\x0eGetInfoRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\"l\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\x12\x13\n\x0b\x65ntry_count\x18\x03 \x01(\x03\x42\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n$asgt/dataservice/v1alpha1/info.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"&\n\x0eGetInfoRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelB\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -82,13 +82,6 @@ _GETINFORESPONSE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='entry_count', full_name='asgt.dataservice.v1alpha1.GetInfoResponse.entry_count', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -102,7 +95,7 @@ _GETINFORESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=222,
-  serialized_end=330,
+  serialized_end=309,
 )
 
 _GETINFORESPONSE.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET

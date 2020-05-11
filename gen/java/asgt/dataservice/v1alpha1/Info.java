@@ -605,15 +605,6 @@ public final class Info {
      * <code>.asgt.type.Model model = 2;</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
-
-    /**
-     * <pre>
-     * Number of entries in the dataset reflecting added entries within the retention policy
-     * </pre>
-     *
-     * <code>int64 entry_count = 3;</code>
-     */
-    long getEntryCount();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.GetInfoResponse}
@@ -628,7 +619,6 @@ public final class Info {
       super(builder);
     }
     private GetInfoResponse() {
-      entryCount_ = 0L;
     }
 
     @java.lang.Override
@@ -679,11 +669,6 @@ public final class Info {
                 model_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 24: {
-
-              entryCount_ = input.readInt64();
               break;
             }
             default: {
@@ -772,19 +757,6 @@ public final class Info {
       return getModel();
     }
 
-    public static final int ENTRY_COUNT_FIELD_NUMBER = 3;
-    private long entryCount_;
-    /**
-     * <pre>
-     * Number of entries in the dataset reflecting added entries within the retention policy
-     * </pre>
-     *
-     * <code>int64 entry_count = 3;</code>
-     */
-    public long getEntryCount() {
-      return entryCount_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -805,9 +777,6 @@ public final class Info {
       if (model_ != null) {
         output.writeMessage(2, getModel());
       }
-      if (entryCount_ != 0L) {
-        output.writeInt64(3, entryCount_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -824,10 +793,6 @@ public final class Info {
       if (model_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModel());
-      }
-      if (entryCount_ != 0L) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, entryCount_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -855,8 +820,6 @@ public final class Info {
         result = result && getModel()
             .equals(other.getModel());
       }
-      result = result && (getEntryCount()
-          == other.getEntryCount());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -876,9 +839,6 @@ public final class Info {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
       }
-      hash = (37 * hash) + ENTRY_COUNT_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEntryCount());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1024,8 +984,6 @@ public final class Info {
           model_ = null;
           modelBuilder_ = null;
         }
-        entryCount_ = 0L;
-
         return this;
       }
 
@@ -1062,7 +1020,6 @@ public final class Info {
         } else {
           result.model_ = modelBuilder_.build();
         }
-        result.entryCount_ = entryCount_;
         onBuilt();
         return result;
       }
@@ -1116,9 +1073,6 @@ public final class Info {
         }
         if (other.hasModel()) {
           mergeModel(other.getModel());
-        }
-        if (other.getEntryCount() != 0L) {
-          setEntryCount(other.getEntryCount());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1418,44 +1372,6 @@ public final class Info {
         }
         return modelBuilder_;
       }
-
-      private long entryCount_ ;
-      /**
-       * <pre>
-       * Number of entries in the dataset reflecting added entries within the retention policy
-       * </pre>
-       *
-       * <code>int64 entry_count = 3;</code>
-       */
-      public long getEntryCount() {
-        return entryCount_;
-      }
-      /**
-       * <pre>
-       * Number of entries in the dataset reflecting added entries within the retention policy
-       * </pre>
-       *
-       * <code>int64 entry_count = 3;</code>
-       */
-      public Builder setEntryCount(long value) {
-        
-        entryCount_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Number of entries in the dataset reflecting added entries within the retention policy
-       * </pre>
-       *
-       * <code>int64 entry_count = 3;</code>
-       */
-      public Builder clearEntryCount() {
-        
-        entryCount_ = 0L;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1533,10 +1449,10 @@ public final class Info {
       "aset.proto\032\025asgt/type/model.proto\032 asgt/" +
       "type/retention_policy.proto\032\037google/prot" +
       "obuf/timestamp.proto\"&\n\016GetInfoRequest\022\024" +
-      "\n\014dataset_name\030\001 \001(\t\"l\n\017GetInfoResponse\022" +
+      "\n\014dataset_name\030\001 \001(\t\"W\n\017GetInfoResponse\022" +
       "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005" +
-      "model\030\002 \001(\0132\020.asgt.type.Model\022\023\n\013entry_c" +
-      "ount\030\003 \001(\003B\rZ\013dataserviceb\006proto3"
+      "model\030\002 \001(\0132\020.asgt.type.ModelB\rZ\013dataser" +
+      "viceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1565,7 +1481,7 @@ public final class Info {
     internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_descriptor,
-        new java.lang.String[] { "Dataset", "Model", "EntryCount", });
+        new java.lang.String[] { "Dataset", "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();

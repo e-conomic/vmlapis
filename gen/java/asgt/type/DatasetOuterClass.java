@@ -124,6 +124,15 @@ public final class DatasetOuterClass {
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <pre>
+     * Number of entries in the dataset reflecting added entries that meet the retention policy
+     * </pre>
+     *
+     * <code>int64 size = 12;</code>
+     */
+    long getSize();
   }
   /**
    * Protobuf type {@code asgt.type.Dataset}
@@ -143,6 +152,7 @@ public final class DatasetOuterClass {
       type_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      size_ = 0L;
     }
 
     @java.lang.Override
@@ -242,6 +252,11 @@ public final class DatasetOuterClass {
                 updatedAt_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 96: {
+
+              size_ = input.readInt64();
               break;
             }
             default: {
@@ -506,6 +521,19 @@ public final class DatasetOuterClass {
       return getUpdatedAt();
     }
 
+    public static final int SIZE_FIELD_NUMBER = 12;
+    private long size_;
+    /**
+     * <pre>
+     * Number of entries in the dataset reflecting added entries that meet the retention policy
+     * </pre>
+     *
+     * <code>int64 size = 12;</code>
+     */
+    public long getSize() {
+      return size_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -543,6 +571,9 @@ public final class DatasetOuterClass {
       }
       if (updatedAt_ != null) {
         output.writeMessage(11, getUpdatedAt());
+      }
+      if (size_ != 0L) {
+        output.writeInt64(12, size_);
       }
       unknownFields.writeTo(output);
     }
@@ -590,6 +621,10 @@ public final class DatasetOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, getUpdatedAt());
       }
+      if (size_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(12, size_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -631,6 +666,8 @@ public final class DatasetOuterClass {
         result = result && getUpdatedAt()
             .equals(other.getUpdatedAt());
       }
+      result = result && (getSize()
+          == other.getSize());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -668,6 +705,9 @@ public final class DatasetOuterClass {
         hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedAt().hashCode();
       }
+      hash = (37 * hash) + SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getSize());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -829,6 +869,8 @@ public final class DatasetOuterClass {
           updatedAt_ = null;
           updatedAtBuilder_ = null;
         }
+        size_ = 0L;
+
         return this;
       }
 
@@ -885,6 +927,7 @@ public final class DatasetOuterClass {
         } else {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
+        result.size_ = size_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -974,6 +1017,9 @@ public final class DatasetOuterClass {
         }
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (other.getSize() != 0L) {
+          setSize(other.getSize());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1750,6 +1796,44 @@ public final class DatasetOuterClass {
         }
         return updatedAtBuilder_;
       }
+
+      private long size_ ;
+      /**
+       * <pre>
+       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * </pre>
+       *
+       * <code>int64 size = 12;</code>
+       */
+      public long getSize() {
+        return size_;
+      }
+      /**
+       * <pre>
+       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * </pre>
+       *
+       * <code>int64 size = 12;</code>
+       */
+      public Builder setSize(long value) {
+        
+        size_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * </pre>
+       *
+       * <code>int64 size = 12;</code>
+       */
+      public Builder clearSize() {
+        
+        size_ = 0L;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1819,14 +1903,14 @@ public final class DatasetOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/type/dataset.proto\022\tasgt.type\032 as" +
       "gt/type/retention_policy.proto\032\037google/p" +
-      "rotobuf/timestamp.proto\"\362\001\n\007Dataset\022\020\n\010c" +
+      "rotobuf/timestamp.proto\"\200\002\n\007Dataset\022\020\n\010c" +
       "onsumer\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\014\n\004type\030\003 \001(" +
       "\t\022\014\n\004tags\030\004 \003(\t\022\017\n\007targets\030\005 \003(\t\0224\n\020rete" +
       "ntion_policy\030\t \001(\0132\032.asgt.type.Retention" +
       "Policy\022.\n\ncreated_at\030\n \001(\0132\032.google.prot" +
       "obuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.goo" +
-      "gle.protobuf.TimestampJ\004\010\006\020\tB\006Z\004typeb\006pr" +
-      "oto3"
+      "gle.protobuf.Timestamp\022\014\n\004size\030\014 \001(\003J\004\010\006" +
+      "\020\tB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1847,7 +1931,7 @@ public final class DatasetOuterClass {
     internal_static_asgt_type_Dataset_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Dataset_descriptor,
-        new java.lang.String[] { "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", });
+        new java.lang.String[] { "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size", });
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

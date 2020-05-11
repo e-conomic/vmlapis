@@ -26,17 +26,17 @@ namespace Asgt.Type {
           string.Concat(
             "Chdhc2d0L3R5cGUvZGF0YXNldC5wcm90bxIJYXNndC50eXBlGiBhc2d0L3R5",
             "cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byLyAQoHRGF0YXNldBIQCghjb25zdW1lchgBIAEoCRIM",
+            "bWVzdGFtcC5wcm90byKAAgoHRGF0YXNldBIQCghjb25zdW1lchgBIAEoCRIM",
             "CgRuYW1lGAIgASgJEgwKBHR5cGUYAyABKAkSDAoEdGFncxgEIAMoCRIPCgd0",
             "YXJnZXRzGAUgAygJEjQKEHJldGVudGlvbl9wb2xpY3kYCSABKAsyGi5hc2d0",
             "LnR5cGUuUmV0ZW50aW9uUG9saWN5Ei4KCmNyZWF0ZWRfYXQYCiABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCyABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSgQIBhAJQgZaBHR5cGViBnBy",
-            "b3RvMw=="));
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBHNpemUYDCABKANKBAgG",
+            "EAlCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size" }, null, null, null)
           }));
     }
     #endregion
@@ -76,6 +76,7 @@ namespace Asgt.Type {
       retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
+      size_ = other.size_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -170,6 +171,20 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "size" field.</summary>
+    public const int SizeFieldNumber = 12;
+    private long size_;
+    /// <summary>
+    /// Number of entries in the dataset reflecting added entries that meet the retention policy
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Size {
+      get { return size_; }
+      set {
+        size_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Dataset);
@@ -191,6 +206,7 @@ namespace Asgt.Type {
       if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
+      if (Size != other.Size) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -205,6 +221,7 @@ namespace Asgt.Type {
       if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
+      if (Size != 0L) hash ^= Size.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -244,6 +261,10 @@ namespace Asgt.Type {
         output.WriteRawTag(90);
         output.WriteMessage(UpdatedAt);
       }
+      if (Size != 0L) {
+        output.WriteRawTag(96);
+        output.WriteInt64(Size);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -271,6 +292,9 @@ namespace Asgt.Type {
       }
       if (updatedAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
+      }
+      if (Size != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Size);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -311,6 +335,9 @@ namespace Asgt.Type {
           updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdatedAt.MergeFrom(other.UpdatedAt);
+      }
+      if (other.Size != 0L) {
+        Size = other.Size;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -362,6 +389,10 @@ namespace Asgt.Type {
               updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(updatedAt_);
+            break;
+          }
+          case 96: {
+            Size = input.ReadInt64();
             break;
           }
         }
