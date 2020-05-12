@@ -4,4 +4,4 @@ dist/
 *.egg-info/
 ssn/**/*.py
 __pycache__/
-
+.idea
