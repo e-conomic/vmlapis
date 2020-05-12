@@ -328,8 +328,8 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServicePromiseClient.pr
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodDescriptor_ElectronicInvoiceLineDataService_GetBankInfo = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetBankInfo',
+const methodDescriptor_ElectronicInvoiceLineDataService_GetElectronicInvoiceLineInfo = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetElectronicInvoiceLineInfo',
   grpc.web.MethodType.UNARY,
   asgt_dataservice_v1alpha1_info_pb.GetInfoRequest,
   asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
@@ -350,7 +350,7 @@ const methodDescriptor_ElectronicInvoiceLineDataService_GetBankInfo = new grpc.w
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodInfo_ElectronicInvoiceLineDataService_GetBankInfo = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ElectronicInvoiceLineDataService_GetElectronicInvoiceLineInfo = new grpc.web.AbstractClientBase.MethodInfo(
   asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
@@ -373,13 +373,13 @@ const methodInfo_ElectronicInvoiceLineDataService_GetBankInfo = new grpc.web.Abs
  * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceClient.prototype.getBankInfo =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceClient.prototype.getElectronicInvoiceLineInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetBankInfo',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetElectronicInvoiceLineInfo',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataService_GetBankInfo,
+      methodDescriptor_ElectronicInvoiceLineDataService_GetElectronicInvoiceLineInfo,
       callback);
 };
 
@@ -392,13 +392,13 @@ proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServiceClient.prototype
  * @return {!Promise<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServicePromiseClient.prototype.getBankInfo =
+proto.asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataServicePromiseClient.prototype.getElectronicInvoiceLineInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetBankInfo',
+      '/asgt.dataservice.v1alpha1.ElectronicInvoiceLineDataService/GetElectronicInvoiceLineInfo',
       request,
       metadata || {},
-      methodDescriptor_ElectronicInvoiceLineDataService_GetBankInfo);
+      methodDescriptor_ElectronicInvoiceLineDataService_GetElectronicInvoiceLineInfo);
 };
 
 

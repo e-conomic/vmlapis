@@ -328,8 +328,8 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServicePromiseClient.prototype
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodDescriptor_ScannedInvoiceDataService_GetBankInfo = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+const methodDescriptor_ScannedInvoiceDataService_GetScannedInvoiceInfo = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetScannedInvoiceInfo',
   grpc.web.MethodType.UNARY,
   asgt_dataservice_v1alpha1_info_pb.GetInfoRequest,
   asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
@@ -350,7 +350,7 @@ const methodDescriptor_ScannedInvoiceDataService_GetBankInfo = new grpc.web.Meth
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodInfo_ScannedInvoiceDataService_GetBankInfo = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_ScannedInvoiceDataService_GetScannedInvoiceInfo = new grpc.web.AbstractClientBase.MethodInfo(
   asgt_dataservice_v1alpha1_info_pb.GetInfoResponse,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
@@ -373,13 +373,13 @@ const methodInfo_ScannedInvoiceDataService_GetBankInfo = new grpc.web.AbstractCl
  * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceClient.prototype.getBankInfo =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceClient.prototype.getScannedInvoiceInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetScannedInvoiceInfo',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataService_GetBankInfo,
+      methodDescriptor_ScannedInvoiceDataService_GetScannedInvoiceInfo,
       callback);
 };
 
@@ -392,13 +392,13 @@ proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServiceClient.prototype.getBan
  * @return {!Promise<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServicePromiseClient.prototype.getBankInfo =
+proto.asgt.dataservice.v1alpha1.ScannedInvoiceDataServicePromiseClient.prototype.getScannedInvoiceInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+      '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetScannedInvoiceInfo',
       request,
       metadata || {},
-      methodDescriptor_ScannedInvoiceDataService_GetBankInfo);
+      methodDescriptor_ScannedInvoiceDataService_GetScannedInvoiceInfo);
 };
 
 

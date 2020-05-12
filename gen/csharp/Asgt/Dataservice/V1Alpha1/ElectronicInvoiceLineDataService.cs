@@ -42,7 +42,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "aWN5IosBCiZBcHBlbmRFbGVjdHJvbmljSW52b2ljZUxpbmVEYXRhUmVxdWVz",
             "dBIUCgxkYXRhc2V0X25hbWUYASABKAkSSwoHZW50cmllcxgDIAMoCzI6LmFz",
             "Z3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuRWxlY3Ryb25pY0ludm9pY2VMaW5l",
-            "RW50cnlJbnB1dDLFBQogRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YVNlcnZp",
+            "RW50cnlJbnB1dDLWBQogRWxlY3Ryb25pY0ludm9pY2VMaW5lRGF0YVNlcnZp",
             "Y2UStwEKIkNyZWF0ZUVsZWN0cm9uaWNJbnZvaWNlTGluZURhdGFzZXQSRC5h",
             "c2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkNyZWF0ZUVsZWN0cm9uaWNJbnZv",
             "aWNlTGluZURhdGFzZXRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
@@ -54,11 +54,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "cHBlbmQ6ASoSmAEKH0RlbGV0ZUVsZWN0cm9uaWNJbnZvaWNlTGluZURhdGES",
             "KC5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRlbGV0ZVJlcXVlc3QaFi5n",
             "b29nbGUucHJvdG9idWYuRW1wdHkiM4LT5JMCLSIoL3YxYWxwaGExL2VsZWN0",
-            "cm9uaWMtaW52b2ljZS1saW5lOmRlbGV0ZToBKhKXAQoLR2V0QmFua0luZm8S",
-            "KS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldEluZm9SZXF1ZXN0Giou",
-            "YXNndC5kYXRhc2VydmljZS52MWFscGhhMS5HZXRJbmZvUmVzcG9uc2UiMYLT",
-            "5JMCKyImL3YxYWxwaGExL2VsZWN0cm9uaWMtaW52b2ljZS1saW5lOmluZm86",
-            "ASpCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
+            "cm9uaWMtaW52b2ljZS1saW5lOmRlbGV0ZToBKhKoAQocR2V0RWxlY3Ryb25p",
+            "Y0ludm9pY2VMaW5lSW5mbxIpLmFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEu",
+            "R2V0SW5mb1JlcXVlc3QaKi5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdl",
+            "dEluZm9SZXNwb25zZSIxgtPkkwIrIiYvdjFhbHBoYTEvZWxlY3Ryb25pYy1p",
+            "bnZvaWNlLWxpbmU6aW5mbzoBKkINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DeleteReflection.Descriptor, global::Asgt.Dataservice.V1Alpha1.InfoReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -3453,7 +3453,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       "\001\n&AppendElectronicInvoiceLineDataReques" +
       "t\022\024\n\014dataset_name\030\001 \001(\t\022K\n\007entries\030\003 \003(\013" +
       "2:.asgt.dataservice.v1alpha1.ElectronicI" +
-      "nvoiceLineEntryInput2\305\005\n ElectronicInvoi" +
+      "nvoiceLineEntryInput2\326\005\n ElectronicInvoi" +
       "ceLineDataService\022\267\001\n\"CreateElectronicIn" +
       "voiceLineDataset\022D.asgt.dataservice.v1al" +
       "pha1.CreateElectronicInvoiceLineDatasetR" +
@@ -3467,11 +3467,12 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       "onicInvoiceLineData\022(.asgt.dataservice.v" +
       "1alpha1.DeleteRequest\032\026.google.protobuf." +
       "Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic-invo" +
-      "ice-line:delete:\001*\022\227\001\n\013GetBankInfo\022).asg" +
-      "t.dataservice.v1alpha1.GetInfoRequest\032*." +
-      "asgt.dataservice.v1alpha1.GetInfoRespons" +
-      "e\"1\202\323\344\223\002+\"&/v1alpha1/electronic-invoice-" +
-      "line:info:\001*B\rZ\013dataserviceb\006proto3"
+      "ice-line:delete:\001*\022\250\001\n\034GetElectronicInvo" +
+      "iceLineInfo\022).asgt.dataservice.v1alpha1." +
+      "GetInfoRequest\032*.asgt.dataservice.v1alph" +
+      "a1.GetInfoResponse\"1\202\323\344\223\002+\"&/v1alpha1/el" +
+      "ectronic-invoice-line:info:\001*B\rZ\013dataser" +
+      "viceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

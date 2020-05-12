@@ -34,7 +34,7 @@ service ScannedInvoiceDataService {
     };
   }
 
-  rpc GetBankInfo (GetInfoRequest) returns (GetInfoResponse) {
+  rpc GetScannedInvoiceInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/scanned-invoice:info"
       body: "*"

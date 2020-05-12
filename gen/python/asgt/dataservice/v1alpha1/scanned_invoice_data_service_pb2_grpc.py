@@ -32,8 +32,8 @@ class ScannedInvoiceDataServiceStub(object):
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.GetBankInfo = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetBankInfo',
+    self.GetScannedInvoiceInfo = channel.unary_unary(
+        '/asgt.dataservice.v1alpha1.ScannedInvoiceDataService/GetScannedInvoiceInfo',
         request_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.GetInfoRequest.SerializeToString,
         response_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.GetInfoResponse.FromString,
         )
@@ -64,7 +64,7 @@ class ScannedInvoiceDataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetBankInfo(self, request, context):
+  def GetScannedInvoiceInfo(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -89,8 +89,8 @@ def add_ScannedInvoiceDataServiceServicer_to_server(servicer, server):
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DeleteRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'GetBankInfo': grpc.unary_unary_rpc_method_handler(
-          servicer.GetBankInfo,
+      'GetScannedInvoiceInfo': grpc.unary_unary_rpc_method_handler(
+          servicer.GetScannedInvoiceInfo,
           request_deserializer=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.GetInfoRequest.FromString,
           response_serializer=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.GetInfoResponse.SerializeToString,
       ),

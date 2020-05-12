@@ -3452,7 +3452,7 @@ public final class ScannedInvoiceDataServiceOuterClass {
       "RetentionPolicy\"}\n\037AppendScannedInvoiceD" +
       "ataRequest\022\024\n\014dataset_name\030\001 \001(\t\022D\n\007entr" +
       "ies\030\003 \003(\01323.asgt.dataservice.v1alpha1.Sc" +
-      "annedInvoiceEntryInput2\373\004\n\031ScannedInvoic" +
+      "annedInvoiceEntryInput2\205\005\n\031ScannedInvoic" +
       "eDataService\022\241\001\n\033CreateScannedInvoiceDat" +
       "aset\022=.asgt.dataservice.v1alpha1.CreateS" +
       "cannedInvoiceDatasetRequest\032\026.google.pro" +
@@ -3464,12 +3464,12 @@ public final class ScannedInvoiceDataServiceOuterClass {
       "oice:append:\001*\022\211\001\n\030DeleteScannedInvoiceD" +
       "ata\022(.asgt.dataservice.v1alpha1.DeleteRe" +
       "quest\032\026.google.protobuf.Empty\"+\202\323\344\223\002%\" /" +
-      "v1alpha1/scanned-invoice:delete:\001*\022\217\001\n\013G" +
-      "etBankInfo\022).asgt.dataservice.v1alpha1.G" +
-      "etInfoRequest\032*.asgt.dataservice.v1alpha" +
-      "1.GetInfoResponse\")\202\323\344\223\002#\"\036/v1alpha1/sca" +
-      "nned-invoice:info:\001*B\rZ\013dataserviceb\006pro" +
-      "to3"
+      "v1alpha1/scanned-invoice:delete:\001*\022\231\001\n\025G" +
+      "etScannedInvoiceInfo\022).asgt.dataservice." +
+      "v1alpha1.GetInfoRequest\032*.asgt.dataservi" +
+      "ce.v1alpha1.GetInfoResponse\")\202\323\344\223\002#\"\036/v1" +
+      "alpha1/scanned-invoice:info:\001*B\rZ\013datase" +
+      "rviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

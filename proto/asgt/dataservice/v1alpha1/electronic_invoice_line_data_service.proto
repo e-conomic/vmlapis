@@ -34,7 +34,7 @@ service ElectronicInvoiceLineDataService {
     };
   }
 
-  rpc GetBankInfo (GetInfoRequest) returns (GetInfoResponse) {
+  rpc GetElectronicInvoiceLineInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/electronic-invoice-line:info"
       body: "*"

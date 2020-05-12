@@ -41,7 +41,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "YXNndC50eXBlLlJldGVudGlvblBvbGljeSJ9Ch9BcHBlbmRTY2FubmVkSW52",
             "b2ljZURhdGFSZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRJECgdlbnRy",
             "aWVzGAMgAygLMjMuYXNndC5kYXRhc2VydmljZS52MWFscGhhMS5TY2FubmVk",
-            "SW52b2ljZUVudHJ5SW5wdXQy+wQKGVNjYW5uZWRJbnZvaWNlRGF0YVNlcnZp",
+            "SW52b2ljZUVudHJ5SW5wdXQyhQUKGVNjYW5uZWRJbnZvaWNlRGF0YVNlcnZp",
             "Y2USoQEKG0NyZWF0ZVNjYW5uZWRJbnZvaWNlRGF0YXNldBI9LmFzZ3QuZGF0",
             "YXNlcnZpY2UudjFhbHBoYTEuQ3JlYXRlU2Nhbm5lZEludm9pY2VEYXRhc2V0",
             "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIrgtPkkwIlIiAvdjFh",
@@ -52,11 +52,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "YXBwZW5kOgEqEokBChhEZWxldGVTY2FubmVkSW52b2ljZURhdGESKC5hc2d0",
             "LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUu",
             "cHJvdG9idWYuRW1wdHkiK4LT5JMCJSIgL3YxYWxwaGExL3NjYW5uZWQtaW52",
-            "b2ljZTpkZWxldGU6ASoSjwEKC0dldEJhbmtJbmZvEikuYXNndC5kYXRhc2Vy",
-            "dmljZS52MWFscGhhMS5HZXRJbmZvUmVxdWVzdBoqLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjFhbHBoYTEuR2V0SW5mb1Jlc3BvbnNlIimC0+STAiMiHi92MWFscGhh",
-            "MS9zY2FubmVkLWludm9pY2U6aW5mbzoBKkINWgtkYXRhc2VydmljZWIGcHJv",
-            "dG8z"));
+            "b2ljZTpkZWxldGU6ASoSmQEKFUdldFNjYW5uZWRJbnZvaWNlSW5mbxIpLmFz",
+            "Z3QuZGF0YXNlcnZpY2UudjFhbHBoYTEuR2V0SW5mb1JlcXVlc3QaKi5hc2d0",
+            "LmRhdGFzZXJ2aWNlLnYxYWxwaGExLkdldEluZm9SZXNwb25zZSIpgtPkkwIj",
+            "Ih4vdjFhbHBoYTEvc2Nhbm5lZC1pbnZvaWNlOmluZm86ASpCDVoLZGF0YXNl",
+            "cnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Dataservice.V1Alpha1.DeleteReflection.Descriptor, global::Asgt.Dataservice.V1Alpha1.InfoReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
