@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.DeleteModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest', null, global);
@@ -959,7 +960,7 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.pro
  */
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.toObject = function(includeInstance, msg) {
   var f, obj = {
-    version: jspb.Message.getFieldWithDefault(msg, 1, 0),
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
     shardName: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -998,8 +999,9 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.des
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setVersion(value);
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
+      msg.setModel(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -1034,11 +1036,12 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.pro
  */
 proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getVersion();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getModel();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
   f = message.getShardName();
@@ -1052,17 +1055,32 @@ proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.ser
 
 
 /**
- * optional int64 version = 1;
- * @return {number}
+ * optional asgt.type.Model model = 1;
+ * @return {?proto.asgt.type.Model}
  */
-proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.getVersion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.getModel = function() {
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 1));
 };
 
 
-/** @param {number} value */
-proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.setVersion = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+/** @param {?proto.asgt.type.Model|undefined} value */
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.setModel = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.clearModel = function() {
+  this.setModel(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.prototype.hasModel = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 

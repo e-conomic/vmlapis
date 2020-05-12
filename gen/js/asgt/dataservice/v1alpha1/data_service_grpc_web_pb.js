@@ -12,7 +12,7 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var asgt_type_dataset_info_pb = require('../../../asgt/type/dataset_info_pb.js')
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.dataservice = {};

@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modelregistry.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\rmodelregistry'),
-  serialized_pb=_b('\n0asgt/modelregistry/v1alpha1/model_registry.proto\x12\x1b\x61sgt.modelregistry.v1alpha1\x1a\x1bgoogle/protobuf/empty.proto\"i\n\x14RegisterModelRequest\x12\x10\n\x08\x63onsumer\x18\x03 \x01(\t\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x15\n\rmodel_version\x18\x02 \x01(\x03\x12\x14\n\x0c\x64\x61taset_name\x18\x04 \x01(\t\"+\n\x15RegisterModelResponse\x12\x12\n\nshard_name\x18\x01 \x01(\t\"?\n\x12\x44\x65leteModelRequest\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\"p\n\x1dGetLatestModelVersionsRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x12\n\nmodel_type\x18\x03 \x01(\t\x12\x13\n\x0bmax_results\x18\x04 \x01(\x05\"\xae\x01\n\x1eGetLatestModelVersionsResponse\x12X\n\x07results\x18\x01 \x03(\x0b\x32G.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo\x1a\x32\n\x0bVersionInfo\x12\x0f\n\x07version\x18\x01 \x01(\x03\x12\x12\n\nshard_name\x18\x02 \x01(\t2\xf3\x02\n\rModelRegistry\x12v\n\rRegisterModel\x12\x31.asgt.modelregistry.v1alpha1.RegisterModelRequest\x1a\x32.asgt.modelregistry.v1alpha1.RegisterModelResponse\x12V\n\x0b\x44\x65leteModel\x12/.asgt.modelregistry.v1alpha1.DeleteModelRequest\x1a\x16.google.protobuf.Empty\x12\x91\x01\n\x16GetLatestModelVersions\x12:.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest\x1a;.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponseB\x0fZ\rmodelregistryb\x06proto3')
+  serialized_pb=_b('\n0asgt/modelregistry/v1alpha1/model_registry.proto\x12\x1b\x61sgt.modelregistry.v1alpha1\x1a\x15\x61sgt/type/model.proto\x1a\x1bgoogle/protobuf/empty.proto\"i\n\x14RegisterModelRequest\x12\x10\n\x08\x63onsumer\x18\x03 \x01(\t\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x15\n\rmodel_version\x18\x02 \x01(\x03\x12\x14\n\x0c\x64\x61taset_name\x18\x04 \x01(\t\"+\n\x15RegisterModelResponse\x12\x12\n\nshard_name\x18\x01 \x01(\t\"?\n\x12\x44\x65leteModelRequest\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\"p\n\x1dGetLatestModelVersionsRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x12\n\nmodel_type\x18\x03 \x01(\t\x12\x13\n\x0bmax_results\x18\x04 \x01(\x05\"\xbe\x01\n\x1eGetLatestModelVersionsResponse\x12X\n\x07results\x18\x01 \x03(\x0b\x32G.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo\x1a\x42\n\x0bVersionInfo\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model\x12\x12\n\nshard_name\x18\x02 \x01(\t2\xf3\x02\n\rModelRegistry\x12v\n\rRegisterModel\x12\x31.asgt.modelregistry.v1alpha1.RegisterModelRequest\x1a\x32.asgt.modelregistry.v1alpha1.RegisterModelResponse\x12V\n\x0b\x44\x65leteModel\x12/.asgt.modelregistry.v1alpha1.DeleteModelRequest\x1a\x16.google.protobuf.Empty\x12\x91\x01\n\x16GetLatestModelVersions\x12:.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest\x1a;.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponseB\x0fZ\rmodelregistryb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_model__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -74,8 +75,8 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=215,
+  serialized_start=133,
+  serialized_end=238,
 )
 
 
@@ -105,8 +106,8 @@ _REGISTERMODELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=217,
-  serialized_end=260,
+  serialized_start=240,
+  serialized_end=283,
 )
 
 
@@ -143,8 +144,8 @@ _DELETEMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=262,
-  serialized_end=325,
+  serialized_start=285,
+  serialized_end=348,
 )
 
 
@@ -195,8 +196,8 @@ _GETLATESTMODELVERSIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=327,
-  serialized_end=439,
+  serialized_start=350,
+  serialized_end=462,
 )
 
 
@@ -208,9 +209,9 @@ _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='version', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.version', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='model', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.model', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -233,8 +234,8 @@ _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=616,
+  serialized_start=589,
+  serialized_end=655,
 )
 
 _GETLATESTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
@@ -263,10 +264,11 @@ _GETLATESTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=442,
-  serialized_end=616,
+  serialized_start=465,
+  serialized_end=655,
 )
 
+_GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO.fields_by_name['model'].message_type = asgt_dot_type_dot_model__pb2._MODEL
 _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO.containing_type = _GETLATESTMODELVERSIONSRESPONSE
 _GETLATESTMODELVERSIONSRESPONSE.fields_by_name['results'].message_type = _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO
 DESCRIPTOR.message_types_by_name['RegisterModelRequest'] = _REGISTERMODELREQUEST
@@ -328,8 +330,8 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=619,
-  serialized_end=990,
+  serialized_start=658,
+  serialized_end=1029,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterModel',

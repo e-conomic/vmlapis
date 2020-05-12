@@ -7,6 +7,7 @@ option go_package = "dataservice";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/dataservice/v1alpha1/delete.proto";
+import "asgt/dataservice/v1alpha1/info.proto";
 import "asgt/type/scanned_invoice.proto";
 import "asgt/type/retention_policy.proto";
 import "asgt/type/target_value.proto";
@@ -29,6 +30,13 @@ service ScannedInvoiceDataService {
   rpc DeleteScannedInvoiceData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/scanned-invoice:delete"
+      body: "*"
+    };
+  }
+
+  rpc GetScannedInvoiceInfo (GetInfoRequest) returns (GetInfoResponse) {
+    option (google.api.http) = {
+      post: "/v1alpha1/scanned-invoice:info"
       body: "*"
     };
   }

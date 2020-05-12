@@ -5,6 +5,7 @@ package asgt.modelregistry.v1alpha1;
 option go_package = "modelregistry";
 
 import "google/protobuf/empty.proto";
+import "asgt/type/model.proto";
 
 service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (RegisterModelResponse);
@@ -39,7 +40,7 @@ message GetLatestModelVersionsRequest {
 
 message GetLatestModelVersionsResponse {
   message VersionInfo {
-    int64 version = 1;
+    asgt.type.Model model = 1;
     string shard_name = 2;
   }
 

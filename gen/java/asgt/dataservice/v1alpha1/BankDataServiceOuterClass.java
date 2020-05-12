@@ -3435,32 +3435,36 @@ public final class BankDataServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n1asgt/dataservice/v1alpha1/bank_data_se" +
       "rvice.proto\022\031asgt.dataservice.v1alpha1\032&" +
-      "asgt/dataservice/v1alpha1/delete.proto\032 " +
-      "asgt/type/bank_transaction.proto\032 asgt/t" +
-      "ype/retention_policy.proto\032\034asgt/type/ta" +
-      "rget_value.proto\032\034google/api/annotations" +
-      ".proto\032\033google/protobuf/empty.proto\"i\n\016B" +
-      "ankEntryInput\022(\n\004data\030\001 \001(\0132\032.asgt.type." +
-      "BankTransaction\022-\n\rtarget_values\030\002 \003(\0132\026" +
-      ".asgt.type.TargetValue\"\301\001\n\030CreateBankDat" +
-      "asetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tag" +
-      "s\030\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022:\n\007entries\030\003 \003(" +
-      "\0132).asgt.dataservice.v1alpha1.BankEntryI" +
-      "nput\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.ty" +
-      "pe.RetentionPolicy\"i\n\025AppendBankDataRequ" +
-      "est\022\024\n\014dataset_name\030\001 \001(\t\022:\n\007entries\030\003 \003" +
-      "(\0132).asgt.dataservice.v1alpha1.BankEntry" +
-      "Input2\212\003\n\017BankDataService\022\202\001\n\021CreateBank" +
-      "Dataset\0223.asgt.dataservice.v1alpha1.Crea" +
-      "teBankDatasetRequest\032\026.google.protobuf.E" +
-      "mpty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:create:\001*\022|" +
-      "\n\016AppendBankData\0220.asgt.dataservice.v1al" +
-      "pha1.AppendBankDataRequest\032\026.google.prot" +
-      "obuf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:appen" +
-      "d:\001*\022t\n\016DeleteBankData\022(.asgt.dataservic" +
-      "e.v1alpha1.DeleteRequest\032\026.google.protob" +
-      "uf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:" +
-      "\001*B\rZ\013dataserviceb\006proto3"
+      "asgt/dataservice/v1alpha1/delete.proto\032$" +
+      "asgt/dataservice/v1alpha1/info.proto\032 as" +
+      "gt/type/bank_transaction.proto\032 asgt/typ" +
+      "e/retention_policy.proto\032\034asgt/type/targ" +
+      "et_value.proto\032\034google/api/annotations.p" +
+      "roto\032\033google/protobuf/empty.proto\"i\n\016Ban" +
+      "kEntryInput\022(\n\004data\030\001 \001(\0132\032.asgt.type.Ba" +
+      "nkTransaction\022-\n\rtarget_values\030\002 \003(\0132\026.a" +
+      "sgt.type.TargetValue\"\301\001\n\030CreateBankDatas" +
+      "etRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004tags\030" +
+      "\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022:\n\007entries\030\003 \003(\0132" +
+      ").asgt.dataservice.v1alpha1.BankEntryInp" +
+      "ut\0224\n\020retention_policy\030\004 \001(\0132\032.asgt.type" +
+      ".RetentionPolicy\"i\n\025AppendBankDataReques" +
+      "t\022\024\n\014dataset_name\030\001 \001(\t\022:\n\007entries\030\003 \003(\013" +
+      "2).asgt.dataservice.v1alpha1.BankEntryIn" +
+      "put2\221\004\n\017BankDataService\022\202\001\n\021CreateBankDa" +
+      "taset\0223.asgt.dataservice.v1alpha1.Create" +
+      "BankDatasetRequest\032\026.google.protobuf.Emp" +
+      "ty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:create:\001*\022|\n\016" +
+      "AppendBankData\0220.asgt.dataservice.v1alph" +
+      "a1.AppendBankDataRequest\032\026.google.protob" +
+      "uf.Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:append:" +
+      "\001*\022t\n\016DeleteBankData\022(.asgt.dataservice." +
+      "v1alpha1.DeleteRequest\032\026.google.protobuf" +
+      ".Empty\" \202\323\344\223\002\032\"\025/v1alpha1/bank:delete:\001*" +
+      "\022\204\001\n\013GetBankInfo\022).asgt.dataservice.v1al" +
+      "pha1.GetInfoRequest\032*.asgt.dataservice.v" +
+      "1alpha1.GetInfoResponse\"\036\202\323\344\223\002\030\"\023/v1alph" +
+      "a1/bank:info:\001*B\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3474,6 +3478,7 @@ public final class BankDataServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Delete.getDescriptor(),
+          asgt.dataservice.v1alpha1.Info.getDescriptor(),
           asgt.type.BankTransactionOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
@@ -3504,6 +3509,7 @@ public final class BankDataServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Delete.getDescriptor();
+    asgt.dataservice.v1alpha1.Info.getDescriptor();
     asgt.type.BankTransactionOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();

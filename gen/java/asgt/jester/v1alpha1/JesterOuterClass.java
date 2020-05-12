@@ -43,17 +43,17 @@ public final class JesterOuterClass {
         int index);
 
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfo getModel();
+    asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
-    asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder();
+    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
   /**
    * <pre>
@@ -109,11 +109,11 @@ public final class JesterOuterClass {
               break;
             }
             case 18: {
-              asgt.type.ModelInfoOuterClass.ModelInfo.Builder subBuilder = null;
+              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelInfoOuterClass.ModelInfo.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -193,23 +193,23 @@ public final class JesterOuterClass {
     }
 
     public static final int MODEL_FIELD_NUMBER = 2;
-    private asgt.type.ModelInfoOuterClass.ModelInfo model_;
+    private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
     public boolean hasModel() {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
-      return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+    public asgt.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.ModelInfo model = 2;</code>
+     * <code>.asgt.type.Model model = 2;</code>
      */
-    public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -832,29 +832,29 @@ public final class JesterOuterClass {
         return predictionsBuilder_;
       }
 
-      private asgt.type.ModelInfoOuterClass.ModelInfo model_ = null;
+      private asgt.type.ModelOuterClass.Model model_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> modelBuilder_;
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo getModel() {
+      public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
-      public Builder setModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -868,10 +868,10 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
       public Builder setModel(
-          asgt.type.ModelInfoOuterClass.ModelInfo.Builder builderForValue) {
+          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -882,13 +882,13 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
-      public Builder mergeModel(asgt.type.ModelInfoOuterClass.ModelInfo value) {
+      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelInfoOuterClass.ModelInfo.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -900,7 +900,7 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -914,33 +914,33 @@ public final class JesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfo.Builder getModelBuilder() {
+      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
-      public asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder getModelOrBuilder() {
+      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelInfoOuterClass.ModelInfo.getDefaultInstance() : model_;
+              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.ModelInfo model = 2;</code>
+       * <code>.asgt.type.Model model = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder> 
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelInfoOuterClass.ModelInfo, asgt.type.ModelInfoOuterClass.ModelInfo.Builder, asgt.type.ModelInfoOuterClass.ModelInfoOrBuilder>(
+              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -4980,38 +4980,38 @@ public final class JesterOuterClass {
       "\n!asgt/jester/v1alpha1/jester.proto\022\024asg" +
       "t.jester.v1alpha1\032 asgt/type/bank_transa" +
       "ction.proto\032\034asgt/type/invoice_line.prot" +
-      "o\032\032asgt/type/model_info.proto\032\032asgt/type" +
-      "/prediction.proto\032\037asgt/type/scanned_inv" +
-      "oice.proto\032\034google/api/annotations.proto" +
-      "\"f\n\023SuggestionsResponse\022*\n\013predictions\030\001" +
-      " \003(\0132\025.asgt.type.Prediction\022#\n\005model\030\002 \001" +
-      "(\0132\024.asgt.type.ModelInfo\"b\n\021SuggestionOp" +
-      "tions\022\030\n\020suggestion_limit\030\001 \001(\005\0223\n\016min_c" +
-      "onfidence\030\002 \001(\0162\033.asgt.type.Confidence.L" +
-      "evel\"\222\001\n\025ScannedInvoiceRequest\022)\n\006inputs" +
-      "\030\001 \003(\0132\031.asgt.type.ScannedInvoice\022\024\n\014dat" +
-      "aset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt." +
-      "jester.v1alpha1.SuggestionOptions\"\226\001\n\034El" +
-      "ectronicInvoiceLineRequest\022&\n\006inputs\030\001 \003" +
-      "(\0132\026.asgt.type.InvoiceLine\022\024\n\014dataset_na" +
-      "me\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester." +
-      "v1alpha1.SuggestionOptions\"\211\001\n\013BankReque" +
-      "st\022*\n\006inputs\030\001 \003(\0132\032.asgt.type.BankTrans" +
-      "action\022\024\n\014dataset_name\030\002 \001(\t\0228\n\007options\030" +
-      "\003 \001(\0132\'.asgt.jester.v1alpha1.SuggestionO" +
-      "ptions2\353\003\n\006Jester\022\241\001\n\031ScannedInvoiceSugg" +
-      "estions\022+.asgt.jester.v1alpha1.ScannedIn" +
-      "voiceRequest\032).asgt.jester.v1alpha1.Sugg" +
-      "estionsResponse\",\202\323\344\223\002&\"!/v1alpha1/scann" +
-      "ed-invoice:suggest:\001*\022\267\001\n ElectronicInvo" +
-      "iceLineSuggestions\0222.asgt.jester.v1alpha" +
-      "1.ElectronicInvoiceLineRequest\032).asgt.je" +
-      "ster.v1alpha1.SuggestionsResponse\"4\202\323\344\223\002" +
-      ".\")/v1alpha1/electronic-invoice-line:sug" +
-      "gest:\001*\022\202\001\n\017BankSuggestions\022!.asgt.jeste" +
-      "r.v1alpha1.BankRequest\032).asgt.jester.v1a" +
-      "lpha1.SuggestionsResponse\"!\202\323\344\223\002\033\"\026/v1al" +
-      "pha1/bank:suggest:\001*B\010Z\006jesterb\006proto3"
+      "o\032\025asgt/type/model.proto\032\032asgt/type/pred" +
+      "iction.proto\032\037asgt/type/scanned_invoice." +
+      "proto\032\034google/api/annotations.proto\"b\n\023S" +
+      "uggestionsResponse\022*\n\013predictions\030\001 \003(\0132" +
+      "\025.asgt.type.Prediction\022\037\n\005model\030\002 \001(\0132\020." +
+      "asgt.type.Model\"b\n\021SuggestionOptions\022\030\n\020" +
+      "suggestion_limit\030\001 \001(\005\0223\n\016min_confidence" +
+      "\030\002 \001(\0162\033.asgt.type.Confidence.Level\"\222\001\n\025" +
+      "ScannedInvoiceRequest\022)\n\006inputs\030\001 \003(\0132\031." +
+      "asgt.type.ScannedInvoice\022\024\n\014dataset_name" +
+      "\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.asgt.jester.v1" +
+      "alpha1.SuggestionOptions\"\226\001\n\034ElectronicI" +
+      "nvoiceLineRequest\022&\n\006inputs\030\001 \003(\0132\026.asgt" +
+      ".type.InvoiceLine\022\024\n\014dataset_name\030\002 \001(\t\022" +
+      "8\n\007options\030\003 \001(\0132\'.asgt.jester.v1alpha1." +
+      "SuggestionOptions\"\211\001\n\013BankRequest\022*\n\006inp" +
+      "uts\030\001 \003(\0132\032.asgt.type.BankTransaction\022\024\n" +
+      "\014dataset_name\030\002 \001(\t\0228\n\007options\030\003 \001(\0132\'.a" +
+      "sgt.jester.v1alpha1.SuggestionOptions2\353\003" +
+      "\n\006Jester\022\241\001\n\031ScannedInvoiceSuggestions\022+" +
+      ".asgt.jester.v1alpha1.ScannedInvoiceRequ" +
+      "est\032).asgt.jester.v1alpha1.SuggestionsRe" +
+      "sponse\",\202\323\344\223\002&\"!/v1alpha1/scanned-invoic" +
+      "e:suggest:\001*\022\267\001\n ElectronicInvoiceLineSu" +
+      "ggestions\0222.asgt.jester.v1alpha1.Electro" +
+      "nicInvoiceLineRequest\032).asgt.jester.v1al" +
+      "pha1.SuggestionsResponse\"4\202\323\344\223\002.\")/v1alp" +
+      "ha1/electronic-invoice-line:suggest:\001*\022\202" +
+      "\001\n\017BankSuggestions\022!.asgt.jester.v1alpha" +
+      "1.BankRequest\032).asgt.jester.v1alpha1.Sug" +
+      "gestionsResponse\"!\202\323\344\223\002\033\"\026/v1alpha1/bank" +
+      ":suggest:\001*B\010Z\006jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5026,7 +5026,7 @@ public final class JesterOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.BankTransactionOuterClass.getDescriptor(),
           asgt.type.InvoiceLineOuterClass.getDescriptor(),
-          asgt.type.ModelInfoOuterClass.getDescriptor(),
+          asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           asgt.type.ScannedInvoiceOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
@@ -5068,7 +5068,7 @@ public final class JesterOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.BankTransactionOuterClass.getDescriptor();
     asgt.type.InvoiceLineOuterClass.getDescriptor();
-    asgt.type.ModelInfoOuterClass.getDescriptor();
+    asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     asgt.type.ScannedInvoiceOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();

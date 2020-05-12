@@ -27,48 +27,48 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Ciphc2d0L2RhdGFzZXJ2aWNlL3YxYWxwaGExL2JxX2VudHJpZXMucHJvdG8S",
             "GWFzZ3QuZGF0YXNlcnZpY2UudjFhbHBoYTEaIGFzZ3QvdHlwZS9iYW5rX3Ry",
             "YW5zYWN0aW9uLnByb3RvGhxhc2d0L3R5cGUvaW52b2ljZV9saW5lLnByb3Rv",
-            "Ghphc2d0L3R5cGUvbW9kZWxfaW5mby5wcm90bxoaYXNndC90eXBlL3ByZWRp",
-            "Y3Rpb24ucHJvdG8aH2FzZ3QvdHlwZS9zY2FubmVkX2ludm9pY2UucHJvdG8a",
-            "HGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEv",
-            "YnFfZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i7gMKCUJhbmtFbnRyeRI+",
-            "CgJpZBgBIAEoCUIy6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlk",
-            "IGlmIGZlZWRiYWNrIGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/AggBEhsK",
-            "DGRhdGFzZXRfbmFtZRgDIAEoCUIF6j8CCAESLwoKZGF0YXNldF9pZBgLIAEo",
-            "CUIb6j8YCAEiFHVuaXF1ZSBJRCBvZiBkYXRhc2V0ElQKBHRhZ3MYBCADKAlC",
-            "Ruo/QyJBVGFncyBkZWZpbmVkIGJ5IGNvbnN1bWVyLCBlbnJpY2hlZCBieSBz",
-            "ZXJ2aWNlIGlmIHZhbGV0a2V5IGlzIHVzZWQSKAoEZGF0YRgFIAEoCzIaLmFz",
-            "Z3QudHlwZS5CYW5rVHJhbnNhY3Rpb24SLQoNdGFyZ2V0X3ZhbHVlcxgGIAMo",
-            "CzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFz",
-            "Z3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3Qu",
-            "dHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDq",
-            "Pw0IARIJVElNRVNUQU1QOg7qPwsKCWJhbmtfZGF0YSKOBAoaRWxlY3Ryb25p",
-            "Y0ludm9pY2VMaW5lRW50cnkSPgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNo",
-            "ZXMgRW52b3kgcmVxdWVzdCBpZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1",
-            "bWVyGAIgASgJQgXqPwIIARIbCgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggB",
-            "Ei8KCmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0",
-            "YXNldBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25z",
-            "dW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1c2Vk",
-            "EiQKBGRhdGEYBSABKAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmUSLQoNdGFy",
-            "Z2V0X3ZhbHVlcxgGIAMoCzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVt",
-            "b2RlbBgJIAEoCzIULmFzZ3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlv",
-            "bhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1l",
-            "X2FkZGVkGAggASgEQhDqPw0IARIJVElNRVNUQU1QOiHqPx4KHGVsZWN0cm9u",
-            "aWNfaW52b2ljZV9saW5lX2RhdGEiggQKE1NjYW5uZWRJbnZvaWNlRW50cnkS",
-            "PgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kgcmVxdWVzdCBp",
-            "ZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJQgXqPwIIARIb",
-            "CgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggBEi8KCmRhdGFzZXRfaWQYCyAB",
-            "KAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNldBJUCgR0YWdzGAQgAygJ",
-            "QkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkg",
-            "c2VydmljZSBpZiB2YWxldGtleSBpcyB1c2VkEicKBGRhdGEYBSABKAsyGS5h",
-            "c2d0LnR5cGUuU2Nhbm5lZEludm9pY2USLQoNdGFyZ2V0X3ZhbHVlcxgGIAMo",
-            "CzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIjCgVtb2RlbBgJIAEoCzIULmFz",
-            "Z3QudHlwZS5Nb2RlbEluZm8SMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3Qu",
-            "dHlwZS5QcmVkaWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDq",
-            "Pw0IARIJVElNRVNUQU1QOhnqPxYKFHNjYW5uZWRfaW52b2ljZV9kYXRhQg1a",
-            "C2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "GhVhc2d0L3R5cGUvbW9kZWwucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9u",
+            "LnByb3RvGh9hc2d0L3R5cGUvc2Nhbm5lZF9pbnZvaWNlLnByb3RvGhxhc2d0",
+            "L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2Zp",
+            "ZWxkLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX3RhYmxlLnByb3RvGhxnb29n",
+            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIuoDCglCYW5rRW50cnkSPgoCaWQY",
+            "ASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kgcmVxdWVzdCBpZCBpZiBm",
+            "ZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJQgXqPwIIARIbCgxkYXRh",
+            "c2V0X25hbWUYAyABKAlCBeo/AggBEi8KCmRhdGFzZXRfaWQYCyABKAlCG+o/",
+            "GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNldBJUCgR0YWdzGAQgAygJQkbqP0Mi",
+            "QVRhZ3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2Vydmlj",
+            "ZSBpZiB2YWxldGtleSBpcyB1c2VkEigKBGRhdGEYBSABKAsyGi5hc2d0LnR5",
+            "cGUuQmFua1RyYW5zYWN0aW9uEi0KDXRhcmdldF92YWx1ZXMYBiADKAsyFi5h",
+            "c2d0LnR5cGUuVGFyZ2V0VmFsdWUSHwoFbW9kZWwYCSABKAsyEC5hc2d0LnR5",
+            "cGUuTW9kZWwSMAoKcHJlZGljdGlvbhgKIAMoCzIcLmFzZ3QudHlwZS5QcmVk",
+            "aWN0aW9uLlRhcmdldBIkCgp0aW1lX2FkZGVkGAggASgEQhDqPw0IARIJVElN",
+            "RVNUQU1QOg7qPwsKCWJhbmtfZGF0YSKKBAoaRWxlY3Ryb25pY0ludm9pY2VM",
+            "aW5lRW50cnkSPgoCaWQYASABKAlCMuo/LyItSUQsIG1hdGNoZXMgRW52b3kg",
+            "cmVxdWVzdCBpZCBpZiBmZWVkYmFjayBkYXRhEhcKCGNvbnN1bWVyGAIgASgJ",
+            "QgXqPwIIARIbCgxkYXRhc2V0X25hbWUYAyABKAlCBeo/AggBEi8KCmRhdGFz",
+            "ZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNldBJUCgR0",
+            "YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1lciwgZW5y",
+            "aWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1c2VkEiQKBGRhdGEY",
+            "BSABKAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmUSLQoNdGFyZ2V0X3ZhbHVl",
+            "cxgGIAMoCzIWLmFzZ3QudHlwZS5UYXJnZXRWYWx1ZRIfCgVtb2RlbBgJIAEo",
+            "CzIQLmFzZ3QudHlwZS5Nb2RlbBIwCgpwcmVkaWN0aW9uGAogAygLMhwuYXNn",
+            "dC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0EiQKCnRpbWVfYWRkZWQYCCABKARC",
+            "EOo/DQgBEglUSU1FU1RBTVA6Ieo/HgocZWxlY3Ryb25pY19pbnZvaWNlX2xp",
+            "bmVfZGF0YSL+AwoTU2Nhbm5lZEludm9pY2VFbnRyeRI+CgJpZBgBIAEoCUIy",
+            "6j8vIi1JRCwgbWF0Y2hlcyBFbnZveSByZXF1ZXN0IGlkIGlmIGZlZWRiYWNr",
+            "IGRhdGESFwoIY29uc3VtZXIYAiABKAlCBeo/AggBEhsKDGRhdGFzZXRfbmFt",
+            "ZRgDIAEoCUIF6j8CCAESLwoKZGF0YXNldF9pZBgLIAEoCUIb6j8YCAEiFHVu",
+            "aXF1ZSBJRCBvZiBkYXRhc2V0ElQKBHRhZ3MYBCADKAlCRuo/QyJBVGFncyBk",
+            "ZWZpbmVkIGJ5IGNvbnN1bWVyLCBlbnJpY2hlZCBieSBzZXJ2aWNlIGlmIHZh",
+            "bGV0a2V5IGlzIHVzZWQSJwoEZGF0YRgFIAEoCzIZLmFzZ3QudHlwZS5TY2Fu",
+            "bmVkSW52b2ljZRItCg10YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNndC50eXBl",
+            "LlRhcmdldFZhbHVlEh8KBW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVs",
+            "EjAKCnByZWRpY3Rpb24YCiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5U",
+            "YXJnZXQSJAoKdGltZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoZ",
+            "6j8WChRzY2FubmVkX2ludm9pY2VfZGF0YUINWgtkYXRhc2VydmljZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelInfoReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.BankEntry), global::Asgt.Dataservice.V1Alpha1.BankEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry), global::Asgt.Dataservice.V1Alpha1.ElectronicInvoiceLineEntry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null),
@@ -202,9 +202,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -380,7 +380,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -432,7 +432,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;
@@ -574,9 +574,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -752,7 +752,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -804,7 +804,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;
@@ -946,9 +946,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 9;
-    private global::Asgt.Type.ModelInfo model_;
+    private global::Asgt.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.ModelInfo Model {
+    public global::Asgt.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -1124,7 +1124,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.ModelInfo();
+          model_ = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -1176,7 +1176,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.ModelInfo();
+              model_ = new global::Asgt.Type.Model();
             }
             input.ReadMessage(model_);
             break;

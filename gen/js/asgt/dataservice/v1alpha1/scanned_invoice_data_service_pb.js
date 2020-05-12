@@ -12,6 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var asgt_dataservice_v1alpha1_delete_pb = require('../../../asgt/dataservice/v1alpha1/delete_pb.js');
+var asgt_dataservice_v1alpha1_info_pb = require('../../../asgt/dataservice/v1alpha1/info_pb.js');
 var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js');
 var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js');
 var asgt_type_target_value_pb = require('../../../asgt/type/target_value_pb.js');

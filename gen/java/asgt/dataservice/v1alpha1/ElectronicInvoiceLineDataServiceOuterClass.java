@@ -3436,38 +3436,43 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       "\nDasgt/dataservice/v1alpha1/electronic_i" +
       "nvoice_line_data_service.proto\022\031asgt.dat" +
       "aservice.v1alpha1\032&asgt/dataservice/v1al" +
-      "pha1/delete.proto\032\034asgt/type/invoice_lin" +
-      "e.proto\032 asgt/type/retention_policy.prot" +
-      "o\032\034asgt/type/target_value.proto\032\034google/" +
-      "api/annotations.proto\032\033google/protobuf/e" +
-      "mpty.proto\"v\n\037ElectronicInvoiceLineEntry" +
-      "Input\022$\n\004data\030\001 \001(\0132\026.asgt.type.InvoiceL" +
-      "ine\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.type.T" +
-      "argetValue\"\343\001\n)CreateElectronicInvoiceLi" +
-      "neDatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014" +
-      "\n\004tags\030\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022K\n\007entries" +
-      "\030\003 \003(\0132:.asgt.dataservice.v1alpha1.Elect" +
-      "ronicInvoiceLineEntryInput\0224\n\020retention_" +
-      "policy\030\004 \001(\0132\032.asgt.type.RetentionPolicy" +
-      "\"\213\001\n&AppendElectronicInvoiceLineDataRequ" +
-      "est\022\024\n\014dataset_name\030\001 \001(\t\022K\n\007entries\030\003 \003" +
-      "(\0132:.asgt.dataservice.v1alpha1.Electroni" +
-      "cInvoiceLineEntryInput2\253\004\n ElectronicInv" +
-      "oiceLineDataService\022\267\001\n\"CreateElectronic" +
-      "InvoiceLineDataset\022D.asgt.dataservice.v1" +
-      "alpha1.CreateElectronicInvoiceLineDatase" +
-      "tRequest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-" +
-      "\"(/v1alpha1/electronic-invoice-line:crea" +
-      "te:\001*\022\261\001\n\037AppendElectronicInvoiceLineDat" +
-      "a\022A.asgt.dataservice.v1alpha1.AppendElec" +
-      "tronicInvoiceLineDataRequest\032\026.google.pr" +
-      "otobuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electron" +
-      "ic-invoice-line:append:\001*\022\230\001\n\037DeleteElec" +
-      "tronicInvoiceLineData\022(.asgt.dataservice" +
-      ".v1alpha1.DeleteRequest\032\026.google.protobu" +
-      "f.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic-in" +
-      "voice-line:delete:\001*B\rZ\013dataserviceb\006pro" +
-      "to3"
+      "pha1/delete.proto\032$asgt/dataservice/v1al" +
+      "pha1/info.proto\032\034asgt/type/invoice_line." +
+      "proto\032 asgt/type/retention_policy.proto\032" +
+      "\034asgt/type/target_value.proto\032\034google/ap" +
+      "i/annotations.proto\032\033google/protobuf/emp" +
+      "ty.proto\"v\n\037ElectronicInvoiceLineEntryIn" +
+      "put\022$\n\004data\030\001 \001(\0132\026.asgt.type.InvoiceLin" +
+      "e\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.type.Tar" +
+      "getValue\"\343\001\n)CreateElectronicInvoiceLine" +
+      "DatasetRequest\022\024\n\014dataset_name\030\001 \001(\t\022\014\n\004" +
+      "tags\030\002 \003(\t\022\017\n\007targets\030\005 \003(\t\022K\n\007entries\030\003" +
+      " \003(\0132:.asgt.dataservice.v1alpha1.Electro" +
+      "nicInvoiceLineEntryInput\0224\n\020retention_po" +
+      "licy\030\004 \001(\0132\032.asgt.type.RetentionPolicy\"\213" +
+      "\001\n&AppendElectronicInvoiceLineDataReques" +
+      "t\022\024\n\014dataset_name\030\001 \001(\t\022K\n\007entries\030\003 \003(\013" +
+      "2:.asgt.dataservice.v1alpha1.ElectronicI" +
+      "nvoiceLineEntryInput2\326\005\n ElectronicInvoi" +
+      "ceLineDataService\022\267\001\n\"CreateElectronicIn" +
+      "voiceLineDataset\022D.asgt.dataservice.v1al" +
+      "pha1.CreateElectronicInvoiceLineDatasetR" +
+      "equest\032\026.google.protobuf.Empty\"3\202\323\344\223\002-\"(" +
+      "/v1alpha1/electronic-invoice-line:create" +
+      ":\001*\022\261\001\n\037AppendElectronicInvoiceLineData\022" +
+      "A.asgt.dataservice.v1alpha1.AppendElectr" +
+      "onicInvoiceLineDataRequest\032\026.google.prot" +
+      "obuf.Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic" +
+      "-invoice-line:append:\001*\022\230\001\n\037DeleteElectr" +
+      "onicInvoiceLineData\022(.asgt.dataservice.v" +
+      "1alpha1.DeleteRequest\032\026.google.protobuf." +
+      "Empty\"3\202\323\344\223\002-\"(/v1alpha1/electronic-invo" +
+      "ice-line:delete:\001*\022\250\001\n\034GetElectronicInvo" +
+      "iceLineInfo\022).asgt.dataservice.v1alpha1." +
+      "GetInfoRequest\032*.asgt.dataservice.v1alph" +
+      "a1.GetInfoResponse\"1\202\323\344\223\002+\"&/v1alpha1/el" +
+      "ectronic-invoice-line:info:\001*B\rZ\013dataser" +
+      "viceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3481,6 +3486,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.dataservice.v1alpha1.Delete.getDescriptor(),
+          asgt.dataservice.v1alpha1.Info.getDescriptor(),
           asgt.type.InvoiceLineOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           asgt.type.TargetValueOuterClass.getDescriptor(),
@@ -3511,6 +3517,7 @@ public final class ElectronicInvoiceLineDataServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.dataservice.v1alpha1.Delete.getDescriptor();
+    asgt.dataservice.v1alpha1.Info.getDescriptor();
     asgt.type.InvoiceLineOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();

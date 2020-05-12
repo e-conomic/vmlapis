@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.dataservice.v1alpha1 import delete_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2
+from vml_proto.asgt.dataservice.v1alpha1 import info_pb2 as asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2
 from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
 from vml_proto.asgt.type import scanned_invoice_pb2 as asgt_dot_type_dot_scanned__invoice__pb2
 from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
@@ -25,9 +26,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n<asgt/dataservice/v1alpha1/scanned_invoice_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a asgt/type/retention_policy.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"r\n\x18ScannedInvoiceEntryInput\x12\'\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xd5\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\xe9\x03\n\x19ScannedInvoiceDataService\x12\xa1\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:create:\x01*\x12\x9b\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:append:\x01*\x12\x89\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:delete:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_pb=_b('\n<asgt/dataservice/v1alpha1/scanned_invoice_data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a&asgt/dataservice/v1alpha1/delete.proto\x1a$asgt/dataservice/v1alpha1/info.proto\x1a asgt/type/retention_policy.proto\x1a\x1f\x61sgt/type/scanned_invoice.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"r\n\x18ScannedInvoiceEntryInput\x12\'\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x19.asgt.type.ScannedInvoice\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xd5\x01\n\"CreateScannedInvoiceDatasetRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x0c\n\x04tags\x18\x02 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput\x12\x34\n\x10retention_policy\x18\x04 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"}\n\x1f\x41ppendScannedInvoiceDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x44\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x33.asgt.dataservice.v1alpha1.ScannedInvoiceEntryInput2\x85\x05\n\x19ScannedInvoiceDataService\x12\xa1\x01\n\x1b\x43reateScannedInvoiceDataset\x12=.asgt.dataservice.v1alpha1.CreateScannedInvoiceDatasetRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:create:\x01*\x12\x9b\x01\n\x18\x41ppendScannedInvoiceData\x12:.asgt.dataservice.v1alpha1.AppendScannedInvoiceDataRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:append:\x01*\x12\x89\x01\n\x18\x44\x65leteScannedInvoiceData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"+\x82\xd3\xe4\x93\x02%\" /v1alpha1/scanned-invoice:delete:\x01*\x12\x99\x01\n\x15GetScannedInvoiceInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\")\x82\xd3\xe4\x93\x02#\"\x1e/v1alpha1/scanned-invoice:info:\x01*B\rZ\x0b\x64\x61taserviceb\x06proto3')
   ,
-  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_scanned__invoice__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +66,8 @@ _SCANNEDINVOICEENTRYINPUT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=287,
-  serialized_end=401,
+  serialized_start=325,
+  serialized_end=439,
 )
 
 
@@ -124,8 +125,8 @@ _CREATESCANNEDINVOICEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=404,
-  serialized_end=617,
+  serialized_start=442,
+  serialized_end=655,
 )
 
 
@@ -162,8 +163,8 @@ _APPENDSCANNEDINVOICEDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=619,
-  serialized_end=744,
+  serialized_start=657,
+  serialized_end=782,
 )
 
 _SCANNEDINVOICEENTRYINPUT.fields_by_name['data'].message_type = asgt_dot_type_dot_scanned__invoice__pb2._SCANNEDINVOICE
@@ -206,8 +207,8 @@ _SCANNEDINVOICEDATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=747,
-  serialized_end=1236,
+  serialized_start=785,
+  serialized_end=1430,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateScannedInvoiceDataset',
@@ -235,6 +236,15 @@ _SCANNEDINVOICEDATASERVICE = _descriptor.ServiceDescriptor(
     input_type=asgt_dot_dataservice_dot_v1alpha1_dot_delete__pb2._DELETEREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=_b('\202\323\344\223\002%\" /v1alpha1/scanned-invoice:delete:\001*'),
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetScannedInvoiceInfo',
+    full_name='asgt.dataservice.v1alpha1.ScannedInvoiceDataService.GetScannedInvoiceInfo',
+    index=3,
+    containing_service=None,
+    input_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFOREQUEST,
+    output_type=asgt_dot_dataservice_dot_v1alpha1_dot_info__pb2._GETINFORESPONSE,
+    serialized_options=_b('\202\323\344\223\002#\"\036/v1alpha1/scanned-invoice:info:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_SCANNEDINVOICEDATASERVICE)

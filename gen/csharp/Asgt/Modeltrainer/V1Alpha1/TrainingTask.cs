@@ -25,18 +25,18 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5hc2d0L21vZGVsdHJhaW5lci92MWFscGhhMS90cmFpbmluZ190YXNrLnBy",
-            "b3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRocYXNndC90eXBlL2Rh",
-            "dGFzZXRfaW5mby5wcm90byLyAQoOVHJhaW5Nb2RlbFRhc2sSCgoCaWQYASAB",
-            "KAkSLAoMZGF0YXNldF9pbmZvGAIgASgLMhYuYXNndC50eXBlLkRhdGFzZXRJ",
-            "bmZvEhUKDW1vZGVsX3ZlcnNpb24YAyABKAMSQQoGc3RhdHVzGAQgASgOMjEu",
-            "YXNndC5tb2RlbHRyYWluZXIudjFhbHBoYTEuVHJhaW5Nb2RlbFRhc2suU3Rh",
-            "dHVzIkwKBlN0YXR1cxILCgdVTktOT1dOEAASDQoJU0NIRURVTEVEEAESCwoH",
-            "U1RBUlRFRBADEg0KCVNVQ0NFRURFRBAEEgoKBkZBSUxFRBAFQg5aDG1vZGVs",
-            "dHJhaW5lcmIGcHJvdG8z"));
+            "b3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRoXYXNndC90eXBlL2Rh",
+            "dGFzZXQucHJvdG8i6QEKDlRyYWluTW9kZWxUYXNrEgoKAmlkGAEgASgJEiMK",
+            "B2RhdGFzZXQYAiABKAsyEi5hc2d0LnR5cGUuRGF0YXNldBIVCg1tb2RlbF92",
+            "ZXJzaW9uGAMgASgDEkEKBnN0YXR1cxgEIAEoDjIxLmFzZ3QubW9kZWx0cmFp",
+            "bmVyLnYxYWxwaGExLlRyYWluTW9kZWxUYXNrLlN0YXR1cyJMCgZTdGF0dXMS",
+            "CwoHVU5LTk9XThAAEg0KCVNDSEVEVUxFRBABEgsKB1NUQVJURUQQAxINCglT",
+            "VUNDRUVERUQQBBIKCgZGQUlMRUQQBUIOWgxtb2RlbHRyYWluZXJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetInfoReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask), global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Parser, new[]{ "Id", "DatasetInfo", "ModelVersion", "Status" }, null, new[]{ typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask), global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Parser, new[]{ "Id", "Dataset", "ModelVersion", "Status" }, null, new[]{ typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status) }, null)
           }));
     }
     #endregion
@@ -69,7 +69,7 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TrainModelTask(TrainModelTask other) : this() {
       id_ = other.id_;
-      datasetInfo_ = other.datasetInfo_ != null ? other.datasetInfo_.Clone() : null;
+      dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       modelVersion_ = other.modelVersion_;
       status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -91,14 +91,14 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       }
     }
 
-    /// <summary>Field number for the "dataset_info" field.</summary>
-    public const int DatasetInfoFieldNumber = 2;
-    private global::Asgt.Type.DatasetInfo datasetInfo_;
+    /// <summary>Field number for the "dataset" field.</summary>
+    public const int DatasetFieldNumber = 2;
+    private global::Asgt.Type.Dataset dataset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.DatasetInfo DatasetInfo {
-      get { return datasetInfo_; }
+    public global::Asgt.Type.Dataset Dataset {
+      get { return dataset_; }
       set {
-        datasetInfo_ = value;
+        dataset_ = value;
       }
     }
 
@@ -138,7 +138,7 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
         return true;
       }
       if (Id != other.Id) return false;
-      if (!object.Equals(DatasetInfo, other.DatasetInfo)) return false;
+      if (!object.Equals(Dataset, other.Dataset)) return false;
       if (ModelVersion != other.ModelVersion) return false;
       if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -148,7 +148,7 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (datasetInfo_ != null) hash ^= DatasetInfo.GetHashCode();
+      if (dataset_ != null) hash ^= Dataset.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (Status != 0) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
@@ -168,9 +168,9 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (datasetInfo_ != null) {
+      if (dataset_ != null) {
         output.WriteRawTag(18);
-        output.WriteMessage(DatasetInfo);
+        output.WriteMessage(Dataset);
       }
       if (ModelVersion != 0L) {
         output.WriteRawTag(24);
@@ -191,8 +191,8 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (datasetInfo_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatasetInfo);
+      if (dataset_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dataset);
       }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
@@ -214,11 +214,11 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.datasetInfo_ != null) {
-        if (datasetInfo_ == null) {
-          datasetInfo_ = new global::Asgt.Type.DatasetInfo();
+      if (other.dataset_ != null) {
+        if (dataset_ == null) {
+          dataset_ = new global::Asgt.Type.Dataset();
         }
-        DatasetInfo.MergeFrom(other.DatasetInfo);
+        Dataset.MergeFrom(other.Dataset);
       }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
@@ -242,10 +242,10 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
             break;
           }
           case 18: {
-            if (datasetInfo_ == null) {
-              datasetInfo_ = new global::Asgt.Type.DatasetInfo();
+            if (dataset_ == null) {
+              dataset_ = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(datasetInfo_);
+            input.ReadMessage(dataset_);
             break;
           }
           case 24: {
