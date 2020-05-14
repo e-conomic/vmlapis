@@ -15,6 +15,7 @@ service OcrService {
 
 message GetTextAnnotationRequest {
   ssn.annotator.v1.Document document = 2;
+  bool preview = 3;
 }
 
 message GetTextAnnotationResponse {
