@@ -64,7 +64,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.toObject = function(o
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f)
+    document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
+    preview: jspb.Message.getFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -106,6 +107,10 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.deserializeBinaryFromReader = f
       reader.readMessage(value,ssn_annotator_v1_annotator_pb.Document.deserializeBinaryFromReader);
       msg.setDocument(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPreview(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -143,6 +148,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.serializeBinaryToWriter = funct
       ssn_annotator_v1_annotator_pb.Document.serializeBinaryToWriter
     );
   }
+  f = message.getPreview();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -173,6 +185,23 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.clearDocument = funct
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.hasDocument = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool preview = 3;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.getPreview = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
+};
+
+
+/** @param {boolean} value */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.setPreview = function(value) {
+  jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -223,7 +252,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.toObject = function(
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f)
+    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    image: msg.getImage_asB64()
   };
 
   if (includeInstance) {
@@ -265,6 +295,10 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
       reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
       break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setImage(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -302,6 +336,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
+  f = message.getImage_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -332,6 +373,45 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearTextAnnotation 
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasTextAnnotation = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bytes image = 3;
+ * @return {string}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * optional bytes image = 3;
+ * This is a type-conversion wrapper around `getImage()`
+ * @return {string}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getImage()));
+};
+
+
+/**
+ * optional bytes image = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getImage()`
+ * @return {!Uint8Array}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getImage()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setImage = function(value) {
+  jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
