@@ -19,6 +19,7 @@ message GetTextAnnotationRequest {
 
 message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
+  bytes image = 3;
 }
 
 message OcrScanImageRequest {
