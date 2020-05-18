@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationRequest', null, global);
@@ -253,7 +254,7 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.toObject = function(
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
-    image: msg.getImage_asB64()
+    image: (f = msg.getImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -296,7 +297,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
       msg.setTextAnnotation(value);
       break;
     case 3:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      var value = new google_protobuf_wrappers_pb.BytesValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.BytesValue.deserializeBinaryFromReader);
       msg.setImage(value);
       break;
     default:
@@ -336,11 +338,12 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
-  f = message.getImage_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
+  f = message.getImage();
+  if (f != null) {
+    writer.writeMessage(
       3,
-      f
+      f,
+      google_protobuf_wrappers_pb.BytesValue.serializeBinaryToWriter
     );
   }
 };
@@ -377,41 +380,32 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasTextAnnotation = 
 
 
 /**
- * optional bytes image = 3;
- * @return {string}
+ * optional google.protobuf.BytesValue image = 3;
+ * @return {?proto.google.protobuf.BytesValue}
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+  return /** @type{?proto.google.protobuf.BytesValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BytesValue, 3));
 };
 
 
-/**
- * optional bytes image = 3;
- * This is a type-conversion wrapper around `getImage()`
- * @return {string}
- */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getImage()));
-};
-
-
-/**
- * optional bytes image = 3;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getImage()`
- * @return {!Uint8Array}
- */
-proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getImage()));
-};
-
-
-/** @param {!(string|Uint8Array)} value */
+/** @param {?proto.google.protobuf.BytesValue|undefined} value */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setImage = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value);
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearImage = function() {
+  this.setImage(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasImage = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
