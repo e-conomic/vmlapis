@@ -7,35 +7,19 @@ option go_package = "jester";
 import "google/api/annotations.proto";
 import "asgt/type/prediction.proto";
 import "asgt/type/model.proto";
-import "asgt/type/bank_transaction.proto";
 import "asgt/type/transaction.proto";
-import "asgt/type/scanned_invoice.proto";
 
 service Jester {
-  rpc ScannedInvoiceSuggestions (ScannedInvoiceRequest) returns (SuggestionsResponse) {
+  rpc Suggest(SuggestionRequest) returns (SuggestionResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/scanned-invoice:suggest"
-      body: "*"
-    };
-  }
-
-  rpc ElectronicInvoiceLineSuggestions (ElectronicInvoiceLineRequest) returns (SuggestionsResponse) {
-    option (google.api.http) = {
-      post: "/v1alpha1/electronic-invoice-line:suggest"
-      body: "*"
-    };
-  }
-
-  rpc BankSuggestions (BankRequest) returns (SuggestionsResponse) {
-    option (google.api.http) = {
-      post: "/v1alpha1/bank:suggest"
+      post: "/v1alpha1/{dataset_type}:suggest"
       body: "*"
     };
   }
 }
 
 // AutoSuggest
-message SuggestionsResponse {
+message SuggestionResponse {
   repeated asgt.type.Prediction predictions = 1;
   asgt.type.Model model = 2;
 }
@@ -45,23 +29,9 @@ message SuggestionOptions {
   asgt.type.Confidence.Level min_confidence = 2;
 }
 
-// Scanned Invoice
-message ScannedInvoiceRequest {
-  repeated asgt.type.ScannedInvoice inputs = 1;
-  string dataset_name = 2;
-  SuggestionOptions options = 3;
-}
-
-// Electronic Invoice Line
-message ElectronicInvoiceLineRequest {
-  repeated asgt.type.InvoiceLine inputs = 1;
-  string dataset_name = 2;
-  SuggestionOptions options = 3;
-}
-
-// Bank
-message BankRequest {
-  repeated asgt.type.BankTransaction inputs = 1;
-  string dataset_name = 2;
-  SuggestionOptions options = 3;
+message SuggestionRequest {
+  repeated asgt.type.Transaction inputs = 1;
+  string dataset_type = 2;
+  string dataset_name = 3;
+  SuggestionOptions options = 4;
 }
