@@ -6,6 +6,6 @@ option go_package = "type";
 
 // Record mapping a target name to a value
 message TargetValue {
-  string target = 1;
+  string name = 1;
   string value = 2;
 }
