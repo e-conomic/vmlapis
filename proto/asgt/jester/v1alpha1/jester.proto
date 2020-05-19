@@ -12,7 +12,7 @@ import "asgt/type/transaction.proto";
 service Jester {
   rpc Suggest(SuggestionRequest) returns (SuggestionResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}:suggest"
+      post: "/v1alpha1/{dataset_type}/{dataset_name}:suggest"
       body: "*"
     };
   }
@@ -30,8 +30,8 @@ message SuggestionOptions {
 }
 
 message SuggestionRequest {
-  repeated asgt.type.Transaction inputs = 1;
+  string dataset_name = 1;
   string dataset_type = 2;
-  string dataset_name = 3;
+  repeated asgt.type.Transaction inputs = 3;
   SuggestionOptions options = 4;
 }

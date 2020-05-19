@@ -12,28 +12,28 @@ import "asgt/type/target_value.proto";
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}:create"
+      post: "/v1alpha1/{dataset_type}/{dataset_name}:create"
       body: "*"
     };
   }
 
   rpc AppendData (AppendDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}:append"
+      post: "/v1alpha1/{dataset_type}/{dataset_name}:append"
       body: "*"
     };
   }
 
   rpc DeleteData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}:delete"
+      post: "/v1alpha1/{dataset_type}/{dataset_name}:delete"
       body: "*"
     };
   }
 
   rpc GetBankInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}:info"
+      post: "/v1alpha1/{dataset_type}/{dataset_name}:info"
       body: "*"
     };
   }
@@ -49,11 +49,11 @@ message EntryInput {
 
 message CreateRequest {
   string dataset_name = 1;
-  string dataset_type = 6;
-  repeated string tags = 2;
-  repeated string targets = 5;
-  repeated EntryInput entries = 3;
-  asgt.type.RetentionPolicy retention_policy = 4;
+  string dataset_type = 2;
+  repeated string tags = 3;
+  repeated string targets = 6;
+  repeated EntryInput entries = 4;
+  asgt.type.RetentionPolicy retention_policy = 5;
 }
 
 message AppendDataRequest {
