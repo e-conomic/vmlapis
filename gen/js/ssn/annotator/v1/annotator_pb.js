@@ -200,7 +200,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   OCR_LINE_NL_PAYMENT_ID: 22,
   TEXT: 23,
   IBAN: 24,
-  LINES: 25
+  LINES: 25,
+  PREVIEW: 26
 };
 
 /**
@@ -603,7 +604,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     linesList: jspb.Message.toObjectList(msg.getLinesList(),
-    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance),
+    preview: jspb.Message.getFieldWithDefault(msg, 27, "")
   };
 
   if (includeInstance) {
@@ -767,6 +769,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.LineCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.LineCandidate.deserializeBinaryFromReader);
       msg.addLines(value);
+      break;
+    case 27:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPreview(value);
       break;
     default:
       reader.skipField();
@@ -1001,6 +1007,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       26,
       f,
       ssn_type_candidate_pb.LineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getPreview();
+  if (f.length > 0) {
+    writer.writeString(
+      27,
+      f
     );
   }
 };
@@ -1776,6 +1789,21 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addLines = function(o
 
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearLinesList = function() {
   this.setLinesList([]);
+};
+
+
+/**
+ * optional string preview = 27;
+ * @return {string}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPreview = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 27, ""));
+};
+
+
+/** @param {string} value */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPreview = function(value) {
+  jspb.Message.setProto3StringField(this, 27, value);
 };
 
 
