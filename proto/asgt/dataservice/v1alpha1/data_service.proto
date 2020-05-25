@@ -31,7 +31,7 @@ service DataService {
     };
   }
 
-  rpc GetBankInfo (GetInfoRequest) returns (GetInfoResponse) {
+  rpc GetInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
       post: "/v1alpha1/{dataset_type}/{dataset_name}:info"
       body: "*"
@@ -61,7 +61,6 @@ message AppendDataRequest {
   string dataset_type = 2;
   repeated Sample samples = 3;
 }
-
 
 message GetDatasetRequest {
   string consumer = 1;
