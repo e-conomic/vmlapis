@@ -71,6 +71,8 @@ message Feature {
     IBAN = 24;
     // Run LINES detection
     LINES = 25;
+    // Run first page of PDF to PNG conversion
+    PREVIEW = 26;
   }
   // The feature type.
   Type type = 1;
@@ -168,6 +170,8 @@ message DocumentAnnotatorResponse {
   // Invoice lines represented in a form of text, amount and page reference
   // to state on which page the line was found
   repeated ssn.type.LineCandidate lines = 26;
+  // Base64 encoded PNG image  of the first page of PDF document sent in request
+  string preview = 27;
 }
 
 message Document {
