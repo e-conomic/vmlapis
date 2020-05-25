@@ -25,24 +25,26 @@ namespace Ssn.Ocrservice.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJzc24vb2Nyc2VydmljZS92MS9vY3JzZXJ2aWNlLnByb3RvEhFzc24ub2Ny",
-            "c2VydmljZS52MRogc3NuL2Fubm90YXRvci92MS9hbm5vdGF0b3IucHJvdG8a",
-            "HnNzbi90eXBlL3RleHRfYW5ub3RhdGlvbi5wcm90byJIChhHZXRUZXh0QW5u",
-            "b3RhdGlvblJlcXVlc3QSLAoIZG9jdW1lbnQYAiABKAsyGi5zc24uYW5ub3Rh",
-            "dG9yLnYxLkRvY3VtZW50Ik4KGUdldFRleHRBbm5vdGF0aW9uUmVzcG9uc2US",
-            "MQoPdGV4dF9hbm5vdGF0aW9uGAIgASgLMhguc3NuLnR5cGUuVGV4dEFubm90",
-            "YXRpb24iIwoTT2NyU2NhbkltYWdlUmVxdWVzdBIMCgRkYXRhGAEgASgMIikK",
-            "FE9jclNjYW5JbWFnZVJlc3BvbnNlEhEKCXRlc3NfaG9jchgBIAEoCTLdAQoK",
-            "T2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2USJi5zc24ub2Nyc2VydmljZS52",
-            "MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9jcnNlcnZpY2UudjEuT2Ny",
-            "U2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFubm90YXRpb24SKy5zc24u",
-            "b2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlcXVlc3QaLC5zc24u",
-            "b2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNlQgxaCm9j",
-            "cnNlcnZpY2ViBnByb3RvMw=="));
+            "c2VydmljZS52MRoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJzLnByb3RvGiBz",
+            "c24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90bxoec3NuL3R5cGUvdGV4",
+            "dF9hbm5vdGF0aW9uLnByb3RvIlkKGEdldFRleHRBbm5vdGF0aW9uUmVxdWVz",
+            "dBIsCghkb2N1bWVudBgCIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1l",
+            "bnQSDwoHcHJldmlldxgDIAEoCCJ6ChlHZXRUZXh0QW5ub3RhdGlvblJlc3Bv",
+            "bnNlEjEKD3RleHRfYW5ub3RhdGlvbhgCIAEoCzIYLnNzbi50eXBlLlRleHRB",
+            "bm5vdGF0aW9uEioKBWltYWdlGAMgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkJ5",
+            "dGVzVmFsdWUiIwoTT2NyU2NhbkltYWdlUmVxdWVzdBIMCgRkYXRhGAEgASgM",
+            "IikKFE9jclNjYW5JbWFnZVJlc3BvbnNlEhEKCXRlc3NfaG9jchgBIAEoCTLd",
+            "AQoKT2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2USJi5zc24ub2Nyc2Vydmlj",
+            "ZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9jcnNlcnZpY2UudjEu",
+            "T2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFubm90YXRpb24SKy5z",
+            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlcXVlc3QaLC5z",
+            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNlQgxa",
+            "Cm9jcnNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null)
           }));
@@ -77,6 +79,7 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTextAnnotationRequest(GetTextAnnotationRequest other) : this() {
       document_ = other.document_ != null ? other.document_.Clone() : null;
+      preview_ = other.preview_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,6 +99,17 @@ namespace Ssn.Ocrservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "preview" field.</summary>
+    public const int PreviewFieldNumber = 3;
+    private bool preview_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Preview {
+      get { return preview_; }
+      set {
+        preview_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTextAnnotationRequest);
@@ -110,6 +124,7 @@ namespace Ssn.Ocrservice.V1 {
         return true;
       }
       if (!object.Equals(Document, other.Document)) return false;
+      if (Preview != other.Preview) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -117,6 +132,7 @@ namespace Ssn.Ocrservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (document_ != null) hash ^= Document.GetHashCode();
+      if (Preview != false) hash ^= Preview.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -134,6 +150,10 @@ namespace Ssn.Ocrservice.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Document);
       }
+      if (Preview != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Preview);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -144,6 +164,9 @@ namespace Ssn.Ocrservice.V1 {
       int size = 0;
       if (document_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      }
+      if (Preview != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -162,6 +185,9 @@ namespace Ssn.Ocrservice.V1 {
         }
         Document.MergeFrom(other.Document);
       }
+      if (other.Preview != false) {
+        Preview = other.Preview;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -178,6 +204,10 @@ namespace Ssn.Ocrservice.V1 {
               document_ = new global::Ssn.Annotator.V1.Document();
             }
             input.ReadMessage(document_);
+            break;
+          }
+          case 24: {
+            Preview = input.ReadBool();
             break;
           }
         }
@@ -212,6 +242,7 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public GetTextAnnotationResponse(GetTextAnnotationResponse other) : this() {
       textAnnotation_ = other.textAnnotation_ != null ? other.textAnnotation_.Clone() : null;
+      Image = other.Image;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -231,6 +262,18 @@ namespace Ssn.Ocrservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "image" field.</summary>
+    public const int ImageFieldNumber = 3;
+    private static readonly pb::FieldCodec<pb::ByteString> _single_image_codec = pb::FieldCodec.ForClassWrapper<pb::ByteString>(26);
+    private pb::ByteString image_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString Image {
+      get { return image_; }
+      set {
+        image_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as GetTextAnnotationResponse);
@@ -245,6 +288,7 @@ namespace Ssn.Ocrservice.V1 {
         return true;
       }
       if (!object.Equals(TextAnnotation, other.TextAnnotation)) return false;
+      if (Image != other.Image) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -252,6 +296,7 @@ namespace Ssn.Ocrservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (textAnnotation_ != null) hash ^= TextAnnotation.GetHashCode();
+      if (image_ != null) hash ^= Image.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -269,6 +314,9 @@ namespace Ssn.Ocrservice.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(TextAnnotation);
       }
+      if (image_ != null) {
+        _single_image_codec.WriteTagAndValue(output, Image);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -279,6 +327,9 @@ namespace Ssn.Ocrservice.V1 {
       int size = 0;
       if (textAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextAnnotation);
+      }
+      if (image_ != null) {
+        size += _single_image_codec.CalculateSizeWithTag(Image);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -297,6 +348,11 @@ namespace Ssn.Ocrservice.V1 {
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
+      if (other.image_ != null) {
+        if (image_ == null || other.Image != pb::ByteString.Empty) {
+          Image = other.Image;
+        }
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -313,6 +369,13 @@ namespace Ssn.Ocrservice.V1 {
               textAnnotation_ = new global::Ssn.Type.TextAnnotation();
             }
             input.ReadMessage(textAnnotation_);
+            break;
+          }
+          case 26: {
+            pb::ByteString value = _single_image_codec.Read(input);
+            if (image_ == null || value != pb::ByteString.Empty) {
+              Image = value;
+            }
             break;
           }
         }

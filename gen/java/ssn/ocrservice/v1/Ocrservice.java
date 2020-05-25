@@ -30,6 +30,11 @@ public final class Ocrservice {
      * <code>.ssn.annotator.v1.Document document = 2;</code>
      */
     ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder();
+
+    /**
+     * <code>bool preview = 3;</code>
+     */
+    boolean getPreview();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationRequest}
@@ -44,6 +49,7 @@ public final class Ocrservice {
       super(builder);
     }
     private GetTextAnnotationRequest() {
+      preview_ = false;
     }
 
     @java.lang.Override
@@ -81,6 +87,11 @@ public final class Ocrservice {
                 document_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 24: {
+
+              preview_ = input.readBool();
               break;
             }
             default: {
@@ -136,6 +147,15 @@ public final class Ocrservice {
       return getDocument();
     }
 
+    public static final int PREVIEW_FIELD_NUMBER = 3;
+    private boolean preview_;
+    /**
+     * <code>bool preview = 3;</code>
+     */
+    public boolean getPreview() {
+      return preview_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -153,6 +173,9 @@ public final class Ocrservice {
       if (document_ != null) {
         output.writeMessage(2, getDocument());
       }
+      if (preview_ != false) {
+        output.writeBool(3, preview_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -165,6 +188,10 @@ public final class Ocrservice {
       if (document_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getDocument());
+      }
+      if (preview_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, preview_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -187,6 +214,8 @@ public final class Ocrservice {
         result = result && getDocument()
             .equals(other.getDocument());
       }
+      result = result && (getPreview()
+          == other.getPreview());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -202,6 +231,9 @@ public final class Ocrservice {
         hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
         hash = (53 * hash) + getDocument().hashCode();
       }
+      hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getPreview());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -341,6 +373,8 @@ public final class Ocrservice {
           document_ = null;
           documentBuilder_ = null;
         }
+        preview_ = false;
+
         return this;
       }
 
@@ -372,6 +406,7 @@ public final class Ocrservice {
         } else {
           result.document_ = documentBuilder_.build();
         }
+        result.preview_ = preview_;
         onBuilt();
         return result;
       }
@@ -422,6 +457,9 @@ public final class Ocrservice {
         if (other == ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.getDefaultInstance()) return this;
         if (other.hasDocument()) {
           mergeDocument(other.getDocument());
+        }
+        if (other.getPreview() != false) {
+          setPreview(other.getPreview());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -568,6 +606,32 @@ public final class Ocrservice {
         }
         return documentBuilder_;
       }
+
+      private boolean preview_ ;
+      /**
+       * <code>bool preview = 3;</code>
+       */
+      public boolean getPreview() {
+        return preview_;
+      }
+      /**
+       * <code>bool preview = 3;</code>
+       */
+      public Builder setPreview(boolean value) {
+        
+        preview_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool preview = 3;</code>
+       */
+      public Builder clearPreview() {
+        
+        preview_ = false;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -637,6 +701,19 @@ public final class Ocrservice {
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    boolean hasImage();
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    com.google.protobuf.BytesValue getImage();
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    com.google.protobuf.BytesValueOrBuilder getImageOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationResponse}
@@ -686,6 +763,19 @@ public final class Ocrservice {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(textAnnotation_);
                 textAnnotation_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.google.protobuf.BytesValue.Builder subBuilder = null;
+              if (image_ != null) {
+                subBuilder = image_.toBuilder();
+              }
+              image_ = input.readMessage(com.google.protobuf.BytesValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(image_);
+                image_ = subBuilder.buildPartial();
               }
 
               break;
@@ -743,6 +833,27 @@ public final class Ocrservice {
       return getTextAnnotation();
     }
 
+    public static final int IMAGE_FIELD_NUMBER = 3;
+    private com.google.protobuf.BytesValue image_;
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    public boolean hasImage() {
+      return image_ != null;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    public com.google.protobuf.BytesValue getImage() {
+      return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue image = 3;</code>
+     */
+    public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
+      return getImage();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -760,6 +871,9 @@ public final class Ocrservice {
       if (textAnnotation_ != null) {
         output.writeMessage(2, getTextAnnotation());
       }
+      if (image_ != null) {
+        output.writeMessage(3, getImage());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -772,6 +886,10 @@ public final class Ocrservice {
       if (textAnnotation_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getTextAnnotation());
+      }
+      if (image_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getImage());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -794,6 +912,11 @@ public final class Ocrservice {
         result = result && getTextAnnotation()
             .equals(other.getTextAnnotation());
       }
+      result = result && (hasImage() == other.hasImage());
+      if (hasImage()) {
+        result = result && getImage()
+            .equals(other.getImage());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -808,6 +931,10 @@ public final class Ocrservice {
       if (hasTextAnnotation()) {
         hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
         hash = (53 * hash) + getTextAnnotation().hashCode();
+      }
+      if (hasImage()) {
+        hash = (37 * hash) + IMAGE_FIELD_NUMBER;
+        hash = (53 * hash) + getImage().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -948,6 +1075,12 @@ public final class Ocrservice {
           textAnnotation_ = null;
           textAnnotationBuilder_ = null;
         }
+        if (imageBuilder_ == null) {
+          image_ = null;
+        } else {
+          image_ = null;
+          imageBuilder_ = null;
+        }
         return this;
       }
 
@@ -978,6 +1111,11 @@ public final class Ocrservice {
           result.textAnnotation_ = textAnnotation_;
         } else {
           result.textAnnotation_ = textAnnotationBuilder_.build();
+        }
+        if (imageBuilder_ == null) {
+          result.image_ = image_;
+        } else {
+          result.image_ = imageBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1029,6 +1167,9 @@ public final class Ocrservice {
         if (other == ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.getDefaultInstance()) return this;
         if (other.hasTextAnnotation()) {
           mergeTextAnnotation(other.getTextAnnotation());
+        }
+        if (other.hasImage()) {
+          mergeImage(other.getImage());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1174,6 +1315,123 @@ public final class Ocrservice {
           textAnnotation_ = null;
         }
         return textAnnotationBuilder_;
+      }
+
+      private com.google.protobuf.BytesValue image_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> imageBuilder_;
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public boolean hasImage() {
+        return imageBuilder_ != null || image_ != null;
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public com.google.protobuf.BytesValue getImage() {
+        if (imageBuilder_ == null) {
+          return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
+        } else {
+          return imageBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public Builder setImage(com.google.protobuf.BytesValue value) {
+        if (imageBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          image_ = value;
+          onChanged();
+        } else {
+          imageBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public Builder setImage(
+          com.google.protobuf.BytesValue.Builder builderForValue) {
+        if (imageBuilder_ == null) {
+          image_ = builderForValue.build();
+          onChanged();
+        } else {
+          imageBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public Builder mergeImage(com.google.protobuf.BytesValue value) {
+        if (imageBuilder_ == null) {
+          if (image_ != null) {
+            image_ =
+              com.google.protobuf.BytesValue.newBuilder(image_).mergeFrom(value).buildPartial();
+          } else {
+            image_ = value;
+          }
+          onChanged();
+        } else {
+          imageBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public Builder clearImage() {
+        if (imageBuilder_ == null) {
+          image_ = null;
+          onChanged();
+        } else {
+          image_ = null;
+          imageBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public com.google.protobuf.BytesValue.Builder getImageBuilder() {
+        
+        onChanged();
+        return getImageFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
+        if (imageBuilder_ != null) {
+          return imageBuilder_.getMessageOrBuilder();
+        } else {
+          return image_ == null ?
+              com.google.protobuf.BytesValue.getDefaultInstance() : image_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.BytesValue image = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 
+          getImageFieldBuilder() {
+        if (imageBuilder_ == null) {
+          imageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder>(
+                  getImage(),
+                  getParentForChildren(),
+                  isClean());
+          image_ = null;
+        }
+        return imageBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2287,21 +2545,23 @@ public final class Ocrservice {
   static {
     java.lang.String[] descriptorData = {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
-      "n.ocrservice.v1\032 ssn/annotator/v1/annota" +
-      "tor.proto\032\036ssn/type/text_annotation.prot" +
-      "o\"H\n\030GetTextAnnotationRequest\022,\n\010documen" +
-      "t\030\002 \001(\0132\032.ssn.annotator.v1.Document\"N\n\031G" +
-      "etTextAnnotationResponse\0221\n\017text_annotat" +
-      "ion\030\002 \001(\0132\030.ssn.type.TextAnnotation\"#\n\023O" +
-      "crScanImageRequest\022\014\n\004data\030\001 \001(\014\")\n\024OcrS" +
-      "canImageResponse\022\021\n\ttess_hocr\030\001 \001(\t2\335\001\n\n" +
-      "OcrService\022_\n\014OcrScanImage\022&.ssn.ocrserv" +
-      "ice.v1.OcrScanImageRequest\032\'.ssn.ocrserv" +
-      "ice.v1.OcrScanImageResponse\022n\n\021GetTextAn" +
-      "notation\022+.ssn.ocrservice.v1.GetTextAnno" +
-      "tationRequest\032,.ssn.ocrservice.v1.GetTex" +
-      "tAnnotationResponseB\014Z\nocrserviceb\006proto" +
-      "3"
+      "n.ocrservice.v1\032\036google/protobuf/wrapper" +
+      "s.proto\032 ssn/annotator/v1/annotator.prot" +
+      "o\032\036ssn/type/text_annotation.proto\"Y\n\030Get" +
+      "TextAnnotationRequest\022,\n\010document\030\002 \001(\0132" +
+      "\032.ssn.annotator.v1.Document\022\017\n\007preview\030\003" +
+      " \001(\010\"z\n\031GetTextAnnotationResponse\0221\n\017tex" +
+      "t_annotation\030\002 \001(\0132\030.ssn.type.TextAnnota" +
+      "tion\022*\n\005image\030\003 \001(\0132\033.google.protobuf.By" +
+      "tesValue\"#\n\023OcrScanImageRequest\022\014\n\004data\030" +
+      "\001 \001(\014\")\n\024OcrScanImageResponse\022\021\n\ttess_ho" +
+      "cr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014OcrScanImage\022" +
+      "&.ssn.ocrservice.v1.OcrScanImageRequest\032" +
+      "\'.ssn.ocrservice.v1.OcrScanImageResponse" +
+      "\022n\n\021GetTextAnnotation\022+.ssn.ocrservice.v" +
+      "1.GetTextAnnotationRequest\032,.ssn.ocrserv" +
+      "ice.v1.GetTextAnnotationResponseB\014Z\nocrs" +
+      "erviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2314,6 +2574,7 @@ public final class Ocrservice {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
         }, assigner);
@@ -2322,13 +2583,13 @@ public final class Ocrservice {
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor,
-        new java.lang.String[] { "Document", });
+        new java.lang.String[] { "Document", "Preview", });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor,
-        new java.lang.String[] { "TextAnnotation", });
+        new java.lang.String[] { "TextAnnotation", "Image", });
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable = new
@@ -2341,6 +2602,7 @@ public final class Ocrservice {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,
         new java.lang.String[] { "TessHocr", });
+    com.google.protobuf.WrappersProto.getDescriptor();
     ssn.annotator.v1.Annotator.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
   }

@@ -6,6 +6,7 @@ option go_package = "ocrservice";
 
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/text_annotation.proto";
+import "google/protobuf/wrappers.proto";
 
 // Interface exported by the server.
 service OcrService {
@@ -15,10 +16,12 @@ service OcrService {
 
 message GetTextAnnotationRequest {
   ssn.annotator.v1.Document document = 2;
+  bool preview = 3;
 }
 
 message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
+  google.protobuf.BytesValue image = 3;
 }
 
 message OcrScanImageRequest {

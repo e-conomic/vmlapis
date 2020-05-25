@@ -366,6 +366,14 @@ public final class Annotator {
        * <code>LINES = 25;</code>
        */
       LINES(25),
+      /**
+       * <pre>
+       * Run first page of PDF to PNG conversion
+       * </pre>
+       *
+       * <code>PREVIEW = 26;</code>
+       */
+      PREVIEW(26),
       UNRECOGNIZED(-1),
       ;
 
@@ -577,6 +585,14 @@ public final class Annotator {
        * <code>LINES = 25;</code>
        */
       public static final int LINES_VALUE = 25;
+      /**
+       * <pre>
+       * Run first page of PDF to PNG conversion
+       * </pre>
+       *
+       * <code>PREVIEW = 26;</code>
+       */
+      public static final int PREVIEW_VALUE = 26;
 
 
       public final int getNumber() {
@@ -623,6 +639,7 @@ public final class Annotator {
           case 23: return TEXT;
           case 24: return IBAN;
           case 25: return LINES;
+          case 26: return PREVIEW;
           default: return null;
         }
       }
@@ -3678,6 +3695,24 @@ public final class Annotator {
      */
     ssn.type.CandidateOuterClass.LineCandidateOrBuilder getLinesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * </pre>
+     *
+     * <code>string preview = 27;</code>
+     */
+    java.lang.String getPreview();
+    /**
+     * <pre>
+     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * </pre>
+     *
+     * <code>string preview = 27;</code>
+     */
+    com.google.protobuf.ByteString
+        getPreviewBytes();
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -3717,6 +3752,7 @@ public final class Annotator {
       feedbackId_ = "";
       iban_ = java.util.Collections.emptyList();
       lines_ = java.util.Collections.emptyList();
+      preview_ = "";
     }
 
     @java.lang.Override
@@ -3973,6 +4009,12 @@ public final class Annotator {
               }
               lines_.add(
                   input.readMessage(ssn.type.CandidateOuterClass.LineCandidate.parser(), extensionRegistry));
+              break;
+            }
+            case 218: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              preview_ = s;
               break;
             }
             default: {
@@ -5596,6 +5638,48 @@ public final class Annotator {
       return lines_.get(index);
     }
 
+    public static final int PREVIEW_FIELD_NUMBER = 27;
+    private volatile java.lang.Object preview_;
+    /**
+     * <pre>
+     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * </pre>
+     *
+     * <code>string preview = 27;</code>
+     */
+    public java.lang.String getPreview() {
+      java.lang.Object ref = preview_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        preview_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Base64 encoded PNG image  of the first page of PDF document sent in request
+     * </pre>
+     *
+     * <code>string preview = 27;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPreviewBytes() {
+      java.lang.Object ref = preview_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        preview_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5687,6 +5771,9 @@ public final class Annotator {
       }
       for (int i = 0; i < lines_.size(); i++) {
         output.writeMessage(26, lines_.get(i));
+      }
+      if (!getPreviewBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 27, preview_);
       }
       unknownFields.writeTo(output);
     }
@@ -5799,6 +5886,9 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(26, lines_.get(i));
       }
+      if (!getPreviewBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(27, preview_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -5870,6 +5960,8 @@ public final class Annotator {
           .equals(other.getIbanList());
       result = result && getLinesList()
           .equals(other.getLinesList());
+      result = result && getPreview()
+          .equals(other.getPreview());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5981,6 +6073,8 @@ public final class Annotator {
         hash = (37 * hash) + LINES_FIELD_NUMBER;
         hash = (53 * hash) + getLinesList().hashCode();
       }
+      hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
+      hash = (53 * hash) + getPreview().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6285,6 +6379,8 @@ public final class Annotator {
         } else {
           linesBuilder_.clear();
         }
+        preview_ = "";
+
         return this;
       }
 
@@ -6527,6 +6623,7 @@ public final class Annotator {
         } else {
           result.lines_ = linesBuilder_.build();
         }
+        result.preview_ = preview_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7184,6 +7281,10 @@ public final class Annotator {
               linesBuilder_.addAllMessages(other.lines_);
             }
           }
+        }
+        if (!other.getPreview().isEmpty()) {
+          preview_ = other.preview_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -15223,6 +15324,95 @@ public final class Annotator {
         }
         return linesBuilder_;
       }
+
+      private java.lang.Object preview_ = "";
+      /**
+       * <pre>
+       * Base64 encoded PNG image  of the first page of PDF document sent in request
+       * </pre>
+       *
+       * <code>string preview = 27;</code>
+       */
+      public java.lang.String getPreview() {
+        java.lang.Object ref = preview_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          preview_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base64 encoded PNG image  of the first page of PDF document sent in request
+       * </pre>
+       *
+       * <code>string preview = 27;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPreviewBytes() {
+        java.lang.Object ref = preview_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          preview_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Base64 encoded PNG image  of the first page of PDF document sent in request
+       * </pre>
+       *
+       * <code>string preview = 27;</code>
+       */
+      public Builder setPreview(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        preview_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base64 encoded PNG image  of the first page of PDF document sent in request
+       * </pre>
+       *
+       * <code>string preview = 27;</code>
+       */
+      public Builder clearPreview() {
+        
+        preview_ = getDefaultInstance().getPreview();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Base64 encoded PNG image  of the first page of PDF document sent in request
+       * </pre>
+       *
+       * <code>string preview = 27;</code>
+       */
+      public Builder setPreviewBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        preview_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -16728,10 +16918,10 @@ public final class Annotator {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
       "to\032\030ssn/type/candidate.proto\032\036ssn/type/t" +
-      "ext_annotation.proto\"\314\005\n\007Feature\022,\n\004type" +
+      "ext_annotation.proto\"\331\005\n\007Feature\022,\n\004type" +
       "\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type\022\023" +
       "\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030\003 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\"\311\004\n\004Type" +
+      "\001(\0162\032.ssn.type.Confidence.Level\"\326\004\n\004Type" +
       "\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\nOR" +
       "DER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CURR" +
       "ENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VAT\020" +
@@ -16746,49 +16936,49 @@ public final class Annotator {
       "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
       "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
       "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010" +
-      "\n\004IBAN\020\030\022\t\n\005LINES\020\031\"\203\001\n\030DocumentAnnotato" +
-      "rRequest\022,\n\010document\030\001 \001(\0132\032.ssn.annotat" +
-      "or.v1.Document\022+\n\010features\030\002 \003(\0132\031.ssn.a" +
-      "nnotator.v1.Feature\022\014\n\004tags\030\003 \003(\t\"\313\t\n\031Do" +
-      "cumentAnnotatorResponse\022\'\n\norder_date\030\001 " +
-      "\003(\0132\023.ssn.type.Candidate\022-\n\020payment_due_" +
-      "date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010curre" +
-      "ncy\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttotal_" +
-      "vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016total_" +
-      "incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022+\n\016t" +
-      "otal_excl_vat\030\006 \003(\0132\023.ssn.type.Candidate" +
-      "\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.ty" +
-      "pe.Candidate\0222\n\025supplier_country_code\030\010 " +
-      "\003(\0132\023.ssn.type.Candidate\022*\n\rdocument_typ" +
-      "e\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016payment_" +
-      "method\030\n \003(\0132\023.ssn.type.Candidate\0222\n\025cre" +
-      "dit_card_last_four\030\013 \003(\0132\023.ssn.type.Cand" +
-      "idate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn.type" +
-      ".Candidate\0221\n\017text_annotation\030\r \001(\0132\030.ss" +
-      "n.type.TextAnnotation\022-\n\020ocr_line_dk_typ" +
-      "e\030\016 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line" +
-      "_dk_payment_id\030\017 \003(\0132\023.ssn.type.Candidat" +
-      "e\0224\n\027ocr_line_dk_creditor_id\030\020 \003(\0132\023.ssn" +
-      ".type.Candidate\0223\n\026ocr_line_se_payment_i" +
-      "d\030\021 \003(\0132\023.ssn.type.Candidate\022=\n ocr_line" +
-      "_se_bankgiro_creditor_id\030\022 \003(\0132\023.ssn.typ" +
-      "e.Candidate\022=\n ocr_line_se_plusgiro_cred" +
-      "itor_id\030\023 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
-      "r_line_no_payment_id\030\024 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0223\n\026ocr_line_fi_payment_id\030\025 \003(\0132" +
-      "\023.ssn.type.Candidate\0223\n\026ocr_line_nl_paym" +
-      "ent_id\030\026 \003(\0132\023.ssn.type.Candidate\022\014\n\004tex" +
-      "t\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(\t\022!\n\004iban\030\031 \003" +
-      "(\0132\023.ssn.type.Candidate\022&\n\005lines\030\032 \003(\0132\027" +
-      ".ssn.type.LineCandidate\"M\n\010Document\022\017\n\007c" +
-      "ontent\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 .ssn.annot" +
-      "ator.v1.DocumentSource\"\"\n\016DocumentSource" +
-      "\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021DocumentAnnotator" +
-      "\022\215\001\n\020AnnotateDocument\022*.ssn.annotator.v1" +
-      ".DocumentAnnotatorRequest\032+.ssn.annotato" +
-      "r.v1.DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025" +
-      "/v1/document:annotate:\001*B\013Z\tannotatorb\006p" +
-      "roto3"
+      "\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032\"\203\001\n\030Doc" +
+      "umentAnnotatorRequest\022,\n\010document\030\001 \001(\0132" +
+      "\032.ssn.annotator.v1.Document\022+\n\010features\030" +
+      "\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014\n\004tags" +
+      "\030\003 \003(\t\"\334\t\n\031DocumentAnnotatorResponse\022\'\n\n" +
+      "order_date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n" +
+      "\020payment_due_date\030\002 \003(\0132\023.ssn.type.Candi" +
+      "date\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Candid" +
+      "ate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candid" +
+      "ate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.C" +
+      "andidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.t" +
+      "ype.Candidate\0222\n\025supplier_corporate_id\030\007" +
+      " \003(\0132\023.ssn.type.Candidate\0222\n\025supplier_co" +
+      "untry_code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n" +
+      "\rdocument_type\030\t \003(\0132\023.ssn.type.Candidat" +
+      "e\022+\n\016payment_method\030\n \003(\0132\023.ssn.type.Can" +
+      "didate\0222\n\025credit_card_last_four\030\013 \003(\0132\023." +
+      "ssn.type.Candidate\022+\n\016invoice_number\030\014 \003" +
+      "(\0132\023.ssn.type.Candidate\0221\n\017text_annotati" +
+      "on\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020oc" +
+      "r_line_dk_type\030\016 \003(\0132\023.ssn.type.Candidat" +
+      "e\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn." +
+      "type.Candidate\0224\n\027ocr_line_dk_creditor_i" +
+      "d\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line" +
+      "_se_payment_id\030\021 \003(\0132\023.ssn.type.Candidat" +
+      "e\022=\n ocr_line_se_bankgiro_creditor_id\030\022 " +
+      "\003(\0132\023.ssn.type.Candidate\022=\n ocr_line_se_" +
+      "plusgiro_creditor_id\030\023 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0223\n\026ocr_line_no_payment_id\030\024 \003(\0132" +
+      "\023.ssn.type.Candidate\0223\n\026ocr_line_fi_paym" +
+      "ent_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr" +
+      "_line_nl_payment_id\030\026 \003(\0132\023.ssn.type.Can" +
+      "didate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(" +
+      "\t\022!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&\n\005" +
+      "lines\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017\n\007" +
+      "preview\030\033 \001(\t\"M\n\010Document\022\017\n\007content\030\001 \001" +
+      "(\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Do" +
+      "cumentSource\"\"\n\016DocumentSource\022\020\n\010http_u" +
+      "ri\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Annot" +
+      "ateDocument\022*.ssn.annotator.v1.DocumentA" +
+      "nnotatorRequest\032+.ssn.annotator.v1.Docum" +
+      "entAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docume" +
+      "nt:annotate:\001*B\013Z\tannotatorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16822,7 +17012,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new
