@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modelregistry.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\rmodelregistry'),
-  serialized_pb=_b('\n0asgt/modelregistry/v1alpha1/model_registry.proto\x12\x1b\x61sgt.modelregistry.v1alpha1\x1a\x1bgoogle/protobuf/empty.proto\"i\n\x14RegisterModelRequest\x12\x10\n\x08\x63onsumer\x18\x03 \x01(\t\x12\x12\n\nmodel_type\x18\x01 \x01(\t\x12\x15\n\rmodel_version\x18\x02 \x01(\x03\x12\x14\n\x0c\x64\x61taset_name\x18\x04 \x01(\t\"+\n\x15RegisterModelResponse\x12\x12\n\nshard_name\x18\x01 \x01(\t\"?\n\x12\x44\x65leteModelRequest\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\"p\n\x1dGetLatestModelVersionsRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_name\x18\x02 \x01(\t\x12\x12\n\nmodel_type\x18\x03 \x01(\t\x12\x13\n\x0bmax_results\x18\x04 \x01(\x05\"\xae\x01\n\x1eGetLatestModelVersionsResponse\x12X\n\x07results\x18\x01 \x03(\x0b\x32G.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo\x1a\x32\n\x0bVersionInfo\x12\x0f\n\x07version\x18\x01 \x01(\x03\x12\x12\n\nshard_name\x18\x02 \x01(\t2\xf3\x02\n\rModelRegistry\x12v\n\rRegisterModel\x12\x31.asgt.modelregistry.v1alpha1.RegisterModelRequest\x1a\x32.asgt.modelregistry.v1alpha1.RegisterModelResponse\x12V\n\x0b\x44\x65leteModel\x12/.asgt.modelregistry.v1alpha1.DeleteModelRequest\x1a\x16.google.protobuf.Empty\x12\x91\x01\n\x16GetLatestModelVersions\x12:.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest\x1a;.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponseB\x0fZ\rmodelregistryb\x06proto3')
+  serialized_pb=_b('\n0asgt/modelregistry/v1alpha1/model_registry.proto\x12\x1b\x61sgt.modelregistry.v1alpha1\x1a\x15\x61sgt/type/model.proto\x1a\x1bgoogle/protobuf/empty.proto\"[\n\x14RegisterModelRequest\x12\x12\n\ndataset_id\x18\x01 \x01(\t\x12\x18\n\x10\x64\x61taset_revision\x18\x02 \x01(\x03\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\"?\n\x12\x44\x65leteModelRequest\x12\x12\n\ndataset_id\x18\x01 \x01(\t\x12\x15\n\rmodel_version\x18\x02 \x01(\x03\"C\n\x18ListModelVersionsRequest\x12\x12\n\ndataset_id\x18\x01 \x01(\t\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\"=\n\x19ListModelVersionsResponse\x12 \n\x06models\x18\x01 \x03(\x0b\x32\x10.asgt.type.Model2\xc8\x02\n\rModelRegistry\x12Z\n\rRegisterModel\x12\x31.asgt.modelregistry.v1alpha1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12V\n\x0b\x44\x65leteModel\x12/.asgt.modelregistry.v1alpha1.DeleteModelRequest\x1a\x16.google.protobuf.Empty\x12\x82\x01\n\x11ListModelVersions\x12\x35.asgt.modelregistry.v1alpha1.ListModelVersionsRequest\x1a\x36.asgt.modelregistry.v1alpha1.ListModelVersionsResponseB\x0fZ\rmodelregistryb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_model__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -35,97 +36,21 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='consumer', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.consumer', index=0,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.model_type', index=1,
+      name='dataset_id', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.dataset_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_version', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.model_version', index=2,
+      name='dataset_revision', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.dataset_revision', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.dataset_name', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=110,
-  serialized_end=215,
-)
-
-
-_REGISTERMODELRESPONSE = _descriptor.Descriptor(
-  name='RegisterModelResponse',
-  full_name='asgt.modelregistry.v1alpha1.RegisterModelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='shard_name', full_name='asgt.modelregistry.v1alpha1.RegisterModelResponse.shard_name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=217,
-  serialized_end=260,
-)
-
-
-_DELETEMODELREQUEST = _descriptor.Descriptor(
-  name='DeleteModelRequest',
-  full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest.model_type', index=0,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='model_version', full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest.model_version', index=1,
+      name='model_version', full_name='asgt.modelregistry.v1alpha1.RegisterModelRequest.model_version', index=2,
       number=3, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -143,42 +68,28 @@ _DELETEMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=262,
-  serialized_end=325,
+  serialized_start=133,
+  serialized_end=224,
 )
 
 
-_GETLATESTMODELVERSIONSREQUEST = _descriptor.Descriptor(
-  name='GetLatestModelVersionsRequest',
-  full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest',
+_DELETEMODELREQUEST = _descriptor.Descriptor(
+  name='DeleteModelRequest',
+  full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='consumer', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.consumer', index=0,
+      name='dataset_id', full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest.dataset_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.dataset_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.model_type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_results', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest.max_results', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='model_version', full_name='asgt.modelregistry.v1alpha1.DeleteModelRequest.model_version', index=1,
+      number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -195,29 +106,29 @@ _GETLATESTMODELVERSIONSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=327,
-  serialized_end=439,
+  serialized_start=226,
+  serialized_end=289,
 )
 
 
-_GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO = _descriptor.Descriptor(
-  name='VersionInfo',
-  full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo',
+_LISTMODELVERSIONSREQUEST = _descriptor.Descriptor(
+  name='ListModelVersionsRequest',
+  full_name='asgt.modelregistry.v1alpha1.ListModelVersionsRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='version', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.version', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='dataset_id', full_name='asgt.modelregistry.v1alpha1.ListModelVersionsRequest.dataset_id', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='shard_name', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo.shard_name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='max_results', full_name='asgt.modelregistry.v1alpha1.ListModelVersionsRequest.max_results', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -233,19 +144,20 @@ _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=616,
+  serialized_start=291,
+  serialized_end=358,
 )
 
-_GETLATESTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
-  name='GetLatestModelVersionsResponse',
-  full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse',
+
+_LISTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
+  name='ListModelVersionsResponse',
+  full_name='asgt.modelregistry.v1alpha1.ListModelVersionsResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='results', full_name='asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.results', index=0,
+      name='models', full_name='asgt.modelregistry.v1alpha1.ListModelVersionsResponse.models', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -254,7 +166,7 @@ _GETLATESTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO, ],
+  nested_types=[],
   enum_types=[
   ],
   serialized_options=None,
@@ -263,17 +175,15 @@ _GETLATESTMODELVERSIONSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=442,
-  serialized_end=616,
+  serialized_start=360,
+  serialized_end=421,
 )
 
-_GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO.containing_type = _GETLATESTMODELVERSIONSRESPONSE
-_GETLATESTMODELVERSIONSRESPONSE.fields_by_name['results'].message_type = _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO
+_LISTMODELVERSIONSRESPONSE.fields_by_name['models'].message_type = asgt_dot_type_dot_model__pb2._MODEL
 DESCRIPTOR.message_types_by_name['RegisterModelRequest'] = _REGISTERMODELREQUEST
-DESCRIPTOR.message_types_by_name['RegisterModelResponse'] = _REGISTERMODELRESPONSE
 DESCRIPTOR.message_types_by_name['DeleteModelRequest'] = _DELETEMODELREQUEST
-DESCRIPTOR.message_types_by_name['GetLatestModelVersionsRequest'] = _GETLATESTMODELVERSIONSREQUEST
-DESCRIPTOR.message_types_by_name['GetLatestModelVersionsResponse'] = _GETLATESTMODELVERSIONSRESPONSE
+DESCRIPTOR.message_types_by_name['ListModelVersionsRequest'] = _LISTMODELVERSIONSREQUEST
+DESCRIPTOR.message_types_by_name['ListModelVersionsResponse'] = _LISTMODELVERSIONSRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RegisterModelRequest = _reflection.GeneratedProtocolMessageType('RegisterModelRequest', (_message.Message,), dict(
@@ -283,13 +193,6 @@ RegisterModelRequest = _reflection.GeneratedProtocolMessageType('RegisterModelRe
   ))
 _sym_db.RegisterMessage(RegisterModelRequest)
 
-RegisterModelResponse = _reflection.GeneratedProtocolMessageType('RegisterModelResponse', (_message.Message,), dict(
-  DESCRIPTOR = _REGISTERMODELRESPONSE,
-  __module__ = 'asgt.modelregistry.v1alpha1.model_registry_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.RegisterModelResponse)
-  ))
-_sym_db.RegisterMessage(RegisterModelResponse)
-
 DeleteModelRequest = _reflection.GeneratedProtocolMessageType('DeleteModelRequest', (_message.Message,), dict(
   DESCRIPTOR = _DELETEMODELREQUEST,
   __module__ = 'asgt.modelregistry.v1alpha1.model_registry_pb2'
@@ -297,27 +200,19 @@ DeleteModelRequest = _reflection.GeneratedProtocolMessageType('DeleteModelReques
   ))
 _sym_db.RegisterMessage(DeleteModelRequest)
 
-GetLatestModelVersionsRequest = _reflection.GeneratedProtocolMessageType('GetLatestModelVersionsRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETLATESTMODELVERSIONSREQUEST,
+ListModelVersionsRequest = _reflection.GeneratedProtocolMessageType('ListModelVersionsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _LISTMODELVERSIONSREQUEST,
   __module__ = 'asgt.modelregistry.v1alpha1.model_registry_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest)
+  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
   ))
-_sym_db.RegisterMessage(GetLatestModelVersionsRequest)
+_sym_db.RegisterMessage(ListModelVersionsRequest)
 
-GetLatestModelVersionsResponse = _reflection.GeneratedProtocolMessageType('GetLatestModelVersionsResponse', (_message.Message,), dict(
-
-  VersionInfo = _reflection.GeneratedProtocolMessageType('VersionInfo', (_message.Message,), dict(
-    DESCRIPTOR = _GETLATESTMODELVERSIONSRESPONSE_VERSIONINFO,
-    __module__ = 'asgt.modelregistry.v1alpha1.model_registry_pb2'
-    # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo)
-    ))
-  ,
-  DESCRIPTOR = _GETLATESTMODELVERSIONSRESPONSE,
+ListModelVersionsResponse = _reflection.GeneratedProtocolMessageType('ListModelVersionsResponse', (_message.Message,), dict(
+  DESCRIPTOR = _LISTMODELVERSIONSRESPONSE,
   __module__ = 'asgt.modelregistry.v1alpha1.model_registry_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse)
+  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
   ))
-_sym_db.RegisterMessage(GetLatestModelVersionsResponse)
-_sym_db.RegisterMessage(GetLatestModelVersionsResponse.VersionInfo)
+_sym_db.RegisterMessage(ListModelVersionsResponse)
 
 
 DESCRIPTOR._options = None
@@ -328,8 +223,8 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=619,
-  serialized_end=990,
+  serialized_start=424,
+  serialized_end=752,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterModel',
@@ -337,7 +232,7 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
     index=0,
     containing_service=None,
     input_type=_REGISTERMODELREQUEST,
-    output_type=_REGISTERMODELRESPONSE,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -350,12 +245,12 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetLatestModelVersions',
-    full_name='asgt.modelregistry.v1alpha1.ModelRegistry.GetLatestModelVersions',
+    name='ListModelVersions',
+    full_name='asgt.modelregistry.v1alpha1.ModelRegistry.ListModelVersions',
     index=2,
     containing_service=None,
-    input_type=_GETLATESTMODELVERSIONSREQUEST,
-    output_type=_GETLATESTMODELVERSIONSRESPONSE,
+    input_type=_LISTMODELVERSIONSREQUEST,
+    output_type=_LISTMODELVERSIONSRESPONSE,
     serialized_options=None,
   ),
 ])

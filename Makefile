@@ -13,9 +13,7 @@ all:
 		proto/ssn/dataservice/v1alpha1/dataservice.proto \
 		proto/ssn/dataservice/v1/dataservice.proto \
 		proto/asgt/jester/v1alpha1/jester.proto \
-		proto/asgt/dataservice/v1alpha1/bank_data_service.proto \
-		proto/asgt/dataservice/v1alpha1/electronic_invoice_line_data_service.proto \
-		proto/asgt/dataservice/v1alpha1/scanned_invoice_data_service.proto
+		proto/asgt/data/v1alpha1/data_service.proto
 	./scripts/gomock.sh
 	./scripts/js_fixes.sh
 	./scripts/py_fixes.sh

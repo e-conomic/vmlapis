@@ -59,7 +59,7 @@ proto.asgt.type.TargetValue.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.TargetValue.toObject = function(includeInstance, msg) {
   var f, obj = {
-    target: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     value: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -99,7 +99,7 @@ proto.asgt.type.TargetValue.deserializeBinaryFromReader = function(msg, reader) 
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTarget(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -134,7 +134,7 @@ proto.asgt.type.TargetValue.prototype.serializeBinary = function() {
  */
 proto.asgt.type.TargetValue.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTarget();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -152,16 +152,16 @@ proto.asgt.type.TargetValue.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * optional string target = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.type.TargetValue.prototype.getTarget = function() {
+proto.asgt.type.TargetValue.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.type.TargetValue.prototype.setTarget = function(value) {
+proto.asgt.type.TargetValue.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

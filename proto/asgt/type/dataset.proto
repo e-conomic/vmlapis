@@ -22,3 +22,11 @@ message Dataset {
   // Number of samples in the dataset reflecting added entries that meet the retention policy
   int64 size = 12;
 }
+
+message Revision {
+  int64 number = 1;
+  google.protobuf.Timestamp created_at = 2;
+
+  // Number of samples added to the dataset in this revision
+  int64 size = 3;
+}

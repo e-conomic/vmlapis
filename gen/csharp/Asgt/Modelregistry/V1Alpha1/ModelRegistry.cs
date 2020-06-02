@@ -25,36 +25,30 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBhc2d0L21vZGVscmVnaXN0cnkvdjFhbHBoYTEvbW9kZWxfcmVnaXN0cnku",
-            "cHJvdG8SG2FzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMRobZ29vZ2xlL3By",
-            "b3RvYnVmL2VtcHR5LnByb3RvImkKFFJlZ2lzdGVyTW9kZWxSZXF1ZXN0EhAK",
-            "CGNvbnN1bWVyGAMgASgJEhIKCm1vZGVsX3R5cGUYASABKAkSFQoNbW9kZWxf",
-            "dmVyc2lvbhgCIAEoAxIUCgxkYXRhc2V0X25hbWUYBCABKAkiKwoVUmVnaXN0",
-            "ZXJNb2RlbFJlc3BvbnNlEhIKCnNoYXJkX25hbWUYASABKAkiPwoSRGVsZXRl",
-            "TW9kZWxSZXF1ZXN0EhIKCm1vZGVsX3R5cGUYAiABKAkSFQoNbW9kZWxfdmVy",
-            "c2lvbhgDIAEoAyJwCh1HZXRMYXRlc3RNb2RlbFZlcnNpb25zUmVxdWVzdBIQ",
-            "Cghjb25zdW1lchgBIAEoCRIUCgxkYXRhc2V0X25hbWUYAiABKAkSEgoKbW9k",
-            "ZWxfdHlwZRgDIAEoCRITCgttYXhfcmVzdWx0cxgEIAEoBSKuAQoeR2V0TGF0",
-            "ZXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNlElgKB3Jlc3VsdHMYASADKAsyRy5h",
-            "c2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEuR2V0TGF0ZXN0TW9kZWxWZXJz",
-            "aW9uc1Jlc3BvbnNlLlZlcnNpb25JbmZvGjIKC1ZlcnNpb25JbmZvEg8KB3Zl",
-            "cnNpb24YASABKAMSEgoKc2hhcmRfbmFtZRgCIAEoCTLzAgoNTW9kZWxSZWdp",
-            "c3RyeRJ2Cg1SZWdpc3Rlck1vZGVsEjEuYXNndC5tb2RlbHJlZ2lzdHJ5LnYx",
-            "YWxwaGExLlJlZ2lzdGVyTW9kZWxSZXF1ZXN0GjIuYXNndC5tb2RlbHJlZ2lz",
-            "dHJ5LnYxYWxwaGExLlJlZ2lzdGVyTW9kZWxSZXNwb25zZRJWCgtEZWxldGVN",
-            "b2RlbBIvLmFzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5EZWxldGVNb2Rl",
-            "bFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSkQEKFkdldExhdGVz",
-            "dE1vZGVsVmVyc2lvbnMSOi5hc2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEu",
-            "R2V0TGF0ZXN0TW9kZWxWZXJzaW9uc1JlcXVlc3QaOy5hc2d0Lm1vZGVscmVn",
-            "aXN0cnkudjFhbHBoYTEuR2V0TGF0ZXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNl",
-            "Qg9aDW1vZGVscmVnaXN0cnliBnByb3RvMw=="));
+            "cHJvdG8SG2FzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMRoVYXNndC90eXBl",
+            "L21vZGVsLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8iWwoU",
+            "UmVnaXN0ZXJNb2RlbFJlcXVlc3QSEgoKZGF0YXNldF9pZBgBIAEoCRIYChBk",
+            "YXRhc2V0X3JldmlzaW9uGAIgASgDEhUKDW1vZGVsX3ZlcnNpb24YAyABKAMi",
+            "PwoSRGVsZXRlTW9kZWxSZXF1ZXN0EhIKCmRhdGFzZXRfaWQYASABKAkSFQoN",
+            "bW9kZWxfdmVyc2lvbhgCIAEoAyJDChhMaXN0TW9kZWxWZXJzaW9uc1JlcXVl",
+            "c3QSEgoKZGF0YXNldF9pZBgBIAEoCRITCgttYXhfcmVzdWx0cxgCIAEoBSI9",
+            "ChlMaXN0TW9kZWxWZXJzaW9uc1Jlc3BvbnNlEiAKBm1vZGVscxgBIAMoCzIQ",
+            "LmFzZ3QudHlwZS5Nb2RlbDLIAgoNTW9kZWxSZWdpc3RyeRJaCg1SZWdpc3Rl",
+            "ck1vZGVsEjEuYXNndC5tb2RlbHJlZ2lzdHJ5LnYxYWxwaGExLlJlZ2lzdGVy",
+            "TW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5ElYKC0RlbGV0",
+            "ZU1vZGVsEi8uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxYWxwaGExLkRlbGV0ZU1v",
+            "ZGVsUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRKCAQoRTGlzdE1v",
+            "ZGVsVmVyc2lvbnMSNS5hc2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEuTGlz",
+            "dE1vZGVsVmVyc2lvbnNSZXF1ZXN0GjYuYXNndC5tb2RlbHJlZ2lzdHJ5LnYx",
+            "YWxwaGExLkxpc3RNb2RlbFZlcnNpb25zUmVzcG9uc2VCD1oNbW9kZWxyZWdp",
+            "c3RyeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "Consumer", "ModelType", "ModelVersion", "DatasetName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse), global::Asgt.Modelregistry.V1Alpha1.RegisterModelResponse.Parser, new[]{ "ShardName" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest), global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest.Parser, new[]{ "ModelType", "ModelVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsRequest.Parser, new[]{ "Consumer", "DatasetName", "ModelType", "MaxResults" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Parser, new[]{ "Results" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo), global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo.Parser, new[]{ "Version", "ShardName" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "DatasetId", "DatasetRevision", "ModelVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest), global::Asgt.Modelregistry.V1Alpha1.DeleteModelRequest.Parser, new[]{ "DatasetId", "ModelVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.ListModelVersionsRequest), global::Asgt.Modelregistry.V1Alpha1.ListModelVersionsRequest.Parser, new[]{ "DatasetId", "MaxResults" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.ListModelVersionsResponse), global::Asgt.Modelregistry.V1Alpha1.ListModelVersionsResponse.Parser, new[]{ "Models" }, null, null, null)
           }));
     }
     #endregion
@@ -86,10 +80,9 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RegisterModelRequest(RegisterModelRequest other) : this() {
-      consumer_ = other.consumer_;
-      modelType_ = other.modelType_;
+      datasetId_ = other.datasetId_;
+      datasetRevision_ = other.datasetRevision_;
       modelVersion_ = other.modelVersion_;
-      datasetName_ = other.datasetName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,47 +91,36 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       return new RegisterModelRequest(this);
     }
 
-    /// <summary>Field number for the "consumer" field.</summary>
-    public const int ConsumerFieldNumber = 3;
-    private string consumer_ = "";
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 1;
+    private string datasetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Consumer {
-      get { return consumer_; }
+    public string DatasetId {
+      get { return datasetId_; }
       set {
-        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "model_type" field.</summary>
-    public const int ModelTypeFieldNumber = 1;
-    private string modelType_ = "";
+    /// <summary>Field number for the "dataset_revision" field.</summary>
+    public const int DatasetRevisionFieldNumber = 2;
+    private long datasetRevision_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelType {
-      get { return modelType_; }
+    public long DatasetRevision {
+      get { return datasetRevision_; }
       set {
-        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetRevision_ = value;
       }
     }
 
     /// <summary>Field number for the "model_version" field.</summary>
-    public const int ModelVersionFieldNumber = 2;
+    public const int ModelVersionFieldNumber = 3;
     private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long ModelVersion {
       get { return modelVersion_; }
       set {
         modelVersion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 4;
-    private string datasetName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
-      set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -155,20 +137,18 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Consumer != other.Consumer) return false;
-      if (ModelType != other.ModelType) return false;
+      if (DatasetId != other.DatasetId) return false;
+      if (DatasetRevision != other.DatasetRevision) return false;
       if (ModelVersion != other.ModelVersion) return false;
-      if (DatasetName != other.DatasetName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
+      if (DatasetRevision != 0L) hash ^= DatasetRevision.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,21 +162,17 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelType.Length != 0) {
+      if (DatasetId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(ModelType);
+        output.WriteString(DatasetId);
+      }
+      if (DatasetRevision != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(DatasetRevision);
       }
       if (ModelVersion != 0L) {
-        output.WriteRawTag(16);
+        output.WriteRawTag(24);
         output.WriteInt64(ModelVersion);
-      }
-      if (Consumer.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Consumer);
-      }
-      if (DatasetName.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(DatasetName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -206,17 +182,14 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Consumer.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
-      if (ModelType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
+      if (DatasetRevision != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DatasetRevision);
       }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
-      }
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -229,18 +202,15 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.Consumer.Length != 0) {
-        Consumer = other.Consumer;
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
-      if (other.ModelType.Length != 0) {
-        ModelType = other.ModelType;
+      if (other.DatasetRevision != 0L) {
+        DatasetRevision = other.DatasetRevision;
       }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -253,148 +223,15 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            ModelType = input.ReadString();
+            DatasetId = input.ReadString();
             break;
           }
           case 16: {
+            DatasetRevision = input.ReadInt64();
+            break;
+          }
+          case 24: {
             ModelVersion = input.ReadInt64();
-            break;
-          }
-          case 26: {
-            Consumer = input.ReadString();
-            break;
-          }
-          case 34: {
-            DatasetName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class RegisterModelResponse : pb::IMessage<RegisterModelResponse> {
-    private static readonly pb::MessageParser<RegisterModelResponse> _parser = new pb::MessageParser<RegisterModelResponse>(() => new RegisterModelResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RegisterModelResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RegisterModelResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RegisterModelResponse(RegisterModelResponse other) : this() {
-      shardName_ = other.shardName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RegisterModelResponse Clone() {
-      return new RegisterModelResponse(this);
-    }
-
-    /// <summary>Field number for the "shard_name" field.</summary>
-    public const int ShardNameFieldNumber = 1;
-    private string shardName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ShardName {
-      get { return shardName_; }
-      set {
-        shardName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as RegisterModelResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RegisterModelResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (ShardName != other.ShardName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (ShardName.Length != 0) hash ^= ShardName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (ShardName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(ShardName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (ShardName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ShardName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RegisterModelResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.ShardName.Length != 0) {
-        ShardName = other.ShardName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            ShardName = input.ReadString();
             break;
           }
         }
@@ -411,7 +248,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -428,7 +265,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteModelRequest(DeleteModelRequest other) : this() {
-      modelType_ = other.modelType_;
+      datasetId_ = other.datasetId_;
       modelVersion_ = other.modelVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -438,19 +275,19 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       return new DeleteModelRequest(this);
     }
 
-    /// <summary>Field number for the "model_type" field.</summary>
-    public const int ModelTypeFieldNumber = 2;
-    private string modelType_ = "";
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 1;
+    private string datasetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelType {
-      get { return modelType_; }
+    public string DatasetId {
+      get { return datasetId_; }
       set {
-        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "model_version" field.</summary>
-    public const int ModelVersionFieldNumber = 3;
+    public const int ModelVersionFieldNumber = 2;
     private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long ModelVersion {
@@ -473,7 +310,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ModelType != other.ModelType) return false;
+      if (DatasetId != other.DatasetId) return false;
       if (ModelVersion != other.ModelVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -481,7 +318,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -496,12 +333,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelType.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(ModelType);
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DatasetId);
       }
       if (ModelVersion != 0L) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(16);
         output.WriteInt64(ModelVersion);
       }
       if (_unknownFields != null) {
@@ -512,8 +349,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ModelType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
@@ -529,8 +366,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.ModelType.Length != 0) {
-        ModelType = other.ModelType;
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
@@ -546,11 +383,11 @@ namespace Asgt.Modelregistry.V1Alpha1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 18: {
-            ModelType = input.ReadString();
+          case 10: {
+            DatasetId = input.ReadString();
             break;
           }
-          case 24: {
+          case 16: {
             ModelVersion = input.ReadInt64();
             break;
           }
@@ -560,15 +397,15 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
   }
 
-  public sealed partial class GetLatestModelVersionsRequest : pb::IMessage<GetLatestModelVersionsRequest> {
-    private static readonly pb::MessageParser<GetLatestModelVersionsRequest> _parser = new pb::MessageParser<GetLatestModelVersionsRequest>(() => new GetLatestModelVersionsRequest());
+  public sealed partial class ListModelVersionsRequest : pb::IMessage<ListModelVersionsRequest> {
+    private static readonly pb::MessageParser<ListModelVersionsRequest> _parser = new pb::MessageParser<ListModelVersionsRequest>(() => new ListModelVersionsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetLatestModelVersionsRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<ListModelVersionsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -577,61 +414,37 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsRequest() {
+    public ListModelVersionsRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsRequest(GetLatestModelVersionsRequest other) : this() {
-      consumer_ = other.consumer_;
-      datasetName_ = other.datasetName_;
-      modelType_ = other.modelType_;
+    public ListModelVersionsRequest(ListModelVersionsRequest other) : this() {
+      datasetId_ = other.datasetId_;
       maxResults_ = other.maxResults_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsRequest Clone() {
-      return new GetLatestModelVersionsRequest(this);
+    public ListModelVersionsRequest Clone() {
+      return new ListModelVersionsRequest(this);
     }
 
-    /// <summary>Field number for the "consumer" field.</summary>
-    public const int ConsumerFieldNumber = 1;
-    private string consumer_ = "";
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 1;
+    private string datasetId_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Consumer {
-      get { return consumer_; }
+    public string DatasetId {
+      get { return datasetId_; }
       set {
-        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 2;
-    private string datasetName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
-      set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "model_type" field.</summary>
-    public const int ModelTypeFieldNumber = 3;
-    private string modelType_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string ModelType {
-      get { return modelType_; }
-      set {
-        modelType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "max_results" field.</summary>
-    public const int MaxResultsFieldNumber = 4;
+    public const int MaxResultsFieldNumber = 2;
     private int maxResults_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int MaxResults {
@@ -643,20 +456,18 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetLatestModelVersionsRequest);
+      return Equals(other as ListModelVersionsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetLatestModelVersionsRequest other) {
+    public bool Equals(ListModelVersionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Consumer != other.Consumer) return false;
-      if (DatasetName != other.DatasetName) return false;
-      if (ModelType != other.ModelType) return false;
+      if (DatasetId != other.DatasetId) return false;
       if (MaxResults != other.MaxResults) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -664,9 +475,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -681,20 +490,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Consumer.Length != 0) {
+      if (DatasetId.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Consumer);
-      }
-      if (DatasetName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DatasetName);
-      }
-      if (ModelType.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(ModelType);
+        output.WriteString(DatasetId);
       }
       if (MaxResults != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(16);
         output.WriteInt32(MaxResults);
       }
       if (_unknownFields != null) {
@@ -705,14 +506,8 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Consumer.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
-      }
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
-      }
-      if (ModelType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelType);
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       if (MaxResults != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
@@ -724,18 +519,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetLatestModelVersionsRequest other) {
+    public void MergeFrom(ListModelVersionsRequest other) {
       if (other == null) {
         return;
       }
-      if (other.Consumer.Length != 0) {
-        Consumer = other.Consumer;
-      }
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
-      }
-      if (other.ModelType.Length != 0) {
-        ModelType = other.ModelType;
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       if (other.MaxResults != 0) {
         MaxResults = other.MaxResults;
@@ -752,18 +541,10 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Consumer = input.ReadString();
+            DatasetId = input.ReadString();
             break;
           }
-          case 18: {
-            DatasetName = input.ReadString();
-            break;
-          }
-          case 26: {
-            ModelType = input.ReadString();
-            break;
-          }
-          case 32: {
+          case 16: {
             MaxResults = input.ReadInt32();
             break;
           }
@@ -773,15 +554,15 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
   }
 
-  public sealed partial class GetLatestModelVersionsResponse : pb::IMessage<GetLatestModelVersionsResponse> {
-    private static readonly pb::MessageParser<GetLatestModelVersionsResponse> _parser = new pb::MessageParser<GetLatestModelVersionsResponse>(() => new GetLatestModelVersionsResponse());
+  public sealed partial class ListModelVersionsResponse : pb::IMessage<ListModelVersionsResponse> {
+    private static readonly pb::MessageParser<ListModelVersionsResponse> _parser = new pb::MessageParser<ListModelVersionsResponse>(() => new ListModelVersionsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetLatestModelVersionsResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<ListModelVersionsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -790,54 +571,54 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsResponse() {
+    public ListModelVersionsResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsResponse(GetLatestModelVersionsResponse other) : this() {
-      results_ = other.results_.Clone();
+    public ListModelVersionsResponse(ListModelVersionsResponse other) : this() {
+      models_ = other.models_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetLatestModelVersionsResponse Clone() {
-      return new GetLatestModelVersionsResponse(this);
+    public ListModelVersionsResponse Clone() {
+      return new ListModelVersionsResponse(this);
     }
 
-    /// <summary>Field number for the "results" field.</summary>
-    public const int ResultsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo> _repeated_results_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo> results_ = new pbc::RepeatedField<global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo>();
+    /// <summary>Field number for the "models" field.</summary>
+    public const int ModelsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Type.Model> _repeated_models_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Model.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Model> models_ = new pbc::RepeatedField<global::Asgt.Type.Model>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Types.VersionInfo> Results {
-      get { return results_; }
+    public pbc::RepeatedField<global::Asgt.Type.Model> Models {
+      get { return models_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as GetLatestModelVersionsResponse);
+      return Equals(other as ListModelVersionsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetLatestModelVersionsResponse other) {
+    public bool Equals(ListModelVersionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!results_.Equals(other.results_)) return false;
+      if(!models_.Equals(other.models_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= results_.GetHashCode();
+      hash ^= models_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -851,7 +632,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      results_.WriteTo(output, _repeated_results_codec);
+      models_.WriteTo(output, _repeated_models_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -860,7 +641,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += results_.CalculateSize(_repeated_results_codec);
+      size += models_.CalculateSize(_repeated_models_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -868,11 +649,11 @@ namespace Asgt.Modelregistry.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetLatestModelVersionsResponse other) {
+    public void MergeFrom(ListModelVersionsResponse other) {
       if (other == null) {
         return;
       }
-      results_.Add(other.results_);
+      models_.Add(other.models_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -885,176 +666,12 @@ namespace Asgt.Modelregistry.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            results_.AddEntriesFrom(input, _repeated_results_codec);
+            models_.AddEntriesFrom(input, _repeated_models_codec);
             break;
           }
         }
       }
     }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the GetLatestModelVersionsResponse message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public sealed partial class VersionInfo : pb::IMessage<VersionInfo> {
-        private static readonly pb::MessageParser<VersionInfo> _parser = new pb::MessageParser<VersionInfo>(() => new VersionInfo());
-        private pb::UnknownFieldSet _unknownFields;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<VersionInfo> Parser { get { return _parser; } }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Modelregistry.V1Alpha1.GetLatestModelVersionsResponse.Descriptor.NestedTypes[0]; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        pbr::MessageDescriptor pb::IMessage.Descriptor {
-          get { return Descriptor; }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public VersionInfo() {
-          OnConstruction();
-        }
-
-        partial void OnConstruction();
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public VersionInfo(VersionInfo other) : this() {
-          version_ = other.version_;
-          shardName_ = other.shardName_;
-          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public VersionInfo Clone() {
-          return new VersionInfo(this);
-        }
-
-        /// <summary>Field number for the "version" field.</summary>
-        public const int VersionFieldNumber = 1;
-        private long version_;
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public long Version {
-          get { return version_; }
-          set {
-            version_ = value;
-          }
-        }
-
-        /// <summary>Field number for the "shard_name" field.</summary>
-        public const int ShardNameFieldNumber = 2;
-        private string shardName_ = "";
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string ShardName {
-          get { return shardName_; }
-          set {
-            shardName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override bool Equals(object other) {
-          return Equals(other as VersionInfo);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(VersionInfo other) {
-          if (ReferenceEquals(other, null)) {
-            return false;
-          }
-          if (ReferenceEquals(other, this)) {
-            return true;
-          }
-          if (Version != other.Version) return false;
-          if (ShardName != other.ShardName) return false;
-          return Equals(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override int GetHashCode() {
-          int hash = 1;
-          if (Version != 0L) hash ^= Version.GetHashCode();
-          if (ShardName.Length != 0) hash ^= ShardName.GetHashCode();
-          if (_unknownFields != null) {
-            hash ^= _unknownFields.GetHashCode();
-          }
-          return hash;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public override string ToString() {
-          return pb::JsonFormatter.ToDiagnosticString(this);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void WriteTo(pb::CodedOutputStream output) {
-          if (Version != 0L) {
-            output.WriteRawTag(8);
-            output.WriteInt64(Version);
-          }
-          if (ShardName.Length != 0) {
-            output.WriteRawTag(18);
-            output.WriteString(ShardName);
-          }
-          if (_unknownFields != null) {
-            _unknownFields.WriteTo(output);
-          }
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public int CalculateSize() {
-          int size = 0;
-          if (Version != 0L) {
-            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Version);
-          }
-          if (ShardName.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(ShardName);
-          }
-          if (_unknownFields != null) {
-            size += _unknownFields.CalculateSize();
-          }
-          return size;
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(VersionInfo other) {
-          if (other == null) {
-            return;
-          }
-          if (other.Version != 0L) {
-            Version = other.Version;
-          }
-          if (other.ShardName.Length != 0) {
-            ShardName = other.ShardName;
-          }
-          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-        }
-
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(pb::CodedInputStream input) {
-          uint tag;
-          while ((tag = input.ReadTag()) != 0) {
-            switch(tag) {
-              default:
-                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-                break;
-              case 8: {
-                Version = input.ReadInt64();
-                break;
-              }
-              case 18: {
-                ShardName = input.ReadString();
-                break;
-              }
-            }
-          }
-        }
-
-      }
-
-    }
-    #endregion
 
   }
 

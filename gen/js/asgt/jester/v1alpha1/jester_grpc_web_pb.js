@@ -12,15 +12,11 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var asgt_type_bank_transaction_pb = require('../../../asgt/type/bank_transaction_pb.js')
-
-var asgt_type_invoice_line_pb = require('../../../asgt/type/invoice_line_pb.js')
+var asgt_type_data_pb = require('../../../asgt/type/data_pb.js')
 
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
-
-var asgt_type_scanned_invoice_pb = require('../../../asgt/type/scanned_invoice_pb.js')
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 const proto = {};
@@ -83,240 +79,80 @@ proto.asgt.jester.v1alpha1.JesterPromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.jester.v1alpha1.ScannedInvoiceRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
+ *   !proto.asgt.jester.v1alpha1.SuggestionRequest,
+ *   !proto.asgt.jester.v1alpha1.SuggestionResponse>}
  */
-const methodDescriptor_Jester_ScannedInvoiceSuggestions = new grpc.web.MethodDescriptor(
-  '/asgt.jester.v1alpha1.Jester/ScannedInvoiceSuggestions',
+const methodDescriptor_Jester_Suggest = new grpc.web.MethodDescriptor(
+  '/asgt.jester.v1alpha1.Jester/Suggest',
   grpc.web.MethodType.UNARY,
-  proto.asgt.jester.v1alpha1.ScannedInvoiceRequest,
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
+  proto.asgt.jester.v1alpha1.SuggestionRequest,
+  proto.asgt.jester.v1alpha1.SuggestionResponse,
   /**
-   * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest} request
+   * @param {!proto.asgt.jester.v1alpha1.SuggestionRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
+  proto.asgt.jester.v1alpha1.SuggestionResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.jester.v1alpha1.ScannedInvoiceRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
+ *   !proto.asgt.jester.v1alpha1.SuggestionRequest,
+ *   !proto.asgt.jester.v1alpha1.SuggestionResponse>}
  */
-const methodInfo_Jester_ScannedInvoiceSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
+const methodInfo_Jester_Suggest = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.asgt.jester.v1alpha1.SuggestionResponse,
   /**
-   * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest} request
+   * @param {!proto.asgt.jester.v1alpha1.SuggestionRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
+  proto.asgt.jester.v1alpha1.SuggestionResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest} request The
+ * @param {!proto.asgt.jester.v1alpha1.SuggestionRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.jester.v1alpha1.SuggestionsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.jester.v1alpha1.SuggestionResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1alpha1.SuggestionsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1alpha1.SuggestionResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.jester.v1alpha1.JesterClient.prototype.scannedInvoiceSuggestions =
+proto.asgt.jester.v1alpha1.JesterClient.prototype.suggest =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ScannedInvoiceSuggestions',
+      '/asgt.jester.v1alpha1.Jester/Suggest',
       request,
       metadata || {},
-      methodDescriptor_Jester_ScannedInvoiceSuggestions,
+      methodDescriptor_Jester_Suggest,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.jester.v1alpha1.ScannedInvoiceRequest} request The
+ * @param {!proto.asgt.jester.v1alpha1.SuggestionRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.jester.v1alpha1.SuggestionsResponse>}
+ * @return {!Promise<!proto.asgt.jester.v1alpha1.SuggestionResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.scannedInvoiceSuggestions =
+proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.suggest =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ScannedInvoiceSuggestions',
+      '/asgt.jester.v1alpha1.Jester/Suggest',
       request,
       metadata || {},
-      methodDescriptor_Jester_ScannedInvoiceSuggestions);
-};
-
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- */
-const methodDescriptor_Jester_ElectronicInvoiceLineSuggestions = new grpc.web.MethodDescriptor(
-  '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
-  grpc.web.MethodType.UNARY,
-  proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
-  /**
-   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- */
-const methodInfo_Jester_ElectronicInvoiceLineSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
-  /**
-   * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.jester.v1alpha1.SuggestionsResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1alpha1.SuggestionsResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.asgt.jester.v1alpha1.JesterClient.prototype.electronicInvoiceLineSuggestions =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
-      request,
-      metadata || {},
-      methodDescriptor_Jester_ElectronicInvoiceLineSuggestions,
-      callback);
-};
-
-
-/**
- * @param {!proto.asgt.jester.v1alpha1.ElectronicInvoiceLineRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- *     A native promise that resolves to the response
- */
-proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.electronicInvoiceLineSuggestions =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
-      request,
-      metadata || {},
-      methodDescriptor_Jester_ElectronicInvoiceLineSuggestions);
-};
-
-
-/**
- * @const
- * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.jester.v1alpha1.BankRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- */
-const methodDescriptor_Jester_BankSuggestions = new grpc.web.MethodDescriptor(
-  '/asgt.jester.v1alpha1.Jester/BankSuggestions',
-  grpc.web.MethodType.UNARY,
-  proto.asgt.jester.v1alpha1.BankRequest,
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
-  /**
-   * @param {!proto.asgt.jester.v1alpha1.BankRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
-);
-
-
-/**
- * @const
- * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.jester.v1alpha1.BankRequest,
- *   !proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- */
-const methodInfo_Jester_BankSuggestions = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.jester.v1alpha1.SuggestionsResponse,
-  /**
-   * @param {!proto.asgt.jester.v1alpha1.BankRequest} request
-   * @return {!Uint8Array}
-   */
-  function(request) {
-    return request.serializeBinary();
-  },
-  proto.asgt.jester.v1alpha1.SuggestionsResponse.deserializeBinary
-);
-
-
-/**
- * @param {!proto.asgt.jester.v1alpha1.BankRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.jester.v1alpha1.SuggestionsResponse)}
- *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1alpha1.SuggestionsResponse>|undefined}
- *     The XHR Node Readable Stream
- */
-proto.asgt.jester.v1alpha1.JesterClient.prototype.bankSuggestions =
-    function(request, metadata, callback) {
-  return this.client_.rpcCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/BankSuggestions',
-      request,
-      metadata || {},
-      methodDescriptor_Jester_BankSuggestions,
-      callback);
-};
-
-
-/**
- * @param {!proto.asgt.jester.v1alpha1.BankRequest} request The
- *     request proto
- * @param {?Object<string, string>} metadata User defined
- *     call metadata
- * @return {!Promise<!proto.asgt.jester.v1alpha1.SuggestionsResponse>}
- *     A native promise that resolves to the response
- */
-proto.asgt.jester.v1alpha1.JesterPromiseClient.prototype.bankSuggestions =
-    function(request, metadata) {
-  return this.client_.unaryCall(this.hostname_ +
-      '/asgt.jester.v1alpha1.Jester/BankSuggestions',
-      request,
-      metadata || {},
-      methodDescriptor_Jester_BankSuggestions);
+      methodDescriptor_Jester_Suggest);
 };
 
 

@@ -16,6 +16,11 @@
   "mode": "REQUIRED"
  },
  {
+  "name": "dataset_type",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
   "name": "dataset_id",
   "type": "STRING",
   "mode": "REQUIRED",
@@ -33,14 +38,97 @@
   "mode": "NULLABLE",
   "fields": [
    {
-    "name": "amount",
-    "type": "FLOAT",
-    "mode": "NULLABLE"
+    "name": "transaction",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     }
+    ]
    },
    {
-    "name": "text",
-    "type": "STRING",
-    "mode": "NULLABLE"
+    "name": "invoice",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "issue_date",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "supplier",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+       {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "global_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       }
+      ]
+     },
+     {
+      "name": "customer_ref",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "total",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "invoice_line",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "currency",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "item_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     }
+    ]
    }
   ]
  },
@@ -50,7 +138,7 @@
   "mode": "REPEATED",
   "fields": [
    {
-    "name": "target",
+    "name": "name",
     "type": "STRING",
     "mode": "NULLABLE"
    },
@@ -84,7 +172,7 @@
   "mode": "REPEATED",
   "fields": [
    {
-    "name": "target",
+    "name": "name",
     "type": "STRING",
     "mode": "NULLABLE"
    },

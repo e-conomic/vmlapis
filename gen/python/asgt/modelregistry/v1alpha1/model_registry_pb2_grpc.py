@@ -18,17 +18,17 @@ class ModelRegistryStub(object):
     self.RegisterModel = channel.unary_unary(
         '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
-        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelResponse.FromString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.DeleteModel = channel.unary_unary(
         '/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel',
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.GetLatestModelVersions = channel.unary_unary(
-        '/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions',
-        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetLatestModelVersionsRequest.SerializeToString,
-        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetLatestModelVersionsResponse.FromString,
+    self.ListModelVersions = channel.unary_unary(
+        '/asgt.modelregistry.v1alpha1.ModelRegistry/ListModelVersions',
+        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsRequest.SerializeToString,
+        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsResponse.FromString,
         )
 
 
@@ -50,7 +50,7 @@ class ModelRegistryServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def GetLatestModelVersions(self, request, context):
+  def ListModelVersions(self, request, context):
     """List the most recent versions of a model trained with a specified dataset
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -63,17 +63,17 @@ def add_ModelRegistryServicer_to_server(servicer, server):
       'RegisterModel': grpc.unary_unary_rpc_method_handler(
           servicer.RegisterModel,
           request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelRequest.FromString,
-          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelResponse.SerializeToString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'DeleteModel': grpc.unary_unary_rpc_method_handler(
           servicer.DeleteModel,
           request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'GetLatestModelVersions': grpc.unary_unary_rpc_method_handler(
-          servicer.GetLatestModelVersions,
-          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetLatestModelVersionsRequest.FromString,
-          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetLatestModelVersionsResponse.SerializeToString,
+      'ListModelVersions': grpc.unary_unary_rpc_method_handler(
+          servicer.ListModelVersions,
+          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsRequest.FromString,
+          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

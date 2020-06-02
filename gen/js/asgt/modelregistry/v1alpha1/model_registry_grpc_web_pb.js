@@ -12,6 +12,8 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
+
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 const proto = {};
 proto.asgt = {};
@@ -74,13 +76,13 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
- *   !proto.asgt.modelregistry.v1alpha1.RegisterModelResponse>}
+ *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ModelRegistry_RegisterModel = new grpc.web.MethodDescriptor(
   '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
   grpc.web.MethodType.UNARY,
   proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
-  proto.asgt.modelregistry.v1alpha1.RegisterModelResponse,
+  google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request
    * @return {!Uint8Array}
@@ -88,7 +90,7 @@ const methodDescriptor_ModelRegistry_RegisterModel = new grpc.web.MethodDescript
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.RegisterModelResponse.deserializeBinary
+  google_protobuf_empty_pb.Empty.deserializeBinary
 );
 
 
@@ -96,10 +98,10 @@ const methodDescriptor_ModelRegistry_RegisterModel = new grpc.web.MethodDescript
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
- *   !proto.asgt.modelregistry.v1alpha1.RegisterModelResponse>}
+ *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.modelregistry.v1alpha1.RegisterModelResponse,
+  google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request
    * @return {!Uint8Array}
@@ -107,7 +109,7 @@ const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.M
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.RegisterModelResponse.deserializeBinary
+  google_protobuf_empty_pb.Empty.deserializeBinary
 );
 
 
@@ -116,9 +118,9 @@ const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.M
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.modelregistry.v1alpha1.RegisterModelResponse)}
+ * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1alpha1.RegisterModelResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.registerModel =
@@ -137,7 +139,7 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.registerModel =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.modelregistry.v1alpha1.RegisterModelResponse>}
+ * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
 proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.registerModel =
@@ -233,80 +235,80 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.deleteMod
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest,
- *   !proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse>}
+ *   !proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest,
+ *   !proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse>}
  */
-const methodDescriptor_ModelRegistry_GetLatestModelVersions = new grpc.web.MethodDescriptor(
-  '/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions',
+const methodDescriptor_ModelRegistry_ListModelVersions = new grpc.web.MethodDescriptor(
+  '/asgt.modelregistry.v1alpha1.ModelRegistry/ListModelVersions',
   grpc.web.MethodType.UNARY,
-  proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest,
-  proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse,
+  proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest,
+  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest} request
+   * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.deserializeBinary
+  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest,
- *   !proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse>}
+ *   !proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest,
+ *   !proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse>}
  */
-const methodInfo_ModelRegistry_GetLatestModelVersions = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse,
+const methodInfo_ModelRegistry_ListModelVersions = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest} request
+   * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.deserializeBinary
+  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest} request The
+ * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.getLatestModelVersions =
+proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.listModelVersions =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions',
+      '/asgt.modelregistry.v1alpha1.ModelRegistry/ListModelVersions',
       request,
       metadata || {},
-      methodDescriptor_ModelRegistry_GetLatestModelVersions,
+      methodDescriptor_ModelRegistry_ListModelVersions,
       callback);
 };
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest} request The
+ * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse>}
+ * @return {!Promise<!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.getLatestModelVersions =
+proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.listModelVersions =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions',
+      '/asgt.modelregistry.v1alpha1.ModelRegistry/ListModelVersions',
       request,
       metadata || {},
-      methodDescriptor_ModelRegistry_GetLatestModelVersions);
+      methodDescriptor_ModelRegistry_ListModelVersions);
 };
 
 
