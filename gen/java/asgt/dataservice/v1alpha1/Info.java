@@ -707,6 +707,7 @@ public final class Info {
 
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
      */
     boolean hasDataset();
     /**
@@ -742,6 +743,18 @@ public final class Info {
      * <code>.asgt.type.Model model = 2;</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
+========
+     */
+    boolean hasDataset();
+    /**
+     * <code>.asgt.type.Dataset dataset = 1;</code>
+     */
+    asgt.type.DatasetOuterClass.Dataset getDataset();
+    /**
+     * <code>.asgt.type.Dataset dataset = 1;</code>
+     */
+    asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.GetInfoResponse}
@@ -786,6 +799,7 @@ public final class Info {
               asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
               if (dataset_ != null) {
                 subBuilder = dataset_.toBuilder();
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
               }
               dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
               if (subBuilder != null) {
@@ -804,6 +818,13 @@ public final class Info {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
+========
+              }
+              dataset_ = input.readMessage(asgt.type.DatasetOuterClass.Dataset.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dataset_);
+                dataset_ = subBuilder.buildPartial();
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
               }
 
               break;
@@ -861,6 +882,7 @@ public final class Info {
       return getDataset();
     }
 
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
     public static final int MODEL_FIELD_NUMBER = 2;
     private asgt.type.ModelOuterClass.Model model_;
     /**
@@ -892,6 +914,27 @@ public final class Info {
      */
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
+========
+    public static final int DATASET_FIELD_NUMBER = 1;
+    private asgt.type.DatasetOuterClass.Dataset dataset_;
+    /**
+     * <code>.asgt.type.Dataset dataset = 1;</code>
+     */
+    public boolean hasDataset() {
+      return dataset_ != null;
+    }
+    /**
+     * <code>.asgt.type.Dataset dataset = 1;</code>
+     */
+    public asgt.type.DatasetOuterClass.Dataset getDataset() {
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
+    }
+    /**
+     * <code>.asgt.type.Dataset dataset = 1;</code>
+     */
+    public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
+      return getDataset();
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
     }
 
     private byte memoizedIsInitialized = -1;
@@ -910,9 +953,12 @@ public final class Info {
                         throws java.io.IOException {
       if (dataset_ != null) {
         output.writeMessage(1, getDataset());
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       }
       if (model_ != null) {
         output.writeMessage(2, getModel());
+========
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
       }
       unknownFields.writeTo(output);
     }
@@ -924,12 +970,17 @@ public final class Info {
 
       size = 0;
       if (dataset_ != null) {
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, getDataset());
       }
       if (model_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModel());
+========
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDataset());
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -951,11 +1002,14 @@ public final class Info {
       if (hasDataset()) {
         result = result && getDataset()
             .equals(other.getDataset());
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       }
       result = result && (hasModel() == other.hasModel());
       if (hasModel()) {
         result = result && getModel()
             .equals(other.getModel());
+========
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -971,10 +1025,13 @@ public final class Info {
       if (hasDataset()) {
         hash = (37 * hash) + DATASET_FIELD_NUMBER;
         hash = (53 * hash) + getDataset().hashCode();
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       }
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
+========
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1111,6 +1168,7 @@ public final class Info {
         super.clear();
         if (datasetBuilder_ == null) {
           dataset_ = null;
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
         } else {
           dataset_ = null;
           datasetBuilder_ = null;
@@ -1120,6 +1178,11 @@ public final class Info {
         } else {
           model_ = null;
           modelBuilder_ = null;
+========
+        } else {
+          dataset_ = null;
+          datasetBuilder_ = null;
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
         return this;
       }
@@ -1145,6 +1208,7 @@ public final class Info {
       }
 
       @java.lang.Override
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       public asgt.dataservice.v1alpha1.Info.GetInfoResponse buildPartial() {
         asgt.dataservice.v1alpha1.Info.GetInfoResponse result = new asgt.dataservice.v1alpha1.Info.GetInfoResponse(this);
         if (datasetBuilder_ == null) {
@@ -1156,6 +1220,14 @@ public final class Info {
           result.model_ = model_;
         } else {
           result.model_ = modelBuilder_.build();
+========
+      public asgt.dataservice.v1alpha1.DataServiceOuterClass.GetDatasetResponse buildPartial() {
+        asgt.dataservice.v1alpha1.DataServiceOuterClass.GetDatasetResponse result = new asgt.dataservice.v1alpha1.DataServiceOuterClass.GetDatasetResponse(this);
+        if (datasetBuilder_ == null) {
+          result.dataset_ = dataset_;
+        } else {
+          result.dataset_ = datasetBuilder_.build();
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
         onBuilt();
         return result;
@@ -1203,6 +1275,7 @@ public final class Info {
         }
       }
 
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Info.GetInfoResponse other) {
         if (other == asgt.dataservice.v1alpha1.Info.GetInfoResponse.getDefaultInstance()) return this;
         if (other.hasDataset()) {
@@ -1210,6 +1283,12 @@ public final class Info {
         }
         if (other.hasModel()) {
           mergeModel(other.getModel());
+========
+      public Builder mergeFrom(asgt.dataservice.v1alpha1.DataServiceOuterClass.GetDatasetResponse other) {
+        if (other == asgt.dataservice.v1alpha1.DataServiceOuterClass.GetDatasetResponse.getDefaultInstance()) return this;
+        if (other.hasDataset()) {
+          mergeDataset(other.getDataset());
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1241,6 +1320,7 @@ public final class Info {
       }
 
       private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
@@ -1400,11 +1480,44 @@ public final class Info {
           onChanged();
         } else {
           modelBuilder_.setMessage(value);
+========
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
+      /**
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public boolean hasDataset() {
+        return datasetBuilder_ != null || dataset_ != null;
+      }
+      /**
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public asgt.type.DatasetOuterClass.Dataset getDataset() {
+        if (datasetBuilder_ == null) {
+          return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
+        } else {
+          return datasetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
+        if (datasetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dataset_ = value;
+          onChanged();
+        } else {
+          datasetBuilder_.setMessage(value);
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
 
         return this;
       }
       /**
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
        * <pre>
        * The most recently trained model; empty if no model has been trained
        * </pre>
@@ -1418,11 +1531,23 @@ public final class Info {
           onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
+========
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public Builder setDataset(
+          asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
+        if (datasetBuilder_ == null) {
+          dataset_ = builderForValue.build();
+          onChanged();
+        } else {
+          datasetBuilder_.setMessage(builderForValue.build());
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
 
         return this;
       }
       /**
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
        * <pre>
        * The most recently trained model; empty if no model has been trained
        * </pre>
@@ -1440,11 +1565,27 @@ public final class Info {
           onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
+========
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
+        if (datasetBuilder_ == null) {
+          if (dataset_ != null) {
+            dataset_ =
+              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          } else {
+            dataset_ = value;
+          }
+          onChanged();
+        } else {
+          datasetBuilder_.mergeFrom(value);
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
 
         return this;
       }
       /**
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
        * <pre>
        * The most recently trained model; empty if no model has been trained
        * </pre>
@@ -1458,11 +1599,23 @@ public final class Info {
         } else {
           model_ = null;
           modelBuilder_ = null;
+========
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public Builder clearDataset() {
+        if (datasetBuilder_ == null) {
+          dataset_ = null;
+          onChanged();
+        } else {
+          dataset_ = null;
+          datasetBuilder_ = null;
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }
 
         return this;
       }
       /**
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
        * <pre>
        * The most recently trained model; empty if no model has been trained
        * </pre>
@@ -1508,6 +1661,41 @@ public final class Info {
           model_ = null;
         }
         return modelBuilder_;
+========
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
+        
+        onChanged();
+        return getDatasetFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
+        if (datasetBuilder_ != null) {
+          return datasetBuilder_.getMessageOrBuilder();
+        } else {
+          return dataset_ == null ?
+              asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
+        }
+      }
+      /**
+       * <code>.asgt.type.Dataset dataset = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
+          getDatasetFieldBuilder() {
+        if (datasetBuilder_ == null) {
+          datasetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder>(
+                  getDataset(),
+                  getParentForChildren(),
+                  isClean());
+          dataset_ = null;
+        }
+        return datasetBuilder_;
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1581,6 +1769,7 @@ public final class Info {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
       "\n\035asgt/data/v1alpha1/info.proto\022\031asgt.da" +
       "taservice.v1alpha1\032\027asgt/type/dataset.pr" +
       "oto\032\025asgt/type/model.proto\032 asgt/type/re" +
@@ -1590,6 +1779,18 @@ public final class Info {
       "etInfoResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.t" +
       "ype.Dataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.M" +
       "odelB\rZ\013dataserviceb\006proto3"
+========
+      "\n,asgt/dataservice/v1alpha1/data_service" +
+      ".proto\022\031asgt.dataservice.v1alpha1\032\027asgt/" +
+      "type/dataset.proto\"Q\n\021GetDatasetRequest\022" +
+      "\020\n\010consumer\030\001 \001(\t\022\024\n\014dataset_name\030\002 \001(\t\022" +
+      "\024\n\014dataset_type\030\003 \001(\t\"9\n\022GetDatasetRespo" +
+      "nse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset" +
+      "2x\n\013DataService\022i\n\nGetDataset\022,.asgt.dat" +
+      "aservice.v1alpha1.GetDatasetRequest\032-.as" +
+      "gt.dataservice.v1alpha1.GetDatasetRespon" +
+      "seB\rZ\013dataserviceb\006proto3"
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1603,9 +1804,12 @@ public final class Info {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
+========
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
         }, assigner);
     internal_static_asgt_dataservice_v1alpha1_GetInfoRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1617,12 +1821,18 @@ public final class Info {
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+<<<<<<<< HEAD:gen/java/asgt/dataservice/v1alpha1/Info.java
         internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_descriptor,
         new java.lang.String[] { "Dataset", "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
+========
+        internal_static_asgt_dataservice_v1alpha1_GetDatasetResponse_descriptor,
+        new java.lang.String[] { "Dataset", });
+    asgt.type.DatasetOuterClass.getDescriptor();
+>>>>>>>> origin/master:gen/java/asgt/dataservice/v1alpha1/DataServiceOuterClass.java
   }
 
   // @@protoc_insertion_point(outer_class_scope)

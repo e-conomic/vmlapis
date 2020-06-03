@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationRequest', null, global);
@@ -64,7 +65,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.toObject = function(o
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f)
+    document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
+    preview: jspb.Message.getFieldWithDefault(msg, 3, false)
   };
 
   if (includeInstance) {
@@ -106,6 +108,10 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.deserializeBinaryFromReader = f
       reader.readMessage(value,ssn_annotator_v1_annotator_pb.Document.deserializeBinaryFromReader);
       msg.setDocument(value);
       break;
+    case 3:
+      var value = /** @type {boolean} */ (reader.readBool());
+      msg.setPreview(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -143,6 +149,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.serializeBinaryToWriter = funct
       ssn_annotator_v1_annotator_pb.Document.serializeBinaryToWriter
     );
   }
+  f = message.getPreview();
+  if (f) {
+    writer.writeBool(
+      3,
+      f
+    );
+  }
 };
 
 
@@ -173,6 +186,23 @@ proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.clearDocument = funct
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.hasDocument = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional bool preview = 3;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
+ * @return {boolean}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.getPreview = function() {
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 3, false));
+};
+
+
+/** @param {boolean} value */
+proto.ssn.ocrservice.v1.GetTextAnnotationRequest.prototype.setPreview = function(value) {
+  jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
 
@@ -223,7 +253,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.toObject = function(
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f)
+    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    image: (f = msg.getImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -265,6 +296,11 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
       reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
       break;
+    case 3:
+      var value = new google_protobuf_wrappers_pb.BytesValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.BytesValue.deserializeBinaryFromReader);
+      msg.setImage(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -302,6 +338,14 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
+  f = message.getImage();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      google_protobuf_wrappers_pb.BytesValue.serializeBinaryToWriter
+    );
+  }
 };
 
 
@@ -332,6 +376,36 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearTextAnnotation 
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasTextAnnotation = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional google.protobuf.BytesValue image = 3;
+ * @return {?proto.google.protobuf.BytesValue}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getImage = function() {
+  return /** @type{?proto.google.protobuf.BytesValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.BytesValue, 3));
+};
+
+
+/** @param {?proto.google.protobuf.BytesValue|undefined} value */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setImage = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearImage = function() {
+  this.setImage(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasImage = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
