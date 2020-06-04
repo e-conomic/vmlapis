@@ -13,7 +13,7 @@ import "asgt/data/v1alpha1/info.proto";
 service Data {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}/{dataset_name}:create"
+      post: "/v1alpha1/{dataset_type}:create"
       body: "*"
     };
   }
