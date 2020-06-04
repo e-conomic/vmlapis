@@ -14,8 +14,8 @@ var global = Function('return this')();
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.DeleteModelRequest', null, global);
-goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest', null, global);
-goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse', null, global);
+goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest', null, global);
+goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.RegisterModelRequest', null, global);
 
 /**
@@ -393,12 +393,12 @@ proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelVersion =
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest = function(opt_data) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest, jspb.Message);
+goog.inherits(proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.displayName = 'proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest';
+  proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.displayName = 'proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest';
 }
 
 
@@ -413,8 +413,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.toObject(opt_includeInstance, this);
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -423,14 +423,13 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.toObject = 
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} msg The msg instance to transform.
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.toObject = function(includeInstance, msg) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    maxResults: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    datasetId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -444,23 +443,23 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.toObject = function(i
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest}
+ * @return {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.deserializeBinary = function(bytes) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest;
-  return proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest;
+  return proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} msg The message object to deserialize into.
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest}
+ * @return {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -470,10 +469,6 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.deserializeBinaryFrom
     case 1:
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetId(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setMaxResults(value);
       break;
     default:
       reader.skipField();
@@ -488,9 +483,9 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.deserializeBinaryFrom
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.serializeBinary = function() {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.serializeBinaryToWriter(this, writer);
+  proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -498,23 +493,16 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.serializeBi
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest} message
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDatasetId();
   if (f.length > 0) {
     writer.writeString(
       1,
-      f
-    );
-  }
-  f = message.getMaxResults();
-  if (f !== 0) {
-    writer.writeInt32(
-      2,
       f
     );
   }
@@ -525,29 +513,14 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.serializeBinaryToWrit
  * optional string dataset_id = 1;
  * @return {string}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.getDatasetId = function() {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.getDatasetId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.setDatasetId = function(value) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.setDatasetId = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional int32 max_results = 2;
- * @return {number}
- */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.getMaxResults = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.setMaxResults = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -562,20 +535,13 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsRequest.prototype.setMaxResul
  * @extends {jspb.Message}
  * @constructor
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.repeatedFields_, null);
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse, jspb.Message);
+goog.inherits(proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
-  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.displayName = 'proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse';
+  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.displayName = 'proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse';
 }
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.repeatedFields_ = [1];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -589,8 +555,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.toObject(opt_includeInstance, this);
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -599,14 +565,13 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.toObject =
  * @param {boolean|undefined} includeInstance Whether to include the JSPB
  *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse} msg The msg instance to transform.
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.toObject = function(includeInstance, msg) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    modelsList: jspb.Message.toObjectList(msg.getModelsList(),
-    asgt_type_model_pb.Model.toObject, includeInstance)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -620,23 +585,23 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.toObject = function(
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse}
+ * @return {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinary = function(bytes) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse;
-  return proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse;
+  return proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse} msg The message object to deserialize into.
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse}
+ * @return {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -646,7 +611,7 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinaryFro
     case 1:
       var value = new asgt_type_model_pb.Model;
       reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
-      msg.addModels(value);
+      msg.setModel(value);
       break;
     default:
       reader.skipField();
@@ -661,9 +626,9 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.deserializeBinaryFro
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.serializeBinary = function() {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.serializeBinaryToWriter(this, writer);
+  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -671,15 +636,15 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.serializeB
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse} message
+ * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getModelsList();
-  if (f.length > 0) {
-    writer.writeRepeatedMessage(
+  f = message.getModel();
+  if (f != null) {
+    writer.writeMessage(
       1,
       f,
       asgt_type_model_pb.Model.serializeBinaryToWriter
@@ -689,33 +654,32 @@ proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.serializeBinaryToWri
 
 
 /**
- * repeated asgt.type.Model models = 1;
- * @return {!Array<!proto.asgt.type.Model>}
+ * optional asgt.type.Model model = 1;
+ * @return {?proto.asgt.type.Model}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.getModelsList = function() {
-  return /** @type{!Array<!proto.asgt.type.Model>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_model_pb.Model, 1));
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.getModel = function() {
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 1));
 };
 
 
-/** @param {!Array<!proto.asgt.type.Model>} value */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.setModelsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 1, value);
+/** @param {?proto.asgt.type.Model|undefined} value */
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.setModel = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.clearModel = function() {
+  this.setModel(undefined);
 };
 
 
 /**
- * @param {!proto.asgt.type.Model=} opt_value
- * @param {number=} opt_index
- * @return {!proto.asgt.type.Model}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.addModels = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.type.Model, opt_index);
-};
-
-
-proto.asgt.modelregistry.v1alpha1.ListModelVersionsResponse.prototype.clearModelsList = function() {
-  this.setModelsList([]);
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.prototype.hasModel = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 

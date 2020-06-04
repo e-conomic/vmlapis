@@ -1306,8 +1306,8 @@ public final class ModelRegistryOuterClass {
 
   }
 
-  public interface ListModelVersionsRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
+  public interface GetCurrentModelRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.modelregistry.v1alpha1.GetCurrentModelRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1319,27 +1319,21 @@ public final class ModelRegistryOuterClass {
      */
     com.google.protobuf.ByteString
         getDatasetIdBytes();
-
-    /**
-     * <code>int32 max_results = 2;</code>
-     */
-    int getMaxResults();
   }
   /**
-   * Protobuf type {@code asgt.modelregistry.v1alpha1.ListModelVersionsRequest}
+   * Protobuf type {@code asgt.modelregistry.v1alpha1.GetCurrentModelRequest}
    */
-  public  static final class ListModelVersionsRequest extends
+  public  static final class GetCurrentModelRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
-      ListModelVersionsRequestOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.modelregistry.v1alpha1.GetCurrentModelRequest)
+      GetCurrentModelRequestOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ListModelVersionsRequest.newBuilder() to construct.
-    private ListModelVersionsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GetCurrentModelRequest.newBuilder() to construct.
+    private GetCurrentModelRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ListModelVersionsRequest() {
+    private GetCurrentModelRequest() {
       datasetId_ = "";
-      maxResults_ = 0;
     }
 
     @java.lang.Override
@@ -1347,7 +1341,7 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ListModelVersionsRequest(
+    private GetCurrentModelRequest(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1372,11 +1366,6 @@ public final class ModelRegistryOuterClass {
               datasetId_ = s;
               break;
             }
-            case 16: {
-
-              maxResults_ = input.readInt32();
-              break;
-            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1398,15 +1387,15 @@ public final class ModelRegistryOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor;
+      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_fieldAccessorTable
+      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.Builder.class);
+              asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.Builder.class);
     }
 
     public static final int DATASET_ID_FIELD_NUMBER = 1;
@@ -1443,15 +1432,6 @@ public final class ModelRegistryOuterClass {
       }
     }
 
-    public static final int MAX_RESULTS_FIELD_NUMBER = 2;
-    private int maxResults_;
-    /**
-     * <code>int32 max_results = 2;</code>
-     */
-    public int getMaxResults() {
-      return maxResults_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1469,9 +1449,6 @@ public final class ModelRegistryOuterClass {
       if (!getDatasetIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetId_);
       }
-      if (maxResults_ != 0) {
-        output.writeInt32(2, maxResults_);
-      }
       unknownFields.writeTo(output);
     }
 
@@ -1484,10 +1461,6 @@ public final class ModelRegistryOuterClass {
       if (!getDatasetIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetId_);
       }
-      if (maxResults_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, maxResults_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1498,16 +1471,14 @@ public final class ModelRegistryOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest)) {
+      if (!(obj instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest)) {
         return super.equals(obj);
       }
-      asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest other = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest) obj;
+      asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest other = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest) obj;
 
       boolean result = true;
       result = result && getDatasetId()
           .equals(other.getDatasetId());
-      result = result && (getMaxResults()
-          == other.getMaxResults());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1521,76 +1492,74 @@ public final class ModelRegistryOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetId().hashCode();
-      hash = (37 * hash) + MAX_RESULTS_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxResults();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(byte[] data)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(java.io.InputStream input)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseDelimitedFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1603,7 +1572,7 @@ public final class ModelRegistryOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest prototype) {
+    public static Builder newBuilder(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1619,26 +1588,26 @@ public final class ModelRegistryOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.modelregistry.v1alpha1.ListModelVersionsRequest}
+     * Protobuf type {@code asgt.modelregistry.v1alpha1.GetCurrentModelRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequestOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.modelregistry.v1alpha1.GetCurrentModelRequest)
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor;
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_fieldAccessorTable
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.Builder.class);
+                asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.Builder.class);
       }
 
-      // Construct using asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.newBuilder()
+      // Construct using asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1658,25 +1627,23 @@ public final class ModelRegistryOuterClass {
         super.clear();
         datasetId_ = "";
 
-        maxResults_ = 0;
-
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor;
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest getDefaultInstanceForType() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.getDefaultInstance();
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest getDefaultInstanceForType() {
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest build() {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest result = buildPartial();
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest build() {
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1684,10 +1651,9 @@ public final class ModelRegistryOuterClass {
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest buildPartial() {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest result = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest(this);
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest buildPartial() {
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest result = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest(this);
         result.datasetId_ = datasetId_;
-        result.maxResults_ = maxResults_;
         onBuilt();
         return result;
       }
@@ -1726,22 +1692,19 @@ public final class ModelRegistryOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest) {
-          return mergeFrom((asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest)other);
+        if (other instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest) {
+          return mergeFrom((asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest other) {
-        if (other == asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest other) {
+        if (other == asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest.getDefaultInstance()) return this;
         if (!other.getDatasetId().isEmpty()) {
           datasetId_ = other.datasetId_;
           onChanged();
-        }
-        if (other.getMaxResults() != 0) {
-          setMaxResults(other.getMaxResults());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1758,11 +1721,11 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest parsedMessage = null;
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1840,32 +1803,6 @@ public final class ModelRegistryOuterClass {
         onChanged();
         return this;
       }
-
-      private int maxResults_ ;
-      /**
-       * <code>int32 max_results = 2;</code>
-       */
-      public int getMaxResults() {
-        return maxResults_;
-      }
-      /**
-       * <code>int32 max_results = 2;</code>
-       */
-      public Builder setMaxResults(int value) {
-        
-        maxResults_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 max_results = 2;</code>
-       */
-      public Builder clearMaxResults() {
-        
-        maxResults_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1879,88 +1816,76 @@ public final class ModelRegistryOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
+      // @@protoc_insertion_point(builder_scope:asgt.modelregistry.v1alpha1.GetCurrentModelRequest)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.ListModelVersionsRequest)
-    private static final asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.GetCurrentModelRequest)
+    private static final asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest();
+      DEFAULT_INSTANCE = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest();
     }
 
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest getDefaultInstance() {
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListModelVersionsRequest>
-        PARSER = new com.google.protobuf.AbstractParser<ListModelVersionsRequest>() {
+    private static final com.google.protobuf.Parser<GetCurrentModelRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetCurrentModelRequest>() {
       @java.lang.Override
-      public ListModelVersionsRequest parsePartialFrom(
+      public GetCurrentModelRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ListModelVersionsRequest(input, extensionRegistry);
+        return new GetCurrentModelRequest(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ListModelVersionsRequest> parser() {
+    public static com.google.protobuf.Parser<GetCurrentModelRequest> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ListModelVersionsRequest> getParserForType() {
+    public com.google.protobuf.Parser<GetCurrentModelRequest> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsRequest getDefaultInstanceForType() {
+    public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
-  public interface ListModelVersionsResponseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
+  public interface GetCurrentModelResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.modelregistry.v1alpha1.GetCurrentModelResponse)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    java.util.List<asgt.type.ModelOuterClass.Model> 
-        getModelsList();
+    boolean hasModel();
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    asgt.type.ModelOuterClass.Model getModels(int index);
+    asgt.type.ModelOuterClass.Model getModel();
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    int getModelsCount();
-    /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
-     */
-    java.util.List<? extends asgt.type.ModelOuterClass.ModelOrBuilder> 
-        getModelsOrBuilderList();
-    /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
-     */
-    asgt.type.ModelOuterClass.ModelOrBuilder getModelsOrBuilder(
-        int index);
+    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
   /**
-   * Protobuf type {@code asgt.modelregistry.v1alpha1.ListModelVersionsResponse}
+   * Protobuf type {@code asgt.modelregistry.v1alpha1.GetCurrentModelResponse}
    */
-  public  static final class ListModelVersionsResponse extends
+  public  static final class GetCurrentModelResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
-      ListModelVersionsResponseOrBuilder {
+      // @@protoc_insertion_point(message_implements:asgt.modelregistry.v1alpha1.GetCurrentModelResponse)
+      GetCurrentModelResponseOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use ListModelVersionsResponse.newBuilder() to construct.
-    private ListModelVersionsResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use GetCurrentModelResponse.newBuilder() to construct.
+    private GetCurrentModelResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private ListModelVersionsResponse() {
-      models_ = java.util.Collections.emptyList();
+    private GetCurrentModelResponse() {
     }
 
     @java.lang.Override
@@ -1968,7 +1893,7 @@ public final class ModelRegistryOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private ListModelVersionsResponse(
+    private GetCurrentModelResponse(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1988,12 +1913,16 @@ public final class ModelRegistryOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                models_ = new java.util.ArrayList<asgt.type.ModelOuterClass.Model>();
-                mutable_bitField0_ |= 0x00000001;
+              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
+              if (model_ != null) {
+                subBuilder = model_.toBuilder();
               }
-              models_.add(
-                  input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry));
+              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(model_);
+                model_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -2011,59 +1940,42 @@ public final class ModelRegistryOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          models_ = java.util.Collections.unmodifiableList(models_);
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor;
+      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_fieldAccessorTable
+      return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.Builder.class);
+              asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.Builder.class);
     }
 
-    public static final int MODELS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.type.ModelOuterClass.Model> models_;
+    public static final int MODEL_FIELD_NUMBER = 1;
+    private asgt.type.ModelOuterClass.Model model_;
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    public java.util.List<asgt.type.ModelOuterClass.Model> getModelsList() {
-      return models_;
+    public boolean hasModel() {
+      return model_ != null;
     }
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    public java.util.List<? extends asgt.type.ModelOuterClass.ModelOrBuilder> 
-        getModelsOrBuilderList() {
-      return models_;
+    public asgt.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
+     * <code>.asgt.type.Model model = 1;</code>
      */
-    public int getModelsCount() {
-      return models_.size();
-    }
-    /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
-     */
-    public asgt.type.ModelOuterClass.Model getModels(int index) {
-      return models_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.type.Model models = 1;</code>
-     */
-    public asgt.type.ModelOuterClass.ModelOrBuilder getModelsOrBuilder(
-        int index) {
-      return models_.get(index);
+    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+      return getModel();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2080,8 +1992,8 @@ public final class ModelRegistryOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < models_.size(); i++) {
-        output.writeMessage(1, models_.get(i));
+      if (model_ != null) {
+        output.writeMessage(1, getModel());
       }
       unknownFields.writeTo(output);
     }
@@ -2092,9 +2004,9 @@ public final class ModelRegistryOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < models_.size(); i++) {
+      if (model_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, models_.get(i));
+          .computeMessageSize(1, getModel());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2106,14 +2018,17 @@ public final class ModelRegistryOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse)) {
+      if (!(obj instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse)) {
         return super.equals(obj);
       }
-      asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse other = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse) obj;
+      asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse other = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse) obj;
 
       boolean result = true;
-      result = result && getModelsList()
-          .equals(other.getModelsList());
+      result = result && (hasModel() == other.hasModel());
+      if (hasModel()) {
+        result = result && getModel()
+            .equals(other.getModel());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2125,78 +2040,78 @@ public final class ModelRegistryOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getModelsCount() > 0) {
-        hash = (37 * hash) + MODELS_FIELD_NUMBER;
-        hash = (53 * hash) + getModelsList().hashCode();
+      if (hasModel()) {
+        hash = (37 * hash) + MODEL_FIELD_NUMBER;
+        hash = (53 * hash) + getModel().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(byte[] data)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(java.io.InputStream input)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseDelimitedFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parseFrom(
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2209,7 +2124,7 @@ public final class ModelRegistryOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse prototype) {
+    public static Builder newBuilder(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2225,26 +2140,26 @@ public final class ModelRegistryOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code asgt.modelregistry.v1alpha1.ListModelVersionsResponse}
+     * Protobuf type {@code asgt.modelregistry.v1alpha1.GetCurrentModelResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:asgt.modelregistry.v1alpha1.GetCurrentModelResponse)
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor;
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_fieldAccessorTable
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.Builder.class);
+                asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.class, asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.Builder.class);
       }
 
-      // Construct using asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.newBuilder()
+      // Construct using asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2257,17 +2172,16 @@ public final class ModelRegistryOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getModelsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (modelsBuilder_ == null) {
-          models_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+        if (modelBuilder_ == null) {
+          model_ = null;
         } else {
-          modelsBuilder_.clear();
+          model_ = null;
+          modelBuilder_ = null;
         }
         return this;
       }
@@ -2275,17 +2189,17 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor;
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor;
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse getDefaultInstanceForType() {
-        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.getDefaultInstance();
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse getDefaultInstanceForType() {
+        return asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse build() {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse result = buildPartial();
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse build() {
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2293,17 +2207,12 @@ public final class ModelRegistryOuterClass {
       }
 
       @java.lang.Override
-      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse buildPartial() {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse result = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse(this);
-        int from_bitField0_ = bitField0_;
-        if (modelsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            models_ = java.util.Collections.unmodifiableList(models_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.models_ = models_;
+      public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse buildPartial() {
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse result = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse(this);
+        if (modelBuilder_ == null) {
+          result.model_ = model_;
         } else {
-          result.models_ = modelsBuilder_.build();
+          result.model_ = modelBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2343,41 +2252,18 @@ public final class ModelRegistryOuterClass {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse) {
-          return mergeFrom((asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse)other);
+        if (other instanceof asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse) {
+          return mergeFrom((asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse other) {
-        if (other == asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse.getDefaultInstance()) return this;
-        if (modelsBuilder_ == null) {
-          if (!other.models_.isEmpty()) {
-            if (models_.isEmpty()) {
-              models_ = other.models_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureModelsIsMutable();
-              models_.addAll(other.models_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.models_.isEmpty()) {
-            if (modelsBuilder_.isEmpty()) {
-              modelsBuilder_.dispose();
-              modelsBuilder_ = null;
-              models_ = other.models_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              modelsBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getModelsFieldBuilder() : null;
-            } else {
-              modelsBuilder_.addAllMessages(other.models_);
-            }
-          }
+      public Builder mergeFrom(asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse other) {
+        if (other == asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse.getDefaultInstance()) return this;
+        if (other.hasModel()) {
+          mergeModel(other.getModel());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2394,11 +2280,11 @@ public final class ModelRegistryOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse parsedMessage = null;
+        asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse) e.getUnfinishedMessage();
+          parsedMessage = (asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2407,246 +2293,122 @@ public final class ModelRegistryOuterClass {
         }
         return this;
       }
-      private int bitField0_;
 
-      private java.util.List<asgt.type.ModelOuterClass.Model> models_ =
-        java.util.Collections.emptyList();
-      private void ensureModelsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          models_ = new java.util.ArrayList<asgt.type.ModelOuterClass.Model>(models_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelsBuilder_;
-
+      private asgt.type.ModelOuterClass.Model model_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public java.util.List<asgt.type.ModelOuterClass.Model> getModelsList() {
-        if (modelsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(models_);
+      public boolean hasModel() {
+        return modelBuilder_ != null || model_ != null;
+      }
+      /**
+       * <code>.asgt.type.Model model = 1;</code>
+       */
+      public asgt.type.ModelOuterClass.Model getModel() {
+        if (modelBuilder_ == null) {
+          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
-          return modelsBuilder_.getMessageList();
+          return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public int getModelsCount() {
-        if (modelsBuilder_ == null) {
-          return models_.size();
-        } else {
-          return modelsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public asgt.type.ModelOuterClass.Model getModels(int index) {
-        if (modelsBuilder_ == null) {
-          return models_.get(index);
-        } else {
-          return modelsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public Builder setModels(
-          int index, asgt.type.ModelOuterClass.Model value) {
-        if (modelsBuilder_ == null) {
+      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
+        if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureModelsIsMutable();
-          models_.set(index, value);
+          model_ = value;
           onChanged();
         } else {
-          modelsBuilder_.setMessage(index, value);
+          modelBuilder_.setMessage(value);
         }
+
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public Builder setModels(
-          int index, asgt.type.ModelOuterClass.Model.Builder builderForValue) {
-        if (modelsBuilder_ == null) {
-          ensureModelsIsMutable();
-          models_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          modelsBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public Builder addModels(asgt.type.ModelOuterClass.Model value) {
-        if (modelsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureModelsIsMutable();
-          models_.add(value);
-          onChanged();
-        } else {
-          modelsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public Builder addModels(
-          int index, asgt.type.ModelOuterClass.Model value) {
-        if (modelsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureModelsIsMutable();
-          models_.add(index, value);
-          onChanged();
-        } else {
-          modelsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public Builder addModels(
+      public Builder setModel(
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
-        if (modelsBuilder_ == null) {
-          ensureModelsIsMutable();
-          models_.add(builderForValue.build());
+        if (modelBuilder_ == null) {
+          model_ = builderForValue.build();
           onChanged();
         } else {
-          modelsBuilder_.addMessage(builderForValue.build());
+          modelBuilder_.setMessage(builderForValue.build());
         }
+
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public Builder addModels(
-          int index, asgt.type.ModelOuterClass.Model.Builder builderForValue) {
-        if (modelsBuilder_ == null) {
-          ensureModelsIsMutable();
-          models_.add(index, builderForValue.build());
+      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
+        if (modelBuilder_ == null) {
+          if (model_ != null) {
+            model_ =
+              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          } else {
+            model_ = value;
+          }
           onChanged();
         } else {
-          modelsBuilder_.addMessage(index, builderForValue.build());
+          modelBuilder_.mergeFrom(value);
         }
+
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public Builder addAllModels(
-          java.lang.Iterable<? extends asgt.type.ModelOuterClass.Model> values) {
-        if (modelsBuilder_ == null) {
-          ensureModelsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, models_);
+      public Builder clearModel() {
+        if (modelBuilder_ == null) {
+          model_ = null;
           onChanged();
         } else {
-          modelsBuilder_.addAllMessages(values);
+          model_ = null;
+          modelBuilder_ = null;
         }
+
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public Builder clearModels() {
-        if (modelsBuilder_ == null) {
-          models_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
+      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
+        
+        onChanged();
+        return getModelFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.Model model = 1;</code>
+       */
+      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+        if (modelBuilder_ != null) {
+          return modelBuilder_.getMessageOrBuilder();
         } else {
-          modelsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public Builder removeModels(int index) {
-        if (modelsBuilder_ == null) {
-          ensureModelsIsMutable();
-          models_.remove(index);
-          onChanged();
-        } else {
-          modelsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public asgt.type.ModelOuterClass.Model.Builder getModelsBuilder(
-          int index) {
-        return getModelsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public asgt.type.ModelOuterClass.ModelOrBuilder getModelsOrBuilder(
-          int index) {
-        if (modelsBuilder_ == null) {
-          return models_.get(index);  } else {
-          return modelsBuilder_.getMessageOrBuilder(index);
+          return model_ == null ?
+              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
+       * <code>.asgt.type.Model model = 1;</code>
        */
-      public java.util.List<? extends asgt.type.ModelOuterClass.ModelOrBuilder> 
-           getModelsOrBuilderList() {
-        if (modelsBuilder_ != null) {
-          return modelsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(models_);
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public asgt.type.ModelOuterClass.Model.Builder addModelsBuilder() {
-        return getModelsFieldBuilder().addBuilder(
-            asgt.type.ModelOuterClass.Model.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public asgt.type.ModelOuterClass.Model.Builder addModelsBuilder(
-          int index) {
-        return getModelsFieldBuilder().addBuilder(
-            index, asgt.type.ModelOuterClass.Model.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.type.Model models = 1;</code>
-       */
-      public java.util.List<asgt.type.ModelOuterClass.Model.Builder> 
-           getModelsBuilderList() {
-        return getModelsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
+      private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
-          getModelsFieldBuilder() {
-        if (modelsBuilder_ == null) {
-          modelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getModelFieldBuilder() {
+        if (modelBuilder_ == null) {
+          modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
-                  models_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getModel(),
                   getParentForChildren(),
                   isClean());
-          models_ = null;
+          model_ = null;
         }
-        return modelsBuilder_;
+        return modelBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2661,41 +2423,41 @@ public final class ModelRegistryOuterClass {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
+      // @@protoc_insertion_point(builder_scope:asgt.modelregistry.v1alpha1.GetCurrentModelResponse)
     }
 
-    // @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.ListModelVersionsResponse)
-    private static final asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:asgt.modelregistry.v1alpha1.GetCurrentModelResponse)
+    private static final asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse();
+      DEFAULT_INSTANCE = new asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse();
     }
 
-    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse getDefaultInstance() {
+    public static asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<ListModelVersionsResponse>
-        PARSER = new com.google.protobuf.AbstractParser<ListModelVersionsResponse>() {
+    private static final com.google.protobuf.Parser<GetCurrentModelResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetCurrentModelResponse>() {
       @java.lang.Override
-      public ListModelVersionsResponse parsePartialFrom(
+      public GetCurrentModelResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ListModelVersionsResponse(input, extensionRegistry);
+        return new GetCurrentModelResponse(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<ListModelVersionsResponse> parser() {
+    public static com.google.protobuf.Parser<GetCurrentModelResponse> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<ListModelVersionsResponse> getParserForType() {
+    public com.google.protobuf.Parser<GetCurrentModelResponse> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.ListModelVersionsResponse getDefaultInstanceForType() {
+    public asgt.modelregistry.v1alpha1.ModelRegistryOuterClass.GetCurrentModelResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2712,15 +2474,15 @@ public final class ModelRegistryOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_modelregistry_v1alpha1_DeleteModelRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor;
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_fieldAccessorTable;
+      internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor;
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_fieldAccessorTable;
+      internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2737,19 +2499,18 @@ public final class ModelRegistryOuterClass {
       "ataset_id\030\001 \001(\t\022\030\n\020dataset_revision\030\002 \001(" +
       "\003\022\025\n\rmodel_version\030\003 \001(\003\"?\n\022DeleteModelR" +
       "equest\022\022\n\ndataset_id\030\001 \001(\t\022\025\n\rmodel_vers" +
-      "ion\030\002 \001(\003\"C\n\030ListModelVersionsRequest\022\022\n" +
-      "\ndataset_id\030\001 \001(\t\022\023\n\013max_results\030\002 \001(\005\"=" +
-      "\n\031ListModelVersionsResponse\022 \n\006models\030\001 " +
-      "\003(\0132\020.asgt.type.Model2\310\002\n\rModelRegistry\022" +
-      "Z\n\rRegisterModel\0221.asgt.modelregistry.v1" +
-      "alpha1.RegisterModelRequest\032\026.google.pro" +
-      "tobuf.Empty\022V\n\013DeleteModel\022/.asgt.modelr" +
-      "egistry.v1alpha1.DeleteModelRequest\032\026.go" +
-      "ogle.protobuf.Empty\022\202\001\n\021ListModelVersion" +
-      "s\0225.asgt.modelregistry.v1alpha1.ListMode" +
-      "lVersionsRequest\0326.asgt.modelregistry.v1" +
-      "alpha1.ListModelVersionsResponseB\017Z\rmode" +
-      "lregistryb\006proto3"
+      "ion\030\002 \001(\003\",\n\026GetCurrentModelRequest\022\022\n\nd" +
+      "ataset_id\030\001 \001(\t\":\n\027GetCurrentModelRespon" +
+      "se\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model2\301\002\n\r" +
+      "ModelRegistry\022Z\n\rRegisterModel\0221.asgt.mo" +
+      "delregistry.v1alpha1.RegisterModelReques" +
+      "t\032\026.google.protobuf.Empty\022V\n\013DeleteModel" +
+      "\022/.asgt.modelregistry.v1alpha1.DeleteMod" +
+      "elRequest\032\026.google.protobuf.Empty\022|\n\017Get" +
+      "CurrentModel\0223.asgt.modelregistry.v1alph" +
+      "a1.GetCurrentModelRequest\0324.asgt.modelre" +
+      "gistry.v1alpha1.GetCurrentModelResponseB" +
+      "\017Z\rmodelregistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2777,18 +2538,18 @@ public final class ModelRegistryOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1alpha1_DeleteModelRequest_descriptor,
         new java.lang.String[] { "DatasetId", "ModelVersion", });
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor =
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_fieldAccessorTable = new
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsRequest_descriptor,
-        new java.lang.String[] { "DatasetId", "MaxResults", });
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor =
+        internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelRequest_descriptor,
+        new java.lang.String[] { "DatasetId", });
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_fieldAccessorTable = new
+    internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_modelregistry_v1alpha1_ListModelVersionsResponse_descriptor,
-        new java.lang.String[] { "Models", });
+        internal_static_asgt_modelregistry_v1alpha1_GetCurrentModelResponse_descriptor,
+        new java.lang.String[] { "Model", });
     asgt.type.ModelOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }

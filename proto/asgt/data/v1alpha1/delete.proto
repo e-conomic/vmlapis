@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package asgt.dataservice.v1alpha1;
 
-option go_package = "dataservice";
+option go_package = "data";
 
 message DeleteRequest {
-  string dataset_type = 1;
+  string type = 1;
   oneof match {
     string name = 2;
     string tag = 3;

@@ -25,185 +25,25 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9hc2d0L2RhdGEvdjFhbHBoYTEvY3JlYXRlLnByb3RvEhlhc2d0LmRhdGFz",
-            "ZXJ2aWNlLnYxYWxwaGExGhRhc2d0L3R5cGUvZGF0YS5wcm90bxogYXNndC90",
-            "eXBlL3JldGVudGlvbl9wb2xpY3kucHJvdG8aHGFzZ3QvdHlwZS90YXJnZXRf",
-            "dmFsdWUucHJvdG8iVgoGU2FtcGxlEh0KBGRhdGEYASABKAsyDy5hc2d0LnR5",
-            "cGUuRGF0YRItCg10YXJnZXRfdmFsdWVzGAIgAygLMhYuYXNndC50eXBlLlRh",
-            "cmdldFZhbHVlIsQBCg1DcmVhdGVSZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgB",
-            "IAEoCRIUCgxkYXRhc2V0X3R5cGUYAiABKAkSDAoEdGFncxgDIAMoCRIPCgd0",
-            "YXJnZXRzGAYgAygJEjIKB3NhbXBsZXMYBCADKAsyIS5hc2d0LmRhdGFzZXJ2",
-            "aWNlLnYxYWxwaGExLlNhbXBsZRI0ChByZXRlbnRpb25fcG9saWN5GAUgASgL",
-            "MhouYXNndC50eXBlLlJldGVudGlvblBvbGljeSJzChFBcHBlbmREYXRhUmVx",
-            "dWVzdBIUCgxkYXRhc2V0X25hbWUYASABKAkSFAoMZGF0YXNldF90eXBlGAIg",
-            "ASgJEjIKB3NhbXBsZXMYAyADKAsyIS5hc2d0LmRhdGFzZXJ2aWNlLnYxYWxw",
-            "aGExLlNhbXBsZUINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
+            "ZXJ2aWNlLnYxYWxwaGExGiBhc2d0L3R5cGUvcmV0ZW50aW9uX3BvbGljeS5w",
+            "cm90bxoWYXNndC90eXBlL3NhbXBsZS5wcm90byKkAQoNQ3JlYXRlUmVxdWVz",
+            "dBIMCgRuYW1lGAEgASgJEgwKBHR5cGUYAiABKAkSDAoEdGFncxgDIAMoCRIP",
+            "Cgd0YXJnZXRzGAYgAygJEiIKB3NhbXBsZXMYBCADKAsyES5hc2d0LnR5cGUu",
+            "U2FtcGxlEjQKEHJldGVudGlvbl9wb2xpY3kYBSABKAsyGi5hc2d0LnR5cGUu",
+            "UmV0ZW50aW9uUG9saWN5IlMKEUFwcGVuZERhdGFSZXF1ZXN0EgwKBG5hbWUY",
+            "ASABKAkSDAoEdHlwZRgCIAEoCRIiCgdzYW1wbGVzGAMgAygLMhEuYXNndC50",
+            "eXBlLlNhbXBsZUIGWgRkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.Sample), global::Asgt.Dataservice.V1Alpha1.Sample.Parser, new[]{ "Data", "TargetValues" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateRequest), global::Asgt.Dataservice.V1Alpha1.CreateRequest.Parser, new[]{ "DatasetName", "DatasetType", "Tags", "Targets", "Samples", "RetentionPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendDataRequest.Parser, new[]{ "DatasetName", "DatasetType", "Samples" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.CreateRequest), global::Asgt.Dataservice.V1Alpha1.CreateRequest.Parser, new[]{ "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.AppendDataRequest), global::Asgt.Dataservice.V1Alpha1.AppendDataRequest.Parser, new[]{ "Name", "Type", "Samples" }, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Sample : pb::IMessage<Sample> {
-    private static readonly pb::MessageParser<Sample> _parser = new pb::MessageParser<Sample>(() => new Sample());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<Sample> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.CreateReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Sample() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Sample(Sample other) : this() {
-      data_ = other.data_ != null ? other.data_.Clone() : null;
-      targetValues_ = other.targetValues_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public Sample Clone() {
-      return new Sample(this);
-    }
-
-    /// <summary>Field number for the "data" field.</summary>
-    public const int DataFieldNumber = 1;
-    private global::Asgt.Type.Data data_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Data Data {
-      get { return data_; }
-      set {
-        data_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "target_values" field.</summary>
-    public const int TargetValuesFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
-        = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetValue.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
-      get { return targetValues_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as Sample);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(Sample other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!object.Equals(Data, other.Data)) return false;
-      if(!targetValues_.Equals(other.targetValues_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (data_ != null) hash ^= Data.GetHashCode();
-      hash ^= targetValues_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (data_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Data);
-      }
-      targetValues_.WriteTo(output, _repeated_targetValues_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (data_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
-      }
-      size += targetValues_.CalculateSize(_repeated_targetValues_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(Sample other) {
-      if (other == null) {
-        return;
-      }
-      if (other.data_ != null) {
-        if (data_ == null) {
-          data_ = new global::Asgt.Type.Data();
-        }
-        Data.MergeFrom(other.Data);
-      }
-      targetValues_.Add(other.targetValues_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            if (data_ == null) {
-              data_ = new global::Asgt.Type.Data();
-            }
-            input.ReadMessage(data_);
-            break;
-          }
-          case 18: {
-            targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class CreateRequest : pb::IMessage<CreateRequest> {
     private static readonly pb::MessageParser<CreateRequest> _parser = new pb::MessageParser<CreateRequest>(() => new CreateRequest());
     private pb::UnknownFieldSet _unknownFields;
@@ -212,7 +52,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.CreateReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Asgt.Dataservice.V1Alpha1.CreateReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -229,8 +69,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CreateRequest(CreateRequest other) : this() {
-      datasetName_ = other.datasetName_;
-      datasetType_ = other.datasetType_;
+      name_ = other.name_;
+      type_ = other.type_;
       tags_ = other.tags_.Clone();
       targets_ = other.targets_.Clone();
       samples_ = other.samples_.Clone();
@@ -243,25 +83,25 @@ namespace Asgt.Dataservice.V1Alpha1 {
       return new CreateRequest(this);
     }
 
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 1;
-    private string datasetName_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
+    public string Name {
+      get { return name_; }
       set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "dataset_type" field.</summary>
-    public const int DatasetTypeFieldNumber = 2;
-    private string datasetType_ = "";
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetType {
-      get { return datasetType_; }
+    public string Type {
+      get { return type_; }
       set {
-        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -287,11 +127,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     /// <summary>Field number for the "samples" field.</summary>
     public const int SamplesFieldNumber = 4;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.Sample> _repeated_samples_codec
-        = pb::FieldCodec.ForMessage(34, global::Asgt.Dataservice.V1Alpha1.Sample.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample> samples_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample>();
+    private static readonly pb::FieldCodec<global::Asgt.Type.Sample> _repeated_samples_codec
+        = pb::FieldCodec.ForMessage(34, global::Asgt.Type.Sample.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Sample> samples_ = new pbc::RepeatedField<global::Asgt.Type.Sample>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample> Samples {
+    public pbc::RepeatedField<global::Asgt.Type.Sample> Samples {
       get { return samples_; }
     }
 
@@ -319,8 +159,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DatasetName != other.DatasetName) return false;
-      if (DatasetType != other.DatasetType) return false;
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if(!targets_.Equals(other.targets_)) return false;
       if(!samples_.Equals(other.samples_)) return false;
@@ -331,8 +171,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= tags_.GetHashCode();
       hash ^= targets_.GetHashCode();
       hash ^= samples_.GetHashCode();
@@ -350,13 +190,13 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DatasetName.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(DatasetName);
+        output.WriteString(Name);
       }
-      if (DatasetType.Length != 0) {
+      if (Type.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(DatasetType);
+        output.WriteString(Type);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       samples_.WriteTo(output, _repeated_samples_codec);
@@ -373,11 +213,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DatasetType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       size += targets_.CalculateSize(_repeated_targets_codec);
@@ -396,11 +236,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.DatasetType.Length != 0) {
-        DatasetType = other.DatasetType;
+      if (other.Type.Length != 0) {
+        Type = other.Type;
       }
       tags_.Add(other.tags_);
       targets_.Add(other.targets_);
@@ -423,11 +263,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            DatasetName = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            DatasetType = input.ReadString();
+            Type = input.ReadString();
             break;
           }
           case 26: {
@@ -463,7 +303,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.CreateReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.Dataservice.V1Alpha1.CreateReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -480,8 +320,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public AppendDataRequest(AppendDataRequest other) : this() {
-      datasetName_ = other.datasetName_;
-      datasetType_ = other.datasetType_;
+      name_ = other.name_;
+      type_ = other.type_;
       samples_ = other.samples_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -491,35 +331,35 @@ namespace Asgt.Dataservice.V1Alpha1 {
       return new AppendDataRequest(this);
     }
 
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 1;
-    private string datasetName_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
+    public string Name {
+      get { return name_; }
       set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "dataset_type" field.</summary>
-    public const int DatasetTypeFieldNumber = 2;
-    private string datasetType_ = "";
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetType {
-      get { return datasetType_; }
+    public string Type {
+      get { return type_; }
       set {
-        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "samples" field.</summary>
     public const int SamplesFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Asgt.Dataservice.V1Alpha1.Sample> _repeated_samples_codec
-        = pb::FieldCodec.ForMessage(26, global::Asgt.Dataservice.V1Alpha1.Sample.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample> samples_ = new pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample>();
+    private static readonly pb::FieldCodec<global::Asgt.Type.Sample> _repeated_samples_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.Type.Sample.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Sample> samples_ = new pbc::RepeatedField<global::Asgt.Type.Sample>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Dataservice.V1Alpha1.Sample> Samples {
+    public pbc::RepeatedField<global::Asgt.Type.Sample> Samples {
       get { return samples_; }
     }
 
@@ -536,8 +376,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DatasetName != other.DatasetName) return false;
-      if (DatasetType != other.DatasetType) return false;
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
       if(!samples_.Equals(other.samples_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -545,8 +385,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= samples_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -561,13 +401,13 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DatasetName.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(DatasetName);
+        output.WriteString(Name);
       }
-      if (DatasetType.Length != 0) {
+      if (Type.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(DatasetType);
+        output.WriteString(Type);
       }
       samples_.WriteTo(output, _repeated_samples_codec);
       if (_unknownFields != null) {
@@ -578,11 +418,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DatasetType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       size += samples_.CalculateSize(_repeated_samples_codec);
       if (_unknownFields != null) {
@@ -596,11 +436,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.DatasetType.Length != 0) {
-        DatasetType = other.DatasetType;
+      if (other.Type.Length != 0) {
+        Type = other.Type;
       }
       samples_.Add(other.samples_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -615,11 +455,11 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            DatasetName = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            DatasetType = input.ReadString();
+            Type = input.ReadString();
             break;
           }
           case 26: {

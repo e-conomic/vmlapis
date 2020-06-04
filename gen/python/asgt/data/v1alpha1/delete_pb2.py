@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/data/v1alpha1/delete.proto',
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
-  serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n\x1f\x61sgt/data/v1alpha1/delete.proto\x12\x19\x61sgt.dataservice.v1alpha1\"M\n\rDeleteRequest\x12\x14\n\x0c\x64\x61taset_type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05matchB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_options=_b('Z\004data'),
+  serialized_pb=_b('\n\x1f\x61sgt/data/v1alpha1/delete.proto\x12\x19\x61sgt.dataservice.v1alpha1\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05matchB\x06Z\x04\x64\x61tab\x06proto3')
 )
 
 
@@ -33,7 +33,7 @@ _DELETEREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset_type', full_name='asgt.dataservice.v1alpha1.DeleteRequest.dataset_type', index=0,
+      name='type', full_name='asgt.dataservice.v1alpha1.DeleteRequest.type', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -69,7 +69,7 @@ _DELETEREQUEST = _descriptor.Descriptor(
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=62,
-  serialized_end=139,
+  serialized_end=131,
 )
 
 _DELETEREQUEST.oneofs_by_name['match'].fields.append(

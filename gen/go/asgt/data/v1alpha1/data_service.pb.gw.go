@@ -2,11 +2,11 @@
 // source: asgt/data/v1alpha1/data_service.proto
 
 /*
-Package dataservice is a reverse proxy.
+Package data is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package dataservice
+package data
 
 import (
 	"context"
@@ -47,26 +47,15 @@ func request_Data_CreateDataset_0(ctx context.Context, marshaler runtime.Marshal
 		_   = err
 	)
 
-	val, ok = pathParams["dataset_type"]
+	val, ok = pathParams["type"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_type")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
 	}
 
-	protoReq.DatasetType, err = runtime.String(val)
+	protoReq.Type, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_type", err)
-	}
-
-	val, ok = pathParams["dataset_name"]
-	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_name")
-	}
-
-	protoReq.DatasetName, err = runtime.String(val)
-
-	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_name", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
 	}
 
 	msg, err := client.CreateDataset(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -93,26 +82,26 @@ func request_Data_AppendData_0(ctx context.Context, marshaler runtime.Marshaler,
 		_   = err
 	)
 
-	val, ok = pathParams["dataset_type"]
+	val, ok = pathParams["type"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_type")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
 	}
 
-	protoReq.DatasetType, err = runtime.String(val)
+	protoReq.Type, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_type", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
 	}
 
-	val, ok = pathParams["dataset_name"]
+	val, ok = pathParams["name"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_name")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "name")
 	}
 
-	protoReq.DatasetName, err = runtime.String(val)
+	protoReq.Name, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_name", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "name", err)
 	}
 
 	msg, err := client.AppendData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -139,15 +128,15 @@ func request_Data_DeleteData_0(ctx context.Context, marshaler runtime.Marshaler,
 		_   = err
 	)
 
-	val, ok = pathParams["dataset_type"]
+	val, ok = pathParams["type"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_type")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
 	}
 
-	protoReq.DatasetType, err = runtime.String(val)
+	protoReq.Type, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_type", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
 	}
 
 	msg, err := client.DeleteData(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -174,26 +163,26 @@ func request_Data_GetInfo_0(ctx context.Context, marshaler runtime.Marshaler, cl
 		_   = err
 	)
 
-	val, ok = pathParams["dataset_type"]
+	val, ok = pathParams["type"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_type")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "type")
 	}
 
-	protoReq.DatasetType, err = runtime.String(val)
+	protoReq.Type, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_type", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "type", err)
 	}
 
-	val, ok = pathParams["dataset_name"]
+	val, ok = pathParams["name"]
 	if !ok {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "dataset_name")
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "missing parameter %s", "name")
 	}
 
-	protoReq.DatasetName, err = runtime.String(val)
+	protoReq.Name, err = runtime.String(val)
 
 	if err != nil {
-		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "dataset_name", err)
+		return nil, metadata, status.Errorf(codes.InvalidArgument, "type mismatch, parameter: %s, error: %v", "name", err)
 	}
 
 	msg, err := client.GetInfo(ctx, &protoReq, grpc.Header(&metadata.HeaderMD), grpc.Trailer(&metadata.TrailerMD))
@@ -323,13 +312,13 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 }
 
 var (
-	pattern_Data_CreateDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "dataset_type", "dataset_name"}, "create"))
+	pattern_Data_CreateDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "create"))
 
-	pattern_Data_AppendData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "dataset_type", "dataset_name"}, "append"))
+	pattern_Data_AppendData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "append"))
 
-	pattern_Data_DeleteData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "dataset_type"}, "delete"))
+	pattern_Data_DeleteData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "delete"))
 
-	pattern_Data_GetInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "dataset_type", "dataset_name"}, "info"))
+	pattern_Data_GetInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "info"))
 )
 
 var (

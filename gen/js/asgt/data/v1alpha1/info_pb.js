@@ -64,8 +64,8 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.toObject = function(opt
  */
 proto.asgt.dataservice.v1alpha1.GetInfoRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    datasetType: jspb.Message.getFieldWithDefault(msg, 2, "")
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    type: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
   if (includeInstance) {
@@ -104,11 +104,11 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.deserializeBinaryFromReader = fun
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetType(value);
+      msg.setType(value);
       break;
     default:
       reader.skipField();
@@ -139,14 +139,14 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.serializeBinary = funct
  */
 proto.asgt.dataservice.v1alpha1.GetInfoRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getDatasetType();
+  f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -157,31 +157,31 @@ proto.asgt.dataservice.v1alpha1.GetInfoRequest.serializeBinaryToWriter = functio
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getDatasetName = function() {
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setDatasetName = function(value) {
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string dataset_type = 2;
+ * optional string type = 2;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getDatasetType = function() {
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.getType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setDatasetType = function(value) {
+proto.asgt.dataservice.v1alpha1.GetInfoRequest.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 

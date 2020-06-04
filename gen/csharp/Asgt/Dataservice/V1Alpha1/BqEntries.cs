@@ -41,7 +41,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "BW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rpb24Y",
             "CiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9h",
             "ZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoO6j8LCgliYW5rX2RhdGFC",
-            "DVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
+            "BloEZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

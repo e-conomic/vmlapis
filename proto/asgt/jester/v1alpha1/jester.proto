@@ -12,7 +12,7 @@ import "asgt/type/data.proto";
 service Jester {
   rpc Suggest(SuggestionRequest) returns (SuggestionResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/{dataset_type}/{dataset_name}:suggest"
+      post: "/v1alpha1/{type}/{name}:suggest"
       body: "*"
     };
   }
@@ -30,8 +30,8 @@ message SuggestionOptions {
 }
 
 message SuggestionRequest {
-  string dataset_name = 1;
-  string dataset_type = 2;
+  string name = 1;
+  string type = 2;
   repeated asgt.type.Data inputs = 3;
   SuggestionOptions options = 4;
 }

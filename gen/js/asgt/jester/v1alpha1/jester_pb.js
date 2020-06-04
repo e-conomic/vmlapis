@@ -453,8 +453,8 @@ proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.toObject = function(opt_i
  */
 proto.asgt.jester.v1alpha1.SuggestionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    datasetType: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    name: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    type: jspb.Message.getFieldWithDefault(msg, 2, ""),
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     asgt_type_data_pb.Data.toObject, includeInstance),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1alpha1.SuggestionOptions.toObject(includeInstance, f)
@@ -496,11 +496,11 @@ proto.asgt.jester.v1alpha1.SuggestionRequest.deserializeBinaryFromReader = funct
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetName(value);
+      msg.setName(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetType(value);
+      msg.setType(value);
       break;
     case 3:
       var value = new asgt_type_data_pb.Data;
@@ -541,14 +541,14 @@ proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.serializeBinary = functio
  */
 proto.asgt.jester.v1alpha1.SuggestionRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetName();
+  f = message.getName();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getDatasetType();
+  f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -575,31 +575,31 @@ proto.asgt.jester.v1alpha1.SuggestionRequest.serializeBinaryToWriter = function(
 
 
 /**
- * optional string dataset_name = 1;
+ * optional string name = 1;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.getDatasetName = function() {
+proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.setDatasetName = function(value) {
+proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.setName = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string dataset_type = 2;
+ * optional string type = 2;
  * @return {string}
  */
-proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.getDatasetType = function() {
+proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.getType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.setDatasetType = function(value) {
+proto.asgt.jester.v1alpha1.SuggestionRequest.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 

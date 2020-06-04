@@ -85,7 +85,7 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.toObject = function(opt_
  */
 proto.asgt.dataservice.v1alpha1.DeleteRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetType: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    type: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     tag: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
@@ -126,7 +126,7 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.deserializeBinaryFromReader = func
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetType(value);
+      msg.setType(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
@@ -165,7 +165,7 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.serializeBinary = functi
  */
 proto.asgt.dataservice.v1alpha1.DeleteRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetType();
+  f = message.getType();
   if (f.length > 0) {
     writer.writeString(
       1,
@@ -190,16 +190,16 @@ proto.asgt.dataservice.v1alpha1.DeleteRequest.serializeBinaryToWriter = function
 
 
 /**
- * optional string dataset_type = 1;
+ * optional string type = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getDatasetType = function() {
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.getType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setDatasetType = function(value) {
+proto.asgt.dataservice.v1alpha1.DeleteRequest.prototype.setType = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 

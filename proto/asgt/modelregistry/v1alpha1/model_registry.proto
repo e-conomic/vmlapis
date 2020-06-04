@@ -11,8 +11,10 @@ service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);
   rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
 
+  rpc GetCurrentModel (GetCurrentModelRequest) returns (GetCurrentModelResponse);
+
   // List the most recent versions of a model trained with a specified dataset
-  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
+  //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
 
 message RegisterModelRequest {
@@ -26,11 +28,19 @@ message DeleteModelRequest {
   int64 model_version = 2;
 }
 
-message ListModelVersionsRequest {
+message GetCurrentModelRequest {
   string dataset_id = 1;
-  int32 max_results = 2;
 }
 
-message ListModelVersionsResponse {
-  repeated asgt.type.Model models = 1;
+message GetCurrentModelResponse {
+  asgt.type.Model model = 1;
 }
+
+//message ListModelVersionsRequest {
+//  string dataset_id = 1;
+//  int32 max_results = 2;
+//}
+//
+//message ListModelVersionsResponse {
+//  repeated asgt.type.Model models = 1;
+//}

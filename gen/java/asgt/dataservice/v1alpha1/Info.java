@@ -19,24 +19,24 @@ public final class Info {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
 
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    java.lang.String getDatasetType();
+    java.lang.String getType();
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetTypeBytes();
+        getTypeBytes();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1alpha1.GetInfoRequest}
@@ -51,8 +51,8 @@ public final class Info {
       super(builder);
     }
     private GetInfoRequest() {
-      datasetName_ = "";
-      datasetType_ = "";
+      name_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -82,13 +82,13 @@ public final class Info {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetType_ = s;
+              type_ = s;
               break;
             }
             default: {
@@ -123,68 +123,68 @@ public final class Info {
               asgt.dataservice.v1alpha1.Info.GetInfoRequest.class, asgt.dataservice.v1alpha1.Info.GetInfoRequest.Builder.class);
     }
 
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DATASET_TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object datasetType_;
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object type_;
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    public java.lang.String getDatasetType() {
-      java.lang.Object ref = datasetType_;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetType_ = s;
+        type_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetTypeBytes() {
-      java.lang.Object ref = datasetType_;
+        getTypeBytes() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetType_ = b;
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -205,11 +205,11 @@ public final class Info {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       unknownFields.writeTo(output);
     }
@@ -220,11 +220,11 @@ public final class Info {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -242,10 +242,10 @@ public final class Info {
       asgt.dataservice.v1alpha1.Info.GetInfoRequest other = (asgt.dataservice.v1alpha1.Info.GetInfoRequest) obj;
 
       boolean result = true;
-      result = result && getDatasetName()
-          .equals(other.getDatasetName());
-      result = result && getDatasetType()
-          .equals(other.getDatasetType());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -257,10 +257,10 @@ public final class Info {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetType().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -394,9 +394,9 @@ public final class Info {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
-        datasetType_ = "";
+        type_ = "";
 
         return this;
       }
@@ -424,8 +424,8 @@ public final class Info {
       @java.lang.Override
       public asgt.dataservice.v1alpha1.Info.GetInfoRequest buildPartial() {
         asgt.dataservice.v1alpha1.Info.GetInfoRequest result = new asgt.dataservice.v1alpha1.Info.GetInfoRequest(this);
-        result.datasetName_ = datasetName_;
-        result.datasetType_ = datasetType_;
+        result.name_ = name_;
+        result.type_ = type_;
         onBuilt();
         return result;
       }
@@ -474,12 +474,12 @@ public final class Info {
 
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Info.GetInfoRequest other) {
         if (other == asgt.dataservice.v1alpha1.Info.GetInfoRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
-        if (!other.getDatasetType().isEmpty()) {
-          datasetType_ = other.datasetType_;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
@@ -511,140 +511,140 @@ public final class Info {
         return this;
       }
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object datasetType_ = "";
+      private java.lang.Object type_ = "";
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public java.lang.String getDatasetType() {
-        java.lang.Object ref = datasetType_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetType_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetTypeBytes() {
-        java.lang.Object ref = datasetType_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetType_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetType(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder clearDatasetType() {
+      public Builder clearType() {
         
-        datasetType_ = getDefaultInstance().getDatasetType();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetTypeBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
@@ -1585,11 +1585,11 @@ public final class Info {
       "taservice.v1alpha1\032\027asgt/type/dataset.pr" +
       "oto\032\025asgt/type/model.proto\032 asgt/type/re" +
       "tention_policy.proto\032\037google/protobuf/ti" +
-      "mestamp.proto\"<\n\016GetInfoRequest\022\024\n\014datas" +
-      "et_name\030\001 \001(\t\022\024\n\014dataset_type\030\002 \001(\t\"W\n\017G" +
-      "etInfoResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.t" +
-      "ype.Dataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.M" +
-      "odelB\rZ\013dataserviceb\006proto3"
+      "mestamp.proto\",\n\016GetInfoRequest\022\014\n\004name\030" +
+      "\001 \001(\t\022\014\n\004type\030\002 \001(\t\"W\n\017GetInfoResponse\022#" +
+      "\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005m" +
+      "odel\030\002 \001(\0132\020.asgt.type.ModelB\006Z\004datab\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1612,7 +1612,7 @@ public final class Info {
     internal_static_asgt_dataservice_v1alpha1_GetInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_GetInfoRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "DatasetType", });
+        new java.lang.String[] { "Name", "Type", });
     internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_GetInfoResponse_fieldAccessorTable = new

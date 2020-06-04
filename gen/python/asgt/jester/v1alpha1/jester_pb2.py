@@ -23,7 +23,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.jester.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\006jester'),
-  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\"a\n\x12SuggestionResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x9a\x01\n\x11SuggestionRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x02 \x01(\t\x12\x1f\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.Data\x12\x38\n\x07options\x18\x04 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions2\xa3\x01\n\x06Jester\x12\x98\x01\n\x07Suggest\x12\'.asgt.jester.v1alpha1.SuggestionRequest\x1a(.asgt.jester.v1alpha1.SuggestionResponse\":\x82\xd3\xe4\x93\x02\x34\"//v1alpha1/{dataset_type}/{dataset_name}:suggest:\x01*B\x08Z\x06jesterb\x06proto3')
+  serialized_pb=_b('\n!asgt/jester/v1alpha1/jester.proto\x12\x14\x61sgt.jester.v1alpha1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\"a\n\x12SuggestionResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x8a\x01\n\x11SuggestionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x1f\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.Data\x12\x38\n\x07options\x18\x04 \x01(\x0b\x32\'.asgt.jester.v1alpha1.SuggestionOptions2\x93\x01\n\x06Jester\x12\x88\x01\n\x07Suggest\x12\'.asgt.jester.v1alpha1.SuggestionRequest\x1a(.asgt.jester.v1alpha1.SuggestionResponse\"*\x82\xd3\xe4\x93\x02$\"\x1f/v1alpha1/{type}/{name}:suggest:\x01*B\x08Z\x06jesterb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -114,14 +114,14 @@ _SUGGESTIONREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.jester.v1alpha1.SuggestionRequest.dataset_name', index=0,
+      name='name', full_name='asgt.jester.v1alpha1.SuggestionRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_type', full_name='asgt.jester.v1alpha1.SuggestionRequest.dataset_type', index=1,
+      name='type', full_name='asgt.jester.v1alpha1.SuggestionRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -154,7 +154,7 @@ _SUGGESTIONREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=362,
-  serialized_end=516,
+  serialized_end=500,
 )
 
 _SUGGESTIONRESPONSE.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
@@ -197,8 +197,8 @@ _JESTER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=519,
-  serialized_end=682,
+  serialized_start=503,
+  serialized_end=650,
   methods=[
   _descriptor.MethodDescriptor(
     name='Suggest',
@@ -207,7 +207,7 @@ _JESTER = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_SUGGESTIONREQUEST,
     output_type=_SUGGESTIONRESPONSE,
-    serialized_options=_b('\202\323\344\223\0024\"//v1alpha1/{dataset_type}/{dataset_name}:suggest:\001*'),
+    serialized_options=_b('\202\323\344\223\002$\"\037/v1alpha1/{type}/{name}:suggest:\001*'),
   ),
 ])
 _sym_db.RegisterServiceDescriptor(_JESTER)

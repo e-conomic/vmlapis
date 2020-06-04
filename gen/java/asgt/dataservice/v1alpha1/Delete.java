@@ -19,14 +19,14 @@ public final class Delete {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_type = 1;</code>
+     * <code>string type = 1;</code>
      */
-    java.lang.String getDatasetType();
+    java.lang.String getType();
     /**
-     * <code>string dataset_type = 1;</code>
+     * <code>string type = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetTypeBytes();
+        getTypeBytes();
 
     /**
      * <code>string name = 2;</code>
@@ -63,7 +63,7 @@ public final class Delete {
       super(builder);
     }
     private DeleteRequest() {
-      datasetType_ = "";
+      type_ = "";
     }
 
     @java.lang.Override
@@ -93,7 +93,7 @@ public final class Delete {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetType_ = s;
+              type_ = s;
               break;
             }
             case 18: {
@@ -178,34 +178,34 @@ public final class Delete {
           matchCase_);
     }
 
-    public static final int DATASET_TYPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetType_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object type_;
     /**
-     * <code>string dataset_type = 1;</code>
+     * <code>string type = 1;</code>
      */
-    public java.lang.String getDatasetType() {
-      java.lang.Object ref = datasetType_;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetType_ = s;
+        type_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_type = 1;</code>
+     * <code>string type = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetTypeBytes() {
-      java.lang.Object ref = datasetType_;
+        getTypeBytes() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetType_ = b;
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -312,8 +312,8 @@ public final class Delete {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, type_);
       }
       if (matchCase_ == 2) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, match_);
@@ -330,8 +330,8 @@ public final class Delete {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, type_);
       }
       if (matchCase_ == 2) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, match_);
@@ -355,8 +355,8 @@ public final class Delete {
       asgt.dataservice.v1alpha1.Delete.DeleteRequest other = (asgt.dataservice.v1alpha1.Delete.DeleteRequest) obj;
 
       boolean result = true;
-      result = result && getDatasetType()
-          .equals(other.getDatasetType());
+      result = result && getType()
+          .equals(other.getType());
       result = result && getMatchCase().equals(
           other.getMatchCase());
       if (!result) return false;
@@ -383,8 +383,8 @@ public final class Delete {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetType().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       switch (matchCase_) {
         case 2:
           hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -530,7 +530,7 @@ public final class Delete {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetType_ = "";
+        type_ = "";
 
         matchCase_ = 0;
         match_ = null;
@@ -560,7 +560,7 @@ public final class Delete {
       @java.lang.Override
       public asgt.dataservice.v1alpha1.Delete.DeleteRequest buildPartial() {
         asgt.dataservice.v1alpha1.Delete.DeleteRequest result = new asgt.dataservice.v1alpha1.Delete.DeleteRequest(this);
-        result.datasetType_ = datasetType_;
+        result.type_ = type_;
         if (matchCase_ == 2) {
           result.match_ = match_;
         }
@@ -616,8 +616,8 @@ public final class Delete {
 
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Delete.DeleteRequest other) {
         if (other == asgt.dataservice.v1alpha1.Delete.DeleteRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetType().isEmpty()) {
-          datasetType_ = other.datasetType_;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         switch (other.getMatchCase()) {
@@ -681,71 +681,71 @@ public final class Delete {
       }
 
 
-      private java.lang.Object datasetType_ = "";
+      private java.lang.Object type_ = "";
       /**
-       * <code>string dataset_type = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public java.lang.String getDatasetType() {
-        java.lang.Object ref = datasetType_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetType_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_type = 1;</code>
+       * <code>string type = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetTypeBytes() {
-        java.lang.Object ref = datasetType_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetType_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_type = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder setDatasetType(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder clearDatasetType() {
+      public Builder clearType() {
         
-        datasetType_ = getDefaultInstance().getDatasetType();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 1;</code>
+       * <code>string type = 1;</code>
        */
-      public Builder setDatasetTypeBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
@@ -977,10 +977,9 @@ public final class Delete {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/data/v1alpha1/delete.proto\022\031asgt." +
-      "dataservice.v1alpha1\"M\n\rDeleteRequest\022\024\n" +
-      "\014dataset_type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003t" +
-      "ag\030\003 \001(\tH\000B\007\n\005matchB\rZ\013dataserviceb\006prot" +
-      "o3"
+      "dataservice.v1alpha1\"E\n\rDeleteRequest\022\014\n" +
+      "\004type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\t" +
+      "H\000B\007\n\005matchB\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -999,7 +998,7 @@ public final class Delete {
     internal_static_asgt_dataservice_v1alpha1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_DeleteRequest_descriptor,
-        new java.lang.String[] { "DatasetType", "Name", "Tag", "Match", });
+        new java.lang.String[] { "Type", "Name", "Tag", "Match", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

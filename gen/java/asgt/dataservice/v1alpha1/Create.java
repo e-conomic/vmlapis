@@ -14,1008 +14,29 @@ public final class Create {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface SampleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.Sample)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    boolean hasData();
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    asgt.type.DataOuterClass.Data getData();
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
-
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
-        getTargetValuesList();
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    int getTargetValuesCount();
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetValuesOrBuilderList();
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code asgt.dataservice.v1alpha1.Sample}
-   */
-  public  static final class Sample extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1alpha1.Sample)
-      SampleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Sample.newBuilder() to construct.
-    private Sample(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Sample() {
-      targetValues_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Sample(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              asgt.type.DataOuterClass.Data.Builder subBuilder = null;
-              if (data_ != null) {
-                subBuilder = data_.toBuilder();
-              }
-              data_ = input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(data_);
-                data_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              targetValues_.add(
-                  input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.dataservice.v1alpha1.Create.internal_static_asgt_dataservice_v1alpha1_Sample_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1alpha1.Create.internal_static_asgt_dataservice_v1alpha1_Sample_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1alpha1.Create.Sample.class, asgt.dataservice.v1alpha1.Create.Sample.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int DATA_FIELD_NUMBER = 1;
-    private asgt.type.DataOuterClass.Data data_;
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    public boolean hasData() {
-      return data_ != null;
-    }
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    public asgt.type.DataOuterClass.Data getData() {
-      return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
-    }
-    /**
-     * <code>.asgt.type.Data data = 1;</code>
-     */
-    public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
-      return getData();
-    }
-
-    public static final int TARGET_VALUES_FIELD_NUMBER = 2;
-    private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
-      return targetValues_;
-    }
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-        getTargetValuesOrBuilderList() {
-      return targetValues_;
-    }
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    public int getTargetValuesCount() {
-      return targetValues_.size();
-    }
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
-      return targetValues_.get(index);
-    }
-    /**
-     * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-     */
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
-        int index) {
-      return targetValues_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (data_ != null) {
-        output.writeMessage(1, getData());
-      }
-      for (int i = 0; i < targetValues_.size(); i++) {
-        output.writeMessage(2, targetValues_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (data_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getData());
-      }
-      for (int i = 0; i < targetValues_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, targetValues_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.dataservice.v1alpha1.Create.Sample)) {
-        return super.equals(obj);
-      }
-      asgt.dataservice.v1alpha1.Create.Sample other = (asgt.dataservice.v1alpha1.Create.Sample) obj;
-
-      boolean result = true;
-      result = result && (hasData() == other.hasData());
-      if (hasData()) {
-        result = result && getData()
-            .equals(other.getData());
-      }
-      result = result && getTargetValuesList()
-          .equals(other.getTargetValuesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasData()) {
-        hash = (37 * hash) + DATA_FIELD_NUMBER;
-        hash = (53 * hash) + getData().hashCode();
-      }
-      if (getTargetValuesCount() > 0) {
-        hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetValuesList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.dataservice.v1alpha1.Create.Sample parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.dataservice.v1alpha1.Create.Sample prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code asgt.dataservice.v1alpha1.Sample}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1alpha1.Sample)
-        asgt.dataservice.v1alpha1.Create.SampleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.dataservice.v1alpha1.Create.internal_static_asgt_dataservice_v1alpha1_Sample_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1alpha1.Create.internal_static_asgt_dataservice_v1alpha1_Sample_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1alpha1.Create.Sample.class, asgt.dataservice.v1alpha1.Create.Sample.Builder.class);
-      }
-
-      // Construct using asgt.dataservice.v1alpha1.Create.Sample.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getTargetValuesFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (dataBuilder_ == null) {
-          data_ = null;
-        } else {
-          data_ = null;
-          dataBuilder_ = null;
-        }
-        if (targetValuesBuilder_ == null) {
-          targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        } else {
-          targetValuesBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.dataservice.v1alpha1.Create.internal_static_asgt_dataservice_v1alpha1_Sample_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Create.Sample getDefaultInstanceForType() {
-        return asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Create.Sample build() {
-        asgt.dataservice.v1alpha1.Create.Sample result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.dataservice.v1alpha1.Create.Sample buildPartial() {
-        asgt.dataservice.v1alpha1.Create.Sample result = new asgt.dataservice.v1alpha1.Create.Sample(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (dataBuilder_ == null) {
-          result.data_ = data_;
-        } else {
-          result.data_ = dataBuilder_.build();
-        }
-        if (targetValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.targetValues_ = targetValues_;
-        } else {
-          result.targetValues_ = targetValuesBuilder_.build();
-        }
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1alpha1.Create.Sample) {
-          return mergeFrom((asgt.dataservice.v1alpha1.Create.Sample)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.dataservice.v1alpha1.Create.Sample other) {
-        if (other == asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance()) return this;
-        if (other.hasData()) {
-          mergeData(other.getData());
-        }
-        if (targetValuesBuilder_ == null) {
-          if (!other.targetValues_.isEmpty()) {
-            if (targetValues_.isEmpty()) {
-              targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-            } else {
-              ensureTargetValuesIsMutable();
-              targetValues_.addAll(other.targetValues_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.targetValues_.isEmpty()) {
-            if (targetValuesBuilder_.isEmpty()) {
-              targetValuesBuilder_.dispose();
-              targetValuesBuilder_ = null;
-              targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000002);
-              targetValuesBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getTargetValuesFieldBuilder() : null;
-            } else {
-              targetValuesBuilder_.addAllMessages(other.targetValues_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.dataservice.v1alpha1.Create.Sample parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1alpha1.Create.Sample) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private asgt.type.DataOuterClass.Data data_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> dataBuilder_;
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public boolean hasData() {
-        return dataBuilder_ != null || data_ != null;
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public asgt.type.DataOuterClass.Data getData() {
-        if (dataBuilder_ == null) {
-          return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
-        } else {
-          return dataBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public Builder setData(asgt.type.DataOuterClass.Data value) {
-        if (dataBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          data_ = value;
-          onChanged();
-        } else {
-          dataBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public Builder setData(
-          asgt.type.DataOuterClass.Data.Builder builderForValue) {
-        if (dataBuilder_ == null) {
-          data_ = builderForValue.build();
-          onChanged();
-        } else {
-          dataBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public Builder mergeData(asgt.type.DataOuterClass.Data value) {
-        if (dataBuilder_ == null) {
-          if (data_ != null) {
-            data_ =
-              asgt.type.DataOuterClass.Data.newBuilder(data_).mergeFrom(value).buildPartial();
-          } else {
-            data_ = value;
-          }
-          onChanged();
-        } else {
-          dataBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public Builder clearData() {
-        if (dataBuilder_ == null) {
-          data_ = null;
-          onChanged();
-        } else {
-          data_ = null;
-          dataBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public asgt.type.DataOuterClass.Data.Builder getDataBuilder() {
-        
-        onChanged();
-        return getDataFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
-        if (dataBuilder_ != null) {
-          return dataBuilder_.getMessageOrBuilder();
-        } else {
-          return data_ == null ?
-              asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
-        }
-      }
-      /**
-       * <code>.asgt.type.Data data = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
-          getDataFieldBuilder() {
-        if (dataBuilder_ == null) {
-          dataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder>(
-                  getData(),
-                  getParentForChildren(),
-                  isClean());
-          data_ = null;
-        }
-        return dataBuilder_;
-      }
-
-      private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
-        java.util.Collections.emptyList();
-      private void ensureTargetValuesIsMutable() {
-        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
-
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
-        if (targetValuesBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(targetValues_);
-        } else {
-          return targetValuesBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public int getTargetValuesCount() {
-        if (targetValuesBuilder_ == null) {
-          return targetValues_.size();
-        } else {
-          return targetValuesBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
-        if (targetValuesBuilder_ == null) {
-          return targetValues_.get(index);
-        } else {
-          return targetValuesBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder setTargetValues(
-          int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTargetValuesIsMutable();
-          targetValues_.set(index, value);
-          onChanged();
-        } else {
-          targetValuesBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder setTargetValues(
-          int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetValuesBuilder_ == null) {
-          ensureTargetValuesIsMutable();
-          targetValues_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          targetValuesBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTargetValuesIsMutable();
-          targetValues_.add(value);
-          onChanged();
-        } else {
-          targetValuesBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder addTargetValues(
-          int index, asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValuesBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureTargetValuesIsMutable();
-          targetValues_.add(index, value);
-          onChanged();
-        } else {
-          targetValuesBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder addTargetValues(
-          asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetValuesBuilder_ == null) {
-          ensureTargetValuesIsMutable();
-          targetValues_.add(builderForValue.build());
-          onChanged();
-        } else {
-          targetValuesBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder addTargetValues(
-          int index, asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetValuesBuilder_ == null) {
-          ensureTargetValuesIsMutable();
-          targetValues_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          targetValuesBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder addAllTargetValues(
-          java.lang.Iterable<? extends asgt.type.TargetValueOuterClass.TargetValue> values) {
-        if (targetValuesBuilder_ == null) {
-          ensureTargetValuesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, targetValues_);
-          onChanged();
-        } else {
-          targetValuesBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder clearTargetValues() {
-        if (targetValuesBuilder_ == null) {
-          targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
-          onChanged();
-        } else {
-          targetValuesBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public Builder removeTargetValues(int index) {
-        if (targetValuesBuilder_ == null) {
-          ensureTargetValuesIsMutable();
-          targetValues_.remove(index);
-          onChanged();
-        } else {
-          targetValuesBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
-          int index) {
-        return getTargetValuesFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
-          int index) {
-        if (targetValuesBuilder_ == null) {
-          return targetValues_.get(index);  } else {
-          return targetValuesBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-           getTargetValuesOrBuilderList() {
-        if (targetValuesBuilder_ != null) {
-          return targetValuesBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(targetValues_);
-        }
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
-        return getTargetValuesFieldBuilder().addBuilder(
-            asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
-          int index) {
-        return getTargetValuesFieldBuilder().addBuilder(
-            index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
-       */
-      public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
-           getTargetValuesBuilderList() {
-        return getTargetValuesFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetValuesFieldBuilder() {
-        if (targetValuesBuilder_ == null) {
-          targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  targetValues_,
-                  ((bitField0_ & 0x00000002) == 0x00000002),
-                  getParentForChildren(),
-                  isClean());
-          targetValues_ = null;
-        }
-        return targetValuesBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1alpha1.Sample)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.Sample)
-    private static final asgt.dataservice.v1alpha1.Create.Sample DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1alpha1.Create.Sample();
-    }
-
-    public static asgt.dataservice.v1alpha1.Create.Sample getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Sample>
-        PARSER = new com.google.protobuf.AbstractParser<Sample>() {
-      @java.lang.Override
-      public Sample parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Sample(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Sample> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Sample> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.dataservice.v1alpha1.Create.Sample getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface CreateRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1alpha1.CreateRequest)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
 
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    java.lang.String getDatasetType();
+    java.lang.String getType();
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetTypeBytes();
+        getTypeBytes();
 
     /**
      * <code>repeated string tags = 3;</code>
@@ -1056,27 +77,27 @@ public final class Create {
         getTargetsBytes(int index);
 
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.Create.Sample> 
+    java.util.List<asgt.type.SampleOuterClass.Sample> 
         getSamplesList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Create.Sample getSamples(int index);
+    asgt.type.SampleOuterClass.Sample getSamples(int index);
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
     int getSamplesCount();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+    java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+    asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index);
 
     /**
@@ -1105,8 +126,8 @@ public final class Create {
       super(builder);
     }
     private CreateRequest() {
-      datasetName_ = "";
-      datasetType_ = "";
+      name_ = "";
+      type_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       samples_ = java.util.Collections.emptyList();
@@ -1139,13 +160,13 @@ public final class Create {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetType_ = s;
+              type_ = s;
               break;
             }
             case 26: {
@@ -1159,11 +180,11 @@ public final class Create {
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                samples_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Create.Sample>();
+                samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
                 mutable_bitField0_ |= 0x00000010;
               }
               samples_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.Create.Sample.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
               break;
             }
             case 42: {
@@ -1230,68 +251,68 @@ public final class Create {
     }
 
     private int bitField0_;
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DATASET_TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object datasetType_;
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object type_;
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    public java.lang.String getDatasetType() {
-      java.lang.Object ref = datasetType_;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetType_ = s;
+        type_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetTypeBytes() {
-      java.lang.Object ref = datasetType_;
+        getTypeBytes() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetType_ = b;
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -1357,36 +378,36 @@ public final class Create {
     }
 
     public static final int SAMPLES_FIELD_NUMBER = 4;
-    private java.util.List<asgt.dataservice.v1alpha1.Create.Sample> samples_;
+    private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.Create.Sample> getSamplesList() {
+    public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+    public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Create.Sample getSamples(int index) {
+    public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+     * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
-    public asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+    public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
     }
@@ -1426,11 +447,11 @@ public final class Create {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
@@ -1453,11 +474,11 @@ public final class Create {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       {
         int dataSize = 0;
@@ -1499,10 +520,10 @@ public final class Create {
       asgt.dataservice.v1alpha1.Create.CreateRequest other = (asgt.dataservice.v1alpha1.Create.CreateRequest) obj;
 
       boolean result = true;
-      result = result && getDatasetName()
-          .equals(other.getDatasetName());
-      result = result && getDatasetType()
-          .equals(other.getDatasetType());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
       result = result && getTagsList()
           .equals(other.getTagsList());
       result = result && getTargetsList()
@@ -1525,10 +546,10 @@ public final class Create {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetType().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -1679,9 +700,9 @@ public final class Create {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
-        datasetType_ = "";
+        type_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -1727,8 +748,8 @@ public final class Create {
         asgt.dataservice.v1alpha1.Create.CreateRequest result = new asgt.dataservice.v1alpha1.Create.CreateRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.datasetName_ = datasetName_;
-        result.datasetType_ = datasetType_;
+        result.name_ = name_;
+        result.type_ = type_;
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -1802,12 +823,12 @@ public final class Create {
 
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Create.CreateRequest other) {
         if (other == asgt.dataservice.v1alpha1.Create.CreateRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
-        if (!other.getDatasetType().isEmpty()) {
-          datasetType_ = other.datasetType_;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
@@ -1889,140 +910,140 @@ public final class Create {
       }
       private int bitField0_;
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object datasetType_ = "";
+      private java.lang.Object type_ = "";
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public java.lang.String getDatasetType() {
-        java.lang.Object ref = datasetType_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetType_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetTypeBytes() {
-        java.lang.Object ref = datasetType_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetType_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetType(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder clearDatasetType() {
+      public Builder clearType() {
         
-        datasetType_ = getDefaultInstance().getDatasetType();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetTypeBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
@@ -2215,22 +1236,22 @@ public final class Create {
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.Create.Sample> samples_ =
+      private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          samples_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Create.Sample>(samples_);
+          samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder> samplesBuilder_;
+          asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> samplesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Create.Sample> getSamplesList() {
+      public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
         if (samplesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(samples_);
         } else {
@@ -2238,7 +1259,7 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public int getSamplesCount() {
         if (samplesBuilder_ == null) {
@@ -2248,9 +1269,9 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample getSamples(int index) {
+      public asgt.type.SampleOuterClass.Sample getSamples(int index) {
         if (samplesBuilder_ == null) {
           return samples_.get(index);
         } else {
@@ -2258,10 +1279,10 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder setSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample value) {
+          int index, asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2275,10 +1296,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder setSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.set(index, builderForValue.build());
@@ -2289,9 +1310,9 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public Builder addSamples(asgt.dataservice.v1alpha1.Create.Sample value) {
+      public Builder addSamples(asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2305,10 +1326,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder addSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample value) {
+          int index, asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2322,10 +1343,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder addSamples(
-          asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.add(builderForValue.build());
@@ -2336,10 +1357,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder addSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.add(index, builderForValue.build());
@@ -2350,10 +1371,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder addAllSamples(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Create.Sample> values) {
+          java.lang.Iterable<? extends asgt.type.SampleOuterClass.Sample> values) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2365,7 +1386,7 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
@@ -2378,7 +1399,7 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
       public Builder removeSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -2391,16 +1412,16 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder getSamplesBuilder(
+      public asgt.type.SampleOuterClass.Sample.Builder getSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+      public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
           int index) {
         if (samplesBuilder_ == null) {
           return samples_.get(index);  } else {
@@ -2408,9 +1429,9 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+      public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
            getSamplesOrBuilderList() {
         if (samplesBuilder_ != null) {
           return samplesBuilder_.getMessageOrBuilderList();
@@ -2419,33 +1440,33 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder addSamplesBuilder() {
+      public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder() {
         return getSamplesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance());
+            asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder addSamplesBuilder(
+      public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance());
+            index, asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 4;</code>
+       * <code>repeated .asgt.type.Sample samples = 4;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Create.Sample.Builder> 
+      public java.util.List<asgt.type.SampleOuterClass.Sample.Builder> 
            getSamplesBuilderList() {
         return getSamplesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+          asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> 
           getSamplesFieldBuilder() {
         if (samplesBuilder_ == null) {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder>(
+              asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
@@ -2629,47 +1650,47 @@ public final class Create {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    java.lang.String getDatasetName();
+    java.lang.String getName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetNameBytes();
+        getNameBytes();
 
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    java.lang.String getDatasetType();
+    java.lang.String getType();
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     com.google.protobuf.ByteString
-        getDatasetTypeBytes();
+        getTypeBytes();
 
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    java.util.List<asgt.dataservice.v1alpha1.Create.Sample> 
+    java.util.List<asgt.type.SampleOuterClass.Sample> 
         getSamplesList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    asgt.dataservice.v1alpha1.Create.Sample getSamples(int index);
+    asgt.type.SampleOuterClass.Sample getSamples(int index);
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
     int getSamplesCount();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+    java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+    asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index);
   }
   /**
@@ -2685,8 +1706,8 @@ public final class Create {
       super(builder);
     }
     private AppendDataRequest() {
-      datasetName_ = "";
-      datasetType_ = "";
+      name_ = "";
+      type_ = "";
       samples_ = java.util.Collections.emptyList();
     }
 
@@ -2717,22 +1738,22 @@ public final class Create {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetName_ = s;
+              name_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              datasetType_ = s;
+              type_ = s;
               break;
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                samples_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Create.Sample>();
+                samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
                 mutable_bitField0_ |= 0x00000004;
               }
               samples_.add(
-                  input.readMessage(asgt.dataservice.v1alpha1.Create.Sample.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -2771,68 +1792,68 @@ public final class Create {
     }
 
     private int bitField0_;
-    public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
-    public java.lang.String getDatasetName() {
-      java.lang.Object ref = datasetName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetName_ = s;
+        name_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetNameBytes() {
-      java.lang.Object ref = datasetName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int DATASET_TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object datasetType_;
+    public static final int TYPE_FIELD_NUMBER = 2;
+    private volatile java.lang.Object type_;
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
-    public java.lang.String getDatasetType() {
-      java.lang.Object ref = datasetType_;
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        datasetType_ = s;
+        type_ = s;
         return s;
       }
     }
     /**
-     * <code>string dataset_type = 2;</code>
+     * <code>string type = 2;</code>
      */
     public com.google.protobuf.ByteString
-        getDatasetTypeBytes() {
-      java.lang.Object ref = datasetType_;
+        getTypeBytes() {
+      java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        datasetType_ = b;
+        type_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2840,36 +1861,36 @@ public final class Create {
     }
 
     public static final int SAMPLES_FIELD_NUMBER = 3;
-    private java.util.List<asgt.dataservice.v1alpha1.Create.Sample> samples_;
+    private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    public java.util.List<asgt.dataservice.v1alpha1.Create.Sample> getSamplesList() {
+    public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+    public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.Create.Sample getSamples(int index) {
+    public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
-     * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+     * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
-    public asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+    public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
     }
@@ -2888,11 +1909,11 @@ public final class Create {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getDatasetNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, type_);
       }
       for (int i = 0; i < samples_.size(); i++) {
         output.writeMessage(3, samples_.get(i));
@@ -2906,11 +1927,11 @@ public final class Create {
       if (size != -1) return size;
 
       size = 0;
-      if (!getDatasetNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, datasetName_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
-      if (!getDatasetTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, datasetType_);
+      if (!getTypeBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, type_);
       }
       for (int i = 0; i < samples_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -2932,10 +1953,10 @@ public final class Create {
       asgt.dataservice.v1alpha1.Create.AppendDataRequest other = (asgt.dataservice.v1alpha1.Create.AppendDataRequest) obj;
 
       boolean result = true;
-      result = result && getDatasetName()
-          .equals(other.getDatasetName());
-      result = result && getDatasetType()
-          .equals(other.getDatasetType());
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getType()
+          .equals(other.getType());
       result = result && getSamplesList()
           .equals(other.getSamplesList());
       result = result && unknownFields.equals(other.unknownFields);
@@ -2949,10 +1970,10 @@ public final class Create {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + DATASET_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetName().hashCode();
-      hash = (37 * hash) + DATASET_TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + getDatasetType().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + getType().hashCode();
       if (getSamplesCount() > 0) {
         hash = (37 * hash) + SAMPLES_FIELD_NUMBER;
         hash = (53 * hash) + getSamplesList().hashCode();
@@ -3091,9 +2112,9 @@ public final class Create {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        datasetName_ = "";
+        name_ = "";
 
-        datasetType_ = "";
+        type_ = "";
 
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
@@ -3129,8 +2150,8 @@ public final class Create {
         asgt.dataservice.v1alpha1.Create.AppendDataRequest result = new asgt.dataservice.v1alpha1.Create.AppendDataRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.datasetName_ = datasetName_;
-        result.datasetType_ = datasetType_;
+        result.name_ = name_;
+        result.type_ = type_;
         if (samplesBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
@@ -3189,12 +2210,12 @@ public final class Create {
 
       public Builder mergeFrom(asgt.dataservice.v1alpha1.Create.AppendDataRequest other) {
         if (other == asgt.dataservice.v1alpha1.Create.AppendDataRequest.getDefaultInstance()) return this;
-        if (!other.getDatasetName().isEmpty()) {
-          datasetName_ = other.datasetName_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
-        if (!other.getDatasetType().isEmpty()) {
-          datasetType_ = other.datasetType_;
+        if (!other.getType().isEmpty()) {
+          type_ = other.type_;
           onChanged();
         }
         if (samplesBuilder_ == null) {
@@ -3253,160 +2274,160 @@ public final class Create {
       }
       private int bitField0_;
 
-      private java.lang.Object datasetName_ = "";
+      private java.lang.Object name_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public java.lang.String getDatasetName() {
-        java.lang.Object ref = datasetName_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetName_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetNameBytes() {
-        java.lang.Object ref = datasetName_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetName_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetName(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder clearDatasetName() {
+      public Builder clearName() {
         
-        datasetName_ = getDefaultInstance().getDatasetName();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setDatasetNameBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetName_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
 
-      private java.lang.Object datasetType_ = "";
+      private java.lang.Object type_ = "";
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public java.lang.String getDatasetType() {
-        java.lang.Object ref = datasetType_;
+      public java.lang.String getType() {
+        java.lang.Object ref = type_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          datasetType_ = s;
+          type_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
       public com.google.protobuf.ByteString
-          getDatasetTypeBytes() {
-        java.lang.Object ref = datasetType_;
+          getTypeBytes() {
+        java.lang.Object ref = type_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          datasetType_ = b;
+          type_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetType(
+      public Builder setType(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder clearDatasetType() {
+      public Builder clearType() {
         
-        datasetType_ = getDefaultInstance().getDatasetType();
+        type_ = getDefaultInstance().getType();
         onChanged();
         return this;
       }
       /**
-       * <code>string dataset_type = 2;</code>
+       * <code>string type = 2;</code>
        */
-      public Builder setDatasetTypeBytes(
+      public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        datasetType_ = value;
+        type_ = value;
         onChanged();
         return this;
       }
 
-      private java.util.List<asgt.dataservice.v1alpha1.Create.Sample> samples_ =
+      private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          samples_ = new java.util.ArrayList<asgt.dataservice.v1alpha1.Create.Sample>(samples_);
+          samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder> samplesBuilder_;
+          asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> samplesBuilder_;
 
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Create.Sample> getSamplesList() {
+      public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
         if (samplesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(samples_);
         } else {
@@ -3414,7 +2435,7 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public int getSamplesCount() {
         if (samplesBuilder_ == null) {
@@ -3424,9 +2445,9 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample getSamples(int index) {
+      public asgt.type.SampleOuterClass.Sample getSamples(int index) {
         if (samplesBuilder_ == null) {
           return samples_.get(index);
         } else {
@@ -3434,10 +2455,10 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder setSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample value) {
+          int index, asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3451,10 +2472,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder setSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.set(index, builderForValue.build());
@@ -3465,9 +2486,9 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public Builder addSamples(asgt.dataservice.v1alpha1.Create.Sample value) {
+      public Builder addSamples(asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3481,10 +2502,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder addSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample value) {
+          int index, asgt.type.SampleOuterClass.Sample value) {
         if (samplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3498,10 +2519,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder addSamples(
-          asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.add(builderForValue.build());
@@ -3512,10 +2533,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder addSamples(
-          int index, asgt.dataservice.v1alpha1.Create.Sample.Builder builderForValue) {
+          int index, asgt.type.SampleOuterClass.Sample.Builder builderForValue) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           samples_.add(index, builderForValue.build());
@@ -3526,10 +2547,10 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder addAllSamples(
-          java.lang.Iterable<? extends asgt.dataservice.v1alpha1.Create.Sample> values) {
+          java.lang.Iterable<? extends asgt.type.SampleOuterClass.Sample> values) {
         if (samplesBuilder_ == null) {
           ensureSamplesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3541,7 +2562,7 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
@@ -3554,7 +2575,7 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
       public Builder removeSamples(int index) {
         if (samplesBuilder_ == null) {
@@ -3567,16 +2588,16 @@ public final class Create {
         return this;
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder getSamplesBuilder(
+      public asgt.type.SampleOuterClass.Sample.Builder getSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.SampleOrBuilder getSamplesOrBuilder(
+      public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
           int index) {
         if (samplesBuilder_ == null) {
           return samples_.get(index);  } else {
@@ -3584,9 +2605,9 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+      public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
            getSamplesOrBuilderList() {
         if (samplesBuilder_ != null) {
           return samplesBuilder_.getMessageOrBuilderList();
@@ -3595,33 +2616,33 @@ public final class Create {
         }
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder addSamplesBuilder() {
+      public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder() {
         return getSamplesFieldBuilder().addBuilder(
-            asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance());
+            asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public asgt.dataservice.v1alpha1.Create.Sample.Builder addSamplesBuilder(
+      public asgt.type.SampleOuterClass.Sample.Builder addSamplesBuilder(
           int index) {
         return getSamplesFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1alpha1.Create.Sample.getDefaultInstance());
+            index, asgt.type.SampleOuterClass.Sample.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.dataservice.v1alpha1.Sample samples = 3;</code>
+       * <code>repeated .asgt.type.Sample samples = 3;</code>
        */
-      public java.util.List<asgt.dataservice.v1alpha1.Create.Sample.Builder> 
+      public java.util.List<asgt.type.SampleOuterClass.Sample.Builder> 
            getSamplesBuilderList() {
         return getSamplesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder> 
+          asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder> 
           getSamplesFieldBuilder() {
         if (samplesBuilder_ == null) {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1alpha1.Create.Sample, asgt.dataservice.v1alpha1.Create.Sample.Builder, asgt.dataservice.v1alpha1.Create.SampleOrBuilder>(
+              asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -3684,11 +2705,6 @@ public final class Create {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_dataservice_v1alpha1_Sample_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_dataservice_v1alpha1_Sample_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1alpha1_CreateRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -3708,20 +2724,15 @@ public final class Create {
   static {
     java.lang.String[] descriptorData = {
       "\n\037asgt/data/v1alpha1/create.proto\022\031asgt." +
-      "dataservice.v1alpha1\032\024asgt/type/data.pro" +
-      "to\032 asgt/type/retention_policy.proto\032\034as" +
-      "gt/type/target_value.proto\"V\n\006Sample\022\035\n\004" +
-      "data\030\001 \001(\0132\017.asgt.type.Data\022-\n\rtarget_va" +
-      "lues\030\002 \003(\0132\026.asgt.type.TargetValue\"\304\001\n\rC" +
-      "reateRequest\022\024\n\014dataset_name\030\001 \001(\t\022\024\n\014da" +
-      "taset_type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007target" +
-      "s\030\006 \003(\t\0222\n\007samples\030\004 \003(\0132!.asgt.dataserv" +
-      "ice.v1alpha1.Sample\0224\n\020retention_policy\030" +
-      "\005 \001(\0132\032.asgt.type.RetentionPolicy\"s\n\021App" +
-      "endDataRequest\022\024\n\014dataset_name\030\001 \001(\t\022\024\n\014" +
-      "dataset_type\030\002 \001(\t\0222\n\007samples\030\003 \003(\0132!.as" +
-      "gt.dataservice.v1alpha1.SampleB\rZ\013datase" +
-      "rviceb\006proto3"
+      "dataservice.v1alpha1\032 asgt/type/retentio" +
+      "n_policy.proto\032\026asgt/type/sample.proto\"\244" +
+      "\001\n\rCreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002" +
+      " \001(\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007s" +
+      "amples\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020reten" +
+      "tion_policy\030\005 \001(\0132\032.asgt.type.RetentionP" +
+      "olicy\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t" +
+      "\022\014\n\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.t" +
+      "ype.SampleB\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3734,31 +2745,23 @@ public final class Create {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DataOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
-          asgt.type.TargetValueOuterClass.getDescriptor(),
+          asgt.type.SampleOuterClass.getDescriptor(),
         }, assigner);
-    internal_static_asgt_dataservice_v1alpha1_Sample_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_asgt_dataservice_v1alpha1_Sample_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_dataservice_v1alpha1_Sample_descriptor,
-        new java.lang.String[] { "Data", "TargetValues", });
     internal_static_asgt_dataservice_v1alpha1_CreateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_dataservice_v1alpha1_CreateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_CreateRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "DatasetType", "Tags", "Targets", "Samples", "RetentionPolicy", });
+        new java.lang.String[] { "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1alpha1_AppendDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1alpha1_AppendDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1alpha1_AppendDataRequest_descriptor,
-        new java.lang.String[] { "DatasetName", "DatasetType", "Samples", });
-    asgt.type.DataOuterClass.getDescriptor();
+        new java.lang.String[] { "Name", "Type", "Samples", });
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
-    asgt.type.TargetValueOuterClass.getDescriptor();
+    asgt.type.SampleOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

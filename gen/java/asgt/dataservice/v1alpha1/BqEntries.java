@@ -2533,7 +2533,7 @@ public final class BqEntries {
       "(\0132\020.asgt.type.Model\0220\n\nprediction\030\n \003(\013" +
       "2\034.asgt.type.Prediction.Target\022$\n\ntime_a" +
       "dded\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_" +
-      "dataB\rZ\013dataserviceb\006proto3"
+      "dataB\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

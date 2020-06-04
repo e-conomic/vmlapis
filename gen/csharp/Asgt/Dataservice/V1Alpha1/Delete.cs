@@ -25,13 +25,13 @@ namespace Asgt.Dataservice.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9hc2d0L2RhdGEvdjFhbHBoYTEvZGVsZXRlLnByb3RvEhlhc2d0LmRhdGFz",
-            "ZXJ2aWNlLnYxYWxwaGExIk0KDURlbGV0ZVJlcXVlc3QSFAoMZGF0YXNldF90",
-            "eXBlGAEgASgJEg4KBG5hbWUYAiABKAlIABINCgN0YWcYAyABKAlIAEIHCgVt",
-            "YXRjaEINWgtkYXRhc2VydmljZWIGcHJvdG8z"));
+            "ZXJ2aWNlLnYxYWxwaGExIkUKDURlbGV0ZVJlcXVlc3QSDAoEdHlwZRgBIAEo",
+            "CRIOCgRuYW1lGAIgASgJSAASDQoDdGFnGAMgASgJSABCBwoFbWF0Y2hCBloE",
+            "ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DeleteRequest), global::Asgt.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "DatasetType", "Name", "Tag" }, new[]{ "Match" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.DeleteRequest), global::Asgt.Dataservice.V1Alpha1.DeleteRequest.Parser, new[]{ "Type", "Name", "Tag" }, new[]{ "Match" }, null, null)
           }));
     }
     #endregion
@@ -63,7 +63,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DeleteRequest(DeleteRequest other) : this() {
-      datasetType_ = other.datasetType_;
+      type_ = other.type_;
       switch (other.MatchCase) {
         case MatchOneofCase.Name:
           Name = other.Name;
@@ -81,14 +81,14 @@ namespace Asgt.Dataservice.V1Alpha1 {
       return new DeleteRequest(this);
     }
 
-    /// <summary>Field number for the "dataset_type" field.</summary>
-    public const int DatasetTypeFieldNumber = 1;
-    private string datasetType_ = "";
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private string type_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetType {
-      get { return datasetType_; }
+    public string Type {
+      get { return type_; }
       set {
-        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -146,7 +146,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DatasetType != other.DatasetType) return false;
+      if (Type != other.Type) return false;
       if (Name != other.Name) return false;
       if (Tag != other.Tag) return false;
       if (MatchCase != other.MatchCase) return false;
@@ -156,7 +156,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       if (matchCase_ == MatchOneofCase.Name) hash ^= Name.GetHashCode();
       if (matchCase_ == MatchOneofCase.Tag) hash ^= Tag.GetHashCode();
       hash ^= (int) matchCase_;
@@ -173,9 +173,9 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DatasetType.Length != 0) {
+      if (Type.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(DatasetType);
+        output.WriteString(Type);
       }
       if (matchCase_ == MatchOneofCase.Name) {
         output.WriteRawTag(18);
@@ -193,8 +193,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DatasetType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       if (matchCase_ == MatchOneofCase.Name) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -213,8 +213,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.DatasetType.Length != 0) {
-        DatasetType = other.DatasetType;
+      if (other.Type.Length != 0) {
+        Type = other.Type;
       }
       switch (other.MatchCase) {
         case MatchOneofCase.Name:
@@ -237,7 +237,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            DatasetType = input.ReadString();
+            Type = input.ReadString();
             break;
           }
           case 18: {

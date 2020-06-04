@@ -28,22 +28,20 @@ public final class DataService {
       "alpha1/create.proto\032\037asgt/data/v1alpha1/" +
       "delete.proto\032\035asgt/data/v1alpha1/info.pr" +
       "oto\032\034google/api/annotations.proto\032\033googl" +
-      "e/protobuf/empty.proto2\275\004\n\004Data\022\214\001\n\rCrea" +
-      "teDataset\022(.asgt.dataservice.v1alpha1.Cr" +
-      "eateRequest\032\026.google.protobuf.Empty\"9\202\323\344" +
-      "\223\0023\"./v1alpha1/{dataset_type}/{dataset_n" +
-      "ame}:create:\001*\022\215\001\n\nAppendData\022,.asgt.dat" +
-      "aservice.v1alpha1.AppendDataRequest\032\026.go" +
-      "ogle.protobuf.Empty\"9\202\323\344\223\0023\"./v1alpha1/{" +
-      "dataset_type}/{dataset_name}:append:\001*\022z" +
-      "\n\nDeleteData\022(.asgt.dataservice.v1alpha1" +
-      ".DeleteRequest\032\026.google.protobuf.Empty\"*" +
-      "\202\323\344\223\002$\"\037/v1alpha1/{dataset_type}:delete:" +
-      "\001*\022\231\001\n\007GetInfo\022).asgt.dataservice.v1alph" +
-      "a1.GetInfoRequest\032*.asgt.dataservice.v1a" +
-      "lpha1.GetInfoResponse\"7\202\323\344\223\0021\",/v1alpha1" +
-      "/{dataset_type}/{dataset_name}:info:\001*B\r" +
-      "Z\013dataserviceb\006proto3"
+      "e/protobuf/empty.proto2\374\003\n\004Data\022u\n\rCreat" +
+      "eDataset\022(.asgt.dataservice.v1alpha1.Cre" +
+      "ateRequest\032\026.google.protobuf.Empty\"\"\202\323\344\223" +
+      "\002\034\"\027/v1alpha1/{type}:create:\001*\022}\n\nAppend" +
+      "Data\022,.asgt.dataservice.v1alpha1.AppendD" +
+      "ataRequest\032\026.google.protobuf.Empty\")\202\323\344\223" +
+      "\002#\"\036/v1alpha1/{type}/{name}:append:\001*\022r\n" +
+      "\nDeleteData\022(.asgt.dataservice.v1alpha1." +
+      "DeleteRequest\032\026.google.protobuf.Empty\"\"\202" +
+      "\323\344\223\002\034\"\027/v1alpha1/{type}:delete:\001*\022\211\001\n\007Ge" +
+      "tInfo\022).asgt.dataservice.v1alpha1.GetInf" +
+      "oRequest\032*.asgt.dataservice.v1alpha1.Get" +
+      "InfoResponse\"\'\202\323\344\223\002!\"\034/v1alpha1/{type}/{" +
+      "name}:info:\001*B\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

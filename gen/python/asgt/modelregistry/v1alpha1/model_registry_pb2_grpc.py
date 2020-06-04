@@ -25,10 +25,10 @@ class ModelRegistryStub(object):
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.ListModelVersions = channel.unary_unary(
-        '/asgt.modelregistry.v1alpha1.ModelRegistry/ListModelVersions',
-        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsRequest.SerializeToString,
-        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsResponse.FromString,
+    self.GetCurrentModel = channel.unary_unary(
+        '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
+        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
+        response_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
         )
 
 
@@ -50,8 +50,9 @@ class ModelRegistryServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
-  def ListModelVersions(self, request, context):
+  def GetCurrentModel(self, request, context):
     """List the most recent versions of a model trained with a specified dataset
+    rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
     """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
@@ -70,10 +71,10 @@ def add_ModelRegistryServicer_to_server(servicer, server):
           request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
-      'ListModelVersions': grpc.unary_unary_rpc_method_handler(
-          servicer.ListModelVersions,
-          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsRequest.FromString,
-          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.ListModelVersionsResponse.SerializeToString,
+      'GetCurrentModel': grpc.unary_unary_rpc_method_handler(
+          servicer.GetCurrentModel,
+          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetCurrentModelRequest.FromString,
+          response_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetCurrentModelResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asgt.dataservice.v1alpha1;
 
-option go_package = "dataservice";
+option go_package = "data";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";

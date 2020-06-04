@@ -22,8 +22,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/data/v1alpha1/info.proto',
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
-  serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n\x1d\x61sgt/data/v1alpha1/info.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x0eGetInfoRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x02 \x01(\t\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_options=_b('Z\004data'),
+  serialized_pb=_b('\n\x1d\x61sgt/data/v1alpha1/info.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelB\x06Z\x04\x64\x61tab\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -38,14 +38,14 @@ _GETINFOREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.dataservice.v1alpha1.GetInfoRequest.dataset_name', index=0,
+      name='name', full_name='asgt.dataservice.v1alpha1.GetInfoRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_type', full_name='asgt.dataservice.v1alpha1.GetInfoRequest.dataset_type', index=1,
+      name='type', full_name='asgt.dataservice.v1alpha1.GetInfoRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -64,7 +64,7 @@ _GETINFOREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=175,
-  serialized_end=235,
+  serialized_end=219,
 )
 
 
@@ -101,8 +101,8 @@ _GETINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=324,
+  serialized_start=221,
+  serialized_end=308,
 )
 
 _GETINFORESPONSE.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET

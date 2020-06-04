@@ -32,20 +32,19 @@ namespace Asgt.Jester.V1Alpha1 {
             "bhIfCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbCJiChFTdWdnZXN0",
             "aW9uT3B0aW9ucxIYChBzdWdnZXN0aW9uX2xpbWl0GAEgASgFEjMKDm1pbl9j",
             "b25maWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWwi",
-            "mgEKEVN1Z2dlc3Rpb25SZXF1ZXN0EhQKDGRhdGFzZXRfbmFtZRgBIAEoCRIU",
-            "CgxkYXRhc2V0X3R5cGUYAiABKAkSHwoGaW5wdXRzGAMgAygLMg8uYXNndC50",
-            "eXBlLkRhdGESOAoHb3B0aW9ucxgEIAEoCzInLmFzZ3QuamVzdGVyLnYxYWxw",
-            "aGExLlN1Z2dlc3Rpb25PcHRpb25zMqMBCgZKZXN0ZXISmAEKB1N1Z2dlc3QS",
-            "Jy5hc2d0Lmplc3Rlci52MWFscGhhMS5TdWdnZXN0aW9uUmVxdWVzdBooLmFz",
-            "Z3QuamVzdGVyLnYxYWxwaGExLlN1Z2dlc3Rpb25SZXNwb25zZSI6gtPkkwI0",
-            "Ii8vdjFhbHBoYTEve2RhdGFzZXRfdHlwZX0ve2RhdGFzZXRfbmFtZX06c3Vn",
-            "Z2VzdDoBKkIIWgZqZXN0ZXJiBnByb3RvMw=="));
+            "igEKEVN1Z2dlc3Rpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSDAoEdHlwZRgC",
+            "IAEoCRIfCgZpbnB1dHMYAyADKAsyDy5hc2d0LnR5cGUuRGF0YRI4CgdvcHRp",
+            "b25zGAQgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9w",
+            "dGlvbnMykwEKBkplc3RlchKIAQoHU3VnZ2VzdBInLmFzZ3QuamVzdGVyLnYx",
+            "YWxwaGExLlN1Z2dlc3Rpb25SZXF1ZXN0GiguYXNndC5qZXN0ZXIudjFhbHBo",
+            "YTEuU3VnZ2VzdGlvblJlc3BvbnNlIiqC0+STAiQiHy92MWFscGhhMS97dHlw",
+            "ZX0ve25hbWV9OnN1Z2dlc3Q6ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionResponse), global::Asgt.Jester.V1Alpha1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionRequest), global::Asgt.Jester.V1Alpha1.SuggestionRequest.Parser, new[]{ "DatasetName", "DatasetType", "Inputs", "Options" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionRequest), global::Asgt.Jester.V1Alpha1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options" }, null, null, null)
           }));
     }
     #endregion
@@ -392,8 +391,8 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public SuggestionRequest(SuggestionRequest other) : this() {
-      datasetName_ = other.datasetName_;
-      datasetType_ = other.datasetType_;
+      name_ = other.name_;
+      type_ = other.type_;
       inputs_ = other.inputs_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -404,25 +403,25 @@ namespace Asgt.Jester.V1Alpha1 {
       return new SuggestionRequest(this);
     }
 
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 1;
-    private string datasetName_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
+    public string Name {
+      get { return name_; }
       set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "dataset_type" field.</summary>
-    public const int DatasetTypeFieldNumber = 2;
-    private string datasetType_ = "";
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetType {
-      get { return datasetType_; }
+    public string Type {
+      get { return type_; }
       set {
-        datasetType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -460,8 +459,8 @@ namespace Asgt.Jester.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (DatasetName != other.DatasetName) return false;
-      if (DatasetType != other.DatasetType) return false;
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
       if(!inputs_.Equals(other.inputs_)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -470,8 +469,8 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= inputs_.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
@@ -487,13 +486,13 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (DatasetName.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(DatasetName);
+        output.WriteString(Name);
       }
-      if (DatasetType.Length != 0) {
+      if (Type.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(DatasetType);
+        output.WriteString(Type);
       }
       inputs_.WriteTo(output, _repeated_inputs_codec);
       if (options_ != null) {
@@ -508,11 +507,11 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (DatasetType.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       size += inputs_.CalculateSize(_repeated_inputs_codec);
       if (options_ != null) {
@@ -529,11 +528,11 @@ namespace Asgt.Jester.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.DatasetType.Length != 0) {
-        DatasetType = other.DatasetType;
+      if (other.Type.Length != 0) {
+        Type = other.Type;
       }
       inputs_.Add(other.inputs_);
       if (other.options_ != null) {
@@ -554,11 +553,11 @@ namespace Asgt.Jester.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            DatasetName = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            DatasetType = input.ReadString();
+            Type = input.ReadString();
             break;
           }
           case 26: {

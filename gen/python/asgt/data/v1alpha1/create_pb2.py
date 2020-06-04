@@ -12,59 +12,20 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from vml_proto.asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
 from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
-from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
+from vml_proto.asgt.type import sample_pb2 as asgt_dot_type_dot_sample__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/data/v1alpha1/create.proto',
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
-  serialized_options=_b('Z\013dataservice'),
-  serialized_pb=_b('\n\x1f\x61sgt/data/v1alpha1/create.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x14\x61sgt/type/data.proto\x1a asgt/type/retention_policy.proto\x1a\x1c\x61sgt/type/target_value.proto\"V\n\x06Sample\x12\x1d\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0f.asgt.type.Data\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValue\"\xc4\x01\n\rCreateRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\x32\n\x07samples\x18\x04 \x03(\x0b\x32!.asgt.dataservice.v1alpha1.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"s\n\x11\x41ppendDataRequest\x12\x14\n\x0c\x64\x61taset_name\x18\x01 \x01(\t\x12\x14\n\x0c\x64\x61taset_type\x18\x02 \x01(\t\x12\x32\n\x07samples\x18\x03 \x03(\x0b\x32!.asgt.dataservice.v1alpha1.SampleB\rZ\x0b\x64\x61taserviceb\x06proto3')
+  serialized_options=_b('Z\004data'),
+  serialized_pb=_b('\n\x1f\x61sgt/data/v1alpha1/create.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\"\xa4\x01\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.SampleB\x06Z\x04\x64\x61tab\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_sample__pb2.DESCRIPTOR,])
 
 
-
-
-_SAMPLE = _descriptor.Descriptor(
-  name='Sample',
-  full_name='asgt.dataservice.v1alpha1.Sample',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='data', full_name='asgt.dataservice.v1alpha1.Sample.data', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='target_values', full_name='asgt.dataservice.v1alpha1.Sample.target_values', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=148,
-  serialized_end=234,
-)
 
 
 _CREATEREQUEST = _descriptor.Descriptor(
@@ -75,14 +36,14 @@ _CREATEREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.dataservice.v1alpha1.CreateRequest.dataset_name', index=0,
+      name='name', full_name='asgt.dataservice.v1alpha1.CreateRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_type', full_name='asgt.dataservice.v1alpha1.CreateRequest.dataset_type', index=1,
+      name='type', full_name='asgt.dataservice.v1alpha1.CreateRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -128,8 +89,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=237,
-  serialized_end=433,
+  serialized_start=121,
+  serialized_end=285,
 )
 
 
@@ -141,14 +102,14 @@ _APPENDDATAREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='dataset_name', full_name='asgt.dataservice.v1alpha1.AppendDataRequest.dataset_name', index=0,
+      name='name', full_name='asgt.dataservice.v1alpha1.AppendDataRequest.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset_type', full_name='asgt.dataservice.v1alpha1.AppendDataRequest.dataset_type', index=1,
+      name='type', full_name='asgt.dataservice.v1alpha1.AppendDataRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -173,26 +134,16 @@ _APPENDDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=435,
-  serialized_end=550,
+  serialized_start=287,
+  serialized_end=370,
 )
 
-_SAMPLE.fields_by_name['data'].message_type = asgt_dot_type_dot_data__pb2._DATA
-_SAMPLE.fields_by_name['target_values'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
-_CREATEREQUEST.fields_by_name['samples'].message_type = _SAMPLE
+_CREATEREQUEST.fields_by_name['samples'].message_type = asgt_dot_type_dot_sample__pb2._SAMPLE
 _CREATEREQUEST.fields_by_name['retention_policy'].message_type = asgt_dot_type_dot_retention__policy__pb2._RETENTIONPOLICY
-_APPENDDATAREQUEST.fields_by_name['samples'].message_type = _SAMPLE
-DESCRIPTOR.message_types_by_name['Sample'] = _SAMPLE
+_APPENDDATAREQUEST.fields_by_name['samples'].message_type = asgt_dot_type_dot_sample__pb2._SAMPLE
 DESCRIPTOR.message_types_by_name['CreateRequest'] = _CREATEREQUEST
 DESCRIPTOR.message_types_by_name['AppendDataRequest'] = _APPENDDATAREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
-Sample = _reflection.GeneratedProtocolMessageType('Sample', (_message.Message,), dict(
-  DESCRIPTOR = _SAMPLE,
-  __module__ = 'asgt.data.v1alpha1.create_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.dataservice.v1alpha1.Sample)
-  ))
-_sym_db.RegisterMessage(Sample)
 
 CreateRequest = _reflection.GeneratedProtocolMessageType('CreateRequest', (_message.Message,), dict(
   DESCRIPTOR = _CREATEREQUEST,
