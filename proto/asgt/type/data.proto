@@ -18,7 +18,7 @@ message Invoice {
   google.protobuf.StringValue customer_ref = 3;
 
   // invoice text from the SmartScan product
-  string text = 4;
+  google.protobuf.StringValue text = 4;
 
   // total of the invoice
   google.protobuf.FloatValue total = 7;
