@@ -20,11 +20,6 @@ class ModelRegistryStub(object):
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
-    self.DeleteModel = channel.unary_unary(
-        '/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel',
-        request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.SerializeToString,
-        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-        )
     self.GetCurrentModel = channel.unary_unary(
         '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
         request_serializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
@@ -37,15 +32,8 @@ class ModelRegistryServicer(object):
   pass
 
   def RegisterModel(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def DeleteModel(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
+    """rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
+    """
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
@@ -64,11 +52,6 @@ def add_ModelRegistryServicer_to_server(servicer, server):
       'RegisterModel': grpc.unary_unary_rpc_method_handler(
           servicer.RegisterModel,
           request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.RegisterModelRequest.FromString,
-          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-      ),
-      'DeleteModel': grpc.unary_unary_rpc_method_handler(
-          servicer.DeleteModel,
-          request_deserializer=asgt_dot_modelregistry_dot_v1alpha1_dot_model__registry__pb2.DeleteModelRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
       'GetCurrentModel': grpc.unary_unary_rpc_method_handler(

@@ -26,23 +26,23 @@ namespace Asgt.Type {
           string.Concat(
             "ChRhc2d0L3R5cGUvZGF0YS5wcm90bxIJYXNndC50eXBlGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBl",
-            "cnMucHJvdG8izgEKB0ludm9pY2USLgoKaXNzdWVfZGF0ZRgBIAEoCzIaLmdv",
+            "cnMucHJvdG8i7AEKB0ludm9pY2USLgoKaXNzdWVfZGF0ZRgBIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJQoIc3VwcGxpZXIYAiABKAsyEy5h",
             "c2d0LnR5cGUuU3VwcGxpZXISMgoMY3VzdG9tZXJfcmVmGAMgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEgwKBHRleHQYBCABKAkSKgoFdG90",
-            "YWwYByABKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZSLFAQoLSW52",
-            "b2ljZUxpbmUSLgoIY3VycmVuY3kYBCABKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "U3RyaW5nVmFsdWUSKwoGYW1vdW50GAMgASgLMhsuZ29vZ2xlLnByb3RvYnVm",
-            "LkZsb2F0VmFsdWUSKgoEdGV4dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJpbmdWYWx1ZRItCgdpdGVtX2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cmluZ1ZhbHVlInMKCFN1cHBsaWVyEgoKAmlkGAEgASgJEioKBG5hbWUY",
-            "BCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLwoJZ2xvYmFs",
-            "X2lkGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIisKC1Ry",
-            "YW5zYWN0aW9uEgwKBHRleHQYASABKAkSDgoGYW1vdW50GAIgASgCIoYBCgRE",
-            "YXRhEisKC3RyYW5zYWN0aW9uGAEgASgLMhYuYXNndC50eXBlLlRyYW5zYWN0",
-            "aW9uEiMKB2ludm9pY2UYAiABKAsyEi5hc2d0LnR5cGUuSW52b2ljZRIsCgxp",
-            "bnZvaWNlX2xpbmUYAyABKAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmVCBloE",
-            "dHlwZWIGcHJvdG8z"));
+            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBHRleHQYBCABKAsyHC5nb29n",
+            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoFdG90YWwYByABKAsyGy5nb29n",
+            "bGUucHJvdG9idWYuRmxvYXRWYWx1ZSLFAQoLSW52b2ljZUxpbmUSLgoIY3Vy",
+            "cmVuY3kYBCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKwoG",
+            "YW1vdW50GAMgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSKgoE",
+            "dGV4dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRItCgdp",
+            "dGVtX2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlInMK",
+            "CFN1cHBsaWVyEgoKAmlkGAEgASgJEioKBG5hbWUYBCABKAsyHC5nb29nbGUu",
+            "cHJvdG9idWYuU3RyaW5nVmFsdWUSLwoJZ2xvYmFsX2lkGAUgASgLMhwuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIisKC1RyYW5zYWN0aW9uEgwKBHRl",
+            "eHQYASABKAkSDgoGYW1vdW50GAIgASgCIoYBCgREYXRhEisKC3RyYW5zYWN0",
+            "aW9uGAEgASgLMhYuYXNndC50eXBlLlRyYW5zYWN0aW9uEiMKB2ludm9pY2UY",
+            "AiABKAsyEi5hc2d0LnR5cGUuSW52b2ljZRIsCgxpbnZvaWNlX2xpbmUYAyAB",
+            "KAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmVCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -85,7 +85,7 @@ namespace Asgt.Type {
       issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
       supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
       CustomerRef = other.CustomerRef;
-      text_ = other.text_;
+      Text = other.Text;
       Total = other.Total;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -137,7 +137,8 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 4;
-    private string text_ = "";
+    private static readonly pb::FieldCodec<string> _single_text_codec = pb::FieldCodec.ForClassWrapper<string>(34);
+    private string text_;
     /// <summary>
     /// invoice text from the SmartScan product
     /// </summary>
@@ -145,7 +146,7 @@ namespace Asgt.Type {
     public string Text {
       get { return text_; }
       set {
-        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        text_ = value;
       }
     }
 
@@ -191,7 +192,7 @@ namespace Asgt.Type {
       if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
       if (supplier_ != null) hash ^= Supplier.GetHashCode();
       if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
-      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (text_ != null) hash ^= Text.GetHashCode();
       if (total_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Total);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -217,9 +218,8 @@ namespace Asgt.Type {
       if (customerRef_ != null) {
         _single_customerRef_codec.WriteTagAndValue(output, CustomerRef);
       }
-      if (Text.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Text);
+      if (text_ != null) {
+        _single_text_codec.WriteTagAndValue(output, Text);
       }
       if (total_ != null) {
         _single_total_codec.WriteTagAndValue(output, Total);
@@ -241,8 +241,8 @@ namespace Asgt.Type {
       if (customerRef_ != null) {
         size += _single_customerRef_codec.CalculateSizeWithTag(CustomerRef);
       }
-      if (Text.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      if (text_ != null) {
+        size += _single_text_codec.CalculateSizeWithTag(Text);
       }
       if (total_ != null) {
         size += _single_total_codec.CalculateSizeWithTag(Total);
@@ -275,8 +275,10 @@ namespace Asgt.Type {
           CustomerRef = other.CustomerRef;
         }
       }
-      if (other.Text.Length != 0) {
-        Text = other.Text;
+      if (other.text_ != null) {
+        if (text_ == null || other.Text != "") {
+          Text = other.Text;
+        }
       }
       if (other.total_ != null) {
         if (total_ == null || other.Total != 0F) {
@@ -316,7 +318,10 @@ namespace Asgt.Type {
             break;
           }
           case 34: {
-            Text = input.ReadString();
+            string value = _single_text_codec.Read(input);
+            if (text_ == null || value != "") {
+              Text = value;
+            }
             break;
           }
           case 58: {

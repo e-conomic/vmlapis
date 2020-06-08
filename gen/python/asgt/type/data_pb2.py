@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x14\x61sgt/type/data.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xce\x01\n\x07Invoice\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x08supplier\x18\x02 \x01(\x0b\x32\x13.asgt.type.Supplier\x12\x32\n\x0c\x63ustomer_ref\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x0c\n\x04text\x18\x04 \x01(\t\x12*\n\x05total\x18\x07 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"\xc5\x01\n\x0bInvoiceLine\x12.\n\x08\x63urrency\x18\x04 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12+\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12*\n\x04text\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12-\n\x07item_id\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\"s\n\x08Supplier\x12\n\n\x02id\x18\x01 \x01(\t\x12*\n\x04name\x18\x04 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12/\n\tglobal_id\x18\x05 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"+\n\x0bTransaction\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x02\"\x86\x01\n\x04\x44\x61ta\x12+\n\x0btransaction\x18\x01 \x01(\x0b\x32\x16.asgt.type.Transaction\x12#\n\x07invoice\x18\x02 \x01(\x0b\x32\x12.asgt.type.Invoice\x12,\n\x0cinvoice_line\x18\x03 \x01(\x0b\x32\x16.asgt.type.InvoiceLineB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x14\x61sgt/type/data.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/wrappers.proto\"\xec\x01\n\x07Invoice\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12%\n\x08supplier\x18\x02 \x01(\x0b\x32\x13.asgt.type.Supplier\x12\x32\n\x0c\x63ustomer_ref\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x04text\x18\x04 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x05total\x18\x07 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"\xc5\x01\n\x0bInvoiceLine\x12.\n\x08\x63urrency\x18\x04 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12+\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\x12*\n\x04text\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12-\n\x07item_id\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\"s\n\x08Supplier\x12\n\n\x02id\x18\x01 \x01(\t\x12*\n\x04name\x18\x04 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12/\n\tglobal_id\x18\x05 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"+\n\x0bTransaction\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x02\"\x86\x01\n\x04\x44\x61ta\x12+\n\x0btransaction\x18\x01 \x01(\x0b\x32\x16.asgt.type.Transaction\x12#\n\x07invoice\x18\x02 \x01(\x0b\x32\x12.asgt.type.Invoice\x12,\n\x0cinvoice_line\x18\x03 \x01(\x0b\x32\x16.asgt.type.InvoiceLineB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,])
 
@@ -58,8 +58,8 @@ _INVOICE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='text', full_name='asgt.type.Invoice.text', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -83,7 +83,7 @@ _INVOICE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=101,
-  serialized_end=307,
+  serialized_end=337,
 )
 
 
@@ -134,8 +134,8 @@ _INVOICELINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=310,
-  serialized_end=507,
+  serialized_start=340,
+  serialized_end=537,
 )
 
 
@@ -179,8 +179,8 @@ _SUPPLIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=509,
-  serialized_end=624,
+  serialized_start=539,
+  serialized_end=654,
 )
 
 
@@ -217,8 +217,8 @@ _TRANSACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=626,
-  serialized_end=669,
+  serialized_start=656,
+  serialized_end=699,
 )
 
 
@@ -262,13 +262,14 @@ _DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=672,
-  serialized_end=806,
+  serialized_start=702,
+  serialized_end=836,
 )
 
 _INVOICE.fields_by_name['issue_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _INVOICE.fields_by_name['supplier'].message_type = _SUPPLIER
 _INVOICE.fields_by_name['customer_ref'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_INVOICE.fields_by_name['text'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _INVOICE.fields_by_name['total'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _INVOICELINE.fields_by_name['currency'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _INVOICELINE.fields_by_name['amount'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE

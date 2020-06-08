@@ -86,18 +86,25 @@ public final class DataOuterClass {
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>.google.protobuf.StringValue text = 4;</code>
      */
-    java.lang.String getText();
+    boolean hasText();
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>.google.protobuf.StringValue text = 4;</code>
      */
-    com.google.protobuf.ByteString
-        getTextBytes();
+    com.google.protobuf.StringValue getText();
+    /**
+     * <pre>
+     * invoice text from the SmartScan product
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue text = 4;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTextOrBuilder();
 
     /**
      * <pre>
@@ -137,7 +144,6 @@ public final class DataOuterClass {
       super(builder);
     }
     private Invoice() {
-      text_ = "";
     }
 
     @java.lang.Override
@@ -204,9 +210,16 @@ public final class DataOuterClass {
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (text_ != null) {
+                subBuilder = text_.toBuilder();
+              }
+              text_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(text_);
+                text_ = subBuilder.buildPartial();
+              }
 
-              text_ = s;
               break;
             }
             case 58: {
@@ -342,45 +355,36 @@ public final class DataOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object text_;
+    private com.google.protobuf.StringValue text_;
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>.google.protobuf.StringValue text = 4;</code>
      */
-    public java.lang.String getText() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        text_ = s;
-        return s;
-      }
+    public boolean hasText() {
+      return text_ != null;
     }
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>.google.protobuf.StringValue text = 4;</code>
      */
-    public com.google.protobuf.ByteString
-        getTextBytes() {
-      java.lang.Object ref = text_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        text_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public com.google.protobuf.StringValue getText() {
+      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+    }
+    /**
+     * <pre>
+     * invoice text from the SmartScan product
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue text = 4;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
+      return getText();
     }
 
     public static final int TOTAL_FIELD_NUMBER = 7;
@@ -439,8 +443,8 @@ public final class DataOuterClass {
       if (customerRef_ != null) {
         output.writeMessage(3, getCustomerRef());
       }
-      if (!getTextBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
+      if (text_ != null) {
+        output.writeMessage(4, getText());
       }
       if (total_ != null) {
         output.writeMessage(7, getTotal());
@@ -466,8 +470,9 @@ public final class DataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getCustomerRef());
       }
-      if (!getTextBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
+      if (text_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getText());
       }
       if (total_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -504,8 +509,11 @@ public final class DataOuterClass {
         result = result && getCustomerRef()
             .equals(other.getCustomerRef());
       }
-      result = result && getText()
-          .equals(other.getText());
+      result = result && (hasText() == other.hasText());
+      if (hasText()) {
+        result = result && getText()
+            .equals(other.getText());
+      }
       result = result && (hasTotal() == other.hasTotal());
       if (hasTotal()) {
         result = result && getTotal()
@@ -534,8 +542,10 @@ public final class DataOuterClass {
         hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
         hash = (53 * hash) + getCustomerRef().hashCode();
       }
-      hash = (37 * hash) + TEXT_FIELD_NUMBER;
-      hash = (53 * hash) + getText().hashCode();
+      if (hasText()) {
+        hash = (37 * hash) + TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getText().hashCode();
+      }
       if (hasTotal()) {
         hash = (37 * hash) + TOTAL_FIELD_NUMBER;
         hash = (53 * hash) + getTotal().hashCode();
@@ -691,8 +701,12 @@ public final class DataOuterClass {
           customerRef_ = null;
           customerRefBuilder_ = null;
         }
-        text_ = "";
-
+        if (textBuilder_ == null) {
+          text_ = null;
+        } else {
+          text_ = null;
+          textBuilder_ = null;
+        }
         if (totalBuilder_ == null) {
           total_ = null;
         } else {
@@ -740,7 +754,11 @@ public final class DataOuterClass {
         } else {
           result.customerRef_ = customerRefBuilder_.build();
         }
-        result.text_ = text_;
+        if (textBuilder_ == null) {
+          result.text_ = text_;
+        } else {
+          result.text_ = textBuilder_.build();
+        }
         if (totalBuilder_ == null) {
           result.total_ = total_;
         } else {
@@ -803,9 +821,8 @@ public final class DataOuterClass {
         if (other.hasCustomerRef()) {
           mergeCustomerRef(other.getCustomerRef());
         }
-        if (!other.getText().isEmpty()) {
-          text_ = other.text_;
-          onChanged();
+        if (other.hasText()) {
+          mergeText(other.getText());
         }
         if (other.hasTotal()) {
           mergeTotal(other.getTotal());
@@ -1262,24 +1279,31 @@ public final class DataOuterClass {
         return customerRefBuilder_;
       }
 
-      private java.lang.Object text_ = "";
+      private com.google.protobuf.StringValue text_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
       /**
        * <pre>
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>.google.protobuf.StringValue text = 4;</code>
        */
-      public java.lang.String getText() {
-        java.lang.Object ref = text_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          text_ = s;
-          return s;
+      public boolean hasText() {
+        return textBuilder_ != null || text_ != null;
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue text = 4;</code>
+       */
+      public com.google.protobuf.StringValue getText() {
+        if (textBuilder_ == null) {
+          return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
         } else {
-          return (java.lang.String) ref;
+          return textBuilder_.getMessage();
         }
       }
       /**
@@ -1287,36 +1311,37 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>.google.protobuf.StringValue text = 4;</code>
        */
-      public com.google.protobuf.ByteString
-          getTextBytes() {
-        java.lang.Object ref = text_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          text_ = b;
-          return b;
+      public Builder setText(com.google.protobuf.StringValue value) {
+        if (textBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          text_ = value;
+          onChanged();
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          textBuilder_.setMessage(value);
         }
+
+        return this;
       }
       /**
        * <pre>
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>.google.protobuf.StringValue text = 4;</code>
        */
       public Builder setText(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        text_ = value;
-        onChanged();
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (textBuilder_ == null) {
+          text_ = builderForValue.build();
+          onChanged();
+        } else {
+          textBuilder_.setMessage(builderForValue.build());
+        }
+
         return this;
       }
       /**
@@ -1324,12 +1349,39 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>.google.protobuf.StringValue text = 4;</code>
+       */
+      public Builder mergeText(com.google.protobuf.StringValue value) {
+        if (textBuilder_ == null) {
+          if (text_ != null) {
+            text_ =
+              com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
+          } else {
+            text_ = value;
+          }
+          onChanged();
+        } else {
+          textBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue text = 4;</code>
        */
       public Builder clearText() {
-        
-        text_ = getDefaultInstance().getText();
-        onChanged();
+        if (textBuilder_ == null) {
+          text_ = null;
+          onChanged();
+        } else {
+          text_ = null;
+          textBuilder_ = null;
+        }
+
         return this;
       }
       /**
@@ -1337,18 +1389,47 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>string text = 4;</code>
+       * <code>.google.protobuf.StringValue text = 4;</code>
        */
-      public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+      public com.google.protobuf.StringValue.Builder getTextBuilder() {
         
-        text_ = value;
         onChanged();
-        return this;
+        return getTextFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue text = 4;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
+        if (textBuilder_ != null) {
+          return textBuilder_.getMessageOrBuilder();
+        } else {
+          return text_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : text_;
+        }
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue text = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTextFieldBuilder() {
+        if (textBuilder_ == null) {
+          textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getText(),
+                  getParentForChildren(),
+                  isClean());
+          text_ = null;
+        }
+        return textBuilder_;
       }
 
       private com.google.protobuf.FloatValue total_ = null;
@@ -5902,25 +5983,26 @@ public final class DataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\024asgt/type/data.proto\022\tasgt.type\032\037googl" +
       "e/protobuf/timestamp.proto\032\036google/proto" +
-      "buf/wrappers.proto\"\316\001\n\007Invoice\022.\n\nissue_" +
+      "buf/wrappers.proto\"\354\001\n\007Invoice\022.\n\nissue_" +
       "date\030\001 \001(\0132\032.google.protobuf.Timestamp\022%" +
       "\n\010supplier\030\002 \001(\0132\023.asgt.type.Supplier\0222\n" +
       "\014customer_ref\030\003 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022\014\n\004text\030\004 \001(\t\022*\n\005total\030\007 \001(\0132\033" +
-      ".google.protobuf.FloatValue\"\305\001\n\013InvoiceL" +
-      "ine\022.\n\010currency\030\004 \001(\0132\034.google.protobuf." +
-      "StringValue\022+\n\006amount\030\003 \001(\0132\033.google.pro" +
-      "tobuf.FloatValue\022*\n\004text\030\010 \001(\0132\034.google." +
-      "protobuf.StringValue\022-\n\007item_id\030\t \001(\0132\034." +
-      "google.protobuf.StringValue\"s\n\010Supplier\022" +
-      "\n\n\002id\030\001 \001(\t\022*\n\004name\030\004 \001(\0132\034.google.proto" +
-      "buf.StringValue\022/\n\tglobal_id\030\005 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"+\n\013Transaction\022" +
-      "\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+" +
-      "\n\013transaction\030\001 \001(\0132\026.asgt.type.Transact" +
-      "ion\022#\n\007invoice\030\002 \001(\0132\022.asgt.type.Invoice" +
-      "\022,\n\014invoice_line\030\003 \001(\0132\026.asgt.type.Invoi" +
-      "ceLineB\006Z\004typeb\006proto3"
+      "ringValue\022*\n\004text\030\004 \001(\0132\034.google.protobu" +
+      "f.StringValue\022*\n\005total\030\007 \001(\0132\033.google.pr" +
+      "otobuf.FloatValue\"\305\001\n\013InvoiceLine\022.\n\010cur" +
+      "rency\030\004 \001(\0132\034.google.protobuf.StringValu" +
+      "e\022+\n\006amount\030\003 \001(\0132\033.google.protobuf.Floa" +
+      "tValue\022*\n\004text\030\010 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022-\n\007item_id\030\t \001(\0132\034.google.pro" +
+      "tobuf.StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(" +
+      "\t\022*\n\004name\030\004 \001(\0132\034.google.protobuf.String" +
+      "Value\022/\n\tglobal_id\030\005 \001(\0132\034.google.protob" +
+      "uf.StringValue\"+\n\013Transaction\022\014\n\004text\030\001 " +
+      "\001(\t\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transact" +
+      "ion\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007inv" +
+      "oice\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014invoic" +
+      "e_line\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004" +
+      "typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

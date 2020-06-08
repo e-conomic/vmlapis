@@ -26,19 +26,19 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type RegisterModelRequest struct {
-	DatasetId            string   `protobuf:"bytes,1,opt,name=dataset_id,json=datasetId,proto3" json:"dataset_id,omitempty"`
-	DatasetRevision      int64    `protobuf:"varint,2,opt,name=dataset_revision,json=datasetRevision,proto3" json:"dataset_revision,omitempty"`
-	ModelVersion         int64    `protobuf:"varint,3,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Dataset              *_type.Dataset  `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	Revision             *_type.Revision `protobuf:"bytes,2,opt,name=revision,proto3" json:"revision,omitempty"`
+	ModelVersion         int64           `protobuf:"varint,3,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
 }
 
 func (m *RegisterModelRequest) Reset()         { *m = RegisterModelRequest{} }
 func (m *RegisterModelRequest) String() string { return proto.CompactTextString(m) }
 func (*RegisterModelRequest) ProtoMessage()    {}
 func (*RegisterModelRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_431f6909cbaf2103, []int{0}
+	return fileDescriptor_model_registry_b4fe69337dc4d684, []int{0}
 }
 func (m *RegisterModelRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RegisterModelRequest.Unmarshal(m, b)
@@ -58,18 +58,18 @@ func (m *RegisterModelRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_RegisterModelRequest proto.InternalMessageInfo
 
-func (m *RegisterModelRequest) GetDatasetId() string {
+func (m *RegisterModelRequest) GetDataset() *_type.Dataset {
 	if m != nil {
-		return m.DatasetId
+		return m.Dataset
 	}
-	return ""
+	return nil
 }
 
-func (m *RegisterModelRequest) GetDatasetRevision() int64 {
+func (m *RegisterModelRequest) GetRevision() *_type.Revision {
 	if m != nil {
-		return m.DatasetRevision
+		return m.Revision
 	}
-	return 0
+	return nil
 }
 
 func (m *RegisterModelRequest) GetModelVersion() int64 {
@@ -79,64 +79,18 @@ func (m *RegisterModelRequest) GetModelVersion() int64 {
 	return 0
 }
 
-type DeleteModelRequest struct {
-	DatasetId            string   `protobuf:"bytes,1,opt,name=dataset_id,json=datasetId,proto3" json:"dataset_id,omitempty"`
-	ModelVersion         int64    `protobuf:"varint,2,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *DeleteModelRequest) Reset()         { *m = DeleteModelRequest{} }
-func (m *DeleteModelRequest) String() string { return proto.CompactTextString(m) }
-func (*DeleteModelRequest) ProtoMessage()    {}
-func (*DeleteModelRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_431f6909cbaf2103, []int{1}
-}
-func (m *DeleteModelRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DeleteModelRequest.Unmarshal(m, b)
-}
-func (m *DeleteModelRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DeleteModelRequest.Marshal(b, m, deterministic)
-}
-func (dst *DeleteModelRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteModelRequest.Merge(dst, src)
-}
-func (m *DeleteModelRequest) XXX_Size() int {
-	return xxx_messageInfo_DeleteModelRequest.Size(m)
-}
-func (m *DeleteModelRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_DeleteModelRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_DeleteModelRequest proto.InternalMessageInfo
-
-func (m *DeleteModelRequest) GetDatasetId() string {
-	if m != nil {
-		return m.DatasetId
-	}
-	return ""
-}
-
-func (m *DeleteModelRequest) GetModelVersion() int64 {
-	if m != nil {
-		return m.ModelVersion
-	}
-	return 0
-}
-
 type GetCurrentModelRequest struct {
-	DatasetId            string   `protobuf:"bytes,1,opt,name=dataset_id,json=datasetId,proto3" json:"dataset_id,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Dataset              *_type.Dataset `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
 }
 
 func (m *GetCurrentModelRequest) Reset()         { *m = GetCurrentModelRequest{} }
 func (m *GetCurrentModelRequest) String() string { return proto.CompactTextString(m) }
 func (*GetCurrentModelRequest) ProtoMessage()    {}
 func (*GetCurrentModelRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_431f6909cbaf2103, []int{2}
+	return fileDescriptor_model_registry_b4fe69337dc4d684, []int{1}
 }
 func (m *GetCurrentModelRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetCurrentModelRequest.Unmarshal(m, b)
@@ -156,11 +110,11 @@ func (m *GetCurrentModelRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_GetCurrentModelRequest proto.InternalMessageInfo
 
-func (m *GetCurrentModelRequest) GetDatasetId() string {
+func (m *GetCurrentModelRequest) GetDataset() *_type.Dataset {
 	if m != nil {
-		return m.DatasetId
+		return m.Dataset
 	}
-	return ""
+	return nil
 }
 
 type GetCurrentModelResponse struct {
@@ -174,7 +128,7 @@ func (m *GetCurrentModelResponse) Reset()         { *m = GetCurrentModelResponse
 func (m *GetCurrentModelResponse) String() string { return proto.CompactTextString(m) }
 func (*GetCurrentModelResponse) ProtoMessage()    {}
 func (*GetCurrentModelResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_431f6909cbaf2103, []int{3}
+	return fileDescriptor_model_registry_b4fe69337dc4d684, []int{2}
 }
 func (m *GetCurrentModelResponse) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetCurrentModelResponse.Unmarshal(m, b)
@@ -203,7 +157,6 @@ func (m *GetCurrentModelResponse) GetModel() *_type.Model {
 
 func init() {
 	proto.RegisterType((*RegisterModelRequest)(nil), "asgt.modelregistry.v1alpha1.RegisterModelRequest")
-	proto.RegisterType((*DeleteModelRequest)(nil), "asgt.modelregistry.v1alpha1.DeleteModelRequest")
 	proto.RegisterType((*GetCurrentModelRequest)(nil), "asgt.modelregistry.v1alpha1.GetCurrentModelRequest")
 	proto.RegisterType((*GetCurrentModelResponse)(nil), "asgt.modelregistry.v1alpha1.GetCurrentModelResponse")
 }
@@ -221,7 +174,6 @@ const _ = grpc.SupportPackageIsVersion4
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type ModelRegistryClient interface {
 	RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	DeleteModel(ctx context.Context, in *DeleteModelRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error)
 }
 
@@ -242,15 +194,6 @@ func (c *modelRegistryClient) RegisterModel(ctx context.Context, in *RegisterMod
 	return out, nil
 }
 
-func (c *modelRegistryClient) DeleteModel(ctx context.Context, in *DeleteModelRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
-	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 func (c *modelRegistryClient) GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error) {
 	out := new(GetCurrentModelResponse)
 	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel", in, out, opts...)
@@ -263,7 +206,6 @@ func (c *modelRegistryClient) GetCurrentModel(ctx context.Context, in *GetCurren
 // ModelRegistryServer is the server API for ModelRegistry service.
 type ModelRegistryServer interface {
 	RegisterModel(context.Context, *RegisterModelRequest) (*empty.Empty, error)
-	DeleteModel(context.Context, *DeleteModelRequest) (*empty.Empty, error)
 	GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error)
 }
 
@@ -285,24 +227,6 @@ func _ModelRegistry_RegisterModel_Handler(srv interface{}, ctx context.Context, 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ModelRegistryServer).RegisterModel(ctx, req.(*RegisterModelRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ModelRegistry_DeleteModel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DeleteModelRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ModelRegistryServer).DeleteModel(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ModelRegistryServer).DeleteModel(ctx, req.(*DeleteModelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -334,10 +258,6 @@ var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ModelRegistry_RegisterModel_Handler,
 		},
 		{
-			MethodName: "DeleteModel",
-			Handler:    _ModelRegistry_DeleteModel_Handler,
-		},
-		{
 			MethodName: "GetCurrentModel",
 			Handler:    _ModelRegistry_GetCurrentModel_Handler,
 		},
@@ -347,31 +267,30 @@ var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/modelregistry/v1alpha1/model_registry.proto", fileDescriptor_model_registry_431f6909cbaf2103)
+	proto.RegisterFile("asgt/modelregistry/v1alpha1/model_registry.proto", fileDescriptor_model_registry_b4fe69337dc4d684)
 }
 
-var fileDescriptor_model_registry_431f6909cbaf2103 = []byte{
-	// 338 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x91, 0x4f, 0x4b, 0xc3, 0x40,
-	0x10, 0xc5, 0x49, 0x8b, 0x42, 0xa7, 0x86, 0x96, 0x45, 0x6b, 0x49, 0x11, 0x4a, 0x05, 0xa9, 0x97,
-	0x8d, 0x6d, 0x05, 0xcf, 0xfe, 0x43, 0x3c, 0x78, 0xc9, 0xa1, 0x48, 0x2f, 0x25, 0x25, 0x63, 0x0c,
-	0xa4, 0xdd, 0xb8, 0xbb, 0x09, 0x14, 0xbc, 0xfa, 0xc1, 0xfc, 0x66, 0x92, 0xdd, 0x04, 0x8c, 0x89,
-	0x81, 0x1c, 0xf3, 0x66, 0x7e, 0x2f, 0xb3, 0xef, 0xc1, 0x95, 0x2b, 0x7c, 0x69, 0x6f, 0x99, 0x87,
-	0x21, 0x47, 0x3f, 0x10, 0x92, 0xef, 0xed, 0x64, 0xe6, 0x86, 0xd1, 0xbb, 0x3b, 0xd3, 0xf2, 0x3a,
-	0xd7, 0x69, 0xc4, 0x99, 0x64, 0x64, 0x94, 0x12, 0xb4, 0x40, 0xd0, 0x9c, 0xb0, 0x4e, 0x94, 0x9d,
-	0xdc, 0x47, 0xa8, 0x61, 0xcd, 0x58, 0x23, 0x9f, 0x31, 0x3f, 0x44, 0x5b, 0x7d, 0x6d, 0xe2, 0x37,
-	0x1b, 0xb7, 0x91, 0xcc, 0x0c, 0x27, 0x5f, 0x06, 0x1c, 0x3b, 0xca, 0x09, 0xf9, 0x4b, 0x0a, 0x39,
-	0xf8, 0x11, 0xa3, 0x90, 0xe4, 0x0c, 0xc0, 0x73, 0xa5, 0x2b, 0x50, 0xae, 0x03, 0x6f, 0x68, 0x8c,
-	0x8d, 0x69, 0xc7, 0xe9, 0x64, 0xca, 0xb3, 0x47, 0x2e, 0xa1, 0x9f, 0x8f, 0x39, 0x26, 0x81, 0x08,
-	0xd8, 0x6e, 0xd8, 0x1a, 0x1b, 0xd3, 0xb6, 0xd3, 0xcb, 0x74, 0x27, 0x93, 0xc9, 0x39, 0x98, 0xfa,
-	0x2d, 0x09, 0x72, 0xb5, 0xd7, 0x56, 0x7b, 0x47, 0x4a, 0x5c, 0x6a, 0x6d, 0xf2, 0x0a, 0xe4, 0x01,
-	0x43, 0x94, 0xd8, 0xe4, 0x88, 0x92, 0x73, 0xab, 0xc2, 0xf9, 0x06, 0x06, 0x4f, 0x28, 0xef, 0x63,
-	0xce, 0x71, 0x27, 0x1b, 0xb8, 0x4f, 0x6e, 0xe1, 0xb4, 0x04, 0x8a, 0x88, 0xed, 0x04, 0x92, 0x0b,
-	0x38, 0x50, 0xff, 0x50, 0x50, 0x77, 0xde, 0xa7, 0xaa, 0x96, 0x34, 0x79, 0xaa, 0x17, 0xf5, 0x78,
-	0xfe, 0xdd, 0x02, 0x33, 0x23, 0x75, 0x59, 0x64, 0x05, 0x66, 0x21, 0x6e, 0x32, 0xa3, 0x35, 0x95,
-	0xd2, 0xaa, 0x6a, 0xac, 0x01, 0xd5, 0x8d, 0xd2, 0xbc, 0x51, 0xfa, 0x98, 0x36, 0x4a, 0x96, 0xd0,
-	0xfd, 0x95, 0x21, 0xb1, 0x6b, 0x9d, 0xcb, 0x69, 0xff, 0xeb, 0xfb, 0x09, 0xbd, 0x3f, 0x41, 0x90,
-	0x45, 0xad, 0x77, 0x75, 0xde, 0xd6, 0x75, 0x33, 0x48, 0x67, 0x7d, 0xd7, 0x5b, 0x99, 0x05, 0x62,
-	0x73, 0xa8, 0xce, 0x5b, 0xfc, 0x04, 0x00, 0x00, 0xff, 0xff, 0x56, 0xea, 0x4d, 0x10, 0x3e, 0x03,
+var fileDescriptor_model_registry_b4fe69337dc4d684 = []byte{
+	// 322 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x91, 0xcf, 0x4a, 0xf3, 0x40,
+	0x14, 0xc5, 0xc9, 0x57, 0x3e, 0x95, 0xab, 0xa1, 0x32, 0x6a, 0x5b, 0xd2, 0x4d, 0xa9, 0x20, 0x5d,
+	0xc8, 0x8c, 0x69, 0x7d, 0x01, 0xff, 0xaf, 0xdc, 0xcc, 0xc2, 0x45, 0x37, 0x92, 0xd2, 0x6b, 0x0c,
+	0xa4, 0x99, 0x38, 0x33, 0x09, 0x14, 0x7c, 0x12, 0xdf, 0xd0, 0xb7, 0x90, 0xcc, 0x4c, 0xb4, 0xd1,
+	0x52, 0xd0, 0x65, 0xce, 0x3d, 0xbf, 0x33, 0x37, 0xf7, 0xc0, 0x59, 0xa4, 0x62, 0xcd, 0x16, 0x62,
+	0x8e, 0xa9, 0xc4, 0x38, 0x51, 0x5a, 0x2e, 0x59, 0x19, 0x46, 0x69, 0xfe, 0x1c, 0x85, 0x56, 0x7e,
+	0xac, 0x75, 0x9a, 0x4b, 0xa1, 0x05, 0xe9, 0x57, 0x04, 0x6d, 0x10, 0xb4, 0x26, 0x82, 0xae, 0x89,
+	0xd3, 0xcb, 0x1c, 0xd9, 0x3c, 0xd2, 0x91, 0x42, 0x6d, 0xa9, 0xe0, 0xe8, 0x6b, 0x60, 0x50, 0x27,
+	0xf7, 0x63, 0x21, 0xe2, 0x14, 0x99, 0xf9, 0x9a, 0x15, 0x4f, 0x0c, 0x17, 0xb9, 0x76, 0x2f, 0x0d,
+	0xdf, 0x3c, 0x38, 0xe4, 0xe6, 0x09, 0x94, 0xf7, 0x15, 0xc4, 0xf1, 0xa5, 0x40, 0xa5, 0xc9, 0x29,
+	0x6c, 0xbb, 0xf4, 0x9e, 0x37, 0xf0, 0x46, 0xbb, 0x63, 0x42, 0xcd, 0x52, 0x55, 0x3c, 0xbd, 0xb6,
+	0x13, 0x5e, 0x5b, 0x08, 0x83, 0x1d, 0x89, 0x65, 0xa2, 0x12, 0x91, 0xf5, 0xfe, 0x19, 0xfb, 0xc1,
+	0x8a, 0x9d, 0xbb, 0x11, 0xff, 0x34, 0x91, 0x63, 0xf0, 0xed, 0x9f, 0x97, 0x28, 0x0d, 0xd5, 0x1a,
+	0x78, 0xa3, 0x16, 0xdf, 0x33, 0xe2, 0x83, 0xd5, 0x86, 0xb7, 0xd0, 0xb9, 0x43, 0x7d, 0x55, 0x48,
+	0x89, 0x99, 0xfe, 0xfb, 0x76, 0xc3, 0x0b, 0xe8, 0xfe, 0xc8, 0x51, 0xb9, 0xc8, 0x14, 0x92, 0x13,
+	0xf8, 0x6f, 0x9e, 0x74, 0x31, 0xfb, 0x2b, 0x31, 0xd6, 0x68, 0xc7, 0xe3, 0x77, 0x0f, 0x7c, 0x47,
+	0xda, 0x3e, 0xc8, 0x14, 0xfc, 0xc6, 0xe1, 0x48, 0x48, 0x37, 0xb4, 0x46, 0xd7, 0x1d, 0x39, 0xe8,
+	0x50, 0xdb, 0x0d, 0xad, 0xbb, 0xa1, 0x37, 0x55, 0x37, 0xe4, 0x15, 0xda, 0xdf, 0x16, 0x26, 0x93,
+	0x8d, 0xe9, 0xeb, 0xcf, 0x14, 0x9c, 0xff, 0x0e, 0xb2, 0x37, 0xb9, 0x6c, 0x4f, 0xfd, 0x06, 0x31,
+	0xdb, 0x32, 0xeb, 0x4d, 0x3e, 0x02, 0x00, 0x00, 0xff, 0xff, 0x0e, 0x1b, 0xb4, 0xb9, 0xc9, 0x02,
 	0x00, 0x00,
 }

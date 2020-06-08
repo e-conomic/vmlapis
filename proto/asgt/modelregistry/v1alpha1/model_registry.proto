@@ -6,10 +6,11 @@ option go_package = "modelregistry";
 
 import "google/protobuf/empty.proto";
 import "asgt/type/model.proto";
+import "asgt/type/dataset.proto";
 
 service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);
-  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
+//  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
 
   rpc GetCurrentModel (GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
@@ -18,18 +19,18 @@ service ModelRegistry {
 }
 
 message RegisterModelRequest {
-  string dataset_id = 1;
-  int64 dataset_revision = 2;
+  asgt.type.Dataset dataset = 1;
+  asgt.type.Revision revision = 2;
   int64 model_version = 3;
 }
 
-message DeleteModelRequest {
-  string dataset_id = 1;
-  int64 model_version = 2;
-}
+//message DeleteModelRequest {
+//  string dataset_id = 1;
+//  int64 model_version = 2;
+//}
 
 message GetCurrentModelRequest {
-  string dataset_id = 1;
+  asgt.type.Dataset dataset = 1;
 }
 
 message GetCurrentModelResponse {

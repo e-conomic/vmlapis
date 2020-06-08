@@ -68,7 +68,7 @@ proto.asgt.type.Invoice.toObject = function(includeInstance, msg) {
     issueDate: (f = msg.getIssueDate()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     supplier: (f = msg.getSupplier()) && proto.asgt.type.Supplier.toObject(includeInstance, f),
     customerRef: (f = msg.getCustomerRef()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    text: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    text: (f = msg.getText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     total: (f = msg.getTotal()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
   };
 
@@ -122,7 +122,8 @@ proto.asgt.type.Invoice.deserializeBinaryFromReader = function(msg, reader) {
       msg.setCustomerRef(value);
       break;
     case 4:
-      var value = /** @type {string} */ (reader.readString());
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setText(value);
       break;
     case 7:
@@ -184,10 +185,11 @@ proto.asgt.type.Invoice.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getText();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f != null) {
+    writer.writeMessage(
       4,
-      f
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
   f = message.getTotal();
@@ -292,17 +294,32 @@ proto.asgt.type.Invoice.prototype.hasCustomerRef = function() {
 
 
 /**
- * optional string text = 4;
- * @return {string}
+ * optional google.protobuf.StringValue text = 4;
+ * @return {?proto.google.protobuf.StringValue}
  */
 proto.asgt.type.Invoice.prototype.getText = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 4));
 };
 
 
-/** @param {string} value */
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
 proto.asgt.type.Invoice.prototype.setText = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.asgt.type.Invoice.prototype.clearText = function() {
+  this.setText(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.type.Invoice.prototype.hasText = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

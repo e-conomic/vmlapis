@@ -11,9 +11,9 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
-goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.DeleteModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.RegisterModelRequest', null, global);
@@ -64,8 +64,8 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.toObject = func
  */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    datasetRevision: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
+    revision: (f = msg.getRevision()) && asgt_type_dataset_pb.Revision.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
@@ -104,12 +104,14 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.deserializeBinaryFromRead
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetId(value);
+      var value = new asgt_type_dataset_pb.Dataset;
+      reader.readMessage(value,asgt_type_dataset_pb.Dataset.deserializeBinaryFromReader);
+      msg.setDataset(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setDatasetRevision(value);
+      var value = new asgt_type_dataset_pb.Revision;
+      reader.readMessage(value,asgt_type_dataset_pb.Revision.deserializeBinaryFromReader);
+      msg.setRevision(value);
       break;
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
@@ -144,18 +146,20 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.serializeBinary
  */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetId();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getDataset();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      asgt_type_dataset_pb.Dataset.serializeBinaryToWriter
     );
   }
-  f = message.getDatasetRevision();
-  if (f !== 0) {
-    writer.writeInt64(
+  f = message.getRevision();
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      asgt_type_dataset_pb.Revision.serializeBinaryToWriter
     );
   }
   f = message.getModelVersion();
@@ -169,32 +173,62 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.serializeBinaryToWriter =
 
 
 /**
- * optional string dataset_id = 1;
- * @return {string}
+ * optional asgt.type.Dataset dataset = 1;
+ * @return {?proto.asgt.type.Dataset}
  */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getDatasetId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getDataset = function() {
+  return /** @type{?proto.asgt.type.Dataset} */ (
+    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Dataset, 1));
 };
 
 
-/** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setDatasetId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {?proto.asgt.type.Dataset|undefined} value */
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setDataset = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.clearDataset = function() {
+  this.setDataset(undefined);
 };
 
 
 /**
- * optional int64 dataset_revision = 2;
- * @return {number}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getDatasetRevision = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.hasDataset = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
-/** @param {number} value */
-proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setDatasetRevision = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+/**
+ * optional asgt.type.Revision revision = 2;
+ * @return {?proto.asgt.type.Revision}
+ */
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getRevision = function() {
+  return /** @type{?proto.asgt.type.Revision} */ (
+    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Revision, 2));
+};
+
+
+/** @param {?proto.asgt.type.Revision|undefined} value */
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setRevision = function(value) {
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.clearRevision = function() {
+  this.setRevision(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.hasRevision = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
@@ -210,175 +244,6 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getModelVersion
 /** @param {number} value */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.setModelVersion = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-
-/**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
-};
-goog.inherits(proto.asgt.modelregistry.v1alpha1.DeleteModelRequest, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.displayName = 'proto.asgt.modelregistry.v1alpha1.DeleteModelRequest';
-}
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.asgt.modelregistry.v1alpha1.DeleteModelRequest} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    datasetId: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    modelVersion: jspb.Message.getFieldWithDefault(msg, 2, 0)
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.asgt.modelregistry.v1alpha1.DeleteModelRequest}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.asgt.modelregistry.v1alpha1.DeleteModelRequest;
-  return proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.asgt.modelregistry.v1alpha1.DeleteModelRequest} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.asgt.modelregistry.v1alpha1.DeleteModelRequest}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetId(value);
-      break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setModelVersion(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.asgt.modelregistry.v1alpha1.DeleteModelRequest} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getDatasetId();
-  if (f.length > 0) {
-    writer.writeString(
-      1,
-      f
-    );
-  }
-  f = message.getModelVersion();
-  if (f !== 0) {
-    writer.writeInt64(
-      2,
-      f
-    );
-  }
-};
-
-
-/**
- * optional string dataset_id = 1;
- * @return {string}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.getDatasetId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setDatasetId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
-};
-
-
-/**
- * optional int64 model_version = 2;
- * @return {number}
- */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.getModelVersion = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.modelregistry.v1alpha1.DeleteModelRequest.prototype.setModelVersion = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
 };
 
 
@@ -429,7 +294,7 @@ proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.toObject = fu
  */
 proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    datasetId: jspb.Message.getFieldWithDefault(msg, 1, "")
+    dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -467,8 +332,9 @@ proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.deserializeBinaryFromRe
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDatasetId(value);
+      var value = new asgt_type_dataset_pb.Dataset;
+      reader.readMessage(value,asgt_type_dataset_pb.Dataset.deserializeBinaryFromReader);
+      msg.setDataset(value);
       break;
     default:
       reader.skipField();
@@ -499,28 +365,44 @@ proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.serializeBina
  */
 proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getDatasetId();
-  if (f.length > 0) {
-    writer.writeString(
+  f = message.getDataset();
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      asgt_type_dataset_pb.Dataset.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional string dataset_id = 1;
- * @return {string}
+ * optional asgt.type.Dataset dataset = 1;
+ * @return {?proto.asgt.type.Dataset}
  */
-proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.getDatasetId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.getDataset = function() {
+  return /** @type{?proto.asgt.type.Dataset} */ (
+    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Dataset, 1));
 };
 
 
-/** @param {string} value */
-proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.setDatasetId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+/** @param {?proto.asgt.type.Dataset|undefined} value */
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.setDataset = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.clearDataset = function() {
+  this.setDataset(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest.prototype.hasDataset = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
