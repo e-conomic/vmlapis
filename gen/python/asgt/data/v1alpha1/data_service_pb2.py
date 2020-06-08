@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\004data'),
-  serialized_pb=_b('\n%asgt/data/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1f\x61sgt/data/v1alpha1/create.proto\x1a\x1f\x61sgt/data/v1alpha1/delete.proto\x1a\x1d\x61sgt/data/v1alpha1/info.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto2\xfc\x03\n\x04\x44\x61ta\x12u\n\rCreateDataset\x12(.asgt.dataservice.v1alpha1.CreateRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:create:\x01*\x12}\n\nAppendData\x12,.asgt.dataservice.v1alpha1.AppendDataRequest\x1a\x16.google.protobuf.Empty\")\x82\xd3\xe4\x93\x02#\"\x1e/v1alpha1/{type}/{name}:append:\x01*\x12r\n\nDeleteData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:delete:\x01*\x12\x89\x01\n\x07GetInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/v1alpha1/{type}/{name}:info:\x01*B\x06Z\x04\x64\x61tab\x06proto3')
+  serialized_pb=_b('\n%asgt/data/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1f\x61sgt/data/v1alpha1/create.proto\x1a\x1f\x61sgt/data/v1alpha1/delete.proto\x1a\x1d\x61sgt/data/v1alpha1/info.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto2\x83\x04\n\x0b\x44\x61taService\x12u\n\rCreateDataset\x12(.asgt.dataservice.v1alpha1.CreateRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:create:\x01*\x12}\n\nAppendData\x12,.asgt.dataservice.v1alpha1.AppendDataRequest\x1a\x16.google.protobuf.Empty\")\x82\xd3\xe4\x93\x02#\"\x1e/v1alpha1/{type}/{name}:append:\x01*\x12r\n\nDeleteData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:delete:\x01*\x12\x89\x01\n\x07GetInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/v1alpha1/{type}/{name}:info:\x01*B\x06Z\x04\x64\x61tab\x06proto3')
   ,
   dependencies=[asgt_dot_data_dot_v1alpha1_dot_create__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -35,18 +35,18 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DESCRIPTOR._options = None
 
-_DATA = _descriptor.ServiceDescriptor(
-  name='Data',
-  full_name='asgt.dataservice.v1alpha1.Data',
+_DATASERVICE = _descriptor.ServiceDescriptor(
+  name='DataService',
+  full_name='asgt.dataservice.v1alpha1.DataService',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   serialized_start=225,
-  serialized_end=733,
+  serialized_end=740,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDataset',
-    full_name='asgt.dataservice.v1alpha1.Data.CreateDataset',
+    full_name='asgt.dataservice.v1alpha1.DataService.CreateDataset',
     index=0,
     containing_service=None,
     input_type=asgt_dot_data_dot_v1alpha1_dot_create__pb2._CREATEREQUEST,
@@ -55,7 +55,7 @@ _DATA = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='AppendData',
-    full_name='asgt.dataservice.v1alpha1.Data.AppendData',
+    full_name='asgt.dataservice.v1alpha1.DataService.AppendData',
     index=1,
     containing_service=None,
     input_type=asgt_dot_data_dot_v1alpha1_dot_create__pb2._APPENDDATAREQUEST,
@@ -64,7 +64,7 @@ _DATA = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='DeleteData',
-    full_name='asgt.dataservice.v1alpha1.Data.DeleteData',
+    full_name='asgt.dataservice.v1alpha1.DataService.DeleteData',
     index=2,
     containing_service=None,
     input_type=asgt_dot_data_dot_v1alpha1_dot_delete__pb2._DELETEREQUEST,
@@ -73,7 +73,7 @@ _DATA = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='GetInfo',
-    full_name='asgt.dataservice.v1alpha1.Data.GetInfo',
+    full_name='asgt.dataservice.v1alpha1.DataService.GetInfo',
     index=3,
     containing_service=None,
     input_type=asgt_dot_data_dot_v1alpha1_dot_info__pb2._GETINFOREQUEST,
@@ -81,8 +81,8 @@ _DATA = _descriptor.ServiceDescriptor(
     serialized_options=_b('\202\323\344\223\002!\"\034/v1alpha1/{type}/{name}:info:\001*'),
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_DATA)
+_sym_db.RegisterServiceDescriptor(_DATASERVICE)
 
-DESCRIPTOR.services_by_name['Data'] = _DATA
+DESCRIPTOR.services_by_name['DataService'] = _DATASERVICE
 
 # @@protoc_insertion_point(module_scope)

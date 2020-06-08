@@ -7,7 +7,7 @@ from vml_proto.asgt.data.v1alpha1 import info_pb2 as asgt_dot_data_dot_v1alpha1_
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-class DataStub(object):
+class DataServiceStub(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -18,28 +18,28 @@ class DataStub(object):
       channel: A grpc.Channel.
     """
     self.CreateDataset = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.Data/CreateDataset',
+        '/asgt.dataservice.v1alpha1.DataService/CreateDataset',
         request_serializer=asgt_dot_data_dot_v1alpha1_dot_create__pb2.CreateRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.AppendData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.Data/AppendData',
+        '/asgt.dataservice.v1alpha1.DataService/AppendData',
         request_serializer=asgt_dot_data_dot_v1alpha1_dot_create__pb2.AppendDataRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.DeleteData = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.Data/DeleteData',
+        '/asgt.dataservice.v1alpha1.DataService/DeleteData',
         request_serializer=asgt_dot_data_dot_v1alpha1_dot_delete__pb2.DeleteRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.GetInfo = channel.unary_unary(
-        '/asgt.dataservice.v1alpha1.Data/GetInfo',
+        '/asgt.dataservice.v1alpha1.DataService/GetInfo',
         request_serializer=asgt_dot_data_dot_v1alpha1_dot_info__pb2.GetInfoRequest.SerializeToString,
         response_deserializer=asgt_dot_data_dot_v1alpha1_dot_info__pb2.GetInfoResponse.FromString,
         )
 
 
-class DataServicer(object):
+class DataServiceServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
@@ -72,7 +72,7 @@ class DataServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_DataServicer_to_server(servicer, server):
+def add_DataServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'CreateDataset': grpc.unary_unary_rpc_method_handler(
           servicer.CreateDataset,
@@ -96,5 +96,5 @@ def add_DataServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'asgt.dataservice.v1alpha1.Data', rpc_method_handlers)
+      'asgt.dataservice.v1alpha1.DataService', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

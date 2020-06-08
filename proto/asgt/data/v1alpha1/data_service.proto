@@ -10,7 +10,7 @@ import "asgt/data/v1alpha1/create.proto";
 import "asgt/data/v1alpha1/delete.proto";
 import "asgt/data/v1alpha1/info.proto";
 
-service Data {
+service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       post: "/v1alpha1/{type}:create"

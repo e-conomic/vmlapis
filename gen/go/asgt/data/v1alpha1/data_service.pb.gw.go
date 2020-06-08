@@ -28,7 +28,7 @@ var _ status.Status
 var _ = runtime.String
 var _ = utilities.NewDoubleArray
 
-func request_Data_CreateDataset_0(ctx context.Context, marshaler runtime.Marshaler, client DataClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_DataService_CreateDataset_0(ctx context.Context, marshaler runtime.Marshaler, client DataServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq CreateRequest
 	var metadata runtime.ServerMetadata
 
@@ -63,7 +63,7 @@ func request_Data_CreateDataset_0(ctx context.Context, marshaler runtime.Marshal
 
 }
 
-func request_Data_AppendData_0(ctx context.Context, marshaler runtime.Marshaler, client DataClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_DataService_AppendData_0(ctx context.Context, marshaler runtime.Marshaler, client DataServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq AppendDataRequest
 	var metadata runtime.ServerMetadata
 
@@ -109,7 +109,7 @@ func request_Data_AppendData_0(ctx context.Context, marshaler runtime.Marshaler,
 
 }
 
-func request_Data_DeleteData_0(ctx context.Context, marshaler runtime.Marshaler, client DataClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_DataService_DeleteData_0(ctx context.Context, marshaler runtime.Marshaler, client DataServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq DeleteRequest
 	var metadata runtime.ServerMetadata
 
@@ -144,7 +144,7 @@ func request_Data_DeleteData_0(ctx context.Context, marshaler runtime.Marshaler,
 
 }
 
-func request_Data_GetInfo_0(ctx context.Context, marshaler runtime.Marshaler, client DataClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
+func request_DataService_GetInfo_0(ctx context.Context, marshaler runtime.Marshaler, client DataServiceClient, req *http.Request, pathParams map[string]string) (proto.Message, runtime.ServerMetadata, error) {
 	var protoReq GetInfoRequest
 	var metadata runtime.ServerMetadata
 
@@ -190,9 +190,9 @@ func request_Data_GetInfo_0(ctx context.Context, marshaler runtime.Marshaler, cl
 
 }
 
-// RegisterDataHandlerFromEndpoint is same as RegisterDataHandler but
+// RegisterDataServiceHandlerFromEndpoint is same as RegisterDataServiceHandler but
 // automatically dials to "endpoint" and closes the connection when "ctx" gets done.
-func RegisterDataHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
+func RegisterDataServiceHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux, endpoint string, opts []grpc.DialOption) (err error) {
 	conn, err := grpc.Dial(endpoint, opts...)
 	if err != nil {
 		return err
@@ -212,23 +212,23 @@ func RegisterDataHandlerFromEndpoint(ctx context.Context, mux *runtime.ServeMux,
 		}()
 	}()
 
-	return RegisterDataHandler(ctx, mux, conn)
+	return RegisterDataServiceHandler(ctx, mux, conn)
 }
 
-// RegisterDataHandler registers the http handlers for service Data to "mux".
+// RegisterDataServiceHandler registers the http handlers for service DataService to "mux".
 // The handlers forward requests to the grpc endpoint over "conn".
-func RegisterDataHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
-	return RegisterDataHandlerClient(ctx, mux, NewDataClient(conn))
+func RegisterDataServiceHandler(ctx context.Context, mux *runtime.ServeMux, conn *grpc.ClientConn) error {
+	return RegisterDataServiceHandlerClient(ctx, mux, NewDataServiceClient(conn))
 }
 
-// RegisterDataHandlerClient registers the http handlers for service Data
-// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "DataClient".
-// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "DataClient"
+// RegisterDataServiceHandlerClient registers the http handlers for service DataService
+// to "mux". The handlers forward requests to the grpc endpoint over the given implementation of "DataServiceClient".
+// Note: the gRPC framework executes interceptors within the gRPC handler. If the passed in "DataServiceClient"
 // doesn't go through the normal gRPC flow (creating a gRPC client etc.) then it will be up to the passed in
-// "DataClient" to call the correct interceptors.
-func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, client DataClient) error {
+// "DataServiceClient" to call the correct interceptors.
+func RegisterDataServiceHandlerClient(ctx context.Context, mux *runtime.ServeMux, client DataServiceClient) error {
 
-	mux.Handle("POST", pattern_Data_CreateDataset_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_DataService_CreateDataset_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -237,18 +237,18 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Data_CreateDataset_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_DataService_CreateDataset_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Data_CreateDataset_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_DataService_CreateDataset_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Data_AppendData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_DataService_AppendData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -257,18 +257,18 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Data_AppendData_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_DataService_AppendData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Data_AppendData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_DataService_AppendData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Data_DeleteData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_DataService_DeleteData_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -277,18 +277,18 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Data_DeleteData_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_DataService_DeleteData_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Data_DeleteData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_DataService_DeleteData_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
-	mux.Handle("POST", pattern_Data_GetInfo_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
+	mux.Handle("POST", pattern_DataService_GetInfo_0, func(w http.ResponseWriter, req *http.Request, pathParams map[string]string) {
 		ctx, cancel := context.WithCancel(req.Context())
 		defer cancel()
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
@@ -297,14 +297,14 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
-		resp, md, err := request_Data_GetInfo_0(rctx, inboundMarshaler, client, req, pathParams)
+		resp, md, err := request_DataService_GetInfo_0(rctx, inboundMarshaler, client, req, pathParams)
 		ctx = runtime.NewServerMetadataContext(ctx, md)
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
 		}
 
-		forward_Data_GetInfo_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
+		forward_DataService_GetInfo_0(ctx, mux, outboundMarshaler, w, req, resp, mux.GetForwardResponseOptions()...)
 
 	})
 
@@ -312,21 +312,21 @@ func RegisterDataHandlerClient(ctx context.Context, mux *runtime.ServeMux, clien
 }
 
 var (
-	pattern_Data_CreateDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "create"))
+	pattern_DataService_CreateDataset_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "create"))
 
-	pattern_Data_AppendData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "append"))
+	pattern_DataService_AppendData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "append"))
 
-	pattern_Data_DeleteData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "delete"))
+	pattern_DataService_DeleteData_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1}, []string{"v1alpha1", "type"}, "delete"))
 
-	pattern_Data_GetInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "info"))
+	pattern_DataService_GetInfo_0 = runtime.MustPattern(runtime.NewPattern(1, []int{2, 0, 1, 0, 4, 1, 5, 1, 1, 0, 4, 1, 5, 2}, []string{"v1alpha1", "type", "name"}, "info"))
 )
 
 var (
-	forward_Data_CreateDataset_0 = runtime.ForwardResponseMessage
+	forward_DataService_CreateDataset_0 = runtime.ForwardResponseMessage
 
-	forward_Data_AppendData_0 = runtime.ForwardResponseMessage
+	forward_DataService_AppendData_0 = runtime.ForwardResponseMessage
 
-	forward_Data_DeleteData_0 = runtime.ForwardResponseMessage
+	forward_DataService_DeleteData_0 = runtime.ForwardResponseMessage
 
-	forward_Data_GetInfo_0 = runtime.ForwardResponseMessage
+	forward_DataService_GetInfo_0 = runtime.ForwardResponseMessage
 )

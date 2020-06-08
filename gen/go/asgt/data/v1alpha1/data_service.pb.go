@@ -33,163 +33,163 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// DataClient is the client API for Data service.
+// DataServiceClient is the client API for DataService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type DataClient interface {
+type DataServiceClient interface {
 	CreateDataset(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	AppendData(ctx context.Context, in *AppendDataRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	DeleteData(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetInfo(ctx context.Context, in *GetInfoRequest, opts ...grpc.CallOption) (*GetInfoResponse, error)
 }
 
-type dataClient struct {
+type dataServiceClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewDataClient(cc *grpc.ClientConn) DataClient {
-	return &dataClient{cc}
+func NewDataServiceClient(cc *grpc.ClientConn) DataServiceClient {
+	return &dataServiceClient{cc}
 }
 
-func (c *dataClient) CreateDataset(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *dataServiceClient) CreateDataset(ctx context.Context, in *CreateRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.Data/CreateDataset", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/CreateDataset", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *dataClient) AppendData(ctx context.Context, in *AppendDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *dataServiceClient) AppendData(ctx context.Context, in *AppendDataRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.Data/AppendData", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/AppendData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *dataClient) DeleteData(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+func (c *dataServiceClient) DeleteData(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.Data/DeleteData", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/DeleteData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *dataClient) GetInfo(ctx context.Context, in *GetInfoRequest, opts ...grpc.CallOption) (*GetInfoResponse, error) {
+func (c *dataServiceClient) GetInfo(ctx context.Context, in *GetInfoRequest, opts ...grpc.CallOption) (*GetInfoResponse, error) {
 	out := new(GetInfoResponse)
-	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.Data/GetInfo", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1alpha1.DataService/GetInfo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// DataServer is the server API for Data service.
-type DataServer interface {
+// DataServiceServer is the server API for DataService service.
+type DataServiceServer interface {
 	CreateDataset(context.Context, *CreateRequest) (*empty.Empty, error)
 	AppendData(context.Context, *AppendDataRequest) (*empty.Empty, error)
 	DeleteData(context.Context, *DeleteRequest) (*empty.Empty, error)
 	GetInfo(context.Context, *GetInfoRequest) (*GetInfoResponse, error)
 }
 
-func RegisterDataServer(s *grpc.Server, srv DataServer) {
-	s.RegisterService(&_Data_serviceDesc, srv)
+func RegisterDataServiceServer(s *grpc.Server, srv DataServiceServer) {
+	s.RegisterService(&_DataService_serviceDesc, srv)
 }
 
-func _Data_CreateDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _DataService_CreateDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(CreateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServer).CreateDataset(ctx, in)
+		return srv.(DataServiceServer).CreateDataset(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.Data/CreateDataset",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/CreateDataset",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServer).CreateDataset(ctx, req.(*CreateRequest))
+		return srv.(DataServiceServer).CreateDataset(ctx, req.(*CreateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Data_AppendData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _DataService_AppendData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(AppendDataRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServer).AppendData(ctx, in)
+		return srv.(DataServiceServer).AppendData(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.Data/AppendData",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/AppendData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServer).AppendData(ctx, req.(*AppendDataRequest))
+		return srv.(DataServiceServer).AppendData(ctx, req.(*AppendDataRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Data_DeleteData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _DataService_DeleteData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DeleteRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServer).DeleteData(ctx, in)
+		return srv.(DataServiceServer).DeleteData(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.Data/DeleteData",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/DeleteData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServer).DeleteData(ctx, req.(*DeleteRequest))
+		return srv.(DataServiceServer).DeleteData(ctx, req.(*DeleteRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _Data_GetInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _DataService_GetInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetInfoRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(DataServer).GetInfo(ctx, in)
+		return srv.(DataServiceServer).GetInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.dataservice.v1alpha1.Data/GetInfo",
+		FullMethod: "/asgt.dataservice.v1alpha1.DataService/GetInfo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServer).GetInfo(ctx, req.(*GetInfoRequest))
+		return srv.(DataServiceServer).GetInfo(ctx, req.(*GetInfoRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _Data_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "asgt.dataservice.v1alpha1.Data",
-	HandlerType: (*DataServer)(nil),
+var _DataService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "asgt.dataservice.v1alpha1.DataService",
+	HandlerType: (*DataServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "CreateDataset",
-			Handler:    _Data_CreateDataset_Handler,
+			Handler:    _DataService_CreateDataset_Handler,
 		},
 		{
 			MethodName: "AppendData",
-			Handler:    _Data_AppendData_Handler,
+			Handler:    _DataService_AppendData_Handler,
 		},
 		{
 			MethodName: "DeleteData",
-			Handler:    _Data_DeleteData_Handler,
+			Handler:    _DataService_DeleteData_Handler,
 		},
 		{
 			MethodName: "GetInfo",
-			Handler:    _Data_GetInfo_Handler,
+			Handler:    _DataService_GetInfo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -197,30 +197,30 @@ var _Data_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/data/v1alpha1/data_service.proto", fileDescriptor_data_service_72b42cc3367ce2a0)
+	proto.RegisterFile("asgt/data/v1alpha1/data_service.proto", fileDescriptor_data_service_0a67092a35f82600)
 }
 
-var fileDescriptor_data_service_72b42cc3367ce2a0 = []byte{
-	// 324 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x92, 0x31, 0x4b, 0x03, 0x31,
-	0x14, 0xc7, 0xa9, 0x96, 0x0a, 0x01, 0x97, 0x1b, 0x14, 0x6b, 0x55, 0x8c, 0x88, 0xb6, 0x48, 0x42,
-	0x75, 0xbb, 0x4d, 0xad, 0x88, 0xab, 0xa3, 0x8b, 0xbc, 0xb6, 0xaf, 0xf5, 0xa0, 0x4d, 0xe2, 0xe5,
-	0xb5, 0x50, 0x4a, 0x17, 0x37, 0x67, 0x3f, 0x9a, 0x5f, 0xc1, 0x8f, 0xe1, 0x20, 0x49, 0xee, 0x2c,
-	0xc8, 0xf5, 0x14, 0xc7, 0xdc, 0xff, 0x77, 0xef, 0xf7, 0xfe, 0xb9, 0x63, 0xc7, 0x60, 0x87, 0x24,
-	0xfb, 0x40, 0x20, 0xa7, 0x6d, 0x18, 0x99, 0x27, 0x68, 0xfb, 0xd3, 0xa3, 0xc5, 0x74, 0x9a, 0xf4,
-	0x50, 0x98, 0x54, 0x93, 0x8e, 0x76, 0x1c, 0x26, 0x5c, 0x90, 0x3f, 0xcf, 0xe9, 0xfa, 0x41, 0xc1,
-	0x84, 0x5e, 0x8a, 0x40, 0xd9, 0xbb, 0x85, 0x40, 0x1f, 0x47, 0xf8, 0x0d, 0xec, 0x15, 0x00, 0x89,
-	0x1a, 0xe8, 0x2c, 0x6e, 0x0c, 0xb5, 0x1e, 0x8e, 0x50, 0x82, 0x49, 0x24, 0x28, 0xa5, 0x09, 0x28,
-	0xd1, 0xca, 0x66, 0xe9, 0x6e, 0x96, 0xfa, 0x53, 0x77, 0x32, 0x90, 0x38, 0x36, 0x34, 0x0b, 0xe1,
-	0xf9, 0xe7, 0x3a, 0xab, 0x76, 0x80, 0x20, 0x9a, 0xb0, 0xcd, 0x6b, 0xbf, 0x53, 0xc7, 0x57, 0xa0,
-	0xe8, 0x54, 0xac, 0x6c, 0x24, 0x02, 0x79, 0x8f, 0xcf, 0x13, 0xb4, 0x54, 0xdf, 0x12, 0xc1, 0x20,
-	0x72, 0x83, 0xb8, 0x71, 0x06, 0xce, 0x5f, 0xde, 0x3f, 0xde, 0xd6, 0x1a, 0x7c, 0x7b, 0xb9, 0xf4,
-	0x9c, 0x66, 0x06, 0x17, 0x71, 0x68, 0x1f, 0x57, 0x5a, 0xd1, 0x82, 0xb1, 0x4b, 0x63, 0x50, 0xf5,
-	0xfd, 0x12, 0x67, 0x25, 0xce, 0x25, 0xf6, 0x9b, 0xb7, 0xe9, 0xbd, 0x47, 0x7c, 0xff, 0xa7, 0x57,
-	0xce, 0x15, 0x8c, 0x71, 0x11, 0x83, 0x1f, 0xe5, 0xf4, 0x29, 0x63, 0x1d, 0x7f, 0xd1, 0x5e, 0x5f,
-	0x56, 0x39, 0x60, 0xff, 0xaf, 0x1c, 0xbe, 0xa7, 0x73, 0xbe, 0x56, 0xd8, 0xc6, 0x2d, 0xd2, 0x9d,
-	0x1a, 0xe8, 0xa8, 0x59, 0x62, 0xcc, 0x98, 0x5c, 0xd9, 0xfa, 0x0b, 0x6a, 0x8d, 0x56, 0x16, 0xf9,
-	0x89, 0x5f, 0xe3, 0x90, 0x37, 0x56, 0xdd, 0x80, 0xfb, 0x79, 0xe2, 0x4a, 0xeb, 0xaa, 0xf6, 0x50,
-	0x75, 0x03, 0xbb, 0x35, 0xdf, 0xe3, 0xe2, 0x2b, 0x00, 0x00, 0xff, 0xff, 0x25, 0x4e, 0xe4, 0x14,
-	0xed, 0x02, 0x00, 0x00,
+var fileDescriptor_data_service_0a67092a35f82600 = []byte{
+	// 329 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x92, 0x41, 0x4b, 0x33, 0x31,
+	0x10, 0x86, 0xe9, 0x47, 0xe9, 0x07, 0x11, 0x2f, 0x39, 0x28, 0xd6, 0xaa, 0x18, 0x11, 0x6d, 0x91,
+	0x84, 0xea, 0x6d, 0x6f, 0x6a, 0x45, 0xbc, 0xea, 0xcd, 0x8b, 0x4c, 0xdb, 0x69, 0x5d, 0x68, 0x93,
+	0xb8, 0x99, 0x16, 0x4a, 0xe9, 0x45, 0x4f, 0x9e, 0xfd, 0x69, 0xfe, 0x05, 0x7f, 0x88, 0x24, 0xd9,
+	0xb5, 0x20, 0x6d, 0x15, 0x8f, 0xd9, 0xf7, 0xd9, 0x3c, 0xf3, 0xce, 0x2e, 0x3b, 0x04, 0xd7, 0x27,
+	0xd5, 0x05, 0x02, 0x35, 0x6e, 0xc2, 0xc0, 0x3e, 0x42, 0x33, 0x9c, 0x1e, 0x1c, 0x66, 0xe3, 0xb4,
+	0x83, 0xd2, 0x66, 0x86, 0x0c, 0xdf, 0xf2, 0x98, 0xf4, 0x41, 0xf1, 0xbc, 0xa0, 0xab, 0x7b, 0x0b,
+	0x6e, 0xe8, 0x64, 0x08, 0x94, 0xbf, 0xbb, 0x10, 0xe8, 0xe2, 0x00, 0xbf, 0x80, 0x9d, 0x05, 0x40,
+	0xaa, 0x7b, 0x26, 0x8f, 0x6b, 0x7d, 0x63, 0xfa, 0x03, 0x54, 0x60, 0x53, 0x05, 0x5a, 0x1b, 0x02,
+	0x4a, 0x8d, 0x76, 0x79, 0xba, 0x9d, 0xa7, 0xe1, 0xd4, 0x1e, 0xf5, 0x14, 0x0e, 0x2d, 0x4d, 0x62,
+	0x78, 0xfa, 0x52, 0x66, 0x6b, 0x2d, 0x20, 0xb8, 0x8b, 0x43, 0xf3, 0x11, 0x5b, 0xbf, 0x0c, 0xa3,
+	0xb5, 0x42, 0x13, 0xe2, 0xc7, 0x72, 0x69, 0x31, 0x19, 0xc9, 0x5b, 0x7c, 0x1a, 0xa1, 0xa3, 0xea,
+	0x86, 0x8c, 0x22, 0x59, 0x88, 0xe4, 0x95, 0x17, 0x09, 0xf1, 0xfc, 0xfe, 0xf1, 0xf6, 0xaf, 0x26,
+	0x36, 0xe7, 0xb3, 0x4f, 0x69, 0x62, 0x71, 0x96, 0xc4, 0x25, 0x24, 0xa5, 0x06, 0x9f, 0x31, 0x76,
+	0x6e, 0x2d, 0xea, 0xae, 0xd7, 0xf2, 0x93, 0x15, 0xce, 0x39, 0xf6, 0x93, 0xb7, 0x1e, 0xbc, 0x07,
+	0x62, 0xf7, 0xbb, 0x57, 0x4d, 0x35, 0x0c, 0x71, 0x96, 0x40, 0xb8, 0xca, 0xeb, 0x33, 0xc6, 0x5a,
+	0x61, 0xdf, 0x41, 0xbf, 0xaa, 0x72, 0xc4, 0xfe, 0x5e, 0x39, 0x7e, 0x56, 0xef, 0x7c, 0x2d, 0xb1,
+	0xff, 0xd7, 0x48, 0x37, 0xba, 0x67, 0x78, 0x7d, 0x85, 0x31, 0x67, 0x0a, 0x65, 0xe3, 0x37, 0xa8,
+	0xb3, 0x46, 0x3b, 0x14, 0x47, 0x61, 0x8c, 0x7d, 0x51, 0x5b, 0xb6, 0x01, 0xff, 0x0f, 0x25, 0xa5,
+	0xc6, 0x45, 0xe5, 0xbe, 0xec, 0x2f, 0x6c, 0x57, 0x42, 0x8f, 0xb3, 0xcf, 0x00, 0x00, 0x00, 0xff,
+	0xff, 0xe8, 0x97, 0x21, 0x1a, 0xf4, 0x02, 0x00, 0x00,
 }

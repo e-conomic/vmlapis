@@ -34,7 +34,7 @@ proto.asgt.dataservice.v1alpha1 = require('./data_service_pb.js');
  * @struct
  * @final
  */
-proto.asgt.dataservice.v1alpha1.DataClient =
+proto.asgt.dataservice.v1alpha1.DataServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -60,7 +60,7 @@ proto.asgt.dataservice.v1alpha1.DataClient =
  * @struct
  * @final
  */
-proto.asgt.dataservice.v1alpha1.DataPromiseClient =
+proto.asgt.dataservice.v1alpha1.DataServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -84,8 +84,8 @@ proto.asgt.dataservice.v1alpha1.DataPromiseClient =
  *   !proto.asgt.dataservice.v1alpha1.CreateRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_Data_CreateDataset = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.Data/CreateDataset',
+const methodDescriptor_DataService_CreateDataset = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.DataService/CreateDataset',
   grpc.web.MethodType.UNARY,
   asgt_data_v1alpha1_create_pb.CreateRequest,
   google_protobuf_empty_pb.Empty,
@@ -106,7 +106,7 @@ const methodDescriptor_Data_CreateDataset = new grpc.web.MethodDescriptor(
  *   !proto.asgt.dataservice.v1alpha1.CreateRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_Data_CreateDataset = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_DataService_CreateDataset = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.CreateRequest} request
@@ -129,13 +129,13 @@ const methodInfo_Data_CreateDataset = new grpc.web.AbstractClientBase.MethodInfo
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.DataClient.prototype.createDataset =
+proto.asgt.dataservice.v1alpha1.DataServiceClient.prototype.createDataset =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/CreateDataset',
+      '/asgt.dataservice.v1alpha1.DataService/CreateDataset',
       request,
       metadata || {},
-      methodDescriptor_Data_CreateDataset,
+      methodDescriptor_DataService_CreateDataset,
       callback);
 };
 
@@ -148,13 +148,13 @@ proto.asgt.dataservice.v1alpha1.DataClient.prototype.createDataset =
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.createDataset =
+proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.createDataset =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/CreateDataset',
+      '/asgt.dataservice.v1alpha1.DataService/CreateDataset',
       request,
       metadata || {},
-      methodDescriptor_Data_CreateDataset);
+      methodDescriptor_DataService_CreateDataset);
 };
 
 
@@ -164,8 +164,8 @@ proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.createDataset =
  *   !proto.asgt.dataservice.v1alpha1.AppendDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_Data_AppendData = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.Data/AppendData',
+const methodDescriptor_DataService_AppendData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.DataService/AppendData',
   grpc.web.MethodType.UNARY,
   asgt_data_v1alpha1_create_pb.AppendDataRequest,
   google_protobuf_empty_pb.Empty,
@@ -186,7 +186,7 @@ const methodDescriptor_Data_AppendData = new grpc.web.MethodDescriptor(
  *   !proto.asgt.dataservice.v1alpha1.AppendDataRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_Data_AppendData = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_DataService_AppendData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.AppendDataRequest} request
@@ -209,13 +209,13 @@ const methodInfo_Data_AppendData = new grpc.web.AbstractClientBase.MethodInfo(
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.DataClient.prototype.appendData =
+proto.asgt.dataservice.v1alpha1.DataServiceClient.prototype.appendData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/AppendData',
+      '/asgt.dataservice.v1alpha1.DataService/AppendData',
       request,
       metadata || {},
-      methodDescriptor_Data_AppendData,
+      methodDescriptor_DataService_AppendData,
       callback);
 };
 
@@ -228,13 +228,13 @@ proto.asgt.dataservice.v1alpha1.DataClient.prototype.appendData =
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.appendData =
+proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.appendData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/AppendData',
+      '/asgt.dataservice.v1alpha1.DataService/AppendData',
       request,
       metadata || {},
-      methodDescriptor_Data_AppendData);
+      methodDescriptor_DataService_AppendData);
 };
 
 
@@ -244,8 +244,8 @@ proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.appendData =
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_Data_DeleteData = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.Data/DeleteData',
+const methodDescriptor_DataService_DeleteData = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.DataService/DeleteData',
   grpc.web.MethodType.UNARY,
   asgt_data_v1alpha1_delete_pb.DeleteRequest,
   google_protobuf_empty_pb.Empty,
@@ -266,7 +266,7 @@ const methodDescriptor_Data_DeleteData = new grpc.web.MethodDescriptor(
  *   !proto.asgt.dataservice.v1alpha1.DeleteRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_Data_DeleteData = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_DataService_DeleteData = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.DeleteRequest} request
@@ -289,13 +289,13 @@ const methodInfo_Data_DeleteData = new grpc.web.AbstractClientBase.MethodInfo(
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.DataClient.prototype.deleteData =
+proto.asgt.dataservice.v1alpha1.DataServiceClient.prototype.deleteData =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/DeleteData',
+      '/asgt.dataservice.v1alpha1.DataService/DeleteData',
       request,
       metadata || {},
-      methodDescriptor_Data_DeleteData,
+      methodDescriptor_DataService_DeleteData,
       callback);
 };
 
@@ -308,13 +308,13 @@ proto.asgt.dataservice.v1alpha1.DataClient.prototype.deleteData =
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.deleteData =
+proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.deleteData =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/DeleteData',
+      '/asgt.dataservice.v1alpha1.DataService/DeleteData',
       request,
       metadata || {},
-      methodDescriptor_Data_DeleteData);
+      methodDescriptor_DataService_DeleteData);
 };
 
 
@@ -324,8 +324,8 @@ proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.deleteData =
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodDescriptor_Data_GetInfo = new grpc.web.MethodDescriptor(
-  '/asgt.dataservice.v1alpha1.Data/GetInfo',
+const methodDescriptor_DataService_GetInfo = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1alpha1.DataService/GetInfo',
   grpc.web.MethodType.UNARY,
   asgt_data_v1alpha1_info_pb.GetInfoRequest,
   asgt_data_v1alpha1_info_pb.GetInfoResponse,
@@ -346,7 +346,7 @@ const methodDescriptor_Data_GetInfo = new grpc.web.MethodDescriptor(
  *   !proto.asgt.dataservice.v1alpha1.GetInfoRequest,
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
-const methodInfo_Data_GetInfo = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_DataService_GetInfo = new grpc.web.AbstractClientBase.MethodInfo(
   asgt_data_v1alpha1_info_pb.GetInfoResponse,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
@@ -369,13 +369,13 @@ const methodInfo_Data_GetInfo = new grpc.web.AbstractClientBase.MethodInfo(
  * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.dataservice.v1alpha1.DataClient.prototype.getInfo =
+proto.asgt.dataservice.v1alpha1.DataServiceClient.prototype.getInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/GetInfo',
+      '/asgt.dataservice.v1alpha1.DataService/GetInfo',
       request,
       metadata || {},
-      methodDescriptor_Data_GetInfo,
+      methodDescriptor_DataService_GetInfo,
       callback);
 };
 
@@ -388,13 +388,13 @@ proto.asgt.dataservice.v1alpha1.DataClient.prototype.getInfo =
  * @return {!Promise<!proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.dataservice.v1alpha1.DataPromiseClient.prototype.getInfo =
+proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.getInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.dataservice.v1alpha1.Data/GetInfo',
+      '/asgt.dataservice.v1alpha1.DataService/GetInfo',
       request,
       metadata || {},
-      methodDescriptor_Data_GetInfo);
+      methodDescriptor_DataService_GetInfo);
 };
 
 
