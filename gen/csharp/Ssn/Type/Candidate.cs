@@ -30,19 +30,20 @@ namespace Ssn.Type {
             "Q29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90",
             "b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZ",
             "X0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJ",
-            "R0gQBSLoAQoJQ2FuZGlkYXRlEg0KBXZhbHVlGAEgASgJEgwKBHRleHQYAiAB",
+            "R0gQBSKsAgoJQ2FuZGlkYXRlEg0KBXZhbHVlGAEgASgJEgwKBHRleHQYAiAB",
             "KAkSKAoKY29uZmlkZW5jZRgDIAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2US",
             "LAoMYm91bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5",
             "EiYKBHR5cGUYBSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZRIQCghw",
-            "YWdlX3JlZhgGIAEoDSIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
-            "EgwKCERPQ1VNRU5UEAIiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJ",
-            "Eg4KBmFtb3VudBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZw",
-            "cm90bzM="));
+            "YWdlX3JlZhgGIAEoDRISCgptb2RlbF9uYW1lGAcgASgJEi4KCW1vZGVsX3Zl",
+            "chgIIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQ2NFZhbHVlIiwKBFR5cGUS",
+            "CwoHVU5LTk9XThAAEgkKBUZJRUxEEAESDAoIRE9DVU1FTlQQAiI/Cg1MaW5l",
+            "Q2FuZGlkYXRlEgwKBHRleHQYASABKAkSDgoGYW1vdW50GAIgASgBEhAKCHBh",
+            "Z2VfcmVmGAYgASgNQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelName", "ModelVer" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null)
           }));
     }
@@ -266,6 +267,8 @@ namespace Ssn.Type {
       boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       type_ = other.type_;
       pageRef_ = other.pageRef_;
+      modelName_ = other.modelName_;
+      ModelVer = other.ModelVer;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -379,6 +382,36 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "model_name" field.</summary>
+    public const int ModelNameFieldNumber = 7;
+    private string modelName_ = "";
+    /// <summary>
+    /// The name of the TensorFlow Serving model that predicted this candidate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ModelName {
+      get { return modelName_; }
+      set {
+        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model_ver" field.</summary>
+    public const int ModelVerFieldNumber = 8;
+    private static readonly pb::FieldCodec<long?> _single_modelVer_codec = pb::FieldCodec.ForStructWrapper<long>(66);
+    private long? modelVer_;
+    /// <summary>
+    /// The version number of the TensorFlow Serving model that predicted
+    /// this candidate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? ModelVer {
+      get { return modelVer_; }
+      set {
+        modelVer_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Candidate);
@@ -398,6 +431,8 @@ namespace Ssn.Type {
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if (Type != other.Type) return false;
       if (PageRef != other.PageRef) return false;
+      if (ModelName != other.ModelName) return false;
+      if (ModelVer != other.ModelVer) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -410,6 +445,8 @@ namespace Ssn.Type {
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (modelVer_ != null) hash ^= ModelVer.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -447,6 +484,13 @@ namespace Ssn.Type {
         output.WriteRawTag(48);
         output.WriteUInt32(PageRef);
       }
+      if (ModelName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ModelName);
+      }
+      if (modelVer_ != null) {
+        _single_modelVer_codec.WriteTagAndValue(output, ModelVer);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -472,6 +516,12 @@ namespace Ssn.Type {
       }
       if (PageRef != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      if (ModelName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      }
+      if (modelVer_ != null) {
+        size += _single_modelVer_codec.CalculateSizeWithTag(ModelVer);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -507,6 +557,14 @@ namespace Ssn.Type {
       }
       if (other.PageRef != 0) {
         PageRef = other.PageRef;
+      }
+      if (other.ModelName.Length != 0) {
+        ModelName = other.ModelName;
+      }
+      if (other.modelVer_ != null) {
+        if (modelVer_ == null || other.ModelVer != 0L) {
+          ModelVer = other.ModelVer;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -547,6 +605,17 @@ namespace Ssn.Type {
           }
           case 48: {
             PageRef = input.ReadUInt32();
+            break;
+          }
+          case 58: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 66: {
+            long? value = _single_modelVer_codec.Read(input);
+            if (modelVer_ == null || value != 0L) {
+              ModelVer = value;
+            }
             break;
           }
         }

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xe8\x01\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08\x44OCUMENT\x10\x02\"?\n\rLineCandidate\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\x12\x10\n\x08page_ref\x18\x06 \x01(\rB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x18ssn/type/candidate.proto\x12\x08ssn.type\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x17ssn/type/geometry.proto\"\xb2\x01\n\nConfidence\x12)\n\x05level\x18\x01 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.google.protobuf.FloatValue\"M\n\x05Level\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0c\n\x08VERY_LOW\x10\x01\x12\x07\n\x03LOW\x10\x02\x12\x07\n\x03MID\x10\x03\x12\x08\n\x04HIGH\x10\x04\x12\r\n\tVERY_HIGH\x10\x05\"\xac\x02\n\tCandidate\x12\r\n\x05value\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12(\n\nconfidence\x18\x03 \x01(\x0b\x32\x14.ssn.type.Confidence\x12,\n\x0c\x62ounding_box\x18\x04 \x01(\x0b\x32\x16.ssn.type.BoundingPoly\x12&\n\x04type\x18\x05 \x01(\x0e\x32\x18.ssn.type.Candidate.Type\x12\x10\n\x08page_ref\x18\x06 \x01(\r\x12\x12\n\nmodel_name\x18\x07 \x01(\t\x12.\n\tmodel_ver\x18\x08 \x01(\x0b\x32\x1b.google.protobuf.Int64Value\",\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x46IELD\x10\x01\x12\x0c\n\x08\x44OCUMENT\x10\x02\"?\n\rLineCandidate\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x01\x12\x10\n\x08page_ref\x18\x06 \x01(\rB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_type_dot_geometry__pb2.DESCRIPTOR,])
 
@@ -86,8 +86,8 @@ _CANDIDATE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=465,
-  serialized_end=509,
+  serialized_start=533,
+  serialized_end=577,
 )
 _sym_db.RegisterEnumDescriptor(_CANDIDATE_TYPE)
 
@@ -180,6 +180,20 @@ _CANDIDATE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_name', full_name='ssn.type.Candidate.model_name', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_ver', full_name='ssn.type.Candidate.model_ver', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -194,7 +208,7 @@ _CANDIDATE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=277,
-  serialized_end=509,
+  serialized_end=577,
 )
 
 
@@ -238,8 +252,8 @@ _LINECANDIDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=511,
-  serialized_end=574,
+  serialized_start=579,
+  serialized_end=642,
 )
 
 _CONFIDENCE.fields_by_name['level'].enum_type = _CONFIDENCE_LEVEL
@@ -248,6 +262,7 @@ _CONFIDENCE_LEVEL.containing_type = _CONFIDENCE
 _CANDIDATE.fields_by_name['confidence'].message_type = _CONFIDENCE
 _CANDIDATE.fields_by_name['bounding_box'].message_type = ssn_dot_type_dot_geometry__pb2._BOUNDINGPOLY
 _CANDIDATE.fields_by_name['type'].enum_type = _CANDIDATE_TYPE
+_CANDIDATE.fields_by_name['model_ver'].message_type = google_dot_protobuf_dot_wrappers__pb2._INT64VALUE
 _CANDIDATE_TYPE.containing_type = _CANDIDATE
 DESCRIPTOR.message_types_by_name['Confidence'] = _CONFIDENCE
 DESCRIPTOR.message_types_by_name['Candidate'] = _CANDIDATE

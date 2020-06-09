@@ -268,7 +268,9 @@ proto.ssn.type.Candidate.toObject = function(includeInstance, msg) {
     confidence: (f = msg.getConfidence()) && proto.ssn.type.Confidence.toObject(includeInstance, f),
     boundingBox: (f = msg.getBoundingBox()) && ssn_type_geometry_pb.BoundingPoly.toObject(includeInstance, f),
     type: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    pageRef: jspb.Message.getFieldWithDefault(msg, 6, 0)
+    pageRef: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    modelName: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    modelVer: (f = msg.getModelVer()) && google_protobuf_wrappers_pb.Int64Value.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -330,6 +332,15 @@ proto.ssn.type.Candidate.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setPageRef(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setModelName(value);
+      break;
+    case 8:
+      var value = new google_protobuf_wrappers_pb.Int64Value;
+      reader.readMessage(value,google_protobuf_wrappers_pb.Int64Value.deserializeBinaryFromReader);
+      msg.setModelVer(value);
       break;
     default:
       reader.skipField();
@@ -402,6 +413,21 @@ proto.ssn.type.Candidate.serializeBinaryToWriter = function(message, writer) {
     writer.writeUint32(
       6,
       f
+    );
+  }
+  f = message.getModelName();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getModelVer();
+  if (f != null) {
+    writer.writeMessage(
+      8,
+      f,
+      google_protobuf_wrappers_pb.Int64Value.serializeBinaryToWriter
     );
   }
 };
@@ -533,6 +559,51 @@ proto.ssn.type.Candidate.prototype.getPageRef = function() {
 /** @param {number} value */
 proto.ssn.type.Candidate.prototype.setPageRef = function(value) {
   jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional string model_name = 7;
+ * @return {string}
+ */
+proto.ssn.type.Candidate.prototype.getModelName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/** @param {string} value */
+proto.ssn.type.Candidate.prototype.setModelName = function(value) {
+  jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional google.protobuf.Int64Value model_ver = 8;
+ * @return {?proto.google.protobuf.Int64Value}
+ */
+proto.ssn.type.Candidate.prototype.getModelVer = function() {
+  return /** @type{?proto.google.protobuf.Int64Value} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.Int64Value, 8));
+};
+
+
+/** @param {?proto.google.protobuf.Int64Value|undefined} value */
+proto.ssn.type.Candidate.prototype.setModelVer = function(value) {
+  jspb.Message.setWrapperField(this, 8, value);
+};
+
+
+proto.ssn.type.Candidate.prototype.clearModelVer = function() {
+  this.setModelVer(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.type.Candidate.prototype.hasModelVer = function() {
+  return jspb.Message.getField(this, 8) != null;
 };
 
 
