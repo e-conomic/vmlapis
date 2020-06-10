@@ -12,13 +12,13 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
-var asgt_data_v1alpha1_append_pb = require('../../../asgt/data/v1alpha1/append_pb.js')
+var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js')
 
-var asgt_data_v1alpha1_create_pb = require('../../../asgt/data/v1alpha1/create_pb.js')
+var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 
-var asgt_data_v1alpha1_delete_pb = require('../../../asgt/data/v1alpha1/delete_pb.js')
+var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js')
 
-var asgt_data_v1alpha1_info_pb = require('../../../asgt/data/v1alpha1/info_pb.js')
+var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js')
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
@@ -89,7 +89,7 @@ proto.asgt.dataservice.v1alpha1.DataServicePromiseClient =
 const methodDescriptor_DataService_CreateDataset = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.DataService/CreateDataset',
   grpc.web.MethodType.UNARY,
-  asgt_data_v1alpha1_create_pb.CreateRequest,
+  proto.asgt.dataservice.v1alpha1.CreateRequest,
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.CreateRequest} request
@@ -169,7 +169,7 @@ proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.createDataset
 const methodDescriptor_DataService_AppendData = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.DataService/AppendData',
   grpc.web.MethodType.UNARY,
-  asgt_data_v1alpha1_append_pb.AppendDataRequest,
+  proto.asgt.dataservice.v1alpha1.AppendDataRequest,
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.AppendDataRequest} request
@@ -249,7 +249,7 @@ proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.appendData =
 const methodDescriptor_DataService_DeleteData = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.DataService/DeleteData',
   grpc.web.MethodType.UNARY,
-  asgt_data_v1alpha1_delete_pb.DeleteRequest,
+  proto.asgt.dataservice.v1alpha1.DeleteRequest,
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.DeleteRequest} request
@@ -329,8 +329,8 @@ proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.deleteData =
 const methodDescriptor_DataService_GetInfo = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.DataService/GetInfo',
   grpc.web.MethodType.UNARY,
-  asgt_data_v1alpha1_info_pb.GetInfoRequest,
-  asgt_data_v1alpha1_info_pb.GetInfoResponse,
+  proto.asgt.dataservice.v1alpha1.GetInfoRequest,
+  proto.asgt.dataservice.v1alpha1.GetInfoResponse,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
    * @return {!Uint8Array}
@@ -338,7 +338,7 @@ const methodDescriptor_DataService_GetInfo = new grpc.web.MethodDescriptor(
   function(request) {
     return request.serializeBinary();
   },
-  asgt_data_v1alpha1_info_pb.GetInfoResponse.deserializeBinary
+  proto.asgt.dataservice.v1alpha1.GetInfoResponse.deserializeBinary
 );
 
 
@@ -349,7 +349,7 @@ const methodDescriptor_DataService_GetInfo = new grpc.web.MethodDescriptor(
  *   !proto.asgt.dataservice.v1alpha1.GetInfoResponse>}
  */
 const methodInfo_DataService_GetInfo = new grpc.web.AbstractClientBase.MethodInfo(
-  asgt_data_v1alpha1_info_pb.GetInfoResponse,
+  proto.asgt.dataservice.v1alpha1.GetInfoResponse,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.GetInfoRequest} request
    * @return {!Uint8Array}
@@ -357,7 +357,7 @@ const methodInfo_DataService_GetInfo = new grpc.web.AbstractClientBase.MethodInf
   function(request) {
     return request.serializeBinary();
   },
-  asgt_data_v1alpha1_info_pb.GetInfoResponse.deserializeBinary
+  proto.asgt.dataservice.v1alpha1.GetInfoResponse.deserializeBinary
 );
 
 

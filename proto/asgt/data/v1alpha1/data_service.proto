@@ -6,10 +6,10 @@ option go_package = "data";
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "asgt/data/v1alpha1/create.proto";
-import "asgt/data/v1alpha1/append.proto";
-import "asgt/data/v1alpha1/delete.proto";
-import "asgt/data/v1alpha1/info.proto";
+import "asgt/type/retention_policy.proto";
+import "asgt/type/model.proto";
+import "asgt/type/dataset.proto";
+import "asgt/type/sample.proto";
 
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
@@ -41,3 +41,38 @@ service DataService {
   }
 }
 
+
+message CreateRequest {
+  string name = 1;
+  string type = 2;
+  repeated string tags = 3;
+  repeated string targets = 6;
+  repeated asgt.type.Sample samples = 4;
+  asgt.type.RetentionPolicy retention_policy = 5;
+}
+
+message AppendDataRequest {
+  string name = 1;
+  string type = 2;
+  repeated asgt.type.Sample samples = 3;
+}
+
+message DeleteRequest {
+  string type = 1;
+  oneof match {
+    string name = 2;
+    string tag = 3;
+  }
+}
+
+message GetInfoRequest {
+  string name = 1;
+  string type = 2;
+}
+
+message GetInfoResponse {
+  asgt.type.Dataset dataset = 1;
+
+  // The most recently trained model; empty if no model has been trained
+  asgt.type.Model model = 2;
+}
