@@ -5,6 +5,7 @@ package asgt.modeltrainer.v1alpha1;
 option go_package = "modeltrainer";
 
 import "asgt/type/dataset.proto";
+import "asgt/type/revision.proto";
 
 message TrainModelTask {
   asgt.type.Dataset dataset = 1;

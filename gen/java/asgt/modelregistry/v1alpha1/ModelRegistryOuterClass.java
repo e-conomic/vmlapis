@@ -38,11 +38,11 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    asgt.type.DatasetOuterClass.Revision getRevision();
+    asgt.type.RevisionOuterClass.Revision getRevision();
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder();
+    asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
 
     /**
      * <code>int64 model_version = 3;</code>
@@ -103,11 +103,11 @@ public final class ModelRegistryOuterClass {
               break;
             }
             case 18: {
-              asgt.type.DatasetOuterClass.Revision.Builder subBuilder = null;
+              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
               if (revision_ != null) {
                 subBuilder = revision_.toBuilder();
               }
-              revision_ = input.readMessage(asgt.type.DatasetOuterClass.Revision.parser(), extensionRegistry);
+              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(revision_);
                 revision_ = subBuilder.buildPartial();
@@ -174,7 +174,7 @@ public final class ModelRegistryOuterClass {
     }
 
     public static final int REVISION_FIELD_NUMBER = 2;
-    private asgt.type.DatasetOuterClass.Revision revision_;
+    private asgt.type.RevisionOuterClass.Revision revision_;
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
@@ -184,13 +184,13 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    public asgt.type.DatasetOuterClass.Revision getRevision() {
-      return revision_ == null ? asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+    public asgt.type.RevisionOuterClass.Revision getRevision() {
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    public asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+    public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
       return getRevision();
     }
 
@@ -684,9 +684,9 @@ public final class ModelRegistryOuterClass {
         return datasetBuilder_;
       }
 
-      private asgt.type.DatasetOuterClass.Revision revision_ = null;
+      private asgt.type.RevisionOuterClass.Revision revision_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder> revisionBuilder_;
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
@@ -696,9 +696,9 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.Revision getRevision() {
+      public asgt.type.RevisionOuterClass.Revision getRevision() {
         if (revisionBuilder_ == null) {
-          return revision_ == null ? asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+          return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
         } else {
           return revisionBuilder_.getMessage();
         }
@@ -706,7 +706,7 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public Builder setRevision(asgt.type.DatasetOuterClass.Revision value) {
+      public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -723,7 +723,7 @@ public final class ModelRegistryOuterClass {
        * <code>.asgt.type.Revision revision = 2;</code>
        */
       public Builder setRevision(
-          asgt.type.DatasetOuterClass.Revision.Builder builderForValue) {
+          asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
         if (revisionBuilder_ == null) {
           revision_ = builderForValue.build();
           onChanged();
@@ -736,11 +736,11 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public Builder mergeRevision(asgt.type.DatasetOuterClass.Revision value) {
+      public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
           if (revision_ != null) {
             revision_ =
-              asgt.type.DatasetOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
           } else {
             revision_ = value;
           }
@@ -768,7 +768,7 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.Revision.Builder getRevisionBuilder() {
+      public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
         
         onChanged();
         return getRevisionFieldBuilder().getBuilder();
@@ -776,23 +776,23 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+      public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
         if (revisionBuilder_ != null) {
           return revisionBuilder_.getMessageOrBuilder();
         } else {
           return revision_ == null ?
-              asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+              asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
         }
       }
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder> 
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
           getRevisionFieldBuilder() {
         if (revisionBuilder_ == null) {
           revisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder>(
+              asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder>(
                   getRevision(),
                   getParentForChildren(),
                   isClean());
@@ -2120,20 +2120,21 @@ public final class ModelRegistryOuterClass {
       "\n0asgt/modelregistry/v1alpha1/model_regi" +
       "stry.proto\022\033asgt.modelregistry.v1alpha1\032" +
       "\027asgt/type/dataset.proto\032\025asgt/type/mode" +
-      "l.proto\032\033google/protobuf/empty.proto\"y\n\024" +
-      "RegisterModelRequest\022#\n\007dataset\030\001 \001(\0132\022." +
-      "asgt.type.Dataset\022%\n\010revision\030\002 \001(\0132\023.as" +
-      "gt.type.Revision\022\025\n\rmodel_version\030\003 \001(\003\"" +
-      "=\n\026GetCurrentModelRequest\022#\n\007dataset\030\001 \001" +
-      "(\0132\022.asgt.type.Dataset\":\n\027GetCurrentMode" +
-      "lResponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Mod" +
-      "el2\351\001\n\rModelRegistry\022Z\n\rRegisterModel\0221." +
-      "asgt.modelregistry.v1alpha1.RegisterMode" +
-      "lRequest\032\026.google.protobuf.Empty\022|\n\017GetC" +
-      "urrentModel\0223.asgt.modelregistry.v1alpha" +
-      "1.GetCurrentModelRequest\0324.asgt.modelreg" +
-      "istry.v1alpha1.GetCurrentModelResponseB\017" +
-      "Z\rmodelregistryb\006proto3"
+      "l.proto\032\030asgt/type/revision.proto\032\033googl" +
+      "e/protobuf/empty.proto\"y\n\024RegisterModelR" +
+      "equest\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Data" +
+      "set\022%\n\010revision\030\002 \001(\0132\023.asgt.type.Revisi" +
+      "on\022\025\n\rmodel_version\030\003 \001(\003\"=\n\026GetCurrentM" +
+      "odelRequest\022#\n\007dataset\030\001 \001(\0132\022.asgt.type" +
+      ".Dataset\":\n\027GetCurrentModelResponse\022\037\n\005m" +
+      "odel\030\001 \001(\0132\020.asgt.type.Model2\351\001\n\rModelRe" +
+      "gistry\022Z\n\rRegisterModel\0221.asgt.modelregi" +
+      "stry.v1alpha1.RegisterModelRequest\032\026.goo" +
+      "gle.protobuf.Empty\022|\n\017GetCurrentModel\0223." +
+      "asgt.modelregistry.v1alpha1.GetCurrentMo" +
+      "delRequest\0324.asgt.modelregistry.v1alpha1" +
+      ".GetCurrentModelResponseB\017Z\rmodelregistr" +
+      "yb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2148,6 +2149,7 @@ public final class ModelRegistryOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.RevisionOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_modelregistry_v1alpha1_RegisterModelRequest_descriptor =
@@ -2170,6 +2172,7 @@ public final class ModelRegistryOuterClass {
         new java.lang.String[] { "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.RevisionOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

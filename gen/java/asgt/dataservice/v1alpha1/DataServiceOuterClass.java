@@ -25,23 +25,24 @@ public final class DataServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n%asgt/data/v1alpha1/data_service.proto\022" +
       "\031asgt.dataservice.v1alpha1\032\037asgt/data/v1" +
-      "alpha1/create.proto\032\037asgt/data/v1alpha1/" +
-      "delete.proto\032\035asgt/data/v1alpha1/info.pr" +
-      "oto\032\034google/api/annotations.proto\032\033googl" +
-      "e/protobuf/empty.proto2\203\004\n\013DataService\022u" +
-      "\n\rCreateDataset\022(.asgt.dataservice.v1alp" +
-      "ha1.CreateRequest\032\026.google.protobuf.Empt" +
-      "y\"\"\202\323\344\223\002\034\"\027/v1alpha1/{type}:create:\001*\022}\n" +
-      "\nAppendData\022,.asgt.dataservice.v1alpha1." +
-      "AppendDataRequest\032\026.google.protobuf.Empt" +
-      "y\")\202\323\344\223\002#\"\036/v1alpha1/{type}/{name}:appen" +
-      "d:\001*\022r\n\nDeleteData\022(.asgt.dataservice.v1" +
-      "alpha1.DeleteRequest\032\026.google.protobuf.E" +
-      "mpty\"\"\202\323\344\223\002\034\"\027/v1alpha1/{type}:delete:\001*" +
-      "\022\211\001\n\007GetInfo\022).asgt.dataservice.v1alpha1" +
-      ".GetInfoRequest\032*.asgt.dataservice.v1alp" +
-      "ha1.GetInfoResponse\"\'\202\323\344\223\002!\"\034/v1alpha1/{" +
-      "type}/{name}:info:\001*B\006Z\004datab\006proto3"
+      "alpha1/append.proto\032\037asgt/data/v1alpha1/" +
+      "create.proto\032\037asgt/data/v1alpha1/delete." +
+      "proto\032\035asgt/data/v1alpha1/info.proto\032\034go" +
+      "ogle/api/annotations.proto\032\033google/proto" +
+      "buf/empty.proto2\203\004\n\013DataService\022u\n\rCreat" +
+      "eDataset\022(.asgt.dataservice.v1alpha1.Cre" +
+      "ateRequest\032\026.google.protobuf.Empty\"\"\202\323\344\223" +
+      "\002\034\"\027/v1alpha1/{type}:create:\001*\022}\n\nAppend" +
+      "Data\022,.asgt.dataservice.v1alpha1.AppendD" +
+      "ataRequest\032\026.google.protobuf.Empty\")\202\323\344\223" +
+      "\002#\"\036/v1alpha1/{type}/{name}:append:\001*\022r\n" +
+      "\nDeleteData\022(.asgt.dataservice.v1alpha1." +
+      "DeleteRequest\032\026.google.protobuf.Empty\"\"\202" +
+      "\323\344\223\002\034\"\027/v1alpha1/{type}:delete:\001*\022\211\001\n\007Ge" +
+      "tInfo\022).asgt.dataservice.v1alpha1.GetInf" +
+      "oRequest\032*.asgt.dataservice.v1alpha1.Get" +
+      "InfoResponse\"\'\202\323\344\223\002!\"\034/v1alpha1/{type}/{" +
+      "name}:info:\001*B\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -54,6 +55,7 @@ public final class DataServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.dataservice.v1alpha1.Append.getDescriptor(),
           asgt.dataservice.v1alpha1.Create.getDescriptor(),
           asgt.dataservice.v1alpha1.Delete.getDescriptor(),
           asgt.dataservice.v1alpha1.Info.getDescriptor(),
@@ -65,6 +67,7 @@ public final class DataServiceOuterClass {
     registry.add(com.google.api.AnnotationsProto.http);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.dataservice.v1alpha1.Append.getDescriptor();
     asgt.dataservice.v1alpha1.Create.getDescriptor();
     asgt.dataservice.v1alpha1.Delete.getDescriptor();
     asgt.dataservice.v1alpha1.Info.getDescriptor();

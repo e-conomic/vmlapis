@@ -7,6 +7,7 @@ option go_package = "modelregistry";
 import "google/protobuf/empty.proto";
 import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
+import "asgt/type/revision.proto";
 
 service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);

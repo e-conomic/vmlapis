@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from vml_proto.asgt.data.v1alpha1 import append_pb2 as asgt_dot_data_dot_v1alpha1_dot_append__pb2
 from vml_proto.asgt.data.v1alpha1 import create_pb2 as asgt_dot_data_dot_v1alpha1_dot_create__pb2
 from vml_proto.asgt.data.v1alpha1 import delete_pb2 as asgt_dot_data_dot_v1alpha1_dot_delete__pb2
 from vml_proto.asgt.data.v1alpha1 import info_pb2 as asgt_dot_data_dot_v1alpha1_dot_info__pb2
@@ -24,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\004data'),
-  serialized_pb=_b('\n%asgt/data/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1f\x61sgt/data/v1alpha1/create.proto\x1a\x1f\x61sgt/data/v1alpha1/delete.proto\x1a\x1d\x61sgt/data/v1alpha1/info.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto2\x83\x04\n\x0b\x44\x61taService\x12u\n\rCreateDataset\x12(.asgt.dataservice.v1alpha1.CreateRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:create:\x01*\x12}\n\nAppendData\x12,.asgt.dataservice.v1alpha1.AppendDataRequest\x1a\x16.google.protobuf.Empty\")\x82\xd3\xe4\x93\x02#\"\x1e/v1alpha1/{type}/{name}:append:\x01*\x12r\n\nDeleteData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:delete:\x01*\x12\x89\x01\n\x07GetInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/v1alpha1/{type}/{name}:info:\x01*B\x06Z\x04\x64\x61tab\x06proto3')
+  serialized_pb=_b('\n%asgt/data/v1alpha1/data_service.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x1f\x61sgt/data/v1alpha1/append.proto\x1a\x1f\x61sgt/data/v1alpha1/create.proto\x1a\x1f\x61sgt/data/v1alpha1/delete.proto\x1a\x1d\x61sgt/data/v1alpha1/info.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto2\x83\x04\n\x0b\x44\x61taService\x12u\n\rCreateDataset\x12(.asgt.dataservice.v1alpha1.CreateRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:create:\x01*\x12}\n\nAppendData\x12,.asgt.dataservice.v1alpha1.AppendDataRequest\x1a\x16.google.protobuf.Empty\")\x82\xd3\xe4\x93\x02#\"\x1e/v1alpha1/{type}/{name}:append:\x01*\x12r\n\nDeleteData\x12(.asgt.dataservice.v1alpha1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\"\x82\xd3\xe4\x93\x02\x1c\"\x17/v1alpha1/{type}:delete:\x01*\x12\x89\x01\n\x07GetInfo\x12).asgt.dataservice.v1alpha1.GetInfoRequest\x1a*.asgt.dataservice.v1alpha1.GetInfoResponse\"\'\x82\xd3\xe4\x93\x02!\"\x1c/v1alpha1/{type}/{name}:info:\x01*B\x06Z\x04\x64\x61tab\x06proto3')
   ,
-  dependencies=[asgt_dot_data_dot_v1alpha1_dot_create__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_data_dot_v1alpha1_dot_append__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_create__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_delete__pb2.DESCRIPTOR,asgt_dot_data_dot_v1alpha1_dot_info__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -41,8 +42,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=225,
-  serialized_end=740,
+  serialized_start=258,
+  serialized_end=773,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDataset',
@@ -58,7 +59,7 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
     full_name='asgt.dataservice.v1alpha1.DataService.AppendData',
     index=1,
     containing_service=None,
-    input_type=asgt_dot_data_dot_v1alpha1_dot_create__pb2._APPENDDATAREQUEST,
+    input_type=asgt_dot_data_dot_v1alpha1_dot_append__pb2._APPENDDATAREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=_b('\202\323\344\223\002#\"\036/v1alpha1/{type}/{name}:append:\001*'),
   ),

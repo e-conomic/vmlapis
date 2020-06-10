@@ -15,9 +15,3 @@ message CreateRequest {
   repeated asgt.type.Sample samples = 4;
   asgt.type.RetentionPolicy retention_policy = 5;
 }
-
-message AppendDataRequest {
-  string name = 1;
-  string type = 2;
-  repeated asgt.type.Sample samples = 3;
-}

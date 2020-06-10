@@ -12,6 +12,8 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_data_v1alpha1_append_pb = require('../../../asgt/data/v1alpha1/append_pb.js')
+
 var asgt_data_v1alpha1_create_pb = require('../../../asgt/data/v1alpha1/create_pb.js')
 
 var asgt_data_v1alpha1_delete_pb = require('../../../asgt/data/v1alpha1/delete_pb.js')
@@ -167,7 +169,7 @@ proto.asgt.dataservice.v1alpha1.DataServicePromiseClient.prototype.createDataset
 const methodDescriptor_DataService_AppendData = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1alpha1.DataService/AppendData',
   grpc.web.MethodType.UNARY,
-  asgt_data_v1alpha1_create_pb.AppendDataRequest,
+  asgt_data_v1alpha1_append_pb.AppendDataRequest,
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.asgt.dataservice.v1alpha1.AppendDataRequest} request

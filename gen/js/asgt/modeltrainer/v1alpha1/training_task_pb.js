@@ -12,6 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
+var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 goog.exportSymbol('proto.asgt.modeltrainer.v1alpha1.TrainModelTask', null, global);
 
 /**
@@ -61,7 +62,7 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.toObject = function(op
 proto.asgt.modeltrainer.v1alpha1.TrainModelTask.toObject = function(includeInstance, msg) {
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
-    revision: (f = msg.getRevision()) && asgt_type_dataset_pb.Revision.toObject(includeInstance, f),
+    revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
@@ -105,8 +106,8 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.deserializeBinaryFromReader = fu
       msg.setDataset(value);
       break;
     case 2:
-      var value = new asgt_type_dataset_pb.Revision;
-      reader.readMessage(value,asgt_type_dataset_pb.Revision.deserializeBinaryFromReader);
+      var value = new asgt_type_revision_pb.Revision;
+      reader.readMessage(value,asgt_type_revision_pb.Revision.deserializeBinaryFromReader);
       msg.setRevision(value);
       break;
     case 4:
@@ -155,7 +156,7 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.serializeBinaryToWriter = functi
     writer.writeMessage(
       2,
       f,
-      asgt_type_dataset_pb.Revision.serializeBinaryToWriter
+      asgt_type_revision_pb.Revision.serializeBinaryToWriter
     );
   }
   f = message.getModelVersion();
@@ -204,7 +205,7 @@ proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.hasDataset = function(
  */
 proto.asgt.modeltrainer.v1alpha1.TrainModelTask.prototype.getRevision = function() {
   return /** @type{?proto.asgt.type.Revision} */ (
-    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Revision, 2));
+    jspb.Message.getWrapperField(this, asgt_type_revision_pb.Revision, 2));
 };
 
 

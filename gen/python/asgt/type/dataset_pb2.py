@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x17\x61sgt/type/dataset.proto\x12\tasgt.type\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x80\x02\n\x07\x44\x61taset\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x34\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\x12.\n\ncreated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nupdated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x0c \x01(\x03J\x04\x08\x06\x10\t\"X\n\x08Revision\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x03 \x01(\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x17\x61sgt/type/dataset.proto\x12\tasgt.type\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x80\x02\n\x07\x44\x61taset\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x0c\n\x04tags\x18\x04 \x03(\t\x12\x0f\n\x07targets\x18\x05 \x03(\t\x12\x34\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\x12.\n\ncreated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12.\n\nupdated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x0c \x01(\x03J\x04\x08\x06\x10\tB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -114,57 +114,10 @@ _DATASET = _descriptor.Descriptor(
   serialized_end=362,
 )
 
-
-_REVISION = _descriptor.Descriptor(
-  name='Revision',
-  full_name='asgt.type.Revision',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='number', full_name='asgt.type.Revision.number', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='created_at', full_name='asgt.type.Revision.created_at', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='size', full_name='asgt.type.Revision.size', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=364,
-  serialized_end=452,
-)
-
 _DATASET.fields_by_name['retention_policy'].message_type = asgt_dot_type_dot_retention__policy__pb2._RETENTIONPOLICY
 _DATASET.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _DATASET.fields_by_name['updated_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
-_REVISION.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 DESCRIPTOR.message_types_by_name['Dataset'] = _DATASET
-DESCRIPTOR.message_types_by_name['Revision'] = _REVISION
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Dataset = _reflection.GeneratedProtocolMessageType('Dataset', (_message.Message,), dict(
@@ -173,13 +126,6 @@ Dataset = _reflection.GeneratedProtocolMessageType('Dataset', (_message.Message,
   # @@protoc_insertion_point(class_scope:asgt.type.Dataset)
   ))
 _sym_db.RegisterMessage(Dataset)
-
-Revision = _reflection.GeneratedProtocolMessageType('Revision', (_message.Message,), dict(
-  DESCRIPTOR = _REVISION,
-  __module__ = 'asgt.type.dataset_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.type.Revision)
-  ))
-_sym_db.RegisterMessage(Revision)
 
 
 DESCRIPTOR._options = None

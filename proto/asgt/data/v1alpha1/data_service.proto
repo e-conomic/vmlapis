@@ -7,6 +7,7 @@ option go_package = "data";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "asgt/data/v1alpha1/create.proto";
+import "asgt/data/v1alpha1/append.proto";
 import "asgt/data/v1alpha1/delete.proto";
 import "asgt/data/v1alpha1/info.proto";
 

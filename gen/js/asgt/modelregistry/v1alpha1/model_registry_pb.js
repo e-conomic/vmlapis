@@ -13,6 +13,7 @@ var global = Function('return this')();
 
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
+var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse', null, global);
@@ -65,7 +66,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.toObject = func
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
-    revision: (f = msg.getRevision()) && asgt_type_dataset_pb.Revision.toObject(includeInstance, f),
+    revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
 
@@ -109,8 +110,8 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.deserializeBinaryFromRead
       msg.setDataset(value);
       break;
     case 2:
-      var value = new asgt_type_dataset_pb.Revision;
-      reader.readMessage(value,asgt_type_dataset_pb.Revision.deserializeBinaryFromReader);
+      var value = new asgt_type_revision_pb.Revision;
+      reader.readMessage(value,asgt_type_revision_pb.Revision.deserializeBinaryFromReader);
       msg.setRevision(value);
       break;
     case 3:
@@ -159,7 +160,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.serializeBinaryToWriter =
     writer.writeMessage(
       2,
       f,
-      asgt_type_dataset_pb.Revision.serializeBinaryToWriter
+      asgt_type_revision_pb.Revision.serializeBinaryToWriter
     );
   }
   f = message.getModelVersion();
@@ -208,7 +209,7 @@ proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.hasDataset = fu
  */
 proto.asgt.modelregistry.v1alpha1.RegisterModelRequest.prototype.getRevision = function() {
   return /** @type{?proto.asgt.type.Revision} */ (
-    jspb.Message.getWrapperField(this, asgt_type_dataset_pb.Revision, 2));
+    jspb.Message.getWrapperField(this, asgt_type_revision_pb.Revision, 2));
 };
 
 

@@ -38,11 +38,11 @@ public final class TrainingTask {
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    asgt.type.DatasetOuterClass.Revision getRevision();
+    asgt.type.RevisionOuterClass.Revision getRevision();
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder();
+    asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
 
     /**
      * <code>int64 model_version = 4;</code>
@@ -103,11 +103,11 @@ public final class TrainingTask {
               break;
             }
             case 18: {
-              asgt.type.DatasetOuterClass.Revision.Builder subBuilder = null;
+              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
               if (revision_ != null) {
                 subBuilder = revision_.toBuilder();
               }
-              revision_ = input.readMessage(asgt.type.DatasetOuterClass.Revision.parser(), extensionRegistry);
+              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(revision_);
                 revision_ = subBuilder.buildPartial();
@@ -174,7 +174,7 @@ public final class TrainingTask {
     }
 
     public static final int REVISION_FIELD_NUMBER = 2;
-    private asgt.type.DatasetOuterClass.Revision revision_;
+    private asgt.type.RevisionOuterClass.Revision revision_;
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
@@ -184,13 +184,13 @@ public final class TrainingTask {
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    public asgt.type.DatasetOuterClass.Revision getRevision() {
-      return revision_ == null ? asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+    public asgt.type.RevisionOuterClass.Revision getRevision() {
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
     /**
      * <code>.asgt.type.Revision revision = 2;</code>
      */
-    public asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+    public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
       return getRevision();
     }
 
@@ -684,9 +684,9 @@ public final class TrainingTask {
         return datasetBuilder_;
       }
 
-      private asgt.type.DatasetOuterClass.Revision revision_ = null;
+      private asgt.type.RevisionOuterClass.Revision revision_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder> revisionBuilder_;
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
@@ -696,9 +696,9 @@ public final class TrainingTask {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.Revision getRevision() {
+      public asgt.type.RevisionOuterClass.Revision getRevision() {
         if (revisionBuilder_ == null) {
-          return revision_ == null ? asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+          return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
         } else {
           return revisionBuilder_.getMessage();
         }
@@ -706,7 +706,7 @@ public final class TrainingTask {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public Builder setRevision(asgt.type.DatasetOuterClass.Revision value) {
+      public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -723,7 +723,7 @@ public final class TrainingTask {
        * <code>.asgt.type.Revision revision = 2;</code>
        */
       public Builder setRevision(
-          asgt.type.DatasetOuterClass.Revision.Builder builderForValue) {
+          asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
         if (revisionBuilder_ == null) {
           revision_ = builderForValue.build();
           onChanged();
@@ -736,11 +736,11 @@ public final class TrainingTask {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public Builder mergeRevision(asgt.type.DatasetOuterClass.Revision value) {
+      public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
           if (revision_ != null) {
             revision_ =
-              asgt.type.DatasetOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
           } else {
             revision_ = value;
           }
@@ -768,7 +768,7 @@ public final class TrainingTask {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.Revision.Builder getRevisionBuilder() {
+      public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
         
         onChanged();
         return getRevisionFieldBuilder().getBuilder();
@@ -776,23 +776,23 @@ public final class TrainingTask {
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
-      public asgt.type.DatasetOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+      public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
         if (revisionBuilder_ != null) {
           return revisionBuilder_.getMessageOrBuilder();
         } else {
           return revision_ == null ?
-              asgt.type.DatasetOuterClass.Revision.getDefaultInstance() : revision_;
+              asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
         }
       }
       /**
        * <code>.asgt.type.Revision revision = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder> 
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
           getRevisionFieldBuilder() {
         if (revisionBuilder_ == null) {
           revisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.DatasetOuterClass.Revision, asgt.type.DatasetOuterClass.Revision.Builder, asgt.type.DatasetOuterClass.RevisionOrBuilder>(
+              asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder>(
                   getRevision(),
                   getParentForChildren(),
                   isClean());
@@ -895,11 +895,11 @@ public final class TrainingTask {
     java.lang.String[] descriptorData = {
       "\n.asgt/modeltrainer/v1alpha1/training_ta" +
       "sk.proto\022\032asgt.modeltrainer.v1alpha1\032\027as" +
-      "gt/type/dataset.proto\"s\n\016TrainModelTask\022" +
-      "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022%\n\010" +
-      "revision\030\002 \001(\0132\023.asgt.type.Revision\022\025\n\rm" +
-      "odel_version\030\004 \001(\003B\016Z\014modeltrainerb\006prot" +
-      "o3"
+      "gt/type/dataset.proto\032\030asgt/type/revisio" +
+      "n.proto\"s\n\016TrainModelTask\022#\n\007dataset\030\001 \001" +
+      "(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001(\013" +
+      "2\023.asgt.type.Revision\022\025\n\rmodel_version\030\004" +
+      " \001(\003B\016Z\014modeltrainerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -913,6 +913,7 @@ public final class TrainingTask {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.RevisionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -921,6 +922,7 @@ public final class TrainingTask {
         internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor,
         new java.lang.String[] { "Dataset", "Revision", "ModelVersion", });
     asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.RevisionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

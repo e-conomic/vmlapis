@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from vml_proto.asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modeltrainer.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\014modeltrainer'),
-  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\"s\n\x0eTrainModelTask\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x04 \x01(\x03\x42\x0eZ\x0cmodeltrainerb\x06proto3')
+  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x18\x61sgt/type/revision.proto\"s\n\x0eTrainModelTask\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x04 \x01(\x03\x42\x0eZ\x0cmodeltrainerb\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,])
 
 
 
@@ -67,12 +68,12 @@ _TRAINMODELTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=103,
-  serialized_end=218,
+  serialized_start=129,
+  serialized_end=244,
 )
 
 _TRAINMODELTASK.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
-_TRAINMODELTASK.fields_by_name['revision'].message_type = asgt_dot_type_dot_dataset__pb2._REVISION
+_TRAINMODELTASK.fields_by_name['revision'].message_type = asgt_dot_type_dot_revision__pb2._REVISION
 DESCRIPTOR.message_types_by_name['TrainModelTask'] = _TRAINMODELTASK
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

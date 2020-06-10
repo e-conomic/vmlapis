@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_data_v1alpha1_append_pb = require('../../../asgt/data/v1alpha1/append_pb.js');
 var asgt_data_v1alpha1_create_pb = require('../../../asgt/data/v1alpha1/create_pb.js');
 var asgt_data_v1alpha1_delete_pb = require('../../../asgt/data/v1alpha1/delete_pb.js');
 var asgt_data_v1alpha1_info_pb = require('../../../asgt/data/v1alpha1/info_pb.js');

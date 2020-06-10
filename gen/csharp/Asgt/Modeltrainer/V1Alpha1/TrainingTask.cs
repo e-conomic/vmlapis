@@ -26,12 +26,12 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
           string.Concat(
             "Ci5hc2d0L21vZGVsdHJhaW5lci92MWFscGhhMS90cmFpbmluZ190YXNrLnBy",
             "b3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRoXYXNndC90eXBlL2Rh",
-            "dGFzZXQucHJvdG8icwoOVHJhaW5Nb2RlbFRhc2sSIwoHZGF0YXNldBgBIAEo",
-            "CzISLmFzZ3QudHlwZS5EYXRhc2V0EiUKCHJldmlzaW9uGAIgASgLMhMuYXNn",
-            "dC50eXBlLlJldmlzaW9uEhUKDW1vZGVsX3ZlcnNpb24YBCABKANCDloMbW9k",
-            "ZWx0cmFpbmVyYgZwcm90bzM="));
+            "dGFzZXQucHJvdG8aGGFzZ3QvdHlwZS9yZXZpc2lvbi5wcm90byJzCg5UcmFp",
+            "bk1vZGVsVGFzaxIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFz",
+            "ZXQSJQoIcmV2aXNpb24YAiABKAsyEy5hc2d0LnR5cGUuUmV2aXNpb24SFQoN",
+            "bW9kZWxfdmVyc2lvbhgEIAEoA0IOWgxtb2RlbHRyYWluZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask), global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null)
           }));
