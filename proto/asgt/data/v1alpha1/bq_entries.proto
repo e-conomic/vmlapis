@@ -14,7 +14,7 @@ import "asgt/type/target_value.proto";
 
 // BQ schema gen - could be used for adding direct developer data endpoints
 message Entry {
-  option (gen_bq_schema.bigquery_opts).table_name = "bank_data";
+  option (gen_bq_schema.bigquery_opts).table_name = "sample_data";
   string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
   string consumer = 2 [(gen_bq_schema.bigquery).require = true];
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];

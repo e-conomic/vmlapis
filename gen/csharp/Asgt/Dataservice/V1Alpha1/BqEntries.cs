@@ -29,7 +29,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "Z3QvdHlwZS9tb2RlbC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJv",
             "dG8aHGFzZ3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hl",
             "bWEvYnFfZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJv",
-            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i+AMKBUVudHJ5Ej4K",
+            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i+gMKBUVudHJ5Ej4K",
             "AmlkGAEgASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQg",
             "aWYgZmVlZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoM",
             "ZGF0YXNldF9uYW1lGAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUYDCAB",
@@ -40,8 +40,8 @@ namespace Asgt.Dataservice.V1Alpha1 {
             "YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlEh8K",
             "BW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rpb24Y",
             "CiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9h",
-            "ZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoO6j8LCgliYW5rX2RhdGFC",
-            "BloEZGF0YWIGcHJvdG8z"));
+            "ZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVfZGF0",
+            "YUIGWgRkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

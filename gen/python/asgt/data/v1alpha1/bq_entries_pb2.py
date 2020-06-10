@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\004data'),
-  serialized_pb=_b('\n#asgt/data/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xf8\x03\n\x05\x45ntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_type\x18\x0c \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of dataset\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x1d\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x0f.asgt.type.Data\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12\x1f\n\x05model\x18\t \x01(\x0b\x32\x10.asgt.type.Model\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x0e\xea?\x0b\n\tbank_dataB\x06Z\x04\x64\x61tab\x06proto3')
+  serialized_pb=_b('\n#asgt/data/v1alpha1/bq_entries.proto\x12\x19\x61sgt.dataservice.v1alpha1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\"\xfa\x03\n\x05\x45ntry\x12>\n\x02id\x18\x01 \x01(\tB2\xea?/\"-ID, matches Envoy request id if feedback data\x12\x17\n\x08\x63onsumer\x18\x02 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_name\x18\x03 \x01(\tB\x05\xea?\x02\x08\x01\x12\x1b\n\x0c\x64\x61taset_type\x18\x0c \x01(\tB\x05\xea?\x02\x08\x01\x12/\n\ndataset_id\x18\x0b \x01(\tB\x1b\xea?\x18\x08\x01\"\x14unique ID of dataset\x12T\n\x04tags\x18\x04 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x1d\n\x04\x64\x61ta\x18\x05 \x01(\x0b\x32\x0f.asgt.type.Data\x12-\n\rtarget_values\x18\x06 \x03(\x0b\x32\x16.asgt.type.TargetValue\x12\x1f\n\x05model\x18\t \x01(\x0b\x32\x10.asgt.type.Model\x12\x30\n\nprediction\x18\n \x03(\x0b\x32\x1c.asgt.type.Prediction.Target\x12$\n\ntime_added\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP:\x10\xea?\r\n\x0bsample_dataB\x06Z\x04\x64\x61tab\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 
@@ -123,14 +123,14 @@ _ENTRY = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=_b('\352?\013\n\tbank_data'),
+  serialized_options=_b('\352?\r\n\013sample_data'),
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
   serialized_start=260,
-  serialized_end=764,
+  serialized_end=766,
 )
 
 _ENTRY.fields_by_name['data'].message_type = asgt_dot_type_dot_data__pb2._DATA

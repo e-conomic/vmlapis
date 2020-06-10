@@ -2520,7 +2520,7 @@ public final class BqEntries {
       "/prediction.proto\032\034asgt/type/target_valu" +
       "e.proto\032\034gen_bq_schema/bq_field.proto\032\034g" +
       "en_bq_schema/bq_table.proto\032\034google/api/" +
-      "annotations.proto\"\370\003\n\005Entry\022>\n\002id\030\001 \001(\tB" +
+      "annotations.proto\"\372\003\n\005Entry\022>\n\002id\030\001 \001(\tB" +
       "2\352?/\"-ID, matches Envoy request id if fe" +
       "edback data\022\027\n\010consumer\030\002 \001(\tB\005\352?\002\010\001\022\033\n\014" +
       "dataset_name\030\003 \001(\tB\005\352?\002\010\001\022\033\n\014dataset_typ" +
@@ -2532,8 +2532,8 @@ public final class BqEntries {
       "\003(\0132\026.asgt.type.TargetValue\022\037\n\005model\030\t \001" +
       "(\0132\020.asgt.type.Model\0220\n\nprediction\030\n \003(\013" +
       "2\034.asgt.type.Prediction.Target\022$\n\ntime_a" +
-      "dded\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\016\352?\013\n\tbank_" +
-      "dataB\006Z\004datab\006proto3"
+      "dded\030\010 \001(\004B\020\352?\r\010\001\022\tTIMESTAMP:\020\352?\r\n\013sampl" +
+      "e_dataB\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
