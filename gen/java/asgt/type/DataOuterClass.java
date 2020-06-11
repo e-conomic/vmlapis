@@ -108,6 +108,31 @@ public final class DataOuterClass {
 
     /**
      * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    boolean hasCurrency();
+    /**
+     * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    com.google.protobuf.StringValue getCurrency();
+    /**
+     * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
+
+    /**
+     * <pre>
      * total of the invoice
      * </pre>
      *
@@ -218,6 +243,19 @@ public final class DataOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(text_);
                 text_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 50: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (currency_ != null) {
+                subBuilder = currency_.toBuilder();
+              }
+              currency_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(currency_);
+                currency_ = subBuilder.buildPartial();
               }
 
               break;
@@ -387,6 +425,39 @@ public final class DataOuterClass {
       return getText();
     }
 
+    public static final int CURRENCY_FIELD_NUMBER = 6;
+    private com.google.protobuf.StringValue currency_;
+    /**
+     * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    public boolean hasCurrency() {
+      return currency_ != null;
+    }
+    /**
+     * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    public com.google.protobuf.StringValue getCurrency() {
+      return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+    }
+    /**
+     * <pre>
+     * name of the currency as a string
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue currency = 6;</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
+      return getCurrency();
+    }
+
     public static final int TOTAL_FIELD_NUMBER = 7;
     private com.google.protobuf.FloatValue total_;
     /**
@@ -446,6 +517,9 @@ public final class DataOuterClass {
       if (text_ != null) {
         output.writeMessage(4, getText());
       }
+      if (currency_ != null) {
+        output.writeMessage(6, getCurrency());
+      }
       if (total_ != null) {
         output.writeMessage(7, getTotal());
       }
@@ -473,6 +547,10 @@ public final class DataOuterClass {
       if (text_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getText());
+      }
+      if (currency_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCurrency());
       }
       if (total_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -514,6 +592,11 @@ public final class DataOuterClass {
         result = result && getText()
             .equals(other.getText());
       }
+      result = result && (hasCurrency() == other.hasCurrency());
+      if (hasCurrency()) {
+        result = result && getCurrency()
+            .equals(other.getCurrency());
+      }
       result = result && (hasTotal() == other.hasTotal());
       if (hasTotal()) {
         result = result && getTotal()
@@ -545,6 +628,10 @@ public final class DataOuterClass {
       if (hasText()) {
         hash = (37 * hash) + TEXT_FIELD_NUMBER;
         hash = (53 * hash) + getText().hashCode();
+      }
+      if (hasCurrency()) {
+        hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
+        hash = (53 * hash) + getCurrency().hashCode();
       }
       if (hasTotal()) {
         hash = (37 * hash) + TOTAL_FIELD_NUMBER;
@@ -707,6 +794,12 @@ public final class DataOuterClass {
           text_ = null;
           textBuilder_ = null;
         }
+        if (currencyBuilder_ == null) {
+          currency_ = null;
+        } else {
+          currency_ = null;
+          currencyBuilder_ = null;
+        }
         if (totalBuilder_ == null) {
           total_ = null;
         } else {
@@ -758,6 +851,11 @@ public final class DataOuterClass {
           result.text_ = text_;
         } else {
           result.text_ = textBuilder_.build();
+        }
+        if (currencyBuilder_ == null) {
+          result.currency_ = currency_;
+        } else {
+          result.currency_ = currencyBuilder_.build();
         }
         if (totalBuilder_ == null) {
           result.total_ = total_;
@@ -823,6 +921,9 @@ public final class DataOuterClass {
         }
         if (other.hasText()) {
           mergeText(other.getText());
+        }
+        if (other.hasCurrency()) {
+          mergeCurrency(other.getCurrency());
         }
         if (other.hasTotal()) {
           mergeTotal(other.getTotal());
@@ -1432,6 +1533,159 @@ public final class DataOuterClass {
         return textBuilder_;
       }
 
+      private com.google.protobuf.StringValue currency_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public boolean hasCurrency() {
+        return currencyBuilder_ != null || currency_ != null;
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public com.google.protobuf.StringValue getCurrency() {
+        if (currencyBuilder_ == null) {
+          return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+        } else {
+          return currencyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public Builder setCurrency(com.google.protobuf.StringValue value) {
+        if (currencyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          currency_ = value;
+          onChanged();
+        } else {
+          currencyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public Builder setCurrency(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (currencyBuilder_ == null) {
+          currency_ = builderForValue.build();
+          onChanged();
+        } else {
+          currencyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public Builder mergeCurrency(com.google.protobuf.StringValue value) {
+        if (currencyBuilder_ == null) {
+          if (currency_ != null) {
+            currency_ =
+              com.google.protobuf.StringValue.newBuilder(currency_).mergeFrom(value).buildPartial();
+          } else {
+            currency_ = value;
+          }
+          onChanged();
+        } else {
+          currencyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public Builder clearCurrency() {
+        if (currencyBuilder_ == null) {
+          currency_ = null;
+          onChanged();
+        } else {
+          currency_ = null;
+          currencyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
+        
+        onChanged();
+        return getCurrencyFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
+        if (currencyBuilder_ != null) {
+          return currencyBuilder_.getMessageOrBuilder();
+        } else {
+          return currency_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+        }
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>.google.protobuf.StringValue currency = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCurrencyFieldBuilder() {
+        if (currencyBuilder_ == null) {
+          currencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getCurrency(),
+                  getParentForChildren(),
+                  isClean());
+          currency_ = null;
+        }
+        return currencyBuilder_;
+      }
+
       private com.google.protobuf.FloatValue total_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalBuilder_;
@@ -1643,41 +1897,28 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * name of the currency as a string
+     * id of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    boolean hasCurrency();
+    boolean hasId();
     /**
      * <pre>
-     * name of the currency as a string
+     * id of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    com.google.protobuf.StringValue getCurrency();
+    com.google.protobuf.StringValue getId();
     /**
      * <pre>
-     * name of the currency as a string
+     * id of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
-
-    /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
-     */
-    boolean hasAmount();
-    /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
-     */
-    com.google.protobuf.FloatValue getAmount();
-    /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
-     */
-    com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder();
+    com.google.protobuf.StringValueOrBuilder getIdOrBuilder();
 
     /**
      * <pre>
@@ -1768,28 +2009,15 @@ public final class DataOuterClass {
             case 0:
               done = true;
               break;
-            case 26: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (amount_ != null) {
-                subBuilder = amount_.toBuilder();
-              }
-              amount_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(amount_);
-                amount_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
+            case 10: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (currency_ != null) {
-                subBuilder = currency_.toBuilder();
+              if (id_ != null) {
+                subBuilder = id_.toBuilder();
               }
-              currency_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              id_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(currency_);
-                currency_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(id_);
+                id_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1852,58 +2080,37 @@ public final class DataOuterClass {
               asgt.type.DataOuterClass.InvoiceLine.class, asgt.type.DataOuterClass.InvoiceLine.Builder.class);
     }
 
-    public static final int CURRENCY_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue currency_;
+    public static final int ID_FIELD_NUMBER = 1;
+    private com.google.protobuf.StringValue id_;
     /**
      * <pre>
-     * name of the currency as a string
+     * id of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    public boolean hasCurrency() {
-      return currency_ != null;
-    }
-    /**
-     * <pre>
-     * name of the currency as a string
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
-     */
-    public com.google.protobuf.StringValue getCurrency() {
-      return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+    public boolean hasId() {
+      return id_ != null;
     }
     /**
      * <pre>
-     * name of the currency as a string
+     * id of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 4;</code>
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-      return getCurrency();
-    }
-
-    public static final int AMOUNT_FIELD_NUMBER = 3;
-    private com.google.protobuf.FloatValue amount_;
-    /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
-     */
-    public boolean hasAmount() {
-      return amount_ != null;
+    public com.google.protobuf.StringValue getId() {
+      return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
     }
     /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
+     * <pre>
+     * id of the invoice line
+     * </pre>
+     *
+     * <code>.google.protobuf.StringValue id = 1;</code>
      */
-    public com.google.protobuf.FloatValue getAmount() {
-      return amount_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
-    }
-    /**
-     * <code>.google.protobuf.FloatValue amount = 3;</code>
-     */
-    public com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder() {
-      return getAmount();
+    public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
+      return getId();
     }
 
     public static final int TEXT_FIELD_NUMBER = 8;
@@ -1986,11 +2193,8 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (amount_ != null) {
-        output.writeMessage(3, getAmount());
-      }
-      if (currency_ != null) {
-        output.writeMessage(4, getCurrency());
+      if (id_ != null) {
+        output.writeMessage(1, getId());
       }
       if (text_ != null) {
         output.writeMessage(8, getText());
@@ -2007,13 +2211,9 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (amount_ != null) {
+      if (id_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getAmount());
-      }
-      if (currency_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getCurrency());
+          .computeMessageSize(1, getId());
       }
       if (text_ != null) {
         size += com.google.protobuf.CodedOutputStream
@@ -2039,15 +2239,10 @@ public final class DataOuterClass {
       asgt.type.DataOuterClass.InvoiceLine other = (asgt.type.DataOuterClass.InvoiceLine) obj;
 
       boolean result = true;
-      result = result && (hasCurrency() == other.hasCurrency());
-      if (hasCurrency()) {
-        result = result && getCurrency()
-            .equals(other.getCurrency());
-      }
-      result = result && (hasAmount() == other.hasAmount());
-      if (hasAmount()) {
-        result = result && getAmount()
-            .equals(other.getAmount());
+      result = result && (hasId() == other.hasId());
+      if (hasId()) {
+        result = result && getId()
+            .equals(other.getId());
       }
       result = result && (hasText() == other.hasText());
       if (hasText()) {
@@ -2070,13 +2265,9 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasCurrency()) {
-        hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-        hash = (53 * hash) + getCurrency().hashCode();
-      }
-      if (hasAmount()) {
-        hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
-        hash = (53 * hash) + getAmount().hashCode();
+      if (hasId()) {
+        hash = (37 * hash) + ID_FIELD_NUMBER;
+        hash = (53 * hash) + getId().hashCode();
       }
       if (hasText()) {
         hash = (37 * hash) + TEXT_FIELD_NUMBER;
@@ -2219,17 +2410,11 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (currencyBuilder_ == null) {
-          currency_ = null;
+        if (idBuilder_ == null) {
+          id_ = null;
         } else {
-          currency_ = null;
-          currencyBuilder_ = null;
-        }
-        if (amountBuilder_ == null) {
-          amount_ = null;
-        } else {
-          amount_ = null;
-          amountBuilder_ = null;
+          id_ = null;
+          idBuilder_ = null;
         }
         if (textBuilder_ == null) {
           text_ = null;
@@ -2269,15 +2454,10 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.InvoiceLine buildPartial() {
         asgt.type.DataOuterClass.InvoiceLine result = new asgt.type.DataOuterClass.InvoiceLine(this);
-        if (currencyBuilder_ == null) {
-          result.currency_ = currency_;
+        if (idBuilder_ == null) {
+          result.id_ = id_;
         } else {
-          result.currency_ = currencyBuilder_.build();
-        }
-        if (amountBuilder_ == null) {
-          result.amount_ = amount_;
-        } else {
-          result.amount_ = amountBuilder_.build();
+          result.id_ = idBuilder_.build();
         }
         if (textBuilder_ == null) {
           result.text_ = text_;
@@ -2337,11 +2517,8 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.type.DataOuterClass.InvoiceLine other) {
         if (other == asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance()) return this;
-        if (other.hasCurrency()) {
-          mergeCurrency(other.getCurrency());
-        }
-        if (other.hasAmount()) {
-          mergeAmount(other.getAmount());
+        if (other.hasId()) {
+          mergeId(other.getId());
         }
         if (other.hasText()) {
           mergeText(other.getText());
@@ -2378,274 +2555,157 @@ public final class DataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.StringValue currency_ = null;
+      private com.google.protobuf.StringValue id_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> idBuilder_;
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public boolean hasCurrency() {
-        return currencyBuilder_ != null || currency_ != null;
+      public boolean hasId() {
+        return idBuilder_ != null || id_ != null;
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public com.google.protobuf.StringValue getCurrency() {
-        if (currencyBuilder_ == null) {
-          return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+      public com.google.protobuf.StringValue getId() {
+        if (idBuilder_ == null) {
+          return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
         } else {
-          return currencyBuilder_.getMessage();
+          return idBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public Builder setCurrency(com.google.protobuf.StringValue value) {
-        if (currencyBuilder_ == null) {
+      public Builder setId(com.google.protobuf.StringValue value) {
+        if (idBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          currency_ = value;
+          id_ = value;
           onChanged();
         } else {
-          currencyBuilder_.setMessage(value);
+          idBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public Builder setCurrency(
+      public Builder setId(
           com.google.protobuf.StringValue.Builder builderForValue) {
-        if (currencyBuilder_ == null) {
-          currency_ = builderForValue.build();
+        if (idBuilder_ == null) {
+          id_ = builderForValue.build();
           onChanged();
         } else {
-          currencyBuilder_.setMessage(builderForValue.build());
+          idBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public Builder mergeCurrency(com.google.protobuf.StringValue value) {
-        if (currencyBuilder_ == null) {
-          if (currency_ != null) {
-            currency_ =
-              com.google.protobuf.StringValue.newBuilder(currency_).mergeFrom(value).buildPartial();
+      public Builder mergeId(com.google.protobuf.StringValue value) {
+        if (idBuilder_ == null) {
+          if (id_ != null) {
+            id_ =
+              com.google.protobuf.StringValue.newBuilder(id_).mergeFrom(value).buildPartial();
           } else {
-            currency_ = value;
+            id_ = value;
           }
           onChanged();
         } else {
-          currencyBuilder_.mergeFrom(value);
+          idBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public Builder clearCurrency() {
-        if (currencyBuilder_ == null) {
-          currency_ = null;
+      public Builder clearId() {
+        if (idBuilder_ == null) {
+          id_ = null;
           onChanged();
         } else {
-          currency_ = null;
-          currencyBuilder_ = null;
+          id_ = null;
+          idBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
+      public com.google.protobuf.StringValue.Builder getIdBuilder() {
         
         onChanged();
-        return getCurrencyFieldBuilder().getBuilder();
+        return getIdFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
-      public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-        if (currencyBuilder_ != null) {
-          return currencyBuilder_.getMessageOrBuilder();
+      public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
+        if (idBuilder_ != null) {
+          return idBuilder_.getMessageOrBuilder();
         } else {
-          return currency_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : currency_;
+          return id_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : id_;
         }
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * id of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 4;</code>
+       * <code>.google.protobuf.StringValue id = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getCurrencyFieldBuilder() {
-        if (currencyBuilder_ == null) {
-          currencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+          getIdFieldBuilder() {
+        if (idBuilder_ == null) {
+          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
               com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getCurrency(),
+                  getId(),
                   getParentForChildren(),
                   isClean());
-          currency_ = null;
+          id_ = null;
         }
-        return currencyBuilder_;
-      }
-
-      private com.google.protobuf.FloatValue amount_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> amountBuilder_;
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public boolean hasAmount() {
-        return amountBuilder_ != null || amount_ != null;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public com.google.protobuf.FloatValue getAmount() {
-        if (amountBuilder_ == null) {
-          return amount_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
-        } else {
-          return amountBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public Builder setAmount(com.google.protobuf.FloatValue value) {
-        if (amountBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          amount_ = value;
-          onChanged();
-        } else {
-          amountBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public Builder setAmount(
-          com.google.protobuf.FloatValue.Builder builderForValue) {
-        if (amountBuilder_ == null) {
-          amount_ = builderForValue.build();
-          onChanged();
-        } else {
-          amountBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public Builder mergeAmount(com.google.protobuf.FloatValue value) {
-        if (amountBuilder_ == null) {
-          if (amount_ != null) {
-            amount_ =
-              com.google.protobuf.FloatValue.newBuilder(amount_).mergeFrom(value).buildPartial();
-          } else {
-            amount_ = value;
-          }
-          onChanged();
-        } else {
-          amountBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public Builder clearAmount() {
-        if (amountBuilder_ == null) {
-          amount_ = null;
-          onChanged();
-        } else {
-          amount_ = null;
-          amountBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public com.google.protobuf.FloatValue.Builder getAmountBuilder() {
-        
-        onChanged();
-        return getAmountFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getAmountOrBuilder() {
-        if (amountBuilder_ != null) {
-          return amountBuilder_.getMessageOrBuilder();
-        } else {
-          return amount_ == null ?
-              com.google.protobuf.FloatValue.getDefaultInstance() : amount_;
-        }
-      }
-      /**
-       * <code>.google.protobuf.FloatValue amount = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-          getAmountFieldBuilder() {
-        if (amountBuilder_ == null) {
-          amountBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                  getAmount(),
-                  getParentForChildren(),
-                  isClean());
-          amount_ = null;
-        }
-        return amountBuilder_;
+        return idBuilder_;
       }
 
       private com.google.protobuf.StringValue text_ = null;
@@ -5983,26 +6043,26 @@ public final class DataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\024asgt/type/data.proto\022\tasgt.type\032\037googl" +
       "e/protobuf/timestamp.proto\032\036google/proto" +
-      "buf/wrappers.proto\"\354\001\n\007Invoice\022.\n\nissue_" +
+      "buf/wrappers.proto\"\234\002\n\007Invoice\022.\n\nissue_" +
       "date\030\001 \001(\0132\032.google.protobuf.Timestamp\022%" +
       "\n\010supplier\030\002 \001(\0132\023.asgt.type.Supplier\0222\n" +
       "\014customer_ref\030\003 \001(\0132\034.google.protobuf.St" +
       "ringValue\022*\n\004text\030\004 \001(\0132\034.google.protobu" +
-      "f.StringValue\022*\n\005total\030\007 \001(\0132\033.google.pr" +
-      "otobuf.FloatValue\"\305\001\n\013InvoiceLine\022.\n\010cur" +
-      "rency\030\004 \001(\0132\034.google.protobuf.StringValu" +
-      "e\022+\n\006amount\030\003 \001(\0132\033.google.protobuf.Floa" +
-      "tValue\022*\n\004text\030\010 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022-\n\007item_id\030\t \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(" +
-      "\t\022*\n\004name\030\004 \001(\0132\034.google.protobuf.String" +
-      "Value\022/\n\tglobal_id\030\005 \001(\0132\034.google.protob" +
-      "uf.StringValue\"+\n\013Transaction\022\014\n\004text\030\001 " +
-      "\001(\t\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transact" +
-      "ion\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007inv" +
-      "oice\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014invoic" +
-      "e_line\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004" +
-      "typeb\006proto3"
+      "f.StringValue\022.\n\010currency\030\006 \001(\0132\034.google" +
+      ".protobuf.StringValue\022*\n\005total\030\007 \001(\0132\033.g" +
+      "oogle.protobuf.FloatValue\"\222\001\n\013InvoiceLin" +
+      "e\022(\n\002id\030\001 \001(\0132\034.google.protobuf.StringVa" +
+      "lue\022*\n\004text\030\010 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\022-\n\007item_id\030\t \001(\0132\034.google.protob" +
+      "uf.StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(\t\022*" +
+      "\n\004name\030\004 \001(\0132\034.google.protobuf.StringVal" +
+      "ue\022/\n\tglobal_id\030\005 \001(\0132\034.google.protobuf." +
+      "StringValue\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t" +
+      "\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transaction" +
+      "\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007invoic" +
+      "e\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014invoice_l" +
+      "ine\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004typ" +
+      "eb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6023,13 +6083,13 @@ public final class DataOuterClass {
     internal_static_asgt_type_Invoice_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Invoice_descriptor,
-        new java.lang.String[] { "IssueDate", "Supplier", "CustomerRef", "Text", "Total", });
+        new java.lang.String[] { "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total", });
     internal_static_asgt_type_InvoiceLine_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_type_InvoiceLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_InvoiceLine_descriptor,
-        new java.lang.String[] { "Currency", "Amount", "Text", "ItemId", });
+        new java.lang.String[] { "Id", "Text", "ItemId", });
     internal_static_asgt_type_Supplier_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_type_Supplier_fieldAccessorTable = new

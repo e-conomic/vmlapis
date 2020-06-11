@@ -26,28 +26,28 @@ namespace Asgt.Type {
           string.Concat(
             "ChRhc2d0L3R5cGUvZGF0YS5wcm90bxIJYXNndC50eXBlGh9nb29nbGUvcHJv",
             "dG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBl",
-            "cnMucHJvdG8i7AEKB0ludm9pY2USLgoKaXNzdWVfZGF0ZRgBIAEoCzIaLmdv",
+            "cnMucHJvdG8inAIKB0ludm9pY2USLgoKaXNzdWVfZGF0ZRgBIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJQoIc3VwcGxpZXIYAiABKAsyEy5h",
             "c2d0LnR5cGUuU3VwcGxpZXISMgoMY3VzdG9tZXJfcmVmGAMgASgLMhwuZ29v",
             "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBHRleHQYBCABKAsyHC5nb29n",
-            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoFdG90YWwYByABKAsyGy5nb29n",
-            "bGUucHJvdG9idWYuRmxvYXRWYWx1ZSLFAQoLSW52b2ljZUxpbmUSLgoIY3Vy",
-            "cmVuY3kYBCABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKwoG",
-            "YW1vdW50GAMgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSKgoE",
-            "dGV4dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRItCgdp",
-            "dGVtX2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlInMK",
-            "CFN1cHBsaWVyEgoKAmlkGAEgASgJEioKBG5hbWUYBCABKAsyHC5nb29nbGUu",
-            "cHJvdG9idWYuU3RyaW5nVmFsdWUSLwoJZ2xvYmFsX2lkGAUgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIisKC1RyYW5zYWN0aW9uEgwKBHRl",
-            "eHQYASABKAkSDgoGYW1vdW50GAIgASgCIoYBCgREYXRhEisKC3RyYW5zYWN0",
-            "aW9uGAEgASgLMhYuYXNndC50eXBlLlRyYW5zYWN0aW9uEiMKB2ludm9pY2UY",
-            "AiABKAsyEi5hc2d0LnR5cGUuSW52b2ljZRIsCgxpbnZvaWNlX2xpbmUYAyAB",
-            "KAsyFi5hc2d0LnR5cGUuSW52b2ljZUxpbmVCBloEdHlwZWIGcHJvdG8z"));
+            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLgoIY3VycmVuY3kYBiABKAsyHC5n",
+            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoFdG90YWwYByABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZSKSAQoLSW52b2ljZUxpbmUSKAoC",
+            "aWQYASABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoEdGV4",
+            "dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRItCgdpdGVt",
+            "X2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlInMKCFN1",
+            "cHBsaWVyEgoKAmlkGAEgASgJEioKBG5hbWUYBCABKAsyHC5nb29nbGUucHJv",
+            "dG9idWYuU3RyaW5nVmFsdWUSLwoJZ2xvYmFsX2lkGAUgASgLMhwuZ29vZ2xl",
+            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlIisKC1RyYW5zYWN0aW9uEgwKBHRleHQY",
+            "ASABKAkSDgoGYW1vdW50GAIgASgCIoYBCgREYXRhEisKC3RyYW5zYWN0aW9u",
+            "GAEgASgLMhYuYXNndC50eXBlLlRyYW5zYWN0aW9uEiMKB2ludm9pY2UYAiAB",
+            "KAsyEi5hc2d0LnR5cGUuSW52b2ljZRIsCgxpbnZvaWNlX2xpbmUYAyABKAsy",
+            "Fi5hc2d0LnR5cGUuSW52b2ljZUxpbmVCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Invoice), global::Asgt.Type.Invoice.Parser, new[]{ "IssueDate", "Supplier", "CustomerRef", "Text", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.InvoiceLine), global::Asgt.Type.InvoiceLine.Parser, new[]{ "Currency", "Amount", "Text", "ItemId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Invoice), global::Asgt.Type.Invoice.Parser, new[]{ "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.InvoiceLine), global::Asgt.Type.InvoiceLine.Parser, new[]{ "Id", "Text", "ItemId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Supplier), global::Asgt.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Transaction), global::Asgt.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Data), global::Asgt.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, null, null, null)
@@ -86,6 +86,7 @@ namespace Asgt.Type {
       supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
       CustomerRef = other.CustomerRef;
       Text = other.Text;
+      Currency = other.Currency;
       Total = other.Total;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -150,6 +151,21 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "currency" field.</summary>
+    public const int CurrencyFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _single_currency_codec = pb::FieldCodec.ForClassWrapper<string>(50);
+    private string currency_;
+    /// <summary>
+    /// name of the currency as a string
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Currency {
+      get { return currency_; }
+      set {
+        currency_ = value;
+      }
+    }
+
     /// <summary>Field number for the "total" field.</summary>
     public const int TotalFieldNumber = 7;
     private static readonly pb::FieldCodec<float?> _single_total_codec = pb::FieldCodec.ForStructWrapper<float>(58);
@@ -182,6 +198,7 @@ namespace Asgt.Type {
       if (!object.Equals(Supplier, other.Supplier)) return false;
       if (CustomerRef != other.CustomerRef) return false;
       if (Text != other.Text) return false;
+      if (Currency != other.Currency) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Total, other.Total)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -193,6 +210,7 @@ namespace Asgt.Type {
       if (supplier_ != null) hash ^= Supplier.GetHashCode();
       if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
       if (text_ != null) hash ^= Text.GetHashCode();
+      if (currency_ != null) hash ^= Currency.GetHashCode();
       if (total_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Total);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -221,6 +239,9 @@ namespace Asgt.Type {
       if (text_ != null) {
         _single_text_codec.WriteTagAndValue(output, Text);
       }
+      if (currency_ != null) {
+        _single_currency_codec.WriteTagAndValue(output, Currency);
+      }
       if (total_ != null) {
         _single_total_codec.WriteTagAndValue(output, Total);
       }
@@ -243,6 +264,9 @@ namespace Asgt.Type {
       }
       if (text_ != null) {
         size += _single_text_codec.CalculateSizeWithTag(Text);
+      }
+      if (currency_ != null) {
+        size += _single_currency_codec.CalculateSizeWithTag(Currency);
       }
       if (total_ != null) {
         size += _single_total_codec.CalculateSizeWithTag(Total);
@@ -278,6 +302,11 @@ namespace Asgt.Type {
       if (other.text_ != null) {
         if (text_ == null || other.Text != "") {
           Text = other.Text;
+        }
+      }
+      if (other.currency_ != null) {
+        if (currency_ == null || other.Currency != "") {
+          Currency = other.Currency;
         }
       }
       if (other.total_ != null) {
@@ -324,6 +353,13 @@ namespace Asgt.Type {
             }
             break;
           }
+          case 50: {
+            string value = _single_currency_codec.Read(input);
+            if (currency_ == null || value != "") {
+              Currency = value;
+            }
+            break;
+          }
           case 58: {
             float? value = _single_total_codec.Read(input);
             if (total_ == null || value != 0F) {
@@ -362,8 +398,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvoiceLine(InvoiceLine other) : this() {
-      Currency = other.Currency;
-      Amount = other.Amount;
+      Id = other.Id;
       Text = other.Text;
       ItemId = other.ItemId;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -374,30 +409,18 @@ namespace Asgt.Type {
       return new InvoiceLine(this);
     }
 
-    /// <summary>Field number for the "currency" field.</summary>
-    public const int CurrencyFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _single_currency_codec = pb::FieldCodec.ForClassWrapper<string>(34);
-    private string currency_;
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _single_id_codec = pb::FieldCodec.ForClassWrapper<string>(10);
+    private string id_;
     /// <summary>
-    /// name of the currency as a string
+    /// id of the invoice line
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Currency {
-      get { return currency_; }
+    public string Id {
+      get { return id_; }
       set {
-        currency_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "amount" field.</summary>
-    public const int AmountFieldNumber = 3;
-    private static readonly pb::FieldCodec<float?> _single_amount_codec = pb::FieldCodec.ForStructWrapper<float>(26);
-    private float? amount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float? Amount {
-      get { return amount_; }
-      set {
-        amount_ = value;
+        id_ = value;
       }
     }
 
@@ -444,8 +467,7 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Currency != other.Currency) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Amount, other.Amount)) return false;
+      if (Id != other.Id) return false;
       if (Text != other.Text) return false;
       if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -454,8 +476,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (currency_ != null) hash ^= Currency.GetHashCode();
-      if (amount_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Amount);
+      if (id_ != null) hash ^= Id.GetHashCode();
       if (text_ != null) hash ^= Text.GetHashCode();
       if (itemId_ != null) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
@@ -471,11 +492,8 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (amount_ != null) {
-        _single_amount_codec.WriteTagAndValue(output, Amount);
-      }
-      if (currency_ != null) {
-        _single_currency_codec.WriteTagAndValue(output, Currency);
+      if (id_ != null) {
+        _single_id_codec.WriteTagAndValue(output, Id);
       }
       if (text_ != null) {
         _single_text_codec.WriteTagAndValue(output, Text);
@@ -491,11 +509,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (currency_ != null) {
-        size += _single_currency_codec.CalculateSizeWithTag(Currency);
-      }
-      if (amount_ != null) {
-        size += _single_amount_codec.CalculateSizeWithTag(Amount);
+      if (id_ != null) {
+        size += _single_id_codec.CalculateSizeWithTag(Id);
       }
       if (text_ != null) {
         size += _single_text_codec.CalculateSizeWithTag(Text);
@@ -514,14 +529,9 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.currency_ != null) {
-        if (currency_ == null || other.Currency != "") {
-          Currency = other.Currency;
-        }
-      }
-      if (other.amount_ != null) {
-        if (amount_ == null || other.Amount != 0F) {
-          Amount = other.Amount;
+      if (other.id_ != null) {
+        if (id_ == null || other.Id != "") {
+          Id = other.Id;
         }
       }
       if (other.text_ != null) {
@@ -545,17 +555,10 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 26: {
-            float? value = _single_amount_codec.Read(input);
-            if (amount_ == null || value != 0F) {
-              Amount = value;
-            }
-            break;
-          }
-          case 34: {
-            string value = _single_currency_codec.Read(input);
-            if (currency_ == null || value != "") {
-              Currency = value;
+          case 10: {
+            string value = _single_id_codec.Read(input);
+            if (id_ == null || value != "") {
+              Id = value;
             }
             break;
           }
