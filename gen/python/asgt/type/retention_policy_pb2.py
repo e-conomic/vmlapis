@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n asgt/type/retention_policy.proto\x12\tasgt.type\"F\n\x0fRetentionPolicy\x12\x12\n\x08max_days\x18\x01 \x01(\x03H\x00\x12\x15\n\x0bmax_records\x18\x02 \x01(\x03H\x00\x42\x08\n\x06policyB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n asgt/type/retention_policy.proto\x12\tasgt.type\"#\n\x0fRetentionPolicy\x12\x10\n\x08max_days\x18\x01 \x01(\x03\x42\x06Z\x04typeb\x06proto3')
 )
 
 
@@ -39,13 +39,6 @@ _RETENTIONPOLICY = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='max_records', full_name='asgt.type.RetentionPolicy.max_records', index=1,
-      number=2, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -57,20 +50,11 @@ _RETENTIONPOLICY = _descriptor.Descriptor(
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
-    _descriptor.OneofDescriptor(
-      name='policy', full_name='asgt.type.RetentionPolicy.policy',
-      index=0, containing_type=None, fields=[]),
   ],
   serialized_start=47,
-  serialized_end=117,
+  serialized_end=82,
 )
 
-_RETENTIONPOLICY.oneofs_by_name['policy'].fields.append(
-  _RETENTIONPOLICY.fields_by_name['max_days'])
-_RETENTIONPOLICY.fields_by_name['max_days'].containing_oneof = _RETENTIONPOLICY.oneofs_by_name['policy']
-_RETENTIONPOLICY.oneofs_by_name['policy'].fields.append(
-  _RETENTIONPOLICY.fields_by_name['max_records'])
-_RETENTIONPOLICY.fields_by_name['max_records'].containing_oneof = _RETENTIONPOLICY.oneofs_by_name['policy']
 DESCRIPTOR.message_types_by_name['RetentionPolicy'] = _RETENTIONPOLICY
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

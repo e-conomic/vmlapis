@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from vml_proto.asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,45 +21,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modeltrainer.v1alpha1',
   syntax='proto3',
   serialized_options=_b('Z\014modeltrainer'),
-  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\"\xe9\x01\n\x0eTrainModelTask\x12\n\n\x02id\x18\x01 \x01(\t\x12#\n\x07\x64\x61taset\x18\x02 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x41\n\x06status\x18\x04 \x01(\x0e\x32\x31.asgt.modeltrainer.v1alpha1.TrainModelTask.Status\"L\n\x06Status\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tSCHEDULED\x10\x01\x12\x0b\n\x07STARTED\x10\x03\x12\r\n\tSUCCEEDED\x10\x04\x12\n\n\x06\x46\x41ILED\x10\x05\x42\x0eZ\x0cmodeltrainerb\x06proto3')
+  serialized_pb=_b('\n.asgt/modeltrainer/v1alpha1/training_task.proto\x12\x1a\x61sgt.modeltrainer.v1alpha1\x1a\x17\x61sgt/type/dataset.proto\x1a\x18\x61sgt/type/revision.proto\"s\n\x0eTrainModelTask\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x04 \x01(\x03\x42\x0eZ\x0cmodeltrainerb\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,])
 
 
-
-_TRAINMODELTASK_STATUS = _descriptor.EnumDescriptor(
-  name='Status',
-  full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.Status',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNKNOWN', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SCHEDULED', index=1, number=1,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='STARTED', index=2, number=3,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCEEDED', index=3, number=4,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAILED', index=4, number=5,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=261,
-  serialized_end=337,
-)
-_sym_db.RegisterEnumDescriptor(_TRAINMODELTASK_STATUS)
 
 
 _TRAINMODELTASK = _descriptor.Descriptor(
@@ -69,14 +36,14 @@ _TRAINMODELTASK = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='dataset', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.dataset', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.dataset', index=1,
+      name='revision', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.revision', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -84,14 +51,7 @@ _TRAINMODELTASK = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='model_version', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.model_version', index=2,
-      number=3, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='status', full_name='asgt.modeltrainer.v1alpha1.TrainModelTask.status', index=3,
-      number=4, type=14, cpp_type=8, label=1,
+      number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -101,7 +61,6 @@ _TRAINMODELTASK = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _TRAINMODELTASK_STATUS,
   ],
   serialized_options=None,
   is_extendable=False,
@@ -109,13 +68,12 @@ _TRAINMODELTASK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=104,
-  serialized_end=337,
+  serialized_start=129,
+  serialized_end=244,
 )
 
 _TRAINMODELTASK.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
-_TRAINMODELTASK.fields_by_name['status'].enum_type = _TRAINMODELTASK_STATUS
-_TRAINMODELTASK_STATUS.containing_type = _TRAINMODELTASK
+_TRAINMODELTASK.fields_by_name['revision'].message_type = asgt_dot_type_dot_revision__pb2._REVISION
 DESCRIPTOR.message_types_by_name['TrainModelTask'] = _TRAINMODELTASK
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 

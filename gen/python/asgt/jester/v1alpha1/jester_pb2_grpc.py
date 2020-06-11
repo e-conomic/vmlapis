@@ -14,20 +14,10 @@ class JesterStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.ScannedInvoiceSuggestions = channel.unary_unary(
-        '/asgt.jester.v1alpha1.Jester/ScannedInvoiceSuggestions',
-        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ScannedInvoiceRequest.SerializeToString,
-        response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
-        )
-    self.ElectronicInvoiceLineSuggestions = channel.unary_unary(
-        '/asgt.jester.v1alpha1.Jester/ElectronicInvoiceLineSuggestions',
-        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.SerializeToString,
-        response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
-        )
-    self.BankSuggestions = channel.unary_unary(
-        '/asgt.jester.v1alpha1.Jester/BankSuggestions',
-        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.BankRequest.SerializeToString,
-        response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.FromString,
+    self.Suggest = channel.unary_unary(
+        '/asgt.jester.v1alpha1.Jester/Suggest',
+        request_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionRequest.SerializeToString,
+        response_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionResponse.FromString,
         )
 
 
@@ -35,21 +25,7 @@ class JesterServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def ScannedInvoiceSuggestions(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def ElectronicInvoiceLineSuggestions(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
-
-  def BankSuggestions(self, request, context):
+  def Suggest(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -59,20 +35,10 @@ class JesterServicer(object):
 
 def add_JesterServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'ScannedInvoiceSuggestions': grpc.unary_unary_rpc_method_handler(
-          servicer.ScannedInvoiceSuggestions,
-          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ScannedInvoiceRequest.FromString,
-          response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
-      ),
-      'ElectronicInvoiceLineSuggestions': grpc.unary_unary_rpc_method_handler(
-          servicer.ElectronicInvoiceLineSuggestions,
-          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.ElectronicInvoiceLineRequest.FromString,
-          response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
-      ),
-      'BankSuggestions': grpc.unary_unary_rpc_method_handler(
-          servicer.BankSuggestions,
-          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.BankRequest.FromString,
-          response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionsResponse.SerializeToString,
+      'Suggest': grpc.unary_unary_rpc_method_handler(
+          servicer.Suggest,
+          request_deserializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionRequest.FromString,
+          response_serializer=asgt_dot_jester_dot_v1alpha1_dot_jester__pb2.SuggestionResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

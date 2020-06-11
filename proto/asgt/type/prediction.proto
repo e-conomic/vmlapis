@@ -30,7 +30,7 @@ message Prediction {
       string value = 1 [(gen_bq_schema.bigquery).require = true];
       Confidence confidence = 2;
     }
-    string target = 1;
+    string name = 1;
     repeated Candidate candidates = 2;
   }
   repeated Target targets = 1;

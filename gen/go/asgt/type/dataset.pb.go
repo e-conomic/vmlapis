@@ -28,7 +28,7 @@ type Dataset struct {
 	RetentionPolicy *RetentionPolicy     `protobuf:"bytes,9,opt,name=retention_policy,json=retentionPolicy,proto3" json:"retention_policy,omitempty"`
 	CreatedAt       *timestamp.Timestamp `protobuf:"bytes,10,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
 	UpdatedAt       *timestamp.Timestamp `protobuf:"bytes,11,opt,name=updated_at,json=updatedAt,proto3" json:"updated_at,omitempty"`
-	// Number of entries in the dataset reflecting added entries that meet the retention policy
+	// Number of samples in the dataset reflecting added entries that meet the retention policy
 	Size                 int64    `protobuf:"varint,12,opt,name=size,proto3" json:"size,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -39,7 +39,7 @@ func (m *Dataset) Reset()         { *m = Dataset{} }
 func (m *Dataset) String() string { return proto.CompactTextString(m) }
 func (*Dataset) ProtoMessage()    {}
 func (*Dataset) Descriptor() ([]byte, []int) {
-	return fileDescriptor_dataset_4d404d76e9b0d8a2, []int{0}
+	return fileDescriptor_dataset_cc660812c21eb853, []int{0}
 }
 func (m *Dataset) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Dataset.Unmarshal(m, b)
@@ -126,9 +126,9 @@ func init() {
 	proto.RegisterType((*Dataset)(nil), "asgt.type.Dataset")
 }
 
-func init() { proto.RegisterFile("asgt/type/dataset.proto", fileDescriptor_dataset_4d404d76e9b0d8a2) }
+func init() { proto.RegisterFile("asgt/type/dataset.proto", fileDescriptor_dataset_cc660812c21eb853) }
 
-var fileDescriptor_dataset_4d404d76e9b0d8a2 = []byte{
+var fileDescriptor_dataset_cc660812c21eb853 = []byte{
 	// 279 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x90, 0xb1, 0x4e, 0xc3, 0x30,
 	0x10, 0x86, 0x95, 0x36, 0xa4, 0x8d, 0x8b, 0x44, 0xe5, 0x05, 0x2b, 0x0b, 0x11, 0x53, 0x26, 0x47,

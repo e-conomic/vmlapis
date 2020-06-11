@@ -24,13 +24,13 @@ namespace Asgt.Type {
     static TargetValueReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvEglhc2d0LnR5cGUiLAoL",
-            "VGFyZ2V0VmFsdWUSDgoGdGFyZ2V0GAEgASgJEg0KBXZhbHVlGAIgASgJQgZa",
-            "BHR5cGViBnByb3RvMw=="));
+            "Chxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvEglhc2d0LnR5cGUiKgoL",
+            "VGFyZ2V0VmFsdWUSDAoEbmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCUIGWgR0",
+            "eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetValue), global::Asgt.Type.TargetValue.Parser, new[]{ "Target", "Value" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetValue), global::Asgt.Type.TargetValue.Parser, new[]{ "Name", "Value" }, null, null, null)
           }));
     }
     #endregion
@@ -65,7 +65,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TargetValue(TargetValue other) : this() {
-      target_ = other.target_;
+      name_ = other.name_;
       value_ = other.value_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -75,14 +75,14 @@ namespace Asgt.Type {
       return new TargetValue(this);
     }
 
-    /// <summary>Field number for the "target" field.</summary>
-    public const int TargetFieldNumber = 1;
-    private string target_ = "";
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Target {
-      get { return target_; }
+    public string Name {
+      get { return name_; }
       set {
-        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -110,7 +110,7 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Target != other.Target) return false;
+      if (Name != other.Name) return false;
       if (Value != other.Value) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -118,7 +118,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Target.Length != 0) hash ^= Target.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Value.Length != 0) hash ^= Value.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -133,9 +133,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Target.Length != 0) {
+      if (Name.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(Target);
+        output.WriteString(Name);
       }
       if (Value.Length != 0) {
         output.WriteRawTag(18);
@@ -149,8 +149,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Target.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       if (Value.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
@@ -166,8 +166,8 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.Target.Length != 0) {
-        Target = other.Target;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
       if (other.Value.Length != 0) {
         Value = other.Value;
@@ -184,7 +184,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Target = input.ReadString();
+            Name = input.ReadString();
             break;
           }
           case 18: {

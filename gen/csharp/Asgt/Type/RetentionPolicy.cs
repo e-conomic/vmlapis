@@ -25,12 +25,12 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBhc2d0L3R5cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90bxIJYXNndC50eXBl",
-            "IkYKD1JldGVudGlvblBvbGljeRISCghtYXhfZGF5cxgBIAEoA0gAEhUKC21h",
-            "eF9yZWNvcmRzGAIgASgDSABCCAoGcG9saWN5QgZaBHR5cGViBnByb3RvMw=="));
+            "IiMKD1JldGVudGlvblBvbGljeRIQCghtYXhfZGF5cxgBIAEoA0IGWgR0eXBl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.RetentionPolicy), global::Asgt.Type.RetentionPolicy.Parser, new[]{ "MaxDays", "MaxRecords" }, new[]{ "Policy" }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.RetentionPolicy), global::Asgt.Type.RetentionPolicy.Parser, new[]{ "MaxDays" }, null, null, null)
           }));
     }
     #endregion
@@ -62,15 +62,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RetentionPolicy(RetentionPolicy other) : this() {
-      switch (other.PolicyCase) {
-        case PolicyOneofCase.MaxDays:
-          MaxDays = other.MaxDays;
-          break;
-        case PolicyOneofCase.MaxRecords:
-          MaxRecords = other.MaxRecords;
-          break;
-      }
-
+      maxDays_ = other.maxDays_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -81,43 +73,13 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "max_days" field.</summary>
     public const int MaxDaysFieldNumber = 1;
+    private long maxDays_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long MaxDays {
-      get { return policyCase_ == PolicyOneofCase.MaxDays ? (long) policy_ : 0L; }
+      get { return maxDays_; }
       set {
-        policy_ = value;
-        policyCase_ = PolicyOneofCase.MaxDays;
+        maxDays_ = value;
       }
-    }
-
-    /// <summary>Field number for the "max_records" field.</summary>
-    public const int MaxRecordsFieldNumber = 2;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long MaxRecords {
-      get { return policyCase_ == PolicyOneofCase.MaxRecords ? (long) policy_ : 0L; }
-      set {
-        policy_ = value;
-        policyCase_ = PolicyOneofCase.MaxRecords;
-      }
-    }
-
-    private object policy_;
-    /// <summary>Enum of possible cases for the "policy" oneof.</summary>
-    public enum PolicyOneofCase {
-      None = 0,
-      MaxDays = 1,
-      MaxRecords = 2,
-    }
-    private PolicyOneofCase policyCase_ = PolicyOneofCase.None;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public PolicyOneofCase PolicyCase {
-      get { return policyCase_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void ClearPolicy() {
-      policyCase_ = PolicyOneofCase.None;
-      policy_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -134,17 +96,13 @@ namespace Asgt.Type {
         return true;
       }
       if (MaxDays != other.MaxDays) return false;
-      if (MaxRecords != other.MaxRecords) return false;
-      if (PolicyCase != other.PolicyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (policyCase_ == PolicyOneofCase.MaxDays) hash ^= MaxDays.GetHashCode();
-      if (policyCase_ == PolicyOneofCase.MaxRecords) hash ^= MaxRecords.GetHashCode();
-      hash ^= (int) policyCase_;
+      if (MaxDays != 0L) hash ^= MaxDays.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -158,13 +116,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (policyCase_ == PolicyOneofCase.MaxDays) {
+      if (MaxDays != 0L) {
         output.WriteRawTag(8);
         output.WriteInt64(MaxDays);
-      }
-      if (policyCase_ == PolicyOneofCase.MaxRecords) {
-        output.WriteRawTag(16);
-        output.WriteInt64(MaxRecords);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -174,11 +128,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (policyCase_ == PolicyOneofCase.MaxDays) {
+      if (MaxDays != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxDays);
-      }
-      if (policyCase_ == PolicyOneofCase.MaxRecords) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxRecords);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -191,15 +142,9 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      switch (other.PolicyCase) {
-        case PolicyOneofCase.MaxDays:
-          MaxDays = other.MaxDays;
-          break;
-        case PolicyOneofCase.MaxRecords:
-          MaxRecords = other.MaxRecords;
-          break;
+      if (other.MaxDays != 0L) {
+        MaxDays = other.MaxDays;
       }
-
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -213,10 +158,6 @@ namespace Asgt.Type {
             break;
           case 8: {
             MaxDays = input.ReadInt64();
-            break;
-          }
-          case 16: {
-            MaxRecords = input.ReadInt64();
             break;
           }
         }

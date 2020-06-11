@@ -175,7 +175,7 @@ namespace Asgt.Type {
     public const int SizeFieldNumber = 12;
     private long size_;
     /// <summary>
-    /// Number of entries in the dataset reflecting added entries that meet the retention policy
+    /// Number of samples in the dataset reflecting added entries that meet the retention policy
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long Size {

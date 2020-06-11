@@ -26,17 +26,14 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
           string.Concat(
             "Ci5hc2d0L21vZGVsdHJhaW5lci92MWFscGhhMS90cmFpbmluZ190YXNrLnBy",
             "b3RvEhphc2d0Lm1vZGVsdHJhaW5lci52MWFscGhhMRoXYXNndC90eXBlL2Rh",
-            "dGFzZXQucHJvdG8i6QEKDlRyYWluTW9kZWxUYXNrEgoKAmlkGAEgASgJEiMK",
-            "B2RhdGFzZXQYAiABKAsyEi5hc2d0LnR5cGUuRGF0YXNldBIVCg1tb2RlbF92",
-            "ZXJzaW9uGAMgASgDEkEKBnN0YXR1cxgEIAEoDjIxLmFzZ3QubW9kZWx0cmFp",
-            "bmVyLnYxYWxwaGExLlRyYWluTW9kZWxUYXNrLlN0YXR1cyJMCgZTdGF0dXMS",
-            "CwoHVU5LTk9XThAAEg0KCVNDSEVEVUxFRBABEgsKB1NUQVJURUQQAxINCglT",
-            "VUNDRUVERUQQBBIKCgZGQUlMRUQQBUIOWgxtb2RlbHRyYWluZXJiBnByb3Rv",
-            "Mw=="));
+            "dGFzZXQucHJvdG8aGGFzZ3QvdHlwZS9yZXZpc2lvbi5wcm90byJzCg5UcmFp",
+            "bk1vZGVsVGFzaxIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFz",
+            "ZXQSJQoIcmV2aXNpb24YAiABKAsyEy5hc2d0LnR5cGUuUmV2aXNpb24SFQoN",
+            "bW9kZWxfdmVyc2lvbhgEIAEoA0IOWgxtb2RlbHRyYWluZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask), global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Parser, new[]{ "Id", "Dataset", "ModelVersion", "Status" }, null, new[]{ typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status) }, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask), global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null)
           }));
     }
     #endregion
@@ -68,10 +65,9 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TrainModelTask(TrainModelTask other) : this() {
-      id_ = other.id_;
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
+      revision_ = other.revision_ != null ? other.revision_.Clone() : null;
       modelVersion_ = other.modelVersion_;
-      status_ = other.status_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -80,19 +76,8 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       return new TrainModelTask(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private string id_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 2;
+    public const int DatasetFieldNumber = 1;
     private global::Asgt.Type.Dataset dataset_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Dataset Dataset {
@@ -102,25 +87,25 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       }
     }
 
+    /// <summary>Field number for the "revision" field.</summary>
+    public const int RevisionFieldNumber = 2;
+    private global::Asgt.Type.Revision revision_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.Revision Revision {
+      get { return revision_; }
+      set {
+        revision_ = value;
+      }
+    }
+
     /// <summary>Field number for the "model_version" field.</summary>
-    public const int ModelVersionFieldNumber = 3;
+    public const int ModelVersionFieldNumber = 4;
     private long modelVersion_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long ModelVersion {
       get { return modelVersion_; }
       set {
         modelVersion_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
-    private global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status status_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status Status {
-      get { return status_; }
-      set {
-        status_ = value;
       }
     }
 
@@ -137,20 +122,18 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (!object.Equals(Dataset, other.Dataset)) return false;
+      if (!object.Equals(Revision, other.Revision)) return false;
       if (ModelVersion != other.ModelVersion) return false;
-      if (Status != other.Status) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
+      if (revision_ != null) hash ^= Revision.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
-      if (Status != 0) hash ^= Status.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -164,21 +147,17 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Id.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Id);
-      }
       if (dataset_ != null) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteMessage(Dataset);
       }
-      if (ModelVersion != 0L) {
-        output.WriteRawTag(24);
-        output.WriteInt64(ModelVersion);
+      if (revision_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Revision);
       }
-      if (Status != 0) {
+      if (ModelVersion != 0L) {
         output.WriteRawTag(32);
-        output.WriteEnum((int) Status);
+        output.WriteInt64(ModelVersion);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -188,17 +167,14 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Id.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
-      }
       if (dataset_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Dataset);
       }
+      if (revision_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Revision);
+      }
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
-      }
-      if (Status != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -211,20 +187,20 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
       if (other == null) {
         return;
       }
-      if (other.Id.Length != 0) {
-        Id = other.Id;
-      }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
           dataset_ = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
+      if (other.revision_ != null) {
+        if (revision_ == null) {
+          revision_ = new global::Asgt.Type.Revision();
+        }
+        Revision.MergeFrom(other.Revision);
+      }
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
-      }
-      if (other.Status != 0) {
-        Status = other.Status;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -238,42 +214,26 @@ namespace Asgt.Modeltrainer.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Id = input.ReadString();
-            break;
-          }
-          case 18: {
             if (dataset_ == null) {
               dataset_ = new global::Asgt.Type.Dataset();
             }
             input.ReadMessage(dataset_);
             break;
           }
-          case 24: {
-            ModelVersion = input.ReadInt64();
+          case 18: {
+            if (revision_ == null) {
+              revision_ = new global::Asgt.Type.Revision();
+            }
+            input.ReadMessage(revision_);
             break;
           }
           case 32: {
-            status_ = (global::Asgt.Modeltrainer.V1Alpha1.TrainModelTask.Types.Status) input.ReadEnum();
+            ModelVersion = input.ReadInt64();
             break;
           }
         }
       }
     }
-
-    #region Nested types
-    /// <summary>Container for nested types declared in the TrainModelTask message type.</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static partial class Types {
-      public enum Status {
-        [pbr::OriginalName("UNKNOWN")] Unknown = 0,
-        [pbr::OriginalName("SCHEDULED")] Scheduled = 1,
-        [pbr::OriginalName("STARTED")] Started = 3,
-        [pbr::OriginalName("SUCCEEDED")] Succeeded = 4,
-        [pbr::OriginalName("FAILED")] Failed = 5,
-      }
-
-    }
-    #endregion
 
   }
 

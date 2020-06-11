@@ -1,0 +1,215 @@
+[
+ {
+  "name": "id",
+  "type": "STRING",
+  "mode": "NULLABLE",
+  "description": "ID, matches Envoy request id if feedback data"
+ },
+ {
+  "name": "consumer",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "dataset_name",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "dataset_type",
+  "type": "STRING",
+  "mode": "REQUIRED"
+ },
+ {
+  "name": "dataset_id",
+  "type": "STRING",
+  "mode": "REQUIRED",
+  "description": "unique ID of dataset"
+ },
+ {
+  "name": "tags",
+  "type": "STRING",
+  "mode": "REPEATED",
+  "description": "Tags defined by consumer, enriched by service if valetkey is used"
+ },
+ {
+  "name": "data",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "transaction",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "invoice",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "issue_date",
+      "type": "TIMESTAMP",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "supplier",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+       {
+        "name": "id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "global_id",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       }
+      ]
+     },
+     {
+      "name": "customer_ref",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "total",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "invoice_line",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+     {
+      "name": "currency",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "amount",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "text",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "item_id",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "target_values",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "value",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "model",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "version",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+   },
+   {
+    "name": "created_at",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ {
+  "name": "prediction",
+  "type": "RECORD",
+  "mode": "REPEATED",
+  "fields": [
+   {
+    "name": "name",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "candidates",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "value",
+      "type": "STRING",
+      "mode": "REQUIRED"
+     },
+     {
+      "name": "confidence",
+      "type": "RECORD",
+      "mode": "NULLABLE",
+      "fields": [
+       {
+        "name": "level",
+        "type": "STRING",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "value",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name": "time_added",
+  "type": "TIMESTAMP",
+  "mode": "REQUIRED"
+ }
+]

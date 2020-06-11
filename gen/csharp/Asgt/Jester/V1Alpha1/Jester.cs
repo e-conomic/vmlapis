@@ -25,44 +25,26 @@ namespace Asgt.Jester.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFhc2d0L2plc3Rlci92MWFscGhhMS9qZXN0ZXIucHJvdG8SFGFzZ3QuamVz",
-            "dGVyLnYxYWxwaGExGiBhc2d0L3R5cGUvYmFua190cmFuc2FjdGlvbi5wcm90",
-            "bxocYXNndC90eXBlL2ludm9pY2VfbGluZS5wcm90bxoVYXNndC90eXBlL21v",
-            "ZGVsLnByb3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxofYXNndC90",
-            "eXBlL3NjYW5uZWRfaW52b2ljZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90byJiChNTdWdnZXN0aW9uc1Jlc3BvbnNlEioKC3ByZWRpY3Rp",
-            "b25zGAEgAygLMhUuYXNndC50eXBlLlByZWRpY3Rpb24SHwoFbW9kZWwYAiAB",
-            "KAsyEC5hc2d0LnR5cGUuTW9kZWwiYgoRU3VnZ2VzdGlvbk9wdGlvbnMSGAoQ",
-            "c3VnZ2VzdGlvbl9saW1pdBgBIAEoBRIzCg5taW5fY29uZmlkZW5jZRgCIAEo",
-            "DjIbLmFzZ3QudHlwZS5Db25maWRlbmNlLkxldmVsIpIBChVTY2FubmVkSW52",
-            "b2ljZVJlcXVlc3QSKQoGaW5wdXRzGAEgAygLMhkuYXNndC50eXBlLlNjYW5u",
-            "ZWRJbnZvaWNlEhQKDGRhdGFzZXRfbmFtZRgCIAEoCRI4CgdvcHRpb25zGAMg",
-            "ASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9wdGlvbnMi",
-            "lgEKHEVsZWN0cm9uaWNJbnZvaWNlTGluZVJlcXVlc3QSJgoGaW5wdXRzGAEg",
-            "AygLMhYuYXNndC50eXBlLkludm9pY2VMaW5lEhQKDGRhdGFzZXRfbmFtZRgC",
-            "IAEoCRI4CgdvcHRpb25zGAMgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEu",
-            "U3VnZ2VzdGlvbk9wdGlvbnMiiQEKC0JhbmtSZXF1ZXN0EioKBmlucHV0cxgB",
-            "IAMoCzIaLmFzZ3QudHlwZS5CYW5rVHJhbnNhY3Rpb24SFAoMZGF0YXNldF9u",
-            "YW1lGAIgASgJEjgKB29wdGlvbnMYAyABKAsyJy5hc2d0Lmplc3Rlci52MWFs",
-            "cGhhMS5TdWdnZXN0aW9uT3B0aW9uczLrAwoGSmVzdGVyEqEBChlTY2FubmVk",
-            "SW52b2ljZVN1Z2dlc3Rpb25zEisuYXNndC5qZXN0ZXIudjFhbHBoYTEuU2Nh",
-            "bm5lZEludm9pY2VSZXF1ZXN0GikuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3Vn",
-            "Z2VzdGlvbnNSZXNwb25zZSIsgtPkkwImIiEvdjFhbHBoYTEvc2Nhbm5lZC1p",
-            "bnZvaWNlOnN1Z2dlc3Q6ASoStwEKIEVsZWN0cm9uaWNJbnZvaWNlTGluZVN1",
-            "Z2dlc3Rpb25zEjIuYXNndC5qZXN0ZXIudjFhbHBoYTEuRWxlY3Ryb25pY0lu",
-            "dm9pY2VMaW5lUmVxdWVzdBopLmFzZ3QuamVzdGVyLnYxYWxwaGExLlN1Z2dl",
-            "c3Rpb25zUmVzcG9uc2UiNILT5JMCLiIpL3YxYWxwaGExL2VsZWN0cm9uaWMt",
-            "aW52b2ljZS1saW5lOnN1Z2dlc3Q6ASoSggEKD0JhbmtTdWdnZXN0aW9ucxIh",
-            "LmFzZ3QuamVzdGVyLnYxYWxwaGExLkJhbmtSZXF1ZXN0GikuYXNndC5qZXN0",
-            "ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbnNSZXNwb25zZSIhgtPkkwIbIhYvdjFh",
-            "bHBoYTEvYmFuazpzdWdnZXN0OgEqQghaBmplc3RlcmIGcHJvdG8z"));
+            "dGVyLnYxYWxwaGExGhRhc2d0L3R5cGUvZGF0YS5wcm90bxoVYXNndC90eXBl",
+            "L21vZGVsLnByb3RvGhphc2d0L3R5cGUvcHJlZGljdGlvbi5wcm90bxocZ29v",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byJhChJTdWdnZXN0aW9uUmVzcG9u",
+            "c2USKgoLcHJlZGljdGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlv",
+            "bhIfCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbCJiChFTdWdnZXN0",
+            "aW9uT3B0aW9ucxIYChBzdWdnZXN0aW9uX2xpbWl0GAEgASgFEjMKDm1pbl9j",
+            "b25maWRlbmNlGAIgASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWwi",
+            "igEKEVN1Z2dlc3Rpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSDAoEdHlwZRgC",
+            "IAEoCRIfCgZpbnB1dHMYAyADKAsyDy5hc2d0LnR5cGUuRGF0YRI4CgdvcHRp",
+            "b25zGAQgASgLMicuYXNndC5qZXN0ZXIudjFhbHBoYTEuU3VnZ2VzdGlvbk9w",
+            "dGlvbnMykwEKBkplc3RlchKIAQoHU3VnZ2VzdBInLmFzZ3QuamVzdGVyLnYx",
+            "YWxwaGExLlN1Z2dlc3Rpb25SZXF1ZXN0GiguYXNndC5qZXN0ZXIudjFhbHBo",
+            "YTEuU3VnZ2VzdGlvblJlc3BvbnNlIiqC0+STAiQiHy92MWFscGhhMS97dHlw",
+            "ZX0ve25hbWV9OnN1Z2dlc3Q6ASpCCFoGamVzdGVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.BankTransactionReflection.Descriptor, global::Asgt.Type.InvoiceLineReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.ScannedInvoiceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionsResponse), global::Asgt.Jester.V1Alpha1.SuggestionsResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionResponse), global::Asgt.Jester.V1Alpha1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionOptions), global::Asgt.Jester.V1Alpha1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest), global::Asgt.Jester.V1Alpha1.ScannedInvoiceRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest), global::Asgt.Jester.V1Alpha1.ElectronicInvoiceLineRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.BankRequest), global::Asgt.Jester.V1Alpha1.BankRequest.Parser, new[]{ "Inputs", "DatasetName", "Options" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1Alpha1.SuggestionRequest), global::Asgt.Jester.V1Alpha1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options" }, null, null, null)
           }));
     }
     #endregion
@@ -72,11 +54,11 @@ namespace Asgt.Jester.V1Alpha1 {
   /// <summary>
   /// AutoSuggest
   /// </summary>
-  public sealed partial class SuggestionsResponse : pb::IMessage<SuggestionsResponse> {
-    private static readonly pb::MessageParser<SuggestionsResponse> _parser = new pb::MessageParser<SuggestionsResponse>(() => new SuggestionsResponse());
+  public sealed partial class SuggestionResponse : pb::IMessage<SuggestionResponse> {
+    private static readonly pb::MessageParser<SuggestionResponse> _parser = new pb::MessageParser<SuggestionResponse>(() => new SuggestionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<SuggestionsResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<SuggestionResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -89,22 +71,22 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse() {
+    public SuggestionResponse() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse(SuggestionsResponse other) : this() {
+    public SuggestionResponse(SuggestionResponse other) : this() {
       predictions_ = other.predictions_.Clone();
       model_ = other.model_ != null ? other.model_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public SuggestionsResponse Clone() {
-      return new SuggestionsResponse(this);
+    public SuggestionResponse Clone() {
+      return new SuggestionResponse(this);
     }
 
     /// <summary>Field number for the "predictions" field.</summary>
@@ -130,11 +112,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as SuggestionsResponse);
+      return Equals(other as SuggestionResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(SuggestionsResponse other) {
+    public bool Equals(SuggestionResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -188,7 +170,7 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(SuggestionsResponse other) {
+    public void MergeFrom(SuggestionResponse other) {
       if (other == null) {
         return;
       }
@@ -384,14 +366,11 @@ namespace Asgt.Jester.V1Alpha1 {
 
   }
 
-  /// <summary>
-  /// Scanned Invoice
-  /// </summary>
-  public sealed partial class ScannedInvoiceRequest : pb::IMessage<ScannedInvoiceRequest> {
-    private static readonly pb::MessageParser<ScannedInvoiceRequest> _parser = new pb::MessageParser<ScannedInvoiceRequest>(() => new ScannedInvoiceRequest());
+  public sealed partial class SuggestionRequest : pb::IMessage<SuggestionRequest> {
+    private static readonly pb::MessageParser<SuggestionRequest> _parser = new pb::MessageParser<SuggestionRequest>(() => new SuggestionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ScannedInvoiceRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<SuggestionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -404,48 +383,60 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ScannedInvoiceRequest() {
+    public SuggestionRequest() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ScannedInvoiceRequest(ScannedInvoiceRequest other) : this() {
+    public SuggestionRequest(SuggestionRequest other) : this() {
+      name_ = other.name_;
+      type_ = other.type_;
       inputs_ = other.inputs_.Clone();
-      datasetName_ = other.datasetName_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ScannedInvoiceRequest Clone() {
-      return new ScannedInvoiceRequest(this);
+    public SuggestionRequest Clone() {
+      return new SuggestionRequest(this);
     }
 
-    /// <summary>Field number for the "inputs" field.</summary>
-    public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Type.ScannedInvoice> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.ScannedInvoice.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.ScannedInvoice> inputs_ = new pbc::RepeatedField<global::Asgt.Type.ScannedInvoice>();
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.ScannedInvoice> Inputs {
-      get { return inputs_; }
-    }
-
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 2;
-    private string datasetName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
+    public string Name {
+      get { return name_; }
       set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "inputs" field.</summary>
+    public const int InputsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Asgt.Type.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(26, global::Asgt.Type.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Type.Data>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.Data> Inputs {
+      get { return inputs_; }
+    }
+
     /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
+    public const int OptionsFieldNumber = 4;
     private global::Asgt.Jester.V1Alpha1.SuggestionOptions options_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Jester.V1Alpha1.SuggestionOptions Options {
@@ -457,19 +448,20 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ScannedInvoiceRequest);
+      return Equals(other as SuggestionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ScannedInvoiceRequest other) {
+    public bool Equals(SuggestionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
       if(!inputs_.Equals(other.inputs_)) return false;
-      if (DatasetName != other.DatasetName) return false;
       if (!object.Equals(Options, other.Options)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -477,8 +469,9 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= inputs_.GetHashCode();
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -493,13 +486,17 @@ namespace Asgt.Jester.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      inputs_.WriteTo(output, _repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DatasetName);
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
       }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      inputs_.WriteTo(output, _repeated_inputs_codec);
       if (options_ != null) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(34);
         output.WriteMessage(Options);
       }
       if (_unknownFields != null) {
@@ -510,10 +507,13 @@ namespace Asgt.Jester.V1Alpha1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += inputs_.CalculateSize(_repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      size += inputs_.CalculateSize(_repeated_inputs_codec);
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
@@ -524,14 +524,17 @@ namespace Asgt.Jester.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ScannedInvoiceRequest other) {
+    public void MergeFrom(SuggestionRequest other) {
       if (other == null) {
         return;
       }
-      inputs_.Add(other.inputs_);
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      inputs_.Add(other.inputs_);
       if (other.options_ != null) {
         if (options_ == null) {
           options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
@@ -550,386 +553,18 @@ namespace Asgt.Jester.V1Alpha1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            inputs_.AddEntriesFrom(input, _repeated_inputs_codec);
+            Name = input.ReadString();
             break;
           }
           case 18: {
-            DatasetName = input.ReadString();
+            Type = input.ReadString();
             break;
           }
           case 26: {
-            if (options_ == null) {
-              options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
-            }
-            input.ReadMessage(options_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// Electronic Invoice Line
-  /// </summary>
-  public sealed partial class ElectronicInvoiceLineRequest : pb::IMessage<ElectronicInvoiceLineRequest> {
-    private static readonly pb::MessageParser<ElectronicInvoiceLineRequest> _parser = new pb::MessageParser<ElectronicInvoiceLineRequest>(() => new ElectronicInvoiceLineRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ElectronicInvoiceLineRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoiceLineRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoiceLineRequest(ElectronicInvoiceLineRequest other) : this() {
-      inputs_ = other.inputs_.Clone();
-      datasetName_ = other.datasetName_;
-      options_ = other.options_ != null ? other.options_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ElectronicInvoiceLineRequest Clone() {
-      return new ElectronicInvoiceLineRequest(this);
-    }
-
-    /// <summary>Field number for the "inputs" field.</summary>
-    public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Type.InvoiceLine> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.InvoiceLine.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.InvoiceLine> inputs_ = new pbc::RepeatedField<global::Asgt.Type.InvoiceLine>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.InvoiceLine> Inputs {
-      get { return inputs_; }
-    }
-
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 2;
-    private string datasetName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
-      set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
-    private global::Asgt.Jester.V1Alpha1.SuggestionOptions options_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.SuggestionOptions Options {
-      get { return options_; }
-      set {
-        options_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ElectronicInvoiceLineRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ElectronicInvoiceLineRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!inputs_.Equals(other.inputs_)) return false;
-      if (DatasetName != other.DatasetName) return false;
-      if (!object.Equals(Options, other.Options)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= inputs_.GetHashCode();
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (options_ != null) hash ^= Options.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      inputs_.WriteTo(output, _repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DatasetName);
-      }
-      if (options_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Options);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += inputs_.CalculateSize(_repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
-      }
-      if (options_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ElectronicInvoiceLineRequest other) {
-      if (other == null) {
-        return;
-      }
-      inputs_.Add(other.inputs_);
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
-      }
-      if (other.options_ != null) {
-        if (options_ == null) {
-          options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
-        }
-        Options.MergeFrom(other.Options);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
             inputs_.AddEntriesFrom(input, _repeated_inputs_codec);
             break;
           }
-          case 18: {
-            DatasetName = input.ReadString();
-            break;
-          }
-          case 26: {
-            if (options_ == null) {
-              options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
-            }
-            input.ReadMessage(options_);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  /// <summary>
-  /// Bank
-  /// </summary>
-  public sealed partial class BankRequest : pb::IMessage<BankRequest> {
-    private static readonly pb::MessageParser<BankRequest> _parser = new pb::MessageParser<BankRequest>(() => new BankRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<BankRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Jester.V1Alpha1.JesterReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankRequest(BankRequest other) : this() {
-      inputs_ = other.inputs_.Clone();
-      datasetName_ = other.datasetName_;
-      options_ = other.options_ != null ? other.options_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public BankRequest Clone() {
-      return new BankRequest(this);
-    }
-
-    /// <summary>Field number for the "inputs" field.</summary>
-    public const int InputsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Type.BankTransaction> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.BankTransaction.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.BankTransaction> inputs_ = new pbc::RepeatedField<global::Asgt.Type.BankTransaction>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.BankTransaction> Inputs {
-      get { return inputs_; }
-    }
-
-    /// <summary>Field number for the "dataset_name" field.</summary>
-    public const int DatasetNameFieldNumber = 2;
-    private string datasetName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string DatasetName {
-      get { return datasetName_; }
-      set {
-        datasetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "options" field.</summary>
-    public const int OptionsFieldNumber = 3;
-    private global::Asgt.Jester.V1Alpha1.SuggestionOptions options_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Jester.V1Alpha1.SuggestionOptions Options {
-      get { return options_; }
-      set {
-        options_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as BankRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(BankRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!inputs_.Equals(other.inputs_)) return false;
-      if (DatasetName != other.DatasetName) return false;
-      if (!object.Equals(Options, other.Options)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= inputs_.GetHashCode();
-      if (DatasetName.Length != 0) hash ^= DatasetName.GetHashCode();
-      if (options_ != null) hash ^= Options.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      inputs_.WriteTo(output, _repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DatasetName);
-      }
-      if (options_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(Options);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += inputs_.CalculateSize(_repeated_inputs_codec);
-      if (DatasetName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetName);
-      }
-      if (options_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(BankRequest other) {
-      if (other == null) {
-        return;
-      }
-      inputs_.Add(other.inputs_);
-      if (other.DatasetName.Length != 0) {
-        DatasetName = other.DatasetName;
-      }
-      if (other.options_ != null) {
-        if (options_ == null) {
-          options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
-        }
-        Options.MergeFrom(other.Options);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            inputs_.AddEntriesFrom(input, _repeated_inputs_codec);
-            break;
-          }
-          case 18: {
-            DatasetName = input.ReadString();
-            break;
-          }
-          case 26: {
+          case 34: {
             if (options_ == null) {
               options_ = new global::Asgt.Jester.V1Alpha1.SuggestionOptions();
             }
