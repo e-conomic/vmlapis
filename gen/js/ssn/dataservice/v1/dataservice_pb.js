@@ -5696,7 +5696,9 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.toObject = function(includeInsta
     ta: (f = msg.getTa()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     documentBytes: msg.getDocumentBytes_asB64(),
     predictions: (f = msg.getPredictions()) && proto.ssn.dataservice.v1.PredictionValues.toObject(includeInstance, f),
-    tagsList: jspb.Message.getRepeatedField(msg, 5)
+    tagsList: jspb.Message.getRepeatedField(msg, 5),
+    confidences: (f = msg.getConfidences()) && proto.ssn.dataservice.v1.PredictionConfidences.toObject(includeInstance, f),
+    predictionMetadata: (f = msg.getPredictionMetadata()) && proto.ssn.dataservice.v1.PredictionMetadata.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5754,6 +5756,16 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.deserializeBinaryFromReader = fu
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 6:
+      var value = new proto.ssn.dataservice.v1.PredictionConfidences;
+      reader.readMessage(value,proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader);
+      msg.setConfidences(value);
+      break;
+    case 7:
+      var value = new proto.ssn.dataservice.v1.PredictionMetadata;
+      reader.readMessage(value,proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader);
+      msg.setPredictionMetadata(value);
       break;
     default:
       reader.skipField();
@@ -5819,6 +5831,22 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.serializeBinaryToWriter = functi
     writer.writeRepeatedString(
       5,
       f
+    );
+  }
+  f = message.getConfidences();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter
+    );
+  }
+  f = message.getPredictionMetadata();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter
     );
   }
 };
@@ -5964,6 +5992,66 @@ proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.addTags = function(val
 
 proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearTagsList = function() {
   this.setTagsList([]);
+};
+
+
+/**
+ * optional PredictionConfidences confidences = 6;
+ * @return {?proto.ssn.dataservice.v1.PredictionConfidences}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getConfidences = function() {
+  return /** @type{?proto.ssn.dataservice.v1.PredictionConfidences} */ (
+    jspb.Message.getWrapperField(this, proto.ssn.dataservice.v1.PredictionConfidences, 6));
+};
+
+
+/** @param {?proto.ssn.dataservice.v1.PredictionConfidences|undefined} value */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setConfidences = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearConfidences = function() {
+  this.setConfidences(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.hasConfidences = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
+ * optional PredictionMetadata prediction_metadata = 7;
+ * @return {?proto.ssn.dataservice.v1.PredictionMetadata}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.getPredictionMetadata = function() {
+  return /** @type{?proto.ssn.dataservice.v1.PredictionMetadata} */ (
+    jspb.Message.getWrapperField(this, proto.ssn.dataservice.v1.PredictionMetadata, 7));
+};
+
+
+/** @param {?proto.ssn.dataservice.v1.PredictionMetadata|undefined} value */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.setPredictionMetadata = function(value) {
+  jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.clearPredictionMetadata = function() {
+  this.setPredictionMetadata(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.dataservice.v1.PrepareFeedbackRequest.prototype.hasPredictionMetadata = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 

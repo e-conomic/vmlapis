@@ -34520,6 +34520,32 @@ public final class Dataservice {
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    boolean hasConfidences();
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    ssn.dataservice.v1.Dataservice.PredictionConfidences getConfidences();
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder getConfidencesOrBuilder();
+
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    boolean hasPredictionMetadata();
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    ssn.dataservice.v1.Dataservice.PredictionMetadata getPredictionMetadata();
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PrepareFeedbackRequest}
@@ -34607,6 +34633,32 @@ public final class Dataservice {
                 mutable_bitField0_ |= 0x00000010;
               }
               tags_.add(s);
+              break;
+            }
+            case 50: {
+              ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder subBuilder = null;
+              if (confidences_ != null) {
+                subBuilder = confidences_.toBuilder();
+              }
+              confidences_ = input.readMessage(ssn.dataservice.v1.Dataservice.PredictionConfidences.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(confidences_);
+                confidences_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 58: {
+              ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder subBuilder = null;
+              if (predictionMetadata_ != null) {
+                subBuilder = predictionMetadata_.toBuilder();
+              }
+              predictionMetadata_ = input.readMessage(ssn.dataservice.v1.Dataservice.PredictionMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(predictionMetadata_);
+                predictionMetadata_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -34759,6 +34811,48 @@ public final class Dataservice {
       return tags_.getByteString(index);
     }
 
+    public static final int CONFIDENCES_FIELD_NUMBER = 6;
+    private ssn.dataservice.v1.Dataservice.PredictionConfidences confidences_;
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    public boolean hasConfidences() {
+      return confidences_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    public ssn.dataservice.v1.Dataservice.PredictionConfidences getConfidences() {
+      return confidences_ == null ? ssn.dataservice.v1.Dataservice.PredictionConfidences.getDefaultInstance() : confidences_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+     */
+    public ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder getConfidencesOrBuilder() {
+      return getConfidences();
+    }
+
+    public static final int PREDICTION_METADATA_FIELD_NUMBER = 7;
+    private ssn.dataservice.v1.Dataservice.PredictionMetadata predictionMetadata_;
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    public boolean hasPredictionMetadata() {
+      return predictionMetadata_ != null;
+    }
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    public ssn.dataservice.v1.Dataservice.PredictionMetadata getPredictionMetadata() {
+      return predictionMetadata_ == null ? ssn.dataservice.v1.Dataservice.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
+    }
+    /**
+     * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+     */
+    public ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
+      return getPredictionMetadata();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -34787,6 +34881,12 @@ public final class Dataservice {
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+      }
+      if (confidences_ != null) {
+        output.writeMessage(6, getConfidences());
+      }
+      if (predictionMetadata_ != null) {
+        output.writeMessage(7, getPredictionMetadata());
       }
       unknownFields.writeTo(output);
     }
@@ -34820,6 +34920,14 @@ public final class Dataservice {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
+      if (confidences_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getConfidences());
+      }
+      if (predictionMetadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, getPredictionMetadata());
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -34852,6 +34960,16 @@ public final class Dataservice {
       }
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && (hasConfidences() == other.hasConfidences());
+      if (hasConfidences()) {
+        result = result && getConfidences()
+            .equals(other.getConfidences());
+      }
+      result = result && (hasPredictionMetadata() == other.hasPredictionMetadata());
+      if (hasPredictionMetadata()) {
+        result = result && getPredictionMetadata()
+            .equals(other.getPredictionMetadata());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -34878,6 +34996,14 @@ public final class Dataservice {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
+      }
+      if (hasConfidences()) {
+        hash = (37 * hash) + CONFIDENCES_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidences().hashCode();
+      }
+      if (hasPredictionMetadata()) {
+        hash = (37 * hash) + PREDICTION_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getPredictionMetadata().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -35030,6 +35156,18 @@ public final class Dataservice {
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        if (confidencesBuilder_ == null) {
+          confidences_ = null;
+        } else {
+          confidences_ = null;
+          confidencesBuilder_ = null;
+        }
+        if (predictionMetadataBuilder_ == null) {
+          predictionMetadata_ = null;
+        } else {
+          predictionMetadata_ = null;
+          predictionMetadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -35075,6 +35213,16 @@ public final class Dataservice {
           bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.tags_ = tags_;
+        if (confidencesBuilder_ == null) {
+          result.confidences_ = confidences_;
+        } else {
+          result.confidences_ = confidencesBuilder_.build();
+        }
+        if (predictionMetadataBuilder_ == null) {
+          result.predictionMetadata_ = predictionMetadata_;
+        } else {
+          result.predictionMetadata_ = predictionMetadataBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -35146,6 +35294,12 @@ public final class Dataservice {
             tags_.addAll(other.tags_);
           }
           onChanged();
+        }
+        if (other.hasConfidences()) {
+          mergeConfidences(other.getConfidences());
+        }
+        if (other.hasPredictionMetadata()) {
+          mergePredictionMetadata(other.getPredictionMetadata());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -35601,6 +35755,240 @@ public final class Dataservice {
         tags_.add(value);
         onChanged();
         return this;
+      }
+
+      private ssn.dataservice.v1.Dataservice.PredictionConfidences confidences_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1.Dataservice.PredictionConfidences, ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder, ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder> confidencesBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public boolean hasConfidences() {
+        return confidencesBuilder_ != null || confidences_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionConfidences getConfidences() {
+        if (confidencesBuilder_ == null) {
+          return confidences_ == null ? ssn.dataservice.v1.Dataservice.PredictionConfidences.getDefaultInstance() : confidences_;
+        } else {
+          return confidencesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public Builder setConfidences(ssn.dataservice.v1.Dataservice.PredictionConfidences value) {
+        if (confidencesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          confidences_ = value;
+          onChanged();
+        } else {
+          confidencesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public Builder setConfidences(
+          ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder builderForValue) {
+        if (confidencesBuilder_ == null) {
+          confidences_ = builderForValue.build();
+          onChanged();
+        } else {
+          confidencesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public Builder mergeConfidences(ssn.dataservice.v1.Dataservice.PredictionConfidences value) {
+        if (confidencesBuilder_ == null) {
+          if (confidences_ != null) {
+            confidences_ =
+              ssn.dataservice.v1.Dataservice.PredictionConfidences.newBuilder(confidences_).mergeFrom(value).buildPartial();
+          } else {
+            confidences_ = value;
+          }
+          onChanged();
+        } else {
+          confidencesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public Builder clearConfidences() {
+        if (confidencesBuilder_ == null) {
+          confidences_ = null;
+          onChanged();
+        } else {
+          confidences_ = null;
+          confidencesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder getConfidencesBuilder() {
+        
+        onChanged();
+        return getConfidencesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder getConfidencesOrBuilder() {
+        if (confidencesBuilder_ != null) {
+          return confidencesBuilder_.getMessageOrBuilder();
+        } else {
+          return confidences_ == null ?
+              ssn.dataservice.v1.Dataservice.PredictionConfidences.getDefaultInstance() : confidences_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1.Dataservice.PredictionConfidences, ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder, ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder> 
+          getConfidencesFieldBuilder() {
+        if (confidencesBuilder_ == null) {
+          confidencesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1.Dataservice.PredictionConfidences, ssn.dataservice.v1.Dataservice.PredictionConfidences.Builder, ssn.dataservice.v1.Dataservice.PredictionConfidencesOrBuilder>(
+                  getConfidences(),
+                  getParentForChildren(),
+                  isClean());
+          confidences_ = null;
+        }
+        return confidencesBuilder_;
+      }
+
+      private ssn.dataservice.v1.Dataservice.PredictionMetadata predictionMetadata_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1.Dataservice.PredictionMetadata, ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder, ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder> predictionMetadataBuilder_;
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public boolean hasPredictionMetadata() {
+        return predictionMetadataBuilder_ != null || predictionMetadata_ != null;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionMetadata getPredictionMetadata() {
+        if (predictionMetadataBuilder_ == null) {
+          return predictionMetadata_ == null ? ssn.dataservice.v1.Dataservice.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
+        } else {
+          return predictionMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public Builder setPredictionMetadata(ssn.dataservice.v1.Dataservice.PredictionMetadata value) {
+        if (predictionMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          predictionMetadata_ = value;
+          onChanged();
+        } else {
+          predictionMetadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public Builder setPredictionMetadata(
+          ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder builderForValue) {
+        if (predictionMetadataBuilder_ == null) {
+          predictionMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          predictionMetadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public Builder mergePredictionMetadata(ssn.dataservice.v1.Dataservice.PredictionMetadata value) {
+        if (predictionMetadataBuilder_ == null) {
+          if (predictionMetadata_ != null) {
+            predictionMetadata_ =
+              ssn.dataservice.v1.Dataservice.PredictionMetadata.newBuilder(predictionMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            predictionMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          predictionMetadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public Builder clearPredictionMetadata() {
+        if (predictionMetadataBuilder_ == null) {
+          predictionMetadata_ = null;
+          onChanged();
+        } else {
+          predictionMetadata_ = null;
+          predictionMetadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder getPredictionMetadataBuilder() {
+        
+        onChanged();
+        return getPredictionMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      public ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
+        if (predictionMetadataBuilder_ != null) {
+          return predictionMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return predictionMetadata_ == null ?
+              ssn.dataservice.v1.Dataservice.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
+        }
+      }
+      /**
+       * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          ssn.dataservice.v1.Dataservice.PredictionMetadata, ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder, ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder> 
+          getPredictionMetadataFieldBuilder() {
+        if (predictionMetadataBuilder_ == null) {
+          predictionMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.dataservice.v1.Dataservice.PredictionMetadata, ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder, ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder>(
+                  getPredictionMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          predictionMetadata_ = null;
+        }
+        return predictionMetadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -41615,46 +42003,49 @@ public final class Dataservice {
       "eateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Read" +
       "DocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocum" +
       "entResponse\022.\n\010document\030\001 \001(\0132\034.ssn.data" +
-      "service.v1.Document\"\253\001\n\026PrepareFeedbackR" +
+      "service.v1.Document\"\260\002\n\026PrepareFeedbackR" +
       "equest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.typ" +
       "e.TextAnnotation\022\026\n\016document_bytes\030\003 \001(\014" +
       "\0229\n\013predictions\030\004 \001(\0132$.ssn.dataservice." +
-      "v1.PredictionValues\022\014\n\004tags\030\005 \003(\t\"`\n\017Fee" +
-      "dbackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030" +
-      "\002 \001(\0132\036.ssn.dataservice.v1.TrueValues\022\014\n" +
-      "\004tags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart_t" +
-      "ime\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 " +
-      "\003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n" +
-      "\016document_count\030\001 \001(\005\022\026\n\016feedback_count\030" +
-      "\002 \001(\005\022<\n\023overall_correctness\030\003 \001(\0132\037.ssn" +
-      ".dataservice.v1.Correctness\022:\n\021field_cor" +
-      "rectness\030\004 \003(\0132\037.ssn.dataservice.v1.Corr" +
-      "ectness\"q\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n" +
-      "\022correct_percentage\030\002 \001(\002\022\035\n\025incomplete_" +
-      "percentage\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001" +
-      "(\002\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCal" +
-      "lsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030" +
-      "\002 \001(\t\"S\n\025CallsPerMonthResponse\022:\n\017calls_" +
-      "per_month\030\001 \003(\0132!.ssn.dataservice.v1.Cal" +
-      "lsPerMonth2\265\005\n\013DataService\022g\n\016CreateDocu" +
-      "ment\022).ssn.dataservice.v1.CreateDocument" +
-      "Request\032*.ssn.dataservice.v1.CreateDocum" +
-      "entResponse\022a\n\014ReadDocument\022\'.ssn.datase" +
-      "rvice.v1.ReadDocumentRequest\032(.ssn.datas" +
-      "ervice.v1.ReadDocumentResponse\022U\n\017Prepar" +
-      "eFeedback\022*.ssn.dataservice.v1.PrepareFe" +
-      "edbackRequest\032\026.google.protobuf.Empty\022g\n" +
-      "\010Feedback\022#.ssn.dataservice.v1.FeedbackR" +
-      "equest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023" +
-      "/v1/feedback:create:\001*\022[\n\020CalculateMetri" +
-      "cs\022\".ssn.dataservice.v1.MetricsRequest\032#" +
-      ".ssn.dataservice.v1.FeedbackMetrics\022c\n\006D" +
-      "elete\022!.ssn.dataservice.v1.DeleteRequest" +
-      "\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/fe" +
-      "edback:delete:\001*\022X\n\023CallsPerMonthMetric\022" +
-      "\026.google.protobuf.Empty\032).ssn.dataservic" +
-      "e.v1.CallsPerMonthResponseB\rZ\013dataservic" +
-      "eb\006proto3"
+      "v1.PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013con" +
+      "fidences\030\006 \001(\0132).ssn.dataservice.v1.Pred" +
+      "ictionConfidences\022C\n\023prediction_metadata" +
+      "\030\007 \001(\0132&.ssn.dataservice.v1.PredictionMe" +
+      "tadata\"`\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n" +
+      "\013true_values\030\002 \001(\0132\036.ssn.dataservice.v1." +
+      "TrueValues\022\014\n\004tags\030\003 \003(\t\"T\n\016MetricsReque" +
+      "st\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003" +
+      "\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017Feedb" +
+      "ackMetrics\022\026\n\016document_count\030\001 \001(\005\022\026\n\016fe" +
+      "edback_count\030\002 \001(\005\022<\n\023overall_correctnes" +
+      "s\030\003 \001(\0132\037.ssn.dataservice.v1.Correctness" +
+      "\022:\n\021field_correctness\030\004 \003(\0132\037.ssn.datase" +
+      "rvice.v1.Correctness\"q\n\013Correctness\022\r\n\005f" +
+      "ield\030\001 \001(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035" +
+      "\n\025incomplete_percentage\030\003 \001(\002\022\030\n\020error_p" +
+      "ercentage\030\004 \001(\002\"\035\n\rDeleteRequest\022\014\n\004tags" +
+      "\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022" +
+      "\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMonthRespo" +
+      "nse\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.datas" +
+      "ervice.v1.CallsPerMonth2\265\005\n\013DataService\022" +
+      "g\n\016CreateDocument\022).ssn.dataservice.v1.C" +
+      "reateDocumentRequest\032*.ssn.dataservice.v" +
+      "1.CreateDocumentResponse\022a\n\014ReadDocument" +
+      "\022\'.ssn.dataservice.v1.ReadDocumentReques" +
+      "t\032(.ssn.dataservice.v1.ReadDocumentRespo" +
+      "nse\022U\n\017PrepareFeedback\022*.ssn.dataservice" +
+      ".v1.PrepareFeedbackRequest\032\026.google.prot" +
+      "obuf.Empty\022g\n\010Feedback\022#.ssn.dataservice" +
+      ".v1.FeedbackRequest\032\026.google.protobuf.Em" +
+      "pty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020C" +
+      "alculateMetrics\022\".ssn.dataservice.v1.Met" +
+      "ricsRequest\032#.ssn.dataservice.v1.Feedbac" +
+      "kMetrics\022c\n\006Delete\022!.ssn.dataservice.v1." +
+      "DeleteRequest\032\026.google.protobuf.Empty\"\036\202" +
+      "\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPe" +
+      "rMonthMetric\022\026.google.protobuf.Empty\032).s" +
+      "sn.dataservice.v1.CallsPerMonthResponseB" +
+      "\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -41735,7 +42126,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", });
     internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_dataservice_v1_FeedbackRequest_fieldAccessorTable = new
