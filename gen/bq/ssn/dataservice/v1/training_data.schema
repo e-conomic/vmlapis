@@ -254,5 +254,503 @@
   "name": "feedback_time",
   "type": "TIMESTAMP",
   "mode": "REQUIRED"
+ },
+ {
+  "name": "prediction_confidences",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "total_incl_vat",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "total_vat",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "total_excl_vat",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "order_date",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "payment_due_date",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "document_type",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "currency",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "credit_card_last_four",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "payment_method",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_dk_type",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_dk_payment_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_dk_creditor_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_se_payment_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_se_bankgiro_creditor_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_se_plusgiro_creditor_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_no_payment_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_fi_payment_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "ocr_line_nl_payment_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_corporate_id",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "supplier_country_code",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "invoice_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "iban",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   }
+  ]
+ },
+ {
+  "name": "prediction_metadata",
+  "type": "RECORD",
+  "mode": "NULLABLE",
+  "fields": [
+   {
+    "name": "total_incl_vat",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "total_vat",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "total_excl_vat",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "order_date",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "payment_due_date",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "document_type",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "currency",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "credit_card_last_four",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "payment_method",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_dk_type",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_dk_payment_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_dk_creditor_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_se_payment_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_se_bankgiro_creditor_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_se_plusgiro_creditor_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_no_payment_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_fi_payment_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "ocr_line_nl_payment_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "supplier_corporate_id",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "supplier_country_code",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "invoice_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "iban",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   }
+  ]
  }
 ]

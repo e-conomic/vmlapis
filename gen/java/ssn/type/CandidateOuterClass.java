@@ -1117,49 +1117,28 @@ public final class CandidateOuterClass {
 
     /**
      * <pre>
-     * The name of the TensorFlow Serving model that predicted this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>string model_name = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    java.lang.String getModelName();
+    boolean hasModelMetadata();
     /**
      * <pre>
-     * The name of the TensorFlow Serving model that predicted this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>string model_name = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    com.google.protobuf.ByteString
-        getModelNameBytes();
-
+    ssn.type.CandidateOuterClass.ModelSpec getModelMetadata();
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    boolean hasModelVer();
-    /**
-     * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
-     */
-    com.google.protobuf.Int64Value getModelVer();
-    /**
-     * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
-     */
-    com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder();
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.type.Candidate}
@@ -1178,7 +1157,6 @@ public final class CandidateOuterClass {
       text_ = "";
       type_ = 0;
       pageRef_ = 0;
-      modelName_ = "";
     }
 
     @java.lang.Override
@@ -1255,20 +1233,14 @@ public final class CandidateOuterClass {
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              modelName_ = s;
-              break;
-            }
-            case 66: {
-              com.google.protobuf.Int64Value.Builder subBuilder = null;
-              if (modelVer_ != null) {
-                subBuilder = modelVer_.toBuilder();
+              ssn.type.CandidateOuterClass.ModelSpec.Builder subBuilder = null;
+              if (modelMetadata_ != null) {
+                subBuilder = modelMetadata_.toBuilder();
               }
-              modelVer_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              modelMetadata_ = input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom(modelVer_);
-                modelVer_ = subBuilder.buildPartial();
+                subBuilder.mergeFrom(modelMetadata_);
+                modelMetadata_ = subBuilder.buildPartial();
               }
 
               break;
@@ -1645,82 +1617,37 @@ public final class CandidateOuterClass {
       return pageRef_;
     }
 
-    public static final int MODEL_NAME_FIELD_NUMBER = 7;
-    private volatile java.lang.Object modelName_;
+    public static final int MODEL_METADATA_FIELD_NUMBER = 7;
+    private ssn.type.CandidateOuterClass.ModelSpec modelMetadata_;
     /**
      * <pre>
-     * The name of the TensorFlow Serving model that predicted this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>string model_name = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    public java.lang.String getModelName() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        modelName_ = s;
-        return s;
-      }
+    public boolean hasModelMetadata() {
+      return modelMetadata_ != null;
     }
     /**
      * <pre>
-     * The name of the TensorFlow Serving model that predicted this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>string model_name = 7;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    public com.google.protobuf.ByteString
-        getModelNameBytes() {
-      java.lang.Object ref = modelName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        modelName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int MODEL_VER_FIELD_NUMBER = 8;
-    private com.google.protobuf.Int64Value modelVer_;
-    /**
-     * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
-     */
-    public boolean hasModelVer() {
-      return modelVer_ != null;
+    public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
+      return modelMetadata_ == null ? ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance() : modelMetadata_;
     }
     /**
      * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
+     * Model spec of the TensorFlow Serving model that predicted this candidate
      * </pre>
      *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+     * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
      */
-    public com.google.protobuf.Int64Value getModelVer() {
-      return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
-    }
-    /**
-     * <pre>
-     * The version number of the TensorFlow Serving model that predicted
-     * this candidate
-     * </pre>
-     *
-     * <code>.google.protobuf.Int64Value model_ver = 8;</code>
-     */
-    public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
-      return getModelVer();
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
+      return getModelMetadata();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1755,11 +1682,8 @@ public final class CandidateOuterClass {
       if (pageRef_ != 0) {
         output.writeUInt32(6, pageRef_);
       }
-      if (!getModelNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, modelName_);
-      }
-      if (modelVer_ != null) {
-        output.writeMessage(8, getModelVer());
+      if (modelMetadata_ != null) {
+        output.writeMessage(7, getModelMetadata());
       }
       unknownFields.writeTo(output);
     }
@@ -1792,12 +1716,9 @@ public final class CandidateOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, pageRef_);
       }
-      if (!getModelNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, modelName_);
-      }
-      if (modelVer_ != null) {
+      if (modelMetadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getModelVer());
+          .computeMessageSize(7, getModelMetadata());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1832,12 +1753,10 @@ public final class CandidateOuterClass {
       result = result && type_ == other.type_;
       result = result && (getPageRef()
           == other.getPageRef());
-      result = result && getModelName()
-          .equals(other.getModelName());
-      result = result && (hasModelVer() == other.hasModelVer());
-      if (hasModelVer()) {
-        result = result && getModelVer()
-            .equals(other.getModelVer());
+      result = result && (hasModelMetadata() == other.hasModelMetadata());
+      if (hasModelMetadata()) {
+        result = result && getModelMetadata()
+            .equals(other.getModelMetadata());
       }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
@@ -1866,11 +1785,9 @@ public final class CandidateOuterClass {
       hash = (53 * hash) + type_;
       hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
       hash = (53 * hash) + getPageRef();
-      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getModelName().hashCode();
-      if (hasModelVer()) {
-        hash = (37 * hash) + MODEL_VER_FIELD_NUMBER;
-        hash = (53 * hash) + getModelVer().hashCode();
+      if (hasModelMetadata()) {
+        hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getModelMetadata().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2025,13 +1942,11 @@ public final class CandidateOuterClass {
 
         pageRef_ = 0;
 
-        modelName_ = "";
-
-        if (modelVerBuilder_ == null) {
-          modelVer_ = null;
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = null;
         } else {
-          modelVer_ = null;
-          modelVerBuilder_ = null;
+          modelMetadata_ = null;
+          modelMetadataBuilder_ = null;
         }
         return this;
       }
@@ -2073,11 +1988,10 @@ public final class CandidateOuterClass {
         }
         result.type_ = type_;
         result.pageRef_ = pageRef_;
-        result.modelName_ = modelName_;
-        if (modelVerBuilder_ == null) {
-          result.modelVer_ = modelVer_;
+        if (modelMetadataBuilder_ == null) {
+          result.modelMetadata_ = modelMetadata_;
         } else {
-          result.modelVer_ = modelVerBuilder_.build();
+          result.modelMetadata_ = modelMetadataBuilder_.build();
         }
         onBuilt();
         return result;
@@ -2147,12 +2061,8 @@ public final class CandidateOuterClass {
         if (other.getPageRef() != 0) {
           setPageRef(other.getPageRef());
         }
-        if (!other.getModelName().isEmpty()) {
-          modelName_ = other.modelName_;
-          onChanged();
-        }
-        if (other.hasModelVer()) {
-          mergeModelVer(other.getModelVer());
+        if (other.hasModelMetadata()) {
+          mergeModelMetadata(other.getModelMetadata());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2904,255 +2814,157 @@ public final class CandidateOuterClass {
         return this;
       }
 
-      private java.lang.Object modelName_ = "";
-      /**
-       * <pre>
-       * The name of the TensorFlow Serving model that predicted this candidate
-       * </pre>
-       *
-       * <code>string model_name = 7;</code>
-       */
-      public java.lang.String getModelName() {
-        java.lang.Object ref = modelName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          modelName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The name of the TensorFlow Serving model that predicted this candidate
-       * </pre>
-       *
-       * <code>string model_name = 7;</code>
-       */
-      public com.google.protobuf.ByteString
-          getModelNameBytes() {
-        java.lang.Object ref = modelName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          modelName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * The name of the TensorFlow Serving model that predicted this candidate
-       * </pre>
-       *
-       * <code>string model_name = 7;</code>
-       */
-      public Builder setModelName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The name of the TensorFlow Serving model that predicted this candidate
-       * </pre>
-       *
-       * <code>string model_name = 7;</code>
-       */
-      public Builder clearModelName() {
-        
-        modelName_ = getDefaultInstance().getModelName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * The name of the TensorFlow Serving model that predicted this candidate
-       * </pre>
-       *
-       * <code>string model_name = 7;</code>
-       */
-      public Builder setModelNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        modelName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.Int64Value modelVer_ = null;
+      private ssn.type.CandidateOuterClass.ModelSpec modelMetadata_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> modelVerBuilder_;
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> modelMetadataBuilder_;
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public boolean hasModelVer() {
-        return modelVerBuilder_ != null || modelVer_ != null;
+      public boolean hasModelMetadata() {
+        return modelMetadataBuilder_ != null || modelMetadata_ != null;
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public com.google.protobuf.Int64Value getModelVer() {
-        if (modelVerBuilder_ == null) {
-          return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
+      public ssn.type.CandidateOuterClass.ModelSpec getModelMetadata() {
+        if (modelMetadataBuilder_ == null) {
+          return modelMetadata_ == null ? ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance() : modelMetadata_;
         } else {
-          return modelVerBuilder_.getMessage();
+          return modelMetadataBuilder_.getMessage();
         }
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public Builder setModelVer(com.google.protobuf.Int64Value value) {
-        if (modelVerBuilder_ == null) {
+      public Builder setModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (modelMetadataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          modelVer_ = value;
+          modelMetadata_ = value;
           onChanged();
         } else {
-          modelVerBuilder_.setMessage(value);
+          modelMetadataBuilder_.setMessage(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public Builder setModelVer(
-          com.google.protobuf.Int64Value.Builder builderForValue) {
-        if (modelVerBuilder_ == null) {
-          modelVer_ = builderForValue.build();
+      public Builder setModelMetadata(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = builderForValue.build();
           onChanged();
         } else {
-          modelVerBuilder_.setMessage(builderForValue.build());
+          modelMetadataBuilder_.setMessage(builderForValue.build());
         }
 
         return this;
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public Builder mergeModelVer(com.google.protobuf.Int64Value value) {
-        if (modelVerBuilder_ == null) {
-          if (modelVer_ != null) {
-            modelVer_ =
-              com.google.protobuf.Int64Value.newBuilder(modelVer_).mergeFrom(value).buildPartial();
+      public Builder mergeModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (modelMetadataBuilder_ == null) {
+          if (modelMetadata_ != null) {
+            modelMetadata_ =
+              ssn.type.CandidateOuterClass.ModelSpec.newBuilder(modelMetadata_).mergeFrom(value).buildPartial();
           } else {
-            modelVer_ = value;
+            modelMetadata_ = value;
           }
           onChanged();
         } else {
-          modelVerBuilder_.mergeFrom(value);
+          modelMetadataBuilder_.mergeFrom(value);
         }
 
         return this;
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public Builder clearModelVer() {
-        if (modelVerBuilder_ == null) {
-          modelVer_ = null;
+      public Builder clearModelMetadata() {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = null;
           onChanged();
         } else {
-          modelVer_ = null;
-          modelVerBuilder_ = null;
+          modelMetadata_ = null;
+          modelMetadataBuilder_ = null;
         }
 
         return this;
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public com.google.protobuf.Int64Value.Builder getModelVerBuilder() {
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getModelMetadataBuilder() {
         
         onChanged();
-        return getModelVerFieldBuilder().getBuilder();
+        return getModelMetadataFieldBuilder().getBuilder();
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
-      public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
-        if (modelVerBuilder_ != null) {
-          return modelVerBuilder_.getMessageOrBuilder();
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
+        if (modelMetadataBuilder_ != null) {
+          return modelMetadataBuilder_.getMessageOrBuilder();
         } else {
-          return modelVer_ == null ?
-              com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
+          return modelMetadata_ == null ?
+              ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance() : modelMetadata_;
         }
       }
       /**
        * <pre>
-       * The version number of the TensorFlow Serving model that predicted
-       * this candidate
+       * Model spec of the TensorFlow Serving model that predicted this candidate
        * </pre>
        *
-       * <code>.google.protobuf.Int64Value model_ver = 8;</code>
+       * <code>.ssn.type.ModelSpec model_metadata = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
-          getModelVerFieldBuilder() {
-        if (modelVerBuilder_ == null) {
-          modelVerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
-                  getModelVer(),
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getModelMetadataFieldBuilder() {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  getModelMetadata(),
                   getParentForChildren(),
                   isClean());
-          modelVer_ = null;
+          modelMetadata_ = null;
         }
-        return modelVerBuilder_;
+        return modelMetadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -3202,6 +3014,846 @@ public final class CandidateOuterClass {
 
     @java.lang.Override
     public ssn.type.CandidateOuterClass.Candidate getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ModelSpecOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ssn.type.ModelSpec)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The name of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>string model_name = 1;</code>
+     */
+    java.lang.String getModelName();
+    /**
+     * <pre>
+     * The name of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>string model_name = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getModelNameBytes();
+
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    boolean hasModelVer();
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    com.google.protobuf.Int64Value getModelVer();
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ssn.type.ModelSpec}
+   */
+  public  static final class ModelSpec extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ssn.type.ModelSpec)
+      ModelSpecOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ModelSpec.newBuilder() to construct.
+    private ModelSpec(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ModelSpec() {
+      modelName_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ModelSpec(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              modelName_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Int64Value.Builder subBuilder = null;
+              if (modelVer_ != null) {
+                subBuilder = modelVer_.toBuilder();
+              }
+              modelVer_ = input.readMessage(com.google.protobuf.Int64Value.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modelVer_);
+                modelVer_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ssn.type.CandidateOuterClass.ModelSpec.class, ssn.type.CandidateOuterClass.ModelSpec.Builder.class);
+    }
+
+    public static final int MODEL_NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object modelName_;
+    /**
+     * <pre>
+     * The name of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>string model_name = 1;</code>
+     */
+    public java.lang.String getModelName() {
+      java.lang.Object ref = modelName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        modelName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The name of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>string model_name = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getModelNameBytes() {
+      java.lang.Object ref = modelName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        modelName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int MODEL_VER_FIELD_NUMBER = 2;
+    private com.google.protobuf.Int64Value modelVer_;
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    public boolean hasModelVer() {
+      return modelVer_ != null;
+    }
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    public com.google.protobuf.Int64Value getModelVer() {
+      return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
+    }
+    /**
+     * <pre>
+     * The version number of the TensorFlow Serving model
+     * </pre>
+     *
+     * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+     */
+    public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
+      return getModelVer();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getModelNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, modelName_);
+      }
+      if (modelVer_ != null) {
+        output.writeMessage(2, getModelVer());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getModelNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, modelName_);
+      }
+      if (modelVer_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getModelVer());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ssn.type.CandidateOuterClass.ModelSpec)) {
+        return super.equals(obj);
+      }
+      ssn.type.CandidateOuterClass.ModelSpec other = (ssn.type.CandidateOuterClass.ModelSpec) obj;
+
+      boolean result = true;
+      result = result && getModelName()
+          .equals(other.getModelName());
+      result = result && (hasModelVer() == other.hasModelVer());
+      if (hasModelVer()) {
+        result = result && getModelVer()
+            .equals(other.getModelVer());
+      }
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MODEL_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getModelName().hashCode();
+      if (hasModelVer()) {
+        hash = (37 * hash) + MODEL_VER_FIELD_NUMBER;
+        hash = (53 * hash) + getModelVer().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ssn.type.CandidateOuterClass.ModelSpec parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ssn.type.CandidateOuterClass.ModelSpec prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ssn.type.ModelSpec}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ssn.type.ModelSpec)
+        ssn.type.CandidateOuterClass.ModelSpecOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ssn.type.CandidateOuterClass.ModelSpec.class, ssn.type.CandidateOuterClass.ModelSpec.Builder.class);
+      }
+
+      // Construct using ssn.type.CandidateOuterClass.ModelSpec.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        modelName_ = "";
+
+        if (modelVerBuilder_ == null) {
+          modelVer_ = null;
+        } else {
+          modelVer_ = null;
+          modelVerBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ssn.type.CandidateOuterClass.internal_static_ssn_type_ModelSpec_descriptor;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.ModelSpec getDefaultInstanceForType() {
+        return ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.ModelSpec build() {
+        ssn.type.CandidateOuterClass.ModelSpec result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ssn.type.CandidateOuterClass.ModelSpec buildPartial() {
+        ssn.type.CandidateOuterClass.ModelSpec result = new ssn.type.CandidateOuterClass.ModelSpec(this);
+        result.modelName_ = modelName_;
+        if (modelVerBuilder_ == null) {
+          result.modelVer_ = modelVer_;
+        } else {
+          result.modelVer_ = modelVerBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ssn.type.CandidateOuterClass.ModelSpec) {
+          return mergeFrom((ssn.type.CandidateOuterClass.ModelSpec)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ssn.type.CandidateOuterClass.ModelSpec other) {
+        if (other == ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance()) return this;
+        if (!other.getModelName().isEmpty()) {
+          modelName_ = other.modelName_;
+          onChanged();
+        }
+        if (other.hasModelVer()) {
+          mergeModelVer(other.getModelVer());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        ssn.type.CandidateOuterClass.ModelSpec parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (ssn.type.CandidateOuterClass.ModelSpec) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object modelName_ = "";
+      /**
+       * <pre>
+       * The name of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>string model_name = 1;</code>
+       */
+      public java.lang.String getModelName() {
+        java.lang.Object ref = modelName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          modelName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>string model_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getModelNameBytes() {
+        java.lang.Object ref = modelName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          modelName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The name of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>string model_name = 1;</code>
+       */
+      public Builder setModelName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        modelName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>string model_name = 1;</code>
+       */
+      public Builder clearModelName() {
+        
+        modelName_ = getDefaultInstance().getModelName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The name of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>string model_name = 1;</code>
+       */
+      public Builder setModelNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        modelName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Int64Value modelVer_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> modelVerBuilder_;
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public boolean hasModelVer() {
+        return modelVerBuilder_ != null || modelVer_ != null;
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public com.google.protobuf.Int64Value getModelVer() {
+        if (modelVerBuilder_ == null) {
+          return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
+        } else {
+          return modelVerBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public Builder setModelVer(com.google.protobuf.Int64Value value) {
+        if (modelVerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modelVer_ = value;
+          onChanged();
+        } else {
+          modelVerBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public Builder setModelVer(
+          com.google.protobuf.Int64Value.Builder builderForValue) {
+        if (modelVerBuilder_ == null) {
+          modelVer_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelVerBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public Builder mergeModelVer(com.google.protobuf.Int64Value value) {
+        if (modelVerBuilder_ == null) {
+          if (modelVer_ != null) {
+            modelVer_ =
+              com.google.protobuf.Int64Value.newBuilder(modelVer_).mergeFrom(value).buildPartial();
+          } else {
+            modelVer_ = value;
+          }
+          onChanged();
+        } else {
+          modelVerBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public Builder clearModelVer() {
+        if (modelVerBuilder_ == null) {
+          modelVer_ = null;
+          onChanged();
+        } else {
+          modelVer_ = null;
+          modelVerBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public com.google.protobuf.Int64Value.Builder getModelVerBuilder() {
+        
+        onChanged();
+        return getModelVerFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
+        if (modelVerBuilder_ != null) {
+          return modelVerBuilder_.getMessageOrBuilder();
+        } else {
+          return modelVer_ == null ?
+              com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
+        }
+      }
+      /**
+       * <pre>
+       * The version number of the TensorFlow Serving model
+       * </pre>
+       *
+       * <code>.google.protobuf.Int64Value model_ver = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder> 
+          getModelVerFieldBuilder() {
+        if (modelVerBuilder_ == null) {
+          modelVerBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Int64Value, com.google.protobuf.Int64Value.Builder, com.google.protobuf.Int64ValueOrBuilder>(
+                  getModelVer(),
+                  getParentForChildren(),
+                  isClean());
+          modelVer_ = null;
+        }
+        return modelVerBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ssn.type.ModelSpec)
+    }
+
+    // @@protoc_insertion_point(class_scope:ssn.type.ModelSpec)
+    private static final ssn.type.CandidateOuterClass.ModelSpec DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ssn.type.CandidateOuterClass.ModelSpec();
+    }
+
+    public static ssn.type.CandidateOuterClass.ModelSpec getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ModelSpec>
+        PARSER = new com.google.protobuf.AbstractParser<ModelSpec>() {
+      @java.lang.Override
+      public ModelSpec parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ModelSpec(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ModelSpec> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ModelSpec> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3992,6 +4644,11 @@ public final class CandidateOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_Candidate_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_ModelSpec_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_ModelSpec_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_type_LineCandidate_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4011,17 +4668,18 @@ public final class CandidateOuterClass {
       "\001(\0162\032.ssn.type.Confidence.Level\022*\n\005value" +
       "\030\002 \001(\0132\033.google.protobuf.FloatValue\"M\n\005L" +
       "evel\022\013\n\007UNKNOWN\020\000\022\014\n\010VERY_LOW\020\001\022\007\n\003LOW\020\002" +
-      "\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\254\002\n\tC" +
+      "\022\007\n\003MID\020\003\022\010\n\004HIGH\020\004\022\r\n\tVERY_HIGH\020\005\"\225\002\n\tC" +
       "andidate\022\r\n\005value\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022(\n" +
       "\nconfidence\030\003 \001(\0132\024.ssn.type.Confidence\022" +
       ",\n\014bounding_box\030\004 \001(\0132\026.ssn.type.Boundin" +
       "gPoly\022&\n\004type\030\005 \001(\0162\030.ssn.type.Candidate" +
-      ".Type\022\020\n\010page_ref\030\006 \001(\r\022\022\n\nmodel_name\030\007 " +
-      "\001(\t\022.\n\tmodel_ver\030\010 \001(\0132\033.google.protobuf" +
-      ".Int64Value\",\n\004Type\022\013\n\007UNKNOWN\020\000\022\t\n\005FIEL" +
-      "D\020\001\022\014\n\010DOCUMENT\020\002\"?\n\rLineCandidate\022\014\n\004te" +
-      "xt\030\001 \001(\t\022\016\n\006amount\030\002 \001(\001\022\020\n\010page_ref\030\006 \001" +
-      "(\rB\006Z\004typeb\006proto3"
+      ".Type\022\020\n\010page_ref\030\006 \001(\r\022+\n\016model_metadat" +
+      "a\030\007 \001(\0132\023.ssn.type.ModelSpec\",\n\004Type\022\013\n\007" +
+      "UNKNOWN\020\000\022\t\n\005FIELD\020\001\022\014\n\010DOCUMENT\020\002\"O\n\tMo" +
+      "delSpec\022\022\n\nmodel_name\030\001 \001(\t\022.\n\tmodel_ver" +
+      "\030\002 \001(\0132\033.google.protobuf.Int64Value\"?\n\rL" +
+      "ineCandidate\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
+      "(\001\022\020\n\010page_ref\030\006 \001(\rB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4048,9 +4706,15 @@ public final class CandidateOuterClass {
     internal_static_ssn_type_Candidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_Candidate_descriptor,
-        new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelName", "ModelVer", });
-    internal_static_ssn_type_LineCandidate_descriptor =
+        new java.lang.String[] { "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata", });
+    internal_static_ssn_type_ModelSpec_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_type_ModelSpec_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_ModelSpec_descriptor,
+        new java.lang.String[] { "ModelName", "ModelVer", });
+    internal_static_ssn_type_LineCandidate_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_type_LineCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_LineCandidate_descriptor,
