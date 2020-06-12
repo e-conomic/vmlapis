@@ -107,28 +107,28 @@ message PredictionValues {
 }
 
 message PredictionConfidences {
-  repeated google.protobuf.DoubleValue total_incl_vat = 1;
-  repeated google.protobuf.DoubleValue total_vat = 2;
-  repeated google.protobuf.DoubleValue total_excl_vat = 3;
-  repeated google.protobuf.DoubleValue order_date = 4;
-  repeated google.protobuf.DoubleValue payment_due_date = 5;
-  repeated google.protobuf.DoubleValue document_type = 6;
-  repeated google.protobuf.DoubleValue currency = 7;
-  repeated google.protobuf.DoubleValue credit_card_last_four = 8;
-  repeated google.protobuf.DoubleValue payment_method = 9;
-  repeated google.protobuf.DoubleValue ocr_line_dk_type = 10;
-  repeated google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;
-  repeated google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;
-  repeated google.protobuf.DoubleValue ocr_line_se_payment_id = 13;
-  repeated google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;
-  repeated google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;
-  repeated google.protobuf.DoubleValue ocr_line_no_payment_id = 16;
-  repeated google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;
-  repeated google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;
-  repeated google.protobuf.DoubleValue supplier_corporate_id = 19;
-  repeated google.protobuf.DoubleValue supplier_country_code = 20;
-  repeated google.protobuf.DoubleValue invoice_number = 21;
-  repeated google.protobuf.DoubleValue iban = 22;
+  repeated google.protobuf.FloatValue total_incl_vat = 1;
+  repeated google.protobuf.FloatValue total_vat = 2;
+  repeated google.protobuf.FloatValue total_excl_vat = 3;
+  repeated google.protobuf.FloatValue order_date = 4;
+  repeated google.protobuf.FloatValue payment_due_date = 5;
+  repeated google.protobuf.FloatValue document_type = 6;
+  repeated google.protobuf.FloatValue currency = 7;
+  repeated google.protobuf.FloatValue credit_card_last_four = 8;
+  repeated google.protobuf.FloatValue payment_method = 9;
+  repeated google.protobuf.FloatValue ocr_line_dk_type = 10;
+  repeated google.protobuf.FloatValue ocr_line_dk_payment_id = 11;
+  repeated google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;
+  repeated google.protobuf.FloatValue ocr_line_se_payment_id = 13;
+  repeated google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;
+  repeated google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;
+  repeated google.protobuf.FloatValue ocr_line_no_payment_id = 16;
+  repeated google.protobuf.FloatValue ocr_line_fi_payment_id = 17;
+  repeated google.protobuf.FloatValue ocr_line_nl_payment_id = 18;
+  repeated google.protobuf.FloatValue supplier_corporate_id = 19;
+  repeated google.protobuf.FloatValue supplier_country_code = 20;
+  repeated google.protobuf.FloatValue invoice_number = 21;
+  repeated google.protobuf.FloatValue iban = 22;
 }
 
 message PredictionMetadata {
