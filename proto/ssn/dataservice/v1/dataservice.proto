@@ -178,6 +178,8 @@ message PrepareFeedbackRequest {
   bytes document_bytes = 3;
   PredictionValues predictions = 4;
   repeated string tags = 5;
+  PredictionConfidences confidences = 6;
+  PredictionMetadata prediction_metadata = 7;
 }
 
 message FeedbackRequest {
