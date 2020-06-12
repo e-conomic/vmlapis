@@ -19,41 +19,35 @@ public final class TrainingTask {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string id = 1;</code>
-     */
-    java.lang.String getId();
-    /**
-     * <code>string id = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getIdBytes();
-
-    /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     boolean hasDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder();
 
     /**
-     * <code>int64 model_version = 3;</code>
+     * <code>.asgt.type.Revision revision = 2;</code>
      */
-    long getModelVersion();
+    boolean hasRevision();
+    /**
+     * <code>.asgt.type.Revision revision = 2;</code>
+     */
+    asgt.type.RevisionOuterClass.Revision getRevision();
+    /**
+     * <code>.asgt.type.Revision revision = 2;</code>
+     */
+    asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
 
     /**
-     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
+     * <code>int64 model_version = 4;</code>
      */
-    int getStatusValue();
-    /**
-     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-     */
-    asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status getStatus();
+    long getModelVersion();
   }
   /**
    * Protobuf type {@code asgt.modeltrainer.v1alpha1.TrainModelTask}
@@ -68,9 +62,7 @@ public final class TrainingTask {
       super(builder);
     }
     private TrainModelTask() {
-      id_ = "";
       modelVersion_ = 0L;
-      status_ = 0;
     }
 
     @java.lang.Override
@@ -98,12 +90,6 @@ public final class TrainingTask {
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-            case 18: {
               asgt.type.DatasetOuterClass.Dataset.Builder subBuilder = null;
               if (dataset_ != null) {
                 subBuilder = dataset_.toBuilder();
@@ -116,15 +102,22 @@ public final class TrainingTask {
 
               break;
             }
-            case 24: {
+            case 18: {
+              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
+              if (revision_ != null) {
+                subBuilder = revision_.toBuilder();
+              }
+              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(revision_);
+                revision_ = subBuilder.buildPartial();
+              }
 
-              modelVersion_ = input.readInt64();
               break;
             }
             case 32: {
-              int rawValue = input.readEnum();
 
-              status_ = rawValue;
+              modelVersion_ = input.readInt64();
               break;
             }
             default: {
@@ -159,210 +152,55 @@ public final class TrainingTask {
               asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.class, asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Builder.class);
     }
 
-    /**
-     * Protobuf enum {@code asgt.modeltrainer.v1alpha1.TrainModelTask.Status}
-     */
-    public enum Status
-        implements com.google.protobuf.ProtocolMessageEnum {
-      /**
-       * <code>UNKNOWN = 0;</code>
-       */
-      UNKNOWN(0),
-      /**
-       * <code>SCHEDULED = 1;</code>
-       */
-      SCHEDULED(1),
-      /**
-       * <code>STARTED = 3;</code>
-       */
-      STARTED(3),
-      /**
-       * <code>SUCCEEDED = 4;</code>
-       */
-      SUCCEEDED(4),
-      /**
-       * <code>FAILED = 5;</code>
-       */
-      FAILED(5),
-      UNRECOGNIZED(-1),
-      ;
-
-      /**
-       * <code>UNKNOWN = 0;</code>
-       */
-      public static final int UNKNOWN_VALUE = 0;
-      /**
-       * <code>SCHEDULED = 1;</code>
-       */
-      public static final int SCHEDULED_VALUE = 1;
-      /**
-       * <code>STARTED = 3;</code>
-       */
-      public static final int STARTED_VALUE = 3;
-      /**
-       * <code>SUCCEEDED = 4;</code>
-       */
-      public static final int SUCCEEDED_VALUE = 4;
-      /**
-       * <code>FAILED = 5;</code>
-       */
-      public static final int FAILED_VALUE = 5;
-
-
-      public final int getNumber() {
-        if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
-              "Can't get the number of an unknown enum value.");
-        }
-        return value;
-      }
-
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static Status valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static Status forNumber(int value) {
-        switch (value) {
-          case 0: return UNKNOWN;
-          case 1: return SCHEDULED;
-          case 3: return STARTED;
-          case 4: return SUCCEEDED;
-          case 5: return FAILED;
-          default: return null;
-        }
-      }
-
-      public static com.google.protobuf.Internal.EnumLiteMap<Status>
-          internalGetValueMap() {
-        return internalValueMap;
-      }
-      private static final com.google.protobuf.Internal.EnumLiteMap<
-          Status> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<Status>() {
-              public Status findValueByNumber(int number) {
-                return Status.forNumber(number);
-              }
-            };
-
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
-          getValueDescriptor() {
-        return getDescriptor().getValues().get(ordinal());
-      }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptorForType() {
-        return getDescriptor();
-      }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
-          getDescriptor() {
-        return asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDescriptor().getEnumTypes().get(0);
-      }
-
-      private static final Status[] VALUES = values();
-
-      public static Status valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-        if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
-            "EnumValueDescriptor is not for this type.");
-        }
-        if (desc.getIndex() == -1) {
-          return UNRECOGNIZED;
-        }
-        return VALUES[desc.getIndex()];
-      }
-
-      private final int value;
-
-      private Status(int value) {
-        this.value = value;
-      }
-
-      // @@protoc_insertion_point(enum_scope:asgt.modeltrainer.v1alpha1.TrainModelTask.Status)
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
-    /**
-     * <code>string id = 1;</code>
-     */
-    public java.lang.String getId() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        id_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string id = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getIdBytes() {
-      java.lang.Object ref = id_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        id_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATASET_FIELD_NUMBER = 2;
+    public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     public boolean hasDataset() {
       return dataset_ != null;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     public asgt.type.DatasetOuterClass.Dataset getDataset() {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
-     * <code>.asgt.type.Dataset dataset = 2;</code>
+     * <code>.asgt.type.Dataset dataset = 1;</code>
      */
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
       return getDataset();
     }
 
-    public static final int MODEL_VERSION_FIELD_NUMBER = 3;
+    public static final int REVISION_FIELD_NUMBER = 2;
+    private asgt.type.RevisionOuterClass.Revision revision_;
+    /**
+     * <code>.asgt.type.Revision revision = 2;</code>
+     */
+    public boolean hasRevision() {
+      return revision_ != null;
+    }
+    /**
+     * <code>.asgt.type.Revision revision = 2;</code>
+     */
+    public asgt.type.RevisionOuterClass.Revision getRevision() {
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+    }
+    /**
+     * <code>.asgt.type.Revision revision = 2;</code>
+     */
+    public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+      return getRevision();
+    }
+
+    public static final int MODEL_VERSION_FIELD_NUMBER = 4;
     private long modelVersion_;
     /**
-     * <code>int64 model_version = 3;</code>
+     * <code>int64 model_version = 4;</code>
      */
     public long getModelVersion() {
       return modelVersion_;
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 4;
-    private int status_;
-    /**
-     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-     */
-    public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-     */
-    public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status getStatus() {
-      @SuppressWarnings("deprecation")
-      asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status result = asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.valueOf(status_);
-      return result == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -379,17 +217,14 @@ public final class TrainingTask {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
-      }
       if (dataset_ != null) {
-        output.writeMessage(2, getDataset());
+        output.writeMessage(1, getDataset());
+      }
+      if (revision_ != null) {
+        output.writeMessage(2, getRevision());
       }
       if (modelVersion_ != 0L) {
-        output.writeInt64(3, modelVersion_);
-      }
-      if (status_ != asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.UNKNOWN.getNumber()) {
-        output.writeEnum(4, status_);
+        output.writeInt64(4, modelVersion_);
       }
       unknownFields.writeTo(output);
     }
@@ -400,20 +235,17 @@ public final class TrainingTask {
       if (size != -1) return size;
 
       size = 0;
-      if (!getIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
-      }
       if (dataset_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getDataset());
+          .computeMessageSize(1, getDataset());
+      }
+      if (revision_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getRevision());
       }
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(3, modelVersion_);
-      }
-      if (status_ != asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, status_);
+          .computeInt64Size(4, modelVersion_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -431,16 +263,18 @@ public final class TrainingTask {
       asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask other = (asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask) obj;
 
       boolean result = true;
-      result = result && getId()
-          .equals(other.getId());
       result = result && (hasDataset() == other.hasDataset());
       if (hasDataset()) {
         result = result && getDataset()
             .equals(other.getDataset());
       }
+      result = result && (hasRevision() == other.hasRevision());
+      if (hasRevision()) {
+        result = result && getRevision()
+            .equals(other.getRevision());
+      }
       result = result && (getModelVersion()
           == other.getModelVersion());
-      result = result && status_ == other.status_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -452,17 +286,17 @@ public final class TrainingTask {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
       if (hasDataset()) {
         hash = (37 * hash) + DATASET_FIELD_NUMBER;
         hash = (53 * hash) + getDataset().hashCode();
       }
+      if (hasRevision()) {
+        hash = (37 * hash) + REVISION_FIELD_NUMBER;
+        hash = (53 * hash) + getRevision().hashCode();
+      }
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -596,17 +430,19 @@ public final class TrainingTask {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        id_ = "";
-
         if (datasetBuilder_ == null) {
           dataset_ = null;
         } else {
           dataset_ = null;
           datasetBuilder_ = null;
         }
+        if (revisionBuilder_ == null) {
+          revision_ = null;
+        } else {
+          revision_ = null;
+          revisionBuilder_ = null;
+        }
         modelVersion_ = 0L;
-
-        status_ = 0;
 
         return this;
       }
@@ -634,14 +470,17 @@ public final class TrainingTask {
       @java.lang.Override
       public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask buildPartial() {
         asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask result = new asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask(this);
-        result.id_ = id_;
         if (datasetBuilder_ == null) {
           result.dataset_ = dataset_;
         } else {
           result.dataset_ = datasetBuilder_.build();
         }
+        if (revisionBuilder_ == null) {
+          result.revision_ = revision_;
+        } else {
+          result.revision_ = revisionBuilder_.build();
+        }
         result.modelVersion_ = modelVersion_;
-        result.status_ = status_;
         onBuilt();
         return result;
       }
@@ -690,18 +529,14 @@ public final class TrainingTask {
 
       public Builder mergeFrom(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask other) {
         if (other == asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.getDefaultInstance()) return this;
-        if (!other.getId().isEmpty()) {
-          id_ = other.id_;
-          onChanged();
-        }
         if (other.hasDataset()) {
           mergeDataset(other.getDataset());
         }
+        if (other.hasRevision()) {
+          mergeRevision(other.getRevision());
+        }
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -732,86 +567,17 @@ public final class TrainingTask {
         return this;
       }
 
-      private java.lang.Object id_ = "";
-      /**
-       * <code>string id = 1;</code>
-       */
-      public java.lang.String getId() {
-        java.lang.Object ref = id_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          id_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getIdBytes() {
-        java.lang.Object ref = id_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          id_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        id_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder clearId() {
-        
-        id_ = getDefaultInstance().getId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string id = 1;</code>
-       */
-      public Builder setIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        id_ = value;
-        onChanged();
-        return this;
-      }
-
       private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
         if (datasetBuilder_ == null) {
@@ -821,7 +587,7 @@ public final class TrainingTask {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public Builder setDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -837,7 +603,7 @@ public final class TrainingTask {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public Builder setDataset(
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
@@ -851,7 +617,7 @@ public final class TrainingTask {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
@@ -869,7 +635,7 @@ public final class TrainingTask {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public Builder clearDataset() {
         if (datasetBuilder_ == null) {
@@ -883,7 +649,7 @@ public final class TrainingTask {
         return this;
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
         
@@ -891,7 +657,7 @@ public final class TrainingTask {
         return getDatasetFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
         if (datasetBuilder_ != null) {
@@ -902,7 +668,7 @@ public final class TrainingTask {
         }
       }
       /**
-       * <code>.asgt.type.Dataset dataset = 2;</code>
+       * <code>.asgt.type.Dataset dataset = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> 
@@ -918,15 +684,132 @@ public final class TrainingTask {
         return datasetBuilder_;
       }
 
+      private asgt.type.RevisionOuterClass.Revision revision_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public boolean hasRevision() {
+        return revisionBuilder_ != null || revision_ != null;
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public asgt.type.RevisionOuterClass.Revision getRevision() {
+        if (revisionBuilder_ == null) {
+          return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+        } else {
+          return revisionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
+        if (revisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          revision_ = value;
+          onChanged();
+        } else {
+          revisionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public Builder setRevision(
+          asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
+        if (revisionBuilder_ == null) {
+          revision_ = builderForValue.build();
+          onChanged();
+        } else {
+          revisionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
+        if (revisionBuilder_ == null) {
+          if (revision_ != null) {
+            revision_ =
+              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+          } else {
+            revision_ = value;
+          }
+          onChanged();
+        } else {
+          revisionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public Builder clearRevision() {
+        if (revisionBuilder_ == null) {
+          revision_ = null;
+          onChanged();
+        } else {
+          revision_ = null;
+          revisionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
+        
+        onChanged();
+        return getRevisionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+        if (revisionBuilder_ != null) {
+          return revisionBuilder_.getMessageOrBuilder();
+        } else {
+          return revision_ == null ?
+              asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+        }
+      }
+      /**
+       * <code>.asgt.type.Revision revision = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
+          getRevisionFieldBuilder() {
+        if (revisionBuilder_ == null) {
+          revisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder>(
+                  getRevision(),
+                  getParentForChildren(),
+                  isClean());
+          revision_ = null;
+        }
+        return revisionBuilder_;
+      }
+
       private long modelVersion_ ;
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 4;</code>
        */
       public long getModelVersion() {
         return modelVersion_;
       }
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 4;</code>
        */
       public Builder setModelVersion(long value) {
         
@@ -935,56 +818,11 @@ public final class TrainingTask {
         return this;
       }
       /**
-       * <code>int64 model_version = 3;</code>
+       * <code>int64 model_version = 4;</code>
        */
       public Builder clearModelVersion() {
         
         modelVersion_ = 0L;
-        onChanged();
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-       */
-      public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-       */
-      public Builder setStatusValue(int value) {
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-       */
-      public asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status getStatus() {
-        @SuppressWarnings("deprecation")
-        asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status result = asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.valueOf(status_);
-        return result == null ? asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-       */
-      public Builder setStatus(asgt.modeltrainer.v1alpha1.TrainingTask.TrainModelTask.Status value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.asgt.modeltrainer.v1alpha1.TrainModelTask.Status status = 4;</code>
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
         onChanged();
         return this;
       }
@@ -1057,14 +895,11 @@ public final class TrainingTask {
     java.lang.String[] descriptorData = {
       "\n.asgt/modeltrainer/v1alpha1/training_ta" +
       "sk.proto\022\032asgt.modeltrainer.v1alpha1\032\027as" +
-      "gt/type/dataset.proto\"\351\001\n\016TrainModelTask" +
-      "\022\n\n\002id\030\001 \001(\t\022#\n\007dataset\030\002 \001(\0132\022.asgt.typ" +
-      "e.Dataset\022\025\n\rmodel_version\030\003 \001(\003\022A\n\006stat" +
-      "us\030\004 \001(\01621.asgt.modeltrainer.v1alpha1.Tr" +
-      "ainModelTask.Status\"L\n\006Status\022\013\n\007UNKNOWN" +
-      "\020\000\022\r\n\tSCHEDULED\020\001\022\013\n\007STARTED\020\003\022\r\n\tSUCCEE" +
-      "DED\020\004\022\n\n\006FAILED\020\005B\016Z\014modeltrainerb\006proto" +
-      "3"
+      "gt/type/dataset.proto\032\030asgt/type/revisio" +
+      "n.proto\"s\n\016TrainModelTask\022#\n\007dataset\030\001 \001" +
+      "(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001(\013" +
+      "2\023.asgt.type.Revision\022\025\n\rmodel_version\030\004" +
+      " \001(\003B\016Z\014modeltrainerb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1078,14 +913,16 @@ public final class TrainingTask {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
+          asgt.type.RevisionOuterClass.getDescriptor(),
         }, assigner);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modeltrainer_v1alpha1_TrainModelTask_descriptor,
-        new java.lang.String[] { "Id", "Dataset", "ModelVersion", "Status", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", });
     asgt.type.DatasetOuterClass.getDescriptor();
+    asgt.type.RevisionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

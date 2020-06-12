@@ -30,17 +30,17 @@ namespace Asgt.Type {
             "c2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdv",
             "b2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04Q",
             "ABIMCghWRVJZX0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBIN",
-            "CglWRVJZX0hJR0gQBSLgAQoKUHJlZGljdGlvbhItCgd0YXJnZXRzGAEgAygL",
-            "MhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0GqIBCgZUYXJnZXQSDgoG",
-            "dGFyZ2V0GAEgASgJEjoKCmNhbmRpZGF0ZXMYAiADKAsyJi5hc2d0LnR5cGUu",
-            "UHJlZGljdGlvbi5UYXJnZXQuQ2FuZGlkYXRlGkwKCUNhbmRpZGF0ZRIUCgV2",
-            "YWx1ZRgBIAEoCUIF6j8CCAESKQoKY29uZmlkZW5jZRgCIAEoCzIVLmFzZ3Qu",
-            "dHlwZS5Db25maWRlbmNlQgZaBHR5cGViBnByb3RvMw=="));
+            "CglWRVJZX0hJR0gQBSLeAQoKUHJlZGljdGlvbhItCgd0YXJnZXRzGAEgAygL",
+            "MhwuYXNndC50eXBlLlByZWRpY3Rpb24uVGFyZ2V0GqABCgZUYXJnZXQSDAoE",
+            "bmFtZRgBIAEoCRI6CgpjYW5kaWRhdGVzGAIgAygLMiYuYXNndC50eXBlLlBy",
+            "ZWRpY3Rpb24uVGFyZ2V0LkNhbmRpZGF0ZRpMCglDYW5kaWRhdGUSFAoFdmFs",
+            "dWUYASABKAlCBeo/AggBEikKCmNvbmZpZGVuY2UYAiABKAsyFS5hc2d0LnR5",
+            "cGUuQ29uZmlkZW5jZUIGWgR0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Target_", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
           }));
     }
     #endregion
@@ -383,7 +383,7 @@ namespace Asgt.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public Target(Target other) : this() {
-          target_ = other.target_;
+          name_ = other.name_;
           candidates_ = other.candidates_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -393,14 +393,14 @@ namespace Asgt.Type {
           return new Target(this);
         }
 
-        /// <summary>Field number for the "target" field.</summary>
-        public const int Target_FieldNumber = 1;
-        private string target_ = "";
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public string Target_ {
-          get { return target_; }
+        public string Name {
+          get { return name_; }
           set {
-            target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
           }
         }
 
@@ -427,7 +427,7 @@ namespace Asgt.Type {
           if (ReferenceEquals(other, this)) {
             return true;
           }
-          if (Target_ != other.Target_) return false;
+          if (Name != other.Name) return false;
           if(!candidates_.Equals(other.candidates_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -435,7 +435,7 @@ namespace Asgt.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override int GetHashCode() {
           int hash = 1;
-          if (Target_.Length != 0) hash ^= Target_.GetHashCode();
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
           hash ^= candidates_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -450,9 +450,9 @@ namespace Asgt.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void WriteTo(pb::CodedOutputStream output) {
-          if (Target_.Length != 0) {
+          if (Name.Length != 0) {
             output.WriteRawTag(10);
-            output.WriteString(Target_);
+            output.WriteString(Name);
           }
           candidates_.WriteTo(output, _repeated_candidates_codec);
           if (_unknownFields != null) {
@@ -463,8 +463,8 @@ namespace Asgt.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public int CalculateSize() {
           int size = 0;
-          if (Target_.Length != 0) {
-            size += 1 + pb::CodedOutputStream.ComputeStringSize(Target_);
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
           size += candidates_.CalculateSize(_repeated_candidates_codec);
           if (_unknownFields != null) {
@@ -478,8 +478,8 @@ namespace Asgt.Type {
           if (other == null) {
             return;
           }
-          if (other.Target_.Length != 0) {
-            Target_ = other.Target_;
+          if (other.Name.Length != 0) {
+            Name = other.Name;
           }
           candidates_.Add(other.candidates_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -494,7 +494,7 @@ namespace Asgt.Type {
                 _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                 break;
               case 10: {
-                Target_ = input.ReadString();
+                Name = input.ReadString();
                 break;
               }
               case 18: {

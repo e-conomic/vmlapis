@@ -5,17 +5,10 @@ package asgt.modeltrainer.v1alpha1;
 option go_package = "modeltrainer";
 
 import "asgt/type/dataset.proto";
+import "asgt/type/revision.proto";
 
 message TrainModelTask {
-  enum Status {
-    UNKNOWN = 0;
-    SCHEDULED = 1;
-    STARTED = 3;
-    SUCCEEDED = 4;
-    FAILED = 5;
-  }
-  string id = 1;
-  asgt.type.Dataset dataset = 2;
-  int64 model_version = 3;
-  Status status = 4;
+  asgt.type.Dataset dataset = 1;
+  asgt.type.Revision revision = 2;
+  int64 model_version = 4;
 }

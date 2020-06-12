@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1alpha1;
+
+option go_package = "data";
+
+import "gen_bq_schema/bq_field.proto";
+import "gen_bq_schema/bq_table.proto";
+import "google/api/annotations.proto";
+import "asgt/type/data.proto";
+import "asgt/type/model.proto";
+import "asgt/type/prediction.proto";
+import "asgt/type/target_value.proto";
+
+// BQ schema gen - could be used for adding direct developer data endpoints
+message Entry {
+  option (gen_bq_schema.bigquery_opts).table_name = "sample_data";
+  string id = 1 [(gen_bq_schema.bigquery).description = "ID, matches Envoy request id if feedback data"];
+  string consumer = 2 [(gen_bq_schema.bigquery).require = true];
+  string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
+  string dataset_type = 12 [(gen_bq_schema.bigquery).require = true];
+  string dataset_id = 11 [(gen_bq_schema.bigquery) = {require: true, description: "unique ID of dataset"}];
+  repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
+  asgt.type.Data data = 5;
+  repeated asgt.type.TargetValue target_values = 6;
+  asgt.type.Model model = 9;
+  repeated asgt.type.Prediction.Target prediction = 10;
+  uint64 time_added = 8 [(gen_bq_schema.bigquery) = {require: true, type_override: 'TIMESTAMP'}];
+}

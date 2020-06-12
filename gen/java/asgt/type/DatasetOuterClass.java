@@ -127,7 +127,7 @@ public final class DatasetOuterClass {
 
     /**
      * <pre>
-     * Number of entries in the dataset reflecting added entries that meet the retention policy
+     * Number of samples in the dataset reflecting added entries that meet the retention policy
      * </pre>
      *
      * <code>int64 size = 12;</code>
@@ -525,7 +525,7 @@ public final class DatasetOuterClass {
     private long size_;
     /**
      * <pre>
-     * Number of entries in the dataset reflecting added entries that meet the retention policy
+     * Number of samples in the dataset reflecting added entries that meet the retention policy
      * </pre>
      *
      * <code>int64 size = 12;</code>
@@ -1800,7 +1800,7 @@ public final class DatasetOuterClass {
       private long size_ ;
       /**
        * <pre>
-       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
        * <code>int64 size = 12;</code>
@@ -1810,7 +1810,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <pre>
-       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
        * <code>int64 size = 12;</code>
@@ -1823,7 +1823,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <pre>
-       * Number of entries in the dataset reflecting added entries that meet the retention policy
+       * Number of samples in the dataset reflecting added entries that meet the retention policy
        * </pre>
        *
        * <code>int64 size = 12;</code>

@@ -24,38 +24,12 @@ goog.exportSymbol('proto.asgt.type.RetentionPolicy', null, global);
  * @constructor
  */
 proto.asgt.type.RetentionPolicy = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.asgt.type.RetentionPolicy.oneofGroups_);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.asgt.type.RetentionPolicy, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.type.RetentionPolicy.displayName = 'proto.asgt.type.RetentionPolicy';
 }
-/**
- * Oneof group definitions for this message. Each group defines the field
- * numbers belonging to that group. When of these fields' value is set, all
- * other fields in the group are cleared. During deserialization, if multiple
- * fields are encountered for a group, only the last value seen will be kept.
- * @private {!Array<!Array<number>>}
- * @const
- */
-proto.asgt.type.RetentionPolicy.oneofGroups_ = [[1,2]];
-
-/**
- * @enum {number}
- */
-proto.asgt.type.RetentionPolicy.PolicyCase = {
-  POLICY_NOT_SET: 0,
-  MAX_DAYS: 1,
-  MAX_RECORDS: 2
-};
-
-/**
- * @return {proto.asgt.type.RetentionPolicy.PolicyCase}
- */
-proto.asgt.type.RetentionPolicy.prototype.getPolicyCase = function() {
-  return /** @type {proto.asgt.type.RetentionPolicy.PolicyCase} */(jspb.Message.computeOneofCase(this, proto.asgt.type.RetentionPolicy.oneofGroups_[0]));
-};
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -85,8 +59,7 @@ proto.asgt.type.RetentionPolicy.prototype.toObject = function(opt_includeInstanc
  */
 proto.asgt.type.RetentionPolicy.toObject = function(includeInstance, msg) {
   var f, obj = {
-    maxDays: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    maxRecords: jspb.Message.getFieldWithDefault(msg, 2, 0)
+    maxDays: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
 
   if (includeInstance) {
@@ -127,10 +100,6 @@ proto.asgt.type.RetentionPolicy.deserializeBinaryFromReader = function(msg, read
       var value = /** @type {number} */ (reader.readInt64());
       msg.setMaxDays(value);
       break;
-    case 2:
-      var value = /** @type {number} */ (reader.readInt64());
-      msg.setMaxRecords(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -160,17 +129,10 @@ proto.asgt.type.RetentionPolicy.prototype.serializeBinary = function() {
  */
 proto.asgt.type.RetentionPolicy.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = /** @type {number} */ (jspb.Message.getField(message, 1));
-  if (f != null) {
+  f = message.getMaxDays();
+  if (f !== 0) {
     writer.writeInt64(
       1,
-      f
-    );
-  }
-  f = /** @type {number} */ (jspb.Message.getField(message, 2));
-  if (f != null) {
-    writer.writeInt64(
-      2,
       f
     );
   }
@@ -188,50 +150,7 @@ proto.asgt.type.RetentionPolicy.prototype.getMaxDays = function() {
 
 /** @param {number} value */
 proto.asgt.type.RetentionPolicy.prototype.setMaxDays = function(value) {
-  jspb.Message.setOneofField(this, 1, proto.asgt.type.RetentionPolicy.oneofGroups_[0], value);
-};
-
-
-proto.asgt.type.RetentionPolicy.prototype.clearMaxDays = function() {
-  jspb.Message.setOneofField(this, 1, proto.asgt.type.RetentionPolicy.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.type.RetentionPolicy.prototype.hasMaxDays = function() {
-  return jspb.Message.getField(this, 1) != null;
-};
-
-
-/**
- * optional int64 max_records = 2;
- * @return {number}
- */
-proto.asgt.type.RetentionPolicy.prototype.getMaxRecords = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.type.RetentionPolicy.prototype.setMaxRecords = function(value) {
-  jspb.Message.setOneofField(this, 2, proto.asgt.type.RetentionPolicy.oneofGroups_[0], value);
-};
-
-
-proto.asgt.type.RetentionPolicy.prototype.clearMaxRecords = function() {
-  jspb.Message.setOneofField(this, 2, proto.asgt.type.RetentionPolicy.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.type.RetentionPolicy.prototype.hasMaxRecords = function() {
-  return jspb.Message.getField(this, 2) != null;
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 

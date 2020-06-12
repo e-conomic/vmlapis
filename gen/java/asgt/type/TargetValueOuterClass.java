@@ -19,14 +19,14 @@ public final class TargetValueOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string target = 1;</code>
+     * <code>string name = 1;</code>
      */
-    java.lang.String getTarget();
+    java.lang.String getName();
     /**
-     * <code>string target = 1;</code>
+     * <code>string name = 1;</code>
      */
     com.google.protobuf.ByteString
-        getTargetBytes();
+        getNameBytes();
 
     /**
      * <code>string value = 2;</code>
@@ -55,7 +55,7 @@ public final class TargetValueOuterClass {
       super(builder);
     }
     private TargetValue() {
-      target_ = "";
+      name_ = "";
       value_ = "";
     }
 
@@ -86,7 +86,7 @@ public final class TargetValueOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              target_ = s;
+              name_ = s;
               break;
             }
             case 18: {
@@ -127,34 +127,34 @@ public final class TargetValueOuterClass {
               asgt.type.TargetValueOuterClass.TargetValue.class, asgt.type.TargetValueOuterClass.TargetValue.Builder.class);
     }
 
-    public static final int TARGET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object target_;
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
     /**
-     * <code>string target = 1;</code>
+     * <code>string name = 1;</code>
      */
-    public java.lang.String getTarget() {
-      java.lang.Object ref = target_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        target_ = s;
+        name_ = s;
         return s;
       }
     }
     /**
-     * <code>string target = 1;</code>
+     * <code>string name = 1;</code>
      */
     public com.google.protobuf.ByteString
-        getTargetBytes() {
-      java.lang.Object ref = target_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        target_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -209,8 +209,8 @@ public final class TargetValueOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getTargetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (!getValueBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, value_);
@@ -224,8 +224,8 @@ public final class TargetValueOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getTargetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, target_);
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
       }
       if (!getValueBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, value_);
@@ -246,8 +246,8 @@ public final class TargetValueOuterClass {
       asgt.type.TargetValueOuterClass.TargetValue other = (asgt.type.TargetValueOuterClass.TargetValue) obj;
 
       boolean result = true;
-      result = result && getTarget()
-          .equals(other.getTarget());
+      result = result && getName()
+          .equals(other.getName());
       result = result && getValue()
           .equals(other.getValue());
       result = result && unknownFields.equals(other.unknownFields);
@@ -261,8 +261,8 @@ public final class TargetValueOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TARGET_FIELD_NUMBER;
-      hash = (53 * hash) + getTarget().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
       hash = (37 * hash) + VALUE_FIELD_NUMBER;
       hash = (53 * hash) + getValue().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
@@ -402,7 +402,7 @@ public final class TargetValueOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        target_ = "";
+        name_ = "";
 
         value_ = "";
 
@@ -432,7 +432,7 @@ public final class TargetValueOuterClass {
       @java.lang.Override
       public asgt.type.TargetValueOuterClass.TargetValue buildPartial() {
         asgt.type.TargetValueOuterClass.TargetValue result = new asgt.type.TargetValueOuterClass.TargetValue(this);
-        result.target_ = target_;
+        result.name_ = name_;
         result.value_ = value_;
         onBuilt();
         return result;
@@ -482,8 +482,8 @@ public final class TargetValueOuterClass {
 
       public Builder mergeFrom(asgt.type.TargetValueOuterClass.TargetValue other) {
         if (other == asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance()) return this;
-        if (!other.getTarget().isEmpty()) {
-          target_ = other.target_;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
           onChanged();
         }
         if (!other.getValue().isEmpty()) {
@@ -519,71 +519,71 @@ public final class TargetValueOuterClass {
         return this;
       }
 
-      private java.lang.Object target_ = "";
+      private java.lang.Object name_ = "";
       /**
-       * <code>string target = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public java.lang.String getTarget() {
-        java.lang.Object ref = target_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          target_ = s;
+          name_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string name = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getTargetBytes() {
-        java.lang.Object ref = target_;
+          getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          target_ = b;
+          name_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setTarget(
+      public Builder setName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        target_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder clearTarget() {
+      public Builder clearName() {
         
-        target_ = getDefaultInstance().getTarget();
+        name_ = getDefaultInstance().getName();
         onChanged();
         return this;
       }
       /**
-       * <code>string target = 1;</code>
+       * <code>string name = 1;</code>
        */
-      public Builder setTargetBytes(
+      public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        target_ = value;
+        name_ = value;
         onChanged();
         return this;
       }
@@ -724,8 +724,8 @@ public final class TargetValueOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\034asgt/type/target_value.proto\022\tasgt.typ" +
-      "e\",\n\013TargetValue\022\016\n\006target\030\001 \001(\t\022\r\n\005valu" +
-      "e\030\002 \001(\tB\006Z\004typeb\006proto3"
+      "e\"*\n\013TargetValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\tB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -744,7 +744,7 @@ public final class TargetValueOuterClass {
     internal_static_asgt_type_TargetValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_TargetValue_descriptor,
-        new java.lang.String[] { "Target", "Value", });
+        new java.lang.String[] { "Name", "Value", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

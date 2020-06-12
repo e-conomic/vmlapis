@@ -26,20 +26,19 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type RegisterModelRequest struct {
-	Consumer             string   `protobuf:"bytes,3,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	ModelType            string   `protobuf:"bytes,1,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
-	ModelVersion         int64    `protobuf:"varint,2,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
-	DatasetName          string   `protobuf:"bytes,4,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
+	Dataset              *_type.Dataset  `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	Revision             *_type.Revision `protobuf:"bytes,2,opt,name=revision,proto3" json:"revision,omitempty"`
+	ModelVersion         int64           `protobuf:"varint,3,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}        `json:"-"`
+	XXX_unrecognized     []byte          `json:"-"`
+	XXX_sizecache        int32           `json:"-"`
 }
 
 func (m *RegisterModelRequest) Reset()         { *m = RegisterModelRequest{} }
 func (m *RegisterModelRequest) String() string { return proto.CompactTextString(m) }
 func (*RegisterModelRequest) ProtoMessage()    {}
 func (*RegisterModelRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{0}
+	return fileDescriptor_model_registry_33c1ee7a5d04852c, []int{0}
 }
 func (m *RegisterModelRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_RegisterModelRequest.Unmarshal(m, b)
@@ -59,18 +58,18 @@ func (m *RegisterModelRequest) XXX_DiscardUnknown() {
 
 var xxx_messageInfo_RegisterModelRequest proto.InternalMessageInfo
 
-func (m *RegisterModelRequest) GetConsumer() string {
+func (m *RegisterModelRequest) GetDataset() *_type.Dataset {
 	if m != nil {
-		return m.Consumer
+		return m.Dataset
 	}
-	return ""
+	return nil
 }
 
-func (m *RegisterModelRequest) GetModelType() string {
+func (m *RegisterModelRequest) GetRevision() *_type.Revision {
 	if m != nil {
-		return m.ModelType
+		return m.Revision
 	}
-	return ""
+	return nil
 }
 
 func (m *RegisterModelRequest) GetModelVersion() int64 {
@@ -80,254 +79,86 @@ func (m *RegisterModelRequest) GetModelVersion() int64 {
 	return 0
 }
 
-func (m *RegisterModelRequest) GetDatasetName() string {
+type GetCurrentModelRequest struct {
+	Dataset              *_type.Dataset `protobuf:"bytes,1,opt,name=dataset,proto3" json:"dataset,omitempty"`
+	XXX_NoUnkeyedLiteral struct{}       `json:"-"`
+	XXX_unrecognized     []byte         `json:"-"`
+	XXX_sizecache        int32          `json:"-"`
+}
+
+func (m *GetCurrentModelRequest) Reset()         { *m = GetCurrentModelRequest{} }
+func (m *GetCurrentModelRequest) String() string { return proto.CompactTextString(m) }
+func (*GetCurrentModelRequest) ProtoMessage()    {}
+func (*GetCurrentModelRequest) Descriptor() ([]byte, []int) {
+	return fileDescriptor_model_registry_33c1ee7a5d04852c, []int{1}
+}
+func (m *GetCurrentModelRequest) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetCurrentModelRequest.Unmarshal(m, b)
+}
+func (m *GetCurrentModelRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetCurrentModelRequest.Marshal(b, m, deterministic)
+}
+func (dst *GetCurrentModelRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetCurrentModelRequest.Merge(dst, src)
+}
+func (m *GetCurrentModelRequest) XXX_Size() int {
+	return xxx_messageInfo_GetCurrentModelRequest.Size(m)
+}
+func (m *GetCurrentModelRequest) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetCurrentModelRequest.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_GetCurrentModelRequest proto.InternalMessageInfo
+
+func (m *GetCurrentModelRequest) GetDataset() *_type.Dataset {
 	if m != nil {
-		return m.DatasetName
-	}
-	return ""
-}
-
-type RegisterModelResponse struct {
-	ShardName            string   `protobuf:"bytes,1,opt,name=shard_name,json=shardName,proto3" json:"shard_name,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *RegisterModelResponse) Reset()         { *m = RegisterModelResponse{} }
-func (m *RegisterModelResponse) String() string { return proto.CompactTextString(m) }
-func (*RegisterModelResponse) ProtoMessage()    {}
-func (*RegisterModelResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{1}
-}
-func (m *RegisterModelResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RegisterModelResponse.Unmarshal(m, b)
-}
-func (m *RegisterModelResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RegisterModelResponse.Marshal(b, m, deterministic)
-}
-func (dst *RegisterModelResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegisterModelResponse.Merge(dst, src)
-}
-func (m *RegisterModelResponse) XXX_Size() int {
-	return xxx_messageInfo_RegisterModelResponse.Size(m)
-}
-func (m *RegisterModelResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegisterModelResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_RegisterModelResponse proto.InternalMessageInfo
-
-func (m *RegisterModelResponse) GetShardName() string {
-	if m != nil {
-		return m.ShardName
-	}
-	return ""
-}
-
-type DeleteModelRequest struct {
-	ModelType            string   `protobuf:"bytes,2,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
-	ModelVersion         int64    `protobuf:"varint,3,opt,name=model_version,json=modelVersion,proto3" json:"model_version,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *DeleteModelRequest) Reset()         { *m = DeleteModelRequest{} }
-func (m *DeleteModelRequest) String() string { return proto.CompactTextString(m) }
-func (*DeleteModelRequest) ProtoMessage()    {}
-func (*DeleteModelRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{2}
-}
-func (m *DeleteModelRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DeleteModelRequest.Unmarshal(m, b)
-}
-func (m *DeleteModelRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DeleteModelRequest.Marshal(b, m, deterministic)
-}
-func (dst *DeleteModelRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DeleteModelRequest.Merge(dst, src)
-}
-func (m *DeleteModelRequest) XXX_Size() int {
-	return xxx_messageInfo_DeleteModelRequest.Size(m)
-}
-func (m *DeleteModelRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_DeleteModelRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_DeleteModelRequest proto.InternalMessageInfo
-
-func (m *DeleteModelRequest) GetModelType() string {
-	if m != nil {
-		return m.ModelType
-	}
-	return ""
-}
-
-func (m *DeleteModelRequest) GetModelVersion() int64 {
-	if m != nil {
-		return m.ModelVersion
-	}
-	return 0
-}
-
-type GetLatestModelVersionsRequest struct {
-	Consumer             string   `protobuf:"bytes,1,opt,name=consumer,proto3" json:"consumer,omitempty"`
-	DatasetName          string   `protobuf:"bytes,2,opt,name=dataset_name,json=datasetName,proto3" json:"dataset_name,omitempty"`
-	ModelType            string   `protobuf:"bytes,3,opt,name=model_type,json=modelType,proto3" json:"model_type,omitempty"`
-	MaxResults           int32    `protobuf:"varint,4,opt,name=max_results,json=maxResults,proto3" json:"max_results,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
-
-func (m *GetLatestModelVersionsRequest) Reset()         { *m = GetLatestModelVersionsRequest{} }
-func (m *GetLatestModelVersionsRequest) String() string { return proto.CompactTextString(m) }
-func (*GetLatestModelVersionsRequest) ProtoMessage()    {}
-func (*GetLatestModelVersionsRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{3}
-}
-func (m *GetLatestModelVersionsRequest) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetLatestModelVersionsRequest.Unmarshal(m, b)
-}
-func (m *GetLatestModelVersionsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetLatestModelVersionsRequest.Marshal(b, m, deterministic)
-}
-func (dst *GetLatestModelVersionsRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetLatestModelVersionsRequest.Merge(dst, src)
-}
-func (m *GetLatestModelVersionsRequest) XXX_Size() int {
-	return xxx_messageInfo_GetLatestModelVersionsRequest.Size(m)
-}
-func (m *GetLatestModelVersionsRequest) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetLatestModelVersionsRequest.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_GetLatestModelVersionsRequest proto.InternalMessageInfo
-
-func (m *GetLatestModelVersionsRequest) GetConsumer() string {
-	if m != nil {
-		return m.Consumer
-	}
-	return ""
-}
-
-func (m *GetLatestModelVersionsRequest) GetDatasetName() string {
-	if m != nil {
-		return m.DatasetName
-	}
-	return ""
-}
-
-func (m *GetLatestModelVersionsRequest) GetModelType() string {
-	if m != nil {
-		return m.ModelType
-	}
-	return ""
-}
-
-func (m *GetLatestModelVersionsRequest) GetMaxResults() int32 {
-	if m != nil {
-		return m.MaxResults
-	}
-	return 0
-}
-
-type GetLatestModelVersionsResponse struct {
-	Results              []*GetLatestModelVersionsResponse_VersionInfo `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
-	XXX_NoUnkeyedLiteral struct{}                                      `json:"-"`
-	XXX_unrecognized     []byte                                        `json:"-"`
-	XXX_sizecache        int32                                         `json:"-"`
-}
-
-func (m *GetLatestModelVersionsResponse) Reset()         { *m = GetLatestModelVersionsResponse{} }
-func (m *GetLatestModelVersionsResponse) String() string { return proto.CompactTextString(m) }
-func (*GetLatestModelVersionsResponse) ProtoMessage()    {}
-func (*GetLatestModelVersionsResponse) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{4}
-}
-func (m *GetLatestModelVersionsResponse) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetLatestModelVersionsResponse.Unmarshal(m, b)
-}
-func (m *GetLatestModelVersionsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetLatestModelVersionsResponse.Marshal(b, m, deterministic)
-}
-func (dst *GetLatestModelVersionsResponse) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetLatestModelVersionsResponse.Merge(dst, src)
-}
-func (m *GetLatestModelVersionsResponse) XXX_Size() int {
-	return xxx_messageInfo_GetLatestModelVersionsResponse.Size(m)
-}
-func (m *GetLatestModelVersionsResponse) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetLatestModelVersionsResponse.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_GetLatestModelVersionsResponse proto.InternalMessageInfo
-
-func (m *GetLatestModelVersionsResponse) GetResults() []*GetLatestModelVersionsResponse_VersionInfo {
-	if m != nil {
-		return m.Results
+		return m.Dataset
 	}
 	return nil
 }
 
-type GetLatestModelVersionsResponse_VersionInfo struct {
+type GetCurrentModelResponse struct {
 	Model                *_type.Model `protobuf:"bytes,1,opt,name=model,proto3" json:"model,omitempty"`
-	ShardName            string       `protobuf:"bytes,2,opt,name=shard_name,json=shardName,proto3" json:"shard_name,omitempty"`
 	XXX_NoUnkeyedLiteral struct{}     `json:"-"`
 	XXX_unrecognized     []byte       `json:"-"`
 	XXX_sizecache        int32        `json:"-"`
 }
 
-func (m *GetLatestModelVersionsResponse_VersionInfo) Reset() {
-	*m = GetLatestModelVersionsResponse_VersionInfo{}
+func (m *GetCurrentModelResponse) Reset()         { *m = GetCurrentModelResponse{} }
+func (m *GetCurrentModelResponse) String() string { return proto.CompactTextString(m) }
+func (*GetCurrentModelResponse) ProtoMessage()    {}
+func (*GetCurrentModelResponse) Descriptor() ([]byte, []int) {
+	return fileDescriptor_model_registry_33c1ee7a5d04852c, []int{2}
 }
-func (m *GetLatestModelVersionsResponse_VersionInfo) String() string {
-	return proto.CompactTextString(m)
+func (m *GetCurrentModelResponse) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_GetCurrentModelResponse.Unmarshal(m, b)
 }
-func (*GetLatestModelVersionsResponse_VersionInfo) ProtoMessage() {}
-func (*GetLatestModelVersionsResponse_VersionInfo) Descriptor() ([]byte, []int) {
-	return fileDescriptor_model_registry_39d4d54e6096e170, []int{4, 0}
+func (m *GetCurrentModelResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_GetCurrentModelResponse.Marshal(b, m, deterministic)
 }
-func (m *GetLatestModelVersionsResponse_VersionInfo) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo.Unmarshal(m, b)
+func (dst *GetCurrentModelResponse) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetCurrentModelResponse.Merge(dst, src)
 }
-func (m *GetLatestModelVersionsResponse_VersionInfo) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo.Marshal(b, m, deterministic)
+func (m *GetCurrentModelResponse) XXX_Size() int {
+	return xxx_messageInfo_GetCurrentModelResponse.Size(m)
 }
-func (dst *GetLatestModelVersionsResponse_VersionInfo) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo.Merge(dst, src)
-}
-func (m *GetLatestModelVersionsResponse_VersionInfo) XXX_Size() int {
-	return xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo.Size(m)
-}
-func (m *GetLatestModelVersionsResponse_VersionInfo) XXX_DiscardUnknown() {
-	xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo.DiscardUnknown(m)
+func (m *GetCurrentModelResponse) XXX_DiscardUnknown() {
+	xxx_messageInfo_GetCurrentModelResponse.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_GetLatestModelVersionsResponse_VersionInfo proto.InternalMessageInfo
+var xxx_messageInfo_GetCurrentModelResponse proto.InternalMessageInfo
 
-func (m *GetLatestModelVersionsResponse_VersionInfo) GetModel() *_type.Model {
+func (m *GetCurrentModelResponse) GetModel() *_type.Model {
 	if m != nil {
 		return m.Model
 	}
 	return nil
 }
 
-func (m *GetLatestModelVersionsResponse_VersionInfo) GetShardName() string {
-	if m != nil {
-		return m.ShardName
-	}
-	return ""
-}
-
 func init() {
 	proto.RegisterType((*RegisterModelRequest)(nil), "asgt.modelregistry.v1alpha1.RegisterModelRequest")
-	proto.RegisterType((*RegisterModelResponse)(nil), "asgt.modelregistry.v1alpha1.RegisterModelResponse")
-	proto.RegisterType((*DeleteModelRequest)(nil), "asgt.modelregistry.v1alpha1.DeleteModelRequest")
-	proto.RegisterType((*GetLatestModelVersionsRequest)(nil), "asgt.modelregistry.v1alpha1.GetLatestModelVersionsRequest")
-	proto.RegisterType((*GetLatestModelVersionsResponse)(nil), "asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse")
-	proto.RegisterType((*GetLatestModelVersionsResponse_VersionInfo)(nil), "asgt.modelregistry.v1alpha1.GetLatestModelVersionsResponse.VersionInfo")
+	proto.RegisterType((*GetCurrentModelRequest)(nil), "asgt.modelregistry.v1alpha1.GetCurrentModelRequest")
+	proto.RegisterType((*GetCurrentModelResponse)(nil), "asgt.modelregistry.v1alpha1.GetCurrentModelResponse")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -342,10 +173,8 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type ModelRegistryClient interface {
-	RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*RegisterModelResponse, error)
-	DeleteModel(ctx context.Context, in *DeleteModelRequest, opts ...grpc.CallOption) (*empty.Empty, error)
-	// List the most recent versions of a model trained with a specified dataset
-	GetLatestModelVersions(ctx context.Context, in *GetLatestModelVersionsRequest, opts ...grpc.CallOption) (*GetLatestModelVersionsResponse, error)
+	RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error)
 }
 
 type modelRegistryClient struct {
@@ -356,8 +185,8 @@ func NewModelRegistryClient(cc *grpc.ClientConn) ModelRegistryClient {
 	return &modelRegistryClient{cc}
 }
 
-func (c *modelRegistryClient) RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*RegisterModelResponse, error) {
-	out := new(RegisterModelResponse)
+func (c *modelRegistryClient) RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
 	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -365,18 +194,9 @@ func (c *modelRegistryClient) RegisterModel(ctx context.Context, in *RegisterMod
 	return out, nil
 }
 
-func (c *modelRegistryClient) DeleteModel(ctx context.Context, in *DeleteModelRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
-	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-func (c *modelRegistryClient) GetLatestModelVersions(ctx context.Context, in *GetLatestModelVersionsRequest, opts ...grpc.CallOption) (*GetLatestModelVersionsResponse, error) {
-	out := new(GetLatestModelVersionsResponse)
-	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions", in, out, opts...)
+func (c *modelRegistryClient) GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error) {
+	out := new(GetCurrentModelResponse)
+	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -385,10 +205,8 @@ func (c *modelRegistryClient) GetLatestModelVersions(ctx context.Context, in *Ge
 
 // ModelRegistryServer is the server API for ModelRegistry service.
 type ModelRegistryServer interface {
-	RegisterModel(context.Context, *RegisterModelRequest) (*RegisterModelResponse, error)
-	DeleteModel(context.Context, *DeleteModelRequest) (*empty.Empty, error)
-	// List the most recent versions of a model trained with a specified dataset
-	GetLatestModelVersions(context.Context, *GetLatestModelVersionsRequest) (*GetLatestModelVersionsResponse, error)
+	RegisterModel(context.Context, *RegisterModelRequest) (*empty.Empty, error)
+	GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error)
 }
 
 func RegisterModelRegistryServer(s *grpc.Server, srv ModelRegistryServer) {
@@ -413,38 +231,20 @@ func _ModelRegistry_RegisterModel_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ModelRegistry_DeleteModel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DeleteModelRequest)
+func _ModelRegistry_GetCurrentModel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetCurrentModelRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(ModelRegistryServer).DeleteModel(ctx, in)
+		return srv.(ModelRegistryServer).GetCurrentModel(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/asgt.modelregistry.v1alpha1.ModelRegistry/DeleteModel",
+		FullMethod: "/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ModelRegistryServer).DeleteModel(ctx, req.(*DeleteModelRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-func _ModelRegistry_GetLatestModelVersions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(GetLatestModelVersionsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ModelRegistryServer).GetLatestModelVersions(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/asgt.modelregistry.v1alpha1.ModelRegistry/GetLatestModelVersions",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ModelRegistryServer).GetLatestModelVersions(ctx, req.(*GetLatestModelVersionsRequest))
+		return srv.(ModelRegistryServer).GetCurrentModel(ctx, req.(*GetCurrentModelRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -458,12 +258,8 @@ var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 			Handler:    _ModelRegistry_RegisterModel_Handler,
 		},
 		{
-			MethodName: "DeleteModel",
-			Handler:    _ModelRegistry_DeleteModel_Handler,
-		},
-		{
-			MethodName: "GetLatestModelVersions",
-			Handler:    _ModelRegistry_GetLatestModelVersions_Handler,
+			MethodName: "GetCurrentModel",
+			Handler:    _ModelRegistry_GetCurrentModel_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
@@ -471,38 +267,30 @@ var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 }
 
 func init() {
-	proto.RegisterFile("asgt/modelregistry/v1alpha1/model_registry.proto", fileDescriptor_model_registry_39d4d54e6096e170)
+	proto.RegisterFile("asgt/modelregistry/v1alpha1/model_registry.proto", fileDescriptor_model_registry_33c1ee7a5d04852c)
 }
 
-var fileDescriptor_model_registry_39d4d54e6096e170 = []byte{
-	// 462 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x53, 0xd1, 0x6a, 0xd4, 0x40,
-	0x14, 0x65, 0x12, 0xab, 0xf6, 0xa6, 0x41, 0x19, 0x6c, 0x09, 0x29, 0xd5, 0x35, 0x82, 0xec, 0xd3,
-	0xc4, 0x8d, 0xe0, 0x83, 0xbe, 0x89, 0x52, 0x04, 0xeb, 0x43, 0x28, 0x45, 0x7c, 0x59, 0xa6, 0xee,
-	0x6d, 0x5a, 0x48, 0x32, 0x71, 0x66, 0xb2, 0x74, 0x3f, 0xc3, 0x47, 0x5f, 0xfc, 0x2f, 0xbf, 0xc3,
-	0x1f, 0x90, 0xcc, 0x24, 0xb2, 0xc9, 0xae, 0x11, 0xed, 0xe3, 0x9c, 0xcb, 0x39, 0xf7, 0xdc, 0x73,
-	0xef, 0xc0, 0x33, 0xae, 0x32, 0x1d, 0x17, 0x62, 0x81, 0xb9, 0xc4, 0xec, 0x4a, 0x69, 0xb9, 0x8a,
-	0x97, 0x33, 0x9e, 0x57, 0x97, 0x7c, 0x66, 0xe1, 0x79, 0x87, 0xb3, 0x4a, 0x0a, 0x2d, 0xe8, 0x61,
-	0xc3, 0x60, 0x3d, 0x06, 0xeb, 0x18, 0xe1, 0xbe, 0x91, 0xd3, 0xab, 0x0a, 0x2d, 0xd9, 0x72, 0xc2,
-	0xc3, 0x4c, 0x88, 0x2c, 0xc7, 0xd8, 0xbc, 0xce, 0xeb, 0x8b, 0x18, 0x8b, 0x4a, 0xb7, 0x82, 0xd1,
-	0x37, 0x02, 0x0f, 0x52, 0xa3, 0x84, 0xf2, 0xa4, 0x21, 0xa5, 0xf8, 0xa5, 0x46, 0xa5, 0x69, 0x08,
-	0x77, 0x3f, 0x8b, 0x52, 0xd5, 0x05, 0xca, 0xc0, 0x9d, 0x90, 0xe9, 0x6e, 0xfa, 0xfb, 0x4d, 0x8f,
-	0x00, 0xac, 0xbb, 0xa6, 0x57, 0x40, 0x4c, 0x75, 0xd7, 0x20, 0xa7, 0xab, 0x0a, 0xe9, 0x13, 0xf0,
-	0x6d, 0x79, 0x89, 0x52, 0x5d, 0x89, 0x32, 0x70, 0x26, 0x64, 0xea, 0xa6, 0x7b, 0x06, 0x3c, 0xb3,
-	0x18, 0x7d, 0x0c, 0x7b, 0x0b, 0xae, 0xb9, 0x42, 0x3d, 0x2f, 0x79, 0x81, 0xc1, 0x2d, 0xa3, 0xe2,
-	0xb5, 0xd8, 0x07, 0x5e, 0x60, 0xf4, 0x02, 0xf6, 0x07, 0xd6, 0x54, 0x25, 0x4a, 0x85, 0x4d, 0x7f,
-	0x75, 0xc9, 0xe5, 0xc2, 0x32, 0xdb, 0xfe, 0x06, 0x31, 0xbc, 0x8f, 0x40, 0xdf, 0x60, 0x8e, 0x1a,
-	0x7b, 0x03, 0xf5, 0x4d, 0x3b, 0x7f, 0x35, 0xed, 0x6e, 0x9a, 0x8e, 0xbe, 0x13, 0x38, 0x3a, 0x46,
-	0xfd, 0x9e, 0x6b, 0x54, 0xfa, 0x64, 0xad, 0xa2, 0xb6, 0xc5, 0x46, 0x06, 0xb1, 0x0d, 0x47, 0x76,
-	0x36, 0x46, 0x1e, 0x98, 0x74, 0x87, 0x26, 0x1f, 0x81, 0x57, 0xf0, 0xeb, 0xb9, 0x44, 0x55, 0xe7,
-	0x5a, 0x99, 0xcc, 0x76, 0x52, 0x28, 0xf8, 0x75, 0x6a, 0x91, 0xe8, 0x07, 0x81, 0x87, 0x7f, 0x32,
-	0xd8, 0x86, 0xc7, 0xe1, 0x4e, 0xc7, 0x27, 0x13, 0x77, 0xea, 0x25, 0xc7, 0x6c, 0xe4, 0xa8, 0xd8,
-	0xb8, 0x1a, 0x6b, 0x81, 0x77, 0xe5, 0x85, 0x48, 0x3b, 0xdd, 0xf0, 0x14, 0xbc, 0x35, 0x9c, 0x3e,
-	0x85, 0x1d, 0x23, 0x6e, 0x02, 0xf1, 0x92, 0xfb, 0xb6, 0x5f, 0x33, 0x21, 0xb3, 0x1b, 0xb2, 0xe5,
-	0xc1, 0x5a, 0x9d, 0xc1, 0x5a, 0x93, 0x9f, 0x0e, 0xf8, 0xed, 0x46, 0xad, 0x49, 0xba, 0x04, 0xbf,
-	0x77, 0x20, 0x74, 0x36, 0x3a, 0xca, 0xb6, 0x3b, 0x0f, 0x93, 0x7f, 0xa1, 0xb4, 0x11, 0x9e, 0x81,
-	0xb7, 0x76, 0x60, 0x34, 0x1e, 0x95, 0xd8, 0x3c, 0xc5, 0xf0, 0x80, 0xd9, 0x2f, 0xc9, 0xba, 0x2f,
-	0xc9, 0xde, 0x36, 0x5f, 0x92, 0x7e, 0x25, 0x70, 0xb0, 0x3d, 0x6f, 0xfa, 0xf2, 0xbf, 0x96, 0x64,
-	0xdb, 0xbd, 0xba, 0xc1, 0x82, 0x5f, 0xdf, 0xfb, 0xe4, 0xf7, 0x88, 0xe7, 0xb7, 0x8d, 0xe9, 0xe7,
-	0xbf, 0x02, 0x00, 0x00, 0xff, 0xff, 0xb6, 0xf1, 0x96, 0xde, 0xbd, 0x04, 0x00, 0x00,
+var fileDescriptor_model_registry_33c1ee7a5d04852c = []byte{
+	// 326 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x51, 0x4d, 0x4b, 0xc3, 0x40,
+	0x10, 0x25, 0x16, 0x3f, 0x18, 0x0d, 0x95, 0x55, 0xdb, 0x92, 0x5e, 0x4a, 0x05, 0xe9, 0x41, 0x76,
+	0x6d, 0xeb, 0x1f, 0xf0, 0xfb, 0xe4, 0x65, 0x0f, 0x1e, 0x7a, 0x91, 0x94, 0x8e, 0x31, 0x90, 0x66,
+	0xe3, 0xee, 0x26, 0x50, 0xf0, 0x97, 0xf8, 0x0f, 0xfd, 0x17, 0x92, 0xdd, 0x8d, 0x6d, 0xb4, 0x14,
+	0xf4, 0x38, 0x6f, 0xe6, 0xbd, 0x79, 0xbc, 0x07, 0x17, 0xa1, 0x8a, 0x34, 0x9b, 0x8b, 0x19, 0x26,
+	0x12, 0xa3, 0x58, 0x69, 0xb9, 0x60, 0xc5, 0x30, 0x4c, 0xb2, 0xd7, 0x70, 0x68, 0xe1, 0xe7, 0x0a,
+	0xa7, 0x99, 0x14, 0x5a, 0x90, 0x6e, 0xc9, 0xa0, 0x35, 0x06, 0xad, 0x18, 0x41, 0xdb, 0xc8, 0xe9,
+	0x45, 0x86, 0x6c, 0x16, 0xea, 0x50, 0xa1, 0xb6, 0xac, 0xe0, 0x64, 0xb9, 0x30, 0x54, 0x07, 0x77,
+	0x96, 0xb0, 0xc4, 0x22, 0x56, 0xb1, 0x48, 0xdd, 0xa6, 0x1b, 0x09, 0x11, 0x25, 0xc8, 0xcc, 0x34,
+	0xcd, 0x5f, 0x18, 0xce, 0x33, 0xed, 0x3c, 0xf4, 0x3f, 0x3c, 0x38, 0xe6, 0xe6, 0x39, 0xca, 0xc7,
+	0x52, 0x8e, 0xe3, 0x5b, 0x8e, 0x4a, 0x93, 0x73, 0xd8, 0x75, 0x7f, 0x3b, 0x5e, 0xcf, 0x1b, 0xec,
+	0x8f, 0x08, 0x35, 0x76, 0xcb, 0x0f, 0xf4, 0xd6, 0x6e, 0x78, 0x75, 0x42, 0x18, 0xec, 0x55, 0x5f,
+	0x3b, 0x5b, 0xe6, 0xfc, 0x68, 0xe5, 0x9c, 0xbb, 0x15, 0xff, 0x3e, 0x22, 0xa7, 0xe0, 0xdb, 0x4c,
+	0x0a, 0x94, 0x86, 0xd5, 0xe8, 0x79, 0x83, 0x06, 0x3f, 0x30, 0xe0, 0x93, 0xc5, 0xfa, 0xf7, 0xd0,
+	0x7a, 0x40, 0x7d, 0x93, 0x4b, 0x89, 0xa9, 0xfe, 0xbf, 0xbb, 0xfe, 0x15, 0xb4, 0x7f, 0xe9, 0xa8,
+	0x4c, 0xa4, 0x0a, 0xc9, 0x19, 0x6c, 0x9b, 0x97, 0x4e, 0xe6, 0x70, 0x45, 0xc6, 0x1e, 0xda, 0xf5,
+	0xe8, 0xd3, 0x03, 0xdf, 0x31, 0x6d, 0x53, 0x64, 0x02, 0x7e, 0x2d, 0x38, 0x32, 0xa4, 0x1b, 0xfa,
+	0xa4, 0xeb, 0x42, 0x0e, 0x5a, 0xd4, 0x76, 0x43, 0xab, 0x6e, 0xe8, 0x5d, 0xd9, 0x0d, 0x79, 0x87,
+	0xe6, 0x0f, 0xc3, 0x64, 0xbc, 0x51, 0x7d, 0x7d, 0x4c, 0xc1, 0xe5, 0xdf, 0x48, 0x36, 0x93, 0xeb,
+	0xe6, 0xc4, 0xaf, 0x31, 0xa6, 0x3b, 0xc6, 0xde, 0xf8, 0x2b, 0x00, 0x00, 0xff, 0xff, 0x55, 0x54,
+	0xce, 0x89, 0xe3, 0x02, 0x00, 0x00,
 }

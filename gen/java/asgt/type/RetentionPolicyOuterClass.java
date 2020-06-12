@@ -22,13 +22,6 @@ public final class RetentionPolicyOuterClass {
      * <code>int64 max_days = 1;</code>
      */
     long getMaxDays();
-
-    /**
-     * <code>int64 max_records = 2;</code>
-     */
-    long getMaxRecords();
-
-    public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.PolicyCase getPolicyCase();
   }
   /**
    * Protobuf type {@code asgt.type.RetentionPolicy}
@@ -43,6 +36,7 @@ public final class RetentionPolicyOuterClass {
       super(builder);
     }
     private RetentionPolicy() {
+      maxDays_ = 0L;
     }
 
     @java.lang.Override
@@ -70,13 +64,8 @@ public final class RetentionPolicyOuterClass {
               done = true;
               break;
             case 8: {
-              policyCase_ = 1;
-              policy_ = input.readInt64();
-              break;
-            }
-            case 16: {
-              policyCase_ = 2;
-              policy_ = input.readInt64();
+
+              maxDays_ = input.readInt64();
               break;
             }
             default: {
@@ -111,64 +100,13 @@ public final class RetentionPolicyOuterClass {
               asgt.type.RetentionPolicyOuterClass.RetentionPolicy.class, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder.class);
     }
 
-    private int policyCase_ = 0;
-    private java.lang.Object policy_;
-    public enum PolicyCase
-        implements com.google.protobuf.Internal.EnumLite {
-      MAX_DAYS(1),
-      MAX_RECORDS(2),
-      POLICY_NOT_SET(0);
-      private final int value;
-      private PolicyCase(int value) {
-        this.value = value;
-      }
-      /**
-       * @deprecated Use {@link #forNumber(int)} instead.
-       */
-      @java.lang.Deprecated
-      public static PolicyCase valueOf(int value) {
-        return forNumber(value);
-      }
-
-      public static PolicyCase forNumber(int value) {
-        switch (value) {
-          case 1: return MAX_DAYS;
-          case 2: return MAX_RECORDS;
-          case 0: return POLICY_NOT_SET;
-          default: return null;
-        }
-      }
-      public int getNumber() {
-        return this.value;
-      }
-    };
-
-    public PolicyCase
-    getPolicyCase() {
-      return PolicyCase.forNumber(
-          policyCase_);
-    }
-
     public static final int MAX_DAYS_FIELD_NUMBER = 1;
+    private long maxDays_;
     /**
      * <code>int64 max_days = 1;</code>
      */
     public long getMaxDays() {
-      if (policyCase_ == 1) {
-        return (java.lang.Long) policy_;
-      }
-      return 0L;
-    }
-
-    public static final int MAX_RECORDS_FIELD_NUMBER = 2;
-    /**
-     * <code>int64 max_records = 2;</code>
-     */
-    public long getMaxRecords() {
-      if (policyCase_ == 2) {
-        return (java.lang.Long) policy_;
-      }
-      return 0L;
+      return maxDays_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -185,13 +123,8 @@ public final class RetentionPolicyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (policyCase_ == 1) {
-        output.writeInt64(
-            1, (long)((java.lang.Long) policy_));
-      }
-      if (policyCase_ == 2) {
-        output.writeInt64(
-            2, (long)((java.lang.Long) policy_));
+      if (maxDays_ != 0L) {
+        output.writeInt64(1, maxDays_);
       }
       unknownFields.writeTo(output);
     }
@@ -202,15 +135,9 @@ public final class RetentionPolicyOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (policyCase_ == 1) {
+      if (maxDays_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(
-              1, (long)((java.lang.Long) policy_));
-      }
-      if (policyCase_ == 2) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(
-              2, (long)((java.lang.Long) policy_));
+          .computeInt64Size(1, maxDays_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -228,21 +155,8 @@ public final class RetentionPolicyOuterClass {
       asgt.type.RetentionPolicyOuterClass.RetentionPolicy other = (asgt.type.RetentionPolicyOuterClass.RetentionPolicy) obj;
 
       boolean result = true;
-      result = result && getPolicyCase().equals(
-          other.getPolicyCase());
-      if (!result) return false;
-      switch (policyCase_) {
-        case 1:
-          result = result && (getMaxDays()
-              == other.getMaxDays());
-          break;
-        case 2:
-          result = result && (getMaxRecords()
-              == other.getMaxRecords());
-          break;
-        case 0:
-        default:
-      }
+      result = result && (getMaxDays()
+          == other.getMaxDays());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -254,20 +168,9 @@ public final class RetentionPolicyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      switch (policyCase_) {
-        case 1:
-          hash = (37 * hash) + MAX_DAYS_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getMaxDays());
-          break;
-        case 2:
-          hash = (37 * hash) + MAX_RECORDS_FIELD_NUMBER;
-          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-              getMaxRecords());
-          break;
-        case 0:
-        default:
-      }
+      hash = (37 * hash) + MAX_DAYS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMaxDays());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -401,8 +304,8 @@ public final class RetentionPolicyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        policyCase_ = 0;
-        policy_ = null;
+        maxDays_ = 0L;
+
         return this;
       }
 
@@ -429,13 +332,7 @@ public final class RetentionPolicyOuterClass {
       @java.lang.Override
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy buildPartial() {
         asgt.type.RetentionPolicyOuterClass.RetentionPolicy result = new asgt.type.RetentionPolicyOuterClass.RetentionPolicy(this);
-        if (policyCase_ == 1) {
-          result.policy_ = policy_;
-        }
-        if (policyCase_ == 2) {
-          result.policy_ = policy_;
-        }
-        result.policyCase_ = policyCase_;
+        result.maxDays_ = maxDays_;
         onBuilt();
         return result;
       }
@@ -484,18 +381,8 @@ public final class RetentionPolicyOuterClass {
 
       public Builder mergeFrom(asgt.type.RetentionPolicyOuterClass.RetentionPolicy other) {
         if (other == asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance()) return this;
-        switch (other.getPolicyCase()) {
-          case MAX_DAYS: {
-            setMaxDays(other.getMaxDays());
-            break;
-          }
-          case MAX_RECORDS: {
-            setMaxRecords(other.getMaxRecords());
-            break;
-          }
-          case POLICY_NOT_SET: {
-            break;
-          }
+        if (other.getMaxDays() != 0L) {
+          setMaxDays(other.getMaxDays());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -525,37 +412,20 @@ public final class RetentionPolicyOuterClass {
         }
         return this;
       }
-      private int policyCase_ = 0;
-      private java.lang.Object policy_;
-      public PolicyCase
-          getPolicyCase() {
-        return PolicyCase.forNumber(
-            policyCase_);
-      }
 
-      public Builder clearPolicy() {
-        policyCase_ = 0;
-        policy_ = null;
-        onChanged();
-        return this;
-      }
-
-
+      private long maxDays_ ;
       /**
        * <code>int64 max_days = 1;</code>
        */
       public long getMaxDays() {
-        if (policyCase_ == 1) {
-          return (java.lang.Long) policy_;
-        }
-        return 0L;
+        return maxDays_;
       }
       /**
        * <code>int64 max_days = 1;</code>
        */
       public Builder setMaxDays(long value) {
-        policyCase_ = 1;
-        policy_ = value;
+        
+        maxDays_ = value;
         onChanged();
         return this;
       }
@@ -563,41 +433,9 @@ public final class RetentionPolicyOuterClass {
        * <code>int64 max_days = 1;</code>
        */
       public Builder clearMaxDays() {
-        if (policyCase_ == 1) {
-          policyCase_ = 0;
-          policy_ = null;
-          onChanged();
-        }
-        return this;
-      }
-
-      /**
-       * <code>int64 max_records = 2;</code>
-       */
-      public long getMaxRecords() {
-        if (policyCase_ == 2) {
-          return (java.lang.Long) policy_;
-        }
-        return 0L;
-      }
-      /**
-       * <code>int64 max_records = 2;</code>
-       */
-      public Builder setMaxRecords(long value) {
-        policyCase_ = 2;
-        policy_ = value;
+        
+        maxDays_ = 0L;
         onChanged();
-        return this;
-      }
-      /**
-       * <code>int64 max_records = 2;</code>
-       */
-      public Builder clearMaxRecords() {
-        if (policyCase_ == 2) {
-          policyCase_ = 0;
-          policy_ = null;
-          onChanged();
-        }
         return this;
       }
       @java.lang.Override
@@ -668,9 +506,8 @@ public final class RetentionPolicyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n asgt/type/retention_policy.proto\022\tasgt" +
-      ".type\"F\n\017RetentionPolicy\022\022\n\010max_days\030\001 \001" +
-      "(\003H\000\022\025\n\013max_records\030\002 \001(\003H\000B\010\n\006policyB\006Z" +
-      "\004typeb\006proto3"
+      ".type\"#\n\017RetentionPolicy\022\020\n\010max_days\030\001 \001" +
+      "(\003B\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -689,7 +526,7 @@ public final class RetentionPolicyOuterClass {
     internal_static_asgt_type_RetentionPolicy_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_RetentionPolicy_descriptor,
-        new java.lang.String[] { "MaxDays", "MaxRecords", "Policy", });
+        new java.lang.String[] { "MaxDays", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

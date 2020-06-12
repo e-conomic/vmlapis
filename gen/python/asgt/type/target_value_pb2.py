@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\",\n\x0bTargetValue\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\tB\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"*\n\x0bTargetValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\tB\x06Z\x04typeb\x06proto3')
 )
 
 
@@ -33,7 +33,7 @@ _TARGETVALUE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='target', full_name='asgt.type.TargetValue.target', index=0,
+      name='name', full_name='asgt.type.TargetValue.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -59,7 +59,7 @@ _TARGETVALUE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=43,
-  serialized_end=87,
+  serialized_end=85,
 )
 
 DESCRIPTOR.message_types_by_name['TargetValue'] = _TARGETVALUE
