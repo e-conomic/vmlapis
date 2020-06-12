@@ -1897,31 +1897,6 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    boolean hasId();
-    /**
-     * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    com.google.protobuf.StringValue getId();
-    /**
-     * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getIdOrBuilder();
-
-    /**
-     * <pre>
      * text of the invoice line
      * </pre>
      *
@@ -2009,19 +1984,6 @@ public final class DataOuterClass {
             case 0:
               done = true;
               break;
-            case 10: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (id_ != null) {
-                subBuilder = id_.toBuilder();
-              }
-              id_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(id_);
-                id_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
             case 66: {
               com.google.protobuf.StringValue.Builder subBuilder = null;
               if (text_ != null) {
@@ -2078,39 +2040,6 @@ public final class DataOuterClass {
       return asgt.type.DataOuterClass.internal_static_asgt_type_InvoiceLine_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               asgt.type.DataOuterClass.InvoiceLine.class, asgt.type.DataOuterClass.InvoiceLine.Builder.class);
-    }
-
-    public static final int ID_FIELD_NUMBER = 1;
-    private com.google.protobuf.StringValue id_;
-    /**
-     * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    public boolean hasId() {
-      return id_ != null;
-    }
-    /**
-     * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    public com.google.protobuf.StringValue getId() {
-      return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
-    }
-    /**
-     * <pre>
-     * id of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue id = 1;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
-      return getId();
     }
 
     public static final int TEXT_FIELD_NUMBER = 8;
@@ -2193,9 +2122,6 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (id_ != null) {
-        output.writeMessage(1, getId());
-      }
       if (text_ != null) {
         output.writeMessage(8, getText());
       }
@@ -2211,10 +2137,6 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (id_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getId());
-      }
       if (text_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getText());
@@ -2239,11 +2161,6 @@ public final class DataOuterClass {
       asgt.type.DataOuterClass.InvoiceLine other = (asgt.type.DataOuterClass.InvoiceLine) obj;
 
       boolean result = true;
-      result = result && (hasId() == other.hasId());
-      if (hasId()) {
-        result = result && getId()
-            .equals(other.getId());
-      }
       result = result && (hasText() == other.hasText());
       if (hasText()) {
         result = result && getText()
@@ -2265,10 +2182,6 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasId()) {
-        hash = (37 * hash) + ID_FIELD_NUMBER;
-        hash = (53 * hash) + getId().hashCode();
-      }
       if (hasText()) {
         hash = (37 * hash) + TEXT_FIELD_NUMBER;
         hash = (53 * hash) + getText().hashCode();
@@ -2410,12 +2323,6 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (idBuilder_ == null) {
-          id_ = null;
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
         if (textBuilder_ == null) {
           text_ = null;
         } else {
@@ -2454,11 +2361,6 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.InvoiceLine buildPartial() {
         asgt.type.DataOuterClass.InvoiceLine result = new asgt.type.DataOuterClass.InvoiceLine(this);
-        if (idBuilder_ == null) {
-          result.id_ = id_;
-        } else {
-          result.id_ = idBuilder_.build();
-        }
         if (textBuilder_ == null) {
           result.text_ = text_;
         } else {
@@ -2517,9 +2419,6 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.type.DataOuterClass.InvoiceLine other) {
         if (other == asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance()) return this;
-        if (other.hasId()) {
-          mergeId(other.getId());
-        }
         if (other.hasText()) {
           mergeText(other.getText());
         }
@@ -2553,159 +2452,6 @@ public final class DataOuterClass {
           }
         }
         return this;
-      }
-
-      private com.google.protobuf.StringValue id_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> idBuilder_;
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public boolean hasId() {
-        return idBuilder_ != null || id_ != null;
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public com.google.protobuf.StringValue getId() {
-        if (idBuilder_ == null) {
-          return id_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : id_;
-        } else {
-          return idBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public Builder setId(com.google.protobuf.StringValue value) {
-        if (idBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          id_ = value;
-          onChanged();
-        } else {
-          idBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public Builder setId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (idBuilder_ == null) {
-          id_ = builderForValue.build();
-          onChanged();
-        } else {
-          idBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public Builder mergeId(com.google.protobuf.StringValue value) {
-        if (idBuilder_ == null) {
-          if (id_ != null) {
-            id_ =
-              com.google.protobuf.StringValue.newBuilder(id_).mergeFrom(value).buildPartial();
-          } else {
-            id_ = value;
-          }
-          onChanged();
-        } else {
-          idBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public Builder clearId() {
-        if (idBuilder_ == null) {
-          id_ = null;
-          onChanged();
-        } else {
-          id_ = null;
-          idBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getIdBuilder() {
-        
-        onChanged();
-        return getIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getIdOrBuilder() {
-        if (idBuilder_ != null) {
-          return idBuilder_.getMessageOrBuilder();
-        } else {
-          return id_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : id_;
-        }
-      }
-      /**
-       * <pre>
-       * id of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue id = 1;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getIdFieldBuilder() {
-        if (idBuilder_ == null) {
-          idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getId(),
-                  getParentForChildren(),
-                  isClean());
-          id_ = null;
-        }
-        return idBuilder_;
       }
 
       private com.google.protobuf.StringValue text_ = null;
@@ -6050,19 +5796,18 @@ public final class DataOuterClass {
       "ringValue\022*\n\004text\030\004 \001(\0132\034.google.protobu" +
       "f.StringValue\022.\n\010currency\030\006 \001(\0132\034.google" +
       ".protobuf.StringValue\022*\n\005total\030\007 \001(\0132\033.g" +
-      "oogle.protobuf.FloatValue\"\222\001\n\013InvoiceLin" +
-      "e\022(\n\002id\030\001 \001(\0132\034.google.protobuf.StringVa" +
-      "lue\022*\n\004text\030\010 \001(\0132\034.google.protobuf.Stri" +
-      "ngValue\022-\n\007item_id\030\t \001(\0132\034.google.protob" +
-      "uf.StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(\t\022*" +
-      "\n\004name\030\004 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022/\n\tglobal_id\030\005 \001(\0132\034.google.protobuf." +
-      "StringValue\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t" +
-      "\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transaction" +
-      "\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007invoic" +
-      "e\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014invoice_l" +
-      "ine\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004typ" +
-      "eb\006proto3"
+      "oogle.protobuf.FloatValue\"h\n\013InvoiceLine" +
+      "\022*\n\004text\030\010 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022-\n\007item_id\030\t \001(\0132\034.google.protobuf." +
+      "StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(\t\022*\n\004n" +
+      "ame\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
+      "/\n\tglobal_id\030\005 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t\022\016\n" +
+      "\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transaction\030\001 " +
+      "\001(\0132\026.asgt.type.Transaction\022#\n\007invoice\030\002" +
+      " \001(\0132\022.asgt.type.Invoice\022,\n\014invoice_line" +
+      "\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004typeb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6089,7 +5834,7 @@ public final class DataOuterClass {
     internal_static_asgt_type_InvoiceLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_InvoiceLine_descriptor,
-        new java.lang.String[] { "Id", "Text", "ItemId", });
+        new java.lang.String[] { "Text", "ItemId", });
     internal_static_asgt_type_Supplier_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_type_Supplier_fieldAccessorTable = new

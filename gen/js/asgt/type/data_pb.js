@@ -444,7 +444,6 @@ proto.asgt.type.InvoiceLine.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.InvoiceLine.toObject = function(includeInstance, msg) {
   var f, obj = {
-    id: (f = msg.getId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     text: (f = msg.getText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     itemId: (f = msg.getItemId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
@@ -483,11 +482,6 @@ proto.asgt.type.InvoiceLine.deserializeBinaryFromReader = function(msg, reader) 
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new google_protobuf_wrappers_pb.StringValue;
-      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setId(value);
-      break;
     case 8:
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
@@ -527,14 +521,6 @@ proto.asgt.type.InvoiceLine.prototype.serializeBinary = function() {
  */
 proto.asgt.type.InvoiceLine.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getId();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
-    );
-  }
   f = message.getText();
   if (f != null) {
     writer.writeMessage(
@@ -551,36 +537,6 @@ proto.asgt.type.InvoiceLine.serializeBinaryToWriter = function(message, writer) 
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
   }
-};
-
-
-/**
- * optional google.protobuf.StringValue id = 1;
- * @return {?proto.google.protobuf.StringValue}
- */
-proto.asgt.type.InvoiceLine.prototype.getId = function() {
-  return /** @type{?proto.google.protobuf.StringValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 1));
-};
-
-
-/** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.asgt.type.InvoiceLine.prototype.setId = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-proto.asgt.type.InvoiceLine.prototype.clearId = function() {
-  this.setId(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.type.InvoiceLine.prototype.hasId = function() {
-  return jspb.Message.getField(this, 1) != null;
 };
 
 
