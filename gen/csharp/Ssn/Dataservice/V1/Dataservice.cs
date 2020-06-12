@@ -100,103 +100,102 @@ namespace Ssn.Dataservice.V1 {
             "dWUSOwoVc3VwcGxpZXJfY291bnRyeV9jb2RlGBQgAygLMhwuZ29vZ2xlLnBy",
             "b3RvYnVmLlN0cmluZ1ZhbHVlEjQKDmludm9pY2VfbnVtYmVyGBUgAygLMhwu",
             "Z29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBGliYW4YFiADKAsyHC5n",
-            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUijwoKFVByZWRpY3Rpb25Db25m",
-            "aWRlbmNlcxI0Cg50b3RhbF9pbmNsX3ZhdBgBIAMoCzIcLmdvb2dsZS5wcm90",
-            "b2J1Zi5Eb3VibGVWYWx1ZRIvCgl0b3RhbF92YXQYAiADKAsyHC5nb29nbGUu",
-            "cHJvdG9idWYuRG91YmxlVmFsdWUSNAoOdG90YWxfZXhjbF92YXQYAyADKAsy",
-            "HC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUSMAoKb3JkZXJfZGF0ZRgE",
-            "IAMoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRI2ChBwYXltZW50",
-            "X2R1ZV9kYXRlGAUgAygLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVl",
-            "EjMKDWRvY3VtZW50X3R5cGUYBiADKAsyHC5nb29nbGUucHJvdG9idWYuRG91",
-            "YmxlVmFsdWUSLgoIY3VycmVuY3kYByADKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "RG91YmxlVmFsdWUSOwoVY3JlZGl0X2NhcmRfbGFzdF9mb3VyGAggAygLMhwu",
-            "Z29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlEjQKDnBheW1lbnRfbWV0aG9k",
-            "GAkgAygLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlEjYKEG9jcl9s",
-            "aW5lX2RrX3R5cGUYCiADKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFs",
-            "dWUSPAoWb2NyX2xpbmVfZGtfcGF5bWVudF9pZBgLIAMoCzIcLmdvb2dsZS5w",
-            "cm90b2J1Zi5Eb3VibGVWYWx1ZRI9ChdvY3JfbGluZV9ka19jcmVkaXRvcl9p",
-            "ZBgMIAMoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRI8ChZvY3Jf",
-            "bGluZV9zZV9wYXltZW50X2lkGA0gAygLMhwuZ29vZ2xlLnByb3RvYnVmLkRv",
-            "dWJsZVZhbHVlEkYKIG9jcl9saW5lX3NlX2JhbmtnaXJvX2NyZWRpdG9yX2lk",
-            "GA4gAygLMhwuZ29vZ2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlEkYKIG9jcl9s",
-            "aW5lX3NlX3BsdXNnaXJvX2NyZWRpdG9yX2lkGA8gAygLMhwuZ29vZ2xlLnBy",
-            "b3RvYnVmLkRvdWJsZVZhbHVlEjwKFm9jcl9saW5lX25vX3BheW1lbnRfaWQY",
-            "ECADKAsyHC5nb29nbGUucHJvdG9idWYuRG91YmxlVmFsdWUSPAoWb2NyX2xp",
-            "bmVfZmlfcGF5bWVudF9pZBgRIAMoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3Vi",
-            "bGVWYWx1ZRI8ChZvY3JfbGluZV9ubF9wYXltZW50X2lkGBIgAygLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLkRvdWJsZVZhbHVlEjsKFXN1cHBsaWVyX2NvcnBvcmF0",
-            "ZV9pZBgTIAMoCzIcLmdvb2dsZS5wcm90b2J1Zi5Eb3VibGVWYWx1ZRI7ChVz",
-            "dXBwbGllcl9jb3VudHJ5X2NvZGUYFCADKAsyHC5nb29nbGUucHJvdG9idWYu",
-            "RG91YmxlVmFsdWUSNAoOaW52b2ljZV9udW1iZXIYFSADKAsyHC5nb29nbGUu",
-            "cHJvdG9idWYuRG91YmxlVmFsdWUSKgoEaWJhbhgWIAMoCzIcLmdvb2dsZS5w",
-            "cm90b2J1Zi5Eb3VibGVWYWx1ZSLGCAoSUHJlZGljdGlvbk1ldGFkYXRhEisK",
-            "DnRvdGFsX2luY2xfdmF0GAEgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEiYK",
-            "CXRvdGFsX3ZhdBgCIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxIrCg50b3Rh",
-            "bF9leGNsX3ZhdBgDIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxInCgpvcmRl",
-            "cl9kYXRlGAQgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEi0KEHBheW1lbnRf",
-            "ZHVlX2RhdGUYBSADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSKgoNZG9jdW1l",
-            "bnRfdHlwZRgGIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxIlCghjdXJyZW5j",
-            "eRgHIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxIyChVjcmVkaXRfY2FyZF9s",
-            "YXN0X2ZvdXIYCCADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSKwoOcGF5bWVu",
-            "dF9tZXRob2QYCSADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSLQoQb2NyX2xp",
-            "bmVfZGtfdHlwZRgKIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxIzChZvY3Jf",
-            "bGluZV9ka19wYXltZW50X2lkGAsgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVj",
-            "EjQKF29jcl9saW5lX2RrX2NyZWRpdG9yX2lkGAwgAygLMhMuc3NuLnR5cGUu",
-            "TW9kZWxTcGVjEjMKFm9jcl9saW5lX3NlX3BheW1lbnRfaWQYDSADKAsyEy5z",
-            "c24udHlwZS5Nb2RlbFNwZWMSPQogb2NyX2xpbmVfc2VfYmFua2dpcm9fY3Jl",
-            "ZGl0b3JfaWQYDiADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSPQogb2NyX2xp",
-            "bmVfc2VfcGx1c2dpcm9fY3JlZGl0b3JfaWQYDyADKAsyEy5zc24udHlwZS5N",
-            "b2RlbFNwZWMSMwoWb2NyX2xpbmVfbm9fcGF5bWVudF9pZBgQIAMoCzITLnNz",
-            "bi50eXBlLk1vZGVsU3BlYxIzChZvY3JfbGluZV9maV9wYXltZW50X2lkGBEg",
-            "AygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEjMKFm9jcl9saW5lX25sX3BheW1l",
-            "bnRfaWQYEiADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSMgoVc3VwcGxpZXJf",
-            "Y29ycG9yYXRlX2lkGBMgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEjIKFXN1",
-            "cHBsaWVyX2NvdW50cnlfY29kZRgUIAMoCzITLnNzbi50eXBlLk1vZGVsU3Bl",
-            "YxIrCg5pbnZvaWNlX251bWJlchgVIAMoCzITLnNzbi50eXBlLk1vZGVsU3Bl",
-            "YxIhCgRpYmFuGBYgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjIkcKFUNyZWF0",
-            "ZURvY3VtZW50UmVxdWVzdBIuCghkb2N1bWVudBgBIAEoCzIcLnNzbi5kYXRh",
-            "c2VydmljZS52MS5Eb2N1bWVudCIkChZDcmVhdGVEb2N1bWVudFJlc3BvbnNl",
-            "EgoKAmlkGAEgASgJIiEKE1JlYWREb2N1bWVudFJlcXVlc3QSCgoCaWQYASAB",
-            "KAkiRgoUUmVhZERvY3VtZW50UmVzcG9uc2USLgoIZG9jdW1lbnQYASABKAsy",
-            "HC5zc24uZGF0YXNlcnZpY2UudjEuRG9jdW1lbnQisAIKFlByZXBhcmVGZWVk",
-            "YmFja1JlcXVlc3QSCgoCaWQYASABKAkSJAoCdGEYAiABKAsyGC5zc24udHlw",
-            "ZS5UZXh0QW5ub3RhdGlvbhIWCg5kb2N1bWVudF9ieXRlcxgDIAEoDBI5Cgtw",
-            "cmVkaWN0aW9ucxgEIAEoCzIkLnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0",
-            "aW9uVmFsdWVzEgwKBHRhZ3MYBSADKAkSPgoLY29uZmlkZW5jZXMYBiABKAsy",
-            "KS5zc24uZGF0YXNlcnZpY2UudjEuUHJlZGljdGlvbkNvbmZpZGVuY2VzEkMK",
-            "E3ByZWRpY3Rpb25fbWV0YWRhdGEYByABKAsyJi5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuUHJlZGljdGlvbk1ldGFkYXRhImAKD0ZlZWRiYWNrUmVxdWVzdBIKCgJp",
-            "ZBgBIAEoCRIzCgt0cnVlX3ZhbHVlcxgCIAEoCzIeLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5UcnVlVmFsdWVzEgwKBHRhZ3MYAyADKAkiVAoOTWV0cmljc1JlcXVl",
-            "c3QSEgoKc3RhcnRfdGltZRgCIAEoAxIQCghlbmRfdGltZRgDIAEoAxIOCgZm",
-            "aWVsZHMYBCADKAkSDAoEdGFncxgFIAMoCSK7AQoPRmVlZGJhY2tNZXRyaWNz",
-            "EhYKDmRvY3VtZW50X2NvdW50GAEgASgFEhYKDmZlZWRiYWNrX2NvdW50GAIg",
-            "ASgFEjwKE292ZXJhbGxfY29ycmVjdG5lc3MYAyABKAsyHy5zc24uZGF0YXNl",
-            "cnZpY2UudjEuQ29ycmVjdG5lc3MSOgoRZmllbGRfY29ycmVjdG5lc3MYBCAD",
-            "KAsyHy5zc24uZGF0YXNlcnZpY2UudjEuQ29ycmVjdG5lc3MicQoLQ29ycmVj",
-            "dG5lc3MSDQoFZmllbGQYASABKAkSGgoSY29ycmVjdF9wZXJjZW50YWdlGAIg",
-            "ASgCEh0KFWluY29tcGxldGVfcGVyY2VudGFnZRgDIAEoAhIYChBlcnJvcl9w",
-            "ZXJjZW50YWdlGAQgASgCIh0KDURlbGV0ZVJlcXVlc3QSDAoEdGFncxgBIAMo",
-            "CSIyCg1DYWxsc1Blck1vbnRoEg0KBWNhbGxzGAEgASgDEhIKCm1vbnRoX25h",
-            "bWUYAiABKAkiUwoVQ2FsbHNQZXJNb250aFJlc3BvbnNlEjoKD2NhbGxzX3Bl",
-            "cl9tb250aBgBIAMoCzIhLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1v",
-            "bnRoMrUFCgtEYXRhU2VydmljZRJnCg5DcmVhdGVEb2N1bWVudBIpLnNzbi5k",
-            "YXRhc2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlcXVlc3QaKi5zc24uZGF0",
-            "YXNlcnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXNwb25zZRJhCgxSZWFkRG9j",
-            "dW1lbnQSJy5zc24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVxdWVz",
-            "dBooLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXNwb25zZRJV",
-            "Cg9QcmVwYXJlRmVlZGJhY2sSKi5zc24uZGF0YXNlcnZpY2UudjEuUHJlcGFy",
-            "ZUZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJnCghG",
-            "ZWVkYmFjaxIjLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFja1JlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGCITL3YxL2ZlZWRiYWNr",
-            "OmNyZWF0ZToBKhJbChBDYWxjdWxhdGVNZXRyaWNzEiIuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxLk1ldHJpY3NSZXF1ZXN0GiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZl",
-            "ZWRiYWNrTWV0cmljcxJjCgZEZWxldGUSIS5zc24uZGF0YXNlcnZpY2UudjEu",
-            "RGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIY",
-            "IhMvdjEvZmVlZGJhY2s6ZGVsZXRlOgEqElgKE0NhbGxzUGVyTW9udGhNZXRy",
-            "aWMSFi5nb29nbGUucHJvdG9idWYuRW1wdHkaKS5zc24uZGF0YXNlcnZpY2Uu",
-            "djEuQ2FsbHNQZXJNb250aFJlc3BvbnNlQg1aC2RhdGFzZXJ2aWNlYgZwcm90",
-            "bzM="));
+            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUi+QkKFVByZWRpY3Rpb25Db25m",
+            "aWRlbmNlcxIzCg50b3RhbF9pbmNsX3ZhdBgBIAMoCzIbLmdvb2dsZS5wcm90",
+            "b2J1Zi5GbG9hdFZhbHVlEi4KCXRvdGFsX3ZhdBgCIAMoCzIbLmdvb2dsZS5w",
+            "cm90b2J1Zi5GbG9hdFZhbHVlEjMKDnRvdGFsX2V4Y2xfdmF0GAMgAygLMhsu",
+            "Z29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSLwoKb3JkZXJfZGF0ZRgEIAMo",
+            "CzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlEjUKEHBheW1lbnRfZHVl",
+            "X2RhdGUYBSADKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZRIyCg1k",
+            "b2N1bWVudF90eXBlGAYgAygLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFs",
+            "dWUSLQoIY3VycmVuY3kYByADKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRW",
+            "YWx1ZRI6ChVjcmVkaXRfY2FyZF9sYXN0X2ZvdXIYCCADKAsyGy5nb29nbGUu",
+            "cHJvdG9idWYuRmxvYXRWYWx1ZRIzCg5wYXltZW50X21ldGhvZBgJIAMoCzIb",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlEjUKEG9jcl9saW5lX2RrX3R5",
+            "cGUYCiADKAsyGy5nb29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZRI7ChZvY3Jf",
+            "bGluZV9ka19wYXltZW50X2lkGAsgAygLMhsuZ29vZ2xlLnByb3RvYnVmLkZs",
+            "b2F0VmFsdWUSPAoXb2NyX2xpbmVfZGtfY3JlZGl0b3JfaWQYDCADKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZRI7ChZvY3JfbGluZV9zZV9wYXlt",
+            "ZW50X2lkGA0gAygLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSRQog",
+            "b2NyX2xpbmVfc2VfYmFua2dpcm9fY3JlZGl0b3JfaWQYDiADKAsyGy5nb29n",
+            "bGUucHJvdG9idWYuRmxvYXRWYWx1ZRJFCiBvY3JfbGluZV9zZV9wbHVzZ2ly",
+            "b19jcmVkaXRvcl9pZBgPIAMoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZh",
+            "bHVlEjsKFm9jcl9saW5lX25vX3BheW1lbnRfaWQYECADKAsyGy5nb29nbGUu",
+            "cHJvdG9idWYuRmxvYXRWYWx1ZRI7ChZvY3JfbGluZV9maV9wYXltZW50X2lk",
+            "GBEgAygLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUSOwoWb2NyX2xp",
+            "bmVfbmxfcGF5bWVudF9pZBgSIAMoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9h",
+            "dFZhbHVlEjoKFXN1cHBsaWVyX2NvcnBvcmF0ZV9pZBgTIAMoCzIbLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GbG9hdFZhbHVlEjoKFXN1cHBsaWVyX2NvdW50cnlfY29k",
+            "ZRgUIAMoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlEjMKDmludm9p",
+            "Y2VfbnVtYmVyGBUgAygLMhsuZ29vZ2xlLnByb3RvYnVmLkZsb2F0VmFsdWUS",
+            "KQoEaWJhbhgWIAMoCzIbLmdvb2dsZS5wcm90b2J1Zi5GbG9hdFZhbHVlIsYI",
+            "ChJQcmVkaWN0aW9uTWV0YWRhdGESKwoOdG90YWxfaW5jbF92YXQYASADKAsy",
+            "Ey5zc24udHlwZS5Nb2RlbFNwZWMSJgoJdG90YWxfdmF0GAIgAygLMhMuc3Nu",
+            "LnR5cGUuTW9kZWxTcGVjEisKDnRvdGFsX2V4Y2xfdmF0GAMgAygLMhMuc3Nu",
+            "LnR5cGUuTW9kZWxTcGVjEicKCm9yZGVyX2RhdGUYBCADKAsyEy5zc24udHlw",
+            "ZS5Nb2RlbFNwZWMSLQoQcGF5bWVudF9kdWVfZGF0ZRgFIAMoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlYxIqCg1kb2N1bWVudF90eXBlGAYgAygLMhMuc3NuLnR5",
+            "cGUuTW9kZWxTcGVjEiUKCGN1cnJlbmN5GAcgAygLMhMuc3NuLnR5cGUuTW9k",
+            "ZWxTcGVjEjIKFWNyZWRpdF9jYXJkX2xhc3RfZm91chgIIAMoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlYxIrCg5wYXltZW50X21ldGhvZBgJIAMoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlYxItChBvY3JfbGluZV9ka190eXBlGAogAygLMhMuc3Nu",
+            "LnR5cGUuTW9kZWxTcGVjEjMKFm9jcl9saW5lX2RrX3BheW1lbnRfaWQYCyAD",
+            "KAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSNAoXb2NyX2xpbmVfZGtfY3JlZGl0",
+            "b3JfaWQYDCADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSMwoWb2NyX2xpbmVf",
+            "c2VfcGF5bWVudF9pZBgNIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxI9CiBv",
+            "Y3JfbGluZV9zZV9iYW5rZ2lyb19jcmVkaXRvcl9pZBgOIAMoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlYxI9CiBvY3JfbGluZV9zZV9wbHVzZ2lyb19jcmVkaXRv",
+            "cl9pZBgPIAMoCzITLnNzbi50eXBlLk1vZGVsU3BlYxIzChZvY3JfbGluZV9u",
+            "b19wYXltZW50X2lkGBAgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEjMKFm9j",
+            "cl9saW5lX2ZpX3BheW1lbnRfaWQYESADKAsyEy5zc24udHlwZS5Nb2RlbFNw",
+            "ZWMSMwoWb2NyX2xpbmVfbmxfcGF5bWVudF9pZBgSIAMoCzITLnNzbi50eXBl",
+            "Lk1vZGVsU3BlYxIyChVzdXBwbGllcl9jb3Jwb3JhdGVfaWQYEyADKAsyEy5z",
+            "c24udHlwZS5Nb2RlbFNwZWMSMgoVc3VwcGxpZXJfY291bnRyeV9jb2RlGBQg",
+            "AygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEisKDmludm9pY2VfbnVtYmVyGBUg",
+            "AygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEiEKBGliYW4YFiADKAsyEy5zc24u",
+            "dHlwZS5Nb2RlbFNwZWMiRwoVQ3JlYXRlRG9jdW1lbnRSZXF1ZXN0Ei4KCGRv",
+            "Y3VtZW50GAEgASgLMhwuc3NuLmRhdGFzZXJ2aWNlLnYxLkRvY3VtZW50IiQK",
+            "FkNyZWF0ZURvY3VtZW50UmVzcG9uc2USCgoCaWQYASABKAkiIQoTUmVhZERv",
+            "Y3VtZW50UmVxdWVzdBIKCgJpZBgBIAEoCSJGChRSZWFkRG9jdW1lbnRSZXNw",
+            "b25zZRIuCghkb2N1bWVudBgBIAEoCzIcLnNzbi5kYXRhc2VydmljZS52MS5E",
+            "b2N1bWVudCKwAgoWUHJlcGFyZUZlZWRiYWNrUmVxdWVzdBIKCgJpZBgBIAEo",
+            "CRIkCgJ0YRgCIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uEhYKDmRv",
+            "Y3VtZW50X2J5dGVzGAMgASgMEjkKC3ByZWRpY3Rpb25zGAQgASgLMiQuc3Nu",
+            "LmRhdGFzZXJ2aWNlLnYxLlByZWRpY3Rpb25WYWx1ZXMSDAoEdGFncxgFIAMo",
+            "CRI+Cgtjb25maWRlbmNlcxgGIAEoCzIpLnNzbi5kYXRhc2VydmljZS52MS5Q",
+            "cmVkaWN0aW9uQ29uZmlkZW5jZXMSQwoTcHJlZGljdGlvbl9tZXRhZGF0YRgH",
+            "IAEoCzImLnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0aW9uTWV0YWRhdGEi",
+            "YAoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjMKC3RydWVfdmFsdWVz",
+            "GAIgASgLMh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlRydWVWYWx1ZXMSDAoEdGFn",
+            "cxgDIAMoCSJUCg5NZXRyaWNzUmVxdWVzdBISCgpzdGFydF90aW1lGAIgASgD",
+            "EhAKCGVuZF90aW1lGAMgASgDEg4KBmZpZWxkcxgEIAMoCRIMCgR0YWdzGAUg",
+            "AygJIrsBCg9GZWVkYmFja01ldHJpY3MSFgoOZG9jdW1lbnRfY291bnQYASAB",
+            "KAUSFgoOZmVlZGJhY2tfY291bnQYAiABKAUSPAoTb3ZlcmFsbF9jb3JyZWN0",
+            "bmVzcxgDIAEoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzcxI6",
+            "ChFmaWVsZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5kYXRhc2VydmljZS52",
+            "MS5Db3JyZWN0bmVzcyJxCgtDb3JyZWN0bmVzcxINCgVmaWVsZBgBIAEoCRIa",
+            "ChJjb3JyZWN0X3BlcmNlbnRhZ2UYAiABKAISHQoVaW5jb21wbGV0ZV9wZXJj",
+            "ZW50YWdlGAMgASgCEhgKEGVycm9yX3BlcmNlbnRhZ2UYBCABKAIiHQoNRGVs",
+            "ZXRlUmVxdWVzdBIMCgR0YWdzGAEgAygJIjIKDUNhbGxzUGVyTW9udGgSDQoF",
+            "Y2FsbHMYASABKAMSEgoKbW9udGhfbmFtZRgCIAEoCSJTChVDYWxsc1Blck1v",
+            "bnRoUmVzcG9uc2USOgoPY2FsbHNfcGVyX21vbnRoGAEgAygLMiEuc3NuLmRh",
+            "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGgytQUKC0RhdGFTZXJ2aWNlEmcK",
+            "DkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNyZWF0ZURv",
+            "Y3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVEb2N1",
+            "bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVudBInLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Giguc3NuLmRhdGFzZXJ2aWNlLnYx",
+            "LlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1ByZXBhcmVGZWVkYmFjaxIqLnNz",
+            "bi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNrEiMuc3NuLmRhdGFzZXJ2",
+            "aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
+            "eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRlOgEqElsKEENhbGN1bGF0",
+            "ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmljc1JlcXVlc3Qa",
+            "Iy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNzEmMKBkRlbGV0",
+            "ZRIhLnNzbi5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5Ih6C0+STAhgiEy92MS9mZWVkYmFjazpkZWxldGU6",
+            "ASoSWAoTQ2FsbHNQZXJNb250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eRopLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9u",
+            "c2VCDVoLZGF0YXNlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -2053,221 +2052,221 @@ namespace Ssn.Dataservice.V1 {
 
     /// <summary>Field number for the "total_incl_vat" field.</summary>
     public const int TotalInclVatFieldNumber = 1;
-    private static readonly pb::FieldCodec<double?> _repeated_totalInclVat_codec
-        = pb::FieldCodec.ForStructWrapper<double>(10);
-    private readonly pbc::RepeatedField<double?> totalInclVat_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_totalInclVat_codec
+        = pb::FieldCodec.ForStructWrapper<float>(10);
+    private readonly pbc::RepeatedField<float?> totalInclVat_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> TotalInclVat {
+    public pbc::RepeatedField<float?> TotalInclVat {
       get { return totalInclVat_; }
     }
 
     /// <summary>Field number for the "total_vat" field.</summary>
     public const int TotalVatFieldNumber = 2;
-    private static readonly pb::FieldCodec<double?> _repeated_totalVat_codec
-        = pb::FieldCodec.ForStructWrapper<double>(18);
-    private readonly pbc::RepeatedField<double?> totalVat_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_totalVat_codec
+        = pb::FieldCodec.ForStructWrapper<float>(18);
+    private readonly pbc::RepeatedField<float?> totalVat_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> TotalVat {
+    public pbc::RepeatedField<float?> TotalVat {
       get { return totalVat_; }
     }
 
     /// <summary>Field number for the "total_excl_vat" field.</summary>
     public const int TotalExclVatFieldNumber = 3;
-    private static readonly pb::FieldCodec<double?> _repeated_totalExclVat_codec
-        = pb::FieldCodec.ForStructWrapper<double>(26);
-    private readonly pbc::RepeatedField<double?> totalExclVat_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_totalExclVat_codec
+        = pb::FieldCodec.ForStructWrapper<float>(26);
+    private readonly pbc::RepeatedField<float?> totalExclVat_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> TotalExclVat {
+    public pbc::RepeatedField<float?> TotalExclVat {
       get { return totalExclVat_; }
     }
 
     /// <summary>Field number for the "order_date" field.</summary>
     public const int OrderDateFieldNumber = 4;
-    private static readonly pb::FieldCodec<double?> _repeated_orderDate_codec
-        = pb::FieldCodec.ForStructWrapper<double>(34);
-    private readonly pbc::RepeatedField<double?> orderDate_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_orderDate_codec
+        = pb::FieldCodec.ForStructWrapper<float>(34);
+    private readonly pbc::RepeatedField<float?> orderDate_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OrderDate {
+    public pbc::RepeatedField<float?> OrderDate {
       get { return orderDate_; }
     }
 
     /// <summary>Field number for the "payment_due_date" field.</summary>
     public const int PaymentDueDateFieldNumber = 5;
-    private static readonly pb::FieldCodec<double?> _repeated_paymentDueDate_codec
-        = pb::FieldCodec.ForStructWrapper<double>(42);
-    private readonly pbc::RepeatedField<double?> paymentDueDate_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_paymentDueDate_codec
+        = pb::FieldCodec.ForStructWrapper<float>(42);
+    private readonly pbc::RepeatedField<float?> paymentDueDate_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> PaymentDueDate {
+    public pbc::RepeatedField<float?> PaymentDueDate {
       get { return paymentDueDate_; }
     }
 
     /// <summary>Field number for the "document_type" field.</summary>
     public const int DocumentTypeFieldNumber = 6;
-    private static readonly pb::FieldCodec<double?> _repeated_documentType_codec
-        = pb::FieldCodec.ForStructWrapper<double>(50);
-    private readonly pbc::RepeatedField<double?> documentType_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_documentType_codec
+        = pb::FieldCodec.ForStructWrapper<float>(50);
+    private readonly pbc::RepeatedField<float?> documentType_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> DocumentType {
+    public pbc::RepeatedField<float?> DocumentType {
       get { return documentType_; }
     }
 
     /// <summary>Field number for the "currency" field.</summary>
     public const int CurrencyFieldNumber = 7;
-    private static readonly pb::FieldCodec<double?> _repeated_currency_codec
-        = pb::FieldCodec.ForStructWrapper<double>(58);
-    private readonly pbc::RepeatedField<double?> currency_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_currency_codec
+        = pb::FieldCodec.ForStructWrapper<float>(58);
+    private readonly pbc::RepeatedField<float?> currency_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> Currency {
+    public pbc::RepeatedField<float?> Currency {
       get { return currency_; }
     }
 
     /// <summary>Field number for the "credit_card_last_four" field.</summary>
     public const int CreditCardLastFourFieldNumber = 8;
-    private static readonly pb::FieldCodec<double?> _repeated_creditCardLastFour_codec
-        = pb::FieldCodec.ForStructWrapper<double>(66);
-    private readonly pbc::RepeatedField<double?> creditCardLastFour_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_creditCardLastFour_codec
+        = pb::FieldCodec.ForStructWrapper<float>(66);
+    private readonly pbc::RepeatedField<float?> creditCardLastFour_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> CreditCardLastFour {
+    public pbc::RepeatedField<float?> CreditCardLastFour {
       get { return creditCardLastFour_; }
     }
 
     /// <summary>Field number for the "payment_method" field.</summary>
     public const int PaymentMethodFieldNumber = 9;
-    private static readonly pb::FieldCodec<double?> _repeated_paymentMethod_codec
-        = pb::FieldCodec.ForStructWrapper<double>(74);
-    private readonly pbc::RepeatedField<double?> paymentMethod_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_paymentMethod_codec
+        = pb::FieldCodec.ForStructWrapper<float>(74);
+    private readonly pbc::RepeatedField<float?> paymentMethod_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> PaymentMethod {
+    public pbc::RepeatedField<float?> PaymentMethod {
       get { return paymentMethod_; }
     }
 
     /// <summary>Field number for the "ocr_line_dk_type" field.</summary>
     public const int OcrLineDkTypeFieldNumber = 10;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineDkType_codec
-        = pb::FieldCodec.ForStructWrapper<double>(82);
-    private readonly pbc::RepeatedField<double?> ocrLineDkType_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineDkType_codec
+        = pb::FieldCodec.ForStructWrapper<float>(82);
+    private readonly pbc::RepeatedField<float?> ocrLineDkType_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineDkType {
+    public pbc::RepeatedField<float?> OcrLineDkType {
       get { return ocrLineDkType_; }
     }
 
     /// <summary>Field number for the "ocr_line_dk_payment_id" field.</summary>
     public const int OcrLineDkPaymentIdFieldNumber = 11;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineDkPaymentId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(90);
-    private readonly pbc::RepeatedField<double?> ocrLineDkPaymentId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineDkPaymentId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(90);
+    private readonly pbc::RepeatedField<float?> ocrLineDkPaymentId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineDkPaymentId {
+    public pbc::RepeatedField<float?> OcrLineDkPaymentId {
       get { return ocrLineDkPaymentId_; }
     }
 
     /// <summary>Field number for the "ocr_line_dk_creditor_id" field.</summary>
     public const int OcrLineDkCreditorIdFieldNumber = 12;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineDkCreditorId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(98);
-    private readonly pbc::RepeatedField<double?> ocrLineDkCreditorId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineDkCreditorId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(98);
+    private readonly pbc::RepeatedField<float?> ocrLineDkCreditorId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineDkCreditorId {
+    public pbc::RepeatedField<float?> OcrLineDkCreditorId {
       get { return ocrLineDkCreditorId_; }
     }
 
     /// <summary>Field number for the "ocr_line_se_payment_id" field.</summary>
     public const int OcrLineSePaymentIdFieldNumber = 13;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineSePaymentId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(106);
-    private readonly pbc::RepeatedField<double?> ocrLineSePaymentId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineSePaymentId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(106);
+    private readonly pbc::RepeatedField<float?> ocrLineSePaymentId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineSePaymentId {
+    public pbc::RepeatedField<float?> OcrLineSePaymentId {
       get { return ocrLineSePaymentId_; }
     }
 
     /// <summary>Field number for the "ocr_line_se_bankgiro_creditor_id" field.</summary>
     public const int OcrLineSeBankgiroCreditorIdFieldNumber = 14;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineSeBankgiroCreditorId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(114);
-    private readonly pbc::RepeatedField<double?> ocrLineSeBankgiroCreditorId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineSeBankgiroCreditorId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(114);
+    private readonly pbc::RepeatedField<float?> ocrLineSeBankgiroCreditorId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineSeBankgiroCreditorId {
+    public pbc::RepeatedField<float?> OcrLineSeBankgiroCreditorId {
       get { return ocrLineSeBankgiroCreditorId_; }
     }
 
     /// <summary>Field number for the "ocr_line_se_plusgiro_creditor_id" field.</summary>
     public const int OcrLineSePlusgiroCreditorIdFieldNumber = 15;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineSePlusgiroCreditorId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(122);
-    private readonly pbc::RepeatedField<double?> ocrLineSePlusgiroCreditorId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineSePlusgiroCreditorId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(122);
+    private readonly pbc::RepeatedField<float?> ocrLineSePlusgiroCreditorId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineSePlusgiroCreditorId {
+    public pbc::RepeatedField<float?> OcrLineSePlusgiroCreditorId {
       get { return ocrLineSePlusgiroCreditorId_; }
     }
 
     /// <summary>Field number for the "ocr_line_no_payment_id" field.</summary>
     public const int OcrLineNoPaymentIdFieldNumber = 16;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineNoPaymentId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(130);
-    private readonly pbc::RepeatedField<double?> ocrLineNoPaymentId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineNoPaymentId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(130);
+    private readonly pbc::RepeatedField<float?> ocrLineNoPaymentId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineNoPaymentId {
+    public pbc::RepeatedField<float?> OcrLineNoPaymentId {
       get { return ocrLineNoPaymentId_; }
     }
 
     /// <summary>Field number for the "ocr_line_fi_payment_id" field.</summary>
     public const int OcrLineFiPaymentIdFieldNumber = 17;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineFiPaymentId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(138);
-    private readonly pbc::RepeatedField<double?> ocrLineFiPaymentId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineFiPaymentId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(138);
+    private readonly pbc::RepeatedField<float?> ocrLineFiPaymentId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineFiPaymentId {
+    public pbc::RepeatedField<float?> OcrLineFiPaymentId {
       get { return ocrLineFiPaymentId_; }
     }
 
     /// <summary>Field number for the "ocr_line_nl_payment_id" field.</summary>
     public const int OcrLineNlPaymentIdFieldNumber = 18;
-    private static readonly pb::FieldCodec<double?> _repeated_ocrLineNlPaymentId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(146);
-    private readonly pbc::RepeatedField<double?> ocrLineNlPaymentId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_ocrLineNlPaymentId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(146);
+    private readonly pbc::RepeatedField<float?> ocrLineNlPaymentId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> OcrLineNlPaymentId {
+    public pbc::RepeatedField<float?> OcrLineNlPaymentId {
       get { return ocrLineNlPaymentId_; }
     }
 
     /// <summary>Field number for the "supplier_corporate_id" field.</summary>
     public const int SupplierCorporateIdFieldNumber = 19;
-    private static readonly pb::FieldCodec<double?> _repeated_supplierCorporateId_codec
-        = pb::FieldCodec.ForStructWrapper<double>(154);
-    private readonly pbc::RepeatedField<double?> supplierCorporateId_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_supplierCorporateId_codec
+        = pb::FieldCodec.ForStructWrapper<float>(154);
+    private readonly pbc::RepeatedField<float?> supplierCorporateId_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> SupplierCorporateId {
+    public pbc::RepeatedField<float?> SupplierCorporateId {
       get { return supplierCorporateId_; }
     }
 
     /// <summary>Field number for the "supplier_country_code" field.</summary>
     public const int SupplierCountryCodeFieldNumber = 20;
-    private static readonly pb::FieldCodec<double?> _repeated_supplierCountryCode_codec
-        = pb::FieldCodec.ForStructWrapper<double>(162);
-    private readonly pbc::RepeatedField<double?> supplierCountryCode_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_supplierCountryCode_codec
+        = pb::FieldCodec.ForStructWrapper<float>(162);
+    private readonly pbc::RepeatedField<float?> supplierCountryCode_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> SupplierCountryCode {
+    public pbc::RepeatedField<float?> SupplierCountryCode {
       get { return supplierCountryCode_; }
     }
 
     /// <summary>Field number for the "invoice_number" field.</summary>
     public const int InvoiceNumberFieldNumber = 21;
-    private static readonly pb::FieldCodec<double?> _repeated_invoiceNumber_codec
-        = pb::FieldCodec.ForStructWrapper<double>(170);
-    private readonly pbc::RepeatedField<double?> invoiceNumber_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_invoiceNumber_codec
+        = pb::FieldCodec.ForStructWrapper<float>(170);
+    private readonly pbc::RepeatedField<float?> invoiceNumber_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> InvoiceNumber {
+    public pbc::RepeatedField<float?> InvoiceNumber {
       get { return invoiceNumber_; }
     }
 
     /// <summary>Field number for the "iban" field.</summary>
     public const int IbanFieldNumber = 22;
-    private static readonly pb::FieldCodec<double?> _repeated_iban_codec
-        = pb::FieldCodec.ForStructWrapper<double>(178);
-    private readonly pbc::RepeatedField<double?> iban_ = new pbc::RepeatedField<double?>();
+    private static readonly pb::FieldCodec<float?> _repeated_iban_codec
+        = pb::FieldCodec.ForStructWrapper<float>(178);
+    private readonly pbc::RepeatedField<float?> iban_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<double?> Iban {
+    public pbc::RepeatedField<float?> Iban {
       get { return iban_; }
     }
 

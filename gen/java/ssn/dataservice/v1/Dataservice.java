@@ -15170,531 +15170,531 @@ public final class Dataservice {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getTotalInclVatList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    com.google.protobuf.DoubleValue getTotalInclVat(int index);
+    com.google.protobuf.FloatValue getTotalInclVat(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
     int getTotalInclVatCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalInclVatOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getTotalInclVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getTotalVatList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    com.google.protobuf.DoubleValue getTotalVat(int index);
+    com.google.protobuf.FloatValue getTotalVat(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
     int getTotalVatCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalVatOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getTotalVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getTotalExclVatList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    com.google.protobuf.DoubleValue getTotalExclVat(int index);
+    com.google.protobuf.FloatValue getTotalExclVat(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
     int getTotalExclVatCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalExclVatOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getTotalExclVatOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOrderDateList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    com.google.protobuf.DoubleValue getOrderDate(int index);
+    com.google.protobuf.FloatValue getOrderDate(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
     int getOrderDateCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOrderDateOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOrderDateOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOrderDateOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getPaymentDueDateList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    com.google.protobuf.DoubleValue getPaymentDueDate(int index);
+    com.google.protobuf.FloatValue getPaymentDueDate(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
     int getPaymentDueDateCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentDueDateOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getPaymentDueDateOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getPaymentDueDateOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getDocumentTypeList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    com.google.protobuf.DoubleValue getDocumentType(int index);
+    com.google.protobuf.FloatValue getDocumentType(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
     int getDocumentTypeCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getDocumentTypeOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getDocumentTypeOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getDocumentTypeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getCurrencyList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    com.google.protobuf.DoubleValue getCurrency(int index);
+    com.google.protobuf.FloatValue getCurrency(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
     int getCurrencyCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCurrencyOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getCurrencyOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getCurrencyOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getCreditCardLastFourList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    com.google.protobuf.DoubleValue getCreditCardLastFour(int index);
+    com.google.protobuf.FloatValue getCreditCardLastFour(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
     int getCreditCardLastFourCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCreditCardLastFourOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getCreditCardLastFourOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getCreditCardLastFourOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getPaymentMethodList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    com.google.protobuf.DoubleValue getPaymentMethod(int index);
+    com.google.protobuf.FloatValue getPaymentMethod(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
     int getPaymentMethodCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentMethodOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getPaymentMethodOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getPaymentMethodOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineDkTypeList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineDkType(int index);
+    com.google.protobuf.FloatValue getOcrLineDkType(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
     int getOcrLineDkTypeCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkTypeOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineDkTypeOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineDkTypeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineDkPaymentIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineDkPaymentId(int index);
+    com.google.protobuf.FloatValue getOcrLineDkPaymentId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
     int getOcrLineDkPaymentIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineDkCreditorIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineDkCreditorId(int index);
+    com.google.protobuf.FloatValue getOcrLineDkCreditorId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
     int getOcrLineDkCreditorIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineSePaymentIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineSePaymentId(int index);
+    com.google.protobuf.FloatValue getOcrLineSePaymentId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
     int getOcrLineSePaymentIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineSeBankgiroCreditorIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineSeBankgiroCreditorId(int index);
+    com.google.protobuf.FloatValue getOcrLineSeBankgiroCreditorId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
     int getOcrLineSeBankgiroCreditorIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineSePlusgiroCreditorIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineSePlusgiroCreditorId(int index);
+    com.google.protobuf.FloatValue getOcrLineSePlusgiroCreditorId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
     int getOcrLineSePlusgiroCreditorIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineNoPaymentIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineNoPaymentId(int index);
+    com.google.protobuf.FloatValue getOcrLineNoPaymentId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
     int getOcrLineNoPaymentIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineFiPaymentIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineFiPaymentId(int index);
+    com.google.protobuf.FloatValue getOcrLineFiPaymentId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
     int getOcrLineFiPaymentIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getOcrLineNlPaymentIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    com.google.protobuf.DoubleValue getOcrLineNlPaymentId(int index);
+    com.google.protobuf.FloatValue getOcrLineNlPaymentId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
     int getOcrLineNlPaymentIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getSupplierCorporateIdList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    com.google.protobuf.DoubleValue getSupplierCorporateId(int index);
+    com.google.protobuf.FloatValue getSupplierCorporateId(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
     int getSupplierCorporateIdCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCorporateIdOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getSupplierCorporateIdOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getSupplierCorporateIdOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getSupplierCountryCodeList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    com.google.protobuf.DoubleValue getSupplierCountryCode(int index);
+    com.google.protobuf.FloatValue getSupplierCountryCode(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
     int getSupplierCountryCodeCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCountryCodeOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getSupplierCountryCodeOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getSupplierCountryCodeOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getInvoiceNumberList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    com.google.protobuf.DoubleValue getInvoiceNumber(int index);
+    com.google.protobuf.FloatValue getInvoiceNumber(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
     int getInvoiceNumberCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getInvoiceNumberOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getInvoiceNumberOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getInvoiceNumberOrBuilder(
         int index);
 
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    java.util.List<com.google.protobuf.DoubleValue> 
+    java.util.List<com.google.protobuf.FloatValue> 
         getIbanList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    com.google.protobuf.DoubleValue getIban(int index);
+    com.google.protobuf.FloatValue getIban(int index);
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
     int getIbanCount();
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getIbanOrBuilderList();
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    com.google.protobuf.DoubleValueOrBuilder getIbanOrBuilder(
+    com.google.protobuf.FloatValueOrBuilder getIbanOrBuilder(
         int index);
   }
   /**
@@ -15760,200 +15760,200 @@ public final class Dataservice {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                totalInclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000001;
               }
               totalInclVat_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                totalVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000002;
               }
               totalVat_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                totalExclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000004;
               }
               totalExclVat_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 34: {
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                orderDate_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                orderDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000008;
               }
               orderDate_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 42: {
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000010;
               }
               paymentDueDate_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 50: {
               if (!((mutable_bitField0_ & 0x00000020) == 0x00000020)) {
-                documentType_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                documentType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000020;
               }
               documentType_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                currency_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                currency_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000040;
               }
               currency_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 66: {
               if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
-                creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000080;
               }
               creditCardLastFour_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 74: {
               if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
-                paymentMethod_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                paymentMethod_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000100;
               }
               paymentMethod_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 82: {
               if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
-                ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000200;
               }
               ocrLineDkType_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 90: {
               if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
-                ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000400;
               }
               ocrLineDkPaymentId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 98: {
               if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
-                ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00000800;
               }
               ocrLineDkCreditorId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 106: {
               if (!((mutable_bitField0_ & 0x00001000) == 0x00001000)) {
-                ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00001000;
               }
               ocrLineSePaymentId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 114: {
               if (!((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
-                ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00002000;
               }
               ocrLineSeBankgiroCreditorId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 122: {
               if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
-                ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00004000;
               }
               ocrLineSePlusgiroCreditorId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 130: {
               if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
-                ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00008000;
               }
               ocrLineNoPaymentId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 138: {
               if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
-                ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00010000;
               }
               ocrLineFiPaymentId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 146: {
               if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
-                ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00020000;
               }
               ocrLineNlPaymentId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 154: {
               if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
-                supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00040000;
               }
               supplierCorporateId_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 162: {
               if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
-                supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00080000;
               }
               supplierCountryCode_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 170: {
               if (!((mutable_bitField0_ & 0x00100000) == 0x00100000)) {
-                invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00100000;
               }
               invoiceNumber_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             case 178: {
               if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
-                iban_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>();
+                iban_ = new java.util.ArrayList<com.google.protobuf.FloatValue>();
                 mutable_bitField0_ |= 0x00200000;
               }
               iban_.add(
-                  input.readMessage(com.google.protobuf.DoubleValue.parser(), extensionRegistry));
+                  input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -16055,771 +16055,771 @@ public final class Dataservice {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
-    private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_;
+    private java.util.List<com.google.protobuf.FloatValue> totalInclVat_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getTotalInclVatList() {
+    public java.util.List<com.google.protobuf.FloatValue> getTotalInclVatList() {
       return totalInclVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalInclVatOrBuilderList() {
       return totalInclVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
     public int getTotalInclVatCount() {
       return totalInclVat_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    public com.google.protobuf.DoubleValue getTotalInclVat(int index) {
+    public com.google.protobuf.FloatValue getTotalInclVat(int index) {
       return totalInclVat_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+     * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getTotalInclVatOrBuilder(
         int index) {
       return totalInclVat_.get(index);
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 2;
-    private java.util.List<com.google.protobuf.DoubleValue> totalVat_;
+    private java.util.List<com.google.protobuf.FloatValue> totalVat_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getTotalVatList() {
+    public java.util.List<com.google.protobuf.FloatValue> getTotalVatList() {
       return totalVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalVatOrBuilderList() {
       return totalVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
     public int getTotalVatCount() {
       return totalVat_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    public com.google.protobuf.DoubleValue getTotalVat(int index) {
+    public com.google.protobuf.FloatValue getTotalVat(int index) {
       return totalVat_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+     * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getTotalVatOrBuilder(
         int index) {
       return totalVat_.get(index);
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
-    private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_;
+    private java.util.List<com.google.protobuf.FloatValue> totalExclVat_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getTotalExclVatList() {
+    public java.util.List<com.google.protobuf.FloatValue> getTotalExclVatList() {
       return totalExclVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getTotalExclVatOrBuilderList() {
       return totalExclVat_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
     public int getTotalExclVatCount() {
       return totalExclVat_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    public com.google.protobuf.DoubleValue getTotalExclVat(int index) {
+    public com.google.protobuf.FloatValue getTotalExclVat(int index) {
       return totalExclVat_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+     * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getTotalExclVatOrBuilder(
         int index) {
       return totalExclVat_.get(index);
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
-    private java.util.List<com.google.protobuf.DoubleValue> orderDate_;
+    private java.util.List<com.google.protobuf.FloatValue> orderDate_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOrderDateList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOrderDateList() {
       return orderDate_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOrderDateOrBuilderList() {
       return orderDate_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
     public int getOrderDateCount() {
       return orderDate_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    public com.google.protobuf.DoubleValue getOrderDate(int index) {
+    public com.google.protobuf.FloatValue getOrderDate(int index) {
       return orderDate_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+     * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOrderDateOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOrderDateOrBuilder(
         int index) {
       return orderDate_.get(index);
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
-    private java.util.List<com.google.protobuf.DoubleValue> paymentDueDate_;
+    private java.util.List<com.google.protobuf.FloatValue> paymentDueDate_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getPaymentDueDateList() {
+    public java.util.List<com.google.protobuf.FloatValue> getPaymentDueDateList() {
       return paymentDueDate_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentDueDateOrBuilderList() {
       return paymentDueDate_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
     public int getPaymentDueDateCount() {
       return paymentDueDate_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    public com.google.protobuf.DoubleValue getPaymentDueDate(int index) {
+    public com.google.protobuf.FloatValue getPaymentDueDate(int index) {
       return paymentDueDate_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getPaymentDueDateOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getPaymentDueDateOrBuilder(
         int index) {
       return paymentDueDate_.get(index);
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
-    private java.util.List<com.google.protobuf.DoubleValue> documentType_;
+    private java.util.List<com.google.protobuf.FloatValue> documentType_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getDocumentTypeList() {
+    public java.util.List<com.google.protobuf.FloatValue> getDocumentTypeList() {
       return documentType_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getDocumentTypeOrBuilderList() {
       return documentType_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
     public int getDocumentTypeCount() {
       return documentType_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    public com.google.protobuf.DoubleValue getDocumentType(int index) {
+    public com.google.protobuf.FloatValue getDocumentType(int index) {
       return documentType_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+     * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getDocumentTypeOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getDocumentTypeOrBuilder(
         int index) {
       return documentType_.get(index);
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 7;
-    private java.util.List<com.google.protobuf.DoubleValue> currency_;
+    private java.util.List<com.google.protobuf.FloatValue> currency_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getCurrencyList() {
+    public java.util.List<com.google.protobuf.FloatValue> getCurrencyList() {
       return currency_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCurrencyOrBuilderList() {
       return currency_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
     public int getCurrencyCount() {
       return currency_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    public com.google.protobuf.DoubleValue getCurrency(int index) {
+    public com.google.protobuf.FloatValue getCurrency(int index) {
       return currency_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+     * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getCurrencyOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getCurrencyOrBuilder(
         int index) {
       return currency_.get(index);
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
-    private java.util.List<com.google.protobuf.DoubleValue> creditCardLastFour_;
+    private java.util.List<com.google.protobuf.FloatValue> creditCardLastFour_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getCreditCardLastFourList() {
+    public java.util.List<com.google.protobuf.FloatValue> getCreditCardLastFourList() {
       return creditCardLastFour_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getCreditCardLastFourOrBuilderList() {
       return creditCardLastFour_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
     public int getCreditCardLastFourCount() {
       return creditCardLastFour_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    public com.google.protobuf.DoubleValue getCreditCardLastFour(int index) {
+    public com.google.protobuf.FloatValue getCreditCardLastFour(int index) {
       return creditCardLastFour_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+     * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getCreditCardLastFourOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getCreditCardLastFourOrBuilder(
         int index) {
       return creditCardLastFour_.get(index);
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
-    private java.util.List<com.google.protobuf.DoubleValue> paymentMethod_;
+    private java.util.List<com.google.protobuf.FloatValue> paymentMethod_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getPaymentMethodList() {
+    public java.util.List<com.google.protobuf.FloatValue> getPaymentMethodList() {
       return paymentMethod_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getPaymentMethodOrBuilderList() {
       return paymentMethod_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
     public int getPaymentMethodCount() {
       return paymentMethod_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    public com.google.protobuf.DoubleValue getPaymentMethod(int index) {
+    public com.google.protobuf.FloatValue getPaymentMethod(int index) {
       return paymentMethod_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+     * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getPaymentMethodOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getPaymentMethodOrBuilder(
         int index) {
       return paymentMethod_.get(index);
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkType_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineDkType_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkTypeList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkTypeList() {
       return ocrLineDkType_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkTypeOrBuilderList() {
       return ocrLineDkType_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
     public int getOcrLineDkTypeCount() {
       return ocrLineDkType_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineDkType(int index) {
+    public com.google.protobuf.FloatValue getOcrLineDkType(int index) {
       return ocrLineDkType_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkTypeOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineDkTypeOrBuilder(
         int index) {
       return ocrLineDkType_.get(index);
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkPaymentId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineDkPaymentId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkPaymentIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkPaymentIdList() {
       return ocrLineDkPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkPaymentIdOrBuilderList() {
       return ocrLineDkPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
     public int getOcrLineDkPaymentIdCount() {
       return ocrLineDkPaymentId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineDkPaymentId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineDkPaymentId(int index) {
       return ocrLineDkPaymentId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
         int index) {
       return ocrLineDkPaymentId_.get(index);
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkCreditorId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineDkCreditorId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkCreditorIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkCreditorIdList() {
       return ocrLineDkCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineDkCreditorIdOrBuilderList() {
       return ocrLineDkCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
     public int getOcrLineDkCreditorIdCount() {
       return ocrLineDkCreditorId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineDkCreditorId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineDkCreditorId(int index) {
       return ocrLineDkCreditorId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
         int index) {
       return ocrLineDkCreditorId_.get(index);
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineSePaymentId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineSePaymentId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSePaymentIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePaymentIdList() {
       return ocrLineSePaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePaymentIdOrBuilderList() {
       return ocrLineSePaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
     public int getOcrLineSePaymentIdCount() {
       return ocrLineSePaymentId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineSePaymentId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineSePaymentId(int index) {
       return ocrLineSePaymentId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineSePaymentIdOrBuilder(
         int index) {
       return ocrLineSePaymentId_.get(index);
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineSeBankgiroCreditorId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineSeBankgiroCreditorId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSeBankgiroCreditorIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineSeBankgiroCreditorIdList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSeBankgiroCreditorIdOrBuilderList() {
       return ocrLineSeBankgiroCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
     public int getOcrLineSeBankgiroCreditorIdCount() {
       return ocrLineSeBankgiroCreditorId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineSeBankgiroCreditorId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineSeBankgiroCreditorId(int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSeBankgiroCreditorId_.get(index);
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineSePlusgiroCreditorId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineSePlusgiroCreditorId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSePlusgiroCreditorIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePlusgiroCreditorIdList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineSePlusgiroCreditorIdOrBuilderList() {
       return ocrLineSePlusgiroCreditorId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
     public int getOcrLineSePlusgiroCreditorIdCount() {
       return ocrLineSePlusgiroCreditorId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineSePlusgiroCreditorId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineSePlusgiroCreditorId(int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
         int index) {
       return ocrLineSePlusgiroCreditorId_.get(index);
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineNoPaymentId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineNoPaymentId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineNoPaymentIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineNoPaymentIdList() {
       return ocrLineNoPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNoPaymentIdOrBuilderList() {
       return ocrLineNoPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
     public int getOcrLineNoPaymentIdCount() {
       return ocrLineNoPaymentId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineNoPaymentId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineNoPaymentId(int index) {
       return ocrLineNoPaymentId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
         int index) {
       return ocrLineNoPaymentId_.get(index);
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineFiPaymentId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineFiPaymentId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineFiPaymentIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineFiPaymentIdList() {
       return ocrLineFiPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineFiPaymentIdOrBuilderList() {
       return ocrLineFiPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
     public int getOcrLineFiPaymentIdCount() {
       return ocrLineFiPaymentId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineFiPaymentId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineFiPaymentId(int index) {
       return ocrLineFiPaymentId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
         int index) {
       return ocrLineFiPaymentId_.get(index);
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
-    private java.util.List<com.google.protobuf.DoubleValue> ocrLineNlPaymentId_;
+    private java.util.List<com.google.protobuf.FloatValue> ocrLineNlPaymentId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getOcrLineNlPaymentIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getOcrLineNlPaymentIdList() {
       return ocrLineNlPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getOcrLineNlPaymentIdOrBuilderList() {
       return ocrLineNlPaymentId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
     public int getOcrLineNlPaymentIdCount() {
       return ocrLineNlPaymentId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    public com.google.protobuf.DoubleValue getOcrLineNlPaymentId(int index) {
+    public com.google.protobuf.FloatValue getOcrLineNlPaymentId(int index) {
       return ocrLineNlPaymentId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+     * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
         int index) {
       return ocrLineNlPaymentId_.get(index);
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
-    private java.util.List<com.google.protobuf.DoubleValue> supplierCorporateId_;
+    private java.util.List<com.google.protobuf.FloatValue> supplierCorporateId_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getSupplierCorporateIdList() {
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierCorporateIdList() {
       return supplierCorporateId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCorporateIdOrBuilderList() {
       return supplierCorporateId_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
     public int getSupplierCorporateIdCount() {
       return supplierCorporateId_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    public com.google.protobuf.DoubleValue getSupplierCorporateId(int index) {
+    public com.google.protobuf.FloatValue getSupplierCorporateId(int index) {
       return supplierCorporateId_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getSupplierCorporateIdOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getSupplierCorporateIdOrBuilder(
         int index) {
       return supplierCorporateId_.get(index);
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
-    private java.util.List<com.google.protobuf.DoubleValue> supplierCountryCode_;
+    private java.util.List<com.google.protobuf.FloatValue> supplierCountryCode_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getSupplierCountryCodeList() {
+    public java.util.List<com.google.protobuf.FloatValue> getSupplierCountryCodeList() {
       return supplierCountryCode_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getSupplierCountryCodeOrBuilderList() {
       return supplierCountryCode_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
     public int getSupplierCountryCodeCount() {
       return supplierCountryCode_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    public com.google.protobuf.DoubleValue getSupplierCountryCode(int index) {
+    public com.google.protobuf.FloatValue getSupplierCountryCode(int index) {
       return supplierCountryCode_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+     * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getSupplierCountryCodeOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getSupplierCountryCodeOrBuilder(
         int index) {
       return supplierCountryCode_.get(index);
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
-    private java.util.List<com.google.protobuf.DoubleValue> invoiceNumber_;
+    private java.util.List<com.google.protobuf.FloatValue> invoiceNumber_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getInvoiceNumberList() {
+    public java.util.List<com.google.protobuf.FloatValue> getInvoiceNumberList() {
       return invoiceNumber_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getInvoiceNumberOrBuilderList() {
       return invoiceNumber_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
     public int getInvoiceNumberCount() {
       return invoiceNumber_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    public com.google.protobuf.DoubleValue getInvoiceNumber(int index) {
+    public com.google.protobuf.FloatValue getInvoiceNumber(int index) {
       return invoiceNumber_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+     * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getInvoiceNumberOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getInvoiceNumberOrBuilder(
         int index) {
       return invoiceNumber_.get(index);
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
-    private java.util.List<com.google.protobuf.DoubleValue> iban_;
+    private java.util.List<com.google.protobuf.FloatValue> iban_;
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    public java.util.List<com.google.protobuf.DoubleValue> getIbanList() {
+    public java.util.List<com.google.protobuf.FloatValue> getIbanList() {
       return iban_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
         getIbanOrBuilderList() {
       return iban_;
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
     public int getIbanCount() {
       return iban_.size();
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    public com.google.protobuf.DoubleValue getIban(int index) {
+    public com.google.protobuf.FloatValue getIban(int index) {
       return iban_.get(index);
     }
     /**
-     * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+     * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
      */
-    public com.google.protobuf.DoubleValueOrBuilder getIbanOrBuilder(
+    public com.google.protobuf.FloatValueOrBuilder getIbanOrBuilder(
         int index) {
       return iban_.get(index);
     }
@@ -18322,22 +18322,22 @@ public final class Dataservice {
       }
       private int bitField0_;
 
-      private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_ =
+      private java.util.List<com.google.protobuf.FloatValue> totalInclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalInclVatIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          totalInclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalInclVat_);
+          totalInclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalInclVat_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalInclVatBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalInclVatBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getTotalInclVatList() {
+      public java.util.List<com.google.protobuf.FloatValue> getTotalInclVatList() {
         if (totalInclVatBuilder_ == null) {
           return java.util.Collections.unmodifiableList(totalInclVat_);
         } else {
@@ -18345,7 +18345,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public int getTotalInclVatCount() {
         if (totalInclVatBuilder_ == null) {
@@ -18355,9 +18355,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public com.google.protobuf.DoubleValue getTotalInclVat(int index) {
+      public com.google.protobuf.FloatValue getTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
           return totalInclVat_.get(index);
         } else {
@@ -18365,10 +18365,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder setTotalInclVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalInclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18382,10 +18382,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder setTotalInclVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalInclVatBuilder_ == null) {
           ensureTotalInclVatIsMutable();
           totalInclVat_.set(index, builderForValue.build());
@@ -18396,9 +18396,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public Builder addTotalInclVat(com.google.protobuf.DoubleValue value) {
+      public Builder addTotalInclVat(com.google.protobuf.FloatValue value) {
         if (totalInclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18412,10 +18412,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder addTotalInclVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalInclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18429,10 +18429,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder addTotalInclVat(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalInclVatBuilder_ == null) {
           ensureTotalInclVatIsMutable();
           totalInclVat_.add(builderForValue.build());
@@ -18443,10 +18443,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder addTotalInclVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalInclVatBuilder_ == null) {
           ensureTotalInclVatIsMutable();
           totalInclVat_.add(index, builderForValue.build());
@@ -18457,10 +18457,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder addAllTotalInclVat(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (totalInclVatBuilder_ == null) {
           ensureTotalInclVatIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -18472,7 +18472,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder clearTotalInclVat() {
         if (totalInclVatBuilder_ == null) {
@@ -18485,7 +18485,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
       public Builder removeTotalInclVat(int index) {
         if (totalInclVatBuilder_ == null) {
@@ -18498,16 +18498,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getTotalInclVatBuilder(
+      public com.google.protobuf.FloatValue.Builder getTotalInclVatBuilder(
           int index) {
         return getTotalInclVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getTotalInclVatOrBuilder(
           int index) {
         if (totalInclVatBuilder_ == null) {
           return totalInclVat_.get(index);  } else {
@@ -18515,9 +18515,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getTotalInclVatOrBuilderList() {
         if (totalInclVatBuilder_ != null) {
           return totalInclVatBuilder_.getMessageOrBuilderList();
@@ -18526,33 +18526,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalInclVatBuilder() {
+      public com.google.protobuf.FloatValue.Builder addTotalInclVatBuilder() {
         return getTotalInclVatFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalInclVatBuilder(
+      public com.google.protobuf.FloatValue.Builder addTotalInclVatBuilder(
           int index) {
         return getTotalInclVatFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1;</code>
+       * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getTotalInclVatBuilderList() {
         return getTotalInclVatFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getTotalInclVatFieldBuilder() {
         if (totalInclVatBuilder_ == null) {
           totalInclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalInclVat_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -18562,22 +18562,22 @@ public final class Dataservice {
         return totalInclVatBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> totalVat_ =
+      private java.util.List<com.google.protobuf.FloatValue> totalVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalVatIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          totalVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalVat_);
+          totalVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalVat_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalVatBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalVatBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getTotalVatList() {
+      public java.util.List<com.google.protobuf.FloatValue> getTotalVatList() {
         if (totalVatBuilder_ == null) {
           return java.util.Collections.unmodifiableList(totalVat_);
         } else {
@@ -18585,7 +18585,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public int getTotalVatCount() {
         if (totalVatBuilder_ == null) {
@@ -18595,9 +18595,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public com.google.protobuf.DoubleValue getTotalVat(int index) {
+      public com.google.protobuf.FloatValue getTotalVat(int index) {
         if (totalVatBuilder_ == null) {
           return totalVat_.get(index);
         } else {
@@ -18605,10 +18605,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder setTotalVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18622,10 +18622,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder setTotalVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalVatBuilder_ == null) {
           ensureTotalVatIsMutable();
           totalVat_.set(index, builderForValue.build());
@@ -18636,9 +18636,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public Builder addTotalVat(com.google.protobuf.DoubleValue value) {
+      public Builder addTotalVat(com.google.protobuf.FloatValue value) {
         if (totalVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18652,10 +18652,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder addTotalVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18669,10 +18669,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder addTotalVat(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalVatBuilder_ == null) {
           ensureTotalVatIsMutable();
           totalVat_.add(builderForValue.build());
@@ -18683,10 +18683,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder addTotalVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalVatBuilder_ == null) {
           ensureTotalVatIsMutable();
           totalVat_.add(index, builderForValue.build());
@@ -18697,10 +18697,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder addAllTotalVat(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (totalVatBuilder_ == null) {
           ensureTotalVatIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -18712,7 +18712,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder clearTotalVat() {
         if (totalVatBuilder_ == null) {
@@ -18725,7 +18725,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
       public Builder removeTotalVat(int index) {
         if (totalVatBuilder_ == null) {
@@ -18738,16 +18738,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getTotalVatBuilder(
+      public com.google.protobuf.FloatValue.Builder getTotalVatBuilder(
           int index) {
         return getTotalVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getTotalVatOrBuilder(
           int index) {
         if (totalVatBuilder_ == null) {
           return totalVat_.get(index);  } else {
@@ -18755,9 +18755,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getTotalVatOrBuilderList() {
         if (totalVatBuilder_ != null) {
           return totalVatBuilder_.getMessageOrBuilderList();
@@ -18766,33 +18766,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalVatBuilder() {
+      public com.google.protobuf.FloatValue.Builder addTotalVatBuilder() {
         return getTotalVatFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalVatBuilder(
+      public com.google.protobuf.FloatValue.Builder addTotalVatBuilder(
           int index) {
         return getTotalVatFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_vat = 2;</code>
+       * <code>repeated .google.protobuf.FloatValue total_vat = 2;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getTotalVatBuilderList() {
         return getTotalVatFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getTotalVatFieldBuilder() {
         if (totalVatBuilder_ == null) {
           totalVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalVat_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -18802,22 +18802,22 @@ public final class Dataservice {
         return totalVatBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_ =
+      private java.util.List<com.google.protobuf.FloatValue> totalExclVat_ =
         java.util.Collections.emptyList();
       private void ensureTotalExclVatIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          totalExclVat_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(totalExclVat_);
+          totalExclVat_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(totalExclVat_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> totalExclVatBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalExclVatBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getTotalExclVatList() {
+      public java.util.List<com.google.protobuf.FloatValue> getTotalExclVatList() {
         if (totalExclVatBuilder_ == null) {
           return java.util.Collections.unmodifiableList(totalExclVat_);
         } else {
@@ -18825,7 +18825,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public int getTotalExclVatCount() {
         if (totalExclVatBuilder_ == null) {
@@ -18835,9 +18835,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public com.google.protobuf.DoubleValue getTotalExclVat(int index) {
+      public com.google.protobuf.FloatValue getTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
           return totalExclVat_.get(index);
         } else {
@@ -18845,10 +18845,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder setTotalExclVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalExclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18862,10 +18862,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder setTotalExclVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalExclVatBuilder_ == null) {
           ensureTotalExclVatIsMutable();
           totalExclVat_.set(index, builderForValue.build());
@@ -18876,9 +18876,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public Builder addTotalExclVat(com.google.protobuf.DoubleValue value) {
+      public Builder addTotalExclVat(com.google.protobuf.FloatValue value) {
         if (totalExclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18892,10 +18892,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder addTotalExclVat(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (totalExclVatBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18909,10 +18909,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder addTotalExclVat(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalExclVatBuilder_ == null) {
           ensureTotalExclVatIsMutable();
           totalExclVat_.add(builderForValue.build());
@@ -18923,10 +18923,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder addTotalExclVat(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (totalExclVatBuilder_ == null) {
           ensureTotalExclVatIsMutable();
           totalExclVat_.add(index, builderForValue.build());
@@ -18937,10 +18937,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder addAllTotalExclVat(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (totalExclVatBuilder_ == null) {
           ensureTotalExclVatIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -18952,7 +18952,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder clearTotalExclVat() {
         if (totalExclVatBuilder_ == null) {
@@ -18965,7 +18965,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
       public Builder removeTotalExclVat(int index) {
         if (totalExclVatBuilder_ == null) {
@@ -18978,16 +18978,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getTotalExclVatBuilder(
+      public com.google.protobuf.FloatValue.Builder getTotalExclVatBuilder(
           int index) {
         return getTotalExclVatFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getTotalExclVatOrBuilder(
           int index) {
         if (totalExclVatBuilder_ == null) {
           return totalExclVat_.get(index);  } else {
@@ -18995,9 +18995,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getTotalExclVatOrBuilderList() {
         if (totalExclVatBuilder_ != null) {
           return totalExclVatBuilder_.getMessageOrBuilderList();
@@ -19006,33 +19006,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalExclVatBuilder() {
+      public com.google.protobuf.FloatValue.Builder addTotalExclVatBuilder() {
         return getTotalExclVatFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addTotalExclVatBuilder(
+      public com.google.protobuf.FloatValue.Builder addTotalExclVatBuilder(
           int index) {
         return getTotalExclVatFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3;</code>
+       * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getTotalExclVatBuilderList() {
         return getTotalExclVatFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getTotalExclVatFieldBuilder() {
         if (totalExclVatBuilder_ == null) {
           totalExclVatBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   totalExclVat_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -19042,22 +19042,22 @@ public final class Dataservice {
         return totalExclVatBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> orderDate_ =
+      private java.util.List<com.google.protobuf.FloatValue> orderDate_ =
         java.util.Collections.emptyList();
       private void ensureOrderDateIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          orderDate_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(orderDate_);
+          orderDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(orderDate_);
           bitField0_ |= 0x00000008;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> orderDateBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> orderDateBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOrderDateList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOrderDateList() {
         if (orderDateBuilder_ == null) {
           return java.util.Collections.unmodifiableList(orderDate_);
         } else {
@@ -19065,7 +19065,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public int getOrderDateCount() {
         if (orderDateBuilder_ == null) {
@@ -19075,9 +19075,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public com.google.protobuf.DoubleValue getOrderDate(int index) {
+      public com.google.protobuf.FloatValue getOrderDate(int index) {
         if (orderDateBuilder_ == null) {
           return orderDate_.get(index);
         } else {
@@ -19085,10 +19085,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder setOrderDate(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (orderDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19102,10 +19102,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder setOrderDate(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (orderDateBuilder_ == null) {
           ensureOrderDateIsMutable();
           orderDate_.set(index, builderForValue.build());
@@ -19116,9 +19116,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public Builder addOrderDate(com.google.protobuf.DoubleValue value) {
+      public Builder addOrderDate(com.google.protobuf.FloatValue value) {
         if (orderDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19132,10 +19132,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder addOrderDate(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (orderDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19149,10 +19149,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder addOrderDate(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (orderDateBuilder_ == null) {
           ensureOrderDateIsMutable();
           orderDate_.add(builderForValue.build());
@@ -19163,10 +19163,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder addOrderDate(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (orderDateBuilder_ == null) {
           ensureOrderDateIsMutable();
           orderDate_.add(index, builderForValue.build());
@@ -19177,10 +19177,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder addAllOrderDate(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (orderDateBuilder_ == null) {
           ensureOrderDateIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19192,7 +19192,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder clearOrderDate() {
         if (orderDateBuilder_ == null) {
@@ -19205,7 +19205,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
       public Builder removeOrderDate(int index) {
         if (orderDateBuilder_ == null) {
@@ -19218,16 +19218,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOrderDateBuilder(
+      public com.google.protobuf.FloatValue.Builder getOrderDateBuilder(
           int index) {
         return getOrderDateFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOrderDateOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOrderDateOrBuilder(
           int index) {
         if (orderDateBuilder_ == null) {
           return orderDate_.get(index);  } else {
@@ -19235,9 +19235,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOrderDateOrBuilderList() {
         if (orderDateBuilder_ != null) {
           return orderDateBuilder_.getMessageOrBuilderList();
@@ -19246,33 +19246,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOrderDateBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOrderDateBuilder() {
         return getOrderDateFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOrderDateBuilder(
+      public com.google.protobuf.FloatValue.Builder addOrderDateBuilder(
           int index) {
         return getOrderDateFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue order_date = 4;</code>
+       * <code>repeated .google.protobuf.FloatValue order_date = 4;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOrderDateBuilderList() {
         return getOrderDateFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOrderDateFieldBuilder() {
         if (orderDateBuilder_ == null) {
           orderDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   orderDate_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
                   getParentForChildren(),
@@ -19282,22 +19282,22 @@ public final class Dataservice {
         return orderDateBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> paymentDueDate_ =
+      private java.util.List<com.google.protobuf.FloatValue> paymentDueDate_ =
         java.util.Collections.emptyList();
       private void ensurePaymentDueDateIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(paymentDueDate_);
+          paymentDueDate_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(paymentDueDate_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> paymentDueDateBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> paymentDueDateBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getPaymentDueDateList() {
+      public java.util.List<com.google.protobuf.FloatValue> getPaymentDueDateList() {
         if (paymentDueDateBuilder_ == null) {
           return java.util.Collections.unmodifiableList(paymentDueDate_);
         } else {
@@ -19305,7 +19305,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public int getPaymentDueDateCount() {
         if (paymentDueDateBuilder_ == null) {
@@ -19315,9 +19315,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public com.google.protobuf.DoubleValue getPaymentDueDate(int index) {
+      public com.google.protobuf.FloatValue getPaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
           return paymentDueDate_.get(index);
         } else {
@@ -19325,10 +19325,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder setPaymentDueDate(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (paymentDueDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19342,10 +19342,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder setPaymentDueDate(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentDueDateBuilder_ == null) {
           ensurePaymentDueDateIsMutable();
           paymentDueDate_.set(index, builderForValue.build());
@@ -19356,9 +19356,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public Builder addPaymentDueDate(com.google.protobuf.DoubleValue value) {
+      public Builder addPaymentDueDate(com.google.protobuf.FloatValue value) {
         if (paymentDueDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19372,10 +19372,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder addPaymentDueDate(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (paymentDueDateBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19389,10 +19389,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder addPaymentDueDate(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentDueDateBuilder_ == null) {
           ensurePaymentDueDateIsMutable();
           paymentDueDate_.add(builderForValue.build());
@@ -19403,10 +19403,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder addPaymentDueDate(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentDueDateBuilder_ == null) {
           ensurePaymentDueDateIsMutable();
           paymentDueDate_.add(index, builderForValue.build());
@@ -19417,10 +19417,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder addAllPaymentDueDate(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (paymentDueDateBuilder_ == null) {
           ensurePaymentDueDateIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19432,7 +19432,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder clearPaymentDueDate() {
         if (paymentDueDateBuilder_ == null) {
@@ -19445,7 +19445,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
       public Builder removePaymentDueDate(int index) {
         if (paymentDueDateBuilder_ == null) {
@@ -19458,16 +19458,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getPaymentDueDateBuilder(
+      public com.google.protobuf.FloatValue.Builder getPaymentDueDateBuilder(
           int index) {
         return getPaymentDueDateFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getPaymentDueDateOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getPaymentDueDateOrBuilder(
           int index) {
         if (paymentDueDateBuilder_ == null) {
           return paymentDueDate_.get(index);  } else {
@@ -19475,9 +19475,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getPaymentDueDateOrBuilderList() {
         if (paymentDueDateBuilder_ != null) {
           return paymentDueDateBuilder_.getMessageOrBuilderList();
@@ -19486,33 +19486,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addPaymentDueDateBuilder() {
+      public com.google.protobuf.FloatValue.Builder addPaymentDueDateBuilder() {
         return getPaymentDueDateFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addPaymentDueDateBuilder(
+      public com.google.protobuf.FloatValue.Builder addPaymentDueDateBuilder(
           int index) {
         return getPaymentDueDateFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_due_date = 5;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_due_date = 5;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getPaymentDueDateBuilderList() {
         return getPaymentDueDateFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getPaymentDueDateFieldBuilder() {
         if (paymentDueDateBuilder_ == null) {
           paymentDueDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   paymentDueDate_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
@@ -19522,22 +19522,22 @@ public final class Dataservice {
         return paymentDueDateBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> documentType_ =
+      private java.util.List<com.google.protobuf.FloatValue> documentType_ =
         java.util.Collections.emptyList();
       private void ensureDocumentTypeIsMutable() {
         if (!((bitField0_ & 0x00000020) == 0x00000020)) {
-          documentType_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(documentType_);
+          documentType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(documentType_);
           bitField0_ |= 0x00000020;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> documentTypeBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> documentTypeBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getDocumentTypeList() {
+      public java.util.List<com.google.protobuf.FloatValue> getDocumentTypeList() {
         if (documentTypeBuilder_ == null) {
           return java.util.Collections.unmodifiableList(documentType_);
         } else {
@@ -19545,7 +19545,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public int getDocumentTypeCount() {
         if (documentTypeBuilder_ == null) {
@@ -19555,9 +19555,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public com.google.protobuf.DoubleValue getDocumentType(int index) {
+      public com.google.protobuf.FloatValue getDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
           return documentType_.get(index);
         } else {
@@ -19565,10 +19565,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder setDocumentType(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (documentTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19582,10 +19582,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder setDocumentType(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (documentTypeBuilder_ == null) {
           ensureDocumentTypeIsMutable();
           documentType_.set(index, builderForValue.build());
@@ -19596,9 +19596,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public Builder addDocumentType(com.google.protobuf.DoubleValue value) {
+      public Builder addDocumentType(com.google.protobuf.FloatValue value) {
         if (documentTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19612,10 +19612,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder addDocumentType(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (documentTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19629,10 +19629,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder addDocumentType(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (documentTypeBuilder_ == null) {
           ensureDocumentTypeIsMutable();
           documentType_.add(builderForValue.build());
@@ -19643,10 +19643,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder addDocumentType(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (documentTypeBuilder_ == null) {
           ensureDocumentTypeIsMutable();
           documentType_.add(index, builderForValue.build());
@@ -19657,10 +19657,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder addAllDocumentType(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (documentTypeBuilder_ == null) {
           ensureDocumentTypeIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19672,7 +19672,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder clearDocumentType() {
         if (documentTypeBuilder_ == null) {
@@ -19685,7 +19685,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
       public Builder removeDocumentType(int index) {
         if (documentTypeBuilder_ == null) {
@@ -19698,16 +19698,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getDocumentTypeBuilder(
+      public com.google.protobuf.FloatValue.Builder getDocumentTypeBuilder(
           int index) {
         return getDocumentTypeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getDocumentTypeOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getDocumentTypeOrBuilder(
           int index) {
         if (documentTypeBuilder_ == null) {
           return documentType_.get(index);  } else {
@@ -19715,9 +19715,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getDocumentTypeOrBuilderList() {
         if (documentTypeBuilder_ != null) {
           return documentTypeBuilder_.getMessageOrBuilderList();
@@ -19726,33 +19726,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addDocumentTypeBuilder() {
+      public com.google.protobuf.FloatValue.Builder addDocumentTypeBuilder() {
         return getDocumentTypeFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addDocumentTypeBuilder(
+      public com.google.protobuf.FloatValue.Builder addDocumentTypeBuilder(
           int index) {
         return getDocumentTypeFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue document_type = 6;</code>
+       * <code>repeated .google.protobuf.FloatValue document_type = 6;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getDocumentTypeBuilderList() {
         return getDocumentTypeFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getDocumentTypeFieldBuilder() {
         if (documentTypeBuilder_ == null) {
           documentTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   documentType_,
                   ((bitField0_ & 0x00000020) == 0x00000020),
                   getParentForChildren(),
@@ -19762,22 +19762,22 @@ public final class Dataservice {
         return documentTypeBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> currency_ =
+      private java.util.List<com.google.protobuf.FloatValue> currency_ =
         java.util.Collections.emptyList();
       private void ensureCurrencyIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          currency_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(currency_);
+          currency_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(currency_);
           bitField0_ |= 0x00000040;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> currencyBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> currencyBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getCurrencyList() {
+      public java.util.List<com.google.protobuf.FloatValue> getCurrencyList() {
         if (currencyBuilder_ == null) {
           return java.util.Collections.unmodifiableList(currency_);
         } else {
@@ -19785,7 +19785,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public int getCurrencyCount() {
         if (currencyBuilder_ == null) {
@@ -19795,9 +19795,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public com.google.protobuf.DoubleValue getCurrency(int index) {
+      public com.google.protobuf.FloatValue getCurrency(int index) {
         if (currencyBuilder_ == null) {
           return currency_.get(index);
         } else {
@@ -19805,10 +19805,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder setCurrency(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (currencyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19822,10 +19822,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder setCurrency(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (currencyBuilder_ == null) {
           ensureCurrencyIsMutable();
           currency_.set(index, builderForValue.build());
@@ -19836,9 +19836,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public Builder addCurrency(com.google.protobuf.DoubleValue value) {
+      public Builder addCurrency(com.google.protobuf.FloatValue value) {
         if (currencyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19852,10 +19852,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder addCurrency(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (currencyBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19869,10 +19869,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder addCurrency(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (currencyBuilder_ == null) {
           ensureCurrencyIsMutable();
           currency_.add(builderForValue.build());
@@ -19883,10 +19883,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder addCurrency(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (currencyBuilder_ == null) {
           ensureCurrencyIsMutable();
           currency_.add(index, builderForValue.build());
@@ -19897,10 +19897,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder addAllCurrency(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (currencyBuilder_ == null) {
           ensureCurrencyIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19912,7 +19912,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder clearCurrency() {
         if (currencyBuilder_ == null) {
@@ -19925,7 +19925,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
       public Builder removeCurrency(int index) {
         if (currencyBuilder_ == null) {
@@ -19938,16 +19938,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getCurrencyBuilder(
+      public com.google.protobuf.FloatValue.Builder getCurrencyBuilder(
           int index) {
         return getCurrencyFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getCurrencyOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getCurrencyOrBuilder(
           int index) {
         if (currencyBuilder_ == null) {
           return currency_.get(index);  } else {
@@ -19955,9 +19955,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getCurrencyOrBuilderList() {
         if (currencyBuilder_ != null) {
           return currencyBuilder_.getMessageOrBuilderList();
@@ -19966,33 +19966,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addCurrencyBuilder() {
+      public com.google.protobuf.FloatValue.Builder addCurrencyBuilder() {
         return getCurrencyFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addCurrencyBuilder(
+      public com.google.protobuf.FloatValue.Builder addCurrencyBuilder(
           int index) {
         return getCurrencyFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue currency = 7;</code>
+       * <code>repeated .google.protobuf.FloatValue currency = 7;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getCurrencyBuilderList() {
         return getCurrencyFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getCurrencyFieldBuilder() {
         if (currencyBuilder_ == null) {
           currencyBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   currency_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
@@ -20002,22 +20002,22 @@ public final class Dataservice {
         return currencyBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> creditCardLastFour_ =
+      private java.util.List<com.google.protobuf.FloatValue> creditCardLastFour_ =
         java.util.Collections.emptyList();
       private void ensureCreditCardLastFourIsMutable() {
         if (!((bitField0_ & 0x00000080) == 0x00000080)) {
-          creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(creditCardLastFour_);
+          creditCardLastFour_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(creditCardLastFour_);
           bitField0_ |= 0x00000080;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> creditCardLastFourBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> creditCardLastFourBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getCreditCardLastFourList() {
+      public java.util.List<com.google.protobuf.FloatValue> getCreditCardLastFourList() {
         if (creditCardLastFourBuilder_ == null) {
           return java.util.Collections.unmodifiableList(creditCardLastFour_);
         } else {
@@ -20025,7 +20025,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public int getCreditCardLastFourCount() {
         if (creditCardLastFourBuilder_ == null) {
@@ -20035,9 +20035,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.DoubleValue getCreditCardLastFour(int index) {
+      public com.google.protobuf.FloatValue getCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
           return creditCardLastFour_.get(index);
         } else {
@@ -20045,10 +20045,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder setCreditCardLastFour(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (creditCardLastFourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20062,10 +20062,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder setCreditCardLastFour(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (creditCardLastFourBuilder_ == null) {
           ensureCreditCardLastFourIsMutable();
           creditCardLastFour_.set(index, builderForValue.build());
@@ -20076,9 +20076,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public Builder addCreditCardLastFour(com.google.protobuf.DoubleValue value) {
+      public Builder addCreditCardLastFour(com.google.protobuf.FloatValue value) {
         if (creditCardLastFourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20092,10 +20092,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder addCreditCardLastFour(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (creditCardLastFourBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20109,10 +20109,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder addCreditCardLastFour(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (creditCardLastFourBuilder_ == null) {
           ensureCreditCardLastFourIsMutable();
           creditCardLastFour_.add(builderForValue.build());
@@ -20123,10 +20123,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder addCreditCardLastFour(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (creditCardLastFourBuilder_ == null) {
           ensureCreditCardLastFourIsMutable();
           creditCardLastFour_.add(index, builderForValue.build());
@@ -20137,10 +20137,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder addAllCreditCardLastFour(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (creditCardLastFourBuilder_ == null) {
           ensureCreditCardLastFourIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -20152,7 +20152,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder clearCreditCardLastFour() {
         if (creditCardLastFourBuilder_ == null) {
@@ -20165,7 +20165,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
       public Builder removeCreditCardLastFour(int index) {
         if (creditCardLastFourBuilder_ == null) {
@@ -20178,16 +20178,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getCreditCardLastFourBuilder(
+      public com.google.protobuf.FloatValue.Builder getCreditCardLastFourBuilder(
           int index) {
         return getCreditCardLastFourFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getCreditCardLastFourOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getCreditCardLastFourOrBuilder(
           int index) {
         if (creditCardLastFourBuilder_ == null) {
           return creditCardLastFour_.get(index);  } else {
@@ -20195,9 +20195,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getCreditCardLastFourOrBuilderList() {
         if (creditCardLastFourBuilder_ != null) {
           return creditCardLastFourBuilder_.getMessageOrBuilderList();
@@ -20206,33 +20206,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addCreditCardLastFourBuilder() {
+      public com.google.protobuf.FloatValue.Builder addCreditCardLastFourBuilder() {
         return getCreditCardLastFourFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addCreditCardLastFourBuilder(
+      public com.google.protobuf.FloatValue.Builder addCreditCardLastFourBuilder(
           int index) {
         return getCreditCardLastFourFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue credit_card_last_four = 8;</code>
+       * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getCreditCardLastFourBuilderList() {
         return getCreditCardLastFourFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getCreditCardLastFourFieldBuilder() {
         if (creditCardLastFourBuilder_ == null) {
           creditCardLastFourBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   creditCardLastFour_,
                   ((bitField0_ & 0x00000080) == 0x00000080),
                   getParentForChildren(),
@@ -20242,22 +20242,22 @@ public final class Dataservice {
         return creditCardLastFourBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> paymentMethod_ =
+      private java.util.List<com.google.protobuf.FloatValue> paymentMethod_ =
         java.util.Collections.emptyList();
       private void ensurePaymentMethodIsMutable() {
         if (!((bitField0_ & 0x00000100) == 0x00000100)) {
-          paymentMethod_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(paymentMethod_);
+          paymentMethod_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(paymentMethod_);
           bitField0_ |= 0x00000100;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> paymentMethodBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> paymentMethodBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getPaymentMethodList() {
+      public java.util.List<com.google.protobuf.FloatValue> getPaymentMethodList() {
         if (paymentMethodBuilder_ == null) {
           return java.util.Collections.unmodifiableList(paymentMethod_);
         } else {
@@ -20265,7 +20265,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public int getPaymentMethodCount() {
         if (paymentMethodBuilder_ == null) {
@@ -20275,9 +20275,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public com.google.protobuf.DoubleValue getPaymentMethod(int index) {
+      public com.google.protobuf.FloatValue getPaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
           return paymentMethod_.get(index);
         } else {
@@ -20285,10 +20285,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder setPaymentMethod(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (paymentMethodBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20302,10 +20302,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder setPaymentMethod(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentMethodBuilder_ == null) {
           ensurePaymentMethodIsMutable();
           paymentMethod_.set(index, builderForValue.build());
@@ -20316,9 +20316,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public Builder addPaymentMethod(com.google.protobuf.DoubleValue value) {
+      public Builder addPaymentMethod(com.google.protobuf.FloatValue value) {
         if (paymentMethodBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20332,10 +20332,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder addPaymentMethod(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (paymentMethodBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20349,10 +20349,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder addPaymentMethod(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentMethodBuilder_ == null) {
           ensurePaymentMethodIsMutable();
           paymentMethod_.add(builderForValue.build());
@@ -20363,10 +20363,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder addPaymentMethod(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (paymentMethodBuilder_ == null) {
           ensurePaymentMethodIsMutable();
           paymentMethod_.add(index, builderForValue.build());
@@ -20377,10 +20377,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder addAllPaymentMethod(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (paymentMethodBuilder_ == null) {
           ensurePaymentMethodIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -20392,7 +20392,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder clearPaymentMethod() {
         if (paymentMethodBuilder_ == null) {
@@ -20405,7 +20405,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
       public Builder removePaymentMethod(int index) {
         if (paymentMethodBuilder_ == null) {
@@ -20418,16 +20418,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getPaymentMethodBuilder(
+      public com.google.protobuf.FloatValue.Builder getPaymentMethodBuilder(
           int index) {
         return getPaymentMethodFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getPaymentMethodOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getPaymentMethodOrBuilder(
           int index) {
         if (paymentMethodBuilder_ == null) {
           return paymentMethod_.get(index);  } else {
@@ -20435,9 +20435,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getPaymentMethodOrBuilderList() {
         if (paymentMethodBuilder_ != null) {
           return paymentMethodBuilder_.getMessageOrBuilderList();
@@ -20446,33 +20446,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addPaymentMethodBuilder() {
+      public com.google.protobuf.FloatValue.Builder addPaymentMethodBuilder() {
         return getPaymentMethodFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addPaymentMethodBuilder(
+      public com.google.protobuf.FloatValue.Builder addPaymentMethodBuilder(
           int index) {
         return getPaymentMethodFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue payment_method = 9;</code>
+       * <code>repeated .google.protobuf.FloatValue payment_method = 9;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getPaymentMethodBuilderList() {
         return getPaymentMethodFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getPaymentMethodFieldBuilder() {
         if (paymentMethodBuilder_ == null) {
           paymentMethodBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   paymentMethod_,
                   ((bitField0_ & 0x00000100) == 0x00000100),
                   getParentForChildren(),
@@ -20482,22 +20482,22 @@ public final class Dataservice {
         return paymentMethodBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkType_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
         if (!((bitField0_ & 0x00000200) == 0x00000200)) {
-          ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineDkType_);
+          ocrLineDkType_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkType_);
           bitField0_ |= 0x00000200;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineDkTypeBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineDkTypeBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkTypeList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkTypeList() {
         if (ocrLineDkTypeBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineDkType_);
         } else {
@@ -20505,7 +20505,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public int getOcrLineDkTypeCount() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -20515,9 +20515,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineDkType(int index) {
+      public com.google.protobuf.FloatValue getOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
           return ocrLineDkType_.get(index);
         } else {
@@ -20525,10 +20525,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder setOcrLineDkType(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20542,10 +20542,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder setOcrLineDkType(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkTypeBuilder_ == null) {
           ensureOcrLineDkTypeIsMutable();
           ocrLineDkType_.set(index, builderForValue.build());
@@ -20556,9 +20556,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public Builder addOcrLineDkType(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineDkType(com.google.protobuf.FloatValue value) {
         if (ocrLineDkTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20572,10 +20572,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder addOcrLineDkType(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkTypeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20589,10 +20589,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder addOcrLineDkType(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkTypeBuilder_ == null) {
           ensureOcrLineDkTypeIsMutable();
           ocrLineDkType_.add(builderForValue.build());
@@ -20603,10 +20603,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder addOcrLineDkType(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkTypeBuilder_ == null) {
           ensureOcrLineDkTypeIsMutable();
           ocrLineDkType_.add(index, builderForValue.build());
@@ -20617,10 +20617,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder addAllOcrLineDkType(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineDkTypeBuilder_ == null) {
           ensureOcrLineDkTypeIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -20632,7 +20632,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder clearOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -20645,7 +20645,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
       public Builder removeOcrLineDkType(int index) {
         if (ocrLineDkTypeBuilder_ == null) {
@@ -20658,16 +20658,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineDkTypeBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineDkTypeBuilder(
           int index) {
         return getOcrLineDkTypeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkTypeOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineDkTypeOrBuilder(
           int index) {
         if (ocrLineDkTypeBuilder_ == null) {
           return ocrLineDkType_.get(index);  } else {
@@ -20675,9 +20675,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineDkTypeOrBuilderList() {
         if (ocrLineDkTypeBuilder_ != null) {
           return ocrLineDkTypeBuilder_.getMessageOrBuilderList();
@@ -20686,33 +20686,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkTypeBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkTypeBuilder() {
         return getOcrLineDkTypeFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkTypeBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkTypeBuilder(
           int index) {
         return getOcrLineDkTypeFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_type = 10;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineDkTypeBuilderList() {
         return getOcrLineDkTypeFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineDkTypeFieldBuilder() {
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkType_,
                   ((bitField0_ & 0x00000200) == 0x00000200),
                   getParentForChildren(),
@@ -20722,22 +20722,22 @@ public final class Dataservice {
         return ocrLineDkTypeBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkPaymentId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
         if (!((bitField0_ & 0x00000400) == 0x00000400)) {
-          ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineDkPaymentId_);
+          ocrLineDkPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkPaymentId_);
           bitField0_ |= 0x00000400;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineDkPaymentIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineDkPaymentIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkPaymentIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkPaymentIdList() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
         } else {
@@ -20745,7 +20745,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public int getOcrLineDkPaymentIdCount() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -20755,9 +20755,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineDkPaymentId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           return ocrLineDkPaymentId_.get(index);
         } else {
@@ -20765,10 +20765,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder setOcrLineDkPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20782,10 +20782,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder setOcrLineDkPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ensureOcrLineDkPaymentIdIsMutable();
           ocrLineDkPaymentId_.set(index, builderForValue.build());
@@ -20796,9 +20796,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public Builder addOcrLineDkPaymentId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineDkPaymentId(com.google.protobuf.FloatValue value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20812,10 +20812,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder addOcrLineDkPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20829,10 +20829,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder addOcrLineDkPaymentId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ensureOcrLineDkPaymentIdIsMutable();
           ocrLineDkPaymentId_.add(builderForValue.build());
@@ -20843,10 +20843,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder addOcrLineDkPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ensureOcrLineDkPaymentIdIsMutable();
           ocrLineDkPaymentId_.add(index, builderForValue.build());
@@ -20857,10 +20857,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder addAllOcrLineDkPaymentId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ensureOcrLineDkPaymentIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -20872,7 +20872,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder clearOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -20885,7 +20885,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
       public Builder removeOcrLineDkPaymentId(int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
@@ -20898,16 +20898,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineDkPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineDkPaymentIdBuilder(
           int index) {
         return getOcrLineDkPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineDkPaymentIdOrBuilder(
           int index) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           return ocrLineDkPaymentId_.get(index);  } else {
@@ -20915,9 +20915,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineDkPaymentIdOrBuilderList() {
         if (ocrLineDkPaymentIdBuilder_ != null) {
           return ocrLineDkPaymentIdBuilder_.getMessageOrBuilderList();
@@ -20926,33 +20926,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkPaymentIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkPaymentIdBuilder() {
         return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkPaymentIdBuilder(
           int index) {
         return getOcrLineDkPaymentIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_payment_id = 11;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineDkPaymentIdBuilderList() {
         return getOcrLineDkPaymentIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineDkPaymentIdFieldBuilder() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkPaymentId_,
                   ((bitField0_ & 0x00000400) == 0x00000400),
                   getParentForChildren(),
@@ -20962,22 +20962,22 @@ public final class Dataservice {
         return ocrLineDkPaymentIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineDkCreditorId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
         if (!((bitField0_ & 0x00000800) == 0x00000800)) {
-          ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineDkCreditorId_);
+          ocrLineDkCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineDkCreditorId_);
           bitField0_ |= 0x00000800;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineDkCreditorIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineDkCreditorIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineDkCreditorIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineDkCreditorIdList() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
         } else {
@@ -20985,7 +20985,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public int getOcrLineDkCreditorIdCount() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -20995,9 +20995,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineDkCreditorId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           return ocrLineDkCreditorId_.get(index);
         } else {
@@ -21005,10 +21005,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder setOcrLineDkCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21022,10 +21022,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder setOcrLineDkCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ensureOcrLineDkCreditorIdIsMutable();
           ocrLineDkCreditorId_.set(index, builderForValue.build());
@@ -21036,9 +21036,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public Builder addOcrLineDkCreditorId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineDkCreditorId(com.google.protobuf.FloatValue value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21052,10 +21052,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder addOcrLineDkCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21069,10 +21069,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder addOcrLineDkCreditorId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ensureOcrLineDkCreditorIdIsMutable();
           ocrLineDkCreditorId_.add(builderForValue.build());
@@ -21083,10 +21083,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder addOcrLineDkCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ensureOcrLineDkCreditorIdIsMutable();
           ocrLineDkCreditorId_.add(index, builderForValue.build());
@@ -21097,10 +21097,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder addAllOcrLineDkCreditorId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ensureOcrLineDkCreditorIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -21112,7 +21112,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder clearOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -21125,7 +21125,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
       public Builder removeOcrLineDkCreditorId(int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
@@ -21138,16 +21138,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineDkCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineDkCreditorIdBuilder(
           int index) {
         return getOcrLineDkCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineDkCreditorIdOrBuilder(
           int index) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           return ocrLineDkCreditorId_.get(index);  } else {
@@ -21155,9 +21155,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineDkCreditorIdOrBuilderList() {
         if (ocrLineDkCreditorIdBuilder_ != null) {
           return ocrLineDkCreditorIdBuilder_.getMessageOrBuilderList();
@@ -21166,33 +21166,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkCreditorIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkCreditorIdBuilder() {
         return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineDkCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineDkCreditorIdBuilder(
           int index) {
         return getOcrLineDkCreditorIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_dk_creditor_id = 12;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineDkCreditorIdBuilderList() {
         return getOcrLineDkCreditorIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineDkCreditorIdFieldBuilder() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineDkCreditorId_,
                   ((bitField0_ & 0x00000800) == 0x00000800),
                   getParentForChildren(),
@@ -21202,22 +21202,22 @@ public final class Dataservice {
         return ocrLineDkCreditorIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineSePaymentId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
         if (!((bitField0_ & 0x00001000) == 0x00001000)) {
-          ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineSePaymentId_);
+          ocrLineSePaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSePaymentId_);
           bitField0_ |= 0x00001000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineSePaymentIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineSePaymentIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSePaymentIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePaymentIdList() {
         if (ocrLineSePaymentIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
         } else {
@@ -21225,7 +21225,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public int getOcrLineSePaymentIdCount() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -21235,9 +21235,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineSePaymentId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           return ocrLineSePaymentId_.get(index);
         } else {
@@ -21245,10 +21245,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder setOcrLineSePaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21262,10 +21262,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder setOcrLineSePaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ensureOcrLineSePaymentIdIsMutable();
           ocrLineSePaymentId_.set(index, builderForValue.build());
@@ -21276,9 +21276,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public Builder addOcrLineSePaymentId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineSePaymentId(com.google.protobuf.FloatValue value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21292,10 +21292,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder addOcrLineSePaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21309,10 +21309,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder addOcrLineSePaymentId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ensureOcrLineSePaymentIdIsMutable();
           ocrLineSePaymentId_.add(builderForValue.build());
@@ -21323,10 +21323,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder addOcrLineSePaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ensureOcrLineSePaymentIdIsMutable();
           ocrLineSePaymentId_.add(index, builderForValue.build());
@@ -21337,10 +21337,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder addAllOcrLineSePaymentId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ensureOcrLineSePaymentIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -21352,7 +21352,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder clearOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -21365,7 +21365,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
       public Builder removeOcrLineSePaymentId(int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
@@ -21378,16 +21378,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineSePaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineSePaymentIdBuilder(
           int index) {
         return getOcrLineSePaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineSePaymentIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineSePaymentIdOrBuilder(
           int index) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           return ocrLineSePaymentId_.get(index);  } else {
@@ -21395,9 +21395,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineSePaymentIdOrBuilderList() {
         if (ocrLineSePaymentIdBuilder_ != null) {
           return ocrLineSePaymentIdBuilder_.getMessageOrBuilderList();
@@ -21406,33 +21406,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSePaymentIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineSePaymentIdBuilder() {
         return getOcrLineSePaymentIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSePaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineSePaymentIdBuilder(
           int index) {
         return getOcrLineSePaymentIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_payment_id = 13;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineSePaymentIdBuilderList() {
         return getOcrLineSePaymentIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineSePaymentIdFieldBuilder() {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSePaymentId_,
                   ((bitField0_ & 0x00001000) == 0x00001000),
                   getParentForChildren(),
@@ -21442,22 +21442,22 @@ public final class Dataservice {
         return ocrLineSePaymentIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineSeBankgiroCreditorId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
         if (!((bitField0_ & 0x00002000) == 0x00002000)) {
-          ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineSeBankgiroCreditorId_);
+          ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSeBankgiroCreditorId_);
           bitField0_ |= 0x00002000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineSeBankgiroCreditorIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSeBankgiroCreditorIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineSeBankgiroCreditorIdList() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
         } else {
@@ -21465,7 +21465,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public int getOcrLineSeBankgiroCreditorIdCount() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -21475,9 +21475,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineSeBankgiroCreditorId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           return ocrLineSeBankgiroCreditorId_.get(index);
         } else {
@@ -21485,10 +21485,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21502,10 +21502,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder setOcrLineSeBankgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSeBankgiroCreditorIdIsMutable();
           ocrLineSeBankgiroCreditorId_.set(index, builderForValue.build());
@@ -21516,9 +21516,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public Builder addOcrLineSeBankgiroCreditorId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineSeBankgiroCreditorId(com.google.protobuf.FloatValue value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21532,10 +21532,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21549,10 +21549,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSeBankgiroCreditorIdIsMutable();
           ocrLineSeBankgiroCreditorId_.add(builderForValue.build());
@@ -21563,10 +21563,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder addOcrLineSeBankgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSeBankgiroCreditorIdIsMutable();
           ocrLineSeBankgiroCreditorId_.add(index, builderForValue.build());
@@ -21577,10 +21577,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder addAllOcrLineSeBankgiroCreditorId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSeBankgiroCreditorIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -21592,7 +21592,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder clearOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -21605,7 +21605,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
       public Builder removeOcrLineSeBankgiroCreditorId(int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
@@ -21618,16 +21618,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineSeBankgiroCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder(
           int index) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           return ocrLineSeBankgiroCreditorId_.get(index);  } else {
@@ -21635,9 +21635,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineSeBankgiroCreditorIdOrBuilderList() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ != null) {
           return ocrLineSeBankgiroCreditorIdBuilder_.getMessageOrBuilderList();
@@ -21646,33 +21646,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSeBankgiroCreditorIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineSeBankgiroCreditorIdBuilder() {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSeBankgiroCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineSeBankgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_bankgiro_creditor_id = 14;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineSeBankgiroCreditorIdBuilderList() {
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineSeBankgiroCreditorIdFieldBuilder() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
                   ((bitField0_ & 0x00002000) == 0x00002000),
                   getParentForChildren(),
@@ -21682,22 +21682,22 @@ public final class Dataservice {
         return ocrLineSeBankgiroCreditorIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineSePlusgiroCreditorId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
         if (!((bitField0_ & 0x00004000) == 0x00004000)) {
-          ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineSePlusgiroCreditorId_);
+          ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineSePlusgiroCreditorId_);
           bitField0_ |= 0x00004000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineSePlusgiroCreditorIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineSePlusgiroCreditorIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineSePlusgiroCreditorIdList() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
         } else {
@@ -21705,7 +21705,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public int getOcrLineSePlusgiroCreditorIdCount() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -21715,9 +21715,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineSePlusgiroCreditorId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           return ocrLineSePlusgiroCreditorId_.get(index);
         } else {
@@ -21725,10 +21725,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21742,10 +21742,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder setOcrLineSePlusgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSePlusgiroCreditorIdIsMutable();
           ocrLineSePlusgiroCreditorId_.set(index, builderForValue.build());
@@ -21756,9 +21756,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public Builder addOcrLineSePlusgiroCreditorId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineSePlusgiroCreditorId(com.google.protobuf.FloatValue value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21772,10 +21772,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21789,10 +21789,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSePlusgiroCreditorIdIsMutable();
           ocrLineSePlusgiroCreditorId_.add(builderForValue.build());
@@ -21803,10 +21803,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder addOcrLineSePlusgiroCreditorId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSePlusgiroCreditorIdIsMutable();
           ocrLineSePlusgiroCreditorId_.add(index, builderForValue.build());
@@ -21817,10 +21817,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder addAllOcrLineSePlusgiroCreditorId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ensureOcrLineSePlusgiroCreditorIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -21832,7 +21832,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder clearOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -21845,7 +21845,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
       public Builder removeOcrLineSePlusgiroCreditorId(int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
@@ -21858,16 +21858,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineSePlusgiroCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder(
           int index) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           return ocrLineSePlusgiroCreditorId_.get(index);  } else {
@@ -21875,9 +21875,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineSePlusgiroCreditorIdOrBuilderList() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ != null) {
           return ocrLineSePlusgiroCreditorIdBuilder_.getMessageOrBuilderList();
@@ -21886,33 +21886,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSePlusgiroCreditorIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineSePlusgiroCreditorIdBuilder() {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineSePlusgiroCreditorIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineSePlusgiroCreditorIdBuilder(
           int index) {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_se_plusgiro_creditor_id = 15;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineSePlusgiroCreditorIdBuilderList() {
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineSePlusgiroCreditorIdFieldBuilder() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
                   ((bitField0_ & 0x00004000) == 0x00004000),
                   getParentForChildren(),
@@ -21922,22 +21922,22 @@ public final class Dataservice {
         return ocrLineSePlusgiroCreditorIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineNoPaymentId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
         if (!((bitField0_ & 0x00008000) == 0x00008000)) {
-          ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineNoPaymentId_);
+          ocrLineNoPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineNoPaymentId_);
           bitField0_ |= 0x00008000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineNoPaymentIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineNoPaymentIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineNoPaymentIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineNoPaymentIdList() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
         } else {
@@ -21945,7 +21945,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public int getOcrLineNoPaymentIdCount() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -21955,9 +21955,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineNoPaymentId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           return ocrLineNoPaymentId_.get(index);
         } else {
@@ -21965,10 +21965,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder setOcrLineNoPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -21982,10 +21982,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder setOcrLineNoPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ensureOcrLineNoPaymentIdIsMutable();
           ocrLineNoPaymentId_.set(index, builderForValue.build());
@@ -21996,9 +21996,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public Builder addOcrLineNoPaymentId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineNoPaymentId(com.google.protobuf.FloatValue value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22012,10 +22012,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder addOcrLineNoPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22029,10 +22029,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder addOcrLineNoPaymentId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ensureOcrLineNoPaymentIdIsMutable();
           ocrLineNoPaymentId_.add(builderForValue.build());
@@ -22043,10 +22043,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder addOcrLineNoPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ensureOcrLineNoPaymentIdIsMutable();
           ocrLineNoPaymentId_.add(index, builderForValue.build());
@@ -22057,10 +22057,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder addAllOcrLineNoPaymentId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ensureOcrLineNoPaymentIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -22072,7 +22072,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder clearOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -22085,7 +22085,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
       public Builder removeOcrLineNoPaymentId(int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
@@ -22098,16 +22098,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineNoPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineNoPaymentIdBuilder(
           int index) {
         return getOcrLineNoPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineNoPaymentIdOrBuilder(
           int index) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           return ocrLineNoPaymentId_.get(index);  } else {
@@ -22115,9 +22115,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineNoPaymentIdOrBuilderList() {
         if (ocrLineNoPaymentIdBuilder_ != null) {
           return ocrLineNoPaymentIdBuilder_.getMessageOrBuilderList();
@@ -22126,33 +22126,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineNoPaymentIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineNoPaymentIdBuilder() {
         return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineNoPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineNoPaymentIdBuilder(
           int index) {
         return getOcrLineNoPaymentIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_no_payment_id = 16;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineNoPaymentIdBuilderList() {
         return getOcrLineNoPaymentIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineNoPaymentIdFieldBuilder() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineNoPaymentId_,
                   ((bitField0_ & 0x00008000) == 0x00008000),
                   getParentForChildren(),
@@ -22162,22 +22162,22 @@ public final class Dataservice {
         return ocrLineNoPaymentIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineFiPaymentId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
         if (!((bitField0_ & 0x00010000) == 0x00010000)) {
-          ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineFiPaymentId_);
+          ocrLineFiPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineFiPaymentId_);
           bitField0_ |= 0x00010000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineFiPaymentIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineFiPaymentIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineFiPaymentIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineFiPaymentIdList() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
         } else {
@@ -22185,7 +22185,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public int getOcrLineFiPaymentIdCount() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -22195,9 +22195,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineFiPaymentId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           return ocrLineFiPaymentId_.get(index);
         } else {
@@ -22205,10 +22205,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder setOcrLineFiPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22222,10 +22222,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder setOcrLineFiPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ensureOcrLineFiPaymentIdIsMutable();
           ocrLineFiPaymentId_.set(index, builderForValue.build());
@@ -22236,9 +22236,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public Builder addOcrLineFiPaymentId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineFiPaymentId(com.google.protobuf.FloatValue value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22252,10 +22252,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder addOcrLineFiPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22269,10 +22269,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder addOcrLineFiPaymentId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ensureOcrLineFiPaymentIdIsMutable();
           ocrLineFiPaymentId_.add(builderForValue.build());
@@ -22283,10 +22283,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder addOcrLineFiPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ensureOcrLineFiPaymentIdIsMutable();
           ocrLineFiPaymentId_.add(index, builderForValue.build());
@@ -22297,10 +22297,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder addAllOcrLineFiPaymentId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ensureOcrLineFiPaymentIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -22312,7 +22312,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder clearOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -22325,7 +22325,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
       public Builder removeOcrLineFiPaymentId(int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
@@ -22338,16 +22338,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineFiPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineFiPaymentIdBuilder(
           int index) {
         return getOcrLineFiPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineFiPaymentIdOrBuilder(
           int index) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           return ocrLineFiPaymentId_.get(index);  } else {
@@ -22355,9 +22355,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineFiPaymentIdOrBuilderList() {
         if (ocrLineFiPaymentIdBuilder_ != null) {
           return ocrLineFiPaymentIdBuilder_.getMessageOrBuilderList();
@@ -22366,33 +22366,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineFiPaymentIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineFiPaymentIdBuilder() {
         return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineFiPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineFiPaymentIdBuilder(
           int index) {
         return getOcrLineFiPaymentIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_fi_payment_id = 17;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineFiPaymentIdBuilderList() {
         return getOcrLineFiPaymentIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineFiPaymentIdFieldBuilder() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineFiPaymentId_,
                   ((bitField0_ & 0x00010000) == 0x00010000),
                   getParentForChildren(),
@@ -22402,22 +22402,22 @@ public final class Dataservice {
         return ocrLineFiPaymentIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> ocrLineNlPaymentId_ =
+      private java.util.List<com.google.protobuf.FloatValue> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
         if (!((bitField0_ & 0x00020000) == 0x00020000)) {
-          ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(ocrLineNlPaymentId_);
+          ocrLineNlPaymentId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(ocrLineNlPaymentId_);
           bitField0_ |= 0x00020000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ocrLineNlPaymentIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ocrLineNlPaymentIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getOcrLineNlPaymentIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getOcrLineNlPaymentIdList() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
         } else {
@@ -22425,7 +22425,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public int getOcrLineNlPaymentIdCount() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -22435,9 +22435,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public com.google.protobuf.DoubleValue getOcrLineNlPaymentId(int index) {
+      public com.google.protobuf.FloatValue getOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           return ocrLineNlPaymentId_.get(index);
         } else {
@@ -22445,10 +22445,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder setOcrLineNlPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22462,10 +22462,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder setOcrLineNlPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ensureOcrLineNlPaymentIdIsMutable();
           ocrLineNlPaymentId_.set(index, builderForValue.build());
@@ -22476,9 +22476,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public Builder addOcrLineNlPaymentId(com.google.protobuf.DoubleValue value) {
+      public Builder addOcrLineNlPaymentId(com.google.protobuf.FloatValue value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22492,10 +22492,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder addOcrLineNlPaymentId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22509,10 +22509,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder addOcrLineNlPaymentId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ensureOcrLineNlPaymentIdIsMutable();
           ocrLineNlPaymentId_.add(builderForValue.build());
@@ -22523,10 +22523,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder addOcrLineNlPaymentId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ensureOcrLineNlPaymentIdIsMutable();
           ocrLineNlPaymentId_.add(index, builderForValue.build());
@@ -22537,10 +22537,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder addAllOcrLineNlPaymentId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ensureOcrLineNlPaymentIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -22552,7 +22552,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder clearOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -22565,7 +22565,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
       public Builder removeOcrLineNlPaymentId(int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
@@ -22578,16 +22578,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getOcrLineNlPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getOcrLineNlPaymentIdBuilder(
           int index) {
         return getOcrLineNlPaymentIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getOcrLineNlPaymentIdOrBuilder(
           int index) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           return ocrLineNlPaymentId_.get(index);  } else {
@@ -22595,9 +22595,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getOcrLineNlPaymentIdOrBuilderList() {
         if (ocrLineNlPaymentIdBuilder_ != null) {
           return ocrLineNlPaymentIdBuilder_.getMessageOrBuilderList();
@@ -22606,33 +22606,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineNlPaymentIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addOcrLineNlPaymentIdBuilder() {
         return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addOcrLineNlPaymentIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addOcrLineNlPaymentIdBuilder(
           int index) {
         return getOcrLineNlPaymentIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue ocr_line_nl_payment_id = 18;</code>
+       * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getOcrLineNlPaymentIdBuilderList() {
         return getOcrLineNlPaymentIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getOcrLineNlPaymentIdFieldBuilder() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   ocrLineNlPaymentId_,
                   ((bitField0_ & 0x00020000) == 0x00020000),
                   getParentForChildren(),
@@ -22642,22 +22642,22 @@ public final class Dataservice {
         return ocrLineNlPaymentIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> supplierCorporateId_ =
+      private java.util.List<com.google.protobuf.FloatValue> supplierCorporateId_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCorporateIdIsMutable() {
         if (!((bitField0_ & 0x00040000) == 0x00040000)) {
-          supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(supplierCorporateId_);
+          supplierCorporateId_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierCorporateId_);
           bitField0_ |= 0x00040000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> supplierCorporateIdBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierCorporateIdBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getSupplierCorporateIdList() {
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierCorporateIdList() {
         if (supplierCorporateIdBuilder_ == null) {
           return java.util.Collections.unmodifiableList(supplierCorporateId_);
         } else {
@@ -22665,7 +22665,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public int getSupplierCorporateIdCount() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -22675,9 +22675,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public com.google.protobuf.DoubleValue getSupplierCorporateId(int index) {
+      public com.google.protobuf.FloatValue getSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
           return supplierCorporateId_.get(index);
         } else {
@@ -22685,10 +22685,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder setSupplierCorporateId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (supplierCorporateIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22702,10 +22702,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder setSupplierCorporateId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCorporateIdBuilder_ == null) {
           ensureSupplierCorporateIdIsMutable();
           supplierCorporateId_.set(index, builderForValue.build());
@@ -22716,9 +22716,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public Builder addSupplierCorporateId(com.google.protobuf.DoubleValue value) {
+      public Builder addSupplierCorporateId(com.google.protobuf.FloatValue value) {
         if (supplierCorporateIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22732,10 +22732,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder addSupplierCorporateId(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (supplierCorporateIdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22749,10 +22749,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder addSupplierCorporateId(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCorporateIdBuilder_ == null) {
           ensureSupplierCorporateIdIsMutable();
           supplierCorporateId_.add(builderForValue.build());
@@ -22763,10 +22763,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder addSupplierCorporateId(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCorporateIdBuilder_ == null) {
           ensureSupplierCorporateIdIsMutable();
           supplierCorporateId_.add(index, builderForValue.build());
@@ -22777,10 +22777,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder addAllSupplierCorporateId(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (supplierCorporateIdBuilder_ == null) {
           ensureSupplierCorporateIdIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -22792,7 +22792,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder clearSupplierCorporateId() {
         if (supplierCorporateIdBuilder_ == null) {
@@ -22805,7 +22805,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
       public Builder removeSupplierCorporateId(int index) {
         if (supplierCorporateIdBuilder_ == null) {
@@ -22818,16 +22818,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getSupplierCorporateIdBuilder(
+      public com.google.protobuf.FloatValue.Builder getSupplierCorporateIdBuilder(
           int index) {
         return getSupplierCorporateIdFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getSupplierCorporateIdOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getSupplierCorporateIdOrBuilder(
           int index) {
         if (supplierCorporateIdBuilder_ == null) {
           return supplierCorporateId_.get(index);  } else {
@@ -22835,9 +22835,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getSupplierCorporateIdOrBuilderList() {
         if (supplierCorporateIdBuilder_ != null) {
           return supplierCorporateIdBuilder_.getMessageOrBuilderList();
@@ -22846,33 +22846,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addSupplierCorporateIdBuilder() {
+      public com.google.protobuf.FloatValue.Builder addSupplierCorporateIdBuilder() {
         return getSupplierCorporateIdFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addSupplierCorporateIdBuilder(
+      public com.google.protobuf.FloatValue.Builder addSupplierCorporateIdBuilder(
           int index) {
         return getSupplierCorporateIdFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_corporate_id = 19;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getSupplierCorporateIdBuilderList() {
         return getSupplierCorporateIdFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getSupplierCorporateIdFieldBuilder() {
         if (supplierCorporateIdBuilder_ == null) {
           supplierCorporateIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   supplierCorporateId_,
                   ((bitField0_ & 0x00040000) == 0x00040000),
                   getParentForChildren(),
@@ -22882,22 +22882,22 @@ public final class Dataservice {
         return supplierCorporateIdBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> supplierCountryCode_ =
+      private java.util.List<com.google.protobuf.FloatValue> supplierCountryCode_ =
         java.util.Collections.emptyList();
       private void ensureSupplierCountryCodeIsMutable() {
         if (!((bitField0_ & 0x00080000) == 0x00080000)) {
-          supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(supplierCountryCode_);
+          supplierCountryCode_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(supplierCountryCode_);
           bitField0_ |= 0x00080000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> supplierCountryCodeBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> supplierCountryCodeBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getSupplierCountryCodeList() {
+      public java.util.List<com.google.protobuf.FloatValue> getSupplierCountryCodeList() {
         if (supplierCountryCodeBuilder_ == null) {
           return java.util.Collections.unmodifiableList(supplierCountryCode_);
         } else {
@@ -22905,7 +22905,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public int getSupplierCountryCodeCount() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -22915,9 +22915,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public com.google.protobuf.DoubleValue getSupplierCountryCode(int index) {
+      public com.google.protobuf.FloatValue getSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
           return supplierCountryCode_.get(index);
         } else {
@@ -22925,10 +22925,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder setSupplierCountryCode(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (supplierCountryCodeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22942,10 +22942,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder setSupplierCountryCode(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCountryCodeBuilder_ == null) {
           ensureSupplierCountryCodeIsMutable();
           supplierCountryCode_.set(index, builderForValue.build());
@@ -22956,9 +22956,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public Builder addSupplierCountryCode(com.google.protobuf.DoubleValue value) {
+      public Builder addSupplierCountryCode(com.google.protobuf.FloatValue value) {
         if (supplierCountryCodeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22972,10 +22972,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder addSupplierCountryCode(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (supplierCountryCodeBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -22989,10 +22989,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder addSupplierCountryCode(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCountryCodeBuilder_ == null) {
           ensureSupplierCountryCodeIsMutable();
           supplierCountryCode_.add(builderForValue.build());
@@ -23003,10 +23003,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder addSupplierCountryCode(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (supplierCountryCodeBuilder_ == null) {
           ensureSupplierCountryCodeIsMutable();
           supplierCountryCode_.add(index, builderForValue.build());
@@ -23017,10 +23017,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder addAllSupplierCountryCode(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (supplierCountryCodeBuilder_ == null) {
           ensureSupplierCountryCodeIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -23032,7 +23032,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder clearSupplierCountryCode() {
         if (supplierCountryCodeBuilder_ == null) {
@@ -23045,7 +23045,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
       public Builder removeSupplierCountryCode(int index) {
         if (supplierCountryCodeBuilder_ == null) {
@@ -23058,16 +23058,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getSupplierCountryCodeBuilder(
+      public com.google.protobuf.FloatValue.Builder getSupplierCountryCodeBuilder(
           int index) {
         return getSupplierCountryCodeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getSupplierCountryCodeOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getSupplierCountryCodeOrBuilder(
           int index) {
         if (supplierCountryCodeBuilder_ == null) {
           return supplierCountryCode_.get(index);  } else {
@@ -23075,9 +23075,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getSupplierCountryCodeOrBuilderList() {
         if (supplierCountryCodeBuilder_ != null) {
           return supplierCountryCodeBuilder_.getMessageOrBuilderList();
@@ -23086,33 +23086,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addSupplierCountryCodeBuilder() {
+      public com.google.protobuf.FloatValue.Builder addSupplierCountryCodeBuilder() {
         return getSupplierCountryCodeFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addSupplierCountryCodeBuilder(
+      public com.google.protobuf.FloatValue.Builder addSupplierCountryCodeBuilder(
           int index) {
         return getSupplierCountryCodeFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue supplier_country_code = 20;</code>
+       * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getSupplierCountryCodeBuilderList() {
         return getSupplierCountryCodeFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getSupplierCountryCodeFieldBuilder() {
         if (supplierCountryCodeBuilder_ == null) {
           supplierCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   supplierCountryCode_,
                   ((bitField0_ & 0x00080000) == 0x00080000),
                   getParentForChildren(),
@@ -23122,22 +23122,22 @@ public final class Dataservice {
         return supplierCountryCodeBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> invoiceNumber_ =
+      private java.util.List<com.google.protobuf.FloatValue> invoiceNumber_ =
         java.util.Collections.emptyList();
       private void ensureInvoiceNumberIsMutable() {
         if (!((bitField0_ & 0x00100000) == 0x00100000)) {
-          invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(invoiceNumber_);
+          invoiceNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(invoiceNumber_);
           bitField0_ |= 0x00100000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> invoiceNumberBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> invoiceNumberBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getInvoiceNumberList() {
+      public java.util.List<com.google.protobuf.FloatValue> getInvoiceNumberList() {
         if (invoiceNumberBuilder_ == null) {
           return java.util.Collections.unmodifiableList(invoiceNumber_);
         } else {
@@ -23145,7 +23145,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public int getInvoiceNumberCount() {
         if (invoiceNumberBuilder_ == null) {
@@ -23155,9 +23155,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public com.google.protobuf.DoubleValue getInvoiceNumber(int index) {
+      public com.google.protobuf.FloatValue getInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
           return invoiceNumber_.get(index);
         } else {
@@ -23165,10 +23165,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder setInvoiceNumber(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (invoiceNumberBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23182,10 +23182,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder setInvoiceNumber(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (invoiceNumberBuilder_ == null) {
           ensureInvoiceNumberIsMutable();
           invoiceNumber_.set(index, builderForValue.build());
@@ -23196,9 +23196,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public Builder addInvoiceNumber(com.google.protobuf.DoubleValue value) {
+      public Builder addInvoiceNumber(com.google.protobuf.FloatValue value) {
         if (invoiceNumberBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23212,10 +23212,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder addInvoiceNumber(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (invoiceNumberBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23229,10 +23229,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder addInvoiceNumber(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (invoiceNumberBuilder_ == null) {
           ensureInvoiceNumberIsMutable();
           invoiceNumber_.add(builderForValue.build());
@@ -23243,10 +23243,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder addInvoiceNumber(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (invoiceNumberBuilder_ == null) {
           ensureInvoiceNumberIsMutable();
           invoiceNumber_.add(index, builderForValue.build());
@@ -23257,10 +23257,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder addAllInvoiceNumber(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (invoiceNumberBuilder_ == null) {
           ensureInvoiceNumberIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -23272,7 +23272,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder clearInvoiceNumber() {
         if (invoiceNumberBuilder_ == null) {
@@ -23285,7 +23285,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
       public Builder removeInvoiceNumber(int index) {
         if (invoiceNumberBuilder_ == null) {
@@ -23298,16 +23298,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getInvoiceNumberBuilder(
+      public com.google.protobuf.FloatValue.Builder getInvoiceNumberBuilder(
           int index) {
         return getInvoiceNumberFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getInvoiceNumberOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getInvoiceNumberOrBuilder(
           int index) {
         if (invoiceNumberBuilder_ == null) {
           return invoiceNumber_.get(index);  } else {
@@ -23315,9 +23315,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getInvoiceNumberOrBuilderList() {
         if (invoiceNumberBuilder_ != null) {
           return invoiceNumberBuilder_.getMessageOrBuilderList();
@@ -23326,33 +23326,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addInvoiceNumberBuilder() {
+      public com.google.protobuf.FloatValue.Builder addInvoiceNumberBuilder() {
         return getInvoiceNumberFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addInvoiceNumberBuilder(
+      public com.google.protobuf.FloatValue.Builder addInvoiceNumberBuilder(
           int index) {
         return getInvoiceNumberFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue invoice_number = 21;</code>
+       * <code>repeated .google.protobuf.FloatValue invoice_number = 21;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getInvoiceNumberBuilderList() {
         return getInvoiceNumberFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getInvoiceNumberFieldBuilder() {
         if (invoiceNumberBuilder_ == null) {
           invoiceNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   invoiceNumber_,
                   ((bitField0_ & 0x00100000) == 0x00100000),
                   getParentForChildren(),
@@ -23362,22 +23362,22 @@ public final class Dataservice {
         return invoiceNumberBuilder_;
       }
 
-      private java.util.List<com.google.protobuf.DoubleValue> iban_ =
+      private java.util.List<com.google.protobuf.FloatValue> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
         if (!((bitField0_ & 0x00200000) == 0x00200000)) {
-          iban_ = new java.util.ArrayList<com.google.protobuf.DoubleValue>(iban_);
+          iban_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(iban_);
           bitField0_ |= 0x00200000;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> ibanBuilder_;
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> ibanBuilder_;
 
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue> getIbanList() {
+      public java.util.List<com.google.protobuf.FloatValue> getIbanList() {
         if (ibanBuilder_ == null) {
           return java.util.Collections.unmodifiableList(iban_);
         } else {
@@ -23385,7 +23385,7 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public int getIbanCount() {
         if (ibanBuilder_ == null) {
@@ -23395,9 +23395,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public com.google.protobuf.DoubleValue getIban(int index) {
+      public com.google.protobuf.FloatValue getIban(int index) {
         if (ibanBuilder_ == null) {
           return iban_.get(index);
         } else {
@@ -23405,10 +23405,10 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder setIban(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ibanBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23422,10 +23422,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder setIban(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ibanBuilder_ == null) {
           ensureIbanIsMutable();
           iban_.set(index, builderForValue.build());
@@ -23436,9 +23436,9 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public Builder addIban(com.google.protobuf.DoubleValue value) {
+      public Builder addIban(com.google.protobuf.FloatValue value) {
         if (ibanBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23452,10 +23452,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder addIban(
-          int index, com.google.protobuf.DoubleValue value) {
+          int index, com.google.protobuf.FloatValue value) {
         if (ibanBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23469,10 +23469,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder addIban(
-          com.google.protobuf.DoubleValue.Builder builderForValue) {
+          com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ibanBuilder_ == null) {
           ensureIbanIsMutable();
           iban_.add(builderForValue.build());
@@ -23483,10 +23483,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder addIban(
-          int index, com.google.protobuf.DoubleValue.Builder builderForValue) {
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
         if (ibanBuilder_ == null) {
           ensureIbanIsMutable();
           iban_.add(index, builderForValue.build());
@@ -23497,10 +23497,10 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder addAllIban(
-          java.lang.Iterable<? extends com.google.protobuf.DoubleValue> values) {
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
         if (ibanBuilder_ == null) {
           ensureIbanIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -23512,7 +23512,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder clearIban() {
         if (ibanBuilder_ == null) {
@@ -23525,7 +23525,7 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
       public Builder removeIban(int index) {
         if (ibanBuilder_ == null) {
@@ -23538,16 +23538,16 @@ public final class Dataservice {
         return this;
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder getIbanBuilder(
+      public com.google.protobuf.FloatValue.Builder getIbanBuilder(
           int index) {
         return getIbanFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public com.google.protobuf.DoubleValueOrBuilder getIbanOrBuilder(
+      public com.google.protobuf.FloatValueOrBuilder getIbanOrBuilder(
           int index) {
         if (ibanBuilder_ == null) {
           return iban_.get(index);  } else {
@@ -23555,9 +23555,9 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public java.util.List<? extends com.google.protobuf.DoubleValueOrBuilder> 
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
            getIbanOrBuilderList() {
         if (ibanBuilder_ != null) {
           return ibanBuilder_.getMessageOrBuilderList();
@@ -23566,33 +23566,33 @@ public final class Dataservice {
         }
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addIbanBuilder() {
+      public com.google.protobuf.FloatValue.Builder addIbanBuilder() {
         return getIbanFieldBuilder().addBuilder(
-            com.google.protobuf.DoubleValue.getDefaultInstance());
+            com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public com.google.protobuf.DoubleValue.Builder addIbanBuilder(
+      public com.google.protobuf.FloatValue.Builder addIbanBuilder(
           int index) {
         return getIbanFieldBuilder().addBuilder(
-            index, com.google.protobuf.DoubleValue.getDefaultInstance());
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .google.protobuf.DoubleValue iban = 22;</code>
+       * <code>repeated .google.protobuf.FloatValue iban = 22;</code>
        */
-      public java.util.List<com.google.protobuf.DoubleValue.Builder> 
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
            getIbanBuilderList() {
         return getIbanFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder> 
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
           getIbanFieldBuilder() {
         if (ibanBuilder_ == null) {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.google.protobuf.DoubleValue, com.google.protobuf.DoubleValue.Builder, com.google.protobuf.DoubleValueOrBuilder>(
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
                   iban_,
                   ((bitField0_ & 0x00200000) == 0x00200000),
                   getParentForChildren(),
@@ -41938,114 +41938,113 @@ public final class Dataservice {
       ".google.protobuf.StringValue\0224\n\016invoice_" +
       "number\030\025 \003(\0132\034.google.protobuf.StringVal" +
       "ue\022*\n\004iban\030\026 \003(\0132\034.google.protobuf.Strin" +
-      "gValue\"\217\n\n\025PredictionConfidences\0224\n\016tota" +
-      "l_incl_vat\030\001 \003(\0132\034.google.protobuf.Doubl" +
-      "eValue\022/\n\ttotal_vat\030\002 \003(\0132\034.google.proto" +
-      "buf.DoubleValue\0224\n\016total_excl_vat\030\003 \003(\0132" +
-      "\034.google.protobuf.DoubleValue\0220\n\norder_d" +
-      "ate\030\004 \003(\0132\034.google.protobuf.DoubleValue\022" +
-      "6\n\020payment_due_date\030\005 \003(\0132\034.google.proto" +
-      "buf.DoubleValue\0223\n\rdocument_type\030\006 \003(\0132\034" +
-      ".google.protobuf.DoubleValue\022.\n\010currency" +
-      "\030\007 \003(\0132\034.google.protobuf.DoubleValue\022;\n\025" +
-      "credit_card_last_four\030\010 \003(\0132\034.google.pro" +
-      "tobuf.DoubleValue\0224\n\016payment_method\030\t \003(" +
-      "\0132\034.google.protobuf.DoubleValue\0226\n\020ocr_l" +
-      "ine_dk_type\030\n \003(\0132\034.google.protobuf.Doub" +
-      "leValue\022<\n\026ocr_line_dk_payment_id\030\013 \003(\0132" +
-      "\034.google.protobuf.DoubleValue\022=\n\027ocr_lin" +
-      "e_dk_creditor_id\030\014 \003(\0132\034.google.protobuf" +
-      ".DoubleValue\022<\n\026ocr_line_se_payment_id\030\r" +
-      " \003(\0132\034.google.protobuf.DoubleValue\022F\n oc" +
-      "r_line_se_bankgiro_creditor_id\030\016 \003(\0132\034.g" +
-      "oogle.protobuf.DoubleValue\022F\n ocr_line_s" +
-      "e_plusgiro_creditor_id\030\017 \003(\0132\034.google.pr" +
-      "otobuf.DoubleValue\022<\n\026ocr_line_no_paymen" +
-      "t_id\030\020 \003(\0132\034.google.protobuf.DoubleValue" +
-      "\022<\n\026ocr_line_fi_payment_id\030\021 \003(\0132\034.googl" +
-      "e.protobuf.DoubleValue\022<\n\026ocr_line_nl_pa" +
-      "yment_id\030\022 \003(\0132\034.google.protobuf.DoubleV" +
-      "alue\022;\n\025supplier_corporate_id\030\023 \003(\0132\034.go" +
-      "ogle.protobuf.DoubleValue\022;\n\025supplier_co" +
-      "untry_code\030\024 \003(\0132\034.google.protobuf.Doubl" +
-      "eValue\0224\n\016invoice_number\030\025 \003(\0132\034.google." +
-      "protobuf.DoubleValue\022*\n\004iban\030\026 \003(\0132\034.goo" +
-      "gle.protobuf.DoubleValue\"\306\010\n\022PredictionM" +
-      "etadata\022+\n\016total_incl_vat\030\001 \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\022&\n\ttotal_vat\030\002 \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\022+\n\016total_excl_vat\030\003 \003(\0132\023.s" +
-      "sn.type.ModelSpec\022\'\n\norder_date\030\004 \003(\0132\023." +
-      "ssn.type.ModelSpec\022-\n\020payment_due_date\030\005" +
-      " \003(\0132\023.ssn.type.ModelSpec\022*\n\rdocument_ty" +
-      "pe\030\006 \003(\0132\023.ssn.type.ModelSpec\022%\n\010currenc" +
-      "y\030\007 \003(\0132\023.ssn.type.ModelSpec\0222\n\025credit_c" +
-      "ard_last_four\030\010 \003(\0132\023.ssn.type.ModelSpec" +
-      "\022+\n\016payment_method\030\t \003(\0132\023.ssn.type.Mode" +
-      "lSpec\022-\n\020ocr_line_dk_type\030\n \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\0223\n\026ocr_line_dk_payment_id\030\013" +
-      " \003(\0132\023.ssn.type.ModelSpec\0224\n\027ocr_line_dk" +
-      "_creditor_id\030\014 \003(\0132\023.ssn.type.ModelSpec\022" +
-      "3\n\026ocr_line_se_payment_id\030\r \003(\0132\023.ssn.ty" +
-      "pe.ModelSpec\022=\n ocr_line_se_bankgiro_cre" +
-      "ditor_id\030\016 \003(\0132\023.ssn.type.ModelSpec\022=\n o" +
-      "cr_line_se_plusgiro_creditor_id\030\017 \003(\0132\023." +
-      "ssn.type.ModelSpec\0223\n\026ocr_line_no_paymen" +
-      "t_id\030\020 \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_l" +
-      "ine_fi_payment_id\030\021 \003(\0132\023.ssn.type.Model" +
-      "Spec\0223\n\026ocr_line_nl_payment_id\030\022 \003(\0132\023.s" +
-      "sn.type.ModelSpec\0222\n\025supplier_corporate_" +
-      "id\030\023 \003(\0132\023.ssn.type.ModelSpec\0222\n\025supplie" +
-      "r_country_code\030\024 \003(\0132\023.ssn.type.ModelSpe" +
-      "c\022+\n\016invoice_number\030\025 \003(\0132\023.ssn.type.Mod" +
-      "elSpec\022!\n\004iban\030\026 \003(\0132\023.ssn.type.ModelSpe" +
-      "c\"G\n\025CreateDocumentRequest\022.\n\010document\030\001" +
-      " \001(\0132\034.ssn.dataservice.v1.Document\"$\n\026Cr" +
-      "eateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023Read" +
-      "DocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocum" +
-      "entResponse\022.\n\010document\030\001 \001(\0132\034.ssn.data" +
-      "service.v1.Document\"\260\002\n\026PrepareFeedbackR" +
-      "equest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.typ" +
-      "e.TextAnnotation\022\026\n\016document_bytes\030\003 \001(\014" +
-      "\0229\n\013predictions\030\004 \001(\0132$.ssn.dataservice." +
-      "v1.PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013con" +
-      "fidences\030\006 \001(\0132).ssn.dataservice.v1.Pred" +
-      "ictionConfidences\022C\n\023prediction_metadata" +
-      "\030\007 \001(\0132&.ssn.dataservice.v1.PredictionMe" +
-      "tadata\"`\n\017FeedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n" +
-      "\013true_values\030\002 \001(\0132\036.ssn.dataservice.v1." +
-      "TrueValues\022\014\n\004tags\030\003 \003(\t\"T\n\016MetricsReque" +
-      "st\022\022\n\nstart_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003" +
-      "\022\016\n\006fields\030\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017Feedb" +
-      "ackMetrics\022\026\n\016document_count\030\001 \001(\005\022\026\n\016fe" +
-      "edback_count\030\002 \001(\005\022<\n\023overall_correctnes" +
-      "s\030\003 \001(\0132\037.ssn.dataservice.v1.Correctness" +
-      "\022:\n\021field_correctness\030\004 \003(\0132\037.ssn.datase" +
-      "rvice.v1.Correctness\"q\n\013Correctness\022\r\n\005f" +
-      "ield\030\001 \001(\t\022\032\n\022correct_percentage\030\002 \001(\002\022\035" +
-      "\n\025incomplete_percentage\030\003 \001(\002\022\030\n\020error_p" +
-      "ercentage\030\004 \001(\002\"\035\n\rDeleteRequest\022\014\n\004tags" +
-      "\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022" +
-      "\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMonthRespo" +
-      "nse\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.datas" +
-      "ervice.v1.CallsPerMonth2\265\005\n\013DataService\022" +
-      "g\n\016CreateDocument\022).ssn.dataservice.v1.C" +
-      "reateDocumentRequest\032*.ssn.dataservice.v" +
-      "1.CreateDocumentResponse\022a\n\014ReadDocument" +
-      "\022\'.ssn.dataservice.v1.ReadDocumentReques" +
-      "t\032(.ssn.dataservice.v1.ReadDocumentRespo" +
-      "nse\022U\n\017PrepareFeedback\022*.ssn.dataservice" +
-      ".v1.PrepareFeedbackRequest\032\026.google.prot" +
-      "obuf.Empty\022g\n\010Feedback\022#.ssn.dataservice" +
-      ".v1.FeedbackRequest\032\026.google.protobuf.Em" +
-      "pty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020C" +
-      "alculateMetrics\022\".ssn.dataservice.v1.Met" +
-      "ricsRequest\032#.ssn.dataservice.v1.Feedbac" +
-      "kMetrics\022c\n\006Delete\022!.ssn.dataservice.v1." +
-      "DeleteRequest\032\026.google.protobuf.Empty\"\036\202" +
-      "\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPe" +
-      "rMonthMetric\022\026.google.protobuf.Empty\032).s" +
-      "sn.dataservice.v1.CallsPerMonthResponseB" +
-      "\rZ\013dataserviceb\006proto3"
+      "gValue\"\371\t\n\025PredictionConfidences\0223\n\016tota" +
+      "l_incl_vat\030\001 \003(\0132\033.google.protobuf.Float" +
+      "Value\022.\n\ttotal_vat\030\002 \003(\0132\033.google.protob" +
+      "uf.FloatValue\0223\n\016total_excl_vat\030\003 \003(\0132\033." +
+      "google.protobuf.FloatValue\022/\n\norder_date" +
+      "\030\004 \003(\0132\033.google.protobuf.FloatValue\0225\n\020p" +
+      "ayment_due_date\030\005 \003(\0132\033.google.protobuf." +
+      "FloatValue\0222\n\rdocument_type\030\006 \003(\0132\033.goog" +
+      "le.protobuf.FloatValue\022-\n\010currency\030\007 \003(\013" +
+      "2\033.google.protobuf.FloatValue\022:\n\025credit_" +
+      "card_last_four\030\010 \003(\0132\033.google.protobuf.F" +
+      "loatValue\0223\n\016payment_method\030\t \003(\0132\033.goog" +
+      "le.protobuf.FloatValue\0225\n\020ocr_line_dk_ty" +
+      "pe\030\n \003(\0132\033.google.protobuf.FloatValue\022;\n" +
+      "\026ocr_line_dk_payment_id\030\013 \003(\0132\033.google.p" +
+      "rotobuf.FloatValue\022<\n\027ocr_line_dk_credit" +
+      "or_id\030\014 \003(\0132\033.google.protobuf.FloatValue" +
+      "\022;\n\026ocr_line_se_payment_id\030\r \003(\0132\033.googl" +
+      "e.protobuf.FloatValue\022E\n ocr_line_se_ban" +
+      "kgiro_creditor_id\030\016 \003(\0132\033.google.protobu" +
+      "f.FloatValue\022E\n ocr_line_se_plusgiro_cre" +
+      "ditor_id\030\017 \003(\0132\033.google.protobuf.FloatVa" +
+      "lue\022;\n\026ocr_line_no_payment_id\030\020 \003(\0132\033.go" +
+      "ogle.protobuf.FloatValue\022;\n\026ocr_line_fi_" +
+      "payment_id\030\021 \003(\0132\033.google.protobuf.Float" +
+      "Value\022;\n\026ocr_line_nl_payment_id\030\022 \003(\0132\033." +
+      "google.protobuf.FloatValue\022:\n\025supplier_c" +
+      "orporate_id\030\023 \003(\0132\033.google.protobuf.Floa" +
+      "tValue\022:\n\025supplier_country_code\030\024 \003(\0132\033." +
+      "google.protobuf.FloatValue\0223\n\016invoice_nu" +
+      "mber\030\025 \003(\0132\033.google.protobuf.FloatValue\022" +
+      ")\n\004iban\030\026 \003(\0132\033.google.protobuf.FloatVal" +
+      "ue\"\306\010\n\022PredictionMetadata\022+\n\016total_incl_" +
+      "vat\030\001 \003(\0132\023.ssn.type.ModelSpec\022&\n\ttotal_" +
+      "vat\030\002 \003(\0132\023.ssn.type.ModelSpec\022+\n\016total_" +
+      "excl_vat\030\003 \003(\0132\023.ssn.type.ModelSpec\022\'\n\no" +
+      "rder_date\030\004 \003(\0132\023.ssn.type.ModelSpec\022-\n\020" +
+      "payment_due_date\030\005 \003(\0132\023.ssn.type.ModelS" +
+      "pec\022*\n\rdocument_type\030\006 \003(\0132\023.ssn.type.Mo" +
+      "delSpec\022%\n\010currency\030\007 \003(\0132\023.ssn.type.Mod" +
+      "elSpec\0222\n\025credit_card_last_four\030\010 \003(\0132\023." +
+      "ssn.type.ModelSpec\022+\n\016payment_method\030\t \003" +
+      "(\0132\023.ssn.type.ModelSpec\022-\n\020ocr_line_dk_t" +
+      "ype\030\n \003(\0132\023.ssn.type.ModelSpec\0223\n\026ocr_li" +
+      "ne_dk_payment_id\030\013 \003(\0132\023.ssn.type.ModelS" +
+      "pec\0224\n\027ocr_line_dk_creditor_id\030\014 \003(\0132\023.s" +
+      "sn.type.ModelSpec\0223\n\026ocr_line_se_payment" +
+      "_id\030\r \003(\0132\023.ssn.type.ModelSpec\022=\n ocr_li" +
+      "ne_se_bankgiro_creditor_id\030\016 \003(\0132\023.ssn.t" +
+      "ype.ModelSpec\022=\n ocr_line_se_plusgiro_cr" +
+      "editor_id\030\017 \003(\0132\023.ssn.type.ModelSpec\0223\n\026" +
+      "ocr_line_no_payment_id\030\020 \003(\0132\023.ssn.type." +
+      "ModelSpec\0223\n\026ocr_line_fi_payment_id\030\021 \003(" +
+      "\0132\023.ssn.type.ModelSpec\0223\n\026ocr_line_nl_pa" +
+      "yment_id\030\022 \003(\0132\023.ssn.type.ModelSpec\0222\n\025s" +
+      "upplier_corporate_id\030\023 \003(\0132\023.ssn.type.Mo" +
+      "delSpec\0222\n\025supplier_country_code\030\024 \003(\0132\023" +
+      ".ssn.type.ModelSpec\022+\n\016invoice_number\030\025 " +
+      "\003(\0132\023.ssn.type.ModelSpec\022!\n\004iban\030\026 \003(\0132\023" +
+      ".ssn.type.ModelSpec\"G\n\025CreateDocumentReq" +
+      "uest\022.\n\010document\030\001 \001(\0132\034.ssn.dataservice" +
+      ".v1.Document\"$\n\026CreateDocumentResponse\022\n" +
+      "\n\002id\030\001 \001(\t\"!\n\023ReadDocumentRequest\022\n\n\002id\030" +
+      "\001 \001(\t\"F\n\024ReadDocumentResponse\022.\n\010documen" +
+      "t\030\001 \001(\0132\034.ssn.dataservice.v1.Document\"\260\002" +
+      "\n\026PrepareFeedbackRequest\022\n\n\002id\030\001 \001(\t\022$\n\002" +
+      "ta\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\026\n\016do" +
+      "cument_bytes\030\003 \001(\014\0229\n\013predictions\030\004 \001(\0132" +
+      "$.ssn.dataservice.v1.PredictionValues\022\014\n" +
+      "\004tags\030\005 \003(\t\022>\n\013confidences\030\006 \001(\0132).ssn.d" +
+      "ataservice.v1.PredictionConfidences\022C\n\023p" +
+      "rediction_metadata\030\007 \001(\0132&.ssn.dataservi" +
+      "ce.v1.PredictionMetadata\"`\n\017FeedbackRequ" +
+      "est\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030\002 \001(\0132\036.s" +
+      "sn.dataservice.v1.TrueValues\022\014\n\004tags\030\003 \003" +
+      "(\t\"T\n\016MetricsRequest\022\022\n\nstart_time\030\002 \001(\003" +
+      "\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014\n\004ta" +
+      "gs\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n\016document" +
+      "_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005\022<\n\023" +
+      "overall_correctness\030\003 \001(\0132\037.ssn.dataserv" +
+      "ice.v1.Correctness\022:\n\021field_correctness\030" +
+      "\004 \003(\0132\037.ssn.dataservice.v1.Correctness\"q" +
+      "\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_" +
+      "percentage\030\002 \001(\002\022\035\n\025incomplete_percentag" +
+      "e\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\"\035\n\rDel" +
+      "eteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPerMont" +
+      "h\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025" +
+      "CallsPerMonthResponse\022:\n\017calls_per_month" +
+      "\030\001 \003(\0132!.ssn.dataservice.v1.CallsPerMont" +
+      "h2\265\005\n\013DataService\022g\n\016CreateDocument\022).ss" +
+      "n.dataservice.v1.CreateDocumentRequest\032*" +
+      ".ssn.dataservice.v1.CreateDocumentRespon" +
+      "se\022a\n\014ReadDocument\022\'.ssn.dataservice.v1." +
+      "ReadDocumentRequest\032(.ssn.dataservice.v1" +
+      ".ReadDocumentResponse\022U\n\017PrepareFeedback" +
+      "\022*.ssn.dataservice.v1.PrepareFeedbackReq" +
+      "uest\032\026.google.protobuf.Empty\022g\n\010Feedback" +
+      "\022#.ssn.dataservice.v1.FeedbackRequest\032\026." +
+      "google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedb" +
+      "ack:create:\001*\022[\n\020CalculateMetrics\022\".ssn." +
+      "dataservice.v1.MetricsRequest\032#.ssn.data" +
+      "service.v1.FeedbackMetrics\022c\n\006Delete\022!.s" +
+      "sn.dataservice.v1.DeleteRequest\032\026.google" +
+      ".protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:de" +
+      "lete:\001*\022X\n\023CallsPerMonthMetric\022\026.google." +
+      "protobuf.Empty\032).ssn.dataservice.v1.Call" +
+      "sPerMonthResponseB\rZ\013dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
