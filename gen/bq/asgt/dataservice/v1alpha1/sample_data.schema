@@ -97,6 +97,11 @@
       "mode": "NULLABLE"
      },
      {
+      "name": "currency",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
       "name": "total",
       "type": "FLOAT",
       "mode": "NULLABLE"
@@ -109,13 +114,8 @@
     "mode": "NULLABLE",
     "fields": [
      {
-      "name": "currency",
+      "name": "id",
       "type": "STRING",
-      "mode": "NULLABLE"
-     },
-     {
-      "name": "amount",
-      "type": "FLOAT",
       "mode": "NULLABLE"
      },
      {

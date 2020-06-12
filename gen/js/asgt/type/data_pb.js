@@ -69,6 +69,7 @@ proto.asgt.type.Invoice.toObject = function(includeInstance, msg) {
     supplier: (f = msg.getSupplier()) && proto.asgt.type.Supplier.toObject(includeInstance, f),
     customerRef: (f = msg.getCustomerRef()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     text: (f = msg.getText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    currency: (f = msg.getCurrency()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     total: (f = msg.getTotal()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f)
   };
 
@@ -125,6 +126,11 @@ proto.asgt.type.Invoice.deserializeBinaryFromReader = function(msg, reader) {
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setText(value);
+      break;
+    case 6:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setCurrency(value);
       break;
     case 7:
       var value = new google_protobuf_wrappers_pb.FloatValue;
@@ -188,6 +194,14 @@ proto.asgt.type.Invoice.serializeBinaryToWriter = function(message, writer) {
   if (f != null) {
     writer.writeMessage(
       4,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCurrency();
+  if (f != null) {
+    writer.writeMessage(
+      6,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -324,6 +338,36 @@ proto.asgt.type.Invoice.prototype.hasText = function() {
 
 
 /**
+ * optional google.protobuf.StringValue currency = 6;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.asgt.type.Invoice.prototype.getCurrency = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 6));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.asgt.type.Invoice.prototype.setCurrency = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+proto.asgt.type.Invoice.prototype.clearCurrency = function() {
+  this.setCurrency(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.type.Invoice.prototype.hasCurrency = function() {
+  return jspb.Message.getField(this, 6) != null;
+};
+
+
+/**
  * optional google.protobuf.FloatValue total = 7;
  * @return {?proto.google.protobuf.FloatValue}
  */
@@ -400,8 +444,7 @@ proto.asgt.type.InvoiceLine.prototype.toObject = function(opt_includeInstance) {
  */
 proto.asgt.type.InvoiceLine.toObject = function(includeInstance, msg) {
   var f, obj = {
-    currency: (f = msg.getCurrency()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    amount: (f = msg.getAmount()) && google_protobuf_wrappers_pb.FloatValue.toObject(includeInstance, f),
+    id: (f = msg.getId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     text: (f = msg.getText()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     itemId: (f = msg.getItemId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
@@ -440,15 +483,10 @@ proto.asgt.type.InvoiceLine.deserializeBinaryFromReader = function(msg, reader) 
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 4:
+    case 1:
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
-      msg.setCurrency(value);
-      break;
-    case 3:
-      var value = new google_protobuf_wrappers_pb.FloatValue;
-      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
-      msg.setAmount(value);
+      msg.setId(value);
       break;
     case 8:
       var value = new google_protobuf_wrappers_pb.StringValue;
@@ -489,20 +527,12 @@ proto.asgt.type.InvoiceLine.prototype.serializeBinary = function() {
  */
 proto.asgt.type.InvoiceLine.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getCurrency();
+  f = message.getId();
   if (f != null) {
     writer.writeMessage(
-      4,
+      1,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
-    );
-  }
-  f = message.getAmount();
-  if (f != null) {
-    writer.writeMessage(
-      3,
-      f,
-      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
   }
   f = message.getText();
@@ -525,53 +555,23 @@ proto.asgt.type.InvoiceLine.serializeBinaryToWriter = function(message, writer) 
 
 
 /**
- * optional google.protobuf.StringValue currency = 4;
+ * optional google.protobuf.StringValue id = 1;
  * @return {?proto.google.protobuf.StringValue}
  */
-proto.asgt.type.InvoiceLine.prototype.getCurrency = function() {
+proto.asgt.type.InvoiceLine.prototype.getId = function() {
   return /** @type{?proto.google.protobuf.StringValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 4));
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 1));
 };
 
 
 /** @param {?proto.google.protobuf.StringValue|undefined} value */
-proto.asgt.type.InvoiceLine.prototype.setCurrency = function(value) {
-  jspb.Message.setWrapperField(this, 4, value);
+proto.asgt.type.InvoiceLine.prototype.setId = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
 };
 
 
-proto.asgt.type.InvoiceLine.prototype.clearCurrency = function() {
-  this.setCurrency(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {!boolean}
- */
-proto.asgt.type.InvoiceLine.prototype.hasCurrency = function() {
-  return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional google.protobuf.FloatValue amount = 3;
- * @return {?proto.google.protobuf.FloatValue}
- */
-proto.asgt.type.InvoiceLine.prototype.getAmount = function() {
-  return /** @type{?proto.google.protobuf.FloatValue} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 3));
-};
-
-
-/** @param {?proto.google.protobuf.FloatValue|undefined} value */
-proto.asgt.type.InvoiceLine.prototype.setAmount = function(value) {
-  jspb.Message.setWrapperField(this, 3, value);
-};
-
-
-proto.asgt.type.InvoiceLine.prototype.clearAmount = function() {
-  this.setAmount(undefined);
+proto.asgt.type.InvoiceLine.prototype.clearId = function() {
+  this.setId(undefined);
 };
 
 
@@ -579,8 +579,8 @@ proto.asgt.type.InvoiceLine.prototype.clearAmount = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.asgt.type.InvoiceLine.prototype.hasAmount = function() {
-  return jspb.Message.getField(this, 3) != null;
+proto.asgt.type.InvoiceLine.prototype.hasId = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 

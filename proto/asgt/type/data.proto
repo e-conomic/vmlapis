@@ -20,15 +20,16 @@ message Invoice {
   // invoice text from the SmartScan product
   google.protobuf.StringValue text = 4;
 
+  // name of the currency as a string
+  google.protobuf.StringValue currency = 6;
+
   // total of the invoice
   google.protobuf.FloatValue total = 7;
 }
 
 message InvoiceLine {
-  // name of the currency as a string
-  google.protobuf.StringValue currency = 4;
-
-  google.protobuf.FloatValue amount = 3;
+  // id of the invoice line
+  google.protobuf.StringValue id = 1;
 
   // text of the invoice line
   google.protobuf.StringValue text = 8;
