@@ -32,22 +32,21 @@ namespace Asgt.Type {
             "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBHRleHQYBCABKAsyHC5nb29n",
             "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLgoIY3VycmVuY3kYBiABKAsyHC5n",
             "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoFdG90YWwYByABKAsyGy5n",
-            "b29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZSKSAQoLSW52b2ljZUxpbmUSKAoC",
-            "aWQYASABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoEdGV4",
-            "dBgIIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRItCgdpdGVt",
-            "X2lkGAkgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlInMKCFN1",
-            "cHBsaWVyEgoKAmlkGAEgASgJEioKBG5hbWUYBCABKAsyHC5nb29nbGUucHJv",
-            "dG9idWYuU3RyaW5nVmFsdWUSLwoJZ2xvYmFsX2lkGAUgASgLMhwuZ29vZ2xl",
-            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlIisKC1RyYW5zYWN0aW9uEgwKBHRleHQY",
-            "ASABKAkSDgoGYW1vdW50GAIgASgCIoYBCgREYXRhEisKC3RyYW5zYWN0aW9u",
-            "GAEgASgLMhYuYXNndC50eXBlLlRyYW5zYWN0aW9uEiMKB2ludm9pY2UYAiAB",
-            "KAsyEi5hc2d0LnR5cGUuSW52b2ljZRIsCgxpbnZvaWNlX2xpbmUYAyABKAsy",
-            "Fi5hc2d0LnR5cGUuSW52b2ljZUxpbmVCBloEdHlwZWIGcHJvdG8z"));
+            "b29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZSJoCgtJbnZvaWNlTGluZRIqCgR0",
+            "ZXh0GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2l0",
+            "ZW1faWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUicwoI",
+            "U3VwcGxpZXISCgoCaWQYASABKAkSKgoEbmFtZRgEIAEoCzIcLmdvb2dsZS5w",
+            "cm90b2J1Zi5TdHJpbmdWYWx1ZRIvCglnbG9iYWxfaWQYBSABKAsyHC5nb29n",
+            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUiKwoLVHJhbnNhY3Rpb24SDAoEdGV4",
+            "dBgBIAEoCRIOCgZhbW91bnQYAiABKAIihgEKBERhdGESKwoLdHJhbnNhY3Rp",
+            "b24YASABKAsyFi5hc2d0LnR5cGUuVHJhbnNhY3Rpb24SIwoHaW52b2ljZRgC",
+            "IAEoCzISLmFzZ3QudHlwZS5JbnZvaWNlEiwKDGludm9pY2VfbGluZRgDIAEo",
+            "CzIWLmFzZ3QudHlwZS5JbnZvaWNlTGluZUIGWgR0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Invoice), global::Asgt.Type.Invoice.Parser, new[]{ "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.InvoiceLine), global::Asgt.Type.InvoiceLine.Parser, new[]{ "Id", "Text", "ItemId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.InvoiceLine), global::Asgt.Type.InvoiceLine.Parser, new[]{ "Text", "ItemId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Supplier), global::Asgt.Type.Supplier.Parser, new[]{ "Id", "Name", "GlobalId" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Transaction), global::Asgt.Type.Transaction.Parser, new[]{ "Text", "Amount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Data), global::Asgt.Type.Data.Parser, new[]{ "Transaction", "Invoice", "InvoiceLine" }, null, null, null)
@@ -398,7 +397,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvoiceLine(InvoiceLine other) : this() {
-      Id = other.Id;
       Text = other.Text;
       ItemId = other.ItemId;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -407,21 +405,6 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvoiceLine Clone() {
       return new InvoiceLine(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _single_id_codec = pb::FieldCodec.ForClassWrapper<string>(10);
-    private string id_;
-    /// <summary>
-    /// id of the invoice line
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
     }
 
     /// <summary>Field number for the "text" field.</summary>
@@ -467,7 +450,6 @@ namespace Asgt.Type {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (Text != other.Text) return false;
       if (ItemId != other.ItemId) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -476,7 +458,6 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (id_ != null) hash ^= Id.GetHashCode();
       if (text_ != null) hash ^= Text.GetHashCode();
       if (itemId_ != null) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
@@ -492,9 +473,6 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (id_ != null) {
-        _single_id_codec.WriteTagAndValue(output, Id);
-      }
       if (text_ != null) {
         _single_text_codec.WriteTagAndValue(output, Text);
       }
@@ -509,9 +487,6 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (id_ != null) {
-        size += _single_id_codec.CalculateSizeWithTag(Id);
-      }
       if (text_ != null) {
         size += _single_text_codec.CalculateSizeWithTag(Text);
       }
@@ -528,11 +503,6 @@ namespace Asgt.Type {
     public void MergeFrom(InvoiceLine other) {
       if (other == null) {
         return;
-      }
-      if (other.id_ != null) {
-        if (id_ == null || other.Id != "") {
-          Id = other.Id;
-        }
       }
       if (other.text_ != null) {
         if (text_ == null || other.Text != "") {
@@ -555,13 +525,6 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            string value = _single_id_codec.Read(input);
-            if (id_ == null || value != "") {
-              Id = value;
-            }
-            break;
-          }
           case 66: {
             string value = _single_text_codec.Read(input);
             if (text_ == null || value != "") {

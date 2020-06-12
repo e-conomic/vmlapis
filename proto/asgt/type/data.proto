@@ -28,9 +28,6 @@ message Invoice {
 }
 
 message InvoiceLine {
-  // id of the invoice line
-  google.protobuf.StringValue id = 1;
-
   // text of the invoice line
   google.protobuf.StringValue text = 8;
 
