@@ -5250,7 +5250,7 @@ public final class DataServiceOuterClass {
       "\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoRequest" +
       "\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"W\n\017GetInfoR" +
       "esponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dat" +
-      "aset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model2\314\003" +
+      "aset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model2\311\003" +
       "\n\013DataService\022i\n\rCreateDataset\022\".asgt.da" +
       "taservice.v1.CreateRequest\032\026.google.prot" +
       "obuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:create:\001*" +
@@ -5259,10 +5259,10 @@ public final class DataServiceOuterClass {
       "\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*\022f\n\nD" +
       "eleteData\022\".asgt.dataservice.v1.DeleteRe" +
       "quest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/" +
-      "v1/{type}:delete:\001*\022w\n\007GetInfo\022#.asgt.da" +
+      "v1/{type}:delete:\001*\022t\n\007GetInfo\022#.asgt.da" +
       "taservice.v1.GetInfoRequest\032$.asgt.datas" +
-      "ervice.v1.GetInfoResponse\"!\202\323\344\223\002\033\"\026/v1/{" +
-      "type}/{name}:info:\001*B\006Z\004datab\006proto3"
+      "ervice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026/v1/{" +
+      "type}/{name}:infoB\006Z\004datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

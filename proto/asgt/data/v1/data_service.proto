@@ -35,8 +35,7 @@ service DataService {
 
   rpc GetInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
-      post: "/v1/{type}/{name}:info"
-      body: "*"
+      get: "/v1/{type}/{name}:info"
     };
   }
 }

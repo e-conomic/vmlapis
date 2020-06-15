@@ -16,12 +16,12 @@ class ModelRegistryStub(object):
       channel: A grpc.Channel.
     """
     self.RegisterModel = channel.unary_unary(
-        '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
+        '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
         request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
     self.GetCurrentModel = channel.unary_unary(
-        '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
+        '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
         request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
         response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
         )
@@ -61,5 +61,5 @@ def add_ModelRegistryServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'asgt.modelregistry.v1alpha1.ModelRegistry', rpc_method_handlers)
+      'asgt.modelregistry.v1.ModelRegistry', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

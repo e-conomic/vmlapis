@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Asgt.Modelregistry.V1Alpha1 {
+namespace Asgt.Modelregistry.V1 {
 
   /// <summary>Holder for reflection information generated from asgt/modelregistry/v1/model_registry.proto</summary>
   public static partial class ModelRegistryReflection {
@@ -25,27 +25,26 @@ namespace Asgt.Modelregistry.V1Alpha1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
-            "G2FzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMRoXYXNndC90eXBlL2RhdGFz",
-            "ZXQucHJvdG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3Jl",
-            "dmlzaW9uLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8ieQoU",
-            "UmVnaXN0ZXJNb2RlbFJlcXVlc3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3Qu",
-            "dHlwZS5EYXRhc2V0EiUKCHJldmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJl",
-            "dmlzaW9uEhUKDW1vZGVsX3ZlcnNpb24YAyABKAMiPQoWR2V0Q3VycmVudE1v",
-            "ZGVsUmVxdWVzdBIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFz",
-            "ZXQiOgoXR2V0Q3VycmVudE1vZGVsUmVzcG9uc2USHwoFbW9kZWwYASABKAsy",
-            "EC5hc2d0LnR5cGUuTW9kZWwy6QEKDU1vZGVsUmVnaXN0cnkSWgoNUmVnaXN0",
-            "ZXJNb2RlbBIxLmFzZ3QubW9kZWxyZWdpc3RyeS52MWFscGhhMS5SZWdpc3Rl",
-            "ck1vZGVsUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJ8Cg9HZXRD",
-            "dXJyZW50TW9kZWwSMy5hc2d0Lm1vZGVscmVnaXN0cnkudjFhbHBoYTEuR2V0",
-            "Q3VycmVudE1vZGVsUmVxdWVzdBo0LmFzZ3QubW9kZWxyZWdpc3RyeS52MWFs",
-            "cGhhMS5HZXRDdXJyZW50TW9kZWxSZXNwb25zZUIPWg1tb2RlbHJlZ2lzdHJ5",
-            "YgZwcm90bzM="));
+            "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
+            "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
+            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8ieQoUUmVnaXN0",
+            "ZXJNb2RlbFJlcXVlc3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5E",
+            "YXRhc2V0EiUKCHJldmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9u",
+            "EhUKDW1vZGVsX3ZlcnNpb24YAyABKAMiPQoWR2V0Q3VycmVudE1vZGVsUmVx",
+            "dWVzdBIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXQiOgoX",
+            "R2V0Q3VycmVudE1vZGVsUmVzcG9uc2USHwoFbW9kZWwYASABKAsyEC5hc2d0",
+            "LnR5cGUuTW9kZWwy1wEKDU1vZGVsUmVnaXN0cnkSVAoNUmVnaXN0ZXJNb2Rl",
+            "bBIrLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5SZWdpc3Rlck1vZGVsUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJwCg9HZXRDdXJyZW50TW9kZWwS",
+            "LS5hc2d0Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVxdWVz",
+            "dBouLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJyZW50TW9kZWxSZXNw",
+            "b25zZUIPWg1tb2RlbHJlZ2lzdHJ5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest), global::Asgt.Modelregistry.V1Alpha1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1Alpha1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1Alpha1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1Alpha1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null)
           }));
     }
     #endregion
@@ -60,7 +59,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Asgt.Modelregistry.V1.ModelRegistryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -257,7 +256,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Asgt.Modelregistry.V1.ModelRegistryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -392,7 +391,7 @@ namespace Asgt.Modelregistry.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Modelregistry.V1Alpha1.ModelRegistryReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Asgt.Modelregistry.V1.ModelRegistryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for asgt.modelregistry.v1alpha1
+ * @fileoverview gRPC-Web generated client stub for asgt.modelregistry.v1
  * @enhanceable
  * @public
  */
@@ -22,7 +22,7 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 const proto = {};
 proto.asgt = {};
 proto.asgt.modelregistry = {};
-proto.asgt.modelregistry.v1alpha1 = require('./model_registry_pb.js');
+proto.asgt.modelregistry.v1 = require('./model_registry_pb.js');
 
 /**
  * @param {string} hostname
@@ -32,7 +32,7 @@ proto.asgt.modelregistry.v1alpha1 = require('./model_registry_pb.js');
  * @struct
  * @final
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryClient =
+proto.asgt.modelregistry.v1.ModelRegistryClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -58,7 +58,7 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryClient =
  * @struct
  * @final
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient =
+proto.asgt.modelregistry.v1.ModelRegistryPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -79,16 +79,16 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
+ *   !proto.asgt.modelregistry.v1.RegisterModelRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ModelRegistry_RegisterModel = new grpc.web.MethodDescriptor(
-  '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
+  '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
   grpc.web.MethodType.UNARY,
-  proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
+  proto.asgt.modelregistry.v1.RegisterModelRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request
+   * @param {!proto.asgt.modelregistry.v1.RegisterModelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -101,13 +101,13 @@ const methodDescriptor_ModelRegistry_RegisterModel = new grpc.web.MethodDescript
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.modelregistry.v1alpha1.RegisterModelRequest,
+ *   !proto.asgt.modelregistry.v1.RegisterModelRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request
+   * @param {!proto.asgt.modelregistry.v1.RegisterModelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -118,7 +118,7 @@ const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.M
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request The
+ * @param {!proto.asgt.modelregistry.v1.RegisterModelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -127,10 +127,10 @@ const methodInfo_ModelRegistry_RegisterModel = new grpc.web.AbstractClientBase.M
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.registerModel =
+proto.asgt.modelregistry.v1.ModelRegistryClient.prototype.registerModel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
+      '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
       request,
       metadata || {},
       methodDescriptor_ModelRegistry_RegisterModel,
@@ -139,17 +139,17 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.registerModel =
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.RegisterModelRequest} request The
+ * @param {!proto.asgt.modelregistry.v1.RegisterModelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.registerModel =
+proto.asgt.modelregistry.v1.ModelRegistryPromiseClient.prototype.registerModel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/RegisterModel',
+      '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
       request,
       metadata || {},
       methodDescriptor_ModelRegistry_RegisterModel);
@@ -159,58 +159,58 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.registerM
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest,
- *   !proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse>}
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelRequest,
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelResponse>}
  */
 const methodDescriptor_ModelRegistry_GetCurrentModel = new grpc.web.MethodDescriptor(
-  '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
+  '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
   grpc.web.MethodType.UNARY,
-  proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest,
-  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse,
+  proto.asgt.modelregistry.v1.GetCurrentModelRequest,
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} request
+   * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.deserializeBinary
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest,
- *   !proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse>}
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelRequest,
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelResponse>}
  */
 const methodInfo_ModelRegistry_GetCurrentModel = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse,
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse,
   /**
-   * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} request
+   * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse.deserializeBinary
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} request The
+ * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.modelregistry.v1.GetCurrentModelResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1.GetCurrentModelResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.getCurrentModel =
+proto.asgt.modelregistry.v1.ModelRegistryClient.prototype.getCurrentModel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
+      '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
       request,
       metadata || {},
       methodDescriptor_ModelRegistry_GetCurrentModel,
@@ -219,22 +219,22 @@ proto.asgt.modelregistry.v1alpha1.ModelRegistryClient.prototype.getCurrentModel 
 
 
 /**
- * @param {!proto.asgt.modelregistry.v1alpha1.GetCurrentModelRequest} request The
+ * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.modelregistry.v1alpha1.GetCurrentModelResponse>}
+ * @return {!Promise<!proto.asgt.modelregistry.v1.GetCurrentModelResponse>}
  *     A native promise that resolves to the response
  */
-proto.asgt.modelregistry.v1alpha1.ModelRegistryPromiseClient.prototype.getCurrentModel =
+proto.asgt.modelregistry.v1.ModelRegistryPromiseClient.prototype.getCurrentModel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/asgt.modelregistry.v1alpha1.ModelRegistry/GetCurrentModel',
+      '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
       request,
       metadata || {},
       methodDescriptor_ModelRegistry_GetCurrentModel);
 };
 
 
-module.exports = proto.asgt.modelregistry.v1alpha1;
+module.exports = proto.asgt.modelregistry.v1;
 
