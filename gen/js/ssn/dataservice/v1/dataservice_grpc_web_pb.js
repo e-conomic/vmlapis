@@ -24,6 +24,8 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 
 var google_type_date_pb = require('../../../google/type/date_pb.js')
 
+var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
+
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 const proto = {};
 proto.ssn = {};

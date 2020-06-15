@@ -62,6 +62,15 @@ message Candidate {
   // A reference to the page where the candidate was found.
   // page_ref start from 1.
   uint32 page_ref = 6;
+  // Model spec of the TensorFlow Serving model that predicted this candidate
+  ModelSpec model_metadata = 7;
+}
+
+message ModelSpec {
+    // The name of the TensorFlow Serving model
+    string model_name = 1;
+    // The version number of the TensorFlow Serving model
+    google.protobuf.Int64Value model_ver = 2;
 }
 
 message LineCandidate {

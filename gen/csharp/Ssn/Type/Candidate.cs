@@ -30,19 +30,22 @@ namespace Ssn.Type {
             "Q29uZmlkZW5jZS5MZXZlbBIqCgV2YWx1ZRgCIAEoCzIbLmdvb2dsZS5wcm90",
             "b2J1Zi5GbG9hdFZhbHVlIk0KBUxldmVsEgsKB1VOS05PV04QABIMCghWRVJZ",
             "X0xPVxABEgcKA0xPVxACEgcKA01JRBADEggKBEhJR0gQBBINCglWRVJZX0hJ",
-            "R0gQBSLoAQoJQ2FuZGlkYXRlEg0KBXZhbHVlGAEgASgJEgwKBHRleHQYAiAB",
+            "R0gQBSKVAgoJQ2FuZGlkYXRlEg0KBXZhbHVlGAEgASgJEgwKBHRleHQYAiAB",
             "KAkSKAoKY29uZmlkZW5jZRgDIAEoCzIULnNzbi50eXBlLkNvbmZpZGVuY2US",
             "LAoMYm91bmRpbmdfYm94GAQgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5",
             "EiYKBHR5cGUYBSABKA4yGC5zc24udHlwZS5DYW5kaWRhdGUuVHlwZRIQCghw",
-            "YWdlX3JlZhgGIAEoDSIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
-            "EgwKCERPQ1VNRU5UEAIiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJ",
-            "Eg4KBmFtb3VudBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZw",
-            "cm90bzM="));
+            "YWdlX3JlZhgGIAEoDRIrCg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50",
+            "eXBlLk1vZGVsU3BlYyIsCgRUeXBlEgsKB1VOS05PV04QABIJCgVGSUVMRBAB",
+            "EgwKCERPQ1VNRU5UEAIiTwoJTW9kZWxTcGVjEhIKCm1vZGVsX25hbWUYASAB",
+            "KAkSLgoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
+            "VmFsdWUiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJEg4KBmFtb3Vu",
+            "dBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null)
           }));
     }
@@ -266,6 +269,7 @@ namespace Ssn.Type {
       boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       type_ = other.type_;
       pageRef_ = other.pageRef_;
+      modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -379,6 +383,20 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "model_metadata" field.</summary>
+    public const int ModelMetadataFieldNumber = 7;
+    private global::Ssn.Type.ModelSpec modelMetadata_;
+    /// <summary>
+    /// Model spec of the TensorFlow Serving model that predicted this candidate
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Ssn.Type.ModelSpec ModelMetadata {
+      get { return modelMetadata_; }
+      set {
+        modelMetadata_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Candidate);
@@ -398,6 +416,7 @@ namespace Ssn.Type {
       if (!object.Equals(BoundingBox, other.BoundingBox)) return false;
       if (Type != other.Type) return false;
       if (PageRef != other.PageRef) return false;
+      if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -410,6 +429,7 @@ namespace Ssn.Type {
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
       if (Type != 0) hash ^= Type.GetHashCode();
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -447,6 +467,10 @@ namespace Ssn.Type {
         output.WriteRawTag(48);
         output.WriteUInt32(PageRef);
       }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModelMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -472,6 +496,9 @@ namespace Ssn.Type {
       }
       if (PageRef != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      if (modelMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -507,6 +534,12 @@ namespace Ssn.Type {
       }
       if (other.PageRef != 0) {
         PageRef = other.PageRef;
+      }
+      if (other.modelMetadata_ != null) {
+        if (modelMetadata_ == null) {
+          modelMetadata_ = new global::Ssn.Type.ModelSpec();
+        }
+        ModelMetadata.MergeFrom(other.ModelMetadata);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -549,6 +582,13 @@ namespace Ssn.Type {
             PageRef = input.ReadUInt32();
             break;
           }
+          case 58: {
+            if (modelMetadata_ == null) {
+              modelMetadata_ = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(modelMetadata_);
+            break;
+          }
         }
       }
     }
@@ -568,6 +608,174 @@ namespace Ssn.Type {
 
   }
 
+  public sealed partial class ModelSpec : pb::IMessage<ModelSpec> {
+    private static readonly pb::MessageParser<ModelSpec> _parser = new pb::MessageParser<ModelSpec>(() => new ModelSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ModelSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelSpec(ModelSpec other) : this() {
+      modelName_ = other.modelName_;
+      ModelVer = other.ModelVer;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ModelSpec Clone() {
+      return new ModelSpec(this);
+    }
+
+    /// <summary>Field number for the "model_name" field.</summary>
+    public const int ModelNameFieldNumber = 1;
+    private string modelName_ = "";
+    /// <summary>
+    /// The name of the TensorFlow Serving model
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ModelName {
+      get { return modelName_; }
+      set {
+        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model_ver" field.</summary>
+    public const int ModelVerFieldNumber = 2;
+    private static readonly pb::FieldCodec<long?> _single_modelVer_codec = pb::FieldCodec.ForStructWrapper<long>(18);
+    private long? modelVer_;
+    /// <summary>
+    /// The version number of the TensorFlow Serving model
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long? ModelVer {
+      get { return modelVer_; }
+      set {
+        modelVer_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ModelSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ModelSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ModelName != other.ModelName) return false;
+      if (ModelVer != other.ModelVer) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
+      if (modelVer_ != null) hash ^= ModelVer.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (ModelName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ModelName);
+      }
+      if (modelVer_ != null) {
+        _single_modelVer_codec.WriteTagAndValue(output, ModelVer);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (ModelName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      }
+      if (modelVer_ != null) {
+        size += _single_modelVer_codec.CalculateSizeWithTag(ModelVer);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ModelSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ModelName.Length != 0) {
+        ModelName = other.ModelName;
+      }
+      if (other.modelVer_ != null) {
+        if (modelVer_ == null || other.ModelVer != 0L) {
+          ModelVer = other.ModelVer;
+        }
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            long? value = _single_modelVer_codec.Read(input);
+            if (modelVer_ == null || value != 0L) {
+              ModelVer = value;
+            }
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class LineCandidate : pb::IMessage<LineCandidate> {
     private static readonly pb::MessageParser<LineCandidate> _parser = new pb::MessageParser<LineCandidate>(() => new LineCandidate());
     private pb::UnknownFieldSet _unknownFields;
@@ -576,7 +784,7 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

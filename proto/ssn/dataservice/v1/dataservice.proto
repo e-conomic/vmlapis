@@ -10,6 +10,7 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
+import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 
 service DataService {
@@ -51,6 +52,8 @@ message Document {
       type_override: 'TIMESTAMP'
     }
   ];
+  PredictionConfidences prediction_confidences = 9;
+  PredictionMetadata prediction_metadata = 10;
 }
 
 message TrueValues {
@@ -103,6 +106,56 @@ message PredictionValues {
   repeated google.protobuf.StringValue iban = 22;
 }
 
+message PredictionConfidences {
+  repeated google.protobuf.FloatValue total_incl_vat = 1;
+  repeated google.protobuf.FloatValue total_vat = 2;
+  repeated google.protobuf.FloatValue total_excl_vat = 3;
+  repeated google.protobuf.FloatValue order_date = 4;
+  repeated google.protobuf.FloatValue payment_due_date = 5;
+  repeated google.protobuf.FloatValue document_type = 6;
+  repeated google.protobuf.FloatValue currency = 7;
+  repeated google.protobuf.FloatValue credit_card_last_four = 8;
+  repeated google.protobuf.FloatValue payment_method = 9;
+  repeated google.protobuf.FloatValue ocr_line_dk_type = 10;
+  repeated google.protobuf.FloatValue ocr_line_dk_payment_id = 11;
+  repeated google.protobuf.FloatValue ocr_line_dk_creditor_id = 12;
+  repeated google.protobuf.FloatValue ocr_line_se_payment_id = 13;
+  repeated google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14;
+  repeated google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15;
+  repeated google.protobuf.FloatValue ocr_line_no_payment_id = 16;
+  repeated google.protobuf.FloatValue ocr_line_fi_payment_id = 17;
+  repeated google.protobuf.FloatValue ocr_line_nl_payment_id = 18;
+  repeated google.protobuf.FloatValue supplier_corporate_id = 19;
+  repeated google.protobuf.FloatValue supplier_country_code = 20;
+  repeated google.protobuf.FloatValue invoice_number = 21;
+  repeated google.protobuf.FloatValue iban = 22;
+}
+
+message PredictionMetadata {
+  repeated ssn.type.ModelSpec total_incl_vat = 1;
+  repeated ssn.type.ModelSpec total_vat = 2;
+  repeated ssn.type.ModelSpec total_excl_vat = 3;
+  repeated ssn.type.ModelSpec order_date = 4;
+  repeated ssn.type.ModelSpec payment_due_date = 5;
+  repeated ssn.type.ModelSpec document_type = 6;
+  repeated ssn.type.ModelSpec currency = 7;
+  repeated ssn.type.ModelSpec credit_card_last_four = 8;
+  repeated ssn.type.ModelSpec payment_method = 9;
+  repeated ssn.type.ModelSpec ocr_line_dk_type = 10;
+  repeated ssn.type.ModelSpec ocr_line_dk_payment_id = 11;
+  repeated ssn.type.ModelSpec ocr_line_dk_creditor_id = 12;
+  repeated ssn.type.ModelSpec ocr_line_se_payment_id = 13;
+  repeated ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14;
+  repeated ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15;
+  repeated ssn.type.ModelSpec ocr_line_no_payment_id = 16;
+  repeated ssn.type.ModelSpec ocr_line_fi_payment_id = 17;
+  repeated ssn.type.ModelSpec ocr_line_nl_payment_id = 18;
+  repeated ssn.type.ModelSpec supplier_corporate_id = 19;
+  repeated ssn.type.ModelSpec supplier_country_code = 20;
+  repeated ssn.type.ModelSpec invoice_number = 21;
+  repeated ssn.type.ModelSpec iban = 22;
+}
+
 message CreateDocumentRequest {
   Document document = 1;
 }
@@ -125,6 +178,8 @@ message PrepareFeedbackRequest {
   bytes document_bytes = 3;
   PredictionValues predictions = 4;
   repeated string tags = 5;
+  PredictionConfidences confidences = 6;
+  PredictionMetadata prediction_metadata = 7;
 }
 
 message FeedbackRequest {
