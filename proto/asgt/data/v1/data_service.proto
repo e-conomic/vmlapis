@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asgt.dataservice.v1alpha1;
+package asgt.dataservice.v1;
 
 option go_package = "data";
 
@@ -14,28 +14,28 @@ import "asgt/type/sample.proto";
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{type}:create"
+      post: "/v1/{type}:create"
       body: "*"
     };
   }
 
   rpc AppendData (AppendDataRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{type}/{name}:append"
+      post: "/v1/{type}/{name}:append"
       body: "*"
     };
   }
 
   rpc DeleteData (DeleteRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
-      post: "/v1alpha1/{type}:delete"
+      post: "/v1/{type}:delete"
       body: "*"
     };
   }
 
   rpc GetInfo (GetInfoRequest) returns (GetInfoResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/{type}/{name}:info"
+      post: "/v1/{type}/{name}:info"
       body: "*"
     };
   }

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asgt.jester.v1alpha1;
+package asgt.jester.v1;
 
 option go_package = "jester";
 
@@ -12,7 +12,7 @@ import "asgt/type/data.proto";
 service Jester {
   rpc Suggest(SuggestionRequest) returns (SuggestionResponse) {
     option (google.api.http) = {
-      post: "/v1alpha1/{type}/{name}:suggest"
+      post: "/v1/{type}/{name}:suggest"
       body: "*"
     };
   }
