@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package asgt.jester.v1;
+
+option go_package = "jester";
+
+import "google/api/annotations.proto";
+import "asgt/type/prediction.proto";
+import "asgt/type/model.proto";
+import "asgt/type/data.proto";
+
+service Jester {
+  rpc Suggest(SuggestionRequest) returns (SuggestionResponse) {
+    option (google.api.http) = {
+      post: "/v1/{type}/{name}:suggest"
+      body: "*"
+    };
+  }
+}
+
+// AutoSuggest
+message SuggestionResponse {
+  repeated asgt.type.Prediction predictions = 1;
+  asgt.type.Model model = 2;
+}
+
+message SuggestionOptions {
+  int32 suggestion_limit = 1;
+  asgt.type.Confidence.Level min_confidence = 2;
+}
+
+message SuggestionRequest {
+  string name = 1;
+  string type = 2;
+  repeated asgt.type.Data inputs = 3;
+  SuggestionOptions options = 4;
+}
