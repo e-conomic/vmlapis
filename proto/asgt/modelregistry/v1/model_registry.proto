@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asgt.modelregistry.v1alpha1;
+package asgt.modelregistry.v1;
 
 option go_package = "modelregistry";
 

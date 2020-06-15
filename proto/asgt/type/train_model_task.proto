@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package asgt.modeltrainer.v1alpha1;
+package asgt.type;
 
-option go_package = "modeltrainer";
+option go_package = "type";
 
 import "asgt/type/dataset.proto";
 import "asgt/type/revision.proto";
