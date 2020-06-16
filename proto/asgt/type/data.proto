@@ -4,7 +4,6 @@ package asgt.type;
 
 option go_package = "type";
 
-import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 
 
@@ -15,24 +14,24 @@ message Invoice {
   Supplier supplier = 2;
 
   // reference to the customer
-  google.protobuf.StringValue customer_ref = 3;
+  string customer_ref = 3;
 
   // invoice text from the SmartScan product
-  google.protobuf.StringValue text = 4;
+  string text = 4;
 
   // name of the currency as a string
-  google.protobuf.StringValue currency = 6;
+  string currency = 6;
 
   // total of the invoice
-  google.protobuf.FloatValue total = 7;
+  float total = 7;
 }
 
 message InvoiceLine {
   // text of the invoice line
-  google.protobuf.StringValue text = 8;
+  string text = 8;
 
   // id of the product (item)
-  google.protobuf.StringValue item_id = 9;
+  string item_id = 9;
 }
 
 message Supplier {
@@ -40,10 +39,10 @@ message Supplier {
   string id = 1;
 
   // name of the supplier
-  google.protobuf.StringValue name = 4;
+  string name = 4;
 
   // global id of the supplier
-  google.protobuf.StringValue global_id = 5;
+  string global_id = 5;
 }
 
 message Transaction {
