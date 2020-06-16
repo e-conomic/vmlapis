@@ -25,25 +25,19 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChRhc2d0L3R5cGUvZGF0YS5wcm90bxIJYXNndC50eXBlGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBl",
-            "cnMucHJvdG8inAIKB0ludm9pY2USLgoKaXNzdWVfZGF0ZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASJQoIc3VwcGxpZXIYAiABKAsyEy5h",
-            "c2d0LnR5cGUuU3VwcGxpZXISMgoMY3VzdG9tZXJfcmVmGAMgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEioKBHRleHQYBCABKAsyHC5nb29n",
-            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUSLgoIY3VycmVuY3kYBiABKAsyHC5n",
-            "b29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUSKgoFdG90YWwYByABKAsyGy5n",
-            "b29nbGUucHJvdG9idWYuRmxvYXRWYWx1ZSJoCgtJbnZvaWNlTGluZRIqCgR0",
-            "ZXh0GAggASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEi0KB2l0",
-            "ZW1faWQYCSABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUicwoI",
-            "U3VwcGxpZXISCgoCaWQYASABKAkSKgoEbmFtZRgEIAEoCzIcLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJpbmdWYWx1ZRIvCglnbG9iYWxfaWQYBSABKAsyHC5nb29n",
-            "bGUucHJvdG9idWYuU3RyaW5nVmFsdWUiKwoLVHJhbnNhY3Rpb24SDAoEdGV4",
-            "dBgBIAEoCRIOCgZhbW91bnQYAiABKAIihgEKBERhdGESKwoLdHJhbnNhY3Rp",
-            "b24YASABKAsyFi5hc2d0LnR5cGUuVHJhbnNhY3Rpb24SIwoHaW52b2ljZRgC",
-            "IAEoCzISLmFzZ3QudHlwZS5JbnZvaWNlEiwKDGludm9pY2VfbGluZRgDIAEo",
-            "CzIWLmFzZ3QudHlwZS5JbnZvaWNlTGluZUIGWgR0eXBlYgZwcm90bzM="));
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIqUBCgdJbnZvaWNlEi4KCmlzc3VlX2Rh",
+            "dGUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiUKCHN1cHBs",
+            "aWVyGAIgASgLMhMuYXNndC50eXBlLlN1cHBsaWVyEhQKDGN1c3RvbWVyX3Jl",
+            "ZhgDIAEoCRIMCgR0ZXh0GAQgASgJEhAKCGN1cnJlbmN5GAYgASgJEg0KBXRv",
+            "dGFsGAcgASgCIiwKC0ludm9pY2VMaW5lEgwKBHRleHQYCCABKAkSDwoHaXRl",
+            "bV9pZBgJIAEoCSI3CghTdXBwbGllchIKCgJpZBgBIAEoCRIMCgRuYW1lGAQg",
+            "ASgJEhEKCWdsb2JhbF9pZBgFIAEoCSIrCgtUcmFuc2FjdGlvbhIMCgR0ZXh0",
+            "GAEgASgJEg4KBmFtb3VudBgCIAEoAiKGAQoERGF0YRIrCgt0cmFuc2FjdGlv",
+            "bhgBIAEoCzIWLmFzZ3QudHlwZS5UcmFuc2FjdGlvbhIjCgdpbnZvaWNlGAIg",
+            "ASgLMhIuYXNndC50eXBlLkludm9pY2USLAoMaW52b2ljZV9saW5lGAMgASgL",
+            "MhYuYXNndC50eXBlLkludm9pY2VMaW5lQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Invoice), global::Asgt.Type.Invoice.Parser, new[]{ "IssueDate", "Supplier", "CustomerRef", "Text", "Currency", "Total" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.InvoiceLine), global::Asgt.Type.InvoiceLine.Parser, new[]{ "Text", "ItemId" }, null, null, null),
@@ -83,10 +77,10 @@ namespace Asgt.Type {
     public Invoice(Invoice other) : this() {
       issueDate_ = other.issueDate_ != null ? other.issueDate_.Clone() : null;
       supplier_ = other.supplier_ != null ? other.supplier_.Clone() : null;
-      CustomerRef = other.CustomerRef;
-      Text = other.Text;
-      Currency = other.Currency;
-      Total = other.Total;
+      customerRef_ = other.customerRef_;
+      text_ = other.text_;
+      currency_ = other.currency_;
+      total_ = other.total_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,8 +116,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "customer_ref" field.</summary>
     public const int CustomerRefFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _single_customerRef_codec = pb::FieldCodec.ForClassWrapper<string>(26);
-    private string customerRef_;
+    private string customerRef_ = "";
     /// <summary>
     /// reference to the customer
     /// </summary>
@@ -131,14 +124,13 @@ namespace Asgt.Type {
     public string CustomerRef {
       get { return customerRef_; }
       set {
-        customerRef_ = value;
+        customerRef_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _single_text_codec = pb::FieldCodec.ForClassWrapper<string>(34);
-    private string text_;
+    private string text_ = "";
     /// <summary>
     /// invoice text from the SmartScan product
     /// </summary>
@@ -146,14 +138,13 @@ namespace Asgt.Type {
     public string Text {
       get { return text_; }
       set {
-        text_ = value;
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "currency" field.</summary>
     public const int CurrencyFieldNumber = 6;
-    private static readonly pb::FieldCodec<string> _single_currency_codec = pb::FieldCodec.ForClassWrapper<string>(50);
-    private string currency_;
+    private string currency_ = "";
     /// <summary>
     /// name of the currency as a string
     /// </summary>
@@ -161,19 +152,18 @@ namespace Asgt.Type {
     public string Currency {
       get { return currency_; }
       set {
-        currency_ = value;
+        currency_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "total" field.</summary>
     public const int TotalFieldNumber = 7;
-    private static readonly pb::FieldCodec<float?> _single_total_codec = pb::FieldCodec.ForStructWrapper<float>(58);
-    private float? total_;
+    private float total_;
     /// <summary>
     /// total of the invoice
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float? Total {
+    public float Total {
       get { return total_; }
       set {
         total_ = value;
@@ -198,7 +188,7 @@ namespace Asgt.Type {
       if (CustomerRef != other.CustomerRef) return false;
       if (Text != other.Text) return false;
       if (Currency != other.Currency) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.Equals(Total, other.Total)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Total, other.Total)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -207,10 +197,10 @@ namespace Asgt.Type {
       int hash = 1;
       if (issueDate_ != null) hash ^= IssueDate.GetHashCode();
       if (supplier_ != null) hash ^= Supplier.GetHashCode();
-      if (customerRef_ != null) hash ^= CustomerRef.GetHashCode();
-      if (text_ != null) hash ^= Text.GetHashCode();
-      if (currency_ != null) hash ^= Currency.GetHashCode();
-      if (total_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Total);
+      if (CustomerRef.Length != 0) hash ^= CustomerRef.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (Currency.Length != 0) hash ^= Currency.GetHashCode();
+      if (Total != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Total);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -232,17 +222,21 @@ namespace Asgt.Type {
         output.WriteRawTag(18);
         output.WriteMessage(Supplier);
       }
-      if (customerRef_ != null) {
-        _single_customerRef_codec.WriteTagAndValue(output, CustomerRef);
+      if (CustomerRef.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CustomerRef);
       }
-      if (text_ != null) {
-        _single_text_codec.WriteTagAndValue(output, Text);
+      if (Text.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Text);
       }
-      if (currency_ != null) {
-        _single_currency_codec.WriteTagAndValue(output, Currency);
+      if (Currency.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Currency);
       }
-      if (total_ != null) {
-        _single_total_codec.WriteTagAndValue(output, Total);
+      if (Total != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Total);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -258,17 +252,17 @@ namespace Asgt.Type {
       if (supplier_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Supplier);
       }
-      if (customerRef_ != null) {
-        size += _single_customerRef_codec.CalculateSizeWithTag(CustomerRef);
+      if (CustomerRef.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerRef);
       }
-      if (text_ != null) {
-        size += _single_text_codec.CalculateSizeWithTag(Text);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (currency_ != null) {
-        size += _single_currency_codec.CalculateSizeWithTag(Currency);
+      if (Currency.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Currency);
       }
-      if (total_ != null) {
-        size += _single_total_codec.CalculateSizeWithTag(Total);
+      if (Total != 0F) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -293,25 +287,17 @@ namespace Asgt.Type {
         }
         Supplier.MergeFrom(other.Supplier);
       }
-      if (other.customerRef_ != null) {
-        if (customerRef_ == null || other.CustomerRef != "") {
-          CustomerRef = other.CustomerRef;
-        }
+      if (other.CustomerRef.Length != 0) {
+        CustomerRef = other.CustomerRef;
       }
-      if (other.text_ != null) {
-        if (text_ == null || other.Text != "") {
-          Text = other.Text;
-        }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
-      if (other.currency_ != null) {
-        if (currency_ == null || other.Currency != "") {
-          Currency = other.Currency;
-        }
+      if (other.Currency.Length != 0) {
+        Currency = other.Currency;
       }
-      if (other.total_ != null) {
-        if (total_ == null || other.Total != 0F) {
-          Total = other.Total;
-        }
+      if (other.Total != 0F) {
+        Total = other.Total;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -339,31 +325,19 @@ namespace Asgt.Type {
             break;
           }
           case 26: {
-            string value = _single_customerRef_codec.Read(input);
-            if (customerRef_ == null || value != "") {
-              CustomerRef = value;
-            }
+            CustomerRef = input.ReadString();
             break;
           }
           case 34: {
-            string value = _single_text_codec.Read(input);
-            if (text_ == null || value != "") {
-              Text = value;
-            }
+            Text = input.ReadString();
             break;
           }
           case 50: {
-            string value = _single_currency_codec.Read(input);
-            if (currency_ == null || value != "") {
-              Currency = value;
-            }
+            Currency = input.ReadString();
             break;
           }
-          case 58: {
-            float? value = _single_total_codec.Read(input);
-            if (total_ == null || value != 0F) {
-              Total = value;
-            }
+          case 61: {
+            Total = input.ReadFloat();
             break;
           }
         }
@@ -397,8 +371,8 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public InvoiceLine(InvoiceLine other) : this() {
-      Text = other.Text;
-      ItemId = other.ItemId;
+      text_ = other.text_;
+      itemId_ = other.itemId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -409,8 +383,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 8;
-    private static readonly pb::FieldCodec<string> _single_text_codec = pb::FieldCodec.ForClassWrapper<string>(66);
-    private string text_;
+    private string text_ = "";
     /// <summary>
     /// text of the invoice line
     /// </summary>
@@ -418,14 +391,13 @@ namespace Asgt.Type {
     public string Text {
       get { return text_; }
       set {
-        text_ = value;
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "item_id" field.</summary>
     public const int ItemIdFieldNumber = 9;
-    private static readonly pb::FieldCodec<string> _single_itemId_codec = pb::FieldCodec.ForClassWrapper<string>(74);
-    private string itemId_;
+    private string itemId_ = "";
     /// <summary>
     /// id of the product (item)
     /// </summary>
@@ -433,7 +405,7 @@ namespace Asgt.Type {
     public string ItemId {
       get { return itemId_; }
       set {
-        itemId_ = value;
+        itemId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -458,8 +430,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (text_ != null) hash ^= Text.GetHashCode();
-      if (itemId_ != null) hash ^= ItemId.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -473,11 +445,13 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (text_ != null) {
-        _single_text_codec.WriteTagAndValue(output, Text);
+      if (Text.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Text);
       }
-      if (itemId_ != null) {
-        _single_itemId_codec.WriteTagAndValue(output, ItemId);
+      if (ItemId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ItemId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -487,11 +461,11 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (text_ != null) {
-        size += _single_text_codec.CalculateSizeWithTag(Text);
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
-      if (itemId_ != null) {
-        size += _single_itemId_codec.CalculateSizeWithTag(ItemId);
+      if (ItemId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -504,15 +478,11 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.text_ != null) {
-        if (text_ == null || other.Text != "") {
-          Text = other.Text;
-        }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
       }
-      if (other.itemId_ != null) {
-        if (itemId_ == null || other.ItemId != "") {
-          ItemId = other.ItemId;
-        }
+      if (other.ItemId.Length != 0) {
+        ItemId = other.ItemId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -526,17 +496,11 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 66: {
-            string value = _single_text_codec.Read(input);
-            if (text_ == null || value != "") {
-              Text = value;
-            }
+            Text = input.ReadString();
             break;
           }
           case 74: {
-            string value = _single_itemId_codec.Read(input);
-            if (itemId_ == null || value != "") {
-              ItemId = value;
-            }
+            ItemId = input.ReadString();
             break;
           }
         }
@@ -571,8 +535,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public Supplier(Supplier other) : this() {
       id_ = other.id_;
-      Name = other.Name;
-      GlobalId = other.GlobalId;
+      name_ = other.name_;
+      globalId_ = other.globalId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -597,8 +561,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 4;
-    private static readonly pb::FieldCodec<string> _single_name_codec = pb::FieldCodec.ForClassWrapper<string>(34);
-    private string name_;
+    private string name_ = "";
     /// <summary>
     /// name of the supplier
     /// </summary>
@@ -606,14 +569,13 @@ namespace Asgt.Type {
     public string Name {
       get { return name_; }
       set {
-        name_ = value;
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
     /// <summary>Field number for the "global_id" field.</summary>
     public const int GlobalIdFieldNumber = 5;
-    private static readonly pb::FieldCodec<string> _single_globalId_codec = pb::FieldCodec.ForClassWrapper<string>(42);
-    private string globalId_;
+    private string globalId_ = "";
     /// <summary>
     /// global id of the supplier
     /// </summary>
@@ -621,7 +583,7 @@ namespace Asgt.Type {
     public string GlobalId {
       get { return globalId_; }
       set {
-        globalId_ = value;
+        globalId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -648,8 +610,8 @@ namespace Asgt.Type {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
-      if (name_ != null) hash ^= Name.GetHashCode();
-      if (globalId_ != null) hash ^= GlobalId.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (GlobalId.Length != 0) hash ^= GlobalId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -667,11 +629,13 @@ namespace Asgt.Type {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
-      if (name_ != null) {
-        _single_name_codec.WriteTagAndValue(output, Name);
+      if (Name.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Name);
       }
-      if (globalId_ != null) {
-        _single_globalId_codec.WriteTagAndValue(output, GlobalId);
+      if (GlobalId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(GlobalId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -684,11 +648,11 @@ namespace Asgt.Type {
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
       }
-      if (name_ != null) {
-        size += _single_name_codec.CalculateSizeWithTag(Name);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (globalId_ != null) {
-        size += _single_globalId_codec.CalculateSizeWithTag(GlobalId);
+      if (GlobalId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GlobalId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -704,15 +668,11 @@ namespace Asgt.Type {
       if (other.Id.Length != 0) {
         Id = other.Id;
       }
-      if (other.name_ != null) {
-        if (name_ == null || other.Name != "") {
-          Name = other.Name;
-        }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.globalId_ != null) {
-        if (globalId_ == null || other.GlobalId != "") {
-          GlobalId = other.GlobalId;
-        }
+      if (other.GlobalId.Length != 0) {
+        GlobalId = other.GlobalId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -730,17 +690,11 @@ namespace Asgt.Type {
             break;
           }
           case 34: {
-            string value = _single_name_codec.Read(input);
-            if (name_ == null || value != "") {
-              Name = value;
-            }
+            Name = input.ReadString();
             break;
           }
           case 42: {
-            string value = _single_globalId_codec.Read(input);
-            if (globalId_ == null || value != "") {
-              GlobalId = value;
-            }
+            GlobalId = input.ReadString();
             break;
           }
         }

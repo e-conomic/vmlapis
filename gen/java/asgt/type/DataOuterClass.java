@@ -61,100 +61,63 @@ public final class DataOuterClass {
      * reference to the customer
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+     * <code>string customer_ref = 3;</code>
      */
-    boolean hasCustomerRef();
+    java.lang.String getCustomerRef();
     /**
      * <pre>
      * reference to the customer
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+     * <code>string customer_ref = 3;</code>
      */
-    com.google.protobuf.StringValue getCustomerRef();
-    /**
-     * <pre>
-     * reference to the customer
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder();
+    com.google.protobuf.ByteString
+        getCustomerRefBytes();
 
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>string text = 4;</code>
      */
-    boolean hasText();
+    java.lang.String getText();
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>string text = 4;</code>
      */
-    com.google.protobuf.StringValue getText();
-    /**
-     * <pre>
-     * invoice text from the SmartScan product
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getTextOrBuilder();
+    com.google.protobuf.ByteString
+        getTextBytes();
 
     /**
      * <pre>
      * name of the currency as a string
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
+     * <code>string currency = 6;</code>
      */
-    boolean hasCurrency();
+    java.lang.String getCurrency();
     /**
      * <pre>
      * name of the currency as a string
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
+     * <code>string currency = 6;</code>
      */
-    com.google.protobuf.StringValue getCurrency();
-    /**
-     * <pre>
-     * name of the currency as a string
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder();
+    com.google.protobuf.ByteString
+        getCurrencyBytes();
 
     /**
      * <pre>
      * total of the invoice
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
+     * <code>float total = 7;</code>
      */
-    boolean hasTotal();
-    /**
-     * <pre>
-     * total of the invoice
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
-     */
-    com.google.protobuf.FloatValue getTotal();
-    /**
-     * <pre>
-     * total of the invoice
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
-     */
-    com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder();
+    float getTotal();
   }
   /**
    * Protobuf type {@code asgt.type.Invoice}
@@ -169,6 +132,10 @@ public final class DataOuterClass {
       super(builder);
     }
     private Invoice() {
+      customerRef_ = "";
+      text_ = "";
+      currency_ = "";
+      total_ = 0F;
     }
 
     @java.lang.Override
@@ -222,55 +189,26 @@ public final class DataOuterClass {
               break;
             }
             case 26: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (customerRef_ != null) {
-                subBuilder = customerRef_.toBuilder();
-              }
-              customerRef_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(customerRef_);
-                customerRef_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              customerRef_ = s;
               break;
             }
             case 34: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (text_ != null) {
-                subBuilder = text_.toBuilder();
-              }
-              text_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(text_);
-                text_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              text_ = s;
               break;
             }
             case 50: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (currency_ != null) {
-                subBuilder = currency_.toBuilder();
-              }
-              currency_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(currency_);
-                currency_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              currency_ = s;
               break;
             }
-            case 58: {
-              com.google.protobuf.FloatValue.Builder subBuilder = null;
-              if (total_ != null) {
-                subBuilder = total_.toBuilder();
-              }
-              total_ = input.readMessage(com.google.protobuf.FloatValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(total_);
-                total_ = subBuilder.buildPartial();
-              }
+            case 61: {
 
+              total_ = input.readFloat();
               break;
             }
             default: {
@@ -360,135 +298,142 @@ public final class DataOuterClass {
     }
 
     public static final int CUSTOMER_REF_FIELD_NUMBER = 3;
-    private com.google.protobuf.StringValue customerRef_;
+    private volatile java.lang.Object customerRef_;
     /**
      * <pre>
      * reference to the customer
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+     * <code>string customer_ref = 3;</code>
      */
-    public boolean hasCustomerRef() {
-      return customerRef_ != null;
+    public java.lang.String getCustomerRef() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerRef_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * reference to the customer
      * </pre>
      *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+     * <code>string customer_ref = 3;</code>
      */
-    public com.google.protobuf.StringValue getCustomerRef() {
-      return customerRef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
-    }
-    /**
-     * <pre>
-     * reference to the customer
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder() {
-      return getCustomerRef();
+    public com.google.protobuf.ByteString
+        getCustomerRefBytes() {
+      java.lang.Object ref = customerRef_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerRef_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int TEXT_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue text_;
+    private volatile java.lang.Object text_;
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>string text = 4;</code>
      */
-    public boolean hasText() {
-      return text_ != null;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * invoice text from the SmartScan product
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 4;</code>
+     * <code>string text = 4;</code>
      */
-    public com.google.protobuf.StringValue getText() {
-      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
-    }
-    /**
-     * <pre>
-     * invoice text from the SmartScan product
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue text = 4;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
-      return getText();
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 6;
-    private com.google.protobuf.StringValue currency_;
+    private volatile java.lang.Object currency_;
     /**
      * <pre>
      * name of the currency as a string
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
+     * <code>string currency = 6;</code>
      */
-    public boolean hasCurrency() {
-      return currency_ != null;
+    public java.lang.String getCurrency() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        currency_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * name of the currency as a string
      * </pre>
      *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
+     * <code>string currency = 6;</code>
      */
-    public com.google.protobuf.StringValue getCurrency() {
-      return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-    }
-    /**
-     * <pre>
-     * name of the currency as a string
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue currency = 6;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-      return getCurrency();
+    public com.google.protobuf.ByteString
+        getCurrencyBytes() {
+      java.lang.Object ref = currency_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        currency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int TOTAL_FIELD_NUMBER = 7;
-    private com.google.protobuf.FloatValue total_;
+    private float total_;
     /**
      * <pre>
      * total of the invoice
      * </pre>
      *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
+     * <code>float total = 7;</code>
      */
-    public boolean hasTotal() {
-      return total_ != null;
-    }
-    /**
-     * <pre>
-     * total of the invoice
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
-     */
-    public com.google.protobuf.FloatValue getTotal() {
-      return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-    }
-    /**
-     * <pre>
-     * total of the invoice
-     * </pre>
-     *
-     * <code>.google.protobuf.FloatValue total = 7;</code>
-     */
-    public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
-      return getTotal();
+    public float getTotal() {
+      return total_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -511,17 +456,17 @@ public final class DataOuterClass {
       if (supplier_ != null) {
         output.writeMessage(2, getSupplier());
       }
-      if (customerRef_ != null) {
-        output.writeMessage(3, getCustomerRef());
+      if (!getCustomerRefBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, customerRef_);
       }
-      if (text_ != null) {
-        output.writeMessage(4, getText());
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, text_);
       }
-      if (currency_ != null) {
-        output.writeMessage(6, getCurrency());
+      if (!getCurrencyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, currency_);
       }
-      if (total_ != null) {
-        output.writeMessage(7, getTotal());
+      if (total_ != 0F) {
+        output.writeFloat(7, total_);
       }
       unknownFields.writeTo(output);
     }
@@ -540,21 +485,18 @@ public final class DataOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getSupplier());
       }
-      if (customerRef_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getCustomerRef());
+      if (!getCustomerRefBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, customerRef_);
       }
-      if (text_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getText());
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, text_);
       }
-      if (currency_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getCurrency());
+      if (!getCurrencyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, currency_);
       }
-      if (total_ != null) {
+      if (total_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getTotal());
+          .computeFloatSize(7, total_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -582,26 +524,16 @@ public final class DataOuterClass {
         result = result && getSupplier()
             .equals(other.getSupplier());
       }
-      result = result && (hasCustomerRef() == other.hasCustomerRef());
-      if (hasCustomerRef()) {
-        result = result && getCustomerRef()
-            .equals(other.getCustomerRef());
-      }
-      result = result && (hasText() == other.hasText());
-      if (hasText()) {
-        result = result && getText()
-            .equals(other.getText());
-      }
-      result = result && (hasCurrency() == other.hasCurrency());
-      if (hasCurrency()) {
-        result = result && getCurrency()
-            .equals(other.getCurrency());
-      }
-      result = result && (hasTotal() == other.hasTotal());
-      if (hasTotal()) {
-        result = result && getTotal()
-            .equals(other.getTotal());
-      }
+      result = result && getCustomerRef()
+          .equals(other.getCustomerRef());
+      result = result && getText()
+          .equals(other.getText());
+      result = result && getCurrency()
+          .equals(other.getCurrency());
+      result = result && (
+          java.lang.Float.floatToIntBits(getTotal())
+          == java.lang.Float.floatToIntBits(
+              other.getTotal()));
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -621,22 +553,15 @@ public final class DataOuterClass {
         hash = (37 * hash) + SUPPLIER_FIELD_NUMBER;
         hash = (53 * hash) + getSupplier().hashCode();
       }
-      if (hasCustomerRef()) {
-        hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
-        hash = (53 * hash) + getCustomerRef().hashCode();
-      }
-      if (hasText()) {
-        hash = (37 * hash) + TEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getText().hashCode();
-      }
-      if (hasCurrency()) {
-        hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
-        hash = (53 * hash) + getCurrency().hashCode();
-      }
-      if (hasTotal()) {
-        hash = (37 * hash) + TOTAL_FIELD_NUMBER;
-        hash = (53 * hash) + getTotal().hashCode();
-      }
+      hash = (37 * hash) + CUSTOMER_REF_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerRef().hashCode();
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + CURRENCY_FIELD_NUMBER;
+      hash = (53 * hash) + getCurrency().hashCode();
+      hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getTotal());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -782,30 +707,14 @@ public final class DataOuterClass {
           supplier_ = null;
           supplierBuilder_ = null;
         }
-        if (customerRefBuilder_ == null) {
-          customerRef_ = null;
-        } else {
-          customerRef_ = null;
-          customerRefBuilder_ = null;
-        }
-        if (textBuilder_ == null) {
-          text_ = null;
-        } else {
-          text_ = null;
-          textBuilder_ = null;
-        }
-        if (currencyBuilder_ == null) {
-          currency_ = null;
-        } else {
-          currency_ = null;
-          currencyBuilder_ = null;
-        }
-        if (totalBuilder_ == null) {
-          total_ = null;
-        } else {
-          total_ = null;
-          totalBuilder_ = null;
-        }
+        customerRef_ = "";
+
+        text_ = "";
+
+        currency_ = "";
+
+        total_ = 0F;
+
         return this;
       }
 
@@ -842,26 +751,10 @@ public final class DataOuterClass {
         } else {
           result.supplier_ = supplierBuilder_.build();
         }
-        if (customerRefBuilder_ == null) {
-          result.customerRef_ = customerRef_;
-        } else {
-          result.customerRef_ = customerRefBuilder_.build();
-        }
-        if (textBuilder_ == null) {
-          result.text_ = text_;
-        } else {
-          result.text_ = textBuilder_.build();
-        }
-        if (currencyBuilder_ == null) {
-          result.currency_ = currency_;
-        } else {
-          result.currency_ = currencyBuilder_.build();
-        }
-        if (totalBuilder_ == null) {
-          result.total_ = total_;
-        } else {
-          result.total_ = totalBuilder_.build();
-        }
+        result.customerRef_ = customerRef_;
+        result.text_ = text_;
+        result.currency_ = currency_;
+        result.total_ = total_;
         onBuilt();
         return result;
       }
@@ -916,17 +809,20 @@ public final class DataOuterClass {
         if (other.hasSupplier()) {
           mergeSupplier(other.getSupplier());
         }
-        if (other.hasCustomerRef()) {
-          mergeCustomerRef(other.getCustomerRef());
+        if (!other.getCustomerRef().isEmpty()) {
+          customerRef_ = other.customerRef_;
+          onChanged();
         }
-        if (other.hasText()) {
-          mergeText(other.getText());
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
         }
-        if (other.hasCurrency()) {
-          mergeCurrency(other.getCurrency());
+        if (!other.getCurrency().isEmpty()) {
+          currency_ = other.currency_;
+          onChanged();
         }
-        if (other.hasTotal()) {
-          mergeTotal(other.getTotal());
+        if (other.getTotal() != 0F) {
+          setTotal(other.getTotal());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1227,31 +1123,24 @@ public final class DataOuterClass {
         return supplierBuilder_;
       }
 
-      private com.google.protobuf.StringValue customerRef_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerRefBuilder_;
+      private java.lang.Object customerRef_ = "";
       /**
        * <pre>
        * reference to the customer
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+       * <code>string customer_ref = 3;</code>
        */
-      public boolean hasCustomerRef() {
-        return customerRefBuilder_ != null || customerRef_ != null;
-      }
-      /**
-       * <pre>
-       * reference to the customer
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-       */
-      public com.google.protobuf.StringValue getCustomerRef() {
-        if (customerRefBuilder_ == null) {
-          return customerRef_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
+      public java.lang.String getCustomerRef() {
+        java.lang.Object ref = customerRef_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerRef_ = s;
+          return s;
         } else {
-          return customerRefBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1259,37 +1148,36 @@ public final class DataOuterClass {
        * reference to the customer
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+       * <code>string customer_ref = 3;</code>
        */
-      public Builder setCustomerRef(com.google.protobuf.StringValue value) {
-        if (customerRefBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          customerRef_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getCustomerRefBytes() {
+        java.lang.Object ref = customerRef_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerRef_ = b;
+          return b;
         } else {
-          customerRefBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
        * reference to the customer
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+       * <code>string customer_ref = 3;</code>
        */
       public Builder setCustomerRef(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (customerRefBuilder_ == null) {
-          customerRef_ = builderForValue.build();
-          onChanged();
-        } else {
-          customerRefBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        customerRef_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1297,152 +1185,88 @@ public final class DataOuterClass {
        * reference to the customer
        * </pre>
        *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-       */
-      public Builder mergeCustomerRef(com.google.protobuf.StringValue value) {
-        if (customerRefBuilder_ == null) {
-          if (customerRef_ != null) {
-            customerRef_ =
-              com.google.protobuf.StringValue.newBuilder(customerRef_).mergeFrom(value).buildPartial();
-          } else {
-            customerRef_ = value;
-          }
-          onChanged();
-        } else {
-          customerRefBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * reference to the customer
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
+       * <code>string customer_ref = 3;</code>
        */
       public Builder clearCustomerRef() {
-        if (customerRefBuilder_ == null) {
-          customerRef_ = null;
-          onChanged();
-        } else {
-          customerRef_ = null;
-          customerRefBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * reference to the customer
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getCustomerRefBuilder() {
         
+        customerRef_ = getDefaultInstance().getCustomerRef();
         onChanged();
-        return getCustomerRefFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * reference to the customer
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getCustomerRefOrBuilder() {
-        if (customerRefBuilder_ != null) {
-          return customerRefBuilder_.getMessageOrBuilder();
-        } else {
-          return customerRef_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : customerRef_;
-        }
-      }
-      /**
-       * <pre>
-       * reference to the customer
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue customer_ref = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getCustomerRefFieldBuilder() {
-        if (customerRefBuilder_ == null) {
-          customerRefBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getCustomerRef(),
-                  getParentForChildren(),
-                  isClean());
-          customerRef_ = null;
-        }
-        return customerRefBuilder_;
-      }
-
-      private com.google.protobuf.StringValue text_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public boolean hasText() {
-        return textBuilder_ != null || text_ != null;
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public com.google.protobuf.StringValue getText() {
-        if (textBuilder_ == null) {
-          return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
-        } else {
-          return textBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public Builder setText(com.google.protobuf.StringValue value) {
-        if (textBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          text_ = value;
-          onChanged();
-        } else {
-          textBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
+       * reference to the customer
+       * </pre>
+       *
+       * <code>string customer_ref = 3;</code>
+       */
+      public Builder setCustomerRefBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        customerRef_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <pre>
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>string text = 4;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>string text = 4;</code>
        */
       public Builder setText(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (textBuilder_ == null) {
-          text_ = builderForValue.build();
-          onChanged();
-        } else {
-          textBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1450,152 +1274,88 @@ public final class DataOuterClass {
        * invoice text from the SmartScan product
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public Builder mergeText(com.google.protobuf.StringValue value) {
-        if (textBuilder_ == null) {
-          if (text_ != null) {
-            text_ =
-              com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
-          } else {
-            text_ = value;
-          }
-          onChanged();
-        } else {
-          textBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
+       * <code>string text = 4;</code>
        */
       public Builder clearText() {
-        if (textBuilder_ == null) {
-          text_ = null;
-          onChanged();
-        } else {
-          text_ = null;
-          textBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getTextBuilder() {
         
+        text_ = getDefaultInstance().getText();
         onChanged();
-        return getTextFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
-        if (textBuilder_ != null) {
-          return textBuilder_.getMessageOrBuilder();
-        } else {
-          return text_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : text_;
-        }
-      }
-      /**
-       * <pre>
-       * invoice text from the SmartScan product
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getTextFieldBuilder() {
-        if (textBuilder_ == null) {
-          textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getText(),
-                  getParentForChildren(),
-                  isClean());
-          text_ = null;
-        }
-        return textBuilder_;
-      }
-
-      private com.google.protobuf.StringValue currency_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> currencyBuilder_;
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      public boolean hasCurrency() {
-        return currencyBuilder_ != null || currency_ != null;
-      }
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      public com.google.protobuf.StringValue getCurrency() {
-        if (currencyBuilder_ == null) {
-          return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-        } else {
-          return currencyBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      public Builder setCurrency(com.google.protobuf.StringValue value) {
-        if (currencyBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          currency_ = value;
-          onChanged();
-        } else {
-          currencyBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
+       * invoice text from the SmartScan product
+       * </pre>
+       *
+       * <code>string text = 4;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object currency_ = "";
+      /**
+       * <pre>
        * name of the currency as a string
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
+       * <code>string currency = 6;</code>
+       */
+      public java.lang.String getCurrency() {
+        java.lang.Object ref = currency_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          currency_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>string currency = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCurrencyBytes() {
+        java.lang.Object ref = currency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          currency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * name of the currency as a string
+       * </pre>
+       *
+       * <code>string currency = 6;</code>
        */
       public Builder setCurrency(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (currencyBuilder_ == null) {
-          currency_ = builderForValue.build();
-          onChanged();
-        } else {
-          currencyBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        currency_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1603,134 +1363,55 @@ public final class DataOuterClass {
        * name of the currency as a string
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      public Builder mergeCurrency(com.google.protobuf.StringValue value) {
-        if (currencyBuilder_ == null) {
-          if (currency_ != null) {
-            currency_ =
-              com.google.protobuf.StringValue.newBuilder(currency_).mergeFrom(value).buildPartial();
-          } else {
-            currency_ = value;
-          }
-          onChanged();
-        } else {
-          currencyBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
+       * <code>string currency = 6;</code>
        */
       public Builder clearCurrency() {
-        if (currencyBuilder_ == null) {
-          currency_ = null;
-          onChanged();
-        } else {
-          currency_ = null;
-          currencyBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
         
+        currency_ = getDefaultInstance().getCurrency();
         onChanged();
-        return getCurrencyFieldBuilder().getBuilder();
+        return this;
       }
       /**
        * <pre>
        * name of the currency as a string
        * </pre>
        *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
+       * <code>string currency = 6;</code>
        */
-      public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-        if (currencyBuilder_ != null) {
-          return currencyBuilder_.getMessageOrBuilder();
-        } else {
-          return currency_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : currency_;
-        }
-      }
-      /**
-       * <pre>
-       * name of the currency as a string
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue currency = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getCurrencyFieldBuilder() {
-        if (currencyBuilder_ == null) {
-          currencyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getCurrency(),
-                  getParentForChildren(),
-                  isClean());
-          currency_ = null;
-        }
-        return currencyBuilder_;
+      public Builder setCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        currency_ = value;
+        onChanged();
+        return this;
       }
 
-      private com.google.protobuf.FloatValue total_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> totalBuilder_;
+      private float total_ ;
       /**
        * <pre>
        * total of the invoice
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
+       * <code>float total = 7;</code>
        */
-      public boolean hasTotal() {
-        return totalBuilder_ != null || total_ != null;
+      public float getTotal() {
+        return total_;
       }
       /**
        * <pre>
        * total of the invoice
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
+       * <code>float total = 7;</code>
        */
-      public com.google.protobuf.FloatValue getTotal() {
-        if (totalBuilder_ == null) {
-          return total_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-        } else {
-          return totalBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public Builder setTotal(com.google.protobuf.FloatValue value) {
-        if (totalBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          total_ = value;
-          onChanged();
-        } else {
-          totalBuilder_.setMessage(value);
-        }
-
+      public Builder setTotal(float value) {
+        
+        total_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -1738,105 +1419,13 @@ public final class DataOuterClass {
        * total of the invoice
        * </pre>
        *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public Builder setTotal(
-          com.google.protobuf.FloatValue.Builder builderForValue) {
-        if (totalBuilder_ == null) {
-          total_ = builderForValue.build();
-          onChanged();
-        } else {
-          totalBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public Builder mergeTotal(com.google.protobuf.FloatValue value) {
-        if (totalBuilder_ == null) {
-          if (total_ != null) {
-            total_ =
-              com.google.protobuf.FloatValue.newBuilder(total_).mergeFrom(value).buildPartial();
-          } else {
-            total_ = value;
-          }
-          onChanged();
-        } else {
-          totalBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
+       * <code>float total = 7;</code>
        */
       public Builder clearTotal() {
-        if (totalBuilder_ == null) {
-          total_ = null;
-          onChanged();
-        } else {
-          total_ = null;
-          totalBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public com.google.protobuf.FloatValue.Builder getTotalBuilder() {
         
+        total_ = 0F;
         onChanged();
-        return getTotalFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      public com.google.protobuf.FloatValueOrBuilder getTotalOrBuilder() {
-        if (totalBuilder_ != null) {
-          return totalBuilder_.getMessageOrBuilder();
-        } else {
-          return total_ == null ?
-              com.google.protobuf.FloatValue.getDefaultInstance() : total_;
-        }
-      }
-      /**
-       * <pre>
-       * total of the invoice
-       * </pre>
-       *
-       * <code>.google.protobuf.FloatValue total = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
-          getTotalFieldBuilder() {
-        if (totalBuilder_ == null) {
-          totalBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
-                  getTotal(),
-                  getParentForChildren(),
-                  isClean());
-          total_ = null;
-        }
-        return totalBuilder_;
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1900,50 +1489,36 @@ public final class DataOuterClass {
      * text of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 8;</code>
+     * <code>string text = 8;</code>
      */
-    boolean hasText();
+    java.lang.String getText();
     /**
      * <pre>
      * text of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 8;</code>
+     * <code>string text = 8;</code>
      */
-    com.google.protobuf.StringValue getText();
-    /**
-     * <pre>
-     * text of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue text = 8;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getTextOrBuilder();
+    com.google.protobuf.ByteString
+        getTextBytes();
 
     /**
      * <pre>
      * id of the product (item)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
+     * <code>string item_id = 9;</code>
      */
-    boolean hasItemId();
+    java.lang.String getItemId();
     /**
      * <pre>
      * id of the product (item)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
+     * <code>string item_id = 9;</code>
      */
-    com.google.protobuf.StringValue getItemId();
-    /**
-     * <pre>
-     * id of the product (item)
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getItemIdOrBuilder();
+    com.google.protobuf.ByteString
+        getItemIdBytes();
   }
   /**
    * Protobuf type {@code asgt.type.InvoiceLine}
@@ -1958,6 +1533,8 @@ public final class DataOuterClass {
       super(builder);
     }
     private InvoiceLine() {
+      text_ = "";
+      itemId_ = "";
     }
 
     @java.lang.Override
@@ -1985,29 +1562,15 @@ public final class DataOuterClass {
               done = true;
               break;
             case 66: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (text_ != null) {
-                subBuilder = text_.toBuilder();
-              }
-              text_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(text_);
-                text_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              text_ = s;
               break;
             }
             case 74: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (itemId_ != null) {
-                subBuilder = itemId_.toBuilder();
-              }
-              itemId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(itemId_);
-                itemId_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              itemId_ = s;
               break;
             }
             default: {
@@ -2043,69 +1606,87 @@ public final class DataOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 8;
-    private com.google.protobuf.StringValue text_;
+    private volatile java.lang.Object text_;
     /**
      * <pre>
      * text of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 8;</code>
+     * <code>string text = 8;</code>
      */
-    public boolean hasText() {
-      return text_ != null;
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        text_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * text of the invoice line
      * </pre>
      *
-     * <code>.google.protobuf.StringValue text = 8;</code>
+     * <code>string text = 8;</code>
      */
-    public com.google.protobuf.StringValue getText() {
-      return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
-    }
-    /**
-     * <pre>
-     * text of the invoice line
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue text = 8;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
-      return getText();
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int ITEM_ID_FIELD_NUMBER = 9;
-    private com.google.protobuf.StringValue itemId_;
+    private volatile java.lang.Object itemId_;
     /**
      * <pre>
      * id of the product (item)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
+     * <code>string item_id = 9;</code>
      */
-    public boolean hasItemId() {
-      return itemId_ != null;
+    public java.lang.String getItemId() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        itemId_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * id of the product (item)
      * </pre>
      *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
+     * <code>string item_id = 9;</code>
      */
-    public com.google.protobuf.StringValue getItemId() {
-      return itemId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : itemId_;
-    }
-    /**
-     * <pre>
-     * id of the product (item)
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue item_id = 9;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getItemIdOrBuilder() {
-      return getItemId();
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        itemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2122,11 +1703,11 @@ public final class DataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (text_ != null) {
-        output.writeMessage(8, getText());
+      if (!getTextBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, text_);
       }
-      if (itemId_ != null) {
-        output.writeMessage(9, getItemId());
+      if (!getItemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 9, itemId_);
       }
       unknownFields.writeTo(output);
     }
@@ -2137,13 +1718,11 @@ public final class DataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (text_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(8, getText());
+      if (!getTextBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, text_);
       }
-      if (itemId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(9, getItemId());
+      if (!getItemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, itemId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2161,16 +1740,10 @@ public final class DataOuterClass {
       asgt.type.DataOuterClass.InvoiceLine other = (asgt.type.DataOuterClass.InvoiceLine) obj;
 
       boolean result = true;
-      result = result && (hasText() == other.hasText());
-      if (hasText()) {
-        result = result && getText()
-            .equals(other.getText());
-      }
-      result = result && (hasItemId() == other.hasItemId());
-      if (hasItemId()) {
-        result = result && getItemId()
-            .equals(other.getItemId());
-      }
+      result = result && getText()
+          .equals(other.getText());
+      result = result && getItemId()
+          .equals(other.getItemId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -2182,14 +1755,10 @@ public final class DataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasText()) {
-        hash = (37 * hash) + TEXT_FIELD_NUMBER;
-        hash = (53 * hash) + getText().hashCode();
-      }
-      if (hasItemId()) {
-        hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getItemId().hashCode();
-      }
+      hash = (37 * hash) + TEXT_FIELD_NUMBER;
+      hash = (53 * hash) + getText().hashCode();
+      hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getItemId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2323,18 +1892,10 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (textBuilder_ == null) {
-          text_ = null;
-        } else {
-          text_ = null;
-          textBuilder_ = null;
-        }
-        if (itemIdBuilder_ == null) {
-          itemId_ = null;
-        } else {
-          itemId_ = null;
-          itemIdBuilder_ = null;
-        }
+        text_ = "";
+
+        itemId_ = "";
+
         return this;
       }
 
@@ -2361,16 +1922,8 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.InvoiceLine buildPartial() {
         asgt.type.DataOuterClass.InvoiceLine result = new asgt.type.DataOuterClass.InvoiceLine(this);
-        if (textBuilder_ == null) {
-          result.text_ = text_;
-        } else {
-          result.text_ = textBuilder_.build();
-        }
-        if (itemIdBuilder_ == null) {
-          result.itemId_ = itemId_;
-        } else {
-          result.itemId_ = itemIdBuilder_.build();
-        }
+        result.text_ = text_;
+        result.itemId_ = itemId_;
         onBuilt();
         return result;
       }
@@ -2419,11 +1972,13 @@ public final class DataOuterClass {
 
       public Builder mergeFrom(asgt.type.DataOuterClass.InvoiceLine other) {
         if (other == asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance()) return this;
-        if (other.hasText()) {
-          mergeText(other.getText());
+        if (!other.getText().isEmpty()) {
+          text_ = other.text_;
+          onChanged();
         }
-        if (other.hasItemId()) {
-          mergeItemId(other.getItemId());
+        if (!other.getItemId().isEmpty()) {
+          itemId_ = other.itemId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2454,31 +2009,24 @@ public final class DataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.StringValue text_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> textBuilder_;
+      private java.lang.Object text_ = "";
       /**
        * <pre>
        * text of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 8;</code>
+       * <code>string text = 8;</code>
        */
-      public boolean hasText() {
-        return textBuilder_ != null || text_ != null;
-      }
-      /**
-       * <pre>
-       * text of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 8;</code>
-       */
-      public com.google.protobuf.StringValue getText() {
-        if (textBuilder_ == null) {
-          return text_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : text_;
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          text_ = s;
+          return s;
         } else {
-          return textBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2486,37 +2034,36 @@ public final class DataOuterClass {
        * text of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 8;</code>
+       * <code>string text = 8;</code>
        */
-      public Builder setText(com.google.protobuf.StringValue value) {
-        if (textBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          text_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
         } else {
-          textBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
        * text of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 8;</code>
+       * <code>string text = 8;</code>
        */
       public Builder setText(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (textBuilder_ == null) {
-          text_ = builderForValue.build();
-          onChanged();
-        } else {
-          textBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        text_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -2524,152 +2071,88 @@ public final class DataOuterClass {
        * text of the invoice line
        * </pre>
        *
-       * <code>.google.protobuf.StringValue text = 8;</code>
-       */
-      public Builder mergeText(com.google.protobuf.StringValue value) {
-        if (textBuilder_ == null) {
-          if (text_ != null) {
-            text_ =
-              com.google.protobuf.StringValue.newBuilder(text_).mergeFrom(value).buildPartial();
-          } else {
-            text_ = value;
-          }
-          onChanged();
-        } else {
-          textBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 8;</code>
+       * <code>string text = 8;</code>
        */
       public Builder clearText() {
-        if (textBuilder_ == null) {
-          text_ = null;
-          onChanged();
-        } else {
-          text_ = null;
-          textBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * text of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 8;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getTextBuilder() {
         
+        text_ = getDefaultInstance().getText();
         onChanged();
-        return getTextFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * text of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 8;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getTextOrBuilder() {
-        if (textBuilder_ != null) {
-          return textBuilder_.getMessageOrBuilder();
-        } else {
-          return text_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : text_;
-        }
-      }
-      /**
-       * <pre>
-       * text of the invoice line
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue text = 8;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getTextFieldBuilder() {
-        if (textBuilder_ == null) {
-          textBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getText(),
-                  getParentForChildren(),
-                  isClean());
-          text_ = null;
-        }
-        return textBuilder_;
-      }
-
-      private com.google.protobuf.StringValue itemId_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> itemIdBuilder_;
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      public boolean hasItemId() {
-        return itemIdBuilder_ != null || itemId_ != null;
-      }
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      public com.google.protobuf.StringValue getItemId() {
-        if (itemIdBuilder_ == null) {
-          return itemId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : itemId_;
-        } else {
-          return itemIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      public Builder setItemId(com.google.protobuf.StringValue value) {
-        if (itemIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          itemId_ = value;
-          onChanged();
-        } else {
-          itemIdBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
+       * text of the invoice line
+       * </pre>
+       *
+       * <code>string text = 8;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object itemId_ = "";
+      /**
+       * <pre>
        * id of the product (item)
        * </pre>
        *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
+       * <code>string item_id = 9;</code>
+       */
+      public java.lang.String getItemId() {
+        java.lang.Object ref = itemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          itemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the product (item)
+       * </pre>
+       *
+       * <code>string item_id = 9;</code>
+       */
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        java.lang.Object ref = itemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          itemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * id of the product (item)
+       * </pre>
+       *
+       * <code>string item_id = 9;</code>
        */
       public Builder setItemId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (itemIdBuilder_ == null) {
-          itemId_ = builderForValue.build();
-          onChanged();
-        } else {
-          itemIdBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        itemId_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -2677,39 +2160,12 @@ public final class DataOuterClass {
        * id of the product (item)
        * </pre>
        *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      public Builder mergeItemId(com.google.protobuf.StringValue value) {
-        if (itemIdBuilder_ == null) {
-          if (itemId_ != null) {
-            itemId_ =
-              com.google.protobuf.StringValue.newBuilder(itemId_).mergeFrom(value).buildPartial();
-          } else {
-            itemId_ = value;
-          }
-          onChanged();
-        } else {
-          itemIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
+       * <code>string item_id = 9;</code>
        */
       public Builder clearItemId() {
-        if (itemIdBuilder_ == null) {
-          itemId_ = null;
-          onChanged();
-        } else {
-          itemId_ = null;
-          itemIdBuilder_ = null;
-        }
-
+        
+        itemId_ = getDefaultInstance().getItemId();
+        onChanged();
         return this;
       }
       /**
@@ -2717,47 +2173,18 @@ public final class DataOuterClass {
        * id of the product (item)
        * </pre>
        *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
+       * <code>string item_id = 9;</code>
        */
-      public com.google.protobuf.StringValue.Builder getItemIdBuilder() {
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        itemId_ = value;
         onChanged();
-        return getItemIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getItemIdOrBuilder() {
-        if (itemIdBuilder_ != null) {
-          return itemIdBuilder_.getMessageOrBuilder();
-        } else {
-          return itemId_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : itemId_;
-        }
-      }
-      /**
-       * <pre>
-       * id of the product (item)
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue item_id = 9;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getItemIdFieldBuilder() {
-        if (itemIdBuilder_ == null) {
-          itemIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getItemId(),
-                  getParentForChildren(),
-                  isClean());
-          itemId_ = null;
-        }
-        return itemIdBuilder_;
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2839,50 +2266,36 @@ public final class DataOuterClass {
      * name of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>string name = 4;</code>
      */
-    boolean hasName();
+    java.lang.String getName();
     /**
      * <pre>
      * name of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>string name = 4;</code>
      */
-    com.google.protobuf.StringValue getName();
-    /**
-     * <pre>
-     * name of the supplier
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue name = 4;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getNameOrBuilder();
+    com.google.protobuf.ByteString
+        getNameBytes();
 
     /**
      * <pre>
      * global id of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
+     * <code>string global_id = 5;</code>
      */
-    boolean hasGlobalId();
+    java.lang.String getGlobalId();
     /**
      * <pre>
      * global id of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
+     * <code>string global_id = 5;</code>
      */
-    com.google.protobuf.StringValue getGlobalId();
-    /**
-     * <pre>
-     * global id of the supplier
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
-     */
-    com.google.protobuf.StringValueOrBuilder getGlobalIdOrBuilder();
+    com.google.protobuf.ByteString
+        getGlobalIdBytes();
   }
   /**
    * Protobuf type {@code asgt.type.Supplier}
@@ -2898,6 +2311,8 @@ public final class DataOuterClass {
     }
     private Supplier() {
       id_ = "";
+      name_ = "";
+      globalId_ = "";
     }
 
     @java.lang.Override
@@ -2931,29 +2346,15 @@ public final class DataOuterClass {
               break;
             }
             case 34: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (name_ != null) {
-                subBuilder = name_.toBuilder();
-              }
-              name_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(name_);
-                name_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              name_ = s;
               break;
             }
             case 42: {
-              com.google.protobuf.StringValue.Builder subBuilder = null;
-              if (globalId_ != null) {
-                subBuilder = globalId_.toBuilder();
-              }
-              globalId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(globalId_);
-                globalId_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              globalId_ = s;
               break;
             }
             default: {
@@ -3031,69 +2432,87 @@ public final class DataOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    private com.google.protobuf.StringValue name_;
+    private volatile java.lang.Object name_;
     /**
      * <pre>
      * name of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>string name = 4;</code>
      */
-    public boolean hasName() {
-      return name_ != null;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * name of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue name = 4;</code>
+     * <code>string name = 4;</code>
      */
-    public com.google.protobuf.StringValue getName() {
-      return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
-    }
-    /**
-     * <pre>
-     * name of the supplier
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue name = 4;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
-      return getName();
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     public static final int GLOBAL_ID_FIELD_NUMBER = 5;
-    private com.google.protobuf.StringValue globalId_;
+    private volatile java.lang.Object globalId_;
     /**
      * <pre>
      * global id of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
+     * <code>string global_id = 5;</code>
      */
-    public boolean hasGlobalId() {
-      return globalId_ != null;
+    public java.lang.String getGlobalId() {
+      java.lang.Object ref = globalId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        globalId_ = s;
+        return s;
+      }
     }
     /**
      * <pre>
      * global id of the supplier
      * </pre>
      *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
+     * <code>string global_id = 5;</code>
      */
-    public com.google.protobuf.StringValue getGlobalId() {
-      return globalId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : globalId_;
-    }
-    /**
-     * <pre>
-     * global id of the supplier
-     * </pre>
-     *
-     * <code>.google.protobuf.StringValue global_id = 5;</code>
-     */
-    public com.google.protobuf.StringValueOrBuilder getGlobalIdOrBuilder() {
-      return getGlobalId();
+    public com.google.protobuf.ByteString
+        getGlobalIdBytes() {
+      java.lang.Object ref = globalId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        globalId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3113,11 +2532,11 @@ public final class DataOuterClass {
       if (!getIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
       }
-      if (name_ != null) {
-        output.writeMessage(4, getName());
+      if (!getNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, name_);
       }
-      if (globalId_ != null) {
-        output.writeMessage(5, getGlobalId());
+      if (!getGlobalIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, globalId_);
       }
       unknownFields.writeTo(output);
     }
@@ -3131,13 +2550,11 @@ public final class DataOuterClass {
       if (!getIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
       }
-      if (name_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getName());
+      if (!getNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, name_);
       }
-      if (globalId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getGlobalId());
+      if (!getGlobalIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, globalId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3157,16 +2574,10 @@ public final class DataOuterClass {
       boolean result = true;
       result = result && getId()
           .equals(other.getId());
-      result = result && (hasName() == other.hasName());
-      if (hasName()) {
-        result = result && getName()
-            .equals(other.getName());
-      }
-      result = result && (hasGlobalId() == other.hasGlobalId());
-      if (hasGlobalId()) {
-        result = result && getGlobalId()
-            .equals(other.getGlobalId());
-      }
+      result = result && getName()
+          .equals(other.getName());
+      result = result && getGlobalId()
+          .equals(other.getGlobalId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -3180,14 +2591,10 @@ public final class DataOuterClass {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId().hashCode();
-      if (hasName()) {
-        hash = (37 * hash) + NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getName().hashCode();
-      }
-      if (hasGlobalId()) {
-        hash = (37 * hash) + GLOBAL_ID_FIELD_NUMBER;
-        hash = (53 * hash) + getGlobalId().hashCode();
-      }
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + GLOBAL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getGlobalId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3323,18 +2730,10 @@ public final class DataOuterClass {
         super.clear();
         id_ = "";
 
-        if (nameBuilder_ == null) {
-          name_ = null;
-        } else {
-          name_ = null;
-          nameBuilder_ = null;
-        }
-        if (globalIdBuilder_ == null) {
-          globalId_ = null;
-        } else {
-          globalId_ = null;
-          globalIdBuilder_ = null;
-        }
+        name_ = "";
+
+        globalId_ = "";
+
         return this;
       }
 
@@ -3362,16 +2761,8 @@ public final class DataOuterClass {
       public asgt.type.DataOuterClass.Supplier buildPartial() {
         asgt.type.DataOuterClass.Supplier result = new asgt.type.DataOuterClass.Supplier(this);
         result.id_ = id_;
-        if (nameBuilder_ == null) {
-          result.name_ = name_;
-        } else {
-          result.name_ = nameBuilder_.build();
-        }
-        if (globalIdBuilder_ == null) {
-          result.globalId_ = globalId_;
-        } else {
-          result.globalId_ = globalIdBuilder_.build();
-        }
+        result.name_ = name_;
+        result.globalId_ = globalId_;
         onBuilt();
         return result;
       }
@@ -3424,11 +2815,13 @@ public final class DataOuterClass {
           id_ = other.id_;
           onChanged();
         }
-        if (other.hasName()) {
-          mergeName(other.getName());
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
         }
-        if (other.hasGlobalId()) {
-          mergeGlobalId(other.getGlobalId());
+        if (!other.getGlobalId().isEmpty()) {
+          globalId_ = other.globalId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3548,31 +2941,24 @@ public final class DataOuterClass {
         return this;
       }
 
-      private com.google.protobuf.StringValue name_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> nameBuilder_;
+      private java.lang.Object name_ = "";
       /**
        * <pre>
        * name of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 4;</code>
+       * <code>string name = 4;</code>
        */
-      public boolean hasName() {
-        return nameBuilder_ != null || name_ != null;
-      }
-      /**
-       * <pre>
-       * name of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue name = 4;</code>
-       */
-      public com.google.protobuf.StringValue getName() {
-        if (nameBuilder_ == null) {
-          return name_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : name_;
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
         } else {
-          return nameBuilder_.getMessage();
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -3580,37 +2966,36 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 4;</code>
+       * <code>string name = 4;</code>
        */
-      public Builder setName(com.google.protobuf.StringValue value) {
-        if (nameBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          name_ = value;
-          onChanged();
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
         } else {
-          nameBuilder_.setMessage(value);
+          return (com.google.protobuf.ByteString) ref;
         }
-
-        return this;
       }
       /**
        * <pre>
        * name of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 4;</code>
+       * <code>string name = 4;</code>
        */
       public Builder setName(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (nameBuilder_ == null) {
-          name_ = builderForValue.build();
-          onChanged();
-        } else {
-          nameBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -3618,152 +3003,88 @@ public final class DataOuterClass {
        * name of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue name = 4;</code>
-       */
-      public Builder mergeName(com.google.protobuf.StringValue value) {
-        if (nameBuilder_ == null) {
-          if (name_ != null) {
-            name_ =
-              com.google.protobuf.StringValue.newBuilder(name_).mergeFrom(value).buildPartial();
-          } else {
-            name_ = value;
-          }
-          onChanged();
-        } else {
-          nameBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue name = 4;</code>
+       * <code>string name = 4;</code>
        */
       public Builder clearName() {
-        if (nameBuilder_ == null) {
-          name_ = null;
-          onChanged();
-        } else {
-          name_ = null;
-          nameBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * name of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue name = 4;</code>
-       */
-      public com.google.protobuf.StringValue.Builder getNameBuilder() {
         
+        name_ = getDefaultInstance().getName();
         onChanged();
-        return getNameFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * name of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue name = 4;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getNameOrBuilder() {
-        if (nameBuilder_ != null) {
-          return nameBuilder_.getMessageOrBuilder();
-        } else {
-          return name_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : name_;
-        }
-      }
-      /**
-       * <pre>
-       * name of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue name = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getNameFieldBuilder() {
-        if (nameBuilder_ == null) {
-          nameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getName(),
-                  getParentForChildren(),
-                  isClean());
-          name_ = null;
-        }
-        return nameBuilder_;
-      }
-
-      private com.google.protobuf.StringValue globalId_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> globalIdBuilder_;
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      public boolean hasGlobalId() {
-        return globalIdBuilder_ != null || globalId_ != null;
-      }
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      public com.google.protobuf.StringValue getGlobalId() {
-        if (globalIdBuilder_ == null) {
-          return globalId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : globalId_;
-        } else {
-          return globalIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      public Builder setGlobalId(com.google.protobuf.StringValue value) {
-        if (globalIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          globalId_ = value;
-          onChanged();
-        } else {
-          globalIdBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
+       * name of the supplier
+       * </pre>
+       *
+       * <code>string name = 4;</code>
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object globalId_ = "";
+      /**
+       * <pre>
        * global id of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
+       * <code>string global_id = 5;</code>
+       */
+      public java.lang.String getGlobalId() {
+        java.lang.Object ref = globalId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          globalId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * global id of the supplier
+       * </pre>
+       *
+       * <code>string global_id = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getGlobalIdBytes() {
+        java.lang.Object ref = globalId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          globalId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * global id of the supplier
+       * </pre>
+       *
+       * <code>string global_id = 5;</code>
        */
       public Builder setGlobalId(
-          com.google.protobuf.StringValue.Builder builderForValue) {
-        if (globalIdBuilder_ == null) {
-          globalId_ = builderForValue.build();
-          onChanged();
-        } else {
-          globalIdBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        globalId_ = value;
+        onChanged();
         return this;
       }
       /**
@@ -3771,39 +3092,12 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      public Builder mergeGlobalId(com.google.protobuf.StringValue value) {
-        if (globalIdBuilder_ == null) {
-          if (globalId_ != null) {
-            globalId_ =
-              com.google.protobuf.StringValue.newBuilder(globalId_).mergeFrom(value).buildPartial();
-          } else {
-            globalId_ = value;
-          }
-          onChanged();
-        } else {
-          globalIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
+       * <code>string global_id = 5;</code>
        */
       public Builder clearGlobalId() {
-        if (globalIdBuilder_ == null) {
-          globalId_ = null;
-          onChanged();
-        } else {
-          globalId_ = null;
-          globalIdBuilder_ = null;
-        }
-
+        
+        globalId_ = getDefaultInstance().getGlobalId();
+        onChanged();
         return this;
       }
       /**
@@ -3811,47 +3105,18 @@ public final class DataOuterClass {
        * global id of the supplier
        * </pre>
        *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
+       * <code>string global_id = 5;</code>
        */
-      public com.google.protobuf.StringValue.Builder getGlobalIdBuilder() {
+      public Builder setGlobalIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        globalId_ = value;
         onChanged();
-        return getGlobalIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      public com.google.protobuf.StringValueOrBuilder getGlobalIdOrBuilder() {
-        if (globalIdBuilder_ != null) {
-          return globalIdBuilder_.getMessageOrBuilder();
-        } else {
-          return globalId_ == null ?
-              com.google.protobuf.StringValue.getDefaultInstance() : globalId_;
-        }
-      }
-      /**
-       * <pre>
-       * global id of the supplier
-       * </pre>
-       *
-       * <code>.google.protobuf.StringValue global_id = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
-          getGlobalIdFieldBuilder() {
-        if (globalIdBuilder_ == null) {
-          globalIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
-                  getGlobalId(),
-                  getParentForChildren(),
-                  isClean());
-          globalId_ = null;
-        }
-        return globalIdBuilder_;
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5788,26 +5053,19 @@ public final class DataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024asgt/type/data.proto\022\tasgt.type\032\037googl" +
-      "e/protobuf/timestamp.proto\032\036google/proto" +
-      "buf/wrappers.proto\"\234\002\n\007Invoice\022.\n\nissue_" +
-      "date\030\001 \001(\0132\032.google.protobuf.Timestamp\022%" +
-      "\n\010supplier\030\002 \001(\0132\023.asgt.type.Supplier\0222\n" +
-      "\014customer_ref\030\003 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022*\n\004text\030\004 \001(\0132\034.google.protobu" +
-      "f.StringValue\022.\n\010currency\030\006 \001(\0132\034.google" +
-      ".protobuf.StringValue\022*\n\005total\030\007 \001(\0132\033.g" +
-      "oogle.protobuf.FloatValue\"h\n\013InvoiceLine" +
-      "\022*\n\004text\030\010 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022-\n\007item_id\030\t \001(\0132\034.google.protobuf." +
-      "StringValue\"s\n\010Supplier\022\n\n\002id\030\001 \001(\t\022*\n\004n" +
-      "ame\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
-      "/\n\tglobal_id\030\005 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t\022\016\n" +
-      "\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013transaction\030\001 " +
-      "\001(\0132\026.asgt.type.Transaction\022#\n\007invoice\030\002" +
-      " \001(\0132\022.asgt.type.Invoice\022,\n\014invoice_line" +
-      "\030\003 \001(\0132\026.asgt.type.InvoiceLineB\006Z\004typeb\006" +
-      "proto3"
+      "e/protobuf/timestamp.proto\"\245\001\n\007Invoice\022." +
+      "\n\nissue_date\030\001 \001(\0132\032.google.protobuf.Tim" +
+      "estamp\022%\n\010supplier\030\002 \001(\0132\023.asgt.type.Sup" +
+      "plier\022\024\n\014customer_ref\030\003 \001(\t\022\014\n\004text\030\004 \001(" +
+      "\t\022\020\n\010currency\030\006 \001(\t\022\r\n\005total\030\007 \001(\002\",\n\013In" +
+      "voiceLine\022\014\n\004text\030\010 \001(\t\022\017\n\007item_id\030\t \001(\t" +
+      "\"7\n\010Supplier\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\004 \001(\t\022\021" +
+      "\n\tglobal_id\030\005 \001(\t\"+\n\013Transaction\022\014\n\004text" +
+      "\030\001 \001(\t\022\016\n\006amount\030\002 \001(\002\"\206\001\n\004Data\022+\n\013trans" +
+      "action\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007" +
+      "invoice\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014inv" +
+      "oice_line\030\003 \001(\0132\026.asgt.type.InvoiceLineB" +
+      "\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5821,7 +5079,6 @@ public final class DataOuterClass {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
-          com.google.protobuf.WrappersProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_type_Invoice_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5854,7 +5111,6 @@ public final class DataOuterClass {
         internal_static_asgt_type_Data_descriptor,
         new java.lang.String[] { "Transaction", "Invoice", "InvoiceLine", });
     com.google.protobuf.TimestampProto.getDescriptor();
-    com.google.protobuf.WrappersProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
