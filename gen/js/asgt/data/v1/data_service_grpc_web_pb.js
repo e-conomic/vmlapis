@@ -400,5 +400,85 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.getInfo =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.dataservice.v1.UpdateDatasetRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_DataService_UpdateDataset = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/UpdateDataset',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.dataservice.v1.UpdateDatasetRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.dataservice.v1.UpdateDatasetRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.dataservice.v1.UpdateDatasetRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodInfo_DataService_UpdateDataset = new grpc.web.AbstractClientBase.MethodInfo(
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.dataservice.v1.UpdateDatasetRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.UpdateDatasetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.updateDataset =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/UpdateDataset',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_UpdateDataset,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.UpdateDatasetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.updateDataset =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/UpdateDataset',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_UpdateDataset);
+};
+
+
 module.exports = proto.asgt.dataservice.v1;
 
