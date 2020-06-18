@@ -33,7 +33,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -41,7 +41,7 @@ public final class DataOuterClass {
     boolean hasSupplier();
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -49,7 +49,7 @@ public final class DataOuterClass {
     asgt.type.DataOuterClass.Supplier getSupplier();
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -58,7 +58,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * reference to the customer
+     * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string customer_ref = 3;</code>
@@ -66,7 +66,7 @@ public final class DataOuterClass {
     java.lang.String getCustomerRef();
     /**
      * <pre>
-     * reference to the customer
+     * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string customer_ref = 3;</code>
@@ -76,7 +76,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * invoice text from the SmartScan product
+     * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
      * <code>string text = 4;</code>
@@ -84,7 +84,7 @@ public final class DataOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * invoice text from the SmartScan product
+     * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
      * <code>string text = 4;</code>
@@ -94,7 +94,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * name of the currency as a string
+     * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string currency = 6;</code>
@@ -102,7 +102,7 @@ public final class DataOuterClass {
     java.lang.String getCurrency();
     /**
      * <pre>
-     * name of the currency as a string
+     * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string currency = 6;</code>
@@ -112,7 +112,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * total of the invoice
+     * total of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>float total = 7;</code>
@@ -268,7 +268,7 @@ public final class DataOuterClass {
     private asgt.type.DataOuterClass.Supplier supplier_;
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -278,7 +278,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -288,7 +288,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * supplier of the invoice
+     * supplier of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -301,7 +301,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object customerRef_;
     /**
      * <pre>
-     * reference to the customer
+     * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string customer_ref = 3;</code>
@@ -320,7 +320,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * reference to the customer
+     * reference to the customer. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string customer_ref = 3;</code>
@@ -343,7 +343,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * invoice text from the SmartScan product
+     * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
      * <code>string text = 4;</code>
@@ -362,7 +362,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * invoice text from the SmartScan product
+     * invoice text from the SmartScan product. Used in scanned-invoice requests.
      * </pre>
      *
      * <code>string text = 4;</code>
@@ -385,7 +385,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object currency_;
     /**
      * <pre>
-     * name of the currency as a string
+     * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string currency = 6;</code>
@@ -404,7 +404,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * name of the currency as a string
+     * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string currency = 6;</code>
@@ -427,7 +427,7 @@ public final class DataOuterClass {
     private float total_;
     /**
      * <pre>
-     * total of the invoice
+     * total of the invoice. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>float total = 7;</code>
@@ -975,7 +975,7 @@ public final class DataOuterClass {
           asgt.type.DataOuterClass.Supplier, asgt.type.DataOuterClass.Supplier.Builder, asgt.type.DataOuterClass.SupplierOrBuilder> supplierBuilder_;
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -985,7 +985,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -999,7 +999,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1019,7 +1019,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1037,7 +1037,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1059,7 +1059,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1077,7 +1077,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1089,7 +1089,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1104,7 +1104,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * supplier of the invoice
+       * supplier of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>.asgt.type.Supplier supplier = 2;</code>
@@ -1126,7 +1126,7 @@ public final class DataOuterClass {
       private java.lang.Object customerRef_ = "";
       /**
        * <pre>
-       * reference to the customer
+       * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string customer_ref = 3;</code>
@@ -1145,7 +1145,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * reference to the customer
+       * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string customer_ref = 3;</code>
@@ -1165,7 +1165,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * reference to the customer
+       * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string customer_ref = 3;</code>
@@ -1182,7 +1182,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * reference to the customer
+       * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string customer_ref = 3;</code>
@@ -1195,7 +1195,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * reference to the customer
+       * reference to the customer. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string customer_ref = 3;</code>
@@ -1215,7 +1215,7 @@ public final class DataOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * invoice text from the SmartScan product
+       * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
        * <code>string text = 4;</code>
@@ -1234,7 +1234,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product
+       * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
        * <code>string text = 4;</code>
@@ -1254,7 +1254,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product
+       * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
        * <code>string text = 4;</code>
@@ -1271,7 +1271,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product
+       * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
        * <code>string text = 4;</code>
@@ -1284,7 +1284,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * invoice text from the SmartScan product
+       * invoice text from the SmartScan product. Used in scanned-invoice requests.
        * </pre>
        *
        * <code>string text = 4;</code>
@@ -1304,7 +1304,7 @@ public final class DataOuterClass {
       private java.lang.Object currency_ = "";
       /**
        * <pre>
-       * name of the currency as a string
+       * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string currency = 6;</code>
@@ -1323,7 +1323,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string currency = 6;</code>
@@ -1343,7 +1343,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string currency = 6;</code>
@@ -1360,7 +1360,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string currency = 6;</code>
@@ -1373,7 +1373,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * name of the currency as a string
+       * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string currency = 6;</code>
@@ -1393,7 +1393,7 @@ public final class DataOuterClass {
       private float total_ ;
       /**
        * <pre>
-       * total of the invoice
+       * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>float total = 7;</code>
@@ -1403,7 +1403,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * total of the invoice
+       * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>float total = 7;</code>
@@ -1416,7 +1416,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * total of the invoice
+       * total of the invoice. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>float total = 7;</code>
@@ -1486,7 +1486,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * text of the invoice line
+     * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string text = 8;</code>
@@ -1494,7 +1494,7 @@ public final class DataOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * text of the invoice line
+     * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string text = 8;</code>
@@ -1504,7 +1504,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * id of the product (item)
+     * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string item_id = 9;</code>
@@ -1512,7 +1512,7 @@ public final class DataOuterClass {
     java.lang.String getItemId();
     /**
      * <pre>
-     * id of the product (item)
+     * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string item_id = 9;</code>
@@ -1609,7 +1609,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * text of the invoice line
+     * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string text = 8;</code>
@@ -1628,7 +1628,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * text of the invoice line
+     * text of the invoice line. Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string text = 8;</code>
@@ -1651,7 +1651,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object itemId_;
     /**
      * <pre>
-     * id of the product (item)
+     * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string item_id = 9;</code>
@@ -1670,7 +1670,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * id of the product (item)
+     * id of the product (item). Used in electronic-invoice-line requests.
      * </pre>
      *
      * <code>string item_id = 9;</code>
@@ -2012,7 +2012,7 @@ public final class DataOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * text of the invoice line
+       * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string text = 8;</code>
@@ -2031,7 +2031,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the invoice line
+       * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string text = 8;</code>
@@ -2051,7 +2051,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the invoice line
+       * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string text = 8;</code>
@@ -2068,7 +2068,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the invoice line
+       * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string text = 8;</code>
@@ -2081,7 +2081,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the invoice line
+       * text of the invoice line. Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string text = 8;</code>
@@ -2101,7 +2101,7 @@ public final class DataOuterClass {
       private java.lang.Object itemId_ = "";
       /**
        * <pre>
-       * id of the product (item)
+       * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string item_id = 9;</code>
@@ -2120,7 +2120,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item)
+       * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string item_id = 9;</code>
@@ -2140,7 +2140,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item)
+       * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string item_id = 9;</code>
@@ -2157,7 +2157,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item)
+       * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string item_id = 9;</code>
@@ -2170,7 +2170,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * id of the product (item)
+       * id of the product (item). Used in electronic-invoice-line requests.
        * </pre>
        *
        * <code>string item_id = 9;</code>
@@ -3177,7 +3177,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * text of the bank transaction
+     * text of the bank transaction. Used in bank requests.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -3185,7 +3185,7 @@ public final class DataOuterClass {
     java.lang.String getText();
     /**
      * <pre>
-     * text of the bank transaction
+     * text of the bank transaction. Used in bank requests.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -3195,7 +3195,7 @@ public final class DataOuterClass {
 
     /**
      * <pre>
-     * amount of the transaction
+     * amount of the transaction. Used in bank requests.
      * </pre>
      *
      * <code>float amount = 2;</code>
@@ -3290,7 +3290,7 @@ public final class DataOuterClass {
     private volatile java.lang.Object text_;
     /**
      * <pre>
-     * text of the bank transaction
+     * text of the bank transaction. Used in bank requests.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -3309,7 +3309,7 @@ public final class DataOuterClass {
     }
     /**
      * <pre>
-     * text of the bank transaction
+     * text of the bank transaction. Used in bank requests.
      * </pre>
      *
      * <code>string text = 1;</code>
@@ -3332,7 +3332,7 @@ public final class DataOuterClass {
     private float amount_;
     /**
      * <pre>
-     * amount of the transaction
+     * amount of the transaction. Used in bank requests.
      * </pre>
      *
      * <code>float amount = 2;</code>
@@ -3667,7 +3667,7 @@ public final class DataOuterClass {
       private java.lang.Object text_ = "";
       /**
        * <pre>
-       * text of the bank transaction
+       * text of the bank transaction. Used in bank requests.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -3686,7 +3686,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the bank transaction
+       * text of the bank transaction. Used in bank requests.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -3706,7 +3706,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the bank transaction
+       * text of the bank transaction. Used in bank requests.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -3723,7 +3723,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the bank transaction
+       * text of the bank transaction. Used in bank requests.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -3736,7 +3736,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * text of the bank transaction
+       * text of the bank transaction. Used in bank requests.
        * </pre>
        *
        * <code>string text = 1;</code>
@@ -3756,7 +3756,7 @@ public final class DataOuterClass {
       private float amount_ ;
       /**
        * <pre>
-       * amount of the transaction
+       * amount of the transaction. Used in bank requests.
        * </pre>
        *
        * <code>float amount = 2;</code>
@@ -3766,7 +3766,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * amount of the transaction
+       * amount of the transaction. Used in bank requests.
        * </pre>
        *
        * <code>float amount = 2;</code>
@@ -3779,7 +3779,7 @@ public final class DataOuterClass {
       }
       /**
        * <pre>
-       * amount of the transaction
+       * amount of the transaction. Used in bank requests.
        * </pre>
        *
        * <code>float amount = 2;</code>

@@ -6,31 +6,30 @@ option go_package = "type";
 
 import "google/protobuf/timestamp.proto";
 
-
 message Invoice {
   google.protobuf.Timestamp issue_date = 1;
 
-  // supplier of the invoice
+  // supplier of the invoice. Used in electronic-invoice-line requests.
   Supplier supplier = 2;
 
-  // reference to the customer
+  // reference to the customer. Used in electronic-invoice-line requests.
   string customer_ref = 3;
 
-  // invoice text from the SmartScan product
+  // invoice text from the SmartScan product. Used in scanned-invoice requests.
   string text = 4;
 
-  // name of the currency as a string
+  // name of the currency as a string. Used in electronic-invoice-line requests.
   string currency = 6;
 
-  // total of the invoice
+  // total of the invoice. Used in electronic-invoice-line requests.
   float total = 7;
 }
 
 message InvoiceLine {
-  // text of the invoice line
+  // text of the invoice line. Used in electronic-invoice-line requests.
   string text = 8;
 
-  // id of the product (item)
+  // id of the product (item). Used in electronic-invoice-line requests.
   string item_id = 9;
 }
 
@@ -46,10 +45,10 @@ message Supplier {
 }
 
 message Transaction {
-  // text of the bank transaction
+  // text of the bank transaction. Used in bank requests.
   string text = 1;
 
-  // amount of the transaction
+  // amount of the transaction. Used in bank requests.
   float amount = 2;
 }
 
