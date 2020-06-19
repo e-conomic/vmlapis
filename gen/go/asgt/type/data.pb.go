@@ -21,15 +21,15 @@ const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Invoice struct {
 	IssueDate *timestamp.Timestamp `protobuf:"bytes,1,opt,name=issue_date,json=issueDate,proto3" json:"issue_date,omitempty"`
-	// supplier of the invoice
+	// supplier of the invoice. Used in electronic-invoice-line requests.
 	Supplier *Supplier `protobuf:"bytes,2,opt,name=supplier,proto3" json:"supplier,omitempty"`
-	// reference to the customer
+	// reference to the customer. Used in electronic-invoice-line requests.
 	CustomerRef string `protobuf:"bytes,3,opt,name=customer_ref,json=customerRef,proto3" json:"customer_ref,omitempty"`
-	// invoice text from the SmartScan product
+	// invoice text from the SmartScan product. Used in scanned-invoice requests.
 	Text string `protobuf:"bytes,4,opt,name=text,proto3" json:"text,omitempty"`
-	// name of the currency as a string
+	// name of the currency as a string. Used in electronic-invoice-line requests.
 	Currency string `protobuf:"bytes,6,opt,name=currency,proto3" json:"currency,omitempty"`
-	// total of the invoice
+	// total of the invoice. Used in electronic-invoice-line requests.
 	Total                float32  `protobuf:"fixed32,7,opt,name=total,proto3" json:"total,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -40,7 +40,7 @@ func (m *Invoice) Reset()         { *m = Invoice{} }
 func (m *Invoice) String() string { return proto.CompactTextString(m) }
 func (*Invoice) ProtoMessage()    {}
 func (*Invoice) Descriptor() ([]byte, []int) {
-	return fileDescriptor_data_271ced741fe7a0ff, []int{0}
+	return fileDescriptor_data_75fe01dbf4b9a5ba, []int{0}
 }
 func (m *Invoice) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Invoice.Unmarshal(m, b)
@@ -103,9 +103,9 @@ func (m *Invoice) GetTotal() float32 {
 }
 
 type InvoiceLine struct {
-	// text of the invoice line
+	// text of the invoice line. Used in electronic-invoice-line requests.
 	Text string `protobuf:"bytes,8,opt,name=text,proto3" json:"text,omitempty"`
-	// id of the product (item)
+	// id of the product (item). Used in electronic-invoice-line requests.
 	ItemId               string   `protobuf:"bytes,9,opt,name=item_id,json=itemId,proto3" json:"item_id,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -116,7 +116,7 @@ func (m *InvoiceLine) Reset()         { *m = InvoiceLine{} }
 func (m *InvoiceLine) String() string { return proto.CompactTextString(m) }
 func (*InvoiceLine) ProtoMessage()    {}
 func (*InvoiceLine) Descriptor() ([]byte, []int) {
-	return fileDescriptor_data_271ced741fe7a0ff, []int{1}
+	return fileDescriptor_data_75fe01dbf4b9a5ba, []int{1}
 }
 func (m *InvoiceLine) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_InvoiceLine.Unmarshal(m, b)
@@ -166,7 +166,7 @@ func (m *Supplier) Reset()         { *m = Supplier{} }
 func (m *Supplier) String() string { return proto.CompactTextString(m) }
 func (*Supplier) ProtoMessage()    {}
 func (*Supplier) Descriptor() ([]byte, []int) {
-	return fileDescriptor_data_271ced741fe7a0ff, []int{2}
+	return fileDescriptor_data_75fe01dbf4b9a5ba, []int{2}
 }
 func (m *Supplier) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Supplier.Unmarshal(m, b)
@@ -208,9 +208,9 @@ func (m *Supplier) GetGlobalId() string {
 }
 
 type Transaction struct {
-	// text of the bank transaction
+	// text of the bank transaction. Used in bank requests.
 	Text string `protobuf:"bytes,1,opt,name=text,proto3" json:"text,omitempty"`
-	// amount of the transaction
+	// amount of the transaction. Used in bank requests.
 	Amount               float32  `protobuf:"fixed32,2,opt,name=amount,proto3" json:"amount,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
@@ -221,7 +221,7 @@ func (m *Transaction) Reset()         { *m = Transaction{} }
 func (m *Transaction) String() string { return proto.CompactTextString(m) }
 func (*Transaction) ProtoMessage()    {}
 func (*Transaction) Descriptor() ([]byte, []int) {
-	return fileDescriptor_data_271ced741fe7a0ff, []int{3}
+	return fileDescriptor_data_75fe01dbf4b9a5ba, []int{3}
 }
 func (m *Transaction) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Transaction.Unmarshal(m, b)
@@ -271,7 +271,7 @@ func (m *Data) Reset()         { *m = Data{} }
 func (m *Data) String() string { return proto.CompactTextString(m) }
 func (*Data) ProtoMessage()    {}
 func (*Data) Descriptor() ([]byte, []int) {
-	return fileDescriptor_data_271ced741fe7a0ff, []int{4}
+	return fileDescriptor_data_75fe01dbf4b9a5ba, []int{4}
 }
 func (m *Data) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Data.Unmarshal(m, b)
@@ -320,9 +320,9 @@ func init() {
 	proto.RegisterType((*Data)(nil), "asgt.type.Data")
 }
 
-func init() { proto.RegisterFile("asgt/type/data.proto", fileDescriptor_data_271ced741fe7a0ff) }
+func init() { proto.RegisterFile("asgt/type/data.proto", fileDescriptor_data_75fe01dbf4b9a5ba) }
 
-var fileDescriptor_data_271ced741fe7a0ff = []byte{
+var fileDescriptor_data_75fe01dbf4b9a5ba = []byte{
 	// 392 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x54, 0x52, 0xcd, 0xce, 0x93, 0x40,
 	0x14, 0x0d, 0xc8, 0xc7, 0xcf, 0xe5, 0x8b, 0x8b, 0xb1, 0xa9, 0xa4, 0x2e, 0xac, 0xac, 0xba, 0x30,

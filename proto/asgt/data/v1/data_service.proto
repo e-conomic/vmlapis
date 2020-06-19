@@ -38,6 +38,13 @@ service DataService {
       get: "/v1/{type}/{name}:info"
     };
   }
+
+  rpc UpdateDataset (UpdateDatasetRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      put: "/v1/{type}/{name}:update"
+      body: "*"
+    };
+  }
 }
 
 
@@ -67,6 +74,12 @@ message DeleteRequest {
 message GetInfoRequest {
   string name = 1;
   string type = 2;
+}
+
+message UpdateDatasetRequest {
+  string name = 1;
+  string type = 2;
+  asgt.type.RetentionPolicy retention_policy = 3;
 }
 
 message GetInfoResponse {

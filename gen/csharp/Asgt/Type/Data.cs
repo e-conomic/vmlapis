@@ -104,7 +104,7 @@ namespace Asgt.Type {
     public const int SupplierFieldNumber = 2;
     private global::Asgt.Type.Supplier supplier_;
     /// <summary>
-    /// supplier of the invoice
+    /// supplier of the invoice. Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Supplier Supplier {
@@ -118,7 +118,7 @@ namespace Asgt.Type {
     public const int CustomerRefFieldNumber = 3;
     private string customerRef_ = "";
     /// <summary>
-    /// reference to the customer
+    /// reference to the customer. Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string CustomerRef {
@@ -132,7 +132,7 @@ namespace Asgt.Type {
     public const int TextFieldNumber = 4;
     private string text_ = "";
     /// <summary>
-    /// invoice text from the SmartScan product
+    /// invoice text from the SmartScan product. Used in scanned-invoice requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -146,7 +146,7 @@ namespace Asgt.Type {
     public const int CurrencyFieldNumber = 6;
     private string currency_ = "";
     /// <summary>
-    /// name of the currency as a string
+    /// name of the currency as a string. Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Currency {
@@ -160,7 +160,7 @@ namespace Asgt.Type {
     public const int TotalFieldNumber = 7;
     private float total_;
     /// <summary>
-    /// total of the invoice
+    /// total of the invoice. Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Total {
@@ -385,7 +385,7 @@ namespace Asgt.Type {
     public const int TextFieldNumber = 8;
     private string text_ = "";
     /// <summary>
-    /// text of the invoice line
+    /// text of the invoice line. Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -399,7 +399,7 @@ namespace Asgt.Type {
     public const int ItemIdFieldNumber = 9;
     private string itemId_ = "";
     /// <summary>
-    /// id of the product (item)
+    /// id of the product (item). Used in electronic-invoice-line requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ItemId {
@@ -742,7 +742,7 @@ namespace Asgt.Type {
     public const int TextFieldNumber = 1;
     private string text_ = "";
     /// <summary>
-    /// text of the bank transaction
+    /// text of the bank transaction. Used in bank requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Text {
@@ -756,7 +756,7 @@ namespace Asgt.Type {
     public const int AmountFieldNumber = 2;
     private float amount_;
     /// <summary>
-    /// amount of the transaction
+    /// amount of the transaction. Used in bank requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public float Amount {

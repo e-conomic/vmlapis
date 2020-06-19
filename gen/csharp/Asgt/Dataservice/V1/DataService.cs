@@ -37,19 +37,24 @@ namespace Asgt.Dataservice.V1 {
             "KAsyES5hc2d0LnR5cGUuU2FtcGxlIkUKDURlbGV0ZVJlcXVlc3QSDAoEdHlw",
             "ZRgBIAEoCRIOCgRuYW1lGAIgASgJSAASDQoDdGFnGAMgASgJSABCBwoFbWF0",
             "Y2giLAoOR2V0SW5mb1JlcXVlc3QSDAoEbmFtZRgBIAEoCRIMCgR0eXBlGAIg",
-            "ASgJIlcKD0dldEluZm9SZXNwb25zZRIjCgdkYXRhc2V0GAEgASgLMhIuYXNn",
-            "dC50eXBlLkRhdGFzZXQSHwoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9k",
-            "ZWwyyQMKC0RhdGFTZXJ2aWNlEmkKDUNyZWF0ZURhdGFzZXQSIi5hc2d0LmRh",
-            "dGFzZXJ2aWNlLnYxLkNyZWF0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiHILT5JMCFiIRL3YxL3t0eXBlfTpjcmVhdGU6ASoScQoKQXBwZW5k",
-            "RGF0YRImLmFzZ3QuZGF0YXNlcnZpY2UudjEuQXBwZW5kRGF0YVJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiI4LT5JMCHSIYL3YxL3t0eXBlfS97",
-            "bmFtZX06YXBwZW5kOgEqEmYKCkRlbGV0ZURhdGESIi5hc2d0LmRhdGFzZXJ2",
-            "aWNlLnYxLkRlbGV0ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
-            "HILT5JMCFiIRL3YxL3t0eXBlfTpkZWxldGU6ASoSdAoHR2V0SW5mbxIjLmFz",
-            "Z3QuZGF0YXNlcnZpY2UudjEuR2V0SW5mb1JlcXVlc3QaJC5hc2d0LmRhdGFz",
-            "ZXJ2aWNlLnYxLkdldEluZm9SZXNwb25zZSIegtPkkwIYEhYvdjEve3R5cGV9",
-            "L3tuYW1lfTppbmZvQgZaBGRhdGFiBnByb3RvMw=="));
+            "ASgJImgKFFVwZGF0ZURhdGFzZXRSZXF1ZXN0EgwKBG5hbWUYASABKAkSDAoE",
+            "dHlwZRgCIAEoCRI0ChByZXRlbnRpb25fcG9saWN5GAMgASgLMhouYXNndC50",
+            "eXBlLlJldGVudGlvblBvbGljeSJXCg9HZXRJbmZvUmVzcG9uc2USIwoHZGF0",
+            "YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0Eh8KBW1vZGVsGAIgASgL",
+            "MhAuYXNndC50eXBlLk1vZGVsMsIECgtEYXRhU2VydmljZRJpCg1DcmVhdGVE",
+            "YXRhc2V0EiIuYXNndC5kYXRhc2VydmljZS52MS5DcmVhdGVSZXF1ZXN0GhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92MS97dHlwZX06Y3Jl",
+            "YXRlOgEqEnEKCkFwcGVuZERhdGESJi5hc2d0LmRhdGFzZXJ2aWNlLnYxLkFw",
+            "cGVuZERhdGFSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiOC0+ST",
+            "Ah0iGC92MS97dHlwZX0ve25hbWV9OmFwcGVuZDoBKhJmCgpEZWxldGVEYXRh",
+            "EiIuYXNndC5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5IhyC0+STAhYiES92MS97dHlwZX06ZGVsZXRlOgEq",
+            "EnQKB0dldEluZm8SIy5hc2d0LmRhdGFzZXJ2aWNlLnYxLkdldEluZm9SZXF1",
+            "ZXN0GiQuYXNndC5kYXRhc2VydmljZS52MS5HZXRJbmZvUmVzcG9uc2UiHoLT",
+            "5JMCGBIWL3YxL3t0eXBlfS97bmFtZX06aW5mbxJ3Cg1VcGRhdGVEYXRhc2V0",
+            "EikuYXNndC5kYXRhc2VydmljZS52MS5VcGRhdGVEYXRhc2V0UmVxdWVzdBoW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdGhgvdjEve3R5cGV9L3tu",
+            "YW1lfTp1cGRhdGU6ASpCBloEZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -57,6 +62,7 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.AppendDataRequest), global::Asgt.Dataservice.V1.AppendDataRequest.Parser, new[]{ "Name", "Type", "Samples" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.DeleteRequest), global::Asgt.Dataservice.V1.DeleteRequest.Parser, new[]{ "Type", "Name", "Tag" }, new[]{ "Match" }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null)
           }));
     }
@@ -865,6 +871,197 @@ namespace Asgt.Dataservice.V1 {
 
   }
 
+  public sealed partial class UpdateDatasetRequest : pb::IMessage<UpdateDatasetRequest> {
+    private static readonly pb::MessageParser<UpdateDatasetRequest> _parser = new pb::MessageParser<UpdateDatasetRequest>(() => new UpdateDatasetRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateDatasetRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Dataservice.V1.DataServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDatasetRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDatasetRequest(UpdateDatasetRequest other) : this() {
+      name_ = other.name_;
+      type_ = other.type_;
+      retentionPolicy_ = other.retentionPolicy_ != null ? other.retentionPolicy_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateDatasetRequest Clone() {
+      return new UpdateDatasetRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 2;
+    private string type_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Type {
+      get { return type_; }
+      set {
+        type_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "retention_policy" field.</summary>
+    public const int RetentionPolicyFieldNumber = 3;
+    private global::Asgt.Type.RetentionPolicy retentionPolicy_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.RetentionPolicy RetentionPolicy {
+      get { return retentionPolicy_; }
+      set {
+        retentionPolicy_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateDatasetRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateDatasetRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(RetentionPolicy, other.RetentionPolicy)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Type.Length != 0) hash ^= Type.GetHashCode();
+      if (retentionPolicy_ != null) hash ^= RetentionPolicy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Type.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Type);
+      }
+      if (retentionPolicy_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RetentionPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Type.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
+      }
+      if (retentionPolicy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RetentionPolicy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateDatasetRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Type.Length != 0) {
+        Type = other.Type;
+      }
+      if (other.retentionPolicy_ != null) {
+        if (retentionPolicy_ == null) {
+          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+        }
+        RetentionPolicy.MergeFrom(other.RetentionPolicy);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Type = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (retentionPolicy_ == null) {
+              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+            }
+            input.ReadMessage(retentionPolicy_);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class GetInfoResponse : pb::IMessage<GetInfoResponse> {
     private static readonly pb::MessageParser<GetInfoResponse> _parser = new pb::MessageParser<GetInfoResponse>(() => new GetInfoResponse());
     private pb::UnknownFieldSet _unknownFields;
@@ -873,7 +1070,7 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1.DataServiceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Asgt.Dataservice.V1.DataServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
