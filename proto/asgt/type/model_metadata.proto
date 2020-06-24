@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "type";
+
+
+message ModelMetadata {
+    int64 model_version = 1;
+    // Targets used to train the model
+    string targets = 2;
+    // Number of samples used to train the model
+    int32 sample_size = 3;
+}
