@@ -14,6 +14,7 @@ _sym_db = _symbol_database.Default()
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
+from vml_proto.asgt.type import model_metadata_pb2 as asgt_dot_type_dot_model__metadata__pb2
 from vml_proto.asgt.type import revision_pb2 as asgt_dot_type_dot_revision__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
@@ -23,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modelregistry.v1',
   syntax='proto3',
   serialized_options=_b('Z\rmodelregistry'),
-  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1bgoogle/protobuf/empty.proto\"y\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model2\xd7\x01\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseB\x0fZ\rmodelregistryb\x06proto3')
+  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1e\x61sgt/type/model_metadata.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xab\x01\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x30\n\x0emodel_metadata\x18\x04 \x01(\x0b\x32\x18.asgt.type.ModelMetadata\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model2\xd7\x01\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseB\x0fZ\rmodelregistryb\x06proto3')
   ,
-  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_model__metadata__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 
 
@@ -58,6 +59,13 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_metadata', full_name='asgt.modelregistry.v1.RegisterModelRequest.model_metadata', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -70,8 +78,8 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=172,
-  serialized_end=293,
+  serialized_start=205,
+  serialized_end=376,
 )
 
 
@@ -101,8 +109,8 @@ _GETCURRENTMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=295,
-  serialized_end=356,
+  serialized_start=378,
+  serialized_end=439,
 )
 
 
@@ -132,12 +140,13 @@ _GETCURRENTMODELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=358,
-  serialized_end=416,
+  serialized_start=441,
+  serialized_end=499,
 )
 
 _REGISTERMODELREQUEST.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
 _REGISTERMODELREQUEST.fields_by_name['revision'].message_type = asgt_dot_type_dot_revision__pb2._REVISION
+_REGISTERMODELREQUEST.fields_by_name['model_metadata'].message_type = asgt_dot_type_dot_model__metadata__pb2._MODELMETADATA
 _GETCURRENTMODELREQUEST.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
 _GETCURRENTMODELRESPONSE.fields_by_name['model'].message_type = asgt_dot_type_dot_model__pb2._MODEL
 DESCRIPTOR.message_types_by_name['RegisterModelRequest'] = _REGISTERMODELREQUEST
@@ -175,8 +184,8 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=419,
-  serialized_end=634,
+  serialized_start=502,
+  serialized_end=717,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterModel',

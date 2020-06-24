@@ -13,6 +13,7 @@ var global = Function('return this')();
 
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
+var asgt_type_model_metadata_pb = require('../../../asgt/type/model_metadata_pb.js');
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelRequest', null, global);
@@ -67,7 +68,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
     revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
-    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    modelMetadata: (f = msg.getModelMetadata()) && asgt_type_model_metadata_pb.ModelMetadata.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -117,6 +119,11 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setModelVersion(value);
+      break;
+    case 4:
+      var value = new asgt_type_model_metadata_pb.ModelMetadata;
+      reader.readMessage(value,asgt_type_model_metadata_pb.ModelMetadata.deserializeBinaryFromReader);
+      msg.setModelMetadata(value);
       break;
     default:
       reader.skipField();
@@ -168,6 +175,14 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
     writer.writeInt64(
       3,
       f
+    );
+  }
+  f = message.getModelMetadata();
+  if (f != null) {
+    writer.writeMessage(
+      4,
+      f,
+      asgt_type_model_metadata_pb.ModelMetadata.serializeBinaryToWriter
     );
   }
 };
@@ -245,6 +260,36 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getModelVersion = fun
 /** @param {number} value */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setModelVersion = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional asgt.type.ModelMetadata model_metadata = 4;
+ * @return {?proto.asgt.type.ModelMetadata}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getModelMetadata = function() {
+  return /** @type{?proto.asgt.type.ModelMetadata} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_metadata_pb.ModelMetadata, 4));
+};
+
+
+/** @param {?proto.asgt.type.ModelMetadata|undefined} value */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setModelMetadata = function(value) {
+  jspb.Message.setWrapperField(this, 4, value);
+};
+
+
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearModelMetadata = function() {
+  this.setModelMetadata(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.hasModelMetadata = function() {
+  return jspb.Message.getField(this, 4) != null;
 };
 
 

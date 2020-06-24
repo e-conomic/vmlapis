@@ -48,6 +48,19 @@ public final class ModelRegistryOuterClass {
      * <code>int64 model_version = 3;</code>
      */
     long getModelVersion();
+
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    boolean hasModelMetadata();
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata();
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1.RegisterModelRequest}
@@ -118,6 +131,19 @@ public final class ModelRegistryOuterClass {
             case 24: {
 
               modelVersion_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder subBuilder = null;
+              if (modelMetadata_ != null) {
+                subBuilder = modelMetadata_.toBuilder();
+              }
+              modelMetadata_ = input.readMessage(asgt.type.ModelMetadataOuterClass.ModelMetadata.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(modelMetadata_);
+                modelMetadata_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -203,6 +229,27 @@ public final class ModelRegistryOuterClass {
       return modelVersion_;
     }
 
+    public static final int MODEL_METADATA_FIELD_NUMBER = 4;
+    private asgt.type.ModelMetadataOuterClass.ModelMetadata modelMetadata_;
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    public boolean hasModelMetadata() {
+      return modelMetadata_ != null;
+    }
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    public asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata() {
+      return modelMetadata_ == null ? asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+    }
+    /**
+     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     */
+    public asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder() {
+      return getModelMetadata();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -226,6 +273,9 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
       }
+      if (modelMetadata_ != null) {
+        output.writeMessage(4, getModelMetadata());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -246,6 +296,10 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, modelVersion_);
+      }
+      if (modelMetadata_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getModelMetadata());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -275,6 +329,11 @@ public final class ModelRegistryOuterClass {
       }
       result = result && (getModelVersion()
           == other.getModelVersion());
+      result = result && (hasModelMetadata() == other.hasModelMetadata());
+      if (hasModelMetadata()) {
+        result = result && getModelMetadata()
+            .equals(other.getModelMetadata());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -297,6 +356,10 @@ public final class ModelRegistryOuterClass {
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
+      if (hasModelMetadata()) {
+        hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
+        hash = (53 * hash) + getModelMetadata().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -444,6 +507,12 @@ public final class ModelRegistryOuterClass {
         }
         modelVersion_ = 0L;
 
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = null;
+        } else {
+          modelMetadata_ = null;
+          modelMetadataBuilder_ = null;
+        }
         return this;
       }
 
@@ -481,6 +550,11 @@ public final class ModelRegistryOuterClass {
           result.revision_ = revisionBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
+        if (modelMetadataBuilder_ == null) {
+          result.modelMetadata_ = modelMetadata_;
+        } else {
+          result.modelMetadata_ = modelMetadataBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -537,6 +611,9 @@ public final class ModelRegistryOuterClass {
         }
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
+        }
+        if (other.hasModelMetadata()) {
+          mergeModelMetadata(other.getModelMetadata());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -825,6 +902,123 @@ public final class ModelRegistryOuterClass {
         modelVersion_ = 0L;
         onChanged();
         return this;
+      }
+
+      private asgt.type.ModelMetadataOuterClass.ModelMetadata modelMetadata_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder> modelMetadataBuilder_;
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public boolean hasModelMetadata() {
+        return modelMetadataBuilder_ != null || modelMetadata_ != null;
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata() {
+        if (modelMetadataBuilder_ == null) {
+          return modelMetadata_ == null ? asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+        } else {
+          return modelMetadataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public Builder setModelMetadata(asgt.type.ModelMetadataOuterClass.ModelMetadata value) {
+        if (modelMetadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          modelMetadata_ = value;
+          onChanged();
+        } else {
+          modelMetadataBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public Builder setModelMetadata(
+          asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder builderForValue) {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          modelMetadataBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public Builder mergeModelMetadata(asgt.type.ModelMetadataOuterClass.ModelMetadata value) {
+        if (modelMetadataBuilder_ == null) {
+          if (modelMetadata_ != null) {
+            modelMetadata_ =
+              asgt.type.ModelMetadataOuterClass.ModelMetadata.newBuilder(modelMetadata_).mergeFrom(value).buildPartial();
+          } else {
+            modelMetadata_ = value;
+          }
+          onChanged();
+        } else {
+          modelMetadataBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public Builder clearModelMetadata() {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadata_ = null;
+          onChanged();
+        } else {
+          modelMetadata_ = null;
+          modelMetadataBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder getModelMetadataBuilder() {
+        
+        onChanged();
+        return getModelMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      public asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder() {
+        if (modelMetadataBuilder_ != null) {
+          return modelMetadataBuilder_.getMessageOrBuilder();
+        } else {
+          return modelMetadata_ == null ?
+              asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+        }
+      }
+      /**
+       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder> 
+          getModelMetadataFieldBuilder() {
+        if (modelMetadataBuilder_ == null) {
+          modelMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder>(
+                  getModelMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          modelMetadata_ = null;
+        }
+        return modelMetadataBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2119,21 +2313,23 @@ public final class ModelRegistryOuterClass {
     java.lang.String[] descriptorData = {
       "\n*asgt/modelregistry/v1/model_registry.p" +
       "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
-      "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
-      "t/type/revision.proto\032\033google/protobuf/e" +
-      "mpty.proto\"y\n\024RegisterModelRequest\022#\n\007da" +
-      "taset\030\001 \001(\0132\022.asgt.type.Dataset\022%\n\010revis" +
-      "ion\030\002 \001(\0132\023.asgt.type.Revision\022\025\n\rmodel_" +
-      "version\030\003 \001(\003\"=\n\026GetCurrentModelRequest\022" +
-      "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\":\n\027" +
-      "GetCurrentModelResponse\022\037\n\005model\030\001 \001(\0132\020" +
-      ".asgt.type.Model2\327\001\n\rModelRegistry\022T\n\rRe" +
-      "gisterModel\022+.asgt.modelregistry.v1.Regi" +
-      "sterModelRequest\032\026.google.protobuf.Empty" +
-      "\022p\n\017GetCurrentModel\022-.asgt.modelregistry" +
-      ".v1.GetCurrentModelRequest\032..asgt.modelr" +
-      "egistry.v1.GetCurrentModelResponseB\017Z\rmo" +
-      "delregistryb\006proto3"
+      "ataset.proto\032\025asgt/type/model.proto\032\036asg" +
+      "t/type/model_metadata.proto\032\030asgt/type/r" +
+      "evision.proto\032\033google/protobuf/empty.pro" +
+      "to\"\253\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
+      " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
+      "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
+      "\030\003 \001(\003\0220\n\016model_metadata\030\004 \001(\0132\030.asgt.ty" +
+      "pe.ModelMetadata\"=\n\026GetCurrentModelReque" +
+      "st\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\"" +
+      ":\n\027GetCurrentModelResponse\022\037\n\005model\030\001 \001(" +
+      "\0132\020.asgt.type.Model2\327\001\n\rModelRegistry\022T\n" +
+      "\rRegisterModel\022+.asgt.modelregistry.v1.R" +
+      "egisterModelRequest\032\026.google.protobuf.Em" +
+      "pty\022p\n\017GetCurrentModel\022-.asgt.modelregis" +
+      "try.v1.GetCurrentModelRequest\032..asgt.mod" +
+      "elregistry.v1.GetCurrentModelResponseB\017Z" +
+      "\rmodelregistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2148,6 +2344,7 @@ public final class ModelRegistryOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
+          asgt.type.ModelMetadataOuterClass.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
@@ -2156,7 +2353,7 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "ModelMetadata", });
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_fieldAccessorTable = new
@@ -2171,6 +2368,7 @@ public final class ModelRegistryOuterClass {
         new java.lang.String[] { "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
+    asgt.type.ModelMetadataOuterClass.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
