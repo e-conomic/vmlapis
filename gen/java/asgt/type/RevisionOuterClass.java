@@ -44,6 +44,16 @@ public final class RevisionOuterClass {
      * <code>int64 size = 3;</code>
      */
     long getSize();
+
+    /**
+     * <code>string dataset_id = 4;</code>
+     */
+    java.lang.String getDatasetId();
+    /**
+     * <code>string dataset_id = 4;</code>
+     */
+    com.google.protobuf.ByteString
+        getDatasetIdBytes();
   }
   /**
    * Protobuf type {@code asgt.type.Revision}
@@ -60,6 +70,7 @@ public final class RevisionOuterClass {
     private Revision() {
       number_ = 0L;
       size_ = 0L;
+      datasetId_ = "";
     }
 
     @java.lang.Override
@@ -107,6 +118,12 @@ public final class RevisionOuterClass {
             case 24: {
 
               size_ = input.readInt64();
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              datasetId_ = s;
               break;
             }
             default: {
@@ -184,6 +201,40 @@ public final class RevisionOuterClass {
       return size_;
     }
 
+    public static final int DATASET_ID_FIELD_NUMBER = 4;
+    private volatile java.lang.Object datasetId_;
+    /**
+     * <code>string dataset_id = 4;</code>
+     */
+    public java.lang.String getDatasetId() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        datasetId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string dataset_id = 4;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDatasetIdBytes() {
+      java.lang.Object ref = datasetId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        datasetId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -207,6 +258,9 @@ public final class RevisionOuterClass {
       if (size_ != 0L) {
         output.writeInt64(3, size_);
       }
+      if (!getDatasetIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, datasetId_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -227,6 +281,9 @@ public final class RevisionOuterClass {
       if (size_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, size_);
+      }
+      if (!getDatasetIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, datasetId_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -253,6 +310,8 @@ public final class RevisionOuterClass {
       }
       result = result && (getSize()
           == other.getSize());
+      result = result && getDatasetId()
+          .equals(other.getDatasetId());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -274,6 +333,8 @@ public final class RevisionOuterClass {
       hash = (37 * hash) + SIZE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getSize());
+      hash = (37 * hash) + DATASET_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -417,6 +478,8 @@ public final class RevisionOuterClass {
         }
         size_ = 0L;
 
+        datasetId_ = "";
+
         return this;
       }
 
@@ -450,6 +513,7 @@ public final class RevisionOuterClass {
           result.createdAt_ = createdAtBuilder_.build();
         }
         result.size_ = size_;
+        result.datasetId_ = datasetId_;
         onBuilt();
         return result;
       }
@@ -506,6 +570,10 @@ public final class RevisionOuterClass {
         }
         if (other.getSize() != 0L) {
           setSize(other.getSize());
+        }
+        if (!other.getDatasetId().isEmpty()) {
+          datasetId_ = other.datasetId_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -716,6 +784,75 @@ public final class RevisionOuterClass {
         onChanged();
         return this;
       }
+
+      private java.lang.Object datasetId_ = "";
+      /**
+       * <code>string dataset_id = 4;</code>
+       */
+      public java.lang.String getDatasetId() {
+        java.lang.Object ref = datasetId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          datasetId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string dataset_id = 4;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDatasetIdBytes() {
+        java.lang.Object ref = datasetId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          datasetId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string dataset_id = 4;</code>
+       */
+      public Builder setDatasetId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 4;</code>
+       */
+      public Builder clearDatasetId() {
+        
+        datasetId_ = getDefaultInstance().getDatasetId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string dataset_id = 4;</code>
+       */
+      public Builder setDatasetIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        datasetId_ = value;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -784,10 +921,10 @@ public final class RevisionOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030asgt/type/revision.proto\022\tasgt.type\032\037g" +
-      "oogle/protobuf/timestamp.proto\"X\n\010Revisi" +
+      "oogle/protobuf/timestamp.proto\"l\n\010Revisi" +
       "on\022\016\n\006number\030\001 \001(\003\022.\n\ncreated_at\030\002 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\014\n\004size\030\003 \001(\003" +
-      "B\006Z\004typeb\006proto3"
+      "\022\022\n\ndataset_id\030\004 \001(\tB\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -807,7 +944,7 @@ public final class RevisionOuterClass {
     internal_static_asgt_type_Revision_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Revision_descriptor,
-        new java.lang.String[] { "Number", "CreatedAt", "Size", });
+        new java.lang.String[] { "Number", "CreatedAt", "Size", "DatasetId", });
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

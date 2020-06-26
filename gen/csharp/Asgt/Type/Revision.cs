@@ -25,13 +25,14 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chhhc2d0L3R5cGUvcmV2aXNpb24ucHJvdG8SCWFzZ3QudHlwZRofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJYCghSZXZpc2lvbhIOCgZudW1i",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJsCghSZXZpc2lvbhIOCgZudW1i",
             "ZXIYASABKAMSLgoKY3JlYXRlZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASDAoEc2l6ZRgDIAEoA0IGWgR0eXBlYgZwcm90bzM="));
+            "Zi5UaW1lc3RhbXASDAoEc2l6ZRgDIAEoAxISCgpkYXRhc2V0X2lkGAQgASgJ",
+            "QgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Revision), global::Asgt.Type.Revision.Parser, new[]{ "Number", "CreatedAt", "Size" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Revision), global::Asgt.Type.Revision.Parser, new[]{ "Number", "CreatedAt", "Size", "DatasetId" }, null, null, null)
           }));
     }
     #endregion
@@ -66,6 +67,7 @@ namespace Asgt.Type {
       number_ = other.number_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       size_ = other.size_;
+      datasetId_ = other.datasetId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -110,6 +112,17 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "dataset_id" field.</summary>
+    public const int DatasetIdFieldNumber = 4;
+    private string datasetId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string DatasetId {
+      get { return datasetId_; }
+      set {
+        datasetId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Revision);
@@ -126,6 +139,7 @@ namespace Asgt.Type {
       if (Number != other.Number) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (Size != other.Size) return false;
+      if (DatasetId != other.DatasetId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -135,6 +149,7 @@ namespace Asgt.Type {
       if (Number != 0L) hash ^= Number.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (Size != 0L) hash ^= Size.GetHashCode();
+      if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -160,6 +175,10 @@ namespace Asgt.Type {
         output.WriteRawTag(24);
         output.WriteInt64(Size);
       }
+      if (DatasetId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DatasetId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -176,6 +195,9 @@ namespace Asgt.Type {
       }
       if (Size != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Size);
+      }
+      if (DatasetId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -199,6 +221,9 @@ namespace Asgt.Type {
       }
       if (other.Size != 0L) {
         Size = other.Size;
+      }
+      if (other.DatasetId.Length != 0) {
+        DatasetId = other.DatasetId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -224,6 +249,10 @@ namespace Asgt.Type {
           }
           case 24: {
             Size = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            DatasetId = input.ReadString();
             break;
           }
         }

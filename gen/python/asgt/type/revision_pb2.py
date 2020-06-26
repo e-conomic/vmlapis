@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"X\n\x08Revision\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x03 \x01(\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"l\n\x08Revision\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x12\n\ndataset_id\x18\x04 \x01(\tB\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -55,6 +55,13 @@ _REVISION = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dataset_id', full_name='asgt.type.Revision.dataset_id', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -68,7 +75,7 @@ _REVISION = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=72,
-  serialized_end=160,
+  serialized_end=180,
 )
 
 _REVISION.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP

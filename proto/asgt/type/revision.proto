@@ -12,4 +12,5 @@ message Revision {
 
   // Number of samples added to the dataset in this revision
   int64 size = 3;
+  string dataset_id = 4;
 }

@@ -62,7 +62,8 @@ proto.asgt.type.Revision.toObject = function(includeInstance, msg) {
   var f, obj = {
     number: jspb.Message.getFieldWithDefault(msg, 1, 0),
     createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    size: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    size: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    datasetId: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -112,6 +113,10 @@ proto.asgt.type.Revision.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {number} */ (reader.readInt64());
       msg.setSize(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDatasetId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -160,6 +165,13 @@ proto.asgt.type.Revision.serializeBinaryToWriter = function(message, writer) {
   if (f !== 0) {
     writer.writeInt64(
       3,
+      f
+    );
+  }
+  f = message.getDatasetId();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
       f
     );
   }
@@ -223,6 +235,21 @@ proto.asgt.type.Revision.prototype.getSize = function() {
 /** @param {number} value */
 proto.asgt.type.Revision.prototype.setSize = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional string dataset_id = 4;
+ * @return {string}
+ */
+proto.asgt.type.Revision.prototype.getDatasetId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.asgt.type.Revision.prototype.setDatasetId = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
