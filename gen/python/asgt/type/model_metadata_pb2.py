@@ -19,37 +19,37 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1e\x61sgt/type/model_metadata.proto\x12\tasgt.type\"L\n\rModelMetadata\x12\x15\n\rmodel_version\x18\x01 \x01(\x03\x12\x0f\n\x07targets\x18\x02 \x01(\t\x12\x13\n\x0bsample_size\x18\x03 \x01(\x05\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x1e\x61sgt/type/model_metadata.proto\x12\tasgt.type\"\x97\x01\n\rTargetMetrics\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x30\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.Metric\x1a\x44\n\x06Metric\x12\x11\n\tprecision\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x13\n\x0b\x61nswer_rate\x18\x03 \x01(\x02\x42\x06Z\x04typeb\x06proto3')
 )
 
 
 
 
-_MODELMETADATA = _descriptor.Descriptor(
-  name='ModelMetadata',
-  full_name='asgt.type.ModelMetadata',
+_TARGETMETRICS_METRIC = _descriptor.Descriptor(
+  name='Metric',
+  full_name='asgt.type.TargetMetrics.Metric',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='model_version', full_name='asgt.type.ModelMetadata.model_version', index=0,
-      number=1, type=3, cpp_type=2, label=1,
-      has_default_value=False, default_value=0,
+      name='precision', full_name='asgt.type.TargetMetrics.Metric.precision', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='targets', full_name='asgt.type.ModelMetadata.targets', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      name='confidence', full_name='asgt.type.TargetMetrics.Metric.confidence', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='sample_size', full_name='asgt.type.ModelMetadata.sample_size', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      name='answer_rate', full_name='asgt.type.TargetMetrics.Metric.answer_rate', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
@@ -65,19 +65,66 @@ _MODELMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=45,
-  serialized_end=121,
+  serialized_start=129,
+  serialized_end=197,
 )
 
-DESCRIPTOR.message_types_by_name['ModelMetadata'] = _MODELMETADATA
+_TARGETMETRICS = _descriptor.Descriptor(
+  name='TargetMetrics',
+  full_name='asgt.type.TargetMetrics',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target', full_name='asgt.type.TargetMetrics.target', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='metrics', full_name='asgt.type.TargetMetrics.metrics', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_TARGETMETRICS_METRIC, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=46,
+  serialized_end=197,
+)
+
+_TARGETMETRICS_METRIC.containing_type = _TARGETMETRICS
+_TARGETMETRICS.fields_by_name['metrics'].message_type = _TARGETMETRICS_METRIC
+DESCRIPTOR.message_types_by_name['TargetMetrics'] = _TARGETMETRICS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-ModelMetadata = _reflection.GeneratedProtocolMessageType('ModelMetadata', (_message.Message,), dict(
-  DESCRIPTOR = _MODELMETADATA,
+TargetMetrics = _reflection.GeneratedProtocolMessageType('TargetMetrics', (_message.Message,), dict(
+
+  Metric = _reflection.GeneratedProtocolMessageType('Metric', (_message.Message,), dict(
+    DESCRIPTOR = _TARGETMETRICS_METRIC,
+    __module__ = 'asgt.type.model_metadata_pb2'
+    # @@protoc_insertion_point(class_scope:asgt.type.TargetMetrics.Metric)
+    ))
+  ,
+  DESCRIPTOR = _TARGETMETRICS,
   __module__ = 'asgt.type.model_metadata_pb2'
-  # @@protoc_insertion_point(class_scope:asgt.type.ModelMetadata)
+  # @@protoc_insertion_point(class_scope:asgt.type.TargetMetrics)
   ))
-_sym_db.RegisterMessage(ModelMetadata)
+_sym_db.RegisterMessage(TargetMetrics)
+_sym_db.RegisterMessage(TargetMetrics.Metric)
 
 
 DESCRIPTOR._options = None

@@ -24,25 +24,26 @@ namespace Asgt.Type {
     static ModelMetadataReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvbW9kZWxfbWV0YWRhdGEucHJvdG8SCWFzZ3QudHlwZSJM",
-            "Cg1Nb2RlbE1ldGFkYXRhEhUKDW1vZGVsX3ZlcnNpb24YASABKAMSDwoHdGFy",
-            "Z2V0cxgCIAEoCRITCgtzYW1wbGVfc2l6ZRgDIAEoBUIGWgR0eXBlYgZwcm90",
-            "bzM="));
+            "Ch5hc2d0L3R5cGUvbW9kZWxfbWV0YWRhdGEucHJvdG8SCWFzZ3QudHlwZSKX",
+            "AQoNVGFyZ2V0TWV0cmljcxIOCgZ0YXJnZXQYASABKAkSMAoHbWV0cmljcxgC",
+            "IAMoCzIfLmFzZ3QudHlwZS5UYXJnZXRNZXRyaWNzLk1ldHJpYxpECgZNZXRy",
+            "aWMSEQoJcHJlY2lzaW9uGAEgASgCEhIKCmNvbmZpZGVuY2UYAiABKAISEwoL",
+            "YW5zd2VyX3JhdGUYAyABKAJCBloEdHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ModelMetadata), global::Asgt.Type.ModelMetadata.Parser, new[]{ "ModelVersion", "Targets", "SampleSize" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null)})
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class ModelMetadata : pb::IMessage<ModelMetadata> {
-    private static readonly pb::MessageParser<ModelMetadata> _parser = new pb::MessageParser<ModelMetadata>(() => new ModelMetadata());
+  public sealed partial class TargetMetrics : pb::IMessage<TargetMetrics> {
+    private static readonly pb::MessageParser<TargetMetrics> _parser = new pb::MessageParser<TargetMetrics>(() => new TargetMetrics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ModelMetadata> Parser { get { return _parser; } }
+    public static pb::MessageParser<TargetMetrics> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -55,89 +56,68 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ModelMetadata() {
+    public TargetMetrics() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ModelMetadata(ModelMetadata other) : this() {
-      modelVersion_ = other.modelVersion_;
-      targets_ = other.targets_;
-      sampleSize_ = other.sampleSize_;
+    public TargetMetrics(TargetMetrics other) : this() {
+      target_ = other.target_;
+      metrics_ = other.metrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ModelMetadata Clone() {
-      return new ModelMetadata(this);
+    public TargetMetrics Clone() {
+      return new TargetMetrics(this);
     }
 
-    /// <summary>Field number for the "model_version" field.</summary>
-    public const int ModelVersionFieldNumber = 1;
-    private long modelVersion_;
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 1;
+    private string target_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long ModelVersion {
-      get { return modelVersion_; }
+    public string Target {
+      get { return target_; }
       set {
-        modelVersion_ = value;
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "targets" field.</summary>
-    public const int TargetsFieldNumber = 2;
-    private string targets_ = "";
-    /// <summary>
-    /// Targets used to train the model
-    /// </summary>
+    /// <summary>Field number for the "metrics" field.</summary>
+    public const int MetricsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics.Types.Metric> _repeated_metrics_codec
+        = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetMetrics.Types.Metric.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric> metrics_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Targets {
-      get { return targets_; }
-      set {
-        targets_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "sample_size" field.</summary>
-    public const int SampleSizeFieldNumber = 3;
-    private int sampleSize_;
-    /// <summary>
-    /// Number of samples used to train the model
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SampleSize {
-      get { return sampleSize_; }
-      set {
-        sampleSize_ = value;
-      }
+    public pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.Metric> Metrics {
+      get { return metrics_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as ModelMetadata);
+      return Equals(other as TargetMetrics);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ModelMetadata other) {
+    public bool Equals(TargetMetrics other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (ModelVersion != other.ModelVersion) return false;
-      if (Targets != other.Targets) return false;
-      if (SampleSize != other.SampleSize) return false;
+      if (Target != other.Target) return false;
+      if(!metrics_.Equals(other.metrics_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
-      if (Targets.Length != 0) hash ^= Targets.GetHashCode();
-      if (SampleSize != 0) hash ^= SampleSize.GetHashCode();
+      if (Target.Length != 0) hash ^= Target.GetHashCode();
+      hash ^= metrics_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,18 +131,11 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (ModelVersion != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(ModelVersion);
+      if (Target.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Target);
       }
-      if (Targets.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Targets);
-      }
-      if (SampleSize != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(SampleSize);
-      }
+      metrics_.WriteTo(output, _repeated_metrics_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -171,15 +144,10 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (ModelVersion != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
+      if (Target.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
       }
-      if (Targets.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Targets);
-      }
-      if (SampleSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleSize);
-      }
+      size += metrics_.CalculateSize(_repeated_metrics_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -187,19 +155,14 @@ namespace Asgt.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ModelMetadata other) {
+    public void MergeFrom(TargetMetrics other) {
       if (other == null) {
         return;
       }
-      if (other.ModelVersion != 0L) {
-        ModelVersion = other.ModelVersion;
+      if (other.Target.Length != 0) {
+        Target = other.Target;
       }
-      if (other.Targets.Length != 0) {
-        Targets = other.Targets;
-      }
-      if (other.SampleSize != 0) {
-        SampleSize = other.SampleSize;
-      }
+      metrics_.Add(other.metrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -211,21 +174,209 @@ namespace Asgt.Type {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            ModelVersion = input.ReadInt64();
+          case 10: {
+            Target = input.ReadString();
             break;
           }
           case 18: {
-            Targets = input.ReadString();
-            break;
-          }
-          case 24: {
-            SampleSize = input.ReadInt32();
+            metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
             break;
           }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TargetMetrics message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public sealed partial class Metric : pb::IMessage<Metric> {
+        private static readonly pb::MessageParser<Metric> _parser = new pb::MessageParser<Metric>(() => new Metric());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pb::MessageParser<Metric> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Asgt.Type.TargetMetrics.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Metric() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Metric(Metric other) : this() {
+          precision_ = other.precision_;
+          confidence_ = other.confidence_;
+          answerRate_ = other.answerRate_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public Metric Clone() {
+          return new Metric(this);
+        }
+
+        /// <summary>Field number for the "precision" field.</summary>
+        public const int PrecisionFieldNumber = 1;
+        private float precision_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Precision {
+          get { return precision_; }
+          set {
+            precision_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "confidence" field.</summary>
+        public const int ConfidenceFieldNumber = 2;
+        private float confidence_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float Confidence {
+          get { return confidence_; }
+          set {
+            confidence_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "answer_rate" field.</summary>
+        public const int AnswerRateFieldNumber = 3;
+        private float answerRate_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public float AnswerRate {
+          get { return answerRate_; }
+          set {
+            answerRate_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override bool Equals(object other) {
+          return Equals(other as Metric);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public bool Equals(Metric other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Precision, other.Precision)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AnswerRate, other.AnswerRate)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Precision != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Precision);
+          if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+          if (AnswerRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AnswerRate);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void WriteTo(pb::CodedOutputStream output) {
+          if (Precision != 0F) {
+            output.WriteRawTag(13);
+            output.WriteFloat(Precision);
+          }
+          if (Confidence != 0F) {
+            output.WriteRawTag(21);
+            output.WriteFloat(Confidence);
+          }
+          if (AnswerRate != 0F) {
+            output.WriteRawTag(29);
+            output.WriteFloat(AnswerRate);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public int CalculateSize() {
+          int size = 0;
+          if (Precision != 0F) {
+            size += 1 + 4;
+          }
+          if (Confidence != 0F) {
+            size += 1 + 4;
+          }
+          if (AnswerRate != 0F) {
+            size += 1 + 4;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(Metric other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Precision != 0F) {
+            Precision = other.Precision;
+          }
+          if (other.Confidence != 0F) {
+            Confidence = other.Confidence;
+          }
+          if (other.AnswerRate != 0F) {
+            AnswerRate = other.AnswerRate;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        public void MergeFrom(pb::CodedInputStream input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 13: {
+                Precision = input.ReadFloat();
+                break;
+              }
+              case 21: {
+                Confidence = input.ReadFloat();
+                break;
+              }
+              case 29: {
+                AnswerRate = input.ReadFloat();
+                break;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+    #endregion
 
   }
 

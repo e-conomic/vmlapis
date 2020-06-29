@@ -50,17 +50,33 @@ public final class ModelRegistryOuterClass {
     long getModelVersion();
 
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>int32 sample_size = 4;</code>
      */
-    boolean hasModelMetadata();
+    int getSampleSize();
+
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata();
+    java.util.List<asgt.type.ModelMetadata.TargetMetrics> 
+        getTargetMetricsList();
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder();
+    asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index);
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    int getTargetMetricsCount();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+        getTargetMetricsOrBuilderList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1.RegisterModelRequest}
@@ -76,6 +92,8 @@ public final class ModelRegistryOuterClass {
     }
     private RegisterModelRequest() {
       modelVersion_ = 0L;
+      sampleSize_ = 0;
+      targetMetrics_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -133,17 +151,18 @@ public final class ModelRegistryOuterClass {
               modelVersion_ = input.readInt64();
               break;
             }
-            case 34: {
-              asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder subBuilder = null;
-              if (modelMetadata_ != null) {
-                subBuilder = modelMetadata_.toBuilder();
-              }
-              modelMetadata_ = input.readMessage(asgt.type.ModelMetadataOuterClass.ModelMetadata.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(modelMetadata_);
-                modelMetadata_ = subBuilder.buildPartial();
-              }
+            case 32: {
 
+              sampleSize_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                targetMetrics_ = new java.util.ArrayList<asgt.type.ModelMetadata.TargetMetrics>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              targetMetrics_.add(
+                  input.readMessage(asgt.type.ModelMetadata.TargetMetrics.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -161,6 +180,9 @@ public final class ModelRegistryOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -178,6 +200,7 @@ public final class ModelRegistryOuterClass {
               asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.class, asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
@@ -229,25 +252,48 @@ public final class ModelRegistryOuterClass {
       return modelVersion_;
     }
 
-    public static final int MODEL_METADATA_FIELD_NUMBER = 4;
-    private asgt.type.ModelMetadataOuterClass.ModelMetadata modelMetadata_;
+    public static final int SAMPLE_SIZE_FIELD_NUMBER = 4;
+    private int sampleSize_;
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>int32 sample_size = 4;</code>
      */
-    public boolean hasModelMetadata() {
-      return modelMetadata_ != null;
+    public int getSampleSize() {
+      return sampleSize_;
+    }
+
+    public static final int TARGET_METRICS_FIELD_NUMBER = 5;
+    private java.util.List<asgt.type.ModelMetadata.TargetMetrics> targetMetrics_;
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public java.util.List<asgt.type.ModelMetadata.TargetMetrics> getTargetMetricsList() {
+      return targetMetrics_;
     }
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata() {
-      return modelMetadata_ == null ? asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+    public java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+        getTargetMetricsOrBuilderList() {
+      return targetMetrics_;
     }
     /**
-     * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder() {
-      return getModelMetadata();
+    public int getTargetMetricsCount() {
+      return targetMetrics_.size();
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index) {
+      return targetMetrics_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+        int index) {
+      return targetMetrics_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -273,8 +319,11 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
       }
-      if (modelMetadata_ != null) {
-        output.writeMessage(4, getModelMetadata());
+      if (sampleSize_ != 0) {
+        output.writeInt32(4, sampleSize_);
+      }
+      for (int i = 0; i < targetMetrics_.size(); i++) {
+        output.writeMessage(5, targetMetrics_.get(i));
       }
       unknownFields.writeTo(output);
     }
@@ -297,9 +346,13 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, modelVersion_);
       }
-      if (modelMetadata_ != null) {
+      if (sampleSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getModelMetadata());
+          .computeInt32Size(4, sampleSize_);
+      }
+      for (int i = 0; i < targetMetrics_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, targetMetrics_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -329,11 +382,10 @@ public final class ModelRegistryOuterClass {
       }
       result = result && (getModelVersion()
           == other.getModelVersion());
-      result = result && (hasModelMetadata() == other.hasModelMetadata());
-      if (hasModelMetadata()) {
-        result = result && getModelMetadata()
-            .equals(other.getModelMetadata());
-      }
+      result = result && (getSampleSize()
+          == other.getSampleSize());
+      result = result && getTargetMetricsList()
+          .equals(other.getTargetMetricsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -356,9 +408,11 @@ public final class ModelRegistryOuterClass {
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
-      if (hasModelMetadata()) {
-        hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
-        hash = (53 * hash) + getModelMetadata().hashCode();
+      hash = (37 * hash) + SAMPLE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getSampleSize();
+      if (getTargetMetricsCount() > 0) {
+        hash = (37 * hash) + TARGET_METRICS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetMetricsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -488,6 +542,7 @@ public final class ModelRegistryOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTargetMetricsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -507,11 +562,13 @@ public final class ModelRegistryOuterClass {
         }
         modelVersion_ = 0L;
 
-        if (modelMetadataBuilder_ == null) {
-          modelMetadata_ = null;
+        sampleSize_ = 0;
+
+        if (targetMetricsBuilder_ == null) {
+          targetMetrics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
-          modelMetadata_ = null;
-          modelMetadataBuilder_ = null;
+          targetMetricsBuilder_.clear();
         }
         return this;
       }
@@ -539,6 +596,8 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest buildPartial() {
         asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest result = new asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (datasetBuilder_ == null) {
           result.dataset_ = dataset_;
         } else {
@@ -550,11 +609,17 @@ public final class ModelRegistryOuterClass {
           result.revision_ = revisionBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
-        if (modelMetadataBuilder_ == null) {
-          result.modelMetadata_ = modelMetadata_;
+        result.sampleSize_ = sampleSize_;
+        if (targetMetricsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.targetMetrics_ = targetMetrics_;
         } else {
-          result.modelMetadata_ = modelMetadataBuilder_.build();
+          result.targetMetrics_ = targetMetricsBuilder_.build();
         }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -612,8 +677,34 @@ public final class ModelRegistryOuterClass {
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
         }
-        if (other.hasModelMetadata()) {
-          mergeModelMetadata(other.getModelMetadata());
+        if (other.getSampleSize() != 0) {
+          setSampleSize(other.getSampleSize());
+        }
+        if (targetMetricsBuilder_ == null) {
+          if (!other.targetMetrics_.isEmpty()) {
+            if (targetMetrics_.isEmpty()) {
+              targetMetrics_ = other.targetMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureTargetMetricsIsMutable();
+              targetMetrics_.addAll(other.targetMetrics_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.targetMetrics_.isEmpty()) {
+            if (targetMetricsBuilder_.isEmpty()) {
+              targetMetricsBuilder_.dispose();
+              targetMetricsBuilder_ = null;
+              targetMetrics_ = other.targetMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              targetMetricsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTargetMetricsFieldBuilder() : null;
+            } else {
+              targetMetricsBuilder_.addAllMessages(other.targetMetrics_);
+            }
+          }
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -643,6 +734,7 @@ public final class ModelRegistryOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -904,121 +996,270 @@ public final class ModelRegistryOuterClass {
         return this;
       }
 
-      private asgt.type.ModelMetadataOuterClass.ModelMetadata modelMetadata_ = null;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder> modelMetadataBuilder_;
+      private int sampleSize_ ;
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>int32 sample_size = 4;</code>
        */
-      public boolean hasModelMetadata() {
-        return modelMetadataBuilder_ != null || modelMetadata_ != null;
+      public int getSampleSize() {
+        return sampleSize_;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>int32 sample_size = 4;</code>
        */
-      public asgt.type.ModelMetadataOuterClass.ModelMetadata getModelMetadata() {
-        if (modelMetadataBuilder_ == null) {
-          return modelMetadata_ == null ? asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+      public Builder setSampleSize(int value) {
+        
+        sampleSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 sample_size = 4;</code>
+       */
+      public Builder clearSampleSize() {
+        
+        sampleSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.type.ModelMetadata.TargetMetrics> targetMetrics_ =
+        java.util.Collections.emptyList();
+      private void ensureTargetMetricsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          targetMetrics_ = new java.util.ArrayList<asgt.type.ModelMetadata.TargetMetrics>(targetMetrics_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder> targetMetricsBuilder_;
+
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public java.util.List<asgt.type.ModelMetadata.TargetMetrics> getTargetMetricsList() {
+        if (targetMetricsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetMetrics_);
         } else {
-          return modelMetadataBuilder_.getMessage();
+          return targetMetricsBuilder_.getMessageList();
         }
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public Builder setModelMetadata(asgt.type.ModelMetadataOuterClass.ModelMetadata value) {
-        if (modelMetadataBuilder_ == null) {
+      public int getTargetMetricsCount() {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.size();
+        } else {
+          return targetMetricsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index) {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.get(index);
+        } else {
+          return targetMetricsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder setTargetMetrics(
+          int index, asgt.type.ModelMetadata.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          modelMetadata_ = value;
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.set(index, value);
           onChanged();
         } else {
-          modelMetadataBuilder_.setMessage(value);
+          targetMetricsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public Builder setModelMetadata(
-          asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder builderForValue) {
-        if (modelMetadataBuilder_ == null) {
-          modelMetadata_ = builderForValue.build();
+      public Builder setTargetMetrics(
+          int index, asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.set(index, builderForValue.build());
           onChanged();
         } else {
-          modelMetadataBuilder_.setMessage(builderForValue.build());
+          targetMetricsBuilder_.setMessage(index, builderForValue.build());
         }
-
         return this;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public Builder mergeModelMetadata(asgt.type.ModelMetadataOuterClass.ModelMetadata value) {
-        if (modelMetadataBuilder_ == null) {
-          if (modelMetadata_ != null) {
-            modelMetadata_ =
-              asgt.type.ModelMetadataOuterClass.ModelMetadata.newBuilder(modelMetadata_).mergeFrom(value).buildPartial();
-          } else {
-            modelMetadata_ = value;
+      public Builder addTargetMetrics(asgt.type.ModelMetadata.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
           }
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(value);
           onChanged();
         } else {
-          modelMetadataBuilder_.mergeFrom(value);
+          targetMetricsBuilder_.addMessage(value);
         }
-
         return this;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public Builder clearModelMetadata() {
-        if (modelMetadataBuilder_ == null) {
-          modelMetadata_ = null;
+      public Builder addTargetMetrics(
+          int index, asgt.type.ModelMetadata.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(index, value);
           onChanged();
         } else {
-          modelMetadata_ = null;
-          modelMetadataBuilder_ = null;
+          targetMetricsBuilder_.addMessage(index, value);
         }
-
         return this;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder getModelMetadataBuilder() {
-        
-        onChanged();
-        return getModelMetadataFieldBuilder().getBuilder();
+      public Builder addTargetMetrics(
+          asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(builderForValue.build());
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder getModelMetadataOrBuilder() {
-        if (modelMetadataBuilder_ != null) {
-          return modelMetadataBuilder_.getMessageOrBuilder();
+      public Builder addTargetMetrics(
+          int index, asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(index, builderForValue.build());
+          onChanged();
         } else {
-          return modelMetadata_ == null ?
-              asgt.type.ModelMetadataOuterClass.ModelMetadata.getDefaultInstance() : modelMetadata_;
+          targetMetricsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addAllTargetMetrics(
+          java.lang.Iterable<? extends asgt.type.ModelMetadata.TargetMetrics> values) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, targetMetrics_);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder clearTargetMetrics() {
+        if (targetMetricsBuilder_ == null) {
+          targetMetrics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder removeTargetMetrics(int index) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.remove(index);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.ModelMetadata.TargetMetrics.Builder getTargetMetricsBuilder(
+          int index) {
+        return getTargetMetricsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+          int index) {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.get(index);  } else {
+          return targetMetricsBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>.asgt.type.ModelMetadata model_metadata = 4;</code>
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder> 
-          getModelMetadataFieldBuilder() {
-        if (modelMetadataBuilder_ == null) {
-          modelMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelMetadataOuterClass.ModelMetadata, asgt.type.ModelMetadataOuterClass.ModelMetadata.Builder, asgt.type.ModelMetadataOuterClass.ModelMetadataOrBuilder>(
-                  getModelMetadata(),
+      public java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+           getTargetMetricsOrBuilderList() {
+        if (targetMetricsBuilder_ != null) {
+          return targetMetricsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(targetMetrics_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.ModelMetadata.TargetMetrics.Builder addTargetMetricsBuilder() {
+        return getTargetMetricsFieldBuilder().addBuilder(
+            asgt.type.ModelMetadata.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.ModelMetadata.TargetMetrics.Builder addTargetMetricsBuilder(
+          int index) {
+        return getTargetMetricsFieldBuilder().addBuilder(
+            index, asgt.type.ModelMetadata.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public java.util.List<asgt.type.ModelMetadata.TargetMetrics.Builder> 
+           getTargetMetricsBuilderList() {
+        return getTargetMetricsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+          getTargetMetricsFieldBuilder() {
+        if (targetMetricsBuilder_ == null) {
+          targetMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder>(
+                  targetMetrics_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
                   isClean());
-          modelMetadata_ = null;
+          targetMetrics_ = null;
         }
-        return modelMetadataBuilder_;
+        return targetMetricsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2316,20 +2557,21 @@ public final class ModelRegistryOuterClass {
       "ataset.proto\032\025asgt/type/model.proto\032\036asg" +
       "t/type/model_metadata.proto\032\030asgt/type/r" +
       "evision.proto\032\033google/protobuf/empty.pro" +
-      "to\"\253\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
+      "to\"\300\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
       " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
       "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
-      "\030\003 \001(\003\0220\n\016model_metadata\030\004 \001(\0132\030.asgt.ty" +
-      "pe.ModelMetadata\"=\n\026GetCurrentModelReque" +
-      "st\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\"" +
-      ":\n\027GetCurrentModelResponse\022\037\n\005model\030\001 \001(" +
-      "\0132\020.asgt.type.Model2\327\001\n\rModelRegistry\022T\n" +
-      "\rRegisterModel\022+.asgt.modelregistry.v1.R" +
-      "egisterModelRequest\032\026.google.protobuf.Em" +
-      "pty\022p\n\017GetCurrentModel\022-.asgt.modelregis" +
-      "try.v1.GetCurrentModelRequest\032..asgt.mod" +
-      "elregistry.v1.GetCurrentModelResponseB\017Z" +
-      "\rmodelregistryb\006proto3"
+      "\030\003 \001(\003\022\023\n\013sample_size\030\004 \001(\005\0220\n\016target_me" +
+      "trics\030\005 \003(\0132\030.asgt.type.TargetMetrics\"=\n" +
+      "\026GetCurrentModelRequest\022#\n\007dataset\030\001 \001(\013" +
+      "2\022.asgt.type.Dataset\":\n\027GetCurrentModelR" +
+      "esponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model" +
+      "2\327\001\n\rModelRegistry\022T\n\rRegisterModel\022+.as" +
+      "gt.modelregistry.v1.RegisterModelRequest" +
+      "\032\026.google.protobuf.Empty\022p\n\017GetCurrentMo" +
+      "del\022-.asgt.modelregistry.v1.GetCurrentMo" +
+      "delRequest\032..asgt.modelregistry.v1.GetCu" +
+      "rrentModelResponseB\017Z\rmodelregistryb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2344,7 +2586,7 @@ public final class ModelRegistryOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.ModelMetadataOuterClass.getDescriptor(),
+          asgt.type.ModelMetadata.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
@@ -2353,7 +2595,7 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "ModelMetadata", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics", });
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_fieldAccessorTable = new
@@ -2368,7 +2610,7 @@ public final class ModelRegistryOuterClass {
         new java.lang.String[] { "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.ModelMetadataOuterClass.getDescriptor();
+    asgt.type.ModelMetadata.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
