@@ -8,6 +8,7 @@ import "google/protobuf/empty.proto";
 import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/revision.proto";
+import "asgt/type/target_metrics.proto";
 
 service ModelRegistry {
   rpc RegisterModel (RegisterModelRequest) returns (google.protobuf.Empty);
@@ -23,6 +24,8 @@ message RegisterModelRequest {
   asgt.type.Dataset dataset = 1;
   asgt.type.Revision revision = 2;
   int64 model_version = 3;
+  int32 sample_size = 4;
+  repeated asgt.type.TargetMetrics target_metrics = 5;
 }
 
 //message DeleteModelRequest {

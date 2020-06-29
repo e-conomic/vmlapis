@@ -18,6 +18,8 @@ var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js')
 
+var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js')
+
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 const proto = {};
 proto.asgt = {};

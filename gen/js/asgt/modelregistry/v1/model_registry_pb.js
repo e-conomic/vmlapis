@@ -14,6 +14,7 @@ var global = Function('return this')();
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
+var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelResponse', null, global);
@@ -30,12 +31,19 @@ goog.exportSymbol('proto.asgt.modelregistry.v1.RegisterModelRequest', null, glob
  * @constructor
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.modelregistry.v1.RegisterModelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.modelregistry.v1.RegisterModelRequest.displayName = 'proto.asgt.modelregistry.v1.RegisterModelRequest';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_ = [5];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -67,7 +75,10 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
     revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
-    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0)
+    modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    sampleSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
+    asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -117,6 +128,15 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
     case 3:
       var value = /** @type {number} */ (reader.readInt64());
       msg.setModelVersion(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSampleSize(value);
+      break;
+    case 5:
+      var value = new asgt_type_target_metrics_pb.TargetMetrics;
+      reader.readMessage(value,asgt_type_target_metrics_pb.TargetMetrics.deserializeBinaryFromReader);
+      msg.addTargetMetrics(value);
       break;
     default:
       reader.skipField();
@@ -168,6 +188,21 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
     writer.writeInt64(
       3,
       f
+    );
+  }
+  f = message.getSampleSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getTargetMetricsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      5,
+      f,
+      asgt_type_target_metrics_pb.TargetMetrics.serializeBinaryToWriter
     );
   }
 };
@@ -245,6 +280,52 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getModelVersion = fun
 /** @param {number} value */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setModelVersion = function(value) {
   jspb.Message.setProto3IntField(this, 3, value);
+};
+
+
+/**
+ * optional int32 sample_size = 4;
+ * @return {number}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getSampleSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setSampleSize = function(value) {
+  jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * repeated asgt.type.TargetMetrics target_metrics = 5;
+ * @return {!Array<!proto.asgt.type.TargetMetrics>}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTargetMetricsList = function() {
+  return /** @type{!Array<!proto.asgt.type.TargetMetrics>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_metrics_pb.TargetMetrics, 5));
+};
+
+
+/** @param {!Array<!proto.asgt.type.TargetMetrics>} value */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTargetMetricsList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 5, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.TargetMetrics=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.addTargetMetrics = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.asgt.type.TargetMetrics, opt_index);
+};
+
+
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearTargetMetricsList = function() {
+  this.setTargetMetricsList([]);
 };
 
 

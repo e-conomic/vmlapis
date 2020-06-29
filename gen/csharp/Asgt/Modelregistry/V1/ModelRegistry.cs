@@ -27,22 +27,24 @@ namespace Asgt.Modelregistry.V1 {
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
             "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
             "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
-            "LnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8ieQoUUmVnaXN0",
-            "ZXJNb2RlbFJlcXVlc3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5E",
-            "YXRhc2V0EiUKCHJldmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9u",
-            "EhUKDW1vZGVsX3ZlcnNpb24YAyABKAMiPQoWR2V0Q3VycmVudE1vZGVsUmVx",
-            "dWVzdBIjCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFzZXQiOgoX",
-            "R2V0Q3VycmVudE1vZGVsUmVzcG9uc2USHwoFbW9kZWwYASABKAsyEC5hc2d0",
-            "LnR5cGUuTW9kZWwy1wEKDU1vZGVsUmVnaXN0cnkSVAoNUmVnaXN0ZXJNb2Rl",
-            "bBIrLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5SZWdpc3Rlck1vZGVsUmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJwCg9HZXRDdXJyZW50TW9kZWwS",
-            "LS5hc2d0Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVxdWVz",
-            "dBouLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJyZW50TW9kZWxSZXNw",
-            "b25zZUIPWg1tb2RlbHJlZ2lzdHJ5YgZwcm90bzM="));
+            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aG2dvb2ds",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byLAAQoUUmVnaXN0ZXJNb2RlbFJlcXVl",
+            "c3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0EiUKCHJl",
+            "dmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9uEhUKDW1vZGVsX3Zl",
+            "cnNpb24YAyABKAMSEwoLc2FtcGxlX3NpemUYBCABKAUSMAoOdGFyZ2V0X21l",
+            "dHJpY3MYBSADKAsyGC5hc2d0LnR5cGUuVGFyZ2V0TWV0cmljcyI9ChZHZXRD",
+            "dXJyZW50TW9kZWxSZXF1ZXN0EiMKB2RhdGFzZXQYASABKAsyEi5hc2d0LnR5",
+            "cGUuRGF0YXNldCI6ChdHZXRDdXJyZW50TW9kZWxSZXNwb25zZRIfCgVtb2Rl",
+            "bBgBIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbDLXAQoNTW9kZWxSZWdpc3RyeRJU",
+            "Cg1SZWdpc3Rlck1vZGVsEisuYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLlJlZ2lz",
+            "dGVyTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EnAKD0dl",
+            "dEN1cnJlbnRNb2RlbBItLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJy",
+            "ZW50TW9kZWxSZXF1ZXN0Gi4uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLkdldEN1",
+            "cnJlbnRNb2RlbFJlc3BvbnNlQg9aDW1vZGVscmVnaXN0cnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null)
           }));
@@ -79,6 +81,8 @@ namespace Asgt.Modelregistry.V1 {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       revision_ = other.revision_ != null ? other.revision_.Clone() : null;
       modelVersion_ = other.modelVersion_;
+      sampleSize_ = other.sampleSize_;
+      targetMetrics_ = other.targetMetrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -120,6 +124,27 @@ namespace Asgt.Modelregistry.V1 {
       }
     }
 
+    /// <summary>Field number for the "sample_size" field.</summary>
+    public const int SampleSizeFieldNumber = 4;
+    private int sampleSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int SampleSize {
+      get { return sampleSize_; }
+      set {
+        sampleSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "target_metrics" field.</summary>
+    public const int TargetMetricsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics> _repeated_targetMetrics_codec
+        = pb::FieldCodec.ForMessage(42, global::Asgt.Type.TargetMetrics.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> targetMetrics_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> TargetMetrics {
+      get { return targetMetrics_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RegisterModelRequest);
@@ -136,6 +161,8 @@ namespace Asgt.Modelregistry.V1 {
       if (!object.Equals(Dataset, other.Dataset)) return false;
       if (!object.Equals(Revision, other.Revision)) return false;
       if (ModelVersion != other.ModelVersion) return false;
+      if (SampleSize != other.SampleSize) return false;
+      if(!targetMetrics_.Equals(other.targetMetrics_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -145,6 +172,8 @@ namespace Asgt.Modelregistry.V1 {
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
       if (revision_ != null) hash ^= Revision.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
+      if (SampleSize != 0) hash ^= SampleSize.GetHashCode();
+      hash ^= targetMetrics_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -170,6 +199,11 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(24);
         output.WriteInt64(ModelVersion);
       }
+      if (SampleSize != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(SampleSize);
+      }
+      targetMetrics_.WriteTo(output, _repeated_targetMetrics_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -187,6 +221,10 @@ namespace Asgt.Modelregistry.V1 {
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
       }
+      if (SampleSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleSize);
+      }
+      size += targetMetrics_.CalculateSize(_repeated_targetMetrics_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -213,6 +251,10 @@ namespace Asgt.Modelregistry.V1 {
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
+      if (other.SampleSize != 0) {
+        SampleSize = other.SampleSize;
+      }
+      targetMetrics_.Add(other.targetMetrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -240,6 +282,14 @@ namespace Asgt.Modelregistry.V1 {
           }
           case 24: {
             ModelVersion = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            SampleSize = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            targetMetrics_.AddEntriesFrom(input, _repeated_targetMetrics_codec);
             break;
           }
         }

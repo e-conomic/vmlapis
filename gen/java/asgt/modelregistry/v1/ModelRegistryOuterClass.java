@@ -48,6 +48,35 @@ public final class ModelRegistryOuterClass {
      * <code>int64 model_version = 3;</code>
      */
     long getModelVersion();
+
+    /**
+     * <code>int32 sample_size = 4;</code>
+     */
+    int getSampleSize();
+
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> 
+        getTargetMetricsList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index);
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    int getTargetMetricsCount();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+        getTargetMetricsOrBuilderList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1.RegisterModelRequest}
@@ -63,6 +92,8 @@ public final class ModelRegistryOuterClass {
     }
     private RegisterModelRequest() {
       modelVersion_ = 0L;
+      sampleSize_ = 0;
+      targetMetrics_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -120,6 +151,20 @@ public final class ModelRegistryOuterClass {
               modelVersion_ = input.readInt64();
               break;
             }
+            case 32: {
+
+              sampleSize_ = input.readInt32();
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              targetMetrics_.add(
+                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -135,6 +180,9 @@ public final class ModelRegistryOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -152,6 +200,7 @@ public final class ModelRegistryOuterClass {
               asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.class, asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest.Builder.class);
     }
 
+    private int bitField0_;
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
@@ -203,6 +252,50 @@ public final class ModelRegistryOuterClass {
       return modelVersion_;
     }
 
+    public static final int SAMPLE_SIZE_FIELD_NUMBER = 4;
+    private int sampleSize_;
+    /**
+     * <code>int32 sample_size = 4;</code>
+     */
+    public int getSampleSize() {
+      return sampleSize_;
+    }
+
+    public static final int TARGET_METRICS_FIELD_NUMBER = 5;
+    private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_;
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
+      return targetMetrics_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+        getTargetMetricsOrBuilderList() {
+      return targetMetrics_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public int getTargetMetricsCount() {
+      return targetMetrics_.size();
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
+      return targetMetrics_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+     */
+    public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+        int index) {
+      return targetMetrics_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -226,6 +319,12 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
       }
+      if (sampleSize_ != 0) {
+        output.writeInt32(4, sampleSize_);
+      }
+      for (int i = 0; i < targetMetrics_.size(); i++) {
+        output.writeMessage(5, targetMetrics_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -246,6 +345,14 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, modelVersion_);
+      }
+      if (sampleSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, sampleSize_);
+      }
+      for (int i = 0; i < targetMetrics_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, targetMetrics_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -275,6 +382,10 @@ public final class ModelRegistryOuterClass {
       }
       result = result && (getModelVersion()
           == other.getModelVersion());
+      result = result && (getSampleSize()
+          == other.getSampleSize());
+      result = result && getTargetMetricsList()
+          .equals(other.getTargetMetricsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -297,6 +408,12 @@ public final class ModelRegistryOuterClass {
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
+      hash = (37 * hash) + SAMPLE_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getSampleSize();
+      if (getTargetMetricsCount() > 0) {
+        hash = (37 * hash) + TARGET_METRICS_FIELD_NUMBER;
+        hash = (53 * hash) + getTargetMetricsList().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -425,6 +542,7 @@ public final class ModelRegistryOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getTargetMetricsFieldBuilder();
         }
       }
       @java.lang.Override
@@ -444,6 +562,14 @@ public final class ModelRegistryOuterClass {
         }
         modelVersion_ = 0L;
 
+        sampleSize_ = 0;
+
+        if (targetMetricsBuilder_ == null) {
+          targetMetrics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          targetMetricsBuilder_.clear();
+        }
         return this;
       }
 
@@ -470,6 +596,8 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest buildPartial() {
         asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest result = new asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (datasetBuilder_ == null) {
           result.dataset_ = dataset_;
         } else {
@@ -481,6 +609,17 @@ public final class ModelRegistryOuterClass {
           result.revision_ = revisionBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
+        result.sampleSize_ = sampleSize_;
+        if (targetMetricsBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.targetMetrics_ = targetMetrics_;
+        } else {
+          result.targetMetrics_ = targetMetricsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -538,6 +677,35 @@ public final class ModelRegistryOuterClass {
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
         }
+        if (other.getSampleSize() != 0) {
+          setSampleSize(other.getSampleSize());
+        }
+        if (targetMetricsBuilder_ == null) {
+          if (!other.targetMetrics_.isEmpty()) {
+            if (targetMetrics_.isEmpty()) {
+              targetMetrics_ = other.targetMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureTargetMetricsIsMutable();
+              targetMetrics_.addAll(other.targetMetrics_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.targetMetrics_.isEmpty()) {
+            if (targetMetricsBuilder_.isEmpty()) {
+              targetMetricsBuilder_.dispose();
+              targetMetricsBuilder_ = null;
+              targetMetrics_ = other.targetMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              targetMetricsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getTargetMetricsFieldBuilder() : null;
+            } else {
+              targetMetricsBuilder_.addAllMessages(other.targetMetrics_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -566,6 +734,7 @@ public final class ModelRegistryOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -825,6 +994,272 @@ public final class ModelRegistryOuterClass {
         modelVersion_ = 0L;
         onChanged();
         return this;
+      }
+
+      private int sampleSize_ ;
+      /**
+       * <code>int32 sample_size = 4;</code>
+       */
+      public int getSampleSize() {
+        return sampleSize_;
+      }
+      /**
+       * <code>int32 sample_size = 4;</code>
+       */
+      public Builder setSampleSize(int value) {
+        
+        sampleSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 sample_size = 4;</code>
+       */
+      public Builder clearSampleSize() {
+        
+        sampleSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_ =
+        java.util.Collections.emptyList();
+      private void ensureTargetMetricsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(targetMetrics_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> targetMetricsBuilder_;
+
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
+        if (targetMetricsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(targetMetrics_);
+        } else {
+          return targetMetricsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public int getTargetMetricsCount() {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.size();
+        } else {
+          return targetMetricsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.get(index);
+        } else {
+          return targetMetricsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder setTargetMetrics(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.set(index, value);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder setTargetMetrics(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetMetricsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addTargetMetrics(asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(value);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addTargetMetrics(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (targetMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(index, value);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addTargetMetrics(
+          asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(builderForValue.build());
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addTargetMetrics(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder addAllTargetMetrics(
+          java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics> values) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, targetMetrics_);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder clearTargetMetrics() {
+        if (targetMetricsBuilder_ == null) {
+          targetMetrics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public Builder removeTargetMetrics(int index) {
+        if (targetMetricsBuilder_ == null) {
+          ensureTargetMetricsIsMutable();
+          targetMetrics_.remove(index);
+          onChanged();
+        } else {
+          targetMetricsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder getTargetMetricsBuilder(
+          int index) {
+        return getTargetMetricsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+          int index) {
+        if (targetMetricsBuilder_ == null) {
+          return targetMetrics_.get(index);  } else {
+          return targetMetricsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+           getTargetMetricsOrBuilderList() {
+        if (targetMetricsBuilder_ != null) {
+          return targetMetricsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(targetMetrics_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder() {
+        return getTargetMetricsFieldBuilder().addBuilder(
+            asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder(
+          int index) {
+        return getTargetMetricsFieldBuilder().addBuilder(
+            index, asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
+       */
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder> 
+           getTargetMetricsBuilderList() {
+        return getTargetMetricsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+          getTargetMetricsFieldBuilder() {
+        if (targetMetricsBuilder_ == null) {
+          targetMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
+                  targetMetrics_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          targetMetrics_ = null;
+        }
+        return targetMetricsBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2120,20 +2555,23 @@ public final class ModelRegistryOuterClass {
       "\n*asgt/modelregistry/v1/model_registry.p" +
       "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
       "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
-      "t/type/revision.proto\032\033google/protobuf/e" +
-      "mpty.proto\"y\n\024RegisterModelRequest\022#\n\007da" +
-      "taset\030\001 \001(\0132\022.asgt.type.Dataset\022%\n\010revis" +
-      "ion\030\002 \001(\0132\023.asgt.type.Revision\022\025\n\rmodel_" +
-      "version\030\003 \001(\003\"=\n\026GetCurrentModelRequest\022" +
-      "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\":\n\027" +
-      "GetCurrentModelResponse\022\037\n\005model\030\001 \001(\0132\020" +
-      ".asgt.type.Model2\327\001\n\rModelRegistry\022T\n\rRe" +
-      "gisterModel\022+.asgt.modelregistry.v1.Regi" +
-      "sterModelRequest\032\026.google.protobuf.Empty" +
-      "\022p\n\017GetCurrentModel\022-.asgt.modelregistry" +
-      ".v1.GetCurrentModelRequest\032..asgt.modelr" +
-      "egistry.v1.GetCurrentModelResponseB\017Z\rmo" +
-      "delregistryb\006proto3"
+      "t/type/revision.proto\032\036asgt/type/target_" +
+      "metrics.proto\032\033google/protobuf/empty.pro" +
+      "to\"\300\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
+      " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
+      "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
+      "\030\003 \001(\003\022\023\n\013sample_size\030\004 \001(\005\0220\n\016target_me" +
+      "trics\030\005 \003(\0132\030.asgt.type.TargetMetrics\"=\n" +
+      "\026GetCurrentModelRequest\022#\n\007dataset\030\001 \001(\013" +
+      "2\022.asgt.type.Dataset\":\n\027GetCurrentModelR" +
+      "esponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model" +
+      "2\327\001\n\rModelRegistry\022T\n\rRegisterModel\022+.as" +
+      "gt.modelregistry.v1.RegisterModelRequest" +
+      "\032\026.google.protobuf.Empty\022p\n\017GetCurrentMo" +
+      "del\022-.asgt.modelregistry.v1.GetCurrentMo" +
+      "delRequest\032..asgt.modelregistry.v1.GetCu" +
+      "rrentModelResponseB\017Z\rmodelregistryb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2149,6 +2587,7 @@ public final class ModelRegistryOuterClass {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
+          asgt.type.TargetMetricsOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor =
@@ -2156,7 +2595,7 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics", });
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_fieldAccessorTable = new
@@ -2172,6 +2611,7 @@ public final class ModelRegistryOuterClass {
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
+    asgt.type.TargetMetricsOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 
