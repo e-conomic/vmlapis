@@ -57,12 +57,12 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    java.util.List<asgt.type.ModelMetadata.TargetMetrics> 
+    java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> 
         getTargetMetricsList();
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index);
+    asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index);
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
@@ -70,12 +70,12 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+    java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getTargetMetricsOrBuilderList();
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+    asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
         int index);
   }
   /**
@@ -158,11 +158,11 @@ public final class ModelRegistryOuterClass {
             }
             case 42: {
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                targetMetrics_ = new java.util.ArrayList<asgt.type.ModelMetadata.TargetMetrics>();
+                targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
                 mutable_bitField0_ |= 0x00000010;
               }
               targetMetrics_.add(
-                  input.readMessage(asgt.type.ModelMetadata.TargetMetrics.parser(), extensionRegistry));
+                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -262,17 +262,17 @@ public final class ModelRegistryOuterClass {
     }
 
     public static final int TARGET_METRICS_FIELD_NUMBER = 5;
-    private java.util.List<asgt.type.ModelMetadata.TargetMetrics> targetMetrics_;
+    private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_;
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public java.util.List<asgt.type.ModelMetadata.TargetMetrics> getTargetMetricsList() {
+    public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
       return targetMetrics_;
     }
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+    public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getTargetMetricsOrBuilderList() {
       return targetMetrics_;
     }
@@ -285,13 +285,13 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index) {
+    public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
       return targetMetrics_.get(index);
     }
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
      */
-    public asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+    public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
         int index) {
       return targetMetrics_.get(index);
     }
@@ -1022,22 +1022,22 @@ public final class ModelRegistryOuterClass {
         return this;
       }
 
-      private java.util.List<asgt.type.ModelMetadata.TargetMetrics> targetMetrics_ =
+      private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_ =
         java.util.Collections.emptyList();
       private void ensureTargetMetricsIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          targetMetrics_ = new java.util.ArrayList<asgt.type.ModelMetadata.TargetMetrics>(targetMetrics_);
+          targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(targetMetrics_);
           bitField0_ |= 0x00000010;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder> targetMetricsBuilder_;
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> targetMetricsBuilder_;
 
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public java.util.List<asgt.type.ModelMetadata.TargetMetrics> getTargetMetricsList() {
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getTargetMetricsList() {
         if (targetMetricsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(targetMetrics_);
         } else {
@@ -1057,7 +1057,7 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadata.TargetMetrics getTargetMetrics(int index) {
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics getTargetMetrics(int index) {
         if (targetMetricsBuilder_ == null) {
           return targetMetrics_.get(index);
         } else {
@@ -1068,7 +1068,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder setTargetMetrics(
-          int index, asgt.type.ModelMetadata.TargetMetrics value) {
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
         if (targetMetricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1085,7 +1085,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder setTargetMetrics(
-          int index, asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
         if (targetMetricsBuilder_ == null) {
           ensureTargetMetricsIsMutable();
           targetMetrics_.set(index, builderForValue.build());
@@ -1098,7 +1098,7 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public Builder addTargetMetrics(asgt.type.ModelMetadata.TargetMetrics value) {
+      public Builder addTargetMetrics(asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
         if (targetMetricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1115,7 +1115,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder addTargetMetrics(
-          int index, asgt.type.ModelMetadata.TargetMetrics value) {
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
         if (targetMetricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1132,7 +1132,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder addTargetMetrics(
-          asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+          asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
         if (targetMetricsBuilder_ == null) {
           ensureTargetMetricsIsMutable();
           targetMetrics_.add(builderForValue.build());
@@ -1146,7 +1146,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder addTargetMetrics(
-          int index, asgt.type.ModelMetadata.TargetMetrics.Builder builderForValue) {
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
         if (targetMetricsBuilder_ == null) {
           ensureTargetMetricsIsMutable();
           targetMetrics_.add(index, builderForValue.build());
@@ -1160,7 +1160,7 @@ public final class ModelRegistryOuterClass {
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
       public Builder addAllTargetMetrics(
-          java.lang.Iterable<? extends asgt.type.ModelMetadata.TargetMetrics> values) {
+          java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics> values) {
         if (targetMetricsBuilder_ == null) {
           ensureTargetMetricsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1200,14 +1200,14 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadata.TargetMetrics.Builder getTargetMetricsBuilder(
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder getTargetMetricsBuilder(
           int index) {
         return getTargetMetricsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadata.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
+      public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
           int index) {
         if (targetMetricsBuilder_ == null) {
           return targetMetrics_.get(index);  } else {
@@ -1217,7 +1217,7 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public java.util.List<? extends asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+      public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
            getTargetMetricsOrBuilderList() {
         if (targetMetricsBuilder_ != null) {
           return targetMetricsBuilder_.getMessageOrBuilderList();
@@ -1228,31 +1228,31 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadata.TargetMetrics.Builder addTargetMetricsBuilder() {
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder() {
         return getTargetMetricsFieldBuilder().addBuilder(
-            asgt.type.ModelMetadata.TargetMetrics.getDefaultInstance());
+            asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public asgt.type.ModelMetadata.TargetMetrics.Builder addTargetMetricsBuilder(
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addTargetMetricsBuilder(
           int index) {
         return getTargetMetricsFieldBuilder().addBuilder(
-            index, asgt.type.ModelMetadata.TargetMetrics.getDefaultInstance());
+            index, asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
        */
-      public java.util.List<asgt.type.ModelMetadata.TargetMetrics.Builder> 
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder> 
            getTargetMetricsBuilderList() {
         return getTargetMetricsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder> 
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
           getTargetMetricsFieldBuilder() {
         if (targetMetricsBuilder_ == null) {
           targetMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.ModelMetadata.TargetMetrics, asgt.type.ModelMetadata.TargetMetrics.Builder, asgt.type.ModelMetadata.TargetMetricsOrBuilder>(
+              asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
                   targetMetrics_,
                   ((bitField0_ & 0x00000010) == 0x00000010),
                   getParentForChildren(),
@@ -2554,9 +2554,9 @@ public final class ModelRegistryOuterClass {
     java.lang.String[] descriptorData = {
       "\n*asgt/modelregistry/v1/model_registry.p" +
       "roto\022\025asgt.modelregistry.v1\032\027asgt/type/d" +
-      "ataset.proto\032\025asgt/type/model.proto\032\036asg" +
-      "t/type/model_metadata.proto\032\030asgt/type/r" +
-      "evision.proto\032\033google/protobuf/empty.pro" +
+      "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
+      "t/type/revision.proto\032\036asgt/type/target_" +
+      "metrics.proto\032\033google/protobuf/empty.pro" +
       "to\"\300\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
       " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
       "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
@@ -2586,8 +2586,8 @@ public final class ModelRegistryOuterClass {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.ModelMetadata.getDescriptor(),
           asgt.type.RevisionOuterClass.getDescriptor(),
+          asgt.type.TargetMetricsOuterClass.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
         }, assigner);
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor =
@@ -2610,8 +2610,8 @@ public final class ModelRegistryOuterClass {
         new java.lang.String[] { "Model", });
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.ModelMetadata.getDescriptor();
     asgt.type.RevisionOuterClass.getDescriptor();
+    asgt.type.TargetMetricsOuterClass.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
   }
 

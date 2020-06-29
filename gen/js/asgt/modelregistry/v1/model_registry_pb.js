@@ -13,8 +13,8 @@ var global = Function('return this')();
 
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
-var asgt_type_model_metadata_pb = require('../../../asgt/type/model_metadata_pb.js');
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
+var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelRequest', null, global);
 goog.exportSymbol('proto.asgt.modelregistry.v1.GetCurrentModelResponse', null, global);
@@ -78,7 +78,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
     sampleSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
-    asgt_type_model_metadata_pb.TargetMetrics.toObject, includeInstance)
+    asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -134,8 +134,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       msg.setSampleSize(value);
       break;
     case 5:
-      var value = new asgt_type_model_metadata_pb.TargetMetrics;
-      reader.readMessage(value,asgt_type_model_metadata_pb.TargetMetrics.deserializeBinaryFromReader);
+      var value = new asgt_type_target_metrics_pb.TargetMetrics;
+      reader.readMessage(value,asgt_type_target_metrics_pb.TargetMetrics.deserializeBinaryFromReader);
       msg.addTargetMetrics(value);
       break;
     default:
@@ -202,7 +202,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       5,
       f,
-      asgt_type_model_metadata_pb.TargetMetrics.serializeBinaryToWriter
+      asgt_type_target_metrics_pb.TargetMetrics.serializeBinaryToWriter
     );
   }
 };
@@ -304,7 +304,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setSampleSize = funct
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTargetMetricsList = function() {
   return /** @type{!Array<!proto.asgt.type.TargetMetrics>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_model_metadata_pb.TargetMetrics, 5));
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_metrics_pb.TargetMetrics, 5));
 };
 
 

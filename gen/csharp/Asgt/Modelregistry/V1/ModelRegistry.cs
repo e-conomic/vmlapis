@@ -26,8 +26,8 @@ namespace Asgt.Modelregistry.V1 {
           string.Concat(
             "Ciphc2d0L21vZGVscmVnaXN0cnkvdjEvbW9kZWxfcmVnaXN0cnkucHJvdG8S",
             "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
-            "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoeYXNndC90eXBlL21vZGVsX21l",
-            "dGFkYXRhLnByb3RvGhhhc2d0L3R5cGUvcmV2aXNpb24ucHJvdG8aG2dvb2ds",
+            "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
+            "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aG2dvb2ds",
             "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byLAAQoUUmVnaXN0ZXJNb2RlbFJlcXVl",
             "c3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0EiUKCHJl",
             "dmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9uEhUKDW1vZGVsX3Zl",
@@ -42,7 +42,7 @@ namespace Asgt.Modelregistry.V1 {
             "ZW50TW9kZWxSZXF1ZXN0Gi4uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLkdldEN1",
             "cnJlbnRNb2RlbFJlc3BvbnNlQg9aDW1vZGVscmVnaXN0cnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.ModelMetadataReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
