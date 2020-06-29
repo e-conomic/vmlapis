@@ -5,10 +5,14 @@ package asgt.type;
 option go_package = "type";
 
 
-message ModelMetadata {
-    int64 model_version = 1;
-    // Targets used to train the model
-    string targets = 2;
-    // Number of samples used to train the model
-    int32 sample_size = 3;
+message TargetMetrics {
+    message Metric {
+        float precision = 1;
+        float confidence = 2;
+        float answer_rate = 3;
+    }
+
+    string target = 1;
+    repeated Metric metrics = 2;
 }
+
