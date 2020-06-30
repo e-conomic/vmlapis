@@ -5261,6 +5261,31 @@ public final class DataServiceOuterClass {
      * <code>.asgt.type.Model model = 2;</code>
      */
     asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
+
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    boolean hasRevision();
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    asgt.type.RevisionOuterClass.Revision getRevision();
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1.GetInfoResponse}
@@ -5323,6 +5348,19 @@ public final class DataServiceOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              asgt.type.RevisionOuterClass.Revision.Builder subBuilder = null;
+              if (revision_ != null) {
+                subBuilder = revision_.toBuilder();
+              }
+              revision_ = input.readMessage(asgt.type.RevisionOuterClass.Revision.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(revision_);
+                revision_ = subBuilder.buildPartial();
               }
 
               break;
@@ -5413,6 +5451,39 @@ public final class DataServiceOuterClass {
       return getModel();
     }
 
+    public static final int REVISION_FIELD_NUMBER = 3;
+    private asgt.type.RevisionOuterClass.Revision revision_;
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    public boolean hasRevision() {
+      return revision_ != null;
+    }
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    public asgt.type.RevisionOuterClass.Revision getRevision() {
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+    }
+    /**
+     * <pre>
+     * The latest revision
+     * </pre>
+     *
+     * <code>.asgt.type.Revision revision = 3;</code>
+     */
+    public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+      return getRevision();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -5433,6 +5504,9 @@ public final class DataServiceOuterClass {
       if (model_ != null) {
         output.writeMessage(2, getModel());
       }
+      if (revision_ != null) {
+        output.writeMessage(3, getRevision());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -5449,6 +5523,10 @@ public final class DataServiceOuterClass {
       if (model_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getModel());
+      }
+      if (revision_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getRevision());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -5476,6 +5554,11 @@ public final class DataServiceOuterClass {
         result = result && getModel()
             .equals(other.getModel());
       }
+      result = result && (hasRevision() == other.hasRevision());
+      if (hasRevision()) {
+        result = result && getRevision()
+            .equals(other.getRevision());
+      }
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -5494,6 +5577,10 @@ public final class DataServiceOuterClass {
       if (hasModel()) {
         hash = (37 * hash) + MODEL_FIELD_NUMBER;
         hash = (53 * hash) + getModel().hashCode();
+      }
+      if (hasRevision()) {
+        hash = (37 * hash) + REVISION_FIELD_NUMBER;
+        hash = (53 * hash) + getRevision().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -5640,6 +5727,12 @@ public final class DataServiceOuterClass {
           model_ = null;
           modelBuilder_ = null;
         }
+        if (revisionBuilder_ == null) {
+          revision_ = null;
+        } else {
+          revision_ = null;
+          revisionBuilder_ = null;
+        }
         return this;
       }
 
@@ -5675,6 +5768,11 @@ public final class DataServiceOuterClass {
           result.model_ = model_;
         } else {
           result.model_ = modelBuilder_.build();
+        }
+        if (revisionBuilder_ == null) {
+          result.revision_ = revision_;
+        } else {
+          result.revision_ = revisionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -5729,6 +5827,9 @@ public final class DataServiceOuterClass {
         }
         if (other.hasModel()) {
           mergeModel(other.getModel());
+        }
+        if (other.hasRevision()) {
+          mergeRevision(other.getRevision());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -6028,6 +6129,159 @@ public final class DataServiceOuterClass {
         }
         return modelBuilder_;
       }
+
+      private asgt.type.RevisionOuterClass.Revision revision_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> revisionBuilder_;
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public boolean hasRevision() {
+        return revisionBuilder_ != null || revision_ != null;
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public asgt.type.RevisionOuterClass.Revision getRevision() {
+        if (revisionBuilder_ == null) {
+          return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+        } else {
+          return revisionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public Builder setRevision(asgt.type.RevisionOuterClass.Revision value) {
+        if (revisionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          revision_ = value;
+          onChanged();
+        } else {
+          revisionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public Builder setRevision(
+          asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
+        if (revisionBuilder_ == null) {
+          revision_ = builderForValue.build();
+          onChanged();
+        } else {
+          revisionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
+        if (revisionBuilder_ == null) {
+          if (revision_ != null) {
+            revision_ =
+              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+          } else {
+            revision_ = value;
+          }
+          onChanged();
+        } else {
+          revisionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public Builder clearRevision() {
+        if (revisionBuilder_ == null) {
+          revision_ = null;
+          onChanged();
+        } else {
+          revision_ = null;
+          revisionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
+        
+        onChanged();
+        return getRevisionFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
+        if (revisionBuilder_ != null) {
+          return revisionBuilder_.getMessageOrBuilder();
+        } else {
+          return revision_ == null ?
+              asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
+        }
+      }
+      /**
+       * <pre>
+       * The latest revision
+       * </pre>
+       *
+       * <code>.asgt.type.Revision revision = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder> 
+          getRevisionFieldBuilder() {
+        if (revisionBuilder_ == null) {
+          revisionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              asgt.type.RevisionOuterClass.Revision, asgt.type.RevisionOuterClass.Revision.Builder, asgt.type.RevisionOuterClass.RevisionOrBuilder>(
+                  getRevision(),
+                  getParentForChildren(),
+                  isClean());
+          revision_ = null;
+        }
+        return revisionBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -6123,38 +6377,40 @@ public final class DataServiceOuterClass {
       "\n\037asgt/data/v1/data_service.proto\022\023asgt." +
       "dataservice.v1\032\027asgt/type/dataset.proto\032" +
       "\025asgt/type/model.proto\032 asgt/type/retent" +
-      "ion_policy.proto\032\026asgt/type/sample.proto" +
-      "\032\034google/api/annotations.proto\032\033google/p" +
-      "rotobuf/empty.proto\"\244\001\n\rCreateRequest\022\014\n" +
-      "\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022" +
-      "\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132\021.asgt" +
-      ".type.Sample\0224\n\020retention_policy\030\005 \001(\0132\032" +
-      ".asgt.type.RetentionPolicy\"S\n\021AppendData" +
-      "Request\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\"\n\007s" +
-      "amples\030\003 \003(\0132\021.asgt.type.Sample\"E\n\rDelet" +
-      "eRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r" +
-      "\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoRequest" +
-      "\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024UpdateDa" +
-      "tasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t" +
-      "\0224\n\020retention_policy\030\003 \001(\0132\032.asgt.type.R" +
-      "etentionPolicy\"W\n\017GetInfoResponse\022#\n\007dat" +
-      "aset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005model\030" +
-      "\002 \001(\0132\020.asgt.type.Model2\302\004\n\013DataService\022" +
-      "i\n\rCreateDataset\022\".asgt.dataservice.v1.C" +
-      "reateRequest\032\026.google.protobuf.Empty\"\034\202\323" +
-      "\344\223\002\026\"\021/v1/{type}:create:\001*\022q\n\nAppendData" +
-      "\022&.asgt.dataservice.v1.AppendDataRequest" +
-      "\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{t" +
-      "ype}/{name}:append:\001*\022f\n\nDeleteData\022\".as" +
-      "gt.dataservice.v1.DeleteRequest\032\026.google" +
-      ".protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:dele" +
-      "te:\001*\022t\n\007GetInfo\022#.asgt.dataservice.v1.G" +
-      "etInfoRequest\032$.asgt.dataservice.v1.GetI" +
-      "nfoResponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:i" +
-      "nfo\022w\n\rUpdateDataset\022).asgt.dataservice." +
-      "v1.UpdateDatasetRequest\032\026.google.protobu" +
-      "f.Empty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:updat" +
-      "e:\001*B\006Z\004datab\006proto3"
+      "ion_policy.proto\032\030asgt/type/revision.pro" +
+      "to\032\026asgt/type/sample.proto\032\034google/api/a" +
+      "nnotations.proto\032\033google/protobuf/empty." +
+      "proto\"\244\001\n\rCreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n" +
+      "\004type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007targets\030\006 \003" +
+      "(\t\022\"\n\007samples\030\004 \003(\0132\021.asgt.type.Sample\0224" +
+      "\n\020retention_policy\030\005 \001(\0132\032.asgt.type.Ret" +
+      "entionPolicy\"S\n\021AppendDataRequest\022\014\n\004nam" +
+      "e\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021" +
+      ".asgt.type.Sample\"E\n\rDeleteRequest\022\014\n\004ty" +
+      "pe\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B" +
+      "\007\n\005match\",\n\016GetInfoRequest\022\014\n\004name\030\001 \001(\t" +
+      "\022\014\n\004type\030\002 \001(\t\"h\n\024UpdateDatasetRequest\022\014" +
+      "\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\0224\n\020retention_" +
+      "policy\030\003 \001(\0132\032.asgt.type.RetentionPolicy" +
+      "\"~\n\017GetInfoResponse\022#\n\007dataset\030\001 \001(\0132\022.a" +
+      "sgt.type.Dataset\022\037\n\005model\030\002 \001(\0132\020.asgt.t" +
+      "ype.Model\022%\n\010revision\030\003 \001(\0132\023.asgt.type." +
+      "Revision2\302\004\n\013DataService\022i\n\rCreateDatase" +
+      "t\022\".asgt.dataservice.v1.CreateRequest\032\026." +
+      "google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type" +
+      "}:create:\001*\022q\n\nAppendData\022&.asgt.dataser" +
+      "vice.v1.AppendDataRequest\032\026.google.proto" +
+      "buf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:app" +
+      "end:\001*\022f\n\nDeleteData\022\".asgt.dataservice." +
+      "v1.DeleteRequest\032\026.google.protobuf.Empty" +
+      "\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInf" +
+      "o\022#.asgt.dataservice.v1.GetInfoRequest\032$" +
+      ".asgt.dataservice.v1.GetInfoResponse\"\036\202\323" +
+      "\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpdateDa" +
+      "taset\022).asgt.dataservice.v1.UpdateDatase" +
+      "tRequest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035" +
+      "\032\030/v1/{type}/{name}:update:\001*B\006Z\004datab\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6170,6 +6426,7 @@ public final class DataServiceOuterClass {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
+          asgt.type.RevisionOuterClass.getDescriptor(),
           asgt.type.SampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
@@ -6209,7 +6466,7 @@ public final class DataServiceOuterClass {
     internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor,
-        new java.lang.String[] { "Dataset", "Model", });
+        new java.lang.String[] { "Dataset", "Model", "Revision", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
@@ -6218,6 +6475,7 @@ public final class DataServiceOuterClass {
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
+    asgt.type.RevisionOuterClass.getDescriptor();
     asgt.type.SampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();

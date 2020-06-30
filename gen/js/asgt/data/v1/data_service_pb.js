@@ -14,6 +14,7 @@ var global = Function('return this')();
 var asgt_type_dataset_pb = require('../../../asgt/type/dataset_pb.js');
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy_pb.js');
+var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
@@ -1273,7 +1274,8 @@ proto.asgt.dataservice.v1.GetInfoResponse.prototype.toObject = function(opt_incl
 proto.asgt.dataservice.v1.GetInfoResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f),
+    revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1320,6 +1322,11 @@ proto.asgt.dataservice.v1.GetInfoResponse.deserializeBinaryFromReader = function
       reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
+    case 3:
+      var value = new asgt_type_revision_pb.Revision;
+      reader.readMessage(value,asgt_type_revision_pb.Revision.deserializeBinaryFromReader);
+      msg.setRevision(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -1363,6 +1370,14 @@ proto.asgt.dataservice.v1.GetInfoResponse.serializeBinaryToWriter = function(mes
       2,
       f,
       asgt_type_model_pb.Model.serializeBinaryToWriter
+    );
+  }
+  f = message.getRevision();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      asgt_type_revision_pb.Revision.serializeBinaryToWriter
     );
   }
 };
@@ -1425,6 +1440,36 @@ proto.asgt.dataservice.v1.GetInfoResponse.prototype.clearModel = function() {
  */
 proto.asgt.dataservice.v1.GetInfoResponse.prototype.hasModel = function() {
   return jspb.Message.getField(this, 2) != null;
+};
+
+
+/**
+ * optional asgt.type.Revision revision = 3;
+ * @return {?proto.asgt.type.Revision}
+ */
+proto.asgt.dataservice.v1.GetInfoResponse.prototype.getRevision = function() {
+  return /** @type{?proto.asgt.type.Revision} */ (
+    jspb.Message.getWrapperField(this, asgt_type_revision_pb.Revision, 3));
+};
+
+
+/** @param {?proto.asgt.type.Revision|undefined} value */
+proto.asgt.dataservice.v1.GetInfoResponse.prototype.setRevision = function(value) {
+  jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+proto.asgt.dataservice.v1.GetInfoResponse.prototype.clearRevision = function() {
+  this.setRevision(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1.GetInfoResponse.prototype.hasRevision = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 

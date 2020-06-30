@@ -10,6 +10,7 @@ import "asgt/type/retention_policy.proto";
 import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
+import "asgt/type/revision.proto";
 
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
@@ -84,7 +85,8 @@ message UpdateDatasetRequest {
 
 message GetInfoResponse {
   asgt.type.Dataset dataset = 1;
-
   // The most recently trained model; empty if no model has been trained
   asgt.type.Model model = 2;
+  // The latest revision
+  asgt.type.Revision revision = 3;
 }
