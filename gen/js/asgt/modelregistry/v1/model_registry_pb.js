@@ -42,7 +42,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_ = [7];
+proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_ = [5];
 
 
 
@@ -76,9 +76,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
     revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    totalSampleSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    trainingSampleSize: jspb.Message.getFieldWithDefault(msg, 5, 0),
-    validationSampleSize: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    metricsMap: (f = msg.getMetricsMap()) ? f.toObject(includeInstance, undefined) : [],
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
   };
@@ -132,18 +130,12 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       msg.setModelVersion(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setTotalSampleSize(value);
+      var value = msg.getMetricsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readInt32, null, "");
+         });
       break;
     case 5:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setTrainingSampleSize(value);
-      break;
-    case 6:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setValidationSampleSize(value);
-      break;
-    case 7:
       var value = new asgt_type_target_metrics_pb.TargetMetrics;
       reader.readMessage(value,asgt_type_target_metrics_pb.TargetMetrics.deserializeBinaryFromReader);
       msg.addTargetMetrics(value);
@@ -200,31 +192,14 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       f
     );
   }
-  f = message.getTotalSampleSize();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
-  }
-  f = message.getTrainingSampleSize();
-  if (f !== 0) {
-    writer.writeInt32(
-      5,
-      f
-    );
-  }
-  f = message.getValidationSampleSize();
-  if (f !== 0) {
-    writer.writeInt32(
-      6,
-      f
-    );
+  f = message.getMetricsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeInt32);
   }
   f = message.getTargetMetricsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      7,
+      5,
       f,
       asgt_type_target_metrics_pb.TargetMetrics.serializeBinaryToWriter
     );
@@ -308,63 +283,36 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setModelVersion = fun
 
 
 /**
- * optional int32 total_sample_size = 4;
- * @return {number}
+ * map<string, int32> metrics = 4;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,number>}
  */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTotalSampleSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getMetricsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,number>} */ (
+      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      null));
 };
 
 
-/** @param {number} value */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTotalSampleSize = function(value) {
-  jspb.Message.setProto3IntField(this, 4, value);
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearMetricsMap = function() {
+  this.getMetricsMap().clear();
 };
 
 
 /**
- * optional int32 training_sample_size = 5;
- * @return {number}
- */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTrainingSampleSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTrainingSampleSize = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
-};
-
-
-/**
- * optional int32 validation_sample_size = 6;
- * @return {number}
- */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getValidationSampleSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
-};
-
-
-/** @param {number} value */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setValidationSampleSize = function(value) {
-  jspb.Message.setProto3IntField(this, 6, value);
-};
-
-
-/**
- * repeated asgt.type.TargetMetrics target_metrics = 7;
+ * repeated asgt.type.TargetMetrics target_metrics = 5;
  * @return {!Array<!proto.asgt.type.TargetMetrics>}
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTargetMetricsList = function() {
   return /** @type{!Array<!proto.asgt.type.TargetMetrics>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_metrics_pb.TargetMetrics, 7));
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_metrics_pb.TargetMetrics, 5));
 };
 
 
 /** @param {!Array<!proto.asgt.type.TargetMetrics>} value */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTargetMetricsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 7, value);
+  jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
@@ -374,7 +322,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setTargetMetricsList 
  * @return {!proto.asgt.type.TargetMetrics}
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.addTargetMetrics = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.asgt.type.TargetMetrics, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.asgt.type.TargetMetrics, opt_index);
 };
 
 
