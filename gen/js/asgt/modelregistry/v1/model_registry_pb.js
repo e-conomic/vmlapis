@@ -76,7 +76,7 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     dataset: (f = msg.getDataset()) && asgt_type_dataset_pb.Dataset.toObject(includeInstance, f),
     revision: (f = msg.getRevision()) && asgt_type_revision_pb.Revision.toObject(includeInstance, f),
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    sampleSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    metricsMap: (f = msg.getMetricsMap()) ? f.toObject(includeInstance, undefined) : [],
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
   };
@@ -130,8 +130,10 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       msg.setModelVersion(value);
       break;
     case 4:
-      var value = /** @type {number} */ (reader.readInt32());
-      msg.setSampleSize(value);
+      var value = msg.getMetricsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readInt32, null, "");
+         });
       break;
     case 5:
       var value = new asgt_type_target_metrics_pb.TargetMetrics;
@@ -190,12 +192,9 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       f
     );
   }
-  f = message.getSampleSize();
-  if (f !== 0) {
-    writer.writeInt32(
-      4,
-      f
-    );
+  f = message.getMetricsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeInt32);
   }
   f = message.getTargetMetricsList();
   if (f.length > 0) {
@@ -284,17 +283,20 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setModelVersion = fun
 
 
 /**
- * optional int32 sample_size = 4;
- * @return {number}
+ * map<string, int32> metrics = 4;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,number>}
  */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getSampleSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getMetricsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,number>} */ (
+      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      null));
 };
 
 
-/** @param {number} value */
-proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setSampleSize = function(value) {
-  jspb.Message.setProto3IntField(this, 4, value);
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearMetricsMap = function() {
+  this.getMetricsMap().clear();
 };
 
 

@@ -50,9 +50,38 @@ public final class ModelRegistryOuterClass {
     long getModelVersion();
 
     /**
-     * <code>int32 sample_size = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
      */
-    int getSampleSize();
+    int getMetricsCount();
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+    boolean containsMetrics(
+        java.lang.String key);
+    /**
+     * Use {@link #getMetricsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getMetrics();
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.Integer>
+    getMetricsMap();
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+
+    int getMetricsOrDefault(
+        java.lang.String key,
+        int defaultValue);
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+
+    int getMetricsOrThrow(
+        java.lang.String key);
 
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5;</code>
@@ -92,7 +121,6 @@ public final class ModelRegistryOuterClass {
     }
     private RegisterModelRequest() {
       modelVersion_ = 0L;
-      sampleSize_ = 0;
       targetMetrics_ = java.util.Collections.emptyList();
     }
 
@@ -151,9 +179,17 @@ public final class ModelRegistryOuterClass {
               modelVersion_ = input.readInt64();
               break;
             }
-            case 32: {
-
-              sampleSize_ = input.readInt32();
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                metrics_ = com.google.protobuf.MapField.newMapField(
+                    MetricsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+              metrics__ = input.readMessage(
+                  MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              metrics_.getMutableMap().put(
+                  metrics__.getKey(), metrics__.getValue());
               break;
             }
             case 42: {
@@ -192,6 +228,18 @@ public final class ModelRegistryOuterClass {
       return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor;
     }
 
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 4:
+          return internalGetMetrics();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -252,13 +300,80 @@ public final class ModelRegistryOuterClass {
       return modelVersion_;
     }
 
-    public static final int SAMPLE_SIZE_FIELD_NUMBER = 4;
-    private int sampleSize_;
+    public static final int METRICS_FIELD_NUMBER = 4;
+    private static final class MetricsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.Integer> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.Integer>newDefaultInstance(
+                  asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.INT32,
+                  0);
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.Integer> metrics_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+    internalGetMetrics() {
+      if (metrics_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            MetricsDefaultEntryHolder.defaultEntry);
+      }
+      return metrics_;
+    }
+
+    public int getMetricsCount() {
+      return internalGetMetrics().getMap().size();
+    }
     /**
-     * <code>int32 sample_size = 4;</code>
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
      */
-    public int getSampleSize() {
-      return sampleSize_;
+
+    public boolean containsMetrics(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetMetrics().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getMetricsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.Integer> getMetrics() {
+      return getMetricsMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.Integer> getMetricsMap() {
+      return internalGetMetrics().getMap();
+    }
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+
+    public int getMetricsOrDefault(
+        java.lang.String key,
+        int defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetMetrics().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, int32&gt; metrics = 4;</code>
+     */
+
+    public int getMetricsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.Integer> map =
+          internalGetMetrics().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
     }
 
     public static final int TARGET_METRICS_FIELD_NUMBER = 5;
@@ -319,9 +434,12 @@ public final class ModelRegistryOuterClass {
       if (modelVersion_ != 0L) {
         output.writeInt64(3, modelVersion_);
       }
-      if (sampleSize_ != 0) {
-        output.writeInt32(4, sampleSize_);
-      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetMetrics(),
+          MetricsDefaultEntryHolder.defaultEntry,
+          4);
       for (int i = 0; i < targetMetrics_.size(); i++) {
         output.writeMessage(5, targetMetrics_.get(i));
       }
@@ -346,9 +464,15 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(3, modelVersion_);
       }
-      if (sampleSize_ != 0) {
+      for (java.util.Map.Entry<java.lang.String, java.lang.Integer> entry
+           : internalGetMetrics().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.Integer>
+        metrics__ = MetricsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, sampleSize_);
+            .computeMessageSize(4, metrics__);
       }
       for (int i = 0; i < targetMetrics_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
@@ -382,8 +506,8 @@ public final class ModelRegistryOuterClass {
       }
       result = result && (getModelVersion()
           == other.getModelVersion());
-      result = result && (getSampleSize()
-          == other.getSampleSize());
+      result = result && internalGetMetrics().equals(
+          other.internalGetMetrics());
       result = result && getTargetMetricsList()
           .equals(other.getTargetMetricsList());
       result = result && unknownFields.equals(other.unknownFields);
@@ -408,8 +532,10 @@ public final class ModelRegistryOuterClass {
       hash = (37 * hash) + MODEL_VERSION_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getModelVersion());
-      hash = (37 * hash) + SAMPLE_SIZE_FIELD_NUMBER;
-      hash = (53 * hash) + getSampleSize();
+      if (!internalGetMetrics().getMap().isEmpty()) {
+        hash = (37 * hash) + METRICS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetMetrics().hashCode();
+      }
       if (getTargetMetricsCount() > 0) {
         hash = (37 * hash) + TARGET_METRICS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetMetricsList().hashCode();
@@ -521,6 +647,28 @@ public final class ModelRegistryOuterClass {
         return asgt.modelregistry.v1.ModelRegistryOuterClass.internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor;
       }
 
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMetrics();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 4:
+            return internalGetMutableMetrics();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
@@ -562,8 +710,7 @@ public final class ModelRegistryOuterClass {
         }
         modelVersion_ = 0L;
 
-        sampleSize_ = 0;
-
+        internalGetMutableMetrics().clear();
         if (targetMetricsBuilder_ == null) {
           targetMetrics_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -609,7 +756,8 @@ public final class ModelRegistryOuterClass {
           result.revision_ = revisionBuilder_.build();
         }
         result.modelVersion_ = modelVersion_;
-        result.sampleSize_ = sampleSize_;
+        result.metrics_ = internalGetMetrics();
+        result.metrics_.makeImmutable();
         if (targetMetricsBuilder_ == null) {
           if (((bitField0_ & 0x00000010) == 0x00000010)) {
             targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
@@ -677,9 +825,8 @@ public final class ModelRegistryOuterClass {
         if (other.getModelVersion() != 0L) {
           setModelVersion(other.getModelVersion());
         }
-        if (other.getSampleSize() != 0) {
-          setSampleSize(other.getSampleSize());
-        }
+        internalGetMutableMetrics().mergeFrom(
+            other.internalGetMetrics());
         if (targetMetricsBuilder_ == null) {
           if (!other.targetMetrics_.isEmpty()) {
             if (targetMetrics_.isEmpty()) {
@@ -996,29 +1143,126 @@ public final class ModelRegistryOuterClass {
         return this;
       }
 
-      private int sampleSize_ ;
-      /**
-       * <code>int32 sample_size = 4;</code>
-       */
-      public int getSampleSize() {
-        return sampleSize_;
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.Integer> metrics_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetMetrics() {
+        if (metrics_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              MetricsDefaultEntryHolder.defaultEntry);
+        }
+        return metrics_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
+      internalGetMutableMetrics() {
+        onChanged();;
+        if (metrics_ == null) {
+          metrics_ = com.google.protobuf.MapField.newMapField(
+              MetricsDefaultEntryHolder.defaultEntry);
+        }
+        if (!metrics_.isMutable()) {
+          metrics_ = metrics_.copy();
+        }
+        return metrics_;
+      }
+
+      public int getMetricsCount() {
+        return internalGetMetrics().getMap().size();
       }
       /**
-       * <code>int32 sample_size = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
        */
-      public Builder setSampleSize(int value) {
-        
-        sampleSize_ = value;
-        onChanged();
+
+      public boolean containsMetrics(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetMetrics().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getMetricsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer> getMetrics() {
+        return getMetricsMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.Integer> getMetricsMap() {
+        return internalGetMetrics().getMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       */
+
+      public int getMetricsOrDefault(
+          java.lang.String key,
+          int defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetMetrics().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       */
+
+      public int getMetricsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.Integer> map =
+            internalGetMetrics().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearMetrics() {
+        internalGetMutableMetrics().getMutableMap()
+            .clear();
         return this;
       }
       /**
-       * <code>int32 sample_size = 4;</code>
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
        */
-      public Builder clearSampleSize() {
+
+      public Builder removeMetrics(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableMetrics().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.Integer>
+      getMutableMetrics() {
+        return internalGetMutableMetrics().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       */
+      public Builder putMetrics(
+          java.lang.String key,
+          int value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
         
-        sampleSize_ = 0;
-        onChanged();
+        internalGetMutableMetrics().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, int32&gt; metrics = 4;</code>
+       */
+
+      public Builder putAllMetrics(
+          java.util.Map<java.lang.String, java.lang.Integer> values) {
+        internalGetMutableMetrics().getMutableMap()
+            .putAll(values);
         return this;
       }
 
@@ -2534,6 +2778,11 @@ public final class ModelRegistryOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -2557,21 +2806,23 @@ public final class ModelRegistryOuterClass {
       "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
       "t/type/revision.proto\032\036asgt/type/target_" +
       "metrics.proto\032\033google/protobuf/empty.pro" +
-      "to\"\300\001\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
+      "to\"\246\002\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
       " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
       "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
-      "\030\003 \001(\003\022\023\n\013sample_size\030\004 \001(\005\0220\n\016target_me" +
-      "trics\030\005 \003(\0132\030.asgt.type.TargetMetrics\"=\n" +
-      "\026GetCurrentModelRequest\022#\n\007dataset\030\001 \001(\013" +
-      "2\022.asgt.type.Dataset\":\n\027GetCurrentModelR" +
-      "esponse\022\037\n\005model\030\001 \001(\0132\020.asgt.type.Model" +
-      "2\327\001\n\rModelRegistry\022T\n\rRegisterModel\022+.as" +
-      "gt.modelregistry.v1.RegisterModelRequest" +
-      "\032\026.google.protobuf.Empty\022p\n\017GetCurrentMo" +
-      "del\022-.asgt.modelregistry.v1.GetCurrentMo" +
-      "delRequest\032..asgt.modelregistry.v1.GetCu" +
-      "rrentModelResponseB\017Z\rmodelregistryb\006pro" +
-      "to3"
+      "\030\003 \001(\003\022I\n\007metrics\030\004 \003(\01328.asgt.modelregi" +
+      "stry.v1.RegisterModelRequest.MetricsEntr" +
+      "y\0220\n\016target_metrics\030\005 \003(\0132\030.asgt.type.Ta" +
+      "rgetMetrics\032.\n\014MetricsEntry\022\013\n\003key\030\001 \001(\t" +
+      "\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026GetCurrentModelRe" +
+      "quest\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
+      "et\":\n\027GetCurrentModelResponse\022\037\n\005model\030\001" +
+      " \001(\0132\020.asgt.type.Model2\327\001\n\rModelRegistry" +
+      "\022T\n\rRegisterModel\022+.asgt.modelregistry.v" +
+      "1.RegisterModelRequest\032\026.google.protobuf" +
+      ".Empty\022p\n\017GetCurrentModel\022-.asgt.modelre" +
+      "gistry.v1.GetCurrentModelRequest\032..asgt." +
+      "modelregistry.v1.GetCurrentModelResponse" +
+      "B\017Z\rmodelregistryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2595,7 +2846,13 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", });
+    internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor =
+      internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor.getNestedTypes().get(0);
+    internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_modelregistry_v1_GetCurrentModelRequest_fieldAccessorTable = new
