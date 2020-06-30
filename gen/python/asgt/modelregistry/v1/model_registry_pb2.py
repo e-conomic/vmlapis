@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modelregistry.v1',
   syntax='proto3',
   serialized_options=_b('Z\rmodelregistry'),
-  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xc0\x01\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x13\n\x0bsample_size\x18\x04 \x01(\x05\x12\x30\n\x0etarget_metrics\x18\x05 \x03(\x0b\x32\x18.asgt.type.TargetMetrics\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model2\xd7\x01\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseB\x0fZ\rmodelregistryb\x06proto3')
+  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\x84\x02\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12\x19\n\x11total_sample_size\x18\x04 \x01(\x05\x12\x1c\n\x14training_sample_size\x18\x05 \x01(\x05\x12\x1e\n\x16validation_sample_size\x18\x06 \x01(\x05\x12\x30\n\x0etarget_metrics\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetrics\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model2\xd7\x01\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseB\x0fZ\rmodelregistryb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,asgt_dot_type_dot_target__metrics__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -60,15 +60,29 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='sample_size', full_name='asgt.modelregistry.v1.RegisterModelRequest.sample_size', index=3,
+      name='total_sample_size', full_name='asgt.modelregistry.v1.RegisterModelRequest.total_sample_size', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='target_metrics', full_name='asgt.modelregistry.v1.RegisterModelRequest.target_metrics', index=4,
-      number=5, type=11, cpp_type=10, label=3,
+      name='training_sample_size', full_name='asgt.modelregistry.v1.RegisterModelRequest.training_sample_size', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='validation_sample_size', full_name='asgt.modelregistry.v1.RegisterModelRequest.validation_sample_size', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='target_metrics', full_name='asgt.modelregistry.v1.RegisterModelRequest.target_metrics', index=6,
+      number=7, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -86,7 +100,7 @@ _REGISTERMODELREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=205,
-  serialized_end=397,
+  serialized_end=465,
 )
 
 
@@ -116,8 +130,8 @@ _GETCURRENTMODELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=399,
-  serialized_end=460,
+  serialized_start=467,
+  serialized_end=528,
 )
 
 
@@ -147,8 +161,8 @@ _GETCURRENTMODELRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=520,
+  serialized_start=530,
+  serialized_end=588,
 )
 
 _REGISTERMODELREQUEST.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
@@ -191,8 +205,8 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=523,
-  serialized_end=738,
+  serialized_start=591,
+  serialized_end=806,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterModel',

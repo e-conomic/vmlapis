@@ -28,23 +28,25 @@ namespace Asgt.Modelregistry.V1 {
             "FWFzZ3QubW9kZWxyZWdpc3RyeS52MRoXYXNndC90eXBlL2RhdGFzZXQucHJv",
             "dG8aFWFzZ3QvdHlwZS9tb2RlbC5wcm90bxoYYXNndC90eXBlL3JldmlzaW9u",
             "LnByb3RvGh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aG2dvb2ds",
-            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byLAAQoUUmVnaXN0ZXJNb2RlbFJlcXVl",
+            "ZS9wcm90b2J1Zi9lbXB0eS5wcm90byKEAgoUUmVnaXN0ZXJNb2RlbFJlcXVl",
             "c3QSIwoHZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0EiUKCHJl",
             "dmlzaW9uGAIgASgLMhMuYXNndC50eXBlLlJldmlzaW9uEhUKDW1vZGVsX3Zl",
-            "cnNpb24YAyABKAMSEwoLc2FtcGxlX3NpemUYBCABKAUSMAoOdGFyZ2V0X21l",
-            "dHJpY3MYBSADKAsyGC5hc2d0LnR5cGUuVGFyZ2V0TWV0cmljcyI9ChZHZXRD",
-            "dXJyZW50TW9kZWxSZXF1ZXN0EiMKB2RhdGFzZXQYASABKAsyEi5hc2d0LnR5",
-            "cGUuRGF0YXNldCI6ChdHZXRDdXJyZW50TW9kZWxSZXNwb25zZRIfCgVtb2Rl",
-            "bBgBIAEoCzIQLmFzZ3QudHlwZS5Nb2RlbDLXAQoNTW9kZWxSZWdpc3RyeRJU",
-            "Cg1SZWdpc3Rlck1vZGVsEisuYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLlJlZ2lz",
-            "dGVyTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EnAKD0dl",
-            "dEN1cnJlbnRNb2RlbBItLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJy",
-            "ZW50TW9kZWxSZXF1ZXN0Gi4uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLkdldEN1",
-            "cnJlbnRNb2RlbFJlc3BvbnNlQg9aDW1vZGVscmVnaXN0cnliBnByb3RvMw=="));
+            "cnNpb24YAyABKAMSGQoRdG90YWxfc2FtcGxlX3NpemUYBCABKAUSHAoUdHJh",
+            "aW5pbmdfc2FtcGxlX3NpemUYBSABKAUSHgoWdmFsaWRhdGlvbl9zYW1wbGVf",
+            "c2l6ZRgGIAEoBRIwCg50YXJnZXRfbWV0cmljcxgHIAMoCzIYLmFzZ3QudHlw",
+            "ZS5UYXJnZXRNZXRyaWNzIj0KFkdldEN1cnJlbnRNb2RlbFJlcXVlc3QSIwoH",
+            "ZGF0YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0IjoKF0dldEN1cnJl",
+            "bnRNb2RlbFJlc3BvbnNlEh8KBW1vZGVsGAEgASgLMhAuYXNndC50eXBlLk1v",
+            "ZGVsMtcBCg1Nb2RlbFJlZ2lzdHJ5ElQKDVJlZ2lzdGVyTW9kZWwSKy5hc2d0",
+            "Lm1vZGVscmVnaXN0cnkudjEuUmVnaXN0ZXJNb2RlbFJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkScAoPR2V0Q3VycmVudE1vZGVsEi0uYXNndC5t",
+            "b2RlbHJlZ2lzdHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlcXVlc3QaLi5hc2d0",
+            "Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVzcG9uc2VCD1oN",
+            "bW9kZWxyZWdpc3RyeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "SampleSize", "TargetMetrics" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "TotalSampleSize", "TrainingSampleSize", "ValidationSampleSize", "TargetMetrics" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null)
           }));
@@ -81,7 +83,9 @@ namespace Asgt.Modelregistry.V1 {
       dataset_ = other.dataset_ != null ? other.dataset_.Clone() : null;
       revision_ = other.revision_ != null ? other.revision_.Clone() : null;
       modelVersion_ = other.modelVersion_;
-      sampleSize_ = other.sampleSize_;
+      totalSampleSize_ = other.totalSampleSize_;
+      trainingSampleSize_ = other.trainingSampleSize_;
+      validationSampleSize_ = other.validationSampleSize_;
       targetMetrics_ = other.targetMetrics_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -124,21 +128,43 @@ namespace Asgt.Modelregistry.V1 {
       }
     }
 
-    /// <summary>Field number for the "sample_size" field.</summary>
-    public const int SampleSizeFieldNumber = 4;
-    private int sampleSize_;
+    /// <summary>Field number for the "total_sample_size" field.</summary>
+    public const int TotalSampleSizeFieldNumber = 4;
+    private int totalSampleSize_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int SampleSize {
-      get { return sampleSize_; }
+    public int TotalSampleSize {
+      get { return totalSampleSize_; }
       set {
-        sampleSize_ = value;
+        totalSampleSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "training_sample_size" field.</summary>
+    public const int TrainingSampleSizeFieldNumber = 5;
+    private int trainingSampleSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TrainingSampleSize {
+      get { return trainingSampleSize_; }
+      set {
+        trainingSampleSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validation_sample_size" field.</summary>
+    public const int ValidationSampleSizeFieldNumber = 6;
+    private int validationSampleSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ValidationSampleSize {
+      get { return validationSampleSize_; }
+      set {
+        validationSampleSize_ = value;
       }
     }
 
     /// <summary>Field number for the "target_metrics" field.</summary>
-    public const int TargetMetricsFieldNumber = 5;
+    public const int TargetMetricsFieldNumber = 7;
     private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics> _repeated_targetMetrics_codec
-        = pb::FieldCodec.ForMessage(42, global::Asgt.Type.TargetMetrics.Parser);
+        = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TargetMetrics.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> targetMetrics_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> TargetMetrics {
@@ -161,7 +187,9 @@ namespace Asgt.Modelregistry.V1 {
       if (!object.Equals(Dataset, other.Dataset)) return false;
       if (!object.Equals(Revision, other.Revision)) return false;
       if (ModelVersion != other.ModelVersion) return false;
-      if (SampleSize != other.SampleSize) return false;
+      if (TotalSampleSize != other.TotalSampleSize) return false;
+      if (TrainingSampleSize != other.TrainingSampleSize) return false;
+      if (ValidationSampleSize != other.ValidationSampleSize) return false;
       if(!targetMetrics_.Equals(other.targetMetrics_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -172,7 +200,9 @@ namespace Asgt.Modelregistry.V1 {
       if (dataset_ != null) hash ^= Dataset.GetHashCode();
       if (revision_ != null) hash ^= Revision.GetHashCode();
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
-      if (SampleSize != 0) hash ^= SampleSize.GetHashCode();
+      if (TotalSampleSize != 0) hash ^= TotalSampleSize.GetHashCode();
+      if (TrainingSampleSize != 0) hash ^= TrainingSampleSize.GetHashCode();
+      if (ValidationSampleSize != 0) hash ^= ValidationSampleSize.GetHashCode();
       hash ^= targetMetrics_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -199,9 +229,17 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(24);
         output.WriteInt64(ModelVersion);
       }
-      if (SampleSize != 0) {
+      if (TotalSampleSize != 0) {
         output.WriteRawTag(32);
-        output.WriteInt32(SampleSize);
+        output.WriteInt32(TotalSampleSize);
+      }
+      if (TrainingSampleSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(TrainingSampleSize);
+      }
+      if (ValidationSampleSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ValidationSampleSize);
       }
       targetMetrics_.WriteTo(output, _repeated_targetMetrics_codec);
       if (_unknownFields != null) {
@@ -221,8 +259,14 @@ namespace Asgt.Modelregistry.V1 {
       if (ModelVersion != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ModelVersion);
       }
-      if (SampleSize != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleSize);
+      if (TotalSampleSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalSampleSize);
+      }
+      if (TrainingSampleSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSampleSize);
+      }
+      if (ValidationSampleSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ValidationSampleSize);
       }
       size += targetMetrics_.CalculateSize(_repeated_targetMetrics_codec);
       if (_unknownFields != null) {
@@ -251,8 +295,14 @@ namespace Asgt.Modelregistry.V1 {
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
-      if (other.SampleSize != 0) {
-        SampleSize = other.SampleSize;
+      if (other.TotalSampleSize != 0) {
+        TotalSampleSize = other.TotalSampleSize;
+      }
+      if (other.TrainingSampleSize != 0) {
+        TrainingSampleSize = other.TrainingSampleSize;
+      }
+      if (other.ValidationSampleSize != 0) {
+        ValidationSampleSize = other.ValidationSampleSize;
       }
       targetMetrics_.Add(other.targetMetrics_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -285,10 +335,18 @@ namespace Asgt.Modelregistry.V1 {
             break;
           }
           case 32: {
-            SampleSize = input.ReadInt32();
+            TotalSampleSize = input.ReadInt32();
             break;
           }
-          case 42: {
+          case 40: {
+            TrainingSampleSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ValidationSampleSize = input.ReadInt32();
+            break;
+          }
+          case 58: {
             targetMetrics_.AddEntriesFrom(input, _repeated_targetMetrics_codec);
             break;
           }
