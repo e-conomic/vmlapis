@@ -24,10 +24,8 @@ message RegisterModelRequest {
   asgt.type.Dataset dataset = 1;
   asgt.type.Revision revision = 2;
   int64 model_version = 3;
-  int32 total_sample_size = 4;
-  int32 training_sample_size = 5;
-  int32 validation_sample_size = 6;
-  repeated asgt.type.TargetMetrics target_metrics = 7;
+  map<string, int32> metrics = 4;
+  repeated asgt.type.TargetMetrics target_metrics = 5;
 }
 
 //message DeleteModelRequest {
