@@ -6,6 +6,7 @@ option go_package = "type";
 
 import "gen_bq_schema/bq_field.proto";
 import "google/protobuf/timestamp.proto";
+import "asgt/type/target_metrics.proto";
 
 message Model {
   reserved 1 to 2;
@@ -13,11 +14,5 @@ message Model {
   google.protobuf.Timestamp created_at = 4;
   int32 dataset_size = 5;
   int32 training_size = 6;
-  repeated ConfidenceScore confidence_scores = 7;
-}
-
-message ConfidenceScore {
-  float precision = 1;
-  float confidence = 2;
-  float answer_rate = 3;
+  repeated asgt.type.TargetMetrics confidence_scores = 7;
 }
