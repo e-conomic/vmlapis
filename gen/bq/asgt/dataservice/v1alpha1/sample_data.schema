@@ -175,19 +175,31 @@
     "mode": "REPEATED",
     "fields": [
      {
-      "name": "precision",
-      "type": "FLOAT",
+      "name": "target",
+      "type": "STRING",
       "mode": "NULLABLE"
      },
      {
-      "name": "confidence",
-      "type": "FLOAT",
-      "mode": "NULLABLE"
-     },
-     {
-      "name": "answer_rate",
-      "type": "FLOAT",
-      "mode": "NULLABLE"
+      "name": "metrics",
+      "type": "RECORD",
+      "mode": "REPEATED",
+      "fields": [
+       {
+        "name": "precision",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "confidence",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+       },
+       {
+        "name": "answer_rate",
+        "type": "FLOAT",
+        "mode": "NULLABLE"
+       }
+      ]
      }
     ]
    }

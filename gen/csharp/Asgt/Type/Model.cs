@@ -24,20 +24,18 @@ namespace Asgt.Type {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRocZ2VuX2JxX3Nj",
-            "aGVtYS9icV9maWVsZC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byK5AQoFTW9kZWwSFgoHdmVyc2lvbhgDIAEoA0IF6j8CCAESLgoK",
-            "Y3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "FAoMZGF0YXNldF9zaXplGAUgASgFEhUKDXRyYWluaW5nX3NpemUYBiABKAUS",
-            "NQoRY29uZmlkZW5jZV9zY29yZXMYByADKAsyGi5hc2d0LnR5cGUuQ29uZmlk",
-            "ZW5jZVNjb3JlSgQIARADIk0KD0NvbmZpZGVuY2VTY29yZRIRCglwcmVjaXNp",
-            "b24YASABKAISEgoKY29uZmlkZW5jZRgCIAEoAhITCgthbnN3ZXJfcmF0ZRgD",
-            "IAEoAkIGWgR0eXBlYgZwcm90bzM="));
+            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
+            "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrcBCgVN",
+            "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxkYXRhc2V0X3Np",
+            "emUYBSABKAUSFQoNdHJhaW5pbmdfc2l6ZRgGIAEoBRIzChFjb25maWRlbmNl",
+            "X3Njb3JlcxgHIAMoCzIYLmFzZ3QudHlwZS5UYXJnZXRNZXRyaWNzSgQIARAD",
+            "QgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ConfidenceScore), global::Asgt.Type.ConfidenceScore.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores" }, null, null, null)
           }));
     }
     #endregion
@@ -128,11 +126,11 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "confidence_scores" field.</summary>
     public const int ConfidenceScoresFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Asgt.Type.ConfidenceScore> _repeated_confidenceScores_codec
-        = pb::FieldCodec.ForMessage(58, global::Asgt.Type.ConfidenceScore.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.ConfidenceScore> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.ConfidenceScore>();
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics> _repeated_confidenceScores_codec
+        = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TargetMetrics.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.ConfidenceScore> ConfidenceScores {
+    public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> ConfidenceScores {
       get { return confidenceScores_; }
     }
 
@@ -275,191 +273,6 @@ namespace Asgt.Type {
           }
           case 58: {
             confidenceScores_.AddEntriesFrom(input, _repeated_confidenceScores_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class ConfidenceScore : pb::IMessage<ConfidenceScore> {
-    private static readonly pb::MessageParser<ConfidenceScore> _parser = new pb::MessageParser<ConfidenceScore>(() => new ConfidenceScore());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<ConfidenceScore> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Type.ModelReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfidenceScore() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfidenceScore(ConfidenceScore other) : this() {
-      precision_ = other.precision_;
-      confidence_ = other.confidence_;
-      answerRate_ = other.answerRate_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public ConfidenceScore Clone() {
-      return new ConfidenceScore(this);
-    }
-
-    /// <summary>Field number for the "precision" field.</summary>
-    public const int PrecisionFieldNumber = 1;
-    private float precision_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Precision {
-      get { return precision_; }
-      set {
-        precision_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "confidence" field.</summary>
-    public const int ConfidenceFieldNumber = 2;
-    private float confidence_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Confidence {
-      get { return confidence_; }
-      set {
-        confidence_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "answer_rate" field.</summary>
-    public const int AnswerRateFieldNumber = 3;
-    private float answerRate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float AnswerRate {
-      get { return answerRate_; }
-      set {
-        answerRate_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as ConfidenceScore);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(ConfidenceScore other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Precision, other.Precision)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AnswerRate, other.AnswerRate)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Precision != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Precision);
-      if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
-      if (AnswerRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AnswerRate);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Precision != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(Precision);
-      }
-      if (Confidence != 0F) {
-        output.WriteRawTag(21);
-        output.WriteFloat(Confidence);
-      }
-      if (AnswerRate != 0F) {
-        output.WriteRawTag(29);
-        output.WriteFloat(AnswerRate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Precision != 0F) {
-        size += 1 + 4;
-      }
-      if (Confidence != 0F) {
-        size += 1 + 4;
-      }
-      if (AnswerRate != 0F) {
-        size += 1 + 4;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(ConfidenceScore other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Precision != 0F) {
-        Precision = other.Precision;
-      }
-      if (other.Confidence != 0F) {
-        Confidence = other.Confidence;
-      }
-      if (other.AnswerRate != 0F) {
-        AnswerRate = other.AnswerRate;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 13: {
-            Precision = input.ReadFloat();
-            break;
-          }
-          case 21: {
-            Confidence = input.ReadFloat();
-            break;
-          }
-          case 29: {
-            AnswerRate = input.ReadFloat();
             break;
           }
         }
