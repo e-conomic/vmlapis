@@ -26,13 +26,18 @@ namespace Asgt.Type {
           string.Concat(
             "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRocZ2VuX2JxX3Nj",
             "aGVtYS9icV9maWVsZC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byJVCgVNb2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpj",
-            "cmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEoE",
-            "CAEQA0IGWgR0eXBlYgZwcm90bzM="));
+            "cC5wcm90byK5AQoFTW9kZWwSFgoHdmVyc2lvbhgDIAEoA0IF6j8CCAESLgoK",
+            "Y3JlYXRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "FAoMZGF0YXNldF9zaXplGAUgASgFEhUKDXRyYWluaW5nX3NpemUYBiABKAUS",
+            "NQoRY29uZmlkZW5jZV9zY29yZXMYByADKAsyGi5hc2d0LnR5cGUuQ29uZmlk",
+            "ZW5jZVNjb3JlSgQIARADIk0KD0NvbmZpZGVuY2VTY29yZRIRCglwcmVjaXNp",
+            "b24YASABKAISEgoKY29uZmlkZW5jZRgCIAEoAhITCgthbnN3ZXJfcmF0ZRgD",
+            "IAEoAkIGWgR0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ConfidenceScore), global::Asgt.Type.ConfidenceScore.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null)
           }));
     }
     #endregion
@@ -66,6 +71,9 @@ namespace Asgt.Type {
     public Model(Model other) : this() {
       version_ = other.version_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      datasetSize_ = other.datasetSize_;
+      trainingSize_ = other.trainingSize_;
+      confidenceScores_ = other.confidenceScores_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,6 +104,38 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "dataset_size" field.</summary>
+    public const int DatasetSizeFieldNumber = 5;
+    private int datasetSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DatasetSize {
+      get { return datasetSize_; }
+      set {
+        datasetSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "training_size" field.</summary>
+    public const int TrainingSizeFieldNumber = 6;
+    private int trainingSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TrainingSize {
+      get { return trainingSize_; }
+      set {
+        trainingSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence_scores" field.</summary>
+    public const int ConfidenceScoresFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Asgt.Type.ConfidenceScore> _repeated_confidenceScores_codec
+        = pb::FieldCodec.ForMessage(58, global::Asgt.Type.ConfidenceScore.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.ConfidenceScore> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.ConfidenceScore>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.ConfidenceScore> ConfidenceScores {
+      get { return confidenceScores_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Model);
@@ -111,6 +151,9 @@ namespace Asgt.Type {
       }
       if (Version != other.Version) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (DatasetSize != other.DatasetSize) return false;
+      if (TrainingSize != other.TrainingSize) return false;
+      if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -119,6 +162,9 @@ namespace Asgt.Type {
       int hash = 1;
       if (Version != 0L) hash ^= Version.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
+      if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
+      hash ^= confidenceScores_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,6 +186,15 @@ namespace Asgt.Type {
         output.WriteRawTag(34);
         output.WriteMessage(CreatedAt);
       }
+      if (DatasetSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TrainingSize);
+      }
+      confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -154,6 +209,13 @@ namespace Asgt.Type {
       if (createdAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
       }
+      if (DatasetSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
+      }
+      size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -174,6 +236,13 @@ namespace Asgt.Type {
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
+      if (other.DatasetSize != 0) {
+        DatasetSize = other.DatasetSize;
+      }
+      if (other.TrainingSize != 0) {
+        TrainingSize = other.TrainingSize;
+      }
+      confidenceScores_.Add(other.confidenceScores_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -194,6 +263,203 @@ namespace Asgt.Type {
               createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(createdAt_);
+            break;
+          }
+          case 40: {
+            DatasetSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            TrainingSize = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            confidenceScores_.AddEntriesFrom(input, _repeated_confidenceScores_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ConfidenceScore : pb::IMessage<ConfidenceScore> {
+    private static readonly pb::MessageParser<ConfidenceScore> _parser = new pb::MessageParser<ConfidenceScore>(() => new ConfidenceScore());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ConfidenceScore> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.ModelReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfidenceScore() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfidenceScore(ConfidenceScore other) : this() {
+      precision_ = other.precision_;
+      confidence_ = other.confidence_;
+      answerRate_ = other.answerRate_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ConfidenceScore Clone() {
+      return new ConfidenceScore(this);
+    }
+
+    /// <summary>Field number for the "precision" field.</summary>
+    public const int PrecisionFieldNumber = 1;
+    private float precision_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Precision {
+      get { return precision_; }
+      set {
+        precision_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 2;
+    private float confidence_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "answer_rate" field.</summary>
+    public const int AnswerRateFieldNumber = 3;
+    private float answerRate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float AnswerRate {
+      get { return answerRate_; }
+      set {
+        answerRate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ConfidenceScore);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ConfidenceScore other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Precision, other.Precision)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AnswerRate, other.AnswerRate)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Precision != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Precision);
+      if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+      if (AnswerRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AnswerRate);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Precision != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Precision);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(Confidence);
+      }
+      if (AnswerRate != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(AnswerRate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Precision != 0F) {
+        size += 1 + 4;
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      if (AnswerRate != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ConfidenceScore other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Precision != 0F) {
+        Precision = other.Precision;
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
+      if (other.AnswerRate != 0F) {
+        AnswerRate = other.AnswerRate;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            Precision = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            AnswerRate = input.ReadFloat();
             break;
           }
         }

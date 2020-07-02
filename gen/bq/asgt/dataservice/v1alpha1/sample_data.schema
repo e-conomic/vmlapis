@@ -158,6 +158,38 @@
     "name": "created_at",
     "type": "TIMESTAMP",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "dataset_size",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "training_size",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "confidence_scores",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "precision",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "confidence",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "answer_rate",
+      "type": "FLOAT",
+      "mode": "NULLABLE"
+     }
+    ]
    }
   ]
  },

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.type',
   syntax='proto3',
   serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"U\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampJ\x04\x08\x01\x10\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_pb=_b('\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb9\x01\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x14\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x12\x15\n\rtraining_size\x18\x06 \x01(\x05\x12\x35\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x1a.asgt.type.ConfidenceScoreJ\x04\x08\x01\x10\x03\"M\n\x0f\x43onfidenceScore\x12\x11\n\tprecision\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x13\n\x0b\x61nswer_rate\x18\x03 \x01(\x02\x42\x06Z\x04typeb\x06proto3')
   ,
   dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -49,6 +49,27 @@ _MODEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dataset_size', full_name='asgt.type.Model.dataset_size', index=2,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='training_size', full_name='asgt.type.Model.training_size', index=3,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='confidence_scores', full_name='asgt.type.Model.confidence_scores', index=4,
+      number=7, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -61,12 +82,59 @@ _MODEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=99,
-  serialized_end=184,
+  serialized_start=100,
+  serialized_end=285,
+)
+
+
+_CONFIDENCESCORE = _descriptor.Descriptor(
+  name='ConfidenceScore',
+  full_name='asgt.type.ConfidenceScore',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='precision', full_name='asgt.type.ConfidenceScore.precision', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='confidence', full_name='asgt.type.ConfidenceScore.confidence', index=1,
+      number=2, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='answer_rate', full_name='asgt.type.ConfidenceScore.answer_rate', index=2,
+      number=3, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=287,
+  serialized_end=364,
 )
 
 _MODEL.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_MODEL.fields_by_name['confidence_scores'].message_type = _CONFIDENCESCORE
 DESCRIPTOR.message_types_by_name['Model'] = _MODEL
+DESCRIPTOR.message_types_by_name['ConfidenceScore'] = _CONFIDENCESCORE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Model = _reflection.GeneratedProtocolMessageType('Model', (_message.Message,), dict(
@@ -75,6 +143,13 @@ Model = _reflection.GeneratedProtocolMessageType('Model', (_message.Message,), d
   # @@protoc_insertion_point(class_scope:asgt.type.Model)
   ))
 _sym_db.RegisterMessage(Model)
+
+ConfidenceScore = _reflection.GeneratedProtocolMessageType('ConfidenceScore', (_message.Message,), dict(
+  DESCRIPTOR = _CONFIDENCESCORE,
+  __module__ = 'asgt.type.model_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.type.ConfidenceScore)
+  ))
+_sym_db.RegisterMessage(ConfidenceScore)
 
 
 DESCRIPTOR._options = None

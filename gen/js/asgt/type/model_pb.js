@@ -13,6 +13,7 @@ var global = Function('return this')();
 
 var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
+goog.exportSymbol('proto.asgt.type.ConfidenceScore', null, global);
 goog.exportSymbol('proto.asgt.type.Model', null, global);
 
 /**
@@ -26,12 +27,19 @@ goog.exportSymbol('proto.asgt.type.Model', null, global);
  * @constructor
  */
 proto.asgt.type.Model = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.type.Model.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.type.Model, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.type.Model.displayName = 'proto.asgt.type.Model';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.type.Model.repeatedFields_ = [7];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -62,7 +70,11 @@ proto.asgt.type.Model.prototype.toObject = function(opt_includeInstance) {
 proto.asgt.type.Model.toObject = function(includeInstance, msg) {
   var f, obj = {
     version: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    datasetSize: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    trainingSize: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    confidenceScoresList: jspb.Message.toObjectList(msg.getConfidenceScoresList(),
+    proto.asgt.type.ConfidenceScore.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -108,6 +120,19 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setCreatedAt(value);
       break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setDatasetSize(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrainingSize(value);
+      break;
+    case 7:
+      var value = new proto.asgt.type.ConfidenceScore;
+      reader.readMessage(value,proto.asgt.type.ConfidenceScore.deserializeBinaryFromReader);
+      msg.addConfidenceScores(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -150,6 +175,28 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
       4,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDatasetSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getTrainingSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getConfidenceScoresList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      7,
+      f,
+      proto.asgt.type.ConfidenceScore.serializeBinaryToWriter
     );
   }
 };
@@ -197,6 +244,263 @@ proto.asgt.type.Model.prototype.clearCreatedAt = function() {
  */
 proto.asgt.type.Model.prototype.hasCreatedAt = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional int32 dataset_size = 5;
+ * @return {number}
+ */
+proto.asgt.type.Model.prototype.getDatasetSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.Model.prototype.setDatasetSize = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 training_size = 6;
+ * @return {number}
+ */
+proto.asgt.type.Model.prototype.getTrainingSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.Model.prototype.setTrainingSize = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * repeated ConfidenceScore confidence_scores = 7;
+ * @return {!Array<!proto.asgt.type.ConfidenceScore>}
+ */
+proto.asgt.type.Model.prototype.getConfidenceScoresList = function() {
+  return /** @type{!Array<!proto.asgt.type.ConfidenceScore>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.asgt.type.ConfidenceScore, 7));
+};
+
+
+/** @param {!Array<!proto.asgt.type.ConfidenceScore>} value */
+proto.asgt.type.Model.prototype.setConfidenceScoresList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 7, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.ConfidenceScore=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.ConfidenceScore}
+ */
+proto.asgt.type.Model.prototype.addConfidenceScores = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.asgt.type.ConfidenceScore, opt_index);
+};
+
+
+proto.asgt.type.Model.prototype.clearConfidenceScoresList = function() {
+  this.setConfidenceScoresList([]);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.asgt.type.ConfidenceScore = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.asgt.type.ConfidenceScore, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.asgt.type.ConfidenceScore.displayName = 'proto.asgt.type.ConfidenceScore';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.asgt.type.ConfidenceScore.prototype.toObject = function(opt_includeInstance) {
+  return proto.asgt.type.ConfidenceScore.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.asgt.type.ConfidenceScore} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.type.ConfidenceScore.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    precision: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
+    confidence: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
+    answerRate: +jspb.Message.getFieldWithDefault(msg, 3, 0.0)
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.asgt.type.ConfidenceScore}
+ */
+proto.asgt.type.ConfidenceScore.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.asgt.type.ConfidenceScore;
+  return proto.asgt.type.ConfidenceScore.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.asgt.type.ConfidenceScore} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.asgt.type.ConfidenceScore}
+ */
+proto.asgt.type.ConfidenceScore.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setPrecision(value);
+      break;
+    case 2:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setConfidence(value);
+      break;
+    case 3:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setAnswerRate(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.asgt.type.ConfidenceScore.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.asgt.type.ConfidenceScore.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.asgt.type.ConfidenceScore} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.asgt.type.ConfidenceScore.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPrecision();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      1,
+      f
+    );
+  }
+  f = message.getConfidence();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      2,
+      f
+    );
+  }
+  f = message.getAnswerRate();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      3,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional float precision = 1;
+ * @return {number}
+ */
+proto.asgt.type.ConfidenceScore.prototype.getPrecision = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.ConfidenceScore.prototype.setPrecision = function(value) {
+  jspb.Message.setProto3FloatField(this, 1, value);
+};
+
+
+/**
+ * optional float confidence = 2;
+ * @return {number}
+ */
+proto.asgt.type.ConfidenceScore.prototype.getConfidence = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 2, 0.0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.ConfidenceScore.prototype.setConfidence = function(value) {
+  jspb.Message.setProto3FloatField(this, 2, value);
+};
+
+
+/**
+ * optional float answer_rate = 3;
+ * @return {number}
+ */
+proto.asgt.type.ConfidenceScore.prototype.getAnswerRate = function() {
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.ConfidenceScore.prototype.setAnswerRate = function(value) {
+  jspb.Message.setProto3FloatField(this, 3, value);
 };
 
 
