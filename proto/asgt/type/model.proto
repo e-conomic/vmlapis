@@ -12,7 +12,7 @@ message Model {
   reserved 1 to 2;
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
   google.protobuf.Timestamp created_at = 4;
-  int32 dataset_size = 5;
-  int32 training_size = 6;
-  repeated asgt.type.TargetMetrics confidence_scores = 7;
+  int32 dataset_size = 5 [(gen_bq_schema.bigquery).ignore = true]; 
+  int32 training_size = 6 [(gen_bq_schema.bigquery).ignore = true]; 
+  repeated asgt.type.TargetMetrics confidence_scores = 7 [(gen_bq_schema.bigquery).ignore = true]; 
 }
