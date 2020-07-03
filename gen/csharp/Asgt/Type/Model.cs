@@ -26,12 +26,12 @@ namespace Asgt.Type {
           string.Concat(
             "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
             "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrcBCgVN",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIswBCgVN",
             "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxkYXRhc2V0X3Np",
-            "emUYBSABKAUSFQoNdHJhaW5pbmdfc2l6ZRgGIAEoBRIzChFjb25maWRlbmNl",
-            "X3Njb3JlcxgHIAMoCzIYLmFzZ3QudHlwZS5UYXJnZXRNZXRyaWNzSgQIARAD",
-            "QgZaBHR5cGViBnByb3RvMw=="));
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
+            "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
+            "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
+            "dE1ldHJpY3NCBeo/AhgBSgQIARADQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

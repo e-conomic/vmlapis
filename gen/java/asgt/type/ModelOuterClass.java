@@ -37,35 +37,35 @@ public final class ModelOuterClass {
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
 
     /**
-     * <code>int32 dataset_size = 5;</code>
+     * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     int getDatasetSize();
 
     /**
-     * <code>int32 training_size = 6;</code>
+     * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     int getTrainingSize();
 
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> 
         getConfidenceScoresList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index);
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     int getConfidenceScoresCount();
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getConfidenceScoresOrBuilderList();
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
         int index);
@@ -219,7 +219,7 @@ public final class ModelOuterClass {
     public static final int DATASET_SIZE_FIELD_NUMBER = 5;
     private int datasetSize_;
     /**
-     * <code>int32 dataset_size = 5;</code>
+     * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getDatasetSize() {
       return datasetSize_;
@@ -228,7 +228,7 @@ public final class ModelOuterClass {
     public static final int TRAINING_SIZE_FIELD_NUMBER = 6;
     private int trainingSize_;
     /**
-     * <code>int32 training_size = 6;</code>
+     * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getTrainingSize() {
       return trainingSize_;
@@ -237,32 +237,32 @@ public final class ModelOuterClass {
     public static final int CONFIDENCE_SCORES_FIELD_NUMBER = 7;
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_;
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getConfidenceScoresList() {
       return confidenceScores_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
         getConfidenceScoresOrBuilderList() {
       return confidenceScores_;
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public int getConfidenceScoresCount() {
       return confidenceScores_.size();
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index) {
       return confidenceScores_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
      */
     public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
         int index) {
@@ -841,13 +841,13 @@ public final class ModelOuterClass {
 
       private int datasetSize_ ;
       /**
-       * <code>int32 dataset_size = 5;</code>
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public int getDatasetSize() {
         return datasetSize_;
       }
       /**
-       * <code>int32 dataset_size = 5;</code>
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setDatasetSize(int value) {
         
@@ -856,7 +856,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>int32 dataset_size = 5;</code>
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearDatasetSize() {
         
@@ -867,13 +867,13 @@ public final class ModelOuterClass {
 
       private int trainingSize_ ;
       /**
-       * <code>int32 training_size = 6;</code>
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public int getTrainingSize() {
         return trainingSize_;
       }
       /**
-       * <code>int32 training_size = 6;</code>
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setTrainingSize(int value) {
         
@@ -882,7 +882,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>int32 training_size = 6;</code>
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearTrainingSize() {
         
@@ -904,7 +904,7 @@ public final class ModelOuterClass {
           asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> confidenceScoresBuilder_;
 
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getConfidenceScoresList() {
         if (confidenceScoresBuilder_ == null) {
@@ -914,7 +914,7 @@ public final class ModelOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public int getConfidenceScoresCount() {
         if (confidenceScoresBuilder_ == null) {
@@ -924,7 +924,7 @@ public final class ModelOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index) {
         if (confidenceScoresBuilder_ == null) {
@@ -934,7 +934,7 @@ public final class ModelOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setConfidenceScores(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
@@ -951,7 +951,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder setConfidenceScores(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -965,7 +965,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addConfidenceScores(asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
         if (confidenceScoresBuilder_ == null) {
@@ -981,7 +981,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addConfidenceScores(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
@@ -998,7 +998,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addConfidenceScores(
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -1012,7 +1012,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addConfidenceScores(
           int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
@@ -1026,7 +1026,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder addAllConfidenceScores(
           java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics> values) {
@@ -1041,7 +1041,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearConfidenceScores() {
         if (confidenceScoresBuilder_ == null) {
@@ -1054,7 +1054,7 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder removeConfidenceScores(int index) {
         if (confidenceScoresBuilder_ == null) {
@@ -1067,14 +1067,14 @@ public final class ModelOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder getConfidenceScoresBuilder(
           int index) {
         return getConfidenceScoresFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
           int index) {
@@ -1084,7 +1084,7 @@ public final class ModelOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
            getConfidenceScoresOrBuilderList() {
@@ -1095,14 +1095,14 @@ public final class ModelOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addConfidenceScoresBuilder() {
         return getConfidenceScoresFieldBuilder().addBuilder(
             asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addConfidenceScoresBuilder(
           int index) {
@@ -1110,7 +1110,7 @@ public final class ModelOuterClass {
             index, asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7;</code>
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
        */
       public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder> 
            getConfidenceScoresBuilderList() {
@@ -1200,12 +1200,12 @@ public final class ModelOuterClass {
       "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
       "/type/target_metrics.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\267\001\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "amp.proto\"\314\001\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022\024\n\014dataset_size\030\005 \001(\005\022\025\n\rtra" +
-      "ining_size\030\006 \001(\005\0223\n\021confidence_scores\030\007 " +
-      "\003(\0132\030.asgt.type.TargetMetricsJ\004\010\001\020\003B\006Z\004t" +
-      "ypeb\006proto3"
+      "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
+      "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
+      "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
+      "icsB\005\352?\002\030\001J\004\010\001\020\003B\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
