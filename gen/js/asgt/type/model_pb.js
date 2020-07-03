@@ -11,6 +11,7 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var asgt_type_target_metrics_pb = require('../../asgt/type/target_metrics_pb.js');
 var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.exportSymbol('proto.asgt.type.Model', null, global);
@@ -26,12 +27,19 @@ goog.exportSymbol('proto.asgt.type.Model', null, global);
  * @constructor
  */
 proto.asgt.type.Model = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.asgt.type.Model.repeatedFields_, null);
 };
 goog.inherits(proto.asgt.type.Model, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   proto.asgt.type.Model.displayName = 'proto.asgt.type.Model';
 }
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.asgt.type.Model.repeatedFields_ = [7];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -62,7 +70,11 @@ proto.asgt.type.Model.prototype.toObject = function(opt_includeInstance) {
 proto.asgt.type.Model.toObject = function(includeInstance, msg) {
   var f, obj = {
     version: jspb.Message.getFieldWithDefault(msg, 3, 0),
-    createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f)
+    createdAt: (f = msg.getCreatedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    datasetSize: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    trainingSize: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    confidenceScoresList: jspb.Message.toObjectList(msg.getConfidenceScoresList(),
+    asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -108,6 +120,19 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setCreatedAt(value);
       break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setDatasetSize(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrainingSize(value);
+      break;
+    case 7:
+      var value = new asgt_type_target_metrics_pb.TargetMetrics;
+      reader.readMessage(value,asgt_type_target_metrics_pb.TargetMetrics.deserializeBinaryFromReader);
+      msg.addConfidenceScores(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -150,6 +175,28 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
       4,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
+    );
+  }
+  f = message.getDatasetSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getTrainingSize();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getConfidenceScoresList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      7,
+      f,
+      asgt_type_target_metrics_pb.TargetMetrics.serializeBinaryToWriter
     );
   }
 };
@@ -197,6 +244,67 @@ proto.asgt.type.Model.prototype.clearCreatedAt = function() {
  */
 proto.asgt.type.Model.prototype.hasCreatedAt = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional int32 dataset_size = 5;
+ * @return {number}
+ */
+proto.asgt.type.Model.prototype.getDatasetSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.Model.prototype.setDatasetSize = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 training_size = 6;
+ * @return {number}
+ */
+proto.asgt.type.Model.prototype.getTrainingSize = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.asgt.type.Model.prototype.setTrainingSize = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * repeated TargetMetrics confidence_scores = 7;
+ * @return {!Array<!proto.asgt.type.TargetMetrics>}
+ */
+proto.asgt.type.Model.prototype.getConfidenceScoresList = function() {
+  return /** @type{!Array<!proto.asgt.type.TargetMetrics>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_target_metrics_pb.TargetMetrics, 7));
+};
+
+
+/** @param {!Array<!proto.asgt.type.TargetMetrics>} value */
+proto.asgt.type.Model.prototype.setConfidenceScoresList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 7, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.TargetMetrics=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics}
+ */
+proto.asgt.type.Model.prototype.addConfidenceScores = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 7, opt_value, proto.asgt.type.TargetMetrics, opt_index);
+};
+
+
+proto.asgt.type.Model.prototype.clearConfidenceScoresList = function() {
+  this.setConfidenceScoresList([]);
 };
 
 

@@ -35,6 +35,40 @@ public final class ModelOuterClass {
      * <code>.google.protobuf.Timestamp created_at = 4;</code>
      */
     com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getDatasetSize();
+
+    /**
+     * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getTrainingSize();
+
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> 
+        getConfidenceScoresList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index);
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    int getConfidenceScoresCount();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+        getConfidenceScoresOrBuilderList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.type.Model}
@@ -50,6 +84,9 @@ public final class ModelOuterClass {
     }
     private Model() {
       version_ = 0L;
+      datasetSize_ = 0;
+      trainingSize_ = 0;
+      confidenceScores_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -94,6 +131,25 @@ public final class ModelOuterClass {
 
               break;
             }
+            case 40: {
+
+              datasetSize_ = input.readInt32();
+              break;
+            }
+            case 48: {
+
+              trainingSize_ = input.readInt32();
+              break;
+            }
+            case 58: {
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              confidenceScores_.add(
+                  input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -109,6 +165,9 @@ public final class ModelOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -126,6 +185,7 @@ public final class ModelOuterClass {
               asgt.type.ModelOuterClass.Model.class, asgt.type.ModelOuterClass.Model.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VERSION_FIELD_NUMBER = 3;
     private long version_;
     /**
@@ -156,6 +216,59 @@ public final class ModelOuterClass {
       return getCreatedAt();
     }
 
+    public static final int DATASET_SIZE_FIELD_NUMBER = 5;
+    private int datasetSize_;
+    /**
+     * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getDatasetSize() {
+      return datasetSize_;
+    }
+
+    public static final int TRAINING_SIZE_FIELD_NUMBER = 6;
+    private int trainingSize_;
+    /**
+     * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getTrainingSize() {
+      return trainingSize_;
+    }
+
+    public static final int CONFIDENCE_SCORES_FIELD_NUMBER = 7;
+    private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_;
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getConfidenceScoresList() {
+      return confidenceScores_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+        getConfidenceScoresOrBuilderList() {
+      return confidenceScores_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getConfidenceScoresCount() {
+      return confidenceScores_.size();
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index) {
+      return confidenceScores_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
+        int index) {
+      return confidenceScores_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -176,6 +289,15 @@ public final class ModelOuterClass {
       if (createdAt_ != null) {
         output.writeMessage(4, getCreatedAt());
       }
+      if (datasetSize_ != 0) {
+        output.writeInt32(5, datasetSize_);
+      }
+      if (trainingSize_ != 0) {
+        output.writeInt32(6, trainingSize_);
+      }
+      for (int i = 0; i < confidenceScores_.size(); i++) {
+        output.writeMessage(7, confidenceScores_.get(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -192,6 +314,18 @@ public final class ModelOuterClass {
       if (createdAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getCreatedAt());
+      }
+      if (datasetSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, datasetSize_);
+      }
+      if (trainingSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, trainingSize_);
+      }
+      for (int i = 0; i < confidenceScores_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, confidenceScores_.get(i));
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -216,6 +350,12 @@ public final class ModelOuterClass {
         result = result && getCreatedAt()
             .equals(other.getCreatedAt());
       }
+      result = result && (getDatasetSize()
+          == other.getDatasetSize());
+      result = result && (getTrainingSize()
+          == other.getTrainingSize());
+      result = result && getConfidenceScoresList()
+          .equals(other.getConfidenceScoresList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -233,6 +373,14 @@ public final class ModelOuterClass {
       if (hasCreatedAt()) {
         hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      hash = (37 * hash) + DATASET_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getDatasetSize();
+      hash = (37 * hash) + TRAINING_SIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrainingSize();
+      if (getConfidenceScoresCount() > 0) {
+        hash = (37 * hash) + CONFIDENCE_SCORES_FIELD_NUMBER;
+        hash = (53 * hash) + getConfidenceScoresList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -362,6 +510,7 @@ public final class ModelOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getConfidenceScoresFieldBuilder();
         }
       }
       @java.lang.Override
@@ -374,6 +523,16 @@ public final class ModelOuterClass {
         } else {
           createdAt_ = null;
           createdAtBuilder_ = null;
+        }
+        datasetSize_ = 0;
+
+        trainingSize_ = 0;
+
+        if (confidenceScoresBuilder_ == null) {
+          confidenceScores_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        } else {
+          confidenceScoresBuilder_.clear();
         }
         return this;
       }
@@ -401,12 +560,26 @@ public final class ModelOuterClass {
       @java.lang.Override
       public asgt.type.ModelOuterClass.Model buildPartial() {
         asgt.type.ModelOuterClass.Model result = new asgt.type.ModelOuterClass.Model(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         result.version_ = version_;
         if (createdAtBuilder_ == null) {
           result.createdAt_ = createdAt_;
         } else {
           result.createdAt_ = createdAtBuilder_.build();
         }
+        result.datasetSize_ = datasetSize_;
+        result.trainingSize_ = trainingSize_;
+        if (confidenceScoresBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
+            bitField0_ = (bitField0_ & ~0x00000010);
+          }
+          result.confidenceScores_ = confidenceScores_;
+        } else {
+          result.confidenceScores_ = confidenceScoresBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -461,6 +634,38 @@ public final class ModelOuterClass {
         if (other.hasCreatedAt()) {
           mergeCreatedAt(other.getCreatedAt());
         }
+        if (other.getDatasetSize() != 0) {
+          setDatasetSize(other.getDatasetSize());
+        }
+        if (other.getTrainingSize() != 0) {
+          setTrainingSize(other.getTrainingSize());
+        }
+        if (confidenceScoresBuilder_ == null) {
+          if (!other.confidenceScores_.isEmpty()) {
+            if (confidenceScores_.isEmpty()) {
+              confidenceScores_ = other.confidenceScores_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+            } else {
+              ensureConfidenceScoresIsMutable();
+              confidenceScores_.addAll(other.confidenceScores_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.confidenceScores_.isEmpty()) {
+            if (confidenceScoresBuilder_.isEmpty()) {
+              confidenceScoresBuilder_.dispose();
+              confidenceScoresBuilder_ = null;
+              confidenceScores_ = other.confidenceScores_;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              confidenceScoresBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConfidenceScoresFieldBuilder() : null;
+            } else {
+              confidenceScoresBuilder_.addAllMessages(other.confidenceScores_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -489,6 +694,7 @@ public final class ModelOuterClass {
         }
         return this;
       }
+      private int bitField0_;
 
       private long version_ ;
       /**
@@ -632,6 +838,298 @@ public final class ModelOuterClass {
         }
         return createdAtBuilder_;
       }
+
+      private int datasetSize_ ;
+      /**
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getDatasetSize() {
+        return datasetSize_;
+      }
+      /**
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setDatasetSize(int value) {
+        
+        datasetSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 dataset_size = 5 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearDatasetSize() {
+        
+        datasetSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int trainingSize_ ;
+      /**
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getTrainingSize() {
+        return trainingSize_;
+      }
+      /**
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setTrainingSize(int value) {
+        
+        trainingSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 training_size = 6 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearTrainingSize() {
+        
+        trainingSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_ =
+        java.util.Collections.emptyList();
+      private void ensureConfidenceScoresIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(confidenceScores_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> confidenceScoresBuilder_;
+
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> getConfidenceScoresList() {
+        if (confidenceScoresBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(confidenceScores_);
+        } else {
+          return confidenceScoresBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public int getConfidenceScoresCount() {
+        if (confidenceScoresBuilder_ == null) {
+          return confidenceScores_.size();
+        } else {
+          return confidenceScoresBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics getConfidenceScores(int index) {
+        if (confidenceScoresBuilder_ == null) {
+          return confidenceScores_.get(index);
+        } else {
+          return confidenceScoresBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setConfidenceScores(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (confidenceScoresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.set(index, value);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder setConfidenceScores(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (confidenceScoresBuilder_ == null) {
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addConfidenceScores(asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (confidenceScoresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.add(value);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addConfidenceScores(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics value) {
+        if (confidenceScoresBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.add(index, value);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addConfidenceScores(
+          asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (confidenceScoresBuilder_ == null) {
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.add(builderForValue.build());
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addConfidenceScores(
+          int index, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder builderForValue) {
+        if (confidenceScoresBuilder_ == null) {
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder addAllConfidenceScores(
+          java.lang.Iterable<? extends asgt.type.TargetMetricsOuterClass.TargetMetrics> values) {
+        if (confidenceScoresBuilder_ == null) {
+          ensureConfidenceScoresIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, confidenceScores_);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder clearConfidenceScores() {
+        if (confidenceScoresBuilder_ == null) {
+          confidenceScores_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000010);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public Builder removeConfidenceScores(int index) {
+        if (confidenceScoresBuilder_ == null) {
+          ensureConfidenceScoresIsMutable();
+          confidenceScores_.remove(index);
+          onChanged();
+        } else {
+          confidenceScoresBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder getConfidenceScoresBuilder(
+          int index) {
+        return getConfidenceScoresFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
+          int index) {
+        if (confidenceScoresBuilder_ == null) {
+          return confidenceScores_.get(index);  } else {
+          return confidenceScoresBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<? extends asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+           getConfidenceScoresOrBuilderList() {
+        if (confidenceScoresBuilder_ != null) {
+          return confidenceScoresBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(confidenceScores_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addConfidenceScoresBuilder() {
+        return getConfidenceScoresFieldBuilder().addBuilder(
+            asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder addConfidenceScoresBuilder(
+          int index) {
+        return getConfidenceScoresFieldBuilder().addBuilder(
+            index, asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [(.gen_bq_schema.bigquery) = { ... }</code>
+       */
+      public java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder> 
+           getConfidenceScoresBuilderList() {
+        return getConfidenceScoresFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder> 
+          getConfidenceScoresFieldBuilder() {
+        if (confidenceScoresBuilder_ == null) {
+          confidenceScoresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
+                  confidenceScores_,
+                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  getParentForChildren(),
+                  isClean());
+          confidenceScores_ = null;
+        }
+        return confidenceScoresBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -699,11 +1197,15 @@ public final class ModelOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025asgt/type/model.proto\022\tasgt.type\032\034gen_" +
-      "bq_schema/bq_field.proto\032\037google/protobu" +
-      "f/timestamp.proto\"U\n\005Model\022\026\n\007version\030\003 " +
-      "\001(\003B\005\352?\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google." +
-      "protobuf.TimestampJ\004\010\001\020\003B\006Z\004typeb\006proto3"
+      "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
+      "/type/target_metrics.proto\032\034gen_bq_schem" +
+      "a/bq_field.proto\032\037google/protobuf/timest" +
+      "amp.proto\"\314\001\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
+      "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
+      "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
+      "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
+      "icsB\005\352?\002\030\001J\004\010\001\020\003B\006Z\004typeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -716,6 +1218,7 @@ public final class ModelOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          asgt.type.TargetMetricsOuterClass.getDescriptor(),
           gen_bq_schema.BqField.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         }, assigner);
@@ -724,12 +1227,13 @@ public final class ModelOuterClass {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    asgt.type.TargetMetricsOuterClass.getDescriptor();
     gen_bq_schema.BqField.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }

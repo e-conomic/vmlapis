@@ -24,15 +24,18 @@ namespace Asgt.Type {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRocZ2VuX2JxX3Nj",
-            "aGVtYS9icV9maWVsZC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byJVCgVNb2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpj",
-            "cmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEoE",
-            "CAEQA0IGWgR0eXBlYgZwcm90bzM="));
+            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
+            "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIswBCgVN",
+            "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
+            "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
+            "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
+            "dE1ldHJpY3NCBeo/AhgBSgQIARADQgZaBHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores" }, null, null, null)
           }));
     }
     #endregion
@@ -66,6 +69,9 @@ namespace Asgt.Type {
     public Model(Model other) : this() {
       version_ = other.version_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
+      datasetSize_ = other.datasetSize_;
+      trainingSize_ = other.trainingSize_;
+      confidenceScores_ = other.confidenceScores_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -96,6 +102,38 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "dataset_size" field.</summary>
+    public const int DatasetSizeFieldNumber = 5;
+    private int datasetSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int DatasetSize {
+      get { return datasetSize_; }
+      set {
+        datasetSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "training_size" field.</summary>
+    public const int TrainingSizeFieldNumber = 6;
+    private int trainingSize_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TrainingSize {
+      get { return trainingSize_; }
+      set {
+        trainingSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence_scores" field.</summary>
+    public const int ConfidenceScoresFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics> _repeated_confidenceScores_codec
+        = pb::FieldCodec.ForMessage(58, global::Asgt.Type.TargetMetrics.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics> confidenceScores_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Asgt.Type.TargetMetrics> ConfidenceScores {
+      get { return confidenceScores_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Model);
@@ -111,6 +149,9 @@ namespace Asgt.Type {
       }
       if (Version != other.Version) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
+      if (DatasetSize != other.DatasetSize) return false;
+      if (TrainingSize != other.TrainingSize) return false;
+      if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -119,6 +160,9 @@ namespace Asgt.Type {
       int hash = 1;
       if (Version != 0L) hash ^= Version.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
+      if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
+      if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
+      hash ^= confidenceScores_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -140,6 +184,15 @@ namespace Asgt.Type {
         output.WriteRawTag(34);
         output.WriteMessage(CreatedAt);
       }
+      if (DatasetSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(TrainingSize);
+      }
+      confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -154,6 +207,13 @@ namespace Asgt.Type {
       if (createdAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAt);
       }
+      if (DatasetSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DatasetSize);
+      }
+      if (TrainingSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
+      }
+      size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -174,6 +234,13 @@ namespace Asgt.Type {
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
+      if (other.DatasetSize != 0) {
+        DatasetSize = other.DatasetSize;
+      }
+      if (other.TrainingSize != 0) {
+        TrainingSize = other.TrainingSize;
+      }
+      confidenceScores_.Add(other.confidenceScores_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -194,6 +261,18 @@ namespace Asgt.Type {
               createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(createdAt_);
+            break;
+          }
+          case 40: {
+            DatasetSize = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            TrainingSize = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            confidenceScores_.AddEntriesFrom(input, _repeated_confidenceScores_codec);
             break;
           }
         }
