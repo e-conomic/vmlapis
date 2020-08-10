@@ -28,8 +28,9 @@ namespace Ssn.Type {
             "EgkKAXgYASABKAUSCQoBeRgCIAEoBSIoChBOb3JtYWxpemVkVmVydGV4EgkK",
             "AXgYASABKAISCQoBeRgCIAEoAiJrCgxCb3VuZGluZ1BvbHkSIgoIdmVydGlj",
             "ZXMYASADKAsyEC5zc24udHlwZS5WZXJ0ZXgSNwoTbm9ybWFsaXplZF92ZXJ0",
-            "aWNlcxgCIAMoCzIaLnNzbi50eXBlLk5vcm1hbGl6ZWRWZXJ0ZXhCBloEdHlw",
-            "ZWIGcHJvdG8z"));
+            "aWNlcxgCIAMoCzIaLnNzbi50eXBlLk5vcm1hbGl6ZWRWZXJ0ZXhCNlo0Z2l0",
+            "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL3R5cGU7c3Nu",
+            "dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

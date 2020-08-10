@@ -28,7 +28,8 @@ namespace Asgt.Type {
             "AQoNVGFyZ2V0TWV0cmljcxIOCgZ0YXJnZXQYASABKAkSMAoHbWV0cmljcxgC",
             "IAMoCzIfLmFzZ3QudHlwZS5UYXJnZXRNZXRyaWNzLk1ldHJpYxpECgZNZXRy",
             "aWMSEQoJcHJlY2lzaW9uGAEgASgCEhIKCmNvbmZpZGVuY2UYAiABKAISEwoL",
-            "YW5zd2VyX3JhdGUYAyABKAJCBloEdHlwZWIGcHJvdG8z"));
+            "YW5zd2VyX3JhdGUYAyABKAJCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

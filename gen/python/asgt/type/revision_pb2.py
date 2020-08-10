@@ -19,8 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/revision.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"X\n\x08Revision\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x03 \x01(\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"X\n\x08Revision\x12\x0e\n\x06number\x18\x01 \x01(\x03\x12.\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x0c\n\x04size\x18\x03 \x01(\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 

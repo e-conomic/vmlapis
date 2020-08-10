@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asgt.modelregistry.v1;
 
-option go_package = "modelregistry";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistry";
 
 import "google/protobuf/empty.proto";
 import "asgt/type/model.proto";

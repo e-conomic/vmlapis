@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ssn/type/geometry.proto',
   package='ssn.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x17ssn/type/geometry.proto\x12\x08ssn.type\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x05\x12\t\n\x01y\x18\x02 \x01(\x05\"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\"k\n\x0c\x42oundingPoly\x12\"\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.ssn.type.Vertex\x12\x37\n\x13normalized_vertices\x18\x02 \x03(\x0b\x32\x1a.ssn.type.NormalizedVertexB\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype'),
+  serialized_pb=_b('\n\x17ssn/type/geometry.proto\x12\x08ssn.type\"\x1e\n\x06Vertex\x12\t\n\x01x\x18\x01 \x01(\x05\x12\t\n\x01y\x18\x02 \x01(\x05\"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02\"k\n\x0c\x42oundingPoly\x12\"\n\x08vertices\x18\x01 \x03(\x0b\x32\x10.ssn.type.Vertex\x12\x37\n\x13normalized_vertices\x18\x02 \x03(\x0b\x32\x1a.ssn.type.NormalizedVertexB6Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
 )
 
 

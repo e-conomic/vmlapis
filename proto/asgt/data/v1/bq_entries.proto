@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package asgt.dataservice.v1alpha1;
+package asgt.dataservice.v1;
 
-option go_package = "data";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";

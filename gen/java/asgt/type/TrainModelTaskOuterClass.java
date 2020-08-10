@@ -898,7 +898,8 @@ public final class TrainModelTaskOuterClass {
       "e/revision.proto\"s\n\016TrainModelTask\022#\n\007da" +
       "taset\030\001 \001(\0132\022.asgt.type.Dataset\022%\n\010revis" +
       "ion\030\002 \001(\0132\023.asgt.type.Revision\022\025\n\rmodel_" +
-      "version\030\004 \001(\003B\006Z\004typeb\006proto3"
+      "version\030\004 \001(\003B8Z6github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

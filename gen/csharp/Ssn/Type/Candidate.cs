@@ -39,7 +39,8 @@ namespace Ssn.Type {
             "EgwKCERPQ1VNRU5UEAIiTwoJTW9kZWxTcGVjEhIKCm1vZGVsX25hbWUYASAB",
             "KAkSLgoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0",
             "VmFsdWUiPwoNTGluZUNhbmRpZGF0ZRIMCgR0ZXh0GAEgASgJEg4KBmFtb3Vu",
-            "dBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUIGWgR0eXBlYgZwcm90bzM="));
+            "dBgCIAEoARIQCghwYWdlX3JlZhgGIAEoDUI2WjRnaXRodWIuY29tL2UtY29u",
+            "b21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

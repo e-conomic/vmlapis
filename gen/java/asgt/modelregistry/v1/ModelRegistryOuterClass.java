@@ -2822,7 +2822,9 @@ public final class ModelRegistryOuterClass {
       ".Empty\022p\n\017GetCurrentModel\022-.asgt.modelre" +
       "gistry.v1.GetCurrentModelRequest\032..asgt." +
       "modelregistry.v1.GetCurrentModelResponse" +
-      "B\017Z\rmodelregistryb\006proto3"
+      "BIZGgithub.com/e-conomic/vmlapis/gen/go/" +
+      "asgt/modelregistry/v1;modelregistryb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

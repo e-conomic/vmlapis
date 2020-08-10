@@ -42,8 +42,9 @@ namespace Asgt.Modelregistry.V1 {
             "dHJ5LnYxLlJlZ2lzdGVyTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVm",
             "LkVtcHR5EnAKD0dldEN1cnJlbnRNb2RlbBItLmFzZ3QubW9kZWxyZWdpc3Ry",
             "eS52MS5HZXRDdXJyZW50TW9kZWxSZXF1ZXN0Gi4uYXNndC5tb2RlbHJlZ2lz",
-            "dHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlc3BvbnNlQg9aDW1vZGVscmVnaXN0",
-            "cnliBnByb3RvMw=="));
+            "dHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlc3BvbnNlQklaR2dpdGh1Yi5jb20v",
+            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvbW9kZWxyZWdpc3RyeS92",
+            "MTttb2RlbHJlZ2lzdHJ5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

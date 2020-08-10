@@ -3451,8 +3451,9 @@ public final class PredictionOuterClass {
       "name\030\001 \001(\t\022:\n\ncandidates\030\002 \003(\0132&.asgt.ty" +
       "pe.Prediction.Target.Candidate\032L\n\tCandid" +
       "ate\022\024\n\005value\030\001 \001(\tB\005\352?\002\010\001\022)\n\nconfidence\030" +
-      "\002 \001(\0132\025.asgt.type.ConfidenceB\006Z\004typeb\006pr" +
-      "oto3"
+      "\002 \001(\0132\025.asgt.type.ConfidenceB8Z6github.c" +
+      "om/e-conomic/vmlapis/gen/go/asgt/type;as" +
+      "gttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

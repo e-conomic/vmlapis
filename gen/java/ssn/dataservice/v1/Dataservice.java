@@ -42044,7 +42044,9 @@ public final class Dataservice {
       ".protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:de" +
       "lete:\001*\022X\n\023CallsPerMonthMetric\022\026.google." +
       "protobuf.Empty\032).ssn.dataservice.v1.Call" +
-      "sPerMonthResponseB\rZ\013dataserviceb\006proto3"
+      "sPerMonthResponseBDZBgithub.com/e-conomi" +
+      "c/vmlapis/gen/go/ssn/dataservice/v1;data" +
+      "serviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

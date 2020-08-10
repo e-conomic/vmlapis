@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asgt.type;
 
-option go_package = "type";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 import "asgt/type/dataset.proto";
 import "asgt/type/revision.proto";

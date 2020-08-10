@@ -54,7 +54,8 @@ namespace Asgt.Dataservice.V1 {
             "5JMCGBIWL3YxL3t0eXBlfS97bmFtZX06aW5mbxJ3Cg1VcGRhdGVEYXRhc2V0",
             "EikuYXNndC5kYXRhc2VydmljZS52MS5VcGRhdGVEYXRhc2V0UmVxdWVzdBoW",
             "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdGhgvdjEve3R5cGV9L3tu",
-            "YW1lfTp1cGRhdGU6ASpCBloEZGF0YWIGcHJvdG8z"));
+            "YW1lfTp1cGRhdGU6ASpCN1o1Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vYXNndC9kYXRhL3YxO2RhdGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

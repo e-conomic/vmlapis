@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/target_value.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"*\n\x0bTargetValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\tB\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"*\n\x0bTargetValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\tB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 )
 
 

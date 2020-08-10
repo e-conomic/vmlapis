@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/target_metrics.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\x97\x01\n\rTargetMetrics\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x30\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.Metric\x1a\x44\n\x06Metric\x12\x11\n\tprecision\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x13\n\x0b\x61nswer_rate\x18\x03 \x01(\x02\x42\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\x97\x01\n\rTargetMetrics\x12\x0e\n\x06target\x18\x01 \x01(\t\x12\x30\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.Metric\x1a\x44\n\x06Metric\x12\x11\n\tprecision\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x13\n\x0b\x61nswer_rate\x18\x03 \x01(\x02\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 )
 
 

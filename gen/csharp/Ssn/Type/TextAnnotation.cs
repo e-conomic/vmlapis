@@ -57,7 +57,8 @@ namespace Ssn.Type {
             "NwoIcHJvcGVydHkYASABKAsyJS5zc24udHlwZS5UZXh0QW5ub3RhdGlvbi5U",
             "ZXh0UHJvcGVydHkSLAoMYm91bmRpbmdfYm94GAIgASgLMhYuc3NuLnR5cGUu",
             "Qm91bmRpbmdQb2x5EgwKBHRleHQYAyABKAkSEgoKY29uZmlkZW5jZRgEIAEo",
-            "AkIGWgR0eXBlYgZwcm90bzM="));
+            "AkI2WjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24v",
+            "dHlwZTtzc250eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

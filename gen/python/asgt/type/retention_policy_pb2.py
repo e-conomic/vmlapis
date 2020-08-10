@@ -18,8 +18,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/retention_policy.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n asgt/type/retention_policy.proto\x12\tasgt.type\"#\n\x0fRetentionPolicy\x12\x10\n\x08max_days\x18\x01 \x01(\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n asgt/type/retention_policy.proto\x12\tasgt.type\"#\n\x0fRetentionPolicy\x12\x10\n\x08max_days\x18\x01 \x01(\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 )
 
 

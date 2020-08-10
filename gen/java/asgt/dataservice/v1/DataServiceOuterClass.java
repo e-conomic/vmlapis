@@ -6154,7 +6154,8 @@ public final class DataServiceOuterClass {
       "nfo\022w\n\rUpdateDataset\022).asgt.dataservice." +
       "v1.UpdateDatasetRequest\032\026.google.protobu" +
       "f.Empty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:updat" +
-      "e:\001*B\006Z\004datab\006proto3"
+      "e:\001*B7Z5github.com/e-conomic/vmlapis/gen" +
+      "/go/asgt/data/v1;datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

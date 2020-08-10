@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.ocrservice.v1;
 
-option go_package = "ocrservice";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice";
 
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/text_annotation.proto";

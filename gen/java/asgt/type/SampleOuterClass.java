@@ -1011,7 +1011,9 @@ public final class SampleOuterClass {
       "t/type/data.proto\032\034asgt/type/target_valu" +
       "e.proto\"V\n\006Sample\022\035\n\004data\030\001 \001(\0132\017.asgt.t" +
       "ype.Data\022-\n\rtarget_values\030\002 \003(\0132\026.asgt.t" +
-      "ype.TargetValueB\006Z\004typeb\006proto3"
+      "ype.TargetValueB8Z6github.com/e-conomic/" +
+      "vmlapis/gen/go/asgt/type;asgttypeb\006proto" +
+      "3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

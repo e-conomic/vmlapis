@@ -787,7 +787,8 @@ public final class RevisionOuterClass {
       "oogle/protobuf/timestamp.proto\"X\n\010Revisi" +
       "on\022\016\n\006number\030\001 \001(\003\022.\n\ncreated_at\030\002 \001(\0132\032" +
       ".google.protobuf.Timestamp\022\014\n\004size\030\003 \001(\003" +
-      "B\006Z\004typeb\006proto3"
+      "B8Z6github.com/e-conomic/vmlapis/gen/go/" +
+      "asgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

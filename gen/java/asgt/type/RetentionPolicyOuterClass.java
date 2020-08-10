@@ -507,7 +507,8 @@ public final class RetentionPolicyOuterClass {
     java.lang.String[] descriptorData = {
       "\n asgt/type/retention_policy.proto\022\tasgt" +
       ".type\"#\n\017RetentionPolicy\022\020\n\010max_days\030\001 \001" +
-      "(\003B\006Z\004typeb\006proto3"
+      "(\003B8Z6github.com/e-conomic/vmlapis/gen/g" +
+      "o/asgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

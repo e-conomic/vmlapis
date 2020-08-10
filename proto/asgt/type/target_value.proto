@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asgt.type;
 
-option go_package = "type";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 // Record mapping a target name to a value
 message TargetValue {

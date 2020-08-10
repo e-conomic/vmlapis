@@ -25,8 +25,9 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBhc2d0L3R5cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90bxIJYXNndC50eXBl",
-            "IiMKD1JldGVudGlvblBvbGljeRIQCghtYXhfZGF5cxgBIAEoA0IGWgR0eXBl",
-            "YgZwcm90bzM="));
+            "IiMKD1JldGVudGlvblBvbGljeRIQCghtYXhfZGF5cxgBIAEoA0I4WjZnaXRo",
+            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNn",
+            "dHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

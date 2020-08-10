@@ -15191,7 +15191,9 @@ public final class Mlservice {
       "ssn.mlservice.v2.PredictResponse\022b\n\021Feat" +
       "ureGenPredict\022*.ssn.mlservice.v2.Feature" +
       "GenPredictRequest\032!.ssn.mlservice.v2.Pre" +
-      "dictResponseB\013Z\tmlserviceb\006proto3"
+      "dictResponseB@Z>github.com/e-conomic/vml" +
+      "apis/gen/go/ssn/mlservice/v2;mlserviceb\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

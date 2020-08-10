@@ -725,7 +725,8 @@ public final class TargetValueOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034asgt/type/target_value.proto\022\tasgt.typ" +
       "e\"*\n\013TargetValue\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030" +
-      "\002 \001(\tB\006Z\004typeb\006proto3"
+      "\002 \001(\tB8Z6github.com/e-conomic/vmlapis/ge" +
+      "n/go/asgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

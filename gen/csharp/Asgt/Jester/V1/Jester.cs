@@ -37,8 +37,9 @@ namespace Asgt.Jester.V1 {
             "YXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvbk9wdGlvbnMygAEKBkplc3RlchJ2",
             "CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJlcXVlc3Qa",
             "Ii5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVzcG9uc2UiJILT5JMCHiIZ",
-            "L3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKkIIWgZqZXN0ZXJiBnByb3Rv",
-            "Mw=="));
+            "L3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKkI7WjlnaXRodWIuY29tL2Ut",
+            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2plc3Rlci92MTtqZXN0ZXJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

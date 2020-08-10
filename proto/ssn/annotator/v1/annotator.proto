@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.annotator.v1;
 
-option go_package = "annotator";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 
 import "google/api/annotations.proto";
 import "ssn/type/candidate.proto";

@@ -12,16 +12,6 @@ RUN apt-get update && \
   golang-goprotobuf-dev
 
 
-ARG GRPC_GATEWAY_VERSION=1.8.5
-RUN curl -sSL \
-  https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v${GRPC_GATEWAY_VERSION}/protoc-gen-grpc-gateway-v${GRPC_GATEWAY_VERSION}-linux-x86_64 \
-  -o /usr/local/bin/protoc-gen-grpc-gateway && \
-  curl -sSL \
-  https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v${GRPC_GATEWAY_VERSION}/protoc-gen-swagger-v${GRPC_GATEWAY_VERSION}-linux-x86_64 \
-  -o /usr/local/bin/protoc-gen-swagger && \
-  chmod +x /usr/local/bin/protoc-gen-grpc-gateway && \
-  chmod +x /usr/local/bin/protoc-gen-swagger
-
 ARG GRPC_WEB_VERSION=1.0.7
 RUN curl -sSL \
   https://github.com/grpc/grpc-web/releases/download/${GRPC_WEB_VERSION}/protoc-gen-grpc-web-${GRPC_WEB_VERSION}-linux-x86_64 \
@@ -39,7 +29,9 @@ WORKDIR /app
 COPY ["go.mod", "go.sum", "/app/"]
 RUN go get . \
   && go install github.com/golang/mock/mockgen \
-  && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema
+  && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
+	&& go install google.golang.org/grpc/cmd/protoc-gen-go-grpc \ 
+  && go install google.golang.org/protobuf/cmd/protoc-gen-go
 
 ENV PATH="/root/go/bin:${PATH}"
 

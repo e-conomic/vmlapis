@@ -35,7 +35,8 @@ namespace Asgt.Type {
             "bmFtZRgBIAEoCRI6CgpjYW5kaWRhdGVzGAIgAygLMiYuYXNndC50eXBlLlBy",
             "ZWRpY3Rpb24uVGFyZ2V0LkNhbmRpZGF0ZRpMCglDYW5kaWRhdGUSFAoFdmFs",
             "dWUYASABKAlCBeo/AggBEikKCmNvbmZpZGVuY2UYAiABKAsyFS5hc2d0LnR5",
-            "cGUuQ29uZmlkZW5jZUIGWgR0eXBlYgZwcm90bzM="));
+            "cGUuQ29uZmlkZW5jZUI4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
+            "L2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

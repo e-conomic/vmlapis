@@ -19,8 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gen_bq_schema/bq_table.proto',
   package='gen_bq_schema',
   syntax='proto3',
-  serialized_options=None,
-  serialized_pb=_b('\n\x1cgen_bq_schema/bq_table.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"D\n\x16\x42igQueryMessageOptions\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x16\n\x0euse_json_names\x18\x02 \x01(\x08:^\n\rbigquery_opts\x12\x1f.google.protobuf.MessageOptions\x18\xfd\x07 \x01(\x0b\x32%.gen_bq_schema.BigQueryMessageOptionsb\x06proto3')
+  serialized_options=_b('Z?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema'),
+  serialized_pb=_b('\n\x1cgen_bq_schema/bq_table.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"D\n\x16\x42igQueryMessageOptions\x12\x12\n\ntable_name\x18\x01 \x01(\t\x12\x16\n\x0euse_json_names\x18\x02 \x01(\x08:^\n\rbigquery_opts\x12\x1f.google.protobuf.MessageOptions\x18\xfd\x07 \x01(\x0b\x32%.gen_bq_schema.BigQueryMessageOptionsBAZ?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schemab\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,])
 
@@ -86,4 +86,5 @@ _sym_db.RegisterMessage(BigQueryMessageOptions)
 bigquery_opts.message_type = _BIGQUERYMESSAGEOPTIONS
 google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(bigquery_opts)
 
+DESCRIPTOR._options = None
 # @@protoc_insertion_point(module_scope)

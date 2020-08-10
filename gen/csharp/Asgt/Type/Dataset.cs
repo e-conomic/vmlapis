@@ -32,7 +32,8 @@ namespace Asgt.Type {
             "LnR5cGUuUmV0ZW50aW9uUG9saWN5Ei4KCmNyZWF0ZWRfYXQYCiABKAsyGi5n",
             "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYCyABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBHNpemUYDCABKANKBAgG",
-            "EAlCBloEdHlwZWIGcHJvdG8z"));
+            "EAlCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNn",
+            "dC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

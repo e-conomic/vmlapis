@@ -35,7 +35,8 @@ namespace Asgt.Type {
             "GAEgASgJEg4KBmFtb3VudBgCIAEoAiKGAQoERGF0YRIrCgt0cmFuc2FjdGlv",
             "bhgBIAEoCzIWLmFzZ3QudHlwZS5UcmFuc2FjdGlvbhIjCgdpbnZvaWNlGAIg",
             "ASgLMhIuYXNndC50eXBlLkludm9pY2USLAoMaW52b2ljZV9saW5lGAMgASgL",
-            "MhYuYXNndC50eXBlLkludm9pY2VMaW5lQgZaBHR5cGViBnByb3RvMw=="));
+            "MhYuYXNndC50eXBlLkludm9pY2VMaW5lQjhaNmdpdGh1Yi5jb20vZS1jb25v",
+            "bWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -16978,7 +16978,9 @@ public final class Annotator {
       "ateDocument\022*.ssn.annotator.v1.DocumentA" +
       "nnotatorRequest\032+.ssn.annotator.v1.Docum" +
       "entAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docume" +
-      "nt:annotate:\001*B\013Z\tannotatorb\006proto3"
+      "nt:annotate:\001*B@Z>github.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/annotator/v1;annotator" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

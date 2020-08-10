@@ -14,6 +14,10 @@ all:
 		proto/ssn/dataservice/v1/dataservice.proto \
 		proto/asgt/jester/v1/jester.proto \
 		proto/asgt/data/v1/data_service.proto
+
+	mkdir ./gen/go
+	./scripts/go-gen-ssn.sh
+	./scripts/go-gen-asgt.sh
 	./scripts/gomock.sh
 	./scripts/js_fixes.sh
 	./scripts/py_fixes.sh

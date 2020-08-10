@@ -2863,7 +2863,9 @@ public final class JesterOuterClass {
       "ns2\200\001\n\006Jester\022v\n\007Suggest\022!.asgt.jester.v" +
       "1.SuggestionRequest\032\".asgt.jester.v1.Sug" +
       "gestionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{nam" +
-      "e}:suggest:\001*B\010Z\006jesterb\006proto3"
+      "e}:suggest:\001*B;Z9github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/jester/v1;jesterb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

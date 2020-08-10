@@ -12167,7 +12167,8 @@ public final class TextAnnotationOuterClass {
       "y\030\001 \001(\0132%.ssn.type.TextAnnotation.TextPr" +
       "operty\022,\n\014bounding_box\030\002 \001(\0132\026.ssn.type." +
       "BoundingPoly\022\014\n\004text\030\003 \001(\t\022\022\n\nconfidence" +
-      "\030\004 \001(\002B\006Z\004typeb\006proto3"
+      "\030\004 \001(\002B6Z4github.com/e-conomic/vmlapis/g" +
+      "en/go/ssn/type;ssntypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

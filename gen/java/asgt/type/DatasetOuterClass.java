@@ -1910,7 +1910,8 @@ public final class DatasetOuterClass {
       "Policy\022.\n\ncreated_at\030\n \001(\0132\032.google.prot" +
       "obuf.Timestamp\022.\n\nupdated_at\030\013 \001(\0132\032.goo" +
       "gle.protobuf.Timestamp\022\014\n\004size\030\014 \001(\003J\004\010\006" +
-      "\020\tB\006Z\004typeb\006proto3"
+      "\020\tB8Z6github.com/e-conomic/vmlapis/gen/g" +
+      "o/asgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

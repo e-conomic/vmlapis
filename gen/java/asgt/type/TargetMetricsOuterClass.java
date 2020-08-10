@@ -1570,8 +1570,9 @@ public final class TargetMetricsOuterClass {
       "ype\"\227\001\n\rTargetMetrics\022\016\n\006target\030\001 \001(\t\0220\n" +
       "\007metrics\030\002 \003(\0132\037.asgt.type.TargetMetrics" +
       ".Metric\032D\n\006Metric\022\021\n\tprecision\030\001 \001(\002\022\022\n\n" +
-      "confidence\030\002 \001(\002\022\023\n\013answer_rate\030\003 \001(\002B\006Z" +
-      "\004typeb\006proto3"
+      "confidence\030\002 \001(\002\022\023\n\013answer_rate\030\003 \001(\002B8Z" +
+      "6github.com/e-conomic/vmlapis/gen/go/asg" +
+      "t/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

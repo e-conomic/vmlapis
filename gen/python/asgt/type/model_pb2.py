@@ -21,8 +21,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/model.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xcc\x01\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1b\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12\x1c\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12:\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01J\x04\x08\x01\x10\x03\x42\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xcc\x01\n\x05Model\x12\x16\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01\x12.\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x1b\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12\x1c\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01\x12:\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01J\x04\x08\x01\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_target__metrics__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 

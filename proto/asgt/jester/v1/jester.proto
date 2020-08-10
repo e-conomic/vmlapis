@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package asgt.jester.v1;
 
-option go_package = "jester";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester";
 
 import "google/api/annotations.proto";
 import "asgt/type/prediction.proto";

@@ -5065,7 +5065,8 @@ public final class DataOuterClass {
       "action\030\001 \001(\0132\026.asgt.type.Transaction\022#\n\007" +
       "invoice\030\002 \001(\0132\022.asgt.type.Invoice\022,\n\014inv" +
       "oice_line\030\003 \001(\0132\026.asgt.type.InvoiceLineB" +
-      "\006Z\004typeb\006proto3"
+      "8Z6github.com/e-conomic/vmlapis/gen/go/a" +
+      "sgt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1488,7 +1488,8 @@ public final class AccessOuterClass {
       "\002 \001(\t2}\n\006Access\022s\n\020GenerateValetKey\022\036.ss" +
       "n.access.v1.ValetKeyRequest\032\037.ssn.access" +
       ".v1.ValetKeyResponse\"\036\202\323\344\223\002\030\"\023/v1/access" +
-      "/valetkey:\001*B\010Z\006accessb\006proto3"
+      "/valetkey:\001*B:Z8github.com/e-conomic/vml" +
+      "apis/gen/go/ssn/access/v1;accessb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

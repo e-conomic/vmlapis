@@ -138,8 +138,9 @@ namespace Ssn.Dataservice.V1Alpha1 {
             "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IiSC0+STAh4iGS92MWFs",
             "cGhhMS9mZWVkYmFjazpkZWxldGU6ASoSXgoTQ2FsbHNQZXJNb250aE1ldHJp",
             "YxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRovLnNzbi5kYXRhc2VydmljZS52",
-            "MWFscGhhMS5DYWxsc1Blck1vbnRoUmVzcG9uc2VCDVoLZGF0YXNlcnZpY2Vi",
-            "BnByb3RvMw=="));
+            "MWFscGhhMS5DYWxsc1Blck1vbnRoUmVzcG9uc2VCSlpIZ2l0aHViLmNvbS9l",
+            "LWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2RhdGFzZXJ2aWNlL3YxYWxw",
+            "aGExO2RhdGFzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -2610,7 +2610,9 @@ public final class Geometry {
       "dVertex\022\t\n\001x\030\001 \001(\002\022\t\n\001y\030\002 \001(\002\"k\n\014Boundin" +
       "gPoly\022\"\n\010vertices\030\001 \003(\0132\020.ssn.type.Verte" +
       "x\0227\n\023normalized_vertices\030\002 \003(\0132\032.ssn.typ" +
-      "e.NormalizedVertexB\006Z\004typeb\006proto3"
+      "e.NormalizedVertexB6Z4github.com/e-conom" +
+      "ic/vmlapis/gen/go/ssn/type;ssntypeb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

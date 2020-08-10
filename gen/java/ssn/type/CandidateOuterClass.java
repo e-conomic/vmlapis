@@ -4679,7 +4679,9 @@ public final class CandidateOuterClass {
       "delSpec\022\022\n\nmodel_name\030\001 \001(\t\022.\n\tmodel_ver" +
       "\030\002 \001(\0132\033.google.protobuf.Int64Value\"?\n\rL" +
       "ineCandidate\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001" +
-      "(\001\022\020\n\010page_ref\030\006 \001(\rB\006Z\004typeb\006proto3"
+      "(\001\022\020\n\010page_ref\030\006 \001(\rB6Z4github.com/e-con" +
+      "omic/vmlapis/gen/go/ssn/type;ssntypeb\006pr" +
+      "oto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

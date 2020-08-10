@@ -1205,7 +1205,9 @@ public final class ModelOuterClass {
       "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
-      "icsB\005\352?\002\030\001J\004\010\001\020\003B\006Z\004typeb\006proto3"
+      "icsB\005\352?\002\030\001J\004\010\001\020\003B8Z6github.com/e-conomic" +
+      "/vmlapis/gen/go/asgt/type;asgttypeb\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -30,7 +30,8 @@ namespace Ssn.Access.V1 {
             "bnNlEgoKAmlkGAEgASgJEg0KBXRva2VuGAIgASgJMn0KBkFjY2VzcxJzChBH",
             "ZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFjY2Vzcy52MS5WYWxldEtleVJlcXVl",
             "c3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0S2V5UmVzcG9uc2UiHoLT5JMCGCIT",
-            "L3YxL2FjY2Vzcy92YWxldGtleToBKkIIWgZhY2Nlc3NiBnByb3RvMw=="));
+            "L3YxL2FjY2Vzcy92YWxldGtleToBKkI6WjhnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vYWNjZXNzL3YxO2FjY2Vzc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

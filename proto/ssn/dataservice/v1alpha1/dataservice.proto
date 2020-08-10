@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.dataservice.v1alpha1;
 
-option go_package = "dataservice";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1alpha1;dataservice";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";

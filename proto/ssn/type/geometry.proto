@@ -17,7 +17,7 @@ syntax = "proto3";
 
 package ssn.type;
 
-option go_package = "type";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
 // A vertex represents a 2D point in the image.
 // NOTE: the vertex coordinates are in the same scale as the original image.

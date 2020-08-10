@@ -17,7 +17,7 @@ syntax = "proto3";
 
 package ssn.type;
 
-option go_package = "type";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
 
 import "ssn/type/geometry.proto";
 

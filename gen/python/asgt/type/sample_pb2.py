@@ -20,8 +20,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/type/sample.proto',
   package='asgt.type',
   syntax='proto3',
-  serialized_options=_b('Z\004type'),
-  serialized_pb=_b('\n\x16\x61sgt/type/sample.proto\x12\tasgt.type\x1a\x14\x61sgt/type/data.proto\x1a\x1c\x61sgt/type/target_value.proto\"V\n\x06Sample\x12\x1d\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0f.asgt.type.Data\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValueB\x06Z\x04typeb\x06proto3')
+  serialized_options=_b('Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'),
+  serialized_pb=_b('\n\x16\x61sgt/type/sample.proto\x12\tasgt.type\x1a\x14\x61sgt/type/data.proto\x1a\x1c\x61sgt/type/target_value.proto\"V\n\x06Sample\x12\x1d\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x0f.asgt.type.Data\x12-\n\rtarget_values\x18\x02 \x03(\x0b\x32\x16.asgt.type.TargetValueB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,])
 
