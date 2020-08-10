@@ -14,9 +14,9 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
-var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
+var ssn_types_candidate_pb = require('../../../ssn/types/candidate_pb.js')
 
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
+var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js')
 const proto = {};
 proto.ssn = {};
 proto.ssn.annotator = {};

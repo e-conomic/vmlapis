@@ -15125,73 +15125,73 @@ public final class Mlservice {
   static {
     java.lang.String[] descriptorData = {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
-      "mlservice.v2\032\026google/type/date.proto\032\030ss" +
-      "n/type/candidate.proto\032\036ssn/type/text_an" +
-      "notation.proto\032%tensorflow/core/example/" +
-      "example.proto\"\242\006\n\021FeatureGenRequest\022E\n\014t" +
-      "ruth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fea" +
-      "tureGenRequest.TruthLabels\0221\n\017text_annot" +
-      "ation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\n\n" +
-      "\002id\030\003 \001(\t\032\206\005\n\013TruthLabels\022\026\n\016total_incl_" +
-      "vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_ex" +
-      "cl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.googl" +
-      "e.type.Date\022+\n\020payment_due_date\030\005 \001(\0132\021." +
-      "google.type.Date\022\025\n\rdocument_type\030\006 \001(\t\022" +
-      "\020\n\010currency\030\007 \001(\t\022\032\n\022credit_card_number\030" +
-      "\010 \001(\t\022\026\n\016payment_method\030\t \001(\t\022\030\n\020ocr_lin" +
-      "e_dk_type\030\n \001(\t\022\036\n\026ocr_line_dk_payment_i" +
-      "d\030\013 \001(\t\022\037\n\027ocr_line_dk_creditor_id\030\014 \001(\t" +
-      "\022\036\n\026ocr_line_se_payment_id\030\r \001(\t\022(\n ocr_" +
-      "line_se_bankgiro_creditor_id\030\016 \001(\t\022(\n oc" +
-      "r_line_se_plusgiro_creditor_id\030\017 \001(\t\022\036\n\026" +
-      "ocr_line_no_payment_id\030\020 \001(\t\022\036\n\026ocr_line" +
-      "_fi_payment_id\030\021 \001(\t\022\036\n\026ocr_line_nl_paym" +
-      "ent_id\030\022 \001(\t\022\035\n\025supplier_corporate_id\030\023 " +
-      "\001(\t\022\035\n\025supplier_country_code\030\024 \001(\t\022\026\n\016in" +
-      "voice_number\030\025 \001(\t\":\n\022FeatureGenResponse" +
-      "\022$\n\007example\030\001 \001(\0132\023.tensorflow.Example\"T" +
-      "\n\016PredictRequest\022$\n\007example\030\001 \001(\0132\023.tens" +
-      "orflow.Example\022\034\n\024top_n_most_confident\030\002" +
-      " \001(\r\"\350\010\n\017PredictResponse\022\'\n\norder_date\030\001" +
-      " \003(\0132\023.ssn.type.Candidate\022-\n\020payment_due" +
-      "_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010curr" +
-      "ency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttotal" +
-      "_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016total" +
-      "_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022+\n\016" +
-      "total_excl_vat\030\006 \003(\0132\023.ssn.type.Candidat" +
-      "e\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.t" +
-      "ype.Candidate\0222\n\025supplier_country_code\030\010" +
-      " \003(\0132\023.ssn.type.Candidate\022*\n\rdocument_ty" +
-      "pe\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016payment" +
-      "_method\030\n \003(\0132\023.ssn.type.Candidate\022/\n\022cr" +
-      "edit_card_number\030\013 \003(\0132\023.ssn.type.Candid" +
-      "ate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn.type.C" +
-      "andidate\022-\n\020ocr_line_dk_type\030\r \003(\0132\023.ssn" +
-      ".type.Candidate\0223\n\026ocr_line_dk_payment_i" +
-      "d\030\016 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_line" +
-      "_dk_creditor_id\030\017 \003(\0132\023.ssn.type.Candida" +
-      "te\0223\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn" +
-      ".type.Candidate\022=\n ocr_line_se_bankgiro_" +
-      "creditor_id\030\021 \003(\0132\023.ssn.type.Candidate\022=" +
-      "\n ocr_line_se_plusgiro_creditor_id\030\022 \003(\013" +
-      "2\023.ssn.type.Candidate\0223\n\026ocr_line_no_pay" +
-      "ment_id\030\023 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
-      "r_line_fi_payment_id\030\024 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0223\n\026ocr_line_nl_payment_id\030\025 \003(\0132" +
-      "\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\0132\023.ssn" +
-      ".type.Candidate\022&\n\005lines\030\027 \003(\0132\027.ssn.typ" +
-      "e.LineCandidate\"\227\001\n\030FeatureGenPredictReq" +
-      "uest\022@\n\023feature_gen_request\030\001 \001(\0132#.ssn." +
-      "mlservice.v2.FeatureGenRequest\0229\n\017predic" +
-      "t_request\030\002 \001(\0132 .ssn.mlservice.v2.Predi" +
-      "ctRequest2\230\002\n\tMlService\022W\n\nFeatureGen\022#." +
-      "ssn.mlservice.v2.FeatureGenRequest\032$.ssn" +
-      ".mlservice.v2.FeatureGenResponse\022N\n\007Pred" +
-      "ict\022 .ssn.mlservice.v2.PredictRequest\032!." +
-      "ssn.mlservice.v2.PredictResponse\022b\n\021Feat" +
-      "ureGenPredict\022*.ssn.mlservice.v2.Feature" +
-      "GenPredictRequest\032!.ssn.mlservice.v2.Pre" +
-      "dictResponseB\013Z\tmlserviceb\006proto3"
+      "mlservice.v2\032\026google/type/date.proto\032\031ss" +
+      "n/types/candidate.proto\032\037ssn/types/text_" +
+      "annotation.proto\032%tensorflow/core/exampl" +
+      "e/example.proto\"\242\006\n\021FeatureGenRequest\022E\n" +
+      "\014truth_labels\030\001 \001(\0132/.ssn.mlservice.v2.F" +
+      "eatureGenRequest.TruthLabels\0221\n\017text_ann" +
+      "otation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022" +
+      "\n\n\002id\030\003 \001(\t\032\206\005\n\013TruthLabels\022\026\n\016total_inc" +
+      "l_vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_" +
+      "excl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.goo" +
+      "gle.type.Date\022+\n\020payment_due_date\030\005 \001(\0132" +
+      "\021.google.type.Date\022\025\n\rdocument_type\030\006 \001(" +
+      "\t\022\020\n\010currency\030\007 \001(\t\022\032\n\022credit_card_numbe" +
+      "r\030\010 \001(\t\022\026\n\016payment_method\030\t \001(\t\022\030\n\020ocr_l" +
+      "ine_dk_type\030\n \001(\t\022\036\n\026ocr_line_dk_payment" +
+      "_id\030\013 \001(\t\022\037\n\027ocr_line_dk_creditor_id\030\014 \001" +
+      "(\t\022\036\n\026ocr_line_se_payment_id\030\r \001(\t\022(\n oc" +
+      "r_line_se_bankgiro_creditor_id\030\016 \001(\t\022(\n " +
+      "ocr_line_se_plusgiro_creditor_id\030\017 \001(\t\022\036" +
+      "\n\026ocr_line_no_payment_id\030\020 \001(\t\022\036\n\026ocr_li" +
+      "ne_fi_payment_id\030\021 \001(\t\022\036\n\026ocr_line_nl_pa" +
+      "yment_id\030\022 \001(\t\022\035\n\025supplier_corporate_id\030" +
+      "\023 \001(\t\022\035\n\025supplier_country_code\030\024 \001(\t\022\026\n\016" +
+      "invoice_number\030\025 \001(\t\":\n\022FeatureGenRespon" +
+      "se\022$\n\007example\030\001 \001(\0132\023.tensorflow.Example" +
+      "\"T\n\016PredictRequest\022$\n\007example\030\001 \001(\0132\023.te" +
+      "nsorflow.Example\022\034\n\024top_n_most_confident" +
+      "\030\002 \001(\r\"\350\010\n\017PredictResponse\022\'\n\norder_date" +
+      "\030\001 \003(\0132\023.ssn.type.Candidate\022-\n\020payment_d" +
+      "ue_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010cu" +
+      "rrency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttot" +
+      "al_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016tot" +
+      "al_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022+" +
+      "\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.Candid" +
+      "ate\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn" +
+      ".type.Candidate\0222\n\025supplier_country_code" +
+      "\030\010 \003(\0132\023.ssn.type.Candidate\022*\n\rdocument_" +
+      "type\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016payme" +
+      "nt_method\030\n \003(\0132\023.ssn.type.Candidate\022/\n\022" +
+      "credit_card_number\030\013 \003(\0132\023.ssn.type.Cand" +
+      "idate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn.type" +
+      ".Candidate\022-\n\020ocr_line_dk_type\030\r \003(\0132\023.s" +
+      "sn.type.Candidate\0223\n\026ocr_line_dk_payment" +
+      "_id\030\016 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_li" +
+      "ne_dk_creditor_id\030\017 \003(\0132\023.ssn.type.Candi" +
+      "date\0223\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.s" +
+      "sn.type.Candidate\022=\n ocr_line_se_bankgir" +
+      "o_creditor_id\030\021 \003(\0132\023.ssn.type.Candidate" +
+      "\022=\n ocr_line_se_plusgiro_creditor_id\030\022 \003" +
+      "(\0132\023.ssn.type.Candidate\0223\n\026ocr_line_no_p" +
+      "ayment_id\030\023 \003(\0132\023.ssn.type.Candidate\0223\n\026" +
+      "ocr_line_fi_payment_id\030\024 \003(\0132\023.ssn.type." +
+      "Candidate\0223\n\026ocr_line_nl_payment_id\030\025 \003(" +
+      "\0132\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\0132\023.s" +
+      "sn.type.Candidate\022&\n\005lines\030\027 \003(\0132\027.ssn.t" +
+      "ype.LineCandidate\"\227\001\n\030FeatureGenPredictR" +
+      "equest\022@\n\023feature_gen_request\030\001 \001(\0132#.ss" +
+      "n.mlservice.v2.FeatureGenRequest\0229\n\017pred" +
+      "ict_request\030\002 \001(\0132 .ssn.mlservice.v2.Pre" +
+      "dictRequest2\230\002\n\tMlService\022W\n\nFeatureGen\022" +
+      "#.ssn.mlservice.v2.FeatureGenRequest\032$.s" +
+      "sn.mlservice.v2.FeatureGenResponse\022N\n\007Pr" +
+      "edict\022 .ssn.mlservice.v2.PredictRequest\032" +
+      "!.ssn.mlservice.v2.PredictResponse\022b\n\021Fe" +
+      "atureGenPredict\022*.ssn.mlservice.v2.Featu" +
+      "reGenPredictRequest\032!.ssn.mlservice.v2.P" +
+      "redictResponseB\013Z\tmlserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

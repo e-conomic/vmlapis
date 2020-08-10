@@ -2547,21 +2547,21 @@ public final class Ocrservice {
       "\n\"ssn/ocrservice/v1/ocrservice.proto\022\021ss" +
       "n.ocrservice.v1\032\036google/protobuf/wrapper" +
       "s.proto\032 ssn/annotator/v1/annotator.prot" +
-      "o\032\036ssn/type/text_annotation.proto\"Y\n\030Get" +
-      "TextAnnotationRequest\022,\n\010document\030\002 \001(\0132" +
-      "\032.ssn.annotator.v1.Document\022\017\n\007preview\030\003" +
-      " \001(\010\"z\n\031GetTextAnnotationResponse\0221\n\017tex" +
-      "t_annotation\030\002 \001(\0132\030.ssn.type.TextAnnota" +
-      "tion\022*\n\005image\030\003 \001(\0132\033.google.protobuf.By" +
-      "tesValue\"#\n\023OcrScanImageRequest\022\014\n\004data\030" +
-      "\001 \001(\014\")\n\024OcrScanImageResponse\022\021\n\ttess_ho" +
-      "cr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014OcrScanImage\022" +
-      "&.ssn.ocrservice.v1.OcrScanImageRequest\032" +
-      "\'.ssn.ocrservice.v1.OcrScanImageResponse" +
-      "\022n\n\021GetTextAnnotation\022+.ssn.ocrservice.v" +
-      "1.GetTextAnnotationRequest\032,.ssn.ocrserv" +
-      "ice.v1.GetTextAnnotationResponseB\014Z\nocrs" +
-      "erviceb\006proto3"
+      "o\032\037ssn/types/text_annotation.proto\"Y\n\030Ge" +
+      "tTextAnnotationRequest\022,\n\010document\030\002 \001(\013" +
+      "2\032.ssn.annotator.v1.Document\022\017\n\007preview\030" +
+      "\003 \001(\010\"z\n\031GetTextAnnotationResponse\0221\n\017te" +
+      "xt_annotation\030\002 \001(\0132\030.ssn.type.TextAnnot" +
+      "ation\022*\n\005image\030\003 \001(\0132\033.google.protobuf.B" +
+      "ytesValue\"#\n\023OcrScanImageRequest\022\014\n\004data" +
+      "\030\001 \001(\014\")\n\024OcrScanImageResponse\022\021\n\ttess_h" +
+      "ocr\030\001 \001(\t2\335\001\n\nOcrService\022_\n\014OcrScanImage" +
+      "\022&.ssn.ocrservice.v1.OcrScanImageRequest" +
+      "\032\'.ssn.ocrservice.v1.OcrScanImageRespons" +
+      "e\022n\n\021GetTextAnnotation\022+.ssn.ocrservice." +
+      "v1.GetTextAnnotationRequest\032,.ssn.ocrser" +
+      "vice.v1.GetTextAnnotationResponseB\014Z\nocr" +
+      "serviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

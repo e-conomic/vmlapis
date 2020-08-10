@@ -17,7 +17,7 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var google_type_date_pb = require('../../../google/type/date_pb.js');
-var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
+var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js');
 goog.exportSymbol('proto.ssn.dataservice.v1alpha1.CallsPerMonth', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1alpha1.CallsPerMonthResponse', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1alpha1.Correctness', null, global);
@@ -87,7 +87,7 @@ proto.ssn.dataservice.v1alpha1.Document.prototype.toObject = function(opt_includ
  */
 proto.ssn.dataservice.v1alpha1.Document.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ta: (f = msg.getTa()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    ta: (f = msg.getTa()) && ssn_types_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     bytes: msg.getBytes_asB64(),
     id: jspb.Message.getFieldWithDefault(msg, 3, ""),
     consumer: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -132,8 +132,8 @@ proto.ssn.dataservice.v1alpha1.Document.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new ssn_type_text_annotation_pb.TextAnnotation;
-      reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
+      var value = new ssn_types_text_annotation_pb.TextAnnotation;
+      reader.readMessage(value,ssn_types_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTa(value);
       break;
     case 2:
@@ -200,7 +200,7 @@ proto.ssn.dataservice.v1alpha1.Document.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       1,
       f,
-      ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
+      ssn_types_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
   f = message.getBytes_asU8();
@@ -263,7 +263,7 @@ proto.ssn.dataservice.v1alpha1.Document.serializeBinaryToWriter = function(messa
  */
 proto.ssn.dataservice.v1alpha1.Document.prototype.getTa = function() {
   return /** @type{?proto.ssn.type.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 1));
+    jspb.Message.getWrapperField(this, ssn_types_text_annotation_pb.TextAnnotation, 1));
 };
 
 
@@ -3334,7 +3334,7 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.toObject = funct
 proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    ta: (f = msg.getTa()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    ta: (f = msg.getTa()) && ssn_types_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     documentBytes: msg.getDocumentBytes_asB64(),
     predictions: (f = msg.getPredictions()) && proto.ssn.dataservice.v1alpha1.PredictionValues.toObject(includeInstance, f),
     tagsList: jspb.Message.getRepeatedField(msg, 5)
@@ -3379,8 +3379,8 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.deserializeBinaryFromReade
       msg.setId(value);
       break;
     case 2:
-      var value = new ssn_type_text_annotation_pb.TextAnnotation;
-      reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
+      var value = new ssn_types_text_annotation_pb.TextAnnotation;
+      reader.readMessage(value,ssn_types_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTa(value);
       break;
     case 3:
@@ -3437,7 +3437,7 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.serializeBinaryToWriter = 
     writer.writeMessage(
       2,
       f,
-      ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
+      ssn_types_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
   f = message.getDocumentBytes_asU8();
@@ -3486,7 +3486,7 @@ proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.setId = function
  */
 proto.ssn.dataservice.v1alpha1.PrepareFeedbackRequest.prototype.getTa = function() {
   return /** @type{?proto.ssn.type.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 2));
+    jspb.Message.getWrapperField(this, ssn_types_text_annotation_pb.TextAnnotation, 2));
 };
 
 

@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-package asgt.type;
-
-option go_package = "type";
-
-message RetentionPolicy {
-  int64 max_days = 1;
-}

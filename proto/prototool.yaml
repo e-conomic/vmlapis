@@ -10,13 +10,6 @@ generate:
   go_options:
     import_path: github.com/e-conomic/vmlapis/proto
   plugins:
-  - name: go
-    type: go
-    flags: plugins=grpc
-    output: ../gen/go
-  - name: grpc-gateway
-    type: go
-    output: ../gen/go
   - name: python
     output: ../gen/python
   - name: java

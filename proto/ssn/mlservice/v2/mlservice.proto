@@ -5,8 +5,8 @@ package ssn.mlservice.v2;
 option go_package = "mlservice";
 
 import "google/type/date.proto";
-import "ssn/type/candidate.proto";
-import "ssn/type/text_annotation.proto";
+import "ssn/types/candidate.proto";
+import "ssn/types/text_annotation.proto";
 import "tensorflow/core/example/example.proto";
 
 // Feature Generation Service

@@ -5,7 +5,7 @@ package ssn.ocrservice.v1;
 option go_package = "ocrservice";
 
 import "ssn/annotator/v1/annotator.proto";
-import "ssn/type/text_annotation.proto";
+import "ssn/types/text_annotation.proto";
 import "google/protobuf/wrappers.proto";
 
 // Interface exported by the server.
