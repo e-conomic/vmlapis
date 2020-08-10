@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Asgt.Dataservice.V1Alpha1 {
+namespace Asgt.Dataservice.V1 {
 
   /// <summary>Holder for reflection information generated from asgt/data/v1/bq_entries.proto</summary>
   public static partial class BqEntriesReflection {
@@ -24,29 +24,29 @@ namespace Asgt.Dataservice.V1Alpha1 {
     static BqEntriesReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch1hc2d0L2RhdGEvdjEvYnFfZW50cmllcy5wcm90bxIZYXNndC5kYXRhc2Vy",
-            "dmljZS52MWFscGhhMRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlw",
-            "ZS9tb2RlbC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGFz",
-            "Z3QvdHlwZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFf",
-            "ZmllbGQucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8aHGdv",
-            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i+gMKBUVudHJ5Ej4KAmlkGAEg",
-            "ASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVl",
-            "ZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNl",
-            "dF9uYW1lGAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUYDCABKAlCBeo/",
-            "AggBEi8KCmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2Yg",
-            "ZGF0YXNldBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBj",
-            "b25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1",
-            "c2VkEh0KBGRhdGEYBSABKAsyDy5hc2d0LnR5cGUuRGF0YRItCg10YXJnZXRf",
-            "dmFsdWVzGAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlEh8KBW1vZGVs",
-            "GAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rpb24YCiADKAsy",
-            "HC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgI",
-            "IAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVfZGF0YUI3WjVn",
-            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEv",
-            "djE7ZGF0YWIGcHJvdG8z"));
+            "Ch1hc2d0L2RhdGEvdjEvYnFfZW50cmllcy5wcm90bxITYXNndC5kYXRhc2Vy",
+            "dmljZS52MRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlwZS9tb2Rl",
+            "bC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGFzZ3QvdHlw",
+            "ZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfZmllbGQu",
+            "cHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8aHGdvb2dsZS9h",
+            "cGkvYW5ub3RhdGlvbnMucHJvdG8i+gMKBUVudHJ5Ej4KAmlkGAEgASgJQjLq",
+            "Py8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVlZGJhY2sg",
+            "ZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNldF9uYW1l",
+            "GAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUYDCABKAlCBeo/AggBEi8K",
+            "CmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNl",
+            "dBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1l",
+            "ciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1c2VkEh0K",
+            "BGRhdGEYBSABKAsyDy5hc2d0LnR5cGUuRGF0YRItCg10YXJnZXRfdmFsdWVz",
+            "GAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlEh8KBW1vZGVsGAkgASgL",
+            "MhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rpb24YCiADKAsyHC5hc2d0",
+            "LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgIIAEoBEIQ",
+            "6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVfZGF0YUI3WjVnaXRodWIu",
+            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7ZGF0",
+            "YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1Alpha1.Entry), global::Asgt.Dataservice.V1Alpha1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
           }));
     }
     #endregion
@@ -64,7 +64,7 @@ namespace Asgt.Dataservice.V1Alpha1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Asgt.Dataservice.V1Alpha1.BqEntriesReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Asgt.Dataservice.V1.BqEntriesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

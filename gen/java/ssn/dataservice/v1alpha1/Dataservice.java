@@ -24217,8 +24217,9 @@ public final class Dataservice {
       "pha1/feedback:delete:\001*\022^\n\023CallsPerMonth" +
       "Metric\022\026.google.protobuf.Empty\032/.ssn.dat" +
       "aservice.v1alpha1.CallsPerMonthResponseB" +
-      "DZBgithub.com/e-conomic/vmlapis/gen/go/s" +
-      "sn/dataservice/v1;dataserviceb\006proto3"
+      "JZHgithub.com/e-conomic/vmlapis/gen/go/s" +
+      "sn/dataservice/v1alpha1;dataserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package asgt.dataservice.v1alpha1;
+package asgt.dataservice.v1;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data";
 
