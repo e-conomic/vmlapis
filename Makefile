@@ -11,7 +11,9 @@ all:
 		proto/ssn/annotator/v1/annotator.proto \
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1alpha1/dataservice.proto \
-		proto/ssn/dataservice/v1/dataservice.proto 
+		proto/ssn/dataservice/v1/dataservice.proto \
+		proto/asgt/jester/v1/jester.proto \
+		proto/asgt/data/v1/data_service.proto
 
 	mkdir ./gen/go
 	./scripts/go-gen-ssn.sh
