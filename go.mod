@@ -15,4 +15,6 @@ require (
 	google.golang.org/genproto v0.0.0-20190611190212-a7e196e89fd3
 	google.golang.org/grpc v1.21.1
 	google.golang.org/grpc/cmd/protoc-gen-go-grpc v0.0.0-20200806223615-7419b444ee17 // indirect
+	google.golang.org/protobuf v1.23.0
+	rsc.io/quote/v3 v3.1.0 // indirect
 )
