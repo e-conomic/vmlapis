@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+import "asgt/type/retention_policy.proto";
+import "google/protobuf/timestamp.proto";
+
+message Dataset {
+  string consumer = 1;
+  string name = 2;
+  string type = 3;
+  repeated string tags = 4;
+  repeated string targets = 5;
+  reserved 6 to 8;
+  asgt.type.RetentionPolicy retention_policy = 9;
+
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp updated_at = 11;
+
+  // Number of samples in the dataset reflecting added entries that meet the retention policy
+  int64 size = 12;
+}

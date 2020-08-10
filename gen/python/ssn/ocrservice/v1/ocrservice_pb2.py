@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 from google.protobuf import wrappers_pb2 as google_dot_protobuf_dot_wrappers__pb2
 from vml_proto.ssn.annotator.v1 import annotator_pb2 as ssn_dot_annotator_dot_v1_dot_annotator__pb2
-from vml_proto.ssn.types import text_annotation_pb2 as ssn_dot_types_dot_text__annotation__pb2
+from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.ocrservice.v1',
   syntax='proto3',
   serialized_options=_b('Z@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrservice'),
-  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1fssn/types/text_annotation.proto\"Y\n\x18GetTextAnnotationRequest\x12,\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12\x0f\n\x07preview\x18\x03 \x01(\x08\"z\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12*\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValue\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseBBZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
+  serialized_pb=_b('\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"Y\n\x18GetTextAnnotationRequest\x12,\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12\x0f\n\x07preview\x18\x03 \x01(\x08\"z\n\x19GetTextAnnotationResponse\x12\x31\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12*\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValue\"#\n\x13OcrScanImageRequest\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\")\n\x14OcrScanImageResponse\x12\x11\n\ttess_hocr\x18\x01 \x01(\t2\xdd\x01\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponseBBZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
   ,
-  dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_annotator_dot_v1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_types_dot_text__annotation__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,ssn_dot_annotator_dot_v1_dot_annotator__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,])
 
 
 
@@ -62,8 +62,8 @@ _GETTEXTANNOTATIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=156,
-  serialized_end=245,
+  serialized_start=155,
+  serialized_end=244,
 )
 
 
@@ -100,8 +100,8 @@ _GETTEXTANNOTATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=247,
-  serialized_end=369,
+  serialized_start=246,
+  serialized_end=368,
 )
 
 
@@ -131,8 +131,8 @@ _OCRSCANIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=371,
-  serialized_end=406,
+  serialized_start=370,
+  serialized_end=405,
 )
 
 
@@ -162,12 +162,12 @@ _OCRSCANIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=449,
+  serialized_start=407,
+  serialized_end=448,
 )
 
 _GETTEXTANNOTATIONREQUEST.fields_by_name['document'].message_type = ssn_dot_annotator_dot_v1_dot_annotator__pb2._DOCUMENT
-_GETTEXTANNOTATIONRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_types_dot_text__annotation__pb2._TEXTANNOTATION
+_GETTEXTANNOTATIONRESPONSE.fields_by_name['text_annotation'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
 _GETTEXTANNOTATIONRESPONSE.fields_by_name['image'].message_type = google_dot_protobuf_dot_wrappers__pb2._BYTESVALUE
 DESCRIPTOR.message_types_by_name['GetTextAnnotationRequest'] = _GETTEXTANNOTATIONREQUEST
 DESCRIPTOR.message_types_by_name['GetTextAnnotationResponse'] = _GETTEXTANNOTATIONRESPONSE
@@ -212,8 +212,8 @@ _OCRSERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=452,
-  serialized_end=673,
+  serialized_start=451,
+  serialized_end=672,
   methods=[
   _descriptor.MethodDescriptor(
     name='OcrScanImage',

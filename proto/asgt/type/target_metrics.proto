@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+
+message TargetMetrics {
+    message Metric {
+        float precision = 1;
+        float confidence = 2;
+        float answer_rate = 3;
+    }
+
+    string target = 1;
+    repeated Metric metrics = 2;
+}
+

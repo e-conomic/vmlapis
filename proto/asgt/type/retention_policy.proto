@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+message RetentionPolicy {
+  int64 max_days = 1;
+}

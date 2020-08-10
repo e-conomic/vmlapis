@@ -16,7 +16,7 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
 
-var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js')
+var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 const proto = {};
 proto.ssn = {};
 proto.ssn.ocrservice = {};

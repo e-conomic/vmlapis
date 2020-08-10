@@ -40,6 +40,7 @@ COPY ["go.mod", "go.sum", "/app/"]
 RUN go get . \
   && go install github.com/golang/mock/mockgen \
   && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
+	&& go install google.golang.org/grpc/cmd/protoc-gen-go-grpc \ 
   && go install google.golang.org/protobuf/cmd/protoc-gen-go
 
 ENV PATH="/root/go/bin:${PATH}"

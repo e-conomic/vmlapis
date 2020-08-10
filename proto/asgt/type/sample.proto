@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+import "asgt/type/data.proto";
+import "asgt/type/target_value.proto";
+
+message Sample {
+  asgt.type.Data data = 1;
+  repeated asgt.type.TargetValue target_values = 2;
+}

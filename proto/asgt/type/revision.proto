@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+import "google/protobuf/timestamp.proto";
+
+message Revision {
+  int64 number = 1;
+  google.protobuf.Timestamp created_at = 2;
+
+  // Number of samples added to the dataset in this revision
+  int64 size = 3;
+}

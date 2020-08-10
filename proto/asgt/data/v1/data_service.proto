@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+package asgt.dataservice.v1;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "asgt/type/retention_policy.proto";
+import "asgt/type/model.proto";
+import "asgt/type/dataset.proto";
+import "asgt/type/sample.proto";
+
+service DataService {
+  rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/{type}:create"
+      body: "*"
+    };
+  }
+
+  rpc AppendData (AppendDataRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/{type}/{name}:append"
+      body: "*"
+    };
+  }
+
+  rpc DeleteData (DeleteRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/{type}:delete"
+      body: "*"
+    };
+  }
+
+  rpc GetInfo (GetInfoRequest) returns (GetInfoResponse) {
+    option (google.api.http) = {
+      get: "/v1/{type}/{name}:info"
+    };
+  }
+
+  rpc UpdateDataset (UpdateDatasetRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      put: "/v1/{type}/{name}:update"
+      body: "*"
+    };
+  }
+}
+
+
+message CreateRequest {
+  string name = 1;
+  string type = 2;
+  repeated string tags = 3;
+  repeated string targets = 6;
+  repeated asgt.type.Sample samples = 4;
+  asgt.type.RetentionPolicy retention_policy = 5;
+}
+
+message AppendDataRequest {
+  string name = 1;
+  string type = 2;
+  repeated asgt.type.Sample samples = 3;
+}
+
+message DeleteRequest {
+  string type = 1;
+  oneof match {
+    string name = 2;
+    string tag = 3;
+  }
+}
+
+message GetInfoRequest {
+  string name = 1;
+  string type = 2;
+}
+
+message UpdateDatasetRequest {
+  string name = 1;
+  string type = 2;
+  asgt.type.RetentionPolicy retention_policy = 3;
+}
+
+message GetInfoResponse {
+  asgt.type.Dataset dataset = 1;
+
+  // The most recently trained model; empty if no model has been trained
+  asgt.type.Model model = 2;
+}

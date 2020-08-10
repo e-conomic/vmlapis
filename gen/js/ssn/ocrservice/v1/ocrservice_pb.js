@@ -13,7 +13,7 @@ var global = Function('return this')();
 
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js');
-var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js');
+var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationRequest', null, global);
 goog.exportSymbol('proto.ssn.ocrservice.v1.GetTextAnnotationResponse', null, global);
 goog.exportSymbol('proto.ssn.ocrservice.v1.OcrScanImageRequest', null, global);
@@ -253,7 +253,7 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.toObject = function(
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_types_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     image: (f = msg.getImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f)
   };
 
@@ -292,8 +292,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 2:
-      var value = new ssn_types_text_annotation_pb.TextAnnotation;
-      reader.readMessage(value,ssn_types_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
+      var value = new ssn_type_text_annotation_pb.TextAnnotation;
+      reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
       break;
     case 3:
@@ -335,7 +335,7 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
     writer.writeMessage(
       2,
       f,
-      ssn_types_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
+      ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
   f = message.getImage();
@@ -355,7 +355,7 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getTextAnnotation = function() {
   return /** @type{?proto.ssn.type.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, ssn_types_text_annotation_pb.TextAnnotation, 2));
+    jspb.Message.getWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 2));
 };
 
 

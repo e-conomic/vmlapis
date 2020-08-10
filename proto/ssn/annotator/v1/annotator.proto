@@ -5,8 +5,8 @@ package ssn.annotator.v1;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
 
 import "google/api/annotations.proto";
-import "ssn/types/candidate.proto";
-import "ssn/types/text_annotation.proto";
+import "ssn/type/candidate.proto";
+import "ssn/type/text_annotation.proto";
 
 service DocumentAnnotator {
   rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {

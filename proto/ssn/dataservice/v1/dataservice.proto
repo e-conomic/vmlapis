@@ -10,8 +10,8 @@ import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
-import "ssn/types/candidate.proto";
-import "ssn/types/text_annotation.proto";
+import "ssn/type/candidate.proto";
+import "ssn/type/text_annotation.proto";
 
 service DataService {
   rpc CreateDocument(CreateDocumentRequest) returns (CreateDocumentResponse);

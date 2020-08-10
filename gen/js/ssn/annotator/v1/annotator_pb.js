@@ -12,8 +12,8 @@ var goog = jspb;
 var global = Function('return this')();
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
-var ssn_types_candidate_pb = require('../../../ssn/types/candidate_pb.js');
-var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js');
+var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
+var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.exportSymbol('proto.ssn.annotator.v1.Document', null, global);
 goog.exportSymbol('proto.ssn.annotator.v1.DocumentAnnotatorRequest', null, global);
 goog.exportSymbol('proto.ssn.annotator.v1.DocumentAnnotatorResponse', null, global);
@@ -557,54 +557,54 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.toObject = function(o
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     orderDateList: jspb.Message.toObjectList(msg.getOrderDateList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     paymentDueDateList: jspb.Message.toObjectList(msg.getPaymentDueDateList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     currencyList: jspb.Message.toObjectList(msg.getCurrencyList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     totalVatList: jspb.Message.toObjectList(msg.getTotalVatList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     totalInclVatList: jspb.Message.toObjectList(msg.getTotalInclVatList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     totalExclVatList: jspb.Message.toObjectList(msg.getTotalExclVatList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     supplierCorporateIdList: jspb.Message.toObjectList(msg.getSupplierCorporateIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     supplierCountryCodeList: jspb.Message.toObjectList(msg.getSupplierCountryCodeList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     documentTypeList: jspb.Message.toObjectList(msg.getDocumentTypeList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     paymentMethodList: jspb.Message.toObjectList(msg.getPaymentMethodList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     creditCardLastFourList: jspb.Message.toObjectList(msg.getCreditCardLastFourList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     invoiceNumberList: jspb.Message.toObjectList(msg.getInvoiceNumberList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_types_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     ocrLineDkTypeList: jspb.Message.toObjectList(msg.getOcrLineDkTypeList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineDkPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineDkPaymentIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineDkCreditorIdList: jspb.Message.toObjectList(msg.getOcrLineDkCreditorIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineSePaymentIdList: jspb.Message.toObjectList(msg.getOcrLineSePaymentIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineSeBankgiroCreditorIdList: jspb.Message.toObjectList(msg.getOcrLineSeBankgiroCreditorIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineSePlusgiroCreditorIdList: jspb.Message.toObjectList(msg.getOcrLineSePlusgiroCreditorIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineNoPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineNoPaymentIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineFiPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineFiPaymentIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineNlPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineNlPaymentIdList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     text: jspb.Message.getFieldWithDefault(msg, 23, ""),
     feedbackId: jspb.Message.getFieldWithDefault(msg, 24, ""),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
-    ssn_types_candidate_pb.Candidate.toObject, includeInstance),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     linesList: jspb.Message.toObjectList(msg.getLinesList(),
-    ssn_types_candidate_pb.LineCandidate.toObject, includeInstance),
+    ssn_type_candidate_pb.LineCandidate.toObject, includeInstance),
     preview: jspb.Message.getFieldWithDefault(msg, 27, "")
   };
 
@@ -643,113 +643,113 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOrderDate(value);
       break;
     case 2:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addPaymentDueDate(value);
       break;
     case 3:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addCurrency(value);
       break;
     case 4:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addTotalVat(value);
       break;
     case 5:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addTotalInclVat(value);
       break;
     case 6:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addTotalExclVat(value);
       break;
     case 7:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addSupplierCorporateId(value);
       break;
     case 8:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addSupplierCountryCode(value);
       break;
     case 9:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addDocumentType(value);
       break;
     case 10:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addPaymentMethod(value);
       break;
     case 11:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addCreditCardLastFour(value);
       break;
     case 12:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addInvoiceNumber(value);
       break;
     case 13:
-      var value = new ssn_types_text_annotation_pb.TextAnnotation;
-      reader.readMessage(value,ssn_types_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
+      var value = new ssn_type_text_annotation_pb.TextAnnotation;
+      reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
       break;
     case 14:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineDkType(value);
       break;
     case 15:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineDkPaymentId(value);
       break;
     case 16:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineDkCreditorId(value);
       break;
     case 17:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineSePaymentId(value);
       break;
     case 18:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineSeBankgiroCreditorId(value);
       break;
     case 19:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineSePlusgiroCreditorId(value);
       break;
     case 20:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineNoPaymentId(value);
       break;
     case 21:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineFiPaymentId(value);
       break;
     case 22:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineNlPaymentId(value);
       break;
     case 23:
@@ -761,13 +761,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       msg.setFeedbackId(value);
       break;
     case 25:
-      var value = new ssn_types_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_types_candidate_pb.Candidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addIban(value);
       break;
     case 26:
-      var value = new ssn_types_candidate_pb.LineCandidate;
-      reader.readMessage(value,ssn_types_candidate_pb.LineCandidate.deserializeBinaryFromReader);
+      var value = new ssn_type_candidate_pb.LineCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.LineCandidate.deserializeBinaryFromReader);
       msg.addLines(value);
       break;
     case 27:
@@ -808,7 +808,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       1,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getPaymentDueDateList();
@@ -816,7 +816,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       2,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getCurrencyList();
@@ -824,7 +824,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       3,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getTotalVatList();
@@ -832,7 +832,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       4,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getTotalInclVatList();
@@ -840,7 +840,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       5,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getTotalExclVatList();
@@ -848,7 +848,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       6,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getSupplierCorporateIdList();
@@ -856,7 +856,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       7,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getSupplierCountryCodeList();
@@ -864,7 +864,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       8,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getDocumentTypeList();
@@ -872,7 +872,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       9,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getPaymentMethodList();
@@ -880,7 +880,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       10,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getCreditCardLastFourList();
@@ -888,7 +888,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       11,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getInvoiceNumberList();
@@ -896,7 +896,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       12,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getTextAnnotation();
@@ -904,7 +904,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeMessage(
       13,
       f,
-      ssn_types_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
+      ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineDkTypeList();
@@ -912,7 +912,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       14,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineDkPaymentIdList();
@@ -920,7 +920,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       15,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineDkCreditorIdList();
@@ -928,7 +928,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       16,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineSePaymentIdList();
@@ -936,7 +936,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       17,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineSeBankgiroCreditorIdList();
@@ -944,7 +944,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       18,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineSePlusgiroCreditorIdList();
@@ -952,7 +952,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       19,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineNoPaymentIdList();
@@ -960,7 +960,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       20,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineFiPaymentIdList();
@@ -968,7 +968,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       21,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getOcrLineNlPaymentIdList();
@@ -976,7 +976,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       22,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getText();
@@ -998,7 +998,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       25,
       f,
-      ssn_types_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
   f = message.getLinesList();
@@ -1006,7 +1006,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
     writer.writeRepeatedMessage(
       26,
       f,
-      ssn_types_candidate_pb.LineCandidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.LineCandidate.serializeBinaryToWriter
     );
   }
   f = message.getPreview();
@@ -1025,7 +1025,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOrderDateList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 1));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 1));
 };
 
 
@@ -1056,7 +1056,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOrderDateList = 
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPaymentDueDateList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 2));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 2));
 };
 
 
@@ -1087,7 +1087,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPaymentDueDateLi
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getCurrencyList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 3));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 3));
 };
 
 
@@ -1118,7 +1118,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCurrencyList = f
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTotalVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 4));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 4));
 };
 
 
@@ -1149,7 +1149,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearTotalVatList = f
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTotalInclVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 5));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 5));
 };
 
 
@@ -1180,7 +1180,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearTotalInclVatList
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTotalExclVatList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 6));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 6));
 };
 
 
@@ -1211,7 +1211,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearTotalExclVatList
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getSupplierCorporateIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 7));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 7));
 };
 
 
@@ -1242,7 +1242,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSupplierCorporat
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getSupplierCountryCodeList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 8));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 8));
 };
 
 
@@ -1273,7 +1273,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSupplierCountryC
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getDocumentTypeList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 9));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 9));
 };
 
 
@@ -1304,7 +1304,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearDocumentTypeList
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPaymentMethodList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 10));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 10));
 };
 
 
@@ -1335,7 +1335,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPaymentMethodLis
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getCreditCardLastFourList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 11));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 11));
 };
 
 
@@ -1366,7 +1366,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCreditCardLastFo
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getInvoiceNumberList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 12));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 12));
 };
 
 
@@ -1397,7 +1397,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearInvoiceNumberLis
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTextAnnotation = function() {
   return /** @type{?proto.ssn.type.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, ssn_types_text_annotation_pb.TextAnnotation, 13));
+    jspb.Message.getWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 13));
 };
 
 
@@ -1427,7 +1427,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasTextAnnotation = f
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineDkTypeList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 14));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 14));
 };
 
 
@@ -1458,7 +1458,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineDkTypeLis
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineDkPaymentIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 15));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 15));
 };
 
 
@@ -1489,7 +1489,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineDkPayment
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineDkCreditorIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 16));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 16));
 };
 
 
@@ -1520,7 +1520,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineDkCredito
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineSePaymentIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 17));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 17));
 };
 
 
@@ -1551,7 +1551,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineSePayment
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineSeBankgiroCreditorIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 18));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 18));
 };
 
 
@@ -1582,7 +1582,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineSeBankgir
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineSePlusgiroCreditorIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 19));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 19));
 };
 
 
@@ -1613,7 +1613,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineSePlusgir
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineNoPaymentIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 20));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 20));
 };
 
 
@@ -1644,7 +1644,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineNoPayment
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineFiPaymentIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 21));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 21));
 };
 
 
@@ -1675,7 +1675,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineFiPayment
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineNlPaymentIdList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 22));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 22));
 };
 
 
@@ -1736,7 +1736,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setFeedbackId = funct
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getIbanList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.Candidate, 25));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 25));
 };
 
 
@@ -1767,7 +1767,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearIbanList = funct
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getLinesList = function() {
   return /** @type{!Array<!proto.ssn.type.LineCandidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_types_candidate_pb.LineCandidate, 26));
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.LineCandidate, 26));
 };
 
 

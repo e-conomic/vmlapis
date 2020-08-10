@@ -14,9 +14,9 @@ grpc.web = require('grpc-web');
 
 var google_type_date_pb = require('../../../google/type/date_pb.js')
 
-var ssn_types_candidate_pb = require('../../../ssn/types/candidate_pb.js')
+var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
-var ssn_types_text_annotation_pb = require('../../../ssn/types/text_annotation_pb.js')
+var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 
 var tensorflow_core_example_example_pb = require('../../../tensorflow/core/example/example_pb.js')
 const proto = {};

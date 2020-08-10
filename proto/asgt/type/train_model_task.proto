@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+import "asgt/type/dataset.proto";
+import "asgt/type/revision.proto";
+
+message TrainModelTask {
+  asgt.type.Dataset dataset = 1;
+  asgt.type.Revision revision = 2;
+  int64 model_version = 4;
+}

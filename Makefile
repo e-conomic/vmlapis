@@ -12,75 +12,10 @@ all:
 		proto/ssn/access/v1/access.proto \
 		proto/ssn/dataservice/v1alpha1/dataservice.proto \
 		proto/ssn/dataservice/v1/dataservice.proto 
-	
-	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
-	# export GO111MODULE=on
-	# export PATH="$PATH:/Users/michalderdak/go/bin/"
 
 	mkdir ./gen/go
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/annotator/v1/annotator.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/access/v1/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/dataservice/v1/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/dataservice/v1alpha1/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/mlservice/v2/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/ocrservice/v1/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/pdfservice/v1/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/ssn/types/*.proto
-
-	protoc -I./deps/googleapis -I./deps/tensorflow -I./proto \
-		--go_out=gen/go/ \
-		--go-grpc_out=gen/go/ \
-		--go_opt=paths=source_relative \
-		--go-grpc_opt=paths=source_relative \
-		proto/gen_bq_schema/*.proto
-
+	./scripts/go-gen-ssn.sh
+	./scripts/go-gen-asgt.sh
 	./scripts/gomock.sh
 	./scripts/js_fixes.sh
 	./scripts/py_fixes.sh

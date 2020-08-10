@@ -16917,70 +16917,70 @@ public final class Annotator {
     java.lang.String[] descriptorData = {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
-      "to\032\031ssn/types/candidate.proto\032\037ssn/types" +
-      "/text_annotation.proto\"\331\005\n\007Feature\022,\n\004ty" +
-      "pe\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type" +
-      "\022\023\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030" +
-      "\003 \001(\0162\032.ssn.type.Confidence.Level\"\326\004\n\004Ty" +
-      "pe\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\n" +
-      "ORDER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CU" +
-      "RRENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VA" +
-      "T\020\006\022\022\n\016TOTAL_EXCL_VAT\020\007\022\031\n\025SUPPLIER_CORP" +
-      "ORATE_ID\020\010\022\031\n\025SUPPLIER_COUNTRY_CODE\020\t\022\021\n" +
-      "\rDOCUMENT_TYPE\020\n\022\022\n\016PAYMENT_METHOD\020\013\022\031\n\025" +
-      "CREDIT_CARD_LAST_FOUR\020\014\022\022\n\016INVOICE_NUMBE" +
-      "R\020\r\022\024\n\020OCR_LINE_DK_TYPE\020\016\022\032\n\026OCR_LINE_DK" +
-      "_PAYMENT_ID\020\017\022\033\n\027OCR_LINE_DK_CREDITOR_ID" +
-      "\020\020\022\032\n\026OCR_LINE_SE_PAYMENT_ID\020\021\022$\n OCR_LI" +
-      "NE_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OCR_LINE" +
-      "_SE_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_N" +
-      "O_PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID" +
-      "\020\025\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027" +
-      "\022\010\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032\"\203\001\n\030D" +
-      "ocumentAnnotatorRequest\022,\n\010document\030\001 \001(" +
-      "\0132\032.ssn.annotator.v1.Document\022+\n\010feature" +
-      "s\030\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014\n\004ta" +
-      "gs\030\003 \003(\t\"\334\t\n\031DocumentAnnotatorResponse\022\'" +
-      "\n\norder_date\030\001 \003(\0132\023.ssn.type.Candidate\022" +
-      "-\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Can" +
-      "didate\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Cand" +
-      "idate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Cand" +
-      "idate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type" +
-      ".Candidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn" +
-      ".type.Candidate\0222\n\025supplier_corporate_id" +
-      "\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025supplier_" +
-      "country_code\030\010 \003(\0132\023.ssn.type.Candidate\022" +
-      "*\n\rdocument_type\030\t \003(\0132\023.ssn.type.Candid" +
-      "ate\022+\n\016payment_method\030\n \003(\0132\023.ssn.type.C" +
-      "andidate\0222\n\025credit_card_last_four\030\013 \003(\0132" +
-      "\023.ssn.type.Candidate\022+\n\016invoice_number\030\014" +
-      " \003(\0132\023.ssn.type.Candidate\0221\n\017text_annota" +
-      "tion\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020" +
-      "ocr_line_dk_type\030\016 \003(\0132\023.ssn.type.Candid" +
-      "ate\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ss" +
-      "n.type.Candidate\0224\n\027ocr_line_dk_creditor" +
-      "_id\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_li" +
-      "ne_se_payment_id\030\021 \003(\0132\023.ssn.type.Candid" +
-      "ate\022=\n ocr_line_se_bankgiro_creditor_id\030" +
-      "\022 \003(\0132\023.ssn.type.Candidate\022=\n ocr_line_s" +
-      "e_plusgiro_creditor_id\030\023 \003(\0132\023.ssn.type." +
-      "Candidate\0223\n\026ocr_line_no_payment_id\030\024 \003(" +
-      "\0132\023.ssn.type.Candidate\0223\n\026ocr_line_fi_pa" +
-      "yment_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026o" +
-      "cr_line_nl_payment_id\030\026 \003(\0132\023.ssn.type.C" +
-      "andidate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 " +
-      "\001(\t\022!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&" +
-      "\n\005lines\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017" +
-      "\n\007preview\030\033 \001(\t\"M\n\010Document\022\017\n\007content\030\001" +
-      " \001(\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1." +
-      "DocumentSource\"\"\n\016DocumentSource\022\020\n\010http" +
-      "_uri\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Ann" +
-      "otateDocument\022*.ssn.annotator.v1.Documen" +
-      "tAnnotatorRequest\032+.ssn.annotator.v1.Doc" +
-      "umentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docu" +
-      "ment:annotate:\001*B@Z>github.com/e-conomic" +
-      "/vmlapis/gen/go/ssn/annotator/v1;annotat" +
-      "orb\006proto3"
+      "to\032\030ssn/type/candidate.proto\032\036ssn/type/t" +
+      "ext_annotation.proto\"\331\005\n\007Feature\022,\n\004type" +
+      "\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type\022\023" +
+      "\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030\003 " +
+      "\001(\0162\032.ssn.type.Confidence.Level\"\326\004\n\004Type" +
+      "\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\nOR" +
+      "DER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CURR" +
+      "ENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VAT\020" +
+      "\006\022\022\n\016TOTAL_EXCL_VAT\020\007\022\031\n\025SUPPLIER_CORPOR" +
+      "ATE_ID\020\010\022\031\n\025SUPPLIER_COUNTRY_CODE\020\t\022\021\n\rD" +
+      "OCUMENT_TYPE\020\n\022\022\n\016PAYMENT_METHOD\020\013\022\031\n\025CR" +
+      "EDIT_CARD_LAST_FOUR\020\014\022\022\n\016INVOICE_NUMBER\020" +
+      "\r\022\024\n\020OCR_LINE_DK_TYPE\020\016\022\032\n\026OCR_LINE_DK_P" +
+      "AYMENT_ID\020\017\022\033\n\027OCR_LINE_DK_CREDITOR_ID\020\020" +
+      "\022\032\n\026OCR_LINE_SE_PAYMENT_ID\020\021\022$\n OCR_LINE" +
+      "_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OCR_LINE_S" +
+      "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
+      "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
+      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010" +
+      "\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032\"\203\001\n\030Doc" +
+      "umentAnnotatorRequest\022,\n\010document\030\001 \001(\0132" +
+      "\032.ssn.annotator.v1.Document\022+\n\010features\030" +
+      "\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014\n\004tags" +
+      "\030\003 \003(\t\"\334\t\n\031DocumentAnnotatorResponse\022\'\n\n" +
+      "order_date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n" +
+      "\020payment_due_date\030\002 \003(\0132\023.ssn.type.Candi" +
+      "date\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Candid" +
+      "ate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candid" +
+      "ate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.C" +
+      "andidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.t" +
+      "ype.Candidate\0222\n\025supplier_corporate_id\030\007" +
+      " \003(\0132\023.ssn.type.Candidate\0222\n\025supplier_co" +
+      "untry_code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n" +
+      "\rdocument_type\030\t \003(\0132\023.ssn.type.Candidat" +
+      "e\022+\n\016payment_method\030\n \003(\0132\023.ssn.type.Can" +
+      "didate\0222\n\025credit_card_last_four\030\013 \003(\0132\023." +
+      "ssn.type.Candidate\022+\n\016invoice_number\030\014 \003" +
+      "(\0132\023.ssn.type.Candidate\0221\n\017text_annotati" +
+      "on\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020oc" +
+      "r_line_dk_type\030\016 \003(\0132\023.ssn.type.Candidat" +
+      "e\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn." +
+      "type.Candidate\0224\n\027ocr_line_dk_creditor_i" +
+      "d\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line" +
+      "_se_payment_id\030\021 \003(\0132\023.ssn.type.Candidat" +
+      "e\022=\n ocr_line_se_bankgiro_creditor_id\030\022 " +
+      "\003(\0132\023.ssn.type.Candidate\022=\n ocr_line_se_" +
+      "plusgiro_creditor_id\030\023 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\0223\n\026ocr_line_no_payment_id\030\024 \003(\0132" +
+      "\023.ssn.type.Candidate\0223\n\026ocr_line_fi_paym" +
+      "ent_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr" +
+      "_line_nl_payment_id\030\026 \003(\0132\023.ssn.type.Can" +
+      "didate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(" +
+      "\t\022!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&\n\005" +
+      "lines\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017\n\007" +
+      "preview\030\033 \001(\t\"M\n\010Document\022\017\n\007content\030\001 \001" +
+      "(\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Do" +
+      "cumentSource\"\"\n\016DocumentSource\022\020\n\010http_u" +
+      "ri\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Annot" +
+      "ateDocument\022*.ssn.annotator.v1.DocumentA" +
+      "nnotatorRequest\032+.ssn.annotator.v1.Docum" +
+      "entAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docume" +
+      "nt:annotate:\001*B@Z>github.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/annotator/v1;annotator" +
+      "b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
