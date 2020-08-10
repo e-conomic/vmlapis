@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.mlservice.v2;
 
-option go_package = "mlservice";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
 
 import "google/type/date.proto";
 import "ssn/types/candidate.proto";

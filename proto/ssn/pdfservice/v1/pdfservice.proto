@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ssn.pdfservice.v1;
 
-option go_package = "pdfservice";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1;pdfservice";
 
 service PdfService {
   rpc RasterizePdf(RasterizePdfRequest) returns (stream RasterizePdfResponse);

@@ -2560,8 +2560,9 @@ public final class Ocrservice {
       "\032\'.ssn.ocrservice.v1.OcrScanImageRespons" +
       "e\022n\n\021GetTextAnnotation\022+.ssn.ocrservice." +
       "v1.GetTextAnnotationRequest\032,.ssn.ocrser" +
-      "vice.v1.GetTextAnnotationResponseB\014Z\nocr" +
-      "serviceb\006proto3"
+      "vice.v1.GetTextAnnotationResponseBBZ@git" +
+      "hub.com/e-conomic/vmlapis/gen/go/ssn/ocr" +
+      "service/v1;ocrserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

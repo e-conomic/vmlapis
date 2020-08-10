@@ -38,7 +38,9 @@ namespace Ssn.Pdfservice.V1 {
             "dGgYAyABKA0SDgoGaGVpZ2h0GAQgASgNEg0KBXNjYWxlGAUgASgBMm8KClBk",
             "ZlNlcnZpY2USYQoMUmFzdGVyaXplUGRmEiYuc3NuLnBkZnNlcnZpY2UudjEu",
             "UmFzdGVyaXplUGRmUmVxdWVzdBonLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rl",
-            "cml6ZVBkZlJlc3BvbnNlMAFCDFoKcGRmc2VydmljZWIGcHJvdG8z"));
+            "cml6ZVBkZlJlc3BvbnNlMAFCQlpAZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vc3NuL3BkZnNlcnZpY2UvdjE7cGRmc2VydmljZWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

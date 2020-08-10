@@ -1948,7 +1948,9 @@ public final class Pdfservice {
       "\r\n\005scale\030\005 \001(\0012o\n\nPdfService\022a\n\014Rasteriz" +
       "ePdf\022&.ssn.pdfservice.v1.RasterizePdfReq" +
       "uest\032\'.ssn.pdfservice.v1.RasterizePdfRes" +
-      "ponse0\001B\014Z\npdfserviceb\006proto3"
+      "ponse0\001BBZ@github.com/e-conomic/vmlapis/" +
+      "gen/go/ssn/pdfservice/v1;pdfserviceb\006pro" +
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

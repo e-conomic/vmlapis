@@ -29,7 +29,9 @@ namespace GenBqSchema {
             "eU1lc3NhZ2VPcHRpb25zEhIKCnRhYmxlX25hbWUYASABKAkSFgoOdXNlX2pz",
             "b25fbmFtZXMYAiABKAg6XgoNYmlncXVlcnlfb3B0cxIfLmdvb2dsZS5wcm90",
             "b2J1Zi5NZXNzYWdlT3B0aW9ucxj9ByABKAsyJS5nZW5fYnFfc2NoZW1hLkJp",
-            "Z1F1ZXJ5TWVzc2FnZU9wdGlvbnNiBnByb3RvMw=="));
+            "Z1F1ZXJ5TWVzc2FnZU9wdGlvbnNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMv",
+            "dm1sYXBpcy9nZW4vZ28vZ2V0X2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

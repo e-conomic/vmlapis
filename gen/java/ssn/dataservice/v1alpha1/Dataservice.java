@@ -24217,7 +24217,8 @@ public final class Dataservice {
       "lpha1/feedback:delete:\001*\022^\n\023CallsPerMont" +
       "hMetric\022\026.google.protobuf.Empty\032/.ssn.da" +
       "taservice.v1alpha1.CallsPerMonthResponse" +
-      "B\rZ\013dataserviceb\006proto3"
+      "BDZBgithub.com/e-conomic/vmlapis/gen/go/" +
+      "ssn/dataservice/v1;dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

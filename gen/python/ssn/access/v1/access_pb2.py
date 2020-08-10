@@ -19,8 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ssn/access/v1/access.proto',
   package='ssn.access.v1',
   syntax='proto3',
-  serialized_options=_b('Z\006access'),
-  serialized_pb=_b('\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"+\n\x0fValetKeyRequest\x12\x0b\n\x03sub\x18\x01 \x01(\t\x12\x0b\n\x03\x65xp\x18\x02 \x01(\x03\"-\n\x10ValetKeyResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B\x08Z\x06\x61\x63\x63\x65ssb\x06proto3')
+  serialized_options=_b('Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access'),
+  serialized_pb=_b('\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"+\n\x0fValetKeyRequest\x12\x0b\n\x03sub\x18\x01 \x01(\t\x12\x0b\n\x03\x65xp\x18\x02 \x01(\x03\"-\n\x10ValetKeyResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05token\x18\x02 \x01(\t2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/access/valetkey:\x01*B:Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;accessb\x06proto3')
   ,
   dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
 

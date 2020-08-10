@@ -83,8 +83,9 @@ namespace Ssn.Mlservice.V2 {
             "ZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXF1ZXN0GiEuc3Nu",
             "Lm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVhdHVyZUdlblBy",
             "ZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5QcmVkaWN0UmVx",
-            "dWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3BvbnNlQgtaCW1s",
-            "c2VydmljZWIGcHJvdG8z"));
+            "dWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3BvbnNlQkBaPmdp",
+            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9tbHNlcnZp",
+            "Y2UvdjI7bWxzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

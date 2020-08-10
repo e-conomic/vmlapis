@@ -38,8 +38,9 @@ namespace Ssn.Ocrservice.V1 {
             "Y2UudjEuT2NyU2NhbkltYWdlUmVxdWVzdBonLnNzbi5vY3JzZXJ2aWNlLnYx",
             "Lk9jclNjYW5JbWFnZVJlc3BvbnNlEm4KEUdldFRleHRBbm5vdGF0aW9uEisu",
             "c3NuLm9jcnNlcnZpY2UudjEuR2V0VGV4dEFubm90YXRpb25SZXF1ZXN0Giwu",
-            "c3NuLm9jcnNlcnZpY2UudjEuR2V0VGV4dEFubm90YXRpb25SZXNwb25zZUIM",
-            "WgpvY3JzZXJ2aWNlYgZwcm90bzM="));
+            "c3NuLm9jcnNlcnZpY2UudjEuR2V0VGV4dEFubm90YXRpb25SZXNwb25zZUJC",
+            "WkBnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vb2Ny",
+            "c2VydmljZS92MTtvY3JzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
