@@ -19,8 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='gen_bq_schema/bq_field.proto',
   package='gen_bq_schema',
   syntax='proto3',
-  serialized_options=_b('Z?github.com/e-conomic/vmlapis/gen/go/get_bq_schema;gen_bq_schema'),
-  serialized_pb=_b('\n\x1cgen_bq_schema/bq_field.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"q\n\x14\x42igQueryFieldOptions\x12\x0f\n\x07require\x18\x01 \x01(\x08\x12\x15\n\rtype_override\x18\x02 \x01(\t\x12\x0e\n\x06ignore\x18\x03 \x01(\x08\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0c\n\x04name\x18\x05 \x01(\t:U\n\x08\x62igquery\x12\x1d.google.protobuf.FieldOptions\x18\xfd\x07 \x01(\x0b\x32#.gen_bq_schema.BigQueryFieldOptionsBAZ?github.com/e-conomic/vmlapis/gen/go/get_bq_schema;gen_bq_schemab\x06proto3')
+  serialized_options=_b('Z?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema'),
+  serialized_pb=_b('\n\x1cgen_bq_schema/bq_field.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"q\n\x14\x42igQueryFieldOptions\x12\x0f\n\x07require\x18\x01 \x01(\x08\x12\x15\n\rtype_override\x18\x02 \x01(\t\x12\x0e\n\x06ignore\x18\x03 \x01(\x08\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\x12\x0c\n\x04name\x18\x05 \x01(\t:U\n\x08\x62igquery\x12\x1d.google.protobuf.FieldOptions\x18\xfd\x07 \x01(\x0b\x32#.gen_bq_schema.BigQueryFieldOptionsBAZ?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schemab\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_descriptor__pb2.DESCRIPTOR,])
 

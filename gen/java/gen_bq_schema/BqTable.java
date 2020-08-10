@@ -737,7 +737,7 @@ public final class BqTable {
       "y_opts\022\037.google.protobuf.MessageOptions\030" +
       "\375\007 \001(\0132%.gen_bq_schema.BigQueryMessageOp" +
       "tionsBAZ?github.com/e-conomic/vmlapis/ge" +
-      "n/go/get_bq_schema;gen_bq_schemab\006proto3"
+      "n/go/gen_bq_schema;gen_bq_schemab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

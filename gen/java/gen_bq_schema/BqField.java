@@ -1194,7 +1194,7 @@ public final class BqField {
       "gquery\022\035.google.protobuf.FieldOptions\030\375\007" +
       " \001(\0132#.gen_bq_schema.BigQueryFieldOption" +
       "sBAZ?github.com/e-conomic/vmlapis/gen/go" +
-      "/get_bq_schema;gen_bq_schemab\006proto3"
+      "/gen_bq_schema;gen_bq_schemab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

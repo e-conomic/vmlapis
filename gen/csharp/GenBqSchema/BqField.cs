@@ -31,7 +31,7 @@ namespace GenBqSchema {
             "EgwKBG5hbWUYBSABKAk6VQoIYmlncXVlcnkSHS5nb29nbGUucHJvdG9idWYu",
             "RmllbGRPcHRpb25zGP0HIAEoCzIjLmdlbl9icV9zY2hlbWEuQmlnUXVlcnlG",
             "aWVsZE9wdGlvbnNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
-            "ZW4vZ28vZ2V0X2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
+            "ZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

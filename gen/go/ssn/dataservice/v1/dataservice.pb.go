@@ -7,7 +7,7 @@
 package dataservice
 
 import (
-	_ "github.com/e-conomic/vmlapis/gen/go/get_bq_schema"
+	_ "github.com/e-conomic/vmlapis/gen/go/gen_bq_schema"
 	types "github.com/e-conomic/vmlapis/gen/go/ssn/types"
 	proto "github.com/golang/protobuf/proto"
 	empty "github.com/golang/protobuf/ptypes/empty"
