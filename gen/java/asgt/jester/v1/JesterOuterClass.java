@@ -1631,6 +1631,25 @@ public final class JesterOuterClass {
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
      */
     asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder();
+
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code asgt.jester.v1.SuggestionRequest}
@@ -1648,6 +1667,7 @@ public final class JesterOuterClass {
       name_ = "";
       type_ = "";
       inputs_ = java.util.Collections.emptyList();
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -1708,6 +1728,15 @@ public final class JesterOuterClass {
 
               break;
             }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000010;
+              }
+              tags_.add(s);
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -1725,6 +1754,9 @@ public final class JesterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
+        }
+        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1868,6 +1900,35 @@ public final class JesterOuterClass {
       return getOptions();
     }
 
+    public static final int TAGS_FIELD_NUMBER = 5;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1894,6 +1955,9 @@ public final class JesterOuterClass {
       if (options_ != null) {
         output.writeMessage(4, getOptions());
       }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+      }
       unknownFields.writeTo(output);
     }
 
@@ -1916,6 +1980,14 @@ public final class JesterOuterClass {
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getOptions());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1944,6 +2016,8 @@ public final class JesterOuterClass {
         result = result && getOptions()
             .equals(other.getOptions());
       }
+      result = result && getTagsList()
+          .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1966,6 +2040,10 @@ public final class JesterOuterClass {
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
+      }
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2117,6 +2195,8 @@ public final class JesterOuterClass {
           options_ = null;
           optionsBuilder_ = null;
         }
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -2161,6 +2241,11 @@ public final class JesterOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2246,6 +2331,16 @@ public final class JesterOuterClass {
         }
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2771,6 +2866,100 @@ public final class JesterOuterClass {
         }
         return optionsBuilder_;
       }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000010;
+         }
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 5;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2856,16 +3045,16 @@ public final class JesterOuterClass {
       "ype.Prediction\022\037\n\005model\030\002 \001(\0132\020.asgt.typ" +
       "e.Model\"b\n\021SuggestionOptions\022\030\n\020suggesti" +
       "on_limit\030\001 \001(\005\0223\n\016min_confidence\030\002 \001(\0162\033" +
-      ".asgt.type.Confidence.Level\"\204\001\n\021Suggesti" +
+      ".asgt.type.Confidence.Level\"\222\001\n\021Suggesti" +
       "onRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\037\n" +
       "\006inputs\030\003 \003(\0132\017.asgt.type.Data\0222\n\007option" +
       "s\030\004 \001(\0132!.asgt.jester.v1.SuggestionOptio" +
-      "ns2\200\001\n\006Jester\022v\n\007Suggest\022!.asgt.jester.v" +
-      "1.SuggestionRequest\032\".asgt.jester.v1.Sug" +
-      "gestionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{nam" +
-      "e}:suggest:\001*B;Z9github.com/e-conomic/vm" +
-      "lapis/gen/go/asgt/jester/v1;jesterb\006prot" +
-      "o3"
+      "ns\022\014\n\004tags\030\005 \003(\t2\200\001\n\006Jester\022v\n\007Suggest\022!" +
+      ".asgt.jester.v1.SuggestionRequest\032\".asgt" +
+      ".jester.v1.SuggestionResponse\"$\202\323\344\223\002\036\"\031/" +
+      "v1/{type}/{name}:suggest:\001*B;Z9github.co" +
+      "m/e-conomic/vmlapis/gen/go/asgt/jester/v" +
+      "1;jesterb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2900,7 +3089,7 @@ public final class JesterOuterClass {
     internal_static_asgt_jester_v1_SuggestionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1_SuggestionRequest_descriptor,
-        new java.lang.String[] { "Name", "Type", "Inputs", "Options", });
+        new java.lang.String[] { "Name", "Type", "Inputs", "Options", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
