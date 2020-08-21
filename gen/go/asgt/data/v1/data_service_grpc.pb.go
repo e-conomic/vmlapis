@@ -23,6 +23,7 @@ type DataServiceClient interface {
 	DeleteData(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetInfo(ctx context.Context, in *GetInfoRequest, opts ...grpc.CallOption) (*GetInfoResponse, error)
 	UpdateDataset(ctx context.Context, in *UpdateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
 type dataServiceClient struct {
@@ -78,6 +79,15 @@ func (c *dataServiceClient) UpdateDataset(ctx context.Context, in *UpdateDataset
 	return out, nil
 }
 
+func (c *dataServiceClient) RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1.DataService/RegisterQueryStats", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DataServiceServer is the server API for DataService service.
 // All implementations must embed UnimplementedDataServiceServer
 // for forward compatibility
@@ -87,6 +97,7 @@ type DataServiceServer interface {
 	DeleteData(context.Context, *DeleteRequest) (*empty.Empty, error)
 	GetInfo(context.Context, *GetInfoRequest) (*GetInfoResponse, error)
 	UpdateDataset(context.Context, *UpdateDatasetRequest) (*empty.Empty, error)
+	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error)
 	mustEmbedUnimplementedDataServiceServer()
 }
 
@@ -108,6 +119,9 @@ func (*UnimplementedDataServiceServer) GetInfo(context.Context, *GetInfoRequest)
 }
 func (*UnimplementedDataServiceServer) UpdateDataset(context.Context, *UpdateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateDataset not implemented")
+}
+func (*UnimplementedDataServiceServer) RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RegisterQueryStats not implemented")
 }
 func (*UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
 
@@ -205,6 +219,24 @@ func _DataService_UpdateDataset_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DataService_RegisterQueryStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RegisterQueryStatsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).RegisterQueryStats(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.dataservice.v1.DataService/RegisterQueryStats",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).RegisterQueryStats(ctx, req.(*RegisterQueryStatsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _DataService_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "asgt.dataservice.v1.DataService",
 	HandlerType: (*DataServiceServer)(nil),
@@ -228,6 +260,10 @@ var _DataService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "UpdateDataset",
 			Handler:    _DataService_UpdateDataset_Handler,
+		},
+		{
+			MethodName: "RegisterQueryStats",
+			Handler:    _DataService_RegisterQueryStats_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -20,7 +20,6 @@ const _ = grpc.SupportPackageIsVersion6
 type ModelRegistryClient interface {
 	RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error)
-	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 }
 
 type modelRegistryClient struct {
@@ -49,22 +48,12 @@ func (c *modelRegistryClient) GetCurrentModel(ctx context.Context, in *GetCurren
 	return out, nil
 }
 
-func (c *modelRegistryClient) RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
-	out := new(empty.Empty)
-	err := c.cc.Invoke(ctx, "/asgt.modelregistry.v1.ModelRegistry/RegisterQueryStats", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // ModelRegistryServer is the server API for ModelRegistry service.
 // All implementations must embed UnimplementedModelRegistryServer
 // for forward compatibility
 type ModelRegistryServer interface {
 	RegisterModel(context.Context, *RegisterModelRequest) (*empty.Empty, error)
 	GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error)
-	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error)
 	mustEmbedUnimplementedModelRegistryServer()
 }
 
@@ -77,9 +66,6 @@ func (*UnimplementedModelRegistryServer) RegisterModel(context.Context, *Registe
 }
 func (*UnimplementedModelRegistryServer) GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCurrentModel not implemented")
-}
-func (*UnimplementedModelRegistryServer) RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RegisterQueryStats not implemented")
 }
 func (*UnimplementedModelRegistryServer) mustEmbedUnimplementedModelRegistryServer() {}
 
@@ -123,24 +109,6 @@ func _ModelRegistry_GetCurrentModel_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
-func _ModelRegistry_RegisterQueryStats_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterQueryStatsRequest)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(ModelRegistryServer).RegisterQueryStats(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/asgt.modelregistry.v1.ModelRegistry/RegisterQueryStats",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ModelRegistryServer).RegisterQueryStats(ctx, req.(*RegisterQueryStatsRequest))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "asgt.modelregistry.v1.ModelRegistry",
 	HandlerType: (*ModelRegistryServer)(nil),
@@ -152,10 +120,6 @@ var _ModelRegistry_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetCurrentModel",
 			Handler:    _ModelRegistry_GetCurrentModel_Handler,
-		},
-		{
-			MethodName: "RegisterQueryStats",
-			Handler:    _ModelRegistry_RegisterQueryStats_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

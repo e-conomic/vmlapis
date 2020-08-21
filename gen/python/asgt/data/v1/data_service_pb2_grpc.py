@@ -40,6 +40,11 @@ class DataServiceStub(object):
         request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.UpdateDatasetRequest.SerializeToString,
         response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
         )
+    self.RegisterQueryStats = channel.unary_unary(
+        '/asgt.dataservice.v1.DataService/RegisterQueryStats',
+        request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.RegisterQueryStatsRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
 
 
 class DataServiceServicer(object):
@@ -81,6 +86,13 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def RegisterQueryStats(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_DataServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -107,6 +119,11 @@ def add_DataServiceServicer_to_server(servicer, server):
       'UpdateDataset': grpc.unary_unary_rpc_method_handler(
           servicer.UpdateDataset,
           request_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.UpdateDatasetRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+      ),
+      'RegisterQueryStats': grpc.unary_unary_rpc_method_handler(
+          servicer.RegisterQueryStats,
+          request_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.RegisterQueryStatsRequest.FromString,
           response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
   }
