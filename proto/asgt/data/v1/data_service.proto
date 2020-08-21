@@ -45,6 +45,8 @@ service DataService {
       body: "*"
     };
   }
+
+  rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
 }
 
 
@@ -87,4 +89,11 @@ message GetInfoResponse {
 
   // The most recently trained model; empty if no model has been trained
   asgt.type.Model model = 2;
+}
+
+message RegisterQueryStatsRequest {
+  string dataset = 1;
+  string model_type = 2;
+  int32 batch_size = 3;
+  repeated string tags = 4;
 }

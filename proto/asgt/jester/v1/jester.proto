@@ -34,4 +34,5 @@ message SuggestionRequest {
   string type = 2;
   repeated asgt.type.Data inputs = 3;
   SuggestionOptions options = 4;
+  repeated string tags = 5;
 }

@@ -422,7 +422,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.jester.v1.SuggestionRequest.repeatedFields_ = [3];
+proto.asgt.jester.v1.SuggestionRequest.repeatedFields_ = [3,5];
 
 
 
@@ -457,7 +457,8 @@ proto.asgt.jester.v1.SuggestionRequest.toObject = function(includeInstance, msg)
     type: jspb.Message.getFieldWithDefault(msg, 2, ""),
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     asgt_type_data_pb.Data.toObject, includeInstance),
-    options: (f = msg.getOptions()) && proto.asgt.jester.v1.SuggestionOptions.toObject(includeInstance, f)
+    options: (f = msg.getOptions()) && proto.asgt.jester.v1.SuggestionOptions.toObject(includeInstance, f),
+    tagsList: jspb.Message.getRepeatedField(msg, 5)
   };
 
   if (includeInstance) {
@@ -511,6 +512,10 @@ proto.asgt.jester.v1.SuggestionRequest.deserializeBinaryFromReader = function(ms
       var value = new proto.asgt.jester.v1.SuggestionOptions;
       reader.readMessage(value,proto.asgt.jester.v1.SuggestionOptions.deserializeBinaryFromReader);
       msg.setOptions(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addTags(value);
       break;
     default:
       reader.skipField();
@@ -569,6 +574,13 @@ proto.asgt.jester.v1.SuggestionRequest.serializeBinaryToWriter = function(messag
       4,
       f,
       proto.asgt.jester.v1.SuggestionOptions.serializeBinaryToWriter
+    );
+  }
+  f = message.getTagsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      5,
+      f
     );
   }
 };
@@ -662,6 +674,35 @@ proto.asgt.jester.v1.SuggestionRequest.prototype.clearOptions = function() {
  */
 proto.asgt.jester.v1.SuggestionRequest.prototype.hasOptions = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * repeated string tags = 5;
+ * @return {!Array<string>}
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.getTagsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+};
+
+
+/** @param {!Array<string>} value */
+proto.asgt.jester.v1.SuggestionRequest.prototype.setTagsList = function(value) {
+  jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.addTags = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+proto.asgt.jester.v1.SuggestionRequest.prototype.clearTagsList = function() {
+  this.setTagsList([]);
 };
 
 

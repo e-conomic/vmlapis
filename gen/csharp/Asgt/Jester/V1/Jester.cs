@@ -31,21 +31,21 @@ namespace Asgt.Jester.V1 {
             "dGlvbnMYASADKAsyFS5hc2d0LnR5cGUuUHJlZGljdGlvbhIfCgVtb2RlbBgC",
             "IAEoCzIQLmFzZ3QudHlwZS5Nb2RlbCJiChFTdWdnZXN0aW9uT3B0aW9ucxIY",
             "ChBzdWdnZXN0aW9uX2xpbWl0GAEgASgFEjMKDm1pbl9jb25maWRlbmNlGAIg",
-            "ASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWwihAEKEVN1Z2dlc3Rp",
+            "ASgOMhsuYXNndC50eXBlLkNvbmZpZGVuY2UuTGV2ZWwikgEKEVN1Z2dlc3Rp",
             "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkSDAoEdHlwZRgCIAEoCRIfCgZpbnB1",
             "dHMYAyADKAsyDy5hc2d0LnR5cGUuRGF0YRIyCgdvcHRpb25zGAQgASgLMiEu",
-            "YXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvbk9wdGlvbnMygAEKBkplc3RlchJ2",
-            "CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJlcXVlc3Qa",
-            "Ii5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVzcG9uc2UiJILT5JMCHiIZ",
-            "L3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdDoBKkI7WjlnaXRodWIuY29tL2Ut",
-            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2plc3Rlci92MTtqZXN0ZXJi",
-            "BnByb3RvMw=="));
+            "YXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvbk9wdGlvbnMSDAoEdGFncxgFIAMo",
+            "CTKAAQoGSmVzdGVyEnYKB1N1Z2dlc3QSIS5hc2d0Lmplc3Rlci52MS5TdWdn",
+            "ZXN0aW9uUmVxdWVzdBoiLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rpb25SZXNw",
+            "b25zZSIkgtPkkwIeIhkvdjEve3R5cGV9L3tuYW1lfTpzdWdnZXN0OgEqQjta",
+            "OWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVz",
+            "dGVyL3YxO2plc3RlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -396,6 +396,7 @@ namespace Asgt.Jester.V1 {
       type_ = other.type_;
       inputs_ = other.inputs_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -447,6 +448,16 @@ namespace Asgt.Jester.V1 {
       }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_tags_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SuggestionRequest);
@@ -464,6 +475,7 @@ namespace Asgt.Jester.V1 {
       if (Type != other.Type) return false;
       if(!inputs_.Equals(other.inputs_)) return false;
       if (!object.Equals(Options, other.Options)) return false;
+      if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -474,6 +486,7 @@ namespace Asgt.Jester.V1 {
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= inputs_.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
+      hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -500,6 +513,7 @@ namespace Asgt.Jester.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Options);
       }
+      tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -518,6 +532,7 @@ namespace Asgt.Jester.V1 {
       if (options_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
+      size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -542,6 +557,7 @@ namespace Asgt.Jester.V1 {
         }
         Options.MergeFrom(other.Options);
       }
+      tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -570,6 +586,10 @@ namespace Asgt.Jester.V1 {
               options_ = new global::Asgt.Jester.V1.SuggestionOptions();
             }
             input.ReadMessage(options_);
+            break;
+          }
+          case 42: {
+            tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
         }
