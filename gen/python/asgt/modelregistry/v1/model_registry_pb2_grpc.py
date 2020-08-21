@@ -25,6 +25,11 @@ class ModelRegistryStub(object):
         request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
         response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
         )
+    self.RegisterQueryStats = channel.unary_unary(
+        '/asgt.modelregistry.v1.ModelRegistry/RegisterQueryStats',
+        request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterQueryStatsRequest.SerializeToString,
+        response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+        )
 
 
 class ModelRegistryServicer(object):
@@ -39,6 +44,13 @@ class ModelRegistryServicer(object):
     raise NotImplementedError('Method not implemented!')
 
   def GetCurrentModel(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def RegisterQueryStats(self, request, context):
     """List the most recent versions of a model trained with a specified dataset
     rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
     """
@@ -58,6 +70,11 @@ def add_ModelRegistryServicer_to_server(servicer, server):
           servicer.GetCurrentModel,
           request_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.FromString,
           response_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.SerializeToString,
+      ),
+      'RegisterQueryStats': grpc.unary_unary_rpc_method_handler(
+          servicer.RegisterQueryStats,
+          request_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterQueryStatsRequest.FromString,
+          response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(

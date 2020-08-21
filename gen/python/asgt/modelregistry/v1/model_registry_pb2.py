@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.modelregistry.v1',
   syntax='proto3',
   serialized_options=_b('ZGgithub.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistry'),
-  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa6\x02\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12I\n\x07metrics\x18\x04 \x03(\x0b\x32\x38.asgt.modelregistry.v1.RegisterModelRequest.MetricsEntry\x12\x30\n\x0etarget_metrics\x18\x05 \x03(\x0b\x32\x18.asgt.type.TargetMetrics\x1a.\n\x0cMetricsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model2\xd7\x01\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponseBIZGgithub.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistryb\x06proto3')
+  serialized_pb=_b('\n*asgt/modelregistry/v1/model_registry.proto\x12\x15\x61sgt.modelregistry.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a\x18\x61sgt/type/revision.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa6\x02\n\x14RegisterModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12%\n\x08revision\x18\x02 \x01(\x0b\x32\x13.asgt.type.Revision\x12\x15\n\rmodel_version\x18\x03 \x01(\x03\x12I\n\x07metrics\x18\x04 \x03(\x0b\x32\x38.asgt.modelregistry.v1.RegisterModelRequest.MetricsEntry\x12\x30\n\x0etarget_metrics\x18\x05 \x03(\x0b\x32\x18.asgt.type.TargetMetrics\x1a.\n\x0cMetricsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x05:\x02\x38\x01\"=\n\x16GetCurrentModelRequest\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\":\n\x17GetCurrentModelResponse\x12\x1f\n\x05model\x18\x01 \x01(\x0b\x32\x10.asgt.type.Model\"t\n\x19RegisterQueryStatsRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x12\n\nmodel_type\x18\x03 \x01(\t\x12\x12\n\nbatch_size\x18\x04 \x01(\x05\x12\x0c\n\x04tags\x18\x05 \x03(\t2\xb7\x02\n\rModelRegistry\x12T\n\rRegisterModel\x12+.asgt.modelregistry.v1.RegisterModelRequest\x1a\x16.google.protobuf.Empty\x12p\n\x0fGetCurrentModel\x12-.asgt.modelregistry.v1.GetCurrentModelRequest\x1a..asgt.modelregistry.v1.GetCurrentModelResponse\x12^\n\x12RegisterQueryStats\x12\x30.asgt.modelregistry.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.EmptyBIZGgithub.com/e-conomic/vmlapis/gen/go/asgt/modelregistry/v1;modelregistryb\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_revision__pb2.DESCRIPTOR,asgt_dot_type_dot_target__metrics__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -188,6 +188,65 @@ _GETCURRENTMODELRESPONSE = _descriptor.Descriptor(
   serialized_end=622,
 )
 
+
+_REGISTERQUERYSTATSREQUEST = _descriptor.Descriptor(
+  name='RegisterQueryStatsRequest',
+  full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='consumer', full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest.consumer', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='dataset', full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest.dataset', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='model_type', full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest.model_type', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='batch_size', full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest.batch_size', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='tags', full_name='asgt.modelregistry.v1.RegisterQueryStatsRequest.tags', index=4,
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=624,
+  serialized_end=740,
+)
+
 _REGISTERMODELREQUEST_METRICSENTRY.containing_type = _REGISTERMODELREQUEST
 _REGISTERMODELREQUEST.fields_by_name['dataset'].message_type = asgt_dot_type_dot_dataset__pb2._DATASET
 _REGISTERMODELREQUEST.fields_by_name['revision'].message_type = asgt_dot_type_dot_revision__pb2._REVISION
@@ -198,6 +257,7 @@ _GETCURRENTMODELRESPONSE.fields_by_name['model'].message_type = asgt_dot_type_do
 DESCRIPTOR.message_types_by_name['RegisterModelRequest'] = _REGISTERMODELREQUEST
 DESCRIPTOR.message_types_by_name['GetCurrentModelRequest'] = _GETCURRENTMODELREQUEST
 DESCRIPTOR.message_types_by_name['GetCurrentModelResponse'] = _GETCURRENTMODELRESPONSE
+DESCRIPTOR.message_types_by_name['RegisterQueryStatsRequest'] = _REGISTERQUERYSTATSREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 RegisterModelRequest = _reflection.GeneratedProtocolMessageType('RegisterModelRequest', (_message.Message,), dict(
@@ -229,6 +289,13 @@ GetCurrentModelResponse = _reflection.GeneratedProtocolMessageType('GetCurrentMo
   ))
 _sym_db.RegisterMessage(GetCurrentModelResponse)
 
+RegisterQueryStatsRequest = _reflection.GeneratedProtocolMessageType('RegisterQueryStatsRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REGISTERQUERYSTATSREQUEST,
+  __module__ = 'asgt.modelregistry.v1.model_registry_pb2'
+  # @@protoc_insertion_point(class_scope:asgt.modelregistry.v1.RegisterQueryStatsRequest)
+  ))
+_sym_db.RegisterMessage(RegisterQueryStatsRequest)
+
 
 DESCRIPTOR._options = None
 _REGISTERMODELREQUEST_METRICSENTRY._options = None
@@ -239,8 +306,8 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=625,
-  serialized_end=840,
+  serialized_start=743,
+  serialized_end=1054,
   methods=[
   _descriptor.MethodDescriptor(
     name='RegisterModel',
@@ -258,6 +325,15 @@ _MODELREGISTRY = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_GETCURRENTMODELREQUEST,
     output_type=_GETCURRENTMODELRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='RegisterQueryStats',
+    full_name='asgt.modelregistry.v1.ModelRegistry.RegisterQueryStats',
+    index=2,
+    containing_service=None,
+    input_type=_REGISTERQUERYSTATSREQUEST,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
   ),
 ])
