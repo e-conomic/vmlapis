@@ -41,26 +41,26 @@ namespace Asgt.Dataservice.V1 {
             "dHlwZRgCIAEoCRI0ChByZXRlbnRpb25fcG9saWN5GAMgASgLMhouYXNndC50",
             "eXBlLlJldGVudGlvblBvbGljeSJXCg9HZXRJbmZvUmVzcG9uc2USIwoHZGF0",
             "YXNldBgBIAEoCzISLmFzZ3QudHlwZS5EYXRhc2V0Eh8KBW1vZGVsGAIgASgL",
-            "MhAuYXNndC50eXBlLk1vZGVsInQKGVJlZ2lzdGVyUXVlcnlTdGF0c1JlcXVl",
-            "c3QSEAoIY29uc3VtZXIYASABKAkSDwoHZGF0YXNldBgCIAEoCRISCgptb2Rl",
-            "bF90eXBlGAMgASgJEhIKCmJhdGNoX3NpemUYBCABKAUSDAoEdGFncxgFIAMo",
-            "CTKgBQoLRGF0YVNlcnZpY2USaQoNQ3JlYXRlRGF0YXNldBIiLmFzZ3QuZGF0",
-            "YXNlcnZpY2UudjEuQ3JlYXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSIcgtPkkwIWIhEvdjEve3R5cGV9OmNyZWF0ZToBKhJxCgpBcHBlbmRE",
-            "YXRhEiYuYXNndC5kYXRhc2VydmljZS52MS5BcHBlbmREYXRhUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIjgtPkkwIdIhgvdjEve3R5cGV9L3tu",
-            "YW1lfTphcHBlbmQ6ASoSZgoKRGVsZXRlRGF0YRIiLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjEuRGVsZXRlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIc",
-            "gtPkkwIWIhEvdjEve3R5cGV9OmRlbGV0ZToBKhJ0CgdHZXRJbmZvEiMuYXNn",
-            "dC5kYXRhc2VydmljZS52MS5HZXRJbmZvUmVxdWVzdBokLmFzZ3QuZGF0YXNl",
-            "cnZpY2UudjEuR2V0SW5mb1Jlc3BvbnNlIh6C0+STAhgSFi92MS97dHlwZX0v",
-            "e25hbWV9OmluZm8SdwoNVXBkYXRlRGF0YXNldBIpLmFzZ3QuZGF0YXNlcnZp",
-            "Y2UudjEuVXBkYXRlRGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiI4LT5JMCHRoYL3YxL3t0eXBlfS97bmFtZX06dXBkYXRlOgEqElwK",
-            "ElJlZ2lzdGVyUXVlcnlTdGF0cxIuLmFzZ3QuZGF0YXNlcnZpY2UudjEuUmVn",
-            "aXN0ZXJRdWVyeVN0YXRzUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eUI3WjVnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0",
-            "L2RhdGEvdjE7ZGF0YWIGcHJvdG8z"));
+            "MhAuYXNndC50eXBlLk1vZGVsImIKGVJlZ2lzdGVyUXVlcnlTdGF0c1JlcXVl",
+            "c3QSDwoHZGF0YXNldBgBIAEoCRISCgptb2RlbF90eXBlGAIgASgJEhIKCmJh",
+            "dGNoX3NpemUYAyABKAUSDAoEdGFncxgEIAMoCTKgBQoLRGF0YVNlcnZpY2US",
+            "aQoNQ3JlYXRlRGF0YXNldBIiLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ3JlYXRl",
+            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIWIhEvdjEv",
+            "e3R5cGV9OmNyZWF0ZToBKhJxCgpBcHBlbmREYXRhEiYuYXNndC5kYXRhc2Vy",
+            "dmljZS52MS5BcHBlbmREYXRhUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
+            "bXB0eSIjgtPkkwIdIhgvdjEve3R5cGV9L3tuYW1lfTphcHBlbmQ6ASoSZgoK",
+            "RGVsZXRlRGF0YRIiLmFzZ3QuZGF0YXNlcnZpY2UudjEuRGVsZXRlUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIcgtPkkwIWIhEvdjEve3R5cGV9",
+            "OmRlbGV0ZToBKhJ0CgdHZXRJbmZvEiMuYXNndC5kYXRhc2VydmljZS52MS5H",
+            "ZXRJbmZvUmVxdWVzdBokLmFzZ3QuZGF0YXNlcnZpY2UudjEuR2V0SW5mb1Jl",
+            "c3BvbnNlIh6C0+STAhgSFi92MS97dHlwZX0ve25hbWV9OmluZm8SdwoNVXBk",
+            "YXRlRGF0YXNldBIpLmFzZ3QuZGF0YXNlcnZpY2UudjEuVXBkYXRlRGF0YXNl",
+            "dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiI4LT5JMCHRoYL3Yx",
+            "L3t0eXBlfS97bmFtZX06dXBkYXRlOgEqElwKElJlZ2lzdGVyUXVlcnlTdGF0",
+            "cxIuLmFzZ3QuZGF0YXNlcnZpY2UudjEuUmVnaXN0ZXJRdWVyeVN0YXRzUmVx",
+            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eUI3WjVnaXRodWIuY29tL2Ut",
+            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7ZGF0YWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +70,7 @@ namespace Asgt.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Consumer", "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null)
           }));
     }
     #endregion
@@ -1266,7 +1266,6 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public RegisterQueryStatsRequest(RegisterQueryStatsRequest other) : this() {
-      consumer_ = other.consumer_;
       dataset_ = other.dataset_;
       modelType_ = other.modelType_;
       batchSize_ = other.batchSize_;
@@ -1279,19 +1278,8 @@ namespace Asgt.Dataservice.V1 {
       return new RegisterQueryStatsRequest(this);
     }
 
-    /// <summary>Field number for the "consumer" field.</summary>
-    public const int ConsumerFieldNumber = 1;
-    private string consumer_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Consumer {
-      get { return consumer_; }
-      set {
-        consumer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "dataset" field.</summary>
-    public const int DatasetFieldNumber = 2;
+    public const int DatasetFieldNumber = 1;
     private string dataset_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Dataset {
@@ -1302,7 +1290,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     /// <summary>Field number for the "model_type" field.</summary>
-    public const int ModelTypeFieldNumber = 3;
+    public const int ModelTypeFieldNumber = 2;
     private string modelType_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ModelType {
@@ -1313,7 +1301,7 @@ namespace Asgt.Dataservice.V1 {
     }
 
     /// <summary>Field number for the "batch_size" field.</summary>
-    public const int BatchSizeFieldNumber = 4;
+    public const int BatchSizeFieldNumber = 3;
     private int batchSize_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int BatchSize {
@@ -1324,9 +1312,9 @@ namespace Asgt.Dataservice.V1 {
     }
 
     /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 5;
+    public const int TagsFieldNumber = 4;
     private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(42);
+        = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<string> Tags {
@@ -1346,7 +1334,6 @@ namespace Asgt.Dataservice.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Consumer != other.Consumer) return false;
       if (Dataset != other.Dataset) return false;
       if (ModelType != other.ModelType) return false;
       if (BatchSize != other.BatchSize) return false;
@@ -1357,7 +1344,6 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Consumer.Length != 0) hash ^= Consumer.GetHashCode();
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
       if (ModelType.Length != 0) hash ^= ModelType.GetHashCode();
       if (BatchSize != 0) hash ^= BatchSize.GetHashCode();
@@ -1375,20 +1361,16 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Consumer.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Consumer);
-      }
       if (Dataset.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Dataset);
       }
       if (ModelType.Length != 0) {
-        output.WriteRawTag(26);
+        output.WriteRawTag(18);
         output.WriteString(ModelType);
       }
       if (BatchSize != 0) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(24);
         output.WriteInt32(BatchSize);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
@@ -1400,9 +1382,6 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Consumer.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Consumer);
-      }
       if (Dataset.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
       }
@@ -1423,9 +1402,6 @@ namespace Asgt.Dataservice.V1 {
     public void MergeFrom(RegisterQueryStatsRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.Consumer.Length != 0) {
-        Consumer = other.Consumer;
       }
       if (other.Dataset.Length != 0) {
         Dataset = other.Dataset;
@@ -1449,22 +1425,18 @@ namespace Asgt.Dataservice.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Consumer = input.ReadString();
-            break;
-          }
-          case 18: {
             Dataset = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             ModelType = input.ReadString();
             break;
           }
-          case 32: {
+          case 24: {
             BatchSize = input.ReadInt32();
             break;
           }
-          case 42: {
+          case 34: {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }

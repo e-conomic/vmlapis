@@ -6086,55 +6086,45 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string consumer = 1;</code>
-     */
-    java.lang.String getConsumer();
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    com.google.protobuf.ByteString
-        getConsumerBytes();
-
-    /**
-     * <code>string dataset = 2;</code>
+     * <code>string dataset = 1;</code>
      */
     java.lang.String getDataset();
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string dataset = 1;</code>
      */
     com.google.protobuf.ByteString
         getDatasetBytes();
 
     /**
-     * <code>string model_type = 3;</code>
+     * <code>string model_type = 2;</code>
      */
     java.lang.String getModelType();
     /**
-     * <code>string model_type = 3;</code>
+     * <code>string model_type = 2;</code>
      */
     com.google.protobuf.ByteString
         getModelTypeBytes();
 
     /**
-     * <code>int32 batch_size = 4;</code>
+     * <code>int32 batch_size = 3;</code>
      */
     int getBatchSize();
 
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -6152,7 +6142,6 @@ public final class DataServiceOuterClass {
       super(builder);
     }
     private RegisterQueryStatsRequest() {
-      consumer_ = "";
       dataset_ = "";
       modelType_ = "";
       batchSize_ = 0;
@@ -6186,31 +6175,25 @@ public final class DataServiceOuterClass {
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              consumer_ = s;
+              dataset_ = s;
               break;
             }
             case 18: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              dataset_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
               modelType_ = s;
               break;
             }
-            case 32: {
+            case 24: {
 
               batchSize_ = input.readInt32();
               break;
             }
-            case 42: {
+            case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000008;
               }
               tags_.add(s);
               break;
@@ -6230,7 +6213,7 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -6251,44 +6234,10 @@ public final class DataServiceOuterClass {
     }
 
     private int bitField0_;
-    public static final int CONSUMER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object consumer_;
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    public java.lang.String getConsumer() {
-      java.lang.Object ref = consumer_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        consumer_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string consumer = 1;</code>
-     */
-    public com.google.protobuf.ByteString
-        getConsumerBytes() {
-      java.lang.Object ref = consumer_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        consumer_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int DATASET_FIELD_NUMBER = 2;
+    public static final int DATASET_FIELD_NUMBER = 1;
     private volatile java.lang.Object dataset_;
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string dataset = 1;</code>
      */
     public java.lang.String getDataset() {
       java.lang.Object ref = dataset_;
@@ -6303,7 +6252,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string dataset = 2;</code>
+     * <code>string dataset = 1;</code>
      */
     public com.google.protobuf.ByteString
         getDatasetBytes() {
@@ -6319,10 +6268,10 @@ public final class DataServiceOuterClass {
       }
     }
 
-    public static final int MODEL_TYPE_FIELD_NUMBER = 3;
+    public static final int MODEL_TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object modelType_;
     /**
-     * <code>string model_type = 3;</code>
+     * <code>string model_type = 2;</code>
      */
     public java.lang.String getModelType() {
       java.lang.Object ref = modelType_;
@@ -6337,7 +6286,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string model_type = 3;</code>
+     * <code>string model_type = 2;</code>
      */
     public com.google.protobuf.ByteString
         getModelTypeBytes() {
@@ -6353,38 +6302,38 @@ public final class DataServiceOuterClass {
       }
     }
 
-    public static final int BATCH_SIZE_FIELD_NUMBER = 4;
+    public static final int BATCH_SIZE_FIELD_NUMBER = 3;
     private int batchSize_;
     /**
-     * <code>int32 batch_size = 4;</code>
+     * <code>int32 batch_size = 3;</code>
      */
     public int getBatchSize() {
       return batchSize_;
     }
 
-    public static final int TAGS_FIELD_NUMBER = 5;
+    public static final int TAGS_FIELD_NUMBER = 4;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 5;</code>
+     * <code>repeated string tags = 4;</code>
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -6405,20 +6354,17 @@ public final class DataServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getConsumerBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, consumer_);
-      }
       if (!getDatasetBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, dataset_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, dataset_);
       }
       if (!getModelTypeBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, modelType_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, modelType_);
       }
       if (batchSize_ != 0) {
-        output.writeInt32(4, batchSize_);
+        output.writeInt32(3, batchSize_);
       }
       for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, tags_.getRaw(i));
       }
       unknownFields.writeTo(output);
     }
@@ -6429,18 +6375,15 @@ public final class DataServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (!getConsumerBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, consumer_);
-      }
       if (!getDatasetBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, dataset_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, dataset_);
       }
       if (!getModelTypeBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, modelType_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, modelType_);
       }
       if (batchSize_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(4, batchSize_);
+          .computeInt32Size(3, batchSize_);
       }
       {
         int dataSize = 0;
@@ -6466,8 +6409,6 @@ public final class DataServiceOuterClass {
       asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest other = (asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest) obj;
 
       boolean result = true;
-      result = result && getConsumer()
-          .equals(other.getConsumer());
       result = result && getDataset()
           .equals(other.getDataset());
       result = result && getModelType()
@@ -6487,8 +6428,6 @@ public final class DataServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + CONSUMER_FIELD_NUMBER;
-      hash = (53 * hash) + getConsumer().hashCode();
       hash = (37 * hash) + DATASET_FIELD_NUMBER;
       hash = (53 * hash) + getDataset().hashCode();
       hash = (37 * hash) + MODEL_TYPE_FIELD_NUMBER;
@@ -6632,8 +6571,6 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        consumer_ = "";
-
         dataset_ = "";
 
         modelType_ = "";
@@ -6641,7 +6578,7 @@ public final class DataServiceOuterClass {
         batchSize_ = 0;
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -6670,13 +6607,12 @@ public final class DataServiceOuterClass {
         asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest result = new asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.consumer_ = consumer_;
         result.dataset_ = dataset_;
         result.modelType_ = modelType_;
         result.batchSize_ = batchSize_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.tags_ = tags_;
         result.bitField0_ = to_bitField0_;
@@ -6728,10 +6664,6 @@ public final class DataServiceOuterClass {
 
       public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest other) {
         if (other == asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.getDefaultInstance()) return this;
-        if (!other.getConsumer().isEmpty()) {
-          consumer_ = other.consumer_;
-          onChanged();
-        }
         if (!other.getDataset().isEmpty()) {
           dataset_ = other.dataset_;
           onChanged();
@@ -6746,7 +6678,7 @@ public final class DataServiceOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -6783,78 +6715,9 @@ public final class DataServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.lang.Object consumer_ = "";
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public java.lang.String getConsumer() {
-        java.lang.Object ref = consumer_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          consumer_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public com.google.protobuf.ByteString
-          getConsumerBytes() {
-        java.lang.Object ref = consumer_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          consumer_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder setConsumer(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        consumer_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder clearConsumer() {
-        
-        consumer_ = getDefaultInstance().getConsumer();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string consumer = 1;</code>
-       */
-      public Builder setConsumerBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        consumer_ = value;
-        onChanged();
-        return this;
-      }
-
       private java.lang.Object dataset_ = "";
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string dataset = 1;</code>
        */
       public java.lang.String getDataset() {
         java.lang.Object ref = dataset_;
@@ -6869,7 +6732,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string dataset = 1;</code>
        */
       public com.google.protobuf.ByteString
           getDatasetBytes() {
@@ -6885,7 +6748,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string dataset = 1;</code>
        */
       public Builder setDataset(
           java.lang.String value) {
@@ -6898,7 +6761,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string dataset = 1;</code>
        */
       public Builder clearDataset() {
         
@@ -6907,7 +6770,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset = 2;</code>
+       * <code>string dataset = 1;</code>
        */
       public Builder setDatasetBytes(
           com.google.protobuf.ByteString value) {
@@ -6923,7 +6786,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object modelType_ = "";
       /**
-       * <code>string model_type = 3;</code>
+       * <code>string model_type = 2;</code>
        */
       public java.lang.String getModelType() {
         java.lang.Object ref = modelType_;
@@ -6938,7 +6801,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string model_type = 3;</code>
+       * <code>string model_type = 2;</code>
        */
       public com.google.protobuf.ByteString
           getModelTypeBytes() {
@@ -6954,7 +6817,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string model_type = 3;</code>
+       * <code>string model_type = 2;</code>
        */
       public Builder setModelType(
           java.lang.String value) {
@@ -6967,7 +6830,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string model_type = 3;</code>
+       * <code>string model_type = 2;</code>
        */
       public Builder clearModelType() {
         
@@ -6976,7 +6839,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string model_type = 3;</code>
+       * <code>string model_type = 2;</code>
        */
       public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -6992,13 +6855,13 @@ public final class DataServiceOuterClass {
 
       private int batchSize_ ;
       /**
-       * <code>int32 batch_size = 4;</code>
+       * <code>int32 batch_size = 3;</code>
        */
       public int getBatchSize() {
         return batchSize_;
       }
       /**
-       * <code>int32 batch_size = 4;</code>
+       * <code>int32 batch_size = 3;</code>
        */
       public Builder setBatchSize(int value) {
         
@@ -7007,7 +6870,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>int32 batch_size = 4;</code>
+       * <code>int32 batch_size = 3;</code>
        */
       public Builder clearBatchSize() {
         
@@ -7018,39 +6881,39 @@ public final class DataServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -7063,7 +6926,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public Builder addTags(
           java.lang.String value) {
@@ -7076,7 +6939,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -7087,16 +6950,16 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
       /**
-       * <code>repeated string tags = 5;</code>
+       * <code>repeated string tags = 4;</code>
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -7225,29 +7088,28 @@ public final class DataServiceOuterClass {
       "\0224\n\020retention_policy\030\003 \001(\0132\032.asgt.type.R" +
       "etentionPolicy\"W\n\017GetInfoResponse\022#\n\007dat" +
       "aset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005model\030" +
-      "\002 \001(\0132\020.asgt.type.Model\"t\n\031RegisterQuery" +
-      "StatsRequest\022\020\n\010consumer\030\001 \001(\t\022\017\n\007datase" +
-      "t\030\002 \001(\t\022\022\n\nmodel_type\030\003 \001(\t\022\022\n\nbatch_siz" +
-      "e\030\004 \001(\005\022\014\n\004tags\030\005 \003(\t2\240\005\n\013DataService\022i\n" +
-      "\rCreateDataset\022\".asgt.dataservice.v1.Cre" +
-      "ateRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223" +
-      "\002\026\"\021/v1/{type}:create:\001*\022q\n\nAppendData\022&" +
-      ".asgt.dataservice.v1.AppendDataRequest\032\026" +
-      ".google.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{typ" +
-      "e}/{name}:append:\001*\022f\n\nDeleteData\022\".asgt" +
-      ".dataservice.v1.DeleteRequest\032\026.google.p" +
-      "rotobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete" +
-      ":\001*\022t\n\007GetInfo\022#.asgt.dataservice.v1.Get" +
-      "InfoRequest\032$.asgt.dataservice.v1.GetInf" +
-      "oResponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:inf" +
-      "o\022w\n\rUpdateDataset\022).asgt.dataservice.v1" +
-      ".UpdateDatasetRequest\032\026.google.protobuf." +
-      "Empty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:" +
-      "\001*\022\\\n\022RegisterQueryStats\022..asgt.dataserv" +
-      "ice.v1.RegisterQueryStatsRequest\032\026.googl" +
-      "e.protobuf.EmptyB7Z5github.com/e-conomic" +
-      "/vmlapis/gen/go/asgt/data/v1;datab\006proto" +
-      "3"
+      "\002 \001(\0132\020.asgt.type.Model\"b\n\031RegisterQuery" +
+      "StatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nmodel_t" +
+      "ype\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004tags\030\004 " +
+      "\003(\t2\240\005\n\013DataService\022i\n\rCreateDataset\022\".a" +
+      "sgt.dataservice.v1.CreateRequest\032\026.googl" +
+      "e.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:cre" +
+      "ate:\001*\022q\n\nAppendData\022&.asgt.dataservice." +
+      "v1.AppendDataRequest\032\026.google.protobuf.E" +
+      "mpty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001" +
+      "*\022f\n\nDeleteData\022\".asgt.dataservice.v1.De" +
+      "leteRequest\032\026.google.protobuf.Empty\"\034\202\323\344" +
+      "\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.a" +
+      "sgt.dataservice.v1.GetInfoRequest\032$.asgt" +
+      ".dataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022" +
+      "\026/v1/{type}/{name}:info\022w\n\rUpdateDataset" +
+      "\022).asgt.dataservice.v1.UpdateDatasetRequ" +
+      "est\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1" +
+      "/{type}/{name}:update:\001*\022\\\n\022RegisterQuer" +
+      "yStats\022..asgt.dataservice.v1.RegisterQue" +
+      "ryStatsRequest\032\026.google.protobuf.EmptyB7" +
+      "Z5github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/data/v1;datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7308,7 +7170,7 @@ public final class DataServiceOuterClass {
     internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor,
-        new java.lang.String[] { "Consumer", "Dataset", "ModelType", "BatchSize", "Tags", });
+        new java.lang.String[] { "Dataset", "ModelType", "BatchSize", "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

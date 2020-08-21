@@ -25,7 +25,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1',
   syntax='proto3',
   serialized_options=_b('Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data'),
-  serialized_pb=_b('\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa4\x01\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"h\n\x14UpdateDatasetRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"t\n\x19RegisterQueryStatsRequest\x12\x10\n\x08\x63onsumer\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61taset\x18\x02 \x01(\t\x12\x12\n\nmodel_type\x18\x03 \x01(\t\x12\x12\n\nbatch_size\x18\x04 \x01(\x05\x12\x0c\n\x04tags\x18\x05 \x03(\t2\xa0\x05\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.EmptyB7Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3')
+  serialized_pb=_b('\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xa4\x01\n\rCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x0f\n\x07targets\x18\x06 \x03(\t\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"h\n\x14UpdateDatasetRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x19RegisterQueryStatsRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x0c\n\x04tags\x18\x04 \x03(\t2\xa0\x05\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.EmptyB7Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_sample__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -320,36 +320,29 @@ _REGISTERQUERYSTATSREQUEST = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='consumer', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.consumer', index=0,
+      name='dataset', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.dataset', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='dataset', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.dataset', index=1,
+      name='model_type', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.model_type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='model_type', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.model_type', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='batch_size', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.batch_size', index=3,
-      number=4, type=5, cpp_type=1, label=1,
+      name='batch_size', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.batch_size', index=2,
+      number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='tags', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.tags', index=4,
-      number=5, type=9, cpp_type=9, label=3,
+      name='tags', full_name='asgt.dataservice.v1.RegisterQueryStatsRequest.tags', index=3,
+      number=4, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -367,7 +360,7 @@ _REGISTERQUERYSTATSREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=785,
-  serialized_end=901,
+  serialized_end=883,
 )
 
 _CREATEREQUEST.fields_by_name['samples'].message_type = asgt_dot_type_dot_sample__pb2._SAMPLE
@@ -449,8 +442,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=904,
-  serialized_end=1576,
+  serialized_start=886,
+  serialized_end=1558,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDataset',

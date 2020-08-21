@@ -1452,7 +1452,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.repeatedFields_ = [5];
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.repeatedFields_ = [4];
 
 
 
@@ -1483,11 +1483,10 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.toObject = functio
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    consumer: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    dataset: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    modelType: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    batchSize: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    tagsList: jspb.Message.getRepeatedField(msg, 5)
+    dataset: jspb.Message.getFieldWithDefault(msg, 1, ""),
+    modelType: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    batchSize: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    tagsList: jspb.Message.getRepeatedField(msg, 4)
   };
 
   if (includeInstance) {
@@ -1526,21 +1525,17 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.deserializeBinaryFromReader 
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.setConsumer(value);
+      msg.setDataset(value);
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setDataset(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
       msg.setModelType(value);
       break;
-    case 4:
+    case 3:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setBatchSize(value);
       break;
-    case 5:
+    case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
       break;
@@ -1573,38 +1568,31 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.serializeBinary = 
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getConsumer();
+  f = message.getDataset();
   if (f.length > 0) {
     writer.writeString(
       1,
       f
     );
   }
-  f = message.getDataset();
+  f = message.getModelType();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getModelType();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
   f = message.getBatchSize();
   if (f !== 0) {
     writer.writeInt32(
-      4,
+      3,
       f
     );
   }
   f = message.getTagsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
-      5,
+      4,
       f
     );
   }
@@ -1612,77 +1600,62 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.serializeBinaryToWriter = fu
 
 
 /**
- * optional string consumer = 1;
+ * optional string dataset = 1;
  * @return {string}
  */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getConsumer = function() {
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getDataset = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setConsumer = function(value) {
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setDataset = function(value) {
   jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
- * optional string dataset = 2;
+ * optional string model_type = 2;
  * @return {string}
  */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getDataset = function() {
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getModelType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /** @param {string} value */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setDataset = function(value) {
+proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setModelType = function(value) {
   jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string model_type = 3;
- * @return {string}
- */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getModelType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setModelType = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional int32 batch_size = 4;
+ * optional int32 batch_size = 3;
  * @return {number}
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getBatchSize = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /** @param {number} value */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setBatchSize = function(value) {
-  jspb.Message.setProto3IntField(this, 4, value);
+  jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
 /**
- * repeated string tags = 5;
+ * repeated string tags = 4;
  * @return {!Array<string>}
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.getTagsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 5));
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
 };
 
 
 /** @param {!Array<string>} value */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setTagsList = function(value) {
-  jspb.Message.setField(this, 5, value || []);
+  jspb.Message.setField(this, 4, value || []);
 };
 
 
@@ -1691,7 +1664,7 @@ proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.setTagsList = func
  * @param {number=} opt_index
  */
 proto.asgt.dataservice.v1.RegisterQueryStatsRequest.prototype.addTags = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
 };
 
 
