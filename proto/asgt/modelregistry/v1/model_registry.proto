@@ -16,6 +16,8 @@ service ModelRegistry {
 
   rpc GetCurrentModel (GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
+  rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
+
   // List the most recent versions of a model trained with a specified dataset
   //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }
@@ -49,3 +51,11 @@ message GetCurrentModelResponse {
 //message ListModelVersionsResponse {
 //  repeated asgt.type.Model models = 1;
 //}
+
+message RegisterQueryStatsRequest {
+  string consumer = 1;
+  string dataset = 2;
+  string model_type = 3;
+  int32 batch_size = 4;
+  repeated string tags = 5;
+}
