@@ -5,6 +5,7 @@ FILES=(
     "gen/go/ssn/mlservice/v2/mlservice_grpc.pb.go"
     "gen/go/ssn/pdfservice/v1/pdfservice_grpc.pb.go"
     "gen/go/ssn/annotator/v1/annotator_grpc.pb.go"
+    "gen/go/ssn/dataservice/v1/dataservice_grpc.pb.go"
 )
 	
 
