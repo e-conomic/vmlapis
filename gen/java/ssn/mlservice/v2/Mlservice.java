@@ -362,6 +362,16 @@ public final class Mlservice {
        */
       com.google.protobuf.ByteString
           getInvoiceNumberBytes();
+
+      /**
+       * <code>string iban = 22;</code>
+       */
+      java.lang.String getIban();
+      /**
+       * <code>string iban = 22;</code>
+       */
+      com.google.protobuf.ByteString
+          getIbanBytes();
     }
     /**
      * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
@@ -395,6 +405,7 @@ public final class Mlservice {
         supplierCorporateId_ = "";
         supplierCountryCode_ = "";
         invoiceNumber_ = "";
+        iban_ = "";
       }
 
       @java.lang.Override
@@ -556,6 +567,12 @@ public final class Mlservice {
                 java.lang.String s = input.readStringRequireUtf8();
 
                 invoiceNumber_ = s;
+                break;
+              }
+              case 178: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                iban_ = s;
                 break;
               }
               default: {
@@ -1203,6 +1220,40 @@ public final class Mlservice {
         }
       }
 
+      public static final int IBAN_FIELD_NUMBER = 22;
+      private volatile java.lang.Object iban_;
+      /**
+       * <code>string iban = 22;</code>
+       */
+      public java.lang.String getIban() {
+        java.lang.Object ref = iban_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          iban_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string iban = 22;</code>
+       */
+      public com.google.protobuf.ByteString
+          getIbanBytes() {
+        java.lang.Object ref = iban_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          iban_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1279,6 +1330,9 @@ public final class Mlservice {
         }
         if (!getInvoiceNumberBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 21, invoiceNumber_);
+        }
+        if (!getIbanBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 22, iban_);
         }
         unknownFields.writeTo(output);
       }
@@ -1357,6 +1411,9 @@ public final class Mlservice {
         if (!getInvoiceNumberBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, invoiceNumber_);
         }
+        if (!getIbanBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, iban_);
+        }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
         return size;
@@ -1427,6 +1484,8 @@ public final class Mlservice {
             .equals(other.getSupplierCountryCode());
         result = result && getInvoiceNumber()
             .equals(other.getInvoiceNumber());
+        result = result && getIban()
+            .equals(other.getIban());
         result = result && unknownFields.equals(other.unknownFields);
         return result;
       }
@@ -1487,6 +1546,8 @@ public final class Mlservice {
         hash = (53 * hash) + getSupplierCountryCode().hashCode();
         hash = (37 * hash) + INVOICE_NUMBER_FIELD_NUMBER;
         hash = (53 * hash) + getInvoiceNumber().hashCode();
+        hash = (37 * hash) + IBAN_FIELD_NUMBER;
+        hash = (53 * hash) + getIban().hashCode();
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -1670,6 +1731,8 @@ public final class Mlservice {
 
           invoiceNumber_ = "";
 
+          iban_ = "";
+
           return this;
         }
 
@@ -1725,6 +1788,7 @@ public final class Mlservice {
           result.supplierCorporateId_ = supplierCorporateId_;
           result.supplierCountryCode_ = supplierCountryCode_;
           result.invoiceNumber_ = invoiceNumber_;
+          result.iban_ = iban_;
           onBuilt();
           return result;
         }
@@ -1850,6 +1914,10 @@ public final class Mlservice {
           }
           if (!other.getInvoiceNumber().isEmpty()) {
             invoiceNumber_ = other.invoiceNumber_;
+            onChanged();
+          }
+          if (!other.getIban().isEmpty()) {
+            iban_ = other.iban_;
             onChanged();
           }
           this.mergeUnknownFields(other.unknownFields);
@@ -3293,6 +3361,75 @@ public final class Mlservice {
   checkByteStringIsUtf8(value);
           
           invoiceNumber_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object iban_ = "";
+        /**
+         * <code>string iban = 22;</code>
+         */
+        public java.lang.String getIban() {
+          java.lang.Object ref = iban_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            iban_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string iban = 22;</code>
+         */
+        public com.google.protobuf.ByteString
+            getIbanBytes() {
+          java.lang.Object ref = iban_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            iban_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string iban = 22;</code>
+         */
+        public Builder setIban(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          iban_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string iban = 22;</code>
+         */
+        public Builder clearIban() {
+          
+          iban_ = getDefaultInstance().getIban();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string iban = 22;</code>
+         */
+        public Builder setIbanBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          iban_ = value;
           onChanged();
           return this;
         }
@@ -15128,11 +15265,11 @@ public final class Mlservice {
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032\036ssn/type/text_an" +
       "notation.proto\032%tensorflow/core/example/" +
-      "example.proto\"\242\006\n\021FeatureGenRequest\022E\n\014t" +
+      "example.proto\"\260\006\n\021FeatureGenRequest\022E\n\014t" +
       "ruth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fea" +
       "tureGenRequest.TruthLabels\0221\n\017text_annot" +
       "ation\030\002 \001(\0132\030.ssn.type.TextAnnotation\022\n\n" +
-      "\002id\030\003 \001(\t\032\206\005\n\013TruthLabels\022\026\n\016total_incl_" +
+      "\002id\030\003 \001(\t\032\224\005\n\013TruthLabels\022\026\n\016total_incl_" +
       "vat\030\001 \001(\001\022\021\n\ttotal_vat\030\002 \001(\001\022\026\n\016total_ex" +
       "cl_vat\030\003 \001(\001\022%\n\norder_date\030\004 \001(\0132\021.googl" +
       "e.type.Date\022+\n\020payment_due_date\030\005 \001(\0132\021." +
@@ -15148,52 +15285,52 @@ public final class Mlservice {
       "_fi_payment_id\030\021 \001(\t\022\036\n\026ocr_line_nl_paym" +
       "ent_id\030\022 \001(\t\022\035\n\025supplier_corporate_id\030\023 " +
       "\001(\t\022\035\n\025supplier_country_code\030\024 \001(\t\022\026\n\016in" +
-      "voice_number\030\025 \001(\t\":\n\022FeatureGenResponse" +
-      "\022$\n\007example\030\001 \001(\0132\023.tensorflow.Example\"T" +
-      "\n\016PredictRequest\022$\n\007example\030\001 \001(\0132\023.tens" +
-      "orflow.Example\022\034\n\024top_n_most_confident\030\002" +
-      " \001(\r\"\350\010\n\017PredictResponse\022\'\n\norder_date\030\001" +
-      " \003(\0132\023.ssn.type.Candidate\022-\n\020payment_due" +
-      "_date\030\002 \003(\0132\023.ssn.type.Candidate\022%\n\010curr" +
-      "ency\030\003 \003(\0132\023.ssn.type.Candidate\022&\n\ttotal" +
-      "_vat\030\004 \003(\0132\023.ssn.type.Candidate\022+\n\016total" +
-      "_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate\022+\n\016" +
-      "total_excl_vat\030\006 \003(\0132\023.ssn.type.Candidat" +
-      "e\0222\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.t" +
-      "ype.Candidate\0222\n\025supplier_country_code\030\010" +
-      " \003(\0132\023.ssn.type.Candidate\022*\n\rdocument_ty" +
-      "pe\030\t \003(\0132\023.ssn.type.Candidate\022+\n\016payment" +
-      "_method\030\n \003(\0132\023.ssn.type.Candidate\022/\n\022cr" +
-      "edit_card_number\030\013 \003(\0132\023.ssn.type.Candid" +
-      "ate\022+\n\016invoice_number\030\014 \003(\0132\023.ssn.type.C" +
-      "andidate\022-\n\020ocr_line_dk_type\030\r \003(\0132\023.ssn" +
-      ".type.Candidate\0223\n\026ocr_line_dk_payment_i" +
-      "d\030\016 \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_line" +
-      "_dk_creditor_id\030\017 \003(\0132\023.ssn.type.Candida" +
-      "te\0223\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn" +
-      ".type.Candidate\022=\n ocr_line_se_bankgiro_" +
-      "creditor_id\030\021 \003(\0132\023.ssn.type.Candidate\022=" +
-      "\n ocr_line_se_plusgiro_creditor_id\030\022 \003(\013" +
-      "2\023.ssn.type.Candidate\0223\n\026ocr_line_no_pay" +
-      "ment_id\030\023 \003(\0132\023.ssn.type.Candidate\0223\n\026oc" +
-      "r_line_fi_payment_id\030\024 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0223\n\026ocr_line_nl_payment_id\030\025 \003(\0132" +
-      "\023.ssn.type.Candidate\022!\n\004iban\030\026 \003(\0132\023.ssn" +
-      ".type.Candidate\022&\n\005lines\030\027 \003(\0132\027.ssn.typ" +
-      "e.LineCandidate\"\227\001\n\030FeatureGenPredictReq" +
-      "uest\022@\n\023feature_gen_request\030\001 \001(\0132#.ssn." +
-      "mlservice.v2.FeatureGenRequest\0229\n\017predic" +
-      "t_request\030\002 \001(\0132 .ssn.mlservice.v2.Predi" +
-      "ctRequest2\230\002\n\tMlService\022W\n\nFeatureGen\022#." +
-      "ssn.mlservice.v2.FeatureGenRequest\032$.ssn" +
-      ".mlservice.v2.FeatureGenResponse\022N\n\007Pred" +
-      "ict\022 .ssn.mlservice.v2.PredictRequest\032!." +
-      "ssn.mlservice.v2.PredictResponse\022b\n\021Feat" +
-      "ureGenPredict\022*.ssn.mlservice.v2.Feature" +
-      "GenPredictRequest\032!.ssn.mlservice.v2.Pre" +
-      "dictResponseB@Z>github.com/e-conomic/vml" +
-      "apis/gen/go/ssn/mlservice/v2;mlserviceb\006" +
-      "proto3"
+      "voice_number\030\025 \001(\t\022\014\n\004iban\030\026 \001(\t\":\n\022Feat" +
+      "ureGenResponse\022$\n\007example\030\001 \001(\0132\023.tensor" +
+      "flow.Example\"T\n\016PredictRequest\022$\n\007exampl" +
+      "e\030\001 \001(\0132\023.tensorflow.Example\022\034\n\024top_n_mo" +
+      "st_confident\030\002 \001(\r\"\350\010\n\017PredictResponse\022\'" +
+      "\n\norder_date\030\001 \003(\0132\023.ssn.type.Candidate\022" +
+      "-\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Can" +
+      "didate\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Cand" +
+      "idate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Cand" +
+      "idate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type" +
+      ".Candidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn" +
+      ".type.Candidate\0222\n\025supplier_corporate_id" +
+      "\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025supplier_" +
+      "country_code\030\010 \003(\0132\023.ssn.type.Candidate\022" +
+      "*\n\rdocument_type\030\t \003(\0132\023.ssn.type.Candid" +
+      "ate\022+\n\016payment_method\030\n \003(\0132\023.ssn.type.C" +
+      "andidate\022/\n\022credit_card_number\030\013 \003(\0132\023.s" +
+      "sn.type.Candidate\022+\n\016invoice_number\030\014 \003(" +
+      "\0132\023.ssn.type.Candidate\022-\n\020ocr_line_dk_ty" +
+      "pe\030\r \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_lin" +
+      "e_dk_payment_id\030\016 \003(\0132\023.ssn.type.Candida" +
+      "te\0224\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.ss" +
+      "n.type.Candidate\0223\n\026ocr_line_se_payment_" +
+      "id\030\020 \003(\0132\023.ssn.type.Candidate\022=\n ocr_lin" +
+      "e_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\022=\n ocr_line_se_plusgiro_cre" +
+      "ditor_id\030\022 \003(\0132\023.ssn.type.Candidate\0223\n\026o" +
+      "cr_line_no_payment_id\030\023 \003(\0132\023.ssn.type.C" +
+      "andidate\0223\n\026ocr_line_fi_payment_id\030\024 \003(\013" +
+      "2\023.ssn.type.Candidate\0223\n\026ocr_line_nl_pay" +
+      "ment_id\030\025 \003(\0132\023.ssn.type.Candidate\022!\n\004ib" +
+      "an\030\026 \003(\0132\023.ssn.type.Candidate\022&\n\005lines\030\027" +
+      " \003(\0132\027.ssn.type.LineCandidate\"\227\001\n\030Featur" +
+      "eGenPredictRequest\022@\n\023feature_gen_reques" +
+      "t\030\001 \001(\0132#.ssn.mlservice.v2.FeatureGenReq" +
+      "uest\0229\n\017predict_request\030\002 \001(\0132 .ssn.mlse" +
+      "rvice.v2.PredictRequest2\230\002\n\tMlService\022W\n" +
+      "\nFeatureGen\022#.ssn.mlservice.v2.FeatureGe" +
+      "nRequest\032$.ssn.mlservice.v2.FeatureGenRe" +
+      "sponse\022N\n\007Predict\022 .ssn.mlservice.v2.Pre" +
+      "dictRequest\032!.ssn.mlservice.v2.PredictRe" +
+      "sponse\022b\n\021FeatureGenPredict\022*.ssn.mlserv" +
+      "ice.v2.FeatureGenPredictRequest\032!.ssn.ml" +
+      "service.v2.PredictResponseB@Z>github.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/mlservice/" +
+      "v2;mlserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15222,7 +15359,7 @@ public final class Mlservice {
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", });
     internal_static_ssn_mlservice_v2_FeatureGenResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_mlservice_v2_FeatureGenResponse_fieldAccessorTable = new

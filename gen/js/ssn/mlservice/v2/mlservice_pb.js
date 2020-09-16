@@ -243,7 +243,8 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.toObject = function(include
     ocrLineNlPaymentId: jspb.Message.getFieldWithDefault(msg, 18, ""),
     supplierCorporateId: jspb.Message.getFieldWithDefault(msg, 19, ""),
     supplierCountryCode: jspb.Message.getFieldWithDefault(msg, 20, ""),
-    invoiceNumber: jspb.Message.getFieldWithDefault(msg, 21, "")
+    invoiceNumber: jspb.Message.getFieldWithDefault(msg, 21, ""),
+    iban: jspb.Message.getFieldWithDefault(msg, 22, "")
   };
 
   if (includeInstance) {
@@ -365,6 +366,10 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.deserializeBinaryFromReader
     case 21:
       var value = /** @type {string} */ (reader.readString());
       msg.setInvoiceNumber(value);
+      break;
+    case 22:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setIban(value);
       break;
     default:
       reader.skipField();
@@ -541,6 +546,13 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.serializeBinaryToWriter = f
   if (f.length > 0) {
     writer.writeString(
       21,
+      f
+    );
+  }
+  f = message.getIban();
+  if (f.length > 0) {
+    writer.writeString(
+      22,
       f
     );
   }
@@ -889,6 +901,21 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getInvoiceNumber 
 /** @param {string} value */
 proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setInvoiceNumber = function(value) {
   jspb.Message.setProto3StringField(this, 21, value);
+};
+
+
+/**
+ * optional string iban = 22;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getIban = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 22, ""));
+};
+
+
+/** @param {string} value */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setIban = function(value) {
+  jspb.Message.setProto3StringField(this, 22, value);
 };
 
 
