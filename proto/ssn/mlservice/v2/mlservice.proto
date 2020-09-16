@@ -40,6 +40,7 @@ message FeatureGenRequest {
     string supplier_corporate_id = 19;
     string supplier_country_code = 20;
     string invoice_number = 21;
+    string iban = 22;
   }
   TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
