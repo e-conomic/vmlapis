@@ -7074,42 +7074,45 @@ public final class DataServiceOuterClass {
       "\025asgt/type/model.proto\032 asgt/type/retent" +
       "ion_policy.proto\032\026asgt/type/sample.proto" +
       "\032\034google/api/annotations.proto\032\033google/p" +
-      "rotobuf/empty.proto\"\244\001\n\rCreateRequest\022\014\n" +
-      "\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022" +
-      "\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132\021.asgt" +
-      ".type.Sample\0224\n\020retention_policy\030\005 \001(\0132\032" +
-      ".asgt.type.RetentionPolicy\"S\n\021AppendData" +
-      "Request\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\"\n\007s" +
-      "amples\030\003 \003(\0132\021.asgt.type.Sample\"E\n\rDelet" +
-      "eRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r" +
-      "\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoRequest" +
-      "\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024UpdateDa" +
-      "tasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t" +
-      "\0224\n\020retention_policy\030\003 \001(\0132\032.asgt.type.R" +
-      "etentionPolicy\"W\n\017GetInfoResponse\022#\n\007dat" +
-      "aset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005model\030" +
-      "\002 \001(\0132\020.asgt.type.Model\"b\n\031RegisterQuery" +
-      "StatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nmodel_t" +
-      "ype\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004tags\030\004 " +
-      "\003(\t2\240\005\n\013DataService\022i\n\rCreateDataset\022\".a" +
-      "sgt.dataservice.v1.CreateRequest\032\026.googl" +
-      "e.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:cre" +
-      "ate:\001*\022q\n\nAppendData\022&.asgt.dataservice." +
-      "v1.AppendDataRequest\032\026.google.protobuf.E" +
-      "mpty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001" +
-      "*\022f\n\nDeleteData\022\".asgt.dataservice.v1.De" +
-      "leteRequest\032\026.google.protobuf.Empty\"\034\202\323\344" +
-      "\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.a" +
-      "sgt.dataservice.v1.GetInfoRequest\032$.asgt" +
-      ".dataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022" +
-      "\026/v1/{type}/{name}:info\022w\n\rUpdateDataset" +
-      "\022).asgt.dataservice.v1.UpdateDatasetRequ" +
-      "est\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1" +
-      "/{type}/{name}:update:\001*\022\\\n\022RegisterQuer" +
-      "yStats\022..asgt.dataservice.v1.RegisterQue" +
-      "ryStatsRequest\032\026.google.protobuf.EmptyB7" +
-      "Z5github.com/e-conomic/vmlapis/gen/go/as" +
-      "gt/data/v1;datab\006proto3"
+      "rotobuf/empty.proto\032$ssn/dataservice/v1/" +
+      "dataservice.proto\"\244\001\n\rCreateRequest\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022\017\n" +
+      "\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132\021.asgt.t" +
+      "ype.Sample\0224\n\020retention_policy\030\005 \001(\0132\032.a" +
+      "sgt.type.RetentionPolicy\"S\n\021AppendDataRe" +
+      "quest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\"\n\007sam" +
+      "ples\030\003 \003(\0132\021.asgt.type.Sample\"E\n\rDeleteR" +
+      "equest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003" +
+      "tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoRequest\022\014" +
+      "\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024UpdateData" +
+      "setRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\0224" +
+      "\n\020retention_policy\030\003 \001(\0132\032.asgt.type.Ret" +
+      "entionPolicy\"W\n\017GetInfoResponse\022#\n\007datas" +
+      "et\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005model\030\002 " +
+      "\001(\0132\020.asgt.type.Model\"b\n\031RegisterQuerySt" +
+      "atsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nmodel_typ" +
+      "e\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004tags\030\004 \003(" +
+      "\t2\372\005\n\013DataService\022i\n\rCreateDataset\022\".asg" +
+      "t.dataservice.v1.CreateRequest\032\026.google." +
+      "protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:creat" +
+      "e:\001*\022q\n\nAppendData\022&.asgt.dataservice.v1" +
+      ".AppendDataRequest\032\026.google.protobuf.Emp" +
+      "ty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*\022" +
+      "f\n\nDeleteData\022\".asgt.dataservice.v1.Dele" +
+      "teRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002" +
+      "\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.asg" +
+      "t.dataservice.v1.GetInfoRequest\032$.asgt.d" +
+      "ataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026/" +
+      "v1/{type}/{name}:info\022w\n\rUpdateDataset\022)" +
+      ".asgt.dataservice.v1.UpdateDatasetReques" +
+      "t\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/{" +
+      "type}/{name}:update:\001*\022\\\n\022RegisterQueryS" +
+      "tats\022..asgt.dataservice.v1.RegisterQuery" +
+      "StatsRequest\032\026.google.protobuf.Empty\022X\n\023" +
+      "CallsPerMonthMetric\022\026.google.protobuf.Em" +
+      "pty\032).ssn.dataservice.v1.CallsPerMonthRe" +
+      "sponseB7Z5github.com/e-conomic/vmlapis/g" +
+      "en/go/asgt/data/v1;datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7128,6 +7131,7 @@ public final class DataServiceOuterClass {
           asgt.type.SampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
+          ssn.dataservice.v1.Dataservice.getDescriptor(),
         }, assigner);
     internal_static_asgt_dataservice_v1_CreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7182,6 +7186,7 @@ public final class DataServiceOuterClass {
     asgt.type.SampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
+    ssn.dataservice.v1.Dataservice.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

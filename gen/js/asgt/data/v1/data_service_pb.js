@@ -17,6 +17,7 @@ var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
+var ssn_dataservice_v1_dataservice_pb = require('../../../ssn/dataservice/v1/dataservice_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1.AppendDataRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1.CreateRequest', null, global);
 goog.exportSymbol('proto.asgt.dataservice.v1.DeleteRequest', null, global);

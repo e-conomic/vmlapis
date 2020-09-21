@@ -10,6 +10,7 @@ import "asgt/type/retention_policy.proto";
 import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
+import "ssn/dataservice/v1/dataservice.proto";
 
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
@@ -47,6 +48,8 @@ service DataService {
   }
 
   rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
+  
+  rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
 }
 
 
