@@ -78,7 +78,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     modelVersion: jspb.Message.getFieldWithDefault(msg, 3, 0),
     metricsMap: (f = msg.getMetricsMap()) ? f.toObject(includeInstance, undefined) : [],
     targetMetricsList: jspb.Message.toObjectList(msg.getTargetMetricsList(),
-    asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance)
+    asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
+    inputType: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -139,6 +140,10 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       var value = new asgt_type_target_metrics_pb.TargetMetrics;
       reader.readMessage(value,asgt_type_target_metrics_pb.TargetMetrics.deserializeBinaryFromReader);
       msg.addTargetMetrics(value);
+      break;
+    case 6:
+      var value = /** @type {!proto.asgt.type.Model.InputType} */ (reader.readEnum());
+      msg.setInputType(value);
       break;
     default:
       reader.skipField();
@@ -202,6 +207,13 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       5,
       f,
       asgt_type_target_metrics_pb.TargetMetrics.serializeBinaryToWriter
+    );
+  }
+  f = message.getInputType();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      6,
+      f
     );
   }
 };
@@ -328,6 +340,21 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.addTargetMetrics = fu
 
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearTargetMetricsList = function() {
   this.setTargetMetricsList([]);
+};
+
+
+/**
+ * optional asgt.type.Model.InputType input_type = 6;
+ * @return {!proto.asgt.type.Model.InputType}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getInputType = function() {
+  return /** @type {!proto.asgt.type.Model.InputType} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {!proto.asgt.type.Model.InputType} value */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setInputType = function(value) {
+  jspb.Message.setProto3EnumField(this, 6, value);
 };
 
 
