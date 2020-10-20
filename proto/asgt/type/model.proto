@@ -10,8 +10,8 @@ import "asgt/type/target_metrics.proto";
 
 message Model {
   enum InputType {
-    TENSORS = 0;
-    EXAMPLES = 1;
+    FEATURE_TENSORS = 0;
+    EXAMPLE_TENSOR = 1;
   }
   reserved 1 to 2;
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
