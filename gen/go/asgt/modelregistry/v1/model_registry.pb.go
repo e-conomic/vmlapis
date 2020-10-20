@@ -111,7 +111,7 @@ func (x *RegisterModelRequest) GetInputType() _type.Model_InputType {
 	if x != nil {
 		return x.InputType
 	}
-	return _type.Model_EXAMPLES
+	return _type.Model_TENSORS
 }
 
 type GetCurrentModelRequest struct {

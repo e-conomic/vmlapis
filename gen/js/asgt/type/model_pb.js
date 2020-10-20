@@ -219,8 +219,8 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
  * @enum {number}
  */
 proto.asgt.type.Model.InputType = {
-  EXAMPLES: 0,
-  TENSORS: 1
+  TENSORS: 0,
+  EXAMPLES: 1
 };
 
 /**

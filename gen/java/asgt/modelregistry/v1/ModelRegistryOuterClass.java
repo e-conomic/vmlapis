@@ -476,7 +476,7 @@ public final class ModelRegistryOuterClass {
       for (int i = 0; i < targetMetrics_.size(); i++) {
         output.writeMessage(5, targetMetrics_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
         output.writeEnum(6, inputType_);
       }
       unknownFields.writeTo(output);
@@ -514,7 +514,7 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, targetMetrics_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, inputType_);
       }

@@ -207,24 +207,24 @@ public final class ModelOuterClass {
     public enum InputType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>EXAMPLES = 0;</code>
+       * <code>TENSORS = 0;</code>
        */
-      EXAMPLES(0),
+      TENSORS(0),
       /**
-       * <code>TENSORS = 1;</code>
+       * <code>EXAMPLES = 1;</code>
        */
-      TENSORS(1),
+      EXAMPLES(1),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>EXAMPLES = 0;</code>
+       * <code>TENSORS = 0;</code>
        */
-      public static final int EXAMPLES_VALUE = 0;
+      public static final int TENSORS_VALUE = 0;
       /**
-       * <code>TENSORS = 1;</code>
+       * <code>EXAMPLES = 1;</code>
        */
-      public static final int TENSORS_VALUE = 1;
+      public static final int EXAMPLES_VALUE = 1;
 
 
       public final int getNumber() {
@@ -245,8 +245,8 @@ public final class ModelOuterClass {
 
       public static InputType forNumber(int value) {
         switch (value) {
-          case 0: return EXAMPLES;
-          case 1: return TENSORS;
+          case 0: return TENSORS;
+          case 1: return EXAMPLES;
           default: return null;
         }
       }
@@ -429,7 +429,7 @@ public final class ModelOuterClass {
       for (int i = 0; i < confidenceScores_.size(); i++) {
         output.writeMessage(7, confidenceScores_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
         output.writeEnum(8, inputType_);
       }
       unknownFields.writeTo(output);
@@ -461,7 +461,7 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, confidenceScores_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, inputType_);
       }
@@ -1398,8 +1398,8 @@ public final class ModelOuterClass {
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
       "icsB\005\352?\002\030\001\022.\n\ninput_type\030\010 \001(\0162\032.asgt.ty" +
-      "pe.Model.InputType\"&\n\tInputType\022\014\n\010EXAMP" +
-      "LES\020\000\022\013\n\007TENSORS\020\001J\004\010\001\020\003B8Z6github.com/e" +
+      "pe.Model.InputType\"&\n\tInputType\022\013\n\007TENSO" +
+      "RS\020\000\022\014\n\010EXAMPLES\020\001J\004\010\001\020\003B8Z6github.com/e" +
       "-conomic/vmlapis/gen/go/asgt/type;asgtty" +
       "peb\006proto3"
     };

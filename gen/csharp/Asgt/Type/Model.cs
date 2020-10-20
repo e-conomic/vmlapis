@@ -32,8 +32,8 @@ namespace Asgt.Type {
             "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
             "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
             "dE1ldHJpY3NCBeo/AhgBEi4KCmlucHV0X3R5cGUYCCABKA4yGi5hc2d0LnR5",
-            "cGUuTW9kZWwuSW5wdXRUeXBlIiYKCUlucHV0VHlwZRIMCghFWEFNUExFUxAA",
-            "EgsKB1RFTlNPUlMQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92",
+            "cGUuTW9kZWwuSW5wdXRUeXBlIiYKCUlucHV0VHlwZRILCgdURU5TT1JTEAAS",
+            "DAoIRVhBTVBMRVMQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92",
             "bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
@@ -315,8 +315,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       public enum InputType {
-        [pbr::OriginalName("EXAMPLES")] Examples = 0,
-        [pbr::OriginalName("TENSORS")] Tensors = 1,
+        [pbr::OriginalName("TENSORS")] Tensors = 0,
+        [pbr::OriginalName("EXAMPLES")] Examples = 1,
       }
 
     }
