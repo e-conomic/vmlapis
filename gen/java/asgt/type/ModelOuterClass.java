@@ -207,24 +207,24 @@ public final class ModelOuterClass {
     public enum InputType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
-       * <code>TENSORS = 0;</code>
+       * <code>FEATURE_TENSORS = 0;</code>
        */
-      TENSORS(0),
+      FEATURE_TENSORS(0),
       /**
-       * <code>EXAMPLES = 1;</code>
+       * <code>EXAMPLE_TENSOR = 1;</code>
        */
-      EXAMPLES(1),
+      EXAMPLE_TENSOR(1),
       UNRECOGNIZED(-1),
       ;
 
       /**
-       * <code>TENSORS = 0;</code>
+       * <code>FEATURE_TENSORS = 0;</code>
        */
-      public static final int TENSORS_VALUE = 0;
+      public static final int FEATURE_TENSORS_VALUE = 0;
       /**
-       * <code>EXAMPLES = 1;</code>
+       * <code>EXAMPLE_TENSOR = 1;</code>
        */
-      public static final int EXAMPLES_VALUE = 1;
+      public static final int EXAMPLE_TENSOR_VALUE = 1;
 
 
       public final int getNumber() {
@@ -245,8 +245,8 @@ public final class ModelOuterClass {
 
       public static InputType forNumber(int value) {
         switch (value) {
-          case 0: return TENSORS;
-          case 1: return EXAMPLES;
+          case 0: return FEATURE_TENSORS;
+          case 1: return EXAMPLE_TENSOR;
           default: return null;
         }
       }
@@ -429,7 +429,7 @@ public final class ModelOuterClass {
       for (int i = 0; i < confidenceScores_.size(); i++) {
         output.writeMessage(7, confidenceScores_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
         output.writeEnum(8, inputType_);
       }
       unknownFields.writeTo(output);
@@ -461,7 +461,7 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, confidenceScores_.get(i));
       }
-      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.TENSORS.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(8, inputType_);
       }
@@ -1392,16 +1392,16 @@ public final class ModelOuterClass {
       "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
       "/type/target_metrics.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\244\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "amp.proto\"\262\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
       "icsB\005\352?\002\030\001\022.\n\ninput_type\030\010 \001(\0162\032.asgt.ty" +
-      "pe.Model.InputType\"&\n\tInputType\022\013\n\007TENSO" +
-      "RS\020\000\022\014\n\010EXAMPLES\020\001J\004\010\001\020\003B8Z6github.com/e" +
-      "-conomic/vmlapis/gen/go/asgt/type;asgtty" +
-      "peb\006proto3"
+      "pe.Model.InputType\"4\n\tInputType\022\023\n\017FEATU" +
+      "RE_TENSORS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B8" +
+      "Z6github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

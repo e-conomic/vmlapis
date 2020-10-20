@@ -26,15 +26,16 @@ namespace Asgt.Type {
           string.Concat(
             "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
             "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqQCCgVN",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIrICCgVN",
             "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
             "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
             "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
             "dE1ldHJpY3NCBeo/AhgBEi4KCmlucHV0X3R5cGUYCCABKA4yGi5hc2d0LnR5",
-            "cGUuTW9kZWwuSW5wdXRUeXBlIiYKCUlucHV0VHlwZRILCgdURU5TT1JTEAAS",
-            "DAoIRVhBTVBMRVMQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92",
-            "bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "cGUuTW9kZWwuSW5wdXRUeXBlIjQKCUlucHV0VHlwZRITCg9GRUFUVVJFX1RF",
+            "TlNPUlMQABISCg5FWEFNUExFX1RFTlNPUhABSgQIARADQjhaNmdpdGh1Yi5j",
+            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlw",
+            "ZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -315,8 +316,8 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
       public enum InputType {
-        [pbr::OriginalName("TENSORS")] Tensors = 0,
-        [pbr::OriginalName("EXAMPLES")] Examples = 1,
+        [pbr::OriginalName("FEATURE_TENSORS")] FeatureTensors = 0,
+        [pbr::OriginalName("EXAMPLE_TENSOR")] ExampleTensor = 1,
       }
 
     }
