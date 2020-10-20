@@ -9,7 +9,7 @@ import "google/protobuf/timestamp.proto";
 import "asgt/type/target_metrics.proto";
 
 message Model {
-  enum InputTypes {
+  enum InputType {
     EXAMPLES = 0;
     TENSORS = 1;
   }
@@ -19,5 +19,5 @@ message Model {
   int32 dataset_size = 5 [(gen_bq_schema.bigquery).ignore = true]; 
   int32 training_size = 6 [(gen_bq_schema.bigquery).ignore = true]; 
   repeated asgt.type.TargetMetrics confidence_scores = 7 [(gen_bq_schema.bigquery).ignore = true]; 
-  InputTypes input_types = 8;
+  InputType input_type = 8;
 }
