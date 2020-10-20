@@ -71,13 +71,13 @@ public final class ModelOuterClass {
         int index);
 
     /**
-     * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
      */
-    int getInputTypesValue();
+    int getInputTypeValue();
     /**
-     * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
      */
-    asgt.type.ModelOuterClass.Model.InputTypes getInputTypes();
+    asgt.type.ModelOuterClass.Model.InputType getInputType();
   }
   /**
    * Protobuf type {@code asgt.type.Model}
@@ -96,7 +96,7 @@ public final class ModelOuterClass {
       datasetSize_ = 0;
       trainingSize_ = 0;
       confidenceScores_ = java.util.Collections.emptyList();
-      inputTypes_ = 0;
+      inputType_ = 0;
     }
 
     @java.lang.Override
@@ -163,7 +163,7 @@ public final class ModelOuterClass {
             case 64: {
               int rawValue = input.readEnum();
 
-              inputTypes_ = rawValue;
+              inputType_ = rawValue;
               break;
             }
             default: {
@@ -202,9 +202,9 @@ public final class ModelOuterClass {
     }
 
     /**
-     * Protobuf enum {@code asgt.type.Model.InputTypes}
+     * Protobuf enum {@code asgt.type.Model.InputType}
      */
-    public enum InputTypes
+    public enum InputType
         implements com.google.protobuf.ProtocolMessageEnum {
       /**
        * <code>EXAMPLES = 0;</code>
@@ -239,11 +239,11 @@ public final class ModelOuterClass {
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
-      public static InputTypes valueOf(int value) {
+      public static InputType valueOf(int value) {
         return forNumber(value);
       }
 
-      public static InputTypes forNumber(int value) {
+      public static InputType forNumber(int value) {
         switch (value) {
           case 0: return EXAMPLES;
           case 1: return TENSORS;
@@ -251,15 +251,15 @@ public final class ModelOuterClass {
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<InputTypes>
+      public static com.google.protobuf.Internal.EnumLiteMap<InputType>
           internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
-          InputTypes> internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<InputTypes>() {
-              public InputTypes findValueByNumber(int number) {
-                return InputTypes.forNumber(number);
+          InputType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<InputType>() {
+              public InputType findValueByNumber(int number) {
+                return InputType.forNumber(number);
               }
             };
 
@@ -276,9 +276,9 @@ public final class ModelOuterClass {
         return asgt.type.ModelOuterClass.Model.getDescriptor().getEnumTypes().get(0);
       }
 
-      private static final InputTypes[] VALUES = values();
+      private static final InputType[] VALUES = values();
 
-      public static InputTypes valueOf(
+      public static InputType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
@@ -292,11 +292,11 @@ public final class ModelOuterClass {
 
       private final int value;
 
-      private InputTypes(int value) {
+      private InputType(int value) {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:asgt.type.Model.InputTypes)
+      // @@protoc_insertion_point(enum_scope:asgt.type.Model.InputType)
     }
 
     private int bitField0_;
@@ -383,21 +383,21 @@ public final class ModelOuterClass {
       return confidenceScores_.get(index);
     }
 
-    public static final int INPUT_TYPES_FIELD_NUMBER = 8;
-    private int inputTypes_;
+    public static final int INPUT_TYPE_FIELD_NUMBER = 8;
+    private int inputType_;
     /**
-     * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
      */
-    public int getInputTypesValue() {
-      return inputTypes_;
+    public int getInputTypeValue() {
+      return inputType_;
     }
     /**
-     * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
      */
-    public asgt.type.ModelOuterClass.Model.InputTypes getInputTypes() {
+    public asgt.type.ModelOuterClass.Model.InputType getInputType() {
       @SuppressWarnings("deprecation")
-      asgt.type.ModelOuterClass.Model.InputTypes result = asgt.type.ModelOuterClass.Model.InputTypes.valueOf(inputTypes_);
-      return result == null ? asgt.type.ModelOuterClass.Model.InputTypes.UNRECOGNIZED : result;
+      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+      return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -429,8 +429,8 @@ public final class ModelOuterClass {
       for (int i = 0; i < confidenceScores_.size(); i++) {
         output.writeMessage(7, confidenceScores_.get(i));
       }
-      if (inputTypes_ != asgt.type.ModelOuterClass.Model.InputTypes.EXAMPLES.getNumber()) {
-        output.writeEnum(8, inputTypes_);
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
+        output.writeEnum(8, inputType_);
       }
       unknownFields.writeTo(output);
     }
@@ -461,9 +461,9 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, confidenceScores_.get(i));
       }
-      if (inputTypes_ != asgt.type.ModelOuterClass.Model.InputTypes.EXAMPLES.getNumber()) {
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.EXAMPLES.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(8, inputTypes_);
+          .computeEnumSize(8, inputType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -494,7 +494,7 @@ public final class ModelOuterClass {
           == other.getTrainingSize());
       result = result && getConfidenceScoresList()
           .equals(other.getConfidenceScoresList());
-      result = result && inputTypes_ == other.inputTypes_;
+      result = result && inputType_ == other.inputType_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -521,8 +521,8 @@ public final class ModelOuterClass {
         hash = (37 * hash) + CONFIDENCE_SCORES_FIELD_NUMBER;
         hash = (53 * hash) + getConfidenceScoresList().hashCode();
       }
-      hash = (37 * hash) + INPUT_TYPES_FIELD_NUMBER;
-      hash = (53 * hash) + inputTypes_;
+      hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + inputType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -675,7 +675,7 @@ public final class ModelOuterClass {
         } else {
           confidenceScoresBuilder_.clear();
         }
-        inputTypes_ = 0;
+        inputType_ = 0;
 
         return this;
       }
@@ -722,7 +722,7 @@ public final class ModelOuterClass {
         } else {
           result.confidenceScores_ = confidenceScoresBuilder_.build();
         }
-        result.inputTypes_ = inputTypes_;
+        result.inputType_ = inputType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -810,8 +810,8 @@ public final class ModelOuterClass {
             }
           }
         }
-        if (other.inputTypes_ != 0) {
-          setInputTypesValue(other.getInputTypesValue());
+        if (other.inputType_ != 0) {
+          setInputTypeValue(other.getInputTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1278,47 +1278,47 @@ public final class ModelOuterClass {
         return confidenceScoresBuilder_;
       }
 
-      private int inputTypes_ = 0;
+      private int inputType_ = 0;
       /**
-       * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
        */
-      public int getInputTypesValue() {
-        return inputTypes_;
+      public int getInputTypeValue() {
+        return inputType_;
       }
       /**
-       * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
        */
-      public Builder setInputTypesValue(int value) {
-        inputTypes_ = value;
+      public Builder setInputTypeValue(int value) {
+        inputType_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
        */
-      public asgt.type.ModelOuterClass.Model.InputTypes getInputTypes() {
+      public asgt.type.ModelOuterClass.Model.InputType getInputType() {
         @SuppressWarnings("deprecation")
-        asgt.type.ModelOuterClass.Model.InputTypes result = asgt.type.ModelOuterClass.Model.InputTypes.valueOf(inputTypes_);
-        return result == null ? asgt.type.ModelOuterClass.Model.InputTypes.UNRECOGNIZED : result;
+        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+        return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
       }
       /**
-       * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
        */
-      public Builder setInputTypes(asgt.type.ModelOuterClass.Model.InputTypes value) {
+      public Builder setInputType(asgt.type.ModelOuterClass.Model.InputType value) {
         if (value == null) {
           throw new NullPointerException();
         }
         
-        inputTypes_ = value.getNumber();
+        inputType_ = value.getNumber();
         onChanged();
         return this;
       }
       /**
-       * <code>.asgt.type.Model.InputTypes input_types = 8;</code>
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
        */
-      public Builder clearInputTypes() {
+      public Builder clearInputType() {
         
-        inputTypes_ = 0;
+        inputType_ = 0;
         onChanged();
         return this;
       }
@@ -1392,16 +1392,16 @@ public final class ModelOuterClass {
       "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
       "/type/target_metrics.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\247\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "amp.proto\"\244\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
-      "icsB\005\352?\002\030\001\0220\n\013input_types\030\010 \001(\0162\033.asgt.t" +
-      "ype.Model.InputTypes\"\'\n\nInputTypes\022\014\n\010EX" +
-      "AMPLES\020\000\022\013\n\007TENSORS\020\001J\004\010\001\020\003B8Z6github.co" +
-      "m/e-conomic/vmlapis/gen/go/asgt/type;asg" +
-      "ttypeb\006proto3"
+      "icsB\005\352?\002\030\001\022.\n\ninput_type\030\010 \001(\0162\032.asgt.ty" +
+      "pe.Model.InputType\"&\n\tInputType\022\014\n\010EXAMP" +
+      "LES\020\000\022\013\n\007TENSORS\020\001J\004\010\001\020\003B8Z6github.com/e" +
+      "-conomic/vmlapis/gen/go/asgt/type;asgtty" +
+      "peb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1423,7 +1423,7 @@ public final class ModelOuterClass {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputTypes", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);

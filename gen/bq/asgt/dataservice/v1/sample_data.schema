@@ -160,7 +160,7 @@
     "mode": "NULLABLE"
    },
    {
-    "name": "input_types",
+    "name": "input_type",
     "type": "STRING",
     "mode": "NULLABLE"
    }
