@@ -158,6 +158,11 @@
     "name": "created_at",
     "type": "TIMESTAMP",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "input_types",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },

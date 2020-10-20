@@ -26,17 +26,19 @@ namespace Asgt.Type {
           string.Concat(
             "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
             "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIswBCgVN",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqcCCgVN",
             "b2RlbBIWCgd2ZXJzaW9uGAMgASgDQgXqPwIIARIuCgpjcmVhdGVkX2F0GAQg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIbCgxkYXRhc2V0X3Np",
             "emUYBSABKAVCBeo/AhgBEhwKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgB",
             "EjoKEWNvbmZpZGVuY2Vfc2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdl",
-            "dE1ldHJpY3NCBeo/AhgBSgQIARADQjhaNmdpdGh1Yi5jb20vZS1jb25vbWlj",
-            "L3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
+            "dE1ldHJpY3NCBeo/AhgBEjAKC2lucHV0X3R5cGVzGAggASgOMhsuYXNndC50",
+            "eXBlLk1vZGVsLklucHV0VHlwZXMiJwoKSW5wdXRUeXBlcxIMCghFWEFNUExF",
+            "UxAAEgsKB1RFTlNPUlMQAUoECAEQA0I4WjZnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputTypes" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputTypes) }, null)
           }));
     }
     #endregion
@@ -73,6 +75,7 @@ namespace Asgt.Type {
       datasetSize_ = other.datasetSize_;
       trainingSize_ = other.trainingSize_;
       confidenceScores_ = other.confidenceScores_.Clone();
+      inputTypes_ = other.inputTypes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,6 +138,17 @@ namespace Asgt.Type {
       get { return confidenceScores_; }
     }
 
+    /// <summary>Field number for the "input_types" field.</summary>
+    public const int InputTypesFieldNumber = 8;
+    private global::Asgt.Type.Model.Types.InputTypes inputTypes_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Asgt.Type.Model.Types.InputTypes InputTypes {
+      get { return inputTypes_; }
+      set {
+        inputTypes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Model);
@@ -153,6 +167,7 @@ namespace Asgt.Type {
       if (DatasetSize != other.DatasetSize) return false;
       if (TrainingSize != other.TrainingSize) return false;
       if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
+      if (InputTypes != other.InputTypes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -164,6 +179,7 @@ namespace Asgt.Type {
       if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
       if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
       hash ^= confidenceScores_.GetHashCode();
+      if (InputTypes != 0) hash ^= InputTypes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -194,6 +210,10 @@ namespace Asgt.Type {
         output.WriteInt32(TrainingSize);
       }
       confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
+      if (InputTypes != 0) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) InputTypes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -215,6 +235,9 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
       }
       size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
+      if (InputTypes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputTypes);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -242,6 +265,9 @@ namespace Asgt.Type {
         TrainingSize = other.TrainingSize;
       }
       confidenceScores_.Add(other.confidenceScores_);
+      if (other.InputTypes != 0) {
+        InputTypes = other.InputTypes;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -276,9 +302,25 @@ namespace Asgt.Type {
             confidenceScores_.AddEntriesFrom(input, _repeated_confidenceScores_codec);
             break;
           }
+          case 64: {
+            inputTypes_ = (global::Asgt.Type.Model.Types.InputTypes) input.ReadEnum();
+            break;
+          }
         }
       }
     }
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Model message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static partial class Types {
+      public enum InputTypes {
+        [pbr::OriginalName("EXAMPLES")] Examples = 0,
+        [pbr::OriginalName("TENSORS")] Tensors = 1,
+      }
+
+    }
+    #endregion
 
   }
 
