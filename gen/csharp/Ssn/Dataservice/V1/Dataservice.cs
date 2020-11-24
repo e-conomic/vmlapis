@@ -173,30 +173,31 @@ namespace Ssn.Dataservice.V1 {
             "KAUSFgoOZmVlZGJhY2tfY291bnQYAiABKAUSPAoTb3ZlcmFsbF9jb3JyZWN0",
             "bmVzcxgDIAEoCzIfLnNzbi5kYXRhc2VydmljZS52MS5Db3JyZWN0bmVzcxI6",
             "ChFmaWVsZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5kYXRhc2VydmljZS52",
-            "MS5Db3JyZWN0bmVzcyJxCgtDb3JyZWN0bmVzcxINCgVmaWVsZBgBIAEoCRIa",
-            "ChJjb3JyZWN0X3BlcmNlbnRhZ2UYAiABKAISHQoVaW5jb21wbGV0ZV9wZXJj",
-            "ZW50YWdlGAMgASgCEhgKEGVycm9yX3BlcmNlbnRhZ2UYBCABKAIiHQoNRGVs",
-            "ZXRlUmVxdWVzdBIMCgR0YWdzGAEgAygJIjIKDUNhbGxzUGVyTW9udGgSDQoF",
-            "Y2FsbHMYASABKAMSEgoKbW9udGhfbmFtZRgCIAEoCSJTChVDYWxsc1Blck1v",
-            "bnRoUmVzcG9uc2USOgoPY2FsbHNfcGVyX21vbnRoGAEgAygLMiEuc3NuLmRh",
-            "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGgytQUKC0RhdGFTZXJ2aWNlEmcK",
-            "DkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNyZWF0ZURv",
-            "Y3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVEb2N1",
-            "bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVudBInLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Giguc3NuLmRhdGFzZXJ2aWNlLnYx",
-            "LlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1ByZXBhcmVGZWVkYmFjaxIqLnNz",
-            "bi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRiYWNrEiMuc3NuLmRhdGFzZXJ2",
-            "aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3JlYXRlOgEqElsKEENhbGN1bGF0",
-            "ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2UudjEuTWV0cmljc1JlcXVlc3Qa",
-            "Iy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tNZXRyaWNzEmMKBkRlbGV0",
-            "ZRIhLnNzbi5kYXRhc2VydmljZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5Ih6C0+STAhgiEy92MS9mZWVkYmFjazpkZWxldGU6",
-            "ASoSWAoTQ2FsbHNQZXJNb250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eRopLnNzbi5kYXRhc2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9u",
-            "c2VCRFpCZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3Nu",
-            "L2RhdGFzZXJ2aWNlL3YxO2RhdGFzZXJ2aWNlYgZwcm90bzM="));
+            "MS5Db3JyZWN0bmVzcyKCAQoLQ29ycmVjdG5lc3MSDQoFZmllbGQYASABKAkS",
+            "GgoSY29ycmVjdF9wZXJjZW50YWdlGAIgASgCEh0KFWluY29tcGxldGVfcGVy",
+            "Y2VudGFnZRgDIAEoAhIYChBlcnJvcl9wZXJjZW50YWdlGAQgASgCEg8KB3N1",
+            "cHBvcnQYBSABKAUiHQoNRGVsZXRlUmVxdWVzdBIMCgR0YWdzGAEgAygJIjIK",
+            "DUNhbGxzUGVyTW9udGgSDQoFY2FsbHMYASABKAMSEgoKbW9udGhfbmFtZRgC",
+            "IAEoCSJTChVDYWxsc1Blck1vbnRoUmVzcG9uc2USOgoPY2FsbHNfcGVyX21v",
+            "bnRoGAEgAygLMiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGgy",
+            "tQUKC0RhdGFTZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50Eikuc3NuLmRhdGFz",
+            "ZXJ2aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBoqLnNzbi5kYXRhc2Vy",
+            "dmljZS52MS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEmEKDFJlYWREb2N1bWVu",
+            "dBInLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1lbnRSZXF1ZXN0Gigu",
+            "c3NuLmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJlc3BvbnNlElUKD1By",
+            "ZXBhcmVGZWVkYmFjaxIqLnNzbi5kYXRhc2VydmljZS52MS5QcmVwYXJlRmVl",
+            "ZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EmcKCEZlZWRi",
+            "YWNrEiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNrUmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYIhMvdjEvZmVlZGJhY2s6Y3Jl",
+            "YXRlOgEqElsKEENhbGN1bGF0ZU1ldHJpY3MSIi5zc24uZGF0YXNlcnZpY2Uu",
+            "djEuTWV0cmljc1JlcXVlc3QaIy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJh",
+            "Y2tNZXRyaWNzEmMKBkRlbGV0ZRIhLnNzbi5kYXRhc2VydmljZS52MS5EZWxl",
+            "dGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih6C0+STAhgiEy92",
+            "MS9mZWVkYmFjazpkZWxldGU6ASoSWAoTQ2FsbHNQZXJNb250aE1ldHJpYxIW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRhc2VydmljZS52MS5D",
+            "YWxsc1Blck1vbnRoUmVzcG9uc2VCRFpCZ2l0aHViLmNvbS9lLWNvbm9taWMv",
+            "dm1sYXBpcy9nZW4vZ28vc3NuL2RhdGFzZXJ2aWNlL3YxO2RhdGFzZXJ2aWNl",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
@@ -213,7 +214,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.DeleteRequest), global::Ssn.Dataservice.V1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonth), global::Ssn.Dataservice.V1.CallsPerMonth.Parser, new[]{ "Calls", "MonthName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CallsPerMonthResponse), global::Ssn.Dataservice.V1.CallsPerMonthResponse.Parser, new[]{ "CallsPerMonth" }, null, null, null)
@@ -4539,6 +4540,7 @@ namespace Ssn.Dataservice.V1 {
       correctPercentage_ = other.correctPercentage_;
       incompletePercentage_ = other.incompletePercentage_;
       errorPercentage_ = other.errorPercentage_;
+      support_ = other.support_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4591,6 +4593,17 @@ namespace Ssn.Dataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "support" field.</summary>
+    public const int SupportFieldNumber = 5;
+    private int support_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Support {
+      get { return support_; }
+      set {
+        support_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Correctness);
@@ -4608,6 +4621,7 @@ namespace Ssn.Dataservice.V1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CorrectPercentage, other.CorrectPercentage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(IncompletePercentage, other.IncompletePercentage)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ErrorPercentage, other.ErrorPercentage)) return false;
+      if (Support != other.Support) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4618,6 +4632,7 @@ namespace Ssn.Dataservice.V1 {
       if (CorrectPercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CorrectPercentage);
       if (IncompletePercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IncompletePercentage);
       if (ErrorPercentage != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ErrorPercentage);
+      if (Support != 0) hash ^= Support.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4647,6 +4662,10 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(37);
         output.WriteFloat(ErrorPercentage);
       }
+      if (Support != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Support);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4666,6 +4685,9 @@ namespace Ssn.Dataservice.V1 {
       }
       if (ErrorPercentage != 0F) {
         size += 1 + 4;
+      }
+      if (Support != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Support);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4689,6 +4711,9 @@ namespace Ssn.Dataservice.V1 {
       }
       if (other.ErrorPercentage != 0F) {
         ErrorPercentage = other.ErrorPercentage;
+      }
+      if (other.Support != 0) {
+        Support = other.Support;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4715,6 +4740,10 @@ namespace Ssn.Dataservice.V1 {
           }
           case 37: {
             ErrorPercentage = input.ReadFloat();
+            break;
+          }
+          case 40: {
+            Support = input.ReadInt32();
             break;
           }
         }

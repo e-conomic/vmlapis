@@ -39038,6 +39038,11 @@ public final class Dataservice {
      * <code>float error_percentage = 4;</code>
      */
     float getErrorPercentage();
+
+    /**
+     * <code>int32 support = 5;</code>
+     */
+    int getSupport();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.Correctness}
@@ -39056,6 +39061,7 @@ public final class Dataservice {
       correctPercentage_ = 0F;
       incompletePercentage_ = 0F;
       errorPercentage_ = 0F;
+      support_ = 0;
     }
 
     @java.lang.Override
@@ -39101,6 +39107,11 @@ public final class Dataservice {
             case 37: {
 
               errorPercentage_ = input.readFloat();
+              break;
+            }
+            case 40: {
+
+              support_ = input.readInt32();
               break;
             }
             default: {
@@ -39196,6 +39207,15 @@ public final class Dataservice {
       return errorPercentage_;
     }
 
+    public static final int SUPPORT_FIELD_NUMBER = 5;
+    private int support_;
+    /**
+     * <code>int32 support = 5;</code>
+     */
+    public int getSupport() {
+      return support_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -39222,6 +39242,9 @@ public final class Dataservice {
       if (errorPercentage_ != 0F) {
         output.writeFloat(4, errorPercentage_);
       }
+      if (support_ != 0) {
+        output.writeInt32(5, support_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -39245,6 +39268,10 @@ public final class Dataservice {
       if (errorPercentage_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(4, errorPercentage_);
+      }
+      if (support_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, support_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -39276,6 +39303,8 @@ public final class Dataservice {
           java.lang.Float.floatToIntBits(getErrorPercentage())
           == java.lang.Float.floatToIntBits(
               other.getErrorPercentage()));
+      result = result && (getSupport()
+          == other.getSupport());
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -39298,6 +39327,8 @@ public final class Dataservice {
       hash = (37 * hash) + ERROR_PERCENTAGE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getErrorPercentage());
+      hash = (37 * hash) + SUPPORT_FIELD_NUMBER;
+      hash = (53 * hash) + getSupport();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -39439,6 +39470,8 @@ public final class Dataservice {
 
         errorPercentage_ = 0F;
 
+        support_ = 0;
+
         return this;
       }
 
@@ -39469,6 +39502,7 @@ public final class Dataservice {
         result.correctPercentage_ = correctPercentage_;
         result.incompletePercentage_ = incompletePercentage_;
         result.errorPercentage_ = errorPercentage_;
+        result.support_ = support_;
         onBuilt();
         return result;
       }
@@ -39529,6 +39563,9 @@ public final class Dataservice {
         }
         if (other.getErrorPercentage() != 0F) {
           setErrorPercentage(other.getErrorPercentage());
+        }
+        if (other.getSupport() != 0) {
+          setSupport(other.getSupport());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -39702,6 +39739,32 @@ public final class Dataservice {
       public Builder clearErrorPercentage() {
         
         errorPercentage_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int support_ ;
+      /**
+       * <code>int32 support = 5;</code>
+       */
+      public int getSupport() {
+        return support_;
+      }
+      /**
+       * <code>int32 support = 5;</code>
+       */
+      public Builder setSupport(int value) {
+        
+        support_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 support = 5;</code>
+       */
+      public Builder clearSupport() {
+        
+        support_ = 0;
         onChanged();
         return this;
       }
@@ -42019,34 +42082,34 @@ public final class Dataservice {
       "_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005\022<\n\023" +
       "overall_correctness\030\003 \001(\0132\037.ssn.dataserv" +
       "ice.v1.Correctness\022:\n\021field_correctness\030" +
-      "\004 \003(\0132\037.ssn.dataservice.v1.Correctness\"q" +
-      "\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct_" +
-      "percentage\030\002 \001(\002\022\035\n\025incomplete_percentag" +
-      "e\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\"\035\n\rDel" +
-      "eteRequest\022\014\n\004tags\030\001 \003(\t\"2\n\rCallsPerMont" +
-      "h\022\r\n\005calls\030\001 \001(\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025" +
-      "CallsPerMonthResponse\022:\n\017calls_per_month" +
-      "\030\001 \003(\0132!.ssn.dataservice.v1.CallsPerMont" +
-      "h2\265\005\n\013DataService\022g\n\016CreateDocument\022).ss" +
-      "n.dataservice.v1.CreateDocumentRequest\032*" +
-      ".ssn.dataservice.v1.CreateDocumentRespon" +
-      "se\022a\n\014ReadDocument\022\'.ssn.dataservice.v1." +
-      "ReadDocumentRequest\032(.ssn.dataservice.v1" +
-      ".ReadDocumentResponse\022U\n\017PrepareFeedback" +
-      "\022*.ssn.dataservice.v1.PrepareFeedbackReq" +
-      "uest\032\026.google.protobuf.Empty\022g\n\010Feedback" +
-      "\022#.ssn.dataservice.v1.FeedbackRequest\032\026." +
-      "google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedb" +
-      "ack:create:\001*\022[\n\020CalculateMetrics\022\".ssn." +
-      "dataservice.v1.MetricsRequest\032#.ssn.data" +
-      "service.v1.FeedbackMetrics\022c\n\006Delete\022!.s" +
-      "sn.dataservice.v1.DeleteRequest\032\026.google" +
-      ".protobuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:de" +
-      "lete:\001*\022X\n\023CallsPerMonthMetric\022\026.google." +
-      "protobuf.Empty\032).ssn.dataservice.v1.Call" +
-      "sPerMonthResponseBDZBgithub.com/e-conomi" +
-      "c/vmlapis/gen/go/ssn/dataservice/v1;data" +
-      "serviceb\006proto3"
+      "\004 \003(\0132\037.ssn.dataservice.v1.Correctness\"\202" +
+      "\001\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022correct" +
+      "_percentage\030\002 \001(\002\022\035\n\025incomplete_percenta" +
+      "ge\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\022\017\n\007su" +
+      "pport\030\005 \001(\005\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 \003" +
+      "(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nmo" +
+      "nth_name\030\002 \001(\t\"S\n\025CallsPerMonthResponse\022" +
+      ":\n\017calls_per_month\030\001 \003(\0132!.ssn.dataservi" +
+      "ce.v1.CallsPerMonth2\265\005\n\013DataService\022g\n\016C" +
+      "reateDocument\022).ssn.dataservice.v1.Creat" +
+      "eDocumentRequest\032*.ssn.dataservice.v1.Cr" +
+      "eateDocumentResponse\022a\n\014ReadDocument\022\'.s" +
+      "sn.dataservice.v1.ReadDocumentRequest\032(." +
+      "ssn.dataservice.v1.ReadDocumentResponse\022" +
+      "U\n\017PrepareFeedback\022*.ssn.dataservice.v1." +
+      "PrepareFeedbackRequest\032\026.google.protobuf" +
+      ".Empty\022g\n\010Feedback\022#.ssn.dataservice.v1." +
+      "FeedbackRequest\032\026.google.protobuf.Empty\"" +
+      "\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020Calcu" +
+      "lateMetrics\022\".ssn.dataservice.v1.Metrics" +
+      "Request\032#.ssn.dataservice.v1.FeedbackMet" +
+      "rics\022c\n\006Delete\022!.ssn.dataservice.v1.Dele" +
+      "teRequest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002" +
+      "\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPerMon" +
+      "thMetric\022\026.google.protobuf.Empty\032).ssn.d" +
+      "ataservice.v1.CallsPerMonthResponseBDZBg" +
+      "ithub.com/e-conomic/vmlapis/gen/go/ssn/d" +
+      "ataservice/v1;dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -42151,7 +42214,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1_Correctness_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_Correctness_descriptor,
-        new java.lang.String[] { "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", });
+        new java.lang.String[] { "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support", });
     internal_static_ssn_dataservice_v1_DeleteRequest_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_ssn_dataservice_v1_DeleteRequest_fieldAccessorTable = new
