@@ -5,7 +5,7 @@ all:
 	    --protoc-bin-path=/usr/bin/protoc \
 	    --protoc-wkt-path=/usr/include \
 	    all
-	protoc -I./deps/googleapis -I./proto \
+	protoc -I./deps/googleapis -I./deps/validate -I./proto \
 		--include_imports --include_source_info \
 		--descriptor_set_out=gen/descriptor.bin \
 		proto/ssn/annotator/v1/annotator.proto \

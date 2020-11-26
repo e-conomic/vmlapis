@@ -12,6 +12,8 @@ import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
 import "ssn/dataservice/v1/dataservice.proto";
 
+import "validate/validate.proto";
+
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
@@ -54,7 +56,10 @@ service DataService {
 
 
 message CreateRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = {
+                    pattern:   "^[0-9A-Za-z]+$",
+                    max_bytes: 256,
+                  }];
   string type = 2;
   repeated string tags = 3;
   repeated string targets = 6;

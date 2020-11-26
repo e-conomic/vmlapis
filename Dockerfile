@@ -31,7 +31,8 @@ RUN go get . \
   && go install github.com/golang/mock/mockgen \
   && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
 	&& go install google.golang.org/grpc/cmd/protoc-gen-go-grpc \ 
-  && go install google.golang.org/protobuf/cmd/protoc-gen-go
+  && go install google.golang.org/protobuf/cmd/protoc-gen-go \
+  && go install github.com/envoyproxy/protoc-gen-validate
 
 ENV PATH="/root/go/bin:${PATH}"
 
@@ -39,4 +40,5 @@ COPY Makefile /app/
 COPY deps deps
 COPY scripts scripts
 COPY proto proto
+
 RUN make all
