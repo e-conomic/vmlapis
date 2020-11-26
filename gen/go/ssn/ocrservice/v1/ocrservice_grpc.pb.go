@@ -11,7 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // OcrServiceClient is the client API for OcrService service.
 //
@@ -60,15 +60,22 @@ type OcrServiceServer interface {
 type UnimplementedOcrServiceServer struct {
 }
 
-func (*UnimplementedOcrServiceServer) OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error) {
+func (UnimplementedOcrServiceServer) OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method OcrScanImage not implemented")
 }
-func (*UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error) {
+func (UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTextAnnotation not implemented")
 }
-func (*UnimplementedOcrServiceServer) mustEmbedUnimplementedOcrServiceServer() {}
+func (UnimplementedOcrServiceServer) mustEmbedUnimplementedOcrServiceServer() {}
 
-func RegisterOcrServiceServer(s *grpc.Server, srv OcrServiceServer) {
+// UnsafeOcrServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to OcrServiceServer will
+// result in compilation errors.
+type UnsafeOcrServiceServer interface {
+	mustEmbedUnimplementedOcrServiceServer()
+}
+
+func RegisterOcrServiceServer(s grpc.ServiceRegistrar, srv OcrServiceServer) {
 	s.RegisterService(&_OcrService_serviceDesc, srv)
 }
 

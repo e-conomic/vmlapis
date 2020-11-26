@@ -19,11 +19,11 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
@@ -254,7 +254,7 @@ public final class DataServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -269,7 +269,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -912,7 +912,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -927,7 +927,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -943,7 +943,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -956,7 +956,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearName() {
         
@@ -965,7 +965,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7075,44 +7075,46 @@ public final class DataServiceOuterClass {
       "ion_policy.proto\032\026asgt/type/sample.proto" +
       "\032\034google/api/annotations.proto\032\033google/p" +
       "rotobuf/empty.proto\032$ssn/dataservice/v1/" +
-      "dataservice.proto\"\244\001\n\rCreateRequest\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022\017\n" +
-      "\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132\021.asgt.t" +
-      "ype.Sample\0224\n\020retention_policy\030\005 \001(\0132\032.a" +
-      "sgt.type.RetentionPolicy\"S\n\021AppendDataRe" +
-      "quest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\"\n\007sam" +
-      "ples\030\003 \003(\0132\021.asgt.type.Sample\"E\n\rDeleteR" +
-      "equest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003" +
-      "tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoRequest\022\014" +
-      "\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024UpdateData" +
-      "setRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\0224" +
-      "\n\020retention_policy\030\003 \001(\0132\032.asgt.type.Ret" +
-      "entionPolicy\"W\n\017GetInfoResponse\022#\n\007datas" +
-      "et\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005model\030\002 " +
-      "\001(\0132\020.asgt.type.Model\"b\n\031RegisterQuerySt" +
-      "atsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nmodel_typ" +
-      "e\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004tags\030\004 \003(" +
-      "\t2\372\005\n\013DataService\022i\n\rCreateDataset\022\".asg" +
-      "t.dataservice.v1.CreateRequest\032\026.google." +
-      "protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:creat" +
-      "e:\001*\022q\n\nAppendData\022&.asgt.dataservice.v1" +
-      ".AppendDataRequest\032\026.google.protobuf.Emp" +
-      "ty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*\022" +
-      "f\n\nDeleteData\022\".asgt.dataservice.v1.Dele" +
-      "teRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002" +
-      "\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.asg" +
-      "t.dataservice.v1.GetInfoRequest\032$.asgt.d" +
-      "ataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026/" +
-      "v1/{type}/{name}:info\022w\n\rUpdateDataset\022)" +
-      ".asgt.dataservice.v1.UpdateDatasetReques" +
-      "t\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/{" +
-      "type}/{name}:update:\001*\022\\\n\022RegisterQueryS" +
-      "tats\022..asgt.dataservice.v1.RegisterQuery" +
-      "StatsRequest\032\026.google.protobuf.Empty\022X\n\023" +
-      "CallsPerMonthMetric\022\026.google.protobuf.Em" +
-      "pty\032).ssn.dataservice.v1.CallsPerMonthRe" +
-      "sponseB7Z5github.com/e-conomic/vmlapis/g" +
-      "en/go/asgt/data/v1;datab\006proto3"
+      "dataservice.proto\032\027validate/validate.pro" +
+      "to\"\276\001\n\rCreateRequest\022&\n\004name\030\001 \001(\tB\030\372B\025r" +
+      "\023(\200\0022\016^[0-9A-Za-z]+$\022\014\n\004type\030\002 \001(\t\022\014\n\004ta" +
+      "gs\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003" +
+      "(\0132\021.asgt.type.Sample\0224\n\020retention_polic" +
+      "y\030\005 \001(\0132\032.asgt.type.RetentionPolicy\"S\n\021A" +
+      "ppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002" +
+      " \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sample" +
+      "\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030" +
+      "\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetIn" +
+      "foRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n" +
+      "\024UpdateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004t" +
+      "ype\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032.as" +
+      "gt.type.RetentionPolicy\"W\n\017GetInfoRespon" +
+      "se\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022" +
+      "\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031Regi" +
+      "sterQueryStatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022" +
+      "\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014" +
+      "\n\004tags\030\004 \003(\t2\372\005\n\013DataService\022i\n\rCreateDa" +
+      "taset\022\".asgt.dataservice.v1.CreateReques" +
+      "t\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{" +
+      "type}:create:\001*\022q\n\nAppendData\022&.asgt.dat" +
+      "aservice.v1.AppendDataRequest\032\026.google.p" +
+      "rotobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}" +
+      ":append:\001*\022f\n\nDeleteData\022\".asgt.dataserv" +
+      "ice.v1.DeleteRequest\032\026.google.protobuf.E" +
+      "mpty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007Ge" +
+      "tInfo\022#.asgt.dataservice.v1.GetInfoReque" +
+      "st\032$.asgt.dataservice.v1.GetInfoResponse" +
+      "\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpda" +
+      "teDataset\022).asgt.dataservice.v1.UpdateDa" +
+      "tasetRequest\032\026.google.protobuf.Empty\"#\202\323" +
+      "\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022Reg" +
+      "isterQueryStats\022..asgt.dataservice.v1.Re" +
+      "gisterQueryStatsRequest\032\026.google.protobu" +
+      "f.Empty\022X\n\023CallsPerMonthMetric\022\026.google." +
+      "protobuf.Empty\032).ssn.dataservice.v1.Call" +
+      "sPerMonthResponseB7Z5github.com/e-conomi" +
+      "c/vmlapis/gen/go/asgt/data/v1;datab\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7132,6 +7134,7 @@ public final class DataServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           ssn.dataservice.v1.Dataservice.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         }, assigner);
     internal_static_asgt_dataservice_v1_CreateRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -7178,6 +7181,7 @@ public final class DataServiceOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
@@ -7187,6 +7191,7 @@ public final class DataServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     ssn.dataservice.v1.Dataservice.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

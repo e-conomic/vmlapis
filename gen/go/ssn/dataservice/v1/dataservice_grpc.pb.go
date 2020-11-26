@@ -12,7 +12,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // DataServiceClient is the client API for DataService service.
 //
@@ -118,30 +118,37 @@ type DataServiceServer interface {
 type UnimplementedDataServiceServer struct {
 }
 
-func (*UnimplementedDataServiceServer) CreateDocument(context.Context, *CreateDocumentRequest) (*CreateDocumentResponse, error) {
+func (UnimplementedDataServiceServer) CreateDocument(context.Context, *CreateDocumentRequest) (*CreateDocumentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateDocument not implemented")
 }
-func (*UnimplementedDataServiceServer) ReadDocument(context.Context, *ReadDocumentRequest) (*ReadDocumentResponse, error) {
+func (UnimplementedDataServiceServer) ReadDocument(context.Context, *ReadDocumentRequest) (*ReadDocumentResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ReadDocument not implemented")
 }
-func (*UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) PrepareFeedback(context.Context, *PrepareFeedbackRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PrepareFeedback not implemented")
 }
-func (*UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) Feedback(context.Context, *FeedbackRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Feedback not implemented")
 }
-func (*UnimplementedDataServiceServer) CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error) {
+func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *MetricsRequest) (*FeedbackMetrics, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
-func (*UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) Delete(context.Context, *DeleteRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Delete not implemented")
 }
-func (*UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empty.Empty) (*CallsPerMonthResponse, error) {
+func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empty.Empty) (*CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
 }
-func (*UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
+func (UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
 
-func RegisterDataServiceServer(s *grpc.Server, srv DataServiceServer) {
+// UnsafeDataServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to DataServiceServer will
+// result in compilation errors.
+type UnsafeDataServiceServer interface {
+	mustEmbedUnimplementedDataServiceServer()
+}
+
+func RegisterDataServiceServer(s grpc.ServiceRegistrar, srv DataServiceServer) {
 	s.RegisterService(&_DataService_serviceDesc, srv)
 }
 

@@ -11,7 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // MlServiceClient is the client API for MlService service.
 //
@@ -73,18 +73,25 @@ type MlServiceServer interface {
 type UnimplementedMlServiceServer struct {
 }
 
-func (*UnimplementedMlServiceServer) FeatureGen(context.Context, *FeatureGenRequest) (*FeatureGenResponse, error) {
+func (UnimplementedMlServiceServer) FeatureGen(context.Context, *FeatureGenRequest) (*FeatureGenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FeatureGen not implemented")
 }
-func (*UnimplementedMlServiceServer) Predict(context.Context, *PredictRequest) (*PredictResponse, error) {
+func (UnimplementedMlServiceServer) Predict(context.Context, *PredictRequest) (*PredictResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Predict not implemented")
 }
-func (*UnimplementedMlServiceServer) FeatureGenPredict(context.Context, *FeatureGenPredictRequest) (*PredictResponse, error) {
+func (UnimplementedMlServiceServer) FeatureGenPredict(context.Context, *FeatureGenPredictRequest) (*PredictResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method FeatureGenPredict not implemented")
 }
-func (*UnimplementedMlServiceServer) mustEmbedUnimplementedMlServiceServer() {}
+func (UnimplementedMlServiceServer) mustEmbedUnimplementedMlServiceServer() {}
 
-func RegisterMlServiceServer(s *grpc.Server, srv MlServiceServer) {
+// UnsafeMlServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to MlServiceServer will
+// result in compilation errors.
+type UnsafeMlServiceServer interface {
+	mustEmbedUnimplementedMlServiceServer()
+}
+
+func RegisterMlServiceServer(s grpc.ServiceRegistrar, srv MlServiceServer) {
 	s.RegisterService(&_MlService_serviceDesc, srv)
 }
 

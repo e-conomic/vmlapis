@@ -13,7 +13,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // DataServiceClient is the client API for DataService service.
 //
@@ -117,30 +117,37 @@ type DataServiceServer interface {
 type UnimplementedDataServiceServer struct {
 }
 
-func (*UnimplementedDataServiceServer) CreateDataset(context.Context, *CreateRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) CreateDataset(context.Context, *CreateRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateDataset not implemented")
 }
-func (*UnimplementedDataServiceServer) AppendData(context.Context, *AppendDataRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) AppendData(context.Context, *AppendDataRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AppendData not implemented")
 }
-func (*UnimplementedDataServiceServer) DeleteData(context.Context, *DeleteRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) DeleteData(context.Context, *DeleteRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteData not implemented")
 }
-func (*UnimplementedDataServiceServer) GetInfo(context.Context, *GetInfoRequest) (*GetInfoResponse, error) {
+func (UnimplementedDataServiceServer) GetInfo(context.Context, *GetInfoRequest) (*GetInfoResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetInfo not implemented")
 }
-func (*UnimplementedDataServiceServer) UpdateDataset(context.Context, *UpdateDatasetRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) UpdateDataset(context.Context, *UpdateDatasetRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateDataset not implemented")
 }
-func (*UnimplementedDataServiceServer) RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error) {
+func (UnimplementedDataServiceServer) RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RegisterQueryStats not implemented")
 }
-func (*UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empty.Empty) (*v1.CallsPerMonthResponse, error) {
+func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empty.Empty) (*v1.CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
 }
-func (*UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
+func (UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
 
-func RegisterDataServiceServer(s *grpc.Server, srv DataServiceServer) {
+// UnsafeDataServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to DataServiceServer will
+// result in compilation errors.
+type UnsafeDataServiceServer interface {
+	mustEmbedUnimplementedDataServiceServer()
+}
+
+func RegisterDataServiceServer(s grpc.ServiceRegistrar, srv DataServiceServer) {
 	s.RegisterService(&_DataService_serviceDesc, srv)
 }
 

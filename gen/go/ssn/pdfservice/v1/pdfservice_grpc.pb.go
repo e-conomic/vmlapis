@@ -11,7 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // PdfServiceClient is the client API for PdfService service.
 //
@@ -72,12 +72,19 @@ type PdfServiceServer interface {
 type UnimplementedPdfServiceServer struct {
 }
 
-func (*UnimplementedPdfServiceServer) RasterizePdf(*RasterizePdfRequest, PdfService_RasterizePdfServer) error {
+func (UnimplementedPdfServiceServer) RasterizePdf(*RasterizePdfRequest, PdfService_RasterizePdfServer) error {
 	return status.Errorf(codes.Unimplemented, "method RasterizePdf not implemented")
 }
-func (*UnimplementedPdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {}
+func (UnimplementedPdfServiceServer) mustEmbedUnimplementedPdfServiceServer() {}
 
-func RegisterPdfServiceServer(s *grpc.Server, srv PdfServiceServer) {
+// UnsafePdfServiceServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to PdfServiceServer will
+// result in compilation errors.
+type UnsafePdfServiceServer interface {
+	mustEmbedUnimplementedPdfServiceServer()
+}
+
+func RegisterPdfServiceServer(s grpc.ServiceRegistrar, srv PdfServiceServer) {
 	s.RegisterService(&_PdfService_serviceDesc, srv)
 }
 

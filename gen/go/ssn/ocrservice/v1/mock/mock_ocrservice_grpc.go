@@ -139,3 +139,38 @@ func (mr *MockOcrServiceServerMockRecorder) mustEmbedUnimplementedOcrServiceServ
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedOcrServiceServer", reflect.TypeOf((*MockOcrServiceServer)(nil).mustEmbedUnimplementedOcrServiceServer))
 }
+
+// MockUnsafeOcrServiceServer is a mock of UnsafeOcrServiceServer interface
+type MockUnsafeOcrServiceServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockUnsafeOcrServiceServerMockRecorder
+}
+
+// MockUnsafeOcrServiceServerMockRecorder is the mock recorder for MockUnsafeOcrServiceServer
+type MockUnsafeOcrServiceServerMockRecorder struct {
+	mock *MockUnsafeOcrServiceServer
+}
+
+// NewMockUnsafeOcrServiceServer creates a new mock instance
+func NewMockUnsafeOcrServiceServer(ctrl *gomock.Controller) *MockUnsafeOcrServiceServer {
+	mock := &MockUnsafeOcrServiceServer{ctrl: ctrl}
+	mock.recorder = &MockUnsafeOcrServiceServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use
+func (m *MockUnsafeOcrServiceServer) EXPECT() *MockUnsafeOcrServiceServerMockRecorder {
+	return m.recorder
+}
+
+// mustEmbedUnimplementedOcrServiceServer mocks base method
+func (m *MockUnsafeOcrServiceServer) mustEmbedUnimplementedOcrServiceServer() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "mustEmbedUnimplementedOcrServiceServer")
+}
+
+// mustEmbedUnimplementedOcrServiceServer indicates an expected call of mustEmbedUnimplementedOcrServiceServer
+func (mr *MockUnsafeOcrServiceServerMockRecorder) mustEmbedUnimplementedOcrServiceServer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedOcrServiceServer", reflect.TypeOf((*MockUnsafeOcrServiceServer)(nil).mustEmbedUnimplementedOcrServiceServer))
+}

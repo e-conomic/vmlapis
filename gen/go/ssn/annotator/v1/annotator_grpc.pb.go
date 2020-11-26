@@ -11,7 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // DocumentAnnotatorClient is the client API for DocumentAnnotator service.
 //
@@ -49,12 +49,19 @@ type DocumentAnnotatorServer interface {
 type UnimplementedDocumentAnnotatorServer struct {
 }
 
-func (*UnimplementedDocumentAnnotatorServer) AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error) {
+func (UnimplementedDocumentAnnotatorServer) AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AnnotateDocument not implemented")
 }
-func (*UnimplementedDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnotatorServer() {}
+func (UnimplementedDocumentAnnotatorServer) mustEmbedUnimplementedDocumentAnnotatorServer() {}
 
-func RegisterDocumentAnnotatorServer(s *grpc.Server, srv DocumentAnnotatorServer) {
+// UnsafeDocumentAnnotatorServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to DocumentAnnotatorServer will
+// result in compilation errors.
+type UnsafeDocumentAnnotatorServer interface {
+	mustEmbedUnimplementedDocumentAnnotatorServer()
+}
+
+func RegisterDocumentAnnotatorServer(s grpc.ServiceRegistrar, srv DocumentAnnotatorServer) {
 	s.RegisterService(&_DocumentAnnotator_serviceDesc, srv)
 }
 

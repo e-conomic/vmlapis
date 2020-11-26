@@ -11,7 +11,7 @@ import (
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion7
 
 // JesterClient is the client API for Jester service.
 //
@@ -49,12 +49,19 @@ type JesterServer interface {
 type UnimplementedJesterServer struct {
 }
 
-func (*UnimplementedJesterServer) Suggest(context.Context, *SuggestionRequest) (*SuggestionResponse, error) {
+func (UnimplementedJesterServer) Suggest(context.Context, *SuggestionRequest) (*SuggestionResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Suggest not implemented")
 }
-func (*UnimplementedJesterServer) mustEmbedUnimplementedJesterServer() {}
+func (UnimplementedJesterServer) mustEmbedUnimplementedJesterServer() {}
 
-func RegisterJesterServer(s *grpc.Server, srv JesterServer) {
+// UnsafeJesterServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to JesterServer will
+// result in compilation errors.
+type UnsafeJesterServer interface {
+	mustEmbedUnimplementedJesterServer()
+}
+
+func RegisterJesterServer(s grpc.ServiceRegistrar, srv JesterServer) {
 	s.RegisterService(&_Jester_serviceDesc, srv)
 }
 
