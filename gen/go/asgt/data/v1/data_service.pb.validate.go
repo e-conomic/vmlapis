@@ -44,9 +44,26 @@ func (m *CreateRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return CreateRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
 
-	// no validation rules for Type
+	if !_CreateRequest_Name_Pattern.MatchString(m.GetName()) {
+		return CreateRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[0-9A-Za-z_-]+$\"",
+		}
+	}
+
+	if _, ok := _CreateRequest_Type_InLookup[m.GetType()]; !ok {
+		return CreateRequestValidationError{
+			field:  "Type",
+			reason: "value must be in list [scanned-invoice electronic-invoice-line bank]",
+		}
+	}
 
 	for idx, item := range m.GetTargets() {
 		_, _ = idx, item
@@ -58,10 +75,17 @@ func (m *CreateRequest) Validate() error {
 			}
 		}
 
+		if strings.Contains(item, "_confidences") {
+			return CreateRequestValidationError{
+				field:  fmt.Sprintf("Targets[%v]", idx),
+				reason: "value contains substring \"_confidences\"",
+			}
+		}
+
 		if !_CreateRequest_Targets_Pattern.MatchString(item) {
 			return CreateRequestValidationError{
 				field:  fmt.Sprintf("Targets[%v]", idx),
-				reason: "value does not match regex pattern \"_confidences\"",
+				reason: "value does not match regex pattern \"^[0-9A-Za-z_-]+$\"",
 			}
 		}
 
@@ -149,7 +173,15 @@ var _ interface {
 	ErrorName() string
 } = CreateRequestValidationError{}
 
-var _CreateRequest_Targets_Pattern = regexp.MustCompile("_confidences")
+var _CreateRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z_-]+$")
+
+var _CreateRequest_Type_InLookup = map[string]struct{}{
+	"scanned-invoice":         {},
+	"electronic-invoice-line": {},
+	"bank":                    {},
+}
+
+var _CreateRequest_Targets_Pattern = regexp.MustCompile("^[0-9A-Za-z_-]+$")
 
 // Validate checks the field values on AppendDataRequest with the rules defined
 // in the proto definition for this message. If any rules are violated, an
