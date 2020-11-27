@@ -60,7 +60,7 @@ message CreateRequest {
   string type = 2;
   repeated string tags = 3;
   repeated string targets = 6 [(validate.rules).repeated.items.string = {
-                                pattern:   "^[0-9A-Za-z]+$",
+                                pattern:   "_confidences",
                                 max_bytes: 256,
                               }];
   repeated asgt.type.Sample samples = 4;
