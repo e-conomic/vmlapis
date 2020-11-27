@@ -384,7 +384,19 @@ func (m *UpdateDatasetRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return UpdateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_UpdateDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
+		return UpdateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[0-9A-Za-z]+$\"",
+		}
+	}
 
 	// no validation rules for Type
 
@@ -456,6 +468,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = UpdateDatasetRequestValidationError{}
+
+var _UpdateDatasetRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z]+$")
 
 // Validate checks the field values on GetInfoResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
