@@ -56,12 +56,16 @@ service DataService {
 
 
 message CreateRequest {
-  string name = 1;
-  string type = 2;
+  string name = 1 [(validate.rules).string = {
+                    pattern:   "^[0-9A-Za-z_-]+$",
+                    max_bytes: 256,
+                  }];
+  string type = 2 [(validate.rules).string = {in: ["scanned-invoice", "electronic-invoice-line", "bank"]}];
   repeated string tags = 3;
   repeated string targets = 6 [(validate.rules).repeated.items.string = {
-                                pattern:   "_confidences",
+                                pattern:   "^[0-9A-Za-z_-]+$",
                                 max_bytes: 256,
+                                not_contains: "_confidences"
                               }];
   repeated asgt.type.Sample samples = 4;
   asgt.type.RetentionPolicy retention_policy = 5;
