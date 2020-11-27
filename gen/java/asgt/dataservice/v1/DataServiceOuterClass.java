@@ -7076,45 +7076,45 @@ public final class DataServiceOuterClass {
       "\032\034google/api/annotations.proto\032\033google/p" +
       "rotobuf/empty.proto\032$ssn/dataservice/v1/" +
       "dataservice.proto\032\027validate/validate.pro" +
-      "to\"\303\001\n\rCreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004ty" +
-      "pe\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022.\n\007targets\030\006 \003(\tB" +
-      "\035\372B\032\222\001\027\"\025r\023(\200\0022\016^[0-9A-Za-z]+$\022\"\n\007sample" +
-      "s\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020retention_" +
-      "policy\030\005 \001(\0132\032.asgt.type.RetentionPolicy" +
-      "\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004t" +
-      "ype\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.S" +
-      "ample\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004" +
-      "name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016" +
-      "GetInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001" +
-      "(\t\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001(\t" +
-      "\022\014\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\013" +
-      "2\032.asgt.type.RetentionPolicy\"W\n\017GetInfoR" +
-      "esponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dat" +
-      "aset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n" +
-      "\031RegisterQueryStatsRequest\022\017\n\007dataset\030\001 " +
-      "\001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 " +
-      "\001(\005\022\014\n\004tags\030\004 \003(\t2\372\005\n\013DataService\022i\n\rCre" +
-      "ateDataset\022\".asgt.dataservice.v1.CreateR" +
-      "equest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021" +
-      "/v1/{type}:create:\001*\022q\n\nAppendData\022&.asg" +
-      "t.dataservice.v1.AppendDataRequest\032\026.goo" +
-      "gle.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{" +
-      "name}:append:\001*\022f\n\nDeleteData\022\".asgt.dat" +
-      "aservice.v1.DeleteRequest\032\026.google.proto" +
-      "buf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022" +
-      "t\n\007GetInfo\022#.asgt.dataservice.v1.GetInfo" +
-      "Request\032$.asgt.dataservice.v1.GetInfoRes" +
-      "ponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n" +
-      "\rUpdateDataset\022).asgt.dataservice.v1.Upd" +
-      "ateDatasetRequest\032\026.google.protobuf.Empt" +
-      "y\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\" +
-      "\n\022RegisterQueryStats\022..asgt.dataservice." +
-      "v1.RegisterQueryStatsRequest\032\026.google.pr" +
-      "otobuf.Empty\022X\n\023CallsPerMonthMetric\022\026.go" +
-      "ogle.protobuf.Empty\032).ssn.dataservice.v1" +
-      ".CallsPerMonthResponseB7Z5github.com/e-c" +
-      "onomic/vmlapis/gen/go/asgt/data/v1;datab" +
-      "\006proto3"
+      "to\"\301\001\n\rCreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004ty" +
+      "pe\030\002 \001(\t\022\014\n\004tags\030\003 \003(\t\022,\n\007targets\030\006 \003(\tB" +
+      "\033\372B\030\222\001\025\"\023r\021(\200\0022\014_confidences\022\"\n\007samples\030" +
+      "\004 \003(\0132\021.asgt.type.Sample\0224\n\020retention_po" +
+      "licy\030\005 \001(\0132\032.asgt.type.RetentionPolicy\"S" +
+      "\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004typ" +
+      "e\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sam" +
+      "ple\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004na" +
+      "me\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016Ge" +
+      "tInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t" +
+      "\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014" +
+      "\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032" +
+      ".asgt.type.RetentionPolicy\"W\n\017GetInfoRes" +
+      "ponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
+      "et\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031R" +
+      "egisterQueryStatsRequest\022\017\n\007dataset\030\001 \001(" +
+      "\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(" +
+      "\005\022\014\n\004tags\030\004 \003(\t2\372\005\n\013DataService\022i\n\rCreat" +
+      "eDataset\022\".asgt.dataservice.v1.CreateReq" +
+      "uest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v" +
+      "1/{type}:create:\001*\022q\n\nAppendData\022&.asgt." +
+      "dataservice.v1.AppendDataRequest\032\026.googl" +
+      "e.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{na" +
+      "me}:append:\001*\022f\n\nDeleteData\022\".asgt.datas" +
+      "ervice.v1.DeleteRequest\032\026.google.protobu" +
+      "f.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n" +
+      "\007GetInfo\022#.asgt.dataservice.v1.GetInfoRe" +
+      "quest\032$.asgt.dataservice.v1.GetInfoRespo" +
+      "nse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rU" +
+      "pdateDataset\022).asgt.dataservice.v1.Updat" +
+      "eDatasetRequest\032\026.google.protobuf.Empty\"" +
+      "#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022" +
+      "RegisterQueryStats\022..asgt.dataservice.v1" +
+      ".RegisterQueryStatsRequest\032\026.google.prot" +
+      "obuf.Empty\022X\n\023CallsPerMonthMetric\022\026.goog" +
+      "le.protobuf.Empty\032).ssn.dataservice.v1.C" +
+      "allsPerMonthResponseB7Z5github.com/e-con" +
+      "omic/vmlapis/gen/go/asgt/data/v1;datab\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -61,7 +61,7 @@ func (m *CreateRequest) Validate() error {
 		if !_CreateRequest_Targets_Pattern.MatchString(item) {
 			return CreateRequestValidationError{
 				field:  fmt.Sprintf("Targets[%v]", idx),
-				reason: "value does not match regex pattern \"^[0-9A-Za-z]+$\"",
+				reason: "value does not match regex pattern \"_confidences\"",
 			}
 		}
 
@@ -149,7 +149,7 @@ var _ interface {
 	ErrorName() string
 } = CreateRequestValidationError{}
 
-var _CreateRequest_Targets_Pattern = regexp.MustCompile("^[0-9A-Za-z]+$")
+var _CreateRequest_Targets_Pattern = regexp.MustCompile("_confidences")
 
 // Validate checks the field values on AppendDataRequest with the rules defined
 // in the proto definition for this message. If any rules are violated, an
