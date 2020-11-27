@@ -56,13 +56,13 @@ service DataService {
 
 
 message CreateRequest {
-  string name = 1 [(validate.rules).string = {
-                    pattern:   "^[0-9A-Za-z]+$",
-                    max_bytes: 256,
-                  }];
+  string name = 1;
   string type = 2;
   repeated string tags = 3;
-  repeated string targets = 6;
+  repeated string targets = 6 [(validate.rules).repeated.items.string = {
+                                pattern:   "^[0-9A-Za-z]+$",
+                                max_bytes: 256,
+                              }];
   repeated asgt.type.Sample samples = 4;
   asgt.type.RetentionPolicy retention_policy = 5;
 }
