@@ -44,21 +44,28 @@ func (m *CreateRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetName()) > 256 {
-		return CreateRequestValidationError{
-			field:  "Name",
-			reason: "value length must be at most 256 bytes",
-		}
-	}
-
-	if !_CreateRequest_Name_Pattern.MatchString(m.GetName()) {
-		return CreateRequestValidationError{
-			field:  "Name",
-			reason: "value does not match regex pattern \"^[0-9A-Za-z]+$\"",
-		}
-	}
+	// no validation rules for Name
 
 	// no validation rules for Type
+
+	for idx, item := range m.GetTargets() {
+		_, _ = idx, item
+
+		if len(item) > 256 {
+			return CreateRequestValidationError{
+				field:  fmt.Sprintf("Targets[%v]", idx),
+				reason: "value length must be at most 256 bytes",
+			}
+		}
+
+		if !_CreateRequest_Targets_Pattern.MatchString(item) {
+			return CreateRequestValidationError{
+				field:  fmt.Sprintf("Targets[%v]", idx),
+				reason: "value does not match regex pattern \"^[0-9A-Za-z]+$\"",
+			}
+		}
+
+	}
 
 	for idx, item := range m.GetSamples() {
 		_, _ = idx, item
@@ -142,7 +149,7 @@ var _ interface {
 	ErrorName() string
 } = CreateRequestValidationError{}
 
-var _CreateRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z]+$")
+var _CreateRequest_Targets_Pattern = regexp.MustCompile("^[0-9A-Za-z]+$")
 
 // Validate checks the field values on AppendDataRequest with the rules defined
 // in the proto definition for this message. If any rules are violated, an
@@ -384,19 +391,7 @@ func (m *UpdateDatasetRequest) Validate() error {
 		return nil
 	}
 
-	if len(m.GetName()) > 256 {
-		return UpdateDatasetRequestValidationError{
-			field:  "Name",
-			reason: "value length must be at most 256 bytes",
-		}
-	}
-
-	if !_UpdateDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
-		return UpdateDatasetRequestValidationError{
-			field:  "Name",
-			reason: "value does not match regex pattern \"^[0-9A-Za-z]+$\"",
-		}
-	}
+	// no validation rules for Name
 
 	// no validation rules for Type
 
@@ -468,8 +463,6 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = UpdateDatasetRequestValidationError{}
-
-var _UpdateDatasetRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z]+$")
 
 // Validate checks the field values on GetInfoResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
