@@ -71,13 +71,16 @@ message CreateRequest {
 }
 
 message AppendDataRequest {
-  string name = 1;
-  string type = 2;
+  string name = 1 [(validate.rules).string = {
+                    pattern:   "^[0-9A-Za-z_-]+$",
+                    max_bytes: 256,
+                  }];
+  string type = 2 [(validate.rules).string = {in: ["scanned-invoice", "electronic-invoice-line", "bank"]}];;
   repeated asgt.type.Sample samples = 3;
 }
 
 message DeleteRequest {
-  string type = 1;
+  string type = 1 [(validate.rules).string = {in: ["scanned-invoice", "electronic-invoice-line", "bank"]}];;
   oneof match {
     string name = 2;
     string tag = 3;
@@ -85,13 +88,19 @@ message DeleteRequest {
 }
 
 message GetInfoRequest {
-  string name = 1;
-  string type = 2;
+  string name = 1 [(validate.rules).string = {
+                    pattern:   "^[0-9A-Za-z_-]+$",
+                    max_bytes: 256,
+                  }];
+  string type = 2 [(validate.rules).string = {in: ["scanned-invoice", "electronic-invoice-line", "bank"]}];;
 }
 
 message UpdateDatasetRequest {
-  string name = 1;
-  string type = 2;
+  string name = 1 [(validate.rules).string = {
+                    pattern:   "^[0-9A-Za-z_-]+$",
+                    max_bytes: 256,
+                  }];
+  string type = 2 [(validate.rules).string = {in: ["scanned-invoice", "electronic-invoice-line", "bank"]}];;
   asgt.type.RetentionPolicy retention_policy = 3;
 }
 
