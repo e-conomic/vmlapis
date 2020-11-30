@@ -65,7 +65,6 @@ message CreateRequest {
   repeated string targets = 6 [(validate.rules).repeated.items.string = {
                                 pattern:   "^[0-9A-Za-z_-]+$",
                                 max_bytes: 256,
-                                not_contains: "_confidences"
                               }];
   repeated asgt.type.Sample samples = 4;
   asgt.type.RetentionPolicy retention_policy = 5;
