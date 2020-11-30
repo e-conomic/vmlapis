@@ -75,13 +75,6 @@ func (m *CreateRequest) Validate() error {
 			}
 		}
 
-		if strings.Contains(item, "_confidences") {
-			return CreateRequestValidationError{
-				field:  fmt.Sprintf("Targets[%v]", idx),
-				reason: "value contains substring \"_confidences\"",
-			}
-		}
-
 		if !_CreateRequest_Targets_Pattern.MatchString(item) {
 			return CreateRequestValidationError{
 				field:  fmt.Sprintf("Targets[%v]", idx),
