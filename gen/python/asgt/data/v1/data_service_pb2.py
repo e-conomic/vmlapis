@@ -27,7 +27,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='asgt.dataservice.v1',
   syntax='proto3',
   serialized_options=_b('Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data'),
-  serialized_pb=_b('\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a$ssn/dataservice/v1/dataservice.proto\x1a\x17validate/validate.proto\"\x98\x02\n\rCreateRequest\x12(\n\x04name\x18\x01 \x01(\tB\x1a\xfa\x42\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\x43\n\x04type\x18\x02 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x30\n\x07targets\x18\x06 \x03(\tB\x1f\xfa\x42\x1c\x92\x01\x19\"\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"S\n\x11\x41ppendDataRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"E\n\rDeleteRequest\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\",\n\x0eGetInfoRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"h\n\x14UpdateDatasetRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x19RegisterQueryStatsRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x0c\n\x04tags\x18\x04 \x03(\t2\xfa\x05\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.Empty\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponseB7Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3')
+  serialized_pb=_b('\n\x1f\x61sgt/data/v1/data_service.proto\x12\x13\x61sgt.dataservice.v1\x1a\x17\x61sgt/type/dataset.proto\x1a\x15\x61sgt/type/model.proto\x1a asgt/type/retention_policy.proto\x1a\x16\x61sgt/type/sample.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a$ssn/dataservice/v1/dataservice.proto\x1a\x17validate/validate.proto\"\x98\x02\n\rCreateRequest\x12(\n\x04name\x18\x01 \x01(\tB\x1a\xfa\x42\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\x43\n\x04type\x18\x02 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x30\n\x07targets\x18\x06 \x03(\tB\x1f\xfa\x42\x1c\x92\x01\x19\"\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\"\n\x07samples\x18\x04 \x03(\x0b\x32\x11.asgt.type.Sample\x12\x34\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"\xa6\x01\n\x11\x41ppendDataRequest\x12(\n\x04name\x18\x01 \x01(\tB\x1a\xfa\x42\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\x43\n\x04type\x18\x02 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\x12\"\n\x07samples\x18\x03 \x03(\x0b\x32\x11.asgt.type.Sample\"|\n\rDeleteRequest\x12\x43\n\x04type\x18\x01 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\x12\x0e\n\x04name\x18\x02 \x01(\tH\x00\x12\r\n\x03tag\x18\x03 \x01(\tH\x00\x42\x07\n\x05match\"\x7f\n\x0eGetInfoRequest\x12(\n\x04name\x18\x01 \x01(\tB\x1a\xfa\x42\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\x43\n\x04type\x18\x02 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\"\xbb\x01\n\x14UpdateDatasetRequest\x12(\n\x04name\x18\x01 \x01(\tB\x1a\xfa\x42\x17r\x15(\x80\x02\x32\x10^[0-9A-Za-z_-]+$\x12\x43\n\x04type\x18\x02 \x01(\tB5\xfa\x42\x32r0R\x0fscanned-invoiceR\x17\x65lectronic-invoice-lineR\x04\x62\x61nk\x12\x34\n\x10retention_policy\x18\x03 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicy\"W\n\x0fGetInfoResponse\x12#\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.Dataset\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x19RegisterQueryStatsRequest\x12\x0f\n\x07\x64\x61taset\x18\x01 \x01(\t\x12\x12\n\nmodel_type\x18\x02 \x01(\t\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x0c\n\x04tags\x18\x04 \x03(\t2\xfa\x05\n\x0b\x44\x61taService\x12i\n\rCreateDataset\x12\".asgt.dataservice.v1.CreateRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:create:\x01*\x12q\n\nAppendData\x12&.asgt.dataservice.v1.AppendDataRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\"\x18/v1/{type}/{name}:append:\x01*\x12\x66\n\nDeleteData\x12\".asgt.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1c\x82\xd3\xe4\x93\x02\x16\"\x11/v1/{type}:delete:\x01*\x12t\n\x07GetInfo\x12#.asgt.dataservice.v1.GetInfoRequest\x1a$.asgt.dataservice.v1.GetInfoResponse\"\x1e\x82\xd3\xe4\x93\x02\x18\x12\x16/v1/{type}/{name}:info\x12w\n\rUpdateDataset\x12).asgt.dataservice.v1.UpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x18/v1/{type}/{name}:update:\x01*\x12\\\n\x12RegisterQueryStats\x12..asgt.dataservice.v1.RegisterQueryStatsRequest\x1a\x16.google.protobuf.Empty\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponseB7Z5github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;datab\x06proto3')
   ,
   dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_retention__policy__pb2.DESCRIPTOR,asgt_dot_type_dot_sample__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -113,14 +113,14 @@ _APPENDDATAREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B\027r\025(\200\0022\020^[0-9A-Za-z_-]+$'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='asgt.dataservice.v1.AppendDataRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B2r0R\017scanned-invoiceR\027electronic-invoice-lineR\004bank'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='samples', full_name='asgt.dataservice.v1.AppendDataRequest.samples', index=2,
       number=3, type=11, cpp_type=10, label=3,
@@ -140,8 +140,8 @@ _APPENDDATAREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=567,
-  serialized_end=650,
+  serialized_start=568,
+  serialized_end=734,
 )
 
 
@@ -158,7 +158,7 @@ _DELETEREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B2r0R\017scanned-invoiceR\027electronic-invoice-lineR\004bank'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='asgt.dataservice.v1.DeleteRequest.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
@@ -188,8 +188,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
       name='match', full_name='asgt.dataservice.v1.DeleteRequest.match',
       index=0, containing_type=None, fields=[]),
   ],
-  serialized_start=652,
-  serialized_end=721,
+  serialized_start=736,
+  serialized_end=860,
 )
 
 
@@ -206,14 +206,14 @@ _GETINFOREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B\027r\025(\200\0022\020^[0-9A-Za-z_-]+$'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='asgt.dataservice.v1.GetInfoRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B2r0R\017scanned-invoiceR\027electronic-invoice-lineR\004bank'), file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -226,8 +226,8 @@ _GETINFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=723,
-  serialized_end=767,
+  serialized_start=862,
+  serialized_end=989,
 )
 
 
@@ -244,14 +244,14 @@ _UPDATEDATASETREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B\027r\025(\200\0022\020^[0-9A-Za-z_-]+$'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='type', full_name='asgt.dataservice.v1.UpdateDatasetRequest.type', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=_b('\372B2r0R\017scanned-invoiceR\027electronic-invoice-lineR\004bank'), file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='retention_policy', full_name='asgt.dataservice.v1.UpdateDatasetRequest.retention_policy', index=2,
       number=3, type=11, cpp_type=10, label=1,
@@ -271,8 +271,8 @@ _UPDATEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=769,
-  serialized_end=873,
+  serialized_start=992,
+  serialized_end=1179,
 )
 
 
@@ -309,8 +309,8 @@ _GETINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=875,
-  serialized_end=962,
+  serialized_start=1181,
+  serialized_end=1268,
 )
 
 
@@ -361,8 +361,8 @@ _REGISTERQUERYSTATSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=964,
-  serialized_end=1062,
+  serialized_start=1270,
+  serialized_end=1368,
 )
 
 _CREATEREQUEST.fields_by_name['samples'].message_type = asgt_dot_type_dot_sample__pb2._SAMPLE
@@ -440,6 +440,13 @@ DESCRIPTOR._options = None
 _CREATEREQUEST.fields_by_name['name']._options = None
 _CREATEREQUEST.fields_by_name['type']._options = None
 _CREATEREQUEST.fields_by_name['targets']._options = None
+_APPENDDATAREQUEST.fields_by_name['name']._options = None
+_APPENDDATAREQUEST.fields_by_name['type']._options = None
+_DELETEREQUEST.fields_by_name['type']._options = None
+_GETINFOREQUEST.fields_by_name['name']._options = None
+_GETINFOREQUEST.fields_by_name['type']._options = None
+_UPDATEDATASETREQUEST.fields_by_name['name']._options = None
+_UPDATEDATASETREQUEST.fields_by_name['type']._options = None
 
 _DATASERVICE = _descriptor.ServiceDescriptor(
   name='DataService',
@@ -447,8 +454,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=1065,
-  serialized_end=1827,
+  serialized_start=1371,
+  serialized_end=2133,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDataset',

@@ -1650,21 +1650,21 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -1795,7 +1795,7 @@ public final class DataServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -1810,7 +1810,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -1829,7 +1829,7 @@ public final class DataServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -1844,7 +1844,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -2276,7 +2276,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2291,7 +2291,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2307,7 +2307,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -2320,7 +2320,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearName() {
         
@@ -2329,7 +2329,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2345,7 +2345,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -2360,7 +2360,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -2376,7 +2376,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -2389,7 +2389,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder clearType() {
         
@@ -2398,7 +2398,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -2709,11 +2709,11 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getType();
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -2871,7 +2871,7 @@ public final class DataServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 1;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -2886,7 +2886,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string type = 1;</code>
+     * <code>string type = 1 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -3373,7 +3373,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -3388,7 +3388,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -3404,7 +3404,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -3417,7 +3417,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearType() {
         
@@ -3426,7 +3426,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 1;</code>
+       * <code>string type = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -3657,21 +3657,21 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -3764,7 +3764,7 @@ public final class DataServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -3779,7 +3779,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -3798,7 +3798,7 @@ public final class DataServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -3813,7 +3813,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -4151,7 +4151,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4166,7 +4166,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4182,7 +4182,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4195,7 +4195,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearName() {
         
@@ -4204,7 +4204,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4220,7 +4220,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -4235,7 +4235,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -4251,7 +4251,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -4264,7 +4264,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder clearType() {
         
@@ -4273,7 +4273,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -4344,21 +4344,21 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     java.lang.String getType();
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -4477,7 +4477,7 @@ public final class DataServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getName() {
       java.lang.Object ref = name_;
@@ -4492,7 +4492,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -4511,7 +4511,7 @@ public final class DataServiceOuterClass {
     public static final int TYPE_FIELD_NUMBER = 2;
     private volatile java.lang.Object type_;
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public java.lang.String getType() {
       java.lang.Object ref = type_;
@@ -4526,7 +4526,7 @@ public final class DataServiceOuterClass {
       }
     }
     /**
-     * <code>string type = 2;</code>
+     * <code>string type = 2 [(.validate.rules) = { ... }</code>
      */
     public com.google.protobuf.ByteString
         getTypeBytes() {
@@ -4915,7 +4915,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4930,7 +4930,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4946,7 +4946,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setName(
           java.lang.String value) {
@@ -4959,7 +4959,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder clearName() {
         
@@ -4968,7 +4968,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4984,7 +4984,7 @@ public final class DataServiceOuterClass {
 
       private java.lang.Object type_ = "";
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -4999,7 +4999,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -5015,7 +5015,7 @@ public final class DataServiceOuterClass {
         }
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setType(
           java.lang.String value) {
@@ -5028,7 +5028,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder clearType() {
         
@@ -5037,7 +5037,7 @@ public final class DataServiceOuterClass {
         return this;
       }
       /**
-       * <code>string type = 2;</code>
+       * <code>string type = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -7083,40 +7083,47 @@ public final class DataServiceOuterClass {
       "(\tB\037\372B\034\222\001\031\"\027r\025(\200\0022\020^[0-9A-Za-z_-]+$\022\"\n\007s" +
       "amples\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020reten" +
       "tion_policy\030\005 \001(\0132\032.asgt.type.RetentionP" +
-      "olicy\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t" +
-      "\022\014\n\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.t" +
-      "ype.Sample\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(" +
-      "\t\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005matc" +
-      "h\",\n\016GetInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004typ" +
-      "e\030\002 \001(\t\"h\n\024UpdateDatasetRequest\022\014\n\004name\030" +
-      "\001 \001(\t\022\014\n\004type\030\002 \001(\t\0224\n\020retention_policy\030" +
-      "\003 \001(\0132\032.asgt.type.RetentionPolicy\"W\n\017Get" +
-      "InfoResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.typ" +
-      "e.Dataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Mod" +
-      "el\"b\n\031RegisterQueryStatsRequest\022\017\n\007datas" +
-      "et\030\001 \001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_si" +
-      "ze\030\003 \001(\005\022\014\n\004tags\030\004 \003(\t2\372\005\n\013DataService\022i" +
-      "\n\rCreateDataset\022\".asgt.dataservice.v1.Cr" +
-      "eateRequest\032\026.google.protobuf.Empty\"\034\202\323\344" +
-      "\223\002\026\"\021/v1/{type}:create:\001*\022q\n\nAppendData\022" +
-      "&.asgt.dataservice.v1.AppendDataRequest\032" +
-      "\026.google.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{ty" +
-      "pe}/{name}:append:\001*\022f\n\nDeleteData\022\".asg" +
-      "t.dataservice.v1.DeleteRequest\032\026.google." +
-      "protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delet" +
-      "e:\001*\022t\n\007GetInfo\022#.asgt.dataservice.v1.Ge" +
-      "tInfoRequest\032$.asgt.dataservice.v1.GetIn" +
-      "foResponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:in" +
-      "fo\022w\n\rUpdateDataset\022).asgt.dataservice.v" +
-      "1.UpdateDatasetRequest\032\026.google.protobuf" +
-      ".Empty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update" +
-      ":\001*\022\\\n\022RegisterQueryStats\022..asgt.dataser" +
-      "vice.v1.RegisterQueryStatsRequest\032\026.goog" +
-      "le.protobuf.Empty\022X\n\023CallsPerMonthMetric" +
-      "\022\026.google.protobuf.Empty\032).ssn.dataservi" +
-      "ce.v1.CallsPerMonthResponseB7Z5github.co" +
-      "m/e-conomic/vmlapis/gen/go/asgt/data/v1;" +
-      "datab\006proto3"
+      "olicy\"\246\001\n\021AppendDataRequest\022(\n\004name\030\001 \001(" +
+      "\tB\032\372B\027r\025(\200\0022\020^[0-9A-Za-z_-]+$\022C\n\004type\030\002 " +
+      "\001(\tB5\372B2r0R\017scanned-invoiceR\027electronic-" +
+      "invoice-lineR\004bank\022\"\n\007samples\030\003 \003(\0132\021.as" +
+      "gt.type.Sample\"|\n\rDeleteRequest\022C\n\004type\030" +
+      "\001 \001(\tB5\372B2r0R\017scanned-invoiceR\027electroni" +
+      "c-invoice-lineR\004bank\022\016\n\004name\030\002 \001(\tH\000\022\r\n\003" +
+      "tag\030\003 \001(\tH\000B\007\n\005match\"\177\n\016GetInfoRequest\022(" +
+      "\n\004name\030\001 \001(\tB\032\372B\027r\025(\200\0022\020^[0-9A-Za-z_-]+$" +
+      "\022C\n\004type\030\002 \001(\tB5\372B2r0R\017scanned-invoiceR\027" +
+      "electronic-invoice-lineR\004bank\"\273\001\n\024Update" +
+      "DatasetRequest\022(\n\004name\030\001 \001(\tB\032\372B\027r\025(\200\0022\020" +
+      "^[0-9A-Za-z_-]+$\022C\n\004type\030\002 \001(\tB5\372B2r0R\017s" +
+      "canned-invoiceR\027electronic-invoice-lineR" +
+      "\004bank\0224\n\020retention_policy\030\003 \001(\0132\032.asgt.t" +
+      "ype.RetentionPolicy\"W\n\017GetInfoResponse\022#" +
+      "\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005m" +
+      "odel\030\002 \001(\0132\020.asgt.type.Model\"b\n\031Register" +
+      "QueryStatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nmo" +
+      "del_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004ta" +
+      "gs\030\004 \003(\t2\372\005\n\013DataService\022i\n\rCreateDatase" +
+      "t\022\".asgt.dataservice.v1.CreateRequest\032\026." +
+      "google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type" +
+      "}:create:\001*\022q\n\nAppendData\022&.asgt.dataser" +
+      "vice.v1.AppendDataRequest\032\026.google.proto" +
+      "buf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:app" +
+      "end:\001*\022f\n\nDeleteData\022\".asgt.dataservice." +
+      "v1.DeleteRequest\032\026.google.protobuf.Empty" +
+      "\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInf" +
+      "o\022#.asgt.dataservice.v1.GetInfoRequest\032$" +
+      ".asgt.dataservice.v1.GetInfoResponse\"\036\202\323" +
+      "\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpdateDa" +
+      "taset\022).asgt.dataservice.v1.UpdateDatase" +
+      "tRequest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035" +
+      "\032\030/v1/{type}/{name}:update:\001*\022\\\n\022Registe" +
+      "rQueryStats\022..asgt.dataservice.v1.Regist" +
+      "erQueryStatsRequest\032\026.google.protobuf.Em" +
+      "pty\022X\n\023CallsPerMonthMetric\022\026.google.prot" +
+      "obuf.Empty\032).ssn.dataservice.v1.CallsPer" +
+      "MonthResponseB7Z5github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/data/v1;datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

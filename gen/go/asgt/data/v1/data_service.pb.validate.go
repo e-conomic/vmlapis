@@ -184,9 +184,26 @@ func (m *AppendDataRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return AppendDataRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
 
-	// no validation rules for Type
+	if !_AppendDataRequest_Name_Pattern.MatchString(m.GetName()) {
+		return AppendDataRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[0-9A-Za-z_-]+$\"",
+		}
+	}
+
+	if _, ok := _AppendDataRequest_Type_InLookup[m.GetType()]; !ok {
+		return AppendDataRequestValidationError{
+			field:  "Type",
+			reason: "value must be in list [scanned-invoice electronic-invoice-line bank]",
+		}
+	}
 
 	for idx, item := range m.GetSamples() {
 		_, _ = idx, item
@@ -262,6 +279,14 @@ var _ interface {
 	ErrorName() string
 } = AppendDataRequestValidationError{}
 
+var _AppendDataRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z_-]+$")
+
+var _AppendDataRequest_Type_InLookup = map[string]struct{}{
+	"scanned-invoice":         {},
+	"electronic-invoice-line": {},
+	"bank":                    {},
+}
+
 // Validate checks the field values on DeleteRequest with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
 // is returned.
@@ -270,7 +295,12 @@ func (m *DeleteRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Type
+	if _, ok := _DeleteRequest_Type_InLookup[m.GetType()]; !ok {
+		return DeleteRequestValidationError{
+			field:  "Type",
+			reason: "value must be in list [scanned-invoice electronic-invoice-line bank]",
+		}
+	}
 
 	switch m.Match.(type) {
 
@@ -339,6 +369,12 @@ var _ interface {
 	ErrorName() string
 } = DeleteRequestValidationError{}
 
+var _DeleteRequest_Type_InLookup = map[string]struct{}{
+	"scanned-invoice":         {},
+	"electronic-invoice-line": {},
+	"bank":                    {},
+}
+
 // Validate checks the field values on GetInfoRequest with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
 // is returned.
@@ -347,9 +383,26 @@ func (m *GetInfoRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return GetInfoRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
 
-	// no validation rules for Type
+	if !_GetInfoRequest_Name_Pattern.MatchString(m.GetName()) {
+		return GetInfoRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[0-9A-Za-z_-]+$\"",
+		}
+	}
+
+	if _, ok := _GetInfoRequest_Type_InLookup[m.GetType()]; !ok {
+		return GetInfoRequestValidationError{
+			field:  "Type",
+			reason: "value must be in list [scanned-invoice electronic-invoice-line bank]",
+		}
+	}
 
 	return nil
 }
@@ -408,6 +461,14 @@ var _ interface {
 	ErrorName() string
 } = GetInfoRequestValidationError{}
 
+var _GetInfoRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z_-]+$")
+
+var _GetInfoRequest_Type_InLookup = map[string]struct{}{
+	"scanned-invoice":         {},
+	"electronic-invoice-line": {},
+	"bank":                    {},
+}
+
 // Validate checks the field values on UpdateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -416,9 +477,26 @@ func (m *UpdateDatasetRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return UpdateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
 
-	// no validation rules for Type
+	if !_UpdateDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
+		return UpdateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[0-9A-Za-z_-]+$\"",
+		}
+	}
+
+	if _, ok := _UpdateDatasetRequest_Type_InLookup[m.GetType()]; !ok {
+		return UpdateDatasetRequestValidationError{
+			field:  "Type",
+			reason: "value must be in list [scanned-invoice electronic-invoice-line bank]",
+		}
+	}
 
 	if v, ok := interface{}(m.GetRetentionPolicy()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
@@ -488,6 +566,14 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = UpdateDatasetRequestValidationError{}
+
+var _UpdateDatasetRequest_Name_Pattern = regexp.MustCompile("^[0-9A-Za-z_-]+$")
+
+var _UpdateDatasetRequest_Type_InLookup = map[string]struct{}{
+	"scanned-invoice":         {},
+	"electronic-invoice-line": {},
+	"bank":                    {},
+}
 
 // Validate checks the field values on GetInfoResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
