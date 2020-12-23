@@ -12,6 +12,8 @@ import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
 import "ssn/dataservice/v1/dataservice.proto";
 
+import "google/protobuf/wrappers.proto";
+
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
@@ -50,8 +52,19 @@ service DataService {
   rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
   
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
+  
+  rpc CalculateMetrics(google.protobuf.Empty) returns (CalculateMetricsResponse);
 }
 
+message CalculateMetricsResponse {
+  message MetricRow {
+    string target = 1;
+    google.protobuf.FloatValue confidence = 2;
+    int32 correct = 3;
+    int32 incorrect = 4;
+  }
+  repeated MetricRow metrics = 1;
+}
 
 message CreateRequest {
   string name = 1;
