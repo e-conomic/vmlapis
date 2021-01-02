@@ -647,16 +647,16 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.google.protobuf.Empty,
+ *   !proto.asgt.dataservice.v1.CalculateMetricsRequest,
  *   !proto.asgt.dataservice.v1.CalculateMetricsResponse>}
  */
 const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescriptor(
   '/asgt.dataservice.v1.DataService/CalculateMetrics',
   grpc.web.MethodType.UNARY,
-  google_protobuf_empty_pb.Empty,
+  proto.asgt.dataservice.v1.CalculateMetricsRequest,
   proto.asgt.dataservice.v1.CalculateMetricsResponse,
   /**
-   * @param {!proto.google.protobuf.Empty} request
+   * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -669,13 +669,13 @@ const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescrip
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.google.protobuf.Empty,
+ *   !proto.asgt.dataservice.v1.CalculateMetricsRequest,
  *   !proto.asgt.dataservice.v1.CalculateMetricsResponse>}
  */
 const methodInfo_DataService_CalculateMetrics = new grpc.web.AbstractClientBase.MethodInfo(
   proto.asgt.dataservice.v1.CalculateMetricsResponse,
   /**
-   * @param {!proto.google.protobuf.Empty} request
+   * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -686,7 +686,7 @@ const methodInfo_DataService_CalculateMetrics = new grpc.web.AbstractClientBase.
 
 
 /**
- * @param {!proto.google.protobuf.Empty} request The
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -707,7 +707,7 @@ proto.asgt.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
 
 
 /**
- * @param {!proto.google.protobuf.Empty} request The
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata

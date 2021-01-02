@@ -26,7 +26,7 @@ type DataServiceClient interface {
 	UpdateDataset(ctx context.Context, in *UpdateDatasetRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
-	CalculateMetrics(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
+	CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
 }
 
 type dataServiceClient struct {
@@ -100,7 +100,7 @@ func (c *dataServiceClient) CallsPerMonthMetric(ctx context.Context, in *empty.E
 	return out, nil
 }
 
-func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *empty.Empty, opts ...grpc.CallOption) (*CalculateMetricsResponse, error) {
+func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error) {
 	out := new(CalculateMetricsResponse)
 	err := c.cc.Invoke(ctx, "/asgt.dataservice.v1.DataService/CalculateMetrics", in, out, opts...)
 	if err != nil {
@@ -120,7 +120,7 @@ type DataServiceServer interface {
 	UpdateDataset(context.Context, *UpdateDatasetRequest) (*empty.Empty, error)
 	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*empty.Empty, error)
 	CallsPerMonthMetric(context.Context, *empty.Empty) (*v1.CallsPerMonthResponse, error)
-	CalculateMetrics(context.Context, *empty.Empty) (*CalculateMetricsResponse, error)
+	CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error)
 	mustEmbedUnimplementedDataServiceServer()
 }
 
@@ -149,7 +149,7 @@ func (*UnimplementedDataServiceServer) RegisterQueryStats(context.Context, *Regi
 func (*UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empty.Empty) (*v1.CallsPerMonthResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CallsPerMonthMetric not implemented")
 }
-func (*UnimplementedDataServiceServer) CalculateMetrics(context.Context, *empty.Empty) (*CalculateMetricsResponse, error) {
+func (*UnimplementedDataServiceServer) CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
 }
 func (*UnimplementedDataServiceServer) mustEmbedUnimplementedDataServiceServer() {}
@@ -285,7 +285,7 @@ func _DataService_CallsPerMonthMetric_Handler(srv interface{}, ctx context.Conte
 }
 
 func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(empty.Empty)
+	in := new(CalculateMetricsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -297,7 +297,7 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 		FullMethod: "/asgt.dataservice.v1.DataService/CalculateMetrics",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*empty.Empty))
+		return srv.(DataServiceServer).CalculateMetrics(ctx, req.(*CalculateMetricsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

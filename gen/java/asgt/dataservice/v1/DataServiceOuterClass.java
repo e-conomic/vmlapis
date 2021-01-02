@@ -14,6 +14,741 @@ public final class DataServiceOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface CalculateMetricsRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1.CalculateMetricsRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int64 start_time = 1;</code>
+     */
+    long getStartTime();
+
+    /**
+     * <code>int64 end_time = 2;</code>
+     */
+    long getEndTime();
+
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    java.util.List<java.lang.String>
+        getTagsList();
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    int getTagsCount();
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    java.lang.String getTags(int index);
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getTagsBytes(int index);
+  }
+  /**
+   * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsRequest}
+   */
+  public  static final class CalculateMetricsRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsRequest)
+      CalculateMetricsRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CalculateMetricsRequest.newBuilder() to construct.
+    private CalculateMetricsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CalculateMetricsRequest() {
+      startTime_ = 0L;
+      endTime_ = 0L;
+      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CalculateMetricsRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              startTime_ = input.readInt64();
+              break;
+            }
+            case 16: {
+
+              endTime_ = input.readInt64();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                tags_ = new com.google.protobuf.LazyStringArrayList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              tags_.add(s);
+              break;
+            }
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = tags_.getUnmodifiableView();
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int START_TIME_FIELD_NUMBER = 1;
+    private long startTime_;
+    /**
+     * <code>int64 start_time = 1;</code>
+     */
+    public long getStartTime() {
+      return startTime_;
+    }
+
+    public static final int END_TIME_FIELD_NUMBER = 2;
+    private long endTime_;
+    /**
+     * <code>int64 end_time = 2;</code>
+     */
+    public long getEndTime() {
+      return endTime_;
+    }
+
+    public static final int TAGS_FIELD_NUMBER = 3;
+    private com.google.protobuf.LazyStringList tags_;
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public com.google.protobuf.ProtocolStringList
+        getTagsList() {
+      return tags_;
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public int getTagsCount() {
+      return tags_.size();
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public java.lang.String getTags(int index) {
+      return tags_.get(index);
+    }
+    /**
+     * <code>repeated string tags = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTagsBytes(int index) {
+      return tags_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (startTime_ != 0L) {
+        output.writeInt64(1, startTime_);
+      }
+      if (endTime_ != 0L) {
+        output.writeInt64(2, endTime_);
+      }
+      for (int i = 0; i < tags_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (startTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(1, startTime_);
+      }
+      if (endTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(2, endTime_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < tags_.size(); i++) {
+          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getTagsList().size();
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest)) {
+        return super.equals(obj);
+      }
+      asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) obj;
+
+      boolean result = true;
+      result = result && (getStartTime()
+          == other.getStartTime());
+      result = result && (getEndTime()
+          == other.getEndTime());
+      result = result && getTagsList()
+          .equals(other.getTagsList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getStartTime());
+      hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getEndTime());
+      if (getTagsCount() > 0) {
+        hash = (37 * hash) + TAGS_FIELD_NUMBER;
+        hash = (53 * hash) + getTagsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.CalculateMetricsRequest)
+        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.Builder.class);
+      }
+
+      // Construct using asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startTime_ = 0L;
+
+        endTime_ = 0L;
+
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest build() {
+        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        result.startTime_ = startTime_;
+        result.endTime_ = endTime_;
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.tags_ = tags_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.getDefaultInstance()) return this;
+        if (other.getStartTime() != 0L) {
+          setStartTime(other.getStartTime());
+        }
+        if (other.getEndTime() != 0L) {
+          setEndTime(other.getEndTime());
+        }
+        if (!other.tags_.isEmpty()) {
+          if (tags_.isEmpty()) {
+            tags_ = other.tags_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureTagsIsMutable();
+            tags_.addAll(other.tags_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long startTime_ ;
+      /**
+       * <code>int64 start_time = 1;</code>
+       */
+      public long getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>int64 start_time = 1;</code>
+       */
+      public Builder setStartTime(long value) {
+        
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 start_time = 1;</code>
+       */
+      public Builder clearStartTime() {
+        
+        startTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long endTime_ ;
+      /**
+       * <code>int64 end_time = 2;</code>
+       */
+      public long getEndTime() {
+        return endTime_;
+      }
+      /**
+       * <code>int64 end_time = 2;</code>
+       */
+      public Builder setEndTime(long value) {
+        
+        endTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int64 end_time = 2;</code>
+       */
+      public Builder clearEndTime() {
+        
+        endTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private void ensureTagsIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public com.google.protobuf.ProtocolStringList
+          getTagsList() {
+        return tags_.getUnmodifiableView();
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public int getTagsCount() {
+        return tags_.size();
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public java.lang.String getTags(int index) {
+        return tags_.get(index);
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTagsBytes(int index) {
+        return tags_.getByteString(index);
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder setTags(
+          int index, java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addTags(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addAllTags(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureTagsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, tags_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder clearTags() {
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string tags = 3;</code>
+       */
+      public Builder addTagsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        ensureTagsIsMutable();
+        tags_.add(value);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.dataservice.v1.CalculateMetricsRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CalculateMetricsRequest)
+    private static final asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest();
+    }
+
+    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CalculateMetricsRequest>
+        PARSER = new com.google.protobuf.AbstractParser<CalculateMetricsRequest>() {
+      @java.lang.Override
+      public CalculateMetricsRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CalculateMetricsRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CalculateMetricsRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CalculateMetricsRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface CalculateMetricsResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.dataservice.v1.CalculateMetricsResponse)
       com.google.protobuf.MessageOrBuilder {
@@ -8678,6 +9413,11 @@ public final class DataServiceOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -8738,52 +9478,54 @@ public final class DataServiceOuterClass {
       "\032\034google/api/annotations.proto\032\033google/p" +
       "rotobuf/empty.proto\032\036google/protobuf/wra" +
       "ppers.proto\032$ssn/dataservice/v1/dataserv" +
-      "ice.proto\"\326\001\n\030CalculateMetricsResponse\022H" +
-      "\n\007metrics\030\001 \003(\01327.asgt.dataservice.v1.Ca" +
-      "lculateMetricsResponse.MetricRow\032p\n\tMetr" +
-      "icRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfidence\030\002 \001(" +
-      "\0132\033.google.protobuf.FloatValue\022\017\n\007correc" +
-      "t\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\rCreateReq" +
-      "uest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags" +
-      "\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\013" +
-      "2\021.asgt.type.Sample\0224\n\020retention_policy\030" +
-      "\005 \001(\0132\032.asgt.type.RetentionPolicy\"S\n\021App" +
-      "endDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001" +
-      "(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sample\"E" +
-      "\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 " +
-      "\001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfo" +
-      "Request\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024U" +
-      "pdateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004typ" +
-      "e\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032.asgt" +
-      ".type.RetentionPolicy\"W\n\017GetInfoResponse" +
-      "\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n" +
-      "\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031Regist" +
-      "erQueryStatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\n" +
-      "model_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004" +
-      "tags\030\004 \003(\t2\325\006\n\013DataService\022i\n\rCreateData" +
-      "set\022\".asgt.dataservice.v1.CreateRequest\032" +
-      "\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{ty" +
-      "pe}:create:\001*\022q\n\nAppendData\022&.asgt.datas" +
-      "ervice.v1.AppendDataRequest\032\026.google.pro" +
-      "tobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:a" +
-      "ppend:\001*\022f\n\nDeleteData\022\".asgt.dataservic" +
-      "e.v1.DeleteRequest\032\026.google.protobuf.Emp" +
-      "ty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetI" +
-      "nfo\022#.asgt.dataservice.v1.GetInfoRequest" +
-      "\032$.asgt.dataservice.v1.GetInfoResponse\"\036" +
-      "\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpdate" +
-      "Dataset\022).asgt.dataservice.v1.UpdateData" +
-      "setRequest\032\026.google.protobuf.Empty\"#\202\323\344\223" +
-      "\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022Regis" +
-      "terQueryStats\022..asgt.dataservice.v1.Regi" +
-      "sterQueryStatsRequest\032\026.google.protobuf." +
-      "Empty\022X\n\023CallsPerMonthMetric\022\026.google.pr" +
-      "otobuf.Empty\032).ssn.dataservice.v1.CallsP" +
-      "erMonthResponse\022Y\n\020CalculateMetrics\022\026.go" +
-      "ogle.protobuf.Empty\032-.asgt.dataservice.v" +
-      "1.CalculateMetricsResponseB7Z5github.com" +
-      "/e-conomic/vmlapis/gen/go/asgt/data/v1;d" +
-      "atab\006proto3"
+      "ice.proto\"M\n\027CalculateMetricsRequest\022\022\n\n" +
+      "start_time\030\001 \001(\003\022\020\n\010end_time\030\002 \001(\003\022\014\n\004ta" +
+      "gs\030\003 \003(\t\"\326\001\n\030CalculateMetricsResponse\022H\n" +
+      "\007metrics\030\001 \003(\01327.asgt.dataservice.v1.Cal" +
+      "culateMetricsResponse.MetricRow\032p\n\tMetri" +
+      "cRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfidence\030\002 \001(\013" +
+      "2\033.google.protobuf.FloatValue\022\017\n\007correct" +
+      "\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\rCreateRequ" +
+      "est\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030" +
+      "\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132" +
+      "\021.asgt.type.Sample\0224\n\020retention_policy\030\005" +
+      " \001(\0132\032.asgt.type.RetentionPolicy\"S\n\021Appe" +
+      "ndDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sample\"E\n" +
+      "\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001" +
+      "(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoR" +
+      "equest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024Up" +
+      "dateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type" +
+      "\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032.asgt." +
+      "type.RetentionPolicy\"W\n\017GetInfoResponse\022" +
+      "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005" +
+      "model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031Registe" +
+      "rQueryStatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nm" +
+      "odel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004t" +
+      "ags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rCreateDatas" +
+      "et\022\".asgt.dataservice.v1.CreateRequest\032\026" +
+      ".google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{typ" +
+      "e}:create:\001*\022q\n\nAppendData\022&.asgt.datase" +
+      "rvice.v1.AppendDataRequest\032\026.google.prot" +
+      "obuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:ap" +
+      "pend:\001*\022f\n\nDeleteData\022\".asgt.dataservice" +
+      ".v1.DeleteRequest\032\026.google.protobuf.Empt" +
+      "y\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetIn" +
+      "fo\022#.asgt.dataservice.v1.GetInfoRequest\032" +
+      "$.asgt.dataservice.v1.GetInfoResponse\"\036\202" +
+      "\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpdateD" +
+      "ataset\022).asgt.dataservice.v1.UpdateDatas" +
+      "etRequest\032\026.google.protobuf.Empty\"#\202\323\344\223\002" +
+      "\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022Regist" +
+      "erQueryStats\022..asgt.dataservice.v1.Regis" +
+      "terQueryStatsRequest\032\026.google.protobuf.E" +
+      "mpty\022X\n\023CallsPerMonthMetric\022\026.google.pro" +
+      "tobuf.Empty\032).ssn.dataservice.v1.CallsPe" +
+      "rMonthResponse\022o\n\020CalculateMetrics\022,.asg" +
+      "t.dataservice.v1.CalculateMetricsRequest" +
+      "\032-.asgt.dataservice.v1.CalculateMetricsR" +
+      "esponseB7Z5github.com/e-conomic/vmlapis/" +
+      "gen/go/asgt/data/v1;datab\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8805,8 +9547,14 @@ public final class DataServiceOuterClass {
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.dataservice.v1.Dataservice.getDescriptor(),
         }, assigner);
-    internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor =
+    internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor,
+        new java.lang.String[] { "StartTime", "EndTime", "Tags", });
+    internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor,
@@ -8818,43 +9566,43 @@ public final class DataServiceOuterClass {
         internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor,
         new java.lang.String[] { "Target", "Confidence", "Correct", "Incorrect", });
     internal_static_asgt_dataservice_v1_CreateRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_CreateRequest_descriptor,
         new java.lang.String[] { "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor,
         new java.lang.String[] { "Name", "Type", "Samples", });
     internal_static_asgt_dataservice_v1_DeleteRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_dataservice_v1_DeleteRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_DeleteRequest_descriptor,
         new java.lang.String[] { "Type", "Name", "Tag", "Match", });
     internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_asgt_dataservice_v1_GetInfoRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor,
         new java.lang.String[] { "Name", "Type", });
     internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_asgt_dataservice_v1_UpdateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor,
         new java.lang.String[] { "Name", "Type", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor,
         new java.lang.String[] { "Dataset", "Model", });
     internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor,

@@ -53,7 +53,7 @@ class DataServiceStub(object):
         )
     self.CalculateMetrics = channel.unary_unary(
         '/asgt.dataservice.v1.DataService/CalculateMetrics',
-        request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+        request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.SerializeToString,
         response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.FromString,
         )
 
@@ -158,7 +158,7 @@ def add_DataServiceServicer_to_server(servicer, server):
       ),
       'CalculateMetrics': grpc.unary_unary_rpc_method_handler(
           servicer.CalculateMetrics,
-          request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+          request_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.FromString,
           response_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.SerializeToString,
       ),
   }
