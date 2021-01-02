@@ -53,7 +53,13 @@ service DataService {
   
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
   
-  rpc CalculateMetrics(google.protobuf.Empty) returns (CalculateMetricsResponse);
+  rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
+}
+
+message CalculateMetricsRequest {
+  int64 start_time = 1;
+  int64 end_time = 2;
+  repeated string tags = 3;
 }
 
 message CalculateMetricsResponse {
