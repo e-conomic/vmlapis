@@ -19,14 +19,30 @@ public final class DataServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>int64 start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
-    long getStartTime();
+    boolean hasStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     */
+    com.google.protobuf.Timestamp getStartTime();
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder();
 
     /**
-     * <code>int64 end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
      */
-    long getEndTime();
+    boolean hasEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     */
+    com.google.protobuf.Timestamp getEndTime();
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 
     /**
      * <code>repeated string tags = 3;</code>
@@ -60,8 +76,6 @@ public final class DataServiceOuterClass {
       super(builder);
     }
     private CalculateMetricsRequest() {
-      startTime_ = 0L;
-      endTime_ = 0L;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
@@ -89,14 +103,30 @@ public final class DataServiceOuterClass {
             case 0:
               done = true;
               break;
-            case 8: {
+            case 10: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (startTime_ != null) {
+                subBuilder = startTime_.toBuilder();
+              }
+              startTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startTime_);
+                startTime_ = subBuilder.buildPartial();
+              }
 
-              startTime_ = input.readInt64();
               break;
             }
-            case 16: {
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (endTime_ != null) {
+                subBuilder = endTime_.toBuilder();
+              }
+              endTime_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(endTime_);
+                endTime_ = subBuilder.buildPartial();
+              }
 
-              endTime_ = input.readInt64();
               break;
             }
             case 26: {
@@ -145,21 +175,45 @@ public final class DataServiceOuterClass {
 
     private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
-    private long startTime_;
+    private com.google.protobuf.Timestamp startTime_;
     /**
-     * <code>int64 start_time = 1;</code>
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
-    public long getStartTime() {
-      return startTime_;
+    public boolean hasStartTime() {
+      return startTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     */
+    public com.google.protobuf.Timestamp getStartTime() {
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+      return getStartTime();
     }
 
     public static final int END_TIME_FIELD_NUMBER = 2;
-    private long endTime_;
+    private com.google.protobuf.Timestamp endTime_;
     /**
-     * <code>int64 end_time = 2;</code>
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
      */
-    public long getEndTime() {
-      return endTime_;
+    public boolean hasEndTime() {
+      return endTime_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     */
+    public com.google.protobuf.Timestamp getEndTime() {
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+      return getEndTime();
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
@@ -205,11 +259,11 @@ public final class DataServiceOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (startTime_ != 0L) {
-        output.writeInt64(1, startTime_);
+      if (startTime_ != null) {
+        output.writeMessage(1, getStartTime());
       }
-      if (endTime_ != 0L) {
-        output.writeInt64(2, endTime_);
+      if (endTime_ != null) {
+        output.writeMessage(2, getEndTime());
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
@@ -223,13 +277,13 @@ public final class DataServiceOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (startTime_ != 0L) {
+      if (startTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(1, startTime_);
+          .computeMessageSize(1, getStartTime());
       }
-      if (endTime_ != 0L) {
+      if (endTime_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt64Size(2, endTime_);
+          .computeMessageSize(2, getEndTime());
       }
       {
         int dataSize = 0;
@@ -255,10 +309,16 @@ public final class DataServiceOuterClass {
       asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) obj;
 
       boolean result = true;
-      result = result && (getStartTime()
-          == other.getStartTime());
-      result = result && (getEndTime()
-          == other.getEndTime());
+      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime()) {
+        result = result && getStartTime()
+            .equals(other.getStartTime());
+      }
+      result = result && (hasEndTime() == other.hasEndTime());
+      if (hasEndTime()) {
+        result = result && getEndTime()
+            .equals(other.getEndTime());
+      }
       result = result && getTagsList()
           .equals(other.getTagsList());
       result = result && unknownFields.equals(other.unknownFields);
@@ -272,12 +332,14 @@ public final class DataServiceOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getStartTime());
-      hash = (37 * hash) + END_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          getEndTime());
+      if (hasStartTime()) {
+        hash = (37 * hash) + START_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getStartTime().hashCode();
+      }
+      if (hasEndTime()) {
+        hash = (37 * hash) + END_TIME_FIELD_NUMBER;
+        hash = (53 * hash) + getEndTime().hashCode();
+      }
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
@@ -415,10 +477,18 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        startTime_ = 0L;
-
-        endTime_ = 0L;
-
+        if (startTimeBuilder_ == null) {
+          startTime_ = null;
+        } else {
+          startTime_ = null;
+          startTimeBuilder_ = null;
+        }
+        if (endTimeBuilder_ == null) {
+          endTime_ = null;
+        } else {
+          endTime_ = null;
+          endTimeBuilder_ = null;
+        }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
@@ -449,8 +519,16 @@ public final class DataServiceOuterClass {
         asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
-        result.startTime_ = startTime_;
-        result.endTime_ = endTime_;
+        if (startTimeBuilder_ == null) {
+          result.startTime_ = startTime_;
+        } else {
+          result.startTime_ = startTimeBuilder_.build();
+        }
+        if (endTimeBuilder_ == null) {
+          result.endTime_ = endTime_;
+        } else {
+          result.endTime_ = endTimeBuilder_.build();
+        }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -505,11 +583,11 @@ public final class DataServiceOuterClass {
 
       public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other) {
         if (other == asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.getDefaultInstance()) return this;
-        if (other.getStartTime() != 0L) {
-          setStartTime(other.getStartTime());
+        if (other.hasStartTime()) {
+          mergeStartTime(other.getStartTime());
         }
-        if (other.getEndTime() != 0L) {
-          setEndTime(other.getEndTime());
+        if (other.hasEndTime()) {
+          mergeEndTime(other.getEndTime());
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
@@ -551,56 +629,238 @@ public final class DataServiceOuterClass {
       }
       private int bitField0_;
 
-      private long startTime_ ;
+      private com.google.protobuf.Timestamp startTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
-       * <code>int64 start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
-      public long getStartTime() {
-        return startTime_;
+      public boolean hasStartTime() {
+        return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
-       * <code>int64 start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
-      public Builder setStartTime(long value) {
-        
-        startTime_ = value;
-        onChanged();
+      public com.google.protobuf.Timestamp getStartTime() {
+        if (startTimeBuilder_ == null) {
+          return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        } else {
+          return startTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      public Builder setStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startTime_ = value;
+          onChanged();
+        } else {
+          startTimeBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>int64 start_time = 1;</code>
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      public Builder setStartTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (startTimeBuilder_ == null) {
+          startTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          startTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
+        if (startTimeBuilder_ == null) {
+          if (startTime_ != null) {
+            startTime_ =
+              com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+          } else {
+            startTime_ = value;
+          }
+          onChanged();
+        } else {
+          startTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
        */
       public Builder clearStartTime() {
-        
-        startTime_ = 0L;
-        onChanged();
+        if (startTimeBuilder_ == null) {
+          startTime_ = null;
+          onChanged();
+        } else {
+          startTime_ = null;
+          startTimeBuilder_ = null;
+        }
+
         return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
+        
+        onChanged();
+        return getStartTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
+        if (startTimeBuilder_ != null) {
+          return startTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return startTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getStartTimeFieldBuilder() {
+        if (startTimeBuilder_ == null) {
+          startTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getStartTime(),
+                  getParentForChildren(),
+                  isClean());
+          startTime_ = null;
+        }
+        return startTimeBuilder_;
       }
 
-      private long endTime_ ;
+      private com.google.protobuf.Timestamp endTime_ = null;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
-       * <code>int64 end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
        */
-      public long getEndTime() {
-        return endTime_;
+      public boolean hasEndTime() {
+        return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
-       * <code>int64 end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
        */
-      public Builder setEndTime(long value) {
-        
-        endTime_ = value;
-        onChanged();
+      public com.google.protobuf.Timestamp getEndTime() {
+        if (endTimeBuilder_ == null) {
+          return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        } else {
+          return endTimeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      public Builder setEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          endTime_ = value;
+          onChanged();
+        } else {
+          endTimeBuilder_.setMessage(value);
+        }
+
         return this;
       }
       /**
-       * <code>int64 end_time = 2;</code>
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      public Builder setEndTime(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (endTimeBuilder_ == null) {
+          endTime_ = builderForValue.build();
+          onChanged();
+        } else {
+          endTimeBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
+        if (endTimeBuilder_ == null) {
+          if (endTime_ != null) {
+            endTime_ =
+              com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+          } else {
+            endTime_ = value;
+          }
+          onChanged();
+        } else {
+          endTimeBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
        */
       public Builder clearEndTime() {
-        
-        endTime_ = 0L;
-        onChanged();
+        if (endTimeBuilder_ == null) {
+          endTime_ = null;
+          onChanged();
+        } else {
+          endTime_ = null;
+          endTimeBuilder_ = null;
+        }
+
         return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
+        
+        onChanged();
+        return getEndTimeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
+        if (endTimeBuilder_ != null) {
+          return endTimeBuilder_.getMessageOrBuilder();
+        } else {
+          return endTime_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getEndTimeFieldBuilder() {
+        if (endTimeBuilder_ == null) {
+          endTimeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getEndTime(),
+                  getParentForChildren(),
+                  isClean());
+          endTime_ = null;
+        }
+        return endTimeBuilder_;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -9476,56 +9736,59 @@ public final class DataServiceOuterClass {
       "\025asgt/type/model.proto\032 asgt/type/retent" +
       "ion_policy.proto\032\026asgt/type/sample.proto" +
       "\032\034google/api/annotations.proto\032\033google/p" +
-      "rotobuf/empty.proto\032\036google/protobuf/wra" +
-      "ppers.proto\032$ssn/dataservice/v1/dataserv" +
-      "ice.proto\"M\n\027CalculateMetricsRequest\022\022\n\n" +
-      "start_time\030\001 \001(\003\022\020\n\010end_time\030\002 \001(\003\022\014\n\004ta" +
-      "gs\030\003 \003(\t\"\326\001\n\030CalculateMetricsResponse\022H\n" +
-      "\007metrics\030\001 \003(\01327.asgt.dataservice.v1.Cal" +
-      "culateMetricsResponse.MetricRow\032p\n\tMetri" +
-      "cRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfidence\030\002 \001(\013" +
-      "2\033.google.protobuf.FloatValue\022\017\n\007correct" +
-      "\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\rCreateRequ" +
-      "est\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030" +
-      "\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132" +
-      "\021.asgt.type.Sample\0224\n\020retention_policy\030\005" +
-      " \001(\0132\032.asgt.type.RetentionPolicy\"S\n\021Appe" +
-      "ndDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
-      "\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sample\"E\n" +
-      "\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004name\030\002 \001" +
-      "(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016GetInfoR" +
-      "equest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\"h\n\024Up" +
-      "dateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type" +
-      "\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032.asgt." +
-      "type.RetentionPolicy\"W\n\017GetInfoResponse\022" +
-      "#\n\007dataset\030\001 \001(\0132\022.asgt.type.Dataset\022\037\n\005" +
-      "model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031Registe" +
-      "rQueryStatsRequest\022\017\n\007dataset\030\001 \001(\t\022\022\n\nm" +
-      "odel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(\005\022\014\n\004t" +
-      "ags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rCreateDatas" +
-      "et\022\".asgt.dataservice.v1.CreateRequest\032\026" +
-      ".google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{typ" +
-      "e}:create:\001*\022q\n\nAppendData\022&.asgt.datase" +
-      "rvice.v1.AppendDataRequest\032\026.google.prot" +
-      "obuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:ap" +
-      "pend:\001*\022f\n\nDeleteData\022\".asgt.dataservice" +
-      ".v1.DeleteRequest\032\026.google.protobuf.Empt" +
-      "y\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetIn" +
-      "fo\022#.asgt.dataservice.v1.GetInfoRequest\032" +
-      "$.asgt.dataservice.v1.GetInfoResponse\"\036\202" +
-      "\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rUpdateD" +
-      "ataset\022).asgt.dataservice.v1.UpdateDatas" +
-      "etRequest\032\026.google.protobuf.Empty\"#\202\323\344\223\002" +
-      "\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022Regist" +
-      "erQueryStats\022..asgt.dataservice.v1.Regis" +
-      "terQueryStatsRequest\032\026.google.protobuf.E" +
-      "mpty\022X\n\023CallsPerMonthMetric\022\026.google.pro" +
-      "tobuf.Empty\032).ssn.dataservice.v1.CallsPe" +
-      "rMonthResponse\022o\n\020CalculateMetrics\022,.asg" +
-      "t.dataservice.v1.CalculateMetricsRequest" +
-      "\032-.asgt.dataservice.v1.CalculateMetricsR" +
-      "esponseB7Z5github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/data/v1;datab\006proto3"
+      "rotobuf/empty.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032$ssn/dataservice/v1/dataservice.pro" +
+      "to\"\205\001\n\027CalculateMetricsRequest\022.\n\nstart_" +
+      "time\030\001 \001(\0132\032.google.protobuf.Timestamp\022," +
+      "\n\010end_time\030\002 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004tags\030\003 \003(\t\"\326\001\n\030CalculateMetricsR" +
+      "esponse\022H\n\007metrics\030\001 \003(\01327.asgt.dataserv" +
+      "ice.v1.CalculateMetricsResponse.MetricRo" +
+      "w\032p\n\tMetricRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfid" +
+      "ence\030\002 \001(\0132\033.google.protobuf.FloatValue\022" +
+      "\017\n\007correct\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\r" +
+      "CreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samp" +
+      "les\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020retentio" +
+      "n_policy\030\005 \001(\0132\032.asgt.type.RetentionPoli" +
+      "cy\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n" +
+      "\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type" +
+      ".Sample\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016" +
+      "\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\"," +
+      "\n\016GetInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002" +
+      " \001(\t\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001" +
+      "(\t\022\014\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001" +
+      "(\0132\032.asgt.type.RetentionPolicy\"W\n\017GetInf" +
+      "oResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.D" +
+      "ataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"" +
+      "b\n\031RegisterQueryStatsRequest\022\017\n\007dataset\030" +
+      "\001 \001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030" +
+      "\003 \001(\005\022\014\n\004tags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rC" +
+      "reateDataset\022\".asgt.dataservice.v1.Creat" +
+      "eRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026" +
+      "\"\021/v1/{type}:create:\001*\022q\n\nAppendData\022&.a" +
+      "sgt.dataservice.v1.AppendDataRequest\032\026.g" +
+      "oogle.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}" +
+      "/{name}:append:\001*\022f\n\nDeleteData\022\".asgt.d" +
+      "ataservice.v1.DeleteRequest\032\026.google.pro" +
+      "tobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001" +
+      "*\022t\n\007GetInfo\022#.asgt.dataservice.v1.GetIn" +
+      "foRequest\032$.asgt.dataservice.v1.GetInfoR" +
+      "esponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022" +
+      "w\n\rUpdateDataset\022).asgt.dataservice.v1.U" +
+      "pdateDatasetRequest\032\026.google.protobuf.Em" +
+      "pty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*" +
+      "\022\\\n\022RegisterQueryStats\022..asgt.dataservic" +
+      "e.v1.RegisterQueryStatsRequest\032\026.google." +
+      "protobuf.Empty\022X\n\023CallsPerMonthMetric\022\026." +
+      "google.protobuf.Empty\032).ssn.dataservice." +
+      "v1.CallsPerMonthResponse\022o\n\020CalculateMet" +
+      "rics\022,.asgt.dataservice.v1.CalculateMetr" +
+      "icsRequest\032-.asgt.dataservice.v1.Calcula" +
+      "teMetricsResponseB7Z5github.com/e-conomi" +
+      "c/vmlapis/gen/go/asgt/data/v1;datab\006prot" +
+      "o3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9544,6 +9807,7 @@ public final class DataServiceOuterClass {
           asgt.type.SampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.dataservice.v1.Dataservice.getDescriptor(),
         }, assigner);
@@ -9618,6 +9882,7 @@ public final class DataServiceOuterClass {
     asgt.type.SampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
     ssn.dataservice.v1.Dataservice.getDescriptor();
   }

@@ -17,6 +17,7 @@ var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js');
 var ssn_dataservice_v1_dataservice_pb = require('../../../ssn/dataservice/v1/dataservice_pb.js');
 goog.exportSymbol('proto.asgt.dataservice.v1.AppendDataRequest', null, global);
@@ -83,8 +84,8 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.toObject = function(
  */
 proto.asgt.dataservice.v1.CalculateMetricsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    startTime: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    endTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
+    startTime: (f = msg.getStartTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
+    endTime: (f = msg.getEndTime()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     tagsList: jspb.Message.getRepeatedField(msg, 3)
   };
 
@@ -123,11 +124,13 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.deserializeBinaryFromReader = 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setStartTime(value);
       break;
     case 2:
-      var value = /** @type {number} */ (reader.readInt64());
+      var value = new google_protobuf_timestamp_pb.Timestamp;
+      reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setEndTime(value);
       break;
     case 3:
@@ -164,17 +167,19 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.serializeBinary = fu
 proto.asgt.dataservice.v1.CalculateMetricsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getStartTime();
-  if (f !== 0) {
-    writer.writeInt64(
+  if (f != null) {
+    writer.writeMessage(
       1,
-      f
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getEndTime();
-  if (f !== 0) {
-    writer.writeInt64(
+  if (f != null) {
+    writer.writeMessage(
       2,
-      f
+      f,
+      google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
   }
   f = message.getTagsList();
@@ -188,32 +193,62 @@ proto.asgt.dataservice.v1.CalculateMetricsRequest.serializeBinaryToWriter = func
 
 
 /**
- * optional int64 start_time = 1;
- * @return {number}
+ * optional google.protobuf.Timestamp start_time = 1;
+ * @return {?proto.google.protobuf.Timestamp}
  */
 proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.getStartTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 1));
 };
 
 
-/** @param {number} value */
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
 proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.setStartTime = function(value) {
-  jspb.Message.setProto3IntField(this, 1, value);
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.clearStartTime = function() {
+  this.setStartTime(undefined);
 };
 
 
 /**
- * optional int64 end_time = 2;
- * @return {number}
+ * Returns whether this field is set.
+ * @return {!boolean}
  */
-proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.getEndTime = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.hasStartTime = function() {
+  return jspb.Message.getField(this, 1) != null;
 };
 
 
-/** @param {number} value */
+/**
+ * optional google.protobuf.Timestamp end_time = 2;
+ * @return {?proto.google.protobuf.Timestamp}
+ */
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.getEndTime = function() {
+  return /** @type{?proto.google.protobuf.Timestamp} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 2));
+};
+
+
+/** @param {?proto.google.protobuf.Timestamp|undefined} value */
 proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.setEndTime = function(value) {
-  jspb.Message.setProto3IntField(this, 2, value);
+  jspb.Message.setWrapperField(this, 2, value);
+};
+
+
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.clearEndTime = function() {
+  this.setEndTime(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.asgt.dataservice.v1.CalculateMetricsRequest.prototype.hasEndTime = function() {
+  return jspb.Message.getField(this, 2) != null;
 };
 
 

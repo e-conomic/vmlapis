@@ -28,10 +28,12 @@ namespace Asgt.Dataservice.V1 {
             "ZXJ2aWNlLnYxGhdhc2d0L3R5cGUvZGF0YXNldC5wcm90bxoVYXNndC90eXBl",
             "L21vZGVsLnByb3RvGiBhc2d0L3R5cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90",
             "bxoWYXNndC90eXBlL3NhbXBsZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh5nb29n",
-            "bGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aJHNzbi9kYXRhc2VydmljZS92",
-            "MS9kYXRhc2VydmljZS5wcm90byJNChdDYWxjdWxhdGVNZXRyaWNzUmVxdWVz",
-            "dBISCgpzdGFydF90aW1lGAEgASgDEhAKCGVuZF90aW1lGAIgASgDEgwKBHRh",
+            "aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGh9nb29n",
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcHJvdG9idWYv",
+            "d3JhcHBlcnMucHJvdG8aJHNzbi9kYXRhc2VydmljZS92MS9kYXRhc2Vydmlj",
+            "ZS5wcm90byKFAQoXQ2FsY3VsYXRlTWV0cmljc1JlcXVlc3QSLgoKc3RhcnRf",
+            "dGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5k",
+            "X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBHRh",
             "Z3MYAyADKAki1gEKGENhbGN1bGF0ZU1ldHJpY3NSZXNwb25zZRJICgdtZXRy",
             "aWNzGAEgAygLMjcuYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRy",
             "aWNzUmVzcG9uc2UuTWV0cmljUm93GnAKCU1ldHJpY1JvdxIOCgZ0YXJnZXQY",
@@ -74,7 +76,7 @@ namespace Asgt.Dataservice.V1 {
             "cmljc1Jlc3BvbnNlQjdaNWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
             "Z2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsRequest), global::Asgt.Dataservice.V1.CalculateMetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Parser, new[]{ "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow.Parser, new[]{ "Target", "Confidence", "Correct", "Incorrect" }, null, null, null)}),
@@ -116,8 +118,8 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public CalculateMetricsRequest(CalculateMetricsRequest other) : this() {
-      startTime_ = other.startTime_;
-      endTime_ = other.endTime_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -129,9 +131,9 @@ namespace Asgt.Dataservice.V1 {
 
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 1;
-    private long startTime_;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long StartTime {
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
         startTime_ = value;
@@ -140,9 +142,9 @@ namespace Asgt.Dataservice.V1 {
 
     /// <summary>Field number for the "end_time" field.</summary>
     public const int EndTimeFieldNumber = 2;
-    private long endTime_;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long EndTime {
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
         endTime_ = value;
@@ -172,8 +174,8 @@ namespace Asgt.Dataservice.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (StartTime != other.StartTime) return false;
-      if (EndTime != other.EndTime) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
       if(!tags_.Equals(other.tags_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -181,8 +183,8 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (StartTime != 0L) hash ^= StartTime.GetHashCode();
-      if (EndTime != 0L) hash ^= EndTime.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
       hash ^= tags_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -197,13 +199,13 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (StartTime != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(StartTime);
+      if (startTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(StartTime);
       }
-      if (EndTime != 0L) {
-        output.WriteRawTag(16);
-        output.WriteInt64(EndTime);
+      if (endTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(EndTime);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       if (_unknownFields != null) {
@@ -214,11 +216,11 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (StartTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(StartTime);
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
       }
-      if (EndTime != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EndTime);
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       if (_unknownFields != null) {
@@ -232,11 +234,17 @@ namespace Asgt.Dataservice.V1 {
       if (other == null) {
         return;
       }
-      if (other.StartTime != 0L) {
-        StartTime = other.StartTime;
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
       }
-      if (other.EndTime != 0L) {
-        EndTime = other.EndTime;
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
       }
       tags_.Add(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -250,12 +258,18 @@ namespace Asgt.Dataservice.V1 {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            StartTime = input.ReadInt64();
+          case 10: {
+            if (startTime_ == null) {
+              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(startTime_);
             break;
           }
-          case 16: {
-            EndTime = input.ReadInt64();
+          case 18: {
+            if (endTime_ == null) {
+              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(endTime_);
             break;
           }
           case 26: {
