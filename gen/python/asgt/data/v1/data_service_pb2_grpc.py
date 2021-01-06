@@ -51,6 +51,11 @@ class DataServiceStub(object):
         request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
         response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
         )
+    self.CalculateMetrics = channel.unary_unary(
+        '/asgt.dataservice.v1.DataService/CalculateMetrics',
+        request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.SerializeToString,
+        response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.FromString,
+        )
 
 
 class DataServiceServicer(object):
@@ -106,6 +111,13 @@ class DataServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def CalculateMetrics(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_DataServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -143,6 +155,11 @@ def add_DataServiceServicer_to_server(servicer, server):
           servicer.CallsPerMonthMetric,
           request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
           response_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.SerializeToString,
+      ),
+      'CalculateMetrics': grpc.unary_unary_rpc_method_handler(
+          servicer.CalculateMetrics,
+          request_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.FromString,
+          response_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
