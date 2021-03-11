@@ -26,6 +26,7 @@ message RegisterModelRequest {
   int64 model_version = 3;
   map<string, int32> metrics = 4;
   repeated asgt.type.TargetMetrics target_metrics = 5;
+  asgt.type.Model.InputType input_type = 6;
 }
 
 //message DeleteModelRequest {

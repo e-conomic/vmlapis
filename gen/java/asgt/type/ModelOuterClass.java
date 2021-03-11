@@ -69,6 +69,15 @@ public final class ModelOuterClass {
      */
     asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getConfidenceScoresOrBuilder(
         int index);
+
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
+     */
+    int getInputTypeValue();
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
+     */
+    asgt.type.ModelOuterClass.Model.InputType getInputType();
   }
   /**
    * Protobuf type {@code asgt.type.Model}
@@ -87,6 +96,7 @@ public final class ModelOuterClass {
       datasetSize_ = 0;
       trainingSize_ = 0;
       confidenceScores_ = java.util.Collections.emptyList();
+      inputType_ = 0;
     }
 
     @java.lang.Override
@@ -150,6 +160,12 @@ public final class ModelOuterClass {
                   input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
               break;
             }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              inputType_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -183,6 +199,104 @@ public final class ModelOuterClass {
       return asgt.type.ModelOuterClass.internal_static_asgt_type_Model_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               asgt.type.ModelOuterClass.Model.class, asgt.type.ModelOuterClass.Model.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code asgt.type.Model.InputType}
+     */
+    public enum InputType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>FEATURE_TENSORS = 0;</code>
+       */
+      FEATURE_TENSORS(0),
+      /**
+       * <code>EXAMPLE_TENSOR = 1;</code>
+       */
+      EXAMPLE_TENSOR(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>FEATURE_TENSORS = 0;</code>
+       */
+      public static final int FEATURE_TENSORS_VALUE = 0;
+      /**
+       * <code>EXAMPLE_TENSOR = 1;</code>
+       */
+      public static final int EXAMPLE_TENSOR_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static InputType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static InputType forNumber(int value) {
+        switch (value) {
+          case 0: return FEATURE_TENSORS;
+          case 1: return EXAMPLE_TENSOR;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<InputType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          InputType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<InputType>() {
+              public InputType findValueByNumber(int number) {
+                return InputType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return asgt.type.ModelOuterClass.Model.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final InputType[] VALUES = values();
+
+      public static InputType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private InputType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:asgt.type.Model.InputType)
     }
 
     private int bitField0_;
@@ -269,6 +383,23 @@ public final class ModelOuterClass {
       return confidenceScores_.get(index);
     }
 
+    public static final int INPUT_TYPE_FIELD_NUMBER = 8;
+    private int inputType_;
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
+     */
+    public int getInputTypeValue() {
+      return inputType_;
+    }
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 8;</code>
+     */
+    public asgt.type.ModelOuterClass.Model.InputType getInputType() {
+      @SuppressWarnings("deprecation")
+      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+      return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -297,6 +428,9 @@ public final class ModelOuterClass {
       }
       for (int i = 0; i < confidenceScores_.size(); i++) {
         output.writeMessage(7, confidenceScores_.get(i));
+      }
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
+        output.writeEnum(8, inputType_);
       }
       unknownFields.writeTo(output);
     }
@@ -327,6 +461,10 @@ public final class ModelOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, confidenceScores_.get(i));
       }
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, inputType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -356,6 +494,7 @@ public final class ModelOuterClass {
           == other.getTrainingSize());
       result = result && getConfidenceScoresList()
           .equals(other.getConfidenceScoresList());
+      result = result && inputType_ == other.inputType_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -382,6 +521,8 @@ public final class ModelOuterClass {
         hash = (37 * hash) + CONFIDENCE_SCORES_FIELD_NUMBER;
         hash = (53 * hash) + getConfidenceScoresList().hashCode();
       }
+      hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + inputType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -534,6 +675,8 @@ public final class ModelOuterClass {
         } else {
           confidenceScoresBuilder_.clear();
         }
+        inputType_ = 0;
+
         return this;
       }
 
@@ -579,6 +722,7 @@ public final class ModelOuterClass {
         } else {
           result.confidenceScores_ = confidenceScoresBuilder_.build();
         }
+        result.inputType_ = inputType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -665,6 +809,9 @@ public final class ModelOuterClass {
               confidenceScoresBuilder_.addAllMessages(other.confidenceScores_);
             }
           }
+        }
+        if (other.inputType_ != 0) {
+          setInputTypeValue(other.getInputTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1130,6 +1277,51 @@ public final class ModelOuterClass {
         }
         return confidenceScoresBuilder_;
       }
+
+      private int inputType_ = 0;
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
+       */
+      public int getInputTypeValue() {
+        return inputType_;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
+       */
+      public Builder setInputTypeValue(int value) {
+        inputType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
+       */
+      public asgt.type.ModelOuterClass.Model.InputType getInputType() {
+        @SuppressWarnings("deprecation")
+        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+        return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
+       */
+      public Builder setInputType(asgt.type.ModelOuterClass.Model.InputType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        inputType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 8;</code>
+       */
+      public Builder clearInputType() {
+        
+        inputType_ = 0;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1200,14 +1392,16 @@ public final class ModelOuterClass {
       "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
       "/type/target_metrics.proto\032\034gen_bq_schem" +
       "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\314\001\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
+      "amp.proto\"\262\002\n\005Model\022\026\n\007version\030\003 \001(\003B\005\352?" +
       "\002\010\001\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobu" +
       "f.Timestamp\022\033\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001" +
       "\022\034\n\rtraining_size\030\006 \001(\005B\005\352?\002\030\001\022:\n\021confid" +
       "ence_scores\030\007 \003(\0132\030.asgt.type.TargetMetr" +
-      "icsB\005\352?\002\030\001J\004\010\001\020\003B8Z6github.com/e-conomic" +
-      "/vmlapis/gen/go/asgt/type;asgttypeb\006prot" +
-      "o3"
+      "icsB\005\352?\002\030\001\022.\n\ninput_type\030\010 \001(\0162\032.asgt.ty" +
+      "pe.Model.InputType\"4\n\tInputType\022\023\n\017FEATU" +
+      "RE_TENSORS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B8" +
+      "Z6github.com/e-conomic/vmlapis/gen/go/as" +
+      "gt/type;asgttypeb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -1229,7 +1423,7 @@ public final class ModelOuterClass {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(gen_bq_schema.BqField.bigquery);

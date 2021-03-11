@@ -6891,7 +6891,8 @@ proto.ssn.dataservice.v1.Correctness.toObject = function(includeInstance, msg) {
     field: jspb.Message.getFieldWithDefault(msg, 1, ""),
     correctPercentage: +jspb.Message.getFieldWithDefault(msg, 2, 0.0),
     incompletePercentage: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
-    errorPercentage: +jspb.Message.getFieldWithDefault(msg, 4, 0.0)
+    errorPercentage: +jspb.Message.getFieldWithDefault(msg, 4, 0.0),
+    support: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -6943,6 +6944,10 @@ proto.ssn.dataservice.v1.Correctness.deserializeBinaryFromReader = function(msg,
     case 4:
       var value = /** @type {number} */ (reader.readFloat());
       msg.setErrorPercentage(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setSupport(value);
       break;
     default:
       reader.skipField();
@@ -6998,6 +7003,13 @@ proto.ssn.dataservice.v1.Correctness.serializeBinaryToWriter = function(message,
   if (f !== 0.0) {
     writer.writeFloat(
       4,
+      f
+    );
+  }
+  f = message.getSupport();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
       f
     );
   }
@@ -7061,6 +7073,21 @@ proto.ssn.dataservice.v1.Correctness.prototype.getErrorPercentage = function() {
 /** @param {number} value */
 proto.ssn.dataservice.v1.Correctness.prototype.setErrorPercentage = function(value) {
   jspb.Message.setProto3FloatField(this, 4, value);
+};
+
+
+/**
+ * optional int32 support = 5;
+ * @return {number}
+ */
+proto.ssn.dataservice.v1.Correctness.prototype.getSupport = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.ssn.dataservice.v1.Correctness.prototype.setSupport = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

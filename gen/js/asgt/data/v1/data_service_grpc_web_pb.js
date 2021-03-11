@@ -23,6 +23,12 @@ var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js')
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
+
+var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js')
+
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
+
+var ssn_dataservice_v1_dataservice_pb = require('../../../ssn/dataservice/v1/dataservice_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.dataservice = {};
@@ -557,6 +563,166 @@ proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.registerQueryStats 
       request,
       metadata || {},
       methodDescriptor_DataService_RegisterQueryStats);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodDescriptor_DataService_CallsPerMonthMetric = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
+  grpc.web.MethodType.UNARY,
+  google_protobuf_empty_pb.Empty,
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ */
+const methodInfo_DataService_CallsPerMonthMetric = new grpc.web.AbstractClientBase.MethodInfo(
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  ssn_dataservice_v1_dataservice_pb.CallsPerMonthResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.ssn.dataservice.v1.CallsPerMonthResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.dataservice.v1.CallsPerMonthResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.callsPerMonthMetric =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthMetric,
+      callback);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.dataservice.v1.CallsPerMonthResponse>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CallsPerMonthMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.dataservice.v1.CalculateMetricsRequest,
+ *   !proto.asgt.dataservice.v1.CalculateMetricsResponse>}
+ */
+const methodDescriptor_DataService_CalculateMetrics = new grpc.web.MethodDescriptor(
+  '/asgt.dataservice.v1.DataService/CalculateMetrics',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.dataservice.v1.CalculateMetricsRequest,
+  proto.asgt.dataservice.v1.CalculateMetricsResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.dataservice.v1.CalculateMetricsResponse.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.asgt.dataservice.v1.CalculateMetricsRequest,
+ *   !proto.asgt.dataservice.v1.CalculateMetricsResponse>}
+ */
+const methodInfo_DataService_CalculateMetrics = new grpc.web.AbstractClientBase.MethodInfo(
+  proto.asgt.dataservice.v1.CalculateMetricsResponse,
+  /**
+   * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.dataservice.v1.CalculateMetricsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.asgt.dataservice.v1.CalculateMetricsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.dataservice.v1.CalculateMetricsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.dataservice.v1.DataServiceClient.prototype.calculateMetrics =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CalculateMetrics',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetrics,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.dataservice.v1.CalculateMetricsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.dataservice.v1.CalculateMetricsResponse>}
+ *     A native promise that resolves to the response
+ */
+proto.asgt.dataservice.v1.DataServicePromiseClient.prototype.calculateMetrics =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.dataservice.v1.DataService/CalculateMetrics',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_CalculateMetrics);
 };
 
 

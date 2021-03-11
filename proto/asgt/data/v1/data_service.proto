@@ -10,6 +10,10 @@ import "asgt/type/retention_policy.proto";
 import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
+import "ssn/dataservice/v1/dataservice.proto";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
 
 service DataService {
   rpc CreateDataset (CreateRequest) returns (google.protobuf.Empty) {
@@ -47,8 +51,27 @@ service DataService {
   }
 
   rpc RegisterQueryStats (RegisterQueryStatsRequest) returns (google.protobuf.Empty);
+  
+  rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
+  
+  rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
 }
 
+message CalculateMetricsRequest {
+  google.protobuf.Timestamp start_time = 1;
+  google.protobuf.Timestamp end_time = 2;
+  repeated string tags = 3;
+}
+
+message CalculateMetricsResponse {
+  message MetricRow {
+    string target = 1;
+    google.protobuf.FloatValue confidence = 2;
+    int32 correct = 3;
+    int32 incorrect = 4;
+  }
+  repeated MetricRow metrics = 1;
+}
 
 message CreateRequest {
   string name = 1;

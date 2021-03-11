@@ -209,6 +209,7 @@ message Correctness {
   float correct_percentage = 2;
   float incomplete_percentage = 3;
   float error_percentage = 4;
+  int32 support = 5;
 }
 
 message DeleteRequest {

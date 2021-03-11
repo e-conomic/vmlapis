@@ -106,6 +106,15 @@ public final class ModelRegistryOuterClass {
      */
     asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder getTargetMetricsOrBuilder(
         int index);
+
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     */
+    int getInputTypeValue();
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     */
+    asgt.type.ModelOuterClass.Model.InputType getInputType();
   }
   /**
    * Protobuf type {@code asgt.modelregistry.v1.RegisterModelRequest}
@@ -122,6 +131,7 @@ public final class ModelRegistryOuterClass {
     private RegisterModelRequest() {
       modelVersion_ = 0L;
       targetMetrics_ = java.util.Collections.emptyList();
+      inputType_ = 0;
     }
 
     @java.lang.Override
@@ -199,6 +209,12 @@ public final class ModelRegistryOuterClass {
               }
               targetMetrics_.add(
                   input.readMessage(asgt.type.TargetMetricsOuterClass.TargetMetrics.parser(), extensionRegistry));
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+
+              inputType_ = rawValue;
               break;
             }
             default: {
@@ -411,6 +427,23 @@ public final class ModelRegistryOuterClass {
       return targetMetrics_.get(index);
     }
 
+    public static final int INPUT_TYPE_FIELD_NUMBER = 6;
+    private int inputType_;
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     */
+    public int getInputTypeValue() {
+      return inputType_;
+    }
+    /**
+     * <code>.asgt.type.Model.InputType input_type = 6;</code>
+     */
+    public asgt.type.ModelOuterClass.Model.InputType getInputType() {
+      @SuppressWarnings("deprecation")
+      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+      return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -442,6 +475,9 @@ public final class ModelRegistryOuterClass {
           4);
       for (int i = 0; i < targetMetrics_.size(); i++) {
         output.writeMessage(5, targetMetrics_.get(i));
+      }
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
+        output.writeEnum(6, inputType_);
       }
       unknownFields.writeTo(output);
     }
@@ -478,6 +514,10 @@ public final class ModelRegistryOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, targetMetrics_.get(i));
       }
+      if (inputType_ != asgt.type.ModelOuterClass.Model.InputType.FEATURE_TENSORS.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, inputType_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -510,6 +550,7 @@ public final class ModelRegistryOuterClass {
           other.internalGetMetrics());
       result = result && getTargetMetricsList()
           .equals(other.getTargetMetricsList());
+      result = result && inputType_ == other.inputType_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -540,6 +581,8 @@ public final class ModelRegistryOuterClass {
         hash = (37 * hash) + TARGET_METRICS_FIELD_NUMBER;
         hash = (53 * hash) + getTargetMetricsList().hashCode();
       }
+      hash = (37 * hash) + INPUT_TYPE_FIELD_NUMBER;
+      hash = (53 * hash) + inputType_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -717,6 +760,8 @@ public final class ModelRegistryOuterClass {
         } else {
           targetMetricsBuilder_.clear();
         }
+        inputType_ = 0;
+
         return this;
       }
 
@@ -767,6 +812,7 @@ public final class ModelRegistryOuterClass {
         } else {
           result.targetMetrics_ = targetMetricsBuilder_.build();
         }
+        result.inputType_ = inputType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -852,6 +898,9 @@ public final class ModelRegistryOuterClass {
               targetMetricsBuilder_.addAllMessages(other.targetMetrics_);
             }
           }
+        }
+        if (other.inputType_ != 0) {
+          setInputTypeValue(other.getInputTypeValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1504,6 +1553,51 @@ public final class ModelRegistryOuterClass {
           targetMetrics_ = null;
         }
         return targetMetricsBuilder_;
+      }
+
+      private int inputType_ = 0;
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       */
+      public int getInputTypeValue() {
+        return inputType_;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       */
+      public Builder setInputTypeValue(int value) {
+        inputType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       */
+      public asgt.type.ModelOuterClass.Model.InputType getInputType() {
+        @SuppressWarnings("deprecation")
+        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+        return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       */
+      public Builder setInputType(asgt.type.ModelOuterClass.Model.InputType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        inputType_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Model.InputType input_type = 6;</code>
+       */
+      public Builder clearInputType() {
+        
+        inputType_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2806,25 +2900,26 @@ public final class ModelRegistryOuterClass {
       "ataset.proto\032\025asgt/type/model.proto\032\030asg" +
       "t/type/revision.proto\032\036asgt/type/target_" +
       "metrics.proto\032\033google/protobuf/empty.pro" +
-      "to\"\246\002\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
+      "to\"\326\002\n\024RegisterModelRequest\022#\n\007dataset\030\001" +
       " \001(\0132\022.asgt.type.Dataset\022%\n\010revision\030\002 \001" +
       "(\0132\023.asgt.type.Revision\022\025\n\rmodel_version" +
       "\030\003 \001(\003\022I\n\007metrics\030\004 \003(\01328.asgt.modelregi" +
       "stry.v1.RegisterModelRequest.MetricsEntr" +
       "y\0220\n\016target_metrics\030\005 \003(\0132\030.asgt.type.Ta" +
-      "rgetMetrics\032.\n\014MetricsEntry\022\013\n\003key\030\001 \001(\t" +
-      "\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026GetCurrentModelRe" +
-      "quest\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
-      "et\":\n\027GetCurrentModelResponse\022\037\n\005model\030\001" +
-      " \001(\0132\020.asgt.type.Model2\327\001\n\rModelRegistry" +
-      "\022T\n\rRegisterModel\022+.asgt.modelregistry.v" +
-      "1.RegisterModelRequest\032\026.google.protobuf" +
-      ".Empty\022p\n\017GetCurrentModel\022-.asgt.modelre" +
-      "gistry.v1.GetCurrentModelRequest\032..asgt." +
-      "modelregistry.v1.GetCurrentModelResponse" +
-      "BIZGgithub.com/e-conomic/vmlapis/gen/go/" +
-      "asgt/modelregistry/v1;modelregistryb\006pro" +
-      "to3"
+      "rgetMetrics\022.\n\ninput_type\030\006 \001(\0162\032.asgt.t" +
+      "ype.Model.InputType\032.\n\014MetricsEntry\022\013\n\003k" +
+      "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\005:\0028\001\"=\n\026GetCurren" +
+      "tModelRequest\022#\n\007dataset\030\001 \001(\0132\022.asgt.ty" +
+      "pe.Dataset\":\n\027GetCurrentModelResponse\022\037\n" +
+      "\005model\030\001 \001(\0132\020.asgt.type.Model2\327\001\n\rModel" +
+      "Registry\022T\n\rRegisterModel\022+.asgt.modelre" +
+      "gistry.v1.RegisterModelRequest\032\026.google." +
+      "protobuf.Empty\022p\n\017GetCurrentModel\022-.asgt" +
+      ".modelregistry.v1.GetCurrentModelRequest" +
+      "\032..asgt.modelregistry.v1.GetCurrentModel" +
+      "ResponseBIZGgithub.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/modelregistry/v1;modelregis" +
+      "tryb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2848,7 +2943,7 @@ public final class ModelRegistryOuterClass {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", });
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor =
       internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_fieldAccessorTable = new
