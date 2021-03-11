@@ -14,6 +14,7 @@ var global = Function('return this')();
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
 goog.exportSymbol('proto.ssn.annotator.v1.Document', null, global);
 goog.exportSymbol('proto.ssn.annotator.v1.DocumentAnnotatorRequest', null, global);
 goog.exportSymbol('proto.ssn.annotator.v1.DocumentAnnotatorResponse', null, global);
@@ -306,7 +307,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.toObject = function(includeInsta
     document: (f = msg.getDocument()) && proto.ssn.annotator.v1.Document.toObject(includeInstance, f),
     featuresList: jspb.Message.toObjectList(msg.getFeaturesList(),
     proto.ssn.annotator.v1.Feature.toObject, includeInstance),
-    tagsList: jspb.Message.getRepeatedField(msg, 3)
+    tagsList: jspb.Message.getRepeatedField(msg, 3),
+    tier: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -357,6 +359,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.deserializeBinaryFromReader = fu
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
       break;
+    case 4:
+      var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -406,6 +412,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.serializeBinaryToWriter = functi
   if (f.length > 0) {
     writer.writeRepeatedString(
       3,
+      f
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      4,
       f
     );
   }
@@ -499,6 +512,21 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.addTags = function(val
 
 proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearTagsList = function() {
   this.setTagsList([]);
+};
+
+
+/**
+ * optional ssn.type.Tier tier = 4;
+ * @return {!proto.ssn.type.Tier}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.getTier = function() {
+  return /** @type {!proto.ssn.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/** @param {!proto.ssn.type.Tier} value */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.setTier = function(value) {
+  jspb.Message.setProto3EnumField(this, 4, value);
 };
 
 

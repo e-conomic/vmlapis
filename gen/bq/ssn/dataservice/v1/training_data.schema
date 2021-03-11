@@ -750,6 +750,11 @@
       "mode": "NULLABLE"
      }
     ]
+   },
+   {
+    "name": "tier",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  }

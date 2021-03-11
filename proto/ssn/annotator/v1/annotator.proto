@@ -7,6 +7,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annota
 import "google/api/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
+import "ssn/type/tier.proto";
 
 service DocumentAnnotator {
   rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
@@ -83,10 +84,12 @@ message Feature {
   ssn.type.Confidence.Level min_confidence = 3;
 }
 
+
 message DocumentAnnotatorRequest {
   Document document = 1;
   repeated Feature features = 2;
   repeated string tags = 3;
+  ssn.type.Tier tier = 4;
 }
 
 message DocumentAnnotatorResponse {
