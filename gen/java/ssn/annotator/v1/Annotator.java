@@ -1373,6 +1373,15 @@ public final class Annotator {
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
+
+    /**
+     * <code>.ssn.type.Tier tier = 4;</code>
+     */
+    int getTierValue();
+    /**
+     * <code>.ssn.type.Tier tier = 4;</code>
+     */
+    ssn.type.TierOuterClass.Tier getTier();
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorRequest}
@@ -1389,6 +1398,7 @@ public final class Annotator {
     private DocumentAnnotatorRequest() {
       features_ = java.util.Collections.emptyList();
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tier_ = 0;
     }
 
     @java.lang.Override
@@ -1444,6 +1454,12 @@ public final class Annotator {
                 mutable_bitField0_ |= 0x00000004;
               }
               tags_.add(s);
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              tier_ = rawValue;
               break;
             }
             default: {
@@ -1570,6 +1586,23 @@ public final class Annotator {
       return tags_.getByteString(index);
     }
 
+    public static final int TIER_FIELD_NUMBER = 4;
+    private int tier_;
+    /**
+     * <code>.ssn.type.Tier tier = 4;</code>
+     */
+    public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <code>.ssn.type.Tier tier = 4;</code>
+     */
+    public ssn.type.TierOuterClass.Tier getTier() {
+      @SuppressWarnings("deprecation")
+      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+      return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1592,6 +1625,9 @@ public final class Annotator {
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, tags_.getRaw(i));
+      }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        output.writeEnum(4, tier_);
       }
       unknownFields.writeTo(output);
     }
@@ -1618,6 +1654,10 @@ public final class Annotator {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, tier_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1643,6 +1683,7 @@ public final class Annotator {
           .equals(other.getFeaturesList());
       result = result && getTagsList()
           .equals(other.getTagsList());
+      result = result && tier_ == other.tier_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -1666,6 +1707,8 @@ public final class Annotator {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
       }
+      hash = (37 * hash) + TIER_FIELD_NUMBER;
+      hash = (53 * hash) + tier_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1814,6 +1857,8 @@ public final class Annotator {
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        tier_ = 0;
+
         return this;
       }
 
@@ -1861,6 +1906,7 @@ public final class Annotator {
           bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tags_ = tags_;
+        result.tier_ = tier_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1948,6 +1994,9 @@ public final class Annotator {
             tags_.addAll(other.tags_);
           }
           onChanged();
+        }
+        if (other.tier_ != 0) {
+          setTierValue(other.getTierValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2426,6 +2475,51 @@ public final class Annotator {
   checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
+        onChanged();
+        return this;
+      }
+
+      private int tier_ = 0;
+      /**
+       * <code>.ssn.type.Tier tier = 4;</code>
+       */
+      public int getTierValue() {
+        return tier_;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 4;</code>
+       */
+      public Builder setTierValue(int value) {
+        tier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 4;</code>
+       */
+      public ssn.type.TierOuterClass.Tier getTier() {
+        @SuppressWarnings("deprecation")
+        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+        return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 4;</code>
+       */
+      public Builder setTier(ssn.type.TierOuterClass.Tier value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        tier_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 4;</code>
+       */
+      public Builder clearTier() {
+        
+        tier_ = 0;
         onChanged();
         return this;
       }
@@ -16918,69 +17012,70 @@ public final class Annotator {
       "\n ssn/annotator/v1/annotator.proto\022\020ssn." +
       "annotator.v1\032\034google/api/annotations.pro" +
       "to\032\030ssn/type/candidate.proto\032\036ssn/type/t" +
-      "ext_annotation.proto\"\331\005\n\007Feature\022,\n\004type" +
-      "\030\001 \001(\0162\036.ssn.annotator.v1.Feature.Type\022\023" +
-      "\n\013max_results\030\002 \001(\005\0222\n\016min_confidence\030\003 " +
-      "\001(\0162\032.ssn.type.Confidence.Level\"\326\004\n\004Type" +
-      "\022\013\n\007DEFAULT\020\000\022\023\n\017TEXT_ANNOTATION\020\001\022\016\n\nOR" +
-      "DER_DATE\020\002\022\024\n\020PAYMENT_DUE_DATE\020\003\022\014\n\010CURR" +
-      "ENCY\020\004\022\r\n\tTOTAL_VAT\020\005\022\022\n\016TOTAL_INCL_VAT\020" +
-      "\006\022\022\n\016TOTAL_EXCL_VAT\020\007\022\031\n\025SUPPLIER_CORPOR" +
-      "ATE_ID\020\010\022\031\n\025SUPPLIER_COUNTRY_CODE\020\t\022\021\n\rD" +
-      "OCUMENT_TYPE\020\n\022\022\n\016PAYMENT_METHOD\020\013\022\031\n\025CR" +
-      "EDIT_CARD_LAST_FOUR\020\014\022\022\n\016INVOICE_NUMBER\020" +
-      "\r\022\024\n\020OCR_LINE_DK_TYPE\020\016\022\032\n\026OCR_LINE_DK_P" +
-      "AYMENT_ID\020\017\022\033\n\027OCR_LINE_DK_CREDITOR_ID\020\020" +
-      "\022\032\n\026OCR_LINE_SE_PAYMENT_ID\020\021\022$\n OCR_LINE" +
-      "_SE_BANKGIRO_CREDITOR_ID\020\022\022$\n OCR_LINE_S" +
-      "E_PLUSGIRO_CREDITOR_ID\020\023\022\032\n\026OCR_LINE_NO_" +
-      "PAYMENT_ID\020\024\022\032\n\026OCR_LINE_FI_PAYMENT_ID\020\025" +
-      "\022\032\n\026OCR_LINE_NL_PAYMENT_ID\020\026\022\010\n\004TEXT\020\027\022\010" +
-      "\n\004IBAN\020\030\022\t\n\005LINES\020\031\022\013\n\007PREVIEW\020\032\"\203\001\n\030Doc" +
-      "umentAnnotatorRequest\022,\n\010document\030\001 \001(\0132" +
-      "\032.ssn.annotator.v1.Document\022+\n\010features\030" +
-      "\002 \003(\0132\031.ssn.annotator.v1.Feature\022\014\n\004tags" +
-      "\030\003 \003(\t\"\334\t\n\031DocumentAnnotatorResponse\022\'\n\n" +
-      "order_date\030\001 \003(\0132\023.ssn.type.Candidate\022-\n" +
-      "\020payment_due_date\030\002 \003(\0132\023.ssn.type.Candi" +
-      "date\022%\n\010currency\030\003 \003(\0132\023.ssn.type.Candid" +
-      "ate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn.type.Candid" +
-      "ate\022+\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.C" +
-      "andidate\022+\n\016total_excl_vat\030\006 \003(\0132\023.ssn.t" +
-      "ype.Candidate\0222\n\025supplier_corporate_id\030\007" +
-      " \003(\0132\023.ssn.type.Candidate\0222\n\025supplier_co" +
-      "untry_code\030\010 \003(\0132\023.ssn.type.Candidate\022*\n" +
-      "\rdocument_type\030\t \003(\0132\023.ssn.type.Candidat" +
-      "e\022+\n\016payment_method\030\n \003(\0132\023.ssn.type.Can" +
-      "didate\0222\n\025credit_card_last_four\030\013 \003(\0132\023." +
-      "ssn.type.Candidate\022+\n\016invoice_number\030\014 \003" +
-      "(\0132\023.ssn.type.Candidate\0221\n\017text_annotati" +
-      "on\030\r \001(\0132\030.ssn.type.TextAnnotation\022-\n\020oc" +
-      "r_line_dk_type\030\016 \003(\0132\023.ssn.type.Candidat" +
-      "e\0223\n\026ocr_line_dk_payment_id\030\017 \003(\0132\023.ssn." +
-      "type.Candidate\0224\n\027ocr_line_dk_creditor_i" +
-      "d\030\020 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_line" +
-      "_se_payment_id\030\021 \003(\0132\023.ssn.type.Candidat" +
-      "e\022=\n ocr_line_se_bankgiro_creditor_id\030\022 " +
-      "\003(\0132\023.ssn.type.Candidate\022=\n ocr_line_se_" +
-      "plusgiro_creditor_id\030\023 \003(\0132\023.ssn.type.Ca" +
-      "ndidate\0223\n\026ocr_line_no_payment_id\030\024 \003(\0132" +
-      "\023.ssn.type.Candidate\0223\n\026ocr_line_fi_paym" +
-      "ent_id\030\025 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr" +
-      "_line_nl_payment_id\030\026 \003(\0132\023.ssn.type.Can" +
-      "didate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedback_id\030\030 \001(" +
-      "\t\022!\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate\022&\n\005" +
-      "lines\030\032 \003(\0132\027.ssn.type.LineCandidate\022\017\n\007" +
-      "preview\030\033 \001(\t\"M\n\010Document\022\017\n\007content\030\001 \001" +
-      "(\014\0220\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Do" +
-      "cumentSource\"\"\n\016DocumentSource\022\020\n\010http_u" +
-      "ri\030\001 \001(\t2\243\001\n\021DocumentAnnotator\022\215\001\n\020Annot" +
-      "ateDocument\022*.ssn.annotator.v1.DocumentA" +
-      "nnotatorRequest\032+.ssn.annotator.v1.Docum" +
-      "entAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/docume" +
-      "nt:annotate:\001*B@Z>github.com/e-conomic/v" +
-      "mlapis/gen/go/ssn/annotator/v1;annotator" +
-      "b\006proto3"
+      "ext_annotation.proto\032\023ssn/type/tier.prot" +
+      "o\"\331\005\n\007Feature\022,\n\004type\030\001 \001(\0162\036.ssn.annota" +
+      "tor.v1.Feature.Type\022\023\n\013max_results\030\002 \001(\005" +
+      "\0222\n\016min_confidence\030\003 \001(\0162\032.ssn.type.Conf" +
+      "idence.Level\"\326\004\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017TE" +
+      "XT_ANNOTATION\020\001\022\016\n\nORDER_DATE\020\002\022\024\n\020PAYME" +
+      "NT_DUE_DATE\020\003\022\014\n\010CURRENCY\020\004\022\r\n\tTOTAL_VAT" +
+      "\020\005\022\022\n\016TOTAL_INCL_VAT\020\006\022\022\n\016TOTAL_EXCL_VAT" +
+      "\020\007\022\031\n\025SUPPLIER_CORPORATE_ID\020\010\022\031\n\025SUPPLIE" +
+      "R_COUNTRY_CODE\020\t\022\021\n\rDOCUMENT_TYPE\020\n\022\022\n\016P" +
+      "AYMENT_METHOD\020\013\022\031\n\025CREDIT_CARD_LAST_FOUR" +
+      "\020\014\022\022\n\016INVOICE_NUMBER\020\r\022\024\n\020OCR_LINE_DK_TY" +
+      "PE\020\016\022\032\n\026OCR_LINE_DK_PAYMENT_ID\020\017\022\033\n\027OCR_" +
+      "LINE_DK_CREDITOR_ID\020\020\022\032\n\026OCR_LINE_SE_PAY" +
+      "MENT_ID\020\021\022$\n OCR_LINE_SE_BANKGIRO_CREDIT" +
+      "OR_ID\020\022\022$\n OCR_LINE_SE_PLUSGIRO_CREDITOR" +
+      "_ID\020\023\022\032\n\026OCR_LINE_NO_PAYMENT_ID\020\024\022\032\n\026OCR" +
+      "_LINE_FI_PAYMENT_ID\020\025\022\032\n\026OCR_LINE_NL_PAY" +
+      "MENT_ID\020\026\022\010\n\004TEXT\020\027\022\010\n\004IBAN\020\030\022\t\n\005LINES\020\031" +
+      "\022\013\n\007PREVIEW\020\032\"\241\001\n\030DocumentAnnotatorReque" +
+      "st\022,\n\010document\030\001 \001(\0132\032.ssn.annotator.v1." +
+      "Document\022+\n\010features\030\002 \003(\0132\031.ssn.annotat" +
+      "or.v1.Feature\022\014\n\004tags\030\003 \003(\t\022\034\n\004tier\030\004 \001(" +
+      "\0162\016.ssn.type.Tier\"\334\t\n\031DocumentAnnotatorR" +
+      "esponse\022\'\n\norder_date\030\001 \003(\0132\023.ssn.type.C" +
+      "andidate\022-\n\020payment_due_date\030\002 \003(\0132\023.ssn" +
+      ".type.Candidate\022%\n\010currency\030\003 \003(\0132\023.ssn." +
+      "type.Candidate\022&\n\ttotal_vat\030\004 \003(\0132\023.ssn." +
+      "type.Candidate\022+\n\016total_incl_vat\030\005 \003(\0132\023" +
+      ".ssn.type.Candidate\022+\n\016total_excl_vat\030\006 " +
+      "\003(\0132\023.ssn.type.Candidate\0222\n\025supplier_cor" +
+      "porate_id\030\007 \003(\0132\023.ssn.type.Candidate\0222\n\025" +
+      "supplier_country_code\030\010 \003(\0132\023.ssn.type.C" +
+      "andidate\022*\n\rdocument_type\030\t \003(\0132\023.ssn.ty" +
+      "pe.Candidate\022+\n\016payment_method\030\n \003(\0132\023.s" +
+      "sn.type.Candidate\0222\n\025credit_card_last_fo" +
+      "ur\030\013 \003(\0132\023.ssn.type.Candidate\022+\n\016invoice" +
+      "_number\030\014 \003(\0132\023.ssn.type.Candidate\0221\n\017te" +
+      "xt_annotation\030\r \001(\0132\030.ssn.type.TextAnnot" +
+      "ation\022-\n\020ocr_line_dk_type\030\016 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\0223\n\026ocr_line_dk_payment_id\030\017" +
+      " \003(\0132\023.ssn.type.Candidate\0224\n\027ocr_line_dk" +
+      "_creditor_id\030\020 \003(\0132\023.ssn.type.Candidate\022" +
+      "3\n\026ocr_line_se_payment_id\030\021 \003(\0132\023.ssn.ty" +
+      "pe.Candidate\022=\n ocr_line_se_bankgiro_cre" +
+      "ditor_id\030\022 \003(\0132\023.ssn.type.Candidate\022=\n o" +
+      "cr_line_se_plusgiro_creditor_id\030\023 \003(\0132\023." +
+      "ssn.type.Candidate\0223\n\026ocr_line_no_paymen" +
+      "t_id\030\024 \003(\0132\023.ssn.type.Candidate\0223\n\026ocr_l" +
+      "ine_fi_payment_id\030\025 \003(\0132\023.ssn.type.Candi" +
+      "date\0223\n\026ocr_line_nl_payment_id\030\026 \003(\0132\023.s" +
+      "sn.type.Candidate\022\014\n\004text\030\027 \001(\t\022\023\n\013feedb" +
+      "ack_id\030\030 \001(\t\022!\n\004iban\030\031 \003(\0132\023.ssn.type.Ca" +
+      "ndidate\022&\n\005lines\030\032 \003(\0132\027.ssn.type.LineCa" +
+      "ndidate\022\017\n\007preview\030\033 \001(\t\"M\n\010Document\022\017\n\007" +
+      "content\030\001 \001(\014\0220\n\006source\030\002 \001(\0132 .ssn.anno" +
+      "tator.v1.DocumentSource\"\"\n\016DocumentSourc" +
+      "e\022\020\n\010http_uri\030\001 \001(\t2\243\001\n\021DocumentAnnotato" +
+      "r\022\215\001\n\020AnnotateDocument\022*.ssn.annotator.v" +
+      "1.DocumentAnnotatorRequest\032+.ssn.annotat" +
+      "or.v1.DocumentAnnotatorResponse\" \202\323\344\223\002\032\"" +
+      "\025/v1/document:annotate:\001*B@Z>github.com/" +
+      "e-conomic/vmlapis/gen/go/ssn/annotator/v" +
+      "1;annotatorb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16996,6 +17091,7 @@ public final class Annotator {
           com.google.api.AnnotationsProto.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
+          ssn.type.TierOuterClass.getDescriptor(),
         }, assigner);
     internal_static_ssn_annotator_v1_Feature_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -17008,7 +17104,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorRequest_descriptor,
-        new java.lang.String[] { "Document", "Features", "Tags", });
+        new java.lang.String[] { "Document", "Features", "Tags", "Tier", });
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
@@ -17035,6 +17131,7 @@ public final class Annotator {
     com.google.api.AnnotationsProto.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
+    ssn.type.TierOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

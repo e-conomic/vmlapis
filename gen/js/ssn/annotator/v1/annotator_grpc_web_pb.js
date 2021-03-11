@@ -17,6 +17,8 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
+
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js')
 const proto = {};
 proto.ssn = {};
 proto.ssn.annotator = {};

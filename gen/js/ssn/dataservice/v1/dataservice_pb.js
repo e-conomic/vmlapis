@@ -19,6 +19,7 @@ var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrapp
 var google_type_date_pb = require('../../../google/type/date_pb.js');
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
+var ssn_type_tier_pb = require('../../../ssn/type/tier_pb.js');
 goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonth', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.CallsPerMonthResponse', null, global);
 goog.exportSymbol('proto.ssn.dataservice.v1.Correctness', null, global);
@@ -3999,7 +4000,8 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     invoiceNumberList: jspb.Message.toObjectList(msg.getInvoiceNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
-    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    tier: jspb.Message.getFieldWithDefault(msg, 30, 0)
   };
 
   if (includeInstance) {
@@ -4145,6 +4147,10 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 30:
+      var value = /** @type {!proto.ssn.type.Tier} */ (reader.readEnum());
+      msg.setTier(value);
       break;
     default:
       reader.skipField();
@@ -4349,6 +4355,13 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
       22,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getTier();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      30,
+      f
     );
   }
 };
@@ -5033,6 +5046,21 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addIban = function(opt_val
 
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearIbanList = function() {
   this.setIbanList([]);
+};
+
+
+/**
+ * optional ssn.type.Tier tier = 30;
+ * @return {!proto.ssn.type.Tier}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getTier = function() {
+  return /** @type {!proto.ssn.type.Tier} */ (jspb.Message.getFieldWithDefault(this, 30, 0));
+};
+
+
+/** @param {!proto.ssn.type.Tier} value */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setTier = function(value) {
+  jspb.Message.setProto3EnumField(this, 30, value);
 };
 
 

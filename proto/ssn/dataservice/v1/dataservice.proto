@@ -11,6 +11,7 @@ import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/tier.proto";
 import "ssn/type/text_annotation.proto";
 
 service DataService {
@@ -154,6 +155,7 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec supplier_country_code = 20;
   repeated ssn.type.ModelSpec invoice_number = 21;
   repeated ssn.type.ModelSpec iban = 22;
+  ssn.type.Tier tier = 30;
 }
 
 message CreateDocumentRequest {
