@@ -129,7 +129,7 @@ namespace Ssn.Dataservice.V1 {
             "FXN1cHBsaWVyX2NvdW50cnlfY29kZRgUIAMoCzIbLmdvb2dsZS5wcm90b2J1",
             "Zi5GbG9hdFZhbHVlEjMKDmludm9pY2VfbnVtYmVyGBUgAygLMhsuZ29vZ2xl",
             "LnByb3RvYnVmLkZsb2F0VmFsdWUSKQoEaWJhbhgWIAMoCzIbLmdvb2dsZS5w",
-            "cm90b2J1Zi5GbG9hdFZhbHVlIuQIChJQcmVkaWN0aW9uTWV0YWRhdGESKwoO",
+            "cm90b2J1Zi5GbG9hdFZhbHVlIsYIChJQcmVkaWN0aW9uTWV0YWRhdGESKwoO",
             "dG90YWxfaW5jbF92YXQYASADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSJgoJ",
             "dG90YWxfdmF0GAIgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEisKDnRvdGFs",
             "X2V4Y2xfdmF0GAMgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVjEicKCm9yZGVy",
@@ -153,20 +153,20 @@ namespace Ssn.Dataservice.V1 {
             "b3Jwb3JhdGVfaWQYEyADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSMgoVc3Vw",
             "cGxpZXJfY291bnRyeV9jb2RlGBQgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVj",
             "EisKDmludm9pY2VfbnVtYmVyGBUgAygLMhMuc3NuLnR5cGUuTW9kZWxTcGVj",
-            "EiEKBGliYW4YFiADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMSHAoEdGllchge",
-            "IAEoDjIOLnNzbi50eXBlLlRpZXIiRwoVQ3JlYXRlRG9jdW1lbnRSZXF1ZXN0",
-            "Ei4KCGRvY3VtZW50GAEgASgLMhwuc3NuLmRhdGFzZXJ2aWNlLnYxLkRvY3Vt",
-            "ZW50IiQKFkNyZWF0ZURvY3VtZW50UmVzcG9uc2USCgoCaWQYASABKAkiIQoT",
-            "UmVhZERvY3VtZW50UmVxdWVzdBIKCgJpZBgBIAEoCSJGChRSZWFkRG9jdW1l",
-            "bnRSZXNwb25zZRIuCghkb2N1bWVudBgBIAEoCzIcLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5Eb2N1bWVudCKwAgoWUHJlcGFyZUZlZWRiYWNrUmVxdWVzdBIKCgJp",
-            "ZBgBIAEoCRIkCgJ0YRgCIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9u",
-            "EhYKDmRvY3VtZW50X2J5dGVzGAMgASgMEjkKC3ByZWRpY3Rpb25zGAQgASgL",
-            "MiQuc3NuLmRhdGFzZXJ2aWNlLnYxLlByZWRpY3Rpb25WYWx1ZXMSDAoEdGFn",
-            "cxgFIAMoCRI+Cgtjb25maWRlbmNlcxgGIAEoCzIpLnNzbi5kYXRhc2Vydmlj",
-            "ZS52MS5QcmVkaWN0aW9uQ29uZmlkZW5jZXMSQwoTcHJlZGljdGlvbl9tZXRh",
-            "ZGF0YRgHIAEoCzImLnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0aW9uTWV0",
-            "YWRhdGEiYAoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjMKC3RydWVf",
+            "EiEKBGliYW4YFiADKAsyEy5zc24udHlwZS5Nb2RlbFNwZWMiRwoVQ3JlYXRl",
+            "RG9jdW1lbnRSZXF1ZXN0Ei4KCGRvY3VtZW50GAEgASgLMhwuc3NuLmRhdGFz",
+            "ZXJ2aWNlLnYxLkRvY3VtZW50IiQKFkNyZWF0ZURvY3VtZW50UmVzcG9uc2US",
+            "CgoCaWQYASABKAkiIQoTUmVhZERvY3VtZW50UmVxdWVzdBIKCgJpZBgBIAEo",
+            "CSJGChRSZWFkRG9jdW1lbnRSZXNwb25zZRIuCghkb2N1bWVudBgBIAEoCzIc",
+            "LnNzbi5kYXRhc2VydmljZS52MS5Eb2N1bWVudCLOAgoWUHJlcGFyZUZlZWRi",
+            "YWNrUmVxdWVzdBIKCgJpZBgBIAEoCRIkCgJ0YRgCIAEoCzIYLnNzbi50eXBl",
+            "LlRleHRBbm5vdGF0aW9uEhYKDmRvY3VtZW50X2J5dGVzGAMgASgMEjkKC3By",
+            "ZWRpY3Rpb25zGAQgASgLMiQuc3NuLmRhdGFzZXJ2aWNlLnYxLlByZWRpY3Rp",
+            "b25WYWx1ZXMSDAoEdGFncxgFIAMoCRI+Cgtjb25maWRlbmNlcxgGIAEoCzIp",
+            "LnNzbi5kYXRhc2VydmljZS52MS5QcmVkaWN0aW9uQ29uZmlkZW5jZXMSQwoT",
+            "cHJlZGljdGlvbl9tZXRhZGF0YRgHIAEoCzImLnNzbi5kYXRhc2VydmljZS52",
+            "MS5QcmVkaWN0aW9uTWV0YWRhdGESHAoEdGllchgIIAEoDjIOLnNzbi50eXBl",
+            "LlRpZXIiYAoPRmVlZGJhY2tSZXF1ZXN0EgoKAmlkGAEgASgJEjMKC3RydWVf",
             "dmFsdWVzGAIgASgLMh4uc3NuLmRhdGFzZXJ2aWNlLnYxLlRydWVWYWx1ZXMS",
             "DAoEdGFncxgDIAMoCSJUCg5NZXRyaWNzUmVxdWVzdBISCgpzdGFydF90aW1l",
             "GAIgASgDEhAKCGVuZF90aW1lGAMgASgDEg4KBmZpZWxkcxgEIAMoCRIMCgR0",
@@ -206,12 +206,12 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.TrueValues), global::Ssn.Dataservice.V1.TrueValues.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PredictionValues), global::Ssn.Dataservice.V1.PredictionValues.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PredictionConfidences), global::Ssn.Dataservice.V1.PredictionConfidences.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PredictionMetadata), global::Ssn.Dataservice.V1.PredictionMetadata.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "Tier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PredictionMetadata), global::Ssn.Dataservice.V1.PredictionMetadata.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CreateDocumentRequest), global::Ssn.Dataservice.V1.CreateDocumentRequest.Parser, new[]{ "Document" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.CreateDocumentResponse), global::Ssn.Dataservice.V1.CreateDocumentResponse.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentRequest), global::Ssn.Dataservice.V1.ReadDocumentRequest.Parser, new[]{ "Id" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentResponse), global::Ssn.Dataservice.V1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null),
@@ -2586,7 +2586,6 @@ namespace Ssn.Dataservice.V1 {
       supplierCountryCode_ = other.supplierCountryCode_.Clone();
       invoiceNumber_ = other.invoiceNumber_.Clone();
       iban_ = other.iban_.Clone();
-      tier_ = other.tier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2815,17 +2814,6 @@ namespace Ssn.Dataservice.V1 {
       get { return iban_; }
     }
 
-    /// <summary>Field number for the "tier" field.</summary>
-    public const int TierFieldNumber = 30;
-    private global::Ssn.Type.Tier tier_ = 0;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Ssn.Type.Tier Tier {
-      get { return tier_; }
-      set {
-        tier_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PredictionMetadata);
@@ -2861,7 +2849,6 @@ namespace Ssn.Dataservice.V1 {
       if(!supplierCountryCode_.Equals(other.supplierCountryCode_)) return false;
       if(!invoiceNumber_.Equals(other.invoiceNumber_)) return false;
       if(!iban_.Equals(other.iban_)) return false;
-      if (Tier != other.Tier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2890,7 +2877,6 @@ namespace Ssn.Dataservice.V1 {
       hash ^= supplierCountryCode_.GetHashCode();
       hash ^= invoiceNumber_.GetHashCode();
       hash ^= iban_.GetHashCode();
-      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2926,10 +2912,6 @@ namespace Ssn.Dataservice.V1 {
       supplierCountryCode_.WriteTo(output, _repeated_supplierCountryCode_codec);
       invoiceNumber_.WriteTo(output, _repeated_invoiceNumber_codec);
       iban_.WriteTo(output, _repeated_iban_codec);
-      if (Tier != 0) {
-        output.WriteRawTag(240, 1);
-        output.WriteEnum((int) Tier);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2960,9 +2942,6 @@ namespace Ssn.Dataservice.V1 {
       size += supplierCountryCode_.CalculateSize(_repeated_supplierCountryCode_codec);
       size += invoiceNumber_.CalculateSize(_repeated_invoiceNumber_codec);
       size += iban_.CalculateSize(_repeated_iban_codec);
-      if (Tier != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2996,9 +2975,6 @@ namespace Ssn.Dataservice.V1 {
       supplierCountryCode_.Add(other.supplierCountryCode_);
       invoiceNumber_.Add(other.invoiceNumber_);
       iban_.Add(other.iban_);
-      if (other.Tier != 0) {
-        Tier = other.Tier;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3096,10 +3072,6 @@ namespace Ssn.Dataservice.V1 {
           }
           case 178: {
             iban_.AddEntriesFrom(input, _repeated_iban_codec);
-            break;
-          }
-          case 240: {
-            tier_ = (global::Ssn.Type.Tier) input.ReadEnum();
             break;
           }
         }
@@ -3668,6 +3640,7 @@ namespace Ssn.Dataservice.V1 {
       tags_ = other.tags_.Clone();
       confidences_ = other.confidences_ != null ? other.confidences_.Clone() : null;
       predictionMetadata_ = other.predictionMetadata_ != null ? other.predictionMetadata_.Clone() : null;
+      tier_ = other.tier_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3752,6 +3725,17 @@ namespace Ssn.Dataservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "tier" field.</summary>
+    public const int TierFieldNumber = 8;
+    private global::Ssn.Type.Tier tier_ = 0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Ssn.Type.Tier Tier {
+      get { return tier_; }
+      set {
+        tier_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PrepareFeedbackRequest);
@@ -3772,6 +3756,7 @@ namespace Ssn.Dataservice.V1 {
       if(!tags_.Equals(other.tags_)) return false;
       if (!object.Equals(Confidences, other.Confidences)) return false;
       if (!object.Equals(PredictionMetadata, other.PredictionMetadata)) return false;
+      if (Tier != other.Tier) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3785,6 +3770,7 @@ namespace Ssn.Dataservice.V1 {
       hash ^= tags_.GetHashCode();
       if (confidences_ != null) hash ^= Confidences.GetHashCode();
       if (predictionMetadata_ != null) hash ^= PredictionMetadata.GetHashCode();
+      if (Tier != 0) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3823,6 +3809,10 @@ namespace Ssn.Dataservice.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(PredictionMetadata);
       }
+      if (Tier != 0) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) Tier);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3849,6 +3839,9 @@ namespace Ssn.Dataservice.V1 {
       }
       if (predictionMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PredictionMetadata);
+      }
+      if (Tier != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3891,6 +3884,9 @@ namespace Ssn.Dataservice.V1 {
           predictionMetadata_ = new global::Ssn.Dataservice.V1.PredictionMetadata();
         }
         PredictionMetadata.MergeFrom(other.PredictionMetadata);
+      }
+      if (other.Tier != 0) {
+        Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3941,6 +3937,10 @@ namespace Ssn.Dataservice.V1 {
               predictionMetadata_ = new global::Ssn.Dataservice.V1.PredictionMetadata();
             }
             input.ReadMessage(predictionMetadata_);
+            break;
+          }
+          case 64: {
+            tier_ = (global::Ssn.Type.Tier) input.ReadEnum();
             break;
           }
         }

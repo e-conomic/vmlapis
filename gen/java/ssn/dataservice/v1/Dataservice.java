@@ -24185,15 +24185,6 @@ public final class Dataservice {
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getIbanOrBuilder(
         int index);
-
-    /**
-     * <code>.ssn.type.Tier tier = 30;</code>
-     */
-    int getTierValue();
-    /**
-     * <code>.ssn.type.Tier tier = 30;</code>
-     */
-    ssn.type.TierOuterClass.Tier getTier();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionMetadata}
@@ -24230,7 +24221,6 @@ public final class Dataservice {
       supplierCountryCode_ = java.util.Collections.emptyList();
       invoiceNumber_ = java.util.Collections.emptyList();
       iban_ = java.util.Collections.emptyList();
-      tier_ = 0;
     }
 
     @java.lang.Override
@@ -24455,12 +24445,6 @@ public final class Dataservice {
                   input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
               break;
             }
-            case 240: {
-              int rawValue = input.readEnum();
-
-              tier_ = rawValue;
-              break;
-            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -24559,7 +24543,6 @@ public final class Dataservice {
               ssn.dataservice.v1.Dataservice.PredictionMetadata.class, ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder.class);
     }
 
-    private int bitField0_;
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalInclVat_;
     /**
@@ -25330,23 +25313,6 @@ public final class Dataservice {
       return iban_.get(index);
     }
 
-    public static final int TIER_FIELD_NUMBER = 30;
-    private int tier_;
-    /**
-     * <code>.ssn.type.Tier tier = 30;</code>
-     */
-    public int getTierValue() {
-      return tier_;
-    }
-    /**
-     * <code>.ssn.type.Tier tier = 30;</code>
-     */
-    public ssn.type.TierOuterClass.Tier getTier() {
-      @SuppressWarnings("deprecation")
-      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
-      return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -25426,9 +25392,6 @@ public final class Dataservice {
       }
       for (int i = 0; i < iban_.size(); i++) {
         output.writeMessage(22, iban_.get(i));
-      }
-      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
-        output.writeEnum(30, tier_);
       }
       unknownFields.writeTo(output);
     }
@@ -25527,10 +25490,6 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, iban_.get(i));
       }
-      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(30, tier_);
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -25591,7 +25550,6 @@ public final class Dataservice {
           .equals(other.getInvoiceNumberList());
       result = result && getIbanList()
           .equals(other.getIbanList());
-      result = result && tier_ == other.tier_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -25691,8 +25649,6 @@ public final class Dataservice {
         hash = (37 * hash) + IBAN_FIELD_NUMBER;
         hash = (53 * hash) + getIbanList().hashCode();
       }
-      hash = (37 * hash) + TIER_FIELD_NUMBER;
-      hash = (53 * hash) + tier_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25980,8 +25936,6 @@ public final class Dataservice {
         } else {
           ibanBuilder_.clear();
         }
-        tier_ = 0;
-
         return this;
       }
 
@@ -26009,7 +25963,6 @@ public final class Dataservice {
       public ssn.dataservice.v1.Dataservice.PredictionMetadata buildPartial() {
         ssn.dataservice.v1.Dataservice.PredictionMetadata result = new ssn.dataservice.v1.Dataservice.PredictionMetadata(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -26208,8 +26161,6 @@ public final class Dataservice {
         } else {
           result.iban_ = ibanBuilder_.build();
         }
-        result.tier_ = tier_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -26829,9 +26780,6 @@ public final class Dataservice {
               ibanBuilder_.addAllMessages(other.iban_);
             }
           }
-        }
-        if (other.tier_ != 0) {
-          setTierValue(other.getTierValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -32142,51 +32090,6 @@ public final class Dataservice {
         }
         return ibanBuilder_;
       }
-
-      private int tier_ = 0;
-      /**
-       * <code>.ssn.type.Tier tier = 30;</code>
-       */
-      public int getTierValue() {
-        return tier_;
-      }
-      /**
-       * <code>.ssn.type.Tier tier = 30;</code>
-       */
-      public Builder setTierValue(int value) {
-        tier_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ssn.type.Tier tier = 30;</code>
-       */
-      public ssn.type.TierOuterClass.Tier getTier() {
-        @SuppressWarnings("deprecation")
-        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
-        return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.ssn.type.Tier tier = 30;</code>
-       */
-      public Builder setTier(ssn.type.TierOuterClass.Tier value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        tier_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ssn.type.Tier tier = 30;</code>
-       */
-      public Builder clearTier() {
-        
-        tier_ = 0;
-        onChanged();
-        return this;
-      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -34643,6 +34546,15 @@ public final class Dataservice {
      * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7;</code>
      */
     ssn.dataservice.v1.Dataservice.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder();
+
+    /**
+     * <code>.ssn.type.Tier tier = 8;</code>
+     */
+    int getTierValue();
+    /**
+     * <code>.ssn.type.Tier tier = 8;</code>
+     */
+    ssn.type.TierOuterClass.Tier getTier();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PrepareFeedbackRequest}
@@ -34660,6 +34572,7 @@ public final class Dataservice {
       id_ = "";
       documentBytes_ = com.google.protobuf.ByteString.EMPTY;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      tier_ = 0;
     }
 
     @java.lang.Override
@@ -34756,6 +34669,12 @@ public final class Dataservice {
                 predictionMetadata_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 64: {
+              int rawValue = input.readEnum();
+
+              tier_ = rawValue;
               break;
             }
             default: {
@@ -34950,6 +34869,23 @@ public final class Dataservice {
       return getPredictionMetadata();
     }
 
+    public static final int TIER_FIELD_NUMBER = 8;
+    private int tier_;
+    /**
+     * <code>.ssn.type.Tier tier = 8;</code>
+     */
+    public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <code>.ssn.type.Tier tier = 8;</code>
+     */
+    public ssn.type.TierOuterClass.Tier getTier() {
+      @SuppressWarnings("deprecation")
+      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+      return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -34984,6 +34920,9 @@ public final class Dataservice {
       }
       if (predictionMetadata_ != null) {
         output.writeMessage(7, getPredictionMetadata());
+      }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        output.writeEnum(8, tier_);
       }
       unknownFields.writeTo(output);
     }
@@ -35024,6 +34963,10 @@ public final class Dataservice {
       if (predictionMetadata_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, getPredictionMetadata());
+      }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(8, tier_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -35067,6 +35010,7 @@ public final class Dataservice {
         result = result && getPredictionMetadata()
             .equals(other.getPredictionMetadata());
       }
+      result = result && tier_ == other.tier_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -35102,6 +35046,8 @@ public final class Dataservice {
         hash = (37 * hash) + PREDICTION_METADATA_FIELD_NUMBER;
         hash = (53 * hash) + getPredictionMetadata().hashCode();
       }
+      hash = (37 * hash) + TIER_FIELD_NUMBER;
+      hash = (53 * hash) + tier_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -35265,6 +35211,8 @@ public final class Dataservice {
           predictionMetadata_ = null;
           predictionMetadataBuilder_ = null;
         }
+        tier_ = 0;
+
         return this;
       }
 
@@ -35320,6 +35268,7 @@ public final class Dataservice {
         } else {
           result.predictionMetadata_ = predictionMetadataBuilder_.build();
         }
+        result.tier_ = tier_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -35397,6 +35346,9 @@ public final class Dataservice {
         }
         if (other.hasPredictionMetadata()) {
           mergePredictionMetadata(other.getPredictionMetadata());
+        }
+        if (other.tier_ != 0) {
+          setTierValue(other.getTierValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -36086,6 +36038,51 @@ public final class Dataservice {
           predictionMetadata_ = null;
         }
         return predictionMetadataBuilder_;
+      }
+
+      private int tier_ = 0;
+      /**
+       * <code>.ssn.type.Tier tier = 8;</code>
+       */
+      public int getTierValue() {
+        return tier_;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 8;</code>
+       */
+      public Builder setTierValue(int value) {
+        tier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 8;</code>
+       */
+      public ssn.type.TierOuterClass.Tier getTier() {
+        @SuppressWarnings("deprecation")
+        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+        return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 8;</code>
+       */
+      public Builder setTier(ssn.type.TierOuterClass.Tier value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        tier_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 8;</code>
+       */
+      public Builder clearTier() {
+        
+        tier_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -42130,7 +42127,7 @@ public final class Dataservice {
       "country_code\030\024 \003(\0132\033.google.protobuf.Flo" +
       "atValue\0223\n\016invoice_number\030\025 \003(\0132\033.google" +
       ".protobuf.FloatValue\022)\n\004iban\030\026 \003(\0132\033.goo" +
-      "gle.protobuf.FloatValue\"\344\010\n\022PredictionMe" +
+      "gle.protobuf.FloatValue\"\306\010\n\022PredictionMe" +
       "tadata\022+\n\016total_incl_vat\030\001 \003(\0132\023.ssn.typ" +
       "e.ModelSpec\022&\n\ttotal_vat\030\002 \003(\0132\023.ssn.typ" +
       "e.ModelSpec\022+\n\016total_excl_vat\030\003 \003(\0132\023.ss" +
@@ -42158,20 +42155,20 @@ public final class Dataservice {
       "_country_code\030\024 \003(\0132\023.ssn.type.ModelSpec" +
       "\022+\n\016invoice_number\030\025 \003(\0132\023.ssn.type.Mode" +
       "lSpec\022!\n\004iban\030\026 \003(\0132\023.ssn.type.ModelSpec" +
-      "\022\034\n\004tier\030\036 \001(\0162\016.ssn.type.Tier\"G\n\025Create" +
-      "DocumentRequest\022.\n\010document\030\001 \001(\0132\034.ssn." +
-      "dataservice.v1.Document\"$\n\026CreateDocumen" +
-      "tResponse\022\n\n\002id\030\001 \001(\t\"!\n\023ReadDocumentReq" +
-      "uest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocumentResponse" +
-      "\022.\n\010document\030\001 \001(\0132\034.ssn.dataservice.v1." +
-      "Document\"\260\002\n\026PrepareFeedbackRequest\022\n\n\002i" +
-      "d\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnot" +
-      "ation\022\026\n\016document_bytes\030\003 \001(\014\0229\n\013predict" +
-      "ions\030\004 \001(\0132$.ssn.dataservice.v1.Predicti" +
-      "onValues\022\014\n\004tags\030\005 \003(\t\022>\n\013confidences\030\006 " +
-      "\001(\0132).ssn.dataservice.v1.PredictionConfi" +
-      "dences\022C\n\023prediction_metadata\030\007 \001(\0132&.ss" +
-      "n.dataservice.v1.PredictionMetadata\"`\n\017F" +
+      "\"G\n\025CreateDocumentRequest\022.\n\010document\030\001 " +
+      "\001(\0132\034.ssn.dataservice.v1.Document\"$\n\026Cre" +
+      "ateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023ReadD" +
+      "ocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocume" +
+      "ntResponse\022.\n\010document\030\001 \001(\0132\034.ssn.datas" +
+      "ervice.v1.Document\"\316\002\n\026PrepareFeedbackRe" +
+      "quest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type" +
+      ".TextAnnotation\022\026\n\016document_bytes\030\003 \001(\014\022" +
+      "9\n\013predictions\030\004 \001(\0132$.ssn.dataservice.v" +
+      "1.PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013conf" +
+      "idences\030\006 \001(\0132).ssn.dataservice.v1.Predi" +
+      "ctionConfidences\022C\n\023prediction_metadata\030" +
+      "\007 \001(\0132&.ssn.dataservice.v1.PredictionMet" +
+      "adata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\"`\n\017F" +
       "eedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_value" +
       "s\030\002 \001(\0132\036.ssn.dataservice.v1.TrueValues\022" +
       "\014\n\004tags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart" +
@@ -42260,7 +42257,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1_PredictionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "Tier", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", });
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_fieldAccessorTable = new
@@ -42290,7 +42287,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PrepareFeedbackRequest_descriptor,
-        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", });
+        new java.lang.String[] { "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", });
     internal_static_ssn_dataservice_v1_FeedbackRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_ssn_dataservice_v1_FeedbackRequest_fieldAccessorTable = new
