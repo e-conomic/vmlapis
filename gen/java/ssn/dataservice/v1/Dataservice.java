@@ -24185,6 +24185,15 @@ public final class Dataservice {
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getIbanOrBuilder(
         int index);
+
+    /**
+     * <code>.ssn.type.Tier tier = 30;</code>
+     */
+    int getTierValue();
+    /**
+     * <code>.ssn.type.Tier tier = 30;</code>
+     */
+    ssn.type.TierOuterClass.Tier getTier();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionMetadata}
@@ -24221,6 +24230,7 @@ public final class Dataservice {
       supplierCountryCode_ = java.util.Collections.emptyList();
       invoiceNumber_ = java.util.Collections.emptyList();
       iban_ = java.util.Collections.emptyList();
+      tier_ = 0;
     }
 
     @java.lang.Override
@@ -24445,6 +24455,12 @@ public final class Dataservice {
                   input.readMessage(ssn.type.CandidateOuterClass.ModelSpec.parser(), extensionRegistry));
               break;
             }
+            case 240: {
+              int rawValue = input.readEnum();
+
+              tier_ = rawValue;
+              break;
+            }
             default: {
               if (!parseUnknownFieldProto3(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -24543,6 +24559,7 @@ public final class Dataservice {
               ssn.dataservice.v1.Dataservice.PredictionMetadata.class, ssn.dataservice.v1.Dataservice.PredictionMetadata.Builder.class);
     }
 
+    private int bitField0_;
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalInclVat_;
     /**
@@ -25313,6 +25330,23 @@ public final class Dataservice {
       return iban_.get(index);
     }
 
+    public static final int TIER_FIELD_NUMBER = 30;
+    private int tier_;
+    /**
+     * <code>.ssn.type.Tier tier = 30;</code>
+     */
+    public int getTierValue() {
+      return tier_;
+    }
+    /**
+     * <code>.ssn.type.Tier tier = 30;</code>
+     */
+    public ssn.type.TierOuterClass.Tier getTier() {
+      @SuppressWarnings("deprecation")
+      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+      return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -25392,6 +25426,9 @@ public final class Dataservice {
       }
       for (int i = 0; i < iban_.size(); i++) {
         output.writeMessage(22, iban_.get(i));
+      }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        output.writeEnum(30, tier_);
       }
       unknownFields.writeTo(output);
     }
@@ -25490,6 +25527,10 @@ public final class Dataservice {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(22, iban_.get(i));
       }
+      if (tier_ != ssn.type.TierOuterClass.Tier.DEFAULT.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(30, tier_);
+      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -25550,6 +25591,7 @@ public final class Dataservice {
           .equals(other.getInvoiceNumberList());
       result = result && getIbanList()
           .equals(other.getIbanList());
+      result = result && tier_ == other.tier_;
       result = result && unknownFields.equals(other.unknownFields);
       return result;
     }
@@ -25649,6 +25691,8 @@ public final class Dataservice {
         hash = (37 * hash) + IBAN_FIELD_NUMBER;
         hash = (53 * hash) + getIbanList().hashCode();
       }
+      hash = (37 * hash) + TIER_FIELD_NUMBER;
+      hash = (53 * hash) + tier_;
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -25936,6 +25980,8 @@ public final class Dataservice {
         } else {
           ibanBuilder_.clear();
         }
+        tier_ = 0;
+
         return this;
       }
 
@@ -25963,6 +26009,7 @@ public final class Dataservice {
       public ssn.dataservice.v1.Dataservice.PredictionMetadata buildPartial() {
         ssn.dataservice.v1.Dataservice.PredictionMetadata result = new ssn.dataservice.v1.Dataservice.PredictionMetadata(this);
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -26161,6 +26208,8 @@ public final class Dataservice {
         } else {
           result.iban_ = ibanBuilder_.build();
         }
+        result.tier_ = tier_;
+        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
@@ -26780,6 +26829,9 @@ public final class Dataservice {
               ibanBuilder_.addAllMessages(other.iban_);
             }
           }
+        }
+        if (other.tier_ != 0) {
+          setTierValue(other.getTierValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -32089,6 +32141,51 @@ public final class Dataservice {
           iban_ = null;
         }
         return ibanBuilder_;
+      }
+
+      private int tier_ = 0;
+      /**
+       * <code>.ssn.type.Tier tier = 30;</code>
+       */
+      public int getTierValue() {
+        return tier_;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 30;</code>
+       */
+      public Builder setTierValue(int value) {
+        tier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 30;</code>
+       */
+      public ssn.type.TierOuterClass.Tier getTier() {
+        @SuppressWarnings("deprecation")
+        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+        return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 30;</code>
+       */
+      public Builder setTier(ssn.type.TierOuterClass.Tier value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        tier_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ssn.type.Tier tier = 30;</code>
+       */
+      public Builder clearTier() {
+        
+        tier_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -42127,7 +42224,7 @@ public final class Dataservice {
       "country_code\030\024 \003(\0132\033.google.protobuf.Flo" +
       "atValue\0223\n\016invoice_number\030\025 \003(\0132\033.google" +
       ".protobuf.FloatValue\022)\n\004iban\030\026 \003(\0132\033.goo" +
-      "gle.protobuf.FloatValue\"\306\010\n\022PredictionMe" +
+      "gle.protobuf.FloatValue\"\344\010\n\022PredictionMe" +
       "tadata\022+\n\016total_incl_vat\030\001 \003(\0132\023.ssn.typ" +
       "e.ModelSpec\022&\n\ttotal_vat\030\002 \003(\0132\023.ssn.typ" +
       "e.ModelSpec\022+\n\016total_excl_vat\030\003 \003(\0132\023.ss" +
@@ -42155,57 +42252,57 @@ public final class Dataservice {
       "_country_code\030\024 \003(\0132\023.ssn.type.ModelSpec" +
       "\022+\n\016invoice_number\030\025 \003(\0132\023.ssn.type.Mode" +
       "lSpec\022!\n\004iban\030\026 \003(\0132\023.ssn.type.ModelSpec" +
-      "\"G\n\025CreateDocumentRequest\022.\n\010document\030\001 " +
-      "\001(\0132\034.ssn.dataservice.v1.Document\"$\n\026Cre" +
-      "ateDocumentResponse\022\n\n\002id\030\001 \001(\t\"!\n\023ReadD" +
-      "ocumentRequest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocume" +
-      "ntResponse\022.\n\010document\030\001 \001(\0132\034.ssn.datas" +
-      "ervice.v1.Document\"\316\002\n\026PrepareFeedbackRe" +
-      "quest\022\n\n\002id\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type" +
-      ".TextAnnotation\022\026\n\016document_bytes\030\003 \001(\014\022" +
-      "9\n\013predictions\030\004 \001(\0132$.ssn.dataservice.v" +
-      "1.PredictionValues\022\014\n\004tags\030\005 \003(\t\022>\n\013conf" +
-      "idences\030\006 \001(\0132).ssn.dataservice.v1.Predi" +
-      "ctionConfidences\022C\n\023prediction_metadata\030" +
-      "\007 \001(\0132&.ssn.dataservice.v1.PredictionMet" +
-      "adata\022\034\n\004tier\030\010 \001(\0162\016.ssn.type.Tier\"`\n\017F" +
-      "eedbackRequest\022\n\n\002id\030\001 \001(\t\0223\n\013true_value" +
-      "s\030\002 \001(\0132\036.ssn.dataservice.v1.TrueValues\022" +
-      "\014\n\004tags\030\003 \003(\t\"T\n\016MetricsRequest\022\022\n\nstart" +
-      "_time\030\002 \001(\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030" +
-      "\004 \003(\t\022\014\n\004tags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022" +
-      "\026\n\016document_count\030\001 \001(\005\022\026\n\016feedback_coun" +
-      "t\030\002 \001(\005\022<\n\023overall_correctness\030\003 \001(\0132\037.s" +
-      "sn.dataservice.v1.Correctness\022:\n\021field_c" +
-      "orrectness\030\004 \003(\0132\037.ssn.dataservice.v1.Co" +
-      "rrectness\"\202\001\n\013Correctness\022\r\n\005field\030\001 \001(\t" +
-      "\022\032\n\022correct_percentage\030\002 \001(\002\022\035\n\025incomple" +
-      "te_percentage\030\003 \001(\002\022\030\n\020error_percentage\030" +
-      "\004 \001(\002\022\017\n\007support\030\005 \001(\005\"\035\n\rDeleteRequest\022" +
-      "\014\n\004tags\030\001 \003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030" +
-      "\001 \001(\003\022\022\n\nmonth_name\030\002 \001(\t\"S\n\025CallsPerMon" +
-      "thResponse\022:\n\017calls_per_month\030\001 \003(\0132!.ss" +
-      "n.dataservice.v1.CallsPerMonth2\265\005\n\013DataS" +
-      "ervice\022g\n\016CreateDocument\022).ssn.dataservi" +
-      "ce.v1.CreateDocumentRequest\032*.ssn.datase" +
-      "rvice.v1.CreateDocumentResponse\022a\n\014ReadD" +
-      "ocument\022\'.ssn.dataservice.v1.ReadDocumen" +
-      "tRequest\032(.ssn.dataservice.v1.ReadDocume" +
-      "ntResponse\022U\n\017PrepareFeedback\022*.ssn.data" +
-      "service.v1.PrepareFeedbackRequest\032\026.goog" +
-      "le.protobuf.Empty\022g\n\010Feedback\022#.ssn.data" +
-      "service.v1.FeedbackRequest\032\026.google.prot" +
-      "obuf.Empty\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:" +
-      "\001*\022[\n\020CalculateMetrics\022\".ssn.dataservice" +
-      ".v1.MetricsRequest\032#.ssn.dataservice.v1." +
-      "FeedbackMetrics\022c\n\006Delete\022!.ssn.dataserv" +
-      "ice.v1.DeleteRequest\032\026.google.protobuf.E" +
-      "mpty\"\036\202\323\344\223\002\030\"\023/v1/feedback:delete:\001*\022X\n\023" +
-      "CallsPerMonthMetric\022\026.google.protobuf.Em" +
-      "pty\032).ssn.dataservice.v1.CallsPerMonthRe" +
-      "sponseBDZBgithub.com/e-conomic/vmlapis/g" +
-      "en/go/ssn/dataservice/v1;dataserviceb\006pr" +
-      "oto3"
+      "\022\034\n\004tier\030\036 \001(\0162\016.ssn.type.Tier\"G\n\025Create" +
+      "DocumentRequest\022.\n\010document\030\001 \001(\0132\034.ssn." +
+      "dataservice.v1.Document\"$\n\026CreateDocumen" +
+      "tResponse\022\n\n\002id\030\001 \001(\t\"!\n\023ReadDocumentReq" +
+      "uest\022\n\n\002id\030\001 \001(\t\"F\n\024ReadDocumentResponse" +
+      "\022.\n\010document\030\001 \001(\0132\034.ssn.dataservice.v1." +
+      "Document\"\316\002\n\026PrepareFeedbackRequest\022\n\n\002i" +
+      "d\030\001 \001(\t\022$\n\002ta\030\002 \001(\0132\030.ssn.type.TextAnnot" +
+      "ation\022\026\n\016document_bytes\030\003 \001(\014\0229\n\013predict" +
+      "ions\030\004 \001(\0132$.ssn.dataservice.v1.Predicti" +
+      "onValues\022\014\n\004tags\030\005 \003(\t\022>\n\013confidences\030\006 " +
+      "\001(\0132).ssn.dataservice.v1.PredictionConfi" +
+      "dences\022C\n\023prediction_metadata\030\007 \001(\0132&.ss" +
+      "n.dataservice.v1.PredictionMetadata\022\034\n\004t" +
+      "ier\030\010 \001(\0162\016.ssn.type.Tier\"`\n\017FeedbackReq" +
+      "uest\022\n\n\002id\030\001 \001(\t\0223\n\013true_values\030\002 \001(\0132\036." +
+      "ssn.dataservice.v1.TrueValues\022\014\n\004tags\030\003 " +
+      "\003(\t\"T\n\016MetricsRequest\022\022\n\nstart_time\030\002 \001(" +
+      "\003\022\020\n\010end_time\030\003 \001(\003\022\016\n\006fields\030\004 \003(\t\022\014\n\004t" +
+      "ags\030\005 \003(\t\"\273\001\n\017FeedbackMetrics\022\026\n\016documen" +
+      "t_count\030\001 \001(\005\022\026\n\016feedback_count\030\002 \001(\005\022<\n" +
+      "\023overall_correctness\030\003 \001(\0132\037.ssn.dataser" +
+      "vice.v1.Correctness\022:\n\021field_correctness" +
+      "\030\004 \003(\0132\037.ssn.dataservice.v1.Correctness\"" +
+      "\202\001\n\013Correctness\022\r\n\005field\030\001 \001(\t\022\032\n\022correc" +
+      "t_percentage\030\002 \001(\002\022\035\n\025incomplete_percent" +
+      "age\030\003 \001(\002\022\030\n\020error_percentage\030\004 \001(\002\022\017\n\007s" +
+      "upport\030\005 \001(\005\"\035\n\rDeleteRequest\022\014\n\004tags\030\001 " +
+      "\003(\t\"2\n\rCallsPerMonth\022\r\n\005calls\030\001 \001(\003\022\022\n\nm" +
+      "onth_name\030\002 \001(\t\"S\n\025CallsPerMonthResponse" +
+      "\022:\n\017calls_per_month\030\001 \003(\0132!.ssn.dataserv" +
+      "ice.v1.CallsPerMonth2\265\005\n\013DataService\022g\n\016" +
+      "CreateDocument\022).ssn.dataservice.v1.Crea" +
+      "teDocumentRequest\032*.ssn.dataservice.v1.C" +
+      "reateDocumentResponse\022a\n\014ReadDocument\022\'." +
+      "ssn.dataservice.v1.ReadDocumentRequest\032(" +
+      ".ssn.dataservice.v1.ReadDocumentResponse" +
+      "\022U\n\017PrepareFeedback\022*.ssn.dataservice.v1" +
+      ".PrepareFeedbackRequest\032\026.google.protobu" +
+      "f.Empty\022g\n\010Feedback\022#.ssn.dataservice.v1" +
+      ".FeedbackRequest\032\026.google.protobuf.Empty" +
+      "\"\036\202\323\344\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020Calc" +
+      "ulateMetrics\022\".ssn.dataservice.v1.Metric" +
+      "sRequest\032#.ssn.dataservice.v1.FeedbackMe" +
+      "trics\022c\n\006Delete\022!.ssn.dataservice.v1.Del" +
+      "eteRequest\032\026.google.protobuf.Empty\"\036\202\323\344\223" +
+      "\002\030\"\023/v1/feedback:delete:\001*\022X\n\023CallsPerMo" +
+      "nthMetric\022\026.google.protobuf.Empty\032).ssn." +
+      "dataservice.v1.CallsPerMonthResponseBDZB" +
+      "github.com/e-conomic/vmlapis/gen/go/ssn/" +
+      "dataservice/v1;dataserviceb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -42257,7 +42354,7 @@ public final class Dataservice {
     internal_static_ssn_dataservice_v1_PredictionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "Tier", });
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_fieldAccessorTable = new
