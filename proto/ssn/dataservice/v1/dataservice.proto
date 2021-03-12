@@ -155,7 +155,6 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec supplier_country_code = 20;
   repeated ssn.type.ModelSpec invoice_number = 21;
   repeated ssn.type.ModelSpec iban = 22;
-  ssn.type.Tier tier = 30;
 }
 
 message CreateDocumentRequest {
