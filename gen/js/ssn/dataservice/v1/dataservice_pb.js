@@ -620,7 +620,10 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     supplierCorporateId: (f = msg.getSupplierCorporateId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierCountryCode: (f = msg.getSupplierCountryCode()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     invoiceNumber: (f = msg.getInvoiceNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    iban: (f = msg.getIban()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    iban: (f = msg.getIban()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    orderReference: (f = msg.getOrderReference()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    bankAccountNumber: (f = msg.getBankAccountNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    bankRegistrationNumber: (f = msg.getBankRegistrationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -766,6 +769,21 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setIban(value);
+      break;
+    case 23:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setOrderReference(value);
+      break;
+    case 24:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setBankAccountNumber(value);
+      break;
+    case 25:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setBankRegistrationNumber(value);
       break;
     default:
       reader.skipField();
@@ -968,6 +986,30 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeMessage(
       22,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderReference();
+  if (f != null) {
+    writer.writeMessage(
+      23,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankAccountNumber();
+  if (f != null) {
+    writer.writeMessage(
+      24,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankRegistrationNumber();
+  if (f != null) {
+    writer.writeMessage(
+      25,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -1635,6 +1677,96 @@ proto.ssn.dataservice.v1.TrueValues.prototype.hasIban = function() {
 };
 
 
+/**
+ * optional google.protobuf.StringValue order_reference = 23;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getOrderReference = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 23));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.ssn.dataservice.v1.TrueValues.prototype.setOrderReference = function(value) {
+  jspb.Message.setWrapperField(this, 23, value);
+};
+
+
+proto.ssn.dataservice.v1.TrueValues.prototype.clearOrderReference = function() {
+  this.setOrderReference(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasOrderReference = function() {
+  return jspb.Message.getField(this, 23) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue bank_account_number = 24;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getBankAccountNumber = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 24));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.ssn.dataservice.v1.TrueValues.prototype.setBankAccountNumber = function(value) {
+  jspb.Message.setWrapperField(this, 24, value);
+};
+
+
+proto.ssn.dataservice.v1.TrueValues.prototype.clearBankAccountNumber = function() {
+  this.setBankAccountNumber(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasBankAccountNumber = function() {
+  return jspb.Message.getField(this, 24) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue bank_registration_number = 25;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getBankRegistrationNumber = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 25));
+};
+
+
+/** @param {?proto.google.protobuf.StringValue|undefined} value */
+proto.ssn.dataservice.v1.TrueValues.prototype.setBankRegistrationNumber = function(value) {
+  jspb.Message.setWrapperField(this, 25, value);
+};
+
+
+proto.ssn.dataservice.v1.TrueValues.prototype.clearBankRegistrationNumber = function() {
+  this.setBankRegistrationNumber(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasBankRegistrationNumber = function() {
+  return jspb.Message.getField(this, 25) != null;
+};
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -1658,7 +1790,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
 
 
 
@@ -1732,6 +1864,12 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     invoiceNumberList: jspb.Message.toObjectList(msg.getInvoiceNumberList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    orderReferenceList: jspb.Message.toObjectList(msg.getOrderReferenceList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    bankAccountNumberList: jspb.Message.toObjectList(msg.getBankAccountNumberList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    bankRegistrationNumberList: jspb.Message.toObjectList(msg.getBankRegistrationNumberList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance)
   };
 
@@ -1878,6 +2016,21 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 23:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addOrderReference(value);
+      break;
+    case 24:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addBankAccountNumber(value);
+      break;
+    case 25:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addBankRegistrationNumber(value);
       break;
     default:
       reader.skipField();
@@ -2080,6 +2233,30 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       22,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderReferenceList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      23,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankAccountNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      24,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankRegistrationNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -2769,6 +2946,99 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearIbanList = function() {
 };
 
 
+/**
+ * repeated google.protobuf.StringValue order_reference = 23;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getOrderReferenceList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 23));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.StringValue>} value */
+proto.ssn.dataservice.v1.PredictionValues.prototype.setOrderReferenceList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 23, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addOrderReference = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 23, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearOrderReferenceList = function() {
+  this.setOrderReferenceList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue bank_account_number = 24;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getBankAccountNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 24));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.StringValue>} value */
+proto.ssn.dataservice.v1.PredictionValues.prototype.setBankAccountNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 24, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addBankAccountNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 24, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearBankAccountNumberList = function() {
+  this.setBankAccountNumberList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue bank_registration_number = 25;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getBankRegistrationNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 25));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.StringValue>} value */
+proto.ssn.dataservice.v1.PredictionValues.prototype.setBankRegistrationNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addBankRegistrationNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearBankRegistrationNumberList = function() {
+  this.setBankRegistrationNumberList([]);
+};
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -2792,7 +3062,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
 
 
 
@@ -2866,6 +3136,12 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     invoiceNumberList: jspb.Message.toObjectList(msg.getInvoiceNumberList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    orderReferenceList: jspb.Message.toObjectList(msg.getOrderReferenceList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    bankAccountNumberList: jspb.Message.toObjectList(msg.getBankAccountNumberList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    bankRegistrationNumberList: jspb.Message.toObjectList(msg.getBankRegistrationNumberList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -3012,6 +3288,21 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 23:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addOrderReference(value);
+      break;
+    case 24:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addBankAccountNumber(value);
+      break;
+    case 25:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addBankRegistrationNumber(value);
       break;
     default:
       reader.skipField();
@@ -3214,6 +3505,30 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       22,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderReferenceList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      23,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankAccountNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      24,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankRegistrationNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -3903,6 +4218,99 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearIbanList = functio
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue order_reference = 23;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getOrderReferenceList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 23));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.FloatValue>} value */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setOrderReferenceList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 23, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addOrderReference = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 23, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearOrderReferenceList = function() {
+  this.setOrderReferenceList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue bank_account_number = 24;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getBankAccountNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 24));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.FloatValue>} value */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setBankAccountNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 24, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addBankAccountNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 24, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearBankAccountNumberList = function() {
+  this.setBankAccountNumberList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue bank_registration_number = 25;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getBankRegistrationNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 25));
+};
+
+
+/** @param {!Array<!proto.google.protobuf.FloatValue>} value */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setBankRegistrationNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addBankRegistrationNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearBankRegistrationNumberList = function() {
+  this.setBankRegistrationNumberList([]);
+};
+
+
 
 /**
  * Generated by JsPbCodeGenerator.
@@ -3926,7 +4334,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
 
 
 
@@ -4000,6 +4408,12 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     invoiceNumberList: jspb.Message.toObjectList(msg.getInvoiceNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    orderReferenceList: jspb.Message.toObjectList(msg.getOrderReferenceList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    bankAccountNumberList: jspb.Message.toObjectList(msg.getBankAccountNumberList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    bankRegistrationNumberList: jspb.Message.toObjectList(msg.getBankRegistrationNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -4146,6 +4560,21 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addIban(value);
+      break;
+    case 23:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addOrderReference(value);
+      break;
+    case 24:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addBankAccountNumber(value);
+      break;
+    case 25:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addBankRegistrationNumber(value);
       break;
     default:
       reader.skipField();
@@ -4348,6 +4777,30 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       22,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getOrderReferenceList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      23,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankAccountNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      24,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getBankRegistrationNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      25,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -5034,6 +5487,99 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addIban = function(opt_val
 
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearIbanList = function() {
   this.setIbanList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec order_reference = 23;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getOrderReferenceList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 23));
+};
+
+
+/** @param {!Array<!proto.ssn.type.ModelSpec>} value */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setOrderReferenceList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 23, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addOrderReference = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 23, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearOrderReferenceList = function() {
+  this.setOrderReferenceList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec bank_account_number = 24;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getBankAccountNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 24));
+};
+
+
+/** @param {!Array<!proto.ssn.type.ModelSpec>} value */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setBankAccountNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 24, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addBankAccountNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 24, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearBankAccountNumberList = function() {
+  this.setBankAccountNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec bank_registration_number = 25;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getBankRegistrationNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 25));
+};
+
+
+/** @param {!Array<!proto.ssn.type.ModelSpec>} value */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setBankRegistrationNumberList = function(value) {
+  jspb.Message.setRepeatedWrapperField(this, 25, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addBankRegistrationNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 25, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearBankRegistrationNumberList = function() {
+  this.setBankRegistrationNumberList([]);
 };
 
 
