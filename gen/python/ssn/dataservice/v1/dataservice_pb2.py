@@ -28,7 +28,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='ssn.dataservice.v1',
   syntax='proto3',
   serialized_options=_b('ZBgithub.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataservice'),
-  serialized_pb=_b('\n$ssn/dataservice/v1/dataservice.proto\x12\x12ssn.dataservice.v1\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a\x13ssn/type/tier.proto\"\xbc\x04\n\x08\x44ocument\x12+\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotationB\x05\xea?\x02\x18\x01\x12\x14\n\x05\x62ytes\x18\x02 \x01(\x0c\x42\x05\xea?\x02\x18\x01\x12;\n\x02id\x18\x03 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x04 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x05 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x33\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x1e.ssn.dataservice.v1.TrueValues\x12?\n\x11prediction_values\x18\x07 \x01(\x0b\x32$.ssn.dataservice.v1.PredictionValues\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP\x12I\n\x16prediction_confidences\x18\t \x01(\x0b\x32).ssn.dataservice.v1.PredictionConfidences\x12\x43\n\x13prediction_metadata\x18\n \x01(\x0b\x32&.ssn.dataservice.v1.PredictionMetadata:\x12\xea?\x0f\n\rtraining_data\"\x84\n\n\nTrueValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x04iban\x18\x16 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"\x8a\n\n\x10PredictionValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x04iban\x18\x16 \x03(\x0b\x32\x1c.google.protobuf.StringValue\"\xf9\t\n\x15PredictionConfidences\x12\x33\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12.\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12/\n\norder_date\x18\x04 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x35\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x32\n\rdocument_type\x18\x06 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12-\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0epayment_method\x18\t \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x35\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12<\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x45\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x45\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12)\n\x04iban\x18\x16 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\"\xc6\x08\n\x12PredictionMetadata\x12+\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12&\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\'\n\norder_date\x18\x04 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12-\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12*\n\rdocument_type\x18\x06 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12%\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0epayment_method\x18\t \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12-\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12!\n\x04iban\x18\x16 \x03(\x0b\x32\x13.ssn.type.ModelSpec\"G\n\x15\x43reateDocumentRequest\x12.\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1c.ssn.dataservice.v1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"F\n\x14ReadDocumentResponse\x12.\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1c.ssn.dataservice.v1.Document\"\xce\x02\n\x16PrepareFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x02ta\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x03 \x01(\x0c\x12\x39\n\x0bpredictions\x18\x04 \x01(\x0b\x32$.ssn.dataservice.v1.PredictionValues\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12>\n\x0b\x63onfidences\x18\x06 \x01(\x0b\x32).ssn.dataservice.v1.PredictionConfidences\x12\x43\n\x13prediction_metadata\x18\x07 \x01(\x0b\x32&.ssn.dataservice.v1.PredictionMetadata\x12\x1c\n\x04tier\x18\x08 \x01(\x0e\x32\x0e.ssn.type.Tier\"`\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x33\n\x0btrue_values\x18\x02 \x01(\x0b\x32\x1e.ssn.dataservice.v1.TrueValues\x12\x0c\n\x04tags\x18\x03 \x03(\t\"T\n\x0eMetricsRequest\x12\x12\n\nstart_time\x18\x02 \x01(\x03\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\x03\x12\x0e\n\x06\x66ields\x18\x04 \x03(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\xbb\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kMetrics\x12\x16\n\x0e\x64ocument_count\x18\x01 \x01(\x05\x12\x16\n\x0e\x66\x65\x65\x64\x62\x61\x63k_count\x18\x02 \x01(\x05\x12<\n\x13overall_correctness\x18\x03 \x01(\x0b\x32\x1f.ssn.dataservice.v1.Correctness\x12:\n\x11\x66ield_correctness\x18\x04 \x03(\x0b\x32\x1f.ssn.dataservice.v1.Correctness\"\x82\x01\n\x0b\x43orrectness\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x1a\n\x12\x63orrect_percentage\x18\x02 \x01(\x02\x12\x1d\n\x15incomplete_percentage\x18\x03 \x01(\x02\x12\x18\n\x10\x65rror_percentage\x18\x04 \x01(\x02\x12\x0f\n\x07support\x18\x05 \x01(\x05\"\x1d\n\rDeleteRequest\x12\x0c\n\x04tags\x18\x01 \x03(\t\"2\n\rCallsPerMonth\x12\r\n\x05\x63\x61lls\x18\x01 \x01(\x03\x12\x12\n\nmonth_name\x18\x02 \x01(\t\"S\n\x15\x43\x61llsPerMonthResponse\x12:\n\x0f\x63\x61lls_per_month\x18\x01 \x03(\x0b\x32!.ssn.dataservice.v1.CallsPerMonth2\xb5\x05\n\x0b\x44\x61taService\x12g\n\x0e\x43reateDocument\x12).ssn.dataservice.v1.CreateDocumentRequest\x1a*.ssn.dataservice.v1.CreateDocumentResponse\x12\x61\n\x0cReadDocument\x12\'.ssn.dataservice.v1.ReadDocumentRequest\x1a(.ssn.dataservice.v1.ReadDocumentResponse\x12U\n\x0fPrepareFeedback\x12*.ssn.dataservice.v1.PrepareFeedbackRequest\x1a\x16.google.protobuf.Empty\x12g\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12#.ssn.dataservice.v1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/feedback:create:\x01*\x12[\n\x10\x43\x61lculateMetrics\x12\".ssn.dataservice.v1.MetricsRequest\x1a#.ssn.dataservice.v1.FeedbackMetrics\x12\x63\n\x06\x44\x65lete\x12!.ssn.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/feedback:delete:\x01*\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponseBDZBgithub.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataserviceb\x06proto3')
+  serialized_pb=_b('\n$ssn/dataservice/v1/dataservice.proto\x12\x12ssn.dataservice.v1\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1cgen_bq_schema/bq_table.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1egoogle/protobuf/wrappers.proto\x1a\x16google/type/date.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a\x13ssn/type/tier.proto\"\xbc\x04\n\x08\x44ocument\x12+\n\x02ta\x18\x01 \x01(\x0b\x32\x18.ssn.type.TextAnnotationB\x05\xea?\x02\x18\x01\x12\x14\n\x05\x62ytes\x18\x02 \x01(\x0c\x42\x05\xea?\x02\x18\x01\x12;\n\x02id\x18\x03 \x01(\tB/\xea?\'\"%Feedback ID, same as Envoy request id\xea?\x02\x08\x01\x12\x17\n\x08\x63onsumer\x18\x04 \x01(\tB\x05\xea?\x02\x08\x01\x12T\n\x04tags\x18\x05 \x03(\tBF\xea?C\"ATags defined by consumer, enriched by service if valetkey is used\x12\x33\n\x0btrue_values\x18\x06 \x01(\x0b\x32\x1e.ssn.dataservice.v1.TrueValues\x12?\n\x11prediction_values\x18\x07 \x01(\x0b\x32$.ssn.dataservice.v1.PredictionValues\x12\'\n\rfeedback_time\x18\x08 \x01(\x04\x42\x10\xea?\r\x08\x01\x12\tTIMESTAMP\x12I\n\x16prediction_confidences\x18\t \x01(\x0b\x32).ssn.dataservice.v1.PredictionConfidences\x12\x43\n\x13prediction_metadata\x18\n \x01(\x0b\x32&.ssn.dataservice.v1.PredictionMetadata:\x12\xea?\x0f\n\rtraining_data\"\xb6\x0b\n\nTrueValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x01(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x01(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x04iban\x18\x16 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x35\n\x0forder_reference\x18\x17 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12\x39\n\x13\x62\x61nk_account_number\x18\x18 \x01(\x0b\x32\x1c.google.protobuf.StringValue\x12>\n\x18\x62\x61nk_registration_number\x18\x19 \x01(\x0b\x32\x1c.google.protobuf.StringValue\"\xbc\x0b\n\x10PredictionValues\x12\x34\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12/\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x34\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x1c.google.protobuf.DoubleValue\x12\x30\n\norder_date\x18\x04 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x36\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x11.google.type.DateB\t\xea?\x06\x12\x04\x44\x41TE\x12\x33\n\rdocument_type\x18\x06 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12.\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0epayment_method\x18\t \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x36\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12=\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x46\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12<\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12;\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x34\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12*\n\x04iban\x18\x16 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x35\n\x0forder_reference\x18\x17 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12\x39\n\x13\x62\x61nk_account_number\x18\x18 \x03(\x0b\x32\x1c.google.protobuf.StringValue\x12>\n\x18\x62\x61nk_registration_number\x18\x19 \x03(\x0b\x32\x1c.google.protobuf.StringValue\"\xa8\x0b\n\x15PredictionConfidences\x12\x33\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12.\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12/\n\norder_date\x18\x04 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x35\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x32\n\rdocument_type\x18\x06 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12-\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0epayment_method\x18\t \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x35\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12<\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x45\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x45\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12;\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12:\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x33\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12)\n\x04iban\x18\x16 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x34\n\x0forder_reference\x18\x17 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12\x38\n\x13\x62\x61nk_account_number\x18\x18 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\x12=\n\x18\x62\x61nk_registration_number\x18\x19 \x03(\x0b\x32\x1b.google.protobuf.FloatValue\"\xdd\t\n\x12PredictionMetadata\x12+\n\x0etotal_incl_vat\x18\x01 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12&\n\ttotal_vat\x18\x02 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0etotal_excl_vat\x18\x03 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\'\n\norder_date\x18\x04 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12-\n\x10payment_due_date\x18\x05 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12*\n\rdocument_type\x18\x06 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12%\n\x08\x63urrency\x18\x07 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15\x63redit_card_last_four\x18\x08 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0epayment_method\x18\t \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12-\n\x10ocr_line_dk_type\x18\n \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0b \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x0c \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_se_payment_id\x18\r \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x0e \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_no_payment_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_fi_payment_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x33\n\x16ocr_line_nl_payment_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15supplier_corporate_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x32\n\x15supplier_country_code\x18\x14 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12+\n\x0einvoice_number\x18\x15 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12!\n\x04iban\x18\x16 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12,\n\x0forder_reference\x18\x17 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x30\n\x13\x62\x61nk_account_number\x18\x18 \x03(\x0b\x32\x13.ssn.type.ModelSpec\x12\x35\n\x18\x62\x61nk_registration_number\x18\x19 \x03(\x0b\x32\x13.ssn.type.ModelSpec\"G\n\x15\x43reateDocumentRequest\x12.\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1c.ssn.dataservice.v1.Document\"$\n\x16\x43reateDocumentResponse\x12\n\n\x02id\x18\x01 \x01(\t\"!\n\x13ReadDocumentRequest\x12\n\n\x02id\x18\x01 \x01(\t\"F\n\x14ReadDocumentResponse\x12.\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1c.ssn.dataservice.v1.Document\"\xce\x02\n\x16PrepareFeedbackRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12$\n\x02ta\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12\x16\n\x0e\x64ocument_bytes\x18\x03 \x01(\x0c\x12\x39\n\x0bpredictions\x18\x04 \x01(\x0b\x32$.ssn.dataservice.v1.PredictionValues\x12\x0c\n\x04tags\x18\x05 \x03(\t\x12>\n\x0b\x63onfidences\x18\x06 \x01(\x0b\x32).ssn.dataservice.v1.PredictionConfidences\x12\x43\n\x13prediction_metadata\x18\x07 \x01(\x0b\x32&.ssn.dataservice.v1.PredictionMetadata\x12\x1c\n\x04tier\x18\x08 \x01(\x0e\x32\x0e.ssn.type.Tier\"`\n\x0f\x46\x65\x65\x64\x62\x61\x63kRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x33\n\x0btrue_values\x18\x02 \x01(\x0b\x32\x1e.ssn.dataservice.v1.TrueValues\x12\x0c\n\x04tags\x18\x03 \x03(\t\"T\n\x0eMetricsRequest\x12\x12\n\nstart_time\x18\x02 \x01(\x03\x12\x10\n\x08\x65nd_time\x18\x03 \x01(\x03\x12\x0e\n\x06\x66ields\x18\x04 \x03(\t\x12\x0c\n\x04tags\x18\x05 \x03(\t\"\xbb\x01\n\x0f\x46\x65\x65\x64\x62\x61\x63kMetrics\x12\x16\n\x0e\x64ocument_count\x18\x01 \x01(\x05\x12\x16\n\x0e\x66\x65\x65\x64\x62\x61\x63k_count\x18\x02 \x01(\x05\x12<\n\x13overall_correctness\x18\x03 \x01(\x0b\x32\x1f.ssn.dataservice.v1.Correctness\x12:\n\x11\x66ield_correctness\x18\x04 \x03(\x0b\x32\x1f.ssn.dataservice.v1.Correctness\"\x82\x01\n\x0b\x43orrectness\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x1a\n\x12\x63orrect_percentage\x18\x02 \x01(\x02\x12\x1d\n\x15incomplete_percentage\x18\x03 \x01(\x02\x12\x18\n\x10\x65rror_percentage\x18\x04 \x01(\x02\x12\x0f\n\x07support\x18\x05 \x01(\x05\"\x1d\n\rDeleteRequest\x12\x0c\n\x04tags\x18\x01 \x03(\t\"2\n\rCallsPerMonth\x12\r\n\x05\x63\x61lls\x18\x01 \x01(\x03\x12\x12\n\nmonth_name\x18\x02 \x01(\t\"S\n\x15\x43\x61llsPerMonthResponse\x12:\n\x0f\x63\x61lls_per_month\x18\x01 \x03(\x0b\x32!.ssn.dataservice.v1.CallsPerMonth2\xb5\x05\n\x0b\x44\x61taService\x12g\n\x0e\x43reateDocument\x12).ssn.dataservice.v1.CreateDocumentRequest\x1a*.ssn.dataservice.v1.CreateDocumentResponse\x12\x61\n\x0cReadDocument\x12\'.ssn.dataservice.v1.ReadDocumentRequest\x1a(.ssn.dataservice.v1.ReadDocumentResponse\x12U\n\x0fPrepareFeedback\x12*.ssn.dataservice.v1.PrepareFeedbackRequest\x1a\x16.google.protobuf.Empty\x12g\n\x08\x46\x65\x65\x64\x62\x61\x63k\x12#.ssn.dataservice.v1.FeedbackRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/feedback:create:\x01*\x12[\n\x10\x43\x61lculateMetrics\x12\".ssn.dataservice.v1.MetricsRequest\x1a#.ssn.dataservice.v1.FeedbackMetrics\x12\x63\n\x06\x44\x65lete\x12!.ssn.dataservice.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\"\x13/v1/feedback:delete:\x01*\x12X\n\x13\x43\x61llsPerMonthMetric\x12\x16.google.protobuf.Empty\x1a).ssn.dataservice.v1.CallsPerMonthResponseBDZBgithub.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataserviceb\x06proto3')
   ,
   dependencies=[gen__bq__schema_dot_bq__field__pb2.DESCRIPTOR,gen__bq__schema_dot_bq__table__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_wrappers__pb2.DESCRIPTOR,google_dot_type_dot_date__pb2.DESCRIPTOR,ssn_dot_type_dot_candidate__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,ssn_dot_type_dot_tier__pb2.DESCRIPTOR,])
 
@@ -290,6 +290,27 @@ _TRUEVALUES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_reference', full_name='ssn.dataservice.v1.TrueValues.order_reference', index=22,
+      number=23, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_account_number', full_name='ssn.dataservice.v1.TrueValues.bank_account_number', index=23,
+      number=24, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_registration_number', full_name='ssn.dataservice.v1.TrueValues.bank_registration_number', index=24,
+      number=25, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -303,7 +324,7 @@ _TRUEVALUES = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=890,
-  serialized_end=2174,
+  serialized_end=2352,
 )
 
 
@@ -468,6 +489,27 @@ _PREDICTIONVALUES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_reference', full_name='ssn.dataservice.v1.PredictionValues.order_reference', index=22,
+      number=23, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_account_number', full_name='ssn.dataservice.v1.PredictionValues.bank_account_number', index=23,
+      number=24, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_registration_number', full_name='ssn.dataservice.v1.PredictionValues.bank_registration_number', index=24,
+      number=25, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -480,8 +522,8 @@ _PREDICTIONVALUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2177,
-  serialized_end=3467,
+  serialized_start=2355,
+  serialized_end=3823,
 )
 
 
@@ -646,6 +688,27 @@ _PREDICTIONCONFIDENCES = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_reference', full_name='ssn.dataservice.v1.PredictionConfidences.order_reference', index=22,
+      number=23, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_account_number', full_name='ssn.dataservice.v1.PredictionConfidences.bank_account_number', index=23,
+      number=24, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_registration_number', full_name='ssn.dataservice.v1.PredictionConfidences.bank_registration_number', index=24,
+      number=25, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -658,8 +721,8 @@ _PREDICTIONCONFIDENCES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3470,
-  serialized_end=4743,
+  serialized_start=3826,
+  serialized_end=5274,
 )
 
 
@@ -824,6 +887,27 @@ _PREDICTIONMETADATA = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='order_reference', full_name='ssn.dataservice.v1.PredictionMetadata.order_reference', index=22,
+      number=23, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_account_number', full_name='ssn.dataservice.v1.PredictionMetadata.bank_account_number', index=23,
+      number=24, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='bank_registration_number', full_name='ssn.dataservice.v1.PredictionMetadata.bank_registration_number', index=24,
+      number=25, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -836,8 +920,8 @@ _PREDICTIONMETADATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4746,
-  serialized_end=5840,
+  serialized_start=5277,
+  serialized_end=6522,
 )
 
 
@@ -867,8 +951,8 @@ _CREATEDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5842,
-  serialized_end=5913,
+  serialized_start=6524,
+  serialized_end=6595,
 )
 
 
@@ -898,8 +982,8 @@ _CREATEDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5915,
-  serialized_end=5951,
+  serialized_start=6597,
+  serialized_end=6633,
 )
 
 
@@ -929,8 +1013,8 @@ _READDOCUMENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5953,
-  serialized_end=5986,
+  serialized_start=6635,
+  serialized_end=6668,
 )
 
 
@@ -960,8 +1044,8 @@ _READDOCUMENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5988,
-  serialized_end=6058,
+  serialized_start=6670,
+  serialized_end=6740,
 )
 
 
@@ -1040,8 +1124,8 @@ _PREPAREFEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6061,
-  serialized_end=6395,
+  serialized_start=6743,
+  serialized_end=7077,
 )
 
 
@@ -1085,8 +1169,8 @@ _FEEDBACKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6397,
-  serialized_end=6493,
+  serialized_start=7079,
+  serialized_end=7175,
 )
 
 
@@ -1137,8 +1221,8 @@ _METRICSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6495,
-  serialized_end=6579,
+  serialized_start=7177,
+  serialized_end=7261,
 )
 
 
@@ -1189,8 +1273,8 @@ _FEEDBACKMETRICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6582,
-  serialized_end=6769,
+  serialized_start=7264,
+  serialized_end=7451,
 )
 
 
@@ -1248,8 +1332,8 @@ _CORRECTNESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6772,
-  serialized_end=6902,
+  serialized_start=7454,
+  serialized_end=7584,
 )
 
 
@@ -1279,8 +1363,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6904,
-  serialized_end=6933,
+  serialized_start=7586,
+  serialized_end=7615,
 )
 
 
@@ -1317,8 +1401,8 @@ _CALLSPERMONTH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6935,
-  serialized_end=6985,
+  serialized_start=7617,
+  serialized_end=7667,
 )
 
 
@@ -1348,8 +1432,8 @@ _CALLSPERMONTHRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6987,
-  serialized_end=7070,
+  serialized_start=7669,
+  serialized_end=7752,
 )
 
 _DOCUMENT.fields_by_name['ta'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
@@ -1379,6 +1463,9 @@ _TRUEVALUES.fields_by_name['supplier_corporate_id'].message_type = google_dot_pr
 _TRUEVALUES.fields_by_name['supplier_country_code'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _TRUEVALUES.fields_by_name['invoice_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _TRUEVALUES.fields_by_name['iban'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_TRUEVALUES.fields_by_name['order_reference'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_TRUEVALUES.fields_by_name['bank_account_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_TRUEVALUES.fields_by_name['bank_registration_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _PREDICTIONVALUES.fields_by_name['total_incl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
 _PREDICTIONVALUES.fields_by_name['total_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
 _PREDICTIONVALUES.fields_by_name['total_excl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._DOUBLEVALUE
@@ -1401,6 +1488,9 @@ _PREDICTIONVALUES.fields_by_name['supplier_corporate_id'].message_type = google_
 _PREDICTIONVALUES.fields_by_name['supplier_country_code'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _PREDICTIONVALUES.fields_by_name['invoice_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _PREDICTIONVALUES.fields_by_name['iban'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['order_reference'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['bank_account_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
+_PREDICTIONVALUES.fields_by_name['bank_registration_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._STRINGVALUE
 _PREDICTIONCONFIDENCES.fields_by_name['total_incl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _PREDICTIONCONFIDENCES.fields_by_name['total_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _PREDICTIONCONFIDENCES.fields_by_name['total_excl_vat'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
@@ -1423,6 +1513,9 @@ _PREDICTIONCONFIDENCES.fields_by_name['supplier_corporate_id'].message_type = go
 _PREDICTIONCONFIDENCES.fields_by_name['supplier_country_code'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _PREDICTIONCONFIDENCES.fields_by_name['invoice_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _PREDICTIONCONFIDENCES.fields_by_name['iban'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
+_PREDICTIONCONFIDENCES.fields_by_name['order_reference'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
+_PREDICTIONCONFIDENCES.fields_by_name['bank_account_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
+_PREDICTIONCONFIDENCES.fields_by_name['bank_registration_number'].message_type = google_dot_protobuf_dot_wrappers__pb2._FLOATVALUE
 _PREDICTIONMETADATA.fields_by_name['total_incl_vat'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
 _PREDICTIONMETADATA.fields_by_name['total_vat'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
 _PREDICTIONMETADATA.fields_by_name['total_excl_vat'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
@@ -1445,6 +1538,9 @@ _PREDICTIONMETADATA.fields_by_name['supplier_corporate_id'].message_type = ssn_d
 _PREDICTIONMETADATA.fields_by_name['supplier_country_code'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
 _PREDICTIONMETADATA.fields_by_name['invoice_number'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
 _PREDICTIONMETADATA.fields_by_name['iban'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
+_PREDICTIONMETADATA.fields_by_name['order_reference'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
+_PREDICTIONMETADATA.fields_by_name['bank_account_number'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
+_PREDICTIONMETADATA.fields_by_name['bank_registration_number'].message_type = ssn_dot_type_dot_candidate__pb2._MODELSPEC
 _CREATEDOCUMENTREQUEST.fields_by_name['document'].message_type = _DOCUMENT
 _READDOCUMENTRESPONSE.fields_by_name['document'].message_type = _DOCUMENT
 _PREPAREFEEDBACKREQUEST.fields_by_name['ta'].message_type = ssn_dot_type_dot_text__annotation__pb2._TEXTANNOTATION
@@ -1614,8 +1710,8 @@ _DATASERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=7073,
-  serialized_end=7766,
+  serialized_start=7755,
+  serialized_end=8448,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateDocument',

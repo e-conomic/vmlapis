@@ -130,6 +130,21 @@
     "name": "iban",
     "type": "STRING",
     "mode": "NULLABLE"
+   },
+   {
+    "name": "order_reference",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "bank_account_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "bank_registration_number",
+    "type": "STRING",
+    "mode": "NULLABLE"
    }
   ]
  },
@@ -245,6 +260,21 @@
    },
    {
     "name": "iban",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "order_reference",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bank_account_number",
+    "type": "STRING",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bank_registration_number",
     "type": "STRING",
     "mode": "REPEATED"
    }
@@ -367,6 +397,21 @@
    },
    {
     "name": "iban",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "order_reference",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bank_account_number",
+    "type": "FLOAT",
+    "mode": "REPEATED"
+   },
+   {
+    "name": "bank_registration_number",
     "type": "FLOAT",
     "mode": "REPEATED"
    }
@@ -736,6 +781,57 @@
    },
    {
     "name": "iban",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "order_reference",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "bank_account_number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+     {
+      "name": "model_name",
+      "type": "STRING",
+      "mode": "NULLABLE"
+     },
+     {
+      "name": "model_ver",
+      "type": "INTEGER",
+      "mode": "NULLABLE"
+     }
+    ]
+   },
+   {
+    "name": "bank_registration_number",
     "type": "RECORD",
     "mode": "REPEATED",
     "fields": [
