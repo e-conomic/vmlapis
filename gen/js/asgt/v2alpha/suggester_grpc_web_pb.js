@@ -161,52 +161,52 @@ proto.asgt.v2alpha.suggester.SuggesterPromiseClient.prototype.suggest =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.v2alpha.suggester.SuggestRequest,
- *   !proto.asgt.v2alpha.suggester.SuggestResponse>}
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  */
 const methodDescriptor_Suggester_BatchSuggest = new grpc.web.MethodDescriptor(
   '/asgt.v2alpha.suggester.Suggester/BatchSuggest',
   grpc.web.MethodType.UNARY,
-  proto.asgt.v2alpha.suggester.SuggestRequest,
-  proto.asgt.v2alpha.suggester.SuggestResponse,
+  proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse,
   /**
-   * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request
+   * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.v2alpha.suggester.SuggestResponse.deserializeBinary
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.v2alpha.suggester.SuggestRequest,
- *   !proto.asgt.v2alpha.suggester.SuggestResponse>}
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  */
 const methodInfo_Suggester_BatchSuggest = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.v2alpha.suggester.SuggestResponse,
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse,
   /**
-   * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request
+   * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.v2alpha.suggester.SuggestResponse.deserializeBinary
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request The
+ * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.suggester.SuggestResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.suggester.BatchSuggestResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.suggester.SuggestResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.suggester.BatchSuggestResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.asgt.v2alpha.suggester.SuggesterClient.prototype.batchSuggest =
@@ -221,11 +221,11 @@ proto.asgt.v2alpha.suggester.SuggesterClient.prototype.batchSuggest =
 
 
 /**
- * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request The
+ * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.v2alpha.suggester.SuggestResponse>}
+ * @return {!Promise<!proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  *     A native promise that resolves to the response
  */
 proto.asgt.v2alpha.suggester.SuggesterPromiseClient.prototype.batchSuggest =
@@ -241,52 +241,52 @@ proto.asgt.v2alpha.suggester.SuggesterPromiseClient.prototype.batchSuggest =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.asgt.v2alpha.suggester.SuggestRequest,
- *   !proto.asgt.v2alpha.suggester.SuggestResponse>}
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  */
 const methodDescriptor_Suggester_ModelBatchSuggest = new grpc.web.MethodDescriptor(
   '/asgt.v2alpha.suggester.Suggester/ModelBatchSuggest',
   grpc.web.MethodType.UNARY,
-  proto.asgt.v2alpha.suggester.SuggestRequest,
-  proto.asgt.v2alpha.suggester.SuggestResponse,
+  proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse,
   /**
-   * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request
+   * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.v2alpha.suggester.SuggestResponse.deserializeBinary
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.asgt.v2alpha.suggester.SuggestRequest,
- *   !proto.asgt.v2alpha.suggester.SuggestResponse>}
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestRequest,
+ *   !proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  */
 const methodInfo_Suggester_ModelBatchSuggest = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.asgt.v2alpha.suggester.SuggestResponse,
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse,
   /**
-   * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request
+   * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.asgt.v2alpha.suggester.SuggestResponse.deserializeBinary
+  proto.asgt.v2alpha.suggester.BatchSuggestResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request The
+ * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.suggester.SuggestResponse)}
+ * @param {function(?grpc.web.Error, ?proto.asgt.v2alpha.suggester.BatchSuggestResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.suggester.SuggestResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2alpha.suggester.BatchSuggestResponse>|undefined}
  *     The XHR Node Readable Stream
  */
 proto.asgt.v2alpha.suggester.SuggesterClient.prototype.modelBatchSuggest =
@@ -301,11 +301,11 @@ proto.asgt.v2alpha.suggester.SuggesterClient.prototype.modelBatchSuggest =
 
 
 /**
- * @param {!proto.asgt.v2alpha.suggester.SuggestRequest} request The
+ * @param {!proto.asgt.v2alpha.suggester.BatchSuggestRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.asgt.v2alpha.suggester.SuggestResponse>}
+ * @return {!Promise<!proto.asgt.v2alpha.suggester.BatchSuggestResponse>}
  *     A native promise that resolves to the response
  */
 proto.asgt.v2alpha.suggester.SuggesterPromiseClient.prototype.modelBatchSuggest =

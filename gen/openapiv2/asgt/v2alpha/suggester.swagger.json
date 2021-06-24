@@ -24,7 +24,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
             }
           },
           "default": {
@@ -48,8 +48,11 @@
             "schema": {
               "type": "object",
               "properties": {
-                "input": {
-                  "$ref": "#/definitions/typeData"
+                "inputs": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeData"
+                  }
                 },
                 "options": {
                   "$ref": "#/definitions/suggesterSuggestOptions"
@@ -71,7 +74,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
             }
           },
           "default": {
@@ -95,8 +98,11 @@
             "schema": {
               "type": "object",
               "properties": {
-                "input": {
-                  "$ref": "#/definitions/typeData"
+                "inputs": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeData"
+                  }
                 },
                 "options": {
                   "$ref": "#/definitions/suggesterSuggestOptions"
@@ -248,6 +254,20 @@
           "items": {
             "$ref": "#/definitions/protobufAny"
           }
+        }
+      }
+    },
+    "suggesterBatchSuggestResponse": {
+      "type": "object",
+      "properties": {
+        "predictions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typePrediction"
+          }
+        },
+        "model": {
+          "$ref": "#/definitions/typeModel"
         }
       }
     },

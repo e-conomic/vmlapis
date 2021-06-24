@@ -28,9 +28,9 @@ WORKDIR /app
 
 COPY ["go.mod", "go.sum", "/app/"]
 RUN go get all \
-  && go install github.com/golang/mock/mockgen \
-  && go install github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
   && go install \
+         github.com/golang/mock/mockgen \
+         github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
          github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
          github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
          google.golang.org/protobuf/cmd/protoc-gen-go \

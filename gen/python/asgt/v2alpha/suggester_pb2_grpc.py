@@ -21,13 +21,13 @@ class SuggesterStub(object):
                 )
         self.BatchSuggest = channel.unary_unary(
                 '/asgt.v2alpha.suggester.Suggester/BatchSuggest',
-                request_serializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.SerializeToString,
-                response_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.FromString,
+                request_serializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.FromString,
                 )
         self.ModelBatchSuggest = channel.unary_unary(
                 '/asgt.v2alpha.suggester.Suggester/ModelBatchSuggest',
-                request_serializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.SerializeToString,
-                response_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.FromString,
+                request_serializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.SerializeToString,
+                response_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.FromString,
                 )
 
 
@@ -65,13 +65,13 @@ def add_SuggesterServicer_to_server(servicer, server):
             ),
             'BatchSuggest': grpc.unary_unary_rpc_method_handler(
                     servicer.BatchSuggest,
-                    request_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.FromString,
-                    response_serializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.SerializeToString,
+                    request_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.FromString,
+                    response_serializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.SerializeToString,
             ),
             'ModelBatchSuggest': grpc.unary_unary_rpc_method_handler(
                     servicer.ModelBatchSuggest,
-                    request_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.FromString,
-                    response_serializer=asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.SerializeToString,
+                    request_deserializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.FromString,
+                    response_serializer=asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -110,8 +110,8 @@ class Suggester(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.suggester.Suggester/BatchSuggest',
-            asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.SerializeToString,
-            asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.FromString,
+            asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.SerializeToString,
+            asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -126,7 +126,7 @@ class Suggester(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.suggester.Suggester/ModelBatchSuggest',
-            asgt_dot_v2alpha_dot_suggester__pb2.SuggestRequest.SerializeToString,
-            asgt_dot_v2alpha_dot_suggester__pb2.SuggestResponse.FromString,
+            asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestRequest.SerializeToString,
+            asgt_dot_v2alpha_dot_suggester__pb2.BatchSuggestResponse.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

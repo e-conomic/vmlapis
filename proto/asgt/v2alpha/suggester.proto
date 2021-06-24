@@ -23,7 +23,7 @@ service Suggester {
   }
 
   // Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists
-  rpc BatchSuggest (SuggestRequest) returns (SuggestResponse) {
+  rpc BatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{name}:batchSuggest"
       body: "*"
@@ -31,7 +31,7 @@ service Suggester {
   }
 
   // Suggest target values for multiple inputs using the most recently trained model in a dataset
-  rpc ModelBatchSuggest (SuggestRequest) returns (SuggestResponse) {
+  rpc ModelBatchSuggest (BatchSuggestRequest) returns (BatchSuggestResponse) {
     option (google.api.http) = {
       post: "/v2/datasets/{name}/model:batchSuggest"
       body: "*"

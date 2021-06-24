@@ -20,9 +20,9 @@ type SuggesterClient interface {
 	// Suggest target values for some input using a dataset, returning an empty result if no model exists
 	Suggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
 	// Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists
-	BatchSuggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
+	BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
 	// Suggest target values for multiple inputs using the most recently trained model in a dataset
-	ModelBatchSuggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error)
+	ModelBatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
 }
 
 type suggesterClient struct {
@@ -42,8 +42,8 @@ func (c *suggesterClient) Suggest(ctx context.Context, in *SuggestRequest, opts 
 	return out, nil
 }
 
-func (c *suggesterClient) BatchSuggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error) {
-	out := new(SuggestResponse)
+func (c *suggesterClient) BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error) {
+	out := new(BatchSuggestResponse)
 	err := c.cc.Invoke(ctx, "/asgt.v2alpha.suggester.Suggester/BatchSuggest", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -51,8 +51,8 @@ func (c *suggesterClient) BatchSuggest(ctx context.Context, in *SuggestRequest, 
 	return out, nil
 }
 
-func (c *suggesterClient) ModelBatchSuggest(ctx context.Context, in *SuggestRequest, opts ...grpc.CallOption) (*SuggestResponse, error) {
-	out := new(SuggestResponse)
+func (c *suggesterClient) ModelBatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error) {
+	out := new(BatchSuggestResponse)
 	err := c.cc.Invoke(ctx, "/asgt.v2alpha.suggester.Suggester/ModelBatchSuggest", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -67,9 +67,9 @@ type SuggesterServer interface {
 	// Suggest target values for some input using a dataset, returning an empty result if no model exists
 	Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
 	// Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists
-	BatchSuggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
+	BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
 	// Suggest target values for multiple inputs using the most recently trained model in a dataset
-	ModelBatchSuggest(context.Context, *SuggestRequest) (*SuggestResponse, error)
+	ModelBatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
 	mustEmbedUnimplementedSuggesterServer()
 }
 
@@ -80,10 +80,10 @@ type UnimplementedSuggesterServer struct {
 func (*UnimplementedSuggesterServer) Suggest(context.Context, *SuggestRequest) (*SuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Suggest not implemented")
 }
-func (*UnimplementedSuggesterServer) BatchSuggest(context.Context, *SuggestRequest) (*SuggestResponse, error) {
+func (*UnimplementedSuggesterServer) BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchSuggest not implemented")
 }
-func (*UnimplementedSuggesterServer) ModelBatchSuggest(context.Context, *SuggestRequest) (*SuggestResponse, error) {
+func (*UnimplementedSuggesterServer) ModelBatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ModelBatchSuggest not implemented")
 }
 func (*UnimplementedSuggesterServer) mustEmbedUnimplementedSuggesterServer() {}
@@ -111,7 +111,7 @@ func _Suggester_Suggest_Handler(srv interface{}, ctx context.Context, dec func(i
 }
 
 func _Suggester_BatchSuggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SuggestRequest)
+	in := new(BatchSuggestRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -123,13 +123,13 @@ func _Suggester_BatchSuggest_Handler(srv interface{}, ctx context.Context, dec f
 		FullMethod: "/asgt.v2alpha.suggester.Suggester/BatchSuggest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SuggesterServer).BatchSuggest(ctx, req.(*SuggestRequest))
+		return srv.(SuggesterServer).BatchSuggest(ctx, req.(*BatchSuggestRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _Suggester_ModelBatchSuggest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SuggestRequest)
+	in := new(BatchSuggestRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -141,7 +141,7 @@ func _Suggester_ModelBatchSuggest_Handler(srv interface{}, ctx context.Context, 
 		FullMethod: "/asgt.v2alpha.suggester.Suggester/ModelBatchSuggest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SuggesterServer).ModelBatchSuggest(ctx, req.(*SuggestRequest))
+		return srv.(SuggesterServer).ModelBatchSuggest(ctx, req.(*BatchSuggestRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

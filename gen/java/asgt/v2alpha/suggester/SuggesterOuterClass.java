@@ -4601,20 +4601,21 @@ public final class SuggesterOuterClass {
       "ns\030\003 \001(\0132&.asgt.v2alpha.suggester.Sugges" +
       "tOptions\"c\n\024BatchSuggestResponse\022*\n\013pred" +
       "ictions\030\001 \003(\0132\025.asgt.type.Prediction\022\037\n\005" +
-      "model\030\002 \001(\0132\020.asgt.type.Model2\271\003\n\tSugges" +
+      "model\030\002 \001(\0132\020.asgt.type.Model2\315\003\n\tSugges" +
       "ter\022\202\001\n\007Suggest\022&.asgt.v2alpha.suggester" +
       ".SuggestRequest\032\'.asgt.v2alpha.suggester" +
       ".SuggestResponse\"&\202\323\344\223\002 \"\033/v2/datasets/{" +
-      "name}:suggest:\001*\022\214\001\n\014BatchSuggest\022&.asgt" +
-      ".v2alpha.suggester.SuggestRequest\032\'.asgt" +
-      ".v2alpha.suggester.SuggestResponse\"+\202\323\344\223" +
-      "\002%\" /v2/datasets/{name}:batchSuggest:\001*\022" +
-      "\227\001\n\021ModelBatchSuggest\022&.asgt.v2alpha.sug" +
-      "gester.SuggestRequest\032\'.asgt.v2alpha.sug" +
-      "gester.SuggestResponse\"1\202\323\344\223\002+\"&/v2/data" +
-      "sets/{name}/model:batchSuggest:\001*B<Z:git" +
-      "hub.com/e-conomic/vmlapis/gen/go/asgt/v2" +
-      "alpha;suggesterb\006proto3"
+      "name}:suggest:\001*\022\226\001\n\014BatchSuggest\022+.asgt" +
+      ".v2alpha.suggester.BatchSuggestRequest\032," +
+      ".asgt.v2alpha.suggester.BatchSuggestResp" +
+      "onse\"+\202\323\344\223\002%\" /v2/datasets/{name}:batchS" +
+      "uggest:\001*\022\241\001\n\021ModelBatchSuggest\022+.asgt.v" +
+      "2alpha.suggester.BatchSuggestRequest\032,.a" +
+      "sgt.v2alpha.suggester.BatchSuggestRespon" +
+      "se\"1\202\323\344\223\002+\"&/v2/datasets/{name}/model:ba" +
+      "tchSuggest:\001*B<Z:github.com/e-conomic/vm" +
+      "lapis/gen/go/asgt/v2alpha;suggesterb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
