@@ -55,7 +55,11 @@ namespace Asgt.Dataservice.V1 {
   /// <summary>
   /// BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
-  public sealed partial class Entry : pb::IMessage<Entry> {
+  public sealed partial class Entry : pb::IMessage<Entry>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -390,6 +394,9 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -448,7 +455,72 @@ namespace Asgt.Dataservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            DatasetName = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            if (data_ == null) {
+              Data = new global::Asgt.Type.Data();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 50: {
+            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
+            break;
+          }
+          case 64: {
+            TimeAdded = input.ReadUInt64();
+            break;
+          }
+          case 74: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
+          case 82: {
+            prediction_.AddEntriesFrom(ref input, _repeated_prediction_codec);
+            break;
+          }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 98: {
+            DatasetType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

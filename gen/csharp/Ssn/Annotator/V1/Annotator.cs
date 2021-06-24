@@ -98,7 +98,11 @@ namespace Ssn.Annotator.V1 {
 
   }
   #region Messages
-  public sealed partial class Feature : pb::IMessage<Feature> {
+  public sealed partial class Feature : pb::IMessage<Feature>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Feature> _parser = new pb::MessageParser<Feature>(() => new Feature());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -269,6 +273,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -289,7 +296,34 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            MaxResults = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MinConfidence = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Feature message type.</summary>
@@ -411,7 +445,11 @@ namespace Ssn.Annotator.V1 {
 
   }
 
-  public sealed partial class DocumentAnnotatorRequest : pb::IMessage<DocumentAnnotatorRequest> {
+  public sealed partial class DocumentAnnotatorRequest : pb::IMessage<DocumentAnnotatorRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentAnnotatorRequest> _parser = new pb::MessageParser<DocumentAnnotatorRequest>(() => new DocumentAnnotatorRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -583,6 +621,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -610,11 +651,49 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (document_ == null) {
+              Document = new global::Ssn.Annotator.V1.Document();
+            }
+            input.ReadMessage(Document);
+            break;
+          }
+          case 18: {
+            features_.AddEntriesFrom(ref input, _repeated_features_codec);
+            break;
+          }
+          case 26: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 32: {
+            Tier = (global::Ssn.Type.Tier) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DocumentAnnotatorResponse : pb::IMessage<DocumentAnnotatorResponse> {
+  public sealed partial class DocumentAnnotatorResponse : pb::IMessage<DocumentAnnotatorResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentAnnotatorResponse> _parser = new pb::MessageParser<DocumentAnnotatorResponse>(() => new DocumentAnnotatorResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1277,6 +1356,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1396,11 +1478,141 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            orderDate_.AddEntriesFrom(ref input, _repeated_orderDate_codec);
+            break;
+          }
+          case 18: {
+            paymentDueDate_.AddEntriesFrom(ref input, _repeated_paymentDueDate_codec);
+            break;
+          }
+          case 26: {
+            currency_.AddEntriesFrom(ref input, _repeated_currency_codec);
+            break;
+          }
+          case 34: {
+            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
+            break;
+          }
+          case 42: {
+            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
+            break;
+          }
+          case 50: {
+            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 58: {
+            supplierCorporateId_.AddEntriesFrom(ref input, _repeated_supplierCorporateId_codec);
+            break;
+          }
+          case 66: {
+            supplierCountryCode_.AddEntriesFrom(ref input, _repeated_supplierCountryCode_codec);
+            break;
+          }
+          case 74: {
+            documentType_.AddEntriesFrom(ref input, _repeated_documentType_codec);
+            break;
+          }
+          case 82: {
+            paymentMethod_.AddEntriesFrom(ref input, _repeated_paymentMethod_codec);
+            break;
+          }
+          case 90: {
+            creditCardLastFour_.AddEntriesFrom(ref input, _repeated_creditCardLastFour_codec);
+            break;
+          }
+          case 98: {
+            invoiceNumber_.AddEntriesFrom(ref input, _repeated_invoiceNumber_codec);
+            break;
+          }
+          case 106: {
+            if (textAnnotation_ == null) {
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
+            }
+            input.ReadMessage(TextAnnotation);
+            break;
+          }
+          case 114: {
+            ocrLineDkType_.AddEntriesFrom(ref input, _repeated_ocrLineDkType_codec);
+            break;
+          }
+          case 122: {
+            ocrLineDkPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineDkPaymentId_codec);
+            break;
+          }
+          case 130: {
+            ocrLineDkCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineDkCreditorId_codec);
+            break;
+          }
+          case 138: {
+            ocrLineSePaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineSePaymentId_codec);
+            break;
+          }
+          case 146: {
+            ocrLineSeBankgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSeBankgiroCreditorId_codec);
+            break;
+          }
+          case 154: {
+            ocrLineSePlusgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSePlusgiroCreditorId_codec);
+            break;
+          }
+          case 162: {
+            ocrLineNoPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNoPaymentId_codec);
+            break;
+          }
+          case 170: {
+            ocrLineFiPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineFiPaymentId_codec);
+            break;
+          }
+          case 178: {
+            ocrLineNlPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNlPaymentId_codec);
+            break;
+          }
+          case 186: {
+            Text = input.ReadString();
+            break;
+          }
+          case 194: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 202: {
+            iban_.AddEntriesFrom(ref input, _repeated_iban_codec);
+            break;
+          }
+          case 210: {
+            lines_.AddEntriesFrom(ref input, _repeated_lines_codec);
+            break;
+          }
+          case 218: {
+            Preview = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Document : pb::IMessage<Document> {
+  public sealed partial class Document : pb::IMessage<Document>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1550,6 +1762,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1569,11 +1784,41 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            if (source_ == null) {
+              Source = new global::Ssn.Annotator.V1.DocumentSource();
+            }
+            input.ReadMessage(Source);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class DocumentSource : pb::IMessage<DocumentSource> {
+  public sealed partial class DocumentSource : pb::IMessage<DocumentSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentSource> _parser = new pb::MessageParser<DocumentSource>(() => new DocumentSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1694,6 +1939,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1706,7 +1954,26 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HttpUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
