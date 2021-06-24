@@ -14,6 +14,601 @@ public final class SuggesterOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface SuggestOptionsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.v2alpha.suggester.SuggestOptions)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 suggest_limit = 1;</code>
+     * @return The suggestLimit.
+     */
+    int getSuggestLimit();
+
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The enum numeric value on the wire for minConfidence.
+     */
+    int getMinConfidenceValue();
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The minConfidence.
+     */
+    asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
+  }
+  /**
+   * Protobuf type {@code asgt.v2alpha.suggester.SuggestOptions}
+   */
+  public static final class SuggestOptions extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.v2alpha.suggester.SuggestOptions)
+      SuggestOptionsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SuggestOptions.newBuilder() to construct.
+    private SuggestOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SuggestOptions() {
+      minConfidence_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SuggestOptions();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SuggestOptions(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              suggestLimit_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              minConfidence_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.class, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder.class);
+    }
+
+    public static final int SUGGEST_LIMIT_FIELD_NUMBER = 1;
+    private int suggestLimit_;
+    /**
+     * <code>int32 suggest_limit = 1;</code>
+     * @return The suggestLimit.
+     */
+    @java.lang.Override
+    public int getSuggestLimit() {
+      return suggestLimit_;
+    }
+
+    public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
+    private int minConfidence_;
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The enum numeric value on the wire for minConfidence.
+     */
+    @java.lang.Override public int getMinConfidenceValue() {
+      return minConfidence_;
+    }
+    /**
+     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The minConfidence.
+     */
+    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+      @SuppressWarnings("deprecation")
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (suggestLimit_ != 0) {
+        output.writeInt32(1, suggestLimit_);
+      }
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+        output.writeEnum(2, minConfidence_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (suggestLimit_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, suggestLimit_);
+      }
+      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, minConfidence_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions)) {
+        return super.equals(obj);
+      }
+      asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions other = (asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) obj;
+
+      if (getSuggestLimit()
+          != other.getSuggestLimit()) return false;
+      if (minConfidence_ != other.minConfidence_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUGGEST_LIMIT_FIELD_NUMBER;
+      hash = (53 * hash) + getSuggestLimit();
+      hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
+      hash = (53 * hash) + minConfidence_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.v2alpha.suggester.SuggestOptions}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.v2alpha.suggester.SuggestOptions)
+        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.class, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder.class);
+      }
+
+      // Construct using asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        suggestLimit_ = 0;
+
+        minConfidence_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstanceForType() {
+        return asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions build() {
+        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions buildPartial() {
+        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions result = new asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions(this);
+        result.suggestLimit_ = suggestLimit_;
+        result.minConfidence_ = minConfidence_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) {
+          return mergeFrom((asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions other) {
+        if (other == asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance()) return this;
+        if (other.getSuggestLimit() != 0) {
+          setSuggestLimit(other.getSuggestLimit());
+        }
+        if (other.minConfidence_ != 0) {
+          setMinConfidenceValue(other.getMinConfidenceValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int suggestLimit_ ;
+      /**
+       * <code>int32 suggest_limit = 1;</code>
+       * @return The suggestLimit.
+       */
+      @java.lang.Override
+      public int getSuggestLimit() {
+        return suggestLimit_;
+      }
+      /**
+       * <code>int32 suggest_limit = 1;</code>
+       * @param value The suggestLimit to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSuggestLimit(int value) {
+        
+        suggestLimit_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 suggest_limit = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSuggestLimit() {
+        
+        suggestLimit_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int minConfidence_ = 0;
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return The enum numeric value on the wire for minConfidence.
+       */
+      @java.lang.Override public int getMinConfidenceValue() {
+        return minConfidence_;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @param value The enum numeric value on the wire for minConfidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinConfidenceValue(int value) {
+        
+        minConfidence_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return The minConfidence.
+       */
+      @java.lang.Override
+      public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+        @SuppressWarnings("deprecation")
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @param value The minConfidence to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        minConfidence_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinConfidence() {
+        
+        minConfidence_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.v2alpha.suggester.SuggestOptions)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.v2alpha.suggester.SuggestOptions)
+    private static final asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions();
+    }
+
+    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SuggestOptions>
+        PARSER = new com.google.protobuf.AbstractParser<SuggestOptions>() {
+      @java.lang.Override
+      public SuggestOptions parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SuggestOptions(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SuggestOptions> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SuggestOptions> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface SuggestRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.v2alpha.suggester.SuggestRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -31,59 +626,34 @@ public final class SuggesterOuterClass {
         getNameBytes();
 
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      * @return The input.
      */
     asgt.type.DataOuterClass.Data getInput();
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
 
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return The options.
      */
     asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      */
     asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
-
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return A list containing the tags.
-     */
-    java.util.List<java.lang.String>
-        getTagsList();
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return The count of tags.
-     */
-    int getTagsCount();
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    java.lang.String getTags(int index);
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
-     */
-    com.google.protobuf.ByteString
-        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code asgt.v2alpha.suggester.SuggestRequest}
@@ -99,7 +669,6 @@ public final class SuggesterOuterClass {
     }
     private SuggestRequest() {
       name_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -122,7 +691,6 @@ public final class SuggesterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -139,7 +707,7 @@ public final class SuggesterOuterClass {
               name_ = s;
               break;
             }
-            case 26: {
+            case 18: {
               asgt.type.DataOuterClass.Data.Builder subBuilder = null;
               if (input_ != null) {
                 subBuilder = input_.toBuilder();
@@ -152,7 +720,7 @@ public final class SuggesterOuterClass {
 
               break;
             }
-            case 34: {
+            case 26: {
               asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder subBuilder = null;
               if (options_ != null) {
                 subBuilder = options_.toBuilder();
@@ -163,15 +731,6 @@ public final class SuggesterOuterClass {
                 options_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              tags_.add(s);
               break;
             }
             default: {
@@ -189,9 +748,6 @@ public final class SuggesterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -247,10 +803,10 @@ public final class SuggesterOuterClass {
       }
     }
 
-    public static final int INPUT_FIELD_NUMBER = 3;
+    public static final int INPUT_FIELD_NUMBER = 2;
     private asgt.type.DataOuterClass.Data input_;
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
     @java.lang.Override
@@ -258,7 +814,7 @@ public final class SuggesterOuterClass {
       return input_ != null;
     }
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      * @return The input.
      */
     @java.lang.Override
@@ -266,17 +822,17 @@ public final class SuggesterOuterClass {
       return input_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : input_;
     }
     /**
-     * <code>.asgt.type.Data input = 3;</code>
+     * <code>.asgt.type.Data input = 2;</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
       return getInput();
     }
 
-    public static final int OPTIONS_FIELD_NUMBER = 4;
+    public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -284,7 +840,7 @@ public final class SuggesterOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return The options.
      */
     @java.lang.Override
@@ -292,46 +848,11 @@ public final class SuggesterOuterClass {
       return options_ == null ? asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      */
     @java.lang.Override
     public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList tags_;
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return A list containing the tags.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return The count of tags.
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -352,13 +873,10 @@ public final class SuggesterOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       if (input_ != null) {
-        output.writeMessage(3, getInput());
+        output.writeMessage(2, getInput());
       }
       if (options_ != null) {
-        output.writeMessage(4, getOptions());
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+        output.writeMessage(3, getOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -374,19 +892,11 @@ public final class SuggesterOuterClass {
       }
       if (input_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getInput());
+          .computeMessageSize(2, getInput());
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getOptions());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
+          .computeMessageSize(3, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -415,8 +925,6 @@ public final class SuggesterOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -437,10 +945,6 @@ public final class SuggesterOuterClass {
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
-      }
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -589,8 +1093,6 @@ public final class SuggesterOuterClass {
           options_ = null;
           optionsBuilder_ = null;
         }
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -617,7 +1119,6 @@ public final class SuggesterOuterClass {
       @java.lang.Override
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestRequest buildPartial() {
         asgt.v2alpha.suggester.SuggesterOuterClass.SuggestRequest result = new asgt.v2alpha.suggester.SuggesterOuterClass.SuggestRequest(this);
-        int from_bitField0_ = bitField0_;
         result.name_ = name_;
         if (inputBuilder_ == null) {
           result.input_ = input_;
@@ -629,11 +1130,6 @@ public final class SuggesterOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
         onBuilt();
         return result;
       }
@@ -692,16 +1188,6 @@ public final class SuggesterOuterClass {
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
         }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
-        }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -730,7 +1216,6 @@ public final class SuggesterOuterClass {
         }
         return this;
       }
-      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -812,14 +1297,14 @@ public final class SuggesterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> inputBuilder_;
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        * @return Whether the input field is set.
        */
       public boolean hasInput() {
         return inputBuilder_ != null || input_ != null;
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        * @return The input.
        */
       public asgt.type.DataOuterClass.Data getInput() {
@@ -830,7 +1315,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public Builder setInput(asgt.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -846,7 +1331,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public Builder setInput(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -860,7 +1345,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public Builder mergeInput(asgt.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
@@ -878,7 +1363,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public Builder clearInput() {
         if (inputBuilder_ == null) {
@@ -892,7 +1377,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getInputBuilder() {
         
@@ -900,7 +1385,7 @@ public final class SuggesterOuterClass {
         return getInputFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
         if (inputBuilder_ != null) {
@@ -911,7 +1396,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.type.Data input = 3;</code>
+       * <code>.asgt.type.Data input = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
@@ -931,14 +1416,14 @@ public final class SuggesterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        * @return The options.
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getOptions() {
@@ -949,7 +1434,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder setOptions(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -965,7 +1450,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder setOptions(
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder builderForValue) {
@@ -979,7 +1464,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder mergeOptions(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -997,7 +1482,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -1011,7 +1496,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -1019,7 +1504,7 @@ public final class SuggesterOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -1030,7 +1515,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder> 
@@ -1044,116 +1529,6 @@ public final class SuggesterOuterClass {
           options_ = null;
         }
         return optionsBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return A list containing the tags.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return The count of tags.
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTags(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTagsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -2032,601 +2407,6 @@ public final class SuggesterOuterClass {
 
   }
 
-  public interface SuggestOptionsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:asgt.v2alpha.suggester.SuggestOptions)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>int32 suggest_limit = 1;</code>
-     * @return The suggestLimit.
-     */
-    int getSuggestLimit();
-
-    /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-     * @return The enum numeric value on the wire for minConfidence.
-     */
-    int getMinConfidenceValue();
-    /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-     * @return The minConfidence.
-     */
-    asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
-  }
-  /**
-   * Protobuf type {@code asgt.v2alpha.suggester.SuggestOptions}
-   */
-  public static final class SuggestOptions extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:asgt.v2alpha.suggester.SuggestOptions)
-      SuggestOptionsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use SuggestOptions.newBuilder() to construct.
-    private SuggestOptions(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private SuggestOptions() {
-      minConfidence_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new SuggestOptions();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private SuggestOptions(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-
-              suggestLimit_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              minConfidence_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.class, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder.class);
-    }
-
-    public static final int SUGGEST_LIMIT_FIELD_NUMBER = 1;
-    private int suggestLimit_;
-    /**
-     * <code>int32 suggest_limit = 1;</code>
-     * @return The suggestLimit.
-     */
-    @java.lang.Override
-    public int getSuggestLimit() {
-      return suggestLimit_;
-    }
-
-    public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
-    private int minConfidence_;
-    /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-     * @return The enum numeric value on the wire for minConfidence.
-     */
-    @java.lang.Override public int getMinConfidenceValue() {
-      return minConfidence_;
-    }
-    /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-     * @return The minConfidence.
-     */
-    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-      @SuppressWarnings("deprecation")
-      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
-      return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (suggestLimit_ != 0) {
-        output.writeInt32(1, suggestLimit_);
-      }
-      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
-        output.writeEnum(2, minConfidence_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (suggestLimit_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, suggestLimit_);
-      }
-      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, minConfidence_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions)) {
-        return super.equals(obj);
-      }
-      asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions other = (asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) obj;
-
-      if (getSuggestLimit()
-          != other.getSuggestLimit()) return false;
-      if (minConfidence_ != other.minConfidence_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + SUGGEST_LIMIT_FIELD_NUMBER;
-      hash = (53 * hash) + getSuggestLimit();
-      hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
-      hash = (53 * hash) + minConfidence_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code asgt.v2alpha.suggester.SuggestOptions}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:asgt.v2alpha.suggester.SuggestOptions)
-        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.class, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder.class);
-      }
-
-      // Construct using asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        suggestLimit_ = 0;
-
-        minConfidence_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return asgt.v2alpha.suggester.SuggesterOuterClass.internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
-      }
-
-      @java.lang.Override
-      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstanceForType() {
-        return asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions build() {
-        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions buildPartial() {
-        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions result = new asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions(this);
-        result.suggestLimit_ = suggestLimit_;
-        result.minConfidence_ = minConfidence_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) {
-          return mergeFrom((asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions other) {
-        if (other == asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance()) return this;
-        if (other.getSuggestLimit() != 0) {
-          setSuggestLimit(other.getSuggestLimit());
-        }
-        if (other.minConfidence_ != 0) {
-          setMinConfidenceValue(other.getMinConfidenceValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private int suggestLimit_ ;
-      /**
-       * <code>int32 suggest_limit = 1;</code>
-       * @return The suggestLimit.
-       */
-      @java.lang.Override
-      public int getSuggestLimit() {
-        return suggestLimit_;
-      }
-      /**
-       * <code>int32 suggest_limit = 1;</code>
-       * @param value The suggestLimit to set.
-       * @return This builder for chaining.
-       */
-      public Builder setSuggestLimit(int value) {
-        
-        suggestLimit_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>int32 suggest_limit = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearSuggestLimit() {
-        
-        suggestLimit_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int minConfidence_ = 0;
-      /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-       * @return The enum numeric value on the wire for minConfidence.
-       */
-      @java.lang.Override public int getMinConfidenceValue() {
-        return minConfidence_;
-      }
-      /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-       * @param value The enum numeric value on the wire for minConfidence to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMinConfidenceValue(int value) {
-        
-        minConfidence_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-       * @return The minConfidence.
-       */
-      @java.lang.Override
-      public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-        @SuppressWarnings("deprecation")
-        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
-        return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-       * @param value The minConfidence to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        minConfidence_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMinConfidence() {
-        
-        minConfidence_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:asgt.v2alpha.suggester.SuggestOptions)
-    }
-
-    // @@protoc_insertion_point(class_scope:asgt.v2alpha.suggester.SuggestOptions)
-    private static final asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions();
-    }
-
-    public static asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<SuggestOptions>
-        PARSER = new com.google.protobuf.AbstractParser<SuggestOptions>() {
-      @java.lang.Override
-      public SuggestOptions parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new SuggestOptions(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<SuggestOptions> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<SuggestOptions> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface BatchSuggestRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:asgt.v2alpha.suggester.BatchSuggestRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -2644,68 +2424,43 @@ public final class SuggesterOuterClass {
         getNameBytes();
 
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     java.util.List<asgt.type.DataOuterClass.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     asgt.type.DataOuterClass.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return The options.
      */
     asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getOptions();
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      */
     asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder();
-
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return A list containing the tags.
-     */
-    java.util.List<java.lang.String>
-        getTagsList();
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return The count of tags.
-     */
-    int getTagsCount();
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    java.lang.String getTags(int index);
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
-     */
-    com.google.protobuf.ByteString
-        getTagsBytes(int index);
   }
   /**
    * Protobuf type {@code asgt.v2alpha.suggester.BatchSuggestRequest}
@@ -2722,7 +2477,6 @@ public final class SuggesterOuterClass {
     private BatchSuggestRequest() {
       name_ = "";
       inputs_ = java.util.Collections.emptyList();
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     }
 
     @java.lang.Override
@@ -2762,7 +2516,7 @@ public final class SuggesterOuterClass {
               name_ = s;
               break;
             }
-            case 26: {
+            case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>();
                 mutable_bitField0_ |= 0x00000001;
@@ -2771,7 +2525,7 @@ public final class SuggesterOuterClass {
                   input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry));
               break;
             }
-            case 34: {
+            case 26: {
               asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder subBuilder = null;
               if (options_ != null) {
                 subBuilder = options_.toBuilder();
@@ -2782,15 +2536,6 @@ public final class SuggesterOuterClass {
                 options_ = subBuilder.buildPartial();
               }
 
-              break;
-            }
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              tags_.add(s);
               break;
             }
             default: {
@@ -2810,9 +2555,6 @@ public final class SuggesterOuterClass {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
-        }
-        if (((mutable_bitField0_ & 0x00000002) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -2869,17 +2611,17 @@ public final class SuggesterOuterClass {
       }
     }
 
-    public static final int INPUTS_FIELD_NUMBER = 3;
+    public static final int INPUTS_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.DataOuterClass.Data> inputs_;
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
@@ -2887,21 +2629,21 @@ public final class SuggesterOuterClass {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 3;</code>
+     * <code>repeated .asgt.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
@@ -2909,10 +2651,10 @@ public final class SuggesterOuterClass {
       return inputs_.get(index);
     }
 
-    public static final int OPTIONS_FIELD_NUMBER = 4;
+    public static final int OPTIONS_FIELD_NUMBER = 3;
     private asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions options_;
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return Whether the options field is set.
      */
     @java.lang.Override
@@ -2920,7 +2662,7 @@ public final class SuggesterOuterClass {
       return options_ != null;
     }
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      * @return The options.
      */
     @java.lang.Override
@@ -2928,46 +2670,11 @@ public final class SuggesterOuterClass {
       return options_ == null ? asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
     /**
-     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+     * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
      */
     @java.lang.Override
     public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
-    }
-
-    public static final int TAGS_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList tags_;
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return A list containing the tags.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      return tags_;
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @return The count of tags.
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <code>repeated string tags = 5;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2988,13 +2695,10 @@ public final class SuggesterOuterClass {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       for (int i = 0; i < inputs_.size(); i++) {
-        output.writeMessage(3, inputs_.get(i));
+        output.writeMessage(2, inputs_.get(i));
       }
       if (options_ != null) {
-        output.writeMessage(4, getOptions());
-      }
-      for (int i = 0; i < tags_.size(); i++) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+        output.writeMessage(3, getOptions());
       }
       unknownFields.writeTo(output);
     }
@@ -3010,19 +2714,11 @@ public final class SuggesterOuterClass {
       }
       for (int i = 0; i < inputs_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, inputs_.get(i));
+          .computeMessageSize(2, inputs_.get(i));
       }
       if (options_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getOptions());
-      }
-      {
-        int dataSize = 0;
-        for (int i = 0; i < tags_.size(); i++) {
-          dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-        }
-        size += dataSize;
-        size += 1 * getTagsList().size();
+          .computeMessageSize(3, getOptions());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3048,8 +2744,6 @@ public final class SuggesterOuterClass {
         if (!getOptions()
             .equals(other.getOptions())) return false;
       }
-      if (!getTagsList()
-          .equals(other.getTagsList())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3070,10 +2764,6 @@ public final class SuggesterOuterClass {
       if (hasOptions()) {
         hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
         hash = (53 * hash) + getOptions().hashCode();
-      }
-      if (getTagsCount() > 0) {
-        hash = (37 * hash) + TAGS_FIELD_NUMBER;
-        hash = (53 * hash) + getTagsList().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3223,8 +2913,6 @@ public final class SuggesterOuterClass {
           options_ = null;
           optionsBuilder_ = null;
         }
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -3267,11 +2955,6 @@ public final class SuggesterOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.tags_ = tags_;
         onBuilt();
         return result;
       }
@@ -3352,16 +3035,6 @@ public final class SuggesterOuterClass {
         }
         if (other.hasOptions()) {
           mergeOptions(other.getOptions());
-        }
-        if (!other.tags_.isEmpty()) {
-          if (tags_.isEmpty()) {
-            tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
-          } else {
-            ensureTagsIsMutable();
-            tags_.addAll(other.tags_);
-          }
-          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -3482,7 +3155,7 @@ public final class SuggesterOuterClass {
           asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
         if (inputsBuilder_ == null) {
@@ -3492,7 +3165,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -3502,7 +3175,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public asgt.type.DataOuterClass.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3512,7 +3185,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
           int index, asgt.type.DataOuterClass.Data value) {
@@ -3529,7 +3202,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
           int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3543,7 +3216,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder addInputs(asgt.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
@@ -3559,7 +3232,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
           int index, asgt.type.DataOuterClass.Data value) {
@@ -3576,7 +3249,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3590,7 +3263,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
           int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
@@ -3604,7 +3277,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder addAllInputs(
           java.lang.Iterable<? extends asgt.type.DataOuterClass.Data> values) {
@@ -3619,7 +3292,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -3632,7 +3305,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3645,14 +3318,14 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
           int index) {
@@ -3662,7 +3335,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
            getInputsOrBuilderList() {
@@ -3673,14 +3346,14 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public asgt.type.DataOuterClass.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
             asgt.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public asgt.type.DataOuterClass.Data.Builder addInputsBuilder(
           int index) {
@@ -3688,7 +3361,7 @@ public final class SuggesterOuterClass {
             index, asgt.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 3;</code>
+       * <code>repeated .asgt.type.Data inputs = 2;</code>
        */
       public java.util.List<asgt.type.DataOuterClass.Data.Builder> 
            getInputsBuilderList() {
@@ -3713,14 +3386,14 @@ public final class SuggesterOuterClass {
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder> optionsBuilder_;
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        * @return The options.
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions getOptions() {
@@ -3731,7 +3404,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder setOptions(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3747,7 +3420,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder setOptions(
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder builderForValue) {
@@ -3761,7 +3434,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder mergeOptions(asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
@@ -3779,7 +3452,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public Builder clearOptions() {
         if (optionsBuilder_ == null) {
@@ -3793,7 +3466,7 @@ public final class SuggesterOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder getOptionsBuilder() {
         
@@ -3801,7 +3474,7 @@ public final class SuggesterOuterClass {
         return getOptionsFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       public asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
         if (optionsBuilder_ != null) {
@@ -3812,7 +3485,7 @@ public final class SuggesterOuterClass {
         }
       }
       /**
-       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 4;</code>
+       * <code>.asgt.v2alpha.suggester.SuggestOptions options = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptions.Builder, asgt.v2alpha.suggester.SuggesterOuterClass.SuggestOptionsOrBuilder> 
@@ -3826,116 +3499,6 @@ public final class SuggesterOuterClass {
           options_ = null;
         }
         return optionsBuilder_;
-      }
-
-      private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
-          tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000002;
-         }
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return A list containing the tags.
-       */
-      public com.google.protobuf.ProtocolStringList
-          getTagsList() {
-        return tags_.getUnmodifiableView();
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return The count of tags.
-       */
-      public int getTagsCount() {
-        return tags_.size();
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index of the element to return.
-       * @return The tags at the given index.
-       */
-      public java.lang.String getTags(int index) {
-        return tags_.get(index);
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index of the value to return.
-       * @return The bytes of the tags at the given index.
-       */
-      public com.google.protobuf.ByteString
-          getTagsBytes(int index) {
-        return tags_.getByteString(index);
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param index The index to set the value at.
-       * @param value The tags to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTags(
-          int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.set(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param value The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTags(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param values The tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllTags(
-          java.lang.Iterable<java.lang.String> values) {
-        ensureTagsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, tags_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTags() {
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated string tags = 5;</code>
-       * @param value The bytes of the tags to add.
-       * @return This builder for chaining.
-       */
-      public Builder addTagsBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        ensureTagsIsMutable();
-        tags_.add(value);
-        onChanged();
-        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4987,6 +4550,11 @@ public final class SuggesterOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2alpha_suggester_SuggestRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4996,11 +4564,6 @@ public final class SuggesterOuterClass {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2alpha_suggester_SuggestResponse_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2alpha_suggester_BatchSuggestRequest_descriptor;
   private static final 
@@ -5024,35 +4587,34 @@ public final class SuggesterOuterClass {
       "lpha.suggester\032\024asgt/type/data.proto\032\025as" +
       "gt/type/model.proto\032\032asgt/type/predictio" +
       "n.proto\032\034google/api/annotations.proto\032\031o" +
-      "ptions/annotations.proto\"\205\001\n\016SuggestRequ" +
-      "est\022\014\n\004name\030\001 \001(\t\022\036\n\005input\030\003 \001(\0132\017.asgt." +
-      "type.Data\0227\n\007options\030\004 \001(\0132&.asgt.v2alph" +
-      "a.suggester.SuggestOptions\022\014\n\004tags\030\005 \003(\t" +
-      "\"]\n\017SuggestResponse\022)\n\nprediction\030\001 \001(\0132" +
-      "\025.asgt.type.Prediction\022\037\n\005model\030\002 \001(\0132\020." +
-      "asgt.type.Model\"w\n\016SuggestOptions\022\025\n\rsug" +
-      "gest_limit\030\001 \001(\005\0223\n\016min_confidence\030\002 \001(\016" +
-      "2\033.asgt.type.Confidence.Level:\031\222A\0262\024{\"su" +
-      "ggest_limit\": 3}\"\213\001\n\023BatchSuggestRequest" +
-      "\022\014\n\004name\030\001 \001(\t\022\037\n\006inputs\030\003 \003(\0132\017.asgt.ty" +
-      "pe.Data\0227\n\007options\030\004 \001(\0132&.asgt.v2alpha." +
-      "suggester.SuggestOptions\022\014\n\004tags\030\005 \003(\t\"c" +
-      "\n\024BatchSuggestResponse\022*\n\013predictions\030\001 " +
-      "\003(\0132\025.asgt.type.Prediction\022\037\n\005model\030\002 \001(" +
-      "\0132\020.asgt.type.Model2\271\003\n\tSuggester\022\202\001\n\007Su" +
-      "ggest\022&.asgt.v2alpha.suggester.SuggestRe" +
-      "quest\032\'.asgt.v2alpha.suggester.SuggestRe" +
-      "sponse\"&\202\323\344\223\002 \"\033/v2/datasets/{name}:sugg" +
-      "est:\001*\022\214\001\n\014BatchSuggest\022&.asgt.v2alpha.s" +
-      "uggester.SuggestRequest\032\'.asgt.v2alpha.s" +
-      "uggester.SuggestResponse\"+\202\323\344\223\002%\" /v2/da" +
-      "tasets/{name}:batchSuggest:\001*\022\227\001\n\021ModelB" +
-      "atchSuggest\022&.asgt.v2alpha.suggester.Sug" +
-      "gestRequest\032\'.asgt.v2alpha.suggester.Sug" +
-      "gestResponse\"1\202\323\344\223\002+\"&/v2/datasets/{name" +
-      "}/model:batchSuggest:\001*B<Z:github.com/e-" +
-      "conomic/vmlapis/gen/go/asgt/v2alpha;sugg" +
-      "esterb\006proto3"
+      "ptions/annotations.proto\"w\n\016SuggestOptio" +
+      "ns\022\025\n\rsuggest_limit\030\001 \001(\005\0223\n\016min_confide" +
+      "nce\030\002 \001(\0162\033.asgt.type.Confidence.Level:\031" +
+      "\222A\0262\024{\"suggest_limit\": 3}\"w\n\016SuggestRequ" +
+      "est\022\014\n\004name\030\001 \001(\t\022\036\n\005input\030\002 \001(\0132\017.asgt." +
+      "type.Data\0227\n\007options\030\003 \001(\0132&.asgt.v2alph" +
+      "a.suggester.SuggestOptions\"]\n\017SuggestRes" +
+      "ponse\022)\n\nprediction\030\001 \001(\0132\025.asgt.type.Pr" +
+      "ediction\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Mode" +
+      "l\"}\n\023BatchSuggestRequest\022\014\n\004name\030\001 \001(\t\022\037" +
+      "\n\006inputs\030\002 \003(\0132\017.asgt.type.Data\0227\n\007optio" +
+      "ns\030\003 \001(\0132&.asgt.v2alpha.suggester.Sugges" +
+      "tOptions\"c\n\024BatchSuggestResponse\022*\n\013pred" +
+      "ictions\030\001 \003(\0132\025.asgt.type.Prediction\022\037\n\005" +
+      "model\030\002 \001(\0132\020.asgt.type.Model2\271\003\n\tSugges" +
+      "ter\022\202\001\n\007Suggest\022&.asgt.v2alpha.suggester" +
+      ".SuggestRequest\032\'.asgt.v2alpha.suggester" +
+      ".SuggestResponse\"&\202\323\344\223\002 \"\033/v2/datasets/{" +
+      "name}:suggest:\001*\022\214\001\n\014BatchSuggest\022&.asgt" +
+      ".v2alpha.suggester.SuggestRequest\032\'.asgt" +
+      ".v2alpha.suggester.SuggestResponse\"+\202\323\344\223" +
+      "\002%\" /v2/datasets/{name}:batchSuggest:\001*\022" +
+      "\227\001\n\021ModelBatchSuggest\022&.asgt.v2alpha.sug" +
+      "gester.SuggestRequest\032\'.asgt.v2alpha.sug" +
+      "gester.SuggestResponse\"1\202\323\344\223\002+\"&/v2/data" +
+      "sets/{name}/model:batchSuggest:\001*B<Z:git" +
+      "hub.com/e-conomic/vmlapis/gen/go/asgt/v2" +
+      "alpha;suggesterb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5063,30 +4625,30 @@ public final class SuggesterOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
-    internal_static_asgt_v2alpha_suggester_SuggestRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_asgt_v2alpha_suggester_SuggestRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_v2alpha_suggester_SuggestRequest_descriptor,
-        new java.lang.String[] { "Name", "Input", "Options", "Tags", });
-    internal_static_asgt_v2alpha_suggester_SuggestResponse_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_asgt_v2alpha_suggester_SuggestResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_asgt_v2alpha_suggester_SuggestResponse_descriptor,
-        new java.lang.String[] { "Prediction", "Model", });
     internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_v2alpha_suggester_SuggestOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_suggester_SuggestOptions_descriptor,
         new java.lang.String[] { "SuggestLimit", "MinConfidence", });
+    internal_static_asgt_v2alpha_suggester_SuggestRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_asgt_v2alpha_suggester_SuggestRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2alpha_suggester_SuggestRequest_descriptor,
+        new java.lang.String[] { "Name", "Input", "Options", });
+    internal_static_asgt_v2alpha_suggester_SuggestResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_v2alpha_suggester_SuggestResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2alpha_suggester_SuggestResponse_descriptor,
+        new java.lang.String[] { "Prediction", "Model", });
     internal_static_asgt_v2alpha_suggester_BatchSuggestRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2alpha_suggester_BatchSuggestRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_suggester_BatchSuggestRequest_descriptor,
-        new java.lang.String[] { "Name", "Inputs", "Options", "Tags", });
+        new java.lang.String[] { "Name", "Inputs", "Options", });
     internal_static_asgt_v2alpha_suggester_BatchSuggestResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2alpha_suggester_BatchSuggestResponse_fieldAccessorTable = new

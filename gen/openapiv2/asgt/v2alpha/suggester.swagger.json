@@ -53,12 +53,6 @@
                 },
                 "options": {
                   "$ref": "#/definitions/suggesterSuggestOptions"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -106,12 +100,6 @@
                 },
                 "options": {
                   "$ref": "#/definitions/suggesterSuggestOptions"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }
@@ -159,12 +147,6 @@
                 },
                 "options": {
                   "$ref": "#/definitions/suggesterSuggestOptions"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
                 }
               }
             }

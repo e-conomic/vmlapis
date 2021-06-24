@@ -39,18 +39,6 @@ service Suggester {
   }
 }
 
-message SuggestRequest {
-  string name = 1;
-  asgt.type.Data input = 3;
-  SuggestOptions options = 4;
-  repeated string tags = 5;
-}
-
-message SuggestResponse {
-  asgt.type.Prediction prediction = 1;
-  asgt.type.Model model = 2;
-}
-
 message SuggestOptions {
   option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
 			example: "{\"suggest_limit\": 3}"
@@ -60,12 +48,21 @@ message SuggestOptions {
   asgt.type.Confidence.Level min_confidence = 2;
 }
 
+message SuggestRequest {
+  string name = 1;
+  asgt.type.Data input = 2;
+  SuggestOptions options = 3;
+}
+
+message SuggestResponse {
+  asgt.type.Prediction prediction = 1;
+  asgt.type.Model model = 2;
+}
+
 message BatchSuggestRequest {
   string name = 1;
-
-  repeated asgt.type.Data inputs = 3;
-  SuggestOptions options = 4;
-  repeated string tags = 5;
+  repeated asgt.type.Data inputs = 2;
+  SuggestOptions options = 3;
 }
 
 message BatchSuggestResponse {
