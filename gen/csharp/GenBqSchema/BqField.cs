@@ -33,14 +33,23 @@ namespace GenBqSchema {
             "aWVsZE9wdGlvbnNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
             "ZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryFieldOptions), global::GenBqSchema.BigQueryFieldOptions.Parser, new[]{ "Require", "TypeOverride", "Ignore", "Description", "Name" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { BqFieldExtensions.Bigquery }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryFieldOptions), global::GenBqSchema.BigQueryFieldOptions.Parser, new[]{ "Require", "TypeOverride", "Ignore", "Description", "Name" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  /// <summary>Holder for extension identifiers generated from the top level of gen_bq_schema/bq_field.proto</summary>
+  public static partial class BqFieldExtensions {
+    /// <summary>
+    /// BigQuery field schema generation options.
+    /// </summary>
+    public static readonly pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::GenBqSchema.BigQueryFieldOptions> Bigquery =
+      new pb::Extension<global::Google.Protobuf.Reflection.FieldOptions, global::GenBqSchema.BigQueryFieldOptions>(1021, pb::FieldCodec.ForMessage(8170, global::GenBqSchema.BigQueryFieldOptions.Parser));
+  }
+
   #region Messages
   /// <summary>
   /// Message containing options related to BigQuery schema generation

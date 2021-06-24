@@ -32,8 +32,8 @@ namespace Asgt.Type {
             "YXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null, null)})
           }));
     }
     #endregion

@@ -34,8 +34,8 @@ namespace Asgt.Type {
             "YXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent), global::Asgt.Type.TrainModelEvent.Parser, new[]{ "Dataset", "ModelVersion", "Status", "StatusMessage", "Artifacts" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent.Types.Artifact), global::Asgt.Type.TrainModelEvent.Types.Artifact.Parser, new[]{ "Type", "Path" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent), global::Asgt.Type.TrainModelEvent.Parser, new[]{ "Dataset", "ModelVersion", "Status", "StatusMessage", "Artifacts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent.Types.Artifact), global::Asgt.Type.TrainModelEvent.Types.Artifact.Parser, new[]{ "Type", "Path" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -227,7 +227,7 @@ namespace Asgt.Type {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
@@ -254,9 +254,9 @@ namespace Asgt.Type {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
           case 32: {

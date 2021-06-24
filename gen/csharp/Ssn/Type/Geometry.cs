@@ -33,10 +33,10 @@ namespace Ssn.Type {
             "dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Vertex), global::Ssn.Type.Vertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.NormalizedVertex), global::Ssn.Type.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.BoundingPoly), global::Ssn.Type.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Vertex), global::Ssn.Type.Vertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.NormalizedVertex), global::Ssn.Type.NormalizedVertex.Parser, new[]{ "X", "Y" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.BoundingPoly), global::Ssn.Type.BoundingPoly.Parser, new[]{ "Vertices", "NormalizedVertices" }, null, null, null, null)
           }));
     }
     #endregion

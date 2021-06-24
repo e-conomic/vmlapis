@@ -33,14 +33,26 @@ namespace GenBqSchema {
             "dm1sYXBpcy9nZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZw",
             "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { pbr::FileDescriptor.DescriptorProtoFileDescriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryMessageOptions), global::GenBqSchema.BigQueryMessageOptions.Parser, new[]{ "TableName", "UseJsonNames" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { BqTableExtensions.BigqueryOpts }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GenBqSchema.BigQueryMessageOptions), global::GenBqSchema.BigQueryMessageOptions.Parser, new[]{ "TableName", "UseJsonNames" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  /// <summary>Holder for extension identifiers generated from the top level of gen_bq_schema/bq_table.proto</summary>
+  public static partial class BqTableExtensions {
+    /// <summary>
+    /// BigQuery message schema generation options.
+    ///
+    /// The field number is a globally unique id for this option, assigned by
+    /// protobuf-global-extension-registry@google.com
+    /// </summary>
+    public static readonly pb::Extension<global::Google.Protobuf.Reflection.MessageOptions, global::GenBqSchema.BigQueryMessageOptions> BigqueryOpts =
+      new pb::Extension<global::Google.Protobuf.Reflection.MessageOptions, global::GenBqSchema.BigQueryMessageOptions>(1021, pb::FieldCodec.ForMessage(8170, global::GenBqSchema.BigQueryMessageOptions.Parser));
+  }
+
   #region Messages
   public sealed partial class BigQueryMessageOptions : pb::IMessage<BigQueryMessageOptions> {
     private static readonly pb::MessageParser<BigQueryMessageOptions> _parser = new pb::MessageParser<BigQueryMessageOptions>(() => new BigQueryMessageOptions());

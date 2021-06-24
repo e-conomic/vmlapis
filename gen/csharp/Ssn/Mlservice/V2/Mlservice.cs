@@ -84,16 +84,17 @@ namespace Ssn.Mlservice.V2 {
             "ZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoR",
             "RmVhdHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVH",
             "ZW5QcmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJl",
-            "c3BvbnNlQkBaPmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dv",
-            "L3Nzbi9tbHNlcnZpY2UvdjI7bWxzZXJ2aWNlYgZwcm90bzM="));
+            "c3BvbnNlQlFCD01sU2VydmljZVByb3Rvc1o+Z2l0aHViLmNvbS9lLWNvbm9t",
+            "aWMvdm1sYXBpcy9nZW4vZ28vc3NuL21sc2VydmljZS92MjttbHNlcnZpY2Vi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest), global::Ssn.Mlservice.V2.FeatureGenRequest.Parser, new[]{ "TruthLabels", "TextAnnotation", "Id" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels), global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels.Parser, new[]{ "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenResponse), global::Ssn.Mlservice.V2.FeatureGenResponse.Parser, new[]{ "Example" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictRequest), global::Ssn.Mlservice.V2.PredictRequest.Parser, new[]{ "Example", "TopNMostConfident" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PredictResponse), global::Ssn.Mlservice.V2.PredictResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.FeatureGenPredictRequest), global::Ssn.Mlservice.V2.FeatureGenPredictRequest.Parser, new[]{ "FeatureGenRequest", "PredictRequest" }, null, null, null, null)
           }));
     }
     #endregion
@@ -249,13 +250,13 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.truthLabels_ != null) {
         if (truthLabels_ == null) {
-          truthLabels_ = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
+          TruthLabels = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
         }
         TruthLabels.MergeFrom(other.TruthLabels);
       }
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+          TextAnnotation = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -275,16 +276,16 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (truthLabels_ == null) {
-              truthLabels_ = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
+              TruthLabels = new global::Ssn.Mlservice.V2.FeatureGenRequest.Types.TruthLabels();
             }
-            input.ReadMessage(truthLabels_);
+            input.ReadMessage(TruthLabels);
             break;
           }
           case 18: {
             if (textAnnotation_ == null) {
-              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(textAnnotation_);
+            input.ReadMessage(TextAnnotation);
             break;
           }
           case 26: {
@@ -856,13 +857,13 @@ namespace Ssn.Mlservice.V2 {
           }
           if (other.orderDate_ != null) {
             if (orderDate_ == null) {
-              orderDate_ = new global::Google.Type.Date();
+              OrderDate = new global::Google.Type.Date();
             }
             OrderDate.MergeFrom(other.OrderDate);
           }
           if (other.paymentDueDate_ != null) {
             if (paymentDueDate_ == null) {
-              paymentDueDate_ = new global::Google.Type.Date();
+              PaymentDueDate = new global::Google.Type.Date();
             }
             PaymentDueDate.MergeFrom(other.PaymentDueDate);
           }
@@ -942,16 +943,16 @@ namespace Ssn.Mlservice.V2 {
               }
               case 34: {
                 if (orderDate_ == null) {
-                  orderDate_ = new global::Google.Type.Date();
+                  OrderDate = new global::Google.Type.Date();
                 }
-                input.ReadMessage(orderDate_);
+                input.ReadMessage(OrderDate);
                 break;
               }
               case 42: {
                 if (paymentDueDate_ == null) {
-                  paymentDueDate_ = new global::Google.Type.Date();
+                  PaymentDueDate = new global::Google.Type.Date();
                 }
-                input.ReadMessage(paymentDueDate_);
+                input.ReadMessage(PaymentDueDate);
                 break;
               }
               case 50: {
@@ -1140,7 +1141,7 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.example_ != null) {
         if (example_ == null) {
-          example_ = new global::Tensorflow.Example();
+          Example = new global::Tensorflow.Example();
         }
         Example.MergeFrom(other.Example);
       }
@@ -1157,9 +1158,9 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (example_ == null) {
-              example_ = new global::Tensorflow.Example();
+              Example = new global::Tensorflow.Example();
             }
-            input.ReadMessage(example_);
+            input.ReadMessage(Example);
             break;
           }
         }
@@ -1296,7 +1297,7 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.example_ != null) {
         if (example_ == null) {
-          example_ = new global::Tensorflow.Example();
+          Example = new global::Tensorflow.Example();
         }
         Example.MergeFrom(other.Example);
       }
@@ -1316,9 +1317,9 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (example_ == null) {
-              example_ = new global::Tensorflow.Example();
+              Example = new global::Tensorflow.Example();
             }
-            input.ReadMessage(example_);
+            input.ReadMessage(Example);
             break;
           }
           case 16: {
@@ -2023,13 +2024,13 @@ namespace Ssn.Mlservice.V2 {
       }
       if (other.featureGenRequest_ != null) {
         if (featureGenRequest_ == null) {
-          featureGenRequest_ = new global::Ssn.Mlservice.V2.FeatureGenRequest();
+          FeatureGenRequest = new global::Ssn.Mlservice.V2.FeatureGenRequest();
         }
         FeatureGenRequest.MergeFrom(other.FeatureGenRequest);
       }
       if (other.predictRequest_ != null) {
         if (predictRequest_ == null) {
-          predictRequest_ = new global::Ssn.Mlservice.V2.PredictRequest();
+          PredictRequest = new global::Ssn.Mlservice.V2.PredictRequest();
         }
         PredictRequest.MergeFrom(other.PredictRequest);
       }
@@ -2046,16 +2047,16 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             if (featureGenRequest_ == null) {
-              featureGenRequest_ = new global::Ssn.Mlservice.V2.FeatureGenRequest();
+              FeatureGenRequest = new global::Ssn.Mlservice.V2.FeatureGenRequest();
             }
-            input.ReadMessage(featureGenRequest_);
+            input.ReadMessage(FeatureGenRequest);
             break;
           }
           case 18: {
             if (predictRequest_ == null) {
-              predictRequest_ = new global::Ssn.Mlservice.V2.PredictRequest();
+              PredictRequest = new global::Ssn.Mlservice.V2.PredictRequest();
             }
-            input.ReadMessage(predictRequest_);
+            input.ReadMessage(PredictRequest);
             break;
           }
         }

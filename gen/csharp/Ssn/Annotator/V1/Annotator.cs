@@ -86,12 +86,12 @@ namespace Ssn.Annotator.V1 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null, null)
           }));
     }
     #endregion
@@ -136,7 +136,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Ssn.Annotator.V1.Feature.Types.Type type_ = 0;
+    private global::Ssn.Annotator.V1.Feature.Types.Type type_ = global::Ssn.Annotator.V1.Feature.Types.Type.Default;
     /// <summary>
     /// The feature type.
     /// </summary>
@@ -165,7 +165,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 3;
-    private global::Ssn.Type.Confidence.Types.Level minConfidence_ = 0;
+    private global::Ssn.Type.Confidence.Types.Level minConfidence_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
     /// <summary>
     /// The minimum confidence for predictions that the caller wants returned
     /// </summary>
@@ -199,9 +199,9 @@ namespace Ssn.Annotator.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) hash ^= Type.GetHashCode();
       if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
-      if (MinConfidence != 0) hash ^= MinConfidence.GetHashCode();
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -215,7 +215,7 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -223,7 +223,7 @@ namespace Ssn.Annotator.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(MaxResults);
       }
-      if (MinConfidence != 0) {
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) MinConfidence);
       }
@@ -235,13 +235,13 @@ namespace Ssn.Annotator.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (MaxResults != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
       }
-      if (MinConfidence != 0) {
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
       }
       if (_unknownFields != null) {
@@ -255,13 +255,13 @@ namespace Ssn.Annotator.V1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         Type = other.Type;
       }
       if (other.MaxResults != 0) {
         MaxResults = other.MaxResults;
       }
-      if (other.MinConfidence != 0) {
+      if (other.MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         MinConfidence = other.MinConfidence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -276,7 +276,7 @@ namespace Ssn.Annotator.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
+            Type = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
             break;
           }
           case 16: {
@@ -284,7 +284,7 @@ namespace Ssn.Annotator.V1 {
             break;
           }
           case 24: {
-            minConfidence_ = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            MinConfidence = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
@@ -481,7 +481,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 4;
-    private global::Ssn.Type.Tier tier_ = 0;
+    private global::Ssn.Type.Tier tier_ = global::Ssn.Type.Tier.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Type.Tier Tier {
       get { return tier_; }
@@ -516,7 +516,7 @@ namespace Ssn.Annotator.V1 {
       if (document_ != null) hash ^= Document.GetHashCode();
       hash ^= features_.GetHashCode();
       hash ^= tags_.GetHashCode();
-      if (Tier != 0) hash ^= Tier.GetHashCode();
+      if (Tier != global::Ssn.Type.Tier.Default) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -536,7 +536,7 @@ namespace Ssn.Annotator.V1 {
       }
       features_.WriteTo(output, _repeated_features_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
-      if (Tier != 0) {
+      if (Tier != global::Ssn.Type.Tier.Default) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Tier);
       }
@@ -553,7 +553,7 @@ namespace Ssn.Annotator.V1 {
       }
       size += features_.CalculateSize(_repeated_features_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
-      if (Tier != 0) {
+      if (Tier != global::Ssn.Type.Tier.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (_unknownFields != null) {
@@ -569,13 +569,13 @@ namespace Ssn.Annotator.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Ssn.Annotator.V1.Document();
+          Document = new global::Ssn.Annotator.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
       features_.Add(other.features_);
       tags_.Add(other.tags_);
-      if (other.Tier != 0) {
+      if (other.Tier != global::Ssn.Type.Tier.Default) {
         Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -591,9 +591,9 @@ namespace Ssn.Annotator.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Ssn.Annotator.V1.Document();
+              Document = new global::Ssn.Annotator.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 18: {
@@ -605,7 +605,7 @@ namespace Ssn.Annotator.V1 {
             break;
           }
           case 32: {
-            tier_ = (global::Ssn.Type.Tier) input.ReadEnum();
+            Tier = (global::Ssn.Type.Tier) input.ReadEnum();
             break;
           }
         }
@@ -1248,7 +1248,7 @@ namespace Ssn.Annotator.V1 {
       invoiceNumber_.Add(other.invoiceNumber_);
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+          TextAnnotation = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -1333,9 +1333,9 @@ namespace Ssn.Annotator.V1 {
           }
           case 106: {
             if (textAnnotation_ == null) {
-              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(textAnnotation_);
+            input.ReadMessage(TextAnnotation);
             break;
           }
           case 114: {
@@ -1541,7 +1541,7 @@ namespace Ssn.Annotator.V1 {
       }
       if (other.source_ != null) {
         if (source_ == null) {
-          source_ = new global::Ssn.Annotator.V1.DocumentSource();
+          Source = new global::Ssn.Annotator.V1.DocumentSource();
         }
         Source.MergeFrom(other.Source);
       }
@@ -1562,9 +1562,9 @@ namespace Ssn.Annotator.V1 {
           }
           case 18: {
             if (source_ == null) {
-              source_ = new global::Ssn.Annotator.V1.DocumentSource();
+              Source = new global::Ssn.Annotator.V1.DocumentSource();
             }
-            input.ReadMessage(source_);
+            input.ReadMessage(Source);
             break;
           }
         }

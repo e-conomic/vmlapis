@@ -48,10 +48,10 @@ namespace Asgt.Modelregistry.V1 {
             "eS92MTttb2RlbHJlZ2lzdHJ5YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null, null)
           }));
     }
     #endregion
@@ -133,7 +133,7 @@ namespace Asgt.Modelregistry.V1 {
     /// <summary>Field number for the "metrics" field.</summary>
     public const int MetricsFieldNumber = 4;
     private static readonly pbc::MapField<string, int>.Codec _map_metrics_codec
-        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForInt32(16), 34);
+        = new pbc::MapField<string, int>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt32(16, 0), 34);
     private readonly pbc::MapField<string, int> metrics_ = new pbc::MapField<string, int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, int> Metrics {
@@ -152,7 +152,7 @@ namespace Asgt.Modelregistry.V1 {
 
     /// <summary>Field number for the "input_type" field.</summary>
     public const int InputTypeFieldNumber = 6;
-    private global::Asgt.Type.Model.Types.InputType inputType_ = 0;
+    private global::Asgt.Type.Model.Types.InputType inputType_ = global::Asgt.Type.Model.Types.InputType.FeatureTensors;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Model.Types.InputType InputType {
       get { return inputType_; }
@@ -191,7 +191,7 @@ namespace Asgt.Modelregistry.V1 {
       if (ModelVersion != 0L) hash ^= ModelVersion.GetHashCode();
       hash ^= Metrics.GetHashCode();
       hash ^= targetMetrics_.GetHashCode();
-      if (InputType != 0) hash ^= InputType.GetHashCode();
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -219,7 +219,7 @@ namespace Asgt.Modelregistry.V1 {
       }
       metrics_.WriteTo(output, _map_metrics_codec);
       targetMetrics_.WriteTo(output, _repeated_targetMetrics_codec);
-      if (InputType != 0) {
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         output.WriteRawTag(48);
         output.WriteEnum((int) InputType);
       }
@@ -242,7 +242,7 @@ namespace Asgt.Modelregistry.V1 {
       }
       size += metrics_.CalculateSize(_map_metrics_codec);
       size += targetMetrics_.CalculateSize(_repeated_targetMetrics_codec);
-      if (InputType != 0) {
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
       }
       if (_unknownFields != null) {
@@ -258,13 +258,13 @@ namespace Asgt.Modelregistry.V1 {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
       if (other.revision_ != null) {
         if (revision_ == null) {
-          revision_ = new global::Asgt.Type.Revision();
+          Revision = new global::Asgt.Type.Revision();
         }
         Revision.MergeFrom(other.Revision);
       }
@@ -273,7 +273,7 @@ namespace Asgt.Modelregistry.V1 {
       }
       metrics_.Add(other.metrics_);
       targetMetrics_.Add(other.targetMetrics_);
-      if (other.InputType != 0) {
+      if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         InputType = other.InputType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -289,16 +289,16 @@ namespace Asgt.Modelregistry.V1 {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
           case 18: {
             if (revision_ == null) {
-              revision_ = new global::Asgt.Type.Revision();
+              Revision = new global::Asgt.Type.Revision();
             }
-            input.ReadMessage(revision_);
+            input.ReadMessage(Revision);
             break;
           }
           case 24: {
@@ -314,7 +314,7 @@ namespace Asgt.Modelregistry.V1 {
             break;
           }
           case 48: {
-            inputType_ = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
             break;
           }
         }
@@ -430,7 +430,7 @@ namespace Asgt.Modelregistry.V1 {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
@@ -447,9 +447,9 @@ namespace Asgt.Modelregistry.V1 {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
         }
@@ -565,7 +565,7 @@ namespace Asgt.Modelregistry.V1 {
       }
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.Model();
+          Model = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -582,9 +582,9 @@ namespace Asgt.Modelregistry.V1 {
             break;
           case 10: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.Model();
+              Model = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(model_);
+            input.ReadMessage(Model);
             break;
           }
         }

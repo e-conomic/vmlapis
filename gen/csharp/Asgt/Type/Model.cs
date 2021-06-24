@@ -38,8 +38,8 @@ namespace Asgt.Type {
             "ZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
           }));
     }
     #endregion
@@ -141,7 +141,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "input_type" field.</summary>
     public const int InputTypeFieldNumber = 8;
-    private global::Asgt.Type.Model.Types.InputType inputType_ = 0;
+    private global::Asgt.Type.Model.Types.InputType inputType_ = global::Asgt.Type.Model.Types.InputType.FeatureTensors;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Asgt.Type.Model.Types.InputType InputType {
       get { return inputType_; }
@@ -180,7 +180,7 @@ namespace Asgt.Type {
       if (DatasetSize != 0) hash ^= DatasetSize.GetHashCode();
       if (TrainingSize != 0) hash ^= TrainingSize.GetHashCode();
       hash ^= confidenceScores_.GetHashCode();
-      if (InputType != 0) hash ^= InputType.GetHashCode();
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -211,7 +211,7 @@ namespace Asgt.Type {
         output.WriteInt32(TrainingSize);
       }
       confidenceScores_.WriteTo(output, _repeated_confidenceScores_codec);
-      if (InputType != 0) {
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         output.WriteRawTag(64);
         output.WriteEnum((int) InputType);
       }
@@ -236,7 +236,7 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrainingSize);
       }
       size += confidenceScores_.CalculateSize(_repeated_confidenceScores_codec);
-      if (InputType != 0) {
+      if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) InputType);
       }
       if (_unknownFields != null) {
@@ -255,7 +255,7 @@ namespace Asgt.Type {
       }
       if (other.createdAt_ != null) {
         if (createdAt_ == null) {
-          createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
@@ -266,7 +266,7 @@ namespace Asgt.Type {
         TrainingSize = other.TrainingSize;
       }
       confidenceScores_.Add(other.confidenceScores_);
-      if (other.InputType != 0) {
+      if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         InputType = other.InputType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -286,9 +286,9 @@ namespace Asgt.Type {
           }
           case 34: {
             if (createdAt_ == null) {
-              createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createdAt_);
+            input.ReadMessage(CreatedAt);
             break;
           }
           case 40: {
@@ -304,7 +304,7 @@ namespace Asgt.Type {
             break;
           }
           case 64: {
-            inputType_ = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
+            InputType = (global::Asgt.Type.Model.Types.InputType) input.ReadEnum();
             break;
           }
         }

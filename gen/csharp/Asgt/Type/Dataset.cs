@@ -36,8 +36,8 @@ namespace Asgt.Type {
             "dC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Dataset), global::Asgt.Type.Dataset.Parser, new[]{ "Consumer", "Name", "Type", "Tags", "Targets", "RetentionPolicy", "CreatedAt", "UpdatedAt", "Size" }, null, null, null, null)
           }));
     }
     #endregion
@@ -321,19 +321,19 @@ namespace Asgt.Type {
       targets_.Add(other.targets_);
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
-          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+          RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
       if (other.createdAt_ != null) {
         if (createdAt_ == null) {
-          createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreatedAt.MergeFrom(other.CreatedAt);
       }
       if (other.updatedAt_ != null) {
         if (updatedAt_ == null) {
-          updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdatedAt.MergeFrom(other.UpdatedAt);
       }
@@ -373,23 +373,23 @@ namespace Asgt.Type {
           }
           case 74: {
             if (retentionPolicy_ == null) {
-              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }
-            input.ReadMessage(retentionPolicy_);
+            input.ReadMessage(RetentionPolicy);
             break;
           }
           case 82: {
             if (createdAt_ == null) {
-              createdAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              CreatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(createdAt_);
+            input.ReadMessage(CreatedAt);
             break;
           }
           case 90: {
             if (updatedAt_ == null) {
-              updatedAt_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(updatedAt_);
+            input.ReadMessage(UpdatedAt);
             break;
           }
           case 96: {

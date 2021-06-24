@@ -38,16 +38,16 @@ namespace Ssn.Ocrservice.V1 {
             "ZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9jcnNlcnZpY2UudjEu",
             "T2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFubm90YXRpb24SKy5z",
             "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlcXVlc3QaLC5z",
-            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNlQkJa",
-            "QGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9vY3Jz",
-            "ZXJ2aWNlL3YxO29jcnNlcnZpY2ViBnByb3RvMw=="));
+            "c24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNlQlNC",
+            "D09jclNlcnZpY2VQcm90b1pAZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vc3NuL29jcnNlcnZpY2UvdjE7b2Nyc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null, null)
           }));
     }
     #endregion
@@ -182,7 +182,7 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Ssn.Annotator.V1.Document();
+          Document = new global::Ssn.Annotator.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -202,9 +202,9 @@ namespace Ssn.Ocrservice.V1 {
             break;
           case 18: {
             if (document_ == null) {
-              document_ = new global::Ssn.Annotator.V1.Document();
+              Document = new global::Ssn.Annotator.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 24: {
@@ -274,6 +274,7 @@ namespace Ssn.Ocrservice.V1 {
         image_ = value;
       }
     }
+
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
@@ -345,7 +346,7 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+          TextAnnotation = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -367,9 +368,9 @@ namespace Ssn.Ocrservice.V1 {
             break;
           case 18: {
             if (textAnnotation_ == null) {
-              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(textAnnotation_);
+            input.ReadMessage(TextAnnotation);
             break;
           }
           case 26: {

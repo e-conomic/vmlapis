@@ -44,10 +44,12 @@ public final class JesterOuterClass {
 
     /**
      * <code>.asgt.type.Model model = 2;</code>
+     * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
      * <code>.asgt.type.Model model = 2;</code>
+     * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
@@ -62,7 +64,7 @@ public final class JesterOuterClass {
    *
    * Protobuf type {@code asgt.jester.v1.SuggestionResponse}
    */
-  public  static final class SuggestionResponse extends
+  public static final class SuggestionResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.jester.v1.SuggestionResponse)
       SuggestionResponseOrBuilder {
@@ -73,6 +75,13 @@ public final class JesterOuterClass {
     }
     private SuggestionResponse() {
       predictions_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SuggestionResponse();
     }
 
     @java.lang.Override
@@ -100,7 +109,7 @@ public final class JesterOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -122,7 +131,7 @@ public final class JesterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -136,7 +145,7 @@ public final class JesterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           predictions_ = java.util.Collections.unmodifiableList(predictions_);
         }
         this.unknownFields = unknownFields.build();
@@ -156,18 +165,19 @@ public final class JesterOuterClass {
               asgt.jester.v1.JesterOuterClass.SuggestionResponse.class, asgt.jester.v1.JesterOuterClass.SuggestionResponse.Builder.class);
     }
 
-    private int bitField0_;
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList() {
       return predictions_;
@@ -175,18 +185,21 @@ public final class JesterOuterClass {
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
+    @java.lang.Override
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
+    @java.lang.Override
     public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1;</code>
      */
+    @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index) {
       return predictions_.get(index);
@@ -196,19 +209,24 @@ public final class JesterOuterClass {
     private asgt.type.ModelOuterClass.Model model_;
     /**
      * <code>.asgt.type.Model model = 2;</code>
+     * @return Whether the model field is set.
      */
+    @java.lang.Override
     public boolean hasModel() {
       return model_ != null;
     }
     /**
      * <code>.asgt.type.Model model = 2;</code>
+     * @return The model.
      */
+    @java.lang.Override
     public asgt.type.ModelOuterClass.Model getModel() {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
      * <code>.asgt.type.Model model = 2;</code>
      */
+    @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
@@ -265,16 +283,15 @@ public final class JesterOuterClass {
       }
       asgt.jester.v1.JesterOuterClass.SuggestionResponse other = (asgt.jester.v1.JesterOuterClass.SuggestionResponse) obj;
 
-      boolean result = true;
-      result = result && getPredictionsList()
-          .equals(other.getPredictionsList());
-      result = result && (hasModel() == other.hasModel());
+      if (!getPredictionsList()
+          .equals(other.getPredictionsList())) return false;
+      if (hasModel() != other.hasModel()) return false;
       if (hasModel()) {
-        result = result && getModel()
-            .equals(other.getModel());
+        if (!getModel()
+            .equals(other.getModel())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -469,9 +486,8 @@ public final class JesterOuterClass {
       public asgt.jester.v1.JesterOuterClass.SuggestionResponse buildPartial() {
         asgt.jester.v1.JesterOuterClass.SuggestionResponse result = new asgt.jester.v1.JesterOuterClass.SuggestionResponse(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (predictionsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             predictions_ = java.util.Collections.unmodifiableList(predictions_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -484,42 +500,41 @@ public final class JesterOuterClass {
         } else {
           result.model_ = modelBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -595,7 +610,7 @@ public final class JesterOuterClass {
       private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_ =
         java.util.Collections.emptyList();
       private void ensurePredictionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>(predictions_);
           bitField0_ |= 0x00000001;
          }
@@ -824,7 +839,7 @@ public final class JesterOuterClass {
           predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
                   predictions_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           predictions_ = null;
@@ -832,17 +847,19 @@ public final class JesterOuterClass {
         return predictionsBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_ = null;
+      private asgt.type.ModelOuterClass.Model model_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
        * <code>.asgt.type.Model model = 2;</code>
+       * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
        * <code>.asgt.type.Model model = 2;</code>
+       * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
@@ -951,7 +968,7 @@ public final class JesterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1007,22 +1024,25 @@ public final class JesterOuterClass {
 
     /**
      * <code>int32 suggestion_limit = 1;</code>
+     * @return The suggestionLimit.
      */
     int getSuggestionLimit();
 
     /**
      * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
      * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The minConfidence.
      */
     asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
   }
   /**
    * Protobuf type {@code asgt.jester.v1.SuggestionOptions}
    */
-  public  static final class SuggestionOptions extends
+  public static final class SuggestionOptions extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.jester.v1.SuggestionOptions)
       SuggestionOptionsOrBuilder {
@@ -1032,8 +1052,14 @@ public final class JesterOuterClass {
       super(builder);
     }
     private SuggestionOptions() {
-      suggestionLimit_ = 0;
       minConfidence_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SuggestionOptions();
     }
 
     @java.lang.Override
@@ -1049,7 +1075,6 @@ public final class JesterOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1072,7 +1097,7 @@ public final class JesterOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1107,7 +1132,9 @@ public final class JesterOuterClass {
     private int suggestionLimit_;
     /**
      * <code>int32 suggestion_limit = 1;</code>
+     * @return The suggestionLimit.
      */
+    @java.lang.Override
     public int getSuggestionLimit() {
       return suggestionLimit_;
     }
@@ -1116,14 +1143,16 @@ public final class JesterOuterClass {
     private int minConfidence_;
     /**
      * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The enum numeric value on the wire for minConfidence.
      */
-    public int getMinConfidenceValue() {
+    @java.lang.Override public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
      * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * @return The minConfidence.
      */
-    public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
       @SuppressWarnings("deprecation")
       asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
       return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
@@ -1181,12 +1210,11 @@ public final class JesterOuterClass {
       }
       asgt.jester.v1.JesterOuterClass.SuggestionOptions other = (asgt.jester.v1.JesterOuterClass.SuggestionOptions) obj;
 
-      boolean result = true;
-      result = result && (getSuggestionLimit()
-          == other.getSuggestionLimit());
-      result = result && minConfidence_ == other.minConfidence_;
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSuggestionLimit()
+          != other.getSuggestionLimit()) return false;
+      if (minConfidence_ != other.minConfidence_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1371,35 +1399,35 @@ public final class JesterOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -1451,12 +1479,16 @@ public final class JesterOuterClass {
       private int suggestionLimit_ ;
       /**
        * <code>int32 suggestion_limit = 1;</code>
+       * @return The suggestionLimit.
        */
+      @java.lang.Override
       public int getSuggestionLimit() {
         return suggestionLimit_;
       }
       /**
        * <code>int32 suggestion_limit = 1;</code>
+       * @param value The suggestionLimit to set.
+       * @return This builder for chaining.
        */
       public Builder setSuggestionLimit(int value) {
         
@@ -1466,6 +1498,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>int32 suggestion_limit = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSuggestionLimit() {
         
@@ -1477,21 +1510,27 @@ public final class JesterOuterClass {
       private int minConfidence_ = 0;
       /**
        * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return The enum numeric value on the wire for minConfidence.
        */
-      public int getMinConfidenceValue() {
+      @java.lang.Override public int getMinConfidenceValue() {
         return minConfidence_;
       }
       /**
        * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @param value The enum numeric value on the wire for minConfidence to set.
+       * @return This builder for chaining.
        */
       public Builder setMinConfidenceValue(int value) {
+        
         minConfidence_ = value;
         onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return The minConfidence.
        */
+      @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
         @SuppressWarnings("deprecation")
         asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
@@ -1499,6 +1538,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @param value The minConfidence to set.
+       * @return This builder for chaining.
        */
       public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
         if (value == null) {
@@ -1511,6 +1552,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
         
@@ -1521,7 +1563,7 @@ public final class JesterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1577,20 +1619,24 @@ public final class JesterOuterClass {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -1621,10 +1667,12 @@ public final class JesterOuterClass {
 
     /**
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * @return Whether the options field is set.
      */
     boolean hasOptions();
     /**
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * @return The options.
      */
     asgt.jester.v1.JesterOuterClass.SuggestionOptions getOptions();
     /**
@@ -1634,19 +1682,25 @@ public final class JesterOuterClass {
 
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -1654,7 +1708,7 @@ public final class JesterOuterClass {
   /**
    * Protobuf type {@code asgt.jester.v1.SuggestionRequest}
    */
-  public  static final class SuggestionRequest extends
+  public static final class SuggestionRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.jester.v1.SuggestionRequest)
       SuggestionRequestOrBuilder {
@@ -1668,6 +1722,13 @@ public final class JesterOuterClass {
       type_ = "";
       inputs_ = java.util.Collections.emptyList();
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SuggestionRequest();
     }
 
     @java.lang.Override
@@ -1707,9 +1768,9 @@ public final class JesterOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
                   input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry));
@@ -1730,15 +1791,15 @@ public final class JesterOuterClass {
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1752,10 +1813,10 @@ public final class JesterOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           inputs_ = java.util.Collections.unmodifiableList(inputs_);
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -1775,12 +1836,13 @@ public final class JesterOuterClass {
               asgt.jester.v1.JesterOuterClass.SuggestionRequest.class, asgt.jester.v1.JesterOuterClass.SuggestionRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -1795,7 +1857,9 @@ public final class JesterOuterClass {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -1814,7 +1878,9 @@ public final class JesterOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -1829,7 +1895,9 @@ public final class JesterOuterClass {
     }
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -1849,12 +1917,14 @@ public final class JesterOuterClass {
     /**
      * <code>repeated .asgt.type.Data inputs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
       return inputs_;
     }
     /**
      * <code>repeated .asgt.type.Data inputs = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
@@ -1862,18 +1932,21 @@ public final class JesterOuterClass {
     /**
      * <code>repeated .asgt.type.Data inputs = 3;</code>
      */
+    @java.lang.Override
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
      * <code>repeated .asgt.type.Data inputs = 3;</code>
      */
+    @java.lang.Override
     public asgt.type.DataOuterClass.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Data inputs = 3;</code>
      */
+    @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
@@ -1883,19 +1956,24 @@ public final class JesterOuterClass {
     private asgt.jester.v1.JesterOuterClass.SuggestionOptions options_;
     /**
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * @return Whether the options field is set.
      */
+    @java.lang.Override
     public boolean hasOptions() {
       return options_ != null;
     }
     /**
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+     * @return The options.
      */
+    @java.lang.Override
     public asgt.jester.v1.JesterOuterClass.SuggestionOptions getOptions() {
       return options_ == null ? asgt.jester.v1.JesterOuterClass.SuggestionOptions.getDefaultInstance() : options_;
     }
     /**
      * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
      */
+    @java.lang.Override
     public asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder() {
       return getOptions();
     }
@@ -1904,6 +1982,7 @@ public final class JesterOuterClass {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -1911,18 +1990,23 @@ public final class JesterOuterClass {
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -2004,22 +2088,21 @@ public final class JesterOuterClass {
       }
       asgt.jester.v1.JesterOuterClass.SuggestionRequest other = (asgt.jester.v1.JesterOuterClass.SuggestionRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getInputsList()
-          .equals(other.getInputsList());
-      result = result && (hasOptions() == other.hasOptions());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getInputsList()
+          .equals(other.getInputsList())) return false;
+      if (hasOptions() != other.hasOptions()) return false;
       if (hasOptions()) {
-        result = result && getOptions()
-            .equals(other.getOptions());
+        if (!getOptions()
+            .equals(other.getOptions())) return false;
       }
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2185,7 +2268,7 @@ public final class JesterOuterClass {
 
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           inputsBuilder_.clear();
         }
@@ -2196,7 +2279,7 @@ public final class JesterOuterClass {
           optionsBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -2224,13 +2307,12 @@ public final class JesterOuterClass {
       public asgt.jester.v1.JesterOuterClass.SuggestionRequest buildPartial() {
         asgt.jester.v1.JesterOuterClass.SuggestionRequest result = new asgt.jester.v1.JesterOuterClass.SuggestionRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.type_ = type_;
         if (inputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.inputs_ = inputs_;
         } else {
@@ -2241,47 +2323,46 @@ public final class JesterOuterClass {
         } else {
           result.options_ = optionsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -2307,7 +2388,7 @@ public final class JesterOuterClass {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureInputsIsMutable();
               inputs_.addAll(other.inputs_);
@@ -2320,7 +2401,7 @@ public final class JesterOuterClass {
               inputsBuilder_.dispose();
               inputsBuilder_ = null;
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               inputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputsFieldBuilder() : null;
@@ -2335,7 +2416,7 @@ public final class JesterOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -2375,6 +2456,7 @@ public final class JesterOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -2390,6 +2472,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -2406,6 +2489,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -2419,6 +2504,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -2428,6 +2514,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -2444,6 +2532,7 @@ public final class JesterOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -2459,6 +2548,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -2475,6 +2565,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -2488,6 +2580,7 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -2497,6 +2590,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -2513,9 +2608,9 @@ public final class JesterOuterClass {
       private java.util.List<asgt.type.DataOuterClass.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>(inputs_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -2665,7 +2760,7 @@ public final class JesterOuterClass {
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           inputsBuilder_.clear();
@@ -2742,7 +2837,7 @@ public final class JesterOuterClass {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder>(
                   inputs_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           inputs_ = null;
@@ -2750,17 +2845,19 @@ public final class JesterOuterClass {
         return inputsBuilder_;
       }
 
-      private asgt.jester.v1.JesterOuterClass.SuggestionOptions options_ = null;
+      private asgt.jester.v1.JesterOuterClass.SuggestionOptions options_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.jester.v1.JesterOuterClass.SuggestionOptions, asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder, asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder> optionsBuilder_;
       /**
        * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * @return Whether the options field is set.
        */
       public boolean hasOptions() {
         return optionsBuilder_ != null || options_ != null;
       }
       /**
        * <code>.asgt.jester.v1.SuggestionOptions options = 4;</code>
+       * @return The options.
        */
       public asgt.jester.v1.JesterOuterClass.SuggestionOptions getOptions() {
         if (optionsBuilder_ == null) {
@@ -2869,13 +2966,14 @@ public final class JesterOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -2883,18 +2981,23 @@ public final class JesterOuterClass {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -2902,6 +3005,9 @@ public final class JesterOuterClass {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -2915,6 +3021,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -2928,6 +3036,8 @@ public final class JesterOuterClass {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -2939,15 +3049,18 @@ public final class JesterOuterClass {
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 5;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -2963,7 +3076,7 @@ public final class JesterOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -3056,22 +3169,14 @@ public final class JesterOuterClass {
       "m/e-conomic/vmlapis/gen/go/asgt/jester/v" +
       "1;jesterb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DataOuterClass.getDescriptor(),
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_asgt_jester_v1_SuggestionResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_jester_v1_SuggestionResponse_fieldAccessorTable = new

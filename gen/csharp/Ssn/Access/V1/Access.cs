@@ -34,9 +34,9 @@ namespace Ssn.Access.V1 {
             "Yy92bWxhcGlzL2dlbi9nby9zc24vYWNjZXNzL3YxO2FjY2Vzc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyRequest), global::Ssn.Access.V1.ValetKeyRequest.Parser, new[]{ "Sub", "Exp" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyResponse), global::Ssn.Access.V1.ValetKeyResponse.Parser, new[]{ "Id", "Token" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyRequest), global::Ssn.Access.V1.ValetKeyRequest.Parser, new[]{ "Sub", "Exp" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Access.V1.ValetKeyResponse), global::Ssn.Access.V1.ValetKeyResponse.Parser, new[]{ "Id", "Token" }, null, null, null, null)
           }));
     }
     #endregion

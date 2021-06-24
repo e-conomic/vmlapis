@@ -33,8 +33,8 @@ namespace Asgt.Type {
             "ZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelTask), global::Asgt.Type.TrainModelTask.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelTask), global::Asgt.Type.TrainModelTask.Parser, new[]{ "Dataset", "Revision", "ModelVersion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -190,13 +190,13 @@ namespace Asgt.Type {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
       if (other.revision_ != null) {
         if (revision_ == null) {
-          revision_ = new global::Asgt.Type.Revision();
+          Revision = new global::Asgt.Type.Revision();
         }
         Revision.MergeFrom(other.Revision);
       }
@@ -216,16 +216,16 @@ namespace Asgt.Type {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
           case 18: {
             if (revision_ == null) {
-              revision_ = new global::Asgt.Type.Revision();
+              Revision = new global::Asgt.Type.Revision();
             }
-            input.ReadMessage(revision_);
+            input.ReadMessage(Revision);
             break;
           }
           case 32: {

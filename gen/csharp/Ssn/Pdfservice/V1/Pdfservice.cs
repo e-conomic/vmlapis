@@ -38,14 +38,14 @@ namespace Ssn.Pdfservice.V1 {
             "dGgYAyABKA0SDgoGaGVpZ2h0GAQgASgNEg0KBXNjYWxlGAUgASgBMm8KClBk",
             "ZlNlcnZpY2USYQoMUmFzdGVyaXplUGRmEiYuc3NuLnBkZnNlcnZpY2UudjEu",
             "UmFzdGVyaXplUGRmUmVxdWVzdBonLnNzbi5wZGZzZXJ2aWNlLnYxLlJhc3Rl",
-            "cml6ZVBkZlJlc3BvbnNlMAFCQlpAZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
-            "YXBpcy9nZW4vZ28vc3NuL3BkZnNlcnZpY2UvdjE7cGRmc2VydmljZWIGcHJv",
-            "dG8z"));
+            "cml6ZVBkZlJlc3BvbnNlMAFCU0IPUGRmU2VydmljZVByb3RvWkBnaXRodWIu",
+            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vcGRmc2VydmljZS92",
+            "MTtwZGZzZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest), global::Ssn.Pdfservice.V1.RasterizePdfRequest.Parser, new[]{ "Data", "Dpi", "Format", "Color", "Pages" }, null, new[]{ typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfResponse), global::Ssn.Pdfservice.V1.RasterizePdfResponse.Parser, new[]{ "Index", "Data", "Width", "Height", "Scale" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest), global::Ssn.Pdfservice.V1.RasterizePdfRequest.Parser, new[]{ "Data", "Dpi", "Format", "Color", "Pages" }, null, new[]{ typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace), typeof(global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Pdfservice.V1.RasterizePdfResponse), global::Ssn.Pdfservice.V1.RasterizePdfResponse.Parser, new[]{ "Index", "Data", "Width", "Height", "Scale" }, null, null, null, null)
           }));
     }
     #endregion
@@ -114,7 +114,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "format" field.</summary>
     public const int FormatFieldNumber = 3;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format format_ = 0;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format format_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format Format {
       get { return format_; }
@@ -125,7 +125,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "color" field.</summary>
     public const int ColorFieldNumber = 4;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace color_ = 0;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace color_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace Color {
       get { return color_; }
@@ -136,7 +136,7 @@ namespace Ssn.Pdfservice.V1 {
 
     /// <summary>Field number for the "pages" field.</summary>
     public const int PagesFieldNumber = 5;
-    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption pages_ = 0;
+    private global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption pages_ = global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption Pages {
       get { return pages_; }
@@ -171,9 +171,9 @@ namespace Ssn.Pdfservice.V1 {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
       if (Dpi != 0) hash ^= Dpi.GetHashCode();
-      if (Format != 0) hash ^= Format.GetHashCode();
-      if (Color != 0) hash ^= Color.GetHashCode();
-      if (Pages != 0) hash ^= Pages.GetHashCode();
+      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) hash ^= Format.GetHashCode();
+      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) hash ^= Color.GetHashCode();
+      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) hash ^= Pages.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -195,15 +195,15 @@ namespace Ssn.Pdfservice.V1 {
         output.WriteRawTag(16);
         output.WriteUInt32(Dpi);
       }
-      if (Format != 0) {
+      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
         output.WriteRawTag(24);
         output.WriteEnum((int) Format);
       }
-      if (Color != 0) {
+      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Color);
       }
-      if (Pages != 0) {
+      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
         output.WriteRawTag(40);
         output.WriteEnum((int) Pages);
       }
@@ -221,13 +221,13 @@ namespace Ssn.Pdfservice.V1 {
       if (Dpi != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Dpi);
       }
-      if (Format != 0) {
+      if (Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Format);
       }
-      if (Color != 0) {
+      if (Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Color);
       }
-      if (Pages != 0) {
+      if (Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Pages);
       }
       if (_unknownFields != null) {
@@ -247,13 +247,13 @@ namespace Ssn.Pdfservice.V1 {
       if (other.Dpi != 0) {
         Dpi = other.Dpi;
       }
-      if (other.Format != 0) {
+      if (other.Format != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format.Png) {
         Format = other.Format;
       }
-      if (other.Color != 0) {
+      if (other.Color != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace.Gray) {
         Color = other.Color;
       }
-      if (other.Pages != 0) {
+      if (other.Pages != global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption.FirstLast) {
         Pages = other.Pages;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -276,15 +276,15 @@ namespace Ssn.Pdfservice.V1 {
             break;
           }
           case 24: {
-            format_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
+            Format = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.Format) input.ReadEnum();
             break;
           }
           case 32: {
-            color_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
+            Color = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.ColorSpace) input.ReadEnum();
             break;
           }
           case 40: {
-            pages_ = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
+            Pages = (global::Ssn.Pdfservice.V1.RasterizePdfRequest.Types.PageOption) input.ReadEnum();
             break;
           }
         }

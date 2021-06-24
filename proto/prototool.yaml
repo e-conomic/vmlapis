@@ -3,7 +3,8 @@ protoc:
   includes:
   - ../deps/googleapis
   - ../deps/tensorflow
-
+  - ../deps/protoc-gen-openapiv2
+  - ../deps/protoc-gen-openapiv2
 lint:
   group: google
 generate:

@@ -39,9 +39,9 @@ namespace Asgt.Type {
             "L2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null)})})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Confidence), global::Asgt.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Asgt.Type.Confidence.Types.Level) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction), global::Asgt.Type.Prediction.Parser, new[]{ "Targets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target), global::Asgt.Type.Prediction.Types.Target.Parser, new[]{ "Name", "Candidates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Prediction.Types.Target.Types.Candidate), global::Asgt.Type.Prediction.Types.Target.Types.Candidate.Parser, new[]{ "Value", "Confidence" }, null, null, null, null)})})
           }));
     }
     #endregion
@@ -88,7 +88,7 @@ namespace Asgt.Type {
 
     /// <summary>Field number for the "level" field.</summary>
     public const int LevelFieldNumber = 1;
-    private global::Asgt.Type.Confidence.Types.Level level_ = 0;
+    private global::Asgt.Type.Confidence.Types.Level level_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
     /// <summary>
     /// A bucketized representation of confidence, which is intended to give clients
     /// highly stable results across model upgrades.
@@ -116,6 +116,7 @@ namespace Asgt.Type {
       }
     }
 
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as Confidence);
@@ -137,7 +138,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Level != 0) hash ^= Level.GetHashCode();
+      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= Level.GetHashCode();
       if (value_ != null) hash ^= pbc::ProtobufEqualityComparers.BitwiseNullableSingleEqualityComparer.GetHashCode(Value);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -152,7 +153,7 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Level != 0) {
+      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Level);
       }
@@ -167,7 +168,7 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Level != 0) {
+      if (Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Level);
       }
       if (value_ != null) {
@@ -184,7 +185,7 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      if (other.Level != 0) {
+      if (other.Level != global::Asgt.Type.Confidence.Types.Level.Unknown) {
         Level = other.Level;
       }
       if (other.value_ != null) {
@@ -204,7 +205,7 @@ namespace Asgt.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            level_ = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            Level = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
           case 18: {
@@ -641,7 +642,7 @@ namespace Asgt.Type {
               }
               if (other.confidence_ != null) {
                 if (confidence_ == null) {
-                  confidence_ = new global::Asgt.Type.Confidence();
+                  Confidence = new global::Asgt.Type.Confidence();
                 }
                 Confidence.MergeFrom(other.Confidence);
               }
@@ -662,9 +663,9 @@ namespace Asgt.Type {
                   }
                   case 18: {
                     if (confidence_ == null) {
-                      confidence_ = new global::Asgt.Type.Confidence();
+                      Confidence = new global::Asgt.Type.Confidence();
                     }
-                    input.ReadMessage(confidence_);
+                    input.ReadMessage(Confidence);
                     break;
                   }
                 }

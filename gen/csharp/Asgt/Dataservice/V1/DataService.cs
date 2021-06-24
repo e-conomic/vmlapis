@@ -73,20 +73,21 @@ namespace Asgt.Dataservice.V1 {
             "dGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSZXNwb25zZRJvChBDYWxjdWxh",
             "dGVNZXRyaWNzEiwuYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRy",
             "aWNzUmVxdWVzdBotLmFzZ3QuZGF0YXNlcnZpY2UudjEuQ2FsY3VsYXRlTWV0",
-            "cmljc1Jlc3BvbnNlQjdaNWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
-            "Z2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
+            "cmljc1Jlc3BvbnNlQkpCEURhdGFTZXJ2aWNlUHJvdG9zWjVnaXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7ZGF0YWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsRequest), global::Asgt.Dataservice.V1.CalculateMetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Tags" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Parser, new[]{ "Metrics" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow.Parser, new[]{ "Target", "Confidence", "Correct", "Incorrect" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CreateRequest), global::Asgt.Dataservice.V1.CreateRequest.Parser, new[]{ "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.AppendDataRequest), global::Asgt.Dataservice.V1.AppendDataRequest.Parser, new[]{ "Name", "Type", "Samples" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.DeleteRequest), global::Asgt.Dataservice.V1.DeleteRequest.Parser, new[]{ "Type", "Name", "Tag" }, new[]{ "Match" }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsRequest), global::Asgt.Dataservice.V1.CalculateMetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Tags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Parser, new[]{ "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow), global::Asgt.Dataservice.V1.CalculateMetricsResponse.Types.MetricRow.Parser, new[]{ "Target", "Confidence", "Correct", "Incorrect" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.CreateRequest), global::Asgt.Dataservice.V1.CreateRequest.Parser, new[]{ "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.AppendDataRequest), global::Asgt.Dataservice.V1.AppendDataRequest.Parser, new[]{ "Name", "Type", "Samples" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.DeleteRequest), global::Asgt.Dataservice.V1.DeleteRequest.Parser, new[]{ "Type", "Name", "Tag" }, new[]{ "Match" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoRequest), global::Asgt.Dataservice.V1.GetInfoRequest.Parser, new[]{ "Name", "Type" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.UpdateDatasetRequest), global::Asgt.Dataservice.V1.UpdateDatasetRequest.Parser, new[]{ "Name", "Type", "RetentionPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.GetInfoResponse), global::Asgt.Dataservice.V1.GetInfoResponse.Parser, new[]{ "Dataset", "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.RegisterQueryStatsRequest), global::Asgt.Dataservice.V1.RegisterQueryStatsRequest.Parser, new[]{ "Dataset", "ModelType", "BatchSize", "Tags" }, null, null, null, null)
           }));
     }
     #endregion
@@ -236,13 +237,13 @@ namespace Asgt.Dataservice.V1 {
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
-          startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         StartTime.MergeFrom(other.StartTime);
       }
       if (other.endTime_ != null) {
         if (endTime_ == null) {
-          endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
       }
@@ -260,16 +261,16 @@ namespace Asgt.Dataservice.V1 {
             break;
           case 10: {
             if (startTime_ == null) {
-              startTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(startTime_);
+            input.ReadMessage(StartTime);
             break;
           }
           case 18: {
             if (endTime_ == null) {
-              endTime_ = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
-            input.ReadMessage(endTime_);
+            input.ReadMessage(EndTime);
             break;
           }
           case 26: {
@@ -464,6 +465,7 @@ namespace Asgt.Dataservice.V1 {
             confidence_ = value;
           }
         }
+
 
         /// <summary>Field number for the "correct" field.</summary>
         public const int CorrectFieldNumber = 3;
@@ -831,7 +833,7 @@ namespace Asgt.Dataservice.V1 {
       samples_.Add(other.samples_);
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
-          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+          RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
@@ -864,9 +866,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 42: {
             if (retentionPolicy_ == null) {
-              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }
-            input.ReadMessage(retentionPolicy_);
+            input.ReadMessage(RetentionPolicy);
             break;
           }
           case 50: {
@@ -1584,7 +1586,7 @@ namespace Asgt.Dataservice.V1 {
       }
       if (other.retentionPolicy_ != null) {
         if (retentionPolicy_ == null) {
-          retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+          RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
         }
         RetentionPolicy.MergeFrom(other.RetentionPolicy);
       }
@@ -1609,9 +1611,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 26: {
             if (retentionPolicy_ == null) {
-              retentionPolicy_ = new global::Asgt.Type.RetentionPolicy();
+              RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }
-            input.ReadMessage(retentionPolicy_);
+            input.ReadMessage(RetentionPolicy);
             break;
           }
         }
@@ -1751,13 +1753,13 @@ namespace Asgt.Dataservice.V1 {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.Model();
+          Model = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -1774,16 +1776,16 @@ namespace Asgt.Dataservice.V1 {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
           case 18: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.Model();
+              Model = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(model_);
+            input.ReadMessage(Model);
             break;
           }
         }

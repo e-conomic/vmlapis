@@ -30,8 +30,8 @@ namespace Asgt.Type {
             "YXNndHR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetValue), global::Asgt.Type.TargetValue.Parser, new[]{ "Name", "Value" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetValue), global::Asgt.Type.TargetValue.Parser, new[]{ "Name", "Value" }, null, null, null, null)
           }));
     }
     #endregion

@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.dataservice.v1;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataservice";
+option java_outer_classname = "DataServiceProto";
 
 import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
