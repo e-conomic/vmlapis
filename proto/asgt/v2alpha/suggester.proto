@@ -19,6 +19,16 @@ service Suggester {
     option (google.api.http) = {
       post: "/v2/datasets/{name}:suggest"
       body: "*"
+
+      additional_bindings {
+        post: "/v2/datasets/{name=bank/*}:suggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=electronic-invoice-line/*}:suggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=scanned-invoice/*}:suggest"
+      }
     };
   }
 
@@ -27,6 +37,16 @@ service Suggester {
     option (google.api.http) = {
       post: "/v2/datasets/{name}:batchSuggest"
       body: "*"
+
+      additional_bindings {
+        post: "/v2/datasets/{name=bank/*}:batchSuggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=electronic-invoice-line/*}:batchSuggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=scanned-invoice/*}:batchSuggest"
+      }
     };
   }
 
@@ -35,6 +55,16 @@ service Suggester {
     option (google.api.http) = {
       post: "/v2/datasets/{name}/model:batchSuggest"
       body: "*"
+
+      additional_bindings {
+        post: "/v2/datasets/{name=bank/*}/model:batchSuggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggest"
+      }
+      additional_bindings {
+        post: "/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest"
+      }
     };
   }
 }
