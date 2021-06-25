@@ -4601,21 +4601,33 @@ public final class SuggesterOuterClass {
       "ns\030\003 \001(\0132&.asgt.v2alpha.suggester.Sugges" +
       "tOptions\"c\n\024BatchSuggestResponse\022*\n\013pred" +
       "ictions\030\001 \003(\0132\025.asgt.type.Prediction\022\037\n\005" +
-      "model\030\002 \001(\0132\020.asgt.type.Model2\315\003\n\tSugges" +
-      "ter\022\202\001\n\007Suggest\022&.asgt.v2alpha.suggester" +
+      "model\030\002 \001(\0132\020.asgt.type.Model2\263\007\n\tSugges" +
+      "ter\022\224\002\n\007Suggest\022&.asgt.v2alpha.suggester" +
       ".SuggestRequest\032\'.asgt.v2alpha.suggester" +
-      ".SuggestResponse\"&\202\323\344\223\002 \"\033/v2/datasets/{" +
-      "name}:suggest:\001*\022\226\001\n\014BatchSuggest\022+.asgt" +
-      ".v2alpha.suggester.BatchSuggestRequest\032," +
-      ".asgt.v2alpha.suggester.BatchSuggestResp" +
-      "onse\"+\202\323\344\223\002%\" /v2/datasets/{name}:batchS" +
-      "uggest:\001*\022\241\001\n\021ModelBatchSuggest\022+.asgt.v" +
-      "2alpha.suggester.BatchSuggestRequest\032,.a" +
-      "sgt.v2alpha.suggester.BatchSuggestRespon" +
-      "se\"1\202\323\344\223\002+\"&/v2/datasets/{name}/model:ba" +
-      "tchSuggest:\001*B<Z:github.com/e-conomic/vm" +
-      "lapis/gen/go/asgt/v2alpha;suggesterb\006pro" +
-      "to3"
+      ".SuggestResponse\"\267\001\202\323\344\223\002\260\001\"\033/v2/datasets" +
+      "/{name}:suggest:\001*Z$\"\"/v2/datasets/{name" +
+      "=bank/*}:suggestZ7\"5/v2/datasets/{name=e" +
+      "lectronic-invoice-line/*}:suggestZ/\"-/v2" +
+      "/datasets/{name=scanned-invoice/*}:sugge" +
+      "st\022\267\002\n\014BatchSuggest\022+.asgt.v2alpha.sugge" +
+      "ster.BatchSuggestRequest\032,.asgt.v2alpha." +
+      "suggester.BatchSuggestResponse\"\313\001\202\323\344\223\002\304\001" +
+      "\" /v2/datasets/{name}:batchSuggest:\001*Z)\"" +
+      "\'/v2/datasets/{name=bank/*}:batchSuggest" +
+      "Z<\":/v2/datasets/{name=electronic-invoic" +
+      "e-line/*}:batchSuggestZ4\"2/v2/datasets/{" +
+      "name=scanned-invoice/*}:batchSuggest\022\324\002\n" +
+      "\021ModelBatchSuggest\022+.asgt.v2alpha.sugges" +
+      "ter.BatchSuggestRequest\032,.asgt.v2alpha.s" +
+      "uggester.BatchSuggestResponse\"\343\001\202\323\344\223\002\334\001\"" +
+      "&/v2/datasets/{name}/model:batchSuggest:" +
+      "\001*Z/\"-/v2/datasets/{name=bank/*}/model:b" +
+      "atchSuggestZB\"@/v2/datasets/{name=electr" +
+      "onic-invoice-line/*}/model:batchSuggestZ" +
+      ":\"8/v2/datasets/{name=scanned-invoice/*}" +
+      "/model:batchSuggestB<Z:github.com/e-cono" +
+      "mic/vmlapis/gen/go/asgt/v2alpha;suggeste" +
+      "rb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

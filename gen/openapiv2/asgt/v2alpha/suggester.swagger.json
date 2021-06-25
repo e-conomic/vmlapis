@@ -16,6 +16,285 @@
     "application/json"
   ],
   "paths": {
+    "/v2/datasets/{name=bank/*}/model:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
+        "operationId": "Suggester_ModelBatchSuggest2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=bank/*}:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_BatchSuggest2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=bank/*}:suggest": {
+      "post": {
+        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_Suggest2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
+        "operationId": "Suggester_ModelBatchSuggest3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=electronic-invoice-line/*}:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_BatchSuggest3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=electronic-invoice-line/*}:suggest": {
+      "post": {
+        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_Suggest3",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
+        "operationId": "Suggester_ModelBatchSuggest4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=scanned-invoice/*}:batchSuggest": {
+      "post": {
+        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_BatchSuggest4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
+    "/v2/datasets/{name=scanned-invoice/*}:suggest": {
+      "post": {
+        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
+        "operationId": "Suggester_Suggest4",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/suggesterSuggestResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Suggester"
+        ]
+      }
+    },
     "/v2/datasets/{name}/model:batchSuggest": {
       "post": {
         "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
