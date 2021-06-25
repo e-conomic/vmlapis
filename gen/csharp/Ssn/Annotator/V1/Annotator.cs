@@ -86,19 +86,23 @@ namespace Ssn.Annotator.V1 {
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Feature), global::Ssn.Annotator.V1.Feature.Parser, new[]{ "Type", "MaxResults", "MinConfidence" }, null, new[]{ typeof(global::Ssn.Annotator.V1.Feature.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class Feature : pb::IMessage<Feature> {
+  public sealed partial class Feature : pb::IMessage<Feature>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Feature> _parser = new pb::MessageParser<Feature>(() => new Feature());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -136,7 +140,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "type" field.</summary>
     public const int TypeFieldNumber = 1;
-    private global::Ssn.Annotator.V1.Feature.Types.Type type_ = 0;
+    private global::Ssn.Annotator.V1.Feature.Types.Type type_ = global::Ssn.Annotator.V1.Feature.Types.Type.Default;
     /// <summary>
     /// The feature type.
     /// </summary>
@@ -165,7 +169,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 3;
-    private global::Ssn.Type.Confidence.Types.Level minConfidence_ = 0;
+    private global::Ssn.Type.Confidence.Types.Level minConfidence_ = global::Ssn.Type.Confidence.Types.Level.Unknown;
     /// <summary>
     /// The minimum confidence for predictions that the caller wants returned
     /// </summary>
@@ -199,9 +203,9 @@ namespace Ssn.Annotator.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (Type != 0) hash ^= Type.GetHashCode();
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) hash ^= Type.GetHashCode();
       if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
-      if (MinConfidence != 0) hash ^= MinConfidence.GetHashCode();
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -215,7 +219,7 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (Type != 0) {
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Type);
       }
@@ -223,7 +227,7 @@ namespace Ssn.Annotator.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(MaxResults);
       }
-      if (MinConfidence != 0) {
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(24);
         output.WriteEnum((int) MinConfidence);
       }
@@ -235,13 +239,13 @@ namespace Ssn.Annotator.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (Type != 0) {
+      if (Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
       }
       if (MaxResults != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
       }
-      if (MinConfidence != 0) {
+      if (MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
       }
       if (_unknownFields != null) {
@@ -255,13 +259,13 @@ namespace Ssn.Annotator.V1 {
       if (other == null) {
         return;
       }
-      if (other.Type != 0) {
+      if (other.Type != global::Ssn.Annotator.V1.Feature.Types.Type.Default) {
         Type = other.Type;
       }
       if (other.MaxResults != 0) {
         MaxResults = other.MaxResults;
       }
-      if (other.MinConfidence != 0) {
+      if (other.MinConfidence != global::Ssn.Type.Confidence.Types.Level.Unknown) {
         MinConfidence = other.MinConfidence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -269,6 +273,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -276,7 +283,7 @@ namespace Ssn.Annotator.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            type_ = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
+            Type = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
             break;
           }
           case 16: {
@@ -284,12 +291,39 @@ namespace Ssn.Annotator.V1 {
             break;
           }
           case 24: {
-            minConfidence_ = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            MinConfidence = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Ssn.Annotator.V1.Feature.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            MaxResults = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MinConfidence = (global::Ssn.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
       }
     }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Feature message type.</summary>
@@ -411,7 +445,11 @@ namespace Ssn.Annotator.V1 {
 
   }
 
-  public sealed partial class DocumentAnnotatorRequest : pb::IMessage<DocumentAnnotatorRequest> {
+  public sealed partial class DocumentAnnotatorRequest : pb::IMessage<DocumentAnnotatorRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentAnnotatorRequest> _parser = new pb::MessageParser<DocumentAnnotatorRequest>(() => new DocumentAnnotatorRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -481,7 +519,7 @@ namespace Ssn.Annotator.V1 {
 
     /// <summary>Field number for the "tier" field.</summary>
     public const int TierFieldNumber = 4;
-    private global::Ssn.Type.Tier tier_ = 0;
+    private global::Ssn.Type.Tier tier_ = global::Ssn.Type.Tier.Default;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::Ssn.Type.Tier Tier {
       get { return tier_; }
@@ -516,7 +554,7 @@ namespace Ssn.Annotator.V1 {
       if (document_ != null) hash ^= Document.GetHashCode();
       hash ^= features_.GetHashCode();
       hash ^= tags_.GetHashCode();
-      if (Tier != 0) hash ^= Tier.GetHashCode();
+      if (Tier != global::Ssn.Type.Tier.Default) hash ^= Tier.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -536,7 +574,7 @@ namespace Ssn.Annotator.V1 {
       }
       features_.WriteTo(output, _repeated_features_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
-      if (Tier != 0) {
+      if (Tier != global::Ssn.Type.Tier.Default) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Tier);
       }
@@ -553,7 +591,7 @@ namespace Ssn.Annotator.V1 {
       }
       size += features_.CalculateSize(_repeated_features_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
-      if (Tier != 0) {
+      if (Tier != global::Ssn.Type.Tier.Default) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Tier);
       }
       if (_unknownFields != null) {
@@ -569,13 +607,13 @@ namespace Ssn.Annotator.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          document_ = new global::Ssn.Annotator.V1.Document();
+          Document = new global::Ssn.Annotator.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
       features_.Add(other.features_);
       tags_.Add(other.tags_);
-      if (other.Tier != 0) {
+      if (other.Tier != global::Ssn.Type.Tier.Default) {
         Tier = other.Tier;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -583,6 +621,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -591,9 +632,9 @@ namespace Ssn.Annotator.V1 {
             break;
           case 10: {
             if (document_ == null) {
-              document_ = new global::Ssn.Annotator.V1.Document();
+              Document = new global::Ssn.Annotator.V1.Document();
             }
-            input.ReadMessage(document_);
+            input.ReadMessage(Document);
             break;
           }
           case 18: {
@@ -605,16 +646,54 @@ namespace Ssn.Annotator.V1 {
             break;
           }
           case 32: {
-            tier_ = (global::Ssn.Type.Tier) input.ReadEnum();
+            Tier = (global::Ssn.Type.Tier) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (document_ == null) {
+              Document = new global::Ssn.Annotator.V1.Document();
+            }
+            input.ReadMessage(Document);
+            break;
+          }
+          case 18: {
+            features_.AddEntriesFrom(ref input, _repeated_features_codec);
+            break;
+          }
+          case 26: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 32: {
+            Tier = (global::Ssn.Type.Tier) input.ReadEnum();
             break;
           }
         }
       }
     }
+    #endif
 
   }
 
-  public sealed partial class DocumentAnnotatorResponse : pb::IMessage<DocumentAnnotatorResponse> {
+  public sealed partial class DocumentAnnotatorResponse : pb::IMessage<DocumentAnnotatorResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentAnnotatorResponse> _parser = new pb::MessageParser<DocumentAnnotatorResponse>(() => new DocumentAnnotatorResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1248,7 +1327,7 @@ namespace Ssn.Annotator.V1 {
       invoiceNumber_.Add(other.invoiceNumber_);
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
-          textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+          TextAnnotation = new global::Ssn.Type.TextAnnotation();
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
@@ -1277,6 +1356,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1333,9 +1415,9 @@ namespace Ssn.Annotator.V1 {
           }
           case 106: {
             if (textAnnotation_ == null) {
-              textAnnotation_ = new global::Ssn.Type.TextAnnotation();
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
             }
-            input.ReadMessage(textAnnotation_);
+            input.ReadMessage(TextAnnotation);
             break;
           }
           case 114: {
@@ -1396,11 +1478,141 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            orderDate_.AddEntriesFrom(ref input, _repeated_orderDate_codec);
+            break;
+          }
+          case 18: {
+            paymentDueDate_.AddEntriesFrom(ref input, _repeated_paymentDueDate_codec);
+            break;
+          }
+          case 26: {
+            currency_.AddEntriesFrom(ref input, _repeated_currency_codec);
+            break;
+          }
+          case 34: {
+            totalVat_.AddEntriesFrom(ref input, _repeated_totalVat_codec);
+            break;
+          }
+          case 42: {
+            totalInclVat_.AddEntriesFrom(ref input, _repeated_totalInclVat_codec);
+            break;
+          }
+          case 50: {
+            totalExclVat_.AddEntriesFrom(ref input, _repeated_totalExclVat_codec);
+            break;
+          }
+          case 58: {
+            supplierCorporateId_.AddEntriesFrom(ref input, _repeated_supplierCorporateId_codec);
+            break;
+          }
+          case 66: {
+            supplierCountryCode_.AddEntriesFrom(ref input, _repeated_supplierCountryCode_codec);
+            break;
+          }
+          case 74: {
+            documentType_.AddEntriesFrom(ref input, _repeated_documentType_codec);
+            break;
+          }
+          case 82: {
+            paymentMethod_.AddEntriesFrom(ref input, _repeated_paymentMethod_codec);
+            break;
+          }
+          case 90: {
+            creditCardLastFour_.AddEntriesFrom(ref input, _repeated_creditCardLastFour_codec);
+            break;
+          }
+          case 98: {
+            invoiceNumber_.AddEntriesFrom(ref input, _repeated_invoiceNumber_codec);
+            break;
+          }
+          case 106: {
+            if (textAnnotation_ == null) {
+              TextAnnotation = new global::Ssn.Type.TextAnnotation();
+            }
+            input.ReadMessage(TextAnnotation);
+            break;
+          }
+          case 114: {
+            ocrLineDkType_.AddEntriesFrom(ref input, _repeated_ocrLineDkType_codec);
+            break;
+          }
+          case 122: {
+            ocrLineDkPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineDkPaymentId_codec);
+            break;
+          }
+          case 130: {
+            ocrLineDkCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineDkCreditorId_codec);
+            break;
+          }
+          case 138: {
+            ocrLineSePaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineSePaymentId_codec);
+            break;
+          }
+          case 146: {
+            ocrLineSeBankgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSeBankgiroCreditorId_codec);
+            break;
+          }
+          case 154: {
+            ocrLineSePlusgiroCreditorId_.AddEntriesFrom(ref input, _repeated_ocrLineSePlusgiroCreditorId_codec);
+            break;
+          }
+          case 162: {
+            ocrLineNoPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNoPaymentId_codec);
+            break;
+          }
+          case 170: {
+            ocrLineFiPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineFiPaymentId_codec);
+            break;
+          }
+          case 178: {
+            ocrLineNlPaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineNlPaymentId_codec);
+            break;
+          }
+          case 186: {
+            Text = input.ReadString();
+            break;
+          }
+          case 194: {
+            FeedbackId = input.ReadString();
+            break;
+          }
+          case 202: {
+            iban_.AddEntriesFrom(ref input, _repeated_iban_codec);
+            break;
+          }
+          case 210: {
+            lines_.AddEntriesFrom(ref input, _repeated_lines_codec);
+            break;
+          }
+          case 218: {
+            Preview = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
-  public sealed partial class Document : pb::IMessage<Document> {
+  public sealed partial class Document : pb::IMessage<Document>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Document> _parser = new pb::MessageParser<Document>(() => new Document());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1541,7 +1753,7 @@ namespace Ssn.Annotator.V1 {
       }
       if (other.source_ != null) {
         if (source_ == null) {
-          source_ = new global::Ssn.Annotator.V1.DocumentSource();
+          Source = new global::Ssn.Annotator.V1.DocumentSource();
         }
         Source.MergeFrom(other.Source);
       }
@@ -1550,6 +1762,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1562,18 +1777,48 @@ namespace Ssn.Annotator.V1 {
           }
           case 18: {
             if (source_ == null) {
-              source_ = new global::Ssn.Annotator.V1.DocumentSource();
+              Source = new global::Ssn.Annotator.V1.DocumentSource();
             }
-            input.ReadMessage(source_);
+            input.ReadMessage(Source);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Content = input.ReadBytes();
+            break;
+          }
+          case 18: {
+            if (source_ == null) {
+              Source = new global::Ssn.Annotator.V1.DocumentSource();
+            }
+            input.ReadMessage(Source);
             break;
           }
         }
       }
     }
+    #endif
 
   }
 
-  public sealed partial class DocumentSource : pb::IMessage<DocumentSource> {
+  public sealed partial class DocumentSource : pb::IMessage<DocumentSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<DocumentSource> _parser = new pb::MessageParser<DocumentSource>(() => new DocumentSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1694,6 +1939,9 @@ namespace Ssn.Annotator.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1706,7 +1954,26 @@ namespace Ssn.Annotator.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            HttpUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

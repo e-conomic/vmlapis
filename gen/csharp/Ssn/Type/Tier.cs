@@ -30,7 +30,7 @@ namespace Ssn.Type {
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Type.Tier), }, null));
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Type.Tier), }, null, null));
     }
     #endregion
 

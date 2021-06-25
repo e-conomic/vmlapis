@@ -3,6 +3,7 @@ syntax = "proto3";
 package ssn.mlservice.v2;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
+option java_outer_classname = "MlServiceProtos";
 
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";

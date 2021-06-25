@@ -28,25 +28,24 @@ namespace Asgt.Dataservice.V1 {
             "dmljZS52MRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlwZS9tb2Rl",
             "bC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGFzZ3QvdHlw",
             "ZS90YXJnZXRfdmFsdWUucHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfZmllbGQu",
-            "cHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8aHGdvb2dsZS9h",
-            "cGkvYW5ub3RhdGlvbnMucHJvdG8i+gMKBUVudHJ5Ej4KAmlkGAEgASgJQjLq",
-            "Py8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3QgaWQgaWYgZmVlZGJhY2sg",
-            "ZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAESGwoMZGF0YXNldF9uYW1l",
-            "GAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUYDCABKAlCBeo/AggBEi8K",
-            "CmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlxdWUgSUQgb2YgZGF0YXNl",
-            "dBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVmaW5lZCBieSBjb25zdW1l",
-            "ciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxldGtleSBpcyB1c2VkEh0K",
-            "BGRhdGEYBSABKAsyDy5hc2d0LnR5cGUuRGF0YRItCg10YXJnZXRfdmFsdWVz",
-            "GAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlEh8KBW1vZGVsGAkgASgL",
-            "MhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rpb24YCiADKAsyHC5hc2d0",
-            "LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGltZV9hZGRlZBgIIAEoBEIQ",
-            "6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVfZGF0YUI3WjVnaXRodWIu",
-            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7ZGF0",
-            "YWIGcHJvdG8z"));
+            "cHJvdG8aHGdlbl9icV9zY2hlbWEvYnFfdGFibGUucHJvdG8i+gMKBUVudHJ5",
+            "Ej4KAmlkGAEgASgJQjLqPy8iLUlELCBtYXRjaGVzIEVudm95IHJlcXVlc3Qg",
+            "aWQgaWYgZmVlZGJhY2sgZGF0YRIXCghjb25zdW1lchgCIAEoCUIF6j8CCAES",
+            "GwoMZGF0YXNldF9uYW1lGAMgASgJQgXqPwIIARIbCgxkYXRhc2V0X3R5cGUY",
+            "DCABKAlCBeo/AggBEi8KCmRhdGFzZXRfaWQYCyABKAlCG+o/GAgBIhR1bmlx",
+            "dWUgSUQgb2YgZGF0YXNldBJUCgR0YWdzGAQgAygJQkbqP0MiQVRhZ3MgZGVm",
+            "aW5lZCBieSBjb25zdW1lciwgZW5yaWNoZWQgYnkgc2VydmljZSBpZiB2YWxl",
+            "dGtleSBpcyB1c2VkEh0KBGRhdGEYBSABKAsyDy5hc2d0LnR5cGUuRGF0YRIt",
+            "Cg10YXJnZXRfdmFsdWVzGAYgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVl",
+            "Eh8KBW1vZGVsGAkgASgLMhAuYXNndC50eXBlLk1vZGVsEjAKCnByZWRpY3Rp",
+            "b24YCiADKAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQSJAoKdGlt",
+            "ZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUDoQ6j8NCgtzYW1wbGVf",
+            "ZGF0YUI3WjVnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9h",
+            "c2d0L2RhdGEvdjE7ZGF0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null)
+          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Dataservice.V1.Entry), global::Asgt.Dataservice.V1.Entry.Parser, new[]{ "Id", "Consumer", "DatasetName", "DatasetType", "DatasetId", "Tags", "Data", "TargetValues", "Model", "Prediction", "TimeAdded" }, null, null, null, null)
           }));
     }
     #endregion
@@ -56,7 +55,11 @@ namespace Asgt.Dataservice.V1 {
   /// <summary>
   /// BQ schema gen - could be used for adding direct developer data endpoints
   /// </summary>
-  public sealed partial class Entry : pb::IMessage<Entry> {
+  public sealed partial class Entry : pb::IMessage<Entry>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Entry> _parser = new pb::MessageParser<Entry>(() => new Entry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -371,14 +374,14 @@ namespace Asgt.Dataservice.V1 {
       tags_.Add(other.tags_);
       if (other.data_ != null) {
         if (data_ == null) {
-          data_ = new global::Asgt.Type.Data();
+          Data = new global::Asgt.Type.Data();
         }
         Data.MergeFrom(other.Data);
       }
       targetValues_.Add(other.targetValues_);
       if (other.model_ != null) {
         if (model_ == null) {
-          model_ = new global::Asgt.Type.Model();
+          Model = new global::Asgt.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -391,6 +394,9 @@ namespace Asgt.Dataservice.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -415,9 +421,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 42: {
             if (data_ == null) {
-              data_ = new global::Asgt.Type.Data();
+              Data = new global::Asgt.Type.Data();
             }
-            input.ReadMessage(data_);
+            input.ReadMessage(Data);
             break;
           }
           case 50: {
@@ -430,9 +436,9 @@ namespace Asgt.Dataservice.V1 {
           }
           case 74: {
             if (model_ == null) {
-              model_ = new global::Asgt.Type.Model();
+              Model = new global::Asgt.Type.Model();
             }
-            input.ReadMessage(model_);
+            input.ReadMessage(Model);
             break;
           }
           case 82: {
@@ -449,7 +455,72 @@ namespace Asgt.Dataservice.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Consumer = input.ReadString();
+            break;
+          }
+          case 26: {
+            DatasetName = input.ReadString();
+            break;
+          }
+          case 34: {
+            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 42: {
+            if (data_ == null) {
+              Data = new global::Asgt.Type.Data();
+            }
+            input.ReadMessage(Data);
+            break;
+          }
+          case 50: {
+            targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
+            break;
+          }
+          case 64: {
+            TimeAdded = input.ReadUInt64();
+            break;
+          }
+          case 74: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
+          case 82: {
+            prediction_.AddEntriesFrom(ref input, _repeated_prediction_codec);
+            break;
+          }
+          case 90: {
+            DatasetId = input.ReadString();
+            break;
+          }
+          case 98: {
+            DatasetType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

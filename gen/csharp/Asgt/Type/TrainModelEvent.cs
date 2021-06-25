@@ -34,15 +34,19 @@ namespace Asgt.Type {
             "YXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent), global::Asgt.Type.TrainModelEvent.Parser, new[]{ "Dataset", "ModelVersion", "Status", "StatusMessage", "Artifacts" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent.Types.Artifact), global::Asgt.Type.TrainModelEvent.Types.Artifact.Parser, new[]{ "Type", "Path" }, null, null, null)})
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent), global::Asgt.Type.TrainModelEvent.Parser, new[]{ "Dataset", "ModelVersion", "Status", "StatusMessage", "Artifacts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TrainModelEvent.Types.Artifact), global::Asgt.Type.TrainModelEvent.Types.Artifact.Parser, new[]{ "Type", "Path" }, null, null, null, null)})
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class TrainModelEvent : pb::IMessage<TrainModelEvent> {
+  public sealed partial class TrainModelEvent : pb::IMessage<TrainModelEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<TrainModelEvent> _parser = new pb::MessageParser<TrainModelEvent>(() => new TrainModelEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -227,7 +231,7 @@ namespace Asgt.Type {
       }
       if (other.dataset_ != null) {
         if (dataset_ == null) {
-          dataset_ = new global::Asgt.Type.Dataset();
+          Dataset = new global::Asgt.Type.Dataset();
         }
         Dataset.MergeFrom(other.Dataset);
       }
@@ -246,6 +250,9 @@ namespace Asgt.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -254,9 +261,9 @@ namespace Asgt.Type {
             break;
           case 10: {
             if (dataset_ == null) {
-              dataset_ = new global::Asgt.Type.Dataset();
+              Dataset = new global::Asgt.Type.Dataset();
             }
-            input.ReadMessage(dataset_);
+            input.ReadMessage(Dataset);
             break;
           }
           case 32: {
@@ -277,13 +284,55 @@ namespace Asgt.Type {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (dataset_ == null) {
+              Dataset = new global::Asgt.Type.Dataset();
+            }
+            input.ReadMessage(Dataset);
+            break;
+          }
+          case 32: {
+            ModelVersion = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            Status = input.ReadString();
+            break;
+          }
+          case 50: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 58: {
+            artifacts_.AddEntriesFrom(ref input, _repeated_artifacts_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the TrainModelEvent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Artifact : pb::IMessage<Artifact> {
+      public sealed partial class Artifact : pb::IMessage<Artifact>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<Artifact> _parser = new pb::MessageParser<Artifact>(() => new Artifact());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -420,6 +469,9 @@ namespace Asgt.Type {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -436,7 +488,30 @@ namespace Asgt.Type {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Type = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 

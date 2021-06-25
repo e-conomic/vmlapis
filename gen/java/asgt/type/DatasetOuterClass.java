@@ -20,78 +20,98 @@ public final class DatasetOuterClass {
 
     /**
      * <code>string consumer = 1;</code>
+     * @return The consumer.
      */
     java.lang.String getConsumer();
     /**
      * <code>string consumer = 1;</code>
+     * @return The bytes for consumer.
      */
     com.google.protobuf.ByteString
         getConsumerBytes();
 
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 3;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 3;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>repeated string tags = 4;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 4;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>repeated string targets = 5;</code>
+     * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
      * <code>repeated string targets = 5;</code>
+     * @return The count of targets.
      */
     int getTargetsCount();
     /**
      * <code>repeated string targets = 5;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
      * <code>repeated string targets = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
 
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
@@ -101,10 +121,12 @@ public final class DatasetOuterClass {
 
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
     boolean hasCreatedAt();
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
     com.google.protobuf.Timestamp getCreatedAt();
     /**
@@ -114,10 +136,12 @@ public final class DatasetOuterClass {
 
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
     boolean hasUpdatedAt();
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
     com.google.protobuf.Timestamp getUpdatedAt();
     /**
@@ -131,13 +155,14 @@ public final class DatasetOuterClass {
      * </pre>
      *
      * <code>int64 size = 12;</code>
+     * @return The size.
      */
     long getSize();
   }
   /**
    * Protobuf type {@code asgt.type.Dataset}
    */
-  public  static final class Dataset extends
+  public static final class Dataset extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.type.Dataset)
       DatasetOrBuilder {
@@ -152,7 +177,13 @@ public final class DatasetOuterClass {
       type_ = "";
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      size_ = 0L;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Dataset();
     }
 
     @java.lang.Override
@@ -199,18 +230,18 @@ public final class DatasetOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
             }
             case 42: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000002;
               }
               targets_.add(s);
               break;
@@ -260,7 +291,7 @@ public final class DatasetOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -274,10 +305,10 @@ public final class DatasetOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -297,12 +328,13 @@ public final class DatasetOuterClass {
               asgt.type.DatasetOuterClass.Dataset.class, asgt.type.DatasetOuterClass.Dataset.Builder.class);
     }
 
-    private int bitField0_;
     public static final int CONSUMER_FIELD_NUMBER = 1;
     private volatile java.lang.Object consumer_;
     /**
      * <code>string consumer = 1;</code>
+     * @return The consumer.
      */
+    @java.lang.Override
     public java.lang.String getConsumer() {
       java.lang.Object ref = consumer_;
       if (ref instanceof java.lang.String) {
@@ -317,7 +349,9 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>string consumer = 1;</code>
+     * @return The bytes for consumer.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getConsumerBytes() {
       java.lang.Object ref = consumer_;
@@ -336,7 +370,9 @@ public final class DatasetOuterClass {
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -351,7 +387,9 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -370,7 +408,9 @@ public final class DatasetOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 3;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -385,7 +425,9 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>string type = 3;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -404,6 +446,7 @@ public final class DatasetOuterClass {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -411,18 +454,23 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -433,6 +481,7 @@ public final class DatasetOuterClass {
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <code>repeated string targets = 5;</code>
+     * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
         getTargetsList() {
@@ -440,18 +489,23 @@ public final class DatasetOuterClass {
     }
     /**
      * <code>repeated string targets = 5;</code>
+     * @return The count of targets.
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
      * <code>repeated string targets = 5;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
      */
     public java.lang.String getTargets(int index) {
       return targets_.get(index);
     }
     /**
      * <code>repeated string targets = 5;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetsBytes(int index) {
@@ -462,19 +516,24 @@ public final class DatasetOuterClass {
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * @return Whether the retentionPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+     * @return The retentionPolicy.
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
@@ -483,19 +542,24 @@ public final class DatasetOuterClass {
     private com.google.protobuf.Timestamp createdAt_;
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return Whether the createdAt field is set.
      */
+    @java.lang.Override
     public boolean hasCreatedAt() {
       return createdAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
+     * @return The createdAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getCreatedAt() {
       return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp created_at = 10;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
       return getCreatedAt();
     }
@@ -504,19 +568,24 @@ public final class DatasetOuterClass {
     private com.google.protobuf.Timestamp updatedAt_;
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return Whether the updatedAt field is set.
      */
+    @java.lang.Override
     public boolean hasUpdatedAt() {
       return updatedAt_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+     * @return The updatedAt.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getUpdatedAt() {
       return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
     /**
      * <code>.google.protobuf.Timestamp updated_at = 11;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
       return getUpdatedAt();
     }
@@ -529,7 +598,9 @@ public final class DatasetOuterClass {
      * </pre>
      *
      * <code>int64 size = 12;</code>
+     * @return The size.
      */
+    @java.lang.Override
     public long getSize() {
       return size_;
     }
@@ -640,36 +711,35 @@ public final class DatasetOuterClass {
       }
       asgt.type.DatasetOuterClass.Dataset other = (asgt.type.DatasetOuterClass.Dataset) obj;
 
-      boolean result = true;
-      result = result && getConsumer()
-          .equals(other.getConsumer());
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
-      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
+      if (!getConsumer()
+          .equals(other.getConsumer())) return false;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
       if (hasRetentionPolicy()) {
-        result = result && getRetentionPolicy()
-            .equals(other.getRetentionPolicy());
+        if (!getRetentionPolicy()
+            .equals(other.getRetentionPolicy())) return false;
       }
-      result = result && (hasCreatedAt() == other.hasCreatedAt());
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
       if (hasCreatedAt()) {
-        result = result && getCreatedAt()
-            .equals(other.getCreatedAt());
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
       }
-      result = result && (hasUpdatedAt() == other.hasUpdatedAt());
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
       if (hasUpdatedAt()) {
-        result = result && getUpdatedAt()
-            .equals(other.getUpdatedAt());
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
       }
-      result = result && (getSize()
-          == other.getSize());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getSize()
+          != other.getSize()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -848,9 +918,9 @@ public final class DatasetOuterClass {
         type_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = null;
         } else {
@@ -898,18 +968,17 @@ public final class DatasetOuterClass {
       public asgt.type.DatasetOuterClass.Dataset buildPartial() {
         asgt.type.DatasetOuterClass.Dataset result = new asgt.type.DatasetOuterClass.Dataset(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.consumer_ = consumer_;
         result.name_ = name_;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.targets_ = targets_;
         if (retentionPolicyBuilder_ == null) {
@@ -928,42 +997,41 @@ public final class DatasetOuterClass {
           result.updatedAt_ = updatedAtBuilder_.build();
         }
         result.size_ = size_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
@@ -992,7 +1060,7 @@ public final class DatasetOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1002,7 +1070,7 @@ public final class DatasetOuterClass {
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
@@ -1054,6 +1122,7 @@ public final class DatasetOuterClass {
       private java.lang.Object consumer_ = "";
       /**
        * <code>string consumer = 1;</code>
+       * @return The consumer.
        */
       public java.lang.String getConsumer() {
         java.lang.Object ref = consumer_;
@@ -1069,6 +1138,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string consumer = 1;</code>
+       * @return The bytes for consumer.
        */
       public com.google.protobuf.ByteString
           getConsumerBytes() {
@@ -1085,6 +1155,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string consumer = 1;</code>
+       * @param value The consumer to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumer(
           java.lang.String value) {
@@ -1098,6 +1170,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string consumer = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearConsumer() {
         
@@ -1107,6 +1180,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string consumer = 1;</code>
+       * @param value The bytes for consumer to set.
+       * @return This builder for chaining.
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
@@ -1123,6 +1198,7 @@ public final class DatasetOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 2;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -1138,6 +1214,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -1154,6 +1231,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -1167,6 +1246,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -1176,6 +1256,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -1192,6 +1274,7 @@ public final class DatasetOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 3;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -1207,6 +1290,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string type = 3;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -1223,6 +1307,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string type = 3;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -1236,6 +1322,7 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string type = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -1245,6 +1332,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>string type = 3;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -1260,13 +1349,14 @@ public final class DatasetOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -1274,18 +1364,23 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -1293,6 +1388,9 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -1306,6 +1404,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -1319,6 +1419,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -1330,15 +1432,18 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -1354,13 +1459,14 @@ public final class DatasetOuterClass {
 
       private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @return A list containing the targets.
        */
       public com.google.protobuf.ProtocolStringList
           getTargetsList() {
@@ -1368,18 +1474,23 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @return The count of targets.
        */
       public int getTargetsCount() {
         return targets_.size();
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
        */
       public java.lang.String getTargets(int index) {
         return targets_.get(index);
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
        */
       public com.google.protobuf.ByteString
           getTargetsBytes(int index) {
@@ -1387,6 +1498,9 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
        */
       public Builder setTargets(
           int index, java.lang.String value) {
@@ -1400,6 +1514,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
        */
       public Builder addTargets(
           java.lang.String value) {
@@ -1413,6 +1529,8 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTargets(
           java.lang.Iterable<java.lang.String> values) {
@@ -1424,15 +1542,18 @@ public final class DatasetOuterClass {
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargets() {
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string targets = 5;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetsBytes(
           com.google.protobuf.ByteString value) {
@@ -1446,17 +1567,19 @@ public final class DatasetOuterClass {
         return this;
       }
 
-      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
+      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 9;</code>
+       * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -1563,17 +1686,19 @@ public final class DatasetOuterClass {
         return retentionPolicyBuilder_;
       }
 
-      private com.google.protobuf.Timestamp createdAt_ = null;
+      private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
         return createdAtBuilder_ != null || createdAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10;</code>
+       * @return The createdAt.
        */
       public com.google.protobuf.Timestamp getCreatedAt() {
         if (createdAtBuilder_ == null) {
@@ -1680,17 +1805,19 @@ public final class DatasetOuterClass {
         return createdAtBuilder_;
       }
 
-      private com.google.protobuf.Timestamp updatedAt_ = null;
+      private com.google.protobuf.Timestamp updatedAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
         return updatedAtBuilder_ != null || updatedAt_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11;</code>
+       * @return The updatedAt.
        */
       public com.google.protobuf.Timestamp getUpdatedAt() {
         if (updatedAtBuilder_ == null) {
@@ -1804,7 +1931,9 @@ public final class DatasetOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @return The size.
        */
+      @java.lang.Override
       public long getSize() {
         return size_;
       }
@@ -1814,6 +1943,8 @@ public final class DatasetOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @param value The size to set.
+       * @return This builder for chaining.
        */
       public Builder setSize(long value) {
         
@@ -1827,6 +1958,7 @@ public final class DatasetOuterClass {
        * </pre>
        *
        * <code>int64 size = 12;</code>
+       * @return This builder for chaining.
        */
       public Builder clearSize() {
         
@@ -1837,7 +1969,7 @@ public final class DatasetOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1913,20 +2045,12 @@ public final class DatasetOuterClass {
       "\020\tB8Z6github.com/e-conomic/vmlapis/gen/g" +
       "o/asgt/type;asgttypeb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
-        }, assigner);
+        });
     internal_static_asgt_type_Dataset_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_type_Dataset_fieldAccessorTable = new

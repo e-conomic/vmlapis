@@ -3,8 +3,8 @@
 
 package ssn.ocrservice.v1;
 
-public final class Ocrservice {
-  private Ocrservice() {}
+public final class OcrServiceProto {
+  private OcrServiceProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -20,10 +20,12 @@ public final class Ocrservice {
 
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return Whether the document field is set.
      */
     boolean hasDocument();
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return The document.
      */
     ssn.annotator.v1.Annotator.Document getDocument();
     /**
@@ -33,13 +35,14 @@ public final class Ocrservice {
 
     /**
      * <code>bool preview = 3;</code>
+     * @return The preview.
      */
     boolean getPreview();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationRequest}
    */
-  public  static final class GetTextAnnotationRequest extends
+  public static final class GetTextAnnotationRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.GetTextAnnotationRequest)
       GetTextAnnotationRequestOrBuilder {
@@ -49,7 +52,13 @@ public final class Ocrservice {
       super(builder);
     }
     private GetTextAnnotationRequest() {
-      preview_ = false;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTextAnnotationRequest();
     }
 
     @java.lang.Override
@@ -65,7 +74,6 @@ public final class Ocrservice {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -95,7 +103,7 @@ public final class Ocrservice {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -115,34 +123,39 @@ public final class Ocrservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.class, ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.Builder.class);
+              ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.class, ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.Builder.class);
     }
 
     public static final int DOCUMENT_FIELD_NUMBER = 2;
     private ssn.annotator.v1.Annotator.Document document_;
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return Whether the document field is set.
      */
+    @java.lang.Override
     public boolean hasDocument() {
       return document_ != null;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
+     * @return The document.
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.Document getDocument() {
       return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
     /**
      * <code>.ssn.annotator.v1.Document document = 2;</code>
      */
+    @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
       return getDocument();
     }
@@ -151,7 +164,9 @@ public final class Ocrservice {
     private boolean preview_;
     /**
      * <code>bool preview = 3;</code>
+     * @return The preview.
      */
+    @java.lang.Override
     public boolean getPreview() {
       return preview_;
     }
@@ -203,21 +218,20 @@ public final class Ocrservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest)) {
+      if (!(obj instanceof ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest)) {
         return super.equals(obj);
       }
-      ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest other = (ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest) obj;
+      ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest other = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest) obj;
 
-      boolean result = true;
-      result = result && (hasDocument() == other.hasDocument());
+      if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
-        result = result && getDocument()
-            .equals(other.getDocument());
+        if (!getDocument()
+            .equals(other.getDocument())) return false;
       }
-      result = result && (getPreview()
-          == other.getPreview());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (getPreview()
+          != other.getPreview()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -239,69 +253,69 @@ public final class Ocrservice {
       return hash;
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(byte[] data)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseDelimitedFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -314,7 +328,7 @@ public final class Ocrservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest prototype) {
+    public static Builder newBuilder(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -335,21 +349,21 @@ public final class Ocrservice {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:ssn.ocrservice.v1.GetTextAnnotationRequest)
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequestOrBuilder {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.class, ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.Builder.class);
+                ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.class, ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.Builder.class);
       }
 
-      // Construct using ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.newBuilder()
+      // Construct using ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -381,17 +395,17 @@ public final class Ocrservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor;
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest getDefaultInstanceForType() {
-        return ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.getDefaultInstance();
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest getDefaultInstanceForType() {
+        return ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest build() {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest result = buildPartial();
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest build() {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -399,8 +413,8 @@ public final class Ocrservice {
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest buildPartial() {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest result = new ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest(this);
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest buildPartial() {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest result = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest(this);
         if (documentBuilder_ == null) {
           result.document_ = document_;
         } else {
@@ -413,48 +427,48 @@ public final class Ocrservice {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest) {
-          return mergeFrom((ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest)other);
+        if (other instanceof ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest) {
+          return mergeFrom((ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest other) {
-        if (other == ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest other) {
+        if (other == ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest.getDefaultInstance()) return this;
         if (other.hasDocument()) {
           mergeDocument(other.getDocument());
         }
@@ -476,11 +490,11 @@ public final class Ocrservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest parsedMessage = null;
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest) e.getUnfinishedMessage();
+          parsedMessage = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -490,17 +504,19 @@ public final class Ocrservice {
         return this;
       }
 
-      private ssn.annotator.v1.Annotator.Document document_ = null;
+      private ssn.annotator.v1.Annotator.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.annotator.v1.Annotator.Document, ssn.annotator.v1.Annotator.Document.Builder, ssn.annotator.v1.Annotator.DocumentOrBuilder> documentBuilder_;
       /**
        * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * @return Whether the document field is set.
        */
       public boolean hasDocument() {
         return documentBuilder_ != null || document_ != null;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 2;</code>
+       * @return The document.
        */
       public ssn.annotator.v1.Annotator.Document getDocument() {
         if (documentBuilder_ == null) {
@@ -610,12 +626,16 @@ public final class Ocrservice {
       private boolean preview_ ;
       /**
        * <code>bool preview = 3;</code>
+       * @return The preview.
        */
+      @java.lang.Override
       public boolean getPreview() {
         return preview_;
       }
       /**
        * <code>bool preview = 3;</code>
+       * @param value The preview to set.
+       * @return This builder for chaining.
        */
       public Builder setPreview(boolean value) {
         
@@ -625,6 +645,7 @@ public final class Ocrservice {
       }
       /**
        * <code>bool preview = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearPreview() {
         
@@ -635,7 +656,7 @@ public final class Ocrservice {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -649,12 +670,12 @@ public final class Ocrservice {
     }
 
     // @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.GetTextAnnotationRequest)
-    private static final ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest DEFAULT_INSTANCE;
+    private static final ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest();
+      DEFAULT_INSTANCE = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest();
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest getDefaultInstance() {
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -679,7 +700,7 @@ public final class Ocrservice {
     }
 
     @java.lang.Override
-    public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationRequest getDefaultInstanceForType() {
+    public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -691,10 +712,12 @@ public final class Ocrservice {
 
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
     boolean hasTextAnnotation();
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
     ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation();
     /**
@@ -704,10 +727,12 @@ public final class Ocrservice {
 
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return Whether the image field is set.
      */
     boolean hasImage();
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return The image.
      */
     com.google.protobuf.BytesValue getImage();
     /**
@@ -718,7 +743,7 @@ public final class Ocrservice {
   /**
    * Protobuf type {@code ssn.ocrservice.v1.GetTextAnnotationResponse}
    */
-  public  static final class GetTextAnnotationResponse extends
+  public static final class GetTextAnnotationResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.GetTextAnnotationResponse)
       GetTextAnnotationResponseOrBuilder {
@@ -728,6 +753,13 @@ public final class Ocrservice {
       super(builder);
     }
     private GetTextAnnotationResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetTextAnnotationResponse();
     }
 
     @java.lang.Override
@@ -743,7 +775,6 @@ public final class Ocrservice {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -781,7 +812,7 @@ public final class Ocrservice {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -801,34 +832,39 @@ public final class Ocrservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.class, ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.Builder.class);
+              ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.class, ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.Builder.class);
     }
 
     public static final int TEXT_ANNOTATION_FIELD_NUMBER = 2;
     private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return Whether the textAnnotation field is set.
      */
+    @java.lang.Override
     public boolean hasTextAnnotation() {
       return textAnnotation_ != null;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+     * @return The textAnnotation.
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
       return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
     /**
      * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
      */
+    @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
       return getTextAnnotation();
     }
@@ -837,19 +873,24 @@ public final class Ocrservice {
     private com.google.protobuf.BytesValue image_;
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return Whether the image field is set.
      */
+    @java.lang.Override
     public boolean hasImage() {
       return image_ != null;
     }
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
+     * @return The image.
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValue getImage() {
       return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
     }
     /**
      * <code>.google.protobuf.BytesValue image = 3;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
       return getImage();
     }
@@ -901,24 +942,23 @@ public final class Ocrservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse)) {
+      if (!(obj instanceof ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse)) {
         return super.equals(obj);
       }
-      ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse other = (ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse) obj;
+      ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse other = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse) obj;
 
-      boolean result = true;
-      result = result && (hasTextAnnotation() == other.hasTextAnnotation());
+      if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
       if (hasTextAnnotation()) {
-        result = result && getTextAnnotation()
-            .equals(other.getTextAnnotation());
+        if (!getTextAnnotation()
+            .equals(other.getTextAnnotation())) return false;
       }
-      result = result && (hasImage() == other.hasImage());
+      if (hasImage() != other.hasImage()) return false;
       if (hasImage()) {
-        result = result && getImage()
-            .equals(other.getImage());
+        if (!getImage()
+            .equals(other.getImage())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -941,69 +981,69 @@ public final class Ocrservice {
       return hash;
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(byte[] data)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseDelimitedFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1016,7 +1056,7 @@ public final class Ocrservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse prototype) {
+    public static Builder newBuilder(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1037,21 +1077,21 @@ public final class Ocrservice {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:ssn.ocrservice.v1.GetTextAnnotationResponse)
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponseOrBuilder {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.class, ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.Builder.class);
+                ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.class, ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.Builder.class);
       }
 
-      // Construct using ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.newBuilder()
+      // Construct using ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1087,17 +1127,17 @@ public final class Ocrservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse getDefaultInstanceForType() {
-        return ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.getDefaultInstance();
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse getDefaultInstanceForType() {
+        return ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse build() {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse result = buildPartial();
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse build() {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1105,8 +1145,8 @@ public final class Ocrservice {
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse buildPartial() {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse result = new ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse(this);
+      public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse buildPartial() {
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse result = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse(this);
         if (textAnnotationBuilder_ == null) {
           result.textAnnotation_ = textAnnotation_;
         } else {
@@ -1123,48 +1163,48 @@ public final class Ocrservice {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse) {
-          return mergeFrom((ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse)other);
+        if (other instanceof ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse) {
+          return mergeFrom((ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse other) {
-        if (other == ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse other) {
+        if (other == ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse.getDefaultInstance()) return this;
         if (other.hasTextAnnotation()) {
           mergeTextAnnotation(other.getTextAnnotation());
         }
@@ -1186,11 +1226,11 @@ public final class Ocrservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse parsedMessage = null;
+        ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse) e.getUnfinishedMessage();
+          parsedMessage = (ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1200,17 +1240,19 @@ public final class Ocrservice {
         return this;
       }
 
-      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_ = null;
+      private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
       private com.google.protobuf.SingleFieldBuilderV3<
           ssn.type.TextAnnotationOuterClass.TextAnnotation, ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder, ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder> textAnnotationBuilder_;
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
         return textAnnotationBuilder_ != null || textAnnotation_ != null;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2;</code>
+       * @return The textAnnotation.
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation getTextAnnotation() {
         if (textAnnotationBuilder_ == null) {
@@ -1317,17 +1359,19 @@ public final class Ocrservice {
         return textAnnotationBuilder_;
       }
 
-      private com.google.protobuf.BytesValue image_ = null;
+      private com.google.protobuf.BytesValue image_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> imageBuilder_;
       /**
        * <code>.google.protobuf.BytesValue image = 3;</code>
+       * @return Whether the image field is set.
        */
       public boolean hasImage() {
         return imageBuilder_ != null || image_ != null;
       }
       /**
        * <code>.google.protobuf.BytesValue image = 3;</code>
+       * @return The image.
        */
       public com.google.protobuf.BytesValue getImage() {
         if (imageBuilder_ == null) {
@@ -1436,7 +1480,7 @@ public final class Ocrservice {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1450,12 +1494,12 @@ public final class Ocrservice {
     }
 
     // @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.GetTextAnnotationResponse)
-    private static final ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse DEFAULT_INSTANCE;
+    private static final ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse();
+      DEFAULT_INSTANCE = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse();
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse getDefaultInstance() {
+    public static ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1480,7 +1524,7 @@ public final class Ocrservice {
     }
 
     @java.lang.Override
-    public ssn.ocrservice.v1.Ocrservice.GetTextAnnotationResponse getDefaultInstanceForType() {
+    public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1492,13 +1536,14 @@ public final class Ocrservice {
 
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
     com.google.protobuf.ByteString getData();
   }
   /**
    * Protobuf type {@code ssn.ocrservice.v1.OcrScanImageRequest}
    */
-  public  static final class OcrScanImageRequest extends
+  public static final class OcrScanImageRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.OcrScanImageRequest)
       OcrScanImageRequestOrBuilder {
@@ -1509,6 +1554,13 @@ public final class Ocrservice {
     }
     private OcrScanImageRequest() {
       data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OcrScanImageRequest();
     }
 
     @java.lang.Override
@@ -1524,7 +1576,6 @@ public final class Ocrservice {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -1541,7 +1592,7 @@ public final class Ocrservice {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1561,22 +1612,24 @@ public final class Ocrservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.class, ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.Builder.class);
+              ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.class, ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.Builder.class);
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
      * <code>bytes data = 1;</code>
+     * @return The data.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString getData() {
       return data_;
     }
@@ -1621,16 +1674,15 @@ public final class Ocrservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest)) {
+      if (!(obj instanceof ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest)) {
         return super.equals(obj);
       }
-      ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest other = (ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest) obj;
+      ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest other = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest) obj;
 
-      boolean result = true;
-      result = result && getData()
-          .equals(other.getData());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getData()
+          .equals(other.getData())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1647,69 +1699,69 @@ public final class Ocrservice {
       return hash;
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(byte[] data)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseDelimitedFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1722,7 +1774,7 @@ public final class Ocrservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest prototype) {
+    public static Builder newBuilder(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1743,21 +1795,21 @@ public final class Ocrservice {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:ssn.ocrservice.v1.OcrScanImageRequest)
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageRequestOrBuilder {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.class, ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.Builder.class);
+                ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.class, ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.Builder.class);
       }
 
-      // Construct using ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.newBuilder()
+      // Construct using ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1783,17 +1835,17 @@ public final class Ocrservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest getDefaultInstanceForType() {
-        return ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.getDefaultInstance();
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest getDefaultInstanceForType() {
+        return ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest build() {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest result = buildPartial();
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest build() {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1801,8 +1853,8 @@ public final class Ocrservice {
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest buildPartial() {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest result = new ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest(this);
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest buildPartial() {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest result = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest(this);
         result.data_ = data_;
         onBuilt();
         return result;
@@ -1810,48 +1862,48 @@ public final class Ocrservice {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest) {
-          return mergeFrom((ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest)other);
+        if (other instanceof ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest) {
+          return mergeFrom((ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest other) {
-        if (other == ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest other) {
+        if (other == ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest.getDefaultInstance()) return this;
         if (other.getData() != com.google.protobuf.ByteString.EMPTY) {
           setData(other.getData());
         }
@@ -1870,11 +1922,11 @@ public final class Ocrservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest parsedMessage = null;
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest) e.getUnfinishedMessage();
+          parsedMessage = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1887,12 +1939,16 @@ public final class Ocrservice {
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>bytes data = 1;</code>
+       * @return The data.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString getData() {
         return data_;
       }
       /**
        * <code>bytes data = 1;</code>
+       * @param value The data to set.
+       * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
         if (value == null) {
@@ -1905,6 +1961,7 @@ public final class Ocrservice {
       }
       /**
        * <code>bytes data = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearData() {
         
@@ -1915,7 +1972,7 @@ public final class Ocrservice {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -1929,12 +1986,12 @@ public final class Ocrservice {
     }
 
     // @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.OcrScanImageRequest)
-    private static final ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest DEFAULT_INSTANCE;
+    private static final ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest();
+      DEFAULT_INSTANCE = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest();
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest getDefaultInstance() {
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1959,7 +2016,7 @@ public final class Ocrservice {
     }
 
     @java.lang.Override
-    public ssn.ocrservice.v1.Ocrservice.OcrScanImageRequest getDefaultInstanceForType() {
+    public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1971,10 +2028,12 @@ public final class Ocrservice {
 
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The tessHocr.
      */
     java.lang.String getTessHocr();
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The bytes for tessHocr.
      */
     com.google.protobuf.ByteString
         getTessHocrBytes();
@@ -1982,7 +2041,7 @@ public final class Ocrservice {
   /**
    * Protobuf type {@code ssn.ocrservice.v1.OcrScanImageResponse}
    */
-  public  static final class OcrScanImageResponse extends
+  public static final class OcrScanImageResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:ssn.ocrservice.v1.OcrScanImageResponse)
       OcrScanImageResponseOrBuilder {
@@ -1993,6 +2052,13 @@ public final class Ocrservice {
     }
     private OcrScanImageResponse() {
       tessHocr_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OcrScanImageResponse();
     }
 
     @java.lang.Override
@@ -2008,7 +2074,6 @@ public final class Ocrservice {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -2026,7 +2091,7 @@ public final class Ocrservice {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2046,22 +2111,24 @@ public final class Ocrservice {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable
+      return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.class, ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.Builder.class);
+              ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.class, ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.Builder.class);
     }
 
     public static final int TESS_HOCR_FIELD_NUMBER = 1;
     private volatile java.lang.Object tessHocr_;
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The tessHocr.
      */
+    @java.lang.Override
     public java.lang.String getTessHocr() {
       java.lang.Object ref = tessHocr_;
       if (ref instanceof java.lang.String) {
@@ -2076,7 +2143,9 @@ public final class Ocrservice {
     }
     /**
      * <code>string tess_hocr = 1;</code>
+     * @return The bytes for tessHocr.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTessHocrBytes() {
       java.lang.Object ref = tessHocr_;
@@ -2130,16 +2199,15 @@ public final class Ocrservice {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse)) {
+      if (!(obj instanceof ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse)) {
         return super.equals(obj);
       }
-      ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse other = (ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse) obj;
+      ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse other = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse) obj;
 
-      boolean result = true;
-      result = result && getTessHocr()
-          .equals(other.getTessHocr());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTessHocr()
+          .equals(other.getTessHocr())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2156,69 +2224,69 @@ public final class Ocrservice {
       return hash;
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(byte[] data)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseDelimitedFrom(java.io.InputStream input)
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseDelimitedFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parseFrom(
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2231,7 +2299,7 @@ public final class Ocrservice {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse prototype) {
+    public static Builder newBuilder(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2252,21 +2320,21 @@ public final class Ocrservice {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:ssn.ocrservice.v1.OcrScanImageResponse)
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageResponseOrBuilder {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.class, ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.Builder.class);
+                ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.class, ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.Builder.class);
       }
 
-      // Construct using ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.newBuilder()
+      // Construct using ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2292,17 +2360,17 @@ public final class Ocrservice {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ssn.ocrservice.v1.Ocrservice.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
+        return ssn.ocrservice.v1.OcrServiceProto.internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor;
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse getDefaultInstanceForType() {
-        return ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.getDefaultInstance();
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse getDefaultInstanceForType() {
+        return ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse build() {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse result = buildPartial();
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse build() {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2310,8 +2378,8 @@ public final class Ocrservice {
       }
 
       @java.lang.Override
-      public ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse buildPartial() {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse result = new ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse(this);
+      public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse buildPartial() {
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse result = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse(this);
         result.tessHocr_ = tessHocr_;
         onBuilt();
         return result;
@@ -2319,48 +2387,48 @@ public final class Ocrservice {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse) {
-          return mergeFrom((ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse)other);
+        if (other instanceof ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse) {
+          return mergeFrom((ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse other) {
-        if (other == ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse other) {
+        if (other == ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.getDefaultInstance()) return this;
         if (!other.getTessHocr().isEmpty()) {
           tessHocr_ = other.tessHocr_;
           onChanged();
@@ -2380,11 +2448,11 @@ public final class Ocrservice {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse parsedMessage = null;
+        ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse) e.getUnfinishedMessage();
+          parsedMessage = (ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2397,6 +2465,7 @@ public final class Ocrservice {
       private java.lang.Object tessHocr_ = "";
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return The tessHocr.
        */
       public java.lang.String getTessHocr() {
         java.lang.Object ref = tessHocr_;
@@ -2412,6 +2481,7 @@ public final class Ocrservice {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return The bytes for tessHocr.
        */
       public com.google.protobuf.ByteString
           getTessHocrBytes() {
@@ -2428,6 +2498,8 @@ public final class Ocrservice {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @param value The tessHocr to set.
+       * @return This builder for chaining.
        */
       public Builder setTessHocr(
           java.lang.String value) {
@@ -2441,6 +2513,7 @@ public final class Ocrservice {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTessHocr() {
         
@@ -2450,6 +2523,8 @@ public final class Ocrservice {
       }
       /**
        * <code>string tess_hocr = 1;</code>
+       * @param value The bytes for tessHocr to set.
+       * @return This builder for chaining.
        */
       public Builder setTessHocrBytes(
           com.google.protobuf.ByteString value) {
@@ -2465,7 +2540,7 @@ public final class Ocrservice {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2479,12 +2554,12 @@ public final class Ocrservice {
     }
 
     // @@protoc_insertion_point(class_scope:ssn.ocrservice.v1.OcrScanImageResponse)
-    private static final ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse DEFAULT_INSTANCE;
+    private static final ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse();
+      DEFAULT_INSTANCE = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse();
     }
 
-    public static ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse getDefaultInstance() {
+    public static ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2509,7 +2584,7 @@ public final class Ocrservice {
     }
 
     @java.lang.Override
-    public ssn.ocrservice.v1.Ocrservice.OcrScanImageResponse getDefaultInstanceForType() {
+    public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2560,25 +2635,18 @@ public final class Ocrservice {
       "\'.ssn.ocrservice.v1.OcrScanImageResponse" +
       "\022n\n\021GetTextAnnotation\022+.ssn.ocrservice.v" +
       "1.GetTextAnnotationRequest\032,.ssn.ocrserv" +
-      "ice.v1.GetTextAnnotationResponseBBZ@gith" +
-      "ub.com/e-conomic/vmlapis/gen/go/ssn/ocrs" +
-      "ervice/v1;ocrserviceb\006proto3"
+      "ice.v1.GetTextAnnotationResponseBSB\017OcrS" +
+      "erviceProtoZ@github.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/ocrservice/v1;ocrserviceb\006p" +
+      "roto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.WrappersProto.getDescriptor(),
           ssn.annotator.v1.Annotator.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
-        }, assigner);
+        });
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ssn_ocrservice_v1_GetTextAnnotationRequest_fieldAccessorTable = new

@@ -3,8 +3,8 @@
 
 package asgt.dataservice.v1;
 
-public final class DataServiceOuterClass {
-  private DataServiceOuterClass() {}
+public final class DataServiceProtos {
+  private DataServiceProtos() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -20,10 +20,12 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
     boolean hasStartTime();
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return The startTime.
      */
     com.google.protobuf.Timestamp getStartTime();
     /**
@@ -33,10 +35,12 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * @return Whether the endTime field is set.
      */
     boolean hasEndTime();
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * @return The endTime.
      */
     com.google.protobuf.Timestamp getEndTime();
     /**
@@ -46,19 +50,25 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -66,7 +76,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsRequest}
    */
-  public  static final class CalculateMetricsRequest extends
+  public static final class CalculateMetricsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsRequest)
       CalculateMetricsRequestOrBuilder {
@@ -77,6 +87,13 @@ public final class DataServiceOuterClass {
     }
     private CalculateMetricsRequest() {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateMetricsRequest();
     }
 
     @java.lang.Override
@@ -131,15 +148,15 @@ public final class DataServiceOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -153,7 +170,7 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -162,35 +179,39 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int START_TIME_FIELD_NUMBER = 1;
     private com.google.protobuf.Timestamp startTime_;
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return Whether the startTime field is set.
      */
+    @java.lang.Override
     public boolean hasStartTime() {
       return startTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
+     * @return The startTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getStartTime() {
       return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp start_time = 1;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
       return getStartTime();
     }
@@ -199,19 +220,24 @@ public final class DataServiceOuterClass {
     private com.google.protobuf.Timestamp endTime_;
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * @return Whether the endTime field is set.
      */
+    @java.lang.Override
     public boolean hasEndTime() {
       return endTime_ != null;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
+     * @return The endTime.
      */
+    @java.lang.Override
     public com.google.protobuf.Timestamp getEndTime() {
       return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
     /**
      * <code>.google.protobuf.Timestamp end_time = 2;</code>
      */
+    @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
       return getEndTime();
     }
@@ -220,6 +246,7 @@ public final class DataServiceOuterClass {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -227,18 +254,23 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -303,26 +335,25 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest) obj;
 
-      boolean result = true;
-      result = result && (hasStartTime() == other.hasStartTime());
+      if (hasStartTime() != other.hasStartTime()) return false;
       if (hasStartTime()) {
-        result = result && getStartTime()
-            .equals(other.getStartTime());
+        if (!getStartTime()
+            .equals(other.getStartTime())) return false;
       }
-      result = result && (hasEndTime() == other.hasEndTime());
+      if (hasEndTime() != other.hasEndTime()) return false;
       if (hasEndTime()) {
-        result = result && getEndTime()
-            .equals(other.getEndTime());
+        if (!getEndTime()
+            .equals(other.getEndTime())) return false;
       }
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -349,69 +380,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -424,7 +455,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -445,21 +476,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.CalculateMetricsRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -490,24 +521,24 @@ public final class DataServiceOuterClass {
           endTimeBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -515,10 +546,9 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (startTimeBuilder_ == null) {
           result.startTime_ = startTime_;
         } else {
@@ -529,60 +559,59 @@ public final class DataServiceOuterClass {
         } else {
           result.endTime_ = endTimeBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest.getDefaultInstance()) return this;
         if (other.hasStartTime()) {
           mergeStartTime(other.getStartTime());
         }
@@ -592,7 +621,7 @@ public final class DataServiceOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -614,11 +643,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -629,17 +658,19 @@ public final class DataServiceOuterClass {
       }
       private int bitField0_;
 
-      private com.google.protobuf.Timestamp startTime_ = null;
+      private com.google.protobuf.Timestamp startTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> startTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
         return startTimeBuilder_ != null || startTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1;</code>
+       * @return The startTime.
        */
       public com.google.protobuf.Timestamp getStartTime() {
         if (startTimeBuilder_ == null) {
@@ -746,17 +777,19 @@ public final class DataServiceOuterClass {
         return startTimeBuilder_;
       }
 
-      private com.google.protobuf.Timestamp endTime_ = null;
+      private com.google.protobuf.Timestamp endTime_;
       private com.google.protobuf.SingleFieldBuilderV3<
           com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> endTimeBuilder_;
       /**
        * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * @return Whether the endTime field is set.
        */
       public boolean hasEndTime() {
         return endTimeBuilder_ != null || endTime_ != null;
       }
       /**
        * <code>.google.protobuf.Timestamp end_time = 2;</code>
+       * @return The endTime.
        */
       public com.google.protobuf.Timestamp getEndTime() {
         if (endTimeBuilder_ == null) {
@@ -865,13 +898,14 @@ public final class DataServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -879,18 +913,23 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -898,6 +937,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -911,6 +953,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -924,6 +968,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -935,15 +981,18 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -959,7 +1008,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -973,12 +1022,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CalculateMetricsRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1003,7 +1052,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1016,12 +1065,12 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> 
+    java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> 
         getMetricsList();
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getMetrics(int index);
+    asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index);
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
@@ -1029,18 +1078,18 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    java.util.List<? extends asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder> 
+    java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
         getMetricsOrBuilderList();
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
+    asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
         int index);
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsResponse}
    */
-  public  static final class CalculateMetricsResponse extends
+  public static final class CalculateMetricsResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsResponse)
       CalculateMetricsResponseOrBuilder {
@@ -1051,6 +1100,13 @@ public final class DataServiceOuterClass {
     }
     private CalculateMetricsResponse() {
       metrics_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CalculateMetricsResponse();
     }
 
     @java.lang.Override
@@ -1078,16 +1134,16 @@ public final class DataServiceOuterClass {
               done = true;
               break;
             case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow>();
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow>();
                 mutable_bitField0_ |= 0x00000001;
               }
               metrics_.add(
-                  input.readMessage(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.parser(), extensionRegistry));
+                  input.readMessage(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -1101,7 +1157,7 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           metrics_ = java.util.Collections.unmodifiableList(metrics_);
         }
         this.unknownFields = unknownFields.build();
@@ -1110,15 +1166,15 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.Builder.class);
     }
 
     public interface MetricRowOrBuilder extends
@@ -1127,20 +1183,24 @@ public final class DataServiceOuterClass {
 
       /**
        * <code>string target = 1;</code>
+       * @return The target.
        */
       java.lang.String getTarget();
       /**
        * <code>string target = 1;</code>
+       * @return The bytes for target.
        */
       com.google.protobuf.ByteString
           getTargetBytes();
 
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * @return Whether the confidence field is set.
        */
       boolean hasConfidence();
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * @return The confidence.
        */
       com.google.protobuf.FloatValue getConfidence();
       /**
@@ -1150,18 +1210,20 @@ public final class DataServiceOuterClass {
 
       /**
        * <code>int32 correct = 3;</code>
+       * @return The correct.
        */
       int getCorrect();
 
       /**
        * <code>int32 incorrect = 4;</code>
+       * @return The incorrect.
        */
       int getIncorrect();
     }
     /**
      * Protobuf type {@code asgt.dataservice.v1.CalculateMetricsResponse.MetricRow}
      */
-    public  static final class MetricRow extends
+    public static final class MetricRow extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CalculateMetricsResponse.MetricRow)
         MetricRowOrBuilder {
@@ -1172,8 +1234,13 @@ public final class DataServiceOuterClass {
       }
       private MetricRow() {
         target_ = "";
-        correct_ = 0;
-        incorrect_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new MetricRow();
       }
 
       @java.lang.Override
@@ -1189,7 +1256,6 @@ public final class DataServiceOuterClass {
         if (extensionRegistry == null) {
           throw new java.lang.NullPointerException();
         }
-        int mutable_bitField0_ = 0;
         com.google.protobuf.UnknownFieldSet.Builder unknownFields =
             com.google.protobuf.UnknownFieldSet.newBuilder();
         try {
@@ -1230,7 +1296,7 @@ public final class DataServiceOuterClass {
                 break;
               }
               default: {
-                if (!parseUnknownFieldProto3(
+                if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
                   done = true;
                 }
@@ -1250,22 +1316,24 @@ public final class DataServiceOuterClass {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder.class);
       }
 
       public static final int TARGET_FIELD_NUMBER = 1;
       private volatile java.lang.Object target_;
       /**
        * <code>string target = 1;</code>
+       * @return The target.
        */
+      @java.lang.Override
       public java.lang.String getTarget() {
         java.lang.Object ref = target_;
         if (ref instanceof java.lang.String) {
@@ -1280,7 +1348,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string target = 1;</code>
+       * @return The bytes for target.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTargetBytes() {
         java.lang.Object ref = target_;
@@ -1299,19 +1369,24 @@ public final class DataServiceOuterClass {
       private com.google.protobuf.FloatValue confidence_;
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * @return Whether the confidence field is set.
        */
+      @java.lang.Override
       public boolean hasConfidence() {
         return confidence_ != null;
       }
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
+       * @return The confidence.
        */
+      @java.lang.Override
       public com.google.protobuf.FloatValue getConfidence() {
         return confidence_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : confidence_;
       }
       /**
        * <code>.google.protobuf.FloatValue confidence = 2;</code>
        */
+      @java.lang.Override
       public com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder() {
         return getConfidence();
       }
@@ -1320,7 +1395,9 @@ public final class DataServiceOuterClass {
       private int correct_;
       /**
        * <code>int32 correct = 3;</code>
+       * @return The correct.
        */
+      @java.lang.Override
       public int getCorrect() {
         return correct_;
       }
@@ -1329,7 +1406,9 @@ public final class DataServiceOuterClass {
       private int incorrect_;
       /**
        * <code>int32 incorrect = 4;</code>
+       * @return The incorrect.
        */
+      @java.lang.Override
       public int getIncorrect() {
         return incorrect_;
       }
@@ -1394,25 +1473,24 @@ public final class DataServiceOuterClass {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow)) {
+        if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow)) {
           return super.equals(obj);
         }
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow other = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow) obj;
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow) obj;
 
-        boolean result = true;
-        result = result && getTarget()
-            .equals(other.getTarget());
-        result = result && (hasConfidence() == other.hasConfidence());
+        if (!getTarget()
+            .equals(other.getTarget())) return false;
+        if (hasConfidence() != other.hasConfidence()) return false;
         if (hasConfidence()) {
-          result = result && getConfidence()
-              .equals(other.getConfidence());
+          if (!getConfidence()
+              .equals(other.getConfidence())) return false;
         }
-        result = result && (getCorrect()
-            == other.getCorrect());
-        result = result && (getIncorrect()
-            == other.getIncorrect());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (getCorrect()
+            != other.getCorrect()) return false;
+        if (getIncorrect()
+            != other.getIncorrect()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1437,69 +1515,69 @@ public final class DataServiceOuterClass {
         return hash;
       }
 
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(byte[] data)
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseDelimitedFrom(java.io.InputStream input)
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseDelimitedFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parseFrom(
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1512,7 +1590,7 @@ public final class DataServiceOuterClass {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow prototype) {
+      public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       @java.lang.Override
@@ -1533,21 +1611,21 @@ public final class DataServiceOuterClass {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.CalculateMetricsResponse.MetricRow)
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder {
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
+          return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
         }
 
         @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_fieldAccessorTable
+          return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder.class);
+                  asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder.class);
         }
 
-        // Construct using asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.newBuilder()
+        // Construct using asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1583,17 +1661,17 @@ public final class DataServiceOuterClass {
         @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
+          return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getDefaultInstanceForType() {
-          return asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.getDefaultInstance();
+        public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getDefaultInstanceForType() {
+          return asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance();
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow build() {
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow result = buildPartial();
+        public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow build() {
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
@@ -1601,8 +1679,8 @@ public final class DataServiceOuterClass {
         }
 
         @java.lang.Override
-        public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow buildPartial() {
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow result = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow(this);
+        public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow buildPartial() {
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow(this);
           result.target_ = target_;
           if (confidenceBuilder_ == null) {
             result.confidence_ = confidence_;
@@ -1617,48 +1695,48 @@ public final class DataServiceOuterClass {
 
         @java.lang.Override
         public Builder clone() {
-          return (Builder) super.clone();
+          return super.clone();
         }
         @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
         @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
         @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
         @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
         @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
         @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow) {
-            return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow)other);
+          if (other instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow) {
+            return mergeFrom((asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow other) {
-          if (other == asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.getDefaultInstance()) return this;
+        public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow other) {
+          if (other == asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance()) return this;
           if (!other.getTarget().isEmpty()) {
             target_ = other.target_;
             onChanged();
@@ -1687,11 +1765,11 @@ public final class DataServiceOuterClass {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow parsedMessage = null;
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow) e.getUnfinishedMessage();
+            parsedMessage = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -1704,6 +1782,7 @@ public final class DataServiceOuterClass {
         private java.lang.Object target_ = "";
         /**
          * <code>string target = 1;</code>
+         * @return The target.
          */
         public java.lang.String getTarget() {
           java.lang.Object ref = target_;
@@ -1719,6 +1798,7 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>string target = 1;</code>
+         * @return The bytes for target.
          */
         public com.google.protobuf.ByteString
             getTargetBytes() {
@@ -1735,6 +1815,8 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>string target = 1;</code>
+         * @param value The target to set.
+         * @return This builder for chaining.
          */
         public Builder setTarget(
             java.lang.String value) {
@@ -1748,6 +1830,7 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>string target = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearTarget() {
           
@@ -1757,6 +1840,8 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>string target = 1;</code>
+         * @param value The bytes for target to set.
+         * @return This builder for chaining.
          */
         public Builder setTargetBytes(
             com.google.protobuf.ByteString value) {
@@ -1770,17 +1855,19 @@ public final class DataServiceOuterClass {
           return this;
         }
 
-        private com.google.protobuf.FloatValue confidence_ = null;
+        private com.google.protobuf.FloatValue confidence_;
         private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> confidenceBuilder_;
         /**
          * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * @return Whether the confidence field is set.
          */
         public boolean hasConfidence() {
           return confidenceBuilder_ != null || confidence_ != null;
         }
         /**
          * <code>.google.protobuf.FloatValue confidence = 2;</code>
+         * @return The confidence.
          */
         public com.google.protobuf.FloatValue getConfidence() {
           if (confidenceBuilder_ == null) {
@@ -1890,12 +1977,16 @@ public final class DataServiceOuterClass {
         private int correct_ ;
         /**
          * <code>int32 correct = 3;</code>
+         * @return The correct.
          */
+        @java.lang.Override
         public int getCorrect() {
           return correct_;
         }
         /**
          * <code>int32 correct = 3;</code>
+         * @param value The correct to set.
+         * @return This builder for chaining.
          */
         public Builder setCorrect(int value) {
           
@@ -1905,6 +1996,7 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>int32 correct = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearCorrect() {
           
@@ -1916,12 +2008,16 @@ public final class DataServiceOuterClass {
         private int incorrect_ ;
         /**
          * <code>int32 incorrect = 4;</code>
+         * @return The incorrect.
          */
+        @java.lang.Override
         public int getIncorrect() {
           return incorrect_;
         }
         /**
          * <code>int32 incorrect = 4;</code>
+         * @param value The incorrect to set.
+         * @return This builder for chaining.
          */
         public Builder setIncorrect(int value) {
           
@@ -1931,6 +2027,7 @@ public final class DataServiceOuterClass {
         }
         /**
          * <code>int32 incorrect = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearIncorrect() {
           
@@ -1941,7 +2038,7 @@ public final class DataServiceOuterClass {
         @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
-          return super.setUnknownFieldsProto3(unknownFields);
+          return super.setUnknownFields(unknownFields);
         }
 
         @java.lang.Override
@@ -1955,12 +2052,12 @@ public final class DataServiceOuterClass {
       }
 
       // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CalculateMetricsResponse.MetricRow)
-      private static final asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow DEFAULT_INSTANCE;
+      private static final asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow();
+        DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow();
       }
 
-      public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getDefaultInstance() {
+      public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1985,43 +2082,48 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getDefaultInstanceForType() {
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
     public static final int METRICS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> metrics_;
+    private java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> metrics_;
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    public java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> getMetricsList() {
+    @java.lang.Override
+    public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> getMetricsList() {
       return metrics_;
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    public java.util.List<? extends asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder> 
+    @java.lang.Override
+    public java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
         getMetricsOrBuilderList() {
       return metrics_;
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
+    @java.lang.Override
     public int getMetricsCount() {
       return metrics_.size();
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getMetrics(int index) {
+    @java.lang.Override
+    public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index) {
       return metrics_.get(index);
     }
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
      */
-    public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
+    @java.lang.Override
+    public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
         int index) {
       return metrics_.get(index);
     }
@@ -2066,16 +2168,15 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse other = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse) obj;
+      asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse other = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse) obj;
 
-      boolean result = true;
-      result = result && getMetricsList()
-          .equals(other.getMetricsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getMetricsList()
+          .equals(other.getMetricsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -2094,69 +2195,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2169,7 +2270,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -2190,21 +2291,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.CalculateMetricsResponse)
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponseOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.class, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.class, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2235,17 +2336,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse build() {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse build() {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -2253,11 +2354,11 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse result = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse(this);
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse(this);
         int from_bitField0_ = bitField0_;
         if (metricsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             metrics_ = java.util.Collections.unmodifiableList(metrics_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -2271,48 +2372,48 @@ public final class DataServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.getDefaultInstance()) return this;
         if (metricsBuilder_ == null) {
           if (!other.metrics_.isEmpty()) {
             if (metrics_.isEmpty()) {
@@ -2354,11 +2455,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2369,22 +2470,22 @@ public final class DataServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> metrics_ =
+      private java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> metrics_ =
         java.util.Collections.emptyList();
       private void ensureMetricsIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow>(metrics_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          metrics_ = new java.util.ArrayList<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow>(metrics_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder> metricsBuilder_;
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> metricsBuilder_;
 
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> getMetricsList() {
+      public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> getMetricsList() {
         if (metricsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(metrics_);
         } else {
@@ -2404,7 +2505,7 @@ public final class DataServiceOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow getMetrics(int index) {
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow getMetrics(int index) {
         if (metricsBuilder_ == null) {
           return metrics_.get(index);
         } else {
@@ -2415,7 +2516,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder setMetrics(
-          int index, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow value) {
+          int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2432,7 +2533,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder setMetrics(
-          int index, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
+          int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.set(index, builderForValue.build());
@@ -2445,7 +2546,7 @@ public final class DataServiceOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public Builder addMetrics(asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow value) {
+      public Builder addMetrics(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2462,7 +2563,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder addMetrics(
-          int index, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow value) {
+          int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow value) {
         if (metricsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2479,7 +2580,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder addMetrics(
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.add(builderForValue.build());
@@ -2493,7 +2594,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder addMetrics(
-          int index, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
+          int index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder builderForValue) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           metrics_.add(index, builderForValue.build());
@@ -2507,7 +2608,7 @@ public final class DataServiceOuterClass {
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
       public Builder addAllMetrics(
-          java.lang.Iterable<? extends asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow> values) {
+          java.lang.Iterable<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> values) {
         if (metricsBuilder_ == null) {
           ensureMetricsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -2547,14 +2648,14 @@ public final class DataServiceOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder getMetricsBuilder(
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder getMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder getMetricsOrBuilder(
           int index) {
         if (metricsBuilder_ == null) {
           return metrics_.get(index);  } else {
@@ -2564,7 +2665,7 @@ public final class DataServiceOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public java.util.List<? extends asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder> 
+      public java.util.List<? extends asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
            getMetricsOrBuilderList() {
         if (metricsBuilder_ != null) {
           return metricsBuilder_.getMessageOrBuilderList();
@@ -2575,33 +2676,33 @@ public final class DataServiceOuterClass {
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder() {
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder() {
         return getMetricsFieldBuilder().addBuilder(
-            asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.getDefaultInstance());
+            asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder(
+      public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder addMetricsBuilder(
           int index) {
         return getMetricsFieldBuilder().addBuilder(
-            index, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.getDefaultInstance());
+            index, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance());
       }
       /**
        * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1;</code>
        */
-      public java.util.List<asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder> 
+      public java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder> 
            getMetricsBuilderList() {
         return getMetricsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder> 
+          asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder> 
           getMetricsFieldBuilder() {
         if (metricsBuilder_ == null) {
           metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse.MetricRowOrBuilder>(
+              asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.Builder, asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRowOrBuilder>(
                   metrics_,
-                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           metrics_ = null;
@@ -2611,7 +2712,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -2625,12 +2726,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CalculateMetricsResponse)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2655,7 +2756,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.CalculateMetricsResponse getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2667,58 +2768,74 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
 
     /**
      * <code>repeated string targets = 6;</code>
+     * @return A list containing the targets.
      */
     java.util.List<java.lang.String>
         getTargetsList();
     /**
      * <code>repeated string targets = 6;</code>
+     * @return The count of targets.
      */
     int getTargetsCount();
     /**
      * <code>repeated string targets = 6;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
      */
     java.lang.String getTargets(int index);
     /**
      * <code>repeated string targets = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
      */
     com.google.protobuf.ByteString
         getTargetsBytes(int index);
@@ -2749,10 +2866,12 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
@@ -2763,7 +2882,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.CreateRequest}
    */
-  public  static final class CreateRequest extends
+  public static final class CreateRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.CreateRequest)
       CreateRequestOrBuilder {
@@ -2778,6 +2897,13 @@ public final class DataServiceOuterClass {
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       samples_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreateRequest();
     }
 
     @java.lang.Override
@@ -2818,17 +2944,17 @@ public final class DataServiceOuterClass {
             }
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
             }
             case 34: {
-              if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
-                mutable_bitField0_ |= 0x00000010;
+                mutable_bitField0_ |= 0x00000004;
               }
               samples_.add(
                   input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
@@ -2849,15 +2975,15 @@ public final class DataServiceOuterClass {
             }
             case 50: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 targets_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000002;
               }
               targets_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -2871,13 +2997,13 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
           samples_ = java.util.Collections.unmodifiableList(samples_);
         }
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           targets_ = targets_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -2886,23 +3012,24 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.CreateRequest.class, asgt.dataservice.v1.DataServiceProtos.CreateRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -2917,7 +3044,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -2936,7 +3065,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -2951,7 +3082,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -2970,6 +3103,7 @@ public final class DataServiceOuterClass {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -2977,18 +3111,23 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -2999,6 +3138,7 @@ public final class DataServiceOuterClass {
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <code>repeated string targets = 6;</code>
+     * @return A list containing the targets.
      */
     public com.google.protobuf.ProtocolStringList
         getTargetsList() {
@@ -3006,18 +3146,23 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>repeated string targets = 6;</code>
+     * @return The count of targets.
      */
     public int getTargetsCount() {
       return targets_.size();
     }
     /**
      * <code>repeated string targets = 6;</code>
+     * @param index The index of the element to return.
+     * @return The targets at the given index.
      */
     public java.lang.String getTargets(int index) {
       return targets_.get(index);
     }
     /**
      * <code>repeated string targets = 6;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the targets at the given index.
      */
     public com.google.protobuf.ByteString
         getTargetsBytes(int index) {
@@ -3029,12 +3174,14 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
@@ -3042,18 +3189,21 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
+    @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
+    @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 4;</code>
      */
+    @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
@@ -3063,19 +3213,24 @@ public final class DataServiceOuterClass {
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * @return Whether the retentionPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+     * @return The retentionPolicy.
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
@@ -3161,29 +3316,28 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.CreateRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.CreateRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.CreateRequest other = (asgt.dataservice.v1.DataServiceOuterClass.CreateRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.CreateRequest other = (asgt.dataservice.v1.DataServiceProtos.CreateRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && getTargetsList()
-          .equals(other.getTargetsList());
-      result = result && getSamplesList()
-          .equals(other.getSamplesList());
-      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!getTargetsList()
+          .equals(other.getTargetsList())) return false;
+      if (!getSamplesList()
+          .equals(other.getSamplesList())) return false;
+      if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
       if (hasRetentionPolicy()) {
-        result = result && getRetentionPolicy()
-            .equals(other.getRetentionPolicy());
+        if (!getRetentionPolicy()
+            .equals(other.getRetentionPolicy())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -3218,69 +3372,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3293,7 +3447,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.CreateRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.CreateRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3314,21 +3468,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.CreateRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.CreateRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.CreateRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.class, asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.CreateRequest.class, asgt.dataservice.v1.DataServiceProtos.CreateRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.CreateRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3352,12 +3506,12 @@ public final class DataServiceOuterClass {
         type_ = "";
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
           samplesBuilder_.clear();
         }
@@ -3373,17 +3527,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_CreateRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CreateRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.CreateRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.CreateRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CreateRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.CreateRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.CreateRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.CreateRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3391,26 +3545,25 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.CreateRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.CreateRequest result = new asgt.dataservice.v1.DataServiceOuterClass.CreateRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.CreateRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.CreateRequest result = new asgt.dataservice.v1.DataServiceProtos.CreateRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.type_ = type_;
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.targets_ = targets_;
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.samples_ = samples_;
         } else {
@@ -3421,55 +3574,54 @@ public final class DataServiceOuterClass {
         } else {
           result.retentionPolicy_ = retentionPolicyBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.CreateRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.CreateRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.CreateRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.CreateRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.CreateRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.CreateRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.CreateRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.CreateRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -3481,7 +3633,7 @@ public final class DataServiceOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -3491,7 +3643,7 @@ public final class DataServiceOuterClass {
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
@@ -3502,7 +3654,7 @@ public final class DataServiceOuterClass {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -3515,7 +3667,7 @@ public final class DataServiceOuterClass {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000004);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -3542,11 +3694,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.CreateRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.CreateRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.CreateRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.CreateRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3560,6 +3712,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -3575,6 +3728,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -3591,6 +3745,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -3604,6 +3760,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -3613,6 +3770,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -3629,6 +3788,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -3644,6 +3804,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -3660,6 +3821,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -3673,6 +3836,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -3682,6 +3846,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -3697,13 +3863,14 @@ public final class DataServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -3711,18 +3878,23 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -3730,6 +3902,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -3743,6 +3918,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -3756,6 +3933,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -3767,15 +3946,18 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 3;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -3791,13 +3973,14 @@ public final class DataServiceOuterClass {
 
       private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @return A list containing the targets.
        */
       public com.google.protobuf.ProtocolStringList
           getTargetsList() {
@@ -3805,18 +3988,23 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @return The count of targets.
        */
       public int getTargetsCount() {
         return targets_.size();
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param index The index of the element to return.
+       * @return The targets at the given index.
        */
       public java.lang.String getTargets(int index) {
         return targets_.get(index);
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the targets at the given index.
        */
       public com.google.protobuf.ByteString
           getTargetsBytes(int index) {
@@ -3824,6 +4012,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param index The index to set the value at.
+       * @param value The targets to set.
+       * @return This builder for chaining.
        */
       public Builder setTargets(
           int index, java.lang.String value) {
@@ -3837,6 +4028,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param value The targets to add.
+       * @return This builder for chaining.
        */
       public Builder addTargets(
           java.lang.String value) {
@@ -3850,6 +4043,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param values The targets to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTargets(
           java.lang.Iterable<java.lang.String> values) {
@@ -3861,15 +4056,18 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTargets() {
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string targets = 6;</code>
+       * @param value The bytes of the targets to add.
+       * @return This builder for chaining.
        */
       public Builder addTargetsBytes(
           com.google.protobuf.ByteString value) {
@@ -3886,9 +4084,9 @@ public final class DataServiceOuterClass {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -4038,7 +4236,7 @@ public final class DataServiceOuterClass {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -4115,7 +4313,7 @@ public final class DataServiceOuterClass {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000010) == 0x00000010),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -4123,17 +4321,19 @@ public final class DataServiceOuterClass {
         return samplesBuilder_;
       }
 
-      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
+      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
+       * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -4242,7 +4442,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -4256,12 +4456,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.CreateRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.CreateRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.CreateRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.CreateRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.CreateRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.CreateRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.CreateRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4286,7 +4486,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.CreateRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.CreateRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4298,20 +4498,24 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -4343,7 +4547,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.AppendDataRequest}
    */
-  public  static final class AppendDataRequest extends
+  public static final class AppendDataRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.AppendDataRequest)
       AppendDataRequestOrBuilder {
@@ -4356,6 +4560,13 @@ public final class DataServiceOuterClass {
       name_ = "";
       type_ = "";
       samples_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AppendDataRequest();
     }
 
     @java.lang.Override
@@ -4395,16 +4606,16 @@ public final class DataServiceOuterClass {
               break;
             }
             case 26: {
-              if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>();
-                mutable_bitField0_ |= 0x00000004;
+                mutable_bitField0_ |= 0x00000001;
               }
               samples_.add(
                   input.readMessage(asgt.type.SampleOuterClass.Sample.parser(), extensionRegistry));
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -4418,7 +4629,7 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           samples_ = java.util.Collections.unmodifiableList(samples_);
         }
         this.unknownFields = unknownFields.build();
@@ -4427,23 +4638,24 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.class, asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.class, asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -4458,7 +4670,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -4477,7 +4691,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -4492,7 +4708,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -4512,12 +4730,14 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<asgt.type.SampleOuterClass.Sample> getSamplesList() {
       return samples_;
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
+    @java.lang.Override
     public java.util.List<? extends asgt.type.SampleOuterClass.SampleOrBuilder> 
         getSamplesOrBuilderList() {
       return samples_;
@@ -4525,18 +4745,21 @@ public final class DataServiceOuterClass {
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
+    @java.lang.Override
     public int getSamplesCount() {
       return samples_.size();
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
+    @java.lang.Override
     public asgt.type.SampleOuterClass.Sample getSamples(int index) {
       return samples_.get(index);
     }
     /**
      * <code>repeated .asgt.type.Sample samples = 3;</code>
      */
+    @java.lang.Override
     public asgt.type.SampleOuterClass.SampleOrBuilder getSamplesOrBuilder(
         int index) {
       return samples_.get(index);
@@ -4594,20 +4817,19 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.AppendDataRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest other = (asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.AppendDataRequest other = (asgt.dataservice.v1.DataServiceProtos.AppendDataRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getSamplesList()
-          .equals(other.getSamplesList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getSamplesList()
+          .equals(other.getSamplesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4630,69 +4852,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4705,7 +4927,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.AppendDataRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -4726,21 +4948,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.AppendDataRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.AppendDataRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.class, asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.class, asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4765,7 +4987,7 @@ public final class DataServiceOuterClass {
 
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           samplesBuilder_.clear();
         }
@@ -4775,17 +4997,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -4793,70 +5015,68 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest result = new asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result = new asgt.dataservice.v1.DataServiceProtos.AppendDataRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.name_ = name_;
         result.type_ = type_;
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.samples_ = samples_;
         } else {
           result.samples_ = samplesBuilder_.build();
         }
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.AppendDataRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.AppendDataRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.AppendDataRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -4869,7 +5089,7 @@ public final class DataServiceOuterClass {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -4882,7 +5102,7 @@ public final class DataServiceOuterClass {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000001);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -4906,11 +5126,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.AppendDataRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.AppendDataRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4924,6 +5144,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -4939,6 +5160,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -4955,6 +5177,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -4968,6 +5192,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -4977,6 +5202,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -4993,6 +5220,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -5008,6 +5236,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -5024,6 +5253,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -5037,6 +5268,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -5046,6 +5278,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -5062,9 +5296,9 @@ public final class DataServiceOuterClass {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -5214,7 +5448,7 @@ public final class DataServiceOuterClass {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -5291,7 +5525,7 @@ public final class DataServiceOuterClass {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -5301,7 +5535,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -5315,12 +5549,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.AppendDataRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.AppendDataRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.AppendDataRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.AppendDataRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5345,7 +5579,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.AppendDataRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5357,40 +5591,46 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string type = 1;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string tag = 3;</code>
+     * @return The tag.
      */
     java.lang.String getTag();
     /**
      * <code>string tag = 3;</code>
+     * @return The bytes for tag.
      */
     com.google.protobuf.ByteString
         getTagBytes();
 
-    public asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.MatchCase getMatchCase();
+    public asgt.dataservice.v1.DataServiceProtos.DeleteRequest.MatchCase getMatchCase();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1.DeleteRequest}
    */
-  public  static final class DeleteRequest extends
+  public static final class DeleteRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.DeleteRequest)
       DeleteRequestOrBuilder {
@@ -5401,6 +5641,13 @@ public final class DataServiceOuterClass {
     }
     private DeleteRequest() {
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DeleteRequest();
     }
 
     @java.lang.Override
@@ -5416,7 +5663,6 @@ public final class DataServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -5446,7 +5692,7 @@ public final class DataServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -5466,21 +5712,22 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_DeleteRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_DeleteRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.class, asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.DeleteRequest.class, asgt.dataservice.v1.DataServiceProtos.DeleteRequest.Builder.class);
     }
 
     private int matchCase_ = 0;
     private java.lang.Object match_;
     public enum MatchCase
-        implements com.google.protobuf.Internal.EnumLite {
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       NAME(2),
       TAG(3),
       MATCH_NOT_SET(0);
@@ -5489,6 +5736,8 @@ public final class DataServiceOuterClass {
         this.value = value;
       }
       /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -5519,7 +5768,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 1;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -5534,7 +5785,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string type = 1;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -5552,6 +5805,7 @@ public final class DataServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 2;
     /**
      * <code>string name = 2;</code>
+     * @return The name.
      */
     public java.lang.String getName() {
       java.lang.Object ref = "";
@@ -5572,6 +5826,7 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string name = 2;</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
         getNameBytes() {
@@ -5595,6 +5850,7 @@ public final class DataServiceOuterClass {
     public static final int TAG_FIELD_NUMBER = 3;
     /**
      * <code>string tag = 3;</code>
+     * @return The tag.
      */
     public java.lang.String getTag() {
       java.lang.Object ref = "";
@@ -5615,6 +5871,7 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string tag = 3;</code>
+     * @return The bytes for tag.
      */
     public com.google.protobuf.ByteString
         getTagBytes() {
@@ -5686,31 +5943,28 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.DeleteRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest other = (asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.DeleteRequest other = (asgt.dataservice.v1.DataServiceProtos.DeleteRequest) obj;
 
-      boolean result = true;
-      result = result && getType()
-          .equals(other.getType());
-      result = result && getMatchCase().equals(
-          other.getMatchCase());
-      if (!result) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!getMatchCase().equals(other.getMatchCase())) return false;
       switch (matchCase_) {
         case 2:
-          result = result && getName()
-              .equals(other.getName());
+          if (!getName()
+              .equals(other.getName())) return false;
           break;
         case 3:
-          result = result && getTag()
-              .equals(other.getTag());
+          if (!getTag()
+              .equals(other.getTag())) return false;
           break;
         case 0:
         default:
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -5739,69 +5993,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5814,7 +6068,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.DeleteRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -5835,21 +6089,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.DeleteRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.DeleteRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.DeleteRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_DeleteRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_DeleteRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.class, asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.DeleteRequest.class, asgt.dataservice.v1.DataServiceProtos.DeleteRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.DeleteRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5877,17 +6131,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_DeleteRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.DeleteRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.DeleteRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.DeleteRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.DeleteRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -5895,8 +6149,8 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest result = new asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.DeleteRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.DeleteRequest result = new asgt.dataservice.v1.DataServiceProtos.DeleteRequest(this);
         result.type_ = type_;
         if (matchCase_ == 2) {
           result.match_ = match_;
@@ -5911,48 +6165,48 @@ public final class DataServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.DeleteRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.DeleteRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.DeleteRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.DeleteRequest.getDefaultInstance()) return this;
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
           onChanged();
@@ -5989,11 +6243,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.DeleteRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.DeleteRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6021,6 +6275,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 1;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -6036,6 +6291,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 1;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -6052,6 +6308,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 1;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -6065,6 +6323,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -6074,6 +6333,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 1;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -6089,7 +6350,9 @@ public final class DataServiceOuterClass {
 
       /**
        * <code>string name = 2;</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = "";
         if (matchCase_ == 2) {
@@ -6109,7 +6372,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = "";
@@ -6130,6 +6395,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6143,6 +6410,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         if (matchCase_ == 2) {
@@ -6154,6 +6422,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 2;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6169,7 +6439,9 @@ public final class DataServiceOuterClass {
 
       /**
        * <code>string tag = 3;</code>
+       * @return The tag.
        */
+      @java.lang.Override
       public java.lang.String getTag() {
         java.lang.Object ref = "";
         if (matchCase_ == 3) {
@@ -6189,7 +6461,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string tag = 3;</code>
+       * @return The bytes for tag.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
           getTagBytes() {
         java.lang.Object ref = "";
@@ -6210,6 +6484,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string tag = 3;</code>
+       * @param value The tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTag(
           java.lang.String value) {
@@ -6223,6 +6499,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string tag = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTag() {
         if (matchCase_ == 3) {
@@ -6234,6 +6511,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string tag = 3;</code>
+       * @param value The bytes for tag to set.
+       * @return This builder for chaining.
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
@@ -6249,7 +6528,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6263,12 +6542,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.DeleteRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.DeleteRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.DeleteRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.DeleteRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6293,7 +6572,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.DeleteRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.DeleteRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6305,20 +6584,24 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
@@ -6326,7 +6609,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.GetInfoRequest}
    */
-  public  static final class GetInfoRequest extends
+  public static final class GetInfoRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.GetInfoRequest)
       GetInfoRequestOrBuilder {
@@ -6338,6 +6621,13 @@ public final class DataServiceOuterClass {
     private GetInfoRequest() {
       name_ = "";
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetInfoRequest();
     }
 
     @java.lang.Override
@@ -6353,7 +6643,6 @@ public final class DataServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -6377,7 +6666,7 @@ public final class DataServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -6397,22 +6686,24 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.class, asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.class, asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -6427,7 +6718,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -6446,7 +6739,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -6461,7 +6756,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -6521,18 +6818,17 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.GetInfoRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest other = (asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.GetInfoRequest other = (asgt.dataservice.v1.DataServiceProtos.GetInfoRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -6551,69 +6847,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6626,7 +6922,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.GetInfoRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -6647,21 +6943,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.GetInfoRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.class, asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.class, asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6689,17 +6985,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -6707,8 +7003,8 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest result = new asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoRequest result = new asgt.dataservice.v1.DataServiceProtos.GetInfoRequest(this);
         result.name_ = name_;
         result.type_ = type_;
         onBuilt();
@@ -6717,48 +7013,48 @@ public final class DataServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.GetInfoRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.GetInfoRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.GetInfoRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -6782,11 +7078,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.GetInfoRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.GetInfoRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -6799,6 +7095,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -6814,6 +7111,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -6830,6 +7128,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -6843,6 +7143,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -6852,6 +7153,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -6868,6 +7171,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -6883,6 +7187,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -6899,6 +7204,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -6912,6 +7219,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -6921,6 +7229,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -6936,7 +7246,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -6950,12 +7260,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.GetInfoRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.GetInfoRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.GetInfoRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6980,7 +7290,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.GetInfoRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.GetInfoRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6992,30 +7302,36 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
     java.lang.String getName();
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
     java.lang.String getType();
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
     com.google.protobuf.ByteString
         getTypeBytes();
 
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * @return Whether the retentionPolicy field is set.
      */
     boolean hasRetentionPolicy();
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * @return The retentionPolicy.
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy();
     /**
@@ -7026,7 +7342,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.UpdateDatasetRequest}
    */
-  public  static final class UpdateDatasetRequest extends
+  public static final class UpdateDatasetRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.UpdateDatasetRequest)
       UpdateDatasetRequestOrBuilder {
@@ -7038,6 +7354,13 @@ public final class DataServiceOuterClass {
     private UpdateDatasetRequest() {
       name_ = "";
       type_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpdateDatasetRequest();
     }
 
     @java.lang.Override
@@ -7053,7 +7376,6 @@ public final class DataServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7090,7 +7412,7 @@ public final class DataServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7110,22 +7432,24 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.class, asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.class, asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.Builder.class);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
      * <code>string name = 1;</code>
+     * @return The name.
      */
+    @java.lang.Override
     public java.lang.String getName() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
@@ -7140,7 +7464,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string name = 1;</code>
+     * @return The bytes for name.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
@@ -7159,7 +7485,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object type_;
     /**
      * <code>string type = 2;</code>
+     * @return The type.
      */
+    @java.lang.Override
     public java.lang.String getType() {
       java.lang.Object ref = type_;
       if (ref instanceof java.lang.String) {
@@ -7174,7 +7502,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string type = 2;</code>
+     * @return The bytes for type.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getTypeBytes() {
       java.lang.Object ref = type_;
@@ -7193,19 +7523,24 @@ public final class DataServiceOuterClass {
     private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * @return Whether the retentionPolicy field is set.
      */
+    @java.lang.Override
     public boolean hasRetentionPolicy() {
       return retentionPolicy_ != null;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+     * @return The retentionPolicy.
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
       return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
     /**
      * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
      */
+    @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       return getRetentionPolicy();
     }
@@ -7262,23 +7597,22 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest other = (asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest other = (asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest) obj;
 
-      boolean result = true;
-      result = result && getName()
-          .equals(other.getName());
-      result = result && getType()
-          .equals(other.getType());
-      result = result && (hasRetentionPolicy() == other.hasRetentionPolicy());
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (!getType()
+          .equals(other.getType())) return false;
+      if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
       if (hasRetentionPolicy()) {
-        result = result && getRetentionPolicy()
-            .equals(other.getRetentionPolicy());
+        if (!getRetentionPolicy()
+            .equals(other.getRetentionPolicy())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -7301,69 +7635,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7376,7 +7710,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -7397,21 +7731,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.UpdateDatasetRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.class, asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.class, asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7445,17 +7779,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_UpdateDatasetRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -7463,8 +7797,8 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest result = new asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest result = new asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest(this);
         result.name_ = name_;
         result.type_ = type_;
         if (retentionPolicyBuilder_ == null) {
@@ -7478,48 +7812,48 @@ public final class DataServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -7546,11 +7880,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -7563,6 +7897,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
+       * @return The name.
        */
       public java.lang.String getName() {
         java.lang.Object ref = name_;
@@ -7578,6 +7913,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
           getNameBytes() {
@@ -7594,6 +7930,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
        */
       public Builder setName(
           java.lang.String value) {
@@ -7607,6 +7945,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearName() {
         
@@ -7616,6 +7955,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
@@ -7632,6 +7973,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object type_ = "";
       /**
        * <code>string type = 2;</code>
+       * @return The type.
        */
       public java.lang.String getType() {
         java.lang.Object ref = type_;
@@ -7647,6 +7989,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return The bytes for type.
        */
       public com.google.protobuf.ByteString
           getTypeBytes() {
@@ -7663,6 +8006,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The type to set.
+       * @return This builder for chaining.
        */
       public Builder setType(
           java.lang.String value) {
@@ -7676,6 +8021,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearType() {
         
@@ -7685,6 +8031,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string type = 2;</code>
+       * @param value The bytes for type to set.
+       * @return This builder for chaining.
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -7698,17 +8046,19 @@ public final class DataServiceOuterClass {
         return this;
       }
 
-      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_ = null;
+      private asgt.type.RetentionPolicyOuterClass.RetentionPolicy retentionPolicy_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy, asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder, asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
         return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3;</code>
+       * @return The retentionPolicy.
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy getRetentionPolicy() {
         if (retentionPolicyBuilder_ == null) {
@@ -7817,7 +8167,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -7831,12 +8181,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.UpdateDatasetRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7861,7 +8211,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.UpdateDatasetRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -7873,10 +8223,12 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
+     * @return Whether the dataset field is set.
      */
     boolean hasDataset();
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
+     * @return The dataset.
      */
     asgt.type.DatasetOuterClass.Dataset getDataset();
     /**
@@ -7890,6 +8242,7 @@ public final class DataServiceOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
+     * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
@@ -7898,6 +8251,7 @@ public final class DataServiceOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
+     * @return The model.
      */
     asgt.type.ModelOuterClass.Model getModel();
     /**
@@ -7912,7 +8266,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.GetInfoResponse}
    */
-  public  static final class GetInfoResponse extends
+  public static final class GetInfoResponse extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.GetInfoResponse)
       GetInfoResponseOrBuilder {
@@ -7922,6 +8276,13 @@ public final class DataServiceOuterClass {
       super(builder);
     }
     private GetInfoResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetInfoResponse();
     }
 
     @java.lang.Override
@@ -7937,7 +8298,6 @@ public final class DataServiceOuterClass {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -7975,7 +8335,7 @@ public final class DataServiceOuterClass {
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -7995,34 +8355,39 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.class, asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.class, asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.Builder.class);
     }
 
     public static final int DATASET_FIELD_NUMBER = 1;
     private asgt.type.DatasetOuterClass.Dataset dataset_;
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
+     * @return Whether the dataset field is set.
      */
+    @java.lang.Override
     public boolean hasDataset() {
       return dataset_ != null;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
+     * @return The dataset.
      */
+    @java.lang.Override
     public asgt.type.DatasetOuterClass.Dataset getDataset() {
       return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
     /**
      * <code>.asgt.type.Dataset dataset = 1;</code>
      */
+    @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
       return getDataset();
     }
@@ -8035,7 +8400,9 @@ public final class DataServiceOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
+     * @return Whether the model field is set.
      */
+    @java.lang.Override
     public boolean hasModel() {
       return model_ != null;
     }
@@ -8045,7 +8412,9 @@ public final class DataServiceOuterClass {
      * </pre>
      *
      * <code>.asgt.type.Model model = 2;</code>
+     * @return The model.
      */
+    @java.lang.Override
     public asgt.type.ModelOuterClass.Model getModel() {
       return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
@@ -8056,6 +8425,7 @@ public final class DataServiceOuterClass {
      *
      * <code>.asgt.type.Model model = 2;</code>
      */
+    @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
@@ -8107,24 +8477,23 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.GetInfoResponse)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse other = (asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse) obj;
+      asgt.dataservice.v1.DataServiceProtos.GetInfoResponse other = (asgt.dataservice.v1.DataServiceProtos.GetInfoResponse) obj;
 
-      boolean result = true;
-      result = result && (hasDataset() == other.hasDataset());
+      if (hasDataset() != other.hasDataset()) return false;
       if (hasDataset()) {
-        result = result && getDataset()
-            .equals(other.getDataset());
+        if (!getDataset()
+            .equals(other.getDataset())) return false;
       }
-      result = result && (hasModel() == other.hasModel());
+      if (hasModel() != other.hasModel()) return false;
       if (hasModel()) {
-        result = result && getModel()
-            .equals(other.getModel());
+        if (!getModel()
+            .equals(other.getModel())) return false;
       }
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -8147,69 +8516,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8222,7 +8591,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.GetInfoResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -8243,21 +8612,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.GetInfoResponse)
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponseOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.class, asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.class, asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8293,17 +8662,17 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_GetInfoResponse_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoResponse getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse build() {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoResponse build() {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -8311,8 +8680,8 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse result = new asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse(this);
+      public asgt.dataservice.v1.DataServiceProtos.GetInfoResponse buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.GetInfoResponse result = new asgt.dataservice.v1.DataServiceProtos.GetInfoResponse(this);
         if (datasetBuilder_ == null) {
           result.dataset_ = dataset_;
         } else {
@@ -8329,48 +8698,48 @@ public final class DataServiceOuterClass {
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.GetInfoResponse) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.GetInfoResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.GetInfoResponse other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.GetInfoResponse.getDefaultInstance()) return this;
         if (other.hasDataset()) {
           mergeDataset(other.getDataset());
         }
@@ -8392,11 +8761,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.GetInfoResponse parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.GetInfoResponse) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -8406,17 +8775,19 @@ public final class DataServiceOuterClass {
         return this;
       }
 
-      private asgt.type.DatasetOuterClass.Dataset dataset_ = null;
+      private asgt.type.DatasetOuterClass.Dataset dataset_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.DatasetOuterClass.Dataset, asgt.type.DatasetOuterClass.Dataset.Builder, asgt.type.DatasetOuterClass.DatasetOrBuilder> datasetBuilder_;
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
+       * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
         return datasetBuilder_ != null || dataset_ != null;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1;</code>
+       * @return The dataset.
        */
       public asgt.type.DatasetOuterClass.Dataset getDataset() {
         if (datasetBuilder_ == null) {
@@ -8523,7 +8894,7 @@ public final class DataServiceOuterClass {
         return datasetBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_ = null;
+      private asgt.type.ModelOuterClass.Model model_;
       private com.google.protobuf.SingleFieldBuilderV3<
           asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
@@ -8532,6 +8903,7 @@ public final class DataServiceOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Model model = 2;</code>
+       * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
@@ -8542,6 +8914,7 @@ public final class DataServiceOuterClass {
        * </pre>
        *
        * <code>.asgt.type.Model model = 2;</code>
+       * @return The model.
        */
       public asgt.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
@@ -8678,7 +9051,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -8692,12 +9065,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.GetInfoResponse)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.GetInfoResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.GetInfoResponse();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.GetInfoResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8722,7 +9095,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.GetInfoResponse getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.GetInfoResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -8734,44 +9107,55 @@ public final class DataServiceOuterClass {
 
     /**
      * <code>string dataset = 1;</code>
+     * @return The dataset.
      */
     java.lang.String getDataset();
     /**
      * <code>string dataset = 1;</code>
+     * @return The bytes for dataset.
      */
     com.google.protobuf.ByteString
         getDatasetBytes();
 
     /**
      * <code>string model_type = 2;</code>
+     * @return The modelType.
      */
     java.lang.String getModelType();
     /**
      * <code>string model_type = 2;</code>
+     * @return The bytes for modelType.
      */
     com.google.protobuf.ByteString
         getModelTypeBytes();
 
     /**
      * <code>int32 batch_size = 3;</code>
+     * @return The batchSize.
      */
     int getBatchSize();
 
     /**
      * <code>repeated string tags = 4;</code>
+     * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
      * <code>repeated string tags = 4;</code>
+     * @return The count of tags.
      */
     int getTagsCount();
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
@@ -8779,7 +9163,7 @@ public final class DataServiceOuterClass {
   /**
    * Protobuf type {@code asgt.dataservice.v1.RegisterQueryStatsRequest}
    */
-  public  static final class RegisterQueryStatsRequest extends
+  public static final class RegisterQueryStatsRequest extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:asgt.dataservice.v1.RegisterQueryStatsRequest)
       RegisterQueryStatsRequestOrBuilder {
@@ -8791,8 +9175,14 @@ public final class DataServiceOuterClass {
     private RegisterQueryStatsRequest() {
       dataset_ = "";
       modelType_ = "";
-      batchSize_ = 0;
       tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new RegisterQueryStatsRequest();
     }
 
     @java.lang.Override
@@ -8838,15 +9228,15 @@ public final class DataServiceOuterClass {
             }
             case 34: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 tags_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
+                mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
               break;
             }
             default: {
-              if (!parseUnknownFieldProto3(
+              if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
                 done = true;
               }
@@ -8860,7 +9250,7 @@ public final class DataServiceOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -8869,23 +9259,24 @@ public final class DataServiceOuterClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable
+      return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.Builder.class);
+              asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.class, asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int DATASET_FIELD_NUMBER = 1;
     private volatile java.lang.Object dataset_;
     /**
      * <code>string dataset = 1;</code>
+     * @return The dataset.
      */
+    @java.lang.Override
     public java.lang.String getDataset() {
       java.lang.Object ref = dataset_;
       if (ref instanceof java.lang.String) {
@@ -8900,7 +9291,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string dataset = 1;</code>
+     * @return The bytes for dataset.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getDatasetBytes() {
       java.lang.Object ref = dataset_;
@@ -8919,7 +9312,9 @@ public final class DataServiceOuterClass {
     private volatile java.lang.Object modelType_;
     /**
      * <code>string model_type = 2;</code>
+     * @return The modelType.
      */
+    @java.lang.Override
     public java.lang.String getModelType() {
       java.lang.Object ref = modelType_;
       if (ref instanceof java.lang.String) {
@@ -8934,7 +9329,9 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>string model_type = 2;</code>
+     * @return The bytes for modelType.
      */
+    @java.lang.Override
     public com.google.protobuf.ByteString
         getModelTypeBytes() {
       java.lang.Object ref = modelType_;
@@ -8953,7 +9350,9 @@ public final class DataServiceOuterClass {
     private int batchSize_;
     /**
      * <code>int32 batch_size = 3;</code>
+     * @return The batchSize.
      */
+    @java.lang.Override
     public int getBatchSize() {
       return batchSize_;
     }
@@ -8962,6 +9361,7 @@ public final class DataServiceOuterClass {
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4;</code>
+     * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
@@ -8969,18 +9369,23 @@ public final class DataServiceOuterClass {
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the element to return.
+     * @return The tags at the given index.
      */
     public java.lang.String getTags(int index) {
       return tags_.get(index);
     }
     /**
      * <code>repeated string tags = 4;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the tags at the given index.
      */
     public com.google.protobuf.ByteString
         getTagsBytes(int index) {
@@ -9050,22 +9455,21 @@ public final class DataServiceOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest)) {
+      if (!(obj instanceof asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest)) {
         return super.equals(obj);
       }
-      asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest other = (asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest) obj;
+      asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest other = (asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest) obj;
 
-      boolean result = true;
-      result = result && getDataset()
-          .equals(other.getDataset());
-      result = result && getModelType()
-          .equals(other.getModelType());
-      result = result && (getBatchSize()
-          == other.getBatchSize());
-      result = result && getTagsList()
-          .equals(other.getTagsList());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getDataset()
+          .equals(other.getDataset())) return false;
+      if (!getModelType()
+          .equals(other.getModelType())) return false;
+      if (getBatchSize()
+          != other.getBatchSize()) return false;
+      if (!getTagsList()
+          .equals(other.getTagsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -9090,69 +9494,69 @@ public final class DataServiceOuterClass {
       return hash;
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(byte[] data)
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseDelimitedFrom(java.io.InputStream input)
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseDelimitedFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parseFrom(
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9165,7 +9569,7 @@ public final class DataServiceOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest prototype) {
+    public static Builder newBuilder(asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -9186,21 +9590,21 @@ public final class DataServiceOuterClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:asgt.dataservice.v1.RegisterQueryStatsRequest)
-        asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequestOrBuilder {
+        asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.class, asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.Builder.class);
+                asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.class, asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.Builder.class);
       }
 
-      // Construct using asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.newBuilder()
+      // Construct using asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9225,24 +9629,24 @@ public final class DataServiceOuterClass {
         batchSize_ = 0;
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
+        return asgt.dataservice.v1.DataServiceProtos.internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor;
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest getDefaultInstanceForType() {
-        return asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.getDefaultInstance();
+      public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest getDefaultInstanceForType() {
+        return asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest build() {
-        asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest result = buildPartial();
+      public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest build() {
+        asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -9250,67 +9654,65 @@ public final class DataServiceOuterClass {
       }
 
       @java.lang.Override
-      public asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest buildPartial() {
-        asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest result = new asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest(this);
+      public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest buildPartial() {
+        asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result = new asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.dataset_ = dataset_;
         result.modelType_ = modelType_;
         result.batchSize_ = batchSize_;
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
       @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
       @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
       @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
       @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
       @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest) {
-          return mergeFrom((asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest)other);
+        if (other instanceof asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest) {
+          return mergeFrom((asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest other) {
-        if (other == asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest other) {
+        if (other == asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.getDefaultInstance()) return this;
         if (!other.getDataset().isEmpty()) {
           dataset_ = other.dataset_;
           onChanged();
@@ -9325,7 +9727,7 @@ public final class DataServiceOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -9347,11 +9749,11 @@ public final class DataServiceOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest parsedMessage = null;
+        asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest) e.getUnfinishedMessage();
+          parsedMessage = (asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -9365,6 +9767,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object dataset_ = "";
       /**
        * <code>string dataset = 1;</code>
+       * @return The dataset.
        */
       public java.lang.String getDataset() {
         java.lang.Object ref = dataset_;
@@ -9380,6 +9783,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string dataset = 1;</code>
+       * @return The bytes for dataset.
        */
       public com.google.protobuf.ByteString
           getDatasetBytes() {
@@ -9396,6 +9800,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string dataset = 1;</code>
+       * @param value The dataset to set.
+       * @return This builder for chaining.
        */
       public Builder setDataset(
           java.lang.String value) {
@@ -9409,6 +9815,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string dataset = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDataset() {
         
@@ -9418,6 +9825,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string dataset = 1;</code>
+       * @param value The bytes for dataset to set.
+       * @return This builder for chaining.
        */
       public Builder setDatasetBytes(
           com.google.protobuf.ByteString value) {
@@ -9434,6 +9843,7 @@ public final class DataServiceOuterClass {
       private java.lang.Object modelType_ = "";
       /**
        * <code>string model_type = 2;</code>
+       * @return The modelType.
        */
       public java.lang.String getModelType() {
         java.lang.Object ref = modelType_;
@@ -9449,6 +9859,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string model_type = 2;</code>
+       * @return The bytes for modelType.
        */
       public com.google.protobuf.ByteString
           getModelTypeBytes() {
@@ -9465,6 +9876,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string model_type = 2;</code>
+       * @param value The modelType to set.
+       * @return This builder for chaining.
        */
       public Builder setModelType(
           java.lang.String value) {
@@ -9478,6 +9891,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string model_type = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearModelType() {
         
@@ -9487,6 +9901,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>string model_type = 2;</code>
+       * @param value The bytes for modelType to set.
+       * @return This builder for chaining.
        */
       public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
@@ -9503,12 +9919,16 @@ public final class DataServiceOuterClass {
       private int batchSize_ ;
       /**
        * <code>int32 batch_size = 3;</code>
+       * @return The batchSize.
        */
+      @java.lang.Override
       public int getBatchSize() {
         return batchSize_;
       }
       /**
        * <code>int32 batch_size = 3;</code>
+       * @param value The batchSize to set.
+       * @return This builder for chaining.
        */
       public Builder setBatchSize(int value) {
         
@@ -9518,6 +9938,7 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>int32 batch_size = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
         
@@ -9528,13 +9949,14 @@ public final class DataServiceOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
           getTagsList() {
@@ -9542,18 +9964,23 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public java.lang.String getTags(int index) {
         return tags_.get(index);
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the tags at the given index.
        */
       public com.google.protobuf.ByteString
           getTagsBytes(int index) {
@@ -9561,6 +9988,9 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param index The index to set the value at.
+       * @param value The tags to set.
+       * @return This builder for chaining.
        */
       public Builder setTags(
           int index, java.lang.String value) {
@@ -9574,6 +10004,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param value The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTags(
           java.lang.String value) {
@@ -9587,6 +10019,8 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param values The tags to add.
+       * @return This builder for chaining.
        */
       public Builder addAllTags(
           java.lang.Iterable<java.lang.String> values) {
@@ -9598,15 +10032,18 @@ public final class DataServiceOuterClass {
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string tags = 4;</code>
+       * @param value The bytes of the tags to add.
+       * @return This builder for chaining.
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
@@ -9622,7 +10059,7 @@ public final class DataServiceOuterClass {
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
       @java.lang.Override
@@ -9636,12 +10073,12 @@ public final class DataServiceOuterClass {
     }
 
     // @@protoc_insertion_point(class_scope:asgt.dataservice.v1.RegisterQueryStatsRequest)
-    private static final asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest DEFAULT_INSTANCE;
+    private static final asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest();
+      DEFAULT_INSTANCE = new asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest();
     }
 
-    public static asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest getDefaultInstance() {
+    public static asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9666,7 +10103,7 @@ public final class DataServiceOuterClass {
     }
 
     @java.lang.Override
-    public asgt.dataservice.v1.DataServiceOuterClass.RegisterQueryStatsRequest getDefaultInstanceForType() {
+    public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9786,19 +10223,11 @@ public final class DataServiceOuterClass {
       "v1.CallsPerMonthResponse\022o\n\020CalculateMet" +
       "rics\022,.asgt.dataservice.v1.CalculateMetr" +
       "icsRequest\032-.asgt.dataservice.v1.Calcula" +
-      "teMetricsResponseB7Z5github.com/e-conomi" +
-      "c/vmlapis/gen/go/asgt/data/v1;datab\006prot" +
-      "o3"
+      "teMetricsResponseBJB\021DataServiceProtosZ5" +
+      "github.com/e-conomic/vmlapis/gen/go/asgt" +
+      "/data/v1;datab\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
@@ -9809,8 +10238,8 @@ public final class DataServiceOuterClass {
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
           com.google.protobuf.WrappersProto.getDescriptor(),
-          ssn.dataservice.v1.Dataservice.getDescriptor(),
-        }, assigner);
+          ssn.dataservice.v1.DataServiceProto.getDescriptor(),
+        });
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_asgt_dataservice_v1_CalculateMetricsRequest_fieldAccessorTable = new
@@ -9884,7 +10313,7 @@ public final class DataServiceOuterClass {
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.WrappersProto.getDescriptor();
-    ssn.dataservice.v1.Dataservice.getDescriptor();
+    ssn.dataservice.v1.DataServiceProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -15,6 +15,7 @@ all:
 		proto/asgt/data/v1/data_service.proto
 
 	mkdir ./gen/go
+	mkdir ./gen/openapiv2
 	./scripts/go-gen-ssn.sh
 	./scripts/go-gen-asgt.sh
 	./scripts/gomock.sh
