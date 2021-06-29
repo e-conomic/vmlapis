@@ -46,6 +46,11 @@ class DatasetServiceStub(object):
                 request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.CreateExampleRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
+        self.CreateOrUpdateExample = channel.unary_unary(
+                '/asgt.v2alpha.DatasetService/CreateOrUpdateExample',
+                request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
         self.BatchCreateExample = channel.unary_unary(
                 '/asgt.v2alpha.DatasetService/BatchCreateExample',
                 request_serializer=asgt_dot_v2alpha_dot_dataset__service__pb2.BatchCreateExampleRequest.SerializeToString,
@@ -97,6 +102,12 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateOrUpdateExample(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def BatchCreateExample(self, request, context):
         """Upload multiple examples at once. This matches the behavior of the v1 API.
         """
@@ -143,6 +154,11 @@ def add_DatasetServiceServicer_to_server(servicer, server):
             'CreateExample': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateExample,
                     request_deserializer=asgt_dot_v2alpha_dot_dataset__service__pb2.CreateExampleRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'CreateOrUpdateExample': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateOrUpdateExample,
+                    request_deserializer=asgt_dot_v2alpha_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'BatchCreateExample': grpc.unary_unary_rpc_method_handler(
@@ -257,6 +273,22 @@ class DatasetService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.DatasetService/CreateExample',
             asgt_dot_v2alpha_dot_dataset__service__pb2.CreateExampleRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def CreateOrUpdateExample(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.v2alpha.DatasetService/CreateOrUpdateExample',
+            asgt_dot_v2alpha_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             call_credentials, compression, wait_for_ready, timeout, metadata)

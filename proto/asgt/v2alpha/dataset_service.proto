@@ -57,12 +57,12 @@ service DatasetService {
     };
   }
 
-//  rpc CreateOrUpdateExample (CreateOrUpdateExampleRequest) returns (google.protobuf.Empty) {
-//    option (google.api.http) = {
-//      put: "/v2/datasets/{dataset_name}/examples/{example.id}"
-//      body: "example"
-//    };
-//  }
+  rpc CreateOrUpdateExample (CreateOrUpdateExampleRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      put: "/v2/datasets/{dataset_name}/examples/{example.id}"
+      body: "example"
+    };
+  }
 
   // Upload multiple examples at once. This matches the behavior of the v1 API.
   rpc BatchCreateExample (BatchCreateExampleRequest) returns (google.protobuf.Empty) {

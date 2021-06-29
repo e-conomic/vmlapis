@@ -79,7 +79,8 @@ proto.asgt.type.Example.toObject = function(includeInstance, msg) {
   var f, obj = {
     data: (f = msg.getData()) && asgt_type_data_pb.Data.toObject(includeInstance, f),
     targetValuesList: jspb.Message.toObjectList(msg.getTargetValuesList(),
-    asgt_type_target_value_pb.TargetValue.toObject, includeInstance)
+    asgt_type_target_value_pb.TargetValue.toObject, includeInstance),
+    id: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -126,6 +127,10 @@ proto.asgt.type.Example.deserializeBinaryFromReader = function(msg, reader) {
       reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
       msg.addTargetValues(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -169,6 +174,13 @@ proto.asgt.type.Example.serializeBinaryToWriter = function(message, writer) {
       2,
       f,
       asgt_type_target_value_pb.TargetValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getId();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
     );
   }
 };
@@ -246,6 +258,24 @@ proto.asgt.type.Example.prototype.addTargetValues = function(opt_value, opt_inde
  */
 proto.asgt.type.Example.prototype.clearTargetValuesList = function() {
   return this.setTargetValuesList([]);
+};
+
+
+/**
+ * optional string id = 3;
+ * @return {string}
+ */
+proto.asgt.type.Example.prototype.getId = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.asgt.type.Example} returns this
+ */
+proto.asgt.type.Example.prototype.setId = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

@@ -94,6 +94,51 @@
         ]
       }
     },
+    "/v2/datasets/{datasetName}/examples/{example.id}": {
+      "put": {
+        "operationId": "DatasetService_CreateOrUpdateExample",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "datasetName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "example.id",
+            "description": "An optional id to provide individual corrections to examples, for example when a user updates their initial\nfeedback. The id should be a string in UUID format.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/typeExample"
+            }
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
     "/v2/datasets/{datasetName}/examples:batchCreate": {
       "post": {
         "summary": "Upload multiple examples at once. This matches the behavior of the v1 API.",
@@ -909,6 +954,10 @@
           "items": {
             "$ref": "#/definitions/typeTargetValue"
           }
+        },
+        "id": {
+          "type": "string",
+          "description": "An optional id to provide individual corrections to examples, for example when a user updates their initial\nfeedback. The id should be a string in UUID format."
         }
       },
       "title": "A pair of example data and example target values"

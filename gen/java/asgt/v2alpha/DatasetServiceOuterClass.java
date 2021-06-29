@@ -5624,7 +5624,7 @@ public final class DatasetServiceOuterClass {
       "W\n\031BatchCreateExampleRequest\022\024\n\014dataset_" +
       "name\030\001 \001(\t\022$\n\010examples\030\002 \003(\0132\022.asgt.type" +
       ".Example\"&\n\026TruncateDatasetRequest\022\014\n\004na" +
-      "me\030\001 \001(\t2\351\007\n\016DatasetService\022^\n\nGetDatase" +
+      "me\030\001 \001(\t2\213\t\n\016DatasetService\022^\n\nGetDatase" +
       "t\022\037.asgt.v2alpha.GetDatasetRequest\032\022.asg" +
       "t.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{na" +
       "me}\022d\n\rCreateDataset\022\".asgt.v2alpha.Crea" +
@@ -5640,17 +5640,21 @@ public final class DatasetServiceOuterClass {
       "\021*\017/v2/tags/{name}\022\202\001\n\rCreateExample\022\".a" +
       "sgt.v2alpha.CreateExampleRequest\032\026.googl" +
       "e.protobuf.Empty\"5\202\323\344\223\002/\"$/v2/datasets/{" +
-      "dataset_name}/examples:\007example\022\222\001\n\022Batc" +
-      "hCreateExample\022\'.asgt.v2alpha.BatchCreat" +
-      "eExampleRequest\032\026.google.protobuf.Empty\"" +
-      ";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/exa" +
-      "mples:batchCreate:\001*\022u\n\017TruncateDataset\022" +
-      "$.asgt.v2alpha.TruncateDatasetRequest\032\026." +
-      "google.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/datas" +
-      "ets/{name}/examples\032G\222AD\022BManage dataset" +
-      "s and examples used for training AutoSug" +
-      "gest models.B2Z0github.com/e-conomic/vml" +
-      "apis/gen/go/asgt/v2alphab\006proto3"
+      "dataset_name}/examples:\007example\022\237\001\n\025Crea" +
+      "teOrUpdateExample\022*.asgt.v2alpha.CreateO" +
+      "rUpdateExampleRequest\032\026.google.protobuf." +
+      "Empty\"B\202\323\344\223\002<\0321/v2/datasets/{dataset_nam" +
+      "e}/examples/{example.id}:\007example\022\222\001\n\022Ba" +
+      "tchCreateExample\022\'.asgt.v2alpha.BatchCre" +
+      "ateExampleRequest\032\026.google.protobuf.Empt" +
+      "y\";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/e" +
+      "xamples:batchCreate:\001*\022u\n\017TruncateDatase" +
+      "t\022$.asgt.v2alpha.TruncateDatasetRequest\032" +
+      "\026.google.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/dat" +
+      "asets/{name}/examples\032G\222AD\022BManage datas" +
+      "ets and examples used for training AutoS" +
+      "uggest models.B2Z0github.com/e-conomic/v" +
+      "mlapis/gen/go/asgt/v2alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

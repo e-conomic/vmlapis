@@ -11,7 +11,7 @@ import "asgt/type/target_value.proto";
 message Example {
   asgt.type.Data data = 1;
   repeated asgt.type.TargetValue target_values = 2;
-//  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-//  // feedback. The id should be a string in UUID format.
-//  string id = 3;
+  // An optional id to provide individual corrections to examples, for example when a user updates their initial
+  // feedback. The id should be a string in UUID format.
+  string id = 3;
 }

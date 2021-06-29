@@ -25,15 +25,15 @@ namespace Asgt.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chdhc2d0L3R5cGUvZXhhbXBsZS5wcm90bxIJYXNndC50eXBlGhRhc2d0L3R5",
-            "cGUvZGF0YS5wcm90bxocYXNndC90eXBlL3RhcmdldF92YWx1ZS5wcm90byJX",
+            "cGUvZGF0YS5wcm90bxocYXNndC90eXBlL3RhcmdldF92YWx1ZS5wcm90byJj",
             "CgdFeGFtcGxlEh0KBGRhdGEYASABKAsyDy5hc2d0LnR5cGUuRGF0YRItCg10",
-            "YXJnZXRfdmFsdWVzGAIgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlQjha",
-            "NmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlw",
-            "ZTthc2d0dHlwZWIGcHJvdG8z"));
+            "YXJnZXRfdmFsdWVzGAIgAygLMhYuYXNndC50eXBlLlRhcmdldFZhbHVlEgoK",
+            "AmlkGAMgASgJQjhaNmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Example), global::Asgt.Type.Example.Parser, new[]{ "Data", "TargetValues" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Example), global::Asgt.Type.Example.Parser, new[]{ "Data", "TargetValues", "Id" }, null, null, null, null)
           }));
     }
     #endregion
@@ -74,6 +74,7 @@ namespace Asgt.Type {
     public Example(Example other) : this() {
       data_ = other.data_ != null ? other.data_.Clone() : null;
       targetValues_ = other.targetValues_.Clone();
+      id_ = other.id_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -98,14 +99,24 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<global::Asgt.Type.TargetValue> _repeated_targetValues_codec
         = pb::FieldCodec.ForMessage(18, global::Asgt.Type.TargetValue.Parser);
     private readonly pbc::RepeatedField<global::Asgt.Type.TargetValue> targetValues_ = new pbc::RepeatedField<global::Asgt.Type.TargetValue>();
-    /// <summary>
-    ///  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-    ///  // feedback. The id should be a string in UUID format.
-    ///  string id = 3;
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::Asgt.Type.TargetValue> TargetValues {
       get { return targetValues_; }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 3;
+    private string id_ = "";
+    /// <summary>
+    /// An optional id to provide individual corrections to examples, for example when a user updates their initial
+    /// feedback. The id should be a string in UUID format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -123,6 +134,7 @@ namespace Asgt.Type {
       }
       if (!object.Equals(Data, other.Data)) return false;
       if(!targetValues_.Equals(other.targetValues_)) return false;
+      if (Id != other.Id) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -131,6 +143,7 @@ namespace Asgt.Type {
       int hash = 1;
       if (data_ != null) hash ^= Data.GetHashCode();
       hash ^= targetValues_.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -149,6 +162,10 @@ namespace Asgt.Type {
         output.WriteMessage(Data);
       }
       targetValues_.WriteTo(output, _repeated_targetValues_codec);
+      if (Id.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Id);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -161,6 +178,9 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Data);
       }
       size += targetValues_.CalculateSize(_repeated_targetValues_codec);
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -179,6 +199,9 @@ namespace Asgt.Type {
         Data.MergeFrom(other.Data);
       }
       targetValues_.Add(other.targetValues_);
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -204,6 +227,10 @@ namespace Asgt.Type {
             targetValues_.AddEntriesFrom(input, _repeated_targetValues_codec);
             break;
           }
+          case 26: {
+            Id = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -227,6 +254,10 @@ namespace Asgt.Type {
           }
           case 18: {
             targetValues_.AddEntriesFrom(ref input, _repeated_targetValues_codec);
+            break;
+          }
+          case 26: {
+            Id = input.ReadString();
             break;
           }
         }

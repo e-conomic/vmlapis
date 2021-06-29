@@ -25,6 +25,7 @@ type DatasetServiceClient interface {
 	DeleteDataset(ctx context.Context, in *DeleteDatasetRequest, opts ...grpc.CallOption) (*_type.Dataset, error)
 	DeleteTag(ctx context.Context, in *DeleteTagRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	CreateExample(ctx context.Context, in *CreateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
+	CreateOrUpdateExample(ctx context.Context, in *CreateOrUpdateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	// Upload multiple examples at once. This matches the behavior of the v1 API.
 	BatchCreateExample(ctx context.Context, in *BatchCreateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error)
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
@@ -94,6 +95,15 @@ func (c *datasetServiceClient) CreateExample(ctx context.Context, in *CreateExam
 	return out, nil
 }
 
+func (c *datasetServiceClient) CreateOrUpdateExample(ctx context.Context, in *CreateOrUpdateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
+	out := new(empty.Empty)
+	err := c.cc.Invoke(ctx, "/asgt.v2alpha.DatasetService/CreateOrUpdateExample", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *datasetServiceClient) BatchCreateExample(ctx context.Context, in *BatchCreateExampleRequest, opts ...grpc.CallOption) (*empty.Empty, error) {
 	out := new(empty.Empty)
 	err := c.cc.Invoke(ctx, "/asgt.v2alpha.DatasetService/BatchCreateExample", in, out, opts...)
@@ -122,6 +132,7 @@ type DatasetServiceServer interface {
 	DeleteDataset(context.Context, *DeleteDatasetRequest) (*_type.Dataset, error)
 	DeleteTag(context.Context, *DeleteTagRequest) (*empty.Empty, error)
 	CreateExample(context.Context, *CreateExampleRequest) (*empty.Empty, error)
+	CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*empty.Empty, error)
 	// Upload multiple examples at once. This matches the behavior of the v1 API.
 	BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*empty.Empty, error)
 	// Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
@@ -151,6 +162,9 @@ func (*UnimplementedDatasetServiceServer) DeleteTag(context.Context, *DeleteTagR
 }
 func (*UnimplementedDatasetServiceServer) CreateExample(context.Context, *CreateExampleRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateExample not implemented")
+}
+func (*UnimplementedDatasetServiceServer) CreateOrUpdateExample(context.Context, *CreateOrUpdateExampleRequest) (*empty.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateOrUpdateExample not implemented")
 }
 func (*UnimplementedDatasetServiceServer) BatchCreateExample(context.Context, *BatchCreateExampleRequest) (*empty.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchCreateExample not implemented")
@@ -272,6 +286,24 @@ func _DatasetService_CreateExample_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatasetService_CreateOrUpdateExample_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateOrUpdateExampleRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).CreateOrUpdateExample(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/asgt.v2alpha.DatasetService/CreateOrUpdateExample",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).CreateOrUpdateExample(ctx, req.(*CreateOrUpdateExampleRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _DatasetService_BatchCreateExample_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(BatchCreateExampleRequest)
 	if err := dec(in); err != nil {
@@ -335,6 +367,10 @@ var _DatasetService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CreateExample",
 			Handler:    _DatasetService_CreateExample_Handler,
+		},
+		{
+			MethodName: "CreateOrUpdateExample",
+			Handler:    _DatasetService_CreateOrUpdateExample_Handler,
 		},
 		{
 			MethodName: "BatchCreateExample",

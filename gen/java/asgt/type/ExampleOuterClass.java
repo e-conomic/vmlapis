@@ -34,58 +34,50 @@ public final class ExampleOuterClass {
     asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
 
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     java.util.List<asgt.type.TargetValueOuterClass.TargetValue> 
         getTargetValuesList();
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     int getTargetValuesCount();
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList();
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial
+     * feedback. The id should be a string in UUID format.
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     * @return The id.
+     */
+    java.lang.String getId();
+    /**
+     * <pre>
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial
+     * feedback. The id should be a string in UUID format.
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     * @return The bytes for id.
+     */
+    com.google.protobuf.ByteString
+        getIdBytes();
   }
   /**
    * <pre>
@@ -105,6 +97,7 @@ public final class ExampleOuterClass {
     }
     private Example() {
       targetValues_ = java.util.Collections.emptyList();
+      id_ = "";
     }
 
     @java.lang.Override
@@ -158,6 +151,12 @@ public final class ExampleOuterClass {
               }
               targetValues_.add(
                   input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry));
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              id_ = s;
               break;
             }
             default: {
@@ -224,12 +223,6 @@ public final class ExampleOuterClass {
     public static final int TARGET_VALUES_FIELD_NUMBER = 2;
     private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     @java.lang.Override
@@ -237,12 +230,6 @@ public final class ExampleOuterClass {
       return targetValues_;
     }
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     @java.lang.Override
@@ -251,12 +238,6 @@ public final class ExampleOuterClass {
       return targetValues_;
     }
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     @java.lang.Override
@@ -264,12 +245,6 @@ public final class ExampleOuterClass {
       return targetValues_.size();
     }
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     @java.lang.Override
@@ -277,18 +252,60 @@ public final class ExampleOuterClass {
       return targetValues_.get(index);
     }
     /**
-     * <pre>
-     *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-     *  // feedback. The id should be a string in UUID format.
-     *  string id = 3;
-     * </pre>
-     *
      * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
      */
     @java.lang.Override
     public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index) {
       return targetValues_.get(index);
+    }
+
+    public static final int ID_FIELD_NUMBER = 3;
+    private volatile java.lang.Object id_;
+    /**
+     * <pre>
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial
+     * feedback. The id should be a string in UUID format.
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public java.lang.String getId() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        id_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * An optional id to provide individual corrections to examples, for example when a user updates their initial
+     * feedback. The id should be a string in UUID format.
+     * </pre>
+     *
+     * <code>string id = 3;</code>
+     * @return The bytes for id.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getIdBytes() {
+      java.lang.Object ref = id_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        id_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
 
     private byte memoizedIsInitialized = -1;
@@ -311,6 +328,9 @@ public final class ExampleOuterClass {
       for (int i = 0; i < targetValues_.size(); i++) {
         output.writeMessage(2, targetValues_.get(i));
       }
+      if (!getIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, id_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -327,6 +347,9 @@ public final class ExampleOuterClass {
       for (int i = 0; i < targetValues_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, targetValues_.get(i));
+      }
+      if (!getIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, id_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -350,6 +373,8 @@ public final class ExampleOuterClass {
       }
       if (!getTargetValuesList()
           .equals(other.getTargetValuesList())) return false;
+      if (!getId()
+          .equals(other.getId())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -369,6 +394,8 @@ public final class ExampleOuterClass {
         hash = (37 * hash) + TARGET_VALUES_FIELD_NUMBER;
         hash = (53 * hash) + getTargetValuesList().hashCode();
       }
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -519,6 +546,8 @@ public final class ExampleOuterClass {
         } else {
           targetValuesBuilder_.clear();
         }
+        id_ = "";
+
         return this;
       }
 
@@ -560,6 +589,7 @@ public final class ExampleOuterClass {
         } else {
           result.targetValues_ = targetValuesBuilder_.build();
         }
+        result.id_ = id_;
         onBuilt();
         return result;
       }
@@ -636,6 +666,10 @@ public final class ExampleOuterClass {
               targetValuesBuilder_.addAllMessages(other.targetValues_);
             }
           }
+        }
+        if (!other.getId().isEmpty()) {
+          id_ = other.id_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -799,12 +833,6 @@ public final class ExampleOuterClass {
           asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
@@ -815,12 +843,6 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public int getTargetValuesCount() {
@@ -831,12 +853,6 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
@@ -847,12 +863,6 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder setTargetValues(
@@ -870,12 +880,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder setTargetValues(
@@ -890,12 +894,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder addTargetValues(asgt.type.TargetValueOuterClass.TargetValue value) {
@@ -912,12 +910,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder addTargetValues(
@@ -935,12 +927,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder addTargetValues(
@@ -955,12 +941,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder addTargetValues(
@@ -975,12 +955,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder addAllTargetValues(
@@ -996,12 +970,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder clearTargetValues() {
@@ -1015,12 +983,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public Builder removeTargetValues(int index) {
@@ -1034,12 +996,6 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
@@ -1047,12 +1003,6 @@ public final class ExampleOuterClass {
         return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -1063,12 +1013,6 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public java.util.List<? extends asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
@@ -1080,12 +1024,6 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
@@ -1093,12 +1031,6 @@ public final class ExampleOuterClass {
             asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public asgt.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
@@ -1107,12 +1039,6 @@ public final class ExampleOuterClass {
             index, asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <pre>
-       *  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-       *  // feedback. The id should be a string in UUID format.
-       *  string id = 3;
-       * </pre>
-       *
        * <code>repeated .asgt.type.TargetValue target_values = 2;</code>
        */
       public java.util.List<asgt.type.TargetValueOuterClass.TargetValue.Builder> 
@@ -1132,6 +1058,107 @@ public final class ExampleOuterClass {
           targetValues_ = null;
         }
         return targetValuesBuilder_;
+      }
+
+      private java.lang.Object id_ = "";
+      /**
+       * <pre>
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial
+       * feedback. The id should be a string in UUID format.
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The id.
+       */
+      public java.lang.String getId() {
+        java.lang.Object ref = id_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          id_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial
+       * feedback. The id should be a string in UUID format.
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return The bytes for id.
+       */
+      public com.google.protobuf.ByteString
+          getIdBytes() {
+        java.lang.Object ref = id_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          id_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial
+       * feedback. The id should be a string in UUID format.
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial
+       * feedback. The id should be a string in UUID format.
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = getDefaultInstance().getId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * An optional id to provide individual corrections to examples, for example when a user updates their initial
+       * feedback. The id should be a string in UUID format.
+       * </pre>
+       *
+       * <code>string id = 3;</code>
+       * @param value The bytes for id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        id_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1202,11 +1229,11 @@ public final class ExampleOuterClass {
     java.lang.String[] descriptorData = {
       "\n\027asgt/type/example.proto\022\tasgt.type\032\024as" +
       "gt/type/data.proto\032\034asgt/type/target_val" +
-      "ue.proto\"W\n\007Example\022\035\n\004data\030\001 \001(\0132\017.asgt" +
+      "ue.proto\"c\n\007Example\022\035\n\004data\030\001 \001(\0132\017.asgt" +
       ".type.Data\022-\n\rtarget_values\030\002 \003(\0132\026.asgt" +
-      ".type.TargetValueB8Z6github.com/e-conomi" +
-      "c/vmlapis/gen/go/asgt/type;asgttypeb\006pro" +
-      "to3"
+      ".type.TargetValue\022\n\n\002id\030\003 \001(\tB8Z6github." +
+      "com/e-conomic/vmlapis/gen/go/asgt/type;a" +
+      "sgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1219,7 +1246,7 @@ public final class ExampleOuterClass {
     internal_static_asgt_type_Example_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Example_descriptor,
-        new java.lang.String[] { "Data", "TargetValues", });
+        new java.lang.String[] { "Data", "TargetValues", "Id", });
     asgt.type.DataOuterClass.getDescriptor();
     asgt.type.TargetValueOuterClass.getDescriptor();
   }
