@@ -7,6 +7,9 @@
   "tags": [
     {
       "name": "DocumentAnnotator"
+    },
+    {
+      "name": "DataService"
     }
   ],
   "schemes": [
@@ -48,6 +51,70 @@
         ],
         "tags": [
           "DocumentAnnotator"
+        ]
+      }
+    },
+    "/v1/feedback:create": {
+      "post": {
+        "operationId": "DataService_Feedback",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1FeedbackRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
+        ]
+      }
+    },
+    "/v1/feedback:delete": {
+      "post": {
+        "operationId": "DataService_Delete",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DeleteRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
         ]
       }
     }
@@ -167,6 +234,60 @@
         }
       }
     },
+    "ssnannotatorv1Document": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "format": "byte",
+          "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
+        },
+        "source": {
+          "$ref": "#/definitions/v1DocumentSource",
+          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request."
+        }
+      }
+    },
+    "ssndataservicev1Document": {
+      "type": "object",
+      "properties": {
+        "ta": {
+          "$ref": "#/definitions/typeTextAnnotation"
+        },
+        "bytes": {
+          "type": "string",
+          "format": "byte"
+        },
+        "id": {
+          "type": "string"
+        },
+        "consumer": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trueValues": {
+          "$ref": "#/definitions/v1TrueValues"
+        },
+        "predictionValues": {
+          "$ref": "#/definitions/v1PredictionValues"
+        },
+        "feedbackTime": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "predictionConfidences": {
+          "$ref": "#/definitions/v1PredictionConfidences"
+        },
+        "predictionMetadata": {
+          "$ref": "#/definitions/v1PredictionMetadata"
+        }
+      }
+    },
     "typeBlock": {
       "type": "object",
       "properties": {
@@ -275,6 +396,28 @@
           "title": "The confidence value"
         }
       }
+    },
+    "typeDate": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Year of date. Must be from 1 to 9999, or 0 if specifying a date without\na year."
+        },
+        "month": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Month of year. Must be from 1 to 12, or 0 if specifying a year without a\nmonth and day."
+        },
+        "day": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Day of month. Must be from 1 to 31 and valid for the year and month, or 0\nif specifying a year by itself or a year and month where the day is not\nsignificant."
+        }
+      },
+      "description": "* A full date, with non-zero year, month and day values\n* A month and day value, with a zero year, e.g. an anniversary\n* A year on its own, with zero month and day values\n* A year and month value, with a zero day, e.g. a credit card expiration date\n\nRelated types are [google.type.TimeOfDay][google.type.TimeOfDay] and `google.protobuf.Timestamp`.",
+      "title": "Represents a whole or partial calendar date, e.g. a birthday. The time of day\nand time zone are either specified elsewhere or are not significant. The date\nis relative to the Proleptic Gregorian Calendar. This can represent:"
     },
     "typeLineCandidate": {
       "type": "object",
@@ -475,17 +618,69 @@
       },
       "description": "A word representation."
     },
-    "v1Document": {
+    "v1CallsPerMonth": {
       "type": "object",
       "properties": {
-        "content": {
+        "calls": {
           "type": "string",
-          "format": "byte",
-          "description": "Document content, represented as a stream of bytes.\nNote: As with all `bytes` fields, protobuffers use a pure binary\nrepresentation, whereas JSON representations use base64."
+          "format": "int64"
         },
-        "source": {
-          "$ref": "#/definitions/v1DocumentSource",
-          "description": "Google Cloud Storage image location, or publicly-accessible image\nURL. If both `content` and `source` are provided for a document, `content`\ntakes precedence and is used to perform the scan request."
+        "monthName": {
+          "type": "string"
+        }
+      }
+    },
+    "v1CallsPerMonthResponse": {
+      "type": "object",
+      "properties": {
+        "callsPerMonth": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1CallsPerMonth"
+          }
+        }
+      }
+    },
+    "v1Correctness": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string"
+        },
+        "correctPercentage": {
+          "type": "number",
+          "format": "float"
+        },
+        "incompletePercentage": {
+          "type": "number",
+          "format": "float"
+        },
+        "errorPercentage": {
+          "type": "number",
+          "format": "float"
+        },
+        "support": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "v1CreateDocumentResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        }
+      }
+    },
+    "v1DeleteRequest": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -493,7 +688,7 @@
       "type": "object",
       "properties": {
         "document": {
-          "$ref": "#/definitions/v1Document"
+          "$ref": "#/definitions/ssnannotatorv1Document"
         },
         "features": {
           "type": "array",
@@ -754,6 +949,629 @@
       ],
       "default": "DEFAULT",
       "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: Run supplier corporate id detection\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion"
+    },
+    "v1FeedbackMetrics": {
+      "type": "object",
+      "properties": {
+        "documentCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "feedbackCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "overallCorrectness": {
+          "$ref": "#/definitions/v1Correctness"
+        },
+        "fieldCorrectness": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1Correctness"
+          }
+        }
+      }
+    },
+    "v1FeedbackRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "trueValues": {
+          "$ref": "#/definitions/v1TrueValues"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "v1PredictionConfidences": {
+      "type": "object",
+      "properties": {
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "orderDate": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "paymentDueDate": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "documentType": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "currency": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "creditCardLastFour": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineDkType": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineDkPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineDkCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineSePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineSeBankgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineSePlusgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineNoPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineFiPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineNlPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "supplierCorporateId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "supplierCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "invoiceNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "iban": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "orderReference": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "bankAccountNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "bankRegistrationNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        }
+      }
+    },
+    "v1PredictionMetadata": {
+      "type": "object",
+      "properties": {
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "orderDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "paymentDueDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "documentType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "currency": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "creditCardLastFour": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineDkType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineDkPaymentId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineDkCreditorId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineSePaymentId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineSeBankgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineSePlusgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineNoPaymentId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineFiPaymentId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineNlPaymentId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierCorporateId": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "supplierCountryCode": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "invoiceNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "iban": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "orderReference": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "bankAccountNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "bankRegistrationNumber": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        }
+      }
+    },
+    "v1PredictionValues": {
+      "type": "object",
+      "properties": {
+        "totalInclVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "totalVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "totalExclVat": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "orderDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeDate"
+          }
+        },
+        "paymentDueDate": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeDate"
+          }
+        },
+        "documentType": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "currency": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "creditCardLastFour": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "paymentMethod": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineDkType": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineDkPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineDkCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineSePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineSeBankgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineSePlusgiroCreditorId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineNoPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineFiPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineNlPaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supplierCorporateId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "supplierCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "invoiceNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "iban": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "orderReference": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bankAccountNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bankRegistrationNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "v1ReadDocumentResponse": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "$ref": "#/definitions/ssndataservicev1Document"
+        }
+      }
+    },
+    "v1TrueValues": {
+      "type": "object",
+      "properties": {
+        "totalInclVat": {
+          "type": "number",
+          "format": "double"
+        },
+        "totalVat": {
+          "type": "number",
+          "format": "double"
+        },
+        "totalExclVat": {
+          "type": "number",
+          "format": "double"
+        },
+        "orderDate": {
+          "$ref": "#/definitions/typeDate"
+        },
+        "paymentDueDate": {
+          "$ref": "#/definitions/typeDate"
+        },
+        "documentType": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "creditCardLastFour": {
+          "type": "string"
+        },
+        "paymentMethod": {
+          "type": "string"
+        },
+        "ocrLineDkType": {
+          "type": "string"
+        },
+        "ocrLineDkPaymentId": {
+          "type": "string"
+        },
+        "ocrLineDkCreditorId": {
+          "type": "string"
+        },
+        "ocrLineSePaymentId": {
+          "type": "string"
+        },
+        "ocrLineSeBankgiroCreditorId": {
+          "type": "string"
+        },
+        "ocrLineSePlusgiroCreditorId": {
+          "type": "string"
+        },
+        "ocrLineNoPaymentId": {
+          "type": "string"
+        },
+        "ocrLineFiPaymentId": {
+          "type": "string"
+        },
+        "ocrLineNlPaymentId": {
+          "type": "string"
+        },
+        "supplierCorporateId": {
+          "type": "string"
+        },
+        "supplierCountryCode": {
+          "type": "string"
+        },
+        "invoiceNumber": {
+          "type": "string"
+        },
+        "iban": {
+          "type": "string"
+        },
+        "orderReference": {
+          "type": "string"
+        },
+        "bankAccountNumber": {
+          "type": "string"
+        },
+        "bankRegistrationNumber": {
+          "type": "string"
+        }
+      }
     }
   }
 }
