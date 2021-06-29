@@ -19,6 +19,8 @@ var asgt_type_model_pb = require('../../../asgt/type/model_pb.js')
 var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js')
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
+
+var options_annotations_pb = require('../../../options/annotations_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.jester = {};
