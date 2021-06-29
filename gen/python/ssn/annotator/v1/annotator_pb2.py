@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from options import annotations_pb2 as options_dot_annotations__pb2
 from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
 from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 from vml_proto.ssn.type import tier_pb2 as ssn_dot_type_dot_tier__pb2
@@ -21,11 +22,11 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='ssn/annotator/v1/annotator.proto',
   package='ssn.annotator.v1',
   syntax='proto3',
-  serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator',
+  serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator\222A8\022\017\n\tSmartScan2\002v1*\001\0022\020application/json:\020application/json',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n ssn/annotator/v1/annotator.proto\x12\x10ssn.annotator.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a\x13ssn/type/tier.proto\"\xd9\x05\n\x07\x46\x65\x61ture\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x1e.ssn.annotator.v1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12\x32\n\x0emin_confidence\x18\x03 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\"\xd6\x04\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x19\n\x15SUPPLIER_CORPORATE_ID\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x19\n\x15\x43REDIT_CARD_LAST_FOUR\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x14\n\x10OCR_LINE_DK_TYPE\x10\x0e\x12\x1a\n\x16OCR_LINE_DK_PAYMENT_ID\x10\x0f\x12\x1b\n\x17OCR_LINE_DK_CREDITOR_ID\x10\x10\x12\x1a\n\x16OCR_LINE_SE_PAYMENT_ID\x10\x11\x12$\n OCR_LINE_SE_BANKGIRO_CREDITOR_ID\x10\x12\x12$\n OCR_LINE_SE_PLUSGIRO_CREDITOR_ID\x10\x13\x12\x1a\n\x16OCR_LINE_NO_PAYMENT_ID\x10\x14\x12\x1a\n\x16OCR_LINE_FI_PAYMENT_ID\x10\x15\x12\x1a\n\x16OCR_LINE_NL_PAYMENT_ID\x10\x16\x12\x08\n\x04TEXT\x10\x17\x12\x08\n\x04IBAN\x10\x18\x12\t\n\x05LINES\x10\x19\x12\x0b\n\x07PREVIEW\x10\x1a\"\xa1\x01\n\x18\x44ocumentAnnotatorRequest\x12,\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12+\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x19.ssn.annotator.v1.Feature\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x1c\n\x04tier\x18\x04 \x01(\x0e\x32\x0e.ssn.type.Tier\"\xdc\t\n\x19\x44ocumentAnnotatorResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15\x63redit_card_last_four\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x31\n\x0ftext_annotation\x18\r \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12-\n\x10ocr_line_dk_type\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x16 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x0c\n\x04text\x18\x17 \x01(\t\x12\x13\n\x0b\x66\x65\x65\x64\x62\x61\x63k_id\x18\x18 \x01(\t\x12!\n\x04iban\x18\x19 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\x05lines\x18\x1a \x03(\x0b\x32\x17.ssn.type.LineCandidate\x12\x0f\n\x07preview\x18\x1b \x01(\t\"M\n\x08\x44ocument\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\x12\x30\n\x06source\x18\x02 \x01(\x0b\x32 .ssn.annotator.v1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t2\xa3\x01\n\x11\x44ocumentAnnotator\x12\x8d\x01\n\x10\x41nnotateDocument\x12*.ssn.annotator.v1.DocumentAnnotatorRequest\x1a+.ssn.annotator.v1.DocumentAnnotatorResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1/document:annotate:\x01*B@Z>github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotatorb\x06proto3'
+  serialized_pb=b'\n ssn/annotator/v1/annotator.proto\x12\x10ssn.annotator.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x19options/annotations.proto\x1a\x18ssn/type/candidate.proto\x1a\x1essn/type/text_annotation.proto\x1a\x13ssn/type/tier.proto\"\xd9\x05\n\x07\x46\x65\x61ture\x12,\n\x04type\x18\x01 \x01(\x0e\x32\x1e.ssn.annotator.v1.Feature.Type\x12\x13\n\x0bmax_results\x18\x02 \x01(\x05\x12\x32\n\x0emin_confidence\x18\x03 \x01(\x0e\x32\x1a.ssn.type.Confidence.Level\"\xd6\x04\n\x04Type\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x13\n\x0fTEXT_ANNOTATION\x10\x01\x12\x0e\n\nORDER_DATE\x10\x02\x12\x14\n\x10PAYMENT_DUE_DATE\x10\x03\x12\x0c\n\x08\x43URRENCY\x10\x04\x12\r\n\tTOTAL_VAT\x10\x05\x12\x12\n\x0eTOTAL_INCL_VAT\x10\x06\x12\x12\n\x0eTOTAL_EXCL_VAT\x10\x07\x12\x19\n\x15SUPPLIER_CORPORATE_ID\x10\x08\x12\x19\n\x15SUPPLIER_COUNTRY_CODE\x10\t\x12\x11\n\rDOCUMENT_TYPE\x10\n\x12\x12\n\x0ePAYMENT_METHOD\x10\x0b\x12\x19\n\x15\x43REDIT_CARD_LAST_FOUR\x10\x0c\x12\x12\n\x0eINVOICE_NUMBER\x10\r\x12\x14\n\x10OCR_LINE_DK_TYPE\x10\x0e\x12\x1a\n\x16OCR_LINE_DK_PAYMENT_ID\x10\x0f\x12\x1b\n\x17OCR_LINE_DK_CREDITOR_ID\x10\x10\x12\x1a\n\x16OCR_LINE_SE_PAYMENT_ID\x10\x11\x12$\n OCR_LINE_SE_BANKGIRO_CREDITOR_ID\x10\x12\x12$\n OCR_LINE_SE_PLUSGIRO_CREDITOR_ID\x10\x13\x12\x1a\n\x16OCR_LINE_NO_PAYMENT_ID\x10\x14\x12\x1a\n\x16OCR_LINE_FI_PAYMENT_ID\x10\x15\x12\x1a\n\x16OCR_LINE_NL_PAYMENT_ID\x10\x16\x12\x08\n\x04TEXT\x10\x17\x12\x08\n\x04IBAN\x10\x18\x12\t\n\x05LINES\x10\x19\x12\x0b\n\x07PREVIEW\x10\x1a\"\xa1\x01\n\x18\x44ocumentAnnotatorRequest\x12,\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1a.ssn.annotator.v1.Document\x12+\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0b\x32\x19.ssn.annotator.v1.Feature\x12\x0c\n\x04tags\x18\x03 \x03(\t\x12\x1c\n\x04tier\x18\x04 \x01(\x0e\x32\x0e.ssn.type.Tier\"\xdc\t\n\x19\x44ocumentAnnotatorResponse\x12\'\n\norder_date\x18\x01 \x03(\x0b\x32\x13.ssn.type.Candidate\x12-\n\x10payment_due_date\x18\x02 \x03(\x0b\x32\x13.ssn.type.Candidate\x12%\n\x08\x63urrency\x18\x03 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\ttotal_vat\x18\x04 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_incl_vat\x18\x05 \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0etotal_excl_vat\x18\x06 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_corporate_id\x18\x07 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15supplier_country_code\x18\x08 \x03(\x0b\x32\x13.ssn.type.Candidate\x12*\n\rdocument_type\x18\t \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0epayment_method\x18\n \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x32\n\x15\x63redit_card_last_four\x18\x0b \x03(\x0b\x32\x13.ssn.type.Candidate\x12+\n\x0einvoice_number\x18\x0c \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x31\n\x0ftext_annotation\x18\r \x01(\x0b\x32\x18.ssn.type.TextAnnotation\x12-\n\x10ocr_line_dk_type\x18\x0e \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_dk_payment_id\x18\x0f \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x34\n\x17ocr_line_dk_creditor_id\x18\x10 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_se_payment_id\x18\x11 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_bankgiro_creditor_id\x18\x12 \x03(\x0b\x32\x13.ssn.type.Candidate\x12=\n ocr_line_se_plusgiro_creditor_id\x18\x13 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_no_payment_id\x18\x14 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_fi_payment_id\x18\x15 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x33\n\x16ocr_line_nl_payment_id\x18\x16 \x03(\x0b\x32\x13.ssn.type.Candidate\x12\x0c\n\x04text\x18\x17 \x01(\t\x12\x13\n\x0b\x66\x65\x65\x64\x62\x61\x63k_id\x18\x18 \x01(\t\x12!\n\x04iban\x18\x19 \x03(\x0b\x32\x13.ssn.type.Candidate\x12&\n\x05lines\x18\x1a \x03(\x0b\x32\x17.ssn.type.LineCandidate\x12\x0f\n\x07preview\x18\x1b \x01(\t\"M\n\x08\x44ocument\x12\x0f\n\x07\x63ontent\x18\x01 \x01(\x0c\x12\x30\n\x06source\x18\x02 \x01(\x0b\x32 .ssn.annotator.v1.DocumentSource\"\"\n\x0e\x44ocumentSource\x12\x10\n\x08http_uri\x18\x01 \x01(\t2\xa3\x01\n\x11\x44ocumentAnnotator\x12\x8d\x01\n\x10\x41nnotateDocument\x12*.ssn.annotator.v1.DocumentAnnotatorRequest\x1a+.ssn.annotator.v1.DocumentAnnotatorResponse\" \x82\xd3\xe4\x93\x02\x1a\"\x15/v1/document:annotate:\x01*B{Z>github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator\x92\x41\x38\x12\x0f\n\tSmartScan2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3'
   ,
-  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,ssn_dot_type_dot_candidate__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,ssn_dot_type_dot_tier__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_api_dot_annotations__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,ssn_dot_type_dot_candidate__pb2.DESCRIPTOR,ssn_dot_type_dot_text__annotation__pb2.DESCRIPTOR,ssn_dot_type_dot_tier__pb2.DESCRIPTOR,])
 
 
 
@@ -174,8 +175,8 @@ _FEATURE_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=295,
-  serialized_end=893,
+  serialized_start=322,
+  serialized_end=920,
 )
 _sym_db.RegisterEnumDescriptor(_FEATURE_TYPE)
 
@@ -222,8 +223,8 @@ _FEATURE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=164,
-  serialized_end=893,
+  serialized_start=191,
+  serialized_end=920,
 )
 
 
@@ -275,8 +276,8 @@ _DOCUMENTANNOTATORREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=896,
-  serialized_end=1057,
+  serialized_start=923,
+  serialized_end=1084,
 )
 
 
@@ -489,8 +490,8 @@ _DOCUMENTANNOTATORRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1060,
-  serialized_end=2304,
+  serialized_start=1087,
+  serialized_end=2331,
 )
 
 
@@ -528,8 +529,8 @@ _DOCUMENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2306,
-  serialized_end=2383,
+  serialized_start=2333,
+  serialized_end=2410,
 )
 
 
@@ -560,8 +561,8 @@ _DOCUMENTSOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2385,
-  serialized_end=2419,
+  serialized_start=2412,
+  serialized_end=2446,
 )
 
 _FEATURE.fields_by_name['type'].enum_type = _FEATURE_TYPE
@@ -647,8 +648,8 @@ _DOCUMENTANNOTATOR = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2422,
-  serialized_end=2585,
+  serialized_start=2449,
+  serialized_end=2612,
   methods=[
   _descriptor.MethodDescriptor(
     name='AnnotateDocument',

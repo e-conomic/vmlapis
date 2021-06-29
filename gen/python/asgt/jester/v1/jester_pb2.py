@@ -15,17 +15,18 @@ from vml_proto.asgt.type import data_pb2 as asgt_dot_type_dot_data__pb2
 from vml_proto.asgt.type import model_pb2 as asgt_dot_type_dot_model__pb2
 from vml_proto.asgt.type import prediction_pb2 as asgt_dot_type_dot_prediction__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from options import annotations_pb2 as options_dot_annotations__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='asgt/jester/v1/jester.proto',
   package='asgt.jester.v1',
   syntax='proto3',
-  serialized_options=b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester',
+  serialized_options=b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester\222A:\022\021\n\013AutoSuggest2\002v1*\001\0022\020application/json:\020application/json',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1b\x61sgt/jester/v1/jester.proto\x12\x0e\x61sgt.jester.v1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\"a\n\x12SuggestionResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x92\x01\n\x11SuggestionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x1f\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.Data\x12\x32\n\x07options\x18\x04 \x01(\x0b\x32!.asgt.jester.v1.SuggestionOptions\x12\x0c\n\x04tags\x18\x05 \x03(\t2\x80\x01\n\x06Jester\x12v\n\x07Suggest\x12!.asgt.jester.v1.SuggestionRequest\x1a\".asgt.jester.v1.SuggestionResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1/{type}/{name}:suggest:\x01*B;Z9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jesterb\x06proto3'
+  serialized_pb=b'\n\x1b\x61sgt/jester/v1/jester.proto\x12\x0e\x61sgt.jester.v1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x19options/annotations.proto\"a\n\x12SuggestionResponse\x12*\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.Prediction\x12\x1f\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.Model\"b\n\x11SuggestionOptions\x12\x18\n\x10suggestion_limit\x18\x01 \x01(\x05\x12\x33\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.Level\"\x92\x01\n\x11SuggestionRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12\x1f\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.Data\x12\x32\n\x07options\x18\x04 \x01(\x0b\x32!.asgt.jester.v1.SuggestionOptions\x12\x0c\n\x04tags\x18\x05 \x03(\t2\x80\x01\n\x06Jester\x12v\n\x07Suggest\x12!.asgt.jester.v1.SuggestionRequest\x1a\".asgt.jester.v1.SuggestionResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1/{type}/{name}:suggest:\x01*BxZ9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3'
   ,
-  dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_type_dot_model__pb2.DESCRIPTOR,asgt_dot_type_dot_prediction__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,])
 
 
 
@@ -64,8 +65,8 @@ _SUGGESTIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=150,
-  serialized_end=247,
+  serialized_start=177,
+  serialized_end=274,
 )
 
 
@@ -103,8 +104,8 @@ _SUGGESTIONOPTIONS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=249,
-  serialized_end=347,
+  serialized_start=276,
+  serialized_end=374,
 )
 
 
@@ -163,8 +164,8 @@ _SUGGESTIONREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=496,
+  serialized_start=377,
+  serialized_end=523,
 )
 
 _SUGGESTIONRESPONSE.fields_by_name['predictions'].message_type = asgt_dot_type_dot_prediction__pb2._PREDICTION
@@ -208,8 +209,8 @@ _JESTER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=499,
-  serialized_end=627,
+  serialized_start=526,
+  serialized_end=654,
   methods=[
   _descriptor.MethodDescriptor(
     name='Suggest',

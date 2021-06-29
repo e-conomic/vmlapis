@@ -20,6 +20,8 @@ var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
 goog.object.extend(proto, asgt_type_prediction_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
+var options_annotations_pb = require('../../../options/annotations_pb.js');
+goog.object.extend(proto, options_annotations_pb);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionOptions', null, global);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionRequest', null, global);
 goog.exportSymbol('proto.asgt.jester.v1.SuggestionResponse', null, global);

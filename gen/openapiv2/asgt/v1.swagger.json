@@ -1,13 +1,19 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "asgt/v2alpha/suggester.proto",
-    "version": "version not set"
+    "title": "AutoSuggest",
+    "version": "v1"
   },
   "tags": [
     {
-      "name": "Suggester"
+      "name": "Jester"
+    },
+    {
+      "name": "DataService"
     }
+  ],
+  "schemes": [
+    "https"
   ],
   "consumes": [
     "application/json"
@@ -16,15 +22,14 @@
     "application/json"
   ],
   "paths": {
-    "/v2/datasets/{name=bank/*}/model:batchSuggest": {
+    "/v1/{type}/{name}:append": {
       "post": {
-        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
-        "operationId": "Suggester_ModelBatchSuggest2",
+        "operationId": "DataService_AppendData",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+              "properties": {}
             }
           },
           "default": {
@@ -36,26 +41,47 @@
         },
         "parameters": [
           {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "name",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "samples": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeSample"
+                  }
+                }
+              }
+            }
           }
         ],
         "tags": [
-          "Suggester"
+          "DataService"
         ]
       }
     },
-    "/v2/datasets/{name=bank/*}:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_BatchSuggest2",
+    "/v1/{type}/{name}:info": {
+      "get": {
+        "operationId": "DataService_GetInfo",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
+              "$ref": "#/definitions/v1GetInfoResponse"
             }
           },
           "default": {
@@ -67,6 +93,12 @@
         },
         "parameters": [
           {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "name",
             "in": "path",
             "required": true,
@@ -74,19 +106,18 @@
           }
         ],
         "tags": [
-          "Suggester"
+          "DataService"
         ]
       }
     },
-    "/v2/datasets/{name=bank/*}:suggest": {
+    "/v1/{type}/{name}:suggest": {
       "post": {
-        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_Suggest2",
+        "operationId": "Jester_Suggest",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
+              "$ref": "#/definitions/v1SuggestionResponse"
             }
           },
           "default": {
@@ -98,222 +129,11 @@
         },
         "parameters": [
           {
-            "name": "name",
+            "name": "type",
             "in": "path",
             "required": true,
             "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=electronic-invoice-line/*}/model:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
-        "operationId": "Suggester_ModelBatchSuggest3",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
           },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=electronic-invoice-line/*}:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_BatchSuggest3",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=electronic-invoice-line/*}:suggest": {
-      "post": {
-        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_Suggest3",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=scanned-invoice/*}/model:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
-        "operationId": "Suggester_ModelBatchSuggest4",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=scanned-invoice/*}:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_BatchSuggest4",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name=scanned-invoice/*}:suggest": {
-      "post": {
-        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_Suggest4",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name}/model:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using the most recently trained model in a dataset",
-        "operationId": "Suggester_ModelBatchSuggest",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
           {
             "name": "name",
             "in": "path",
@@ -334,76 +154,31 @@
                   }
                 },
                 "options": {
-                  "$ref": "#/definitions/suggesterSuggestOptions"
-                }
-              }
-            }
-          }
-        ],
-        "tags": [
-          "Suggester"
-        ]
-      }
-    },
-    "/v2/datasets/{name}:batchSuggest": {
-      "post": {
-        "summary": "Suggest target values for multiple inputs using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_BatchSuggest",
-        "responses": {
-          "200": {
-            "description": "A successful response.",
-            "schema": {
-              "$ref": "#/definitions/suggesterBatchSuggestResponse"
-            }
-          },
-          "default": {
-            "description": "An unexpected error response.",
-            "schema": {
-              "$ref": "#/definitions/rpcStatus"
-            }
-          }
-        },
-        "parameters": [
-          {
-            "name": "name",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "inputs": {
+                  "$ref": "#/definitions/v1SuggestionOptions"
+                },
+                "tags": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/definitions/typeData"
+                    "type": "string"
                   }
-                },
-                "options": {
-                  "$ref": "#/definitions/suggesterSuggestOptions"
                 }
               }
             }
           }
         ],
         "tags": [
-          "Suggester"
+          "Jester"
         ]
       }
     },
-    "/v2/datasets/{name}:suggest": {
-      "post": {
-        "summary": "Suggest target values for some input using a dataset, returning an empty result if no model exists",
-        "operationId": "Suggester_Suggest",
+    "/v1/{type}/{name}:update": {
+      "put": {
+        "operationId": "DataService_UpdateDataset",
         "responses": {
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/suggesterSuggestResponse"
+              "properties": {}
             }
           },
           "default": {
@@ -414,6 +189,12 @@
           }
         },
         "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "name",
             "in": "path",
@@ -427,34 +208,149 @@
             "schema": {
               "type": "object",
               "properties": {
-                "input": {
-                  "$ref": "#/definitions/typeData"
-                },
-                "options": {
-                  "$ref": "#/definitions/suggesterSuggestOptions"
+                "retentionPolicy": {
+                  "$ref": "#/definitions/typeRetentionPolicy"
                 }
               }
             }
           }
         ],
         "tags": [
-          "Suggester"
+          "DataService"
+        ]
+      }
+    },
+    "/v1/{type}:create": {
+      "post": {
+        "operationId": "DataService_CreateDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "targets": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "samples": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/typeSample"
+                  }
+                },
+                "retentionPolicy": {
+                  "$ref": "#/definitions/typeRetentionPolicy"
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
+        ]
+      }
+    },
+    "/v1/{type}:delete": {
+      "post": {
+        "operationId": "DataService_DeleteData",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "tag": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
         ]
       }
     }
   },
   "definitions": {
-    "ConfidenceLevel": {
-      "type": "string",
-      "enum": [
-        "UNKNOWN",
-        "VERY_LOW",
-        "LOW",
-        "MID",
-        "HIGH",
-        "VERY_HIGH"
-      ],
-      "default": "UNKNOWN"
+    "CalculateMetricsResponseMetricRow": {
+      "type": "object",
+      "properties": {
+        "target": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": "number",
+          "format": "float"
+        },
+        "correct": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "incorrect": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
     },
     "ModelInputType": {
       "type": "string",
@@ -473,19 +369,19 @@
         "candidates": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/TargetCandidate"
+            "$ref": "#/definitions/PredictionTargetCandidate"
           }
         }
       }
     },
-    "TargetCandidate": {
+    "PredictionTargetCandidate": {
       "type": "object",
       "properties": {
         "value": {
           "type": "string"
         },
         "confidence": {
-          "$ref": "#/definitions/typeConfidence"
+          "$ref": "#/definitions/asgttypeConfidence"
         }
       }
     },
@@ -505,6 +401,33 @@
           "format": "float"
         }
       }
+    },
+    "asgttypeConfidence": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "$ref": "#/definitions/asgttypeConfidenceLevel",
+          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
+        },
+        "value": {
+          "type": "number",
+          "format": "float",
+          "title": "The confidence value"
+        }
+      },
+      "title": "Common types"
+    },
+    "asgttypeConfidenceLevel": {
+      "type": "string",
+      "enum": [
+        "UNKNOWN",
+        "VERY_LOW",
+        "LOW",
+        "MID",
+        "HIGH",
+        "VERY_HIGH"
+      ],
+      "default": "UNKNOWN"
     },
     "protobufAny": {
       "type": "object",
@@ -536,61 +459,6 @@
         }
       }
     },
-    "suggesterBatchSuggestResponse": {
-      "type": "object",
-      "properties": {
-        "predictions": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/typePrediction"
-          }
-        },
-        "model": {
-          "$ref": "#/definitions/typeModel"
-        }
-      }
-    },
-    "suggesterSuggestOptions": {
-      "type": "object",
-      "example": {
-        "suggest_limit": 3
-      },
-      "properties": {
-        "suggestLimit": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "minConfidence": {
-          "$ref": "#/definitions/ConfidenceLevel"
-        }
-      }
-    },
-    "suggesterSuggestResponse": {
-      "type": "object",
-      "properties": {
-        "prediction": {
-          "$ref": "#/definitions/typePrediction"
-        },
-        "model": {
-          "$ref": "#/definitions/typeModel"
-        }
-      }
-    },
-    "typeConfidence": {
-      "type": "object",
-      "properties": {
-        "level": {
-          "$ref": "#/definitions/ConfidenceLevel",
-          "description": "A bucketized representation of confidence, which is intended to give clients\nhighly stable results across model upgrades."
-        },
-        "value": {
-          "type": "number",
-          "format": "float",
-          "title": "The confidence value"
-        }
-      },
-      "title": "Common types"
-    },
     "typeData": {
       "type": "object",
       "properties": {
@@ -605,6 +473,48 @@
         "invoiceLine": {
           "$ref": "#/definitions/typeInvoiceLine",
           "title": "Line-level information for e-invoices; use one sample per invoice line"
+        }
+      }
+    },
+    "typeDataset": {
+      "type": "object",
+      "properties": {
+        "consumer": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "retentionPolicy": {
+          "$ref": "#/definitions/typeRetentionPolicy"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "size": {
+          "type": "string",
+          "format": "int64",
+          "title": "Number of samples in the dataset reflecting added entries that meet the retention policy"
         }
       }
     },
@@ -692,6 +602,29 @@
         }
       }
     },
+    "typeRetentionPolicy": {
+      "type": "object",
+      "properties": {
+        "maxDays": {
+          "type": "string",
+          "format": "int64"
+        }
+      }
+    },
+    "typeSample": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/typeData"
+        },
+        "targetValues": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeTargetValue"
+          }
+        }
+      }
+    },
     "typeSupplier": {
       "type": "object",
       "properties": {
@@ -723,6 +656,18 @@
         }
       }
     },
+    "typeTargetValue": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "title": "Record mapping a target name to a value"
+    },
     "typeTransaction": {
       "type": "object",
       "properties": {
@@ -736,6 +681,79 @@
           "description": "amount of the transaction. Used in bank requests."
         }
       }
+    },
+    "v1CalculateMetricsResponse": {
+      "type": "object",
+      "properties": {
+        "metrics": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CalculateMetricsResponseMetricRow"
+          }
+        }
+      }
+    },
+    "v1CallsPerMonth": {
+      "type": "object",
+      "properties": {
+        "calls": {
+          "type": "string",
+          "format": "int64"
+        },
+        "monthName": {
+          "type": "string"
+        }
+      }
+    },
+    "v1CallsPerMonthResponse": {
+      "type": "object",
+      "properties": {
+        "callsPerMonth": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v1CallsPerMonth"
+          }
+        }
+      }
+    },
+    "v1GetInfoResponse": {
+      "type": "object",
+      "properties": {
+        "dataset": {
+          "$ref": "#/definitions/typeDataset"
+        },
+        "model": {
+          "$ref": "#/definitions/typeModel",
+          "title": "The most recently trained model; empty if no model has been trained"
+        }
+      }
+    },
+    "v1SuggestionOptions": {
+      "type": "object",
+      "properties": {
+        "suggestionLimit": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "minConfidence": {
+          "$ref": "#/definitions/asgttypeConfidenceLevel"
+        }
+      }
+    },
+    "v1SuggestionResponse": {
+      "type": "object",
+      "properties": {
+        "predictions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typePrediction"
+          }
+        },
+        "model": {
+          "$ref": "#/definitions/typeModel"
+        }
+      },
+      "title": "AutoSuggest"
     }
   }
 }

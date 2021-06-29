@@ -3153,21 +3153,23 @@ public final class JesterOuterClass {
       "\n\033asgt/jester/v1/jester.proto\022\016asgt.jest" +
       "er.v1\032\024asgt/type/data.proto\032\025asgt/type/m" +
       "odel.proto\032\032asgt/type/prediction.proto\032\034" +
-      "google/api/annotations.proto\"a\n\022Suggesti" +
-      "onResponse\022*\n\013predictions\030\001 \003(\0132\025.asgt.t" +
-      "ype.Prediction\022\037\n\005model\030\002 \001(\0132\020.asgt.typ" +
-      "e.Model\"b\n\021SuggestionOptions\022\030\n\020suggesti" +
-      "on_limit\030\001 \001(\005\0223\n\016min_confidence\030\002 \001(\0162\033" +
-      ".asgt.type.Confidence.Level\"\222\001\n\021Suggesti" +
-      "onRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\037\n" +
-      "\006inputs\030\003 \003(\0132\017.asgt.type.Data\0222\n\007option" +
-      "s\030\004 \001(\0132!.asgt.jester.v1.SuggestionOptio" +
-      "ns\022\014\n\004tags\030\005 \003(\t2\200\001\n\006Jester\022v\n\007Suggest\022!" +
-      ".asgt.jester.v1.SuggestionRequest\032\".asgt" +
-      ".jester.v1.SuggestionResponse\"$\202\323\344\223\002\036\"\031/" +
-      "v1/{type}/{name}:suggest:\001*B;Z9github.co" +
-      "m/e-conomic/vmlapis/gen/go/asgt/jester/v" +
-      "1;jesterb\006proto3"
+      "google/api/annotations.proto\032\031options/an" +
+      "notations.proto\"a\n\022SuggestionResponse\022*\n" +
+      "\013predictions\030\001 \003(\0132\025.asgt.type.Predictio" +
+      "n\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\021Su" +
+      "ggestionOptions\022\030\n\020suggestion_limit\030\001 \001(" +
+      "\005\0223\n\016min_confidence\030\002 \001(\0162\033.asgt.type.Co" +
+      "nfidence.Level\"\222\001\n\021SuggestionRequest\022\014\n\004" +
+      "name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\037\n\006inputs\030\003 \003(\013" +
+      "2\017.asgt.type.Data\0222\n\007options\030\004 \001(\0132!.asg" +
+      "t.jester.v1.SuggestionOptions\022\014\n\004tags\030\005 " +
+      "\003(\t2\200\001\n\006Jester\022v\n\007Suggest\022!.asgt.jester." +
+      "v1.SuggestionRequest\032\".asgt.jester.v1.Su" +
+      "ggestionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{na" +
+      "me}:suggest:\001*BxZ9github.com/e-conomic/v" +
+      "mlapis/gen/go/asgt/jester/v1;jester\222A:\022\021" +
+      "\n\013AutoSuggest2\002v1*\001\0022\020application/json:\020" +
+      "application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3176,6 +3178,7 @@ public final class JesterOuterClass {
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
     internal_static_asgt_jester_v1_SuggestionResponse_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3198,12 +3201,14 @@ public final class JesterOuterClass {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Swagger);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DataOuterClass.getDescriptor();
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
