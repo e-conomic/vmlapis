@@ -29,12 +29,13 @@ WORKDIR /app
 COPY ["go.mod", "go.sum", "/app/"]
 RUN go get all \
   && go install \
-         github.com/golang/mock/mockgen \
-         github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
-         github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
-         github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
-         google.golang.org/protobuf/cmd/protoc-gen-go \
-         google.golang.org/grpc/cmd/protoc-gen-go-grpc
+  github.com/golang/mock/mockgen \
+  github.com/GoogleCloudPlatform/protoc-gen-bq-schema \
+  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway \
+  github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2 \
+  google.golang.org/protobuf/cmd/protoc-gen-go \
+  google.golang.org/grpc/cmd/protoc-gen-go-grpc \
+  github.com/envoyproxy/protoc-gen-validate
 
 ENV PATH="/root/go/bin:${PATH}"
 

@@ -7,6 +7,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
 import "options/annotations.proto";
+import "validate/validate.proto";
 
 import "asgt/type/example.proto";
 import "asgt/type/dataset.proto";
@@ -87,8 +88,10 @@ message GetDatasetRequest {
 }
 
 message CreateDatasetRequest {
-  string name = 1;
-  repeated string tags = 2;
+  string name = 1 [(validate.rules).string = {
+                    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
+                  }];
+  repeated string tags = 2 [(validate.rules).repeated.unique = true];
 }
 
 message DeleteDatasetRequest {
