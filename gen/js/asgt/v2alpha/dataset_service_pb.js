@@ -22,6 +22,8 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 goog.object.extend(proto, google_protobuf_empty_pb);
 var options_annotations_pb = require('../../options/annotations_pb.js');
 goog.object.extend(proto, options_annotations_pb);
+var validate_validate_pb = require('../../validate/validate_pb.js');
+goog.object.extend(proto, validate_validate_pb);
 goog.exportSymbol('proto.asgt.v2alpha.BatchCreateExampleRequest', null, global);
 goog.exportSymbol('proto.asgt.v2alpha.CreateDatasetRequest', null, global);
 goog.exportSymbol('proto.asgt.v2alpha.CreateExampleRequest', null, global);

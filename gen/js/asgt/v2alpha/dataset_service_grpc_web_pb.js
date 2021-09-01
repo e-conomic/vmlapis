@@ -21,6 +21,8 @@ var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 
 var options_annotations_pb = require('../../options/annotations_pb.js')
+
+var validate_validate_pb = require('../../validate/validate_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.v2alpha = require('./dataset_service_pb.js');

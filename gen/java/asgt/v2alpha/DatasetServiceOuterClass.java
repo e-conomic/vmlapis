@@ -587,36 +587,36 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
         getNameBytes();
 
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     java.util.List<java.lang.String>
         getTagsList();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     int getTagsCount();
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
     java.lang.String getTags(int index);
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -724,7 +724,7 @@ public final class DatasetServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -741,7 +741,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -762,7 +762,7 @@ public final class DatasetServiceOuterClass {
     public static final int TAGS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList tags_;
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @return A list containing the tags.
      */
     public com.google.protobuf.ProtocolStringList
@@ -770,14 +770,14 @@ public final class DatasetServiceOuterClass {
       return tags_;
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @return The count of tags.
      */
     public int getTagsCount() {
       return tags_.size();
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the element to return.
      * @return The tags at the given index.
      */
@@ -785,7 +785,7 @@ public final class DatasetServiceOuterClass {
       return tags_.get(index);
     }
     /**
-     * <code>repeated string tags = 2;</code>
+     * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
      * @param index The index of the value to return.
      * @return The bytes of the tags at the given index.
      */
@@ -1134,7 +1134,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -1150,7 +1150,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -1167,7 +1167,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1182,7 +1182,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -1192,7 +1192,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1216,7 +1216,7 @@ public final class DatasetServiceOuterClass {
          }
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @return A list containing the tags.
        */
       public com.google.protobuf.ProtocolStringList
@@ -1224,14 +1224,14 @@ public final class DatasetServiceOuterClass {
         return tags_.getUnmodifiableView();
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param index The index of the element to return.
        * @return The tags at the given index.
        */
@@ -1239,7 +1239,7 @@ public final class DatasetServiceOuterClass {
         return tags_.get(index);
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param index The index of the value to return.
        * @return The bytes of the tags at the given index.
        */
@@ -1248,7 +1248,7 @@ public final class DatasetServiceOuterClass {
         return tags_.getByteString(index);
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param index The index to set the value at.
        * @param value The tags to set.
        * @return This builder for chaining.
@@ -1264,7 +1264,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param value The tags to add.
        * @return This builder for chaining.
        */
@@ -1279,7 +1279,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param values The tags to add.
        * @return This builder for chaining.
        */
@@ -1292,7 +1292,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearTags() {
@@ -1302,7 +1302,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated string tags = 2;</code>
+       * <code>repeated string tags = 2 [(.validate.rules) = { ... }</code>
        * @param value The bytes of the tags to add.
        * @return This builder for chaining.
        */
@@ -5612,49 +5612,51 @@ public final class DatasetServiceOuterClass {
       "gt.v2alpha\032\027asgt/type/dataset.proto\032\027asg" +
       "t/type/example.proto\032\034google/api/annotat" +
       "ions.proto\032\033google/protobuf/empty.proto\032" +
-      "\031options/annotations.proto\"!\n\021GetDataset" +
-      "Request\022\014\n\004name\030\001 \001(\t\"2\n\024CreateDatasetRe" +
-      "quest\022\014\n\004name\030\001 \001(\t\022\014\n\004tags\030\002 \003(\t\"$\n\024Del" +
-      "eteDatasetRequest\022\014\n\004name\030\001 \001(\t\" \n\020Delet" +
-      "eTagRequest\022\014\n\004name\030\001 \001(\t\"Q\n\024CreateExamp" +
-      "leRequest\022\024\n\014dataset_name\030\001 \001(\t\022#\n\007examp" +
-      "le\030\002 \001(\0132\022.asgt.type.Example\"Y\n\034CreateOr" +
-      "UpdateExampleRequest\022\024\n\014dataset_name\030\001 \001" +
-      "(\t\022#\n\007example\030\002 \001(\0132\022.asgt.type.Example\"" +
-      "W\n\031BatchCreateExampleRequest\022\024\n\014dataset_" +
-      "name\030\001 \001(\t\022$\n\010examples\030\002 \003(\0132\022.asgt.type" +
-      ".Example\"&\n\026TruncateDatasetRequest\022\014\n\004na" +
-      "me\030\001 \001(\t2\213\t\n\016DatasetService\022^\n\nGetDatase" +
-      "t\022\037.asgt.v2alpha.GetDatasetRequest\032\022.asg" +
-      "t.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{na" +
-      "me}\022d\n\rCreateDataset\022\".asgt.v2alpha.Crea" +
-      "teDatasetRequest\032\026.google.protobuf.Empty" +
-      "\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022s\n\025CreateOrUpd" +
-      "ateDataset\022\".asgt.v2alpha.CreateDatasetR" +
-      "equest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023" +
-      "/v2/datasets/{name}:\001*\022d\n\rDeleteDataset\022" +
-      "\".asgt.v2alpha.DeleteDatasetRequest\032\022.as" +
-      "gt.type.Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{n" +
-      "ame}\022\\\n\tDeleteTag\022\036.asgt.v2alpha.DeleteT" +
-      "agRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223\002" +
-      "\021*\017/v2/tags/{name}\022\202\001\n\rCreateExample\022\".a" +
-      "sgt.v2alpha.CreateExampleRequest\032\026.googl" +
-      "e.protobuf.Empty\"5\202\323\344\223\002/\"$/v2/datasets/{" +
-      "dataset_name}/examples:\007example\022\237\001\n\025Crea" +
-      "teOrUpdateExample\022*.asgt.v2alpha.CreateO" +
-      "rUpdateExampleRequest\032\026.google.protobuf." +
-      "Empty\"B\202\323\344\223\002<\0321/v2/datasets/{dataset_nam" +
-      "e}/examples/{example.id}:\007example\022\222\001\n\022Ba" +
-      "tchCreateExample\022\'.asgt.v2alpha.BatchCre" +
-      "ateExampleRequest\032\026.google.protobuf.Empt" +
-      "y\";\202\323\344\223\0025\"0/v2/datasets/{dataset_name}/e" +
-      "xamples:batchCreate:\001*\022u\n\017TruncateDatase" +
-      "t\022$.asgt.v2alpha.TruncateDatasetRequest\032" +
-      "\026.google.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/dat" +
-      "asets/{name}/examples\032G\222AD\022BManage datas" +
-      "ets and examples used for training AutoS" +
-      "uggest models.B2Z0github.com/e-conomic/v" +
-      "mlapis/gen/go/asgt/v2alphab\006proto3"
+      "\031options/annotations.proto\032\027validate/val" +
+      "idate.proto\"!\n\021GetDatasetRequest\022\014\n\004name" +
+      "\030\001 \001(\t\"c\n\024CreateDatasetRequest\0223\n\004name\030\001" +
+      " \001(\tB%\372B\"r 2\036^[A-Za-z0-9.][A-Za-z0-9_.>-" +
+      "]*$\022\026\n\004tags\030\002 \003(\tB\010\372B\005\222\001\002\030\001\"$\n\024DeleteDat" +
+      "asetRequest\022\014\n\004name\030\001 \001(\t\" \n\020DeleteTagRe" +
+      "quest\022\014\n\004name\030\001 \001(\t\"Q\n\024CreateExampleRequ" +
+      "est\022\024\n\014dataset_name\030\001 \001(\t\022#\n\007example\030\002 \001" +
+      "(\0132\022.asgt.type.Example\"Y\n\034CreateOrUpdate" +
+      "ExampleRequest\022\024\n\014dataset_name\030\001 \001(\t\022#\n\007" +
+      "example\030\002 \001(\0132\022.asgt.type.Example\"W\n\031Bat" +
+      "chCreateExampleRequest\022\024\n\014dataset_name\030\001" +
+      " \001(\t\022$\n\010examples\030\002 \003(\0132\022.asgt.type.Examp" +
+      "le\"&\n\026TruncateDatasetRequest\022\014\n\004name\030\001 \001" +
+      "(\t2\213\t\n\016DatasetService\022^\n\nGetDataset\022\037.as" +
+      "gt.v2alpha.GetDatasetRequest\032\022.asgt.type" +
+      ".Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name}\022d\n" +
+      "\rCreateDataset\022\".asgt.v2alpha.CreateData" +
+      "setRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223" +
+      "\002\021\"\014/v2/datasets:\001*\022s\n\025CreateOrUpdateDat" +
+      "aset\022\".asgt.v2alpha.CreateDatasetRequest" +
+      "\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/da" +
+      "tasets/{name}:\001*\022d\n\rDeleteDataset\022\".asgt" +
+      ".v2alpha.DeleteDatasetRequest\032\022.asgt.typ" +
+      "e.Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{name}\022\\" +
+      "\n\tDeleteTag\022\036.asgt.v2alpha.DeleteTagRequ" +
+      "est\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021*\017/v2" +
+      "/tags/{name}\022\202\001\n\rCreateExample\022\".asgt.v2" +
+      "alpha.CreateExampleRequest\032\026.google.prot" +
+      "obuf.Empty\"5\202\323\344\223\002/\"$/v2/datasets/{datase" +
+      "t_name}/examples:\007example\022\237\001\n\025CreateOrUp" +
+      "dateExample\022*.asgt.v2alpha.CreateOrUpdat" +
+      "eExampleRequest\032\026.google.protobuf.Empty\"" +
+      "B\202\323\344\223\002<\0321/v2/datasets/{dataset_name}/exa" +
+      "mples/{example.id}:\007example\022\222\001\n\022BatchCre" +
+      "ateExample\022\'.asgt.v2alpha.BatchCreateExa" +
+      "mpleRequest\032\026.google.protobuf.Empty\";\202\323\344" +
+      "\223\0025\"0/v2/datasets/{dataset_name}/example" +
+      "s:batchCreate:\001*\022u\n\017TruncateDataset\022$.as" +
+      "gt.v2alpha.TruncateDatasetRequest\032\026.goog" +
+      "le.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/datasets/" +
+      "{name}/examples\032G\222AD\022BManage datasets an" +
+      "d examples used for training AutoSuggest" +
+      " models.B2Z0github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/v2alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5664,6 +5666,7 @@ public final class DatasetServiceOuterClass {
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_asgt_v2alpha_GetDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5717,6 +5720,7 @@ public final class DatasetServiceOuterClass {
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Tag);
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
@@ -5724,6 +5728,7 @@ public final class DatasetServiceOuterClass {
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
