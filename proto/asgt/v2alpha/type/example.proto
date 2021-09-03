@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package asgt.v2alpha.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype";
+
+import "asgt/v2alpha/type/data.proto";
+import "asgt/v2alpha/type/target_value.proto";
+
+// A pair of example data and example target values
+message Example {
+  asgt.v2alpha.type.Data data = 1;
+  repeated asgt.v2alpha.type.TargetValue target_values = 2;
+  // An optional id to provide individual corrections to examples, for example when a user updates their initial
+  // feedback. The id should be a string in UUID format.
+  string id = 3;
+}

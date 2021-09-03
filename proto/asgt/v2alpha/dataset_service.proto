@@ -9,7 +9,7 @@ import "google/protobuf/empty.proto";
 import "options/annotations.proto";
 import "validate/validate.proto";
 
-import "asgt/type/example.proto";
+import "asgt/v2alpha/type/example.proto";
 import "asgt/type/dataset.proto";
 
 
@@ -103,17 +103,17 @@ message DeleteTagRequest {
 
 message CreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
-  asgt.type.Example example = 2;
+  asgt.v2alpha.type.Example example = 2;
 }
 
 message CreateOrUpdateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
-  asgt.type.Example example = 2;
+  asgt.v2alpha.type.Example example = 2;
 }
 
 message BatchCreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
-  repeated asgt.type.Example examples = 2;
+  repeated asgt.v2alpha.type.Example examples = 2;
 }
 
 message TruncateDatasetRequest {
