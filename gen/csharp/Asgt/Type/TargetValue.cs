@@ -24,12 +24,14 @@ namespace Asgt.Type {
     static TargetValueReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Chxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvEglhc2d0LnR5cGUiKgoL",
-            "VGFyZ2V0VmFsdWUSDAoEbmFtZRgBIAEoCRINCgV2YWx1ZRgCIAEoCUI4WjZn",
-            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7",
-            "YXNndHR5cGViBnByb3RvMw=="));
+            "Chxhc2d0L3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvEglhc2d0LnR5cGUaF3Zh",
+            "bGlkYXRlL3ZhbGlkYXRlLnByb3RvIn4KC1RhcmdldFZhbHVlEjYKBG5hbWUY",
+            "ASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1d",
+            "KiQSNwoFdmFsdWUYAiABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0Et",
+            "WmEtejAtOV8uPi1dKiRCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetValue), global::Asgt.Type.TargetValue.Parser, new[]{ "Name", "Value" }, null, null, null, null)
           }));

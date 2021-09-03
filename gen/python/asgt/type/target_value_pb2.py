@@ -11,6 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -19,8 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"*\n\x0bTargetValue\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\tB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
-)
+  serialized_pb=b'\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\x1a\x17validate/validate.proto\"~\n\x0bTargetValue\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x37\n\x05value\x18\x02 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$B8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3'
+  ,
+  dependencies=[validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -39,14 +41,14 @@ _TARGETVALUE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='value', full_name='asgt.type.TargetValue.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -59,8 +61,8 @@ _TARGETVALUE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=43,
-  serialized_end=85,
+  serialized_start=68,
+  serialized_end=194,
 )
 
 DESCRIPTOR.message_types_by_name['TargetValue'] = _TARGETVALUE
@@ -75,4 +77,6 @@ _sym_db.RegisterMessage(TargetValue)
 
 
 DESCRIPTOR._options = None
+_TARGETVALUE.fields_by_name['name']._options = None
+_TARGETVALUE.fields_by_name['value']._options = None
 # @@protoc_insertion_point(module_scope)

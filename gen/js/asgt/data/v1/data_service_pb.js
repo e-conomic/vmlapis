@@ -20,6 +20,8 @@ var asgt_type_retention_policy_pb = require('../../../asgt/type/retention_policy
 goog.object.extend(proto, asgt_type_retention_policy_pb);
 var asgt_type_sample_pb = require('../../../asgt/type/sample_pb.js');
 goog.object.extend(proto, asgt_type_sample_pb);
+var asgt_type_target_value_pb = require('../../../asgt/type/target_value_pb.js');
+goog.object.extend(proto, asgt_type_target_value_pb);
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
@@ -955,7 +957,8 @@ proto.asgt.dataservice.v1.CreateRequest.toObject = function(includeInstance, msg
     targetsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
     samplesList: jspb.Message.toObjectList(msg.getSamplesList(),
     asgt_type_sample_pb.Sample.toObject, includeInstance),
-    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f)
+    retentionPolicy: (f = msg.getRetentionPolicy()) && asgt_type_retention_policy_pb.RetentionPolicy.toObject(includeInstance, f),
+    targetValue: (f = msg.getTargetValue()) && asgt_type_target_value_pb.TargetValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1017,6 +1020,11 @@ proto.asgt.dataservice.v1.CreateRequest.deserializeBinaryFromReader = function(m
       var value = new asgt_type_retention_policy_pb.RetentionPolicy;
       reader.readMessage(value,asgt_type_retention_policy_pb.RetentionPolicy.deserializeBinaryFromReader);
       msg.setRetentionPolicy(value);
+      break;
+    case 7:
+      var value = new asgt_type_target_value_pb.TargetValue;
+      reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
+      msg.setTargetValue(value);
       break;
     default:
       reader.skipField();
@@ -1089,6 +1097,14 @@ proto.asgt.dataservice.v1.CreateRequest.serializeBinaryToWriter = function(messa
       5,
       f,
       asgt_type_retention_policy_pb.RetentionPolicy.serializeBinaryToWriter
+    );
+  }
+  f = message.getTargetValue();
+  if (f != null) {
+    writer.writeMessage(
+      7,
+      f,
+      asgt_type_target_value_pb.TargetValue.serializeBinaryToWriter
     );
   }
 };
@@ -1276,6 +1292,43 @@ proto.asgt.dataservice.v1.CreateRequest.prototype.clearRetentionPolicy = functio
  */
 proto.asgt.dataservice.v1.CreateRequest.prototype.hasRetentionPolicy = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * optional asgt.type.TargetValue target_value = 7;
+ * @return {?proto.asgt.type.TargetValue}
+ */
+proto.asgt.dataservice.v1.CreateRequest.prototype.getTargetValue = function() {
+  return /** @type{?proto.asgt.type.TargetValue} */ (
+    jspb.Message.getWrapperField(this, asgt_type_target_value_pb.TargetValue, 7));
+};
+
+
+/**
+ * @param {?proto.asgt.type.TargetValue|undefined} value
+ * @return {!proto.asgt.dataservice.v1.CreateRequest} returns this
+*/
+proto.asgt.dataservice.v1.CreateRequest.prototype.setTargetValue = function(value) {
+  return jspb.Message.setWrapperField(this, 7, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.dataservice.v1.CreateRequest} returns this
+ */
+proto.asgt.dataservice.v1.CreateRequest.prototype.clearTargetValue = function() {
+  return this.setTargetValue(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.dataservice.v1.CreateRequest.prototype.hasTargetValue = function() {
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
