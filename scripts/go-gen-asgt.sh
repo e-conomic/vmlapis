@@ -42,9 +42,10 @@ protoc -I./deps/googleapis -I./deps/tensorflow -I./deps/protoc-gen-openapiv2 -I.
 		--go-grpc_opt=paths=source_relative \
 		proto/asgt/modelregistry/v1/*.proto
 
-protoc -I./deps/googleapis -I./deps/tensorflow -I./deps/protoc-gen-openapiv2 -I./proto \
+protoc -I./deps/googleapis -I./deps/tensorflow -I./deps/protoc-gen-openapiv2 -I./deps/validation -I./proto \
 		--go_out=gen/go/ \
 		--go-grpc_out=gen/go/ \
 		--go_opt=paths=source_relative \
 		--go-grpc_opt=paths=source_relative \
-		proto/asgt/type/*.proto
+		proto/asgt/type/*.proto \
+		--validate_out=lang=go,paths=source_relative:gen/go \
