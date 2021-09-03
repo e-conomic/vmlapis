@@ -2523,19 +2523,19 @@ public final class DatasetServiceOuterClass {
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return The example.
      */
-    asgt.type.ExampleOuterClass.Example getExample();
+    asgt.v2alpha.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      */
-    asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
+    asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.CreateExampleRequest}
@@ -2590,11 +2590,11 @@ public final class DatasetServiceOuterClass {
               break;
             }
             case 18: {
-              asgt.type.ExampleOuterClass.Example.Builder subBuilder = null;
+              asgt.v2alpha.type.ExampleOuterClass.Example.Builder subBuilder = null;
               if (example_ != null) {
                 subBuilder = example_.toBuilder();
               }
-              example_ = input.readMessage(asgt.type.ExampleOuterClass.Example.parser(), extensionRegistry);
+              example_ = input.readMessage(asgt.v2alpha.type.ExampleOuterClass.Example.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(example_);
                 example_ = subBuilder.buildPartial();
@@ -2673,9 +2673,9 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int EXAMPLE_FIELD_NUMBER = 2;
-    private asgt.type.ExampleOuterClass.Example example_;
+    private asgt.v2alpha.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -2683,18 +2683,18 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return The example.
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.Example getExample() {
-      return example_ == null ? asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+    public asgt.v2alpha.type.ExampleOuterClass.Example getExample() {
+      return example_ == null ? asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
+    public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
       return getExample();
     }
 
@@ -3106,31 +3106,31 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private asgt.type.ExampleOuterClass.Example example_;
+      private asgt.v2alpha.type.ExampleOuterClass.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        * @return The example.
        */
-      public asgt.type.ExampleOuterClass.Example getExample() {
+      public asgt.v2alpha.type.ExampleOuterClass.Example getExample() {
         if (exampleBuilder_ == null) {
-          return example_ == null ? asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+          return example_ == null ? asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
         } else {
           return exampleBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public Builder setExample(asgt.type.ExampleOuterClass.Example value) {
+      public Builder setExample(asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3144,10 +3144,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       public Builder setExample(
-          asgt.type.ExampleOuterClass.Example.Builder builderForValue) {
+          asgt.v2alpha.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
           onChanged();
@@ -3158,13 +3158,13 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public Builder mergeExample(asgt.type.ExampleOuterClass.Example value) {
+      public Builder mergeExample(asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
           if (example_ != null) {
             example_ =
-              asgt.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
           } else {
             example_ = value;
           }
@@ -3176,7 +3176,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -3190,33 +3190,33 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
+      public asgt.v2alpha.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
+      public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
           return exampleBuilder_.getMessageOrBuilder();
         } else {
           return example_ == null ?
-              asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+              asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
         }
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
           getExampleFieldBuilder() {
         if (exampleBuilder_ == null) {
           exampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder>(
+              asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder>(
                   getExample(),
                   getParentForChildren(),
                   isClean());
@@ -3294,19 +3294,19 @@ public final class DatasetServiceOuterClass {
         getDatasetNameBytes();
 
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return Whether the example field is set.
      */
     boolean hasExample();
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return The example.
      */
-    asgt.type.ExampleOuterClass.Example getExample();
+    asgt.v2alpha.type.ExampleOuterClass.Example getExample();
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      */
-    asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
+    asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.CreateOrUpdateExampleRequest}
@@ -3361,11 +3361,11 @@ public final class DatasetServiceOuterClass {
               break;
             }
             case 18: {
-              asgt.type.ExampleOuterClass.Example.Builder subBuilder = null;
+              asgt.v2alpha.type.ExampleOuterClass.Example.Builder subBuilder = null;
               if (example_ != null) {
                 subBuilder = example_.toBuilder();
               }
-              example_ = input.readMessage(asgt.type.ExampleOuterClass.Example.parser(), extensionRegistry);
+              example_ = input.readMessage(asgt.v2alpha.type.ExampleOuterClass.Example.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(example_);
                 example_ = subBuilder.buildPartial();
@@ -3444,9 +3444,9 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int EXAMPLE_FIELD_NUMBER = 2;
-    private asgt.type.ExampleOuterClass.Example example_;
+    private asgt.v2alpha.type.ExampleOuterClass.Example example_;
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return Whether the example field is set.
      */
     @java.lang.Override
@@ -3454,18 +3454,18 @@ public final class DatasetServiceOuterClass {
       return example_ != null;
     }
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      * @return The example.
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.Example getExample() {
-      return example_ == null ? asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+    public asgt.v2alpha.type.ExampleOuterClass.Example getExample() {
+      return example_ == null ? asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
     /**
-     * <code>.asgt.type.Example example = 2;</code>
+     * <code>.asgt.v2alpha.type.Example example = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
+    public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
       return getExample();
     }
 
@@ -3877,31 +3877,31 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private asgt.type.ExampleOuterClass.Example example_;
+      private asgt.v2alpha.type.ExampleOuterClass.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> exampleBuilder_;
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
         return exampleBuilder_ != null || example_ != null;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        * @return The example.
        */
-      public asgt.type.ExampleOuterClass.Example getExample() {
+      public asgt.v2alpha.type.ExampleOuterClass.Example getExample() {
         if (exampleBuilder_ == null) {
-          return example_ == null ? asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+          return example_ == null ? asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
         } else {
           return exampleBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public Builder setExample(asgt.type.ExampleOuterClass.Example value) {
+      public Builder setExample(asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3915,10 +3915,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       public Builder setExample(
-          asgt.type.ExampleOuterClass.Example.Builder builderForValue) {
+          asgt.v2alpha.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
           onChanged();
@@ -3929,13 +3929,13 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public Builder mergeExample(asgt.type.ExampleOuterClass.Example value) {
+      public Builder mergeExample(asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
           if (example_ != null) {
             example_ =
-              asgt.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
           } else {
             example_ = value;
           }
@@ -3947,7 +3947,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       public Builder clearExample() {
         if (exampleBuilder_ == null) {
@@ -3961,33 +3961,33 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
+      public asgt.v2alpha.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
         
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
+      public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
         if (exampleBuilder_ != null) {
           return exampleBuilder_.getMessageOrBuilder();
         } else {
           return example_ == null ?
-              asgt.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
+              asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
         }
       }
       /**
-       * <code>.asgt.type.Example example = 2;</code>
+       * <code>.asgt.v2alpha.type.Example example = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
           getExampleFieldBuilder() {
         if (exampleBuilder_ == null) {
           exampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder>(
+              asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder>(
                   getExample(),
                   getParentForChildren(),
                   isClean());
@@ -4065,27 +4065,27 @@ public final class DatasetServiceOuterClass {
         getDatasetNameBytes();
 
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
-    java.util.List<asgt.type.ExampleOuterClass.Example> 
+    java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example> 
         getExamplesList();
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
-    asgt.type.ExampleOuterClass.Example getExamples(int index);
+    asgt.v2alpha.type.ExampleOuterClass.Example getExamples(int index);
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     int getExamplesCount();
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
-    java.util.List<? extends asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+    java.util.List<? extends asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
         getExamplesOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
-    asgt.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
+    asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
         int index);
   }
   /**
@@ -4144,11 +4144,11 @@ public final class DatasetServiceOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                examples_ = new java.util.ArrayList<asgt.type.ExampleOuterClass.Example>();
+                examples_ = new java.util.ArrayList<asgt.v2alpha.type.ExampleOuterClass.Example>();
                 mutable_bitField0_ |= 0x00000001;
               }
               examples_.add(
-                  input.readMessage(asgt.type.ExampleOuterClass.Example.parser(), extensionRegistry));
+                  input.readMessage(asgt.v2alpha.type.ExampleOuterClass.Example.parser(), extensionRegistry));
               break;
             }
             default: {
@@ -4225,41 +4225,41 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int EXAMPLES_FIELD_NUMBER = 2;
-    private java.util.List<asgt.type.ExampleOuterClass.Example> examples_;
+    private java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example> examples_;
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<asgt.type.ExampleOuterClass.Example> getExamplesList() {
+    public java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example> getExamplesList() {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+    public java.util.List<? extends asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
         getExamplesOrBuilderList() {
       return examples_;
     }
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     @java.lang.Override
     public int getExamplesCount() {
       return examples_.size();
     }
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.Example getExamples(int index) {
+    public asgt.v2alpha.type.ExampleOuterClass.Example getExamples(int index) {
       return examples_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Example examples = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
+    public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
         int index) {
       return examples_.get(index);
     }
@@ -4699,22 +4699,22 @@ public final class DatasetServiceOuterClass {
         return this;
       }
 
-      private java.util.List<asgt.type.ExampleOuterClass.Example> examples_ =
+      private java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example> examples_ =
         java.util.Collections.emptyList();
       private void ensureExamplesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          examples_ = new java.util.ArrayList<asgt.type.ExampleOuterClass.Example>(examples_);
+          examples_ = new java.util.ArrayList<asgt.v2alpha.type.ExampleOuterClass.Example>(examples_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> examplesBuilder_;
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> examplesBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public java.util.List<asgt.type.ExampleOuterClass.Example> getExamplesList() {
+      public java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example> getExamplesList() {
         if (examplesBuilder_ == null) {
           return java.util.Collections.unmodifiableList(examples_);
         } else {
@@ -4722,7 +4722,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public int getExamplesCount() {
         if (examplesBuilder_ == null) {
@@ -4732,9 +4732,9 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example getExamples(int index) {
+      public asgt.v2alpha.type.ExampleOuterClass.Example getExamples(int index) {
         if (examplesBuilder_ == null) {
           return examples_.get(index);
         } else {
@@ -4742,10 +4742,10 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder setExamples(
-          int index, asgt.type.ExampleOuterClass.Example value) {
+          int index, asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (examplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4759,10 +4759,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder setExamples(
-          int index, asgt.type.ExampleOuterClass.Example.Builder builderForValue) {
+          int index, asgt.v2alpha.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (examplesBuilder_ == null) {
           ensureExamplesIsMutable();
           examples_.set(index, builderForValue.build());
@@ -4773,9 +4773,9 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public Builder addExamples(asgt.type.ExampleOuterClass.Example value) {
+      public Builder addExamples(asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (examplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4789,10 +4789,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder addExamples(
-          int index, asgt.type.ExampleOuterClass.Example value) {
+          int index, asgt.v2alpha.type.ExampleOuterClass.Example value) {
         if (examplesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4806,10 +4806,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder addExamples(
-          asgt.type.ExampleOuterClass.Example.Builder builderForValue) {
+          asgt.v2alpha.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (examplesBuilder_ == null) {
           ensureExamplesIsMutable();
           examples_.add(builderForValue.build());
@@ -4820,10 +4820,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder addExamples(
-          int index, asgt.type.ExampleOuterClass.Example.Builder builderForValue) {
+          int index, asgt.v2alpha.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (examplesBuilder_ == null) {
           ensureExamplesIsMutable();
           examples_.add(index, builderForValue.build());
@@ -4834,10 +4834,10 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder addAllExamples(
-          java.lang.Iterable<? extends asgt.type.ExampleOuterClass.Example> values) {
+          java.lang.Iterable<? extends asgt.v2alpha.type.ExampleOuterClass.Example> values) {
         if (examplesBuilder_ == null) {
           ensureExamplesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4849,7 +4849,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder clearExamples() {
         if (examplesBuilder_ == null) {
@@ -4862,7 +4862,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
       public Builder removeExamples(int index) {
         if (examplesBuilder_ == null) {
@@ -4875,16 +4875,16 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example.Builder getExamplesBuilder(
+      public asgt.v2alpha.type.ExampleOuterClass.Example.Builder getExamplesBuilder(
           int index) {
         return getExamplesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
+      public asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder getExamplesOrBuilder(
           int index) {
         if (examplesBuilder_ == null) {
           return examples_.get(index);  } else {
@@ -4892,9 +4892,9 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public java.util.List<? extends asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+      public java.util.List<? extends asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
            getExamplesOrBuilderList() {
         if (examplesBuilder_ != null) {
           return examplesBuilder_.getMessageOrBuilderList();
@@ -4903,33 +4903,33 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example.Builder addExamplesBuilder() {
+      public asgt.v2alpha.type.ExampleOuterClass.Example.Builder addExamplesBuilder() {
         return getExamplesFieldBuilder().addBuilder(
-            asgt.type.ExampleOuterClass.Example.getDefaultInstance());
+            asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public asgt.type.ExampleOuterClass.Example.Builder addExamplesBuilder(
+      public asgt.v2alpha.type.ExampleOuterClass.Example.Builder addExamplesBuilder(
           int index) {
         return getExamplesFieldBuilder().addBuilder(
-            index, asgt.type.ExampleOuterClass.Example.getDefaultInstance());
+            index, asgt.v2alpha.type.ExampleOuterClass.Example.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Example examples = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Example examples = 2;</code>
        */
-      public java.util.List<asgt.type.ExampleOuterClass.Example.Builder> 
+      public java.util.List<asgt.v2alpha.type.ExampleOuterClass.Example.Builder> 
            getExamplesBuilderList() {
         return getExamplesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder> 
+          asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder> 
           getExamplesFieldBuilder() {
         if (examplesBuilder_ == null) {
           examplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.ExampleOuterClass.Example, asgt.type.ExampleOuterClass.Example.Builder, asgt.type.ExampleOuterClass.ExampleOrBuilder>(
+              asgt.v2alpha.type.ExampleOuterClass.Example, asgt.v2alpha.type.ExampleOuterClass.Example.Builder, asgt.v2alpha.type.ExampleOuterClass.ExampleOrBuilder>(
                   examples_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -5609,69 +5609,70 @@ public final class DatasetServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"asgt/v2alpha/dataset_service.proto\022\014as" +
-      "gt.v2alpha\032\027asgt/type/dataset.proto\032\027asg" +
-      "t/type/example.proto\032\034google/api/annotat" +
-      "ions.proto\032\033google/protobuf/empty.proto\032" +
-      "\031options/annotations.proto\032\027validate/val" +
-      "idate.proto\"K\n\021GetDatasetRequest\0226\n\004name" +
-      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
-      "9_.>-]*$\"\223\001\n\024CreateDatasetRequest\0226\n\004nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$\022C\n\004tags\030\002 \003(\tB5\372B*\222\001\'\"%r#(\200\0022\036" +
-      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\372B\005\222\001\002\030\001\"N" +
-      "\n\024DeleteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J" +
-      "\n\020DeleteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(" +
-      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\024Cr" +
-      "eateExampleRequest\022>\n\014dataset_name\030\001 \001(\t" +
+      "gt.v2alpha\032\027asgt/type/dataset.proto\032\037asg" +
+      "t/v2alpha/type/example.proto\032\034google/api" +
+      "/annotations.proto\032\033google/protobuf/empt" +
+      "y.proto\032\031options/annotations.proto\032\027vali" +
+      "date/validate.proto\"K\n\021GetDatasetRequest" +
+      "\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
+      "A-Za-z0-9_.>-]*$\"\223\001\n\024CreateDatasetReques" +
+      "t\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.]" +
+      "[A-Za-z0-9_.>-]*$\022C\n\004tags\030\002 \003(\tB5\372B*\222\001\'\"" +
+      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\372B" +
+      "\005\222\001\002\030\001\"N\n\024DeleteDatasetRequest\0226\n\004name\030\001" +
+      " \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_" +
+      ".>-]*$\"J\n\020DeleteTagRequest\0226\n\004name\030\001 \001(\t" +
       "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
-      "*$\022#\n\007example\030\002 \001(\0132\022.asgt.type.Example\"" +
-      "\203\001\n\034CreateOrUpdateExampleRequest\022>\n\014data" +
-      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
-      "A-Za-z0-9_.>-]*$\022#\n\007example\030\002 \001(\0132\022.asgt" +
-      ".type.Example\"\201\001\n\031BatchCreateExampleRequ" +
-      "est\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
-      "-Za-z0-9.][A-Za-z0-9_.>-]*$\022$\n\010examples\030" +
-      "\002 \003(\0132\022.asgt.type.Example\"P\n\026TruncateDat" +
-      "asetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
-      "-Za-z0-9.][A-Za-z0-9_.>-]*$2\213\t\n\016DatasetS" +
-      "ervice\022^\n\nGetDataset\022\037.asgt.v2alpha.GetD" +
-      "atasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002" +
-      "\025\022\023/v2/datasets/{name}\022d\n\rCreateDataset\022" +
-      "\".asgt.v2alpha.CreateDatasetRequest\032\026.go" +
-      "ogle.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/dataset" +
-      "s:\001*\022s\n\025CreateOrUpdateDataset\022\".asgt.v2a" +
-      "lpha.CreateDatasetRequest\032\026.google.proto" +
-      "buf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/{name}:\001" +
-      "*\022d\n\rDeleteDataset\022\".asgt.v2alpha.Delete" +
-      "DatasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223" +
-      "\002\025*\023/v2/datasets/{name}\022\\\n\tDeleteTag\022\036.a" +
-      "sgt.v2alpha.DeleteTagRequest\032\026.google.pr" +
-      "otobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022\202\001" +
-      "\n\rCreateExample\022\".asgt.v2alpha.CreateExa" +
-      "mpleRequest\032\026.google.protobuf.Empty\"5\202\323\344" +
-      "\223\002/\"$/v2/datasets/{dataset_name}/example" +
-      "s:\007example\022\237\001\n\025CreateOrUpdateExample\022*.a" +
-      "sgt.v2alpha.CreateOrUpdateExampleRequest" +
-      "\032\026.google.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/da" +
-      "tasets/{dataset_name}/examples/{example." +
-      "id}:\007example\022\222\001\n\022BatchCreateExample\022\'.as" +
-      "gt.v2alpha.BatchCreateExampleRequest\032\026.g" +
-      "oogle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datase" +
-      "ts/{dataset_name}/examples:batchCreate:\001" +
-      "*\022u\n\017TruncateDataset\022$.asgt.v2alpha.Trun" +
-      "cateDatasetRequest\032\026.google.protobuf.Emp" +
-      "ty\"$\202\323\344\223\002\036*\034/v2/datasets/{name}/examples" +
-      "\032G\222AD\022BManage datasets and examples used" +
-      " for training AutoSuggest models.B2Z0git" +
-      "hub.com/e-conomic/vmlapis/gen/go/asgt/v2" +
-      "alphab\006proto3"
+      "*$\"\203\001\n\024CreateExampleRequest\022>\n\014dataset_n" +
+      "ame\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-" +
+      "z0-9_.>-]*$\022+\n\007example\030\002 \001(\0132\032.asgt.v2al" +
+      "pha.type.Example\"\213\001\n\034CreateOrUpdateExamp" +
+      "leRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200" +
+      "\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022+\n\007exa" +
+      "mple\030\002 \001(\0132\032.asgt.v2alpha.type.Example\"\211" +
+      "\001\n\031BatchCreateExampleRequest\022>\n\014dataset_" +
+      "name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za" +
+      "-z0-9_.>-]*$\022,\n\010examples\030\002 \003(\0132\032.asgt.v2" +
+      "alpha.type.Example\"P\n\026TruncateDatasetReq" +
+      "uest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-" +
+      "9.][A-Za-z0-9_.>-]*$2\213\t\n\016DatasetService\022" +
+      "^\n\nGetDataset\022\037.asgt.v2alpha.GetDatasetR" +
+      "equest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025\022\023/v2/" +
+      "datasets/{name}\022d\n\rCreateDataset\022\".asgt." +
+      "v2alpha.CreateDatasetRequest\032\026.google.pr" +
+      "otobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022s\n" +
+      "\025CreateOrUpdateDataset\022\".asgt.v2alpha.Cr" +
+      "eateDatasetRequest\032\026.google.protobuf.Emp" +
+      "ty\"\036\202\323\344\223\002\030\032\023/v2/datasets/{name}:\001*\022d\n\rDe" +
+      "leteDataset\022\".asgt.v2alpha.DeleteDataset" +
+      "Request\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025*\023/v2" +
+      "/datasets/{name}\022\\\n\tDeleteTag\022\036.asgt.v2a" +
+      "lpha.DeleteTagRequest\032\026.google.protobuf." +
+      "Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022\202\001\n\rCreat" +
+      "eExample\022\".asgt.v2alpha.CreateExampleReq" +
+      "uest\032\026.google.protobuf.Empty\"5\202\323\344\223\002/\"$/v" +
+      "2/datasets/{dataset_name}/examples:\007exam" +
+      "ple\022\237\001\n\025CreateOrUpdateExample\022*.asgt.v2a" +
+      "lpha.CreateOrUpdateExampleRequest\032\026.goog" +
+      "le.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/datasets/" +
+      "{dataset_name}/examples/{example.id}:\007ex" +
+      "ample\022\222\001\n\022BatchCreateExample\022\'.asgt.v2al" +
+      "pha.BatchCreateExampleRequest\032\026.google.p" +
+      "rotobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{dat" +
+      "aset_name}/examples:batchCreate:\001*\022u\n\017Tr" +
+      "uncateDataset\022$.asgt.v2alpha.TruncateDat" +
+      "asetRequest\032\026.google.protobuf.Empty\"$\202\323\344" +
+      "\223\002\036*\034/v2/datasets/{name}/examples\032G\222AD\022B" +
+      "Manage datasets and examples used for tr" +
+      "aining AutoSuggest models.B2Z0github.com" +
+      "/e-conomic/vmlapis/gen/go/asgt/v2alphab\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
-          asgt.type.ExampleOuterClass.getDescriptor(),
+          asgt.v2alpha.type.ExampleOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
@@ -5733,7 +5734,7 @@ public final class DatasetServiceOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
-    asgt.type.ExampleOuterClass.getDescriptor();
+    asgt.v2alpha.type.ExampleOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();

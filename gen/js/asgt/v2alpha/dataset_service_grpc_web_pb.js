@@ -14,7 +14,7 @@ grpc.web = require('grpc-web');
 
 var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js')
 
-var asgt_type_example_pb = require('../../asgt/type/example_pb.js')
+var asgt_v2alpha_type_example_pb = require('../../asgt/v2alpha/type/example_pb.js')
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 

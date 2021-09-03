@@ -14,8 +14,8 @@ var global = Function('return this')();
 
 var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js');
 goog.object.extend(proto, asgt_type_dataset_pb);
-var asgt_type_example_pb = require('../../asgt/type/example_pb.js');
-goog.object.extend(proto, asgt_type_example_pb);
+var asgt_v2alpha_type_example_pb = require('../../asgt/v2alpha/type/example_pb.js');
+goog.object.extend(proto, asgt_v2alpha_type_example_pb);
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
@@ -809,7 +809,7 @@ proto.asgt.v2alpha.CreateExampleRequest.prototype.toObject = function(opt_includ
 proto.asgt.v2alpha.CreateExampleRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    example: (f = msg.getExample()) && asgt_type_example_pb.Example.toObject(includeInstance, f)
+    example: (f = msg.getExample()) && asgt_v2alpha_type_example_pb.Example.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -851,8 +851,8 @@ proto.asgt.v2alpha.CreateExampleRequest.deserializeBinaryFromReader = function(m
       msg.setDatasetName(value);
       break;
     case 2:
-      var value = new asgt_type_example_pb.Example;
-      reader.readMessage(value,asgt_type_example_pb.Example.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_example_pb.Example;
+      reader.readMessage(value,asgt_v2alpha_type_example_pb.Example.deserializeBinaryFromReader);
       msg.setExample(value);
       break;
     default:
@@ -896,7 +896,7 @@ proto.asgt.v2alpha.CreateExampleRequest.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       2,
       f,
-      asgt_type_example_pb.Example.serializeBinaryToWriter
+      asgt_v2alpha_type_example_pb.Example.serializeBinaryToWriter
     );
   }
 };
@@ -921,17 +921,17 @@ proto.asgt.v2alpha.CreateExampleRequest.prototype.setDatasetName = function(valu
 
 
 /**
- * optional asgt.type.Example example = 2;
- * @return {?proto.asgt.type.Example}
+ * optional type.Example example = 2;
+ * @return {?proto.asgt.v2alpha.type.Example}
  */
 proto.asgt.v2alpha.CreateExampleRequest.prototype.getExample = function() {
-  return /** @type{?proto.asgt.type.Example} */ (
-    jspb.Message.getWrapperField(this, asgt_type_example_pb.Example, 2));
+  return /** @type{?proto.asgt.v2alpha.type.Example} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_example_pb.Example, 2));
 };
 
 
 /**
- * @param {?proto.asgt.type.Example|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Example|undefined} value
  * @return {!proto.asgt.v2alpha.CreateExampleRequest} returns this
 */
 proto.asgt.v2alpha.CreateExampleRequest.prototype.setExample = function(value) {
@@ -990,7 +990,7 @@ proto.asgt.v2alpha.CreateOrUpdateExampleRequest.prototype.toObject = function(op
 proto.asgt.v2alpha.CreateOrUpdateExampleRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    example: (f = msg.getExample()) && asgt_type_example_pb.Example.toObject(includeInstance, f)
+    example: (f = msg.getExample()) && asgt_v2alpha_type_example_pb.Example.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1032,8 +1032,8 @@ proto.asgt.v2alpha.CreateOrUpdateExampleRequest.deserializeBinaryFromReader = fu
       msg.setDatasetName(value);
       break;
     case 2:
-      var value = new asgt_type_example_pb.Example;
-      reader.readMessage(value,asgt_type_example_pb.Example.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_example_pb.Example;
+      reader.readMessage(value,asgt_v2alpha_type_example_pb.Example.deserializeBinaryFromReader);
       msg.setExample(value);
       break;
     default:
@@ -1077,7 +1077,7 @@ proto.asgt.v2alpha.CreateOrUpdateExampleRequest.serializeBinaryToWriter = functi
     writer.writeMessage(
       2,
       f,
-      asgt_type_example_pb.Example.serializeBinaryToWriter
+      asgt_v2alpha_type_example_pb.Example.serializeBinaryToWriter
     );
   }
 };
@@ -1102,17 +1102,17 @@ proto.asgt.v2alpha.CreateOrUpdateExampleRequest.prototype.setDatasetName = funct
 
 
 /**
- * optional asgt.type.Example example = 2;
- * @return {?proto.asgt.type.Example}
+ * optional type.Example example = 2;
+ * @return {?proto.asgt.v2alpha.type.Example}
  */
 proto.asgt.v2alpha.CreateOrUpdateExampleRequest.prototype.getExample = function() {
-  return /** @type{?proto.asgt.type.Example} */ (
-    jspb.Message.getWrapperField(this, asgt_type_example_pb.Example, 2));
+  return /** @type{?proto.asgt.v2alpha.type.Example} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_example_pb.Example, 2));
 };
 
 
 /**
- * @param {?proto.asgt.type.Example|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Example|undefined} value
  * @return {!proto.asgt.v2alpha.CreateOrUpdateExampleRequest} returns this
 */
 proto.asgt.v2alpha.CreateOrUpdateExampleRequest.prototype.setExample = function(value) {
@@ -1179,7 +1179,7 @@ proto.asgt.v2alpha.BatchCreateExampleRequest.toObject = function(includeInstance
   var f, obj = {
     datasetName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     examplesList: jspb.Message.toObjectList(msg.getExamplesList(),
-    asgt_type_example_pb.Example.toObject, includeInstance)
+    asgt_v2alpha_type_example_pb.Example.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1221,8 +1221,8 @@ proto.asgt.v2alpha.BatchCreateExampleRequest.deserializeBinaryFromReader = funct
       msg.setDatasetName(value);
       break;
     case 2:
-      var value = new asgt_type_example_pb.Example;
-      reader.readMessage(value,asgt_type_example_pb.Example.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_example_pb.Example;
+      reader.readMessage(value,asgt_v2alpha_type_example_pb.Example.deserializeBinaryFromReader);
       msg.addExamples(value);
       break;
     default:
@@ -1266,7 +1266,7 @@ proto.asgt.v2alpha.BatchCreateExampleRequest.serializeBinaryToWriter = function(
     writer.writeRepeatedMessage(
       2,
       f,
-      asgt_type_example_pb.Example.serializeBinaryToWriter
+      asgt_v2alpha_type_example_pb.Example.serializeBinaryToWriter
     );
   }
 };
@@ -1291,17 +1291,17 @@ proto.asgt.v2alpha.BatchCreateExampleRequest.prototype.setDatasetName = function
 
 
 /**
- * repeated asgt.type.Example examples = 2;
- * @return {!Array<!proto.asgt.type.Example>}
+ * repeated type.Example examples = 2;
+ * @return {!Array<!proto.asgt.v2alpha.type.Example>}
  */
 proto.asgt.v2alpha.BatchCreateExampleRequest.prototype.getExamplesList = function() {
-  return /** @type{!Array<!proto.asgt.type.Example>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_example_pb.Example, 2));
+  return /** @type{!Array<!proto.asgt.v2alpha.type.Example>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2alpha_type_example_pb.Example, 2));
 };
 
 
 /**
- * @param {!Array<!proto.asgt.type.Example>} value
+ * @param {!Array<!proto.asgt.v2alpha.type.Example>} value
  * @return {!proto.asgt.v2alpha.BatchCreateExampleRequest} returns this
 */
 proto.asgt.v2alpha.BatchCreateExampleRequest.prototype.setExamplesList = function(value) {
@@ -1310,12 +1310,12 @@ proto.asgt.v2alpha.BatchCreateExampleRequest.prototype.setExamplesList = functio
 
 
 /**
- * @param {!proto.asgt.type.Example=} opt_value
+ * @param {!proto.asgt.v2alpha.type.Example=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.type.Example}
+ * @return {!proto.asgt.v2alpha.type.Example}
  */
 proto.asgt.v2alpha.BatchCreateExampleRequest.prototype.addExamples = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.type.Example, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.v2alpha.type.Example, opt_index);
 };
 
 
