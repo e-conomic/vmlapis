@@ -84,39 +84,38 @@ service DatasetService {
 
 
 message GetDatasetRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
 }
 
 message CreateDatasetRequest {
-  string name = 1 [(validate.rules).string = {
-                    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
-                  }];
-  repeated string tags = 2 [(validate.rules).repeated.unique = true];
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
+  repeated string tags = 2 [(validate.rules).repeated.unique = true, 
+                            (validate.rules).repeated.items.string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
 }
 
 message DeleteDatasetRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
 }
 
 message DeleteTagRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
 }
 
 message CreateExampleRequest {
-  string dataset_name = 1;
+  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
   asgt.type.Example example = 2;
 }
 
 message CreateOrUpdateExampleRequest {
-  string dataset_name = 1;
+  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
   asgt.type.Example example = 2;
 }
 
 message BatchCreateExampleRequest {
-  string dataset_name = 1;
+  string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
   repeated asgt.type.Example examples = 2;
 }
 
 message TruncateDatasetRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
 }
