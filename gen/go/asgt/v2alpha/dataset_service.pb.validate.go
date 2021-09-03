@@ -168,6 +168,16 @@ func (m *CreateDatasetRequest) Validate() error {
 
 	}
 
+	if v, ok := interface{}(m.GetTargetValue()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return CreateDatasetRequestValidationError{
+				field:  "TargetValue",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
 	return nil
 }
 

@@ -16,6 +16,8 @@ var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js');
 goog.object.extend(proto, asgt_type_dataset_pb);
 var asgt_type_example_pb = require('../../asgt/type/example_pb.js');
 goog.object.extend(proto, asgt_type_example_pb);
+var asgt_type_target_value_pb = require('../../asgt/type/target_value_pb.js');
+goog.object.extend(proto, asgt_type_target_value_pb);
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js');
@@ -370,7 +372,8 @@ proto.asgt.v2alpha.CreateDatasetRequest.prototype.toObject = function(opt_includ
 proto.asgt.v2alpha.CreateDatasetRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
+    targetValue: (f = msg.getTargetValue()) && asgt_type_target_value_pb.TargetValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -415,6 +418,11 @@ proto.asgt.v2alpha.CreateDatasetRequest.deserializeBinaryFromReader = function(m
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
       break;
+    case 3:
+      var value = new asgt_type_target_value_pb.TargetValue;
+      reader.readMessage(value,asgt_type_target_value_pb.TargetValue.deserializeBinaryFromReader);
+      msg.setTargetValue(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -456,6 +464,14 @@ proto.asgt.v2alpha.CreateDatasetRequest.serializeBinaryToWriter = function(messa
     writer.writeRepeatedString(
       2,
       f
+    );
+  }
+  f = message.getTargetValue();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      asgt_type_target_value_pb.TargetValue.serializeBinaryToWriter
     );
   }
 };
@@ -513,6 +529,43 @@ proto.asgt.v2alpha.CreateDatasetRequest.prototype.addTags = function(value, opt_
  */
 proto.asgt.v2alpha.CreateDatasetRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * optional asgt.type.TargetValue target_value = 3;
+ * @return {?proto.asgt.type.TargetValue}
+ */
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.getTargetValue = function() {
+  return /** @type{?proto.asgt.type.TargetValue} */ (
+    jspb.Message.getWrapperField(this, asgt_type_target_value_pb.TargetValue, 3));
+};
+
+
+/**
+ * @param {?proto.asgt.type.TargetValue|undefined} value
+ * @return {!proto.asgt.v2alpha.CreateDatasetRequest} returns this
+*/
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.setTargetValue = function(value) {
+  return jspb.Message.setWrapperField(this, 3, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.v2alpha.CreateDatasetRequest} returns this
+ */
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.clearTargetValue = function() {
+  return this.setTargetValue(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.v2alpha.CreateDatasetRequest.prototype.hasTargetValue = function() {
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
