@@ -26,62 +26,60 @@ namespace Asgt.V2Alpha {
           string.Concat(
             "CiJhc2d0L3YyYWxwaGEvZGF0YXNldF9zZXJ2aWNlLnByb3RvEgxhc2d0LnYy",
             "YWxwaGEaF2FzZ3QvdHlwZS9kYXRhc2V0LnByb3RvGhdhc2d0L3R5cGUvZXhh",
-            "bXBsZS5wcm90bxocYXNndC90eXBlL3RhcmdldF92YWx1ZS5wcm90bxocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
-            "cHR5LnByb3RvGhlvcHRpb25zL2Fubm90YXRpb25zLnByb3RvGhd2YWxpZGF0",
-            "ZS92YWxpZGF0ZS5wcm90byJLChFHZXREYXRhc2V0UmVxdWVzdBI2CgRuYW1l",
-            "GAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4t",
-            "XSokIsEBChRDcmVhdGVEYXRhc2V0UmVxdWVzdBI2CgRuYW1lGAEgASgJQij6",
-            "QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokEkMKBHRh",
-            "Z3MYAiADKAlCNfpCKpIBJyIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16",
-            "MC05Xy4+LV0qJPpCBZIBAhgBEiwKDHRhcmdldF92YWx1ZRgDIAEoCzIWLmFz",
-            "Z3QudHlwZS5UYXJnZXRWYWx1ZSJOChREZWxldGVEYXRhc2V0UmVxdWVzdBI2",
-            "CgRuYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXow",
-            "LTlfLj4tXSokIkoKEERlbGV0ZVRhZ1JlcXVlc3QSNgoEbmFtZRgBIAEoCUIo",
-            "+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJCJ7ChRD",
-            "cmVhdGVFeGFtcGxlUmVxdWVzdBI+CgxkYXRhc2V0X25hbWUYASABKAlCKPpC",
-            "JXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiQSIwoHZXhh",
-            "bXBsZRgCIAEoCzISLmFzZ3QudHlwZS5FeGFtcGxlIoMBChxDcmVhdGVPclVw",
-            "ZGF0ZUV4YW1wbGVSZXF1ZXN0Ej4KDGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIl",
-            "ciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJBIjCgdleGFt",
-            "cGxlGAIgASgLMhIuYXNndC50eXBlLkV4YW1wbGUigQEKGUJhdGNoQ3JlYXRl",
-            "RXhhbXBsZVJlcXVlc3QSPgoMZGF0YXNldF9uYW1lGAEgASgJQij6QiVyIyiA",
-            "AjIeXltBLVphLXowLTkuXVtBLVphLXowLTlfLj4tXSokEiQKCGV4YW1wbGVz",
-            "GAIgAygLMhIuYXNndC50eXBlLkV4YW1wbGUiUAoWVHJ1bmNhdGVEYXRhc2V0",
+            "bXBsZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29v",
+            "Z2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGhlvcHRpb25zL2Fubm90YXRpb25z",
+            "LnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0ZS5wcm90byJLChFHZXREYXRhc2V0",
             "UmVxdWVzdBI2CgRuYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTku",
-            "XVtBLVphLXowLTlfLj4tXSokMosJCg5EYXRhc2V0U2VydmljZRJeCgpHZXRE",
-            "YXRhc2V0Eh8uYXNndC52MmFscGhhLkdldERhdGFzZXRSZXF1ZXN0GhIuYXNn",
-            "dC50eXBlLkRhdGFzZXQiG4LT5JMCFRITL3YyL2RhdGFzZXRzL3tuYW1lfRJk",
-            "Cg1DcmVhdGVEYXRhc2V0EiIuYXNndC52MmFscGhhLkNyZWF0ZURhdGFzZXRS",
-            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC0+STAhEiDC92Mi9k",
-            "YXRhc2V0czoBKhJzChVDcmVhdGVPclVwZGF0ZURhdGFzZXQSIi5hc2d0LnYy",
-            "YWxwaGEuQ3JlYXRlRGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
-            "RW1wdHkiHoLT5JMCGBoTL3YyL2RhdGFzZXRzL3tuYW1lfToBKhJkCg1EZWxl",
-            "dGVEYXRhc2V0EiIuYXNndC52MmFscGhhLkRlbGV0ZURhdGFzZXRSZXF1ZXN0",
-            "GhIuYXNndC50eXBlLkRhdGFzZXQiG4LT5JMCFSoTL3YyL2RhdGFzZXRzL3tu",
-            "YW1lfRJcCglEZWxldGVUYWcSHi5hc2d0LnYyYWxwaGEuRGVsZXRlVGFnUmVx",
-            "dWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIXgtPkkwIRKg8vdjIvdGFn",
-            "cy97bmFtZX0SggEKDUNyZWF0ZUV4YW1wbGUSIi5hc2d0LnYyYWxwaGEuQ3Jl",
-            "YXRlRXhhbXBsZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiNYLT",
-            "5JMCLyIkL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9L2V4YW1wbGVzOgdl",
-            "eGFtcGxlEp8BChVDcmVhdGVPclVwZGF0ZUV4YW1wbGUSKi5hc2d0LnYyYWxw",
-            "aGEuQ3JlYXRlT3JVcGRhdGVFeGFtcGxlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
-            "b2J1Zi5FbXB0eSJCgtPkkwI8GjEvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFt",
-            "ZX0vZXhhbXBsZXMve2V4YW1wbGUuaWR9OgdleGFtcGxlEpIBChJCYXRjaENy",
-            "ZWF0ZUV4YW1wbGUSJy5hc2d0LnYyYWxwaGEuQmF0Y2hDcmVhdGVFeGFtcGxl",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI7gtPkkwI1IjAvdjIv",
-            "ZGF0YXNldHMve2RhdGFzZXRfbmFtZX0vZXhhbXBsZXM6YmF0Y2hDcmVhdGU6",
-            "ASoSdQoPVHJ1bmNhdGVEYXRhc2V0EiQuYXNndC52MmFscGhhLlRydW5jYXRl",
-            "RGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiJILT5JMC",
-            "HiocL3YyL2RhdGFzZXRzL3tuYW1lfS9leGFtcGxlcxpHkkFEEkJNYW5hZ2Ug",
-            "ZGF0YXNldHMgYW5kIGV4YW1wbGVzIHVzZWQgZm9yIHRyYWluaW5nIEF1dG9T",
-            "dWdnZXN0IG1vZGVscy5CMlowZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
-            "cy9nZW4vZ28vYXNndC92MmFscGhhYgZwcm90bzM="));
+            "XVtBLVphLXowLTlfLj4tXSokIpMBChRDcmVhdGVEYXRhc2V0UmVxdWVzdBI2",
+            "CgRuYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXow",
+            "LTlfLj4tXSokEkMKBHRhZ3MYAiADKAlCNfpCKpIBJyIlciMogAIyHl5bQS1a",
+            "YS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJPpCBZIBAhgBIk4KFERlbGV0ZURh",
+            "dGFzZXRSZXF1ZXN0EjYKBG5hbWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEt",
+            "ejAtOS5dW0EtWmEtejAtOV8uPi1dKiQiSgoQRGVsZXRlVGFnUmVxdWVzdBI2",
+            "CgRuYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXow",
+            "LTlfLj4tXSokInsKFENyZWF0ZUV4YW1wbGVSZXF1ZXN0Ej4KDGRhdGFzZXRf",
+            "bmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05",
+            "Xy4+LV0qJBIjCgdleGFtcGxlGAIgASgLMhIuYXNndC50eXBlLkV4YW1wbGUi",
+            "gwEKHENyZWF0ZU9yVXBkYXRlRXhhbXBsZVJlcXVlc3QSPgoMZGF0YXNldF9u",
+            "YW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlf",
+            "Lj4tXSokEiMKB2V4YW1wbGUYAiABKAsyEi5hc2d0LnR5cGUuRXhhbXBsZSKB",
+            "AQoZQmF0Y2hDcmVhdGVFeGFtcGxlUmVxdWVzdBI+CgxkYXRhc2V0X25hbWUY",
+            "ASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1d",
+            "KiQSJAoIZXhhbXBsZXMYAiADKAsyEi5hc2d0LnR5cGUuRXhhbXBsZSJQChZU",
+            "cnVuY2F0ZURhdGFzZXRSZXF1ZXN0EjYKBG5hbWUYASABKAlCKPpCJXIjKIAC",
+            "Mh5eW0EtWmEtejAtOS5dW0EtWmEtejAtOV8uPi1dKiQyiwkKDkRhdGFzZXRT",
+            "ZXJ2aWNlEl4KCkdldERhdGFzZXQSHy5hc2d0LnYyYWxwaGEuR2V0RGF0YXNl",
+            "dFJlcXVlc3QaEi5hc2d0LnR5cGUuRGF0YXNldCIbgtPkkwIVEhMvdjIvZGF0",
+            "YXNldHMve25hbWV9EmQKDUNyZWF0ZURhdGFzZXQSIi5hc2d0LnYyYWxwaGEu",
+            "Q3JlYXRlRGF0YXNldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHki",
+            "F4LT5JMCESIML3YyL2RhdGFzZXRzOgEqEnMKFUNyZWF0ZU9yVXBkYXRlRGF0",
+            "YXNldBIiLmFzZ3QudjJhbHBoYS5DcmVhdGVEYXRhc2V0UmVxdWVzdBoWLmdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYGhMvdjIvZGF0YXNldHMve25h",
+            "bWV9OgEqEmQKDURlbGV0ZURhdGFzZXQSIi5hc2d0LnYyYWxwaGEuRGVsZXRl",
+            "RGF0YXNldFJlcXVlc3QaEi5hc2d0LnR5cGUuRGF0YXNldCIbgtPkkwIVKhMv",
+            "djIvZGF0YXNldHMve25hbWV9ElwKCURlbGV0ZVRhZxIeLmFzZ3QudjJhbHBo",
+            "YS5EZWxldGVUYWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IheC",
+            "0+STAhEqDy92Mi90YWdzL3tuYW1lfRKCAQoNQ3JlYXRlRXhhbXBsZRIiLmFz",
+            "Z3QudjJhbHBoYS5DcmVhdGVFeGFtcGxlUmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSI1gtPkkwIvIiQvdjIvZGF0YXNldHMve2RhdGFzZXRfbmFt",
+            "ZX0vZXhhbXBsZXM6B2V4YW1wbGUSnwEKFUNyZWF0ZU9yVXBkYXRlRXhhbXBs",
+            "ZRIqLmFzZ3QudjJhbHBoYS5DcmVhdGVPclVwZGF0ZUV4YW1wbGVSZXF1ZXN0",
+            "GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkKC0+STAjwaMS92Mi9kYXRhc2V0",
+            "cy97ZGF0YXNldF9uYW1lfS9leGFtcGxlcy97ZXhhbXBsZS5pZH06B2V4YW1w",
+            "bGUSkgEKEkJhdGNoQ3JlYXRlRXhhbXBsZRInLmFzZ3QudjJhbHBoYS5CYXRj",
+            "aENyZWF0ZUV4YW1wbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IjuC0+STAjUiMC92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9leGFtcGxl",
+            "czpiYXRjaENyZWF0ZToBKhJ1Cg9UcnVuY2F0ZURhdGFzZXQSJC5hc2d0LnYy",
+            "YWxwaGEuVHJ1bmNhdGVEYXRhc2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eSIkgtPkkwIeKhwvdjIvZGF0YXNldHMve25hbWV9L2V4YW1wbGVz",
+            "GkeSQUQSQk1hbmFnZSBkYXRhc2V0cyBhbmQgZXhhbXBsZXMgdXNlZCBmb3Ig",
+            "dHJhaW5pbmcgQXV0b1N1Z2dlc3QgbW9kZWxzLkIyWjBnaXRodWIuY29tL2Ut",
+            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3YyYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ExampleReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ExampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.GetDatasetRequest), global::Asgt.V2Alpha.GetDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.CreateDatasetRequest), global::Asgt.V2Alpha.CreateDatasetRequest.Parser, new[]{ "Name", "Tags", "TargetValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.CreateDatasetRequest), global::Asgt.V2Alpha.CreateDatasetRequest.Parser, new[]{ "Name", "Tags" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.DeleteDatasetRequest), global::Asgt.V2Alpha.DeleteDatasetRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.DeleteTagRequest), global::Asgt.V2Alpha.DeleteTagRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.CreateExampleRequest), global::Asgt.V2Alpha.CreateExampleRequest.Parser, new[]{ "DatasetName", "Example" }, null, null, null, null),
@@ -280,7 +278,6 @@ namespace Asgt.V2Alpha {
     public CreateDatasetRequest(CreateDatasetRequest other) : this() {
       name_ = other.name_;
       tags_ = other.tags_.Clone();
-      targetValue_ = other.targetValue_ != null ? other.targetValue_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -310,17 +307,6 @@ namespace Asgt.V2Alpha {
       get { return tags_; }
     }
 
-    /// <summary>Field number for the "target_value" field.</summary>
-    public const int TargetValueFieldNumber = 3;
-    private global::Asgt.Type.TargetValue targetValue_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.TargetValue TargetValue {
-      get { return targetValue_; }
-      set {
-        targetValue_ = value;
-      }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as CreateDatasetRequest);
@@ -336,7 +322,6 @@ namespace Asgt.V2Alpha {
       }
       if (Name != other.Name) return false;
       if(!tags_.Equals(other.tags_)) return false;
-      if (!object.Equals(TargetValue, other.TargetValue)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -345,7 +330,6 @@ namespace Asgt.V2Alpha {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= tags_.GetHashCode();
-      if (targetValue_ != null) hash ^= TargetValue.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -364,10 +348,6 @@ namespace Asgt.V2Alpha {
         output.WriteString(Name);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
-      if (targetValue_ != null) {
-        output.WriteRawTag(26);
-        output.WriteMessage(TargetValue);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -380,9 +360,6 @@ namespace Asgt.V2Alpha {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
-      if (targetValue_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TargetValue);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -398,12 +375,6 @@ namespace Asgt.V2Alpha {
         Name = other.Name;
       }
       tags_.Add(other.tags_);
-      if (other.targetValue_ != null) {
-        if (targetValue_ == null) {
-          TargetValue = new global::Asgt.Type.TargetValue();
-        }
-        TargetValue.MergeFrom(other.TargetValue);
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -426,13 +397,6 @@ namespace Asgt.V2Alpha {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
-          case 26: {
-            if (targetValue_ == null) {
-              TargetValue = new global::Asgt.Type.TargetValue();
-            }
-            input.ReadMessage(TargetValue);
-            break;
-          }
         }
       }
     #endif
@@ -453,13 +417,6 @@ namespace Asgt.V2Alpha {
           }
           case 18: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
-            break;
-          }
-          case 26: {
-            if (targetValue_ == null) {
-              TargetValue = new global::Asgt.Type.TargetValue();
-            }
-            input.ReadMessage(TargetValue);
             break;
           }
         }

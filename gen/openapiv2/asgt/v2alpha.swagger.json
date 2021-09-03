@@ -557,9 +557,6 @@
                   "items": {
                     "type": "string"
                   }
-                },
-                "targetValue": {
-                  "$ref": "#/definitions/typeTargetValue"
                 }
               }
             }
@@ -1140,9 +1137,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "targetValue": {
-          "$ref": "#/definitions/typeTargetValue"
         }
       }
     },

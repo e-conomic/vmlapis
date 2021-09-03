@@ -622,21 +622,6 @@ public final class DatasetServiceOuterClass {
      */
     com.google.protobuf.ByteString
         getTagsBytes(int index);
-
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     * @return Whether the targetValue field is set.
-     */
-    boolean hasTargetValue();
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     * @return The targetValue.
-     */
-    asgt.type.TargetValueOuterClass.TargetValue getTargetValue();
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.CreateDatasetRequest}
@@ -699,19 +684,6 @@ public final class DatasetServiceOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               tags_.add(s);
-              break;
-            }
-            case 26: {
-              asgt.type.TargetValueOuterClass.TargetValue.Builder subBuilder = null;
-              if (targetValue_ != null) {
-                subBuilder = targetValue_.toBuilder();
-              }
-              targetValue_ = input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(targetValue_);
-                targetValue_ = subBuilder.buildPartial();
-              }
-
               break;
             }
             default: {
@@ -822,32 +794,6 @@ public final class DatasetServiceOuterClass {
       return tags_.getByteString(index);
     }
 
-    public static final int TARGET_VALUE_FIELD_NUMBER = 3;
-    private asgt.type.TargetValueOuterClass.TargetValue targetValue_;
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     * @return Whether the targetValue field is set.
-     */
-    @java.lang.Override
-    public boolean hasTargetValue() {
-      return targetValue_ != null;
-    }
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     * @return The targetValue.
-     */
-    @java.lang.Override
-    public asgt.type.TargetValueOuterClass.TargetValue getTargetValue() {
-      return targetValue_ == null ? asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-    }
-    /**
-     * <code>.asgt.type.TargetValue target_value = 3;</code>
-     */
-    @java.lang.Override
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder() {
-      return getTargetValue();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -867,9 +813,6 @@ public final class DatasetServiceOuterClass {
       }
       for (int i = 0; i < tags_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
-      }
-      if (targetValue_ != null) {
-        output.writeMessage(3, getTargetValue());
       }
       unknownFields.writeTo(output);
     }
@@ -891,10 +834,6 @@ public final class DatasetServiceOuterClass {
         size += dataSize;
         size += 1 * getTagsList().size();
       }
-      if (targetValue_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getTargetValue());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -914,11 +853,6 @@ public final class DatasetServiceOuterClass {
           .equals(other.getName())) return false;
       if (!getTagsList()
           .equals(other.getTagsList())) return false;
-      if (hasTargetValue() != other.hasTargetValue()) return false;
-      if (hasTargetValue()) {
-        if (!getTargetValue()
-            .equals(other.getTargetValue())) return false;
-      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -935,10 +869,6 @@ public final class DatasetServiceOuterClass {
       if (getTagsCount() > 0) {
         hash = (37 * hash) + TAGS_FIELD_NUMBER;
         hash = (53 * hash) + getTagsList().hashCode();
-      }
-      if (hasTargetValue()) {
-        hash = (37 * hash) + TARGET_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetValue().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1077,12 +1007,6 @@ public final class DatasetServiceOuterClass {
 
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (targetValueBuilder_ == null) {
-          targetValue_ = null;
-        } else {
-          targetValue_ = null;
-          targetValueBuilder_ = null;
-        }
         return this;
       }
 
@@ -1116,11 +1040,6 @@ public final class DatasetServiceOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        if (targetValueBuilder_ == null) {
-          result.targetValue_ = targetValue_;
-        } else {
-          result.targetValue_ = targetValueBuilder_.build();
-        }
         onBuilt();
         return result;
       }
@@ -1182,9 +1101,6 @@ public final class DatasetServiceOuterClass {
             tags_.addAll(other.tags_);
           }
           onChanged();
-        }
-        if (other.hasTargetValue()) {
-          mergeTargetValue(other.getTargetValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -1400,125 +1316,6 @@ public final class DatasetServiceOuterClass {
         tags_.add(value);
         onChanged();
         return this;
-      }
-
-      private asgt.type.TargetValueOuterClass.TargetValue targetValue_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValueBuilder_;
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       * @return Whether the targetValue field is set.
-       */
-      public boolean hasTargetValue() {
-        return targetValueBuilder_ != null || targetValue_ != null;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       * @return The targetValue.
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargetValue() {
-        if (targetValueBuilder_ == null) {
-          return targetValue_ == null ? asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-        } else {
-          return targetValueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public Builder setTargetValue(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          targetValue_ = value;
-          onChanged();
-        } else {
-          targetValueBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public Builder setTargetValue(
-          asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetValueBuilder_ == null) {
-          targetValue_ = builderForValue.build();
-          onChanged();
-        } else {
-          targetValueBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public Builder mergeTargetValue(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValueBuilder_ == null) {
-          if (targetValue_ != null) {
-            targetValue_ =
-              asgt.type.TargetValueOuterClass.TargetValue.newBuilder(targetValue_).mergeFrom(value).buildPartial();
-          } else {
-            targetValue_ = value;
-          }
-          onChanged();
-        } else {
-          targetValueBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public Builder clearTargetValue() {
-        if (targetValueBuilder_ == null) {
-          targetValue_ = null;
-          onChanged();
-        } else {
-          targetValue_ = null;
-          targetValueBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValueBuilder() {
-        
-        onChanged();
-        return getTargetValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder() {
-        if (targetValueBuilder_ != null) {
-          return targetValueBuilder_.getMessageOrBuilder();
-        } else {
-          return targetValue_ == null ?
-              asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-        }
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetValueFieldBuilder() {
-        if (targetValueBuilder_ == null) {
-          targetValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  getTargetValue(),
-                  getParentForChildren(),
-                  isClean());
-          targetValue_ = null;
-        }
-        return targetValueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -5813,71 +5610,68 @@ public final class DatasetServiceOuterClass {
     java.lang.String[] descriptorData = {
       "\n\"asgt/v2alpha/dataset_service.proto\022\014as" +
       "gt.v2alpha\032\027asgt/type/dataset.proto\032\027asg" +
-      "t/type/example.proto\032\034asgt/type/target_v" +
-      "alue.proto\032\034google/api/annotations.proto" +
-      "\032\033google/protobuf/empty.proto\032\031options/a" +
-      "nnotations.proto\032\027validate/validate.prot" +
-      "o\"K\n\021GetDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\301" +
-      "\001\n\024CreateDatasetRequest\0226\n\004name\030\001 \001(\tB(\372" +
-      "B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022" +
-      "C\n\004tags\030\002 \003(\tB5\372B*\222\001\'\"%r#(\200\0022\036^[A-Za-z0-" +
-      "9.][A-Za-z0-9_.>-]*$\372B\005\222\001\002\030\001\022,\n\014target_v" +
-      "alue\030\003 \001(\0132\026.asgt.type.TargetValue\"N\n\024De" +
-      "leteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(" +
-      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\020De" +
-      "leteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036" +
-      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\024Create" +
-      "ExampleRequest\022>\n\014dataset_name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\022#" +
-      "\n\007example\030\002 \001(\0132\022.asgt.type.Example\"\203\001\n\034" +
-      "CreateOrUpdateExampleRequest\022>\n\014dataset_" +
-      "name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za" +
-      "-z0-9_.>-]*$\022#\n\007example\030\002 \001(\0132\022.asgt.typ" +
-      "e.Example\"\201\001\n\031BatchCreateExampleRequest\022" +
-      ">\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$\022$\n\010examples\030\002 \003(" +
-      "\0132\022.asgt.type.Example\"P\n\026TruncateDataset" +
-      "Request\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-" +
-      "z0-9.][A-Za-z0-9_.>-]*$2\213\t\n\016DatasetServi" +
-      "ce\022^\n\nGetDataset\022\037.asgt.v2alpha.GetDatas" +
-      "etRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025\022\023/" +
-      "v2/datasets/{name}\022d\n\rCreateDataset\022\".as" +
-      "gt.v2alpha.CreateDatasetRequest\032\026.google" +
-      ".protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*" +
-      "\022s\n\025CreateOrUpdateDataset\022\".asgt.v2alpha" +
-      ".CreateDatasetRequest\032\026.google.protobuf." +
-      "Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/{name}:\001*\022d\n" +
-      "\rDeleteDataset\022\".asgt.v2alpha.DeleteData" +
-      "setRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002\025*\023" +
-      "/v2/datasets/{name}\022\\\n\tDeleteTag\022\036.asgt." +
-      "v2alpha.DeleteTagRequest\032\026.google.protob" +
-      "uf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022\202\001\n\rCr" +
-      "eateExample\022\".asgt.v2alpha.CreateExample" +
-      "Request\032\026.google.protobuf.Empty\"5\202\323\344\223\002/\"" +
-      "$/v2/datasets/{dataset_name}/examples:\007e" +
-      "xample\022\237\001\n\025CreateOrUpdateExample\022*.asgt." +
-      "v2alpha.CreateOrUpdateExampleRequest\032\026.g" +
-      "oogle.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/datase" +
-      "ts/{dataset_name}/examples/{example.id}:" +
-      "\007example\022\222\001\n\022BatchCreateExample\022\'.asgt.v" +
-      "2alpha.BatchCreateExampleRequest\032\026.googl" +
-      "e.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets/{" +
-      "dataset_name}/examples:batchCreate:\001*\022u\n" +
-      "\017TruncateDataset\022$.asgt.v2alpha.Truncate" +
-      "DatasetRequest\032\026.google.protobuf.Empty\"$" +
-      "\202\323\344\223\002\036*\034/v2/datasets/{name}/examples\032G\222A" +
-      "D\022BManage datasets and examples used for" +
-      " training AutoSuggest models.B2Z0github." +
-      "com/e-conomic/vmlapis/gen/go/asgt/v2alph" +
-      "ab\006proto3"
+      "t/type/example.proto\032\034google/api/annotat" +
+      "ions.proto\032\033google/protobuf/empty.proto\032" +
+      "\031options/annotations.proto\032\027validate/val" +
+      "idate.proto\"K\n\021GetDatasetRequest\0226\n\004name" +
+      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
+      "9_.>-]*$\"\223\001\n\024CreateDatasetRequest\0226\n\004nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$\022C\n\004tags\030\002 \003(\tB5\372B*\222\001\'\"%r#(\200\0022\036" +
+      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\372B\005\222\001\002\030\001\"N" +
+      "\n\024DeleteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B" +
+      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J" +
+      "\n\020DeleteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(" +
+      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\024Cr" +
+      "eateExampleRequest\022>\n\014dataset_name\030\001 \001(\t" +
+      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
+      "*$\022#\n\007example\030\002 \001(\0132\022.asgt.type.Example\"" +
+      "\203\001\n\034CreateOrUpdateExampleRequest\022>\n\014data" +
+      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
+      "A-Za-z0-9_.>-]*$\022#\n\007example\030\002 \001(\0132\022.asgt" +
+      ".type.Example\"\201\001\n\031BatchCreateExampleRequ" +
+      "est\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
+      "-Za-z0-9.][A-Za-z0-9_.>-]*$\022$\n\010examples\030" +
+      "\002 \003(\0132\022.asgt.type.Example\"P\n\026TruncateDat" +
+      "asetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
+      "-Za-z0-9.][A-Za-z0-9_.>-]*$2\213\t\n\016DatasetS" +
+      "ervice\022^\n\nGetDataset\022\037.asgt.v2alpha.GetD" +
+      "atasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002" +
+      "\025\022\023/v2/datasets/{name}\022d\n\rCreateDataset\022" +
+      "\".asgt.v2alpha.CreateDatasetRequest\032\026.go" +
+      "ogle.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/dataset" +
+      "s:\001*\022s\n\025CreateOrUpdateDataset\022\".asgt.v2a" +
+      "lpha.CreateDatasetRequest\032\026.google.proto" +
+      "buf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/{name}:\001" +
+      "*\022d\n\rDeleteDataset\022\".asgt.v2alpha.Delete" +
+      "DatasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223" +
+      "\002\025*\023/v2/datasets/{name}\022\\\n\tDeleteTag\022\036.a" +
+      "sgt.v2alpha.DeleteTagRequest\032\026.google.pr" +
+      "otobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022\202\001" +
+      "\n\rCreateExample\022\".asgt.v2alpha.CreateExa" +
+      "mpleRequest\032\026.google.protobuf.Empty\"5\202\323\344" +
+      "\223\002/\"$/v2/datasets/{dataset_name}/example" +
+      "s:\007example\022\237\001\n\025CreateOrUpdateExample\022*.a" +
+      "sgt.v2alpha.CreateOrUpdateExampleRequest" +
+      "\032\026.google.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/da" +
+      "tasets/{dataset_name}/examples/{example." +
+      "id}:\007example\022\222\001\n\022BatchCreateExample\022\'.as" +
+      "gt.v2alpha.BatchCreateExampleRequest\032\026.g" +
+      "oogle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datase" +
+      "ts/{dataset_name}/examples:batchCreate:\001" +
+      "*\022u\n\017TruncateDataset\022$.asgt.v2alpha.Trun" +
+      "cateDatasetRequest\032\026.google.protobuf.Emp" +
+      "ty\"$\202\323\344\223\002\036*\034/v2/datasets/{name}/examples" +
+      "\032G\222AD\022BManage datasets and examples used" +
+      " for training AutoSuggest models.B2Z0git" +
+      "hub.com/e-conomic/vmlapis/gen/go/asgt/v2" +
+      "alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.type.DatasetOuterClass.getDescriptor(),
           asgt.type.ExampleOuterClass.getDescriptor(),
-          asgt.type.TargetValueOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
@@ -5894,7 +5688,7 @@ public final class DatasetServiceOuterClass {
     internal_static_asgt_v2alpha_CreateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_CreateDatasetRequest_descriptor,
-        new java.lang.String[] { "Name", "Tags", "TargetValue", });
+        new java.lang.String[] { "Name", "Tags", });
     internal_static_asgt_v2alpha_DeleteDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_asgt_v2alpha_DeleteDatasetRequest_fieldAccessorTable = new
@@ -5940,7 +5734,6 @@ public final class DatasetServiceOuterClass {
         .internalUpdateFileDescriptor(descriptor, registry);
     asgt.type.DatasetOuterClass.getDescriptor();
     asgt.type.ExampleOuterClass.getDescriptor();
-    asgt.type.TargetValueOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();

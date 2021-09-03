@@ -16,8 +16,6 @@ var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js')
 
 var asgt_type_example_pb = require('../../asgt/type/example_pb.js')
 
-var asgt_type_target_value_pb = require('../../asgt/type/target_value_pb.js')
-
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')

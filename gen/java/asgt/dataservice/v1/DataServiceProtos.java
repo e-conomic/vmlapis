@@ -2878,21 +2878,6 @@ public final class DataServiceProtos {
      * <code>.asgt.type.RetentionPolicy retention_policy = 5;</code>
      */
     asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
-
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     * @return Whether the targetValue field is set.
-     */
-    boolean hasTargetValue();
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     * @return The targetValue.
-     */
-    asgt.type.TargetValueOuterClass.TargetValue getTargetValue();
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     */
-    asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.dataservice.v1.CreateRequest}
@@ -2995,19 +2980,6 @@ public final class DataServiceProtos {
                 mutable_bitField0_ |= 0x00000002;
               }
               targets_.add(s);
-              break;
-            }
-            case 58: {
-              asgt.type.TargetValueOuterClass.TargetValue.Builder subBuilder = null;
-              if (targetValue_ != null) {
-                subBuilder = targetValue_.toBuilder();
-              }
-              targetValue_ = input.readMessage(asgt.type.TargetValueOuterClass.TargetValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(targetValue_);
-                targetValue_ = subBuilder.buildPartial();
-              }
-
               break;
             }
             default: {
@@ -3263,32 +3235,6 @@ public final class DataServiceProtos {
       return getRetentionPolicy();
     }
 
-    public static final int TARGET_VALUE_FIELD_NUMBER = 7;
-    private asgt.type.TargetValueOuterClass.TargetValue targetValue_;
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     * @return Whether the targetValue field is set.
-     */
-    @java.lang.Override
-    public boolean hasTargetValue() {
-      return targetValue_ != null;
-    }
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     * @return The targetValue.
-     */
-    @java.lang.Override
-    public asgt.type.TargetValueOuterClass.TargetValue getTargetValue() {
-      return targetValue_ == null ? asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-    }
-    /**
-     * <code>.asgt.type.TargetValue target_value = 7;</code>
-     */
-    @java.lang.Override
-    public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder() {
-      return getTargetValue();
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3320,9 +3266,6 @@ public final class DataServiceProtos {
       }
       for (int i = 0; i < targets_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 6, targets_.getRaw(i));
-      }
-      if (targetValue_ != null) {
-        output.writeMessage(7, getTargetValue());
       }
       unknownFields.writeTo(output);
     }
@@ -3363,10 +3306,6 @@ public final class DataServiceProtos {
         size += dataSize;
         size += 1 * getTargetsList().size();
       }
-      if (targetValue_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getTargetValue());
-      }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
@@ -3396,11 +3335,6 @@ public final class DataServiceProtos {
       if (hasRetentionPolicy()) {
         if (!getRetentionPolicy()
             .equals(other.getRetentionPolicy())) return false;
-      }
-      if (hasTargetValue() != other.hasTargetValue()) return false;
-      if (hasTargetValue()) {
-        if (!getTargetValue()
-            .equals(other.getTargetValue())) return false;
       }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
@@ -3432,10 +3366,6 @@ public final class DataServiceProtos {
       if (hasRetentionPolicy()) {
         hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
         hash = (53 * hash) + getRetentionPolicy().hashCode();
-      }
-      if (hasTargetValue()) {
-        hash = (37 * hash) + TARGET_VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getTargetValue().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3591,12 +3521,6 @@ public final class DataServiceProtos {
           retentionPolicy_ = null;
           retentionPolicyBuilder_ = null;
         }
-        if (targetValueBuilder_ == null) {
-          targetValue_ = null;
-        } else {
-          targetValue_ = null;
-          targetValueBuilder_ = null;
-        }
         return this;
       }
 
@@ -3649,11 +3573,6 @@ public final class DataServiceProtos {
           result.retentionPolicy_ = retentionPolicy_;
         } else {
           result.retentionPolicy_ = retentionPolicyBuilder_.build();
-        }
-        if (targetValueBuilder_ == null) {
-          result.targetValue_ = targetValue_;
-        } else {
-          result.targetValue_ = targetValueBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3759,9 +3678,6 @@ public final class DataServiceProtos {
         }
         if (other.hasRetentionPolicy()) {
           mergeRetentionPolicy(other.getRetentionPolicy());
-        }
-        if (other.hasTargetValue()) {
-          mergeTargetValue(other.getTargetValue());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4522,125 +4438,6 @@ public final class DataServiceProtos {
           retentionPolicy_ = null;
         }
         return retentionPolicyBuilder_;
-      }
-
-      private asgt.type.TargetValueOuterClass.TargetValue targetValue_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> targetValueBuilder_;
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       * @return Whether the targetValue field is set.
-       */
-      public boolean hasTargetValue() {
-        return targetValueBuilder_ != null || targetValue_ != null;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       * @return The targetValue.
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue getTargetValue() {
-        if (targetValueBuilder_ == null) {
-          return targetValue_ == null ? asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-        } else {
-          return targetValueBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public Builder setTargetValue(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValueBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          targetValue_ = value;
-          onChanged();
-        } else {
-          targetValueBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public Builder setTargetValue(
-          asgt.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
-        if (targetValueBuilder_ == null) {
-          targetValue_ = builderForValue.build();
-          onChanged();
-        } else {
-          targetValueBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public Builder mergeTargetValue(asgt.type.TargetValueOuterClass.TargetValue value) {
-        if (targetValueBuilder_ == null) {
-          if (targetValue_ != null) {
-            targetValue_ =
-              asgt.type.TargetValueOuterClass.TargetValue.newBuilder(targetValue_).mergeFrom(value).buildPartial();
-          } else {
-            targetValue_ = value;
-          }
-          onChanged();
-        } else {
-          targetValueBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public Builder clearTargetValue() {
-        if (targetValueBuilder_ == null) {
-          targetValue_ = null;
-          onChanged();
-        } else {
-          targetValue_ = null;
-          targetValueBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValue.Builder getTargetValueBuilder() {
-        
-        onChanged();
-        return getTargetValueFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      public asgt.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValueOrBuilder() {
-        if (targetValueBuilder_ != null) {
-          return targetValueBuilder_.getMessageOrBuilder();
-        } else {
-          return targetValue_ == null ?
-              asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance() : targetValue_;
-        }
-      }
-      /**
-       * <code>.asgt.type.TargetValue target_value = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder> 
-          getTargetValueFieldBuilder() {
-        if (targetValueBuilder_ == null) {
-          targetValueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
-                  getTargetValue(),
-                  getParentForChildren(),
-                  isClean());
-          targetValue_ = null;
-        }
-        return targetValueBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -10375,62 +10172,60 @@ public final class DataServiceProtos {
       "dataservice.v1\032\027asgt/type/dataset.proto\032" +
       "\025asgt/type/model.proto\032 asgt/type/retent" +
       "ion_policy.proto\032\026asgt/type/sample.proto" +
-      "\032\034asgt/type/target_value.proto\032\034google/a" +
-      "pi/annotations.proto\032\033google/protobuf/em" +
-      "pty.proto\032\037google/protobuf/timestamp.pro" +
-      "to\032\036google/protobuf/wrappers.proto\032$ssn/" +
-      "dataservice/v1/dataservice.proto\"\205\001\n\027Cal" +
-      "culateMetricsRequest\022.\n\nstart_time\030\001 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022,\n\010end_time" +
-      "\030\002 \001(\0132\032.google.protobuf.Timestamp\022\014\n\004ta" +
-      "gs\030\003 \003(\t\"\326\001\n\030CalculateMetricsResponse\022H\n" +
-      "\007metrics\030\001 \003(\01327.asgt.dataservice.v1.Cal" +
-      "culateMetricsResponse.MetricRow\032p\n\tMetri" +
-      "cRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfidence\030\002 \001(\013" +
-      "2\033.google.protobuf.FloatValue\022\017\n\007correct" +
-      "\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\322\001\n\rCreateRequ" +
-      "est\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004tags\030" +
-      "\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samples\030\004 \003(\0132" +
-      "\021.asgt.type.Sample\0224\n\020retention_policy\030\005" +
-      " \001(\0132\032.asgt.type.RetentionPolicy\022,\n\014targ" +
-      "et_value\030\007 \001(\0132\026.asgt.type.TargetValue\"S" +
-      "\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004typ" +
-      "e\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type.Sam" +
-      "ple\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016\n\004na" +
-      "me\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\",\n\016Ge" +
-      "tInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t" +
-      "\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001(\t\022\014" +
-      "\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001(\0132\032" +
-      ".asgt.type.RetentionPolicy\"W\n\017GetInfoRes" +
-      "ponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
-      "et\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"b\n\031R" +
-      "egisterQueryStatsRequest\022\017\n\007dataset\030\001 \001(" +
-      "\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030\003 \001(" +
-      "\005\022\014\n\004tags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rCreat" +
-      "eDataset\022\".asgt.dataservice.v1.CreateReq" +
-      "uest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v" +
-      "1/{type}:create:\001*\022q\n\nAppendData\022&.asgt." +
-      "dataservice.v1.AppendDataRequest\032\026.googl" +
-      "e.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}/{na" +
-      "me}:append:\001*\022f\n\nDeleteData\022\".asgt.datas" +
-      "ervice.v1.DeleteRequest\032\026.google.protobu" +
-      "f.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001*\022t\n" +
-      "\007GetInfo\022#.asgt.dataservice.v1.GetInfoRe" +
-      "quest\032$.asgt.dataservice.v1.GetInfoRespo" +
-      "nse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022w\n\rU" +
-      "pdateDataset\022).asgt.dataservice.v1.Updat" +
-      "eDatasetRequest\032\026.google.protobuf.Empty\"" +
-      "#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*\022\\\n\022" +
-      "RegisterQueryStats\022..asgt.dataservice.v1" +
-      ".RegisterQueryStatsRequest\032\026.google.prot" +
-      "obuf.Empty\022X\n\023CallsPerMonthMetric\022\026.goog" +
-      "le.protobuf.Empty\032).ssn.dataservice.v1.C" +
-      "allsPerMonthResponse\022o\n\020CalculateMetrics" +
-      "\022,.asgt.dataservice.v1.CalculateMetricsR" +
-      "equest\032-.asgt.dataservice.v1.CalculateMe" +
-      "tricsResponseBJB\021DataServiceProtosZ5gith" +
-      "ub.com/e-conomic/vmlapis/gen/go/asgt/dat" +
-      "a/v1;datab\006proto3"
+      "\032\034google/api/annotations.proto\032\033google/p" +
+      "rotobuf/empty.proto\032\037google/protobuf/tim" +
+      "estamp.proto\032\036google/protobuf/wrappers.p" +
+      "roto\032$ssn/dataservice/v1/dataservice.pro" +
+      "to\"\205\001\n\027CalculateMetricsRequest\022.\n\nstart_" +
+      "time\030\001 \001(\0132\032.google.protobuf.Timestamp\022," +
+      "\n\010end_time\030\002 \001(\0132\032.google.protobuf.Times" +
+      "tamp\022\014\n\004tags\030\003 \003(\t\"\326\001\n\030CalculateMetricsR" +
+      "esponse\022H\n\007metrics\030\001 \003(\01327.asgt.dataserv" +
+      "ice.v1.CalculateMetricsResponse.MetricRo" +
+      "w\032p\n\tMetricRow\022\016\n\006target\030\001 \001(\t\022/\n\nconfid" +
+      "ence\030\002 \001(\0132\033.google.protobuf.FloatValue\022" +
+      "\017\n\007correct\030\003 \001(\005\022\021\n\tincorrect\030\004 \001(\005\"\244\001\n\r" +
+      "CreateRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(" +
+      "\t\022\014\n\004tags\030\003 \003(\t\022\017\n\007targets\030\006 \003(\t\022\"\n\007samp" +
+      "les\030\004 \003(\0132\021.asgt.type.Sample\0224\n\020retentio" +
+      "n_policy\030\005 \001(\0132\032.asgt.type.RetentionPoli" +
+      "cy\"S\n\021AppendDataRequest\022\014\n\004name\030\001 \001(\t\022\014\n" +
+      "\004type\030\002 \001(\t\022\"\n\007samples\030\003 \003(\0132\021.asgt.type" +
+      ".Sample\"E\n\rDeleteRequest\022\014\n\004type\030\001 \001(\t\022\016" +
+      "\n\004name\030\002 \001(\tH\000\022\r\n\003tag\030\003 \001(\tH\000B\007\n\005match\"," +
+      "\n\016GetInfoRequest\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002" +
+      " \001(\t\"h\n\024UpdateDatasetRequest\022\014\n\004name\030\001 \001" +
+      "(\t\022\014\n\004type\030\002 \001(\t\0224\n\020retention_policy\030\003 \001" +
+      "(\0132\032.asgt.type.RetentionPolicy\"W\n\017GetInf" +
+      "oResponse\022#\n\007dataset\030\001 \001(\0132\022.asgt.type.D" +
+      "ataset\022\037\n\005model\030\002 \001(\0132\020.asgt.type.Model\"" +
+      "b\n\031RegisterQueryStatsRequest\022\017\n\007dataset\030" +
+      "\001 \001(\t\022\022\n\nmodel_type\030\002 \001(\t\022\022\n\nbatch_size\030" +
+      "\003 \001(\005\022\014\n\004tags\030\004 \003(\t2\353\006\n\013DataService\022i\n\rC" +
+      "reateDataset\022\".asgt.dataservice.v1.Creat" +
+      "eRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223\002\026" +
+      "\"\021/v1/{type}:create:\001*\022q\n\nAppendData\022&.a" +
+      "sgt.dataservice.v1.AppendDataRequest\032\026.g" +
+      "oogle.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/{type}" +
+      "/{name}:append:\001*\022f\n\nDeleteData\022\".asgt.d" +
+      "ataservice.v1.DeleteRequest\032\026.google.pro" +
+      "tobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:delete:\001" +
+      "*\022t\n\007GetInfo\022#.asgt.dataservice.v1.GetIn" +
+      "foRequest\032$.asgt.dataservice.v1.GetInfoR" +
+      "esponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}:info\022" +
+      "w\n\rUpdateDataset\022).asgt.dataservice.v1.U" +
+      "pdateDatasetRequest\032\026.google.protobuf.Em" +
+      "pty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:update:\001*" +
+      "\022\\\n\022RegisterQueryStats\022..asgt.dataservic" +
+      "e.v1.RegisterQueryStatsRequest\032\026.google." +
+      "protobuf.Empty\022X\n\023CallsPerMonthMetric\022\026." +
+      "google.protobuf.Empty\032).ssn.dataservice." +
+      "v1.CallsPerMonthResponse\022o\n\020CalculateMet" +
+      "rics\022,.asgt.dataservice.v1.CalculateMetr" +
+      "icsRequest\032-.asgt.dataservice.v1.Calcula" +
+      "teMetricsResponseBJB\021DataServiceProtosZ5" +
+      "github.com/e-conomic/vmlapis/gen/go/asgt" +
+      "/data/v1;datab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10439,7 +10234,6 @@ public final class DataServiceProtos {
           asgt.type.ModelOuterClass.getDescriptor(),
           asgt.type.RetentionPolicyOuterClass.getDescriptor(),
           asgt.type.SampleOuterClass.getDescriptor(),
-          asgt.type.TargetValueOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.protobuf.EmptyProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -10469,7 +10263,7 @@ public final class DataServiceProtos {
     internal_static_asgt_dataservice_v1_CreateRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_CreateRequest_descriptor,
-        new java.lang.String[] { "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy", "TargetValue", });
+        new java.lang.String[] { "Name", "Type", "Tags", "Targets", "Samples", "RetentionPolicy", });
     internal_static_asgt_dataservice_v1_AppendDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_dataservice_v1_AppendDataRequest_fieldAccessorTable = new
@@ -10515,7 +10309,6 @@ public final class DataServiceProtos {
     asgt.type.ModelOuterClass.getDescriptor();
     asgt.type.RetentionPolicyOuterClass.getDescriptor();
     asgt.type.SampleOuterClass.getDescriptor();
-    asgt.type.TargetValueOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.protobuf.EmptyProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

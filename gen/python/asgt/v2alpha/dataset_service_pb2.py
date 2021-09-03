@@ -13,7 +13,6 @@ _sym_db = _symbol_database.Default()
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.type import example_pb2 as asgt_dot_type_dot_example__pb2
-from vml_proto.asgt.type import target_value_pb2 as asgt_dot_type_dot_target__value__pb2
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from options import annotations_pb2 as options_dot_annotations__pb2
@@ -26,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z0github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\"asgt/v2alpha/dataset_service.proto\x12\x0c\x61sgt.v2alpha\x1a\x17\x61sgt/type/dataset.proto\x1a\x17\x61sgt/type/example.proto\x1a\x1c\x61sgt/type/target_value.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"K\n\x11GetDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\xc1\x01\n\x14\x43reateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x43\n\x04tags\x18\x02 \x03(\tB5\xfa\x42*\x92\x01\'\"%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\xfa\x42\x05\x92\x01\x02\x18\x01\x12,\n\x0ctarget_value\x18\x03 \x01(\x0b\x32\x16.asgt.type.TargetValue\"N\n\x14\x44\x65leteDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\x10\x44\x65leteTagRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\x14\x43reateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12#\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x12.asgt.type.Example\"\x83\x01\n\x1c\x43reateOrUpdateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12#\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x12.asgt.type.Example\"\x81\x01\n\x19\x42\x61tchCreateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12$\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x12.asgt.type.Example\"P\n\x16TruncateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$2\x8b\t\n\x0e\x44\x61tasetService\x12^\n\nGetDataset\x12\x1f.asgt.v2alpha.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/datasets/{name}\x12\x64\n\rCreateDataset\x12\".asgt.v2alpha.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12s\n\x15\x43reateOrUpdateDataset\x12\".asgt.v2alpha.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\x1a\x13/v2/datasets/{name}:\x01*\x12\x64\n\rDeleteDataset\x12\".asgt.v2alpha.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/datasets/{name}\x12\\\n\tDeleteTag\x12\x1e.asgt.v2alpha.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v2/tags/{name}\x12\x82\x01\n\rCreateExample\x12\".asgt.v2alpha.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"5\x82\xd3\xe4\x93\x02/\"$/v2/datasets/{dataset_name}/examples:\x07\x65xample\x12\x9f\x01\n\x15\x43reateOrUpdateExample\x12*.asgt.v2alpha.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"B\x82\xd3\xe4\x93\x02<\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x07\x65xample\x12\x92\x01\n\x12\x42\x61tchCreateExample\x12\'.asgt.v2alpha.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12u\n\x0fTruncateDataset\x12$.asgt.v2alpha.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v2/datasets/{name}/examples\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B2Z0github.com/e-conomic/vmlapis/gen/go/asgt/v2alphab\x06proto3'
+  serialized_pb=b'\n\"asgt/v2alpha/dataset_service.proto\x12\x0c\x61sgt.v2alpha\x1a\x17\x61sgt/type/dataset.proto\x1a\x17\x61sgt/type/example.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19options/annotations.proto\x1a\x17validate/validate.proto\"K\n\x11GetDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"\x93\x01\n\x14\x43reateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12\x43\n\x04tags\x18\x02 \x03(\tB5\xfa\x42*\x92\x01\'\"%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\xfa\x42\x05\x92\x01\x02\x18\x01\"N\n\x14\x44\x65leteDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J\n\x10\x44\x65leteTagRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\x14\x43reateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12#\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x12.asgt.type.Example\"\x83\x01\n\x1c\x43reateOrUpdateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12#\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x12.asgt.type.Example\"\x81\x01\n\x19\x42\x61tchCreateExampleRequest\x12>\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\x12$\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x12.asgt.type.Example\"P\n\x16TruncateDatasetRequest\x12\x36\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$2\x8b\t\n\x0e\x44\x61tasetService\x12^\n\nGetDataset\x12\x1f.asgt.v2alpha.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15\x12\x13/v2/datasets/{name}\x12\x64\n\rCreateDataset\x12\".asgt.v2alpha.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12s\n\x15\x43reateOrUpdateDataset\x12\".asgt.v2alpha.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x1e\x82\xd3\xe4\x93\x02\x18\x1a\x13/v2/datasets/{name}:\x01*\x12\x64\n\rDeleteDataset\x12\".asgt.v2alpha.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/datasets/{name}\x12\\\n\tDeleteTag\x12\x1e.asgt.v2alpha.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11*\x0f/v2/tags/{name}\x12\x82\x01\n\rCreateExample\x12\".asgt.v2alpha.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"5\x82\xd3\xe4\x93\x02/\"$/v2/datasets/{dataset_name}/examples:\x07\x65xample\x12\x9f\x01\n\x15\x43reateOrUpdateExample\x12*.asgt.v2alpha.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"B\x82\xd3\xe4\x93\x02<\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x07\x65xample\x12\x92\x01\n\x12\x42\x61tchCreateExample\x12\'.asgt.v2alpha.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12u\n\x0fTruncateDataset\x12$.asgt.v2alpha.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\"$\x82\xd3\xe4\x93\x02\x1e*\x1c/v2/datasets/{name}/examples\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B2Z0github.com/e-conomic/vmlapis/gen/go/asgt/v2alphab\x06proto3'
   ,
-  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_example__pb2.DESCRIPTOR,asgt_dot_type_dot_target__value__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_type_dot_dataset__pb2.DESCRIPTOR,asgt_dot_type_dot_example__pb2.DESCRIPTOR,google_dot_api_dot_annotations__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,options_dot_annotations__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -60,8 +59,8 @@ _GETDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=243,
-  serialized_end=318,
+  serialized_start=213,
+  serialized_end=288,
 )
 
 
@@ -87,13 +86,6 @@ _CREATEDATASETREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=b'\372B*\222\001\'\"%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\372B\005\222\001\002\030\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='target_value', full_name='asgt.v2alpha.CreateDatasetRequest.target_value', index=2,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -106,8 +98,8 @@ _CREATEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=321,
-  serialized_end=514,
+  serialized_start=291,
+  serialized_end=438,
 )
 
 
@@ -138,8 +130,8 @@ _DELETEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=594,
+  serialized_start=440,
+  serialized_end=518,
 )
 
 
@@ -170,8 +162,8 @@ _DELETETAGREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=596,
-  serialized_end=670,
+  serialized_start=520,
+  serialized_end=594,
 )
 
 
@@ -209,8 +201,8 @@ _CREATEEXAMPLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=672,
-  serialized_end=795,
+  serialized_start=596,
+  serialized_end=719,
 )
 
 
@@ -248,8 +240,8 @@ _CREATEORUPDATEEXAMPLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=798,
-  serialized_end=929,
+  serialized_start=722,
+  serialized_end=853,
 )
 
 
@@ -287,8 +279,8 @@ _BATCHCREATEEXAMPLEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=932,
-  serialized_end=1061,
+  serialized_start=856,
+  serialized_end=985,
 )
 
 
@@ -319,11 +311,10 @@ _TRUNCATEDATASETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1063,
-  serialized_end=1143,
+  serialized_start=987,
+  serialized_end=1067,
 )
 
-_CREATEDATASETREQUEST.fields_by_name['target_value'].message_type = asgt_dot_type_dot_target__value__pb2._TARGETVALUE
 _CREATEEXAMPLEREQUEST.fields_by_name['example'].message_type = asgt_dot_type_dot_example__pb2._EXAMPLE
 _CREATEORUPDATEEXAMPLEREQUEST.fields_by_name['example'].message_type = asgt_dot_type_dot_example__pb2._EXAMPLE
 _BATCHCREATEEXAMPLEREQUEST.fields_by_name['examples'].message_type = asgt_dot_type_dot_example__pb2._EXAMPLE
@@ -412,8 +403,8 @@ _DATASETSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=b'\222AD\022BManage datasets and examples used for training AutoSuggest models.',
   create_key=_descriptor._internal_create_key,
-  serialized_start=1146,
-  serialized_end=2309,
+  serialized_start=1070,
+  serialized_end=2233,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetDataset',
