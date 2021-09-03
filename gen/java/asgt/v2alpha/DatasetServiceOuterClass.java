@@ -19,12 +19,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -117,7 +117,7 @@ public final class DatasetServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -134,7 +134,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -456,7 +456,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -472,7 +472,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -489,7 +489,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -504,7 +504,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -514,7 +514,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1375,12 +1375,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -1473,7 +1473,7 @@ public final class DatasetServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -1490,7 +1490,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -1812,7 +1812,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -1828,7 +1828,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -1845,7 +1845,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -1860,7 +1860,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -1870,7 +1870,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -1943,12 +1943,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -2041,7 +2041,7 @@ public final class DatasetServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -2058,7 +2058,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -2380,7 +2380,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -2396,7 +2396,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -2413,7 +2413,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -2428,7 +2428,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -2438,7 +2438,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -2511,12 +2511,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -2637,7 +2637,7 @@ public final class DatasetServiceOuterClass {
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -2654,7 +2654,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -3032,7 +3032,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3048,7 +3048,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3065,7 +3065,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3080,7 +3080,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3090,7 +3090,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -3282,12 +3282,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -3408,7 +3408,7 @@ public final class DatasetServiceOuterClass {
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -3425,7 +3425,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -3803,7 +3803,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -3819,7 +3819,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -3836,7 +3836,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -3851,7 +3851,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -3861,7 +3861,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -4053,12 +4053,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     java.lang.String getDatasetName();
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     com.google.protobuf.ByteString
@@ -4189,7 +4189,7 @@ public final class DatasetServiceOuterClass {
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object datasetName_;
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The datasetName.
      */
     @java.lang.Override
@@ -4206,7 +4206,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string dataset_name = 1;</code>
+     * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for datasetName.
      */
     @java.lang.Override
@@ -4625,7 +4625,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object datasetName_ = "";
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The datasetName.
        */
       public java.lang.String getDatasetName() {
@@ -4641,7 +4641,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for datasetName.
        */
       public com.google.protobuf.ByteString
@@ -4658,7 +4658,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The datasetName to set.
        * @return This builder for chaining.
        */
@@ -4673,7 +4673,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
@@ -4683,7 +4683,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string dataset_name = 1;</code>
+       * <code>string dataset_name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for datasetName to set.
        * @return This builder for chaining.
        */
@@ -4996,12 +4996,12 @@ public final class DatasetServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     java.lang.String getName();
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     com.google.protobuf.ByteString
@@ -5094,7 +5094,7 @@ public final class DatasetServiceOuterClass {
     public static final int NAME_FIELD_NUMBER = 1;
     private volatile java.lang.Object name_;
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The name.
      */
     @java.lang.Override
@@ -5111,7 +5111,7 @@ public final class DatasetServiceOuterClass {
       }
     }
     /**
-     * <code>string name = 1;</code>
+     * <code>string name = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for name.
      */
     @java.lang.Override
@@ -5433,7 +5433,7 @@ public final class DatasetServiceOuterClass {
 
       private java.lang.Object name_ = "";
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The name.
        */
       public java.lang.String getName() {
@@ -5449,7 +5449,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
@@ -5466,7 +5466,7 @@ public final class DatasetServiceOuterClass {
         }
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The name to set.
        * @return This builder for chaining.
        */
@@ -5481,7 +5481,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearName() {
@@ -5491,7 +5491,7 @@ public final class DatasetServiceOuterClass {
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>string name = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for name to set.
        * @return This builder for chaining.
        */
@@ -5613,50 +5613,59 @@ public final class DatasetServiceOuterClass {
       "t/type/example.proto\032\034google/api/annotat" +
       "ions.proto\032\033google/protobuf/empty.proto\032" +
       "\031options/annotations.proto\032\027validate/val" +
-      "idate.proto\"!\n\021GetDatasetRequest\022\014\n\004name" +
-      "\030\001 \001(\t\"c\n\024CreateDatasetRequest\0223\n\004name\030\001" +
-      " \001(\tB%\372B\"r 2\036^[A-Za-z0-9.][A-Za-z0-9_.>-" +
-      "]*$\022\026\n\004tags\030\002 \003(\tB\010\372B\005\222\001\002\030\001\"$\n\024DeleteDat" +
-      "asetRequest\022\014\n\004name\030\001 \001(\t\" \n\020DeleteTagRe" +
-      "quest\022\014\n\004name\030\001 \001(\t\"Q\n\024CreateExampleRequ" +
-      "est\022\024\n\014dataset_name\030\001 \001(\t\022#\n\007example\030\002 \001" +
-      "(\0132\022.asgt.type.Example\"Y\n\034CreateOrUpdate" +
-      "ExampleRequest\022\024\n\014dataset_name\030\001 \001(\t\022#\n\007" +
-      "example\030\002 \001(\0132\022.asgt.type.Example\"W\n\031Bat" +
-      "chCreateExampleRequest\022\024\n\014dataset_name\030\001" +
-      " \001(\t\022$\n\010examples\030\002 \003(\0132\022.asgt.type.Examp" +
-      "le\"&\n\026TruncateDatasetRequest\022\014\n\004name\030\001 \001" +
-      "(\t2\213\t\n\016DatasetService\022^\n\nGetDataset\022\037.as" +
-      "gt.v2alpha.GetDatasetRequest\032\022.asgt.type" +
-      ".Dataset\"\033\202\323\344\223\002\025\022\023/v2/datasets/{name}\022d\n" +
-      "\rCreateDataset\022\".asgt.v2alpha.CreateData" +
-      "setRequest\032\026.google.protobuf.Empty\"\027\202\323\344\223" +
-      "\002\021\"\014/v2/datasets:\001*\022s\n\025CreateOrUpdateDat" +
-      "aset\022\".asgt.v2alpha.CreateDatasetRequest" +
-      "\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\032\023/v2/da" +
-      "tasets/{name}:\001*\022d\n\rDeleteDataset\022\".asgt" +
-      ".v2alpha.DeleteDatasetRequest\032\022.asgt.typ" +
-      "e.Dataset\"\033\202\323\344\223\002\025*\023/v2/datasets/{name}\022\\" +
-      "\n\tDeleteTag\022\036.asgt.v2alpha.DeleteTagRequ" +
-      "est\032\026.google.protobuf.Empty\"\027\202\323\344\223\002\021*\017/v2" +
-      "/tags/{name}\022\202\001\n\rCreateExample\022\".asgt.v2" +
-      "alpha.CreateExampleRequest\032\026.google.prot" +
-      "obuf.Empty\"5\202\323\344\223\002/\"$/v2/datasets/{datase" +
-      "t_name}/examples:\007example\022\237\001\n\025CreateOrUp" +
-      "dateExample\022*.asgt.v2alpha.CreateOrUpdat" +
-      "eExampleRequest\032\026.google.protobuf.Empty\"" +
-      "B\202\323\344\223\002<\0321/v2/datasets/{dataset_name}/exa" +
-      "mples/{example.id}:\007example\022\222\001\n\022BatchCre" +
-      "ateExample\022\'.asgt.v2alpha.BatchCreateExa" +
-      "mpleRequest\032\026.google.protobuf.Empty\";\202\323\344" +
-      "\223\0025\"0/v2/datasets/{dataset_name}/example" +
-      "s:batchCreate:\001*\022u\n\017TruncateDataset\022$.as" +
-      "gt.v2alpha.TruncateDatasetRequest\032\026.goog" +
-      "le.protobuf.Empty\"$\202\323\344\223\002\036*\034/v2/datasets/" +
-      "{name}/examples\032G\222AD\022BManage datasets an" +
-      "d examples used for training AutoSuggest" +
-      " models.B2Z0github.com/e-conomic/vmlapis" +
-      "/gen/go/asgt/v2alphab\006proto3"
+      "idate.proto\"K\n\021GetDatasetRequest\0226\n\004name" +
+      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
+      "9_.>-]*$\"\223\001\n\024CreateDatasetRequest\0226\n\004nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$\022C\n\004tags\030\002 \003(\tB5\372B*\222\001\'\"%r#(\200\0022\036" +
+      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\372B\005\222\001\002\030\001\"N" +
+      "\n\024DeleteDatasetRequest\0226\n\004name\030\001 \001(\tB(\372B" +
+      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"J" +
+      "\n\020DeleteTagRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(" +
+      "\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"{\n\024Cr" +
+      "eateExampleRequest\022>\n\014dataset_name\030\001 \001(\t" +
+      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
+      "*$\022#\n\007example\030\002 \001(\0132\022.asgt.type.Example\"" +
+      "\203\001\n\034CreateOrUpdateExampleRequest\022>\n\014data" +
+      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
+      "A-Za-z0-9_.>-]*$\022#\n\007example\030\002 \001(\0132\022.asgt" +
+      ".type.Example\"\201\001\n\031BatchCreateExampleRequ" +
+      "est\022>\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
+      "-Za-z0-9.][A-Za-z0-9_.>-]*$\022$\n\010examples\030" +
+      "\002 \003(\0132\022.asgt.type.Example\"P\n\026TruncateDat" +
+      "asetRequest\0226\n\004name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A" +
+      "-Za-z0-9.][A-Za-z0-9_.>-]*$2\213\t\n\016DatasetS" +
+      "ervice\022^\n\nGetDataset\022\037.asgt.v2alpha.GetD" +
+      "atasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223\002" +
+      "\025\022\023/v2/datasets/{name}\022d\n\rCreateDataset\022" +
+      "\".asgt.v2alpha.CreateDatasetRequest\032\026.go" +
+      "ogle.protobuf.Empty\"\027\202\323\344\223\002\021\"\014/v2/dataset" +
+      "s:\001*\022s\n\025CreateOrUpdateDataset\022\".asgt.v2a" +
+      "lpha.CreateDatasetRequest\032\026.google.proto" +
+      "buf.Empty\"\036\202\323\344\223\002\030\032\023/v2/datasets/{name}:\001" +
+      "*\022d\n\rDeleteDataset\022\".asgt.v2alpha.Delete" +
+      "DatasetRequest\032\022.asgt.type.Dataset\"\033\202\323\344\223" +
+      "\002\025*\023/v2/datasets/{name}\022\\\n\tDeleteTag\022\036.a" +
+      "sgt.v2alpha.DeleteTagRequest\032\026.google.pr" +
+      "otobuf.Empty\"\027\202\323\344\223\002\021*\017/v2/tags/{name}\022\202\001" +
+      "\n\rCreateExample\022\".asgt.v2alpha.CreateExa" +
+      "mpleRequest\032\026.google.protobuf.Empty\"5\202\323\344" +
+      "\223\002/\"$/v2/datasets/{dataset_name}/example" +
+      "s:\007example\022\237\001\n\025CreateOrUpdateExample\022*.a" +
+      "sgt.v2alpha.CreateOrUpdateExampleRequest" +
+      "\032\026.google.protobuf.Empty\"B\202\323\344\223\002<\0321/v2/da" +
+      "tasets/{dataset_name}/examples/{example." +
+      "id}:\007example\022\222\001\n\022BatchCreateExample\022\'.as" +
+      "gt.v2alpha.BatchCreateExampleRequest\032\026.g" +
+      "oogle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datase" +
+      "ts/{dataset_name}/examples:batchCreate:\001" +
+      "*\022u\n\017TruncateDataset\022$.asgt.v2alpha.Trun" +
+      "cateDatasetRequest\032\026.google.protobuf.Emp" +
+      "ty\"$\202\323\344\223\002\036*\034/v2/datasets/{name}/examples" +
+      "\032G\222AD\022BManage datasets and examples used" +
+      " for training AutoSuggest models.B2Z0git" +
+      "hub.com/e-conomic/vmlapis/gen/go/asgt/v2" +
+      "alphab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

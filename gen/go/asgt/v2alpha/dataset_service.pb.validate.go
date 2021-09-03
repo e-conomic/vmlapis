@@ -41,7 +41,19 @@ func (m *GetDatasetRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return GetDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_GetDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
+		return GetDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	return nil
 }
@@ -102,12 +114,21 @@ var _ interface {
 	ErrorName() string
 } = GetDatasetRequestValidationError{}
 
+var _GetDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on CreateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
 func (m *CreateDatasetRequest) Validate() error {
 	if m == nil {
 		return nil
+	}
+
+	if len(m.GetName()) > 256 {
+		return CreateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
 	}
 
 	if !_CreateDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
@@ -131,7 +152,20 @@ func (m *CreateDatasetRequest) Validate() error {
 			_CreateDatasetRequest_Tags_Unique[item] = struct{}{}
 		}
 
-		// no validation rules for Tags[idx]
+		if len(item) > 256 {
+			return CreateDatasetRequestValidationError{
+				field:  fmt.Sprintf("Tags[%v]", idx),
+				reason: "value length must be at most 256 bytes",
+			}
+		}
+
+		if !_CreateDatasetRequest_Tags_Pattern.MatchString(item) {
+			return CreateDatasetRequestValidationError{
+				field:  fmt.Sprintf("Tags[%v]", idx),
+				reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+			}
+		}
+
 	}
 
 	return nil
@@ -195,6 +229,8 @@ var _ interface {
 
 var _CreateDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
+var _CreateDatasetRequest_Tags_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on DeleteDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -203,7 +239,19 @@ func (m *DeleteDatasetRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return DeleteDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_DeleteDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
+		return DeleteDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	return nil
 }
@@ -264,6 +312,8 @@ var _ interface {
 	ErrorName() string
 } = DeleteDatasetRequestValidationError{}
 
+var _DeleteDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on DeleteTagRequest with the rules defined
 // in the proto definition for this message. If any rules are violated, an
 // error is returned.
@@ -272,7 +322,19 @@ func (m *DeleteTagRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return DeleteTagRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_DeleteTagRequest_Name_Pattern.MatchString(m.GetName()) {
+		return DeleteTagRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	return nil
 }
@@ -331,6 +393,8 @@ var _ interface {
 	ErrorName() string
 } = DeleteTagRequestValidationError{}
 
+var _DeleteTagRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on CreateExampleRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -339,7 +403,19 @@ func (m *CreateExampleRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for DatasetName
+	if len(m.GetDatasetName()) > 256 {
+		return CreateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_CreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		return CreateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
@@ -410,6 +486,8 @@ var _ interface {
 	ErrorName() string
 } = CreateExampleRequestValidationError{}
 
+var _CreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on CreateOrUpdateExampleRequest with the
 // rules defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -418,7 +496,19 @@ func (m *CreateOrUpdateExampleRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for DatasetName
+	if len(m.GetDatasetName()) > 256 {
+		return CreateOrUpdateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_CreateOrUpdateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		return CreateOrUpdateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	if v, ok := interface{}(m.GetExample()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
@@ -490,6 +580,8 @@ var _ interface {
 	ErrorName() string
 } = CreateOrUpdateExampleRequestValidationError{}
 
+var _CreateOrUpdateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on BatchCreateExampleRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -498,7 +590,19 @@ func (m *BatchCreateExampleRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for DatasetName
+	if len(m.GetDatasetName()) > 256 {
+		return BatchCreateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_BatchCreateExampleRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		return BatchCreateExampleRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	for idx, item := range m.GetExamples() {
 		_, _ = idx, item
@@ -574,6 +678,8 @@ var _ interface {
 	ErrorName() string
 } = BatchCreateExampleRequestValidationError{}
 
+var _BatchCreateExampleRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on TruncateDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, an error is returned.
@@ -582,7 +688,19 @@ func (m *TruncateDatasetRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return TruncateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_TruncateDatasetRequest_Name_Pattern.MatchString(m.GetName()) {
+		return TruncateDatasetRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	return nil
 }
@@ -642,3 +760,5 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = TruncateDatasetRequestValidationError{}
+
+var _TruncateDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
