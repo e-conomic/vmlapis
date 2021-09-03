@@ -11,7 +11,6 @@ import "validate/validate.proto";
 
 import "asgt/type/example.proto";
 import "asgt/type/dataset.proto";
-import "asgt/type/target_value.proto";
 
 
 service DatasetService {
@@ -92,7 +91,6 @@ message CreateDatasetRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
   repeated string tags = 2 [(validate.rules).repeated.unique = true, 
                             (validate.rules).repeated.items.string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
-  asgt.type.TargetValue target_value = 3;
 }
 
 message DeleteDatasetRequest {

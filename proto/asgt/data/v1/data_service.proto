@@ -12,7 +12,6 @@ import "asgt/type/model.proto";
 import "asgt/type/dataset.proto";
 import "asgt/type/sample.proto";
 import "ssn/dataservice/v1/dataservice.proto";
-import "asgt/type/target_value.proto";
 
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
@@ -82,7 +81,6 @@ message CreateRequest {
   repeated string targets = 6;
   repeated asgt.type.Sample samples = 4;
   asgt.type.RetentionPolicy retention_policy = 5;
-  asgt.type.TargetValue target_value = 7;
 }
 
 message AppendDataRequest {
