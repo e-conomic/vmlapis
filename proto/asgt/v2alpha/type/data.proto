@@ -6,33 +6,6 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgtt
 
 import "google/protobuf/timestamp.proto";
 
-message Invoice {
-  google.protobuf.Timestamp issue_date = 1;
-
-  // supplier of the invoice. Used in electronic-invoice-line requests.
-  Supplier supplier = 2;
-
-  // reference to the customer. Used in electronic-invoice-line requests.
-  string customer_ref = 3;
-
-  // invoice text from the SmartScan product. Used in scanned-invoice requests.
-  string text = 4;
-
-  // name of the currency as a string. Used in electronic-invoice-line requests.
-  string currency = 6;
-
-  // total of the invoice. Used in electronic-invoice-line requests.
-  float total = 7;
-}
-
-message InvoiceLine {
-  // text of the invoice line. Used in electronic-invoice-line requests.
-  string text = 8;
-
-  // id of the product (item). Used in electronic-invoice-line requests.
-  string item_id = 9;
-}
-
 message Supplier {
   //  id of the supplier; not nullable
   string id = 1;
@@ -44,21 +17,28 @@ message Supplier {
   string global_id = 5;
 }
 
-message Transaction {
-  // text of the bank transaction. Used in bank requests.
+// TODO(lku): if we decide to go with this, we should change the names of the fields to something more generic or specific (depends of what we want)
+message Data {
+  // text of the bank transaction or invoice line or the invoice from SmartScan product.
   string text = 1;
+
+  google.protobuf.Timestamp issue_date = 1;
+
+  // supplier of the invoice. Used in electronic-invoice-line requests.
+  Supplier supplier = 2;
+
+  // reference to the customer. Used in electronic-invoice-line requests.
+  string customer_ref = 3;
+
+  // total of the invoice. Used in electronic-invoice-line requests.
+  float total = 7;
+
+  // id of the product (item). Used in electronic-invoice-line requests.
+  string item_id = 9;
 
   // amount of the transaction. Used in bank requests.
   float amount = 2;
-}
 
-message Data {
-  // Transaction-level information; at this time used only with bank transactions
-  Transaction transaction = 1;
-
-  // Invoice-level information for e-invoices and scanned invoices and receipts
-  Invoice invoice = 2;
-
-  // Line-level information for e-invoices; use one sample per invoice line
-  InvoiceLine invoice_line = 3;
+  // name of the currency as a string. Used in electronic-invoice-line requests.
+  string currency = 6;
 }
