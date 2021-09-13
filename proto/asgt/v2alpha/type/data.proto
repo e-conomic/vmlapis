@@ -6,42 +6,15 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgtt
 
 import "google/protobuf/timestamp.proto";
 
-message Invoice {
-  google.protobuf.Timestamp issue_date = 1;
-
-  // supplier of the invoice. Used in electronic-invoice-line requests.
-  Supplier supplier = 2;
-
-  // reference to the customer. Used in electronic-invoice-line requests.
-  string customer_ref = 3;
-
-  // invoice text from the SmartScan product. Used in scanned-invoice requests.
-  string text = 4;
-
-  // name of the currency as a string. Used in electronic-invoice-line requests.
-  string currency = 6;
-
-  // total of the invoice. Used in electronic-invoice-line requests.
-  float total = 7;
-}
-
-message InvoiceLine {
-  // text of the invoice line. Used in electronic-invoice-line requests.
-  string text = 8;
-
-  // id of the product (item). Used in electronic-invoice-line requests.
-  string item_id = 9;
-}
-
 message Supplier {
   //  id of the supplier; not nullable
   string id = 1;
 
   // name of the supplier
-  string name = 4;
+  string name = 2;
 
   // global id of the supplier
-  string global_id = 5;
+  string global_id = 3;
 }
 
 message Transaction {
@@ -52,13 +25,43 @@ message Transaction {
   float amount = 2;
 }
 
+message Invoice {
+  // text of the invoice 
+  string text = 1;
+
+  // name of the currency as a string. Used in electronic-invoice-line requests.
+  string currency = 2;
+}
+
+message InvoiceLine {
+  google.protobuf.Timestamp issue_date = 1;
+
+  // supplier of the invoice. Used in electronic-invoice-line requests.
+  Supplier supplier = 2;
+
+  // reference to the customer. Used in electronic-invoice-line requests.
+  string customer_ref = 3;
+
+  // total of the invoice. Used in electronic-invoice-line requests.
+  float total = 4;
+
+  // text of the invoice line. Used in electronic-invoice-line requests.
+  string text = 5;
+
+  // id of the product (item). Used in electronic-invoice-line requests.
+  string item_id = 6;
+}
+
 message Data {
-  // Transaction-level information; at this time used only with bank transactions
-  Transaction transaction = 1;
+  oneof data_type {
+    option (validate.required) = true;
+    // "scanned-invoice" - Invoice-level information for e-invoices and scanned invoices and receipts
+    Invoice invoice = 1;
 
-  // Invoice-level information for e-invoices and scanned invoices and receipts
-  Invoice invoice = 2;
+    // "electronic-invoice-line" - Line-level information for e-invoices; use one sample per invoice line
+    InvoiceLine invoice_line = 2;
 
-  // Line-level information for e-invoices; use one sample per invoice line
-  InvoiceLine invoice_line = 3;
+    // "bank" - Transaction-level information; at this time used only with bank transactions
+    Transaction transaction = 3;
+  }
 }
