@@ -9,5 +9,5 @@ import "validate/validate.proto";
 // Record mapping a target name to a value
 message TargetValue {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }];
-  string value = 2;
+  string value = 2;       // TODO(lku) can have funky characters (/\;...) and most likely also non-english letters
 }

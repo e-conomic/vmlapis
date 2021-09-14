@@ -10,8 +10,9 @@ import "asgt/v2alpha/type/target_value.proto";
 // A pair of example data and example target values
 message Example {
   asgt.v2alpha.type.Data data = 1;
-  repeated asgt.v2alpha.type.TargetValue target_values = 2;
-  // An optional id to provide individual corrections to examples, for example when a user updates their initial
-  // feedback. The id should be a string in UUID format.
-  string id = 3;
+
+  repeated asgt.v2alpha.type.TargetValue target_values = 2 [(validate.rules).repeated.min_items = 1];
+
+  // An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
+  string id = 3 [(validate.rules).string.uuid = true];
 }
