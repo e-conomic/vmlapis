@@ -5,6 +5,7 @@ package asgt.v2alpha.type;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype";
 
 import "google/protobuf/timestamp.proto";
+import "validate/validate.proto";
 
 message Invoice {
   google.protobuf.Timestamp issue_date = 1;

@@ -4,6 +4,8 @@ package asgt.v2alpha.type;
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype";
 
+import "validate/validate.proto";
+
 import "asgt/v2alpha/type/data.proto";
 import "asgt/v2alpha/type/target_value.proto";
 
