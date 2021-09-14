@@ -25,47 +25,49 @@ namespace Asgt.V2Alpha {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRhc2d0L3YyYWxwaGEvc3VnZ2VzdGVyX3NlcnZpY2UucHJvdG8SDGFzZ3Qu",
-            "djJhbHBoYRoUYXNndC90eXBlL2RhdGEucHJvdG8aFWFzZ3QvdHlwZS9tb2Rl",
-            "bC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8aHGdvb2dsZS9h",
-            "cGkvYW5ub3RhdGlvbnMucHJvdG8aGW9wdGlvbnMvYW5ub3RhdGlvbnMucHJv",
-            "dG8idwoOU3VnZ2VzdE9wdGlvbnMSFQoNc3VnZ2VzdF9saW1pdBgBIAEoBRIz",
-            "Cg5taW5fY29uZmlkZW5jZRgCIAEoDjIbLmFzZ3QudHlwZS5Db25maWRlbmNl",
-            "LkxldmVsOhmSQRYyFHsic3VnZ2VzdF9saW1pdCI6IDN9Im0KDlN1Z2dlc3RS",
-            "ZXF1ZXN0EgwKBG5hbWUYASABKAkSHgoFaW5wdXQYAiABKAsyDy5hc2d0LnR5",
-            "cGUuRGF0YRItCgdvcHRpb25zGAMgASgLMhwuYXNndC52MmFscGhhLlN1Z2dl",
-            "c3RPcHRpb25zIl0KD1N1Z2dlc3RSZXNwb25zZRIpCgpwcmVkaWN0aW9uGAEg",
-            "ASgLMhUuYXNndC50eXBlLlByZWRpY3Rpb24SHwoFbW9kZWwYAiABKAsyEC5h",
-            "c2d0LnR5cGUuTW9kZWwicwoTQmF0Y2hTdWdnZXN0UmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJEh8KBmlucHV0cxgCIAMoCzIPLmFzZ3QudHlwZS5EYXRhEi0KB29w",
-            "dGlvbnMYAyABKAsyHC5hc2d0LnYyYWxwaGEuU3VnZ2VzdE9wdGlvbnMiYwoU",
-            "QmF0Y2hTdWdnZXN0UmVzcG9uc2USKgoLcHJlZGljdGlvbnMYASADKAsyFS5h",
-            "c2d0LnR5cGUuUHJlZGljdGlvbhIfCgVtb2RlbBgCIAEoCzIQLmFzZ3QudHlw",
-            "ZS5Nb2RlbDKoBwoQU3VnZ2VzdGVyU2VydmljZRKAAgoHU3VnZ2VzdBIcLmFz",
-            "Z3QudjJhbHBoYS5TdWdnZXN0UmVxdWVzdBodLmFzZ3QudjJhbHBoYS5TdWdn",
-            "ZXN0UmVzcG9uc2UitwGC0+STArABIhsvdjIvZGF0YXNldHMve25hbWV9OnN1",
-            "Z2dlc3Q6ASpaJCIiL3YyL2RhdGFzZXRzL3tuYW1lPWJhbmsvKn06c3VnZ2Vz",
-            "dFo3IjUvdjIvZGF0YXNldHMve25hbWU9ZWxlY3Ryb25pYy1pbnZvaWNlLWxp",
-            "bmUvKn06c3VnZ2VzdFovIi0vdjIvZGF0YXNldHMve25hbWU9c2Nhbm5lZC1p",
-            "bnZvaWNlLyp9OnN1Z2dlc3QSowIKDEJhdGNoU3VnZ2VzdBIhLmFzZ3QudjJh",
-            "bHBoYS5CYXRjaFN1Z2dlc3RSZXF1ZXN0GiIuYXNndC52MmFscGhhLkJhdGNo",
-            "U3VnZ2VzdFJlc3BvbnNlIssBgtPkkwLEASIgL3YyL2RhdGFzZXRzL3tuYW1l",
-            "fTpiYXRjaFN1Z2dlc3Q6ASpaKSInL3YyL2RhdGFzZXRzL3tuYW1lPWJhbmsv",
-            "Kn06YmF0Y2hTdWdnZXN0WjwiOi92Mi9kYXRhc2V0cy97bmFtZT1lbGVjdHJv",
-            "bmljLWludm9pY2UtbGluZS8qfTpiYXRjaFN1Z2dlc3RaNCIyL3YyL2RhdGFz",
-            "ZXRzL3tuYW1lPXNjYW5uZWQtaW52b2ljZS8qfTpiYXRjaFN1Z2dlc3QSwAIK",
-            "EU1vZGVsQmF0Y2hTdWdnZXN0EiEuYXNndC52MmFscGhhLkJhdGNoU3VnZ2Vz",
-            "dFJlcXVlc3QaIi5hc2d0LnYyYWxwaGEuQmF0Y2hTdWdnZXN0UmVzcG9uc2Ui",
-            "4wGC0+STAtwBIiYvdjIvZGF0YXNldHMve25hbWV9L21vZGVsOmJhdGNoU3Vn",
-            "Z2VzdDoBKlovIi0vdjIvZGF0YXNldHMve25hbWU9YmFuay8qfS9tb2RlbDpi",
-            "YXRjaFN1Z2dlc3RaQiJAL3YyL2RhdGFzZXRzL3tuYW1lPWVsZWN0cm9uaWMt",
-            "aW52b2ljZS1saW5lLyp9L21vZGVsOmJhdGNoU3VnZ2VzdFo6IjgvdjIvZGF0",
-            "YXNldHMve25hbWU9c2Nhbm5lZC1pbnZvaWNlLyp9L21vZGVsOmJhdGNoU3Vn",
-            "Z2VzdBookkElEiNNYWtlIHByZWRpY3Rpb25zIGFnYWluc3QgYSBkYXRhc2V0",
-            "LkJ0WjBnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0",
-            "L3YyYWxwaGGSQT8SFgoLQXV0b1N1Z2dlc3QyB3YyYWxwaGEqAQIyEGFwcGxp",
-            "Y2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "djJhbHBoYRocYXNndC92MmFscGhhL3R5cGUvZGF0YS5wcm90bxodYXNndC92",
+            "MmFscGhhL3R5cGUvbW9kZWwucHJvdG8aImFzZ3QvdjJhbHBoYS90eXBlL3By",
+            "ZWRpY3Rpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
+            "GW9wdGlvbnMvYW5ub3RhdGlvbnMucHJvdG8ifwoOU3VnZ2VzdE9wdGlvbnMS",
+            "FQoNc3VnZ2VzdF9saW1pdBgBIAEoBRI7Cg5taW5fY29uZmlkZW5jZRgCIAEo",
+            "DjIjLmFzZ3QudjJhbHBoYS50eXBlLkNvbmZpZGVuY2UuTGV2ZWw6GZJBFjIU",
+            "eyJzdWdnZXN0X2xpbWl0IjogM30idQoOU3VnZ2VzdFJlcXVlc3QSDAoEbmFt",
+            "ZRgBIAEoCRImCgVpbnB1dBgCIAEoCzIXLmFzZ3QudjJhbHBoYS50eXBlLkRh",
+            "dGESLQoHb3B0aW9ucxgDIAEoCzIcLmFzZ3QudjJhbHBoYS5TdWdnZXN0T3B0",
+            "aW9ucyJtCg9TdWdnZXN0UmVzcG9uc2USMQoKcHJlZGljdGlvbhgBIAEoCzId",
+            "LmFzZ3QudjJhbHBoYS50eXBlLlByZWRpY3Rpb24SJwoFbW9kZWwYAiABKAsy",
+            "GC5hc2d0LnYyYWxwaGEudHlwZS5Nb2RlbCJ7ChNCYXRjaFN1Z2dlc3RSZXF1",
+            "ZXN0EgwKBG5hbWUYASABKAkSJwoGaW5wdXRzGAIgAygLMhcuYXNndC52MmFs",
+            "cGhhLnR5cGUuRGF0YRItCgdvcHRpb25zGAMgASgLMhwuYXNndC52MmFscGhh",
+            "LlN1Z2dlc3RPcHRpb25zInMKFEJhdGNoU3VnZ2VzdFJlc3BvbnNlEjIKC3By",
+            "ZWRpY3Rpb25zGAEgAygLMh0uYXNndC52MmFscGhhLnR5cGUuUHJlZGljdGlv",
+            "bhInCgVtb2RlbBgCIAEoCzIYLmFzZ3QudjJhbHBoYS50eXBlLk1vZGVsMqgH",
+            "ChBTdWdnZXN0ZXJTZXJ2aWNlEoACCgdTdWdnZXN0EhwuYXNndC52MmFscGhh",
+            "LlN1Z2dlc3RSZXF1ZXN0Gh0uYXNndC52MmFscGhhLlN1Z2dlc3RSZXNwb25z",
+            "ZSK3AYLT5JMCsAEiGy92Mi9kYXRhc2V0cy97bmFtZX06c3VnZ2VzdDoBKlok",
+            "IiIvdjIvZGF0YXNldHMve25hbWU9YmFuay8qfTpzdWdnZXN0WjciNS92Mi9k",
+            "YXRhc2V0cy97bmFtZT1lbGVjdHJvbmljLWludm9pY2UtbGluZS8qfTpzdWdn",
+            "ZXN0Wi8iLS92Mi9kYXRhc2V0cy97bmFtZT1zY2FubmVkLWludm9pY2UvKn06",
+            "c3VnZ2VzdBKjAgoMQmF0Y2hTdWdnZXN0EiEuYXNndC52MmFscGhhLkJhdGNo",
+            "U3VnZ2VzdFJlcXVlc3QaIi5hc2d0LnYyYWxwaGEuQmF0Y2hTdWdnZXN0UmVz",
+            "cG9uc2UiywGC0+STAsQBIiAvdjIvZGF0YXNldHMve25hbWV9OmJhdGNoU3Vn",
+            "Z2VzdDoBKlopIicvdjIvZGF0YXNldHMve25hbWU9YmFuay8qfTpiYXRjaFN1",
+            "Z2dlc3RaPCI6L3YyL2RhdGFzZXRzL3tuYW1lPWVsZWN0cm9uaWMtaW52b2lj",
+            "ZS1saW5lLyp9OmJhdGNoU3VnZ2VzdFo0IjIvdjIvZGF0YXNldHMve25hbWU9",
+            "c2Nhbm5lZC1pbnZvaWNlLyp9OmJhdGNoU3VnZ2VzdBLAAgoRTW9kZWxCYXRj",
+            "aFN1Z2dlc3QSIS5hc2d0LnYyYWxwaGEuQmF0Y2hTdWdnZXN0UmVxdWVzdBoi",
+            "LmFzZ3QudjJhbHBoYS5CYXRjaFN1Z2dlc3RSZXNwb25zZSLjAYLT5JMC3AEi",
+            "Ji92Mi9kYXRhc2V0cy97bmFtZX0vbW9kZWw6YmF0Y2hTdWdnZXN0OgEqWi8i",
+            "LS92Mi9kYXRhc2V0cy97bmFtZT1iYW5rLyp9L21vZGVsOmJhdGNoU3VnZ2Vz",
+            "dFpCIkAvdjIvZGF0YXNldHMve25hbWU9ZWxlY3Ryb25pYy1pbnZvaWNlLWxp",
+            "bmUvKn0vbW9kZWw6YmF0Y2hTdWdnZXN0WjoiOC92Mi9kYXRhc2V0cy97bmFt",
+            "ZT1zY2FubmVkLWludm9pY2UvKn0vbW9kZWw6YmF0Y2hTdWdnZXN0GiiSQSUS",
+            "I01ha2UgcHJlZGljdGlvbnMgYWdhaW5zdCBhIGRhdGFzZXQuQnRaMGdpdGh1",
+            "Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjJhbHBoYZJB",
+            "PxIWCgtBdXRvU3VnZ2VzdDIHdjJhbHBoYSoBAjIQYXBwbGljYXRpb24vanNv",
+            "bjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.V2Alpha.Type.DataReflection.Descriptor, global::Asgt.V2Alpha.Type.ModelReflection.Descriptor, global::Asgt.V2Alpha.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.SuggestOptions), global::Asgt.V2Alpha.SuggestOptions.Parser, new[]{ "SuggestLimit", "MinConfidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.SuggestRequest), global::Asgt.V2Alpha.SuggestRequest.Parser, new[]{ "Name", "Input", "Options" }, null, null, null, null),
@@ -133,9 +135,9 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "min_confidence" field.</summary>
     public const int MinConfidenceFieldNumber = 2;
-    private global::Asgt.Type.Confidence.Types.Level minConfidence_ = global::Asgt.Type.Confidence.Types.Level.Unknown;
+    private global::Asgt.V2Alpha.Type.Confidence.Types.Level minConfidence_ = global::Asgt.V2Alpha.Type.Confidence.Types.Level.Unknown;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Confidence.Types.Level MinConfidence {
+    public global::Asgt.V2Alpha.Type.Confidence.Types.Level MinConfidence {
       get { return minConfidence_; }
       set {
         minConfidence_ = value;
@@ -164,7 +166,7 @@ namespace Asgt.V2Alpha {
     public override int GetHashCode() {
       int hash = 1;
       if (SuggestLimit != 0) hash ^= SuggestLimit.GetHashCode();
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
+      if (MinConfidence != global::Asgt.V2Alpha.Type.Confidence.Types.Level.Unknown) hash ^= MinConfidence.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -182,7 +184,7 @@ namespace Asgt.V2Alpha {
         output.WriteRawTag(8);
         output.WriteInt32(SuggestLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != global::Asgt.V2Alpha.Type.Confidence.Types.Level.Unknown) {
         output.WriteRawTag(16);
         output.WriteEnum((int) MinConfidence);
       }
@@ -197,7 +199,7 @@ namespace Asgt.V2Alpha {
       if (SuggestLimit != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuggestLimit);
       }
-      if (MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (MinConfidence != global::Asgt.V2Alpha.Type.Confidence.Types.Level.Unknown) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MinConfidence);
       }
       if (_unknownFields != null) {
@@ -214,7 +216,7 @@ namespace Asgt.V2Alpha {
       if (other.SuggestLimit != 0) {
         SuggestLimit = other.SuggestLimit;
       }
-      if (other.MinConfidence != global::Asgt.Type.Confidence.Types.Level.Unknown) {
+      if (other.MinConfidence != global::Asgt.V2Alpha.Type.Confidence.Types.Level.Unknown) {
         MinConfidence = other.MinConfidence;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -236,7 +238,7 @@ namespace Asgt.V2Alpha {
             break;
           }
           case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            MinConfidence = (global::Asgt.V2Alpha.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
@@ -258,7 +260,7 @@ namespace Asgt.V2Alpha {
             break;
           }
           case 16: {
-            MinConfidence = (global::Asgt.Type.Confidence.Types.Level) input.ReadEnum();
+            MinConfidence = (global::Asgt.V2Alpha.Type.Confidence.Types.Level) input.ReadEnum();
             break;
           }
         }
@@ -321,9 +323,9 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "input" field.</summary>
     public const int InputFieldNumber = 2;
-    private global::Asgt.Type.Data input_;
+    private global::Asgt.V2Alpha.Type.Data input_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Data Input {
+    public global::Asgt.V2Alpha.Type.Data Input {
       get { return input_; }
       set {
         input_ = value;
@@ -424,7 +426,7 @@ namespace Asgt.V2Alpha {
       }
       if (other.input_ != null) {
         if (input_ == null) {
-          Input = new global::Asgt.Type.Data();
+          Input = new global::Asgt.V2Alpha.Type.Data();
         }
         Input.MergeFrom(other.Input);
       }
@@ -454,7 +456,7 @@ namespace Asgt.V2Alpha {
           }
           case 18: {
             if (input_ == null) {
-              Input = new global::Asgt.Type.Data();
+              Input = new global::Asgt.V2Alpha.Type.Data();
             }
             input.ReadMessage(Input);
             break;
@@ -486,7 +488,7 @@ namespace Asgt.V2Alpha {
           }
           case 18: {
             if (input_ == null) {
-              Input = new global::Asgt.Type.Data();
+              Input = new global::Asgt.V2Alpha.Type.Data();
             }
             input.ReadMessage(Input);
             break;
@@ -546,9 +548,9 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "prediction" field.</summary>
     public const int PredictionFieldNumber = 1;
-    private global::Asgt.Type.Prediction prediction_;
+    private global::Asgt.V2Alpha.Type.Prediction prediction_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Prediction Prediction {
+    public global::Asgt.V2Alpha.Type.Prediction Prediction {
       get { return prediction_; }
       set {
         prediction_ = value;
@@ -557,9 +559,9 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 2;
-    private global::Asgt.Type.Model model_;
+    private global::Asgt.V2Alpha.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Model Model {
+    public global::Asgt.V2Alpha.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -637,13 +639,13 @@ namespace Asgt.V2Alpha {
       }
       if (other.prediction_ != null) {
         if (prediction_ == null) {
-          Prediction = new global::Asgt.Type.Prediction();
+          Prediction = new global::Asgt.V2Alpha.Type.Prediction();
         }
         Prediction.MergeFrom(other.Prediction);
       }
       if (other.model_ != null) {
         if (model_ == null) {
-          Model = new global::Asgt.Type.Model();
+          Model = new global::Asgt.V2Alpha.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -663,14 +665,14 @@ namespace Asgt.V2Alpha {
             break;
           case 10: {
             if (prediction_ == null) {
-              Prediction = new global::Asgt.Type.Prediction();
+              Prediction = new global::Asgt.V2Alpha.Type.Prediction();
             }
             input.ReadMessage(Prediction);
             break;
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              Model = new global::Asgt.V2Alpha.Type.Model();
             }
             input.ReadMessage(Model);
             break;
@@ -691,14 +693,14 @@ namespace Asgt.V2Alpha {
             break;
           case 10: {
             if (prediction_ == null) {
-              Prediction = new global::Asgt.Type.Prediction();
+              Prediction = new global::Asgt.V2Alpha.Type.Prediction();
             }
             input.ReadMessage(Prediction);
             break;
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              Model = new global::Asgt.V2Alpha.Type.Model();
             }
             input.ReadMessage(Model);
             break;
@@ -763,11 +765,11 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "inputs" field.</summary>
     public const int InputsFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Asgt.Type.Data> _repeated_inputs_codec
-        = pb::FieldCodec.ForMessage(18, global::Asgt.Type.Data.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.Data> inputs_ = new pbc::RepeatedField<global::Asgt.Type.Data>();
+    private static readonly pb::FieldCodec<global::Asgt.V2Alpha.Type.Data> _repeated_inputs_codec
+        = pb::FieldCodec.ForMessage(18, global::Asgt.V2Alpha.Type.Data.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.V2Alpha.Type.Data> inputs_ = new pbc::RepeatedField<global::Asgt.V2Alpha.Type.Data>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.Data> Inputs {
+    public pbc::RepeatedField<global::Asgt.V2Alpha.Type.Data> Inputs {
       get { return inputs_; }
     }
 
@@ -971,19 +973,19 @@ namespace Asgt.V2Alpha {
 
     /// <summary>Field number for the "predictions" field.</summary>
     public const int PredictionsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Asgt.Type.Prediction> _repeated_predictions_codec
-        = pb::FieldCodec.ForMessage(10, global::Asgt.Type.Prediction.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.Type.Prediction>();
+    private static readonly pb::FieldCodec<global::Asgt.V2Alpha.Type.Prediction> _repeated_predictions_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.V2Alpha.Type.Prediction.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.V2Alpha.Type.Prediction> predictions_ = new pbc::RepeatedField<global::Asgt.V2Alpha.Type.Prediction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Asgt.Type.Prediction> Predictions {
+    public pbc::RepeatedField<global::Asgt.V2Alpha.Type.Prediction> Predictions {
       get { return predictions_; }
     }
 
     /// <summary>Field number for the "model" field.</summary>
     public const int ModelFieldNumber = 2;
-    private global::Asgt.Type.Model model_;
+    private global::Asgt.V2Alpha.Type.Model model_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Asgt.Type.Model Model {
+    public global::Asgt.V2Alpha.Type.Model Model {
       get { return model_; }
       set {
         model_ = value;
@@ -1057,7 +1059,7 @@ namespace Asgt.V2Alpha {
       predictions_.Add(other.predictions_);
       if (other.model_ != null) {
         if (model_ == null) {
-          Model = new global::Asgt.Type.Model();
+          Model = new global::Asgt.V2Alpha.Type.Model();
         }
         Model.MergeFrom(other.Model);
       }
@@ -1081,7 +1083,7 @@ namespace Asgt.V2Alpha {
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              Model = new global::Asgt.V2Alpha.Type.Model();
             }
             input.ReadMessage(Model);
             break;
@@ -1106,7 +1108,7 @@ namespace Asgt.V2Alpha {
           }
           case 18: {
             if (model_ == null) {
-              Model = new global::Asgt.Type.Model();
+              Model = new global::Asgt.V2Alpha.Type.Model();
             }
             input.ReadMessage(Model);
             break;

@@ -14,6 +14,8 @@ var global = Function('return this')();
 
 var google_protobuf_timestamp_pb = require('google-protobuf/google/protobuf/timestamp_pb.js');
 goog.object.extend(proto, google_protobuf_timestamp_pb);
+var validate_validate_pb = require('../../../validate/validate_pb.js');
+goog.object.extend(proto, validate_validate_pb);
 goog.exportSymbol('proto.asgt.v2alpha.type.Data', null, global);
 goog.exportSymbol('proto.asgt.v2alpha.type.Invoice', null, global);
 goog.exportSymbol('proto.asgt.v2alpha.type.InvoiceLine', null, global);

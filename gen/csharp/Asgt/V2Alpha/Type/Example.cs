@@ -26,13 +26,14 @@ namespace Asgt.V2Alpha.Type {
           string.Concat(
             "Ch9hc2d0L3YyYWxwaGEvdHlwZS9leGFtcGxlLnByb3RvEhFhc2d0LnYyYWxw",
             "aGEudHlwZRocYXNndC92MmFscGhhL3R5cGUvZGF0YS5wcm90bxokYXNndC92",
-            "MmFscGhhL3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvInMKB0V4YW1wbGUSJQoE",
-            "ZGF0YRgBIAEoCzIXLmFzZ3QudjJhbHBoYS50eXBlLkRhdGESNQoNdGFyZ2V0",
-            "X3ZhbHVlcxgCIAMoCzIeLmFzZ3QudjJhbHBoYS50eXBlLlRhcmdldFZhbHVl",
-            "EgoKAmlkGAMgASgJQkBaPmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
-            "Z2VuL2dvL2FzZ3QvdjJhbHBoYS90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "MmFscGhhL3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvGhd2YWxpZGF0ZS92YWxp",
+            "ZGF0ZS5wcm90byKHAQoHRXhhbXBsZRIlCgRkYXRhGAEgASgLMhcuYXNndC52",
+            "MmFscGhhLnR5cGUuRGF0YRI/Cg10YXJnZXRfdmFsdWVzGAIgAygLMh4uYXNn",
+            "dC52MmFscGhhLnR5cGUuVGFyZ2V0VmFsdWVCCPpCBZIBAggBEhQKAmlkGAMg",
+            "ASgJQgj6QgVyA7ABAUJAWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
+            "L2dlbi9nby9hc2d0L3YyYWxwaGEvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.V2Alpha.Type.DataReflection.Descriptor, global::Asgt.V2Alpha.Type.TargetValueReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.V2Alpha.Type.DataReflection.Descriptor, global::Asgt.V2Alpha.Type.TargetValueReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.V2Alpha.Type.Example), global::Asgt.V2Alpha.Type.Example.Parser, new[]{ "Data", "TargetValues", "Id" }, null, null, null, null)
           }));
@@ -109,8 +110,7 @@ namespace Asgt.V2Alpha.Type {
     public const int IdFieldNumber = 3;
     private string id_ = "";
     /// <summary>
-    /// An optional id to provide individual corrections to examples, for example when a user updates their initial
-    /// feedback. The id should be a string in UUID format.
+    /// An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Id {

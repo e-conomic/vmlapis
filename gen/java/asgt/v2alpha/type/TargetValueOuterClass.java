@@ -31,11 +31,19 @@ public final class TargetValueOuterClass {
         getNameBytes();
 
     /**
+     * <pre>
+     * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
     java.lang.String getValue();
     /**
+     * <pre>
+     * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -178,6 +186,10 @@ public final class TargetValueOuterClass {
     public static final int VALUE_FIELD_NUMBER = 2;
     private volatile java.lang.Object value_;
     /**
+     * <pre>
+     * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The value.
      */
@@ -195,6 +207,10 @@ public final class TargetValueOuterClass {
       }
     }
     /**
+     * <pre>
+     * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+     * </pre>
+     *
      * <code>string value = 2;</code>
      * @return The bytes for value.
      */
@@ -614,6 +630,10 @@ public final class TargetValueOuterClass {
 
       private java.lang.Object value_ = "";
       /**
+       * <pre>
+       * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The value.
        */
@@ -630,6 +650,10 @@ public final class TargetValueOuterClass {
         }
       }
       /**
+       * <pre>
+       * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return The bytes for value.
        */
@@ -647,6 +671,10 @@ public final class TargetValueOuterClass {
         }
       }
       /**
+       * <pre>
+       * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The value to set.
        * @return This builder for chaining.
@@ -662,6 +690,10 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @return This builder for chaining.
        */
@@ -672,6 +704,10 @@ public final class TargetValueOuterClass {
         return this;
       }
       /**
+       * <pre>
+       * TODO(lku) can have funky characters (/&#92;;...) and most likely also non-english letters
+       * </pre>
+       *
        * <code>string value = 2;</code>
        * @param value The bytes for value to set.
        * @return This builder for chaining.

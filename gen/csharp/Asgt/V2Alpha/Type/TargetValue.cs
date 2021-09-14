@@ -96,6 +96,9 @@ namespace Asgt.V2Alpha.Type {
     /// <summary>Field number for the "value" field.</summary>
     public const int ValueFieldNumber = 2;
     private string value_ = "";
+    /// <summary>
+    /// TODO(lku) can have funky characters (/\;...) and most likely also non-english letters
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Value {
       get { return value_; }

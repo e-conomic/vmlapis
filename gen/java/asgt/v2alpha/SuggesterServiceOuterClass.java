@@ -29,15 +29,15 @@ public final class SuggesterServiceOuterClass {
     int getSuggestLimit();
 
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     int getMinConfidenceValue();
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
      * @return The minConfidence.
      */
-    asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence();
+    asgt.v2alpha.type.PredictionOuterClass.Confidence.Level getMinConfidence();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.SuggestOptions}
@@ -146,20 +146,20 @@ public final class SuggesterServiceOuterClass {
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
     private int minConfidence_;
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
      * @return The enum numeric value on the wire for minConfidence.
      */
     @java.lang.Override public int getMinConfidenceValue() {
       return minConfidence_;
     }
     /**
-     * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+     * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
      * @return The minConfidence.
      */
-    @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+    @java.lang.Override public asgt.v2alpha.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
       @SuppressWarnings("deprecation")
-      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
-      return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+      asgt.v2alpha.type.PredictionOuterClass.Confidence.Level result = asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      return result == null ? asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -179,7 +179,7 @@ public final class SuggesterServiceOuterClass {
       if (suggestLimit_ != 0) {
         output.writeInt32(1, suggestLimit_);
       }
-      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+      if (minConfidence_ != asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         output.writeEnum(2, minConfidence_);
       }
       unknownFields.writeTo(output);
@@ -195,7 +195,7 @@ public final class SuggesterServiceOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(1, suggestLimit_);
       }
-      if (minConfidence_ != asgt.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
+      if (minConfidence_ != asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.UNKNOWN.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, minConfidence_);
       }
@@ -525,14 +525,14 @@ public final class SuggesterServiceOuterClass {
 
       private int minConfidence_ = 0;
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
        * @return The enum numeric value on the wire for minConfidence.
        */
       @java.lang.Override public int getMinConfidenceValue() {
         return minConfidence_;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
        * @param value The enum numeric value on the wire for minConfidence to set.
        * @return This builder for chaining.
        */
@@ -543,21 +543,21 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
        * @return The minConfidence.
        */
       @java.lang.Override
-      public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
+      public asgt.v2alpha.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
         @SuppressWarnings("deprecation")
-        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
-        return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
+        asgt.v2alpha.type.PredictionOuterClass.Confidence.Level result = asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        return result == null ? asgt.v2alpha.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
        * @param value The minConfidence to set.
        * @return This builder for chaining.
        */
-      public Builder setMinConfidence(asgt.type.PredictionOuterClass.Confidence.Level value) {
+      public Builder setMinConfidence(asgt.v2alpha.type.PredictionOuterClass.Confidence.Level value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -567,7 +567,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Confidence.Level min_confidence = 2;</code>
+       * <code>.asgt.v2alpha.type.Confidence.Level min_confidence = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
@@ -646,19 +646,19 @@ public final class SuggesterServiceOuterClass {
         getNameBytes();
 
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
     boolean hasInput();
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      * @return The input.
      */
-    asgt.type.DataOuterClass.Data getInput();
+    asgt.v2alpha.type.DataOuterClass.Data getInput();
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      */
-    asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
+    asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputOrBuilder();
 
     /**
      * <code>.asgt.v2alpha.SuggestOptions options = 3;</code>
@@ -728,11 +728,11 @@ public final class SuggesterServiceOuterClass {
               break;
             }
             case 18: {
-              asgt.type.DataOuterClass.Data.Builder subBuilder = null;
+              asgt.v2alpha.type.DataOuterClass.Data.Builder subBuilder = null;
               if (input_ != null) {
                 subBuilder = input_.toBuilder();
               }
-              input_ = input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry);
+              input_ = input.readMessage(asgt.v2alpha.type.DataOuterClass.Data.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(input_);
                 input_ = subBuilder.buildPartial();
@@ -824,9 +824,9 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int INPUT_FIELD_NUMBER = 2;
-    private asgt.type.DataOuterClass.Data input_;
+    private asgt.v2alpha.type.DataOuterClass.Data input_;
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      * @return Whether the input field is set.
      */
     @java.lang.Override
@@ -834,18 +834,18 @@ public final class SuggesterServiceOuterClass {
       return input_ != null;
     }
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      * @return The input.
      */
     @java.lang.Override
-    public asgt.type.DataOuterClass.Data getInput() {
-      return input_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : input_;
+    public asgt.v2alpha.type.DataOuterClass.Data getInput() {
+      return input_ == null ? asgt.v2alpha.type.DataOuterClass.Data.getDefaultInstance() : input_;
     }
     /**
-     * <code>.asgt.type.Data input = 2;</code>
+     * <code>.asgt.v2alpha.type.Data input = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
+    public asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
       return getInput();
     }
 
@@ -1313,31 +1313,31 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
 
-      private asgt.type.DataOuterClass.Data input_;
+      private asgt.v2alpha.type.DataOuterClass.Data input_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> inputBuilder_;
+          asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder> inputBuilder_;
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        * @return Whether the input field is set.
        */
       public boolean hasInput() {
         return inputBuilder_ != null || input_ != null;
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        * @return The input.
        */
-      public asgt.type.DataOuterClass.Data getInput() {
+      public asgt.v2alpha.type.DataOuterClass.Data getInput() {
         if (inputBuilder_ == null) {
-          return input_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : input_;
+          return input_ == null ? asgt.v2alpha.type.DataOuterClass.Data.getDefaultInstance() : input_;
         } else {
           return inputBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
-      public Builder setInput(asgt.type.DataOuterClass.Data value) {
+      public Builder setInput(asgt.v2alpha.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1351,10 +1351,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
       public Builder setInput(
-          asgt.type.DataOuterClass.Data.Builder builderForValue) {
+          asgt.v2alpha.type.DataOuterClass.Data.Builder builderForValue) {
         if (inputBuilder_ == null) {
           input_ = builderForValue.build();
           onChanged();
@@ -1365,13 +1365,13 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
-      public Builder mergeInput(asgt.type.DataOuterClass.Data value) {
+      public Builder mergeInput(asgt.v2alpha.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
           if (input_ != null) {
             input_ =
-              asgt.type.DataOuterClass.Data.newBuilder(input_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.DataOuterClass.Data.newBuilder(input_).mergeFrom(value).buildPartial();
           } else {
             input_ = value;
           }
@@ -1383,7 +1383,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
       public Builder clearInput() {
         if (inputBuilder_ == null) {
@@ -1397,33 +1397,33 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
-      public asgt.type.DataOuterClass.Data.Builder getInputBuilder() {
+      public asgt.v2alpha.type.DataOuterClass.Data.Builder getInputBuilder() {
         
         onChanged();
         return getInputFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
-      public asgt.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
+      public asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
         if (inputBuilder_ != null) {
           return inputBuilder_.getMessageOrBuilder();
         } else {
           return input_ == null ?
-              asgt.type.DataOuterClass.Data.getDefaultInstance() : input_;
+              asgt.v2alpha.type.DataOuterClass.Data.getDefaultInstance() : input_;
         }
       }
       /**
-       * <code>.asgt.type.Data input = 2;</code>
+       * <code>.asgt.v2alpha.type.Data input = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
+          asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder> 
           getInputFieldBuilder() {
         if (inputBuilder_ == null) {
           inputBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder>(
+              asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder>(
                   getInput(),
                   getParentForChildren(),
                   isClean());
@@ -1608,34 +1608,34 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      * @return Whether the prediction field is set.
      */
     boolean hasPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      * @return The prediction.
      */
-    asgt.type.PredictionOuterClass.Prediction getPrediction();
+    asgt.v2alpha.type.PredictionOuterClass.Prediction getPrediction();
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      */
-    asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder();
+    asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder();
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return The model.
      */
-    asgt.type.ModelOuterClass.Model getModel();
+    asgt.v2alpha.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      */
-    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
+    asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.SuggestResponse}
@@ -1683,11 +1683,11 @@ public final class SuggesterServiceOuterClass {
               done = true;
               break;
             case 10: {
-              asgt.type.PredictionOuterClass.Prediction.Builder subBuilder = null;
+              asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder subBuilder = null;
               if (prediction_ != null) {
                 subBuilder = prediction_.toBuilder();
               }
-              prediction_ = input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry);
+              prediction_ = input.readMessage(asgt.v2alpha.type.PredictionOuterClass.Prediction.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(prediction_);
                 prediction_ = subBuilder.buildPartial();
@@ -1696,11 +1696,11 @@ public final class SuggesterServiceOuterClass {
               break;
             }
             case 18: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
+              asgt.v2alpha.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.v2alpha.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -1741,9 +1741,9 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int PREDICTION_FIELD_NUMBER = 1;
-    private asgt.type.PredictionOuterClass.Prediction prediction_;
+    private asgt.v2alpha.type.PredictionOuterClass.Prediction prediction_;
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      * @return Whether the prediction field is set.
      */
     @java.lang.Override
@@ -1751,25 +1751,25 @@ public final class SuggesterServiceOuterClass {
       return prediction_ != null;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      * @return The prediction.
      */
     @java.lang.Override
-    public asgt.type.PredictionOuterClass.Prediction getPrediction() {
-      return prediction_ == null ? asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
+    public asgt.v2alpha.type.PredictionOuterClass.Prediction getPrediction() {
+      return prediction_ == null ? asgt.v2alpha.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
     }
     /**
-     * <code>.asgt.type.Prediction prediction = 1;</code>
+     * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
      */
     @java.lang.Override
-    public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
+    public asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
       return getPrediction();
     }
 
     public static final int MODEL_FIELD_NUMBER = 2;
-    private asgt.type.ModelOuterClass.Model model_;
+    private asgt.v2alpha.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -1777,18 +1777,18 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return The model.
      */
     @java.lang.Override
-    public asgt.type.ModelOuterClass.Model getModel() {
-      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+    public asgt.v2alpha.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+    public asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -2137,31 +2137,31 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
 
-      private asgt.type.PredictionOuterClass.Prediction prediction_;
+      private asgt.v2alpha.type.PredictionOuterClass.Prediction prediction_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionBuilder_;
+          asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> predictionBuilder_;
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        * @return Whether the prediction field is set.
        */
       public boolean hasPrediction() {
         return predictionBuilder_ != null || prediction_ != null;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        * @return The prediction.
        */
-      public asgt.type.PredictionOuterClass.Prediction getPrediction() {
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction getPrediction() {
         if (predictionBuilder_ == null) {
-          return prediction_ == null ? asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
+          return prediction_ == null ? asgt.v2alpha.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
         } else {
           return predictionBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
-      public Builder setPrediction(asgt.type.PredictionOuterClass.Prediction value) {
+      public Builder setPrediction(asgt.v2alpha.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2175,10 +2175,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
       public Builder setPrediction(
-          asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
+          asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionBuilder_ == null) {
           prediction_ = builderForValue.build();
           onChanged();
@@ -2189,13 +2189,13 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
-      public Builder mergePrediction(asgt.type.PredictionOuterClass.Prediction value) {
+      public Builder mergePrediction(asgt.v2alpha.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
           if (prediction_ != null) {
             prediction_ =
-              asgt.type.PredictionOuterClass.Prediction.newBuilder(prediction_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.PredictionOuterClass.Prediction.newBuilder(prediction_).mergeFrom(value).buildPartial();
           } else {
             prediction_ = value;
           }
@@ -2207,7 +2207,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
       public Builder clearPrediction() {
         if (predictionBuilder_ == null) {
@@ -2221,33 +2221,33 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionBuilder() {
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder getPredictionBuilder() {
         
         onChanged();
         return getPredictionFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
+      public asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
         if (predictionBuilder_ != null) {
           return predictionBuilder_.getMessageOrBuilder();
         } else {
           return prediction_ == null ?
-              asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
+              asgt.v2alpha.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
         }
       }
       /**
-       * <code>.asgt.type.Prediction prediction = 1;</code>
+       * <code>.asgt.v2alpha.type.Prediction prediction = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
+          asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> 
           getPredictionFieldBuilder() {
         if (predictionBuilder_ == null) {
           predictionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
+              asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder>(
                   getPrediction(),
                   getParentForChildren(),
                   isClean());
@@ -2256,31 +2256,31 @@ public final class SuggesterServiceOuterClass {
         return predictionBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_;
+      private asgt.v2alpha.type.ModelOuterClass.Model model_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
+          asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        * @return The model.
        */
-      public asgt.type.ModelOuterClass.Model getModel() {
+      public asgt.v2alpha.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+          return model_ == null ? asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
+      public Builder setModel(asgt.v2alpha.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2294,10 +2294,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       public Builder setModel(
-          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
+          asgt.v2alpha.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -2308,13 +2308,13 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
+      public Builder mergeModel(asgt.v2alpha.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -2326,7 +2326,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -2340,33 +2340,33 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
+      public asgt.v2alpha.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+      public asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+              asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
+          asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
+              asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -2444,27 +2444,27 @@ public final class SuggesterServiceOuterClass {
         getNameBytes();
 
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
-    java.util.List<asgt.type.DataOuterClass.Data> 
+    java.util.List<asgt.v2alpha.type.DataOuterClass.Data> 
         getInputsList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
-    asgt.type.DataOuterClass.Data getInputs(int index);
+    asgt.v2alpha.type.DataOuterClass.Data getInputs(int index);
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     int getInputsCount();
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
-    java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
+    java.util.List<? extends asgt.v2alpha.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
-    asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
+    asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index);
 
     /**
@@ -2538,11 +2538,11 @@ public final class SuggesterServiceOuterClass {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>();
+                inputs_ = new java.util.ArrayList<asgt.v2alpha.type.DataOuterClass.Data>();
                 mutable_bitField0_ |= 0x00000001;
               }
               inputs_.add(
-                  input.readMessage(asgt.type.DataOuterClass.Data.parser(), extensionRegistry));
+                  input.readMessage(asgt.v2alpha.type.DataOuterClass.Data.parser(), extensionRegistry));
               break;
             }
             case 26: {
@@ -2632,41 +2632,41 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int INPUTS_FIELD_NUMBER = 2;
-    private java.util.List<asgt.type.DataOuterClass.Data> inputs_;
+    private java.util.List<asgt.v2alpha.type.DataOuterClass.Data> inputs_;
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
+    public java.util.List<asgt.v2alpha.type.DataOuterClass.Data> getInputsList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
+    public java.util.List<? extends asgt.v2alpha.type.DataOuterClass.DataOrBuilder> 
         getInputsOrBuilderList() {
       return inputs_;
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     @java.lang.Override
     public int getInputsCount() {
       return inputs_.size();
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.DataOuterClass.Data getInputs(int index) {
+    public asgt.v2alpha.type.DataOuterClass.Data getInputs(int index) {
       return inputs_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Data inputs = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
+    public asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
         int index) {
       return inputs_.get(index);
     }
@@ -3162,22 +3162,22 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
 
-      private java.util.List<asgt.type.DataOuterClass.Data> inputs_ =
+      private java.util.List<asgt.v2alpha.type.DataOuterClass.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>(inputs_);
+          inputs_ = new java.util.ArrayList<asgt.v2alpha.type.DataOuterClass.Data>(inputs_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> inputsBuilder_;
+          asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder> inputsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public java.util.List<asgt.type.DataOuterClass.Data> getInputsList() {
+      public java.util.List<asgt.v2alpha.type.DataOuterClass.Data> getInputsList() {
         if (inputsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(inputs_);
         } else {
@@ -3185,7 +3185,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public int getInputsCount() {
         if (inputsBuilder_ == null) {
@@ -3195,9 +3195,9 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public asgt.type.DataOuterClass.Data getInputs(int index) {
+      public asgt.v2alpha.type.DataOuterClass.Data getInputs(int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);
         } else {
@@ -3205,10 +3205,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
-          int index, asgt.type.DataOuterClass.Data value) {
+          int index, asgt.v2alpha.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3222,10 +3222,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder setInputs(
-          int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
+          int index, asgt.v2alpha.type.DataOuterClass.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.set(index, builderForValue.build());
@@ -3236,9 +3236,9 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public Builder addInputs(asgt.type.DataOuterClass.Data value) {
+      public Builder addInputs(asgt.v2alpha.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3252,10 +3252,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
-          int index, asgt.type.DataOuterClass.Data value) {
+          int index, asgt.v2alpha.type.DataOuterClass.Data value) {
         if (inputsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3269,10 +3269,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
-          asgt.type.DataOuterClass.Data.Builder builderForValue) {
+          asgt.v2alpha.type.DataOuterClass.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(builderForValue.build());
@@ -3283,10 +3283,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder addInputs(
-          int index, asgt.type.DataOuterClass.Data.Builder builderForValue) {
+          int index, asgt.v2alpha.type.DataOuterClass.Data.Builder builderForValue) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           inputs_.add(index, builderForValue.build());
@@ -3297,10 +3297,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder addAllInputs(
-          java.lang.Iterable<? extends asgt.type.DataOuterClass.Data> values) {
+          java.lang.Iterable<? extends asgt.v2alpha.type.DataOuterClass.Data> values) {
         if (inputsBuilder_ == null) {
           ensureInputsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3312,7 +3312,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
@@ -3325,7 +3325,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
       public Builder removeInputs(int index) {
         if (inputsBuilder_ == null) {
@@ -3338,16 +3338,16 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public asgt.type.DataOuterClass.Data.Builder getInputsBuilder(
+      public asgt.v2alpha.type.DataOuterClass.Data.Builder getInputsBuilder(
           int index) {
         return getInputsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public asgt.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
+      public asgt.v2alpha.type.DataOuterClass.DataOrBuilder getInputsOrBuilder(
           int index) {
         if (inputsBuilder_ == null) {
           return inputs_.get(index);  } else {
@@ -3355,9 +3355,9 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public java.util.List<? extends asgt.type.DataOuterClass.DataOrBuilder> 
+      public java.util.List<? extends asgt.v2alpha.type.DataOuterClass.DataOrBuilder> 
            getInputsOrBuilderList() {
         if (inputsBuilder_ != null) {
           return inputsBuilder_.getMessageOrBuilderList();
@@ -3366,33 +3366,33 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public asgt.type.DataOuterClass.Data.Builder addInputsBuilder() {
+      public asgt.v2alpha.type.DataOuterClass.Data.Builder addInputsBuilder() {
         return getInputsFieldBuilder().addBuilder(
-            asgt.type.DataOuterClass.Data.getDefaultInstance());
+            asgt.v2alpha.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public asgt.type.DataOuterClass.Data.Builder addInputsBuilder(
+      public asgt.v2alpha.type.DataOuterClass.Data.Builder addInputsBuilder(
           int index) {
         return getInputsFieldBuilder().addBuilder(
-            index, asgt.type.DataOuterClass.Data.getDefaultInstance());
+            index, asgt.v2alpha.type.DataOuterClass.Data.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Data inputs = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.Data inputs = 2;</code>
        */
-      public java.util.List<asgt.type.DataOuterClass.Data.Builder> 
+      public java.util.List<asgt.v2alpha.type.DataOuterClass.Data.Builder> 
            getInputsBuilderList() {
         return getInputsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder> 
+          asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder> 
           getInputsFieldBuilder() {
         if (inputsBuilder_ == null) {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder>(
+              asgt.v2alpha.type.DataOuterClass.Data, asgt.v2alpha.type.DataOuterClass.Data.Builder, asgt.v2alpha.type.DataOuterClass.DataOrBuilder>(
                   inputs_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -3578,43 +3578,43 @@ public final class SuggesterServiceOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
-    java.util.List<asgt.type.PredictionOuterClass.Prediction> 
+    java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction> 
         getPredictionsList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
-    asgt.type.PredictionOuterClass.Prediction getPredictions(int index);
+    asgt.v2alpha.type.PredictionOuterClass.Prediction getPredictions(int index);
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     int getPredictionsCount();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
-    java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
+    java.util.List<? extends asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList();
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
-    asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+    asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index);
 
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return Whether the model field is set.
      */
     boolean hasModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return The model.
      */
-    asgt.type.ModelOuterClass.Model getModel();
+    asgt.v2alpha.type.ModelOuterClass.Model getModel();
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      */
-    asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
+    asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder();
   }
   /**
    * Protobuf type {@code asgt.v2alpha.BatchSuggestResponse}
@@ -3665,19 +3665,19 @@ public final class SuggesterServiceOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>();
+                predictions_ = new java.util.ArrayList<asgt.v2alpha.type.PredictionOuterClass.Prediction>();
                 mutable_bitField0_ |= 0x00000001;
               }
               predictions_.add(
-                  input.readMessage(asgt.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
+                  input.readMessage(asgt.v2alpha.type.PredictionOuterClass.Prediction.parser(), extensionRegistry));
               break;
             }
             case 18: {
-              asgt.type.ModelOuterClass.Model.Builder subBuilder = null;
+              asgt.v2alpha.type.ModelOuterClass.Model.Builder subBuilder = null;
               if (model_ != null) {
                 subBuilder = model_.toBuilder();
               }
-              model_ = input.readMessage(asgt.type.ModelOuterClass.Model.parser(), extensionRegistry);
+              model_ = input.readMessage(asgt.v2alpha.type.ModelOuterClass.Model.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(model_);
                 model_ = subBuilder.buildPartial();
@@ -3721,49 +3721,49 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
-    private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
+    private java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction> predictions_;
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
+    public java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction> getPredictionsList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
+    public java.util.List<? extends asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> 
         getPredictionsOrBuilderList() {
       return predictions_;
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     @java.lang.Override
     public int getPredictionsCount() {
       return predictions_.size();
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     @java.lang.Override
-    public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
+    public asgt.v2alpha.type.PredictionOuterClass.Prediction getPredictions(int index) {
       return predictions_.get(index);
     }
     /**
-     * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+     * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
      */
     @java.lang.Override
-    public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+    public asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
         int index) {
       return predictions_.get(index);
     }
 
     public static final int MODEL_FIELD_NUMBER = 2;
-    private asgt.type.ModelOuterClass.Model model_;
+    private asgt.v2alpha.type.ModelOuterClass.Model model_;
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return Whether the model field is set.
      */
     @java.lang.Override
@@ -3771,18 +3771,18 @@ public final class SuggesterServiceOuterClass {
       return model_ != null;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      * @return The model.
      */
     @java.lang.Override
-    public asgt.type.ModelOuterClass.Model getModel() {
-      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+    public asgt.v2alpha.type.ModelOuterClass.Model getModel() {
+      return model_ == null ? asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
     /**
-     * <code>.asgt.type.Model model = 2;</code>
+     * <code>.asgt.v2alpha.type.Model model = 2;</code>
      */
     @java.lang.Override
-    public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+    public asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
       return getModel();
     }
 
@@ -4158,22 +4158,22 @@ public final class SuggesterServiceOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_ =
+      private java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction> predictions_ =
         java.util.Collections.emptyList();
       private void ensurePredictionsIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          predictions_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction>(predictions_);
+          predictions_ = new java.util.ArrayList<asgt.v2alpha.type.PredictionOuterClass.Prediction>(predictions_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
+          asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> predictionsBuilder_;
 
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction> getPredictionsList() {
+      public java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction> getPredictionsList() {
         if (predictionsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(predictions_);
         } else {
@@ -4181,7 +4181,7 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public int getPredictionsCount() {
         if (predictionsBuilder_ == null) {
@@ -4191,9 +4191,9 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction getPredictions(int index) {
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction getPredictions(int index) {
         if (predictionsBuilder_ == null) {
           return predictions_.get(index);
         } else {
@@ -4201,10 +4201,10 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder setPredictions(
-          int index, asgt.type.PredictionOuterClass.Prediction value) {
+          int index, asgt.v2alpha.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4218,10 +4218,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder setPredictions(
-          int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
+          int index, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.set(index, builderForValue.build());
@@ -4232,9 +4232,9 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public Builder addPredictions(asgt.type.PredictionOuterClass.Prediction value) {
+      public Builder addPredictions(asgt.v2alpha.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4248,10 +4248,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          int index, asgt.type.PredictionOuterClass.Prediction value) {
+          int index, asgt.v2alpha.type.PredictionOuterClass.Prediction value) {
         if (predictionsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4265,10 +4265,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
+          asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.add(builderForValue.build());
@@ -4279,10 +4279,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder addPredictions(
-          int index, asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
+          int index, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           predictions_.add(index, builderForValue.build());
@@ -4293,10 +4293,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder addAllPredictions(
-          java.lang.Iterable<? extends asgt.type.PredictionOuterClass.Prediction> values) {
+          java.lang.Iterable<? extends asgt.v2alpha.type.PredictionOuterClass.Prediction> values) {
         if (predictionsBuilder_ == null) {
           ensurePredictionsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4308,7 +4308,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder clearPredictions() {
         if (predictionsBuilder_ == null) {
@@ -4321,7 +4321,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
       public Builder removePredictions(int index) {
         if (predictionsBuilder_ == null) {
@@ -4334,16 +4334,16 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder getPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
+      public asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder getPredictionsOrBuilder(
           int index) {
         if (predictionsBuilder_ == null) {
           return predictions_.get(index);  } else {
@@ -4351,9 +4351,9 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<? extends asgt.type.PredictionOuterClass.PredictionOrBuilder> 
+      public java.util.List<? extends asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> 
            getPredictionsOrBuilderList() {
         if (predictionsBuilder_ != null) {
           return predictionsBuilder_.getMessageOrBuilderList();
@@ -4362,33 +4362,33 @@ public final class SuggesterServiceOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder() {
         return getPredictionsFieldBuilder().addBuilder(
-            asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
+            asgt.v2alpha.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public asgt.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
+      public asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder addPredictionsBuilder(
           int index) {
         return getPredictionsFieldBuilder().addBuilder(
-            index, asgt.type.PredictionOuterClass.Prediction.getDefaultInstance());
+            index, asgt.v2alpha.type.PredictionOuterClass.Prediction.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.type.Prediction predictions = 1;</code>
+       * <code>repeated .asgt.v2alpha.type.Prediction predictions = 1;</code>
        */
-      public java.util.List<asgt.type.PredictionOuterClass.Prediction.Builder> 
+      public java.util.List<asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder> 
            getPredictionsBuilderList() {
         return getPredictionsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder> 
+          asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder> 
           getPredictionsFieldBuilder() {
         if (predictionsBuilder_ == null) {
           predictionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              asgt.type.PredictionOuterClass.Prediction, asgt.type.PredictionOuterClass.Prediction.Builder, asgt.type.PredictionOuterClass.PredictionOrBuilder>(
+              asgt.v2alpha.type.PredictionOuterClass.Prediction, asgt.v2alpha.type.PredictionOuterClass.Prediction.Builder, asgt.v2alpha.type.PredictionOuterClass.PredictionOrBuilder>(
                   predictions_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -4398,31 +4398,31 @@ public final class SuggesterServiceOuterClass {
         return predictionsBuilder_;
       }
 
-      private asgt.type.ModelOuterClass.Model model_;
+      private asgt.v2alpha.type.ModelOuterClass.Model model_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
+          asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder> modelBuilder_;
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
         return modelBuilder_ != null || model_ != null;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        * @return The model.
        */
-      public asgt.type.ModelOuterClass.Model getModel() {
+      public asgt.v2alpha.type.ModelOuterClass.Model getModel() {
         if (modelBuilder_ == null) {
-          return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+          return model_ == null ? asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         } else {
           return modelBuilder_.getMessage();
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public Builder setModel(asgt.type.ModelOuterClass.Model value) {
+      public Builder setModel(asgt.v2alpha.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4436,10 +4436,10 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       public Builder setModel(
-          asgt.type.ModelOuterClass.Model.Builder builderForValue) {
+          asgt.v2alpha.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
           onChanged();
@@ -4450,13 +4450,13 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
+      public Builder mergeModel(asgt.v2alpha.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
           if (model_ != null) {
             model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+              asgt.v2alpha.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
           } else {
             model_ = value;
           }
@@ -4468,7 +4468,7 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       public Builder clearModel() {
         if (modelBuilder_ == null) {
@@ -4482,33 +4482,33 @@ public final class SuggesterServiceOuterClass {
         return this;
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
+      public asgt.v2alpha.type.ModelOuterClass.Model.Builder getModelBuilder() {
         
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
-      public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
+      public asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
         if (modelBuilder_ != null) {
           return modelBuilder_.getMessageOrBuilder();
         } else {
           return model_ == null ?
-              asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
+              asgt.v2alpha.type.ModelOuterClass.Model.getDefaultInstance() : model_;
         }
       }
       /**
-       * <code>.asgt.type.Model model = 2;</code>
+       * <code>.asgt.v2alpha.type.Model model = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder> 
+          asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder> 
           getModelFieldBuilder() {
         if (modelBuilder_ == null) {
           modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              asgt.type.ModelOuterClass.Model, asgt.type.ModelOuterClass.Model.Builder, asgt.type.ModelOuterClass.ModelOrBuilder>(
+              asgt.v2alpha.type.ModelOuterClass.Model, asgt.v2alpha.type.ModelOuterClass.Model.Builder, asgt.v2alpha.type.ModelOuterClass.ModelOrBuilder>(
                   getModel(),
                   getParentForChildren(),
                   isClean());
@@ -4604,23 +4604,25 @@ public final class SuggesterServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n$asgt/v2alpha/suggester_service.proto\022\014" +
-      "asgt.v2alpha\032\024asgt/type/data.proto\032\025asgt" +
-      "/type/model.proto\032\032asgt/type/prediction." +
-      "proto\032\034google/api/annotations.proto\032\031opt" +
-      "ions/annotations.proto\"w\n\016SuggestOptions" +
-      "\022\025\n\rsuggest_limit\030\001 \001(\005\0223\n\016min_confidenc" +
-      "e\030\002 \001(\0162\033.asgt.type.Confidence.Level:\031\222A" +
-      "\0262\024{\"suggest_limit\": 3}\"m\n\016SuggestReques" +
-      "t\022\014\n\004name\030\001 \001(\t\022\036\n\005input\030\002 \001(\0132\017.asgt.ty" +
+      "asgt.v2alpha\032\034asgt/v2alpha/type/data.pro" +
+      "to\032\035asgt/v2alpha/type/model.proto\032\"asgt/" +
+      "v2alpha/type/prediction.proto\032\034google/ap" +
+      "i/annotations.proto\032\031options/annotations" +
+      ".proto\"\177\n\016SuggestOptions\022\025\n\rsuggest_limi" +
+      "t\030\001 \001(\005\022;\n\016min_confidence\030\002 \001(\0162#.asgt.v" +
+      "2alpha.type.Confidence.Level:\031\222A\0262\024{\"sug" +
+      "gest_limit\": 3}\"u\n\016SuggestRequest\022\014\n\004nam" +
+      "e\030\001 \001(\t\022&\n\005input\030\002 \001(\0132\027.asgt.v2alpha.ty" +
       "pe.Data\022-\n\007options\030\003 \001(\0132\034.asgt.v2alpha." +
-      "SuggestOptions\"]\n\017SuggestResponse\022)\n\npre" +
-      "diction\030\001 \001(\0132\025.asgt.type.Prediction\022\037\n\005" +
-      "model\030\002 \001(\0132\020.asgt.type.Model\"s\n\023BatchSu" +
-      "ggestRequest\022\014\n\004name\030\001 \001(\t\022\037\n\006inputs\030\002 \003" +
-      "(\0132\017.asgt.type.Data\022-\n\007options\030\003 \001(\0132\034.a" +
-      "sgt.v2alpha.SuggestOptions\"c\n\024BatchSugge" +
-      "stResponse\022*\n\013predictions\030\001 \003(\0132\025.asgt.t" +
-      "ype.Prediction\022\037\n\005model\030\002 \001(\0132\020.asgt.typ" +
+      "SuggestOptions\"m\n\017SuggestResponse\0221\n\npre" +
+      "diction\030\001 \001(\0132\035.asgt.v2alpha.type.Predic" +
+      "tion\022\'\n\005model\030\002 \001(\0132\030.asgt.v2alpha.type." +
+      "Model\"{\n\023BatchSuggestRequest\022\014\n\004name\030\001 \001" +
+      "(\t\022\'\n\006inputs\030\002 \003(\0132\027.asgt.v2alpha.type.D" +
+      "ata\022-\n\007options\030\003 \001(\0132\034.asgt.v2alpha.Sugg" +
+      "estOptions\"s\n\024BatchSuggestResponse\0222\n\013pr" +
+      "edictions\030\001 \003(\0132\035.asgt.v2alpha.type.Pred" +
+      "iction\022\'\n\005model\030\002 \001(\0132\030.asgt.v2alpha.typ" +
       "e.Model2\250\007\n\020SuggesterService\022\200\002\n\007Suggest" +
       "\022\034.asgt.v2alpha.SuggestRequest\032\035.asgt.v2" +
       "alpha.SuggestResponse\"\267\001\202\323\344\223\002\260\001\"\033/v2/dat" +
@@ -4652,9 +4654,9 @@ public final class SuggesterServiceOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          asgt.type.DataOuterClass.getDescriptor(),
-          asgt.type.ModelOuterClass.getDescriptor(),
-          asgt.type.PredictionOuterClass.getDescriptor(),
+          asgt.v2alpha.type.DataOuterClass.getDescriptor(),
+          asgt.v2alpha.type.ModelOuterClass.getDescriptor(),
+          asgt.v2alpha.type.PredictionOuterClass.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor(),
         });
@@ -4696,9 +4698,9 @@ public final class SuggesterServiceOuterClass {
     registry.add(grpc.gateway.protoc_gen_openapiv2.options.Annotations.openapiv2Tag);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    asgt.type.DataOuterClass.getDescriptor();
-    asgt.type.ModelOuterClass.getDescriptor();
-    asgt.type.PredictionOuterClass.getDescriptor();
+    asgt.v2alpha.type.DataOuterClass.getDescriptor();
+    asgt.v2alpha.type.ModelOuterClass.getDescriptor();
+    asgt.v2alpha.type.PredictionOuterClass.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     grpc.gateway.protoc_gen_openapiv2.options.Annotations.getDescriptor();
   }

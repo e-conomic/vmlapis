@@ -105,7 +105,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
      * @return The currency.
      */
     java.lang.String getCurrency();
@@ -114,7 +114,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
      * @return The bytes for currency.
      */
     com.google.protobuf.ByteString
@@ -422,7 +422,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
      * @return The currency.
      */
     @java.lang.Override
@@ -443,7 +443,7 @@ public final class DataOuterClass {
      * name of the currency as a string. Used in electronic-invoice-line requests.
      * </pre>
      *
-     * <code>string currency = 6;</code>
+     * <code>string currency = 6 [(.validate.rules) = { ... }</code>
      * @return The bytes for currency.
      */
     @java.lang.Override
@@ -1363,7 +1363,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
        * @return The currency.
        */
       public java.lang.String getCurrency() {
@@ -1383,7 +1383,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
        * @return The bytes for currency.
        */
       public com.google.protobuf.ByteString
@@ -1404,7 +1404,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
        * @param value The currency to set.
        * @return This builder for chaining.
        */
@@ -1423,7 +1423,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
@@ -1437,7 +1437,7 @@ public final class DataOuterClass {
        * name of the currency as a string. Used in electronic-invoice-line requests.
        * </pre>
        *
-       * <code>string currency = 6;</code>
+       * <code>string currency = 6 [(.validate.rules) = { ... }</code>
        * @param value The bytes for currency to set.
        * @return This builder for chaining.
        */
@@ -2347,7 +2347,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
@@ -2356,7 +2356,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -2507,7 +2507,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2528,7 +2528,7 @@ public final class DataOuterClass {
      *  id of the supplier; not nullable
      * </pre>
      *
-     * <code>string id = 1;</code>
+     * <code>string id = 1 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -2980,7 +2980,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -3000,7 +3000,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -3021,7 +3021,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -3040,7 +3040,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -3054,7 +3054,7 @@ public final class DataOuterClass {
        *  id of the supplier; not nullable
        * </pre>
        *
-       * <code>string id = 1;</code>
+       * <code>string id = 1 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -5253,26 +5253,28 @@ public final class DataOuterClass {
     java.lang.String[] descriptorData = {
       "\n\034asgt/v2alpha/type/data.proto\022\021asgt.v2a" +
       "lpha.type\032\037google/protobuf/timestamp.pro" +
-      "to\"\255\001\n\007Invoice\022.\n\nissue_date\030\001 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\022-\n\010supplier\030\002 \001(\013" +
-      "2\033.asgt.v2alpha.type.Supplier\022\024\n\014custome" +
-      "r_ref\030\003 \001(\t\022\014\n\004text\030\004 \001(\t\022\020\n\010currency\030\006 " +
-      "\001(\t\022\r\n\005total\030\007 \001(\002\",\n\013InvoiceLine\022\014\n\004tex" +
-      "t\030\010 \001(\t\022\017\n\007item_id\030\t \001(\t\"7\n\010Supplier\022\n\n\002" +
-      "id\030\001 \001(\t\022\014\n\004name\030\004 \001(\t\022\021\n\tglobal_id\030\005 \001(" +
-      "\t\"+\n\013Transaction\022\014\n\004text\030\001 \001(\t\022\016\n\006amount" +
-      "\030\002 \001(\002\"\236\001\n\004Data\0223\n\013transaction\030\001 \001(\0132\036.a" +
-      "sgt.v2alpha.type.Transaction\022+\n\007invoice\030" +
-      "\002 \001(\0132\032.asgt.v2alpha.type.Invoice\0224\n\014inv" +
-      "oice_line\030\003 \001(\0132\036.asgt.v2alpha.type.Invo" +
-      "iceLineB@Z>github.com/e-conomic/vmlapis/" +
-      "gen/go/asgt/v2alpha/type;asgttypeb\006proto" +
-      "3"
+      "to\032\027validate/validate.proto\"\306\001\n\007Invoice\022" +
+      ".\n\nissue_date\030\001 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\022-\n\010supplier\030\002 \001(\0132\033.asgt.v2alpha" +
+      ".type.Supplier\022\024\n\014customer_ref\030\003 \001(\t\022\014\n\004" +
+      "text\030\004 \001(\t\022)\n\010currency\030\006 \001(\tB\027\372B\024r\022(\n2\016^" +
+      "[A-Za-z0-9]*$\022\r\n\005total\030\007 \001(\002\",\n\013InvoiceL" +
+      "ine\022\014\n\004text\030\010 \001(\t\022\017\n\007item_id\030\t \001(\t\"P\n\010Su" +
+      "pplier\022#\n\002id\030\001 \001(\tB\027\372B\024r\022(@2\016^[A-Za-z0-9" +
+      "]*$\022\014\n\004name\030\004 \001(\t\022\021\n\tglobal_id\030\005 \001(\t\"+\n\013" +
+      "Transaction\022\014\n\004text\030\001 \001(\t\022\016\n\006amount\030\002 \001(" +
+      "\002\"\236\001\n\004Data\0223\n\013transaction\030\001 \001(\0132\036.asgt.v" +
+      "2alpha.type.Transaction\022+\n\007invoice\030\002 \001(\013" +
+      "2\032.asgt.v2alpha.type.Invoice\0224\n\014invoice_" +
+      "line\030\003 \001(\0132\036.asgt.v2alpha.type.InvoiceLi" +
+      "neB@Z>github.com/e-conomic/vmlapis/gen/g" +
+      "o/asgt/v2alpha/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.TimestampProto.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_asgt_v2alpha_type_Invoice_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5304,7 +5306,13 @@ public final class DataOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_type_Data_descriptor,
         new java.lang.String[] { "Transaction", "Invoice", "InvoiceLine", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     com.google.protobuf.TimestampProto.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

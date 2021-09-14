@@ -17,7 +17,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/anypb"
 
-	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/type"
+	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type"
 )
 
 // ensure the imports are used

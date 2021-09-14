@@ -64,7 +64,19 @@ func (m *Invoice) Validate() error {
 
 	// no validation rules for Text
 
-	// no validation rules for Currency
+	if len(m.GetCurrency()) > 10 {
+		return InvoiceValidationError{
+			field:  "Currency",
+			reason: "value length must be at most 10 bytes",
+		}
+	}
+
+	if !_Invoice_Currency_Pattern.MatchString(m.GetCurrency()) {
+		return InvoiceValidationError{
+			field:  "Currency",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9]*$\"",
+		}
+	}
 
 	// no validation rules for Total
 
@@ -124,6 +136,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = InvoiceValidationError{}
+
+var _Invoice_Currency_Pattern = regexp.MustCompile("^[A-Za-z0-9]*$")
 
 // Validate checks the field values on InvoiceLine with the rules defined in
 // the proto definition for this message. If any rules are violated, an error
@@ -201,7 +215,19 @@ func (m *Supplier) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Id
+	if len(m.GetId()) > 64 {
+		return SupplierValidationError{
+			field:  "Id",
+			reason: "value length must be at most 64 bytes",
+		}
+	}
+
+	if !_Supplier_Id_Pattern.MatchString(m.GetId()) {
+		return SupplierValidationError{
+			field:  "Id",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9]*$\"",
+		}
+	}
 
 	// no validation rules for Name
 
@@ -263,6 +289,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SupplierValidationError{}
+
+var _Supplier_Id_Pattern = regexp.MustCompile("^[A-Za-z0-9]*$")
 
 // Validate checks the field values on Transaction with the rules defined in
 // the proto definition for this message. If any rules are violated, an error

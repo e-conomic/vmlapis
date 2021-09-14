@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x61sgt/v2alpha/type/data.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1fgoogle/protobuf/timestamp.proto\"\xad\x01\n\x07Invoice\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\x08supplier\x18\x02 \x01(\x0b\x32\x1b.asgt.v2alpha.type.Supplier\x12\x14\n\x0c\x63ustomer_ref\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x10\n\x08\x63urrency\x18\x06 \x01(\t\x12\r\n\x05total\x18\x07 \x01(\x02\",\n\x0bInvoiceLine\x12\x0c\n\x04text\x18\x08 \x01(\t\x12\x0f\n\x07item_id\x18\t \x01(\t\"7\n\x08Supplier\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x11\n\tglobal_id\x18\x05 \x01(\t\"+\n\x0bTransaction\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x02\"\x9e\x01\n\x04\x44\x61ta\x12\x33\n\x0btransaction\x18\x01 \x01(\x0b\x32\x1e.asgt.v2alpha.type.Transaction\x12+\n\x07invoice\x18\x02 \x01(\x0b\x32\x1a.asgt.v2alpha.type.Invoice\x12\x34\n\x0cinvoice_line\x18\x03 \x01(\x0b\x32\x1e.asgt.v2alpha.type.InvoiceLineB@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n\x1c\x61sgt/v2alpha/type/data.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17validate/validate.proto\"\xc6\x01\n\x07Invoice\x12.\n\nissue_date\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12-\n\x08supplier\x18\x02 \x01(\x0b\x32\x1b.asgt.v2alpha.type.Supplier\x12\x14\n\x0c\x63ustomer_ref\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12)\n\x08\x63urrency\x18\x06 \x01(\tB\x17\xfa\x42\x14r\x12(\n2\x0e^[A-Za-z0-9]*$\x12\r\n\x05total\x18\x07 \x01(\x02\",\n\x0bInvoiceLine\x12\x0c\n\x04text\x18\x08 \x01(\t\x12\x0f\n\x07item_id\x18\t \x01(\t\"P\n\x08Supplier\x12#\n\x02id\x18\x01 \x01(\tB\x17\xfa\x42\x14r\x12(@2\x0e^[A-Za-z0-9]*$\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x11\n\tglobal_id\x18\x05 \x01(\t\"+\n\x0bTransaction\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x02\"\x9e\x01\n\x04\x44\x61ta\x12\x33\n\x0btransaction\x18\x01 \x01(\x0b\x32\x1e.asgt.v2alpha.type.Transaction\x12+\n\x07invoice\x18\x02 \x01(\x0b\x32\x1a.asgt.v2alpha.type.Invoice\x12\x34\n\x0cinvoice_line\x18\x03 \x01(\x0b\x32\x1e.asgt.v2alpha.type.InvoiceLineB@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -69,7 +70,7 @@ _INVOICE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\024r\022(\n2\016^[A-Za-z0-9]*$', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='total', full_name='asgt.v2alpha.type.Invoice.total', index=5,
       number=7, type=2, cpp_type=6, label=1,
@@ -89,8 +90,8 @@ _INVOICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=85,
-  serialized_end=258,
+  serialized_start=110,
+  serialized_end=308,
 )
 
 
@@ -128,8 +129,8 @@ _INVOICELINE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=260,
-  serialized_end=304,
+  serialized_start=310,
+  serialized_end=354,
 )
 
 
@@ -147,7 +148,7 @@ _SUPPLIER = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\024r\022(@2\016^[A-Za-z0-9]*$', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='name', full_name='asgt.v2alpha.type.Supplier.name', index=1,
       number=4, type=9, cpp_type=9, label=1,
@@ -174,8 +175,8 @@ _SUPPLIER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=306,
-  serialized_end=361,
+  serialized_start=356,
+  serialized_end=436,
 )
 
 
@@ -213,8 +214,8 @@ _TRANSACTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=363,
-  serialized_end=406,
+  serialized_start=438,
+  serialized_end=481,
 )
 
 
@@ -259,8 +260,8 @@ _DATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=409,
-  serialized_end=567,
+  serialized_start=484,
+  serialized_end=642,
 )
 
 _INVOICE.fields_by_name['issue_date'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -312,4 +313,6 @@ _sym_db.RegisterMessage(Data)
 
 
 DESCRIPTOR._options = None
+_INVOICE.fields_by_name['currency']._options = None
+_SUPPLIER.fields_by_name['id']._options = None
 # @@protoc_insertion_point(module_scope)

@@ -28,7 +28,7 @@ type TargetValue struct {
 	unknownFields protoimpl.UnknownFields
 
 	Name  string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
-	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"`
+	Value string `protobuf:"bytes,2,opt,name=value,proto3" json:"value,omitempty"` // TODO(lku) can have funky characters (/\;...) and most likely also non-english letters
 }
 
 func (x *TargetValue) Reset() {

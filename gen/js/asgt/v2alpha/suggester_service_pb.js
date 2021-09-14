@@ -12,12 +12,12 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
-var asgt_type_data_pb = require('../../asgt/type/data_pb.js');
-goog.object.extend(proto, asgt_type_data_pb);
-var asgt_type_model_pb = require('../../asgt/type/model_pb.js');
-goog.object.extend(proto, asgt_type_model_pb);
-var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
-goog.object.extend(proto, asgt_type_prediction_pb);
+var asgt_v2alpha_type_data_pb = require('../../asgt/v2alpha/type/data_pb.js');
+goog.object.extend(proto, asgt_v2alpha_type_data_pb);
+var asgt_v2alpha_type_model_pb = require('../../asgt/v2alpha/type/model_pb.js');
+goog.object.extend(proto, asgt_v2alpha_type_model_pb);
+var asgt_v2alpha_type_prediction_pb = require('../../asgt/v2alpha/type/prediction_pb.js');
+goog.object.extend(proto, asgt_v2alpha_type_prediction_pb);
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
 var options_annotations_pb = require('../../options/annotations_pb.js');
@@ -207,7 +207,7 @@ proto.asgt.v2alpha.SuggestOptions.deserializeBinaryFromReader = function(msg, re
       msg.setSuggestLimit(value);
       break;
     case 2:
-      var value = /** @type {!proto.asgt.type.Confidence.Level} */ (reader.readEnum());
+      var value = /** @type {!proto.asgt.v2alpha.type.Confidence.Level} */ (reader.readEnum());
       msg.setMinConfidence(value);
       break;
     default:
@@ -275,16 +275,16 @@ proto.asgt.v2alpha.SuggestOptions.prototype.setSuggestLimit = function(value) {
 
 
 /**
- * optional asgt.type.Confidence.Level min_confidence = 2;
- * @return {!proto.asgt.type.Confidence.Level}
+ * optional type.Confidence.Level min_confidence = 2;
+ * @return {!proto.asgt.v2alpha.type.Confidence.Level}
  */
 proto.asgt.v2alpha.SuggestOptions.prototype.getMinConfidence = function() {
-  return /** @type {!proto.asgt.type.Confidence.Level} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
+  return /** @type {!proto.asgt.v2alpha.type.Confidence.Level} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
- * @param {!proto.asgt.type.Confidence.Level} value
+ * @param {!proto.asgt.v2alpha.type.Confidence.Level} value
  * @return {!proto.asgt.v2alpha.SuggestOptions} returns this
  */
 proto.asgt.v2alpha.SuggestOptions.prototype.setMinConfidence = function(value) {
@@ -325,7 +325,7 @@ proto.asgt.v2alpha.SuggestRequest.prototype.toObject = function(opt_includeInsta
 proto.asgt.v2alpha.SuggestRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    input: (f = msg.getInput()) && asgt_type_data_pb.Data.toObject(includeInstance, f),
+    input: (f = msg.getInput()) && asgt_v2alpha_type_data_pb.Data.toObject(includeInstance, f),
     options: (f = msg.getOptions()) && proto.asgt.v2alpha.SuggestOptions.toObject(includeInstance, f)
   };
 
@@ -368,8 +368,8 @@ proto.asgt.v2alpha.SuggestRequest.deserializeBinaryFromReader = function(msg, re
       msg.setName(value);
       break;
     case 2:
-      var value = new asgt_type_data_pb.Data;
-      reader.readMessage(value,asgt_type_data_pb.Data.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_data_pb.Data;
+      reader.readMessage(value,asgt_v2alpha_type_data_pb.Data.deserializeBinaryFromReader);
       msg.setInput(value);
       break;
     case 3:
@@ -418,7 +418,7 @@ proto.asgt.v2alpha.SuggestRequest.serializeBinaryToWriter = function(message, wr
     writer.writeMessage(
       2,
       f,
-      asgt_type_data_pb.Data.serializeBinaryToWriter
+      asgt_v2alpha_type_data_pb.Data.serializeBinaryToWriter
     );
   }
   f = message.getOptions();
@@ -451,17 +451,17 @@ proto.asgt.v2alpha.SuggestRequest.prototype.setName = function(value) {
 
 
 /**
- * optional asgt.type.Data input = 2;
- * @return {?proto.asgt.type.Data}
+ * optional type.Data input = 2;
+ * @return {?proto.asgt.v2alpha.type.Data}
  */
 proto.asgt.v2alpha.SuggestRequest.prototype.getInput = function() {
-  return /** @type{?proto.asgt.type.Data} */ (
-    jspb.Message.getWrapperField(this, asgt_type_data_pb.Data, 2));
+  return /** @type{?proto.asgt.v2alpha.type.Data} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_data_pb.Data, 2));
 };
 
 
 /**
- * @param {?proto.asgt.type.Data|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Data|undefined} value
  * @return {!proto.asgt.v2alpha.SuggestRequest} returns this
 */
 proto.asgt.v2alpha.SuggestRequest.prototype.setInput = function(value) {
@@ -556,8 +556,8 @@ proto.asgt.v2alpha.SuggestResponse.prototype.toObject = function(opt_includeInst
  */
 proto.asgt.v2alpha.SuggestResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    prediction: (f = msg.getPrediction()) && asgt_type_prediction_pb.Prediction.toObject(includeInstance, f),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
+    prediction: (f = msg.getPrediction()) && asgt_v2alpha_type_prediction_pb.Prediction.toObject(includeInstance, f),
+    model: (f = msg.getModel()) && asgt_v2alpha_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -595,13 +595,13 @@ proto.asgt.v2alpha.SuggestResponse.deserializeBinaryFromReader = function(msg, r
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new asgt_type_prediction_pb.Prediction;
-      reader.readMessage(value,asgt_type_prediction_pb.Prediction.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_prediction_pb.Prediction;
+      reader.readMessage(value,asgt_v2alpha_type_prediction_pb.Prediction.deserializeBinaryFromReader);
       msg.setPrediction(value);
       break;
     case 2:
-      var value = new asgt_type_model_pb.Model;
-      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_model_pb.Model;
+      reader.readMessage(value,asgt_v2alpha_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     default:
@@ -638,7 +638,7 @@ proto.asgt.v2alpha.SuggestResponse.serializeBinaryToWriter = function(message, w
     writer.writeMessage(
       1,
       f,
-      asgt_type_prediction_pb.Prediction.serializeBinaryToWriter
+      asgt_v2alpha_type_prediction_pb.Prediction.serializeBinaryToWriter
     );
   }
   f = message.getModel();
@@ -646,24 +646,24 @@ proto.asgt.v2alpha.SuggestResponse.serializeBinaryToWriter = function(message, w
     writer.writeMessage(
       2,
       f,
-      asgt_type_model_pb.Model.serializeBinaryToWriter
+      asgt_v2alpha_type_model_pb.Model.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * optional asgt.type.Prediction prediction = 1;
- * @return {?proto.asgt.type.Prediction}
+ * optional type.Prediction prediction = 1;
+ * @return {?proto.asgt.v2alpha.type.Prediction}
  */
 proto.asgt.v2alpha.SuggestResponse.prototype.getPrediction = function() {
-  return /** @type{?proto.asgt.type.Prediction} */ (
-    jspb.Message.getWrapperField(this, asgt_type_prediction_pb.Prediction, 1));
+  return /** @type{?proto.asgt.v2alpha.type.Prediction} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_prediction_pb.Prediction, 1));
 };
 
 
 /**
- * @param {?proto.asgt.type.Prediction|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Prediction|undefined} value
  * @return {!proto.asgt.v2alpha.SuggestResponse} returns this
 */
 proto.asgt.v2alpha.SuggestResponse.prototype.setPrediction = function(value) {
@@ -690,17 +690,17 @@ proto.asgt.v2alpha.SuggestResponse.prototype.hasPrediction = function() {
 
 
 /**
- * optional asgt.type.Model model = 2;
- * @return {?proto.asgt.type.Model}
+ * optional type.Model model = 2;
+ * @return {?proto.asgt.v2alpha.type.Model}
  */
 proto.asgt.v2alpha.SuggestResponse.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.Model} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 2));
+  return /** @type{?proto.asgt.v2alpha.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_model_pb.Model, 2));
 };
 
 
 /**
- * @param {?proto.asgt.type.Model|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Model|undefined} value
  * @return {!proto.asgt.v2alpha.SuggestResponse} returns this
 */
 proto.asgt.v2alpha.SuggestResponse.prototype.setModel = function(value) {
@@ -767,7 +767,7 @@ proto.asgt.v2alpha.BatchSuggestRequest.toObject = function(includeInstance, msg)
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
-    asgt_type_data_pb.Data.toObject, includeInstance),
+    asgt_v2alpha_type_data_pb.Data.toObject, includeInstance),
     options: (f = msg.getOptions()) && proto.asgt.v2alpha.SuggestOptions.toObject(includeInstance, f)
   };
 
@@ -810,8 +810,8 @@ proto.asgt.v2alpha.BatchSuggestRequest.deserializeBinaryFromReader = function(ms
       msg.setName(value);
       break;
     case 2:
-      var value = new asgt_type_data_pb.Data;
-      reader.readMessage(value,asgt_type_data_pb.Data.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_data_pb.Data;
+      reader.readMessage(value,asgt_v2alpha_type_data_pb.Data.deserializeBinaryFromReader);
       msg.addInputs(value);
       break;
     case 3:
@@ -860,7 +860,7 @@ proto.asgt.v2alpha.BatchSuggestRequest.serializeBinaryToWriter = function(messag
     writer.writeRepeatedMessage(
       2,
       f,
-      asgt_type_data_pb.Data.serializeBinaryToWriter
+      asgt_v2alpha_type_data_pb.Data.serializeBinaryToWriter
     );
   }
   f = message.getOptions();
@@ -893,17 +893,17 @@ proto.asgt.v2alpha.BatchSuggestRequest.prototype.setName = function(value) {
 
 
 /**
- * repeated asgt.type.Data inputs = 2;
- * @return {!Array<!proto.asgt.type.Data>}
+ * repeated type.Data inputs = 2;
+ * @return {!Array<!proto.asgt.v2alpha.type.Data>}
  */
 proto.asgt.v2alpha.BatchSuggestRequest.prototype.getInputsList = function() {
-  return /** @type{!Array<!proto.asgt.type.Data>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_data_pb.Data, 2));
+  return /** @type{!Array<!proto.asgt.v2alpha.type.Data>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2alpha_type_data_pb.Data, 2));
 };
 
 
 /**
- * @param {!Array<!proto.asgt.type.Data>} value
+ * @param {!Array<!proto.asgt.v2alpha.type.Data>} value
  * @return {!proto.asgt.v2alpha.BatchSuggestRequest} returns this
 */
 proto.asgt.v2alpha.BatchSuggestRequest.prototype.setInputsList = function(value) {
@@ -912,12 +912,12 @@ proto.asgt.v2alpha.BatchSuggestRequest.prototype.setInputsList = function(value)
 
 
 /**
- * @param {!proto.asgt.type.Data=} opt_value
+ * @param {!proto.asgt.v2alpha.type.Data=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.type.Data}
+ * @return {!proto.asgt.v2alpha.type.Data}
  */
 proto.asgt.v2alpha.BatchSuggestRequest.prototype.addInputs = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.type.Data, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.asgt.v2alpha.type.Data, opt_index);
 };
 
 
@@ -1007,8 +1007,8 @@ proto.asgt.v2alpha.BatchSuggestResponse.prototype.toObject = function(opt_includ
 proto.asgt.v2alpha.BatchSuggestResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     predictionsList: jspb.Message.toObjectList(msg.getPredictionsList(),
-    asgt_type_prediction_pb.Prediction.toObject, includeInstance),
-    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
+    asgt_v2alpha_type_prediction_pb.Prediction.toObject, includeInstance),
+    model: (f = msg.getModel()) && asgt_v2alpha_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1046,13 +1046,13 @@ proto.asgt.v2alpha.BatchSuggestResponse.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new asgt_type_prediction_pb.Prediction;
-      reader.readMessage(value,asgt_type_prediction_pb.Prediction.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_prediction_pb.Prediction;
+      reader.readMessage(value,asgt_v2alpha_type_prediction_pb.Prediction.deserializeBinaryFromReader);
       msg.addPredictions(value);
       break;
     case 2:
-      var value = new asgt_type_model_pb.Model;
-      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
+      var value = new asgt_v2alpha_type_model_pb.Model;
+      reader.readMessage(value,asgt_v2alpha_type_model_pb.Model.deserializeBinaryFromReader);
       msg.setModel(value);
       break;
     default:
@@ -1089,7 +1089,7 @@ proto.asgt.v2alpha.BatchSuggestResponse.serializeBinaryToWriter = function(messa
     writer.writeRepeatedMessage(
       1,
       f,
-      asgt_type_prediction_pb.Prediction.serializeBinaryToWriter
+      asgt_v2alpha_type_prediction_pb.Prediction.serializeBinaryToWriter
     );
   }
   f = message.getModel();
@@ -1097,24 +1097,24 @@ proto.asgt.v2alpha.BatchSuggestResponse.serializeBinaryToWriter = function(messa
     writer.writeMessage(
       2,
       f,
-      asgt_type_model_pb.Model.serializeBinaryToWriter
+      asgt_v2alpha_type_model_pb.Model.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated asgt.type.Prediction predictions = 1;
- * @return {!Array<!proto.asgt.type.Prediction>}
+ * repeated type.Prediction predictions = 1;
+ * @return {!Array<!proto.asgt.v2alpha.type.Prediction>}
  */
 proto.asgt.v2alpha.BatchSuggestResponse.prototype.getPredictionsList = function() {
-  return /** @type{!Array<!proto.asgt.type.Prediction>} */ (
-    jspb.Message.getRepeatedWrapperField(this, asgt_type_prediction_pb.Prediction, 1));
+  return /** @type{!Array<!proto.asgt.v2alpha.type.Prediction>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_v2alpha_type_prediction_pb.Prediction, 1));
 };
 
 
 /**
- * @param {!Array<!proto.asgt.type.Prediction>} value
+ * @param {!Array<!proto.asgt.v2alpha.type.Prediction>} value
  * @return {!proto.asgt.v2alpha.BatchSuggestResponse} returns this
 */
 proto.asgt.v2alpha.BatchSuggestResponse.prototype.setPredictionsList = function(value) {
@@ -1123,12 +1123,12 @@ proto.asgt.v2alpha.BatchSuggestResponse.prototype.setPredictionsList = function(
 
 
 /**
- * @param {!proto.asgt.type.Prediction=} opt_value
+ * @param {!proto.asgt.v2alpha.type.Prediction=} opt_value
  * @param {number=} opt_index
- * @return {!proto.asgt.type.Prediction}
+ * @return {!proto.asgt.v2alpha.type.Prediction}
  */
 proto.asgt.v2alpha.BatchSuggestResponse.prototype.addPredictions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.type.Prediction, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.asgt.v2alpha.type.Prediction, opt_index);
 };
 
 
@@ -1142,17 +1142,17 @@ proto.asgt.v2alpha.BatchSuggestResponse.prototype.clearPredictionsList = functio
 
 
 /**
- * optional asgt.type.Model model = 2;
- * @return {?proto.asgt.type.Model}
+ * optional type.Model model = 2;
+ * @return {?proto.asgt.v2alpha.type.Model}
  */
 proto.asgt.v2alpha.BatchSuggestResponse.prototype.getModel = function() {
-  return /** @type{?proto.asgt.type.Model} */ (
-    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 2));
+  return /** @type{?proto.asgt.v2alpha.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_v2alpha_type_model_pb.Model, 2));
 };
 
 
 /**
- * @param {?proto.asgt.type.Model|undefined} value
+ * @param {?proto.asgt.v2alpha.type.Model|undefined} value
  * @return {!proto.asgt.v2alpha.BatchSuggestResponse} returns this
 */
 proto.asgt.v2alpha.BatchSuggestResponse.prototype.setModel = function(value) {

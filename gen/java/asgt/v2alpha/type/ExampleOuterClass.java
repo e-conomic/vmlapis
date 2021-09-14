@@ -34,46 +34,44 @@ public final class ExampleOuterClass {
     asgt.v2alpha.type.DataOuterClass.DataOrBuilder getDataOrBuilder();
 
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     java.util.List<asgt.v2alpha.type.TargetValueOuterClass.TargetValue> 
         getTargetValuesList();
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     asgt.v2alpha.type.TargetValueOuterClass.TargetValue getTargetValues(int index);
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     int getTargetValuesCount();
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     java.util.List<? extends asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder> 
         getTargetValuesOrBuilderList();
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
         int index);
 
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial
-     * feedback. The id should be a string in UUID format.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     java.lang.String getId();
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial
-     * feedback. The id should be a string in UUID format.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     com.google.protobuf.ByteString
@@ -223,14 +221,14 @@ public final class ExampleOuterClass {
     public static final int TARGET_VALUES_FIELD_NUMBER = 2;
     private java.util.List<asgt.v2alpha.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<asgt.v2alpha.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public java.util.List<? extends asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder> 
@@ -238,21 +236,21 @@ public final class ExampleOuterClass {
       return targetValues_;
     }
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public int getTargetValuesCount() {
       return targetValues_.size();
     }
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public asgt.v2alpha.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
       return targetValues_.get(index);
     }
     /**
-     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+     * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
      */
     @java.lang.Override
     public asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
@@ -264,11 +262,10 @@ public final class ExampleOuterClass {
     private volatile java.lang.Object id_;
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial
-     * feedback. The id should be a string in UUID format.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
      * @return The id.
      */
     @java.lang.Override
@@ -286,11 +283,10 @@ public final class ExampleOuterClass {
     }
     /**
      * <pre>
-     * An optional id to provide individual corrections to examples, for example when a user updates their initial
-     * feedback. The id should be a string in UUID format.
+     * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
      * </pre>
      *
-     * <code>string id = 3;</code>
+     * <code>string id = 3 [(.validate.rules) = { ... }</code>
      * @return The bytes for id.
      */
     @java.lang.Override
@@ -833,7 +829,7 @@ public final class ExampleOuterClass {
           asgt.v2alpha.type.TargetValueOuterClass.TargetValue, asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder, asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder> targetValuesBuilder_;
 
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public java.util.List<asgt.v2alpha.type.TargetValueOuterClass.TargetValue> getTargetValuesList() {
         if (targetValuesBuilder_ == null) {
@@ -843,7 +839,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public int getTargetValuesCount() {
         if (targetValuesBuilder_ == null) {
@@ -853,7 +849,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public asgt.v2alpha.type.TargetValueOuterClass.TargetValue getTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -863,7 +859,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setTargetValues(
           int index, asgt.v2alpha.type.TargetValueOuterClass.TargetValue value) {
@@ -880,7 +876,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder setTargetValues(
           int index, asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -894,7 +890,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder addTargetValues(asgt.v2alpha.type.TargetValueOuterClass.TargetValue value) {
         if (targetValuesBuilder_ == null) {
@@ -910,7 +906,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder addTargetValues(
           int index, asgt.v2alpha.type.TargetValueOuterClass.TargetValue value) {
@@ -927,7 +923,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder addTargetValues(
           asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -941,7 +937,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder addTargetValues(
           int index, asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder builderForValue) {
@@ -955,7 +951,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder addAllTargetValues(
           java.lang.Iterable<? extends asgt.v2alpha.type.TargetValueOuterClass.TargetValue> values) {
@@ -970,7 +966,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
@@ -983,7 +979,7 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public Builder removeTargetValues(int index) {
         if (targetValuesBuilder_ == null) {
@@ -996,14 +992,14 @@ public final class ExampleOuterClass {
         return this;
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder getTargetValuesBuilder(
           int index) {
         return getTargetValuesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder getTargetValuesOrBuilder(
           int index) {
@@ -1013,7 +1009,7 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public java.util.List<? extends asgt.v2alpha.type.TargetValueOuterClass.TargetValueOrBuilder> 
            getTargetValuesOrBuilderList() {
@@ -1024,14 +1020,14 @@ public final class ExampleOuterClass {
         }
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder() {
         return getTargetValuesFieldBuilder().addBuilder(
             asgt.v2alpha.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder addTargetValuesBuilder(
           int index) {
@@ -1039,7 +1035,7 @@ public final class ExampleOuterClass {
             index, asgt.v2alpha.type.TargetValueOuterClass.TargetValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2;</code>
+       * <code>repeated .asgt.v2alpha.type.TargetValue target_values = 2 [(.validate.rules) = { ... }</code>
        */
       public java.util.List<asgt.v2alpha.type.TargetValueOuterClass.TargetValue.Builder> 
            getTargetValuesBuilderList() {
@@ -1063,11 +1059,10 @@ public final class ExampleOuterClass {
       private java.lang.Object id_ = "";
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initial
-       * feedback. The id should be a string in UUID format.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
        * @return The id.
        */
       public java.lang.String getId() {
@@ -1084,11 +1079,10 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initial
-       * feedback. The id should be a string in UUID format.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
        * @return The bytes for id.
        */
       public com.google.protobuf.ByteString
@@ -1106,11 +1100,10 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initial
-       * feedback. The id should be a string in UUID format.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
@@ -1126,11 +1119,10 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initial
-       * feedback. The id should be a string in UUID format.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
@@ -1141,11 +1133,10 @@ public final class ExampleOuterClass {
       }
       /**
        * <pre>
-       * An optional id to provide individual corrections to examples, for example when a user updates their initial
-       * feedback. The id should be a string in UUID format.
+       * An optional id to provide individual corrections to examples, for example when a user updates their initialfeedback.
        * </pre>
        *
-       * <code>string id = 3;</code>
+       * <code>string id = 3 [(.validate.rules) = { ... }</code>
        * @param value The bytes for id to set.
        * @return This builder for chaining.
        */
@@ -1230,17 +1221,19 @@ public final class ExampleOuterClass {
       "\n\037asgt/v2alpha/type/example.proto\022\021asgt." +
       "v2alpha.type\032\034asgt/v2alpha/type/data.pro" +
       "to\032$asgt/v2alpha/type/target_value.proto" +
-      "\"s\n\007Example\022%\n\004data\030\001 \001(\0132\027.asgt.v2alpha" +
-      ".type.Data\0225\n\rtarget_values\030\002 \003(\0132\036.asgt" +
-      ".v2alpha.type.TargetValue\022\n\n\002id\030\003 \001(\tB@Z" +
-      ">github.com/e-conomic/vmlapis/gen/go/asg" +
-      "t/v2alpha/type;asgttypeb\006proto3"
+      "\032\027validate/validate.proto\"\207\001\n\007Example\022%\n" +
+      "\004data\030\001 \001(\0132\027.asgt.v2alpha.type.Data\022?\n\r" +
+      "target_values\030\002 \003(\0132\036.asgt.v2alpha.type." +
+      "TargetValueB\010\372B\005\222\001\002\010\001\022\024\n\002id\030\003 \001(\tB\010\372B\005r\003" +
+      "\260\001\001B@Z>github.com/e-conomic/vmlapis/gen/" +
+      "go/asgt/v2alpha/type;asgttypeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           asgt.v2alpha.type.DataOuterClass.getDescriptor(),
           asgt.v2alpha.type.TargetValueOuterClass.getDescriptor(),
+          io.envoyproxy.pgv.validate.Validate.getDescriptor(),
         });
     internal_static_asgt_v2alpha_type_Example_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1248,8 +1241,14 @@ public final class ExampleOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2alpha_type_Example_descriptor,
         new java.lang.String[] { "Data", "TargetValues", "Id", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(io.envoyproxy.pgv.validate.Validate.rules);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
     asgt.v2alpha.type.DataOuterClass.getDescriptor();
     asgt.v2alpha.type.TargetValueOuterClass.getDescriptor();
+    io.envoyproxy.pgv.validate.Validate.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

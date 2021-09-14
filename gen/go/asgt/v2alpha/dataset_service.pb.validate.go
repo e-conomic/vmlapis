@@ -152,17 +152,17 @@ func (m *CreateDatasetRequest) Validate() error {
 			_CreateDatasetRequest_Tags_Unique[item] = struct{}{}
 		}
 
-		if len(item) > 256 {
+		if len(item) > 64 {
 			return CreateDatasetRequestValidationError{
 				field:  fmt.Sprintf("Tags[%v]", idx),
-				reason: "value length must be at most 256 bytes",
+				reason: "value length must be at most 64 bytes",
 			}
 		}
 
 		if !_CreateDatasetRequest_Tags_Pattern.MatchString(item) {
 			return CreateDatasetRequestValidationError{
 				field:  fmt.Sprintf("Tags[%v]", idx),
-				reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+				reason: "value does not match regex pattern \"^[A-Za-z0-9\\\\s_.>-]*$\"",
 			}
 		}
 
@@ -229,7 +229,7 @@ var _ interface {
 
 var _CreateDatasetRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
-var _CreateDatasetRequest_Tags_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+var _CreateDatasetRequest_Tags_Pattern = regexp.MustCompile("^[A-Za-z0-9\\s_.>-]*$")
 
 // Validate checks the field values on DeleteDatasetRequest with the rules
 // defined in the proto definition for this message. If any rules are

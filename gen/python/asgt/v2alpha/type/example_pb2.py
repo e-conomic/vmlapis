@@ -13,6 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from vml_proto.asgt.v2alpha.type import data_pb2 as asgt_dot_v2alpha_dot_type_dot_data__pb2
 from vml_proto.asgt.v2alpha.type import target_value_pb2 as asgt_dot_v2alpha_dot_type_dot_target__value__pb2
+from validate import validate_pb2 as validate_dot_validate__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x61sgt/v2alpha/type/example.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1c\x61sgt/v2alpha/type/data.proto\x1a$asgt/v2alpha/type/target_value.proto\"s\n\x07\x45xample\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.asgt.v2alpha.type.Data\x12\x35\n\rtarget_values\x18\x02 \x03(\x0b\x32\x1e.asgt.v2alpha.type.TargetValue\x12\n\n\x02id\x18\x03 \x01(\tB@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n\x1f\x61sgt/v2alpha/type/example.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1c\x61sgt/v2alpha/type/data.proto\x1a$asgt/v2alpha/type/target_value.proto\x1a\x17validate/validate.proto\"\x87\x01\n\x07\x45xample\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.asgt.v2alpha.type.Data\x12?\n\rtarget_values\x18\x02 \x03(\x0b\x32\x1e.asgt.v2alpha.type.TargetValueB\x08\xfa\x42\x05\x92\x01\x02\x08\x01\x12\x14\n\x02id\x18\x03 \x01(\tB\x08\xfa\x42\x05r\x03\xb0\x01\x01\x42@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
   ,
-  dependencies=[asgt_dot_v2alpha_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_v2alpha_dot_type_dot_target__value__pb2.DESCRIPTOR,])
+  dependencies=[asgt_dot_v2alpha_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_v2alpha_dot_type_dot_target__value__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
 
 
@@ -49,14 +50,14 @@ _EXAMPLE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005\222\001\002\010\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='id', full_name='asgt.v2alpha.type.Example.id', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\005r\003\260\001\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -69,8 +70,8 @@ _EXAMPLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=122,
-  serialized_end=237,
+  serialized_start=148,
+  serialized_end=283,
 )
 
 _EXAMPLE.fields_by_name['data'].message_type = asgt_dot_v2alpha_dot_type_dot_data__pb2._DATA
@@ -87,4 +88,6 @@ _sym_db.RegisterMessage(Example)
 
 
 DESCRIPTOR._options = None
+_EXAMPLE.fields_by_name['target_values']._options = None
+_EXAMPLE.fields_by_name['id']._options = None
 # @@protoc_insertion_point(module_scope)
