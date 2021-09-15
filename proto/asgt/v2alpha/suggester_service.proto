@@ -6,6 +6,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha";
 
 import "google/api/annotations.proto";
 import "options/annotations.proto";
+import "validate/validate.proto";
 
 import "asgt/v2alpha/type/prediction.proto";
 import "asgt/v2alpha/type/model.proto";
@@ -90,11 +91,11 @@ message SuggestOptions {
 
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;
-  asgt.v2alpha.type.Confidence.Level min_confidence = 2;
+  asgt.v2alpha.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
 }
 
 message SuggestRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   asgt.v2alpha.type.Data input = 2;
   SuggestOptions options = 3;
 }
@@ -105,7 +106,7 @@ message SuggestResponse {
 }
 
 message BatchSuggestRequest {
-  string name = 1;
+  string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   repeated asgt.v2alpha.type.Data inputs = 2;
   SuggestOptions options = 3;
 }
