@@ -8,8 +8,8 @@ import "google/api/annotations.proto";
 import "options/annotations.proto";
 import "validate/validate.proto";
 
-import "asgt/v2alpha/type/prediction.proto";
-import "asgt/v2alpha/type/model.proto";
+import "asgt/type/prediction.proto";
+import "asgt/type/model.proto";
 import "asgt/v2alpha/type/data.proto";
 
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
@@ -91,7 +91,7 @@ message SuggestOptions {
 
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;
-  asgt.v2alpha.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
+  asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
 }
 
 message SuggestRequest {
@@ -101,8 +101,8 @@ message SuggestRequest {
 }
 
 message SuggestResponse {
-  asgt.v2alpha.type.Prediction prediction = 1;
-  asgt.v2alpha.type.Model model = 2;
+  asgt.type.Prediction prediction = 1;
+  asgt.type.Model model = 2;
 }
 
 message BatchSuggestRequest {
@@ -112,6 +112,6 @@ message BatchSuggestRequest {
 }
 
 message BatchSuggestResponse {
-  repeated asgt.v2alpha.type.Prediction predictions = 1;
-  asgt.v2alpha.type.Model model = 2;
+  repeated asgt.type.Prediction predictions = 1;
+  asgt.type.Model model = 2;
 }
