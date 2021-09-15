@@ -12,15 +12,17 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var asgt_type_model_pb = require('../../asgt/type/model_pb.js')
+
+var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js')
+
 var asgt_v2alpha_type_data_pb = require('../../asgt/v2alpha/type/data_pb.js')
-
-var asgt_v2alpha_type_model_pb = require('../../asgt/v2alpha/type/model_pb.js')
-
-var asgt_v2alpha_type_prediction_pb = require('../../asgt/v2alpha/type/prediction_pb.js')
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
 
 var options_annotations_pb = require('../../options/annotations_pb.js')
+
+var validate_validate_pb = require('../../validate/validate_pb.js')
 const proto = {};
 proto.asgt = {};
 proto.asgt.v2alpha = require('./suggester_service_pb.js');

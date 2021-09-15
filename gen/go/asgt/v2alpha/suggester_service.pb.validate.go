@@ -17,7 +17,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/anypb"
 
-	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type"
+	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/type"
 )
 
 // ensure the imports are used
@@ -47,7 +47,12 @@ func (m *SuggestOptions) Validate() error {
 
 	// no validation rules for SuggestLimit
 
-	// no validation rules for MinConfidence
+	if _, ok := asgttype.Confidence_Level_name[int32(m.GetMinConfidence())]; !ok {
+		return SuggestOptionsValidationError{
+			field:  "MinConfidence",
+			reason: "value must be one of the defined enum values",
+		}
+	}
 
 	return nil
 }
@@ -114,7 +119,19 @@ func (m *SuggestRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return SuggestRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_SuggestRequest_Name_Pattern.MatchString(m.GetName()) {
+		return SuggestRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	if v, ok := interface{}(m.GetInput()).(interface{ Validate() error }); ok {
 		if err := v.Validate(); err != nil {
@@ -192,6 +209,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = SuggestRequestValidationError{}
+
+var _SuggestRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on SuggestResponse with the rules defined
 // in the proto definition for this message. If any rules are violated, an
@@ -286,7 +305,19 @@ func (m *BatchSuggestRequest) Validate() error {
 		return nil
 	}
 
-	// no validation rules for Name
+	if len(m.GetName()) > 256 {
+		return BatchSuggestRequestValidationError{
+			field:  "Name",
+			reason: "value length must be at most 256 bytes",
+		}
+	}
+
+	if !_BatchSuggestRequest_Name_Pattern.MatchString(m.GetName()) {
+		return BatchSuggestRequestValidationError{
+			field:  "Name",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+	}
 
 	for idx, item := range m.GetInputs() {
 		_, _ = idx, item
@@ -371,6 +402,8 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = BatchSuggestRequestValidationError{}
+
+var _BatchSuggestRequest_Name_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on BatchSuggestResponse with the rules
 // defined in the proto definition for this message. If any rules are
