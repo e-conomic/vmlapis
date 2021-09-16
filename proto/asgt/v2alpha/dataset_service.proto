@@ -9,8 +9,6 @@ import "google/protobuf/empty.proto";
 import "options/annotations.proto";
 import "validate/validate.proto";
 
-import "asgt/type/prediction.proto";
-
 import "asgt/v2alpha/type/example.proto";
 import "asgt/type/dataset.proto";
 
@@ -84,16 +82,6 @@ service DatasetService {
   }
 }
 
-message TestOptions {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
-			example: "{\"suggest_limit\": 3}"
-	};
-
-  // Maximum number of suggestions to return per target
-  int32 suggest_limit = 1;
-  asgt.type.Confidence.Level min_confidence = 2 [(validate.rules).enum.defined_only = true];
-}
-
 message GetDatasetRequest {
   string name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
 }
@@ -115,7 +103,6 @@ message DeleteTagRequest {
 message CreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = { pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$", max_bytes: 256 }]; // text-no-spaces
   asgt.v2alpha.type.Example example = 2;
-  TestOptions options = 3;
 }
 
 message CreateOrUpdateExampleRequest {
