@@ -1221,12 +1221,13 @@ public final class ExampleOuterClass {
       "\n\037asgt/v2alpha/type/example.proto\022\021asgt." +
       "v2alpha.type\032\034asgt/v2alpha/type/data.pro" +
       "to\032$asgt/v2alpha/type/target_value.proto" +
-      "\032\027validate/validate.proto\"\211\001\n\007Example\022%\n" +
+      "\032\027validate/validate.proto\"\214\001\n\007Example\022%\n" +
       "\004data\030\001 \001(\0132\027.asgt.v2alpha.type.Data\022A\n\r" +
       "target_values\030\002 \003(\0132\036.asgt.v2alpha.type." +
-      "TargetValueB\n\372B\007\222\001\004\010\001(\000\022\024\n\002id\030\003 \001(\tB\010\372B\005" +
-      "r\003\260\001\001B@Z>github.com/e-conomic/vmlapis/ge" +
-      "n/go/asgt/v2alpha/type;asgttypeb\006proto3"
+      "TargetValueB\n\372B\007\222\001\004\010\001(\000\022\027\n\002id\030\003 \001(\tB\013\372B\010" +
+      "r\006\260\001\001\320\001\001B@Z>github.com/e-conomic/vmlapis" +
+      "/gen/go/asgt/v2alpha/type;asgttypeb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

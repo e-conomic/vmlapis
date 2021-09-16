@@ -75,12 +75,16 @@ func (m *Example) Validate() error {
 
 	}
 
-	if err := m._validateUuid(m.GetId()); err != nil {
-		return ExampleValidationError{
-			field:  "Id",
-			reason: "value must be a valid UUID",
-			cause:  err,
+	if m.GetId() != "" {
+
+		if err := m._validateUuid(m.GetId()); err != nil {
+			return ExampleValidationError{
+				field:  "Id",
+				reason: "value must be a valid UUID",
+				cause:  err,
+			}
 		}
+
 	}
 
 	return nil

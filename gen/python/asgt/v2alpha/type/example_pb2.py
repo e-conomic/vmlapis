@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttype',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x61sgt/v2alpha/type/example.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1c\x61sgt/v2alpha/type/data.proto\x1a$asgt/v2alpha/type/target_value.proto\x1a\x17validate/validate.proto\"\x89\x01\n\x07\x45xample\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.asgt.v2alpha.type.Data\x12\x41\n\rtarget_values\x18\x02 \x03(\x0b\x32\x1e.asgt.v2alpha.type.TargetValueB\n\xfa\x42\x07\x92\x01\x04\x08\x01(\x00\x12\x14\n\x02id\x18\x03 \x01(\tB\x08\xfa\x42\x05r\x03\xb0\x01\x01\x42@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
+  serialized_pb=b'\n\x1f\x61sgt/v2alpha/type/example.proto\x12\x11\x61sgt.v2alpha.type\x1a\x1c\x61sgt/v2alpha/type/data.proto\x1a$asgt/v2alpha/type/target_value.proto\x1a\x17validate/validate.proto\"\x8c\x01\n\x07\x45xample\x12%\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x17.asgt.v2alpha.type.Data\x12\x41\n\rtarget_values\x18\x02 \x03(\x0b\x32\x1e.asgt.v2alpha.type.TargetValueB\n\xfa\x42\x07\x92\x01\x04\x08\x01(\x00\x12\x17\n\x02id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xb0\x01\x01\xd0\x01\x01\x42@Z>github.com/e-conomic/vmlapis/gen/go/asgt/v2alpha/type;asgttypeb\x06proto3'
   ,
   dependencies=[asgt_dot_v2alpha_dot_type_dot_data__pb2.DESCRIPTOR,asgt_dot_v2alpha_dot_type_dot_target__value__pb2.DESCRIPTOR,validate_dot_validate__pb2.DESCRIPTOR,])
 
@@ -57,7 +57,7 @@ _EXAMPLE = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\372B\005r\003\260\001\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372B\010r\006\260\001\001\320\001\001', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -71,7 +71,7 @@ _EXAMPLE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=148,
-  serialized_end=285,
+  serialized_end=288,
 )
 
 _EXAMPLE.fields_by_name['data'].message_type = asgt_dot_v2alpha_dot_type_dot_data__pb2._DATA
